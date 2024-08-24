@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/gradients" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/premium_inline_roadblock_margin">
+        <View android:id="@id/gradient" android:background="@drawable/premium_tier0_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/premium_inline_roadblock_height_half" android:alpha="0.1" />
+        <Space android:layout_width="fill_parent" android:layout_height="@dimen/premium_inline_roadblock_height_half" />
+    </LinearLayout>
+    <View android:id="@id/gradient_divider" android:background="@drawable/premium_tier0_gradient" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/premium_inline_roadblock_height_half" android:layout_alignTop="@id/gradients" />
+</RelativeLayout>

@@ -1,0 +1,64 @@
+package com.discord.phone_verification
+
+import com.discord.phone_verification.reactevents.VerificationCodeReceivedEvent
+import com.discord.reactevents.ReactEvents
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReactContextBaseJavaModule
+import com.facebook.react.bridge.ReactMethod
+import eh.w
+import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.h0
+import kotlin.jvm.internal.r
+
+public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+   private final val reactEvents: ReactEvents
+   private final val smsAutofillManager: SmsAutofillManager
+
+   init {
+      r.h(var1, "reactContext");
+      super(var1);
+      this.reactEvents = new ReactEvents(new Pair[]{w.a("verificationCodeReceived", h0.b(VerificationCodeReceivedEvent.class))});
+      this.smsAutofillManager = new SmsAutofillManager(var1, new Function1<java.lang.String, Unit>(this, var1) {
+         final ReactApplicationContext $reactContext;
+         final SmsAutofillManagerModule this$0;
+
+         {
+            super(1);
+            this.this$0 = var1;
+            this.$reactContext = var2;
+         }
+
+         public final void invoke(java.lang.String var1) {
+            r.h(var1, "it");
+            SmsAutofillManagerModule.access$getReactEvents$p(this.this$0).emitModuleEvent(this.$reactContext, new VerificationCodeReceivedEvent(var1));
+         }
+      });
+   }
+
+   @ReactMethod
+   public fun addListener(type: String) {
+      r.h(var1, "type");
+   }
+
+   public open fun getName(): String {
+      return "SmsAutofillManager";
+   }
+
+   public open fun initialize() {
+      super.initialize();
+      this.smsAutofillManager.registerReceiver();
+   }
+
+   public open fun invalidate() {
+      this.smsAutofillManager.unregisterReceiver();
+   }
+
+   @ReactMethod
+   public fun removeListeners(count: Int) {
+   }
+
+   @ReactMethod
+   public fun startSmsRetriever() {
+      this.smsAutofillManager.startSmsRetriever();
+   }
+}

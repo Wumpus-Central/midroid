@@ -1,0 +1,167 @@
+package com.discord.chat.presentation.events
+
+import com.discord.chat.reactevents.AudioFilePlaybackEndedData
+import com.discord.chat.reactevents.AudioFilePlaybackStartedData
+import com.discord.chat.reactevents.ChatScrollPositionEvent
+import com.discord.chat.reactevents.CompleteFirstLayoutData
+import com.discord.chat.reactevents.FirstLayoutData
+import com.discord.chat.reactevents.InitiateEditData
+import com.discord.chat.reactevents.InitiateReplyData
+import com.discord.chat.reactevents.LongPressAttachmentLinkData
+import com.discord.chat.reactevents.LongPressAvatarData
+import com.discord.chat.reactevents.LongPressChannelData
+import com.discord.chat.reactevents.LongPressCommandData
+import com.discord.chat.reactevents.LongPressLinkData
+import com.discord.chat.reactevents.LongPressMessageEvent
+import com.discord.chat.reactevents.LongPressPollImageData
+import com.discord.chat.reactevents.LongPressReactionData
+import com.discord.chat.reactevents.LongPressStickerData
+import com.discord.chat.reactevents.LongPressUsernameData
+import com.discord.chat.reactevents.TapActivityBookmarkEmbedData
+import com.discord.chat.reactevents.TapActivityInstanceEmbedData
+import com.discord.chat.reactevents.TapAttachmentLinkData
+import com.discord.chat.reactevents.TapAutoModerationActionsData
+import com.discord.chat.reactevents.TapAutoModerationFeedbackData
+import com.discord.chat.reactevents.TapAvatarData
+import com.discord.chat.reactevents.TapButtonActionComponent
+import com.discord.chat.reactevents.TapCallData
+import com.discord.chat.reactevents.TapCancelUploadItemData
+import com.discord.chat.reactevents.TapChannelData
+import com.discord.chat.reactevents.TapChannelPromptButtonData
+import com.discord.chat.reactevents.TapClanTagChipletData
+import com.discord.chat.reactevents.TapCommandData
+import com.discord.chat.reactevents.TapConnectionsRoleTagData
+import com.discord.chat.reactevents.TapContentInventoryEntryEmbedData
+import com.discord.chat.reactevents.TapCopyText
+import com.discord.chat.reactevents.TapCtaButton
+import com.discord.chat.reactevents.TapDismissMediaPostSharePromptData
+import com.discord.chat.reactevents.TapEmojiData
+import com.discord.chat.reactevents.TapFollowForumPost
+import com.discord.chat.reactevents.TapForwardFooterData
+import com.discord.chat.reactevents.TapGiftCodeAcceptData
+import com.discord.chat.reactevents.TapGiftCodeEmbedData
+import com.discord.chat.reactevents.TapImageData
+import com.discord.chat.reactevents.TapInlineForwardData
+import com.discord.chat.reactevents.TapInviteEvent
+import com.discord.chat.reactevents.TapInviteToSpeakData
+import com.discord.chat.reactevents.TapJoinActivityData
+import com.discord.chat.reactevents.TapLinkData
+import com.discord.chat.reactevents.TapMentionData
+import com.discord.chat.reactevents.TapMessageData
+import com.discord.chat.reactevents.TapMessageReplyData
+import com.discord.chat.reactevents.TapObscuredMediaLearnMoreData
+import com.discord.chat.reactevents.TapOpTagData
+import com.discord.chat.reactevents.TapPollAction
+import com.discord.chat.reactevents.TapPollAnswer
+import com.discord.chat.reactevents.TapPollSubmitVote
+import com.discord.chat.reactevents.TapPostPreviewEmbedData
+import com.discord.chat.reactevents.TapReactionData
+import com.discord.chat.reactevents.TapRemixData
+import com.discord.chat.reactevents.TapRoleIconData
+import com.discord.chat.reactevents.TapSafetyPolicyNoticeEmbed
+import com.discord.chat.reactevents.TapSafetySystemNotificationCta
+import com.discord.chat.reactevents.TapSeeMoreData
+import com.discord.chat.reactevents.TapSelectActionComponent
+import com.discord.chat.reactevents.TapSeparatorData
+import com.discord.chat.reactevents.TapShareForumPost
+import com.discord.chat.reactevents.TapShowAltTextData
+import com.discord.chat.reactevents.TapStickerData
+import com.discord.chat.reactevents.TapSummaryData
+import com.discord.chat.reactevents.TapSummaryJumpData
+import com.discord.chat.reactevents.TapSuppressNotificationsIconData
+import com.discord.chat.reactevents.TapTagData
+import com.discord.chat.reactevents.TapThreadEmbedEvent
+import com.discord.chat.reactevents.TapTimestampEvent
+import com.discord.chat.reactevents.TapUploadProgressCloseData
+import com.discord.chat.reactevents.TapUsernameData
+import com.discord.chat.reactevents.TapWelcomeReplyData
+import com.discord.chat.reactevents.VoiceMessagePlaybackFailedData
+import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
+import com.discord.reactevents.ReactEvents
+import eh.w
+import kotlin.jvm.internal.h0
+
+internal fun createChatReactEvents(): ReactEvents {
+   return new ReactEvents(
+      new Pair[]{
+         w.a("onChatScrollPosition", h0.b(ChatScrollPositionEvent.class)),
+         w.a("onLongPressAttachmentLink", h0.b(LongPressAttachmentLinkData.class)),
+         w.a("onLongPressAvatar", h0.b(LongPressAvatarData.class)),
+         w.a("onLongPressMessage", h0.b(LongPressMessageEvent.class)),
+         w.a("onLongPressReaction", h0.b(LongPressReactionData.class)),
+         w.a("onLongPressSticker", h0.b(LongPressStickerData.class)),
+         w.a("onLongPressUsername", h0.b(LongPressUsernameData.class)),
+         w.a("onLongPressCommandMention", h0.b(LongPressCommandData.class)),
+         w.a("onLongPressChannel", h0.b(LongPressChannelData.class)),
+         w.a("onTapAttachmentLink", h0.b(TapAttachmentLinkData.class)),
+         w.a("onTapAvatar", h0.b(TapAvatarData.class)),
+         w.a("onTapButtonActionComponent", h0.b(TapButtonActionComponent.class)),
+         w.a("onTapCall", h0.b(TapCallData.class)),
+         w.a("onTapChannel", h0.b(TapChannelData.class)),
+         w.a("onTapCopyText", h0.b(TapCopyText.class)),
+         w.a("onTapGiftCodeAccept", h0.b(TapGiftCodeAcceptData.class)),
+         w.a("onTapGiftCodeEmbed", h0.b(TapGiftCodeEmbedData.class)),
+         w.a("onTapImage", h0.b(TapImageData.class)),
+         w.a("onTapInviteEmbed", h0.b(TapInviteEvent.class)),
+         w.a("onTapJoinActivity", h0.b(TapJoinActivityData.class)),
+         w.a("onTapLink", h0.b(TapLinkData.class)),
+         w.a("onLongPressLink", h0.b(LongPressLinkData.class)),
+         w.a("onTapMention", h0.b(TapMentionData.class)),
+         w.a("onTapCommandMention", h0.b(TapCommandData.class)),
+         w.a("onTapMessage", h0.b(TapMessageData.class)),
+         w.a("onTapMessageReply", h0.b(TapMessageReplyData.class)),
+         w.a("onTapSummary", h0.b(TapSummaryData.class)),
+         w.a("onTapSummaryJump", h0.b(TapSummaryJumpData.class)),
+         w.a("onTapReaction", h0.b(TapReactionData.class)),
+         w.a("onTapRoleIcon", h0.b(TapRoleIconData.class)),
+         w.a("onTapSuppressNotificationsIcon", h0.b(TapSuppressNotificationsIconData.class)),
+         w.a("onTapSeeMore", h0.b(TapSeeMoreData.class)),
+         w.a("onInitiateReply", h0.b(InitiateReplyData.class)),
+         w.a("onInitiateEdit", h0.b(InitiateEditData.class)),
+         w.a("onTapConnectionsRoleTag", h0.b(TapConnectionsRoleTagData.class)),
+         w.a("onTapSelectActionComponent", h0.b(TapSelectActionComponent.class)),
+         w.a("onTapSeparator", h0.b(TapSeparatorData.class)),
+         w.a("onTapSticker", h0.b(TapStickerData.class)),
+         w.a("onTapTimestamp", h0.b(TapTimestampEvent.class)),
+         w.a("onTapThreadEmbed", h0.b(TapThreadEmbedEvent.class)),
+         w.a("onTapUsername", h0.b(TapUsernameData.class)),
+         w.a("onTapUploadProgressClose", h0.b(TapUploadProgressCloseData.class)),
+         w.a("onTapCancelUploadItem", h0.b(TapCancelUploadItemData.class)),
+         w.a("onTapWelcomeReply", h0.b(TapWelcomeReplyData.class)),
+         w.a("onTapInviteToSpeak", h0.b(TapInviteToSpeakData.class)),
+         w.a("onTapEmoji", h0.b(TapEmojiData.class)),
+         w.a("onTapFollowForumPost", h0.b(TapFollowForumPost.class)),
+         w.a("onTapShareForumPost", h0.b(TapShareForumPost.class)),
+         w.a("onTapReactionOverflow", h0.b(TapReactionOverflow.class)),
+         w.a("onTapAutoModerationActions", h0.b(TapAutoModerationActionsData.class)),
+         w.a("onTapAutoModerationFeedback", h0.b(TapAutoModerationFeedbackData.class)),
+         w.a("onTapOpTag", h0.b(TapOpTagData.class)),
+         w.a("onTapShowAltText", h0.b(TapShowAltTextData.class)),
+         w.a("onAudioFilePlaybackEnded", h0.b(AudioFilePlaybackEndedData.class)),
+         w.a("onVoiceMessagePlaybackFailed", h0.b(VoiceMessagePlaybackFailedData.class)),
+         w.a("onAudioFilePlaybackStarted", h0.b(AudioFilePlaybackStartedData.class)),
+         w.a("onTapActivityBookmarkEmbed", h0.b(TapActivityBookmarkEmbedData.class)),
+         w.a("onTapActivityInstanceEmbed", h0.b(TapActivityInstanceEmbedData.class)),
+         w.a("onTapPostPreviewEmbed", h0.b(TapPostPreviewEmbedData.class)),
+         w.a("onTapDismissMediaPostSharePrompt", h0.b(TapDismissMediaPostSharePromptData.class)),
+         w.a("onTapTag", h0.b(TapTagData.class)),
+         w.a("onTapRemix", h0.b(TapRemixData.class)),
+         w.a("onTapChannelPromptButton", h0.b(TapChannelPromptButtonData.class)),
+         w.a("onTapObscuredMediaLearnMore", h0.b(TapObscuredMediaLearnMoreData.class)),
+         w.a("onTapSafetyPolicyNoticeEmbed", h0.b(TapSafetyPolicyNoticeEmbed.class)),
+         w.a("onTapSafetySystemNotificationCta", h0.b(TapSafetySystemNotificationCta.class)),
+         w.a("onTapPollAnswer", h0.b(TapPollAnswer.class)),
+         w.a("onTapPollSubmitVote", h0.b(TapPollSubmitVote.class)),
+         w.a("onTapPollAction", h0.b(TapPollAction.class)),
+         w.a("onLongPressPollImage", h0.b(LongPressPollImageData.class)),
+         w.a("onTapCtaButton", h0.b(TapCtaButton.class)),
+         w.a("onFirstLayout", h0.b(FirstLayoutData.class)),
+         w.a("onCompleteFirstLayout", h0.b(CompleteFirstLayoutData.class)),
+         w.a("onMediaPlayFinishedAnalytics", h0.b(MediaPlayFinishedAnalytics.class)),
+         w.a("onTapForwardFooter", h0.b(TapForwardFooterData.class)),
+         w.a("onTapInlineForward", h0.b(TapInlineForwardData.class)),
+         w.a("onTapClanTagChiplet", h0.b(TapClanTagChipletData.class)),
+         w.a("onTapContentInventoryEntryEmbed", h0.b(TapContentInventoryEntryEmbedData.class))
+      }
+   );
+}
