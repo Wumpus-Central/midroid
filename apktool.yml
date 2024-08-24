@@ -1,0 +1,291 @@
+version: 2.9.3
+apkFileName: beta.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 24
+  targetSdkVersion: 33
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 244112
+  versionName: 244.12 - Beta
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  DebugProbesKt.bin: 8
+  asset-delivery-ktx.properties: 8
+  asset-delivery.properties: 8
+  billing-ktx.properties: 8
+  billing.properties: 8
+  core-common.properties: 8
+  firebase-annotations.properties: 8
+  firebase-common.properties: 8
+  firebase-components.properties: 8
+  firebase-datatransport.properties: 8
+  firebase-encoders-json.properties: 8
+  firebase-encoders-proto.properties: 8
+  firebase-encoders.properties: 8
+  firebase-iid-interop.properties: 8
+  firebase-installations-interop.properties: 8
+  firebase-installations.properties: 8
+  firebase-measurement-connector.properties: 8
+  firebase-messaging.properties: 8
+  google-http-client.properties: 0
+  googleid.properties: 8
+  kotlin-tooling-metadata.json: 8
+  play-services-ads-identifier.properties: 8
+  play-services-analytics-impl.properties: 8
+  play-services-analytics.properties: 8
+  play-services-auth-api-phone.properties: 8
+  play-services-auth-base.properties: 8
+  play-services-auth.properties: 8
+  play-services-base.properties: 8
+  play-services-basement.properties: 8
+  play-services-cloud-messaging.properties: 8
+  play-services-deviceperformance.properties: 8
+  play-services-fido.properties: 8
+  play-services-nearby.properties: 8
+  play-services-stats.properties: 8
+  play-services-tagmanager-v4-impl.properties: 8
+  play-services-tasks.properties: 8
+  review-ktx.properties: 8
+  review.properties: 8
+  transport-api.properties: 8
+  transport-backend-cct.properties: 8
+  transport-runtime.properties: 8
+  stamp-cert-sha256: 8
+  com/google/api/client/googleapis/google-api-client.properties: 0
+  com/google/api/client/googleapis/google.jks: 8
+  okhttp3/internal/publicsuffix/NOTICE: 8
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
+  org/apache/http/version.properties: 8
+doNotCompress:
+- resources.arsc
+- META-INF/androidx.activity_activity.version
+- META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.appcompat_appcompat-resources.version
+- META-INF/androidx.appcompat_appcompat.version
+- META-INF/androidx.arch.core_core-runtime.version
+- META-INF/androidx.autofill_autofill.version
+- META-INF/androidx.browser_browser.version
+- META-INF/androidx.cardview_cardview.version
+- META-INF/androidx.coordinatorlayout_coordinatorlayout.version
+- META-INF/androidx.core_core-ktx.version
+- META-INF/androidx.core_core-performance-play-services.version
+- META-INF/androidx.core_core-performance.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.credentials_credentials-play-services-auth.version
+- META-INF/androidx.credentials_credentials.version
+- META-INF/androidx.cursoradapter_cursoradapter.version
+- META-INF/androidx.customview_customview-poolingcontainer.version
+- META-INF/androidx.customview_customview.version
+- META-INF/androidx.databinding_viewbinding.version
+- META-INF/androidx.datastore_datastore-preferences.version
+- META-INF/androidx.datastore_datastore.version
+- META-INF/androidx.documentfile_documentfile.version
+- META-INF/androidx.drawerlayout_drawerlayout.version
+- META-INF/androidx.dynamicanimation_dynamicanimation-ktx.version
+- META-INF/androidx.dynamicanimation_dynamicanimation.version
+- META-INF/androidx.emoji2_emoji2-views-helper.version
+- META-INF/androidx.emoji2_emoji2.version
+- META-INF/androidx.exifinterface_exifinterface.version
+- META-INF/androidx.fragment_fragment.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
+- META-INF/androidx.lifecycle_lifecycle-livedata.version
+- META-INF/androidx.lifecycle_lifecycle-process.version
+- META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.lifecycle_lifecycle-service.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
+- META-INF/androidx.loader_loader.version
+- META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
+- META-INF/androidx.media_media.version
+- META-INF/androidx.metrics_metrics-performance.version
+- META-INF/androidx.print_print.version
+- META-INF/androidx.recyclerview_recyclerview.version
+- META-INF/androidx.room_room-runtime.version
+- META-INF/androidx.savedstate_savedstate.version
+- META-INF/androidx.sharetarget_sharetarget.version
+- META-INF/androidx.sqlite_sqlite-framework.version
+- META-INF/androidx.sqlite_sqlite.version
+- META-INF/androidx.startup_startup-runtime.version
+- META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
+- META-INF/androidx.tracing_tracing.version
+- META-INF/androidx.transition_transition.version
+- META-INF/androidx.vectordrawable_vectordrawable-animated.version
+- META-INF/androidx.vectordrawable_vectordrawable.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/androidx.viewpager2_viewpager2.version
+- META-INF/androidx.viewpager_viewpager.version
+- META-INF/androidx.webkit_webkit.version
+- META-INF/androidx.work_work-runtime-ktx.version
+- META-INF/androidx.work_work-runtime.version
+- META-INF/com.google.android.material_material.version
+- META-INF/kotlinx_coroutines_android.version
+- META-INF/kotlinx_coroutines_core.version
+- META-INF/native-image/io.sentry/sentry/native-image.properties
+- META-INF/services/ci.a
+- META-INF/services/k6.a
+- META-INF/services/kk.a0
+- META-INF/services/pk.v
+- png
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- assets/net/time4j/calendar/names/buddhist/buddhist_bs.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_en.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_eu.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_hr.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_it.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_km.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_lb.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_lo.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_sr.properties
+- assets/net/time4j/calendar/names/buddhist/buddhist_sv.properties
+- assets/net/time4j/calendar/names/coptic/coptic_am.properties
+- assets/net/time4j/calendar/names/generic/generic_es_DO.properties
+- assets/net/time4j/calendar/names/generic/generic_es_MX.properties
+- assets/net/time4j/calendar/names/generic/generic_es_US.properties
+- assets/net/time4j/calendar/names/generic/generic_pt_PT.properties
+- assets/net/time4j/calendar/names/hebrew/hebrew_bs.properties
+- assets/net/time4j/calendar/names/hebrew/hebrew_hr.properties
+- assets/net/time4j/calendar/names/hebrew/hebrew_it.properties
+- assets/net/time4j/calendar/names/hebrew/hebrew_lb.properties
+- assets/net/time4j/calendar/names/hebrew/hebrew_pt_PT.properties
+- assets/net/time4j/calendar/names/hebrew/hebrew_ug.properties
+- assets/net/time4j/calendar/names/islamic/islamic_en.properties
+- assets/net/time4j/calendar/names/islamic/islamic_it.properties
+- assets/net/time4j/calendar/names/islamic/islamic_lb.properties
+- assets/net/time4j/calendar/names/islamic/islamic_pt_PT.properties
+- assets/net/time4j/calendar/names/japanese/japanese_pt_PT.properties
+- assets/net/time4j/calendar/names/roc/roc_lo.properties
+- assets/net/time4j/calendar/names/roc/roc_pt_PT.properties
+- assets/net/time4j/i18n/numbers/symbol_af.properties
+- assets/net/time4j/i18n/numbers/symbol_am.properties
+- assets/net/time4j/i18n/numbers/symbol_ar.properties
+- assets/net/time4j/i18n/numbers/symbol_ar_DZ.properties
+- assets/net/time4j/i18n/numbers/symbol_ar_EH.properties
+- assets/net/time4j/i18n/numbers/symbol_ar_LY.properties
+- assets/net/time4j/i18n/numbers/symbol_ar_MA.properties
+- assets/net/time4j/i18n/numbers/symbol_ar_TN.properties
+- assets/net/time4j/i18n/numbers/symbol_as.properties
+- assets/net/time4j/i18n/numbers/symbol_ast.properties
+- assets/net/time4j/i18n/numbers/symbol_az.properties
+- assets/net/time4j/i18n/numbers/symbol_be.properties
+- assets/net/time4j/i18n/numbers/symbol_bg.properties
+- assets/net/time4j/i18n/numbers/symbol_bn.properties
+- assets/net/time4j/i18n/numbers/symbol_br.properties
+- assets/net/time4j/i18n/numbers/symbol_bs.properties
+- assets/net/time4j/i18n/numbers/symbol_ca.properties
+- assets/net/time4j/i18n/numbers/symbol_cs.properties
+- assets/net/time4j/i18n/numbers/symbol_cy.properties
+- assets/net/time4j/i18n/numbers/symbol_da.properties
+- assets/net/time4j/i18n/numbers/symbol_de.properties
+- assets/net/time4j/i18n/numbers/symbol_ee.properties
+- assets/net/time4j/i18n/numbers/symbol_el.properties
+- assets/net/time4j/i18n/numbers/symbol_en.properties
+- assets/net/time4j/i18n/numbers/symbol_eo.properties
+- assets/net/time4j/i18n/numbers/symbol_es.properties
+- assets/net/time4j/i18n/numbers/symbol_et.properties
+- assets/net/time4j/i18n/numbers/symbol_eu.properties
+- assets/net/time4j/i18n/numbers/symbol_fa.properties
+- assets/net/time4j/i18n/numbers/symbol_fi.properties
+- assets/net/time4j/i18n/numbers/symbol_fil.properties
+- assets/net/time4j/i18n/numbers/symbol_fo.properties
+- assets/net/time4j/i18n/numbers/symbol_fr.properties
+- assets/net/time4j/i18n/numbers/symbol_fy.properties
+- assets/net/time4j/i18n/numbers/symbol_ga.properties
+- assets/net/time4j/i18n/numbers/symbol_gd.properties
+- assets/net/time4j/i18n/numbers/symbol_gl.properties
+- assets/net/time4j/i18n/numbers/symbol_gsw.properties
+- assets/net/time4j/i18n/numbers/symbol_gu.properties
+- assets/net/time4j/i18n/numbers/symbol_hi.properties
+- assets/net/time4j/i18n/numbers/symbol_hr.properties
+- assets/net/time4j/i18n/numbers/symbol_hu.properties
+- assets/net/time4j/i18n/numbers/symbol_hy.properties
+- assets/net/time4j/i18n/numbers/symbol_id.properties
+- assets/net/time4j/i18n/numbers/symbol_is.properties
+- assets/net/time4j/i18n/numbers/symbol_it.properties
+- assets/net/time4j/i18n/numbers/symbol_ja.properties
+- assets/net/time4j/i18n/numbers/symbol_ka.properties
+- assets/net/time4j/i18n/numbers/symbol_kab.properties
+- assets/net/time4j/i18n/numbers/symbol_kk.properties
+- assets/net/time4j/i18n/numbers/symbol_km.properties
+- assets/net/time4j/i18n/numbers/symbol_kn.properties
+- assets/net/time4j/i18n/numbers/symbol_ko.properties
+- assets/net/time4j/i18n/numbers/symbol_ku.properties
+- assets/net/time4j/i18n/numbers/symbol_ky.properties
+- assets/net/time4j/i18n/numbers/symbol_lb.properties
+- assets/net/time4j/i18n/numbers/symbol_lo.properties
+- assets/net/time4j/i18n/numbers/symbol_lt.properties
+- assets/net/time4j/i18n/numbers/symbol_lv.properties
+- assets/net/time4j/i18n/numbers/symbol_mk.properties
+- assets/net/time4j/i18n/numbers/symbol_ml.properties
+- assets/net/time4j/i18n/numbers/symbol_mn.properties
+- assets/net/time4j/i18n/numbers/symbol_mr.properties
+- assets/net/time4j/i18n/numbers/symbol_ms.properties
+- assets/net/time4j/i18n/numbers/symbol_mt.properties
+- assets/net/time4j/i18n/numbers/symbol_nb.properties
+- assets/net/time4j/i18n/numbers/symbol_ne.properties
+- assets/net/time4j/i18n/numbers/symbol_nl.properties
+- assets/net/time4j/i18n/numbers/symbol_nn.properties
+- assets/net/time4j/i18n/numbers/symbol_or.properties
+- assets/net/time4j/i18n/numbers/symbol_pa.properties
+- assets/net/time4j/i18n/numbers/symbol_pl.properties
+- assets/net/time4j/i18n/numbers/symbol_pt.properties
+- assets/net/time4j/i18n/numbers/symbol_ro.properties
+- assets/net/time4j/i18n/numbers/symbol_ru.properties
+- assets/net/time4j/i18n/numbers/symbol_sd.properties
+- assets/net/time4j/i18n/numbers/symbol_si.properties
+- assets/net/time4j/i18n/numbers/symbol_sk.properties
+- assets/net/time4j/i18n/numbers/symbol_sl.properties
+- assets/net/time4j/i18n/numbers/symbol_so.properties
+- assets/net/time4j/i18n/numbers/symbol_sq.properties
+- assets/net/time4j/i18n/numbers/symbol_sr.properties
+- assets/net/time4j/i18n/numbers/symbol_sv.properties
+- assets/net/time4j/i18n/numbers/symbol_sw.properties
+- assets/net/time4j/i18n/numbers/symbol_ta.properties
+- assets/net/time4j/i18n/numbers/symbol_te.properties
+- assets/net/time4j/i18n/numbers/symbol_th.properties
+- assets/net/time4j/i18n/numbers/symbol_tk.properties
+- assets/net/time4j/i18n/numbers/symbol_to.properties
+- assets/net/time4j/i18n/numbers/symbol_tr.properties
+- assets/net/time4j/i18n/numbers/symbol_ug.properties
+- assets/net/time4j/i18n/numbers/symbol_uk.properties
+- assets/net/time4j/i18n/numbers/symbol_ur_IN.properties
+- assets/net/time4j/i18n/numbers/symbol_uz.properties
+- assets/net/time4j/i18n/numbers/symbol_vi.properties
+- assets/net/time4j/i18n/numbers/symbol_zh.properties
+- assets/net/time4j/i18n/numbers/symbol_zu.properties
+- assets/net/time4j/i18n/units/upattern_en_GB.properties
+- assets/net/time4j/olson/zones/tzname_gsw.properties
+- jpg
+- webp
+- mp3
+- res/raw/design_components_lottieicon_native_generated_lotties_camera.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_messagerequest.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_messagestab.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_microphone.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem1.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem12.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem15.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem18.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem2.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem24.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem3.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem6.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_nitrogem9.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_notificationstab.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_servertab.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_youtab.lottie
+- res/raw/emojis_json.gz
+- webm
+- res/raw/modules_intl_messages_secondtestcompiledmessages.jsona

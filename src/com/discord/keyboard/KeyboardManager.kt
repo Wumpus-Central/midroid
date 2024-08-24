@@ -1,0 +1,76 @@
+package com.discord.keyboard
+
+import java.util.ArrayList
+import kotlin.jvm.internal.r
+
+public object KeyboardManager {
+   private final val keyboardListeners: MutableList<KeyboardEvent> = new ArrayList()
+
+   public fun addKeyboardListener(listener: KeyboardEvent) {
+      label13: {
+         synchronized (this){} // $VF: monitorenter 
+
+         try {
+            r.h(var1, "listener");
+            keyboardListeners.add(var1);
+         } catch (var2: java.lang.Throwable) {
+            // $VF: monitorexit
+         }
+
+         // $VF: monitorexit
+      }
+   }
+
+   internal fun onKeyboardChanged(opened: Boolean) {
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1047)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.insertSemaphore(FinallyProcessor.java:340)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:100)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: getstatic com/discord/keyboard/KeyboardManager.keyboardListeners Ljava/util/List;
+      // 05: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
+      // 0a: astore 2
+      // 0b: aload 2
+      // 0c: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 11: ifeq 26
+      // 14: aload 2
+      // 15: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 1a: checkcast com/discord/keyboard/KeyboardEvent
+      // 1d: iload 1
+      // 1e: invokeinterface com/discord/keyboard/KeyboardEvent.onKeyboardStateChanged (Z)V 2
+      // 23: goto 0b
+      // 26: aload 0
+      // 27: monitorexit
+      // 28: return
+      // 29: astore 2
+      // 2a: aload 0
+      // 2b: monitorexit
+      // 2c: aload 2
+      // 2d: athrow
+   }
+
+   public fun removeKeyboardListener(listener: KeyboardEvent) {
+      label13: {
+         synchronized (this){} // $VF: monitorenter 
+
+         try {
+            r.h(var1, "listener");
+            keyboardListeners.remove(var1);
+         } catch (var2: java.lang.Throwable) {
+            // $VF: monitorexit
+         }
+
+         // $VF: monitorexit
+      }
+   }
+}

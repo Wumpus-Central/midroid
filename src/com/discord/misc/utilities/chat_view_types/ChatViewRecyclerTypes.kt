@@ -1,0 +1,53 @@
+package com.discord.misc.utilities.chat_view_types
+
+public object ChatViewRecyclerTypes {
+   public const val ACTIVITY_BOOKMARK: Int = 30
+   public const val ACTIVITY_INSTANCE_EMBED: Int = 40
+   public const val ACTIVITY_INVITE_EMBED: Int = 17
+   public const val AUDIO_ATTACHMENT: Int = 29
+   public const val AUTO_MODERATION_NOTIFICATION_EMBED: Int = 33
+   public const val BOT_COMPONENTS: Int = 12
+   public const val CHANNEL_DEADCHAT_PROMPT_ACTIONS: Int = 34
+   public const val CONTENT: Int = 0
+   public const val CTA_BUTTON: Int = 41
+   public const val EMBED: Int = 1
+   public const val EMBEDDED_ACTIVITY_INVITE: Int = 31
+   public const val EPHEMERAL_INDICATION: Int = 18
+   public const val FILE_ATTACHMENT: Int = 11
+   public const val FLAGGED_MESSAGE_ACTION_BAR: Int = 22
+   public const val FLAGGED_MESSAGE_EMBED: Int = 21
+   public const val FORUM_POST_ACTION_BAR: Int = 20
+   public const val FORWARD_BREADCRUMB: Int = 44
+   public const val FORWARD_HEADER: Int = 43
+   public const val GIFT: Int = 16
+   public const val GUILD_EVENT_INVITE: Int = 15
+   public const val GUILD_INVITE: Int = 5
+   public const val GUILD_INVITE_DISABLED: Int = 25
+   public const val INFO_LINK: Int = 35
+   public const val INTERACTION_STATUS: Int = 19
+   public const val MEDIA_ATTACHMENT_MOSAIC_IMAGE: Int = 49
+   public const val MEDIA_ATTACHMENT_MOSAIC_VIDEO: Int = 50
+   public const val MEDIA_MOSAIC_ATTACHMENT: Int = 26
+   public const val POLL_IMAGE_ONLY: Int = 38
+   public const val POLL_TEXT_AND_IMAGE: Int = 37
+   public const val POST_PREVIEW_EMBED: Int = 32
+   public const val REACTIONS: Int = 4
+   public const val REACTION_ADD_BURST_REACTION: Int = 48
+   public const val REACTION_ADD_REACTION: Int = 47
+   public const val REACTION_BURST_REACTION: Int = 45
+   public const val REACTION_REACTION: Int = 46
+   public const val ROLE_SUBSCRIPTION_PURCHASE: Int = 23
+   public const val SAFETY_POLICY_NOTICE: Int = 36
+   public const val SAFETY_SYSTEM_NOTIFICATION: Int = 39
+   public const val STAGE_INVITE_TO_SPEAK: Int = 28
+   public const val STICKER_APNG: Int = 7
+   public const val STICKER_GIF: Int = 27
+   public const val STICKER_LOTTIE: Int = 8
+   public const val STICKER_PNG: Int = 6
+   public const val SURVEY_INDICATION: Int = 24
+   public const val THREAD_EMBED: Int = 9
+   public const val TIMESTAMP: Int = 13
+   public const val UPLOAD_PROGRESS: Int = 3
+   public const val VOICE_INVITE_EMBED: Int = 42
+   public const val WELCOME_STICKER: Int = 14
+}

@@ -1,0 +1,390 @@
+package com.discord.chat.presentation.message.view
+
+import android.content.Context
+import android.graphics.drawable.ColorDrawable
+import android.util.AttributeSet
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup.LayoutParams
+import android.widget.FrameLayout
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.f1
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
+import com.discord.SetTextSizeSpKt
+import com.discord.chat.R
+import com.discord.chat.bridge.spoiler.SpoilerConfig
+import com.discord.chat.databinding.MediaImageViewBinding
+import com.discord.chat.presentation.media.MediaContainingViewResizer
+import com.discord.chat.presentation.media.MediaContainingViewResizer.ResizeMode
+import com.discord.chat.presentation.message.utils.GetMediaImagePlaceholderStatesListenerKt
+import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicView
+import com.discord.fonts.DiscordFont
+import com.discord.fonts.DiscordFontUtilsKt
+import com.discord.image.fresco.SetOptionalImageUrlKt
+import com.discord.misc.utilities.size.SizeUtilsKt
+import com.discord.misc.utilities.view.ViewClippingUtilsKt
+import com.discord.misc.utilities.view.ViewUtilsKt
+import com.discord.theme.ThemeManagerKt
+import com.facebook.drawee.generic.GenericDraweeHierarchy
+import com.facebook.drawee.view.SimpleDraweeView
+
+public class MediaImageView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout, MosaicView {
+   public final val binding: MediaImageViewBinding
+   private final val spoiler: SpoilerViewManager
+   private final val attachmentUploadOverlay: AttachmentUploadOverlayViewManager
+   private final val imageFadeDuration: Int
+   private final lateinit var targetSize: com.discord.chat.presentation.message.view.MediaImageView.TargetSize
+   private final lateinit var targetUrl: String
+
+   fun MediaImageView(var1: Context) {
+      kotlin.jvm.internal.r.h(var1, "context");
+      this(var1, null, 2, null);
+   }
+
+   init {
+      kotlin.jvm.internal.r.h(var1, "context");
+      super(var1, var2);
+      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var4, "inflate(LayoutInflater.from(context), this)");
+      this.binding = var4;
+      this.spoiler = new SpoilerViewManager();
+      this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
+      this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
+      (var4.image.getHierarchy() as GenericDraweeHierarchy).z(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var3: TextView = var4.imageAltText;
+      var4.imageAltText.setImportantForAccessibility(4);
+      kotlin.jvm.internal.r.g(var3, "_init_$lambda$0");
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
+      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
+      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+   }
+
+   private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?) {
+      val var4: SimpleDraweeView = this.binding.gifIndicator;
+      kotlin.jvm.internal.r.g(this.binding.gifIndicator, "binding.gifIndicator");
+      val var3: Byte;
+      if (this.shouldShowGifIndicator(var1, var2)) {
+         var3 = 0;
+      } else {
+         var3 = 8;
+      }
+
+      var4.setVisibility(var3);
+   }
+
+   private fun getHeight(isEligibleForMinConstraints: Boolean, height: Int): Int {
+      return if (var1 && var2 <= 212) SizeUtilsKt.getDpToPx(212) else var2;
+   }
+
+   private fun getWidth(isEligibleForMinConstraints: Boolean, width: Int): Int {
+      return if (var1 && var2 <= 146) SizeUtilsKt.getDpToPx(146) else var2;
+   }
+
+   private fun shouldShowGifIndicator(shouldAutoPlayGif: Boolean, filename: String?): Boolean {
+      if (var1) {
+         return false;
+      } else {
+         val var4: Int = GIF_INDICATOR_PADDING;
+         var1 = false;
+         if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var4 * 2) {
+               var1 = false;
+            } else {
+               if (var2 == null) {
+                  return false;
+               }
+
+               if (!kotlin.text.f.s(var2, ".gif", true) && !kotlin.text.f.s(var2, ".gifv", true)) {
+                  return false;
+               }
+
+               var1 = true;
+            }
+         }
+
+         return var1;
+      }
+   }
+
+   public override fun getSingleAspectRatio(): Float {
+      var var2: MediaImageView.TargetSize = this.targetSize;
+      if (this.targetSize == null) {
+         kotlin.jvm.internal.r.y("targetSize");
+         var2 = null;
+      }
+
+      val var1: Float = var2.getWidth();
+      var2 = this.targetSize;
+      if (this.targetSize == null) {
+         kotlin.jvm.internal.r.y("targetSize");
+         var2 = null;
+      }
+
+      return var1 / var2.getHeight();
+   }
+
+   public fun setContent(
+      url: String,
+      width: Int,
+      height: Int,
+      resizeMode: ResizeMode,
+      placeholder: String?,
+      placeholderVersion: Int?,
+      isSpoiler: Boolean,
+      spoilerConfig: SpoilerConfig?,
+      radiusPx: Int,
+      uploadItemProps: UploadItemProps?,
+      isObscure: Boolean,
+      isObscureAwaitingScan: Boolean,
+      isPartOfMosaic: Boolean,
+      shouldAutoPlayGif: Boolean,
+      filename: String?
+   ) {
+      label73: {
+         kotlin.jvm.internal.r.h(var1, "url");
+         kotlin.jvm.internal.r.h(var4, "resizeMode");
+         if (this.targetUrl != null) {
+            var var18: java.lang.String = this.targetUrl;
+            if (this.targetUrl == null) {
+               kotlin.jvm.internal.r.y("targetUrl");
+               var18 = null;
+            }
+
+            if (kotlin.jvm.internal.r.c(var18, var1)) {
+               break label73;
+            }
+         }
+
+         this.targetUrl = var1;
+         val var35: GenericDraweeHierarchy = this.binding.image.getHierarchy() as GenericDraweeHierarchy;
+         val var16: Int;
+         if (var11) {
+            var16 = 0;
+         } else {
+            var16 = this.imageFadeDuration;
+         }
+
+         var35.w(var16);
+         val var36: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
+         val var37: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var21: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
+         SetOptionalImageUrlKt.setOptionalImageUrl(
+            var36, var1, var37, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var21, var5, var6)
+         );
+      }
+
+      val var34: Boolean;
+      if (!var11 && !var12) {
+         var34 = false;
+      } else {
+         var34 = true;
+      }
+
+      val var17: Boolean;
+      if (var34 && !var13) {
+         var17 = true;
+      } else {
+         var17 = false;
+      }
+
+      label54: {
+         val var27: MediaImageView.TargetSize = new MediaImageView.TargetSize(this.getWidth(var17, var2), this.getHeight(var17, var3), var4);
+         var var22: MediaImageView.TargetSize = this.targetSize;
+         if (this.targetSize != null) {
+            if (this.targetSize == null) {
+               kotlin.jvm.internal.r.y("targetSize");
+               var22 = null;
+            }
+
+            if (kotlin.jvm.internal.r.c(var22, var27)) {
+               break label54;
+            }
+         }
+
+         this.targetSize = var27;
+      }
+
+      val var23: SimpleDraweeView = this.binding.image;
+      kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var23, var9);
+      val var24: FrameLayout = this.binding.imageBlurBg;
+      kotlin.jvm.internal.r.g(this.binding.imageBlurBg, "binding.imageBlurBg");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var24, var9);
+      val var30: SpoilerViewManager = this.spoiler;
+      val var28: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
+      val var31: SimpleDraweeView = this.binding.image;
+      kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
+      if (var11 && !var13) {
+         var13 = true;
+      } else {
+         var13 = false;
+      }
+
+      if (!var7 && !var11) {
+         var7 = false;
+      } else {
+         var7 = true;
+      }
+
+      var30.configureSpoiler(var8, this, var28, var31, this.binding.imageBlurBg, var13, var12, var7, var9);
+      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var26: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
+      var29.configureAttachmentOverlay(this, var26, var9, var10);
+      this.configureGifIndicator(var14, var15);
+   }
+
+   public fun setDescription(description: String?, hint: String?) {
+      if (var1 != null) {
+         val var4: SimpleDraweeView = this.binding.image;
+         var var3: java.lang.String = var2;
+         if (var2 == null) {
+            var3 = "";
+         }
+
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var1);
+         var5.append(" ");
+         var5.append(var3);
+         var4.setContentDescription(var5.toString());
+      }
+   }
+
+   public override fun setMosaicSize(width: Int, height: Int) {
+      val var3: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
+      } else {
+         throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
+      }
+   }
+
+   public fun setRole(role: String?) {
+      if (var1 != null) {
+         f1.q0(this.binding.image, new androidx.core.view.a(var1) {
+            final java.lang.String $role;
+
+            {
+               this.$role = var1;
+            }
+
+            public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
+               kotlin.jvm.internal.r.h(var1, "host");
+               kotlin.jvm.internal.r.h(var2, "info");
+               super.onInitializeAccessibilityNodeInfo(var1, var2);
+               var2.L0(this.$role);
+            }
+         });
+      }
+   }
+
+   public fun showAltTextButton(show: Boolean, description: String?, onAltTextButtonClicked: ((String) -> Unit)?) {
+      if (!var1) {
+         var2 = null;
+      }
+
+      this.binding.mediaViewAltTextButton.configure(var2, var3);
+   }
+
+   public fun showDescription(show: Boolean, description: String?) {
+      val var5: TextView = this.binding.imageAltText;
+      kotlin.jvm.internal.r.g(this.binding.imageAltText, "showDescription$lambda$2");
+      ViewUtilsKt.setOptionalText(var5, var2);
+      var var3: Boolean;
+      if (var2 != null && var1) {
+         var3 = 1;
+      } else {
+         var3 = 0;
+      }
+
+      if (var3) {
+         var3 = 0;
+      } else {
+         var3 = 8;
+      }
+
+      var5.setVisibility(var3);
+   }
+
+   public companion object {
+      public final val GIF_INDICATOR_HEIGHT: Int
+      public final val GIF_INDICATOR_PADDING: Int
+      public final val GIF_INDICATOR_WIDTH: Int
+   }
+
+   public data class TargetSize(width: Int, height: Int, resizeMode: ResizeMode) {
+      public final val height: Int
+      public final val resizeMode: ResizeMode
+      public final val width: Int
+
+      init {
+         kotlin.jvm.internal.r.h(var3, "resizeMode");
+         super();
+         this.width = var1;
+         this.height = var2;
+         this.resizeMode = var3;
+      }
+
+      public operator fun component1(): Int {
+         return this.width;
+      }
+
+      public operator fun component2(): Int {
+         return this.height;
+      }
+
+      public operator fun component3(): ResizeMode {
+         return this.resizeMode;
+      }
+
+      public fun copy(width: Int = var0.width, height: Int = var0.height, resizeMode: ResizeMode = var0.resizeMode): com.discord.chat.presentation.message.view.MediaImageView.TargetSize {
+         kotlin.jvm.internal.r.h(var3, "resizeMode");
+         return new MediaImageView.TargetSize(var1, var2, var3);
+      }
+
+      public override operator fun equals(other: Any?): Boolean {
+         if (this === var1) {
+            return true;
+         } else if (var1 !is MediaImageView.TargetSize) {
+            return false;
+         } else {
+            var1 = var1;
+            if (this.width != var1.width) {
+               return false;
+            } else if (this.height != var1.height) {
+               return false;
+            } else {
+               return this.resizeMode === var1.resizeMode;
+            }
+         }
+      }
+
+      public override fun hashCode(): Int {
+         return (Integer.hashCode(this.width) * 31 + Integer.hashCode(this.height)) * 31 + this.resizeMode.hashCode();
+      }
+
+      public override fun toString(): String {
+         val var1: Int = this.width;
+         val var2: Int = this.height;
+         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetSize(width=");
+         var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
+         var3.append(", resizeMode=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
+      }
+   }
+}

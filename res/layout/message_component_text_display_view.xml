@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.discord.chat.presentation.message.view.botuikit.components.TextDisplayComponentView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.flexbox.FlexboxLayout android:id="@id/text_children" android:layout_width="fill_parent" android:layout_height="wrap_content" app:flexDirection="column" />
+</com.discord.chat.presentation.message.view.botuikit.components.TextDisplayComponentView>
