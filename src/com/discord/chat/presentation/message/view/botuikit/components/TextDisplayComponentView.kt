@@ -1,0 +1,92 @@
+package com.discord.chat.presentation.message.view.botuikit.components
+
+import android.content.Context
+import android.text.TextPaint
+import android.util.AttributeSet
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.discord.SetTextSizeSpKt
+import com.discord.chat.bridge.botuikit.TextDisplayComponent
+import com.discord.chat.databinding.MessageComponentTextDisplayViewBinding
+import com.discord.chat.presentation.message.MessageUtilsKt
+import com.discord.chat.presentation.message.view.MessageContentView
+import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
+import com.discord.chat.presentation.message.view.botuikit.ComponentContext
+import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
+import com.discord.chat.presentation.message.view.botuikit.ComponentView
+import com.discord.chat.presentation.textutils.TextUtilsKt
+import com.discord.fonts.DiscordFont
+import com.discord.fonts.DiscordFontUtilsKt
+import com.discord.react.FontManager
+import com.discord.theme.ThemeManagerKt
+import kotlin.jvm.internal.h0
+import kotlin.jvm.internal.r
+import kotlin.reflect.KClass
+
+public class TextDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+   : ConstraintLayout,
+   ComponentView<TextDisplayComponent> {
+   fun TextDisplayComponentView(var1: Context) {
+      r.h(var1, "context");
+      this(var1, null, 0, 6, null);
+   }
+
+   fun TextDisplayComponentView(var1: Context, var2: AttributeSet) {
+      r.h(var1, "context");
+      this(var1, var2, 0, 4, null);
+   }
+
+   init {
+      r.h(var1, "context");
+      super(var1, var2, var3);
+   }
+
+   public open fun configure(
+      component: TextDisplayComponent,
+      componentProvider: ComponentProvider,
+      componentActionListener: ComponentActionListener,
+      componentContext: ComponentContext
+   ) {
+      r.h(var1, "component");
+      r.h(var2, "componentProvider");
+      r.h(var3, "componentActionListener");
+      r.h(var4, "componentContext");
+      val var9: MessageComponentTextDisplayViewBinding = MessageComponentTextDisplayViewBinding.bind(this);
+      r.g(var9, "bind(this)");
+      val var10: Context = this.getContext();
+      r.g(var10, "context");
+      val var11: MessageContentView = new MessageContentView(var10, null, 0, 6, null);
+      var11.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      var var6: Context = this.getContext();
+      r.g(var6, "context");
+      SetTextSizeSpKt.setTextSizeSp(var11, (float)MessageUtilsKt.getChatTextSizeSp(var6));
+      DiscordFontUtilsKt.setDiscordFont(var11, DiscordFont.PrimaryMedium);
+      val var7: TextPaint = var11.getPaint();
+      r.g(var7, "view.paint");
+      val var8: FontManager = FontManager.INSTANCE;
+      var6 = this.getContext();
+      r.g(var6, "context");
+      var11.setMessageContent(
+         var1.getContent(),
+         var4.getMarkdownTextRenderOptions(),
+         var4.getMarkdownTextRenderEventHandlers(),
+         TextUtilsKt.getBaselineHeightForFontSizePx(var7, var8.getScaledSpToPx(16, var6))
+      );
+      var9.getRoot().addView(var11);
+   }
+
+   public override fun getComponentType(): KClass<TextDisplayComponent> {
+      return h0.b(TextDisplayComponent.class);
+   }
+
+   public companion object {
+      public fun inflateComponent(context: Context, root: ViewGroup): TextDisplayComponentView {
+         r.h(var1, "context");
+         r.h(var2, "root");
+         val var3: TextDisplayComponentView = MessageComponentTextDisplayViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
+         r.g(var3, "inflate(\n               …false,\n            ).root");
+         return var3;
+      }
+   }
+}

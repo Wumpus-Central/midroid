@@ -1,0 +1,78 @@
+package com.discord.chat.presentation.message.messagepart
+
+import com.discord.chat.bridge.activities.ActivityInstanceEmbed
+import com.discord.primitives.MessageId
+import kotlin.jvm.internal.r
+
+public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, activityInstanceEmbed: ActivityInstanceEmbed, constrainedWidth: Int) : ActivityInstanceEmbedMessageAccessory(
+      var1, var2, var3
+   ) {
+   public final val activityInstanceEmbed: ActivityInstanceEmbed
+   public final val constrainedWidth: Int
+   public open val messageId: MessageId
+
+   fun ActivityInstanceEmbedMessageAccessory(var1: java.lang.String, var2: ActivityInstanceEmbed, var3: Int) {
+      val var4: java.lang.String = var2.getInstanceId();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("activity instance ");
+      var5.append(var4);
+      super(var1, var5.toString(), false, 4, null);
+      this.messageId = var1;
+      this.activityInstanceEmbed = var2;
+      this.constrainedWidth = var3;
+   }
+
+   public operator fun component1(): MessageId {
+      return this.getMessageId-3Eiw7ao();
+   }
+
+   public operator fun component2(): ActivityInstanceEmbed {
+      return this.activityInstanceEmbed;
+   }
+
+   public operator fun component3(): Int {
+      return this.constrainedWidth;
+   }
+
+   public fun copy(messageId: MessageId = ..., activityInstanceEmbed: ActivityInstanceEmbed = ..., constrainedWidth: Int = ...): ActivityInstanceEmbedMessageAccessory {
+      r.h(var1, "messageId");
+      r.h(var2, "activityInstanceEmbed");
+      return new ActivityInstanceEmbedMessageAccessory(var1, var2, var3, null);
+   }
+
+   public override operator fun equals(other: Any?): Boolean {
+      if (this === var1) {
+         return true;
+      } else if (var1 !is ActivityInstanceEmbedMessageAccessory) {
+         return false;
+      } else {
+         var1 = var1;
+         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
+            return false;
+         } else if (!r.c(this.activityInstanceEmbed, var1.activityInstanceEmbed)) {
+            return false;
+         } else {
+            return this.constrainedWidth == var1.constrainedWidth;
+         }
+      }
+   }
+
+   public override fun hashCode(): Int {
+      return (MessageId.hashCode-impl(this.getMessageId-3Eiw7ao()) * 31 + this.activityInstanceEmbed.hashCode()) * 31 + Integer.hashCode(this.constrainedWidth);
+   }
+
+   public override fun toString(): String {
+      val var2: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var3: ActivityInstanceEmbed = this.activityInstanceEmbed;
+      val var1: Int = this.constrainedWidth;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ActivityInstanceEmbedMessageAccessory(messageId=");
+      var4.append(var2);
+      var4.append(", activityInstanceEmbed=");
+      var4.append(var3);
+      var4.append(", constrainedWidth=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
+   }
+}

@@ -1,0 +1,64 @@
+package com.discord.image.fresco.config;
+
+import android.net.Uri;
+import android.os.SystemClock;
+import com.facebook.imagepipeline.backends.okhttp3.OkHttpNetworkFetcher;
+import com.facebook.imagepipeline.backends.okhttp3.OkHttpNetworkFetcher.OkHttpNetworkFetchState;
+import com.facebook.imagepipeline.producers.NetworkFetcher.Callback;
+import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.ReadableMapKeySetIterator;
+import com.facebook.react.modules.fresco.ReactNetworkImageRequest;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Executor;
+import okhttp3.CacheControl;
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+
+class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
+   private static final String TAG = "ReactOkHttpNetworkFetcher";
+   private final Executor mCancellationExecutor;
+   private final OkHttpClient mOkHttpClient;
+
+   public ReactOkHttpNetworkFetcher(OkHttpClient var1) {
+      super(var1);
+      this.mOkHttpClient = var1;
+      this.mCancellationExecutor = var1.o().d();
+   }
+
+   private Map<String, String> getHeaders(ReadableMap var1) {
+      if (var1 == null) {
+         return null;
+      } else {
+         ReadableMapKeySetIterator var2 = var1.keySetIterator();
+         HashMap var4 = new HashMap();
+
+         while (var2.hasNextKey()) {
+            String var3 = var2.nextKey();
+            var4.put(var3, var1.getString(var3));
+         }
+
+         return var4;
+      }
+   }
+
+   public void fetch(OkHttpNetworkFetchState var1, Callback var2) {
+      var1.f = SystemClock.elapsedRealtime();
+      Uri var5 = var1.g();
+      Map var3;
+      if (var1.b().k() instanceof ReactNetworkImageRequest) {
+         var3 = this.getHeaders(((ReactNetworkImageRequest)var1.b().k()).getHeaders());
+      } else {
+         var3 = null;
+      }
+
+      Map var4 = var3;
+      if (var3 == null) {
+         var4 = Collections.emptyMap();
+      }
+
+      this.fetchWithRequest(var1, var2, new Request.Builder().c(new CacheControl.a().e().a()).l(var5.toString()).f(Headers.q(var4)).d().b());
+   }
+}

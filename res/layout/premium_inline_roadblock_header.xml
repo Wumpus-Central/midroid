@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/gradients" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/premium_inline_roadblock_margin">
+        <Space android:layout_width="fill_parent" android:layout_height="@dimen/premium_inline_roadblock_height_half" />
+        <View android:id="@id/gradient" android:background="@drawable/premium_tier0_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/premium_inline_roadblock_height_half" android:alpha="0.1" />
+    </LinearLayout>
+    <View android:id="@id/gradient_divider" android:background="@drawable/premium_tier0_gradient" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/premium_inline_roadblock_height_half" android:layout_alignTop="@id/gradients" />
+    <FrameLayout android:id="@id/gradient_icon" android:background="@drawable/premium_tier0_gradient_circle" android:layout_width="@dimen/premium_inline_roadblock_height" android:layout_height="@dimen/premium_inline_roadblock_height" android:layout_alignTop="@id/gradients" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/premium_emoji_lock_size" android:layout_height="@dimen/premium_emoji_lock_size" android:src="@drawable/lock" android:importantForAccessibility="no" />
+    </FrameLayout>
+</RelativeLayout>
