@@ -157,32 +157,32 @@ public data class MessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var9: Message = this.message;
-      val var7: MessageFrame = this.messageFrame;
-      val var4: MessageContext = this.messageContext;
-      val var1: Boolean = this.allowChildGestures;
+      val var4: Message = this.message;
+      val var8: MessageFrame = this.messageFrame;
+      val var9: MessageContext = this.messageContext;
+      val var3: Boolean = this.allowChildGestures;
       val var2: Boolean = this.isHighlight;
-      val var8: BackgroundHighlight = this.backgroundHighlight;
+      val var6: BackgroundHighlight = this.backgroundHighlight;
       val var5: Int = this.reactTag;
-      val var3: Boolean = this.renderContentOnly;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageItem(message=");
-      var6.append(var9);
-      var6.append(", messageFrame=");
-      var6.append(var7);
-      var6.append(", messageContext=");
-      var6.append(var4);
-      var6.append(", allowChildGestures=");
-      var6.append(var1);
-      var6.append(", isHighlight=");
-      var6.append(var2);
-      var6.append(", backgroundHighlight=");
-      var6.append(var8);
-      var6.append(", reactTag=");
-      var6.append(var5);
-      var6.append(", renderContentOnly=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var1: Boolean = this.renderContentOnly;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MessageItem(message=");
+      var7.append(var4);
+      var7.append(", messageFrame=");
+      var7.append(var8);
+      var7.append(", messageContext=");
+      var7.append(var9);
+      var7.append(", allowChildGestures=");
+      var7.append(var3);
+      var7.append(", isHighlight=");
+      var7.append(var2);
+      var7.append(", backgroundHighlight=");
+      var7.append(var6);
+      var7.append(", reactTag=");
+      var7.append(var5);
+      var7.append(", renderContentOnly=");
+      var7.append(var1);
+      var7.append(")");
+      return var7.toString();
    }
 }

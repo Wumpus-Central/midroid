@@ -83,15 +83,15 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.url;
-      val var2: java.lang.String = this.type;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("OnPasteImageEvent(url=");
-      var3.append(var1);
-      var3.append(", type=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.url;
+      val var3: java.lang.String = this.type;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnPasteImageEvent(url=");
+      var1.append(var2);
+      var1.append(", type=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : f0<OnPasteImageEvent> {

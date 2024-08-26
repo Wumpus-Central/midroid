@@ -38,21 +38,21 @@ public final class MediaImageViewBinding implements ViewBinding {
       ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.gif_indicator;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.image;
             SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
             if (var6 != null) {
                var1 = R.id.image_alt_text;
-               TextView var5 = (TextView)a.a(var0, var1);
-               if (var5 != null) {
+               TextView var2 = (TextView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.image_blur_bg;
-                  FrameLayout var7 = (FrameLayout)a.a(var0, var1);
-                  if (var7 != null) {
+                  FrameLayout var3 = (FrameLayout)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.media_view_alt_text_button;
-                     AltTextButtonView var3 = (AltTextButtonView)a.a(var0, var1);
-                     if (var3 != null) {
-                        return new MediaImageViewBinding(var0, var4, var2, var6, var5, var7, var3);
+                     AltTextButtonView var5 = (AltTextButtonView)a.a(var0, var1);
+                     if (var5 != null) {
+                        return new MediaImageViewBinding(var0, var4, var7, var6, var2, var3, var5);
                      }
                   }
                }

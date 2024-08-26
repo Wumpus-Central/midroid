@@ -253,8 +253,8 @@ public data class UnfurledMediaItem(url: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: m0 = m0.a;
-         return new KSerializer[]{a2.a, a2.a, m0.a, m0.a, a2.a, a.u(a2.a), a.u(var1), a.u(ContentScanMetadata.$serializer.INSTANCE)};
+         val var2: m0 = m0.a;
+         return new KSerializer[]{a2.a, a2.a, m0.a, m0.a, a2.a, a.u(a2.a), a.u(var2), a.u(ContentScanMetadata.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): UnfurledMediaItem {
@@ -273,16 +273,16 @@ public data class UnfurledMediaItem(url: String,
          if (var14.p()) {
             var7 = var14.m(var13, 0);
             var8 = var14.m(var13, 1);
-            var3 = var14.i(var13, 2);
+            var5 = var14.i(var13, 2);
             val var2: Int = var14.i(var13, 3);
             var15 = var14.m(var13, 4);
             var9 = var14.n(var13, 5, a2.a, null);
             var10 = var14.n(var13, 6, m0.a, null);
             var11 = var14.n(var13, 7, ContentScanMetadata.$serializer.INSTANCE, null);
-            var5 = 255;
+            var3 = 255;
             var4 = var2;
          } else {
-            var var17: Boolean = true;
+            var var18: Boolean = true;
             var4 = 0;
             var var16: Int = 0;
             var11 = null;
@@ -293,11 +293,11 @@ public data class UnfurledMediaItem(url: String,
             var9 = null;
             var3 = 0;
 
-            while (var17) {
+            while (var18) {
                val var6: Int = var14.o(var13);
                switch (var6) {
                   case -1:
-                     var17 = false;
+                     var18 = false;
                      break;
                   case 0:
                      var8 = var14.m(var13, 0);
@@ -336,17 +336,18 @@ public data class UnfurledMediaItem(url: String,
                }
             }
 
+            var5 = var3;
             var8 = var7;
             var7 = var8;
-            var5 = var16;
+            var3 = var16;
          }
 
          var14.c(var13);
          return new UnfurledMediaItem(
-            var5,
+            var3,
             (java.lang.String)var7,
             (java.lang.String)var8,
-            var3,
+            var5,
             var4,
             (java.lang.String)var15,
             var9 as java.lang.String,

@@ -10,6 +10,6 @@ public final class e implements OnClickListener {
    public final long l;
 
    public final void onClick(View var1) {
-      AutoModerationNotificationEmbedViewHolder.b(this.j, this.k, this.l, var1);
+      AutoModerationNotificationEmbedViewHolder.a(this.j, this.k, this.l, var1);
    }
 }

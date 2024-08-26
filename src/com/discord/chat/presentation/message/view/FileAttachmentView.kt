@@ -101,11 +101,10 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var0, var1, var2, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1125,6 +1124,7 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -1222,16 +1222,16 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       }
 
       var17.setAlpha(var9);
-      val var23: AttachmentUploadOverlayView = this.binding.uploadOverlay;
+      val var25: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       val var30: Int = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var22: ShapeDrawable = new ShapeDrawable();
-      val var25: Paint = var22.getPaint();
-      val var18: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var18, "context");
-      var25.setColor(ColorUtilsKt.getColorCompat(var18, 17170445));
+      val var18: ShapeDrawable = new ShapeDrawable();
+      val var23: Paint = var18.getPaint();
+      val var22: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var22, "context");
+      var23.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
       var11 = ThemeManagerKt.getTheme().getBackgroundModifierAccent();
-      kotlin.jvm.internal.r.g(var23, "uploadOverlay");
-      AttachmentUploadOverlayView.configureProgressView$default(var23, null, var22, null, var30, null, var11, 21, null);
+      kotlin.jvm.internal.r.g(var25, "uploadOverlay");
+      AttachmentUploadOverlayView.configureProgressView$default(var25, null, var18, null, var30, null, var11, 21, null);
       if (!kotlin.jvm.internal.r.c(this.uploadContext, this.uploadContext)) {
          this.uploadContext = this.uploadContext;
          this.uploadFinished = false;

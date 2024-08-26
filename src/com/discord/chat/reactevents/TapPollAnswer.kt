@@ -89,17 +89,17 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
 
    public override fun toString(): String {
       val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.answerId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapPollAnswer(channelId=");
-      var1.append(var4);
-      var1.append(", messageId=");
-      var1.append(var3);
-      var1.append(", answerId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.answerId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapPollAnswer(channelId=");
+      var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var1);
+      var2.append(", answerId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<TapPollAnswer> {
@@ -130,15 +130,15 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
          val var9: c = var1.b(var8);
          var var2: Int;
          var var5: java.lang.String;
-         val var7: java.lang.String;
+         var var6: java.lang.String;
          val var10: java.lang.String;
          if (var9.p()) {
-            var5 = var9.m(var8, 0);
-            var7 = var9.m(var8, 1);
+            var6 = var9.m(var8, 0);
+            var5 = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
             var2 = 7;
          } else {
-            var var6: java.lang.String = null;
+            var6 = null;
             var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
@@ -168,13 +168,12 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
                }
             }
 
-            var7 = var11;
             var10 = var5;
-            var5 = var6;
+            var5 = var11;
          }
 
          var9.c(var8);
-         return new TapPollAnswer(var2, var5, var7, var10, null);
+         return new TapPollAnswer(var2, var6, var5, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapPollAnswer) {

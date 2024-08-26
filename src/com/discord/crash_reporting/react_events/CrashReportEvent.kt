@@ -93,16 +93,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
          var1.putString("exitDescription", var4.getReason());
       }
 
-      val var3: SystemLogUtils.Tombstone = this.tombstone;
+      val var5: SystemLogUtils.Tombstone = this.tombstone;
       if (this.tombstone != null) {
          var1.putString("tombstoneGroupHash", this.tombstone.getGroupHash());
-         val var5: java.lang.String = var3.getCause();
-         if (var5 != null) {
-            var1.putString("tombstoneCause", var5);
+         val var3: java.lang.String = var5.getCause();
+         if (var3 != null) {
+            var1.putString("tombstoneCause", var3);
          }
 
-         if (h.n(new IntRange(0, 1000), c.j) == 0 && !f.x(var3.getText())) {
-            var1.putString("tombstone", f.b1(var3.getText(), 6291456));
+         if (h.n(new IntRange(0, 1000), c.j) == 0 && !f.x(var5.getText())) {
+            var1.putString("tombstone", f.b1(var5.getText(), 6291456));
          }
       }
 
@@ -111,16 +111,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
 
    public override fun toString(): String {
       val var4: java.lang.Boolean = this.crashedLastRun;
-      val var3: HistoricalProcessExitReason.Reason = this.reason;
+      val var1: HistoricalProcessExitReason.Reason = this.reason;
       val var2: SystemLogUtils.Tombstone = this.tombstone;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CrashReportEvent(crashedLastRun=");
-      var1.append(var4);
-      var1.append(", reason=");
-      var1.append(var3);
-      var1.append(", tombstone=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CrashReportEvent(crashedLastRun=");
+      var3.append(var4);
+      var3.append(", reason=");
+      var3.append(var1);
+      var3.append(", tombstone=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

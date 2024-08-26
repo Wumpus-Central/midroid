@@ -186,10 +186,10 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
          var var7: Any;
          var var11: Any;
          if (var10.p()) {
-            var7 = var10.n(var9, 0, m0.a, null);
+            var11 = var10.n(var9, 0, m0.a, null);
             var3 = var10.i(var9, 1);
             var6 = var10.n(var9, 2, com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE, null);
-            var11 = var10.n(var9, 3, ChatInputNodeFontWeight.Companion.serializer(), null);
+            var7 = var10.n(var9, 3, ChatInputNodeFontWeight.Companion.serializer(), null);
             var2 = 15;
          } else {
             var var4: Boolean = true;
@@ -228,12 +228,13 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
                }
             }
 
-            var7 = var6;
             var6 = var7;
+            var7 = var11;
+            var11 = var6;
          }
 
          var10.c(var9);
-         return new ChatInputNodeStyle(var2, var7 as Integer, var3, var6 as BackgroundStyle, var11 as ChatInputNodeFontWeight, null);
+         return new ChatInputNodeStyle(var2, var11 as Integer, var3, var6 as BackgroundStyle, var7 as ChatInputNodeFontWeight, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChatInputNodeStyle) {

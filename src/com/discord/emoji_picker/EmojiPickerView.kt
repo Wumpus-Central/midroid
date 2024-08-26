@@ -412,10 +412,10 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var3: Context = this.getContext();
-      r.g(var3, "context");
-      var2.setUseTier0UpsellContent(var3, var1);
+      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var2: Context = this.getContext();
+      r.g(var2, "context");
+      var3.setUseTier0UpsellContent(var2, var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {

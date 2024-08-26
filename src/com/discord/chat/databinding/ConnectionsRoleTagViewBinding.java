@@ -30,21 +30,21 @@ public final class ConnectionsRoleTagViewBinding implements ViewBinding {
 
    public static ConnectionsRoleTagViewBinding bind(View var0) {
       int var1 = R.id.connections_role_tag_container;
-      CardView var4 = (CardView)a.a(var0, var1);
-      if (var4 != null) {
+      CardView var2 = (CardView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.role_name;
-         TextView var5 = (TextView)a.a(var0, var1);
-         if (var5 != null) {
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.verified_check_icon;
-            ImageView var6 = (ImageView)a.a(var0, var1);
-            if (var6 != null) {
+            ImageView var5 = (ImageView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.verified_check_icon_background;
-               ImageView var2 = (ImageView)a.a(var0, var1);
-               if (var2 != null) {
+               ImageView var6 = (ImageView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.verified_check_icon_container;
-                  FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new ConnectionsRoleTagViewBinding(var0, var4, var5, var6, var2, var3);
+                  FrameLayout var4 = (FrameLayout)a.a(var0, var1);
+                  if (var4 != null) {
+                     return new ConnectionsRoleTagViewBinding(var0, var2, var3, var5, var6, var4);
                   }
                }
             }

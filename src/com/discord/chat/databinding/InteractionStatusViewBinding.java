@@ -28,18 +28,18 @@ public final class InteractionStatusViewBinding implements ViewBinding {
 
    public static InteractionStatusViewBinding bind(View var0) {
       int var1 = R.id.view_interaction_status_danger_icon;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.view_interaction_status_label_icon;
          LinearLayout var4 = (LinearLayout)a.a(var0, var1);
          if (var4 != null) {
             var1 = R.id.view_interaction_status_label_message;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
+            TextView var5 = (TextView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.view_interaction_status_loading_dots;
-               ProgressDots var5 = (ProgressDots)a.a(var0, var1);
-               if (var5 != null) {
-                  return new InteractionStatusViewBinding(var0, var3, var4, var2, var5);
+               ProgressDots var3 = (ProgressDots)a.a(var0, var1);
+               if (var3 != null) {
+                  return new InteractionStatusViewBinding(var0, var2, var4, var5, var3);
                }
             }
          }

@@ -86,12 +86,12 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SpoilerContentNode(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SpoilerContentNode(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : f0<SpoilerContentNode> {
@@ -118,26 +118,26 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
 
       public open fun deserialize(decoder: Decoder): SpoilerContentNode {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var7: Any = null;
          var var2: Int;
-         val var8: java.lang.String;
-         val var11: java.lang.String;
+         var var6: java.lang.String;
+         var var10: java.lang.String;
          if (var5) {
-            var7 = var10.y(var9, 0, new xk.f(ContentNodeSerializer.INSTANCE), null);
-            var11 = var10.m(var9, 1);
-            var8 = var10.m(var9, 2);
+            var7 = var9.y(var8, 0, new xk.f(ContentNodeSerializer.INSTANCE), null);
+            var6 = var9.m(var8, 1);
+            var10 = var9.m(var8, 2);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var6: java.lang.String = null;
-            var var12: java.lang.String = null;
+            var6 = null;
+            var10 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -145,27 +145,24 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
                            throw new n(var4);
                         }
 
-                        var12 = var10.m(var9, 2);
+                        var10 = var9.m(var8, 2);
                         var2 |= 4;
                      } else {
-                        var6 = var10.m(var9, 1);
+                        var6 = var9.m(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.y(var9, 0, new xk.f(ContentNodeSerializer.INSTANCE), var7);
+                     var7 = var9.y(var8, 0, new xk.f(ContentNodeSerializer.INSTANCE), var7);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var8 = var12;
-            var11 = var6;
          }
 
-         var10.c(var9);
-         return new SpoilerContentNode(var2, var7 as java.util.List, var11, var8, null);
+         var9.c(var8);
+         return new SpoilerContentNode(var2, var7 as java.util.List, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SpoilerContentNode) {

@@ -1,13 +1,11 @@
 package com.discord.chat.presentation.message.view.voicemessages
 
-import kotlin.jvm.internal.r
-
 public class AudioWaveAnimationManager {
    private final var audioChunkAnimationStarts: Array<Long?>
 
    public final var data: ByteArray = new byte[0]
       internal final set(value) {
-         r.h(var1, "value");
+         kotlin.jvm.internal.r.h(var1, "value");
          this.audioChunkAnimationStarts = new java.lang.Long[var1.length];
          this.data = var1;
       }
@@ -34,7 +32,7 @@ public class AudioWaveAnimationManager {
 
          var var3: Long = System.currentTimeMillis();
          val var7: java.lang.Long = this.audioChunkAnimationStarts[var1];
-         r.e(this.audioChunkAnimationStarts[var1]);
+         kotlin.jvm.internal.r.e(this.audioChunkAnimationStarts[var1]);
          var3 = var3 - var7;
          return if (var3 > 500L) 1.0F else (float)var3 / 500.0F;
       }

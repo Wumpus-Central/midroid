@@ -81,15 +81,15 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.getType();
-      val var2: java.lang.String = this.getId();
-      val var4: java.util.List = this.items;
+      val var4: java.lang.String = this.getId();
+      val var2: java.util.List = this.items;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MediaGalleryDisplayComponent(type=");
       var3.append(var1);
       var3.append(", id=");
-      var3.append(var2);
-      var3.append(", items=");
       var3.append(var4);
+      var3.append(", items=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -160,8 +160,8 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                }
             }
 
-            var10 = (java.lang.String)var6;
             var6 = var11;
+            var10 = (java.lang.String)var6;
          }
 
          var9.c(var8);

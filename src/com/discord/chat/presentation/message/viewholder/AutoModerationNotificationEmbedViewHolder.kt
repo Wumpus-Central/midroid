@@ -40,6 +40,6 @@ public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: Au
       kotlin.jvm.internal.r.h(var3, "onTapAutoModerationFeedback");
       val var4: Long = var1.getMessage().getChannelId_o4g7jtM();
       val var6: java.lang.String = var1.getMessage().getId_3Eiw7ao();
-      this.notificationEmbedView.configure(var1.getModerationContext(), new d(var2, var6, var4), new e(var3, var6, var4));
+      this.notificationEmbedView.configure(var1.getModerationContext(), new e(var2, var6, var4), new f(var3, var6, var4));
    }
 }

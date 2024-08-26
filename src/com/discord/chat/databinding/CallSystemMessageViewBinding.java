@@ -27,18 +27,18 @@ public final class CallSystemMessageViewBinding implements ViewBinding {
 
    public static CallSystemMessageViewBinding bind(View var0) {
       int var1 = R.id.icon;
-      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-      if (var4 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.info;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
+         TextView var4 = (TextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.message;
             TextView var5 = (TextView)a.a(var0, var1);
             if (var5 != null) {
                var1 = R.id.participants;
-               OverlappingCirclesView var3 = (OverlappingCirclesView)a.a(var0, var1);
-               if (var3 != null) {
-                  return new CallSystemMessageViewBinding(var0, var4, var2, var5, var3);
+               OverlappingCirclesView var2 = (OverlappingCirclesView)a.a(var0, var1);
+               if (var2 != null) {
+                  return new CallSystemMessageViewBinding(var0, var3, var4, var5, var2);
                }
             }
          }

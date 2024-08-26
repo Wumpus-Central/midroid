@@ -78,10 +78,10 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
          var var6: java.lang.String;
          val var10: java.lang.String;
          if (var9.p()) {
-            var3 = var9.i(var8, 0);
+            var2 = var9.i(var8, 0);
             var6 = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
-            var2 = 7;
+            var3 = 7;
          } else {
             var6 = null;
             var var11: java.lang.String = null;
@@ -113,12 +113,14 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
                }
             }
 
-            var10 = var6;
             var6 = var11;
+            var10 = var6;
+            var2 = var3;
+            var3 = var2;
          }
 
          var9.c(var8);
-         return new TapForwardFooterData(var2, var3, var6, var10, null);
+         return new TapForwardFooterData(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapForwardFooterData) {

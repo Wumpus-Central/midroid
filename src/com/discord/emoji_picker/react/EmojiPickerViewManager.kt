@@ -54,10 +54,10 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       r.h(var1, "reactContext");
       r.h(var2, "initialProps");
       val var11: ReadableMap = var2.getMap("config");
-      val var3: Float = var2.getFloat("paddingTop", 0.0F);
-      val var4: Float = var2.getFloat("paddingBottom", 0.0F);
-      val var7: Int = var2.getInt("emojiSize", -1);
-      val var8: Int = var2.getInt("emojiMargin", -1);
+      val var4: Float = var2.getFloat("paddingTop", 0.0F);
+      val var3: Float = var2.getFloat("paddingBottom", 0.0F);
+      val var8: Int = var2.getInt("emojiSize", -1);
+      val var7: Int = var2.getInt("emojiMargin", -1);
       val var10: ReadableMap = var2.getMap("emojiData");
       var var5: Boolean;
       if (var11 != null) {
@@ -67,14 +67,14 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       }
 
       if (var5) {
-         if (var7 != -1) {
+         if (var8 != -1) {
             var5 = true;
          } else {
             var5 = false;
          }
 
          if (var5) {
-            if (var8 != -1) {
+            if (var7 != -1) {
                var5 = true;
             } else {
                var5 = false;
@@ -89,11 +89,11 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
 
                if (var5) {
                   val var17: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.INSTANCE
-                     .deserialize(EmojiPickerItemData.CoreData.Companion, var10, var4, var3);
+                     .deserialize(EmojiPickerItemData.CoreData.Companion, var10, var3, var4);
                   val var12: EmojiPickerView = new EmojiPickerView(
                      var1,
-                     var7,
                      var8,
+                     var7,
                      var17,
                      new Function3<View, java.lang.Long, java.lang.String, Unit>(this, var1) {
                         final ThemedReactContext $reactContext;
@@ -297,15 +297,15 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
    public open fun setEmojiData(view: EmojiPickerView, value: ReadableMap?) {
       r.h(var1, "view");
       if (!this.isInitialProp(var1, "emojiData") && var2 != null) {
-         val var4: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.deserialize$default(
+         val var3: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.deserialize$default(
             EmojiPickerItemDataCoreDataDeserializer.INSTANCE, EmojiPickerItemData.CoreData.Companion, var2, 0.0F, 0.0F, 6, null
          );
-         val var3: EmojiPickerCache = this.emojiPickerCaches.get(var1);
-         if (var3 != null) {
-            var3.refreshEmojis(var4);
+         val var4: EmojiPickerCache = this.emojiPickerCaches.get(var1);
+         if (var4 != null) {
+            var4.refreshEmojis(var3);
          }
 
-         var1.setCoreData(var4);
+         var1.setCoreData(var3);
       }
    }
 

@@ -223,25 +223,25 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    public override fun toString(): String {
       val var6: Int = this.getReactionBackgroundColor();
       val var7: Int = this.getReactionBorderColor();
-      val var5: Int = this.getReactionTextColor();
-      val var1: Int = this.getActiveReactionBackgroundColor();
+      val var2: Int = this.getReactionTextColor();
+      val var3: Int = this.getActiveReactionBackgroundColor();
       val var4: Int = this.getActiveReactionBorderColor();
-      val var3: Int = this.getActiveReactionTextColor();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ReactionsTheme(reactionBackgroundColor=");
-      var2.append(var6);
-      var2.append(", reactionBorderColor=");
-      var2.append(var7);
-      var2.append(", reactionTextColor=");
-      var2.append(var5);
-      var2.append(", activeReactionBackgroundColor=");
-      var2.append(var1);
-      var2.append(", activeReactionBorderColor=");
-      var2.append(var4);
-      var2.append(", activeReactionTextColor=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: Int = this.getActiveReactionTextColor();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ReactionsTheme(reactionBackgroundColor=");
+      var5.append(var6);
+      var5.append(", reactionBorderColor=");
+      var5.append(var7);
+      var5.append(", reactionTextColor=");
+      var5.append(var2);
+      var5.append(", activeReactionBackgroundColor=");
+      var5.append(var3);
+      var5.append(", activeReactionBorderColor=");
+      var5.append(var4);
+      var5.append(", activeReactionTextColor=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : f0<ReactionsTheme> {
@@ -272,62 +272,64 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
 
       public open fun deserialize(decoder: Decoder): ReactionsTheme {
          r.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.b(var12);
-         val var5: Boolean = var13.p();
+         val var14: SerialDescriptor = this.getDescriptor();
+         val var15: c = var1.b(var14);
+         val var5: Boolean = var15.p();
          var var10: Any = null;
          var var2: Int;
          var var6: Any;
+         var var7: Any;
          var var8: Any;
-         val var11: Any;
-         var var14: Any;
-         var var16: Any;
+         val var12: Any;
+         val var13: Any;
+         var var21: Any;
          if (var5) {
-            var16 = m0.a;
-            var10 = var13.n(var12, 0, m0.a, null);
-            var14 = var13.n(var12, 1, (DeserializationStrategy)var16, null);
-            var8 = var13.n(var12, 2, (DeserializationStrategy)var16, null);
-            var6 = var13.n(var12, 3, (DeserializationStrategy)var16, null);
-            var11 = var13.n(var12, 4, (DeserializationStrategy)var16, null);
-            var16 = var13.n(var12, 5, (DeserializationStrategy)var16, null);
+            var21 = m0.a;
+            var7 = var15.n(var14, 0, m0.a, null);
+            var8 = var15.n(var14, 1, (DeserializationStrategy)var21, null);
+            var6 = var15.n(var14, 2, (DeserializationStrategy)var21, null);
+            val var16: Any = var15.n(var14, 3, (DeserializationStrategy)var21, null);
+            var12 = var15.n(var14, 4, (DeserializationStrategy)var21, null);
+            var21 = var15.n(var14, 5, (DeserializationStrategy)var21, null);
             var2 = 63;
+            var13 = var16;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var9: Any = null;
+            var21 = null;
             var8 = null;
             var6 = null;
-            var16 = null;
-            var14 = null;
+            var7 = null;
+            var var17: Any = null;
 
             while (var3) {
-               val var4: Int = var13.o(var12);
+               val var4: Int = var15.o(var14);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var10 = var13.n(var12, 0, m0.a, var10);
+                     var10 = var15.n(var14, 0, m0.a, var10);
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var13.n(var12, 1, m0.a, var9);
+                     var21 = var15.n(var14, 1, m0.a, var21);
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var13.n(var12, 2, m0.a, var8);
+                     var8 = var15.n(var14, 2, m0.a, var8);
                      var2 |= 4;
                      break;
                   case 3:
-                     var6 = var13.n(var12, 3, m0.a, var6);
+                     var6 = var15.n(var14, 3, m0.a, var6);
                      var2 |= 8;
                      break;
                   case 4:
-                     var16 = var13.n(var12, 4, m0.a, var16);
+                     var7 = var15.n(var14, 4, m0.a, var7);
                      var2 |= 16;
                      break;
                   case 5:
-                     var14 = var13.n(var12, 5, m0.a, var14);
+                     var17 = var15.n(var14, 5, m0.a, var17);
                      var2 |= 32;
                      break;
                   default:
@@ -335,13 +337,16 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                }
             }
 
-            var11 = var16;
-            var16 = var14;
-            var14 = var9;
+            var12 = var7;
+            var13 = var6;
+            var7 = var10;
+            var8 = var21;
+            var6 = var8;
+            var21 = var17;
          }
 
-         var13.c(var12);
-         return new ReactionsTheme(var2, var10 as Integer, var14 as Integer, var8 as Integer, var6 as Integer, var11 as Integer, var16 as Integer, null);
+         var15.c(var14);
+         return new ReactionsTheme(var2, var7 as Integer, var8 as Integer, var6 as Integer, var13 as Integer, var12 as Integer, var21 as Integer, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ReactionsTheme) {

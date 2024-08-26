@@ -23,7 +23,7 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       r.h(var1, "logsFolderPath");
       super();
       val var4: java.lang.String = var1.toString();
-      val var3: StringBuilder = new StringBuilder();
+      var var3: StringBuilder = new StringBuilder();
       var3.append(var2);
       var3.append(".replay");
       new File(var4, var3.toString()).delete();
@@ -37,11 +37,11 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var10.append(var2);
       var10.append(".replay");
       this.replayFile = new File(var7, var10.toString());
-      val var8: java.lang.String = var1.toString();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append(var2);
-      var5.append(".json");
-      this.jsonFile = new File(var8, var5.toString());
+      val var5: java.lang.String = var1.toString();
+      var3 = new StringBuilder();
+      var3.append(var2);
+      var3.append(".json");
+      this.jsonFile = new File(var5, var3.toString());
    }
 
    private fun appendLine(line: String) {

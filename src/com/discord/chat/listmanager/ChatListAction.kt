@@ -79,16 +79,16 @@ public sealed class ChatListAction protected constructor() {
 
       public override fun toString(): String {
          val var1: Int = this.position;
-         val var3: Boolean = this.animated;
-         val var2: Boolean = this.jumped;
+         val var2: Boolean = this.animated;
+         val var3: Boolean = this.jumped;
          val var4: Boolean = this.isHighlight;
          val var5: StringBuilder = new StringBuilder();
          var5.append("ScrollTo(position=");
          var5.append(var1);
          var5.append(", animated=");
-         var5.append(var3);
-         var5.append(", jumped=");
          var5.append(var2);
+         var5.append(", jumped=");
+         var5.append(var3);
          var5.append(", isHighlight=");
          var5.append(var4);
          var5.append(")");

@@ -39,13 +39,13 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
 
    public open fun onBindViewHolder(holder: Any, position: Int) {
       r.h(var1, "holder");
-      val var4: PollAnswerAccessory = this.items.get(var2);
-      val var3: View = var1.getBinding().getRoot();
-      var3.setEnabled(var4.getCanTapAnswers());
-      var3.setOnClickListener(new e(this, var4));
-      f1.A0(var3, 1);
-      f1.q0(var3, new PollsAnswerAccessibilityDelegate(var4));
-      var1.bind(var4, new Function0<Unit>(this, var4) {
+      val var3: PollAnswerAccessory = this.items.get(var2);
+      val var4: View = var1.getBinding().getRoot();
+      var4.setEnabled(var3.getCanTapAnswers());
+      var4.setOnClickListener(new e(this, var3));
+      f1.A0(var4, 1);
+      f1.q0(var4, new PollsAnswerAccessibilityDelegate(var3));
+      var1.bind(var3, new Function0<Unit>(this, var3) {
          final PollAnswerAccessory $accessory;
          final PollAnswerAdapter<THolder> this$0;
 

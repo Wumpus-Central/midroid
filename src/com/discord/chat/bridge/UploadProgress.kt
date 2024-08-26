@@ -295,25 +295,25 @@ public data class UploadProgress(headerText: String,
          val var11: Int;
          var var12: Int;
          var var14: java.lang.String;
-         var var15: java.lang.String;
+         val var16: java.lang.String;
          val var19: java.lang.String;
          if (var13) {
-            var15 = var18.m(var17, 0);
-            var7 = var18.i(var17, 1);
+            var14 = var18.m(var17, 0);
+            var12 = var18.i(var17, 1);
             var8 = var18.i(var17, 2);
             var2 = var18.u(var17, 3);
-            var14 = var18.m(var17, 4);
+            var16 = var18.m(var17, 4);
             var19 = var18.m(var17, 5);
-            var11 = var18.i(var17, 6);
+            var6 = var18.i(var17, 6);
             val var5: Int = var18.i(var17, 7);
-            var6 = var18.i(var17, 8);
+            var7 = var18.i(var17, 8);
             var4 = var18.i(var17, 9);
             var3 = var18.i(var17, 10);
-            var12 = 2047;
-            var9 = var5;
+            var9 = 2047;
+            var11 = var5;
             var10 = var3;
          } else {
-            var15 = null;
+            var var15: java.lang.String = null;
             var14 = null;
             var var20: java.lang.String = null;
             var var28: Boolean = true;
@@ -381,18 +381,20 @@ public data class UploadProgress(headerText: String,
                }
             }
 
-            var14 = var20;
-            var11 = var7;
+            var16 = var20;
+            var6 = var7;
             var4 = var9;
-            var9 = var8;
+            var7 = var6;
+            var11 = var8;
             var19 = var14;
             var8 = var4;
-            var7 = var23;
-            var12 = var3;
+            var12 = var23;
+            var14 = var15;
+            var9 = var3;
          }
 
          var18.c(var17);
-         return new UploadProgress(var12, var15, var7, var8, var2, var14, var19, var11, var9, var6, var4, var10, null);
+         return new UploadProgress(var9, var14, var12, var8, var2, var16, var19, var6, var11, var7, var4, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgress) {

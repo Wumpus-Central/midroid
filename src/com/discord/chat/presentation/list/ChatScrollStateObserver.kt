@@ -55,10 +55,10 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          }
 
          val var9: Int = var26.getItemCount() - 1;
-         val var7: Int = var26.findLastCompletelyVisibleItemPosition();
-         val var8: Int = var26.findLastVisibleItemPosition();
+         val var8: Int = var26.findLastCompletelyVisibleItemPosition();
+         val var7: Int = var26.findLastVisibleItemPosition();
          val var12: Boolean;
-         if (var7 == var9 && var7 >= 0) {
+         if (var8 == var9 && var8 >= 0) {
             var12 = true;
          } else {
             var12 = false;
@@ -70,7 +70,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          }
 
          val var13: Boolean;
-         if (h.c(var9 - var21, 0) <= var7 && var7 <= var9) {
+         if (h.c(var9 - var21, 0) <= var8 && var8 <= var9) {
             var13 = true;
          } else {
             var13 = false;
@@ -103,7 +103,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          r.f(var19, "null cannot be cast to non-null type com.discord.chat.presentation.list.ChannelChatListAdapter");
          var21 = (var19 as ChannelChatListAdapter).getFirstMessageItemPosition();
          val var16: Boolean;
-         if (var6 <= var21 && var21 <= var7) {
+         if (var6 <= var21 && var21 <= var8) {
             var16 = true;
          } else {
             var16 = false;
@@ -111,9 +111,9 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
 
          val var20: ScrollState;
          if (var17) {
-            var20 = new ScrollState(var14, var15, var11, var10, var13, var12, var27, var16, var8, var6);
+            var20 = new ScrollState(var14, var15, var11, var10, var13, var12, var27, var16, var7, var6);
          } else {
-            var20 = new ScrollState(var14, var15, var13, var12, var11, var10, var27, var16, var6, var8);
+            var20 = new ScrollState(var14, var15, var13, var12, var11, var10, var27, var16, var6, var7);
          }
 
          var10 = r.c(this.scrollState, var20);

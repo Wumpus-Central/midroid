@@ -74,11 +74,11 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
             public void onNewIntent(Intent var1) {
             }
          };
-         val var7: java.lang.String = this.getReactApplicationContext().getPackageName();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("package:");
-         var5.append(var7);
-         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var5.toString()));
+         val var5: java.lang.String = this.getReactApplicationContext().getPackageName();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("package:");
+         var7.append(var5);
+         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var7.toString()));
          this.getReactApplicationContext().addActivityEventListener(var4);
          this.getReactApplicationContext().startActivityForResult(var6, 234780, Bundle.EMPTY);
       }

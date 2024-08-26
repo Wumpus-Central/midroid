@@ -50,9 +50,9 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       r.h(var2, "componentProvider");
       r.h(var3, "componentActionListener");
       r.h(var4, "componentContext");
-      val var10: MessageComponentSeparatorDisplayViewBinding = MessageComponentSeparatorDisplayViewBinding.bind(this);
-      r.g(var10, "bind(this)");
-      var10.divider.setBackgroundColor(ThemeManagerKt.getTheme().getTextMuted());
+      val var8: MessageComponentSeparatorDisplayViewBinding = MessageComponentSeparatorDisplayViewBinding.bind(this);
+      r.g(var8, "bind(this)");
+      var8.divider.setBackgroundColor(ThemeManagerKt.getTheme().getTextMuted());
       val var7: Int = SeparatorDisplayComponentView.WhenMappings.$EnumSwitchMapping$0[var1.getSpacing().ordinal()];
       var var5: Int = 0;
       if (var7 != 1) {
@@ -67,8 +67,8 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
          }
       }
 
-      val var9: View = var10.divider;
-      r.g(var10.divider, "binding.divider");
+      val var9: View = var8.divider;
+      r.g(var8.divider, "binding.divider");
       val var11: LayoutParams = var9.getLayoutParams();
       if (var11 != null) {
          val var12: MarginLayoutParams = var11 as MarginLayoutParams;

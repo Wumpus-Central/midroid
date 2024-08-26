@@ -6,7 +6,6 @@ import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManag
 import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress
 import com.discord.media_player.MediaPlayer
 import com.discord.media_player.MediaPlayer.Event
-import kotlin.jvm.internal.r
 
 public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessory? = null, attached: Boolean = false) {
    public final val accessory: AudioAttachmentMessageAccessory?
@@ -62,7 +61,7 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.accessory, var1.accessory)) {
+         if (!kotlin.jvm.internal.r.c(this.accessory, var1.accessory)) {
             return false;
          } else {
             return this.attached == var1.attached;
@@ -161,14 +160,14 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
    }
 
    public override fun toString(): String {
-      val var3: AudioAttachmentMessageAccessory = this.accessory;
+      val var2: AudioAttachmentMessageAccessory = this.accessory;
       val var1: Boolean = this.attached;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioPlayerViewState(accessory=");
-      var2.append(var3);
-      var2.append(", attached=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AudioPlayerViewState(accessory=");
+      var3.append(var2);
+      var3.append(", attached=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

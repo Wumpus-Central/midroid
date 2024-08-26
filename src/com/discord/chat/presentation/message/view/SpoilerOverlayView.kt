@@ -27,15 +27,15 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var4: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var4;
-      val var3: TextView = var4.label;
-      kotlin.jvm.internal.r.g(var4.label, "_init_$lambda$0");
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryBold);
-      var3.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.primary_800));
-      ViewClippingUtilsKt.clipToCircle(var3);
-      var4.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
+      val var3: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      this.binding = var3;
+      val var4: TextView = var3.label;
+      kotlin.jvm.internal.r.g(var3.label, "_init_$lambda$0");
+      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
+      var4.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.primary_800));
+      ViewClippingUtilsKt.clipToCircle(var4);
+      var3.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
    }
 
    @JvmStatic

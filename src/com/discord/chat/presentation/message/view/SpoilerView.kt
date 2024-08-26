@@ -86,11 +86,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
                var1 = 1;
             }
 
-            val var5: androidx.transition.c = new androidx.transition.c(var1);
+            var3 = new androidx.transition.c(var1);
             val var2: Boolean = this.$showImage;
-            var3 = this.this$0;
-            var5.a0(150L);
-            var5.a(new androidx.transition.i(var2, (SpoilerView)var3) {
+            val var5: SpoilerView = this.this$0;
+            var3.a0(150L);
+            var3.a(new androidx.transition.i(var2, var5) {
                final boolean $showImage;
                final SpoilerView this$0;
 
@@ -110,7 +110,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
                   }
                }
             });
-            androidx.transition.j.a(var4, var5);
+            androidx.transition.j.a(var4, var3);
             if (this.$showImage xor true) {
                var1 = 0;
             } else {

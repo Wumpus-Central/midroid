@@ -102,14 +102,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      val var14: StructurableText = var1.getContent();
-      if (var14 != null) {
-         val var21: ArrayList = this.accessories;
-         val var13: java.lang.String = var1.getId_3Eiw7ao();
-         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
+      val var21: StructurableText = var1.getContent();
+      if (var21 != null) {
+         val var13: ArrayList = this.accessories;
+         val var14: java.lang.String = var1.getId_3Eiw7ao();
+         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
          val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
          val var11: Boolean = var1.getShouldShowRoleDot();
-         val var9: Boolean = var1.getShouldShowRoleOnName();
+         val var10: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
             var4 = 0;
@@ -133,14 +133,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var6 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var21.add(
+         var13.add(
             new MessageContentAccessory(
-               var13,
                var14,
-               var10,
+               var21,
+               var9,
                var8,
                var11,
-               var9,
+               var10,
                var4,
                var5,
                var6,
@@ -167,12 +167,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
-         val var24: ArrayList = this.accessories;
-         val var34: java.lang.String = var1.getId_3Eiw7ao();
-         val var32: java.lang.String = var1.getUsername();
-         val var29: Context = this.binding.getRoot().getContext();
-         r.g(var29, "binding.root.context");
-         var24.add(new RoleSubscriptionPurchaseAccessory(var34, var32, MessageKt.avatarUrl(var1, var29), var3, false, null));
+         val var32: ArrayList = this.accessories;
+         val var24: java.lang.String = var1.getId_3Eiw7ao();
+         val var29: java.lang.String = var1.getUsername();
+         val var34: Context = this.binding.getRoot().getContext();
+         r.g(var34, "binding.root.context");
+         var32.add(new RoleSubscriptionPurchaseAccessory(var24, var29, MessageKt.avatarUrl(var1, var34), var3, false, null));
       }
 
       val var25: Sticker = var1.getSticker();

@@ -185,63 +185,63 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
 
       public open fun deserialize(decoder: Decoder): SafetyPolicyNoticeEmbed {
          r.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.b(var12);
+         val var13: SerialDescriptor = this.getDescriptor();
+         val var14: c = var1.b(var13);
          var var2: Int;
          var var5: java.lang.String;
          var var6: java.lang.String;
          var var8: java.lang.String;
          var var9: java.lang.String;
-         val var14: java.lang.String;
-         var var17: java.lang.String;
-         if (var13.p()) {
-            var17 = var13.m(var12, 0);
-            val var10: java.lang.String = var13.m(var12, 1);
-            var9 = var13.m(var12, 2);
-            var6 = var13.m(var12, 3);
-            var5 = var13.m(var12, 4);
-            var14 = var13.m(var12, 5);
+         val var15: java.lang.String;
+         var var19: java.lang.String;
+         if (var14.p()) {
+            var19 = var14.m(var13, 0);
+            val var10: java.lang.String = var14.m(var13, 1);
+            var9 = var14.m(var13, 2);
+            var5 = var14.m(var13, 3);
+            var6 = var14.m(var13, 4);
+            var15 = var14.m(var13, 5);
             var2 = 63;
-            var8 = var17;
-            var17 = var10;
+            var8 = var19;
+            var19 = var10;
          } else {
             var8 = null;
             var9 = null;
             var6 = null;
-            var17 = null;
+            var19 = null;
             var5 = null;
-            var var15: java.lang.String = null;
+            var var16: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var13.o(var12);
+               val var4: Int = var14.o(var13);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var8 = var13.m(var12, 0);
+                     var8 = var14.m(var13, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var15 = var13.m(var12, 1);
+                     var16 = var14.m(var13, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var5 = var13.m(var12, 2);
+                     var5 = var14.m(var13, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var6 = var13.m(var12, 3);
+                     var6 = var14.m(var13, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var17 = var13.m(var12, 4);
+                     var19 = var14.m(var13, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var9 = var13.m(var12, 5);
+                     var9 = var14.m(var13, 5);
                      var2 |= 32;
                      break;
                   default:
@@ -249,14 +249,15 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                }
             }
 
-            var14 = var9;
-            var5 = var17;
+            var15 = var9;
+            var6 = var19;
+            var5 = var6;
             var9 = var5;
-            var17 = var15;
+            var19 = var16;
          }
 
-         var13.c(var12);
-         return new SafetyPolicyNoticeEmbed(var2, var8, var17, var9, var6, var5, var14, null);
+         var14.c(var13);
+         return new SafetyPolicyNoticeEmbed(var2, var8, var19, var9, var5, var6, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {

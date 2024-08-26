@@ -173,33 +173,33 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
 
       public open fun deserialize(decoder: Decoder): RoleSubscriptionOnClick {
          r.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
-         val var5: Boolean = var11.p();
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
+         val var5: Boolean = var12.p();
          var var9: java.lang.String = null;
          var var2: Int;
          var var6: Any;
-         var var7: Any;
-         var var8: java.lang.String;
-         var var13: Any;
+         var var8: Any;
+         val var13: java.lang.String;
+         var var15: Any;
          if (var5) {
-            var9 = var11.m(var10, 0);
-            var8 = var11.m(var10, 1);
-            var13 = a2.a;
-            var7 = var11.n(var10, 2, a2.a, null);
-            var6 = var11.n(var10, 3, (DeserializationStrategy)var13, null);
-            var13 = var11.n(var10, 4, (DeserializationStrategy)var13, null);
+            var9 = var12.m(var11, 0);
+            var13 = var12.m(var11, 1);
+            var15 = a2.a;
+            var8 = var12.n(var11, 2, a2.a, null);
+            var6 = var12.n(var11, 3, (DeserializationStrategy)var15, null);
+            var15 = var12.n(var11, 4, (DeserializationStrategy)var15, null);
             var2 = 31;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var7 = null;
+            var15 = null;
             var6 = null;
-            var13 = null;
+            var var14: Any = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var12.o(var11);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -209,32 +209,36 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
                                  throw new n(var4);
                               }
 
-                              var13 = var11.n(var10, 4, a2.a, var13);
+                              var14 = var12.n(var11, 4, a2.a, var14);
                               var2 |= 16;
                            } else {
-                              var6 = var11.n(var10, 3, a2.a, var6);
+                              var6 = var12.n(var11, 3, a2.a, var6);
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var11.n(var10, 2, a2.a, var7);
+                           var15 = var12.n(var11, 2, a2.a, var15);
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var11.m(var10, 1);
+                        var8 = var12.m(var11, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var11.m(var10, 0);
+                     var9 = var12.m(var11, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var13 = (java.lang.String)var8;
+            var8 = var15;
+            var15 = var14;
          }
 
-         var11.c(var10);
-         return new RoleSubscriptionOnClick(var2, var9, var8, var7 as java.lang.String, var6 as java.lang.String, var13 as java.lang.String, null);
+         var12.c(var11);
+         return new RoleSubscriptionOnClick(var2, var9, var13, var8 as java.lang.String, var6 as java.lang.String, var15 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleSubscriptionOnClick) {

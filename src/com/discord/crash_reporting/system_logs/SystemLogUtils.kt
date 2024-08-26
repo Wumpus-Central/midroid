@@ -147,33 +147,33 @@ internal object SystemLogUtils {
                   // 078: aload 5
                   // 07a: astore 3
                   // 07b: getstatic ik/a.b Ljava/nio/charset/Charset;
-                  // 07e: astore 8
+                  // 07e: astore 9
                   // 080: aload 5
                   // 082: astore 4
                   // 084: aload 5
                   // 086: astore 3
                   // 087: new java/io/InputStreamReader
-                  // 08a: astore 9
+                  // 08a: astore 8
                   // 08c: aload 5
                   // 08e: astore 4
                   // 090: aload 5
                   // 092: astore 3
-                  // 093: aload 9
+                  // 093: aload 8
                   // 095: aload 6
-                  // 097: aload 8
+                  // 097: aload 9
                   // 099: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
                   // 09c: aload 5
                   // 09e: astore 4
                   // 0a0: aload 5
                   // 0a2: astore 3
-                  // 0a3: aload 9
+                  // 0a3: aload 8
                   // 0a5: instanceof java/io/BufferedReader
                   // 0a8: ifeq 0bc
                   // 0ab: aload 5
                   // 0ad: astore 4
                   // 0af: aload 5
                   // 0b1: astore 3
-                  // 0b2: aload 9
+                  // 0b2: aload 8
                   // 0b4: checkcast java/io/BufferedReader
                   // 0b7: astore 6
                   // 0b9: goto 0d1
@@ -183,7 +183,7 @@ internal object SystemLogUtils {
                   // 0c2: astore 3
                   // 0c3: new java/io/BufferedReader
                   // 0c6: dup
-                  // 0c7: aload 9
+                  // 0c7: aload 8
                   // 0c9: sipush 8192
                   // 0cc: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
                   // 0cf: astore 6
@@ -211,10 +211,10 @@ internal object SystemLogUtils {
                   // 0fa: goto 1cf
                   // 0fd: astore 3
                   // 0fe: goto 1de
-                  // 101: astore 7
+                  // 101: astore 6
                   // 103: aload 3
                   // 104: astore 4
-                  // 106: aload 7
+                  // 106: aload 6
                   // 108: invokevirtual java/lang/Throwable.printStackTrace ()V
                   // 10b: aload 3
                   // 10c: astore 4
@@ -225,7 +225,7 @@ internal object SystemLogUtils {
                   // 116: astore 4
                   // 118: aload 0
                   // 119: getfield com/discord/crash_reporting/system_logs/SystemLogUtils$fetch$1.$output Ljava/util/LinkedList;
-                  // 11c: astore 6
+                  // 11c: astore 7
                   // 11e: aload 3
                   // 11f: astore 4
                   // 121: new java/lang/StringBuilder
@@ -243,7 +243,7 @@ internal object SystemLogUtils {
                   // 139: aload 3
                   // 13a: astore 4
                   // 13c: aload 5
-                  // 13e: aload 7
+                  // 13e: aload 6
                   // 140: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 143: pop
                   // 144: aload 3
@@ -254,14 +254,14 @@ internal object SystemLogUtils {
                   // 14e: pop
                   // 14f: aload 3
                   // 150: astore 4
-                  // 152: aload 6
+                  // 152: aload 7
                   // 154: aload 5
                   // 156: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 159: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 15c: pop
                   // 15d: aload 3
                   // 15e: astore 4
-                  // 160: aload 7
+                  // 160: aload 6
                   // 162: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
                   // 165: astore 6
                   // 167: aload 3
@@ -273,7 +273,7 @@ internal object SystemLogUtils {
                   // 172: astore 4
                   // 174: aload 0
                   // 175: getfield com/discord/crash_reporting/system_logs/SystemLogUtils$fetch$1.$output Ljava/util/LinkedList;
-                  // 178: astore 8
+                  // 178: astore 7
                   // 17a: aload 3
                   // 17b: astore 4
                   // 17d: aload 6
@@ -287,7 +287,7 @@ internal object SystemLogUtils {
                   // 188: aload 6
                   // 18a: iload 1
                   // 18b: aaload
-                  // 18c: astore 7
+                  // 18c: astore 8
                   // 18e: aload 3
                   // 18f: astore 4
                   // 191: new java/lang/StringBuilder
@@ -305,12 +305,12 @@ internal object SystemLogUtils {
                   // 1a9: aload 3
                   // 1aa: astore 4
                   // 1ac: aload 5
-                  // 1ae: aload 7
+                  // 1ae: aload 8
                   // 1b0: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 1b3: pop
                   // 1b4: aload 3
                   // 1b5: astore 4
-                  // 1b7: aload 8
+                  // 1b7: aload 7
                   // 1b9: aload 5
                   // 1bb: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 1be: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z

@@ -27,14 +27,14 @@ public class ActivityBookmarkViewHolder(activityBookmarkView: ActivityBookmarkVi
 
    public fun bind(activityMessageAccessory: ActivityBookmarkMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "activityMessageAccessory");
-      val var2: ActivityBookmarkEmbedImpl = var1.getActivityBookmarkEmbed();
-      val var3: ActivityBookmarkView = this.activityBookmarkView;
-      this.activityBookmarkView.setSplash(var2.getSplashUrl(), var1.getConstrainedWidth());
-      var3.setHeaderText(var2.getHeaderText());
-      var3.setLaunchButton(var2.getAcceptLabelText(), var2.getAcceptLabelBackgroundColor());
-      var3.setDescription(var2.getDescription());
-      var3.setAvatarUris(var2.getParticipantAvatarUris());
-      var3.setParticipantsText(var2.getParticipantsText());
-      var3.setOnLaunchButtonClickListener(new a(var2, this));
+      val var3: ActivityBookmarkEmbedImpl = var1.getActivityBookmarkEmbed();
+      val var2: ActivityBookmarkView = this.activityBookmarkView;
+      this.activityBookmarkView.setSplash(var3.getSplashUrl(), var1.getConstrainedWidth());
+      var2.setHeaderText(var3.getHeaderText());
+      var2.setLaunchButton(var3.getAcceptLabelText(), var3.getAcceptLabelBackgroundColor());
+      var2.setDescription(var3.getDescription());
+      var2.setAvatarUris(var3.getParticipantAvatarUris());
+      var2.setParticipantsText(var3.getParticipantsText());
+      var2.setOnLaunchButtonClickListener(new a(var3, this));
    }
 }

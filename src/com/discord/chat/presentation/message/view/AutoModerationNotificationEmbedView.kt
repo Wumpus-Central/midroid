@@ -221,15 +221,15 @@ public class AutoModerationNotificationEmbedView  public constructor(context: Co
          }
       }
 
-      val var8: java.lang.String = var1.getActionsIconURL();
-      val var12: java.lang.String = var1.getActionsText();
-      val var33: DCDButton = this.binding.actionsButton;
-      if (var8 != null) {
-         this.binding.actionsButton.setIcon(var8, SizeUtilsKt.getDpToPx(16));
+      val var33: java.lang.String = var1.getActionsIconURL();
+      val var8: java.lang.String = var1.getActionsText();
+      val var12: DCDButton = this.binding.actionsButton;
+      if (var33 != null) {
+         this.binding.actionsButton.setIcon(var33, SizeUtilsKt.getDpToPx(16));
       }
 
-      this.binding.actionsButton.setText(var12);
-      var33.setOnClickButtonListener(var2);
+      this.binding.actionsButton.setText(var8);
+      var12.setOnClickButtonListener(var2);
       val var10: java.lang.String = var1.getFeedbackText();
       val var9: DCDButton = this.binding.feedbackButton;
       this.binding.feedbackButton.setText(var10);

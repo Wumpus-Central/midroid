@@ -6,9 +6,8 @@ import com.discord.chat.databinding.AudioPlayerViewBinding;
 
 public final class o implements AnimatorUpdateListener {
    public final AudioPlayerViewBinding a;
-   public final AudioPlayerWipeAnimatorManager b;
 
    public final void onAnimationUpdate(ValueAnimator var1) {
-      <unrepresentable>.a(this.a, this.b, var1);
+      <unrepresentable>.a(this.a, var1);
    }
 }

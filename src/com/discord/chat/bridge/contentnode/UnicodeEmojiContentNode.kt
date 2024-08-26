@@ -84,26 +84,26 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.content.hashCode();
-      val var4: Int = this.surrogate.hashCode();
+      val var4: Int = this.content.hashCode();
+      val var3: Int = this.surrogate.hashCode();
       val var2: Byte = this.getJumboable();
       var var1: Byte = var2;
       if (var2 != 0) {
          var1 = 1;
       }
 
-      return (var3 * 31 + var4) * 31 + var1;
+      return (var4 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var3: java.lang.String = this.surrogate;
+      val var3: java.lang.String = this.content;
+      val var2: java.lang.String = this.surrogate;
       val var1: Boolean = this.getJumboable();
       val var4: StringBuilder = new StringBuilder();
       var4.append("UnicodeEmojiContentNode(content=");
-      var4.append(var2);
-      var4.append(", surrogate=");
       var4.append(var3);
+      var4.append(", surrogate=");
+      var4.append(var2);
       var4.append(", jumboable=");
       var4.append(var1);
       var4.append(")");

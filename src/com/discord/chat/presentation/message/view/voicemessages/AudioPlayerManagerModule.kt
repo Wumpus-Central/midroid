@@ -5,12 +5,11 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import kotlin.jvm.internal.r
 
 @ReactModule(name = "DCDAudioPlayerManager")
 public class AudioPlayerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      kotlin.jvm.internal.r.h(var1, "reactContext");
       super(var1);
    }
 

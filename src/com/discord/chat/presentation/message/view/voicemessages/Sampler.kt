@@ -1,10 +1,8 @@
 package com.discord.chat.presentation.message.view.voicemessages
 
-import kotlin.jvm.internal.r
-
 public object Sampler {
    public fun downSample(data: ByteArray, targetSize: Int): ByteArray {
-      r.h(var1, "data");
+      kotlin.jvm.internal.r.h(var1, "data");
       if (var2 == 0) {
          return new byte[0];
       } else if (var1.length == var2) {

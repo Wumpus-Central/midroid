@@ -435,59 +435,60 @@ public data class AutoModerationNotification(header: String,
          var var8: Byte = 11;
          var var15: java.lang.String = null;
          var var3: Int;
-         var var4: Byte;
-         val var5: Int;
+         var var4: Int;
+         var var5: Byte;
          val var6: Int;
-         var var11: Any;
-         var var12: java.lang.String;
+         var var12: Any;
          var var13: Any;
          var var14: Any;
-         var var16: Any;
+         var var17: java.lang.String;
          var var18: Any;
          var var19: Any;
          val var20: Any;
-         var var39: Any;
+         var var32: Any;
+         var var35: Any;
          if (var10) {
-            var12 = var24.m(var23, 0);
-            var5 = var24.i(var23, 1);
-            var15 = var24.m(var23, 2);
+            var17 = var24.m(var23, 0);
+            var4 = var24.i(var23, 1);
+            var13 = var24.m(var23, 2);
             val var2: Int = var24.i(var23, 3);
-            var39 = a2.a;
+            var35 = a2.a;
             val var25: Any = var24.n(var23, 4, a2.a, null);
-            var11 = var24.n(var23, 5, (DeserializationStrategy)var39, null);
-            var16 = var24.n(var23, 6, (DeserializationStrategy)var39, null);
-            var4 = var24.C(var23, 7);
-            var14 = var24.n(var23, 8, (DeserializationStrategy)var39, null);
-            var13 = var24.n(var23, 9, (DeserializationStrategy)var39, null);
+            var32 = var24.n(var23, 5, (DeserializationStrategy)var35, null);
+            var15 = (java.lang.String)var24.n(var23, 6, (DeserializationStrategy)var35, null);
+            var5 = var24.C(var23, 7);
+            var14 = var24.n(var23, 8, (DeserializationStrategy)var35, null);
+            var12 = var24.n(var23, 9, (DeserializationStrategy)var35, null);
             var18 = var24.n(var23, 10, m0.a, null);
-            var19 = var24.n(var23, 11, (DeserializationStrategy)var39, null);
-            var20 = var24.n(var23, 12, (DeserializationStrategy)var39, null);
+            var19 = var24.n(var23, 11, (DeserializationStrategy)var35, null);
+            var20 = var24.n(var23, 12, (DeserializationStrategy)var35, null);
             var6 = 8191;
             var3 = var2;
-            var39 = var25;
+            var35 = var32;
+            var32 = var25;
          } else {
             var var7: Byte = 12;
-            var39 = null;
+            var17 = null;
             var19 = null;
             var18 = null;
             var14 = null;
-            var16 = null;
+            var35 = null;
             var var26: Any = null;
             var13 = null;
-            var var31: Boolean = true;
+            var var30: Boolean = true;
             var var27: Int = 0;
-            var var30: Byte = 0;
+            var5 = 0;
             var4 = 0;
             var3 = 0;
-            var11 = null;
             var12 = null;
+            var32 = null;
 
-            while (var31) {
+            while (var30) {
                label42: {
                   val var9: Int = var24.o(var23);
                   switch (var9) {
                      case -1:
-                        var31 = false;
+                        var30 = false;
                         break;
                      case 0:
                         var15 = var24.m(var23, 0);
@@ -506,11 +507,11 @@ public data class AutoModerationNotification(header: String,
                         var27 |= 8;
                         break label42;
                      case 4:
-                        var12 = (java.lang.String)var24.n(var23, 4, a2.a, var12);
+                        var32 = var24.n(var23, 4, a2.a, var32);
                         var27 |= 16;
                         break label42;
                      case 5:
-                        var11 = var24.n(var23, 5, a2.a, var11);
+                        var12 = var24.n(var23, 5, a2.a, var12);
                         var27 |= 32;
                         break label42;
                      case 6:
@@ -518,7 +519,7 @@ public data class AutoModerationNotification(header: String,
                         var27 |= 64;
                         break label42;
                      case 7:
-                        var30 = var24.C(var23, 7);
+                        var5 = var24.C(var23, 7);
                         var27 |= 128;
                         break;
                      case 8:
@@ -526,7 +527,7 @@ public data class AutoModerationNotification(header: String,
                         var27 |= 256;
                         break;
                      case 9:
-                        var16 = var24.n(var23, 9, a2.a, var16);
+                        var35 = var24.n(var23, 9, a2.a, var35);
                         var27 |= 512;
                         var7 = 12;
                         continue;
@@ -539,7 +540,7 @@ public data class AutoModerationNotification(header: String,
                         var27 |= 2048;
                         continue;
                      case 12:
-                        var39 = var24.n(var23, var7, a2.a, var39);
+                        var17 = (java.lang.String)var24.n(var23, var7, a2.a, var17);
                         var27 |= 4096;
                         continue;
                      default:
@@ -554,31 +555,29 @@ public data class AutoModerationNotification(header: String,
                var8 = 11;
             }
 
-            var4 = var30;
-            var39 = var12;
-            var16 = var26;
+            var35 = var12;
+            var15 = (java.lang.String)var26;
             var3 = var4;
-            var15 = (java.lang.String)var13;
-            var5 = var3;
-            var12 = var15;
+            var4 = var3;
+            var17 = var15;
             var6 = var27;
-            var13 = var16;
-            var20 = var39;
+            var12 = var35;
+            var20 = var17;
          }
 
          var24.c(var23);
          return new AutoModerationNotification(
             var6,
-            var12,
-            var5,
-            var15,
+            var17,
+            var4,
+            (java.lang.String)var13,
             var3,
-            var39 as java.lang.String,
-            var11 as java.lang.String,
-            var16 as java.lang.String,
-            (boolean)var4,
+            var32 as java.lang.String,
+            var35 as java.lang.String,
+            var15,
+            (boolean)var5,
             var14 as java.lang.String,
-            var13 as java.lang.String,
+            var12 as java.lang.String,
             var18 as Integer,
             var19 as java.lang.String,
             var20 as java.lang.String,

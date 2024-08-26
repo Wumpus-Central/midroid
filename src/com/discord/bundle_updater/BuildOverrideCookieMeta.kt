@@ -303,86 +303,89 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
 
       public open fun deserialize(decoder: Decoder): BuildOverrideCookieMeta {
          r.h(var1, "decoder");
-         val var14: SerialDescriptor = this.getDescriptor();
-         val var15: kotlinx.serialization.encoding.c = var1.b(var14);
-         val var7: Boolean = var15.p();
+         val var15: SerialDescriptor = this.getDescriptor();
+         val var16: kotlinx.serialization.encoding.c = var1.b(var15);
+         val var7: Boolean = var16.p();
          var var12: Any = null;
          var var3: Int;
          var var8: Any;
-         var var9: Any;
          var var10: Any;
-         var var16: Any;
-         var var21: Any;
+         var var11: Any;
+         val var14: Any;
+         var var18: Any;
          if (var7) {
-            var21 = a2.a;
-            var8 = var15.n(var14, 0, a2.a, null);
-            var12 = var15.n(var14, 1, (DeserializationStrategy)var21, null);
-            var10 = var15.n(var14, 2, new xk.f((KSerializer)var21), null);
-            var16 = var15.n(var14, 3, new xk.f((KSerializer)var21), null);
-            var9 = var15.n(var14, 4, h.a, null);
-            var21 = var15.n(var14, 5, new r0((KSerializer)var21, m0.a), null);
+            var18 = a2.a;
+            var8 = var16.n(var15, 0, a2.a, null);
+            var12 = var16.n(var15, 1, (DeserializationStrategy)var18, null);
+            var11 = var16.n(var15, 2, new xk.f((KSerializer)var18), null);
+            var14 = var16.n(var15, 3, new xk.f((KSerializer)var18), null);
+            var10 = var16.n(var15, 4, h.a, null);
+            var18 = var16.n(var15, 5, new r0((KSerializer)var18, m0.a), null);
             var3 = 63;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var21 = null;
+            var11 = null;
             var10 = null;
-            var16 = null;
-            var9 = null;
+            var18 = null;
             var8 = null;
+            var var9: Any = null;
 
             while (var4) {
-               val var5: Int = var15.o(var14);
-               var var17: Int;
+               val var5: Int = var16.o(var15);
+               var var20: Int;
                switch (var5) {
                   case -1:
                      var4 = false;
                      continue;
                   case 0:
-                     var12 = var15.n(var14, 0, a2.a, var12);
+                     var12 = var16.n(var15, 0, a2.a, var12);
                      var3 |= 1;
                      continue;
                   case 1:
-                     var21 = var15.n(var14, 1, a2.a, var21);
+                     var11 = var16.n(var15, 1, a2.a, var11);
                      var3 |= 2;
                      continue;
                   case 2:
-                     var10 = var15.n(var14, 2, new xk.f(a2.a), var10);
-                     var17 = var3 or 4;
+                     var10 = var16.n(var15, 2, new xk.f(a2.a), var10);
+                     var20 = var3 or 4;
                      break;
                   case 3:
-                     var16 = var15.n(var14, 3, new xk.f(a2.a), var16);
-                     var17 = var3 or 8;
+                     var18 = var16.n(var15, 3, new xk.f(a2.a), var18);
+                     var20 = var3 or 8;
                      break;
                   case 4:
-                     var9 = var15.n(var14, 4, h.a, var9);
-                     var17 = var3 or 16;
+                     var8 = var16.n(var15, 4, h.a, var8);
+                     var20 = var3 or 16;
                      break;
                   case 5:
-                     var8 = var15.n(var14, 5, new r0(a2.a, m0.a), var8);
-                     var17 = var3 or 32;
+                     var9 = var16.n(var15, 5, new r0(a2.a, m0.a), var9);
+                     var20 = var3 or 32;
                      break;
                   default:
                      throw new n(var5);
                }
 
-               var3 = var17;
+               var3 = var20;
             }
 
+            var14 = var18;
             var8 = var12;
-            var12 = var21;
-            var21 = var8;
+            var12 = var11;
+            var11 = var10;
+            var10 = var8;
+            var18 = var9;
          }
 
-         var15.c(var14);
+         var16.c(var15);
          return new BuildOverrideCookieMeta(
             var3,
             var8 as java.lang.String,
             var12 as java.lang.String,
-            var10 as java.util.List,
-            var16 as java.util.List,
-            var9 as java.lang.Boolean,
-            var21 as java.util.Map,
+            var11 as java.util.List,
+            var14 as java.util.List,
+            var10 as java.lang.Boolean,
+            var18 as java.util.Map,
             null
          );
       }

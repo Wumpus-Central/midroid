@@ -135,26 +135,26 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
          r.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
+         var var2: Int;
          var var3: Int;
-         var var4: Int;
          val var5: Int;
          val var8: java.lang.String;
-         val var11: java.lang.String;
+         var var12: java.lang.String;
          if (var10.p()) {
-            var11 = var10.m(var9, 0);
+            val var11: java.lang.String = var10.m(var9, 0);
             val var7: java.lang.String = var10.m(var9, 1);
             var5 = var10.i(var9, 2);
-            val var2: Int = var10.i(var9, 3);
+            var2 = var10.i(var9, 3);
             var3 = 15;
-            var8 = var7;
-            var4 = var2;
+            var8 = var11;
+            var12 = var7;
          } else {
             var var16: java.lang.String = null;
-            var var12: java.lang.String = null;
+            var12 = null;
             var var15: Boolean = true;
-            var4 = 0;
+            var var4: Int = 0;
             var3 = 0;
-            var var13: Int = 0;
+            var2 = 0;
 
             while (var15) {
                val var6: Int = var10.o(var9);
@@ -167,18 +167,18 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
                            }
 
                            var4 = var10.i(var9, 3);
-                           var13 |= 8;
+                           var2 |= 8;
                         } else {
                            var3 = var10.i(var9, 2);
-                           var13 |= 4;
+                           var2 |= 4;
                         }
                      } else {
                         var12 = var10.m(var9, 1);
-                        var13 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var16 = var10.m(var9, 0);
-                     var13 |= 1;
+                     var2 |= 1;
                   }
                } else {
                   var15 = false;
@@ -186,13 +186,13 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
             }
 
             var5 = var3;
-            var8 = var12;
-            var11 = var16;
-            var3 = var13;
+            var3 = var2;
+            var2 = var4;
+            var8 = var16;
          }
 
          var10.c(var9);
-         return new ConnectionsRoleTag(var3, var11, var8, var5, var4, null);
+         return new ConnectionsRoleTag(var3, var8, var12, var5, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ConnectionsRoleTag) {

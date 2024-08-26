@@ -35,13 +35,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "embeddedActivityInviteAccessory");
-      val var5: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var2: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var5.getSplashUrl(), var1.getConstrainedWidth());
-      var2.setTitleText(var5.getTitleText());
-      var2.setHeaderText(var5.getHeaderText());
-      var2.setSubtitleText_oCLp7l4(
-         var5.getStructurableSubtitleText(),
+      val var14: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var6: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var14.getSplashUrl(), var1.getConstrainedWidth());
+      var6.setTitleText(var14.getTitleText());
+      var6.setHeaderText(var14.getHeaderText());
+      var6.setSubtitleText_oCLp7l4(
+         var14.getStructurableSubtitleText(),
          var1.getMessageId_3Eiw7ao(),
          new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
             {
@@ -195,9 +195,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var2.setNoParticipantsText(var5.getNoParticipantsText());
-      var2.setLaunchButton(var5.getAcceptLabelText(), var5.getAcceptLabelBackgroundColor(), var5.getCtaEnabled());
-      var2.setAvatarUris(var5.getParticipantAvatarUris());
-      var2.setOnLaunchButtonClickListener(new j(this, var1));
+      var6.setNoParticipantsText(var14.getNoParticipantsText());
+      var6.setLaunchButton(var14.getAcceptLabelText(), var14.getAcceptLabelBackgroundColor(), var14.getCtaEnabled());
+      var6.setAvatarUris(var14.getParticipantAvatarUris());
+      var6.setOnLaunchButtonClickListener(new k(this, var1));
    }
 }

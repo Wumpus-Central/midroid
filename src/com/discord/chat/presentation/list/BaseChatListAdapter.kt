@@ -22,21 +22,21 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
       r.h(var1, "eventHandlerProvider");
       r.h(var2, "messageComponentProvider");
       super();
-      val var3: AccessoriesViewPool = new AccessoriesViewPool();
-      this.messageAccessoriesRecycledViewPool = var3;
+      val var4: AccessoriesViewPool = new AccessoriesViewPool();
+      this.messageAccessoriesRecycledViewPool = var4;
       this.chatListItems = h.i();
-      val var4: AdapterDelegatesManager = this.delegatesManager;
+      val var3: AdapterDelegatesManager = this.delegatesManager;
       r.g(this.delegatesManager, "delegatesManager");
-      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var4, var1, var2, var3);
+      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var3, var1, var2, var4);
       this.setHasStableIds(true);
    }
 
    public fun fillAdapter(recyclerView: RecyclerView) {
       r.h(var1, "recyclerView");
-      val var2: java.util.Map = this.delegateViewTypes;
-      val var3: RecycledViewPool = var1.getRecycledViewPool();
-      r.g(var3, "recyclerView.recycledViewPool");
-      ChatListViewFactoryKt.fillChatList(var1, this, var2, var3);
+      val var3: java.util.Map = this.delegateViewTypes;
+      val var2: RecycledViewPool = var1.getRecycledViewPool();
+      r.g(var2, "recyclerView.recycledViewPool");
+      ChatListViewFactoryKt.fillChatList(var1, this, var3, var2);
       ChatListViewFactoryKt.fillAccessories(var1, new MessageAccessoriesAdapter(null, 1, null), this.messageAccessoriesRecycledViewPool);
    }
 

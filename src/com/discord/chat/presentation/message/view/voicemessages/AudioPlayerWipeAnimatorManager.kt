@@ -22,7 +22,6 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
 
 public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlayerViewBinding) {
    private final var animateToPlay: Boolean
@@ -67,8 +66,8 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
 
    init {
-      r.h(var1, "context");
-      r.h(var2, "binding");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "binding");
       super();
       this.brand500 = var1.getColor(color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
@@ -105,11 +104,11 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             }
 
             private static final void invoke$lambda$1$lambda$0(AudioPlayerViewBinding var0, AudioPlayerWipeAnimatorManager var1, ValueAnimator var2) {
-               r.h(var0, "$binding");
-               r.h(var1, "this$0");
-               r.h(var2, "it");
+               kotlin.jvm.internal.r.h(var0, "$binding");
+               kotlin.jvm.internal.r.h(var1, "this$0");
+               kotlin.jvm.internal.r.h(var2, "it");
                var var7: Drawable = (Drawable)var2.getAnimatedValue();
-               r.f(var7, "null cannot be cast to non-null type kotlin.Float");
+               kotlin.jvm.internal.r.f(var7, "null cannot be cast to non-null type kotlin.Float");
                val var4: Float = var7 as java.lang.Float;
                val var3: Float;
                if (var0.playerContainer.getWidth() > 0 && var0.wipe.getWidth() > 0) {
@@ -138,13 +137,13 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
                      )
                   );
                val var6: View = var0.buttonContainer;
-               r.g(var0.buttonContainer, "binding.buttonContainer");
+               kotlin.jvm.internal.r.g(var0.buttonContainer, "binding.buttonContainer");
                ViewClippingUtilsKt.clipToCircle(var6);
             }
 
             public final ValueAnimator invoke() {
                val var1: ValueAnimator = ValueAnimator.ofFloat(new float[]{0.0F, 1.0F});
-               var1.addUpdateListener(new o(this.$binding, this.this$0));
+               var1.addUpdateListener(new p(this.$binding, this.this$0));
                return var1;
             }
          }
@@ -158,17 +157,17 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
          }
 
          private static final void invoke$lambda$1$lambda$0(AudioPlayerViewBinding var0, ValueAnimator var1) {
-            r.h(var0, "$binding");
-            r.h(var1, "it");
+            kotlin.jvm.internal.r.h(var0, "$binding");
+            kotlin.jvm.internal.r.h(var1, "it");
             val var2: SimpleDraweeSpanTextView = var0.text;
             val var3: Any = var1.getAnimatedValue();
-            r.f(var3, "null cannot be cast to non-null type kotlin.Int");
+            kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
             var2.setTextColor(var3 as Integer);
          }
 
          public final ValueAnimator invoke() {
             val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{ThemeManagerKt.getTheme().getInteractiveNormal(), -1});
-            var1.addUpdateListener(new p(this.$binding));
+            var1.addUpdateListener(new q(this.$binding));
             return var1;
          }
       });
@@ -181,18 +180,18 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
          }
 
          private static final void invoke$lambda$1$lambda$0(AudioPlayerViewBinding var0, ValueAnimator var1) {
-            r.h(var0, "$binding");
-            r.h(var1, "it");
+            kotlin.jvm.internal.r.h(var0, "$binding");
+            kotlin.jvm.internal.r.h(var1, "it");
             val var2: SimpleDraweeView = var0.button;
-            r.g(var0.button, "binding.button");
+            kotlin.jvm.internal.r.g(var0.button, "binding.button");
             val var3: Any = var1.getAnimatedValue();
-            r.f(var3, "null cannot be cast to non-null type kotlin.Int");
+            kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
             ColorUtilsKt.setTintColor(var2, var3 as Integer);
          }
 
          public final ValueAnimator invoke() {
             val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{-1, -16777216});
-            var1.addUpdateListener(new m(this.$binding));
+            var1.addUpdateListener(new n(this.$binding));
             return var1;
          }
       });
@@ -205,17 +204,17 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
          }
 
          private static final void invoke$lambda$1$lambda$0(AudioPlayerViewBinding var0, ValueAnimator var1) {
-            r.h(var0, "$binding");
-            r.h(var1, "it");
+            kotlin.jvm.internal.r.h(var0, "$binding");
+            kotlin.jvm.internal.r.h(var1, "it");
             val var2: AudioWaveView = var0.wave;
             val var3: Any = var1.getAnimatedValue();
-            r.f(var3, "null cannot be cast to non-null type kotlin.Int");
+            kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
             var2.setAudioProgressPaintColor(var3 as Integer);
          }
 
          public final ValueAnimator invoke() {
             val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{-1, ThemeManagerKt.getTheme().getInteractiveActive()});
-            var1.addUpdateListener(new n(this.$binding));
+            var1.addUpdateListener(new o(this.$binding));
             return var1;
          }
       });
@@ -237,7 +236,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
       var7.setDuration(var5);
       if (VERSION.SDK_INT >= 26) {
-         k.a(var7, var2);
+         l.a(var7, var2);
       }
 
       var7.addListener(new AnimatorListener(this) {
@@ -330,7 +329,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
                   }
 
                   if (this.animatorSet != null) {
-                     var10 = l.a(this.animatorSet);
+                     var10 = m.a(this.animatorSet);
                   } else {
                      var10 = 0L;
                   }

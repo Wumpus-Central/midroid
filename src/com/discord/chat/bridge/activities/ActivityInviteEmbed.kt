@@ -326,90 +326,90 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
          var var8: Byte = 7;
          var var7: Byte = 6;
          var var4: Int;
-         val var5: Int;
+         var var6: Int;
          var var11: Any;
          var var12: Any;
          var var13: Any;
-         var var14: Any;
+         var var15: Any;
          var var16: Any;
-         val var17: Any;
-         var var21: Any;
+         var var20: Any;
+         var var26: Any;
          if (var10) {
-            var21 = a2.a;
+            var26 = a2.a;
             var13 = var19.n(var18, 0, a2.a, null);
-            var4 = var19.C(var18, 1);
+            var6 = var19.C(var18, 1);
             var12 = var19.m(var18, 2);
-            var17 = var19.m(var18, 3);
-            var16 = var19.n(var18, 4, new xk.f(a.u((KSerializer)var21)), null);
+            var11 = var19.m(var18, 3);
+            var16 = var19.n(var18, 4, new xk.f(a.u((KSerializer)var26)), null);
             val var2: Int = var19.i(var18, 5);
-            var11 = var19.n(var18, 6, (DeserializationStrategy)var21, null);
-            var21 = var19.n(var18, 7, (DeserializationStrategy)var21, null);
+            var20 = var19.n(var18, 6, (DeserializationStrategy)var26, null);
+            var15 = var19.n(var18, 7, (DeserializationStrategy)var26, null);
             var10 = var19.C(var18, 8);
-            var14 = var19.m(var18, 9);
+            var26 = var19.m(var18, 9);
             var3 = 1023;
-            var5 = var2;
+            var4 = var2;
          } else {
-            var var26: Boolean = true;
+            var var5: Boolean = true;
             var10 = false;
-            var var23: Int = 0;
-            var var6: Int = 0;
-            var14 = null;
-            var var15: Any = null;
-            var21 = null;
+            var var22: Int = 0;
+            var6 = 0;
+            var15 = null;
+            var26 = null;
+            var20 = null;
             var12 = null;
             var11 = null;
             var13 = null;
             var16 = null;
             var4 = 0;
 
-            while (var26) {
+            while (var5) {
                label44: {
                   val var9: Int = var19.o(var18);
                   switch (var9) {
                      case -1:
-                        var26 = false;
+                        var5 = false;
                         break;
                      case 0:
-                        var21 = var19.n(var18, 0, a2.a, var21);
-                        var23 |= 1;
+                        var20 = var19.n(var18, 0, a2.a, var20);
+                        var22 |= 1;
                         var3 = 9;
                         break;
                      case 1:
                         var6 = var19.C(var18, 1);
-                        var23 |= 2;
+                        var22 |= 2;
                         break label44;
                      case 2:
                         var12 = var19.m(var18, 2);
-                        var23 |= 4;
+                        var22 |= 4;
                         break label44;
                      case 3:
                         var11 = var19.m(var18, 3);
-                        var23 |= 8;
+                        var22 |= 8;
                         break label44;
                      case 4:
                         var16 = var19.n(var18, 4, new xk.f(a.u(a2.a)), var16);
-                        var23 |= 16;
+                        var22 |= 16;
                         var3 = 9;
                         continue;
                      case 5:
                         var4 = var19.i(var18, 5);
-                        var23 |= 32;
+                        var22 |= 32;
                         continue;
                      case 6:
-                        var15 = var19.n(var18, var7, a2.a, var15);
-                        var23 |= 64;
+                        var26 = var19.n(var18, var7, a2.a, var26);
+                        var22 |= 64;
                         continue;
                      case 7:
-                        var14 = var19.n(var18, var8, a2.a, var14);
-                        var23 |= 128;
+                        var15 = var19.n(var18, var8, a2.a, var15);
+                        var22 |= 128;
                         continue;
                      case 8:
                         var10 = var19.C(var18, 8);
-                        var23 |= 256;
+                        var22 |= 256;
                         continue;
                      case 9:
                         var13 = var19.m(var18, var3);
-                        var23 |= 512;
+                        var22 |= 512;
                         continue;
                      default:
                         throw new n(var9);
@@ -423,29 +423,25 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
                var3 = 9;
             }
 
-            var21 = var14;
-            var14 = var13;
-            var13 = var21;
-            var5 = var4;
-            var17 = var11;
-            var4 = var6;
-            var11 = var15;
-            var3 = var23;
+            var13 = var20;
+            var20 = var26;
+            var26 = var13;
+            var3 = var22;
          }
 
          var19.c(var18);
          return new ActivityInviteEmbed(
             var3,
             var13 as java.lang.String,
-            (boolean)var4,
+            (boolean)var6,
             (java.lang.String)var12,
-            (java.lang.String)var17,
+            (java.lang.String)var11,
             var16 as java.util.List,
-            var5,
-            var11 as java.lang.String,
-            var21 as java.lang.String,
+            var4,
+            var20 as java.lang.String,
+            var15 as java.lang.String,
             var10,
-            (java.lang.String)var14,
+            (java.lang.String)var26,
             null
          );
       }

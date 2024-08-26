@@ -35,12 +35,12 @@ public object UnicodeEmojis {
          new Function2<CoroutineScope, Continuation<? super UnicodeEmojis.EmojiCategories>, Object>(var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:100)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1621,11 +1621,11 @@ public object UnicodeEmojis {
 
          public open fun deserialize(decoder: Decoder): com.discord.emoji.UnicodeEmojis.EmojiCategories {
             r.h(var1, "decoder");
-            val var15: SerialDescriptor = this.getDescriptor();
-            val var16: c = var1.b(var15);
-            val var6: Boolean = var16.p();
+            val var16: SerialDescriptor = this.getDescriptor();
+            val var17: c = var1.b(var16);
+            val var6: Boolean = var17.p();
             var var4: Byte = 7;
-            var var17: Any = null;
+            var var18: Any = null;
             var var2: Int;
             var var7: Any;
             var var8: Any;
@@ -1633,22 +1633,22 @@ public object UnicodeEmojis {
             var var10: Any;
             var var11: Any;
             var var12: Any;
-            var var20: Any;
+            var var23: Any;
             if (var6) {
-               var20 = UnicodeEmojis.Emoji.$serializer.INSTANCE;
-               var17 = var16.y(var15, 0, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), null);
-               var8 = var16.y(var15, 1, new xk.f((KSerializer)var20), null);
-               var9 = var16.y(var15, 2, new xk.f((KSerializer)var20), null);
-               var7 = var16.y(var15, 3, new xk.f((KSerializer)var20), null);
-               var10 = var16.y(var15, 4, new xk.f((KSerializer)var20), null);
-               var11 = var16.y(var15, 5, new xk.f((KSerializer)var20), null);
-               var12 = var16.y(var15, 6, new xk.f((KSerializer)var20), null);
-               var20 = var16.y(var15, 7, new xk.f((KSerializer)var20), null);
+               var23 = UnicodeEmojis.Emoji.$serializer.INSTANCE;
+               var8 = var17.y(var16, 0, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), null);
+               var18 = var17.y(var16, 1, new xk.f((KSerializer)var23), null);
+               var7 = var17.y(var16, 2, new xk.f((KSerializer)var23), null);
+               var10 = var17.y(var16, 3, new xk.f((KSerializer)var23), null);
+               var9 = var17.y(var16, 4, new xk.f((KSerializer)var23), null);
+               var11 = var17.y(var16, 5, new xk.f((KSerializer)var23), null);
+               var12 = var17.y(var16, 6, new xk.f((KSerializer)var23), null);
+               var23 = var17.y(var16, 7, new xk.f((KSerializer)var23), null);
                var2 = 255;
             } else {
                var var3: Boolean = true;
                var2 = 0;
-               var20 = null;
+               var23 = null;
                var12 = null;
                var11 = null;
                var8 = null;
@@ -1657,42 +1657,42 @@ public object UnicodeEmojis {
                var10 = null;
 
                while (var3) {
-                  val var5: Int = var16.o(var15);
+                  val var5: Int = var17.o(var16);
                   switch (var5) {
                      case -1:
                         var3 = false;
                         break;
                      case 0:
-                        var17 = var16.y(var15, 0, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var17);
+                        var18 = var17.y(var16, 0, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var18);
                         var2 |= 1;
                         break;
                      case 1:
-                        var8 = var16.y(var15, 1, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var8);
+                        var8 = var17.y(var16, 1, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var8);
                         var2 |= 2;
                         break;
                      case 2:
-                        var7 = var16.y(var15, 2, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var7);
+                        var7 = var17.y(var16, 2, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var7);
                         var2 |= 4;
                         break;
                      case 3:
-                        var9 = var16.y(var15, 3, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var9);
+                        var9 = var17.y(var16, 3, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var9);
                         var2 |= 8;
                         var4 = 7;
                         continue;
                      case 4:
-                        var10 = var16.y(var15, 4, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var10);
+                        var10 = var17.y(var16, 4, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var10);
                         var2 |= 16;
                         continue;
                      case 5:
-                        var11 = var16.y(var15, 5, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var11);
+                        var11 = var17.y(var16, 5, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var11);
                         var2 |= 32;
                         continue;
                      case 6:
-                        var12 = var16.y(var15, 6, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var12);
+                        var12 = var17.y(var16, 6, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var12);
                         var2 |= 64;
                         continue;
                      case 7:
-                        var20 = var16.y(var15, var4, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var20);
+                        var23 = var17.y(var16, var4, new xk.f<>(UnicodeEmojis.Emoji.$serializer.INSTANCE), (java.util.List<? extends UnicodeEmojis.Emoji>)var23);
                         var2 |= 128;
                         continue;
                      default:
@@ -1702,21 +1702,23 @@ public object UnicodeEmojis {
                   var4 = 7;
                }
 
-               var7 = var9;
-               var9 = var7;
+               var9 = var10;
+               var8 = var18;
+               var18 = var8;
+               var10 = var9;
             }
 
-            var16.c(var15);
+            var17.c(var16);
             return new UnicodeEmojis.EmojiCategories(
                var2,
-               var17 as java.util.List,
                var8 as java.util.List,
-               var9 as java.util.List,
+               var18 as java.util.List,
                var7 as java.util.List,
                var10 as java.util.List,
+               var9 as java.util.List,
                var11 as java.util.List,
                var12 as java.util.List,
-               var20 as java.util.List,
+               var23 as java.util.List,
                null
             );
          }

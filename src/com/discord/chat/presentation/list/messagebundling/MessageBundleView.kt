@@ -456,40 +456,40 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
-            val var1: KSerializer = vk.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE);
-            val var2: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-            return new KSerializer[]{var1, new xk.f(MessageRow.$serializer.INSTANCE), vk.a.u(e0.a), new xk.f(var2), vk.a.u(a2.a)};
+            val var2: KSerializer = vk.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE);
+            val var1: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
+            return new KSerializer[]{var2, new xk.f(MessageRow.$serializer.INSTANCE), vk.a.u(e0.a), new xk.f(var1), vk.a.u(a2.a)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.list.messagebundling.MessageBundleView.MessageBundle {
             r.h(var1, "decoder");
-            val var11: SerialDescriptor = this.getDescriptor();
-            val var12: kotlinx.serialization.encoding.c = var1.b(var11);
-            val var5: Boolean = var12.p();
+            val var10: SerialDescriptor = this.getDescriptor();
+            val var11: kotlinx.serialization.encoding.c = var1.b(var10);
+            val var5: Boolean = var11.p();
             var var7: Any = null;
             var var2: Int;
+            var var6: Any;
             var var8: Any;
             var var9: Any;
             var var13: Any;
-            var var15: Any;
             if (var5) {
-               var7 = var12.n(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, null);
-               var15 = MessageRow.$serializer.INSTANCE;
-               var9 = var12.y(var11, 1, new xk.f(MessageRow.$serializer.INSTANCE), null);
-               var13 = var12.n(var11, 2, e0.a, null);
-               var15 = var12.y(var11, 3, new xk.f((KSerializer)var15), null);
-               var8 = var12.n(var11, 4, a2.a, null);
+               var7 = var11.n(var10, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, null);
+               var13 = MessageRow.$serializer.INSTANCE;
+               var9 = var11.y(var10, 1, new xk.f(MessageRow.$serializer.INSTANCE), null);
+               var8 = var11.n(var10, 2, e0.a, null);
+               var6 = var11.y(var10, 3, new xk.f((KSerializer)var13), null);
+               var13 = var11.n(var10, 4, a2.a, null);
                var2 = 31;
             } else {
                var var3: Boolean = true;
                var2 = 0;
                var9 = null;
                var8 = null;
-               var15 = null;
+               var6 = null;
                var13 = null;
 
                while (var3) {
-                  val var4: Int = var12.o(var11);
+                  val var4: Int = var11.o(var10);
                   if (var4 != -1) {
                      if (var4 != 0) {
                         if (var4 != 1) {
@@ -499,41 +499,38 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                                     throw new n(var4);
                                  }
 
-                                 var13 = var12.n(var11, 4, a2.a, var13);
+                                 var13 = var11.n(var10, 4, a2.a, var13);
                                  var2 |= 16;
                               } else {
-                                 var15 = var12.y(var11, 3, new xk.f(MessageRow.$serializer.INSTANCE), var15);
+                                 var6 = var11.y(var10, 3, new xk.f(MessageRow.$serializer.INSTANCE), var6);
                                  var2 |= 8;
                               }
                            } else {
-                              var8 = var12.n(var11, 2, e0.a, var8);
+                              var8 = var11.n(var10, 2, e0.a, var8);
                               var2 |= 4;
                            }
                         } else {
-                           var9 = var12.y(var11, 1, new xk.f(MessageRow.$serializer.INSTANCE), var9);
+                           var9 = var11.y(var10, 1, new xk.f(MessageRow.$serializer.INSTANCE), var9);
                            var2 |= 2;
                         }
                      } else {
-                        var7 = var12.n(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, var7);
+                        var7 = var11.n(var10, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, var7);
                         var2 |= 1;
                      }
                   } else {
                      var3 = false;
                   }
                }
-
-               var13 = var8;
-               var8 = var13;
             }
 
-            var12.c(var11);
+            var11.c(var10);
             return new MessageBundleView.MessageBundle(
                var2,
                var7 as MessageFrameFeedHeaderView.MessageBundleHeader,
                var9 as java.util.List,
-               var13 as java.lang.Float,
-               var15 as java.util.List,
-               var8 as java.lang.String,
+               var8 as java.lang.Float,
+               var6 as java.util.List,
+               var13 as java.lang.String,
                null
             );
          }

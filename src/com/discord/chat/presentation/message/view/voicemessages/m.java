@@ -1,13 +1,4 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
-import com.discord.chat.databinding.AudioPlayerViewBinding;
-
-public final class m implements AnimatorUpdateListener {
-   public final AudioPlayerViewBinding a;
-
-   public final void onAnimationUpdate(ValueAnimator var1) {
-      <unrepresentable>.a(this.a, var1);
-   }
+public final class m {
 }

@@ -454,13 +454,13 @@ public data class LinkContext(usernameOnClick: UserNameOnClick? = null,
          var var23: Any;
          if (var6) {
             var23 = UserNameOnClick.$serializer.INSTANCE;
-            var10 = var21.n(var20, 0, UserNameOnClick.$serializer.INSTANCE, null);
-            var9 = var21.n(var20, 1, (DeserializationStrategy)var23, null);
-            var11 = var21.n(var20, 2, CommandOnClick.$serializer.INSTANCE, null);
+            var11 = var21.n(var20, 0, UserNameOnClick.$serializer.INSTANCE, null);
+            var10 = var21.n(var20, 1, (DeserializationStrategy)var23, null);
+            var7 = var21.n(var20, 2, CommandOnClick.$serializer.INSTANCE, null);
             var8 = var21.n(var20, 3, ActorHook.$serializer.INSTANCE, null);
-            var7 = var21.n(var20, 4, ThreadOnClick.$serializer.INSTANCE, null);
+            var12 = var21.n(var20, 4, ThreadOnClick.$serializer.INSTANCE, null);
             var13 = var21.n(var20, 5, PinsOnClick.$serializer.INSTANCE, null);
-            var12 = var21.n(var20, 6, WebhookNameOnClick.$serializer.INSTANCE, null);
+            var9 = var21.n(var20, 6, WebhookNameOnClick.$serializer.INSTANCE, null);
             var14 = var21.n(var20, 7, HandleDelete.$serializer.INSTANCE, null);
             var23 = var21.n(var20, 8, RoleSubscriptionOnClick.$serializer.INSTANCE, null);
             var16 = var21.n(var20, 9, HandleMessage.$serializer.INSTANCE, null);
@@ -538,25 +538,25 @@ public data class LinkContext(usernameOnClick: UserNameOnClick? = null,
                var4 = 10;
             }
 
-            var12 = var11;
-            var9 = var23;
-            var10 = var7;
-            var11 = var8;
-            var7 = var9;
+            var10 = var23;
+            var11 = var7;
+            var7 = var8;
+            var12 = var9;
             var23 = var12;
             var8 = var10;
+            var9 = var11;
          }
 
          var21.c(var20);
          return new LinkContext(
             var2,
+            var11 as UserNameOnClick,
             var10 as UserNameOnClick,
-            var9 as UserNameOnClick,
-            var11 as CommandOnClick,
+            var7 as CommandOnClick,
             var8 as ActorHook,
-            var7 as ThreadOnClick,
+            var12 as ThreadOnClick,
             var13 as PinsOnClick,
-            var12 as WebhookNameOnClick,
+            var9 as WebhookNameOnClick,
             var14 as HandleDelete,
             var23 as RoleSubscriptionOnClick,
             var16 as HandleMessage,

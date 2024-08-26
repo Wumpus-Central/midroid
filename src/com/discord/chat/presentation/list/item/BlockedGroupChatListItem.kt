@@ -102,43 +102,43 @@ public data class BlockedGroupChatListItem(text: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.text.hashCode();
+      val var7: Int = this.text.hashCode();
       val var4: Int = this.getId().hashCode();
       val var5: Int = Integer.hashCode(this.textColor);
-      val var3: Int = Integer.hashCode(this.backgroundColor);
-      val var7: Int = Integer.hashCode(this.borderColor);
+      val var6: Int = Integer.hashCode(this.backgroundColor);
+      val var3: Int = Integer.hashCode(this.borderColor);
       var var1: Byte = this.isRevealed;
       if (this.isRevealed != 0) {
          var1 = 1;
       }
 
-      return (((((var6 * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var7) * 31 + var1) * 31 + this.content.hashCode();
+      return (((((var7 * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var3) * 31 + var1) * 31 + this.content.hashCode();
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.text;
+      val var5: java.lang.String = this.text;
       val var6: java.lang.String = this.getId();
       val var1: Int = this.textColor;
       val var3: Int = this.backgroundColor;
       val var2: Int = this.borderColor;
       val var4: Boolean = this.isRevealed;
-      val var5: java.util.List = this.content;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("BlockedGroupChatListItem(text=");
-      var7.append(var8);
-      var7.append(", id=");
-      var7.append(var6);
-      var7.append(", textColor=");
-      var7.append(var1);
-      var7.append(", backgroundColor=");
-      var7.append(var3);
-      var7.append(", borderColor=");
-      var7.append(var2);
-      var7.append(", isRevealed=");
-      var7.append(var4);
-      var7.append(", content=");
-      var7.append(var5);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.util.List = this.content;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("BlockedGroupChatListItem(text=");
+      var8.append(var5);
+      var8.append(", id=");
+      var8.append(var6);
+      var8.append(", textColor=");
+      var8.append(var1);
+      var8.append(", backgroundColor=");
+      var8.append(var3);
+      var8.append(", borderColor=");
+      var8.append(var2);
+      var8.append(", isRevealed=");
+      var8.append(var4);
+      var8.append(", content=");
+      var8.append(var7);
+      var8.append(")");
+      return var8.toString();
    }
 }

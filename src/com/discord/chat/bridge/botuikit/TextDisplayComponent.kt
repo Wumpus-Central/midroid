@@ -83,17 +83,17 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
 
    public override fun toString(): String {
       val var1: Int = this.getType();
-      val var4: java.lang.String = this.getId();
-      val var3: StructurableText = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TextDisplayComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.getId();
+      val var2: StructurableText = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TextDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<TextDisplayComponent> {
@@ -127,10 +127,10 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          var var6: java.lang.String;
          var var9: Any;
          if (var8.p()) {
-            var3 = var8.i(var7, 0);
+            var2 = var8.i(var7, 0);
             var6 = var8.m(var7, 1);
             var9 = var8.y(var7, 2, StructurableTextSerializer.INSTANCE, null);
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -161,10 +161,13 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
                   var4 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.c(var7);
-         return new TextDisplayComponent(var2, var3, var6, var9 as StructurableText, null);
+         return new TextDisplayComponent(var3, var2, var6, var9 as StructurableText, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TextDisplayComponent) {

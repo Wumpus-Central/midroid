@@ -120,6 +120,10 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
       this.removeChildView();
    }
 
+   public open fun removeView(view: View?) {
+      this.removeChildView();
+   }
+
    public open fun removeViewAt(index: Int) {
       this.removeChildView();
    }

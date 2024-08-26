@@ -88,12 +88,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var2);
       this.binding.message.setText(var1.getTitle());
-      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var18: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("Binding ");
-      var8.append(var18);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var8.toString(), null, 2, null);
+      val var18: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var8: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("Binding ");
+      var13.append(var8);
+      AttachedViewCoroutineScope.cancelAllWork$default(var18, var13.toString(), null, 2, null);
       if (r.c(var1.isCallActive(), var6)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          r.e(var14);
@@ -104,6 +104,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
             new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var14, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -1126,8 +1128,6 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
             3,
             null

@@ -20,30 +20,30 @@ public class DeviceLocaleManagerModule(reactContext: ReactApplicationContext) : 
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any?> {
-      val var5: ArrayList = new ArrayList();
-      val var6: LocaleList = LocaleList.getAdjustedDefault();
-      r.g(var6, "getAdjustedDefault()");
-      val var3: Int = var6.size();
+      val var7: ArrayList = new ArrayList();
+      val var4: LocaleList = LocaleList.getAdjustedDefault();
+      r.g(var4, "getAdjustedDefault()");
+      val var3: Int = var4.size();
       var var2: Int = 10;
 
       for (int var1 = 0; var1 < var3; var1++) {
-         val var4: java.lang.String = var6.get(var1).toLanguageTag();
+         val var5: java.lang.String = var4.get(var1).toLanguageTag();
          if (var1 == 0) {
-            r.g(var4, "lang");
-            var5.add(var4);
+            r.g(var5, "lang");
+            var7.add(var5);
          } else {
-            val var7: StringBuilder = new StringBuilder();
-            var7.append(var4);
-            var7.append(";q=0.");
-            var7.append(var2);
-            var5.add(var7.toString());
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var5);
+            var6.append(";q=0.");
+            var6.append(var2);
+            var7.add(var6.toString());
          }
 
          var2 = h.c(1, var2 - 1);
       }
 
-      kotlin.collections.h.k0(var5, ",", null, null, 0, null, null, 62, null);
-      return s.m(w.a("Language", kotlin.collections.h.a0(var5)), w.a("Languages", var5));
+      kotlin.collections.h.k0(var7, ",", null, null, 0, null, null, 62, null);
+      return s.m(w.a("Language", kotlin.collections.h.a0(var7)), w.a("Languages", var7));
    }
 
    public companion object {

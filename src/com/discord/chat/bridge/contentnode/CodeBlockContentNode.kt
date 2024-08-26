@@ -76,14 +76,14 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.lang.hashCode();
-      val var4: Int = this.content.hashCode();
+      val var4: Int = this.lang.hashCode();
+      val var3: Int = this.content.hashCode();
       var var1: Byte = this.inQuote;
       if (this.inQuote != 0) {
          var1 = 1;
       }
 
-      return (var3 * 31 + var4) * 31 + var1;
+      return (var4 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {

@@ -304,10 +304,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
 
       public fun onBindViewHolder(emojiSize: Int, emojiMargin: Int) {
-         val var3: View = this.itemView;
-         val var4: LayoutParams = new LayoutParams(var1, var1);
-         var4.setMargins(var2, var2, var2, var2);
-         var3.setLayoutParams(var4);
+         val var4: View = this.itemView;
+         val var3: LayoutParams = new LayoutParams(var1, var1);
+         var3.setMargins(var2, var2, var2, var2);
+         var4.setLayoutParams(var3);
       }
    }
 

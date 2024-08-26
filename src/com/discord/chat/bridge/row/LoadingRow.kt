@@ -92,32 +92,32 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
 
    public override fun hashCode(): Int {
       val var3: Int = Integer.hashCode(this.getIndex());
-      val var4: Int = this.getChangeType().hashCode();
-      val var5: Int = this.button.hashCode();
+      val var5: Int = this.getChangeType().hashCode();
+      val var4: Int = this.button.hashCode();
       var var1: Byte = this.isLoading;
       if (this.isLoading != 0) {
          var1 = 1;
       }
 
-      return ((var3 * 31 + var4) * 31 + var5) * 31 + var1;
+      return ((var3 * 31 + var5) * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.getIndex();
-      val var4: ChangeType = this.getChangeType();
-      val var5: LoadMoreButton = this.button;
+      val var5: ChangeType = this.getChangeType();
+      val var3: LoadMoreButton = this.button;
       val var2: Boolean = this.isLoading;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LoadingRow(index=");
-      var3.append(var1);
-      var3.append(", changeType=");
-      var3.append(var4);
-      var3.append(", button=");
-      var3.append(var5);
-      var3.append(", isLoading=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LoadingRow(index=");
+      var4.append(var1);
+      var4.append(", changeType=");
+      var4.append(var5);
+      var4.append(", button=");
+      var4.append(var3);
+      var4.append(", isLoading=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<LoadingRow> {
@@ -145,29 +145,29 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
 
       public open fun deserialize(decoder: Decoder): LoadingRow {
          r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.b(var9);
          var var2: Int;
          var var3: Int;
          var var4: Int;
          var var7: Any;
-         var var10: Any;
-         if (var9.p()) {
-            var4 = var9.i(var8, 0);
-            var7 = var9.y(var8, 1, ChangeType.Serializer.INSTANCE, null);
-            var10 = var9.y(var8, 2, LoadMoreButton.$serializer.INSTANCE, null);
-            var3 = var9.C(var8, 3);
+         var var11: Any;
+         if (var10.p()) {
+            var4 = var10.i(var9, 0);
+            var11 = var10.y(var9, 1, ChangeType.Serializer.INSTANCE, null);
+            var7 = var10.y(var9, 2, LoadMoreButton.$serializer.INSTANCE, null);
+            var3 = var10.C(var9, 3);
             var2 = 15;
          } else {
             var var5: Boolean = true;
             var4 = 0;
             var2 = 0;
             var7 = null;
-            var10 = null;
+            var11 = null;
             var3 = 0;
 
             while (var5) {
-               val var6: Int = var9.o(var8);
+               val var6: Int = var10.o(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -176,28 +176,31 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
                               throw new n(var6);
                            }
 
-                           var3 = var9.C(var8, 3);
+                           var3 = var10.C(var9, 3);
                            var2 |= 8;
                         } else {
-                           var10 = var9.y(var8, 2, LoadMoreButton.$serializer.INSTANCE, var10);
+                           var11 = var10.y(var9, 2, LoadMoreButton.$serializer.INSTANCE, var11);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var9.y(var8, 1, ChangeType.Serializer.INSTANCE, var7);
+                        var7 = var10.y(var9, 1, ChangeType.Serializer.INSTANCE, var7);
                         var2 |= 2;
                      }
                   } else {
-                     var4 = var9.i(var8, 0);
+                     var4 = var10.i(var9, 0);
                      var2 |= 1;
                   }
                } else {
                   var5 = false;
                }
             }
+
+            var11 = var7;
+            var7 = var11;
          }
 
-         var9.c(var8);
-         return new LoadingRow(var2, var4, var7 as ChangeType, var10 as LoadMoreButton, (boolean)var3, null);
+         var10.c(var9);
+         return new LoadingRow(var2, var4, var11 as ChangeType, var7 as LoadMoreButton, (boolean)var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadingRow) {

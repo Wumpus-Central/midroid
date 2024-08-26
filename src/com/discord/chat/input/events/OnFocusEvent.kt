@@ -134,9 +134,9 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
          var var5: Int;
          if (var9.p()) {
             var5 = var9.i(var8, 0);
-            var4 = var9.i(var8, 1);
+            var3 = var9.i(var8, 1);
             var2 = var9.i(var8, 2);
-            var3 = 7;
+            var4 = 7;
          } else {
             var var6: Boolean = true;
             var5 = 0;
@@ -168,13 +168,12 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
                }
             }
 
-            var4 = var3;
-            var3 = var2;
+            var4 = var2;
             var2 = var4;
          }
 
          var9.c(var8);
-         return new OnFocusEvent(var3, var5, var4, var2, null);
+         return new OnFocusEvent(var4, var5, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnFocusEvent) {

@@ -55,12 +55,12 @@ public data class SubtextContentNode(content: List<ContentNode>) : ContentNode {
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SubtextContentNode(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SubtextContentNode(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<SubtextContentNode> {
