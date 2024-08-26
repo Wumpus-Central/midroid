@@ -39,15 +39,15 @@ public class SummarySeparatorView  public constructor(context: Context, attrs: A
       val var16: SeparatorSummaryViewBinding = SeparatorSummaryViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var16, "inflate(\n        LayoutI…ext),\n        this,\n    )");
       this.binding = var16;
-      val var5: View = var16.getRoot();
-      r.g(var5, "root");
-      val var6: Resources = var1.getResources();
+      val var6: View = var16.getRoot();
+      r.g(var6, "root");
+      val var5: Resources = var1.getResources();
       val var4: Int = R.dimen.message_divider_margin_horiz;
-      var5.setPaddingRelative(
-         var6.getDimensionPixelSize(R.dimen.message_divider_margin_horiz),
-         var5.getPaddingTop(),
+      var6.setPaddingRelative(
+         var5.getDimensionPixelSize(R.dimen.message_divider_margin_horiz),
+         var6.getPaddingTop(),
          var1.getResources().getDimensionPixelSize(var4),
-         var5.getPaddingBottom()
+         var6.getPaddingBottom()
       );
       val var7: TextView = var16.middleText;
       r.g(var16.middleText, "lambda$2$lambda$0");

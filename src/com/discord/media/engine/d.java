@@ -4,7 +4,6 @@ import com.discord.native.engine.ConnectionInfo;
 import com.discord.native.engine.NativeEngine.ConnectToServerCallback;
 import kotlin.jvm.functions.Function2;
 
-// $VF: synthetic class
 public final class d implements ConnectToServerCallback {
    public final Function2 a;
 

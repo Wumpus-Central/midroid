@@ -75,11 +75,11 @@ public object JavaScript {
                   r.h(var1, "matcher");
                   r.h(var2, "parser");
                   val var6: java.lang.String = var1.group(1);
-                  val var4: java.lang.String = var1.group(2);
-                  val var5: ParseSpec.Companion = ParseSpec.Companion;
+                  val var5: java.lang.String = var1.group(2);
+                  val var4: ParseSpec.Companion = ParseSpec.Companion;
                   r.e(var6);
-                  r.e(var4);
-                  return (ParseSpec<RC, S>)var5.createTerminal(new JavaScript.FieldNode<>(var6, var4, this.$codeStyleProviders), var3);
+                  r.e(var5);
+                  return (ParseSpec<RC, S>)var4.createTerminal(new JavaScript.FieldNode<>(var6, var5, this.$codeStyleProviders), var3);
                }
             };
          }

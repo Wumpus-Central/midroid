@@ -121,8 +121,8 @@ public object TTIMetrics {
       }
 
       public override fun hashCode(): Int {
-         val var4: Int = this.label.hashCode();
-         val var5: Int = java.lang.Long.hashCode(this.timestamp);
+         val var5: Int = this.label.hashCode();
+         val var4: Int = java.lang.Long.hashCode(this.timestamp);
          val var1: Int;
          if (this.tag == null) {
             var1 = 0;
@@ -135,7 +135,7 @@ public object TTIMetrics {
             var2 = 1;
          }
 
-         return ((var4 * 31 + var5) * 31 + var1) * 31 + var2;
+         return ((var5 * 31 + var4) * 31 + var1) * 31 + var2;
       }
 
       public override fun toString(): String {

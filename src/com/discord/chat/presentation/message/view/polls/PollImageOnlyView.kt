@@ -137,15 +137,15 @@ public class PollImageOnlyView  public constructor(context: Context, attrs: Attr
 
             ReactAssetUtilsKt.setOptionalReactImageUrl(var26, var14);
             if (var1.getCanShowVoteCounts()) {
-               val var15: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).votePercentage;
-               r.g(var15, "bind$lambda$8");
-               var15.setVisibility(0);
+               val var18: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).votePercentage;
+               r.g(var18, "bind$lambda$8");
+               var18.setVisibility(0);
                var4 = var8.getVotesPercentage();
-               val var18: StringBuilder = new StringBuilder();
-               var18.append(var4);
-               var18.append("%");
-               var15.setText(var18.toString());
-               var15.setTextColor(var1.getLabelColor());
+               val var15: StringBuilder = new StringBuilder();
+               var15.append(var4);
+               var15.append("%");
+               var18.setText(var15.toString());
+               var18.setTextColor(var1.getLabelColor());
                val var16: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).voteCounts;
                r.g(var16, "bind$lambda$9");
                var16.setVisibility(0);

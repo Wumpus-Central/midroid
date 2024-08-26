@@ -3,7 +3,6 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.OnPingCallback;
 import kotlin.jvm.functions.Function4;
 
-// $VF: synthetic class
 public final class c implements OnPingCallback {
    public final Function4 a;
 

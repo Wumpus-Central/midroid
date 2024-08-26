@@ -4,7 +4,6 @@ import com.discord.native.engine.AudioOutputDeviceDescription;
 import com.discord.native.engine.NativeEngine.GetAudioOutputDevicesCallback;
 import kotlin.jvm.functions.Function1;
 
-// $VF: synthetic class
 public final class t implements GetAudioOutputDevicesCallback {
    public final Function1 a;
 

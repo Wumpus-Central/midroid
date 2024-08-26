@@ -57,7 +57,7 @@ public class InviteToSpeakView  public constructor(context: Context, attrs: Attr
    fun `setProps$lambda$1`(var0: Function1, var1: Message, var2: View) {
       r.h(var0, "$onInviteToSpeakClicked");
       r.h(var1, "$message");
-      var0.invoke(MessageId.box-impl(var1.getId-3Eiw7ao()));
+      var0.invoke(MessageId.box_impl(var1.getId_3Eiw7ao()));
    }
 
    public fun setProps(message: Message, onInviteToSpeakClicked: (MessageId) -> Unit) {

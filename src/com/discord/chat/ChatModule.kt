@@ -40,10 +40,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
       super(var1);
       this.reactContext = var1;
       this.json = l.b(null, <unrepresentable>.INSTANCE, 1, null);
-      val var2: CompletableJob = m1.b(null, 1, null);
-      val var3: ExecutorService = Executors.newSingleThreadExecutor();
-      r.g(var3, "newSingleThreadExecutor()");
-      this.moduleScope = g.a(var2.N0(v0.b(var3)));
+      val var3: CompletableJob = m1.b(null, 1, null);
+      val var2: ExecutorService = Executors.newSingleThreadExecutor();
+      r.g(var2, "newSingleThreadExecutor()");
+      this.moduleScope = g.a(var3.N0(v0.b(var2)));
       this.listManagers = new LinkedHashMap<>();
       this.previousRowUpdateTag = -1;
       this.rowUpdateLoggers = new LinkedHashMap<>();
@@ -70,11 +70,11 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, this.getChatListManager(var1), null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at java.base/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1107,11 +1107,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
          new Function2<ChatListManager, Continuation<? super Unit>, Object>(this, var1, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
+   //   at java.base/java.util.HashMap.put(HashMap.java:618)
+   //   at java.base/java.util.HashSet.add(HashSet.java:229)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2131,6 +2130,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    
       );
    }
@@ -2153,12 +2153,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
       // 01: monitorenter
       // 02: aload 0
       // 03: getfield com/discord/chat/ChatModule.listManagers Ljava/util/Map;
-      // 06: astore 4
+      // 06: astore 5
       // 08: iload 1
       // 09: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-      // 0c: astore 5
-      // 0e: aload 4
-      // 10: aload 5
+      // 0c: astore 4
+      // 0e: aload 5
+      // 10: aload 4
       // 12: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 17: astore 3
       // 18: aload 3
@@ -2171,8 +2171,8 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
       // 23: aload 0
       // 24: getfield com/discord/chat/ChatModule.moduleScope Lkotlinx/coroutines/CoroutineScope;
       // 27: invokespecial com/discord/chat/listmanager/ChatListManager.<init> (Lkotlinx/coroutines/CoroutineScope;)V
-      // 2a: aload 4
-      // 2c: aload 5
+      // 2a: aload 5
+      // 2c: aload 4
       // 2e: aload 2
       // 2f: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 34: pop
@@ -2197,11 +2197,11 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    public open fun invalidate() {
       super.invalidate();
       val var2: CoroutineContext = this.moduleScope.getCoroutineContext();
-      val var1: java.lang.String = ChatModule.class.getSimpleName();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var1);
-      var3.append(" invalidate()");
-      v.g(var2, new CancellationException(var3.toString()));
+      val var3: java.lang.String = ChatModule.class.getSimpleName();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(var3);
+      var1.append(" invalidate()");
+      v.g(var2, new CancellationException(var1.toString()));
    }
 
    @ReactMethod
@@ -2213,11 +2213,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
          new Function2<ChatListManager, Continuation<? super Unit>, Object>(this, var1, var2, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
+   //   at java.base/java.util.HashMap.put(HashMap.java:618)
+   //   at java.base/java.util.HashSet.add(HashSet.java:229)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -3237,6 +3236,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    
       );
    }

@@ -21,19 +21,19 @@ public class DeviceLocaleManagerModule(reactContext: ReactApplicationContext) : 
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any?> {
       val var5: ArrayList = new ArrayList();
-      val var4: LocaleList = LocaleList.getAdjustedDefault();
-      r.g(var4, "getAdjustedDefault()");
-      val var3: Int = var4.size();
+      val var6: LocaleList = LocaleList.getAdjustedDefault();
+      r.g(var6, "getAdjustedDefault()");
+      val var3: Int = var6.size();
       var var2: Int = 10;
 
       for (int var1 = 0; var1 < var3; var1++) {
-         val var6: java.lang.String = var4.get(var1).toLanguageTag();
+         val var4: java.lang.String = var6.get(var1).toLanguageTag();
          if (var1 == 0) {
-            r.g(var6, "lang");
-            var5.add(var6);
+            r.g(var4, "lang");
+            var5.add(var4);
          } else {
             val var7: StringBuilder = new StringBuilder();
-            var7.append(var6);
+            var7.append(var4);
             var7.append(";q=0.");
             var7.append(var2);
             var5.add(var7.toString());

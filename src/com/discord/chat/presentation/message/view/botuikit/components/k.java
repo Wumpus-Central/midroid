@@ -5,7 +5,6 @@ import android.view.View.OnClickListener;
 import com.discord.chat.bridge.botuikit.SelectComponent;
 import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener;
 
-// $VF: synthetic class
 public final class k implements OnClickListener {
    public final ComponentActionListener j;
    public final SelectComponent k;

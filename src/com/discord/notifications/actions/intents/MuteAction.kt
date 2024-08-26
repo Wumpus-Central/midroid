@@ -32,14 +32,14 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId) : 
    public override fun onNotificationAction(context: Context, intent: Intent) {
       r.h(var1, "context");
       r.h(var2, "intent");
-      val var4: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var5: Bundle = new Bundle();
+      val var5: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
       if (this.guildId != null) {
-         var5.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
+         var4.putString("guildId", java.lang.String.valueOf(this.guildId.unbox_impl()));
       }
 
-      var5.putString("channelId", java.lang.String.valueOf(this.channelId));
-      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MuteAction", 0L, false, var5, true, 12, null);
+      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
+      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "MuteAction", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -54,7 +54,7 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId) : 
       r.h(var1, "out");
       var1.writeString(this.tag);
       var1.writeParcelable(this.guildId, var2);
-      var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);
+      var1.writeParcelable(ChannelId.box_impl(this.channelId), var2);
    }
 
    // $VF: Class flags could not be determined
@@ -64,7 +64,7 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId) : 
          return new MuteAction(
             var1.readString(),
             var1.readParcelable(MuteAction.class.getClassLoader()) as GuildId,
-            (var1.readParcelable(MuteAction.class.getClassLoader()) as ChannelId).unbox-impl(),
+            (var1.readParcelable(MuteAction.class.getClassLoader()) as ChannelId).unbox_impl(),
             null
          );
       }

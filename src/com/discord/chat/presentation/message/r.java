@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message;
 import java.util.Comparator;
 import kotlin.jvm.functions.Function2;
 
-// $VF: synthetic class
 public final class r implements Comparator {
    public final Function2 j;
 

@@ -20,32 +20,32 @@ public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactCo
    }
 
    public fun keysArray(): WritableNativeArray {
-      val var4: WritableNativeArray = new WritableNativeArray();
-      val var3: Array<java.lang.Enum> = this.keys();
-      val var2: Int = var3.length;
+      val var3: WritableNativeArray = new WritableNativeArray();
+      val var4: Array<java.lang.Enum> = this.keys();
+      val var2: Int = var4.length;
 
       for (int var1 = 0; var1 < var2; var1++) {
-         var4.pushString(var3[var1].name());
+         var3.pushString(var4[var1].name());
       }
 
-      return var4;
+      return var3;
    }
 
    public fun reactResources(values: ReadableArray): HashMap<String, String> {
       r.h(var1, "values");
-      val var7: HashMap = new HashMap(var1.size());
-      val var5: Array<java.lang.Enum> = this.keys();
-      val var4: Int = var5.length;
+      val var8: HashMap = new HashMap(var1.size());
+      val var6: Array<java.lang.Enum> = this.keys();
+      val var4: Int = var6.length;
       var var3: Int = 0;
 
       for (int var2 = 0; var3 < var4; var2++) {
-         val var6: java.lang.String = var5[var3].name();
-         val var8: java.lang.String = var1.getString(var2);
-         r.g(var8, "values.getString(index)");
-         var7.put(var6, var8);
+         val var7: java.lang.String = var6[var3].name();
+         val var5: java.lang.String = var1.getString(var2);
+         r.g(var5, "values.getString(index)");
+         var8.put(var7, var5);
          var3++;
       }
 
-      return var7;
+      return var8;
    }
 }

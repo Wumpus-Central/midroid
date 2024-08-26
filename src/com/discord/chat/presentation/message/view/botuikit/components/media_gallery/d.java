@@ -5,7 +5,6 @@ import android.view.View.OnLongClickListener;
 import com.discord.chat.bridge.botuikit.MediaGalleryDisplayComponent;
 import com.discord.chat.bridge.botuikit.MediaGalleryItem;
 
-// $VF: synthetic class
 public final class d implements OnLongClickListener {
    public final MediaGalleryDisplayComponentAdapter j;
    public final MediaGalleryDisplayComponent k;

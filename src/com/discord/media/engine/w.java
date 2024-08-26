@@ -3,7 +3,6 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.GetEncryptionModesCallback;
 import kotlin.jvm.functions.Function1;
 
-// $VF: synthetic class
 public final class w implements GetEncryptionModesCallback {
    public final Function1 a;
 

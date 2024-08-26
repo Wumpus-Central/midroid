@@ -33,16 +33,16 @@ internal object NotificationChannels {
          var5 = false;
       }
 
-      var3 = var3.g(var5);
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("android.resource://");
+      val var8: Builder = var3.g(var5);
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("android.resource://");
       val var6: java.lang.String = var1.getPackageName();
       val var7: StringBuilder = new StringBuilder();
       var7.append(var6);
       var7.append("/");
       var7.append(var4);
-      var8.append(var7.toString());
-      var3.h(Uri.parse(var8.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
+      var10.append(var7.toString());
+      var8.h(Uri.parse(var10.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
    }
 
    private fun configureMediaChannel(legacyChannel: NotificationChannelCompat?, builder: Builder) {
@@ -134,11 +134,11 @@ internal object NotificationChannels {
    }
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
-      for (NotificationChannelCompat var2 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var3: java.lang.String = var2.b();
-         r.g(var3, "channel.id");
-         if (f.I(var3, "calls", false, 2, null)) {
-            return var2;
+      for (NotificationChannelCompat var3 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+         val var2: java.lang.String = var3.b();
+         r.g(var2, "channel.id");
+         if (f.I(var2, "calls", false, 2, null)) {
+            return var3;
          }
       }
 
@@ -171,11 +171,11 @@ internal object NotificationChannels {
          var2.append(var3);
          var4 = var2.toString();
       } else {
-         val var6: java.lang.String = var1.getId();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("calls_");
-         var5.append(var6);
-         var4 = var5.toString();
+         val var5: java.lang.String = var1.getId();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("calls_");
+         var6.append(var5);
+         var4 = var6.toString();
       }
 
       return var4;
@@ -320,13 +320,13 @@ internal object NotificationChannels {
       r.h(var3, "localizedGroupNames");
       val var5: Int = ColorUtilsKt.getColorCompat(var1, color.brand);
       val var14: java.util.List = this.createNotificationChannelGroups(var1, var3);
-      val var9: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
-      val var8: ArrayList = new ArrayList();
-      val var6: Int = var9.length;
+      val var8: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
+      val var9: ArrayList = new ArrayList();
+      val var6: Int = var8.length;
 
       for (int var4 = 0; var4 < var6; var4++) {
          val var17: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(
-            var1, var9[var4], var5, var2, new Function2<NotificationChannelCompat, Builder, Unit>(var9[var4], var1) {
+            var1, var8[var4], var5, var2, new Function2<NotificationChannelCompat, Builder, Unit>(var8[var4], var1) {
                final NotificationChannels.Category $category;
                final Context $context;
 
@@ -347,29 +347,54 @@ internal object NotificationChannels {
                      NotificationChannels.configureCallChannel$default(NotificationChannels.INSTANCE, this.$context, var1, var2, null, 8, null);
                   }
                }
+
+               @Metadata(
+                  k = 3,
+                  mv = {1, 8, 0},
+                  xi = 48
+               )
+               public final class WhenMappings {
+                  public static final int[] $EnumSwitchMapping$0;
+
+                  static {
+                     val var0: IntArray = new int[NotificationChannels.Category.values().length];
+
+                     try {
+                        var0[NotificationChannels.Category.Calls.ordinal()] = 1;
+                     } catch (var3: NoSuchFieldError) {
+                     }
+
+                     try {
+                        var0[NotificationChannels.Category.MediaConnections.ordinal()] = 2;
+                     } catch (var2: NoSuchFieldError) {
+                     }
+
+                     $EnumSwitchMapping$0 = var0;
+                  }
+               }
             }
          );
          if (var17 != null) {
-            var8.add(var17);
+            var9.add(var17);
          }
       }
 
       try {
-         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var8);
+         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
       } catch (var12: Exception) {
          val var16: CrashReporting = CrashReporting.INSTANCE;
          val var13: LinkedHashMap = new LinkedHashMap(h.c(s.d(kotlin.collections.h.t(var14, 10)), 16));
 
-         for (q0 var18 : var14) {
-            val var11: java.lang.String = java.lang.String.valueOf(var18.b());
+         for (q0 var11 : var14) {
+            val var18: java.lang.String = java.lang.String.valueOf(var11.b());
             val var7: Boolean;
-            if (NotificationManagerUtilsKt.getNotificationManagerCompat(var1).k(var18.a()) != null) {
+            if (NotificationManagerUtilsKt.getNotificationManagerCompat(var1).k(var11.a()) != null) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            val var19: Pair = w.a(var11, java.lang.String.valueOf(var7));
+            val var19: Pair = w.a(var18, java.lang.String.valueOf(var7));
             var13.put(var19.c(), var19.d());
          }
 
@@ -385,28 +410,28 @@ internal object NotificationChannels {
          val var4: ArrayList = new ArrayList();
          val var8: NotificationChannels.CallRingtone = NotificationChannels.CallRingtone.Companion.fromName(var2);
 
-         for (NotificationChannelCompat var7 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-            val var6: java.lang.String = var7.b();
-            r.g(var6, "channel.id");
-            if (f.I(var6, "calls", false, 2, null)) {
-               r.g(var7, "channel");
-               var4.add(var7);
+         for (NotificationChannelCompat var5 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+            val var7: java.lang.String = var5.b();
+            r.g(var7, "channel.id");
+            if (f.I(var7, "calls", false, 2, null)) {
+               r.g(var5, "channel");
+               var4.add(var5);
             }
          }
 
          if (!var4.isEmpty()) {
             val var13: NotificationChannelCompat = var4.get(0) as NotificationChannelCompat;
-            val var14: Builder = new Builder(this.getChannelId(var8), var13.c())
+            val var11: Builder = new Builder(this.getChannelId(var8), var13.c())
                .f(java.lang.String.valueOf(var13.d()))
                .b(java.lang.String.valueOf(var13.d()))
                .c(NotificationChannels.Category.Calls.getGroup().getGroupId())
                .i(var13.g())
                .e(var13.f())
                .d(ColorUtilsKt.getColorCompat(var1, color.brand));
-            val var11: NotificationChannels = INSTANCE;
-            r.g(var14, "builder");
-            var11.configureCallChannel(var1, var13, var14, var8.getResource());
-            val var9: NotificationChannelCompat = var14.a();
+            val var14: NotificationChannels = INSTANCE;
+            r.g(var11, "builder");
+            var14.configureCallChannel(var1, var13, var11, var8.getResource());
+            val var9: NotificationChannelCompat = var11.a();
             r.g(var9, "Builder(\n            rin…   }\n            .build()");
 
             for (NotificationChannelCompat var12 : var4) {
@@ -619,6 +644,89 @@ internal object NotificationChannels {
 
             return NotificationChannels.Category.Other;
          }
+
+         // $VF: Class flags could not be determined
+         internal class WhenMappings {
+            @JvmStatic
+            public int[] $EnumSwitchMapping$0;
+
+            @JvmStatic
+            fun {
+               val var0: IntArray = new int[NotificationChannels.Category.values().length];
+
+               try {
+                  var0[NotificationChannels.Category.Calls.ordinal()] = 1;
+               } catch (var15: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.MediaConnections.ordinal()] = 2;
+               } catch (var14: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.Messages.ordinal()] = 3;
+               } catch (var13: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.MessagesDirect.ordinal()] = 4;
+               } catch (var12: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.FriendRequests.ordinal()] = 5;
+               } catch (var11: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.Polls.ordinal()] = 6;
+               } catch (var10: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.Social.ordinal()] = 7;
+               } catch (var9: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.GameDetection.ordinal()] = 8;
+               } catch (var8: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.StageStart.ordinal()] = 9;
+               } catch (var7: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.SystemMessages.ordinal()] = 10;
+               } catch (var6: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.ForumThreadCreated.ordinal()] = 11;
+               } catch (var5: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.GuildEventStart.ordinal()] = 12;
+               } catch (var4: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.GuildHighlights.ordinal()] = 13;
+               } catch (var3: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.OtherServerNotifications.ordinal()] = 14;
+               } catch (var2: NoSuchFieldError) {
+               }
+
+               $EnumSwitchMapping$0 = var0;
+            }
+         }
       }
    }
 
@@ -657,6 +765,34 @@ internal object NotificationChannels {
 
             return "Other";
          }
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+      @JvmStatic
+      public int[] $EnumSwitchMapping$1;
+
+      @JvmStatic
+      fun {
+         var var1: IntArray = new int[NotificationChannels.CallRingtone.values().length];
+
+         try {
+            var1[NotificationChannels.CallRingtone.Default.ordinal()] = 1;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var1;
+         var1 = new int[NotificationChannels.Category.values().length];
+
+         try {
+            var1[NotificationChannels.Category.Calls.ordinal()] = 1;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$1 = var1;
       }
    }
 }

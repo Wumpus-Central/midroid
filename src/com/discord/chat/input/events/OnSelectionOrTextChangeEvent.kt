@@ -144,15 +144,14 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
          var var4: Int;
          val var5: Int;
          var var7: java.lang.String;
-         val var8: java.lang.String;
+         val var11: java.lang.String;
          if (var10.p()) {
             var4 = var10.i(var9, 0);
             val var2: Int = var10.i(var9, 1);
             var7 = var10.m(var9, 2);
-            val var11: java.lang.String = var10.m(var9, 3);
+            var11 = var10.m(var9, 3);
             var3 = 15;
             var5 = var2;
-            var8 = var11;
          } else {
             var7 = null;
             var var12: java.lang.String = null;
@@ -190,14 +189,14 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
                }
             }
 
-            var8 = var7;
+            var11 = var7;
             var7 = var12;
             var5 = var3;
             var3 = var13;
          }
 
          var10.c(var9);
-         return new OnSelectionOrTextChangeEvent(var3, var4, var5, var7, var8, null);
+         return new OnSelectionOrTextChangeEvent(var3, var4, var5, var7, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSelectionOrTextChangeEvent) {

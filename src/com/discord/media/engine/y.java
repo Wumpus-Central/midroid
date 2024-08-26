@@ -3,7 +3,6 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeEngine.GetCodecCapabilitiesCallback;
 import kotlin.jvm.functions.Function1;
 
-// $VF: synthetic class
 public final class y implements GetCodecCapabilitiesCallback {
    public final Function1 a;
 

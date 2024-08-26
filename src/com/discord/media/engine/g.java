@@ -3,7 +3,6 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.OnPingTimeoutCallback;
 import kotlin.jvm.functions.Function4;
 
-// $VF: synthetic class
 public final class g implements OnPingTimeoutCallback {
    public final Function4 a;
 

@@ -39,13 +39,13 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       var var7: Int = 0;
 
       while (var10.hasNext()) {
-         val var11: Any = var10.next();
+         var var11: Any = var10.next();
          if (var7 < 0) {
             h.s();
          }
 
-         val var15: View = var11 as View;
-         val var12: ViewHolder = var2.getChildViewHolder(var11 as View);
+         val var12: View = var11 as View;
+         var11 = var2.getChildViewHolder(var11 as View);
          var var8: Boolean;
          if (var5 == -1.0F) {
             var8 = 1;
@@ -56,12 +56,12 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
          var var3: Float;
          var var6: Float;
          if (var8) {
-            r.g(var12, "childViewHolder");
+            r.g(var11, "childViewHolder");
             var3 = var5;
             var6 = var4;
-            if (this.isInsidePremiumRoadblock(var12)) {
-               if (var15.getTop() >= 0) {
-                  var3 = var15.getTop();
+            if (this.isInsidePremiumRoadblock((ViewHolder)var11)) {
+               if (var12.getTop() >= 0) {
+                  var3 = var12.getTop();
                   var6 = var4;
                } else {
                   var3 = 0.0F;
@@ -79,9 +79,9 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
             var6 = var4;
             label47:
             if (var8) {
-               r.g(var12, "childViewHolder");
-               if (!this.isInsidePremiumRoadblock(var12)) {
-                  var8 = var15.getTop();
+               r.g(var11, "childViewHolder");
+               if (!this.isInsidePremiumRoadblock((ViewHolder)var11)) {
+                  var8 = var12.getTop();
                } else {
                   var3 = var5;
                   var6 = var4;
@@ -89,7 +89,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
                      break label47;
                   }
 
-                  var8 = var15.getTop() + var15.getHeight();
+                  var8 = var12.getTop() + var12.getHeight();
                }
 
                var6 = var8;

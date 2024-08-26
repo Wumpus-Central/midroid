@@ -30,13 +30,13 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
             r.h(var1, "activeAudioDevice");
-            val var4: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var3: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
-            val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var2: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            r.g(var2, "reactApplicationContext");
-            var3.emitModuleEvent(var2, var4);
+            val var2: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
+            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            r.g(var4, "reactApplicationContext");
+            var2.emitModuleEvent(var4, var3);
          }
 
          @Override
@@ -162,6 +162,39 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          }
 
          return var3;
+      }
+
+      // $VF: Class flags could not be determined
+      internal class WhenMappings {
+         @JvmStatic
+         public int[] $EnumSwitchMapping$0;
+
+         @JvmStatic
+         fun {
+            val var0: IntArray = new int[SimpleDeviceType.values().length];
+
+            try {
+               var0[SimpleDeviceType.EARPIECE.ordinal()] = 1;
+            } catch (var5: NoSuchFieldError) {
+            }
+
+            try {
+               var0[SimpleDeviceType.BLUETOOTH_HEADSET.ordinal()] = 2;
+            } catch (var4: NoSuchFieldError) {
+            }
+
+            try {
+               var0[SimpleDeviceType.SPEAKERPHONE.ordinal()] = 3;
+            } catch (var3: NoSuchFieldError) {
+            }
+
+            try {
+               var0[SimpleDeviceType.WIRED_HEADSET.ordinal()] = 4;
+            } catch (var2: NoSuchFieldError) {
+            }
+
+            $EnumSwitchMapping$0 = var0;
+         }
       }
    }
 }

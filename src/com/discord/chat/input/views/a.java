@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.ClipData.Item;
 import androidx.core.util.g;
 
-// $VF: synthetic class
 public final class a implements g {
    public final Context a;
 

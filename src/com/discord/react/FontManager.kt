@@ -86,8 +86,8 @@ public object FontManager {
 
          try {
             r.h(var1, "context");
-            val var2: Float = this.getInitialFontSize();
-            val var3: Float = this.getFontScale(var1);
+            val var3: Float = this.getInitialFontSize();
+            val var2: Float = this.getFontScale(var1);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit
          }

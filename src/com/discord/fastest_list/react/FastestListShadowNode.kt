@@ -27,11 +27,11 @@ internal class FastestListShadowNode : LayoutShadowNode {
    }
 
    public open fun setDefaultPadding(spacingType: Int, padding: Float) {
-      val var3: java.lang.String = FastestListShadowNode.class.getSimpleName();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var3);
-      var4.append(" does not support default padding");
-      throw new IllegalStateException(var4.toString().toString());
+      val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var4);
+      var3.append(" does not support default padding");
+      throw new IllegalStateException(var3.toString().toString());
    }
 
    public open fun setPadding(spacingType: Int, padding: Float) {
@@ -92,11 +92,11 @@ internal class FastestListShadowNode : LayoutShadowNode {
    }
 
    public open fun setPaddingPercent(spacingType: Int, percent: Float): Nothing {
-      val var3: java.lang.String = FastestListShadowNode.class.getSimpleName();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var3);
-      var4.append(" does not support percentage based padding");
-      throw new IllegalStateException(var4.toString().toString());
+      val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var4);
+      var3.append(" does not support percentage based padding");
+      throw new IllegalStateException(var3.toString().toString());
    }
 
    public open fun setReactTag(reactTag: Int) {
@@ -118,6 +118,64 @@ internal class FastestListShadowNode : LayoutShadowNode {
          if (var2 != null) {
             FastestListShadowNode.access$flushChanges(var2, var1);
          }
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[e.values().length];
+
+         try {
+            var0[e.q.ordinal()] = 1;
+         } catch (var10: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.r.ordinal()] = 2;
+         } catch (var9: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.s.ordinal()] = 3;
+         } catch (var8: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.k.ordinal()] = 4;
+         } catch (var7: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.l.ordinal()] = 5;
+         } catch (var6: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.m.ordinal()] = 6;
+         } catch (var5: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.n.ordinal()] = 7;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.o.ordinal()] = 8;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[e.p.ordinal()] = 9;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
       }
    }
 }

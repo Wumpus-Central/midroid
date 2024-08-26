@@ -3,7 +3,6 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeEngine.StopLocalAudioRecordingCallback;
 import kotlin.jvm.functions.Function2;
 
-// $VF: synthetic class
 public final class h implements StopLocalAudioRecordingCallback {
    public final Function2 a;
 

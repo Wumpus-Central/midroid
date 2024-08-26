@@ -3,7 +3,6 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.OnFirstFrameCallback;
 import kotlin.jvm.functions.Function3;
 
-// $VF: synthetic class
 public final class b implements OnFirstFrameCallback {
    public final Function3 a;
 

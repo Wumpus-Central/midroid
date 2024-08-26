@@ -3,7 +3,6 @@ package com.discord.segmented.control;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-// $VF: synthetic class
 public final class a implements OnClickListener {
    public final SegmentedControlView j;
    public final int k;

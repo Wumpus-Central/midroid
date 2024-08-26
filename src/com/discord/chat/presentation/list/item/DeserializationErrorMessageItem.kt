@@ -8,7 +8,7 @@ public data class DeserializationErrorMessageItem(message: ErrorMessage) : ChatL
 
    init {
       r.h(var1, "message");
-      super(var1.getId-3Eiw7ao(), null);
+      super(var1.getId_3Eiw7ao(), null);
       this.message = var1;
    }
 

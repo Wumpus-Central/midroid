@@ -60,14 +60,14 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun hashCode(): Int {
-         val var4: Int = this.title.hashCode();
-         val var3: Int = java.lang.Long.hashCode(this.id);
+         val var3: Int = this.title.hashCode();
+         val var4: Int = java.lang.Long.hashCode(this.id);
          var var1: Byte = this.isInsidePremiumRoadBlock;
          if (this.isInsidePremiumRoadBlock != 0) {
             var1 = 1;
          }
 
-         return (var4 * 31 + var3) * 31 + var1;
+         return (var3 * 31 + var4) * 31 + var1;
       }
 
       public override fun itemId(): Long {
@@ -113,7 +113,7 @@ internal sealed class EmojiPickerItem protected constructor() {
          public final get() {
             val var2: java.lang.String;
             if (this.unicode != null) {
-               var2 = Surrogates.toAssetUrl-impl(Surrogates.constructor-impl(this.unicode.getSurrogates()));
+               var2 = Surrogates.toAssetUrl_impl(Surrogates.constructor_impl(this.unicode.getSurrogates()));
             } else {
                var2 = null;
             }
@@ -227,27 +227,27 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun toString(): String {
-         val var3: Long = this.id;
-         val var7: java.lang.String = this.name;
-         val var2: Boolean = this.animated;
-         val var5: EmojiPickerItem.Emoji.DisabledType = this.disabled;
-         val var8: UnicodeEmojis.Emoji = this.unicode;
-         val var1: Boolean = this.isInsidePremiumRoadBlock;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Emoji(id=");
-         var6.append(var3);
-         var6.append(", name=");
-         var6.append(var7);
-         var6.append(", animated=");
-         var6.append(var2);
-         var6.append(", disabled=");
-         var6.append(var5);
-         var6.append(", unicode=");
-         var6.append(var8);
-         var6.append(", isInsidePremiumRoadBlock=");
-         var6.append(var1);
-         var6.append(")");
-         return var6.toString();
+         val var1: Long = this.id;
+         val var5: java.lang.String = this.name;
+         val var4: Boolean = this.animated;
+         val var8: EmojiPickerItem.Emoji.DisabledType = this.disabled;
+         val var6: UnicodeEmojis.Emoji = this.unicode;
+         val var3: Boolean = this.isInsidePremiumRoadBlock;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Emoji(id=");
+         var7.append(var1);
+         var7.append(", name=");
+         var7.append(var5);
+         var7.append(", animated=");
+         var7.append(var4);
+         var7.append(", disabled=");
+         var7.append(var8);
+         var7.append(", unicode=");
+         var7.append(var6);
+         var7.append(", isInsidePremiumRoadBlock=");
+         var7.append(var3);
+         var7.append(")");
+         return var7.toString();
       }
 
       public enum class DisabledType {
@@ -491,12 +491,12 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.id;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("PremiumInlineRoadblockHeader(id=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.id;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("PremiumInlineRoadblockHeader(id=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 

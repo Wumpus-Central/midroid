@@ -12,11 +12,13 @@ public interface PortalUiModel {
       }
 
 
+   fun getMessageId_3Eiw7ao(): java.lang.String
+
    // $VF: Class flags could not be determined
    internal class DefaultImpls {
       @JvmStatic
       fun getPortal(var0: PortalUiModel): Double {
-         val var3: java.lang.String = MessageId.toString-impl(var0.getMessageId-3Eiw7ao());
+         val var3: java.lang.String = MessageId.toString_impl(var0.getMessageId_3Eiw7ao());
          val var2: java.lang.String = var0.getClass().getSimpleName();
          val var1: Int = var0.getIndex();
          val var4: StringBuilder = new StringBuilder();

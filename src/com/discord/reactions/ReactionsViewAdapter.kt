@@ -76,7 +76,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
       val var2: Int = this.getAddBurstReactionIndex();
       var var6: java.lang.String = null;
       var var7: java.lang.String = null;
-      val var3: Long;
+      val var4: Long;
       if (var1 == var2) {
          var6 = this.messageId;
          if (this.messageId == null) {
@@ -94,7 +94,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          var17.append(var6);
          var17.append("_add_burst_reactions_");
          var17.append(var7);
-         var3 = IdUtilsKt.convertToId(var17.toString());
+         var4 = IdUtilsKt.convertToId(var17.toString());
       } else if (var1 == this.getAddReactionIndex()) {
          var6 = this.messageId;
          if (this.messageId == null) {
@@ -112,7 +112,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          var18.append(var6);
          var18.append("_add_reactions_");
          var18.append(var7);
-         var3 = IdUtilsKt.convertToId(var18.toString());
+         var4 = IdUtilsKt.convertToId(var18.toString());
       } else {
          val var19: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
@@ -122,16 +122,16 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          }
 
          var7 = var19.getEmoji().getEmojiId();
-         val var5: Boolean = var19.isBurstReaction();
+         val var3: Boolean = var19.isBurstReaction();
          val var20: StringBuilder = new StringBuilder();
          var20.append(var6);
          var20.append("_");
          var20.append(var7);
-         var20.append(var5);
-         var3 = IdUtilsKt.convertToId(var20.toString());
+         var20.append(var3);
+         var4 = IdUtilsKt.convertToId(var20.toString());
       }
 
-      return var3;
+      return var4;
    }
 
    public open fun getItemViewType(position: Int): Int {
@@ -203,20 +203,20 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
             var18 = null;
          }
 
+         var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
             r.y("onAddReactionClick");
-         } else {
-            var5 = this.onAddReactionClick;
+            var5 = null;
          }
 
          var32.bind(var12, var18, var5, this.reactionsTheme);
       } else {
          if (var1 !is AddBurstReactionViewHolder) {
-            val var21: Class = var1.getClass();
-            val var14: StringBuilder = new StringBuilder();
-            var14.append("Invalid view holder type ");
-            var14.append(var21);
-            throw new IllegalStateException(var14.toString().toString());
+            val var14: Class = var1.getClass();
+            val var21: StringBuilder = new StringBuilder();
+            var21.append("Invalid view holder type ");
+            var21.append(var14);
+            throw new IllegalStateException(var21.toString().toString());
          }
 
          val var33: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;
@@ -232,10 +232,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
             var20 = null;
          }
 
-         var5 = this.onAddBurstReactionClick;
          if (this.onAddBurstReactionClick == null) {
             r.y("onAddBurstReactionClick");
-            var5 = null;
+         } else {
+            var5 = this.onAddBurstReactionClick;
          }
 
          var33.bind(var13, var20, var5, this.reactionsTheme);
@@ -247,9 +247,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       r.h(var1, "parent");
       val var5: com.google.android.flexbox.FlexboxLayoutManager.b = new com.google.android.flexbox.FlexboxLayoutManager.b(-2, this.reactionHeight);
-      val var4: ThemeManager = ThemeManager.INSTANCE;
-      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var4.setThemeOverride(this.theme);
+      val var3: ThemeManager = ThemeManager.INSTANCE;
+      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var3.setThemeOverride(this.theme);
       var var9: Any;
       switch (var2) {
          case 45:
@@ -287,7 +287,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
             throw new IllegalStateException(var6.toString().toString());
       }
 
-      var4.setThemeOverride(var3);
+      var3.setThemeOverride(var4);
       return (ViewHolder)var9;
    }
 

@@ -151,30 +151,30 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.id;
-      val var2: java.lang.String = this.username;
-      val var6: java.lang.Boolean = this.isBot;
-      val var5: java.lang.Boolean = this.isFriend;
-      val var3: java.lang.String = this.friendNickname;
-      val var4: java.lang.String = this.globalName;
-      val var7: java.util.Map = this.nicknames;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("UserSearchTransformedUser(id=");
-      var8.append(var1);
-      var8.append(", username=");
-      var8.append(var2);
-      var8.append(", isBot=");
-      var8.append(var6);
-      var8.append(", isFriend=");
-      var8.append(var5);
-      var8.append(", friendNickname=");
-      var8.append(var3);
-      var8.append(", globalName=");
-      var8.append(var4);
-      var8.append(", nicknames=");
-      var8.append(var7);
-      var8.append(")");
-      return var8.toString();
+      val var4: java.lang.String = this.id;
+      val var6: java.lang.String = this.username;
+      val var1: java.lang.Boolean = this.isBot;
+      val var8: java.lang.Boolean = this.isFriend;
+      val var5: java.lang.String = this.friendNickname;
+      val var2: java.lang.String = this.globalName;
+      val var3: java.util.Map = this.nicknames;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("UserSearchTransformedUser(id=");
+      var7.append(var4);
+      var7.append(", username=");
+      var7.append(var6);
+      var7.append(", isBot=");
+      var7.append(var1);
+      var7.append(", isFriend=");
+      var7.append(var8);
+      var7.append(", friendNickname=");
+      var7.append(var5);
+      var7.append(", globalName=");
+      var7.append(var2);
+      var7.append(", nicknames=");
+      var7.append(var3);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

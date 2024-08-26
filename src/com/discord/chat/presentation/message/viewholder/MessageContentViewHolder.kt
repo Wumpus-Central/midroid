@@ -59,15 +59,15 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       this.messageContentView.setTextColor(var1.getMessageTextColor());
       DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
-      val var24: TextPaint = this.messageContentView.getPaint();
-      kotlin.jvm.internal.r.g(var24, "messageContentView.paint");
-      val var25: FontManager = FontManager.INSTANCE;
-      val var23: Context = this.messageContentView.getContext();
-      kotlin.jvm.internal.r.g(var23, "messageContentView.context");
+      val var23: TextPaint = this.messageContentView.getPaint();
+      kotlin.jvm.internal.r.g(var23, "messageContentView.paint");
+      val var24: FontManager = FontManager.INSTANCE;
+      val var25: Context = this.messageContentView.getContext();
+      kotlin.jvm.internal.r.g(var25, "messageContentView.context");
       this.messageContentView
-         .setMessageContent-2ZcwkLU(
+         .setMessageContent_2ZcwkLU(
             var1.getMessageContent(),
-            var1.getMessageId-3Eiw7ao(),
+            var1.getMessageId_3Eiw7ao(),
             var1.getShouldAnimateEmoji(),
             var1.getShouldShowLinkDecorations(),
             var1.getShouldShowRoleDot(),
@@ -84,7 +84,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
 
                public final void invoke(LinkContentNode var1) {
                   kotlin.jvm.internal.r.h(var1, "node");
-                  this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageContentItem.getMessageId-3Eiw7ao()), var1);
+                  this.$onLinkClicked.invoke(MessageId.box_impl(this.$messageContentItem.getMessageId_3Eiw7ao()), var1);
                }
             },
             var3,
@@ -126,7 +126,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var24, var25.getScaledSpToPx(16, var23))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var23, var24.getScaledSpToPx(16, var25))
          );
    }
 }

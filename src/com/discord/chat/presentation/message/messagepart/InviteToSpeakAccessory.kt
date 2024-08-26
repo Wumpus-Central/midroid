@@ -8,7 +8,7 @@ public data class InviteToSpeakAccessory(message: Message) : MessageAccessory {
 
    init {
       r.h(var1, "message");
-      super(var1.getId-3Eiw7ao(), "invite to speak", false, 4, null);
+      super(var1.getId_3Eiw7ao(), "invite to speak", false, 4, null);
       this.message = var1;
    }
 

@@ -133,19 +133,19 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var3: Int = this.fontSize;
+      val var5: Int = this.fontSize;
       val var1: Int = this.color;
-      val var4: BackgroundStyle = this.backgroundStyle;
-      val var5: ChatInputNodeFontWeight = this.fontWeight;
+      val var3: BackgroundStyle = this.backgroundStyle;
+      val var4: ChatInputNodeFontWeight = this.fontWeight;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ChatInputNodeStyle(fontSize=");
-      var2.append(var3);
+      var2.append(var5);
       var2.append(", color=");
       var2.append(var1);
       var2.append(", backgroundStyle=");
-      var2.append(var4);
+      var2.append(var3);
       var2.append(", fontWeight=");
-      var2.append(var5);
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }
@@ -182,19 +182,19 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
          val var10: c = var1.b(var9);
          var var2: Int;
          var var3: Int;
+         var var6: Any;
          var var7: Any;
-         val var8: Any;
          var var11: Any;
          if (var10.p()) {
-            var11 = var10.n(var9, 0, m0.a, null);
+            var7 = var10.n(var9, 0, m0.a, null);
             var3 = var10.i(var9, 1);
-            var8 = var10.n(var9, 2, com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE, null);
-            var7 = var10.n(var9, 3, ChatInputNodeFontWeight.Companion.serializer(), null);
+            var6 = var10.n(var9, 2, com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE, null);
+            var11 = var10.n(var9, 3, ChatInputNodeFontWeight.Companion.serializer(), null);
             var2 = 15;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var var6: Any = null;
+            var6 = null;
             var7 = null;
             var11 = null;
             var2 = 0;
@@ -228,13 +228,12 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
                }
             }
 
-            var8 = var7;
-            var7 = var11;
-            var11 = var6;
+            var7 = var6;
+            var6 = var7;
          }
 
          var10.c(var9);
-         return new ChatInputNodeStyle(var2, var11 as Integer, var3, var8 as BackgroundStyle, var7 as ChatInputNodeFontWeight, null);
+         return new ChatInputNodeStyle(var2, var7 as Integer, var3, var6 as BackgroundStyle, var11 as ChatInputNodeFontWeight, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChatInputNodeStyle) {

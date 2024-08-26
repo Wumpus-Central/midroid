@@ -77,9 +77,9 @@ internal object BrowserManager {
       r.h(var3, "onFailure");
 
       try {
-         val var4: Uri = Uri.parse(var2);
-         r.g(var4, "uri");
-         this.openUrlWithCustomTabs(var1, var4, new Function1<Exception, Unit>(var1, var2, var3) {
+         val var5: Uri = Uri.parse(var2);
+         r.g(var5, "uri");
+         this.openUrlWithCustomTabs(var1, var5, new Function1<Exception, Unit>(var1, var2, var3) {
             final Context $context;
             final Function1<Exception, Unit> $onFailure;
             final java.lang.String $url;

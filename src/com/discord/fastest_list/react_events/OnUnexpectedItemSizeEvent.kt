@@ -21,10 +21,10 @@ internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
    }
 
    public open fun serialize(): WritableMap {
-      val var2: Pair = w.a("section", this.entry.getSection-sZRFyWU());
+      val var2: Pair = w.a("section", this.entry.getSection_sZRFyWU());
       var var1: Int = 0;
       if (this.entry is FastestListSections.Entry.SectionItem) {
-         var1 = (this.entry as FastestListSections.Entry.SectionItem).getItem-JXkbwXs();
+         var1 = (this.entry as FastestListSections.Entry.SectionItem).getItem_JXkbwXs();
       }
 
       return NativeMapExtensionsKt.nativeMapOf(

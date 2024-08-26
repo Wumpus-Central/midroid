@@ -29,15 +29,15 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var5: SafetyPolicyNoticeBinding = SafetyPolicyNoticeBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var5;
-      val var3: View = var5.getRoot();
-      var3.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      kotlin.jvm.internal.r.g(var3, "_init_$lambda$0");
-      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
-      val var4: SimpleDraweeView = var5.icon;
-      kotlin.jvm.internal.r.g(var5.icon, "_init_$lambda$1");
+      val var3: SafetyPolicyNoticeBinding = SafetyPolicyNoticeBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      this.binding = var3;
+      val var5: View = var3.getRoot();
+      var5.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
+      kotlin.jvm.internal.r.g(var5, "_init_$lambda$0");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(8));
+      val var4: SimpleDraweeView = var3.icon;
+      kotlin.jvm.internal.r.g(var3.icon, "_init_$lambda$1");
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.WarningTriangle);
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getStatusDanger());
    }

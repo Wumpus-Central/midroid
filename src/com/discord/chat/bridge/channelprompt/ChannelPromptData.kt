@@ -245,30 +245,30 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.cameraButtonIcon;
-      val var3: java.lang.String = this.gifButtonIcon;
-      val var6: java.lang.String = this.emojiButtonIcon;
-      val var4: java.lang.String = this.gamingStatsButtonText;
-      val var2: java.lang.String = this.cameraButtonText;
-      val var8: java.lang.String = this.gifButtonText;
-      val var7: java.lang.String = this.emojiButtonText;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ChannelPromptData(cameraButtonIcon=");
-      var5.append(var1);
-      var5.append(", gifButtonIcon=");
-      var5.append(var3);
-      var5.append(", emojiButtonIcon=");
-      var5.append(var6);
-      var5.append(", gamingStatsButtonText=");
-      var5.append(var4);
-      var5.append(", cameraButtonText=");
-      var5.append(var2);
-      var5.append(", gifButtonText=");
-      var5.append(var8);
-      var5.append(", emojiButtonText=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var6: java.lang.String = this.cameraButtonIcon;
+      val var7: java.lang.String = this.gifButtonIcon;
+      val var5: java.lang.String = this.emojiButtonIcon;
+      val var1: java.lang.String = this.gamingStatsButtonText;
+      val var4: java.lang.String = this.cameraButtonText;
+      val var2: java.lang.String = this.gifButtonText;
+      val var3: java.lang.String = this.emojiButtonText;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ChannelPromptData(cameraButtonIcon=");
+      var8.append(var6);
+      var8.append(", gifButtonIcon=");
+      var8.append(var7);
+      var8.append(", emojiButtonIcon=");
+      var8.append(var5);
+      var8.append(", gamingStatsButtonText=");
+      var8.append(var1);
+      var8.append(", cameraButtonText=");
+      var8.append(var4);
+      var8.append(", gifButtonText=");
+      var8.append(var2);
+      var8.append(", emojiButtonText=");
+      var8.append(var3);
+      var8.append(")");
+      return var8.toString();
    }
 
    public object `$serializer` : f0<ChannelPromptData> {
@@ -315,11 +315,11 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
          if (var6) {
             val var9: a2 = a2.a;
             var17 = var16.n(var15, 0, a2.a, null);
-            var11 = var16.n(var15, 1, var9, null);
-            var8 = var16.n(var15, 2, var9, null);
+            var10 = var16.n(var15, 1, var9, null);
+            var13 = var16.n(var15, 2, var9, null);
             var7 = var16.n(var15, 3, var9, null);
-            var13 = var16.n(var15, 4, var9, null);
-            var10 = var16.n(var15, 5, var9, null);
+            var11 = var16.n(var15, 4, var9, null);
+            var8 = var16.n(var15, 5, var9, null);
             var12 = var16.n(var15, 6, var9, null);
             var2 = 127;
          } else {
@@ -374,9 +374,10 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                var4 = 6;
             }
 
-            var10 = var7;
-            var8 = var10;
-            var13 = var8;
+            var13 = var10;
+            var8 = var7;
+            var10 = var11;
+            var11 = var8;
             var7 = var20;
          }
 
@@ -384,11 +385,11 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
          return new ChannelPromptData(
             var2,
             var17 as java.lang.String,
+            var10 as java.lang.String,
+            var13 as java.lang.String,
+            var7 as java.lang.String,
             var11 as java.lang.String,
             var8 as java.lang.String,
-            var7 as java.lang.String,
-            var13 as java.lang.String,
-            var10 as java.lang.String,
             var12 as java.lang.String,
             null
          );

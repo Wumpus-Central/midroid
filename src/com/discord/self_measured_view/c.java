@@ -1,6 +1,5 @@
 package com.discord.self_measured_view;
 
-// $VF: synthetic class
 public final class c implements Runnable {
    public final SelfMeasuredView j;
 

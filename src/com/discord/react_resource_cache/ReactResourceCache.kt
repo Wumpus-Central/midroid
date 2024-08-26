@@ -34,12 +34,12 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
          }
 
          if (var5 == null) {
-            val var6: java.lang.String = var2.name();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unable to access ");
-            var7.append(var6);
-            var7.append(" as it has not yet been provided.");
-            throw new IllegalAccessException(var7.toString());
+            val var7: java.lang.String = var2.name();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unable to access ");
+            var6.append(var7);
+            var6.append(" as it has not yet been provided.");
+            throw new IllegalAccessException(var6.toString());
          }
 
          var3 = var5;
@@ -51,15 +51,15 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public fun set(context: Context, newReactResources: Map<String, String>) {
       r.h(var1, "context");
       r.h(var2, "newReactResources");
-      val var3: Editor = this.getCache(var1).edit();
-      r.g(var3, "editor");
-      var3.clear();
+      val var4: Editor = this.getCache(var1).edit();
+      r.g(var4, "editor");
+      var4.clear();
 
-      for (Entry var4 : var2.entrySet()) {
-         var3.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
+      for (Entry var3 : var2.entrySet()) {
+         var4.putString(var3.getKey() as java.lang.String, var3.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);
-      var3.apply();
+      var4.apply();
    }
 }

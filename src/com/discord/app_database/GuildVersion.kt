@@ -69,15 +69,15 @@ public data class GuildVersion(id: String, version: Long) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("GuildVersion(id=");
-      var4.append(var3);
-      var4.append(", version=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("GuildVersion(id=");
+      var3.append(var4);
+      var3.append(", version=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<GuildVersion> {

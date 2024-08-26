@@ -23,8 +23,8 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
    public fun bind(ephemeralAccessory: EphemeralIndicationMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "ephemeralAccessory");
       this.ephemeralIndicationView
-         .setEphemeralIndication-AFFcxXc(
-            var1.getMessageId-3Eiw7ao(),
+         .setEphemeralIndication_AFFcxXc(
+            var1.getMessageId_3Eiw7ao(),
             var1.getEphemeralIndication(),
             new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
                {
@@ -38,10 +38,10 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
                   );
                }
 
-               public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
+               public final void invoke_ntcYbpo(java.lang.String var1, LinkContentNode var2) {
                   kotlin.jvm.internal.r.h(var1, "p0");
                   kotlin.jvm.internal.r.h(var2, "p1");
-                  (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
+                  (super.receiver as ChatEventHandler).onLinkClicked_ntcYbpo(var1, var2);
                }
             },
             new Function1<java.lang.String, Unit>(this, var1) {
@@ -56,8 +56,8 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
 
                public final void invoke(java.lang.String var1) {
                   kotlin.jvm.internal.r.h(var1, "it");
-                  ChatEventHandler.DefaultImpls.onLinkClicked-u7_MRrM$default(
-                     EphemeralIndicationViewHolder.access$getEventHandler$p(this.this$0), this.$ephemeralAccessory.getMessageId-3Eiw7ao(), var1, null, 4, null
+                  ChatEventHandler.DefaultImpls.onLinkClicked_u7_MRrM$default(
+                     EphemeralIndicationViewHolder.access$getEventHandler$p(this.this$0), this.$ephemeralAccessory.getMessageId_3Eiw7ao(), var1, null, 4, null
                   );
                }
             }

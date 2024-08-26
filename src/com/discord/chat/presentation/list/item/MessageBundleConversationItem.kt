@@ -8,7 +8,7 @@ public data class MessageBundleConversationItem(messageItem: MessageItem) : Mess
 
    init {
       r.h(var1, "messageItem");
-      super(MessageId.toString-impl(var1.getMessage().getId-3Eiw7ao()), null);
+      super(MessageId.toString_impl(var1.getMessage().getId_3Eiw7ao()), null);
       this.messageItem = var1;
    }
 

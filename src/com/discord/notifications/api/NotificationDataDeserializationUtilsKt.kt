@@ -25,16 +25,16 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var10 != null) {
          val var4: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var5 : var10.entrySet()) {
+         for (Entry var7 : var10.entrySet()) {
             val var2: Boolean;
-            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
+            if (var7.getKey() is java.lang.String && var7.getValue() is java.lang.String) {
                var2 = true;
             } else {
                var2 = false;
             }
 
             if (var2) {
-               var4.put(var5.getKey(), var5.getValue());
+               var4.put(var7.getKey(), var7.getValue());
             }
          }
 
@@ -64,7 +64,7 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var18 != null) {
          val var19: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var18);
          if (var19 != null) {
-            var20 = ChannelId.box-impl(ChannelId.constructor-impl(var19));
+            var20 = ChannelId.box_impl(ChannelId.constructor_impl(var19));
             break label56;
          }
       }
@@ -74,7 +74,7 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
 
    var var23: java.lang.String = var10.get("message_id") as java.lang.String;
    if (var23 != null) {
-      var23 = MessageId.constructor-impl(var23);
+      var23 = MessageId.constructor_impl(var23);
    } else {
       var23 = null;
    }

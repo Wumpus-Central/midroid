@@ -24,14 +24,14 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
       kotlin.jvm.internal.r.h(var5, "context");
       var13 = SpoilerAttributes.Companion.forAttachment(var0, var1, var2);
       if (kotlin.jvm.internal.r.c(var1.isCurrentUserMessageAuthor(), java.lang.Boolean.TRUE)) {
-         val var12: java.lang.String = var1.getNonce-N_6c4I0();
+         val var12: java.lang.String = var1.getNonce_N_6c4I0();
          var11 = var12;
          if (var12 != null) {
             break label67;
          }
       }
 
-      var11 = var1.getId-3Eiw7ao();
+      var11 = var1.getId_3Eiw7ao();
    }
 
    val var6: Int = CreateAttachmentAccessoryKt.WhenMappings.$EnumSwitchMapping$0[var0.type().ordinal()];
@@ -62,12 +62,12 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
                );
             } else {
                var14 = new AudioAttachmentMessageAccessory(
-                  var1.getChannelId-o4g7jtM(),
+                  var1.getChannelId_o4g7jtM(),
                   var11,
                   var0,
                   var2,
                   var1.getAttachmentsOpacity(),
-                  var1.getAuthorId-wUX8bhU(),
+                  var1.getAuthorId_wUX8bhU(),
                   var1.getAudioAttachmentBackgroundColor(),
                   var8,
                   null
@@ -79,7 +79,7 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
             );
          }
       } else {
-         val var26: Long = var1.getChannelId-o4g7jtM();
+         val var26: Long = var1.getChannelId_o4g7jtM();
          val var19: java.lang.Boolean = var1.getUseAttachmentGridLayout();
          if (var19 != null) {
             var7 = var19;
@@ -117,7 +117,6 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
    return (MessageAttachmentAccessory)var14;
 }
 // $VF: Class flags could not be determined
-@JvmSynthetic
 internal class WhenMappings {
    @JvmStatic
    public int[] $EnumSwitchMapping$0;

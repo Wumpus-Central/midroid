@@ -35,35 +35,35 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
          val var8: Int = MessageAccessoriesView.Companion.getWidth(this.constrainedWidth, false, true);
          val var6: Int = (var8 - this.spacingPx * 2) / 3;
          val var14: Int = this.getItemCount();
+         var var12: Int = 0;
          var var11: Int = 0;
-         var var10: Int = 0;
          var var20: Int = 0;
 
-         for (int var21 = 0; var10 < var14; var10++) {
+         for (int var22 = 0; var11 < var14; var11++) {
             var var17: Pair;
-            var var22: Int = this.getItemCount();
-            label105:
-            if (var22 != 1) {
-               if (var22 != 2) {
-                  if (var22 == 3) {
+            var var23: Int = this.getItemCount();
+            label108:
+            if (var23 != 1) {
+               if (var23 != 2) {
+                  if (var23 == 3) {
                      var17 = new Pair;
                      val var18: Int = 2;
-                     if (var10 == 0) {
+                     if (var11 == 0) {
                         var17./* $VF: Unable to resugar constructor */<init>(var18, 4);
                      } else {
                         var17./* $VF: Unable to resugar constructor */<init>(var18, 2);
                      }
-                     break label105;
+                     break label108;
                   }
 
-                  if (var22 != 4) {
-                     var22 = this.getItemCount() % 3;
-                     if (var10 < var22) {
-                        var17 = new Pair(var22, 6 / var22);
+                  if (var23 != 4) {
+                     var23 = this.getItemCount() % 3;
+                     if (var11 < var23) {
+                        var17 = new Pair(var23, 6 / var23);
                      } else {
                         var17 = new Pair(3, 2);
                      }
-                     break label105;
+                     break label108;
                   }
                }
 
@@ -74,102 +74,111 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
 
             val var13: Int = (var17.a() as java.lang.Number).intValue();
             val var15: Int = (var17.b() as java.lang.Number).intValue();
-            val var19: View = var1.o(var10);
+            val var19: View = var1.o(var11);
             r.g(var19, "recycler.getViewForPosition(index)");
             val var16: Boolean = var19 is MosaicView;
-            val var32: MosaicView;
+            val var33: MosaicView;
             if (var19 is MosaicView) {
-               var32 = var19 as MosaicView;
+               var33 = var19 as MosaicView;
             } else {
-               var32 = null;
+               var33 = null;
             }
 
             val var2: Float;
-            if (var32 != null) {
-               var2 = var32.getSingleAspectRatio();
+            if (var33 != null) {
+               var2 = var33.getSingleAspectRatio();
             } else {
                var2 = 1.0F;
             }
 
-            var var26: Int;
-            if (this.getItemCount() == 1) {
-               var26 = (int)(var8 / var2);
-               var22 = this.mediaMaxHeight;
-               if (var26 > this.mediaMaxHeight) {
-                  var26 = (int)(this.mediaMaxHeight * var2);
-               } else {
-                  var22 = var26;
-                  var26 = var8;
-               }
-            } else {
-               if (this.getItemCount() == 3) {
-                  if (var10 == 0) {
-                     var22 = var6 * 2 + this.spacingPx;
-                  } else {
-                     var22 = var6;
-                  }
-               } else {
-                  var22 = (var8 - (var13 - 1) * this.spacingPx) / var13;
-               }
-
-               var26 = this.getItemCount();
-               if (var26 != 3) {
-                  if (var26 != 4 && var13 < 3) {
-                     var26 = var6 * 2 + this.spacingPx;
-                  } else {
-                     var26 = var6;
-                  }
-               } else {
-                  var26 = var22;
-               }
-
+            var var27: Int;
+            label99: {
                var var9: Int;
-               if (this.getItemCount() == 3) {
-                  var9 = var21;
-                  if (var10 == 2) {
-                     var9 = var21 + 4;
-                     var20 = this.spacingPx * 2;
+               if (this.getItemCount() == 1) {
+                  var23 = (int)(var8 / var2);
+                  if ((int)(var8 / var2) <= this.mediaMaxHeight) {
+                     var27 = var8;
+                     break label99;
                   }
+
+                  var23 = (int)(this.mediaMaxHeight * var2);
+                  var9 = var20;
+                  var20 = this.mediaMaxHeight;
                } else {
-                  var9 = var21;
+                  if (this.getItemCount() == 3) {
+                     if (var11 == 0) {
+                        var23 = var6 * 2 + this.spacingPx;
+                     } else {
+                        var23 = var6;
+                     }
+                  } else {
+                     var23 = (var8 - (var13 - 1) * this.spacingPx) / var13;
+                  }
+
+                  var27 = this.getItemCount();
+                  if (var27 != 3) {
+                     if (var27 != 4 && var13 < 3) {
+                        var27 = var6 * 2 + this.spacingPx;
+                     } else {
+                        var27 = var6;
+                     }
+                  } else {
+                     var27 = var23;
+                  }
+
+                  var var10: Int;
+                  if (this.getItemCount() == 3) {
+                     var10 = var22;
+                     var9 = var20;
+                     if (var11 == 2) {
+                        var10 = var22 + 4;
+                        var9 = this.spacingPx * 2;
+                     }
+                  } else {
+                     var9 = var20;
+                     var10 = var22;
+                  }
+
+                  var22 = var10;
+                  var20 = var27;
                }
 
-               var21 = var9;
-               var22 = var26;
-               var26 = var22;
+               var27 = var23;
+               var23 = var20;
+               var20 = var9;
             }
 
             this.addView(var19);
             this.measureChildWithMargins(var19, 0, 0);
-            var var30: Int;
+            var var31: Int;
             if (this.getItemCount() == 3) {
-               var30 = var13;
+               var31 = var13;
             } else {
-               var30 = var13 - 1;
+               var31 = var13 - 1;
             }
 
-            var30 = sh.a.b((float)Math.ceil((double)((float)(var8 - var30 * this.spacingPx) / 6.0F * (float)var21 + (float)var20)));
-            this.layoutDecoratedWithMargins(var19, var30, var11, var30 + var26, var11 + var22);
-            var var33: MosaicView = null;
+            var31 = sh.a.b((float)Math.ceil((double)((float)(var8 - var31 * this.spacingPx) / 6.0F * (float)var22 + (float)var20)));
+            this.layoutDecoratedWithMargins(var19, var31, var12, var31 + var27, var12 + var23);
+            var var34: MosaicView = null;
             if (var16) {
-               var33 = var19 as MosaicView;
+               var34 = var19 as MosaicView;
             }
 
-            if (var33 != null) {
-               var33.setMosaicSize(var26, var22);
+            if (var34 != null) {
+               var34.setMosaicSize(var27, var23);
             }
 
             if (this.getItemCount() > 1) {
-               var21 += var15;
-               var26 = var20 + this.spacingPx;
+               var22 += var15;
+               var27 = var20 + this.spacingPx;
                var20 += this.spacingPx;
                if (this.getItemCount() == 3) {
-                  var20 = var26 + this.spacingPx;
+                  var20 = var27 + this.spacingPx;
                }
 
-               if (var21 >= 6) {
-                  var11 += this.spacingPx + var22;
-                  var21 = 0;
+               if (var22 >= 6) {
+                  var12 += this.spacingPx + var23;
+                  var22 = 0;
                   var20 = 0;
                }
             }

@@ -70,10 +70,10 @@ public abstract class APNGImageView : FrameLayout {
    }
 
    protected open fun resetViews(visibleView: View? = null, showLoading: Boolean = true) {
-      for (View var5 : a3.a(this)) {
-         val var4: Boolean = r.c(var5, var1);
+      for (View var6 : a3.a(this)) {
+         val var4: Boolean = r.c(var6, var1);
          if (!var4) {
-            this.recycleChild(var5, var2);
+            this.recycleChild(var6, var2);
          }
 
          val var3: Byte;
@@ -83,7 +83,7 @@ public abstract class APNGImageView : FrameLayout {
             var3 = 8;
          }
 
-         var5.setVisibility(var3);
+         var6.setVisibility(var3);
       }
    }
 }

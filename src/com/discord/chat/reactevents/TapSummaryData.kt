@@ -89,15 +89,15 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
 
    public override fun toString(): String {
       val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.summaryId;
+      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.summaryId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapSummaryData(channelId=");
       var1.append(var2);
       var1.append(", messageId=");
-      var1.append(var3);
-      var1.append(", summaryId=");
       var1.append(var4);
+      var1.append(", summaryId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

@@ -3,7 +3,6 @@ package com.discord.sticker_picker;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-// $VF: synthetic class
 public final class a implements OnClickListener {
    public final StickerPickerRowView j;
    public final StickerPickerRow.Sticker k;

@@ -3,7 +3,6 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.SecureFramesTransitionReadyCallback;
 import kotlin.jvm.functions.Function0;
 
-// $VF: synthetic class
 public final class u implements SecureFramesTransitionReadyCallback {
    public final Function0 a;
 

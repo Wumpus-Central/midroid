@@ -275,7 +275,6 @@ public fun ReadableArray.toStringList(): List<String> {
    return var1;
 }
 // $VF: Class flags could not be determined
-@JvmSynthetic
 internal class WhenMappings {
    @JvmStatic
    public int[] $EnumSwitchMapping$0;

@@ -38,10 +38,10 @@ public object ThemeManager {
                   var7 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
                   r.y("resourceTheme");
-                  var3 = null;
+               } else {
+                  var3 = resourceTheme;
                }
 
                var8 = new MidnightTheme(var7, var3);
@@ -82,10 +82,10 @@ public object ThemeManager {
             var11 = null;
          }
 
+         var3 = resourceTheme;
          if (resourceTheme == null) {
             r.y("resourceTheme");
-         } else {
-            var3 = resourceTheme;
+            var3 = null;
          }
 
          var8 = new DarkTheme(var11, var3);
@@ -262,6 +262,39 @@ public object ThemeManager {
 
       if (var5 != null) {
          ActivityThemeUtils.INSTANCE.updateWindowBackground$theme_release(var5);
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[DiscordTheme.values().length];
+
+         try {
+            var0[DiscordTheme.DARK_LEGACY.ordinal()] = 1;
+         } catch (var5: NoSuchFieldError) {
+         }
+
+         try {
+            var0[DiscordTheme.LIGHT.ordinal()] = 2;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[DiscordTheme.DARK.ordinal()] = 3;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[DiscordTheme.MIDNIGHT.ordinal()] = 4;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
       }
    }
 }

@@ -97,9 +97,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       r.g(var5, "skuIds.toArrayList()");
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 
@@ -210,10 +210,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var2: BillingManager = this.billingManager;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      var2.open(var1);
+      val var1: BillingManager = this.billingManager;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      var1.open(var2);
    }
 
    @ReactMethod

@@ -9,6 +9,7 @@ import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import com.discord.chat.bridge.botuikit.SeparatorDisplayComponent
+import com.discord.chat.bridge.botuikit.SeparatorSpacingSize
 import com.discord.chat.databinding.MessageComponentSeparatorDisplayViewBinding
 import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
@@ -49,9 +50,9 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       r.h(var2, "componentProvider");
       r.h(var3, "componentActionListener");
       r.h(var4, "componentContext");
-      val var8: MessageComponentSeparatorDisplayViewBinding = MessageComponentSeparatorDisplayViewBinding.bind(this);
-      r.g(var8, "bind(this)");
-      var8.divider.setBackgroundColor(ThemeManagerKt.getTheme().getTextMuted());
+      val var10: MessageComponentSeparatorDisplayViewBinding = MessageComponentSeparatorDisplayViewBinding.bind(this);
+      r.g(var10, "bind(this)");
+      var10.divider.setBackgroundColor(ThemeManagerKt.getTheme().getTextMuted());
       val var7: Int = SeparatorDisplayComponentView.WhenMappings.$EnumSwitchMapping$0[var1.getSpacing().ordinal()];
       var var5: Int = 0;
       if (var7 != 1) {
@@ -66,8 +67,8 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
          }
       }
 
-      val var9: View = var8.divider;
-      r.g(var8.divider, "binding.divider");
+      val var9: View = var10.divider;
+      r.g(var10.divider, "binding.divider");
       val var11: LayoutParams = var9.getLayoutParams();
       if (var11 != null) {
          val var12: MarginLayoutParams = var11 as MarginLayoutParams;
@@ -91,6 +92,34 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
          val var3: SeparatorDisplayComponentView = MessageComponentSeparatorDisplayViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
          r.g(var3, "inflate(\n               …false,\n            ).root");
          return var3;
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[SeparatorSpacingSize.values().length];
+
+         try {
+            var0[SeparatorSpacingSize.SMALL.ordinal()] = 1;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[SeparatorSpacingSize.LARGE.ordinal()] = 2;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[SeparatorSpacingSize.UNKNOWN.ordinal()] = 3;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
       }
    }
 }

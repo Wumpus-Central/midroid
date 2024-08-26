@@ -88,15 +88,15 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var3: java.lang.String = this.source;
-      val var2: java.lang.String = this.reason;
+      val var2: java.lang.String = this.source;
+      val var3: java.lang.String = this.reason;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MlsFailureCallbackEvent(connectionId=");
       var4.append(var1);
       var4.append(", source=");
-      var4.append(var3);
-      var4.append(", reason=");
       var4.append(var2);
+      var4.append(", reason=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
@@ -129,24 +129,24 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          r.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: java.lang.String;
-         val var7: java.lang.String;
+         val var10: java.lang.String;
          if (var9.p()) {
-            var2 = var9.i(var8, 0);
-            var7 = var9.m(var8, 1);
-            val var10: java.lang.String = var9.m(var8, 2);
+            val var2: Int = var9.i(var8, 0);
+            var6 = var9.m(var8, 1);
+            var10 = var9.m(var8, 2);
             var3 = 7;
-            var6 = var10;
+            var4 = var2;
          } else {
             var6 = null;
             var var11: java.lang.String = null;
-            var var4: Boolean = true;
+            var var14: Boolean = true;
             var3 = 0;
-            var2 = 0;
+            var var12: Int = 0;
 
-            while (var4) {
+            while (var14) {
                val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -156,27 +156,28 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
                         }
 
                         var6 = var9.m(var8, 2);
-                        var2 |= 4;
+                        var12 |= 4;
                      } else {
                         var11 = var9.m(var8, 1);
-                        var2 |= 2;
+                        var12 |= 2;
                      }
                   } else {
                      var3 = var9.i(var8, 0);
-                     var2 |= 1;
+                     var12 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var14 = false;
                }
             }
 
-            var3 = var2;
-            var7 = var11;
-            var2 = var3;
+            var10 = var6;
+            var6 = var11;
+            var4 = var3;
+            var3 = var12;
          }
 
          var9.c(var8);
-         return new MlsFailureCallbackEvent(var3, var2, var7, var6, null);
+         return new MlsFailureCallbackEvent(var3, var4, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {

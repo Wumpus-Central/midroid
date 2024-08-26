@@ -97,8 +97,6 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.String.indexOf(String.java:2634)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:53)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -1121,6 +1119,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          2,
          null
@@ -1250,27 +1250,27 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
+         val var7: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var3: Int = this.widthDp;
-         val var1: Int = this.heightDp;
-         val var7: java.lang.String = this.asset;
+         val var1: Int = this.widthDp;
+         val var3: Int = this.heightDp;
+         val var6: java.lang.String = this.asset;
          val var2: Int = this.renderMode;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Config(url=");
-         var6.append(var5);
-         var6.append(", animate=");
-         var6.append(var4);
-         var6.append(", widthDp=");
-         var6.append(var3);
-         var6.append(", heightDp=");
-         var6.append(var1);
-         var6.append(", asset=");
-         var6.append(var7);
-         var6.append(", renderMode=");
-         var6.append(var2);
-         var6.append(")");
-         return var6.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Config(url=");
+         var5.append(var7);
+         var5.append(", animate=");
+         var5.append(var4);
+         var5.append(", widthDp=");
+         var5.append(var1);
+         var5.append(", heightDp=");
+         var5.append(var3);
+         var5.append(", asset=");
+         var5.append(var6);
+         var5.append(", renderMode=");
+         var5.append(var2);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

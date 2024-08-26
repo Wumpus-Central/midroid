@@ -99,5 +99,28 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
             }
          }
       }
+
+      // $VF: Class flags could not be determined
+      internal class WhenMappings {
+         @JvmStatic
+         public int[] $EnumSwitchMapping$0;
+
+         @JvmStatic
+         fun {
+            val var0: IntArray = new int[FastestListPlaceholderType.Shape.Type.values().length];
+
+            try {
+               var0[FastestListPlaceholderType.Shape.Type.CIRCLE.ordinal()] = 1;
+            } catch (var3: NoSuchFieldError) {
+            }
+
+            try {
+               var0[FastestListPlaceholderType.Shape.Type.RECT.ordinal()] = 2;
+            } catch (var2: NoSuchFieldError) {
+            }
+
+            $EnumSwitchMapping$0 = var0;
+         }
+      }
    }
 }

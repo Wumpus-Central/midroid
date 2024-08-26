@@ -2,7 +2,6 @@ package com.discord.recycler_view.scroller;
 
 import kotlin.jvm.functions.Function0;
 
-// $VF: synthetic class
 public final class a implements Runnable {
    public final Scroller j;
    public final int k;

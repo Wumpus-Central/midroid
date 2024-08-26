@@ -4,7 +4,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import com.discord.chat.presentation.events.ChatEventHandler;
 
-// $VF: synthetic class
 public final class k implements OnClickListener {
    public final ChatEventHandler j;
    public final String k;

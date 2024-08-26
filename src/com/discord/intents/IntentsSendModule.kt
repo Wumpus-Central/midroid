@@ -110,13 +110,13 @@ public class IntentsSendModule(reactContext: ReactApplicationContext) : ReactCon
    public fun isPackageInstalled(appName: String, promise: Promise) {
       r.h(var1, "appName");
       r.h(var2, "promise");
-      var1 = InstalledPackage.Companion.parse(var1).getAppPackage();
-      val var3: PackageManager = this.reactContext.getPackageManager();
-      if (var1 != null) {
+      val var3: java.lang.String = InstalledPackage.Companion.parse(var1).getAppPackage();
+      val var8: PackageManager = this.reactContext.getPackageManager();
+      if (var3 != null) {
          label33: {
             try {
                if (VERSION.SDK_INT >= 33) {
-                  var3.getPackageInfo(var1, PackageInfoFlags.of(0L));
+                  var8.getPackageInfo(var3, PackageInfoFlags.of(0L));
                   break label33;
                }
             } catch (var7: NameNotFoundException) {
@@ -125,7 +125,7 @@ public class IntentsSendModule(reactContext: ReactApplicationContext) : ReactCon
             }
 
             try {
-               var3.getPackageInfo(var1, 0);
+               var8.getPackageInfo(var3, 0);
             } catch (var6: NameNotFoundException) {
                var2.resolve(java.lang.Boolean.FALSE);
                return;

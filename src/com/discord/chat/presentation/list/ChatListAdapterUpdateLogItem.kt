@@ -77,19 +77,19 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var16.append("Items: ");
          var16.append(var8);
          val var18: java.lang.String = var16.toString();
-         var var19: StringBuilder = new StringBuilder();
+         val var19: StringBuilder = new StringBuilder();
          var19.append("Operations: ");
          var19.append(var13);
-         var13 = var19.toString();
-         var19 = new StringBuilder();
-         var19.append("ChatList - ");
-         var19.append(var10);
-         var19.append(", ");
-         var19.append(var18);
-         var19.append(", ");
-         var19.append(var13);
-         var19.append(", \n");
-         return var19.toString();
+         val var20: java.lang.String = var19.toString();
+         val var14: StringBuilder = new StringBuilder();
+         var14.append("ChatList - ");
+         var14.append(var10);
+         var14.append(", ");
+         var14.append(var18);
+         var14.append(", ");
+         var14.append(var20);
+         var14.append(", \n");
+         return var14.toString();
       }
    }
 
@@ -129,6 +129,34 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var3.append("PortalView - ");
          var3.append(var4);
          return var3.toString();
+      }
+
+      // $VF: Class flags could not be determined
+      internal class WhenMappings {
+         @JvmStatic
+         public int[] $EnumSwitchMapping$0;
+
+         @JvmStatic
+         fun {
+            val var0: IntArray = new int[ChannelChatListAdapter.PortalViewUpdateType.values().length];
+
+            try {
+               var0[ChannelChatListAdapter.PortalViewUpdateType.ADD.ordinal()] = 1;
+            } catch (var4: NoSuchFieldError) {
+            }
+
+            try {
+               var0[ChannelChatListAdapter.PortalViewUpdateType.CHANGE.ordinal()] = 2;
+            } catch (var3: NoSuchFieldError) {
+            }
+
+            try {
+               var0[ChannelChatListAdapter.PortalViewUpdateType.REMOVE.ordinal()] = 3;
+            } catch (var2: NoSuchFieldError) {
+            }
+
+            $EnumSwitchMapping$0 = var0;
+         }
       }
    }
 

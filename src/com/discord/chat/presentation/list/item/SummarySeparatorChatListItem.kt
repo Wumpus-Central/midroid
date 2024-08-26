@@ -6,35 +6,9 @@ import kotlin.jvm.internal.r
 
 public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isBeforeContent: Boolean) : ChatListItem {
    public final val color: Int
-
    public final val currentMsgId: MessageId
-      public final get() {
-         val var1: java.lang.String;
-         if (this.isBeforeContent) {
-            var1 = this.summary.getStartId-3Eiw7ao();
-         } else {
-            var1 = this.summary.getEndId-3Eiw7ao();
-         }
-
-         return var1;
-      }
-
-
    public final val isBeforeContent: Boolean
-
    public final val jumpToMsgId: MessageId
-      public final get() {
-         val var1: java.lang.String;
-         if (this.isBeforeContent) {
-            var1 = this.summary.getEndId-3Eiw7ao();
-         } else {
-            var1 = this.summary.getStartId-3Eiw7ao();
-         }
-
-         return var1;
-      }
-
-
    public final val summary: Summary
 
    public final val text: String
@@ -96,6 +70,28 @@ public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isB
             return this.isBeforeContent == var1.isBeforeContent;
          }
       }
+   }
+
+   fun getCurrentMsgId_3Eiw7ao(): java.lang.String {
+      val var1: java.lang.String;
+      if (this.isBeforeContent) {
+         var1 = this.summary.getStartId_3Eiw7ao();
+      } else {
+         var1 = this.summary.getEndId_3Eiw7ao();
+      }
+
+      return var1;
+   }
+
+   fun getJumpToMsgId_3Eiw7ao(): java.lang.String {
+      val var1: java.lang.String;
+      if (this.isBeforeContent) {
+         var1 = this.summary.getEndId_3Eiw7ao();
+      } else {
+         var1 = this.summary.getStartId_3Eiw7ao();
+      }
+
+      return var1;
    }
 
    public override fun hashCode(): Int {

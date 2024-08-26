@@ -41,9 +41,9 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
 
       var2.o0(var4);
       var4 = r.c(this.accessory.getAnswer().isSelected(), java.lang.Boolean.TRUE);
-      val var5: PollChatAnswerInteractionType = this.accessory.getInteractionType();
-      val var6: IntArray = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0;
-      var var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[var5.ordinal()];
+      val var6: PollChatAnswerInteractionType = this.accessory.getInteractionType();
+      val var5: IntArray = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0;
+      var var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[var6.ordinal()];
       if (var3 != 2) {
          if (var3 == 3) {
             var2.p0(var4);
@@ -52,7 +52,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
          var2.O0(var4);
       }
 
-      var3 = var6[this.accessory.getInteractionType().ordinal()];
+      var3 = var5[this.accessory.getInteractionType().ordinal()];
       val var7: java.lang.String;
       if (var3 != 1) {
          if (var3 != 2) {
@@ -71,6 +71,34 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
       var2.q0(var7);
       if (this.accessory.getTapAccessibilityLabel() != null) {
          var2.b(new androidx.core.view.accessibility.AccessibilityNodeInfoCompat.a(16, this.accessory.getTapAccessibilityLabel()));
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[PollChatAnswerInteractionType.values().length];
+
+         try {
+            var0[PollChatAnswerInteractionType.LIST.ordinal()] = 1;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[PollChatAnswerInteractionType.RADIO_BUTTONS.ordinal()] = 2;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[PollChatAnswerInteractionType.CHECKBOXES.ordinal()] = 3;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
       }
    }
 }

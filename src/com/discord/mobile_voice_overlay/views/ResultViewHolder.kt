@@ -51,7 +51,7 @@ private class ResultViewHolder(parent: ViewGroup,
    fun `_init_$lambda$1`(var0: ResultViewHolder, var1: View) {
       r.h(var0, "this$0");
       if (var0.result != null) {
-         var0.onChannelSelected.invoke(ChannelId.box-impl(var0.result.getChannelId-o4g7jtM()));
+         var0.onChannelSelected.invoke(ChannelId.box_impl(var0.result.getChannelId_o4g7jtM()));
       }
    }
 

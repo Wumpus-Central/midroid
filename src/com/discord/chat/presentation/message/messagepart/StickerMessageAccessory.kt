@@ -1,65 +1,10 @@
-package com.discord.chat.presentation.message.messagepart
-
-import com.discord.chat.bridge.sticker.Sticker
-import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
-
-public data class StickerMessageAccessory(messageId: MessageId, sticker: Sticker) : StickerMessageAccessory(var1, var2) {
-   public open val messageId: MessageId
-   public final val sticker: Sticker
-
-   fun StickerMessageAccessory(var1: java.lang.String, var2: Sticker) {
-      val var3: Long = var2.getId();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("sticker-");
-      var5.append(var3);
-      super(var1, var5.toString(), false, 4, null);
-      this.messageId = var1;
-      this.sticker = var2;
-   }
-
-   public operator fun component1(): MessageId {
-      return this.getMessageId-3Eiw7ao();
-   }
-
-   public operator fun component2(): Sticker {
-      return this.sticker;
-   }
-
-   public fun copy(messageId: MessageId = ..., sticker: Sticker = ...): StickerMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "sticker");
-      return new StickerMessageAccessory(var1, var2, null);
-   }
-
-   public override operator fun equals(other: Any?): Boolean {
-      if (this === var1) {
-         return true;
-      } else if (var1 !is StickerMessageAccessory) {
-         return false;
-      } else {
-         var1 = var1;
-         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
-            return false;
-         } else {
-            return r.c(this.sticker, var1.sticker);
-         }
-      }
-   }
-
-   public override fun hashCode(): Int {
-      return MessageId.hashCode-impl(this.getMessageId-3Eiw7ao()) * 31 + this.sticker.hashCode();
-   }
-
-   public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var2: Sticker = this.sticker;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("StickerMessageAccessory(messageId=");
-      var1.append(var3);
-      var1.append(", sticker=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
-   }
-}
+/*
+$VF: Unable to decompile class
+Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+java.lang.IllegalStateException: Couldn't find method component1 ()Lcom/discord/primitives/MessageId; in class com/discord/chat/presentation/message/messagepart/StickerMessageAccessory
+  at org.vineflower.kotlin.struct.KFunction.parse(KFunction.java:112)
+  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:221)
+  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
+  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
+  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:194)
+*/

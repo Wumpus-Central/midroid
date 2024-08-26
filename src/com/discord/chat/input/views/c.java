@@ -3,7 +3,6 @@ package com.discord.chat.input.views;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
 
-// $VF: synthetic class
 public final class c implements OnFocusChangeListener {
    public final ChatInputRootView a;
 

@@ -114,18 +114,18 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
    }
 
    public override fun toString(): String {
-      val var4: MessageFrameType = this.getType();
-      val var2: java.lang.String = this.guildName;
-      val var1: java.lang.String = this.channelName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MessageFrameJump(type=");
-      var3.append(var4);
-      var3.append(", guildName=");
-      var3.append(var2);
-      var3.append(", channelName=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: MessageFrameType = this.getType();
+      val var3: java.lang.String = this.guildName;
+      val var2: java.lang.String = this.channelName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MessageFrameJump(type=");
+      var4.append(var1);
+      var4.append(", guildName=");
+      var4.append(var3);
+      var4.append(", channelName=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<MessageFrameJump> {
@@ -158,19 +158,18 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
          val var5: Boolean = var10.p();
          var var6: Any = null;
          var var2: Int;
-         var var7: Any;
-         val var8: Any;
          var var11: Any;
+         var var13: Any;
          if (var5) {
-            var11 = var10.y(var9, 0, MessageFrameType.Serializer.INSTANCE, null);
-            var6 = a2.a;
-            var8 = var10.n(var9, 1, a2.a, null);
-            var7 = var10.n(var9, 2, (DeserializationStrategy)var6, null);
+            var6 = var10.y(var9, 0, MessageFrameType.Serializer.INSTANCE, null);
+            var13 = a2.a;
+            var11 = var10.n(var9, 1, a2.a, null);
+            var13 = var10.n(var9, 2, (DeserializationStrategy)var13, null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
+            var13 = null;
             var11 = null;
 
             while (var3) {
@@ -185,7 +184,7 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
                         var11 = var10.n(var9, 2, a2.a, var11);
                         var2 |= 4;
                      } else {
-                        var7 = var10.n(var9, 1, a2.a, var7);
+                        var13 = var10.n(var9, 1, a2.a, var13);
                         var2 |= 2;
                      }
                   } else {
@@ -197,13 +196,12 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
                }
             }
 
-            var8 = var7;
-            var7 = var11;
-            var11 = var6;
+            var13 = var11;
+            var11 = var13;
          }
 
          var10.c(var9);
-         return new MessageFrameJump(var2, var11 as MessageFrameType, var8 as java.lang.String, var7 as java.lang.String, null);
+         return new MessageFrameJump(var2, var6 as MessageFrameType, var11 as java.lang.String, var13 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageFrameJump) {

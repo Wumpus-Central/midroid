@@ -3,7 +3,6 @@ package com.discord.chat.bridge.row
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.summaries.Summary
 import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -177,11 +176,11 @@ public data class SeparatorRow(changeType: ChangeType,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = this.getChangeType().hashCode();
-      val var4: Int = Integer.hashCode(this.getIndex());
-      val var5: Int = this.text.hashCode();
-      val var7: Int = this.id.hashCode();
-      val var6: Int = Integer.hashCode(this.color);
+      val var6: Int = this.getChangeType().hashCode();
+      val var8: Int = Integer.hashCode(this.getIndex());
+      val var4: Int = this.text.hashCode();
+      val var5: Int = this.id.hashCode();
+      val var7: Int = Integer.hashCode(this.color);
       var var3: Int = 0;
       val var1: Int;
       if (this.scrollTo == null) {
@@ -201,37 +200,37 @@ public data class SeparatorRow(changeType: ChangeType,
          var3 = this.summary.hashCode();
       }
 
-      return ((((((var8 * 31 + var4) * 31 + var5) * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var6 * 31 + var8) * 31 + var4) * 31 + var5) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var9: ChangeType = this.getChangeType();
-      val var2: Int = this.getIndex();
-      val var3: java.lang.String = this.text;
-      val var4: java.lang.String = this.id;
-      val var1: Int = this.color;
+      val var7: ChangeType = this.getChangeType();
+      val var1: Int = this.getIndex();
+      val var5: java.lang.String = this.text;
+      val var8: java.lang.String = this.id;
+      val var2: Int = this.color;
       val var6: java.lang.Boolean = this.scrollTo;
-      val var5: java.lang.Boolean = this.isBeforeContent;
-      val var8: Summary = this.summary;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("SeparatorRow(changeType=");
-      var7.append(var9);
-      var7.append(", index=");
-      var7.append(var2);
-      var7.append(", text=");
-      var7.append(var3);
-      var7.append(", id=");
-      var7.append(var4);
-      var7.append(", color=");
-      var7.append(var1);
-      var7.append(", scrollTo=");
-      var7.append(var6);
-      var7.append(", isBeforeContent=");
-      var7.append(var5);
-      var7.append(", summary=");
-      var7.append(var8);
-      var7.append(")");
-      return var7.toString();
+      val var9: java.lang.Boolean = this.isBeforeContent;
+      val var3: Summary = this.summary;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SeparatorRow(changeType=");
+      var4.append(var7);
+      var4.append(", index=");
+      var4.append(var1);
+      var4.append(", text=");
+      var4.append(var5);
+      var4.append(", id=");
+      var4.append(var8);
+      var4.append(", color=");
+      var4.append(var2);
+      var4.append(", scrollTo=");
+      var4.append(var6);
+      var4.append(", isBeforeContent=");
+      var4.append(var9);
+      var4.append(", summary=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<SeparatorRow> {
@@ -258,8 +257,8 @@ public data class SeparatorRow(changeType: ChangeType,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: h = h.a;
-         return new KSerializer[]{ChangeType.Serializer.INSTANCE, m0.a, a2.a, a2.a, m0.a, a.u(h.a), a.u(var1), a.u(Summary.$serializer.INSTANCE)};
+         val var2: h = h.a;
+         return new KSerializer[]{ChangeType.Serializer.INSTANCE, m0.a, a2.a, a2.a, m0.a, a.u(h.a), a.u(var2), a.u(Summary.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): SeparatorRow {
@@ -269,42 +268,43 @@ public data class SeparatorRow(changeType: ChangeType,
          val var8: Boolean = var16.p();
          var var6: Byte = 7;
          var var2: Int;
-         var var3: Int;
          var var4: Int;
+         val var5: Int;
          var var9: Any;
          var var10: Any;
-         var var11: Any;
+         var var12: Any;
          var var13: Any;
+         val var14: Any;
          var var17: Any;
-         var var20: Any;
          if (var8) {
-            var9 = var16.y(var15, 0, ChangeType.Serializer.INSTANCE, null);
-            var3 = var16.i(var15, 1);
-            var11 = var16.m(var15, 2);
+            var10 = var16.y(var15, 0, ChangeType.Serializer.INSTANCE, null);
+            var5 = var16.i(var15, 1);
+            var14 = var16.m(var15, 2);
             var17 = var16.m(var15, 3);
-            var4 = var16.i(var15, 4);
-            var20 = h.a;
-            var10 = var16.n(var15, 5, h.a, null);
-            var20 = var16.n(var15, 6, (DeserializationStrategy)var20, null);
+            val var3: Int = var16.i(var15, 4);
+            val var11: h = h.a;
+            var9 = var16.n(var15, 5, h.a, null);
+            var12 = var16.n(var15, 6, var11, null);
             var13 = var16.n(var15, 7, Summary.$serializer.INSTANCE, null);
             var2 = 255;
+            var4 = var3;
          } else {
-            var var5: Boolean = true;
+            var var19: Boolean = true;
             var4 = 0;
             var2 = 0;
             var13 = null;
-            var20 = null;
+            var12 = null;
             var9 = null;
             var10 = null;
             var17 = null;
-            var11 = null;
-            var3 = 0;
+            var var22: Any = null;
+            var var18: Int = 0;
 
-            while (var5) {
+            while (var19) {
                val var7: Int = var16.o(var15);
                switch (var7) {
                   case -1:
-                     var5 = false;
+                     var19 = false;
                      break;
                   case 0:
                      var9 = var16.y(var15, 0, ChangeType.Serializer.INSTANCE, var9);
@@ -312,7 +312,7 @@ public data class SeparatorRow(changeType: ChangeType,
                      var6 = 7;
                      break;
                   case 1:
-                     var3 = var16.i(var15, 1);
+                     var18 = var16.i(var15, 1);
                      var2 |= 2;
                      break;
                   case 2:
@@ -328,11 +328,11 @@ public data class SeparatorRow(changeType: ChangeType,
                      var2 |= 16;
                      break;
                   case 5:
-                     var11 = var16.n(var15, 5, h.a, var11);
+                     var22 = var16.n(var15, 5, h.a, var22);
                      var2 |= 32;
                      break;
                   case 6:
-                     var20 = var16.n(var15, 6, h.a, var20);
+                     var12 = var16.n(var15, 6, h.a, var12);
                      var2 |= 64;
                      break;
                   case 7:
@@ -344,20 +344,22 @@ public data class SeparatorRow(changeType: ChangeType,
                }
             }
 
-            var11 = var10;
-            var10 = var11;
+            var14 = var10;
+            var10 = var9;
+            var5 = var18;
+            var9 = var22;
          }
 
          var16.c(var15);
          return new SeparatorRow(
             var2,
-            var9 as ChangeType,
-            var3,
-            (java.lang.String)var11,
+            var10 as ChangeType,
+            var5,
+            (java.lang.String)var14,
             (java.lang.String)var17,
             var4,
-            var10 as java.lang.Boolean,
-            var20 as java.lang.Boolean,
+            var9 as java.lang.Boolean,
+            var12 as java.lang.Boolean,
             var13 as Summary,
             null
          );

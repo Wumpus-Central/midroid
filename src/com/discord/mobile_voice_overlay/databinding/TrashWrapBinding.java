@@ -27,12 +27,12 @@ public final class TrashWrapBinding implements ViewBinding {
       SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.trash_wrap_target_container;
-         FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-         if (var3 != null) {
+         FrameLayout var4 = (FrameLayout)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.trash_wrap_target_zone;
-            FrameLayout var4 = (FrameLayout)a.a(var0, var1);
-            if (var4 != null) {
-               return new TrashWrapBinding(var0, var2, var3, var4);
+            FrameLayout var3 = (FrameLayout)a.a(var0, var1);
+            if (var3 != null) {
+               return new TrashWrapBinding(var0, var2, var4, var3);
             }
          }
       }

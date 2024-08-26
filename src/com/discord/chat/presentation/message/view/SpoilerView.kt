@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
 import androidx.transition.Transition
 import com.discord.chat.bridge.spoiler.SpoilerConfig
 import com.discord.chat.bridge.spoiler.SpoilerManager
+import com.discord.chat.bridge.spoiler.SpoilerType
 import com.discord.chat.databinding.SpoilerViewBinding
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import kotlin.jvm.functions.Function0
@@ -38,11 +39,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun configureObscureOverlay(label: String, parent: ViewGroup) {
-      val var3: View = this.binding.obscure.getOverlayView();
-      val var4: ObscureOverlayView = this.binding.obscure;
+      val var4: View = this.binding.obscure.getOverlayView();
+      val var3: ObscureOverlayView = this.binding.obscure;
       kotlin.jvm.internal.r.g(this.binding.obscure, "binding.obscure");
-      var4.setVisibility(0);
-      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, this.onClick(true, var3), this.onClick(false, var3));
+      var3.setVisibility(0);
+      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, this.onClick(true, var4), this.onClick(false, var4));
    }
 
    private fun configureSpoilerOverlay(label: String) {
@@ -77,7 +78,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
             }
 
             kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type android.view.ViewGroup");
-            var3 = var3 as ViewGroup;
+            val var4: ViewGroup = var3 as ViewGroup;
             var var1: Byte;
             if (this.$showImage) {
                var1 = 2;
@@ -85,11 +86,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
                var1 = 1;
             }
 
-            val var4: androidx.transition.c = new androidx.transition.c(var1);
+            val var5: androidx.transition.c = new androidx.transition.c(var1);
             val var2: Boolean = this.$showImage;
-            val var5: SpoilerView = this.this$0;
-            var4.a0(150L);
-            var4.a(new androidx.transition.i(var2, var5) {
+            var3 = this.this$0;
+            var5.a0(150L);
+            var5.a(new androidx.transition.i(var2, (SpoilerView)var3) {
                final boolean $showImage;
                final SpoilerView this$0;
 
@@ -109,7 +110,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
                   }
                }
             });
-            androidx.transition.j.a((ViewGroup)var3, var4);
+            androidx.transition.j.a(var4, var5);
             if (this.$showImage xor true) {
                var1 = 0;
             } else {
@@ -134,7 +135,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       kotlin.jvm.internal.r.h(var2, "viewToBlur");
       if (var1 != null) {
          this.resetOverlays();
-         this.isOverlayVisible = SpoilerManager.INSTANCE.isNotRevealed-V2PEE7g(var1.getAttributes().getIdentifier-Bq9X6Gg());
+         this.isOverlayVisible = SpoilerManager.INSTANCE.isNotRevealed_V2PEE7g(var1.getAttributes().getIdentifier_Bq9X6Gg());
          if (SpoilerView.WhenMappings.$EnumSwitchMapping$0[var1.getAttributes().getType().ordinal()] == 1) {
             this.configureObscureOverlay(var1.getAttributes().getLabel(), var2);
          } else {
@@ -200,6 +201,24 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var5.h(var4.getId(), 4, 0, 4, 0);
          var5.c(var1);
          return var4;
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[SpoilerType.values().length];
+
+         try {
+            var0[SpoilerType.OBSCURE.ordinal()] = 1;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
       }
    }
 }

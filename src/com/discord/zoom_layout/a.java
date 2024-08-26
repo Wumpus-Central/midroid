@@ -1,6 +1,5 @@
 package com.discord.zoom_layout;
 
-// $VF: synthetic class
 public final class a implements Runnable {
    public final ZoomLayoutFixed j;
 

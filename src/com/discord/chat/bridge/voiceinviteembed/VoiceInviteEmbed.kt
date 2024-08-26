@@ -144,11 +144,11 @@ public data class VoiceInviteEmbed(guildId: String,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = this.guildId.hashCode();
-      val var5: Int = this.channelId.hashCode();
-      val var7: Int = this.titleText.hashCode();
-      val var8: Int = this.bodyText.hashCode();
-      val var6: Int = this.joinText.hashCode();
+      val var8: Int = this.guildId.hashCode();
+      val var9: Int = this.channelId.hashCode();
+      val var5: Int = this.titleText.hashCode();
+      val var6: Int = this.bodyText.hashCode();
+      val var7: Int = this.joinText.hashCode();
       val var1: Int;
       if (this.joinIcon == null) {
          var1 = 0;
@@ -166,29 +166,29 @@ public data class VoiceInviteEmbed(guildId: String,
          var3 = this.isInactive;
       }
 
-      return ((((((var9 * 31 + var5) * 31 + var7) * 31 + var8) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var8 * 31 + var9) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.guildId;
-      val var9: java.lang.String = this.channelId;
-      val var8: java.lang.String = this.titleText;
-      val var4: java.lang.String = this.bodyText;
-      val var3: java.lang.String = this.joinText;
+      val var8: java.lang.String = this.guildId;
+      val var7: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.titleText;
+      val var3: java.lang.String = this.bodyText;
+      val var9: java.lang.String = this.joinText;
       val var6: java.lang.String = this.joinIcon;
       val var2: Boolean = this.joinDisabled;
       val var1: Boolean = this.isInactive;
       val var5: StringBuilder = new StringBuilder();
       var5.append("VoiceInviteEmbed(guildId=");
-      var5.append(var7);
-      var5.append(", channelId=");
-      var5.append(var9);
-      var5.append(", titleText=");
       var5.append(var8);
-      var5.append(", bodyText=");
+      var5.append(", channelId=");
+      var5.append(var7);
+      var5.append(", titleText=");
       var5.append(var4);
-      var5.append(", joinText=");
+      var5.append(", bodyText=");
       var5.append(var3);
+      var5.append(", joinText=");
+      var5.append(var9);
       var5.append(", joinIcon=");
       var5.append(var6);
       var5.append(", joinDisabled=");
@@ -238,13 +238,13 @@ public data class VoiceInviteEmbed(guildId: String,
          var var9: java.lang.String;
          var var11: Any;
          val var12: java.lang.String;
-         var var15: java.lang.String;
+         val var15: java.lang.String;
          if (var14.p()) {
             var8 = var14.m(var13, 0);
             var9 = var14.m(var13, 1);
             var12 = var14.m(var13, 2);
-            var7 = var14.m(var13, 3);
-            var15 = var14.m(var13, 4);
+            var15 = var14.m(var13, 3);
+            var7 = var14.m(var13, 4);
             var11 = var14.n(var13, 5, a2.a, null);
             var3 = var14.C(var13, 6);
             var6 = var14.C(var13, 7);
@@ -257,7 +257,7 @@ public data class VoiceInviteEmbed(guildId: String,
             var9 = null;
             var8 = null;
             var7 = null;
-            var15 = null;
+            var var16: java.lang.String = null;
             var11 = null;
             var3 = 0;
 
@@ -284,7 +284,7 @@ public data class VoiceInviteEmbed(guildId: String,
                      var2 |= 8;
                      break;
                   case 4:
-                     var15 = var14.m(var13, 4);
+                     var16 = var14.m(var13, 4);
                      var2 |= 16;
                      break;
                   case 5:
@@ -304,12 +304,14 @@ public data class VoiceInviteEmbed(guildId: String,
                }
             }
 
+            var7 = var16;
+            var15 = var7;
             var12 = var8;
             var8 = var10;
          }
 
          var14.c(var13);
-         return new VoiceInviteEmbed(var2, var8, var9, var12, var7, var15, var11 as java.lang.String, (boolean)var3, var6, null);
+         return new VoiceInviteEmbed(var2, var8, var9, var12, var15, var7, var11 as java.lang.String, (boolean)var3, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceInviteEmbed) {

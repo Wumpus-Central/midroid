@@ -96,16 +96,16 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    public override fun toString(): String {
       val var1: Int = this.stallTime;
       val var2: java.lang.String = this.sessionId;
-      val var4: java.lang.String = this.trace;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("StallReport(stallTime=");
-      var3.append(var1);
-      var3.append(", sessionId=");
-      var3.append(var2);
-      var3.append(", trace=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.trace;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("StallReport(stallTime=");
+      var4.append(var1);
+      var4.append(", sessionId=");
+      var4.append(var2);
+      var4.append(", trace=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<StallReport> {
@@ -132,26 +132,26 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
       public open fun deserialize(decoder: Decoder): StallReport {
          r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.b(var7);
          var var2: Int;
          var var3: Int;
-         var var6: Any;
-         val var10: java.lang.String;
-         if (var9.p()) {
-            var3 = var9.i(var8, 0);
-            var10 = var9.m(var8, 1);
-            var6 = var9.n(var8, 2, a2.a, null);
+         var var6: java.lang.String;
+         var var9: Any;
+         if (var8.p()) {
+            var3 = var8.i(var7, 0);
+            var6 = var8.m(var7, 1);
+            var9 = var8.n(var7, 2, a2.a, null);
             var2 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var6 = null;
-            var var11: Any = null;
+            var9 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var9.o(var8);
+               val var5: Int = var8.o(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -159,27 +159,24 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
                            throw new n(var5);
                         }
 
-                        var11 = var9.n(var8, 2, a2.a, var11);
+                        var9 = var8.n(var7, 2, a2.a, var9);
                         var2 |= 4;
                      } else {
-                        var6 = var9.m(var8, 1);
+                        var6 = var8.m(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var9.i(var8, 0);
+                     var3 = var8.i(var7, 0);
                      var2 |= 1;
                   }
                } else {
                   var4 = false;
                }
             }
-
-            var6 = var11;
-            var10 = (java.lang.String)var6;
          }
 
-         var9.c(var8);
-         return new StallReport(var2, var3, var10, var6 as java.lang.String, null);
+         var8.c(var7);
+         return new StallReport(var2, var3, var6, var9 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: StallReport) {

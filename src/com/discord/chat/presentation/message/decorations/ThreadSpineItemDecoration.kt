@@ -43,14 +43,14 @@ public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx:
          if (var9 != null) {
             val var10: View = var9.getSpineOriginView();
             if (var10 != null) {
-               val var6: Int = var10.getLeft() + var10.getMeasuredWidth() / 2;
-               val var7: Int = var2.getChildCount();
+               val var7: Int = var10.getLeft() + var10.getMeasuredWidth() / 2;
+               val var6: Int = var2.getChildCount();
 
-               for (int var4 = 0; var4 < var7; var4++) {
+               for (int var4 = 0; var4 < var6; var4++) {
                   val var11: View = var2.getChildAt(var4);
                   if (var11 != null) {
                      if (var11 is ThreadEmbedView) {
-                        this.spineDrawer.drawSpineCurve(var1, var2, var11, var11, var6);
+                        this.spineDrawer.drawSpineCurve(var1, var2, var11, var11, var7);
                      } else if (var11 is MessageContentView) {
                         val var5: Int;
                         if (var4 == 0) {
@@ -59,9 +59,9 @@ public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx:
                            var5 = 0;
                         }
 
-                        this.spineDrawer.drawSpinePiece(var1, var2, var11, var6, var5);
+                        this.spineDrawer.drawSpinePiece(var1, var2, var11, var7, var5);
                      } else {
-                        SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var11, var6, 0, 16, null);
+                        SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var11, var7, 0, 16, null);
                      }
                   }
                }

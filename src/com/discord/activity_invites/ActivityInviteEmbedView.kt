@@ -426,12 +426,12 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var2: java.lang.String = this.uri;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Start(uri=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.lang.String = this.uri;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Start(uri=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
    }

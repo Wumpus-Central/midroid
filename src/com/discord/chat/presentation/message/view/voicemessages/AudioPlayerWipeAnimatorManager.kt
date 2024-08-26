@@ -311,36 +311,36 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    }
 
    public fun startAnimator(animateToPlay: Boolean, shouldAnimate: Boolean) {
-      var var9: Long = 0L;
+      var var10: Long = 0L;
       if (var2) {
          if (this.animateToPlay == var1) {
             return;
          }
 
-         var9 = 0L;
+         var10 = 0L;
          if (this.animateToPlay != var1) {
-            var9 = 0L;
+            var10 = 0L;
             if (this.animatorSet != null) {
-               var var5: Long = 0L;
+               var var6: Long = 0L;
                if (VERSION.SDK_INT >= 26) {
                   if (this.animatorSet != null) {
-                     var5 = this.animatorSet.getDuration();
+                     var6 = this.animatorSet.getDuration();
                   } else {
-                     var5 = 0L;
+                     var6 = 0L;
                   }
 
                   if (this.animatorSet != null) {
-                     var9 = l.a(this.animatorSet);
+                     var10 = l.a(this.animatorSet);
                   } else {
-                     var9 = 0L;
+                     var10 = 0L;
                   }
 
-                  var var17: java.lang.Long = var5 - var9;
-                  var5 = var17.longValue();
+                  var var17: java.lang.Long = var6 - var10;
+                  var6 = var17.longValue();
                   var var3: Boolean = false;
-                  if (0L <= var5) {
+                  if (0L <= var6) {
                      var3 = false;
-                     if (var5 < 201L) {
+                     if (var6 < 201L) {
                         var3 = true;
                      }
                   }
@@ -349,23 +349,23 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
                      var17 = null;
                   }
 
-                  var5 = 0L;
+                  var6 = 0L;
                   if (var17 != null) {
-                     var5 = var17;
+                     var6 = var17;
                   }
                }
 
-               var9 = var5;
+               var10 = var6;
                if (this.animatorSet != null) {
                   this.animatorSet.cancel();
-                  var9 = var5;
+                  var10 = var6;
                }
             }
          }
       }
 
       this.animateToPlay = var1;
-      val var19: AnimatorSet = this.getAnimatorSet(var1, var9, var2);
+      val var19: AnimatorSet = this.getAnimatorSet(var1, var10, var2);
       var19.start();
       this.animatorSet = var19;
    }

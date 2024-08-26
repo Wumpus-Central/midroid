@@ -54,7 +54,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       this.positionEndPrev = var1;
       val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
       val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
-      this.onVisibleItemsChanged.invoke(this.sectionsId, var4.getSection-sZRFyWU(), var3.getSection-sZRFyWU(), var4.getItem-JXkbwXs(), var3.getItem-JXkbwXs());
+      this.onVisibleItemsChanged.invoke(this.sectionsId, var4.getSection_sZRFyWU(), var3.getSection_sZRFyWU(), var4.getItem_JXkbwXs(), var3.getItem_JXkbwXs());
    }
 
    private fun isUnchanged(itemEndPosition: Int, itemStartPosition: Int): Boolean {
@@ -69,15 +69,15 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
    }
 
    public fun updateVisibleItemPositions() {
-      var var3: Int = this.layoutManager.findFirstVisibleItemPosition();
-      var var2: Int = this.layoutManager.findLastVisibleItemPosition();
-      if (var2 != -1 && var3 != -1) {
-         if (this.positionEndPrevRaw == var2 && this.positionStartPrevRaw == var3 && r.c(this.sectionsId, this.sections.getId())) {
+      var var2: Int = this.layoutManager.findFirstVisibleItemPosition();
+      var var3: Int = this.layoutManager.findLastVisibleItemPosition();
+      if (var3 != -1 && var2 != -1) {
+         if (this.positionEndPrevRaw == var3 && this.positionStartPrevRaw == var2 && r.c(this.sectionsId, this.sections.getId())) {
             return;
          }
 
-         this.positionEndPrevRaw = var2;
-         this.positionStartPrevRaw = var3;
+         this.positionEndPrevRaw = var3;
+         this.positionStartPrevRaw = var2;
          var var1: Boolean;
          if (this.getLastItemPosition() < 0) {
             var1 = 1;
@@ -86,18 +86,20 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
          }
 
          if (var1) {
-            if (!this.isUnchanged(var2, var3)) {
-               this.computeVisibleItems(var2, var3);
+            if (!this.isUnchanged(var3, var2)) {
+               this.computeVisibleItems(var3, var2);
             }
 
             return;
          }
 
          if (this.getScrollingForward()) {
-            var2 = Math.min(this.getLastItemPosition(), var2 + this.getItemBuffer());
-            var1 = var3;
+            var3 = Math.min(this.getLastItemPosition(), var3 + this.getItemBuffer());
+            var1 = var2;
+            var2 = var3;
          } else {
-            var1 = Math.max(0, var3 - this.getItemBuffer());
+            var1 = Math.max(0, var2 - this.getItemBuffer());
+            var2 = var3;
          }
 
          if (this.isUnchanged(var2, var1)) {
@@ -106,8 +108,8 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
          val var6: Int = this.positionEndPrev - this.positionStartPrev;
          var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
-         var var4: Int = var1;
-         var3 = var2;
+         var3 = var1;
+         var var4: Int = var2;
          if (var5 > 0) {
             var5 = Math.min(this.getLastItemPosition(), var2 + var5);
             var3 = var6 - (var5 - var1);
@@ -116,14 +118,14 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
                var2 = Math.max(0, var1 - var3);
             }
 
-            var4 = var2;
-            var3 = var5;
+            var3 = var2;
+            var4 = var5;
             if (this.isUnchanged(var5, var2)) {
                return;
             }
          }
 
-         this.computeVisibleItems(var3, var4);
+         this.computeVisibleItems(var4, var3);
       }
    }
 

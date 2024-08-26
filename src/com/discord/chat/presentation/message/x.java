@@ -6,7 +6,6 @@ import com.discord.chat.bridge.roleicons.RoleIcon;
 import com.discord.chat.presentation.events.ChatEventHandler;
 import com.discord.emoji.RenderableEmoji;
 
-// $VF: synthetic class
 public final class x implements OnClickListener {
    public final ChatEventHandler j;
    public final RoleIcon k;
