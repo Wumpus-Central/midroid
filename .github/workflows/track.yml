@@ -3,8 +3,10 @@ name: Track
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 6 * * *"
+    - cron: "*/15 6 * * *"
     - cron: "30 * * * *"
+
+permissions: write-all
 
 jobs:
   track:
