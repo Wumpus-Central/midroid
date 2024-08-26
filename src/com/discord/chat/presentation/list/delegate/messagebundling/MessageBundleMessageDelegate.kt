@@ -55,19 +55,19 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
       if (var1 is MessageView) {
          if (var2 is MessageBundleMessageItem) {
             val var12: MessageView = var1 as MessageView;
-            val var13: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
+            val var8: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
             val var9: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
-            val var8: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
-            val var7: MessageFrame = var13.getMessageItem().getMessageFrame();
-            val var11: MessageItem = var13.getMessageItem();
-            val var10: Context = var12.getContext();
-            r.g(var10, "view.context");
+            val var13: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
+            val var7: MessageFrame = var8.getMessageItem().getMessageFrame();
+            val var10: MessageItem = var8.getMessageItem();
+            val var11: Context = var12.getContext();
+            r.g(var11, "view.context");
             MessageView.setMessage$default(
                var12,
                var9,
-               var8,
+               var13,
                var7,
-               MessageBundleDelegateUtilsKt.getEventHandler(var11, var10),
+               MessageBundleDelegateUtilsKt.getEventHandler(var10, var11),
                null,
                new Function0<MessageView.ChainPart>(this, var3, var4) {
                   final java.util.List<MessageBundleItem> $items;
@@ -86,8 +86,8 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
                   }
                },
                false,
-               var13.getMessageItem().isHighlight(),
-               var13.getMessageItem().getRenderContentOnly(),
+               var8.getMessageItem().isHighlight(),
+               var8.getMessageItem().getRenderContentOnly(),
                80,
                null
             );

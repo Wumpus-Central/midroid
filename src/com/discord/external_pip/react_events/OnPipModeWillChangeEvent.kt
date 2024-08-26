@@ -14,7 +14,6 @@ import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
 import uk.n
 import xk.f0
-import xk.f0.a
 
 @f
 internal class OnPipModeWillChangeEvent : ReactEvent {
@@ -43,7 +42,7 @@ internal class OnPipModeWillChangeEvent : ReactEvent {
          descriptor = new PluginGeneratedSerialDescriptor("com.discord.external_pip.react_events.OnPipModeWillChangeEvent", var0, 0);
       }
 
-      public open fun childSerializers(): Array<KSerializer<*>> {
+      public override fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[0];
       }
 
@@ -73,8 +72,8 @@ internal class OnPipModeWillChangeEvent : ReactEvent {
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return a.a(this);
+      override fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return f0.a.a(this);
       }
    }
 

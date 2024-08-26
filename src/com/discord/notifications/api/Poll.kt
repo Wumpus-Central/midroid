@@ -11,6 +11,7 @@ import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
 import uk.n
 import xk.f0
+import xk.f0.a
 
 @f
 public data class Poll(question: PollMedia) {
@@ -78,7 +79,7 @@ public data class Poll(question: PollMedia) {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{PollMedia.$serializer.INSTANCE};
       }
 
@@ -103,7 +104,7 @@ public data class Poll(question: PollMedia) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, (PollMedia)var8);
+                  var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, var8);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -124,8 +125,8 @@ public data class Poll(question: PollMedia) {
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return a.a(this);
       }
    }
 

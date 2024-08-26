@@ -16,11 +16,11 @@ public class DevicePerformanceManagerModule(reactContext: ReactApplicationContex
    }
 
    @ReactMethod
-   public open fun getMediaPerformanceClass(): Double {
+   public override fun getMediaPerformanceClass(): Double {
       return this.devicePerformance.i();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNDeviceLocaleManager";
    }
 

@@ -103,13 +103,13 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   .a()
             ) as PipelineDraweeControllerBuilder;
          val var12: java.lang.String = var1.getGiftCode();
-         val var8: java.lang.String = var1.getSplashUrl();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("splash-");
-         var7.append(var12);
-         var7.append("-");
-         var7.append(var8);
-         var9 = ((var6.A(var7.toString()) as PipelineDraweeControllerBuilder).F(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).c();
+         val var7: java.lang.String = var1.getSplashUrl();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("splash-");
+         var8.append(var12);
+         var8.append("-");
+         var8.append(var7);
+         var9 = ((var6.A(var8.toString()) as PipelineDraweeControllerBuilder).F(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).c();
       } else {
          var9 = null;
       }
@@ -214,25 +214,25 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          this.binding.thumbnail.setImageURI((var9 as GiftEmbed.Resolved).getThumbnailUrl());
          (var31.getHierarchy() as GenericDraweeHierarchy).D(com.facebook.drawee.generic.a.a((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
-         val var32: TextView = this.binding.title;
+         var var11: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
-         var32.setTextColor(var27.getTitleColor());
-         kotlin.jvm.internal.r.g(var32, "bind$lambda$12");
-         val var11: java.lang.CharSequence = var32.getText();
-         kotlin.jvm.internal.r.g(var11, "text");
+         var11.setTextColor(var27.getTitleColor());
+         kotlin.jvm.internal.r.g(var11, "bind$lambda$12");
+         val var32: java.lang.CharSequence = var11.getText();
+         kotlin.jvm.internal.r.g(var32, "text");
          var var20: Byte;
-         if (kotlin.text.f.x(var11) xor true) {
+         if (kotlin.text.f.x(var32) xor true) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var32.setVisibility(var20);
-         val var35: TextView = this.binding.subtitle;
+         var11.setVisibility(var20);
+         var11 = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
-         var35.setTextColor(var27.getSubtitleColor());
-         kotlin.jvm.internal.r.g(var35, "bind$lambda$13");
-         val var33: java.lang.CharSequence = var35.getText();
+         var11.setTextColor(var27.getSubtitleColor());
+         kotlin.jvm.internal.r.g(var11, "bind$lambda$13");
+         val var33: java.lang.CharSequence = var11.getText();
          kotlin.jvm.internal.r.g(var33, "text");
          if (kotlin.text.f.x(var33) xor true) {
             var20 = 0;
@@ -240,7 +240,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var20 = 8;
          }
 
-         var35.setVisibility(var20);
+         var11.setVisibility(var20);
          if (var27 is GiftEmbed.Resolved.Invalid) {
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
                .u(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));

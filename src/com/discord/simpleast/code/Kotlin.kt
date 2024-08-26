@@ -22,16 +22,16 @@ public object Kotlin {
       val var3: Pattern = PATTERN_KOTLIN_COMMENTS;
       r.g(PATTERN_KOTLIN_COMMENTS, "PATTERN_KOTLIN_COMMENTS");
       val var6: Rule = CodeRules.toMatchGroupRule$default(var2, var3, 0, var1.getCommentStyleProvider(), 1, null);
-      val var4: Pattern = PATTERN_KOTLIN_STRINGS;
+      var var4: Pattern = PATTERN_KOTLIN_STRINGS;
       r.g(PATTERN_KOTLIN_STRINGS, "PATTERN_KOTLIN_STRINGS");
-      val var7: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
-      val var5: Pattern = PATTERN_KOTLIN_ANNOTATION;
+      val var5: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
+      var4 = PATTERN_KOTLIN_ANNOTATION;
       r.g(PATTERN_KOTLIN_ANNOTATION, "PATTERN_KOTLIN_ANNOTATION");
       return h.l(
          new Rule[]{
             var6,
-            var7,
-            CodeRules.toMatchGroupRule$default(var2, var5, 0, var1.getGenericsStyleProvider(), 1, null),
+            var5,
+            CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getGenericsStyleProvider(), 1, null),
             Kotlin.FieldNode.Companion.createFieldRule(var1),
             Kotlin.FunctionNode.Companion.createFunctionRule(var1)
          }

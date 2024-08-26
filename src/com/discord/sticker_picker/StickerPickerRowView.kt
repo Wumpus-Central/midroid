@@ -150,4 +150,37 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
          ViewMeasureExtensionsKt.measureAndLayout(this);
       }
    }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[StickerPickerRow.Sticker.Type.values().length];
+
+         try {
+            var0[StickerPickerRow.Sticker.Type.PNG.ordinal()] = 1;
+         } catch (var5: NoSuchFieldError) {
+         }
+
+         try {
+            var0[StickerPickerRow.Sticker.Type.APNG.ordinal()] = 2;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[StickerPickerRow.Sticker.Type.LOTTIE.ordinal()] = 3;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[StickerPickerRow.Sticker.Type.GIF.ordinal()] = 4;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
+      }
+   }
 }

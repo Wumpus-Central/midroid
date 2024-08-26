@@ -175,27 +175,27 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.query;
-      val var5: UserSearchQuerySetFilters = this.filters;
-      val var7: java.util.List = this.blacklist;
-      val var3: java.util.List = this.whitelist;
-      val var4: java.util.Map = this.boosters;
+      val var3: java.lang.String = this.query;
+      val var7: UserSearchQuerySetFilters = this.filters;
+      val var2: java.util.List = this.blacklist;
+      val var5: java.util.List = this.whitelist;
+      val var6: java.util.Map = this.boosters;
       val var1: Int = this.limit;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("UserSearchQuerySetPayload(query=");
-      var6.append(var2);
-      var6.append(", filters=");
-      var6.append(var5);
-      var6.append(", blacklist=");
-      var6.append(var7);
-      var6.append(", whitelist=");
-      var6.append(var3);
-      var6.append(", boosters=");
-      var6.append(var4);
-      var6.append(", limit=");
-      var6.append(var1);
-      var6.append(")");
-      return var6.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSearchQuerySetPayload(query=");
+      var4.append(var3);
+      var4.append(", filters=");
+      var4.append(var7);
+      var4.append(", blacklist=");
+      var4.append(var2);
+      var4.append(", whitelist=");
+      var4.append(var5);
+      var4.append(", boosters=");
+      var4.append(var6);
+      var4.append(", limit=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<UserSearchQuerySetPayload> {
@@ -226,66 +226,66 @@ internal data class UserSearchQuerySetPayload(query: String,
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetPayload {
          r.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.b(var12);
-         val var7: Boolean = var13.p();
+         val var13: SerialDescriptor = this.getDescriptor();
+         val var14: c = var1.b(var13);
+         val var7: Boolean = var14.p();
          var var4: Byte = 5;
          var var2: Int;
          var var3: Int;
          var var8: Any;
          var var9: Any;
-         var var10: java.lang.String;
          var var11: Any;
-         var var15: Any;
+         val var12: Any;
+         val var15: java.lang.String;
          if (var7) {
-            var10 = var13.m(var12, 0);
-            var11 = var13.n(var12, 1, UserSearchQuerySetFilters.$serializer.INSTANCE, null);
-            var15 = a2.a;
-            var9 = var13.n(var12, 2, new xk.f(a2.a), null);
-            var8 = var13.n(var12, 3, new xk.f((KSerializer)var15), null);
-            var15 = var13.y(var12, 4, new r0((KSerializer)var15, x.a), null);
-            var3 = var13.i(var12, 5);
+            var15 = var14.m(var13, 0);
+            var11 = var14.n(var13, 1, UserSearchQuerySetFilters.$serializer.INSTANCE, null);
+            val var10: a2 = a2.a;
+            var9 = var14.n(var13, 2, new xk.f(a2.a), null);
+            var8 = var14.n(var13, 3, new xk.f(var10), null);
+            var12 = var14.y(var13, 4, new r0(var10, x.a), null);
+            var3 = var14.i(var13, 5);
             var2 = 63;
          } else {
             var var5: Boolean = true;
             var3 = 0;
-            var10 = null;
+            var var17: java.lang.String = null;
             var11 = null;
             var9 = null;
             var8 = null;
-            var15 = null;
+            var var16: Any = null;
             var2 = 0;
 
             while (var5) {
-               label28: {
-                  val var6: Int = var13.o(var12);
+               label29: {
+                  val var6: Int = var14.o(var13);
                   switch (var6) {
                      case -1:
                         var5 = false;
                         break;
                      case 0:
-                        var10 = var13.m(var12, 0);
+                        var17 = var14.m(var13, 0);
                         var2 |= 1;
                         break;
                      case 1:
-                        var11 = var13.n(var12, 1, UserSearchQuerySetFilters.$serializer.INSTANCE, var11);
+                        var11 = var14.n(var13, 1, UserSearchQuerySetFilters.$serializer.INSTANCE, var11);
                         var2 |= 2;
                         var4 = 5;
                         continue;
                      case 2:
-                        var9 = var13.n(var12, 2, new xk.f(a2.a), var9);
+                        var9 = var14.n(var13, 2, new xk.f(a2.a), var9);
                         var2 |= 4;
-                        break label28;
+                        break label29;
                      case 3:
-                        var8 = var13.n(var12, 3, new xk.f(a2.a), var8);
+                        var8 = var14.n(var13, 3, new xk.f(a2.a), var8);
                         var2 |= 8;
-                        break label28;
+                        break label29;
                      case 4:
-                        var15 = var13.y(var12, 4, new r0(a2.a, x.a), var15);
+                        var16 = var14.y(var13, 4, new r0(a2.a, x.a), var16);
                         var2 |= 16;
-                        break label28;
+                        break label29;
                      case 5:
-                        var3 = var13.i(var12, var4);
+                        var3 = var14.i(var13, var4);
                         var2 |= 32;
                         continue;
                      default:
@@ -298,11 +298,14 @@ internal data class UserSearchQuerySetPayload(query: String,
 
                var4 = 5;
             }
+
+            var12 = var16;
+            var15 = var17;
          }
 
-         var13.c(var12);
+         var14.c(var13);
          return new UserSearchQuerySetPayload(
-            var2, var10, var11 as UserSearchQuerySetFilters, var9 as java.util.List, var8 as java.util.List, var15 as java.util.Map, var3, null
+            var2, var15, var11 as UserSearchQuerySetFilters, var9 as java.util.List, var8 as java.util.List, var12 as java.util.Map, var3, null
          );
       }
 

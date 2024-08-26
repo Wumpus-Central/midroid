@@ -30,19 +30,19 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
    fun `bind$lambda$1$lambda$0`(var0: EmbeddedActivityInviteViewHolder, var1: EmbeddedActivityInviteMessageAccessory, var2: View) {
       kotlin.jvm.internal.r.h(var0, "this$0");
       kotlin.jvm.internal.r.h(var1, "$embeddedActivityInviteAccessory");
-      var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
+      var0.eventHandler.onTapInviteEmbed_AFFcxXc(var1.getMessageId_3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
    }
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "embeddedActivityInviteAccessory");
-      val var6: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var17: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var6.getSplashUrl(), var1.getConstrainedWidth());
-      var17.setTitleText(var6.getTitleText());
-      var17.setHeaderText(var6.getHeaderText());
-      var17.setSubtitleText-oCLp7l4(
-         var6.getStructurableSubtitleText(),
-         var1.getMessageId-3Eiw7ao(),
+      val var5: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var2: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var5.getSplashUrl(), var1.getConstrainedWidth());
+      var2.setTitleText(var5.getTitleText());
+      var2.setHeaderText(var5.getHeaderText());
+      var2.setSubtitleText_oCLp7l4(
+         var5.getStructurableSubtitleText(),
+         var1.getMessageId_3Eiw7ao(),
          new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
             {
                super(
@@ -55,10 +55,10 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
                );
             }
 
-            public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
+            public final void invoke_ntcYbpo(java.lang.String var1, LinkContentNode var2) {
                kotlin.jvm.internal.r.h(var1, "p0");
                kotlin.jvm.internal.r.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
+               (super.receiver as ChatEventHandler).onLinkClicked_ntcYbpo(var1, var2);
             }
          },
          new Function1<LinkContentNode, Unit>(this.eventHandler) {
@@ -189,15 +189,15 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
                super(1, var1, ChatEventHandler::class.java, "onTapSeeMore", "onTapSeeMore-1xi1bu0(Ljava/lang/String;)V", 0);
             }
 
-            public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
+            public final void invoke_1xi1bu0(java.lang.String var1) {
                kotlin.jvm.internal.r.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
+               (super.receiver as ChatEventHandler).onTapSeeMore_1xi1bu0(var1);
             }
          }
       );
-      var17.setNoParticipantsText(var6.getNoParticipantsText());
-      var17.setLaunchButton(var6.getAcceptLabelText(), var6.getAcceptLabelBackgroundColor(), var6.getCtaEnabled());
-      var17.setAvatarUris(var6.getParticipantAvatarUris());
-      var17.setOnLaunchButtonClickListener(new j(this, var1));
+      var2.setNoParticipantsText(var5.getNoParticipantsText());
+      var2.setLaunchButton(var5.getAcceptLabelText(), var5.getAcceptLabelBackgroundColor(), var5.getCtaEnabled());
+      var2.setAvatarUris(var5.getParticipantAvatarUris());
+      var2.setOnLaunchButtonClickListener(new j(this, var1));
    }
 }

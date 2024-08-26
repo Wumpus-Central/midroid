@@ -118,14 +118,14 @@ public fun interpolateColors(colorA: Int, colorB: Int, t: Float, minT: Float = 0
    } else if (var2 >= var4) {
       return var1;
    } else {
-      val var9: Int = Color.red(var0);
-      val var7: Int = Color.green(var0);
+      val var8: Int = Color.red(var0);
+      val var6: Int = Color.green(var0);
       val var5: Int = Color.blue(var0);
       var0 = Color.alpha(var0);
       return Color.argb(
          h.k((int)((float)var0 + (float)(Color.alpha(var1) - var0) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         h.k((int)((float)var9 + (float)(Color.red(var1) - var9) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         h.k((int)((float)var7 + (float)(Color.green(var1) - var7) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         h.k((int)((float)var8 + (float)(Color.red(var1) - var8) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         h.k((int)((float)var6 + (float)(Color.green(var1) - var6) * ((var2 - var3) / (var4 - var3))), 0, 255),
          h.k((int)((float)var5 + (float)(Color.blue(var1) - var5) * ((var2 - var3) / (var4 - var3))), 0, 255)
       );
    }

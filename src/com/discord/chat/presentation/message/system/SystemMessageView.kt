@@ -102,13 +102,13 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      var var13: StructurableText = var1.getContent();
-      if (var13 != null) {
+      val var14: StructurableText = var1.getContent();
+      if (var14 != null) {
          val var21: ArrayList = this.accessories;
-         val var14: java.lang.String = var1.getId-3Eiw7ao();
-         val var11: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var8: Boolean = var1.getShouldShowRoleDot();
+         val var13: java.lang.String = var1.getId_3Eiw7ao();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var11: Boolean = var1.getShouldShowRoleDot();
          val var9: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
@@ -135,11 +135,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var21.add(
             new MessageContentAccessory(
-               var14,
                var13,
-               var11,
+               var14,
                var10,
                var8,
+               var11,
                var9,
                var4,
                var5,
@@ -162,17 +162,17 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       val var22: java.lang.String = var1.getTimestamp();
       if (var22 != null) {
          this.accessories
-            .add(new TimestampMessageAccessory(var1.getId-3Eiw7ao(), var22, ThemeManagerKt.getTheme().getTextMuted(), DiscordFont.PrimaryMedium, null));
+            .add(new TimestampMessageAccessory(var1.getId_3Eiw7ao(), var22, ThemeManagerKt.getTheme().getTextMuted(), DiscordFont.PrimaryMedium, null));
       }
 
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
-         val var32: ArrayList = this.accessories;
-         val var29: java.lang.String = var1.getId-3Eiw7ao();
-         val var34: java.lang.String = var1.getUsername();
-         val var24: Context = this.binding.getRoot().getContext();
-         r.g(var24, "binding.root.context");
-         var32.add(new RoleSubscriptionPurchaseAccessory(var29, var34, MessageKt.avatarUrl(var1, var24), var3, false, null));
+         val var24: ArrayList = this.accessories;
+         val var34: java.lang.String = var1.getId_3Eiw7ao();
+         val var32: java.lang.String = var1.getUsername();
+         val var29: Context = this.binding.getRoot().getContext();
+         r.g(var29, "binding.root.context");
+         var24.add(new RoleSubscriptionPurchaseAccessory(var34, var32, MessageKt.avatarUrl(var1, var29), var3, false, null));
       }
 
       val var25: Sticker = var1.getSticker();
@@ -190,7 +190,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var27: java.util.Iterator = var26.iterator();
 
             for (int var20 = 0; var27.hasNext(); var20++) {
-               var13 = (StructurableText)var27.next();
+               val var30: Any = var27.next();
                if (var20 < 0) {
                   h.s();
                }
@@ -198,12 +198,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                this.accessories
                   .add(
                      new EmbedMessageAccessory(
-                        var1.getId-3Eiw7ao(),
+                        var1.getId_3Eiw7ao(),
                         var20,
-                        var1.getChannelId-o4g7jtM(),
+                        var1.getChannelId_o4g7jtM(),
                         var3,
                         16,
-                        var13 as Embed,
+                        var30 as Embed,
                         false,
                         false,
                         false,
@@ -236,7 +236,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          this.accessories
             .add(
                new ReactionsMessageAccessory(
-                  var1.getId-3Eiw7ao(),
+                  var1.getId_3Eiw7ao(),
                   var1.getReactions(),
                   var2.getCanAddNewReactions(),
                   var2.getUseAddBurstReaction(),
@@ -252,17 +252,17 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       val var16: ThreadEmbed = var1.getThreadEmbed();
       if (var16 != null) {
-         this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId-3Eiw7ao(), var16, null));
+         this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId_3Eiw7ao(), var16, null));
       }
 
       val var17: EphemeralIndication = var1.getEphemeralIndication();
       if (var17 != null) {
-         this.accessories.add(new EphemeralIndicationMessageAccessory(var1.getId-3Eiw7ao(), var17, null));
+         this.accessories.add(new EphemeralIndicationMessageAccessory(var1.getId_3Eiw7ao(), var17, null));
       }
 
       val var18: SafetyPolicyNoticeEmbed = var1.getSafetyPolicyNoticeEmbed();
       if (var18 != null) {
-         this.accessories.add(new SafetyPolicyNoticeMessageAccessory(var1.getId-3Eiw7ao(), var18, null));
+         this.accessories.add(new SafetyPolicyNoticeMessageAccessory(var1.getId_3Eiw7ao(), var18, null));
       }
 
       return this.accessories;
@@ -360,7 +360,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       } else {
          val var4: Function6 = var1.getOnMessageLongPressed();
          if (var4 != null) {
-            var4.invoke(MessageId.box-impl(var0.getId-3Eiw7ao()), ChannelId.box-impl(var0.getChannelId-o4g7jtM()), null, null, null, null);
+            var4.invoke(MessageId.box_impl(var0.getId_3Eiw7ao()), ChannelId.box_impl(var0.getChannelId_o4g7jtM()), null, null, null, null);
          }
 
          var3 = true;
@@ -392,7 +392,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       val var8: java.util.List = this.generateMessageAccessories(var1, var2);
       this.binding
          .accessoriesView
-         .setAccessories-MNg-vQI(var1.getId-3Eiw7ao(), var1.getChannelId-o4g7jtM(), var1.getGuildId-qOKuAAo(), var8, var3, null, false);
+         .setAccessories_MNg_vQI(var1.getId_3Eiw7ao(), var1.getChannelId_o4g7jtM(), var1.getGuildId_qOKuAAo(), var8, var3, null, false);
       val var9: MessageAccessoriesView = this.binding.accessoriesView;
       r.g(this.binding.accessoriesView, "binding.accessoriesView");
       val var10: Byte;
@@ -423,5 +423,183 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             f1.q0(this.this$0, new MessageViewAccessibilityDelegate(this.$message, var1, new c(), this.$onLongClick));
          }
       });
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[MessageType.values().length];
+
+         try {
+            var0[MessageType.USER_JOIN.ordinal()] = 1;
+         } catch (var34: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.ROLE_SUBSCRIPTION_PURCHASE.ordinal()] = 2;
+         } catch (var33: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.RECIPIENT_ADD.ordinal()] = 3;
+         } catch (var32: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_STREAM.ordinal()] = 4;
+         } catch (var31: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_INVITE_REMINDER.ordinal()] = 5;
+         } catch (var30: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.PRIVATE_CHANNEL_INTEGRATION_ADDED.ordinal()] = 6;
+         } catch (var29: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_DEADCHAT_REVIVE_PROMPT.ordinal()] = 7;
+         } catch (var28: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_GAMING_STATS_PROMPT.ordinal()] = 8;
+         } catch (var27: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.RECIPIENT_REMOVE.ordinal()] = 9;
+         } catch (var26: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.PRIVATE_CHANNEL_INTEGRATION_REMOVED.ordinal()] = 10;
+         } catch (var25: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.CHANNEL_NAME_CHANGE.ordinal()] = 11;
+         } catch (var24: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.CHANNEL_ICON_CHANGE.ordinal()] = 12;
+         } catch (var23: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.CHANNEL_PINNED_MESSAGE.ordinal()] = 13;
+         } catch (var22: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION.ordinal()] = 14;
+         } catch (var21: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.USER_PREMIUM_GUILD_SUBSCRIPTION.ordinal()] = 15;
+         } catch (var20: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1.ordinal()] = 16;
+         } catch (var19: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2.ordinal()] = 17;
+         } catch (var18: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3.ordinal()] = 18;
+         } catch (var17: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.CHANNEL_FOLLOW_ADD.ordinal()] = 19;
+         } catch (var16: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_DISCOVERY_DISQUALIFIED.ordinal()] = 20;
+         } catch (var15: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_DISCOVERY_REQUALIFIED.ordinal()] = 21;
+         } catch (var14: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING.ordinal()] = 22;
+         } catch (var13: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING.ordinal()] = 23;
+         } catch (var12: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.THREAD_CREATED.ordinal()] = 24;
+         } catch (var11: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.THREAD_STARTER_MESSAGE.ordinal()] = 25;
+         } catch (var10: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.STAGE_START.ordinal()] = 26;
+         } catch (var9: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.STAGE_END.ordinal()] = 27;
+         } catch (var8: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.STAGE_TOPIC.ordinal()] = 28;
+         } catch (var7: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.STAGE_SPEAKER.ordinal()] = 29;
+         } catch (var6: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.STAGE_RAISE_HAND.ordinal()] = 30;
+         } catch (var5: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_INCIDENT_ALERT_MODE_ENABLED.ordinal()] = 31;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.GUILD_INCIDENT_ALERT_MODE_DISABLED.ordinal()] = 32;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[MessageType.POLL_RESULT.ordinal()] = 33;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
+      }
    }
 }

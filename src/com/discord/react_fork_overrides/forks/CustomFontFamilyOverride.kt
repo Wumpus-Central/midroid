@@ -108,24 +108,24 @@ internal object CustomFontFamilyOverride {
       val var7: Int = var1.length;
 
       for (int var4 = 0; var4 < var7; var4++) {
-         val var11: java.lang.String = var1[var4];
-         val var10: Array<java.lang.String> = FILE_EXTENSIONS;
+         val var10: java.lang.String = var1[var4];
+         val var11: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var13: java.lang.String = var10[var5];
+            val var13: java.lang.String = var11[var5];
             val var12: StringBuilder = new StringBuilder();
             var12.append("fonts/");
-            var12.append(var11);
+            var12.append(var10);
             var12.append(var13);
-            var13 = var12.toString();
-            r.g(var13, "StringBuilder()\n        …              .toString()");
+            val var28: java.lang.String = var12.toString();
+            r.g(var28, "StringBuilder()\n        …              .toString()");
 
             try {
-               val var32: Font = b1.a(new Builder(var3, var13));
-               r.g(var32, "Builder(assetManager, fileName).build()");
-               val var30: FontFamily = d1.a(new android.graphics.fonts.FontFamily.Builder(var32));
+               val var29: Font = b1.a(new Builder(var3, var28));
+               r.g(var29, "Builder(assetManager, fileName).build()");
+               val var30: FontFamily = d1.a(new android.graphics.fonts.FontFamily.Builder(var29));
                r.g(var30, "Builder(font).build()");
                var9.add(var30);
             } catch (var14: java.lang.Throwable) {
@@ -180,12 +180,12 @@ internal object CustomFontFamilyOverride {
 
    @JvmStatic
    fun `override$lambda$0`(var0: CreateTypefaceObject): Typeface {
-      val var3: CustomFontFamilyOverride = INSTANCE;
-      val var2: java.lang.String = var0.fontFamilyName;
+      val var2: CustomFontFamilyOverride = INSTANCE;
+      val var3: java.lang.String = var0.fontFamilyName;
       val var1: Int = var0.style;
       val var4: AssetManager = var0.assetManager;
       r.f(var0.assetManager, "null cannot be cast to non-null type android.content.res.AssetManager");
-      return var3.createAssetTypeface(var2, var1, var4);
+      return var2.createAssetTypeface(var3, var1, var4);
    }
 
    public fun override() {

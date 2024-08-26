@@ -15,6 +15,7 @@ import uk.f
 import uk.n
 import xk.a2
 import xk.f0
+import xk.f0.a
 
 @f
 internal data class RegisterEvent(token: String) : ReactEvent {
@@ -86,7 +87,7 @@ internal data class RegisterEvent(token: String) : ReactEvent {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{a2.a};
       }
 
@@ -132,8 +133,8 @@ internal data class RegisterEvent(token: String) : ReactEvent {
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return a.a(this);
       }
    }
 

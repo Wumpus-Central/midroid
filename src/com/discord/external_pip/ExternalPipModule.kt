@@ -66,7 +66,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return s.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return s.m(w.a("isSupported", ExternalPipManager.Companion.isSupported()));
    }
 
    public open fun getName(): String {

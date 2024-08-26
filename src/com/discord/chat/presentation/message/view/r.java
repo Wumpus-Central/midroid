@@ -5,7 +5,6 @@ import android.view.View.OnClickListener;
 import com.discord.media_player.MediaSource;
 import kotlin.jvm.functions.Function2;
 
-// $VF: synthetic class
 public final class r implements OnClickListener {
    public final Function2 j;
    public final MediaSource k;

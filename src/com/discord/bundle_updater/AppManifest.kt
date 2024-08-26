@@ -104,18 +104,18 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var1: AppManifestMetadata = this.metadata;
-      val var2: java.util.Map = this.hashes;
-      val var3: java.util.Map = this.patches;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AppManifest(metadata=");
-      var4.append(var1);
-      var4.append(", hashes=");
-      var4.append(var2);
-      var4.append(", patches=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: AppManifestMetadata = this.metadata;
+      val var4: java.util.Map = this.hashes;
+      val var2: java.util.Map = this.patches;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AppManifest(metadata=");
+      var1.append(var3);
+      var1.append(", hashes=");
+      var1.append(var4);
+      var1.append(", patches=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : f0<AppManifest> {

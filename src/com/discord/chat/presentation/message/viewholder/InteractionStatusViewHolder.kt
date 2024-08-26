@@ -14,6 +14,6 @@ public class InteractionStatusViewHolder(interactionStatusView: InteractionStatu
 
    public fun bind(accessory: InteractionStatusMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "accessory");
-      this.interactionStatusView.setInteractionStatus-ntcYbpo(var1.getMessageId-3Eiw7ao(), var1.getInteractionStatus());
+      this.interactionStatusView.setInteractionStatus_ntcYbpo(var1.getMessageId_3Eiw7ao(), var1.getInteractionStatus());
    }
 }

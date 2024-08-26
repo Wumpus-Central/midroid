@@ -138,22 +138,24 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          var var2: Int;
-         var var3: Int;
          var var4: Int;
          var var9: Any;
+         var var10: Int;
          if (var8.p()) {
-            var4 = var8.i(var7, 0);
+            var10 = var8.i(var7, 0);
             var9 = var8.n(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, null);
-            var2 = var8.C(var7, 2);
-            var3 = 7;
+            val var5: Byte = var8.C(var7, 2);
+            var2 = 7;
+            var4 = var10;
+            var10 = var5;
          } else {
-            var var5: Boolean = true;
+            var var11: Boolean = true;
             var4 = 0;
             var2 = 0;
             var9 = null;
-            var3 = 0;
+            var10 = 0;
 
-            while (var5) {
+            while (var11) {
                val var6: Int = var8.o(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -162,7 +164,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                            throw new n(var6);
                         }
 
-                        var3 = var8.C(var7, 2);
+                        var10 = var8.C(var7, 2);
                         var2 |= 4;
                      } else {
                         var9 = var8.n(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, var9);
@@ -173,16 +175,13 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                      var2 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var11 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var8.c(var7);
-         return new ForwardInfo(var3, var4, var9 as ForwardFooterInfo, (boolean)var2, null);
+         return new ForwardInfo(var2, var4, var9 as ForwardFooterInfo, (boolean)var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardInfo) {

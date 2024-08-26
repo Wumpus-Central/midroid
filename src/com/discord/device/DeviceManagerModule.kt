@@ -22,27 +22,25 @@ public class DeviceManagerModule(reactContext: ReactApplicationContext) : Native
       this.reactContext = var1;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNDeviceManager";
    }
 
-   protected open fun getTypedExportedConstants(): MutableMap<String, out Any> {
+   protected override fun getTypedExportedConstants(): MutableMap<String, out Any> {
       return s.m(
-         new Pair[]{
-            w.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT)),
-            w.a("device", Build.DEVICE),
-            w.a("deviceModel", Build.MODEL),
-            w.a("deviceBrand", Build.BRAND),
-            w.a("deviceProduct", Build.PRODUCT),
-            w.a("deviceManufacturer", Build.MANUFACTURER),
-            w.a("isTablet", IsTabletKt.isTablet(this.reactContext)),
-            w.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext)),
-            w.a("isTaskBarEnabled", java.lang.Boolean.FALSE),
-            w.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext)),
-            w.a("socName", DeviceHardwareInfoKt.socName()),
-            w.a("ramSize", DeviceHardwareInfoKt.ramSize()),
-            w.a("maxCpuFreq", DeviceHardwareInfoKt.maxCpuFreq())
-         }
+         w.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT)),
+         w.a("device", Build.DEVICE),
+         w.a("deviceModel", Build.MODEL),
+         w.a("deviceBrand", Build.BRAND),
+         w.a("deviceProduct", Build.PRODUCT),
+         w.a("deviceManufacturer", Build.MANUFACTURER),
+         w.a("isTablet", IsTabletKt.isTablet(this.reactContext)),
+         w.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext)),
+         w.a("isTaskBarEnabled", java.lang.Boolean.FALSE),
+         w.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext)),
+         w.a("socName", DeviceHardwareInfoKt.socName()),
+         w.a("ramSize", DeviceHardwareInfoKt.ramSize()),
+         w.a("maxCpuFreq", DeviceHardwareInfoKt.maxCpuFreq())
       );
    }
 

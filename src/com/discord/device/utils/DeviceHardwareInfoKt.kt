@@ -15,38 +15,37 @@ internal fun getNumCpuCores(): Int {
 }
 
 internal fun getSocFromProcCpuInfo(): String {
-   val var1: Scanner = new Scanner(new File("/proc/cpuinfo"));
+   val var0: Scanner = new Scanner(new File("/proc/cpuinfo"));
 
-   var var0: java.lang.String;
    while (true) {
-      if (var1.hasNextLine()) {
-         var0 = var1.nextLine();
-         r.g(var0, "line");
-         if (!f.I(var0, "Hardware", false, 2, null)) {
+      if (var0.hasNextLine()) {
+         val var1: java.lang.String = var0.nextLine();
+         r.g(var1, "line");
+         if (!f.I(var1, "Hardware", false, 2, null)) {
             continue;
          }
 
-         var0 = f.W0(f.A0(var0, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
+         var2 = f.W0(f.A0(var1, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
          break;
       }
 
-      var0 = "";
+      var2 = "";
       break;
    }
 
-   return var0;
+   return var2;
 }
 
 internal fun maxCpuFreq(): String {
    val var3: Int = getNumCpuCores();
-   var var6: Long = 0L;
+   var var4: Long = 0L;
    var var2: Int = 0;
 
    while (true) {
       var var10: java.lang.String = "";
       if (var2 >= var3) {
-         if (var6 > 0L) {
-            val var0: Double = var6 / 1000000.0;
+         if (var4 > 0L) {
+            val var0: Double = var4 / 1000000.0;
             val var15: m0 = m0.a;
             var10 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
             r.g(var10, "format(locale, format, *args)");
@@ -68,37 +67,38 @@ internal fun maxCpuFreq(): String {
          return "";
       }
 
-      var var4: Long = var6;
-      if (var8 > var6) {
-         var4 = var8;
+      var var6: Long = var4;
+      if (var8 > var4) {
+         var6 = var8;
       }
 
       var2++;
-      var6 = var4;
+      var4 = var6;
    }
 }
 
 internal fun ramSize(): String {
-   val var4: Scanner = new Scanner(new File("/proc/meminfo"));
+   val var6: Scanner = new Scanner(new File("/proc/meminfo"));
 
    var var5: java.lang.String;
+   var var9: java.lang.String;
    while (true) {
-      val var3: Boolean = var4.hasNextLine();
+      val var3: Boolean = var6.hasNextLine();
       var5 = "";
       if (var3) {
-         var var6: java.lang.String = var4.nextLine();
-         r.g(var6, "line");
-         if (!f.I(var6, "MemTotal", false, 2, null)) {
+         var9 = var6.nextLine();
+         r.g(var9, "line");
+         if (!f.I(var9, "MemTotal", false, 2, null)) {
             continue;
          }
 
          val var8: MatchResult = Regex.c(
-            new Regex("\\d+"), f.W0(f.A0(var6, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString(), 0, 2, null
+            new Regex("\\d+"), f.W0(f.A0(var9, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString(), 0, 2, null
          );
          if (var8 != null) {
-            var6 = var8.getValue();
-            var9 = var6;
-            if (var6 != null) {
+            val var11: java.lang.String = var8.getValue();
+            var9 = var11;
+            if (var11 != null) {
                break;
             }
          }
@@ -150,13 +150,13 @@ internal fun socName(): String {
          }
       }
 
-      var2 = a.a();
-      val var4: java.lang.String = b.a();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var2);
-      var3.append("_");
-      var3.append(var4);
-      return var3.toString();
+      val var3: java.lang.String = a.a();
+      var2 = b.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var3);
+      var4.append("_");
+      var4.append(var2);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

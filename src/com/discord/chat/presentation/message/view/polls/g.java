@@ -5,7 +5,6 @@ import android.view.View.OnLongClickListener;
 import com.discord.chat.bridge.attachment.Attachment;
 import kotlin.jvm.functions.Function6;
 
-// $VF: synthetic class
 public final class g implements OnLongClickListener {
    public final PollMediaView j;
    public final Function6 k;

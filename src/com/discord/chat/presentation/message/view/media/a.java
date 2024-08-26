@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.media;
 
-// $VF: synthetic class
 public final class a implements Runnable {
    public final ViewAttachedListener j;
 

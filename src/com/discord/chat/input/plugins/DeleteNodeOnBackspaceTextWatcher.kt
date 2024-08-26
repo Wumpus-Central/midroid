@@ -57,24 +57,24 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
             var var11: Int = null;
 
             while (var2 < var5) {
-               val var6: Int = var10.getSpanStart(var13[var2]);
-               val var7: Int = var10.getSpanEnd(var13[var2]);
+               val var7: Int = var10.getSpanStart(var13[var2]);
+               val var6: Int = var10.getSpanEnd(var13[var2]);
                if (var12 == null) {
-                  var14 = var6;
+                  var14 = var7;
                } else {
                   var14 = var12;
-                  if (var12 > var6) {
-                     var14 = var6;
+                  if (var12 > var7) {
+                     var14 = var7;
                   }
                }
 
                var var21: Int;
                if (var11 == null) {
-                  var21 = var7;
+                  var21 = var6;
                } else {
                   var21 = var11;
-                  if (var11 < var7) {
-                     var21 = var7;
+                  if (var11 < var6) {
+                     var21 = var6;
                   }
                }
 

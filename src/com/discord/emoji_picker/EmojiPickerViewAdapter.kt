@@ -92,17 +92,17 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          var5 = h.m(var1, var2);
       }
 
-      val var6: java.util.Iterator = var5.iterator();
+      val var9: java.util.Iterator = var5.iterator();
       var2 = 0;
       var1 = 0;
 
-      while (var6.hasNext()) {
-         val var9: EmojiPickerItem = this.getItem((var6 as p).nextInt());
+      while (var9.hasNext()) {
+         val var6: EmojiPickerItem = this.getItem((var9 as p).nextInt());
          val var4: Boolean;
-         if (var9 is EmojiPickerItem.Emoji) {
+         if (var6 is EmojiPickerItem.Emoji) {
             var4 = true;
          } else {
-            var4 = var9 is EmojiPickerItem.EmojiPlaceholder;
+            var4 = var6 is EmojiPickerItem.EmojiPlaceholder;
          }
 
          if (var4) {
@@ -116,7 +116,7 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
                var1++;
                continue;
             }
-         } else if (var9 !is EmojiPickerItem.Category) {
+         } else if (var6 !is EmojiPickerItem.Category) {
             continue;
          }
 
@@ -194,10 +194,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
             var8 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
          );
       } else if (var1 is EmojiPickerViewHolder.Spacer) {
-         val var9: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
-         val var6: EmojiPickerItem = this.getItem(var2);
-         r.f(var6, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
-         var9.onBindViewHolder(var6 as EmojiPickerItem.Spacer);
+         val var6: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
+         val var9: EmojiPickerItem = this.getItem(var2);
+         r.f(var9, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
+         var6.onBindViewHolder(var9 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
          val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
          val var10: EmojiPickerItem = this.getItem(var2);
@@ -369,6 +369,54 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
       if (this.useTier0UpsellContent != var1) {
          this.useTier0UpsellContent = var1;
          this.onItemsChanged.invoke(null, null);
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[EmojiPickerItem.ItemType.values().length];
+
+         try {
+            var0[EmojiPickerItem.ItemType.EMOJI.ordinal()] = 1;
+         } catch (var8: NoSuchFieldError) {
+         }
+
+         try {
+            var0[EmojiPickerItem.ItemType.PLACEHOLDER.ordinal()] = 2;
+         } catch (var7: NoSuchFieldError) {
+         }
+
+         try {
+            var0[EmojiPickerItem.ItemType.CATEGORY.ordinal()] = 3;
+         } catch (var6: NoSuchFieldError) {
+         }
+
+         try {
+            var0[EmojiPickerItem.ItemType.SPACER.ordinal()] = 4;
+         } catch (var5: NoSuchFieldError) {
+         }
+
+         try {
+            var0[EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal()] = 5;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[EmojiPickerItem.ItemType.PREMIUM_INLINE_ROADBLOCK_HEADER.ordinal()] = 6;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[EmojiPickerItem.ItemType.PREMIUM_INLINE_ROADBLOCK_FOOTER.ordinal()] = 7;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
       }
    }
 }

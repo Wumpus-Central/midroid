@@ -19,7 +19,7 @@ public object NotificationMessageSerializer : KSerializer<NotificationMessage> {
 
    public open fun deserialize(decoder: Decoder): NotificationMessage {
       r.h(var1, "decoder");
-      return json.b(NotificationMessage.Companion.serializer(), var1.z());
+      return json.b(NotificationMessage.Companion.serializer(), var1.z()) as NotificationMessage;
    }
 
    public open fun serialize(encoder: Encoder, value: NotificationMessage) {

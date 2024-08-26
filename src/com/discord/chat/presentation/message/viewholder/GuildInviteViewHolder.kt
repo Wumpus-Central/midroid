@@ -22,7 +22,7 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
    fun `bind$lambda$1$lambda$0`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
       kotlin.jvm.internal.r.h(var0, "this$0");
       kotlin.jvm.internal.r.h(var1, "$inviteAccessory");
-      var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
+      var0.eventHandler.onTapInviteEmbed_AFFcxXc(var1.getMessageId_3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
    }
 
    public fun bind(inviteAccessory: GuildInviteMessageAccessory) {

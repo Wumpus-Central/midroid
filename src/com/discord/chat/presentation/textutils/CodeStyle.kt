@@ -33,9 +33,11 @@ public object CodeStyle {
          var var2: Any = var3.get(var4);
          var var1: Any = var2;
          if (var2 == null) {
-            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new g(), new h(), null, null, null, null, null, null, 252, null);
-            var2 = CodeRules.INSTANCE;
-            var2 = CodeRules.createCodeRule$default(CodeRules.INSTANCE, var5.getDefaultStyleProvider(), var2.createCodeLanguageMap(var5), null, 4, null);
+            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new g(), new h(), null, null, null, null, null, null, 252, null);
+            val var5: CodeRules = CodeRules.INSTANCE;
+            var2 = CodeRules.createCodeRule$default(
+               CodeRules.INSTANCE, var2.getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
+            );
             var1 = new Parser(false, 1, null);
             var1.addRule((Rule)var2);
             var3.put(var4, var1);
@@ -62,7 +64,7 @@ public object CodeStyle {
    }
 
    private fun generateAst(node: CodeBlockContentNode): List<Node<RenderContext>> {
-      val var3: java.lang.String = kotlin.text.f.W0(var1.getLang()).toString();
+      var var3: java.lang.String = kotlin.text.f.W0(var1.getLang()).toString();
       var var2: java.lang.String = var1.getContent();
       val var6: StringBuilder = new StringBuilder();
       var6.append("```");
@@ -70,21 +72,21 @@ public object CodeStyle {
       var6.append("\n");
       var6.append(var2);
       var6.append("\n```");
-      val var7: java.lang.String = var6.toString();
+      var3 = var6.toString();
 
       label16:
       try {
-         val var11: eh.r.a = eh.r.k;
-         var9 = eh.r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         val var9: eh.r.a = eh.r.k;
+         var8 = eh.r.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var8: eh.r.a = eh.r.k;
-         var9 = eh.r.b(s.a(var4));
+         val var7: eh.r.a = eh.r.k;
+         var8 = eh.r.b(s.a(var4));
          break label16;
       }
 
       val var12: java.util.List = kotlin.collections.h.d(new TextNode(var2));
-      var2 = (java.lang.String)var9;
-      if (eh.r.g(var9)) {
+      var2 = (java.lang.String)var8;
+      if (eh.r.g(var8)) {
          var2 = var12;
       }
 
@@ -142,7 +144,7 @@ public object CodeStyle {
          var4 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var10: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var11: BlockBackgroundSpan = new BlockBackgroundSpan(
          var4,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -152,10 +154,10 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       val var6: Int = SizeUtilsKt.getDpToPx(4);
-      val var11: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var9: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-      val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var8: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var8: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var7: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var10: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      val var9: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       var4 = 0;
       val var5: Int = var1.length();
@@ -164,7 +166,7 @@ public object CodeStyle {
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var6));
 
       for (; var4 < 5; var4++) {
-         val var12: Any = new Object[]{var10, var11, var9, var7, var8}[var4];
+         val var12: Any = new Object[]{var11, var8, var7, var10, var9}[var4];
          if (var12 != null) {
             var1.setSpan(var12, var5, var1.length(), 33);
          }

@@ -102,23 +102,23 @@ public data class MarkdownTextRenderOptions(containerId: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.containerId;
-      val var2: Boolean = this.shouldAnimateEmoji;
-      val var4: Boolean = this.shouldShowLinkDecorations;
-      val var1: Boolean = this.shouldShowRoleDot;
+      val var5: java.lang.String = this.containerId;
+      val var1: Boolean = this.shouldAnimateEmoji;
+      val var2: Boolean = this.shouldShowLinkDecorations;
+      val var4: Boolean = this.shouldShowRoleDot;
       val var3: Boolean = this.shouldShowRoleOnName;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MarkdownTextRenderOptions(containerId=");
-      var5.append(var6);
-      var5.append(", shouldAnimateEmoji=");
-      var5.append(var2);
-      var5.append(", shouldShowLinkDecorations=");
-      var5.append(var4);
-      var5.append(", shouldShowRoleDot=");
-      var5.append(var1);
-      var5.append(", shouldShowRoleOnName=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MarkdownTextRenderOptions(containerId=");
+      var6.append(var5);
+      var6.append(", shouldAnimateEmoji=");
+      var6.append(var1);
+      var6.append(", shouldShowLinkDecorations=");
+      var6.append(var2);
+      var6.append(", shouldShowRoleDot=");
+      var6.append(var4);
+      var6.append(", shouldShowRoleOnName=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 }

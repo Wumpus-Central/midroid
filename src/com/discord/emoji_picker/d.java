@@ -4,7 +4,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import kotlin.jvm.functions.Function2;
 
-// $VF: synthetic class
 public final class d implements OnClickListener {
    public final EmojiPickerViewHolder.Emoji j;
    public final Function2 k;

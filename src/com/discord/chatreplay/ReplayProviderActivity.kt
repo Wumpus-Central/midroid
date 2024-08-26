@@ -67,12 +67,12 @@ public class ReplayProviderActivity : Activity {
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(var1);
       if (r.c(this.getIntent().getAction(), "com.discord.GET_REPLAY_LIST")) {
-         val var4: java.util.List = this.getReplaysList();
-         val var2: Intent = new Intent();
-         val var3: kotlinx.serialization.json.Json.a = Json.d;
+         val var2: java.util.List = this.getReplaysList();
+         val var3: Intent = new Intent();
+         val var4: kotlinx.serialization.json.Json.a = Json.d;
          Json.d.a();
-         var2.putExtra("INTENT_EXTRA_REPLAYS_LIST", var3.c(new f(Replay.$serializer.INSTANCE), var4));
-         this.setResult(-1, var2);
+         var3.putExtra("INTENT_EXTRA_REPLAYS_LIST", var4.c(new f(Replay.$serializer.INSTANCE), var2));
+         this.setResult(-1, var3);
          this.finish();
       } else if (r.c(this.getIntent().getAction(), "com.discord.REQUEST_REPLAY_ACCESS")) {
          val var5: Uri = this.getIntent().getData();

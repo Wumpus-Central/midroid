@@ -80,10 +80,10 @@ public object DCDModuleProvider {
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
             var var3: NativeModule = null;
             if (var2 != null) {
-               val var5: Function1 = this.$onNativeModule;
+               val var6: Function1 = this.$onNativeModule;
                var3 = null;
                if (r.c(var1, this.$moduleName)) {
-                  var3 = var5.invoke(var2) as NativeModule;
+                  var3 = var6.invoke(var2) as NativeModule;
                }
             }
 
@@ -112,15 +112,15 @@ public object DCDModuleProvider {
 
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
             r.h(var1, "reactContext");
-            val var5: Array<Array<Function1>> = this.$onViewManager;
-            val var4: ArrayList = new ArrayList(this.$onViewManager.length);
-            val var3: Int = var5.length;
+            val var4: Array<Array<Function1>> = this.$onViewManager;
+            val var5: ArrayList = new ArrayList(this.$onViewManager.length);
+            val var3: Int = var4.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               var4.add(var5[var2].invoke(var1) as ViewManager);
+               var5.add(var4[var2].invoke(var1) as ViewManager);
             }
 
-            return var4;
+            return var5;
          }
       };
    }

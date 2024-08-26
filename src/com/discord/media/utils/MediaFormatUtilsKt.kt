@@ -68,16 +68,16 @@ public final val mimeType: String?
 
       label16:
       try {
-         val var5: eh.r.a = eh.r.k;
-         var4 = eh.r.b(var0.getString("mime"));
-      } catch (var2: java.lang.Throwable) {
          val var1: eh.r.a = eh.r.k;
-         var4 = eh.r.b(s.a(var2));
+         var5 = eh.r.b(var0.getString("mime"));
+      } catch (var2: java.lang.Throwable) {
+         val var4: eh.r.a = eh.r.k;
+         var5 = eh.r.b(s.a(var2));
          break label16;
       }
 
-      var var6: Any = var4;
-      if (eh.r.g(var4)) {
+      var var6: Any = var5;
+      if (eh.r.g(var5)) {
          var6 = null;
       }
 

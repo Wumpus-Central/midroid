@@ -78,15 +78,15 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
       r.h(var0, "this$0");
       r.h(var1, "$rects");
       val var2: Companion = ReactRootView.Companion;
-      val var6: ReactApplicationContext = var0.getReactApplicationContext();
-      r.g(var6, "reactApplicationContext");
+      val var3: ReactApplicationContext = var0.getReactApplicationContext();
+      r.g(var3, "reactApplicationContext");
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-      val var3: ArrayList = new ArrayList(h.t(var4, 10));
+      val var6: ArrayList = new ArrayList(h.t(var4, 10));
       val var7: java.util.Iterator = var4.iterator();
 
       while (var7.hasNext()) {
          val var5: ReadableMap = var1.getMap((var7 as p).nextInt());
-         var3.add(
+         var6.add(
             new Rect(
                SizeUtilsKt.getDpToPx(var5.getInt("left")),
                SizeUtilsKt.getDpToPx(var5.getInt("top")),
@@ -96,7 +96,7 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
          );
       }
 
-      var2.setSystemGestureExclusionRects(var6, var3);
+      var2.setSystemGestureExclusionRects(var3, var6);
    }
 
    public open fun getName(): String {

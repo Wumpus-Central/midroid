@@ -19,27 +19,20 @@ public class NativeEngine(context: Context, logLevel: Int) {
       r.h(var1, "context");
       super();
       this.logLevel = var2;
-      val var3: Context = var1.getApplicationContext();
+      var var3: Context = var1.getApplicationContext();
       r.g(var3, "context.applicationContext");
       CameraEnumeratorProvider.maybeInit(var3);
-      var1 = var1.getApplicationContext();
-      r.g(var1, "context.applicationContext");
-      val var5: org.webrtc.EglBase.Context = SharedEglBaseContext.getEglContext();
-      r.g(var5, "getEglContext()");
-      this.nativeInstance = this.nativeCreateInstance(var1, var5, var2);
+      var3 = var1.getApplicationContext();
+      r.g(var3, "context.applicationContext");
+      val var4: org.webrtc.EglBase.Context = SharedEglBaseContext.getEglContext();
+      r.g(var4, "getEglContext()");
+      this.nativeInstance = this.nativeCreateInstance(var3, var4, var2);
    }
 
    private external fun nativeCreateInstance(context: Context, eglContext: org.webrtc.EglBase.Context, logLevel: Int): Long {
    }
 
    private external fun nativeDestroyInstance() {
-   }
-
-   public external fun createSpeedTestConnection(
-      userId: String,
-      connectionOptionsJSON: String,
-      callback: com.discord.native.engine.NativeEngine.ConnectToServerCallback
-   ): NativeSpeedTestConnection {
    }
 
    public external fun createVoiceConnection(

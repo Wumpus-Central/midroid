@@ -42,16 +42,16 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
    init {
       r.h(var1, "context");
       super(var1, var2);
-      val var4: BlockedMessageGroupViewBinding = BlockedMessageGroupViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var4, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var4;
+      val var6: BlockedMessageGroupViewBinding = BlockedMessageGroupViewBinding.inflate(LayoutInflater.from(var1), this);
+      r.g(var6, "inflate(LayoutInflater.from(context), this)");
+      this.binding = var6;
       val var3: Int = var1.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
       this.setPaddingRelative(var3, this.getPaddingTop(), var3, this.getPaddingBottom());
-      val var6: TextView = var4.blockedMessageGroupButton;
-      r.g(var4.blockedMessageGroupButton, "binding.blockedMessageGroupButton");
-      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
-      val var7: RecyclerView = var4.blockedMessages;
-      var4.blockedMessages.setItemAnimator(null);
+      val var4: TextView = var6.blockedMessageGroupButton;
+      r.g(var6.blockedMessageGroupButton, "binding.blockedMessageGroupButton");
+      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
+      val var7: RecyclerView = var6.blockedMessages;
+      var6.blockedMessages.setItemAnimator(null);
       var7.addItemDecoration(new BackgroundHighlightDecoration(var1));
       var7.addItemDecoration(new VerticalSpacingItemDecoration(SizeUtilsKt.getDpToPx(16), 0, SizeUtilsKt.getDpToPx(16), true, 2, null));
       val var5: LinearLayoutManager = new LinearLayoutManager(var1);
@@ -63,7 +63,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
    fun `bind$lambda$2`(var0: ChatEventHandler, var1: BlockedGroupChatListItem, var2: View) {
       r.h(var0, "$eventHandler");
       r.h(var1, "$item");
-      var0.onTapToggleBlockedMessages-1xi1bu0(MessageId.constructor-impl(var1.getId()));
+      var0.onTapToggleBlockedMessages_1xi1bu0(MessageId.constructor_impl(var1.getId()));
    }
 
    @SuppressLint(["NotifyDataSetChanged"])

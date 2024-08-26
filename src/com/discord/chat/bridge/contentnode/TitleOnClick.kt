@@ -163,8 +163,8 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
                }
             }
 
-            var10 = var12;
             var12 = var11;
+            var10 = var12;
          }
 
          var9.c(var8);

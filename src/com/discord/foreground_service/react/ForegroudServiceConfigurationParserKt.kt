@@ -16,14 +16,14 @@ import kotlin.jvm.internal.r
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
    r.h(var0, "<this>");
    r.h(var1, "readableMap");
-   val var2: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
+   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
    val var4: java.lang.String = var1.getString("content");
-   val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-   val var3: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
-   val var8: ReadableMap = var1.getMap("contentAction");
+   var0 = ServiceNotificationConfiguration.Companion;
+   val var2: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
+   val var5: ReadableMap = var1.getMap("contentAction");
    val var9: ServiceNotificationConfiguration.Action;
-   if (var8 != null) {
-      var9 = parseAction(var5, var8);
+   if (var5 != null) {
+      var9 = parseAction(var0, var5);
    } else {
       var9 = null;
    }
@@ -33,33 +33,33 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
    if (var11 != null) {
       val var6: IntRange = NativeArrayExtensionsKt.sizeRange(var11);
       var10 = new ArrayList(h.t(var6, 10));
-      val var7: java.util.Iterator = var6.iterator();
+      val var12: java.util.Iterator = var6.iterator();
 
-      while (var7.hasNext()) {
-         val var12: ReadableMap = var11.getMap((var7 as p).nextInt());
-         r.g(var12, "array.getMap(index)");
-         var10.add(parseAction(ServiceNotificationConfiguration.Companion, var12));
+      while (var12.hasNext()) {
+         val var7: ReadableMap = var11.getMap((var12 as p).nextInt());
+         r.g(var7, "array.getMap(index)");
+         var10.add(parseAction(ServiceNotificationConfiguration.Companion, var7));
       }
    } else {
       var10 = h.i();
    }
 
-   return new ServiceNotificationConfiguration(var2, var4, var3, var9, (java.util.List<ServiceNotificationConfiguration.Action>)var10);
+   return new ServiceNotificationConfiguration(var3, var4, var2, var9, (java.util.List<ServiceNotificationConfiguration.Action>)var10);
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
-   val var2: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
+   val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
    val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
-   val var4: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
+   val var2: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
    val var5: ReadableMap = var1.getMap("data");
    if (var5 != null) {
       val var7: java.util.Map = NativeMapExtensionsKt.toStringMap(var5);
       if (var7 != null) {
-         return new ServiceNotificationConfiguration.Action(var2, var3, var4, var7);
+         return new ServiceNotificationConfiguration.Action(var4, var3, var2, var7);
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var2, var3, var4, s.h());
+   return new ServiceNotificationConfiguration.Action(var4, var3, var2, s.h());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
@@ -71,10 +71,10 @@ internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNoti
 
    while (var7.hasNext()) {
       val var2: Int = (var7 as p).nextInt();
-      val var4: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var5: ReadableMap = var1.getMap(var2);
-      r.g(var5, "readableArray.getMap(index)");
-      var6.add(parse(var4, var5));
+      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var4: ReadableMap = var1.getMap(var2);
+      r.g(var4, "readableArray.getMap(index)");
+      var6.add(parse(var5, var4));
    }
 
    return var6;

@@ -257,4 +257,52 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          return var3;
       }
    }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[ButtonStyle.values().length];
+
+         try {
+            var0[ButtonStyle.UNKNOWN.ordinal()] = 1;
+         } catch (var8: NoSuchFieldError) {
+         }
+
+         try {
+            var0[ButtonStyle.PRIMARY.ordinal()] = 2;
+         } catch (var7: NoSuchFieldError) {
+         }
+
+         try {
+            var0[ButtonStyle.SECONDARY.ordinal()] = 3;
+         } catch (var6: NoSuchFieldError) {
+         }
+
+         try {
+            var0[ButtonStyle.LINK.ordinal()] = 4;
+         } catch (var5: NoSuchFieldError) {
+         }
+
+         try {
+            var0[ButtonStyle.DANGER.ordinal()] = 5;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[ButtonStyle.SUCCESS.ordinal()] = 6;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[ButtonStyle.PREMIUM.ordinal()] = 7;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
+      }
+   }
 }

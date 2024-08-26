@@ -83,13 +83,13 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.app;
-      val var2: java.lang.String = this.location;
+      val var2: java.lang.String = this.app;
+      val var1: java.lang.String = this.location;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ShareBroadcastReceiverAppClicked(app=");
-      var3.append(var1);
-      var3.append(", location=");
       var3.append(var2);
+      var3.append(", location=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

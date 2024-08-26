@@ -14,6 +14,6 @@ public class ThumbhashPackage : ReactPackage {
 
    public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
       r.h(var1, "reactContext");
-      return h.o(new ImageWithThumbhashPlaceholderViewManager());
+      return h.o(new ImageWithThumbhashPlaceholderViewManager[]{new ImageWithThumbhashPlaceholderViewManager()});
    }
 }

@@ -161,10 +161,10 @@ public object ContactSyncProvider {
       } else {
          while (var8.moveToNext()) {
             val var6: java.lang.String = this.getColumnString(var8, "display_name");
-            val var9: java.lang.String = this.getColumnString(var8, "data4");
-            val var10: java.lang.String = this.getColumnString(var8, "_id");
+            val var10: java.lang.String = this.getColumnString(var8, "data4");
+            val var9: java.lang.String = this.getColumnString(var8, "_id");
             var var3: java.lang.String = this.getColumnString(var8, "contact_id");
-            if (var10 != null && var3 != null) {
+            if (var9 != null && var3 != null) {
                var var4: ContactNameEntry;
                label45: {
                   var4 = this.getContactName(var1, var3);
@@ -196,13 +196,13 @@ public object ContactSyncProvider {
                   var2 = false;
                }
 
-               if (var9 != null) {
+               if (var10 != null) {
                   var var5: java.lang.String = var6;
                   if (var6 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var7.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
+                  val var12: ContactSyncBlobEntry = var7.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
                }
             }
          }

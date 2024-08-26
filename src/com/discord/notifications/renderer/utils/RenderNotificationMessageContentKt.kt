@@ -8,10 +8,10 @@ import kotlin.jvm.internal.r
 
 public fun renderNotificationMessageContent(content: String): String {
    r.h(var0, "content");
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var14: java.lang.String = var4.i(var3.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
+   var var14: java.lang.String = var3.i(var4.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
    var var13: java.lang.String = var0;
 
    while (true) {
@@ -74,10 +74,10 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var12: Int = var6.c().e();
-      val var2: Int = var6.c().m();
+      val var2: Int = var6.c().e();
+      val var12: Int = var6.c().m();
       r.g(var10, "formatted");
-      var13 = f.u0(var13, var12, var2 + 1, var10).toString();
+      var13 = f.u0(var13, var2, var12 + 1, var10).toString();
       var14 = f.u0(var14, var6.c().e(), var6.c().m() + 1, var10).toString();
    }
 }

@@ -12,30 +12,30 @@ import kotlin.jvm.internal.r
 
 internal fun Array<AudioInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
    r.h(var0, "<this>");
-   val var4: ArrayList = new ArrayList(var0.length);
+   val var5: ArrayList = new ArrayList(var0.length);
    val var3: Int = var0.length;
    var var2: Int = 0;
 
    for (int var1 = 0; var2 < var3; var1++) {
-      var4.add(s.l(new Pair[]{w.a("name", var0[var2].getName()), w.a("guid", var0[var2].getGuid()), w.a("index", var1)}));
+      var5.add(s.l(new Pair[]{w.a("name", var0[var2].getName()), w.a("guid", var0[var2].getGuid()), w.a("index", var1)}));
       var2++;
    }
 
-   return var4;
+   return var5;
 }
 
 internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
    r.h(var0, "<this>");
-   val var4: ArrayList = new ArrayList(var0.length);
+   val var5: ArrayList = new ArrayList(var0.length);
    val var3: Int = var0.length;
    var var2: Int = 0;
 
    for (int var1 = 0; var2 < var3; var1++) {
-      var4.add(s.l(new Pair[]{w.a("name", var0[var2].getName()), w.a("guid", var0[var2].getGuid()), w.a("index", var1)}));
+      var5.add(s.l(new Pair[]{w.a("name", var0[var2].getName()), w.a("guid", var0[var2].getGuid()), w.a("index", var1)}));
       var2++;
    }
 
-   return var4;
+   return var5;
 }
 
 internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
@@ -103,7 +103,6 @@ internal fun ConnectionInfo.toMap(): Map<String, Any> {
    return s.l(new Pair[]{w.a("protocol", var0.getProtocol()), w.a("address", var0.getLocalAddress()), w.a("port", var0.getLocalPort())});
 }
 // $VF: Class flags could not be determined
-@JvmSynthetic
 internal class WhenMappings {
    @JvmStatic
    public int[] $EnumSwitchMapping$0;

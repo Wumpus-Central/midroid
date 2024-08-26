@@ -20,7 +20,7 @@ public data class AutomodSystemMessageItem(message: Message,
    init {
       r.h(var1, "message");
       r.h(var2, "messageContext");
-      super(MessageId.toString-impl(var1.getId-3Eiw7ao()), null);
+      super(MessageId.toString_impl(var1.getId_3Eiw7ao()), null);
       this.message = var1;
       this.messageContext = var2;
       this.allowChildGestures = var3;
@@ -65,14 +65,14 @@ public data class AutomodSystemMessageItem(message: Message,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.message.hashCode();
-      val var3: Int = this.messageContext.hashCode();
+      val var3: Int = this.message.hashCode();
+      val var4: Int = this.messageContext.hashCode();
       var var1: Byte = this.allowChildGestures;
       if (this.allowChildGestures != 0) {
          var1 = 1;
       }
 
-      return (var4 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {

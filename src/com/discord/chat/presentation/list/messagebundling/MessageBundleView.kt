@@ -226,9 +226,9 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                   this.$onTapReply = var1;
                }
 
-               public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
+               public final void invoke_1xi1bu0(java.lang.String var1) {
                   r.h(var1, "it");
-                  this.$onTapReply.invoke(MessageId.box-impl(var1));
+                  this.$onTapReply.invoke(MessageId.box_impl(var1));
                }
             }, var5);
             return;
@@ -413,24 +413,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var6: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var3: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
          val var1: java.util.List = this.rows;
-         val var3: java.lang.Float = this.truncationThreshold;
-         val var2: java.util.List = this.referenceMessageRows;
-         val var5: java.lang.String = this.viewMoreText;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("MessageBundle(messageFrame=");
-         var4.append(var6);
-         var4.append(", rows=");
-         var4.append(var1);
-         var4.append(", truncationThreshold=");
-         var4.append(var3);
-         var4.append(", referenceMessageRows=");
-         var4.append(var2);
-         var4.append(", viewMoreText=");
-         var4.append(var5);
-         var4.append(")");
-         return var4.toString();
+         val var6: java.lang.Float = this.truncationThreshold;
+         val var4: java.util.List = this.referenceMessageRows;
+         val var2: java.lang.String = this.viewMoreText;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("MessageBundle(messageFrame=");
+         var5.append(var3);
+         var5.append(", rows=");
+         var5.append(var1);
+         var5.append(", truncationThreshold=");
+         var5.append(var6);
+         var5.append(", referenceMessageRows=");
+         var5.append(var4);
+         var5.append(", viewMoreText=");
+         var5.append(var2);
+         var5.append(")");
+         return var5.toString();
       }
 
       public object `$serializer` : f0<MessageBundleView.MessageBundle> {

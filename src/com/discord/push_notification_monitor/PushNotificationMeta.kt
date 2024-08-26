@@ -11,6 +11,7 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
 import uk.n
+import vk.a
 import xk.a2
 import xk.f0
 import xk.h
@@ -158,8 +159,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var1 = 1;
       }
 
-      val var6: Int = this.type.hashCode();
-      val var7: Int = this.title.hashCode();
+      val var7: Int = this.type.hashCode();
+      val var6: Int = this.title.hashCode();
       var var4: Int = 0;
       val var9: Int;
       if (this.content == null) {
@@ -179,34 +180,34 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var4 = this.messageId.hashCode();
       }
 
-      return (((((var5 * 31 + var1) * 31 + var6) * 31 + var7) * 31 + var9) * 31 + var3) * 31 + var4;
+      return (((((var5 * 31 + var1) * 31 + var7) * 31 + var6) * 31 + var9) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var2: Long = this.receivedTimestamp;
-      val var1: Boolean = this.silent;
-      val var7: java.lang.String = this.type;
-      val var9: java.lang.String = this.title;
-      val var6: java.lang.String = this.content;
-      val var5: java.lang.String = this.channelId;
-      val var8: java.lang.String = this.messageId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PushNotificationMeta(receivedTimestamp=");
-      var4.append(var2);
-      var4.append(", silent=");
-      var4.append(var1);
-      var4.append(", type=");
-      var4.append(var7);
-      var4.append(", title=");
-      var4.append(var9);
-      var4.append(", content=");
-      var4.append(var6);
-      var4.append(", channelId=");
-      var4.append(var5);
-      var4.append(", messageId=");
-      var4.append(var8);
-      var4.append(")");
-      return var4.toString();
+      val var1: Long = this.receivedTimestamp;
+      val var3: Boolean = this.silent;
+      val var4: java.lang.String = this.type;
+      val var8: java.lang.String = this.title;
+      val var5: java.lang.String = this.content;
+      val var7: java.lang.String = this.channelId;
+      val var9: java.lang.String = this.messageId;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("PushNotificationMeta(receivedTimestamp=");
+      var6.append(var1);
+      var6.append(", silent=");
+      var6.append(var3);
+      var6.append(", type=");
+      var6.append(var4);
+      var6.append(", title=");
+      var6.append(var8);
+      var6.append(", content=");
+      var6.append(var5);
+      var6.append(", channelId=");
+      var6.append(var7);
+      var6.append(", messageId=");
+      var6.append(var9);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : f0<PushNotificationMeta> {
@@ -231,9 +232,9 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          val var3: a2 = a2.a;
-         return new KSerializer[]{w0.a, h.a, a2.a, a2.a, vk.a.u(a2.a), vk.a.u(var3), vk.a.u(var3)};
+         return new KSerializer[]{w0.a, h.a, a2.a, a2.a, a.u(a2.a), a.u(var3), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): PushNotificationMeta {
@@ -241,33 +242,33 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          val var13: SerialDescriptor = this.getDescriptor();
          val var14: c = var1.b(var13);
          var var2: Int;
-         var var5: Long;
-         var var7: Boolean;
-         var var8: Any;
+         var var5: Boolean;
+         var var6: Long;
          var var9: Any;
+         var var10: Any;
          var var11: Any;
          val var12: Any;
-         var var18: Any;
+         var var17: Any;
          if (var14.p()) {
-            var5 = var14.f(var13, 0);
-            var7 = var14.C(var13, 1);
-            var8 = var14.m(var13, 2);
+            var6 = var14.f(var13, 0);
+            var5 = var14.C(var13, 1);
+            var12 = var14.m(var13, 2);
             val var15: java.lang.String = var14.m(var13, 3);
-            var18 = a2.a;
+            var17 = a2.a;
             var11 = var14.n(var13, 4, a2.a, null);
-            var9 = var14.n(var13, 5, (DeserializationStrategy)var18, null);
-            var12 = var14.n(var13, 6, (DeserializationStrategy)var18, null);
+            var10 = var14.n(var13, 5, (DeserializationStrategy)var17, null);
+            var9 = var14.n(var13, 6, (DeserializationStrategy)var17, null);
             var2 = 127;
-            var18 = var15;
+            var17 = var15;
          } else {
             var var3: Boolean = true;
-            var7 = false;
+            var5 = false;
             var11 = null;
             var9 = null;
             var var16: Any = null;
-            var5 = 0L;
-            var18 = null;
-            var8 = null;
+            var6 = 0L;
+            var10 = null;
+            var17 = null;
             var2 = 0;
 
             while (var3) {
@@ -277,31 +278,31 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
                      var3 = false;
                      break;
                   case 0:
-                     var5 = var14.f(var13, 0);
+                     var6 = var14.f(var13, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var7 = var14.C(var13, 1);
+                     var5 = var14.C(var13, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var18 = var14.m(var13, 2);
+                     var10 = var14.m(var13, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var8 = var14.m(var13, 3);
+                     var17 = var14.m(var13, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var11 = var14.n(var13, 4, a2.a, (java.lang.String)var11);
+                     var11 = var14.n(var13, 4, a2.a, var11);
                      var2 |= 16;
                      break;
                   case 5:
-                     var9 = var14.n(var13, 5, a2.a, (java.lang.String)var9);
+                     var9 = var14.n(var13, 5, a2.a, var9);
                      var2 |= 32;
                      break;
                   case 6:
-                     var16 = var14.n(var13, 6, a2.a, (java.lang.String)var16);
+                     var16 = var14.n(var13, 6, a2.a, var16);
                      var2 |= 64;
                      break;
                   default:
@@ -309,21 +310,21 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
                }
             }
 
-            var18 = var8;
-            var8 = var18;
-            var12 = var16;
+            var12 = var10;
+            var10 = var9;
+            var9 = var16;
          }
 
          var14.c(var13);
          return new PushNotificationMeta(
             var2,
+            var6,
             var5,
-            var7,
-            (java.lang.String)var8,
-            (java.lang.String)var18,
+            (java.lang.String)var12,
+            (java.lang.String)var17,
             var11 as java.lang.String,
+            var10 as java.lang.String,
             var9 as java.lang.String,
-            var12 as java.lang.String,
             null
          );
       }
@@ -337,8 +338,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return xk.f0.a.a(this);
       }
    }
 

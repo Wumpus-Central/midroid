@@ -111,7 +111,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       this.lastFrameTimestamp = null;
    }
 
-   public open fun changeCaptureFormat(width: Int, height: Int, framerate: Int) {
+   public override fun changeCaptureFormat(width: Int, height: Int, framerate: Int) {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -176,15 +176,15 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 36: invokevirtual android/graphics/Point.set (II)V
       // 39: aload 0
       // 3a: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 3d: astore 1
-      // 3e: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
-      // 41: astore 5
-      // 43: aload 1
-      // 44: aload 5
-      // 46: aload 1
-      // 47: getfield android/graphics/Point.x I
-      // 4a: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 4d: aload 5
+      // 3d: astore 5
+      // 3f: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
+      // 42: astore 1
+      // 43: aload 5
+      // 45: aload 1
+      // 46: aload 5
+      // 48: getfield android/graphics/Point.x I
+      // 4b: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 4e: aload 1
       // 4f: aload 0
       // 50: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
       // 53: getfield android/graphics/Point.y I
@@ -211,12 +211,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 78: athrow
    }
 
-   public open fun dispose() {
+   public override fun dispose() {
       this.release();
       super.dispose();
    }
 
-   public open fun initialize(surfaceTextureHelper: SurfaceTextureHelper, applicationContext: Context, capturerObserver: CapturerObserver) {
+   public override fun initialize(surfaceTextureHelper: SurfaceTextureHelper, applicationContext: Context, capturerObserver: CapturerObserver) {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -236,7 +236,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   public open fun onFrame(frame: VideoFrame?) {
+   public override fun onFrame(frame: VideoFrame?) {
       if (var1 != null) {
          var var2: Context = this.context;
          if (this.context == null) {
@@ -277,7 +277,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   public open fun startCapture(width: Int, height: Int, framerate: Int) {
+   public override fun startCapture(width: Int, height: Int, framerate: Int) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
@@ -331,7 +331,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 41: athrow
    }
 
-   public open fun stopCapture() {
+   public override fun stopCapture() {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -347,7 +347,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   protected open fun updateVirtualDisplay() {
+   protected override fun updateVirtualDisplay() {
       try {
          super.updateVirtualDisplay();
       } catch (var2: java.lang.Throwable) {

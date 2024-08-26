@@ -73,4 +73,32 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
          var2.b(new androidx.core.view.accessibility.AccessibilityNodeInfoCompat.a(16, this.accessory.getTapAccessibilityLabel()));
       }
    }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[PollChatAnswerInteractionType.values().length];
+
+         try {
+            var0[PollChatAnswerInteractionType.LIST.ordinal()] = 1;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[PollChatAnswerInteractionType.RADIO_BUTTONS.ordinal()] = 2;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[PollChatAnswerInteractionType.CHECKBOXES.ordinal()] = 3;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
+      }
+   }
 }

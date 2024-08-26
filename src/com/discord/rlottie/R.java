@@ -520,29 +520,29 @@ public final class R {
       public static final int hint_alpha_material_light = 2131165374;
       public static final int hint_pressed_alpha_material_dark = 2131165375;
       public static final int hint_pressed_alpha_material_light = 2131165376;
-      public static final int notification_action_icon_size = 2131165992;
-      public static final int notification_action_text_size = 2131165993;
-      public static final int notification_big_circle_margin = 2131165994;
-      public static final int notification_content_margin_start = 2131165995;
-      public static final int notification_large_icon_height = 2131165996;
-      public static final int notification_large_icon_width = 2131165997;
-      public static final int notification_main_column_padding_top = 2131165998;
-      public static final int notification_media_narrow_margin = 2131165999;
-      public static final int notification_right_icon_size = 2131166000;
-      public static final int notification_right_side_padding_top = 2131166001;
-      public static final int notification_small_icon_background_padding = 2131166002;
-      public static final int notification_small_icon_size_as_large = 2131166003;
-      public static final int notification_subtext_size = 2131166004;
-      public static final int notification_top_pad = 2131166005;
-      public static final int notification_top_pad_large_text = 2131166006;
-      public static final int tooltip_corner_radius = 2131166027;
-      public static final int tooltip_horizontal_padding = 2131166028;
-      public static final int tooltip_margin = 2131166029;
-      public static final int tooltip_precise_anchor_extra_offset = 2131166030;
-      public static final int tooltip_precise_anchor_threshold = 2131166031;
-      public static final int tooltip_vertical_padding = 2131166032;
-      public static final int tooltip_y_offset_non_touch = 2131166033;
-      public static final int tooltip_y_offset_touch = 2131166034;
+      public static final int notification_action_icon_size = 2131165993;
+      public static final int notification_action_text_size = 2131165994;
+      public static final int notification_big_circle_margin = 2131165995;
+      public static final int notification_content_margin_start = 2131165996;
+      public static final int notification_large_icon_height = 2131165997;
+      public static final int notification_large_icon_width = 2131165998;
+      public static final int notification_main_column_padding_top = 2131165999;
+      public static final int notification_media_narrow_margin = 2131166000;
+      public static final int notification_right_icon_size = 2131166001;
+      public static final int notification_right_side_padding_top = 2131166002;
+      public static final int notification_small_icon_background_padding = 2131166003;
+      public static final int notification_small_icon_size_as_large = 2131166004;
+      public static final int notification_subtext_size = 2131166005;
+      public static final int notification_top_pad = 2131166006;
+      public static final int notification_top_pad_large_text = 2131166007;
+      public static final int tooltip_corner_radius = 2131166028;
+      public static final int tooltip_horizontal_padding = 2131166029;
+      public static final int tooltip_margin = 2131166030;
+      public static final int tooltip_precise_anchor_extra_offset = 2131166031;
+      public static final int tooltip_precise_anchor_threshold = 2131166032;
+      public static final int tooltip_vertical_padding = 2131166033;
+      public static final int tooltip_y_offset_non_touch = 2131166034;
+      public static final int tooltip_y_offset_touch = 2131166035;
 
       private dimen() {
       }
@@ -631,20 +631,20 @@ public final class R {
       public static final int btn_radio_off_to_on_mtrl_animation = 2131230889;
       public static final int btn_radio_on_mtrl = 2131230890;
       public static final int btn_radio_on_to_off_mtrl_animation = 2131230891;
-      public static final int notification_action_background = 2131232691;
-      public static final int notification_bg = 2131232692;
-      public static final int notification_bg_low = 2131232693;
-      public static final int notification_bg_low_normal = 2131232694;
-      public static final int notification_bg_low_pressed = 2131232695;
-      public static final int notification_bg_normal = 2131232696;
-      public static final int notification_bg_normal_pressed = 2131232697;
-      public static final int notification_icon_background = 2131232698;
-      public static final int notification_template_icon_bg = 2131232700;
-      public static final int notification_template_icon_low_bg = 2131232701;
-      public static final int notification_tile_bg = 2131232702;
-      public static final int notify_panel_notification_icon_bg = 2131232703;
-      public static final int tooltip_frame_dark = 2131232711;
-      public static final int tooltip_frame_light = 2131232712;
+      public static final int notification_action_background = 2131232692;
+      public static final int notification_bg = 2131232693;
+      public static final int notification_bg_low = 2131232694;
+      public static final int notification_bg_low_normal = 2131232695;
+      public static final int notification_bg_low_pressed = 2131232696;
+      public static final int notification_bg_normal = 2131232697;
+      public static final int notification_bg_normal_pressed = 2131232698;
+      public static final int notification_icon_background = 2131232699;
+      public static final int notification_template_icon_bg = 2131232701;
+      public static final int notification_template_icon_low_bg = 2131232702;
+      public static final int notification_tile_bg = 2131232703;
+      public static final int notify_panel_notification_icon_bg = 2131232704;
+      public static final int tooltip_frame_dark = 2131232712;
+      public static final int tooltip_frame_light = 2131232713;
 
       private drawable() {
       }

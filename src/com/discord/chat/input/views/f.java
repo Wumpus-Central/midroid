@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.View.OnKeyListener;
 import kotlin.jvm.internal.Ref.BooleanRef;
 
-// $VF: synthetic class
 public final class f implements OnKeyListener {
    public final BooleanRef j;
    public final DCDChatInput k;

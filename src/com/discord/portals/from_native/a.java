@@ -1,6 +1,5 @@
 package com.discord.portals.from_native;
 
-// $VF: synthetic class
 public final class a implements Runnable {
    public final double j;
 

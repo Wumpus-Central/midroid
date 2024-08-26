@@ -4,7 +4,6 @@ import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 import kotlin.jvm.functions.Function2;
 
-// $VF: synthetic class
 public final class c implements OnLayoutChangeListener {
    public final EmojiPickerScroller j;
    public final Function2 k;

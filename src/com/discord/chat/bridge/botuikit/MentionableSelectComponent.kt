@@ -202,9 +202,9 @@ public data class MentionableSelectComponent(type: Int,
 
    public override fun hashCode(): Int {
       val var7: Int = Integer.hashCode(this.getType());
-      val var8: Int = this.getId().hashCode();
-      val var6: Int = this.getState().hashCode();
-      val var5: Int = this.getCustomId().hashCode();
+      val var5: Int = this.getId().hashCode();
+      val var8: Int = this.getState().hashCode();
+      val var6: Int = this.getCustomId().hashCode();
       val var11: java.lang.String = this.getPlaceholder();
       var var2: Int = 0;
       val var1: Int;
@@ -226,44 +226,44 @@ public data class MentionableSelectComponent(type: Int,
          var3 = 1;
       }
 
-      return ((((((((var7 * 31 + var8) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var3) * 31
+      return ((((((((var7 * 31 + var5) * 31 + var8) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var3) * 31
          + this.getSelectedOptions().hashCode();
    }
 
    public override fun toString(): String {
-      val var1: Int = this.getType();
-      val var5: java.lang.String = this.getId();
-      val var9: ActionComponentState = this.getState();
-      val var7: java.lang.String = this.getCustomId();
-      val var10: java.lang.String = this.getPlaceholder();
-      val var6: java.lang.String = this.getAccessibilityLabel();
-      val var2: Int = this.getMinValues();
-      val var3: Int = this.getMaxValues();
+      val var3: Int = this.getType();
+      val var6: java.lang.String = this.getId();
+      val var11: ActionComponentState = this.getState();
+      val var5: java.lang.String = this.getCustomId();
+      val var8: java.lang.String = this.getPlaceholder();
+      val var7: java.lang.String = this.getAccessibilityLabel();
+      val var1: Int = this.getMinValues();
+      val var2: Int = this.getMaxValues();
       val var4: Boolean = this.getDisabled();
-      val var8: java.util.List = this.getSelectedOptions();
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MentionableSelectComponent(type=");
-      var11.append(var1);
-      var11.append(", id=");
-      var11.append(var5);
-      var11.append(", state=");
-      var11.append(var9);
-      var11.append(", customId=");
-      var11.append(var7);
-      var11.append(", placeholder=");
-      var11.append(var10);
-      var11.append(", accessibilityLabel=");
-      var11.append(var6);
-      var11.append(", minValues=");
-      var11.append(var2);
-      var11.append(", maxValues=");
-      var11.append(var3);
-      var11.append(", disabled=");
-      var11.append(var4);
-      var11.append(", selectedOptions=");
-      var11.append(var8);
-      var11.append(")");
-      return var11.toString();
+      val var9: java.util.List = this.getSelectedOptions();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("MentionableSelectComponent(type=");
+      var10.append(var3);
+      var10.append(", id=");
+      var10.append(var6);
+      var10.append(", state=");
+      var10.append(var11);
+      var10.append(", customId=");
+      var10.append(var5);
+      var10.append(", placeholder=");
+      var10.append(var8);
+      var10.append(", accessibilityLabel=");
+      var10.append(var7);
+      var10.append(", minValues=");
+      var10.append(var1);
+      var10.append(", maxValues=");
+      var10.append(var2);
+      var10.append(", disabled=");
+      var10.append(var4);
+      var10.append(", selectedOptions=");
+      var10.append(var9);
+      var10.append(")");
+      return var10.toString();
    }
 
    public object `$serializer` : f0<MentionableSelectComponent> {
@@ -317,68 +317,69 @@ public data class MentionableSelectComponent(type: Int,
          var var10: Byte = 7;
          var var9: Byte = 6;
          var var2: Int = 0;
-         var var3: Int;
          var var4: Int;
          var var5: Int;
          var var6: Int;
          val var7: Int;
-         var var15: Any;
+         var var14: Any;
          var var16: Any;
          var var17: Any;
          val var18: Any;
          val var19: Any;
-         var var27: Any;
+         var var25: Int;
+         var var30: Any;
          if (var12) {
-            var5 = var21.i(var20, 0);
+            var7 = var21.i(var20, 0);
             val var22: java.lang.String = var21.m(var20, 1);
-            var18 = var21.y(var20, 2, ActionComponentState.Serializer.INSTANCE, null);
+            var14 = var21.y(var20, 2, ActionComponentState.Serializer.INSTANCE, null);
             val var13: java.lang.String = var21.m(var20, 3);
-            var27 = a2.a;
+            var30 = a2.a;
             var19 = var21.n(var20, 4, a2.a, null);
-            var17 = var21.n(var20, 5, (DeserializationStrategy)var27, null);
-            var2 = var21.i(var20, 6);
+            var17 = var21.n(var20, 5, (DeserializationStrategy)var30, null);
+            var25 = var21.i(var20, 6);
             var4 = var21.i(var20, 7);
-            var3 = var21.C(var20, 8);
+            val var24: Byte = var21.C(var20, 8);
             var16 = var21.y(var20, 9, new xk.f(SearchableSelectItem.$serializer.INSTANCE), null);
-            var7 = 1023;
-            var15 = var13;
-            var6 = var2;
-            var27 = var22;
+            var5 = 1023;
+            var18 = var13;
+            var6 = var25;
+            var30 = var22;
+            var25 = var24;
          } else {
-            var var25: Boolean = true;
+            var var27: Boolean = true;
             var5 = 0;
             var6 = 0;
-            var3 = 0;
+            var25 = 0;
             var17 = null;
             var16 = null;
             var var23: Any = null;
-            var var26: Any = null;
-            var27 = null;
-            var15 = null;
+            var var28: Any = null;
+            var30 = null;
+            var14 = null;
             var4 = 0;
 
-            while (var25) {
+            while (var27) {
                label38: {
                   label37: {
                      val var11: Int = var21.o(var20);
                      switch (var11) {
                         case -1:
-                           var25 = false;
+                           var27 = false;
                            break;
                         case 0:
                            var5 = var21.i(var20, 0);
                            var2 |= 1;
                            break label37;
                         case 1:
-                           var27 = var21.m(var20, 1);
+                           var30 = var21.m(var20, 1);
                            var2 |= 2;
                            break label37;
                         case 2:
-                           var26 = var21.y(var20, 2, ActionComponentState.Serializer.INSTANCE, var26);
+                           var28 = var21.y(var20, 2, ActionComponentState.Serializer.INSTANCE, var28);
                            var2 |= 4;
                            break label37;
                         case 3:
-                           var15 = var21.m(var20, 3);
+                           var14 = var21.m(var20, 3);
                            var2 |= 8;
                            break;
                         case 4:
@@ -399,7 +400,7 @@ public data class MentionableSelectComponent(type: Int,
                            var2 |= 128;
                            break label38;
                         case 8:
-                           var3 = var21.C(var20, 8);
+                           var25 = var21.C(var20, 8);
                            var2 |= 256;
                            break label38;
                         case 9:
@@ -422,23 +423,25 @@ public data class MentionableSelectComponent(type: Int,
                var9 = 6;
             }
 
-            var18 = var26;
+            var18 = var14;
+            var14 = var28;
             var19 = var23;
-            var7 = var2;
+            var7 = var5;
+            var5 = var2;
          }
 
          var21.c(var20);
          return new MentionableSelectComponent(
-            var7,
             var5,
-            (java.lang.String)var27,
-            var18 as ActionComponentState,
-            (java.lang.String)var15,
+            var7,
+            (java.lang.String)var30,
+            var14 as ActionComponentState,
+            (java.lang.String)var18,
             var19 as java.lang.String,
             var17 as java.lang.String,
             var6,
             var4,
-            (boolean)var3,
+            (boolean)var25,
             var16 as java.util.List,
             null
          );

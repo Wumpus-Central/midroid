@@ -151,30 +151,30 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
-      val var2: java.lang.String = this.username;
-      val var6: java.lang.Boolean = this.isBot;
-      val var4: java.lang.Boolean = this.isFriend;
-      val var8: java.lang.String = this.friendNickname;
-      val var3: java.lang.String = this.globalName;
-      val var7: java.util.Map = this.nicknames;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UserSearchTransformedUser(id=");
-      var1.append(var5);
-      var1.append(", username=");
-      var1.append(var2);
-      var1.append(", isBot=");
-      var1.append(var6);
-      var1.append(", isFriend=");
-      var1.append(var4);
-      var1.append(", friendNickname=");
-      var1.append(var8);
-      var1.append(", globalName=");
-      var1.append(var3);
-      var1.append(", nicknames=");
-      var1.append(var7);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.id;
+      val var6: java.lang.String = this.username;
+      val var1: java.lang.Boolean = this.isBot;
+      val var8: java.lang.Boolean = this.isFriend;
+      val var5: java.lang.String = this.friendNickname;
+      val var2: java.lang.String = this.globalName;
+      val var3: java.util.Map = this.nicknames;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("UserSearchTransformedUser(id=");
+      var7.append(var4);
+      var7.append(", username=");
+      var7.append(var6);
+      var7.append(", isBot=");
+      var7.append(var1);
+      var7.append(", isFriend=");
+      var7.append(var8);
+      var7.append(", friendNickname=");
+      var7.append(var5);
+      var7.append(", globalName=");
+      var7.append(var2);
+      var7.append(", nicknames=");
+      var7.append(var3);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {
@@ -184,7 +184,7 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    internal object Serializer : KSerializer<UserSearchTransformedUser> {
-      private final val TRANSFORMED_USER_KEYS: Set<String> = u.i("id", "username", "isBot", "isFriend", "friendNickname", "globalName")
+      private final val TRANSFORMED_USER_KEYS: Set<String> = u.i(new java.lang.String[]{"id", "username", "isBot", "isFriend", "friendNickname", "globalName"})
 
       public open val descriptor: SerialDescriptor
          public open get() {
@@ -200,10 +200,10 @@ internal data class UserSearchTransformedUser(id: String,
          val var13: LinkedHashMap = new LinkedHashMap();
 
          for (Entry var7 : var6.entrySet()) {
-            val var4: java.lang.String = var7.getKey() as java.lang.String;
-            val var5: JsonElement = var7.getValue() as JsonElement;
+            val var8: java.lang.String = var7.getKey() as java.lang.String;
+            val var4: JsonElement = var7.getValue() as JsonElement;
             val var2: Boolean;
-            if (TRANSFORMED_USER_KEYS.contains(var4) || !kotlinx.serialization.json.g.p(var5).m() && kotlinx.serialization.json.g.p(var5) !is JsonNull) {
+            if (TRANSFORMED_USER_KEYS.contains(var8) || !kotlinx.serialization.json.g.p(var4).m() && kotlinx.serialization.json.g.p(var4) !is JsonNull) {
                var2 = false;
             } else {
                var2 = true;

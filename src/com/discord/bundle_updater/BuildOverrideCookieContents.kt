@@ -66,13 +66,13 @@ public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, bui
    }
 
    public override fun toString(): String {
-      val var2: BuildOverrideCookieMeta = this.meta;
-      val var1: java.util.Map = this.builds;
+      val var1: BuildOverrideCookieMeta = this.meta;
+      val var2: java.util.Map = this.builds;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BuildOverrideCookieContents(meta=");
-      var3.append(var2);
-      var3.append(", builds=");
       var3.append(var1);
+      var3.append(", builds=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

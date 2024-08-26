@@ -36,27 +36,27 @@ public final class UploadProgressViewBinding implements ViewBinding {
 
    public static UploadProgressViewBinding bind(View var0) {
       int var1 = R.id.barrier;
-      Barrier var5 = (Barrier)a.a(var0, var1);
-      if (var5 != null) {
+      Barrier var6 = (Barrier)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.progress_bar;
          View var2 = a.a(var0, var1);
          if (var2 != null) {
             var1 = R.id.progress_bg;
-            FrameLayout var8 = (FrameLayout)a.a(var0, var1);
-            if (var8 != null) {
+            FrameLayout var7 = (FrameLayout)a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.progress_cancel;
-               SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-               if (var3 != null) {
+               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.progress_file_image;
-                  SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var6 != null) {
+                  SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.progress_subtext;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
+                     TextView var5 = (TextView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.progress_text;
-                        TextView var4 = (TextView)a.a(var0, var1);
-                        if (var4 != null) {
-                           return new UploadProgressViewBinding(var0, var5, var2, var8, var3, var6, var7, var4);
+                        TextView var8 = (TextView)a.a(var0, var1);
+                        if (var8 != null) {
+                           return new UploadProgressViewBinding(var0, var6, var2, var7, var4, var3, var5, var8);
                         }
                      }
                   }

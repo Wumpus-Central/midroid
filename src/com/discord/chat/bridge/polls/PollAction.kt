@@ -149,16 +149,16 @@ public data class PollAction(label: String,
    }
 
    public fun getFullTextLabel(): String {
-      val var1: java.lang.String = this.secondaryLabel;
+      val var3: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var3: java.lang.String = this.label;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var3);
-         var2.append("  •  ");
-         var2.append(var1);
-         return var2.toString();
+         val var2: java.lang.String = this.label;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var2);
+         var1.append("  •  ");
+         var1.append(var3);
+         return var1.toString();
       }
    }
 
@@ -193,27 +193,27 @@ public data class PollAction(label: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.label;
-      val var7: PollActionPresentation = this.presentation;
+      val var3: java.lang.String = this.label;
+      val var5: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var5: java.lang.String = this.type;
-      val var3: java.lang.String = this.secondaryLabel;
-      val var2: java.lang.String = this.accessibilityHint;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("PollAction(label=");
-      var6.append(var4);
-      var6.append(", presentation=");
-      var6.append(var7);
-      var6.append(", enabled=");
-      var6.append(var1);
-      var6.append(", type=");
-      var6.append(var5);
-      var6.append(", secondaryLabel=");
-      var6.append(var3);
-      var6.append(", accessibilityHint=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var6: java.lang.String = this.type;
+      val var2: java.lang.String = this.secondaryLabel;
+      val var4: java.lang.String = this.accessibilityHint;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("PollAction(label=");
+      var7.append(var3);
+      var7.append(", presentation=");
+      var7.append(var5);
+      var7.append(", enabled=");
+      var7.append(var1);
+      var7.append(", type=");
+      var7.append(var6);
+      var7.append(", secondaryLabel=");
+      var7.append(var2);
+      var7.append(", accessibilityHint=");
+      var7.append(var4);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : f0<PollAction> {
@@ -244,76 +244,73 @@ public data class PollAction(label: String,
 
       public open fun deserialize(decoder: Decoder): PollAction {
          r.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.b(var11);
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.b(var10);
          var var2: Int;
          var var5: Boolean;
          var var6: java.lang.String;
          var var7: Any;
          var var8: Any;
          var var9: Any;
-         var var14: Any;
-         if (var12.p()) {
-            var6 = var12.m(var11, 0);
-            var9 = var12.y(var11, 1, PollActionPresentation.Companion.serializer(), null);
-            var5 = var12.C(var11, 2);
-            var14 = a2.a;
-            var8 = var12.n(var11, 3, a2.a, null);
-            var7 = var12.n(var11, 4, (DeserializationStrategy)var14, null);
-            var14 = var12.n(var11, 5, (DeserializationStrategy)var14, null);
+         var var13: Any;
+         if (var11.p()) {
+            var6 = var11.m(var10, 0);
+            var9 = var11.y(var10, 1, PollActionPresentation.Companion.serializer(), null);
+            var5 = var11.C(var10, 2);
+            var13 = a2.a;
+            var8 = var11.n(var10, 3, a2.a, null);
+            var7 = var11.n(var10, 4, (DeserializationStrategy)var13, null);
+            var13 = var11.n(var10, 5, (DeserializationStrategy)var13, null);
             var2 = 63;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var7 = null;
+            var6 = null;
             var9 = null;
             var8 = null;
-            var6 = null;
-            var14 = null;
+            var7 = null;
+            var13 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var12.o(var11);
+               val var4: Int = var11.o(var10);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var7 = var12.m(var11, 0);
+                     var6 = var11.m(var10, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var12.y(var11, 1, PollActionPresentation.Companion.serializer(), var9);
+                     var9 = var11.y(var10, 1, PollActionPresentation.Companion.serializer(), var9);
                      var2 |= 2;
                      break;
                   case 2:
-                     var5 = var12.C(var11, 2);
+                     var5 = var11.C(var10, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var8 = var12.n(var11, 3, a2.a, var8);
+                     var8 = var11.n(var10, 3, a2.a, var8);
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = (java.lang.String)var12.n(var11, 4, a2.a, var6);
+                     var7 = var11.n(var10, 4, a2.a, var7);
                      var2 |= 16;
                      break;
                   case 5:
-                     var14 = var12.n(var11, 5, a2.a, var14);
+                     var13 = var11.n(var10, 5, a2.a, var13);
                      var2 |= 32;
                      break;
                   default:
                      throw new n(var4);
                }
             }
-
-            var6 = (java.lang.String)var7;
-            var7 = var6;
          }
 
-         var12.c(var11);
+         var11.c(var10);
          return new PollAction(
-            var2, var6, var9 as PollActionPresentation, var5, var8 as java.lang.String, var7 as java.lang.String, var14 as java.lang.String, null
+            var2, var6, var9 as PollActionPresentation, var5, var8 as java.lang.String, var7 as java.lang.String, var13 as java.lang.String, null
          );
       }
 

@@ -20,22 +20,20 @@ internal object HistoricalProcessExitReason {
          var0 = s.h();
       } else {
          var0 = s.l(
-            new Pair[]{
-               w.a(6, "ANR"),
-               w.a(4, "CRASH"),
-               w.a(5, "CRASH_NATIVE"),
-               w.a(12, "DEPENDENCY_DIED"),
-               w.a(9, "EXCESSIVE_RESOURCE_USAGE"),
-               w.a(1, "EXIT_SELF"),
-               w.a(7, "INITIALIZATION_FAILURE"),
-               w.a(3, "LOW_MEMORY"),
-               w.a(13, "OTHER"),
-               w.a(8, "PERMISSION_CHANGE"),
-               w.a(2, "SIGNALED"),
-               w.a(0, "UNKNOWN"),
-               w.a(10, "USER_REQUESTED"),
-               w.a(11, "USER_STOPPED")
-            }
+            w.a(6, "ANR"),
+            w.a(4, "CRASH"),
+            w.a(5, "CRASH_NATIVE"),
+            w.a(12, "DEPENDENCY_DIED"),
+            w.a(9, "EXCESSIVE_RESOURCE_USAGE"),
+            w.a(1, "EXIT_SELF"),
+            w.a(7, "INITIALIZATION_FAILURE"),
+            w.a(3, "LOW_MEMORY"),
+            w.a(13, "OTHER"),
+            w.a(8, "PERMISSION_CHANGE"),
+            w.a(2, "SIGNALED"),
+            w.a(0, "UNKNOWN"),
+            w.a(10, "USER_REQUESTED"),
+            w.a(11, "USER_STOPPED")
          );
       }
 
@@ -132,14 +130,14 @@ internal object HistoricalProcessExitReason {
 
       public override fun toString(): String {
          val var1: java.lang.String = this.reason;
-         val var2: java.lang.String = this.description;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Reason(reason=");
-         var3.append(var1);
-         var3.append(", description=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.description;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Reason(reason=");
+         var2.append(var1);
+         var2.append(", description=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

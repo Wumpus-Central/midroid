@@ -19,9 +19,9 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
+import kotlin.jvm.internal.Ref$ObjectRef
 import kotlin.jvm.internal.h0
 import kotlin.jvm.internal.r
-import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
 
 public object CrashReporting {
@@ -29,13 +29,11 @@ public object CrashReporting {
    private const val TAG_BUILD_NUMBER: String = "buildNumber"
    public final val ignoreNetworkExceptionList: List<KClass<out Throwable>> =
       h.l(
-         new KClass[]{
-            h0.b(UnknownHostException.class),
-            h0.b(SocketTimeoutException.class),
-            h0.b(SocketException.class),
-            h0.b(ConnectException.class),
-            h0.b(SSLException.class)
-         }
+         h0.b(UnknownHostException.class),
+         h0.b(SocketTimeoutException.class),
+         h0.b(SocketException.class),
+         h0.b(ConnectException.class),
+         h0.b(SSLException.class)
       )
 
    public final var isCrashedLastRun: Boolean?
@@ -64,7 +62,7 @@ public object CrashReporting {
    }
 
    @JvmStatic
-   fun `init$lambda$0`(var0: ObjectRef, var1: java.lang.String, var2: Context, var3: Double, var5: SentryAndroidOptions) {
+   fun `init$lambda$0`(var0: Ref$ObjectRef, var1: java.lang.String, var2: Context, var3: Double, var5: SentryAndroidOptions) {
       r.h(var0, "$dsn");
       r.h(var1, "$releaseName");
       r.h(var2, "$context");
@@ -74,16 +72,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var6.getVersionCode());
       var5.setRelease(var1);
-      val var7: File = var2.getCacheDir();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var7);
-      var8.append("/sentry");
-      var5.setCacheDirPath(var8.toString());
+      val var8: File = var2.getCacheDir();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var8);
+      var7.append("/sentry");
+      var5.setCacheDirPath(var7.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("9cc2d943-45fc-4581-b3e9-db66beaeea49");
+      var5.setProguardUuid("a6468e06-d207-433c-b96b-bfb14d501dbf");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -172,7 +170,7 @@ public object CrashReporting {
             }
          }
 
-         val var7: ObjectRef = new ObjectRef();
+         val var7: Ref$ObjectRef = new Ref$ObjectRef();
          val var6: java.lang.String;
          if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
             var6 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
@@ -182,7 +180,7 @@ public object CrashReporting {
             var6 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
          }
 
-         var7.j = var6;
+         var7.j = (T)var6;
          r1.g(var1, new a(var7, var2, var1, this.getSampleRate(var1)));
          isCrashedLastRun = o3.u();
       }
@@ -192,5 +190,28 @@ public object CrashReporting {
       INFO,
       WARNING      @JvmStatic
       private CrashReporting.ErrorLevel[] $VALUES = $values();
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+
+      @JvmStatic
+      fun {
+         val var0: IntArray = new int[CrashReporting.ErrorLevel.values().length];
+
+         try {
+            var0[CrashReporting.ErrorLevel.INFO.ordinal()] = 1;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[CrashReporting.ErrorLevel.WARNING.ordinal()] = 2;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
+      }
    }
 }

@@ -4,7 +4,6 @@ import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import com.discord.chat.databinding.AudioPlayerViewBinding;
 
-// $VF: synthetic class
 public final class n implements AnimatorUpdateListener {
    public final AudioPlayerViewBinding a;
 

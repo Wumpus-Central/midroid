@@ -141,24 +141,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.source;
-      val var6: java.lang.String = this.unicodeEmoji;
+      val var5: java.lang.String = this.source;
+      val var4: java.lang.String = this.unicodeEmoji;
       val var3: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var4: java.lang.String = this.alt;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("RoleIcon(source=");
-      var5.append(var2);
-      var5.append(", unicodeEmoji=");
-      var5.append(var6);
-      var5.append(", name=");
-      var5.append(var3);
-      var5.append(", size=");
-      var5.append(var1);
-      var5.append(", alt=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.alt;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("RoleIcon(source=");
+      var6.append(var5);
+      var6.append(", unicodeEmoji=");
+      var6.append(var4);
+      var6.append(", name=");
+      var6.append(var3);
+      var6.append(", size=");
+      var6.append(var1);
+      var6.append(", alt=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : f0<RoleIcon> {
@@ -188,35 +188,33 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
 
       public open fun deserialize(decoder: Decoder): RoleIcon {
          r.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
          var var2: Int;
          var var3: Int;
+         var var6: Any;
          var var7: Any;
          var var8: Any;
-         val var9: Any;
          var var14: Any;
-         if (var11.p()) {
+         if (var12.p()) {
             var14 = a2.a;
-            var8 = var11.n(var10, 0, a2.a, null);
-            var7 = var11.n(var10, 1, (DeserializationStrategy)var14, null);
-            val var6: java.lang.String = var11.m(var10, 2);
-            var3 = var11.i(var10, 3);
-            var14 = var11.m(var10, 4);
+            var8 = var12.n(var11, 0, a2.a, null);
+            var14 = var12.n(var11, 1, (DeserializationStrategy)var14, null);
+            var6 = var12.m(var11, 2);
+            var3 = var12.i(var11, 3);
+            var7 = var12.m(var11, 4);
             var2 = 31;
-            var9 = var14;
-            var14 = var6;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var8 = null;
             var7 = null;
             var14 = null;
-            var var15: Any = null;
+            var6 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var11.o(var10);
+               val var5: Int = var12.o(var11);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -226,22 +224,22 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                                  throw new n(var5);
                               }
 
-                              var15 = var11.m(var10, 4);
+                              var6 = var12.m(var11, 4);
                               var2 |= 16;
                            } else {
-                              var3 = var11.i(var10, 3);
+                              var3 = var12.i(var11, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var14 = var11.m(var10, 2);
+                           var14 = var12.m(var11, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.n(var10, 1, a2.a, var7);
+                        var7 = var12.n(var11, 1, a2.a, var7);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.n(var10, 0, a2.a, var8);
+                     var8 = var12.n(var11, 0, a2.a, var8);
                      var2 |= 1;
                   }
                } else {
@@ -249,11 +247,13 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                }
             }
 
-            var9 = var15;
+            var6 = var14;
+            var7 = var6;
+            var14 = var7;
          }
 
-         var11.c(var10);
-         return new RoleIcon(var2, var8 as java.lang.String, var7 as java.lang.String, (java.lang.String)var14, var3, (java.lang.String)var9, null);
+         var12.c(var11);
+         return new RoleIcon(var2, var8 as java.lang.String, var14 as java.lang.String, (java.lang.String)var6, var3, (java.lang.String)var7, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleIcon) {

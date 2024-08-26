@@ -79,10 +79,10 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
          }
 
          public final void invoke() {
-            val var1: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
-            val var2: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
-            r.g(var2, "reactApplicationContext");
-            var1.emitModuleEvent(var2, new TimerEvent((int)this.$id));
+            val var2: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
+            val var1: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
+            r.g(var1, "reactApplicationContext");
+            var2.emitModuleEvent(var1, new TimerEvent((int)this.$id));
          }
       });
    }

@@ -30,10 +30,10 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
 
    public open fun getCurrentIcon(promise: Promise) {
       r.h(var1, "promise");
-      val var3: AppIconUtil = AppIconUtil.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var3.getCurrentAppIcon(var2).getId())}));
+      val var2: AppIconUtil = AppIconUtil.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "reactApplicationContext");
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var2.getCurrentAppIcon(var3).getId())}));
    }
 
    public open fun setIcon(id: String, promise: Promise) {

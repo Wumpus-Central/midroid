@@ -3,7 +3,6 @@ package com.discord.chat.presentation.root;
 import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 
-// $VF: synthetic class
 public final class a implements OnLayoutChangeListener {
    public final View j;
    public final ChatView k;

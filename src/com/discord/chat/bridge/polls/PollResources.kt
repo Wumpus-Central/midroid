@@ -103,18 +103,18 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.selectedIcon;
-      val var1: java.lang.String = this.checkmarkIcon;
-      val var4: java.util.Map = this.styles;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PollResources(selectedIcon=");
-      var2.append(var3);
-      var2.append(", checkmarkIcon=");
-      var2.append(var1);
-      var2.append(", styles=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = this.selectedIcon;
+      val var2: java.lang.String = this.checkmarkIcon;
+      val var1: java.util.Map = this.styles;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollResources(selectedIcon=");
+      var3.append(var4);
+      var3.append(", checkmarkIcon=");
+      var3.append(var2);
+      var3.append(", styles=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<PollResources> {
@@ -141,26 +141,26 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
 
       public open fun deserialize(decoder: Decoder): PollResources {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var7: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
-         val var11: java.lang.String;
+         var var6: java.lang.String;
+         var var10: Any;
          if (var5) {
-            var7 = var10.m(var9, 0);
-            var11 = var10.m(var9, 1);
-            var6 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), null);
+            var7 = var9.m(var8, 0);
+            var6 = var9.m(var8, 1);
+            var10 = var9.y(var8, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var6 = null;
-            var var12: Any = null;
+            var10 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -168,27 +168,24 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
                            throw new n(var4);
                         }
 
-                        var12 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), var12);
+                        var10 = var9.y(var8, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), var10);
                         var2 |= 4;
                      } else {
-                        var6 = var10.m(var9, 1);
+                        var6 = var9.m(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.m(var9, 0);
+                     var7 = var9.m(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = var12;
-            var11 = (java.lang.String)var6;
          }
 
-         var10.c(var9);
-         return new PollResources(var2, var7, var11, var6 as java.util.Map, null);
+         var9.c(var8);
+         return new PollResources(var2, var7, var6, var10 as java.util.Map, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollResources) {

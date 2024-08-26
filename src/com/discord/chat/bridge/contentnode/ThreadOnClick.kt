@@ -70,13 +70,13 @@ public data class ThreadOnClick(action: String, threadId: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.action;
-      val var3: java.lang.String = this.threadId;
+      val var3: java.lang.String = this.action;
+      val var1: java.lang.String = this.threadId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ThreadOnClick(action=");
-      var2.append(var1);
-      var2.append(", threadId=");
       var2.append(var3);
+      var2.append(", threadId=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

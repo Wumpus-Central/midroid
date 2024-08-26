@@ -97,9 +97,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       r.g(var5, "skuIds.toArrayList()");
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 

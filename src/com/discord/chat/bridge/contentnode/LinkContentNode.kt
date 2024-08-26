@@ -189,18 +189,18 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.content;
-      val var2: java.lang.String = this.target;
-      val var1: LinkContext = this.context;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LinkContentNode(content=");
-      var4.append(var3);
-      var4.append(", target=");
-      var4.append(var2);
-      var4.append(", context=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.util.List = this.content;
+      val var1: java.lang.String = this.target;
+      val var4: LinkContext = this.context;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LinkContentNode(content=");
+      var3.append(var2);
+      var3.append(", target=");
+      var3.append(var1);
+      var3.append(", context=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<LinkContentNode> {
@@ -224,9 +224,9 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: xk.f = new xk.f(ContentNodeSerializer.INSTANCE);
-         val var2: a2 = a2.a;
-         return new KSerializer[]{var1, a2.a, a.u(LinkContext.$serializer.INSTANCE), var2, xk.h.a};
+         val var2: xk.f = new xk.f(ContentNodeSerializer.INSTANCE);
+         val var1: a2 = a2.a;
+         return new KSerializer[]{var2, a2.a, a.u(LinkContext.$serializer.INSTANCE), var1, xk.h.a};
       }
 
       public open fun deserialize(decoder: Decoder): LinkContentNode {

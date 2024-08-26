@@ -14,7 +14,7 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    init {
       r.h(var1, "message");
       r.h(var2, "messageContext");
-      super(var1.getId-3Eiw7ao(), null);
+      super(var1.getId_3Eiw7ao(), null);
       this.message = var1;
       this.messageContext = var2;
       this.backgroundHighlight = var3;
@@ -76,17 +76,17 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun toString(): String {
-      val var1: Message = this.message;
-      val var4: MessageContext = this.messageContext;
-      val var3: BackgroundHighlight = this.backgroundHighlight;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SystemMessageItem(message=");
-      var2.append(var1);
-      var2.append(", messageContext=");
-      var2.append(var4);
-      var2.append(", backgroundHighlight=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: Message = this.message;
+      val var3: MessageContext = this.messageContext;
+      val var1: BackgroundHighlight = this.backgroundHighlight;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SystemMessageItem(message=");
+      var4.append(var2);
+      var4.append(", messageContext=");
+      var4.append(var3);
+      var4.append(", backgroundHighlight=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

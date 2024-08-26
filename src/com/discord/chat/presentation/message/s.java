@@ -6,7 +6,6 @@ import com.discord.chat.bridge.MediaType;
 import com.discord.chat.bridge.Message;
 import kotlin.jvm.functions.Function6;
 
-// $VF: synthetic class
 public final class s implements OnLongClickListener {
    public final Function6 j;
    public final Message k;
@@ -14,6 +13,6 @@ public final class s implements OnLongClickListener {
    public final MediaType m;
 
    public final boolean onLongClick(View var1) {
-      return MessageView.e(this.j, this.k, this.l, this.m, var1);
+      return MessageView.d(this.j, this.k, this.l, this.m, var1);
    }
 }

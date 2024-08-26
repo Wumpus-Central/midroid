@@ -1,9 +1,12 @@
 package com.discord.chat.presentation.list
 
 import android.view.View
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate
 import com.discord.chat.presentation.list.item.ChatListItem
+import com.discord.chat.presentation.message.MessageAccessoriesAdapter
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegatesManager
 import kotlin.jvm.internal.r
@@ -19,13 +22,22 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
       r.h(var1, "eventHandlerProvider");
       r.h(var2, "messageComponentProvider");
       super();
-      val var4: AccessoriesViewPool = new AccessoriesViewPool();
-      this.messageAccessoriesRecycledViewPool = var4;
+      val var3: AccessoriesViewPool = new AccessoriesViewPool();
+      this.messageAccessoriesRecycledViewPool = var3;
       this.chatListItems = h.i();
-      val var3: AdapterDelegatesManager = this.delegatesManager;
+      val var4: AdapterDelegatesManager = this.delegatesManager;
       r.g(this.delegatesManager, "delegatesManager");
-      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var3, var1, var2, var4);
+      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var4, var1, var2, var3);
       this.setHasStableIds(true);
+   }
+
+   public fun fillAdapter(recyclerView: RecyclerView) {
+      r.h(var1, "recyclerView");
+      val var2: java.util.Map = this.delegateViewTypes;
+      val var3: RecycledViewPool = var1.getRecycledViewPool();
+      r.g(var3, "recyclerView.recycledViewPool");
+      ChatListViewFactoryKt.fillChatList(var1, this, var2, var3);
+      ChatListViewFactoryKt.fillAccessories(var1, new MessageAccessoriesAdapter(null, 1, null), this.messageAccessoriesRecycledViewPool);
    }
 
    public override fun getChatListItem(position: Int): ChatListItem? {

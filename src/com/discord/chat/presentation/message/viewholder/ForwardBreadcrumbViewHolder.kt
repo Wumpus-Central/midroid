@@ -17,6 +17,6 @@ public class ForwardBreadcrumbViewHolder(breadcrumbView: ForwardBreadcrumbView) 
    public fun bind(accessory: ForwardBreadcrumbMessageAccessory, onTapForwardFooter: (Int, ChannelId, MessageId) -> Unit) {
       kotlin.jvm.internal.r.h(var1, "accessory");
       kotlin.jvm.internal.r.h(var2, "onTapForwardFooter");
-      this.breadcrumbView.configure-JjTCmh4(var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var1.getForwardInfo(), var2);
+      this.breadcrumbView.configure_JjTCmh4(var1.getChannelId_o4g7jtM(), var1.getMessageId_3Eiw7ao(), var1.getForwardInfo(), var2);
    }
 }

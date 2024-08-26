@@ -68,10 +68,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
          if (var5 != 2) {
             if (var5 == 3) {
                val var15: RectF = this.pathRect;
-               val var3: Float = this.height;
-               val var2: Float = this.shapeHeight;
+               val var4: Float = this.height;
+               val var3: Float = this.shapeHeight;
                this.pathRect.top = (this.height - this.shapeHeight) / 2;
-               var15.bottom = var3 - (var3 - var2) / 2;
+               var15.bottom = var4 - (var4 - var3) / 2;
             }
          } else {
             val var16: RectF = this.pathRect;
@@ -91,9 +91,9 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             if (var5 == 3) {
                val var19: RectF = this.pathRect;
                val var12: Float = this.width;
-               val var9: Float = this.shapeWidth;
+               val var13: Float = this.shapeWidth;
                this.pathRect.left = (this.width - this.shapeWidth) / 2;
-               var19.right = var12 - (var12 - var9) / 2;
+               var19.right = var12 - (var12 - var13) / 2;
             }
          } else {
             val var20: RectF = this.pathRect;
@@ -255,6 +255,54 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             var3.append(var1);
             throw new IllegalArgumentException(var3.toString());
          }
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+      @JvmStatic
+      public int[] $EnumSwitchMapping$1;
+
+      @JvmStatic
+      fun {
+         var var0: IntArray = new int[AnimatableUnderlay.ClipDirectionY.values().length];
+
+         try {
+            var0[AnimatableUnderlay.ClipDirectionY.FROM_TOP.ordinal()] = 1;
+         } catch (var7: NoSuchFieldError) {
+         }
+
+         try {
+            var0[AnimatableUnderlay.ClipDirectionY.FROM_BOTTOM.ordinal()] = 2;
+         } catch (var6: NoSuchFieldError) {
+         }
+
+         try {
+            var0[AnimatableUnderlay.ClipDirectionY.CENTERED.ordinal()] = 3;
+         } catch (var5: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var0;
+         var0 = new int[AnimatableUnderlay.ClipDirectionX.values().length];
+
+         try {
+            var0[AnimatableUnderlay.ClipDirectionX.FROM_LEFT.ordinal()] = 1;
+         } catch (var4: NoSuchFieldError) {
+         }
+
+         try {
+            var0[AnimatableUnderlay.ClipDirectionX.FROM_RIGHT.ordinal()] = 2;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         try {
+            var0[AnimatableUnderlay.ClipDirectionX.CENTERED.ordinal()] = 3;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$1 = var0;
       }
    }
 }

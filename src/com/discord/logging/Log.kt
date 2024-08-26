@@ -3,7 +3,6 @@ package com.discord.logging
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 import timber.log.a
-import timber.log.a.b
 
 public object Log {
    @JvmStatic
@@ -14,9 +13,9 @@ public object Log {
    public fun d(tag: String, message: String, exception: Throwable? = null) {
       r.h(var1, "tag");
       r.h(var2, "message");
-      val var4: b = a.a;
+      val var4: a.b = a.a;
       a.a.b(var1);
-      var4.d(var3, var2, new Object[0]);
+      var4.d(var3, var2);
    }
 
    public fun d(tag: KClass<*>, message: String, exception: Throwable? = null) {
@@ -30,9 +29,9 @@ public object Log {
    public fun e(tag: String, message: String, exception: Throwable? = null) {
       r.h(var1, "tag");
       r.h(var2, "message");
-      val var4: b = a.a;
+      val var4: a.b = a.a;
       a.a.b(var1);
-      var4.e(var3, var2, new Object[0]);
+      var4.e(var3, var2);
    }
 
    public fun e(tag: KClass<*>, message: String, exception: Throwable? = null) {
@@ -46,9 +45,9 @@ public object Log {
    public fun i(tag: String, message: String, exception: Throwable? = null) {
       r.h(var1, "tag");
       r.h(var2, "message");
-      val var4: b = a.a;
+      val var4: a.b = a.a;
       a.a.b(var1);
-      var4.i(var3, var2, new Object[0]);
+      var4.i(var3, var2);
    }
 
    public fun i(tag: KClass<*>, message: String, exception: Throwable? = null) {
@@ -62,9 +61,9 @@ public object Log {
    public fun w(tag: String, message: String, exception: Throwable? = null) {
       r.h(var1, "tag");
       r.h(var2, "message");
-      val var4: b = a.a;
+      val var4: a.b = a.a;
       a.a.b(var1);
-      var4.w(var3, var2, new Object[0]);
+      var4.w(var3, var2);
    }
 
    public fun w(tag: KClass<*>, message: String, exception: Throwable? = null) {

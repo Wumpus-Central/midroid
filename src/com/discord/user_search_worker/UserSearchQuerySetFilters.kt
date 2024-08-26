@@ -132,18 +132,18 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.guild;
-      val var4: java.lang.Boolean = this.friends;
-      val var2: java.lang.Boolean = this.strict;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UserSearchQuerySetFilters(guild=");
-      var3.append(var1);
-      var3.append(", friends=");
-      var3.append(var4);
-      var3.append(", strict=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.guild;
+      val var2: java.lang.Boolean = this.friends;
+      val var1: java.lang.Boolean = this.strict;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSearchQuerySetFilters(guild=");
+      var4.append(var3);
+      var4.append(", friends=");
+      var4.append(var2);
+      var4.append(", strict=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<UserSearchQuerySetFilters> {
@@ -165,9 +165,9 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = a.u(a2.a);
-         val var2: h = h.a;
-         return new KSerializer[]{var1, a.u(h.a), a.u(var2)};
+         val var2: KSerializer = a.u(a2.a);
+         val var1: h = h.a;
+         return new KSerializer[]{var2, a.u(h.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetFilters {

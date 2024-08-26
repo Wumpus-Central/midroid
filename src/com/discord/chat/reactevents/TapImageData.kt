@@ -117,8 +117,8 @@ public data class TapImageData(id: String,
 
    public override fun hashCode(): Int {
       val var7: Int = this.id.hashCode();
-      val var8: Int = Integer.hashCode(this.index);
-      val var6: Int = this.type.hashCode();
+      val var6: Int = Integer.hashCode(this.index);
+      val var8: Int = this.type.hashCode();
       val var5: Int = this.layout.hashCode();
       var var4: Int = 0;
       val var1: Int;
@@ -146,7 +146,7 @@ public data class TapImageData(id: String,
          var4 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((((var7 * 31 + var8) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((((var7 * 31 + var6) * 31 + var8) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public open fun serialize(): WritableMap {
@@ -165,33 +165,33 @@ public data class TapImageData(id: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var6: java.lang.String = this.id;
       val var1: Int = this.index;
-      val var8: java.lang.String = this.type;
-      val var6: TapImageData.Layout = this.layout;
-      val var2: java.lang.Double = this.portal;
-      val var4: Int = this.embedIndex;
-      val var9: java.lang.String = this.componentId;
-      val var5: Int = this.componentMediaIndex;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("TapImageData(id=");
-      var7.append(var3);
-      var7.append(", index=");
-      var7.append(var1);
-      var7.append(", type=");
-      var7.append(var8);
-      var7.append(", layout=");
-      var7.append(var6);
-      var7.append(", portal=");
-      var7.append(var2);
-      var7.append(", embedIndex=");
-      var7.append(var4);
-      var7.append(", componentId=");
-      var7.append(var9);
-      var7.append(", componentMediaIndex=");
-      var7.append(var5);
-      var7.append(")");
-      return var7.toString();
+      val var2: java.lang.String = this.type;
+      val var8: TapImageData.Layout = this.layout;
+      val var4: java.lang.Double = this.portal;
+      val var3: Int = this.embedIndex;
+      val var5: java.lang.String = this.componentId;
+      val var7: Int = this.componentMediaIndex;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("TapImageData(id=");
+      var9.append(var6);
+      var9.append(", index=");
+      var9.append(var1);
+      var9.append(", type=");
+      var9.append(var2);
+      var9.append(", layout=");
+      var9.append(var8);
+      var9.append(", portal=");
+      var9.append(var4);
+      var9.append(", embedIndex=");
+      var9.append(var3);
+      var9.append(", componentId=");
+      var9.append(var5);
+      var9.append(", componentMediaIndex=");
+      var9.append(var7);
+      var9.append(")");
+      return var9.toString();
    }
 
    public data class Layout(width: Int, height: Int, x: Int, y: Int, resizeMode: ViewResizeMode) {
@@ -269,24 +269,24 @@ public data class TapImageData(id: String,
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var3: Int = this.height;
-         val var1: Int = this.x;
-         val var4: Int = this.y;
-         val var6: ViewResizeMode = this.resizeMode;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Layout(width=");
-         var5.append(var2);
-         var5.append(", height=");
-         var5.append(var3);
-         var5.append(", x=");
-         var5.append(var1);
-         var5.append(", y=");
-         var5.append(var4);
-         var5.append(", resizeMode=");
-         var5.append(var6);
-         var5.append(")");
-         return var5.toString();
+         val var1: Int = this.width;
+         val var2: Int = this.height;
+         val var4: Int = this.x;
+         val var3: Int = this.y;
+         val var5: ViewResizeMode = this.resizeMode;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Layout(width=");
+         var6.append(var1);
+         var6.append(", height=");
+         var6.append(var2);
+         var6.append(", x=");
+         var6.append(var4);
+         var6.append(", y=");
+         var6.append(var3);
+         var6.append(", resizeMode=");
+         var6.append(var5);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

@@ -24,10 +24,10 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
       r.h(var1, "reactContext");
-      val var2: ChatView = new ChatView(var1);
-      val var3: Context = var2.getContext();
-      r.g(var3, "chatView.context");
-      var2.setEventHandler(new ChatViewEventHandler(var3, this.reactEvents, new Function0<Integer>(var2) {
+      val var3: ChatView = new ChatView(var1);
+      val var2: Context = var3.getContext();
+      r.g(var2, "chatView.context");
+      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new Function0<Integer>(var3) {
          final ChatView $chatView;
 
          {
@@ -39,7 +39,7 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
             return this.$chatView.getId();
          }
       }));
-      return var2;
+      return var3;
    }
 
    protected open fun getDelegate(): DCDChatManagerDelegate<ChatView, ChatViewManager> {

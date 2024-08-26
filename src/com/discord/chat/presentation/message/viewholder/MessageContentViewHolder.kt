@@ -65,9 +65,9 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       val var25: Context = this.messageContentView.getContext();
       kotlin.jvm.internal.r.g(var25, "messageContentView.context");
       this.messageContentView
-         .setMessageContent-2ZcwkLU(
+         .setMessageContent_2ZcwkLU(
             var1.getMessageContent(),
-            var1.getMessageId-3Eiw7ao(),
+            var1.getMessageId_3Eiw7ao(),
             var1.getShouldAnimateEmoji(),
             var1.getShouldShowLinkDecorations(),
             var1.getShouldShowRoleDot(),
@@ -84,7 +84,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
 
                public final void invoke(LinkContentNode var1) {
                   kotlin.jvm.internal.r.h(var1, "node");
-                  this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageContentItem.getMessageId-3Eiw7ao()), var1);
+                  this.$onLinkClicked.invoke(MessageId.box_impl(this.$messageContentItem.getMessageId_3Eiw7ao()), var1);
                }
             },
             var3,

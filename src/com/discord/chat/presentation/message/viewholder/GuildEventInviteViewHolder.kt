@@ -38,27 +38,27 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    fun `bind$lambda$3$lambda$2$lambda$0`(var0: GuildEventInviteViewHolder, var1: GuildEventInviteMessageAccessory, var2: View) {
       kotlin.jvm.internal.r.h(var0, "this$0");
       kotlin.jvm.internal.r.h(var1, "$inviteAccessory");
-      var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), java.lang.Boolean.TRUE, java.lang.Boolean.FALSE);
+      var0.eventHandler.onTapInviteEmbed_AFFcxXc(var1.getMessageId_3Eiw7ao(), var1.getCodedLinkIndex(), java.lang.Boolean.TRUE, java.lang.Boolean.FALSE);
    }
 
    @JvmStatic
    fun `bind$lambda$3$lambda$2$lambda$1`(var0: GuildEventInviteViewHolder, var1: GuildEventInviteMessageAccessory, var2: View) {
       kotlin.jvm.internal.r.h(var0, "this$0");
       kotlin.jvm.internal.r.h(var1, "$inviteAccessory");
-      var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), java.lang.Boolean.FALSE, java.lang.Boolean.TRUE);
+      var0.eventHandler.onTapInviteEmbed_AFFcxXc(var1.getMessageId_3Eiw7ao(), var1.getCodedLinkIndex(), java.lang.Boolean.FALSE, java.lang.Boolean.TRUE);
    }
 
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "inviteAccessory");
-      val var19: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var17: GuildEventInviteView = this.guildEventInviteView;
-      this.guildEventInviteView.setHeader(var19.getHeaderIcon(), var19.getHeaderText(), var19.getHeaderColor());
-      var17.setCreatorAvatar(var19.getCreatorAvatar());
-      var17.setBadge(var19.getBadgeIcon(), var19.getBadgeCount());
-      var17.setTitle(var19.getTitleText(), var19.getTitleColor());
-      var17.setDescription-nMRbdFE(
-         var19.getContent(),
-         var1.getMessageId-3Eiw7ao(),
+      val var9: GuildEventInviteEmbedImpl = var1.getInvite();
+      val var6: GuildEventInviteView = this.guildEventInviteView;
+      this.guildEventInviteView.setHeader(var9.getHeaderIcon(), var9.getHeaderText(), var9.getHeaderColor());
+      var6.setCreatorAvatar(var9.getCreatorAvatar());
+      var6.setBadge(var9.getBadgeIcon(), var9.getBadgeCount());
+      var6.setTitle(var9.getTitleText(), var9.getTitleColor());
+      var6.setDescription_nMRbdFE(
+         var9.getContent(),
+         var1.getMessageId_3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
          var1.getShouldShowRoleDot(),
@@ -75,10 +75,10 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
                );
             }
 
-            public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
+            public final void invoke_ntcYbpo(java.lang.String var1, LinkContentNode var2) {
                kotlin.jvm.internal.r.h(var1, "p0");
                kotlin.jvm.internal.r.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
+               (super.receiver as ChatEventHandler).onLinkClicked_ntcYbpo(var1, var2);
             }
          },
          new Function1<LinkContentNode, Unit>(this.eventHandler) {
@@ -220,22 +220,22 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
                super(1, var1, ChatEventHandler::class.java, "onTapSeeMore", "onTapSeeMore-1xi1bu0(Ljava/lang/String;)V", 0);
             }
 
-            public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
+            public final void invoke_1xi1bu0(java.lang.String var1) {
                kotlin.jvm.internal.r.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
+               (super.receiver as ChatEventHandler).onTapSeeMore_1xi1bu0(var1);
             }
          }
       );
-      var17.setGuild(var19.getGuildName(), var19.getGuildIcon());
-      var17.setChannel(var19.getChannelIcon(), var19.getChannelName());
-      var17.setAcceptButton(
-         var19.getAcceptLabelIcon(),
-         var19.getAcceptLabelText(),
-         var19.getAcceptLabelColor(),
-         var19.getAcceptLabelBorderColor(),
-         var19.getAcceptLabelBackgroundColor(),
+      var6.setGuild(var9.getGuildName(), var9.getGuildIcon());
+      var6.setChannel(var9.getChannelIcon(), var9.getChannelName());
+      var6.setAcceptButton(
+         var9.getAcceptLabelIcon(),
+         var9.getAcceptLabelText(),
+         var9.getAcceptLabelColor(),
+         var9.getAcceptLabelBorderColor(),
+         var9.getAcceptLabelBackgroundColor(),
          new m(this, var1)
       );
-      var17.setSecondaryButton(var19.getSecondaryActionIcon(), new n(this, var1));
+      var6.setSecondaryButton(var9.getSecondaryActionIcon(), new n(this, var1));
    }
 }

@@ -43,18 +43,18 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun isEnabled(): Boolean {
-      val var2: JSITraceCache = JSITraceCache.INSTANCE;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      return var2.isEnabled(var1);
+      val var1: JSITraceCache = JSITraceCache.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      return var1.isEnabled(var2);
    }
 
    @ReactMethod
    public fun setEnabled(enabled: Boolean) {
-      val var2: JSITraceCache = JSITraceCache.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
-      var2.setEnabled(var3, var1);
+      val var3: JSITraceCache = JSITraceCache.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      var3.setEnabled(var2, var1);
    }
 
    public companion object {

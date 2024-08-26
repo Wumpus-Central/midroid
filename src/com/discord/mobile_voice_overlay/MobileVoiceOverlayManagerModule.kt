@@ -45,10 +45,10 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
 
    public open fun enableOverlay(promise: Promise) {
       r.h(var1, "promise");
-      val var3: WindowUtils = WindowUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      if (var3.canDrawOverlay(var2)) {
+      val var2: WindowUtils = WindowUtils.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "reactApplicationContext");
+      if (var2.canDrawOverlay(var3)) {
          var1.resolve(java.lang.Boolean.TRUE);
       } else {
          val var4: ActivityEventListener = new ActivityEventListener(this, var1) {
@@ -63,11 +63,11 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
             public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
                if (var2 == 234780) {
                   MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
-                  val var5: Promise = this.$promise;
-                  val var7: WindowUtils = WindowUtils.INSTANCE;
-                  val var6: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
-                  r.g(var6, "reactApplicationContext");
-                  var5.resolve(var7.canDrawOverlay(var6));
+                  val var6: Promise = this.$promise;
+                  val var5: WindowUtils = WindowUtils.INSTANCE;
+                  val var7: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
+                  r.g(var7, "reactApplicationContext");
+                  var6.resolve(var5.canDrawOverlay(var7));
                }
             }
 

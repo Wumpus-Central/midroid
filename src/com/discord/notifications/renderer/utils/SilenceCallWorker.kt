@@ -34,7 +34,7 @@ public class SilenceCallWorker(context: Context, workerParams: WorkerParameters)
             r.g(var6, "success()");
             return var6;
          } else {
-            var var3: Context = this.getApplicationContext();
+            val var3: Context = this.getApplicationContext();
             r.g(var3, "applicationContext");
             val var9: Notification = NotificationManagerUtilsKt.getActiveNotification(var3, var1);
             if (var9 == null) {
@@ -42,11 +42,11 @@ public class SilenceCallWorker(context: Context, workerParams: WorkerParameters)
                r.g(var5, "success()");
                return var5;
             } else {
-               val var8: Builder = new Builder(this.getApplicationContext(), var9).q(var2);
-               r.g(var8, "Builder(applicationConte…Id(notificationChannelId)");
-               var3 = this.getApplicationContext();
-               r.g(var3, "applicationContext");
-               NotificationManagerUtilsKt.notify$default(NotificationManagerUtilsKt.getNotificationManagerCompat(var3), var1, var8, 0, 4, null);
+               val var10: Builder = new Builder(this.getApplicationContext(), var9).q(var2);
+               r.g(var10, "Builder(applicationConte…Id(notificationChannelId)");
+               val var8: Context = this.getApplicationContext();
+               r.g(var8, "applicationContext");
+               NotificationManagerUtilsKt.notify$default(NotificationManagerUtilsKt.getNotificationManagerCompat(var8), var1, var10, 0, 4, null);
                val var4: Result = Result.c();
                r.g(var4, "success()");
                return var4;

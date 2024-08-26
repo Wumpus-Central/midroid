@@ -15,7 +15,6 @@ import uk.f
 import uk.n
 import xk.f0
 import xk.m0
-import xk.f0.a
 
 @f
 internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
@@ -86,7 +85,7 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
          descriptor = var1;
       }
 
-      public open fun childSerializers(): Array<KSerializer<*>> {
+      public override fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{m0.a};
       }
 
@@ -132,8 +131,8 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return a.a(this);
+      override fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return f0.a.a(this);
       }
    }
 

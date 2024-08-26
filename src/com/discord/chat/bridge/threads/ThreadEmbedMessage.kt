@@ -56,12 +56,12 @@ public data class ThreadEmbedMessage(message: Message) {
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ThreadEmbedMessage(message=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: Message = this.message;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThreadEmbedMessage(message=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<ThreadEmbedMessage> {

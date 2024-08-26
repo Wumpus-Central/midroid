@@ -10,6 +10,7 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
 import uk.n
+import vk.a
 import xk.f0
 
 @f
@@ -37,7 +38,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       }
 
       if (var3) {
-         var1.m(var2, 0, new xk.f<>(EmbedField.$serializer.INSTANCE), var0.fields);
+         var1.m(var2, 0, new xk.f(EmbedField.$serializer.INSTANCE), var0.fields);
       }
    }
 
@@ -95,8 +96,8 @@ public data class Embed(fields: List<EmbedField>? = null) {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{vk.a.u(new xk.f<>(EmbedField.$serializer.INSTANCE))};
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{a.u(new xk.f(EmbedField.$serializer.INSTANCE))};
       }
 
       public open fun deserialize(decoder: Decoder): Embed {
@@ -108,7 +109,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
          var var3: Boolean = true;
          var var8: Any;
          if (var5) {
-            var8 = var7.n(var6, 0, new xk.f<>(EmbedField.$serializer.INSTANCE), null);
+            var8 = var7.n(var6, 0, new xk.f(EmbedField.$serializer.INSTANCE), null);
          } else {
             var2 = 0;
             var8 = null;
@@ -120,7 +121,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.n(var6, 0, new xk.f<>(EmbedField.$serializer.INSTANCE), (java.util.List<? extends EmbedField>)var8);
+                  var8 = var7.n(var6, 0, new xk.f(EmbedField.$serializer.INSTANCE), var8);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -141,8 +142,8 @@ public data class Embed(fields: List<EmbedField>? = null) {
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return xk.f0.a.a(this);
       }
    }
 

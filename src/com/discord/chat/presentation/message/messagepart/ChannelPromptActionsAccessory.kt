@@ -8,7 +8,7 @@ public data class ChannelPromptActionsAccessory(message: Message) : MessageAcces
 
    init {
       r.h(var1, "message");
-      super(var1.getId-3Eiw7ao(), "channel deadchat prompt actions", false, 4, null);
+      super(var1.getId_3Eiw7ao(), "channel deadchat prompt actions", false, 4, null);
       this.message = var1;
    }
 

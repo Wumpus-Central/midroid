@@ -111,36 +111,36 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = java.lang.Long.hashCode(this.id);
-      val var5: Int = this.alt.hashCode();
-      val var4: Int = this.src.hashCode();
-      val var3: Int = this.frozenSrc.hashCode();
+      val var5: Int = java.lang.Long.hashCode(this.id);
+      val var3: Int = this.alt.hashCode();
+      val var6: Int = this.src.hashCode();
+      val var4: Int = this.frozenSrc.hashCode();
       val var2: Byte = this.getJumboable();
       var var1: Byte = var2;
       if (var2 != 0) {
          var1 = 1;
       }
 
-      return (((var6 * 31 + var5) * 31 + var4) * 31 + var3) * 31 + var1;
+      return (((var5 * 31 + var3) * 31 + var6) * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: Long = this.id;
-      val var5: java.lang.String = this.alt;
+      val var1: Long = this.id;
+      val var6: java.lang.String = this.alt;
       val var7: java.lang.String = this.src;
-      val var6: java.lang.String = this.frozenSrc;
-      val var1: Boolean = this.getJumboable();
+      val var5: java.lang.String = this.frozenSrc;
+      val var3: Boolean = this.getJumboable();
       val var4: StringBuilder = new StringBuilder();
       var4.append("CustomEmojiContentNode(id=");
-      var4.append(var2);
+      var4.append(var1);
       var4.append(", alt=");
-      var4.append(var5);
+      var4.append(var6);
       var4.append(", src=");
       var4.append(var7);
       var4.append(", frozenSrc=");
-      var4.append(var6);
+      var4.append(var5);
       var4.append(", jumboable=");
-      var4.append(var1);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
@@ -229,8 +229,8 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
                }
             }
 
-            var13 = var8;
             var8 = var14;
+            var13 = var8;
          }
 
          var12.c(var11);

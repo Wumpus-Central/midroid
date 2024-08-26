@@ -5,7 +5,6 @@ import android.view.View.OnClickListener;
 import com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory;
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder;
 
-// $VF: synthetic class
 public final class a implements OnClickListener {
    public final AttachmentMediaMosaicAdapter j;
    public final ImageAttachmentMessageAccessory k;

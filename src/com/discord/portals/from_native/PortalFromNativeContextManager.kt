@@ -66,33 +66,33 @@ public object PortalFromNativeContextManager {
 
    public fun registerView(portal: Double, portalView: FrameLayout) {
       r.h(var3, "portalView");
-      val var4: PortalFromNativeContext = portalContextMap.get(var1);
-      if (var4 != null) {
-         val var5: View = var4.getView().get();
-         if (var5 != null) {
-            r.g(var5, "context.view.get() ?: return@let");
-            var4.getRemoveViewFromParent().invoke(var5);
-            var3.addView(var5);
+      val var5: PortalFromNativeContext = portalContextMap.get(var1);
+      if (var5 != null) {
+         val var4: View = var5.getView().get();
+         if (var4 != null) {
+            r.g(var4, "context.view.get() ?: return@let");
+            var5.getRemoveViewFromParent().invoke(var4);
+            var3.addView(var4);
             ViewMeasureExtensionsKt.measureAndLayout(var3);
-            var4.getOnViewAddedToPortal().invoke(var5);
+            var5.getOnViewAddedToPortal().invoke(var4);
             _portalContextIdsFlow.setValue(PortalFromNativeContextManager.Event.PortalRegistered.INSTANCE);
          }
       }
    }
 
    public fun unregisterView(portal: Double) {
-      val var4: PortalFromNativeContext = portalContextMap.remove(var1);
-      if (var4 != null) {
+      val var3: PortalFromNativeContext = portalContextMap.remove(var1);
+      if (var3 != null) {
          _portalContextIdsFlow.setValue(null);
-         val var3: View = var4.getView().get();
-         if (var3 == null) {
+         val var4: View = var3.getView().get();
+         if (var4 == null) {
             return;
          }
 
-         r.g(var3, "context.view.get() ?: return");
-         ViewRemoveFromParentKt.removeFromParent(var3);
-         var4.getOnViewRemovedFromPortal().invoke(var3);
-         var4.getReturnViewToParent().invoke(var3);
+         r.g(var4, "context.view.get() ?: return");
+         ViewRemoveFromParentKt.removeFromParent(var4);
+         var3.getOnViewRemovedFromPortal().invoke(var4);
+         var3.getReturnViewToParent().invoke(var4);
       }
    }
 

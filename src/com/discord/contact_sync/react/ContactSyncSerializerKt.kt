@@ -78,7 +78,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       val var3: java.util.Map = ContactSyncProvider.INSTANCE.getContactsMap(var0);
       var10 = Json.d;
       Json.d.a();
-      var11 = var10.c(new r0(a2.a, ContactSyncBlobEntry.$serializer.INSTANCE), var3);
+      var11 = var10.c(new r0<>(a2.a, ContactSyncBlobEntry.$serializer.INSTANCE), var3);
       val var4: java.util.Collection = var3.values();
       var12 = new ArrayList(h.t(var4, 10));
       var6 = var4.iterator();
@@ -102,7 +102,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    try {
       var10.a();
-      var1.invoke(new Object[]{null, var11, var10.c(new f(ContactSyncPayloadEntry.$serializer.INSTANCE), var12)});
+      var1.invoke(new Object[]{null, var11, var10.c(new f<>(ContactSyncPayloadEntry.$serializer.INSTANCE), var12)});
    } catch (var7: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission(NativePermissionStatus.DENIED.name()), null, null});
    }

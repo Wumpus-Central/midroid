@@ -425,39 +425,39 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var10: Int = this.border;
+      val var5: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var8: Int = this.fill;
-      val var3: Int = this.label;
+      val var10: Int = this.fill;
+      val var8: Int = this.label;
       val var1: Float = this.opacity;
-      val var4: Int = this.answerBackground;
-      val var5: Int = this.answerFill;
-      val var9: PollRadioStyle = this.radioStyle;
-      val var7: Int = this.radioBackground;
-      val var6: Int = this.radioForeground;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("PollStyleSet(border=");
-      var11.append(var10);
-      var11.append(", borderWidth=");
-      var11.append(var2);
-      var11.append(", fill=");
-      var11.append(var8);
-      var11.append(", label=");
-      var11.append(var3);
-      var11.append(", opacity=");
-      var11.append(var1);
-      var11.append(", answerBackground=");
-      var11.append(var4);
-      var11.append(", answerFill=");
-      var11.append(var5);
-      var11.append(", radioStyle=");
-      var11.append(var9);
-      var11.append(", radioBackground=");
-      var11.append(var7);
-      var11.append(", radioForeground=");
-      var11.append(var6);
-      var11.append(")");
-      return var11.toString();
+      val var11: Int = this.answerBackground;
+      val var3: Int = this.answerFill;
+      val var6: PollRadioStyle = this.radioStyle;
+      val var4: Int = this.radioBackground;
+      val var9: Int = this.radioForeground;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("PollStyleSet(border=");
+      var7.append(var5);
+      var7.append(", borderWidth=");
+      var7.append(var2);
+      var7.append(", fill=");
+      var7.append(var10);
+      var7.append(", label=");
+      var7.append(var8);
+      var7.append(", opacity=");
+      var7.append(var1);
+      var7.append(", answerBackground=");
+      var7.append(var11);
+      var7.append(", answerFill=");
+      var7.append(var3);
+      var7.append(", radioStyle=");
+      var7.append(var6);
+      var7.append(", radioBackground=");
+      var7.append(var4);
+      var7.append(", radioForeground=");
+      var7.append(var9);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : f0<PollStyleSet> {
@@ -507,22 +507,22 @@ public data class PollStyleSet(border: Int? = null,
          var var14: Any;
          var var15: Any;
          val var16: Any;
-         var var24: Any;
+         var var23: Any;
          if (var8) {
-            var24 = m0.a;
+            var23 = m0.a;
             val var19: Any = var18.n(var17, 0, m0.a, null);
             val var3: Int = var18.i(var17, 1);
-            var14 = var18.n(var17, 2, (DeserializationStrategy)var24, null);
-            var11 = var18.n(var17, 3, (DeserializationStrategy)var24, null);
+            var9 = var18.n(var17, 2, (DeserializationStrategy)var23, null);
+            var11 = var18.n(var17, 3, (DeserializationStrategy)var23, null);
             var2 = var18.u(var17, 4);
-            var9 = var18.n(var17, 5, (DeserializationStrategy)var24, null);
-            var12 = var18.n(var17, 6, (DeserializationStrategy)var24, null);
+            var16 = var18.n(var17, 5, (DeserializationStrategy)var23, null);
+            var12 = var18.n(var17, 6, (DeserializationStrategy)var23, null);
             var13 = var18.n(var17, 7, PollRadioStyle.Serializer.INSTANCE, null);
-            var16 = var18.n(var17, 8, (DeserializationStrategy)var24, null);
-            var15 = var18.n(var17, 9, (DeserializationStrategy)var24, null);
+            var14 = var18.n(var17, 8, (DeserializationStrategy)var23, null);
+            var15 = var18.n(var17, 9, (DeserializationStrategy)var23, null);
             var5 = 1023;
             var4 = var3;
-            var24 = var19;
+            var23 = var19;
          } else {
             var var6: Boolean = true;
             var4 = 0;
@@ -532,7 +532,7 @@ public data class PollStyleSet(border: Int? = null,
             var13 = null;
             var var20: Any = null;
             var11 = null;
-            var24 = null;
+            var23 = null;
             var9 = null;
             var2 = 0.0F;
             var var21: Int = 0;
@@ -545,7 +545,7 @@ public data class PollStyleSet(border: Int? = null,
                         var6 = false;
                         continue;
                      case 0:
-                        var24 = var18.n(var17, 0, m0.a, var24);
+                        var23 = var18.n(var17, 0, m0.a, var23);
                         var21 |= 1;
                         break;
                      case 1:
@@ -596,24 +596,22 @@ public data class PollStyleSet(border: Int? = null,
                var5 = 9;
             }
 
-            var16 = var14;
-            var14 = var9;
-            var9 = var20;
+            var16 = var20;
             var5 = var21;
          }
 
          var18.c(var17);
          return new PollStyleSet(
             var5,
-            var24 as Integer,
+            var23 as Integer,
             var4,
-            var14 as Integer,
+            var9 as Integer,
             var11 as Integer,
             var2,
-            var9 as Integer,
+            var16 as Integer,
             var12 as Integer,
             var13 as PollRadioStyle,
-            var16 as Integer,
+            var14 as Integer,
             var15 as Integer,
             null
          );

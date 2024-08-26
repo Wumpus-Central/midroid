@@ -70,15 +70,15 @@ internal object NotificationChannels {
    }
 
    private fun createNotificationChannelGroups(context: Context, localizedGroupNames: Map<String, String>): List<q0> {
-      val var7: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
-      val var8: ArrayList = new ArrayList(var7.length);
-      val var5: Int = var7.length;
+      val var8: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
+      val var7: ArrayList = new ArrayList(var8.length);
+      val var5: Int = var8.length;
 
       for (int var3 = 0; var3 < var5; var3++) {
          var var11: q0;
          label28: {
-            val var6: NotificationChannels.ChannelGroup = var7[var3];
-            if (var2.containsKey(var7[var3].getId())) {
+            val var6: NotificationChannels.ChannelGroup = var8[var3];
+            if (var2.containsKey(var8[var3].getId())) {
                val var9: java.lang.CharSequence = var2.get(var6.getId()) as java.lang.CharSequence;
                val var4: Boolean;
                if (var9 != null && !f.x(var9)) {
@@ -93,16 +93,16 @@ internal object NotificationChannels {
                }
             }
 
-            val var12: c = new c(var6.getGroupId());
-            val var10: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
-            var11 = var12.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var6.getId())).b(var10.defaultLabel(var6.getId())).a();
+            val var10: c = new c(var6.getGroupId());
+            val var12: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
+            var11 = var10.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var6.getId())).b(var12.defaultLabel(var6.getId())).a();
          }
 
-         var8.add(var11);
+         var7.add(var11);
       }
 
-      NotificationManagerUtilsKt.getNotificationManagerCompat(var1).d(var8);
-      return var8;
+      NotificationManagerUtilsKt.getNotificationManagerCompat(var1).d(var7);
+      return var7;
    }
 
    private fun com.discord.notifications.renderer.NotificationChannels.Category.getAndDeleteLegacyNotificationChannel(context: Context): NotificationChannelCompat? {
@@ -165,11 +165,11 @@ internal object NotificationChannels {
    private fun com.discord.notifications.renderer.NotificationChannels.CallRingtone.getChannelId(): String {
       val var4: java.lang.String;
       if (NotificationChannels.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()] == 1) {
-         val var2: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("calls_");
-         var3.append(var2);
-         var4 = var3.toString();
+         val var3: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("calls_");
+         var2.append(var3);
+         var4 = var2.toString();
       } else {
          val var5: java.lang.String = var1.getId();
          val var6: StringBuilder = new StringBuilder();
@@ -318,15 +318,15 @@ internal object NotificationChannels {
       r.h(var1, "context");
       r.h(var2, "localizedCategoryNames");
       r.h(var3, "localizedGroupNames");
-      val var6: Int = ColorUtilsKt.getColorCompat(var1, color.brand);
-      val var13: java.util.List = this.createNotificationChannelGroups(var1, var3);
+      val var5: Int = ColorUtilsKt.getColorCompat(var1, color.brand);
+      val var14: java.util.List = this.createNotificationChannelGroups(var1, var3);
       val var8: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
       val var9: ArrayList = new ArrayList();
-      val var5: Int = var8.length;
+      val var6: Int = var8.length;
 
-      for (int var4 = 0; var4 < var5; var4++) {
+      for (int var4 = 0; var4 < var6; var4++) {
          val var17: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(
-            var1, var8[var4], var6, var2, new Function2<NotificationChannelCompat, Builder, Unit>(var8[var4], var1) {
+            var1, var8[var4], var5, var2, new Function2<NotificationChannelCompat, Builder, Unit>(var8[var4], var1) {
                final NotificationChannels.Category $category;
                final Context $context;
 
@@ -347,6 +347,31 @@ internal object NotificationChannels {
                      NotificationChannels.configureCallChannel$default(NotificationChannels.INSTANCE, this.$context, var1, var2, null, 8, null);
                   }
                }
+
+               @Metadata(
+                  k = 3,
+                  mv = {1, 8, 0},
+                  xi = 48
+               )
+               public final class WhenMappings {
+                  public static final int[] $EnumSwitchMapping$0;
+
+                  static {
+                     val var0: IntArray = new int[NotificationChannels.Category.values().length];
+
+                     try {
+                        var0[NotificationChannels.Category.Calls.ordinal()] = 1;
+                     } catch (var3: NoSuchFieldError) {
+                     }
+
+                     try {
+                        var0[NotificationChannels.Category.MediaConnections.ordinal()] = 2;
+                     } catch (var2: NoSuchFieldError) {
+                     }
+
+                     $EnumSwitchMapping$0 = var0;
+                  }
+               }
             }
          );
          if (var17 != null) {
@@ -358,22 +383,22 @@ internal object NotificationChannels {
          NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
       } catch (var12: Exception) {
          val var16: CrashReporting = CrashReporting.INSTANCE;
-         val var15: LinkedHashMap = new LinkedHashMap(h.c(s.d(kotlin.collections.h.t(var13, 10)), 16));
+         val var13: LinkedHashMap = new LinkedHashMap(h.c(s.d(kotlin.collections.h.t(var14, 10)), 16));
 
-         for (q0 var18 : var13) {
-            val var11: java.lang.String = java.lang.String.valueOf(var18.b());
+         for (q0 var11 : var14) {
+            val var18: java.lang.String = java.lang.String.valueOf(var11.b());
             val var7: Boolean;
-            if (NotificationManagerUtilsKt.getNotificationManagerCompat(var1).k(var18.a()) != null) {
+            if (NotificationManagerUtilsKt.getNotificationManagerCompat(var1).k(var11.a()) != null) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            val var19: Pair = w.a(var11, java.lang.String.valueOf(var7));
-            var15.put(var19.c(), var19.d());
+            val var19: Pair = w.a(var18, java.lang.String.valueOf(var7));
+            var13.put(var19.c(), var19.d());
          }
 
-         CrashReporting.addBreadcrumb$default(var16, "Failed to create notification group or channel", var15, null, 4, null);
+         CrashReporting.addBreadcrumb$default(var16, "Failed to create notification group or channel", var13, null, 4, null);
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var12, false, 2, null);
       }
    }
@@ -385,12 +410,12 @@ internal object NotificationChannels {
          val var4: ArrayList = new ArrayList();
          val var8: NotificationChannels.CallRingtone = NotificationChannels.CallRingtone.Companion.fromName(var2);
 
-         for (NotificationChannelCompat var6 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-            val var5: java.lang.String = var6.b();
-            r.g(var5, "channel.id");
-            if (f.I(var5, "calls", false, 2, null)) {
-               r.g(var6, "channel");
-               var4.add(var6);
+         for (NotificationChannelCompat var5 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+            val var7: java.lang.String = var5.b();
+            r.g(var7, "channel.id");
+            if (f.I(var7, "calls", false, 2, null)) {
+               r.g(var5, "channel");
+               var4.add(var5);
             }
          }
 
@@ -619,6 +644,89 @@ internal object NotificationChannels {
 
             return NotificationChannels.Category.Other;
          }
+
+         // $VF: Class flags could not be determined
+         internal class WhenMappings {
+            @JvmStatic
+            public int[] $EnumSwitchMapping$0;
+
+            @JvmStatic
+            fun {
+               val var0: IntArray = new int[NotificationChannels.Category.values().length];
+
+               try {
+                  var0[NotificationChannels.Category.Calls.ordinal()] = 1;
+               } catch (var15: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.MediaConnections.ordinal()] = 2;
+               } catch (var14: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.Messages.ordinal()] = 3;
+               } catch (var13: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.MessagesDirect.ordinal()] = 4;
+               } catch (var12: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.FriendRequests.ordinal()] = 5;
+               } catch (var11: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.Polls.ordinal()] = 6;
+               } catch (var10: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.Social.ordinal()] = 7;
+               } catch (var9: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.GameDetection.ordinal()] = 8;
+               } catch (var8: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.StageStart.ordinal()] = 9;
+               } catch (var7: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.SystemMessages.ordinal()] = 10;
+               } catch (var6: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.ForumThreadCreated.ordinal()] = 11;
+               } catch (var5: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.GuildEventStart.ordinal()] = 12;
+               } catch (var4: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.GuildHighlights.ordinal()] = 13;
+               } catch (var3: NoSuchFieldError) {
+               }
+
+               try {
+                  var0[NotificationChannels.Category.OtherServerNotifications.ordinal()] = 14;
+               } catch (var2: NoSuchFieldError) {
+               }
+
+               $EnumSwitchMapping$0 = var0;
+            }
+         }
       }
    }
 
@@ -657,6 +765,34 @@ internal object NotificationChannels {
 
             return "Other";
          }
+      }
+   }
+
+   // $VF: Class flags could not be determined
+   internal class WhenMappings {
+      @JvmStatic
+      public int[] $EnumSwitchMapping$0;
+      @JvmStatic
+      public int[] $EnumSwitchMapping$1;
+
+      @JvmStatic
+      fun {
+         var var1: IntArray = new int[NotificationChannels.CallRingtone.values().length];
+
+         try {
+            var1[NotificationChannels.CallRingtone.Default.ordinal()] = 1;
+         } catch (var3: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$0 = var1;
+         var1 = new int[NotificationChannels.Category.values().length];
+
+         try {
+            var1[NotificationChannels.Category.Calls.ordinal()] = 1;
+         } catch (var2: NoSuchFieldError) {
+         }
+
+         $EnumSwitchMapping$1 = var1;
       }
    }
 }

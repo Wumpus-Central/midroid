@@ -8,7 +8,6 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Ref.BooleanRef;
 import t2.m;
 
-// $VF: synthetic class
 public final class c implements m {
    public final BillingManager a;
    public final Function1 b;

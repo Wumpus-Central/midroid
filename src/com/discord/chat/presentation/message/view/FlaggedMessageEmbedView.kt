@@ -123,8 +123,8 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
 
       var13.setVisibility(var9);
       if (var1.getConnectionsRoleTag() != null) {
-         var13.configureConnectionsRoleTag-uESh2Cg(
-            var1.getAuthorId-wUX8bhU(), var1.getGuildId-qOKuAAo(), ChannelId.box-impl(var1.getChannelId-o4g7jtM()), var1.getConnectionsRoleTag(), var2
+         var13.configureConnectionsRoleTag_uESh2Cg(
+            var1.getAuthorId_wUX8bhU(), var1.getGuildId_qOKuAAo(), ChannelId.box_impl(var1.getChannelId_o4g7jtM()), var1.getConnectionsRoleTag(), var2
          );
       }
    }
@@ -133,8 +133,8 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
    fun `configureAuthor$lambda$7$lambda$5`(var0: Message, var1: ChatEventHandler, var2: View) {
       kotlin.jvm.internal.r.h(var0, "$message");
       kotlin.jvm.internal.r.h(var1, "$eventHandler");
-      if (var0.getAuthorId-wUX8bhU() != null) {
-         var1.onTapAvatar-x5gers8(var0.getId-3Eiw7ao(), var0.getAuthorId-wUX8bhU().unbox-impl());
+      if (var0.getAuthorId_wUX8bhU() != null) {
+         var1.onTapAvatar_x5gers8(var0.getId_3Eiw7ao(), var0.getAuthorId_wUX8bhU().unbox_impl());
       }
    }
 
@@ -142,8 +142,8 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
    fun `configureAuthor$lambda$7$lambda$6`(var0: Message, var1: ChatEventHandler, var2: View): Boolean {
       kotlin.jvm.internal.r.h(var0, "$message");
       kotlin.jvm.internal.r.h(var1, "$eventHandler");
-      if (var0.getAuthorId-wUX8bhU() != null) {
-         var1.onLongPressAvatar-x5gers8(var0.getId-3Eiw7ao(), var0.getAuthorId-wUX8bhU().unbox-impl());
+      if (var0.getAuthorId_wUX8bhU() != null) {
+         var1.onLongPressAvatar_x5gers8(var0.getId_3Eiw7ao(), var0.getAuthorId_wUX8bhU().unbox_impl());
       }
 
       return true;
@@ -153,8 +153,8 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
    fun `configureAuthor$lambda$9$lambda$8`(var0: Message, var1: ChatEventHandler, var2: View) {
       kotlin.jvm.internal.r.h(var0, "$message");
       kotlin.jvm.internal.r.h(var1, "$eventHandler");
-      if (var0.getAuthorId-wUX8bhU() != null) {
-         var1.onLongPressUsername-x5gers8(var0.getId-3Eiw7ao(), var0.getAuthorId-wUX8bhU().unbox-impl());
+      if (var0.getAuthorId_wUX8bhU() != null) {
+         var1.onLongPressUsername_x5gers8(var0.getId_3Eiw7ao(), var0.getAuthorId_wUX8bhU().unbox_impl());
       }
    }
 
@@ -231,10 +231,10 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       }
 
       if (var14) {
-         MessageContentView.setMessageContent-2ZcwkLU$default(
+         MessageContentView.setMessageContent_2ZcwkLU$default(
             var8,
             var1.getContent(),
-            var1.getId-3Eiw7ao(),
+            var1.getId_3Eiw7ao(),
             MessageKt.shouldAnimateEmoji(var1),
             MessageKt.shouldShowLinkDecorations(var1),
             var1.getShouldShowRoleDot(),

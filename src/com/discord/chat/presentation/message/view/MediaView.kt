@@ -346,30 +346,30 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          val var3: java.lang.Double = this.mediaSource.getPortal();
          if (var3 != null) {
             val var1: Double = var3;
-            val var6: MediaPlayer = this.mediaPlayer;
-            val var7: Pair;
+            var var4: MediaPlayer = this.mediaPlayer;
+            val var6: Pair;
             if (this.mediaPlayer != null && this.mediaPlayerView != null) {
                kotlin.jvm.internal.r.e(this.mediaPlayer);
-               val var9: MediaPlayerView = this.mediaPlayerView;
+               val var7: MediaPlayerView = this.mediaPlayerView;
                kotlin.jvm.internal.r.e(this.mediaPlayerView);
-               var7 = new Pair(var6, var9);
+               var6 = new Pair(var4, var7);
             } else {
                if (!var5.isValid()) {
                   return;
                }
 
-               val var4: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
-               var7 = var4;
-               if (var4 == null) {
+               val var9: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
+               var6 = var9;
+               if (var9 == null) {
                   return;
                }
             }
 
-            val var10: MediaPlayer = var7.a() as MediaPlayer;
+            var4 = var6.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
                .addPortal(
                   var1,
-                  (var7.b() as MediaPlayerView).getView(),
+                  (var6.b() as MediaPlayerView).getView(),
                   new Function1<View, Unit>(this) {
                      final MediaView this$0;
 
@@ -384,7 +384,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         ViewRemoveFromParentKt.removeFromParent(var1);
                      }
                   },
-                  new Function1<View, Unit>(this, var5, var10) {
+                  new Function1<View, Unit>(this, var5, var4) {
                      final MediaPlayer $mediaPlayer;
                      final MediaSource $mediaSource;
                      final MediaView this$0;
@@ -406,7 +406,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         MediaView.access$play(this.this$0);
                      }
                   },
-                  new Function1<View, Unit>(this, var10, var5) {
+                  new Function1<View, Unit>(this, var4, var5) {
                      final MediaPlayer $mediaPlayer;
                      final MediaSource $mediaSource;
                      final MediaView this$0;
@@ -647,6 +647,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -1669,8 +1671,6 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          3,
          null
@@ -1682,6 +1682,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -2704,8 +2706,6 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          3,
          null

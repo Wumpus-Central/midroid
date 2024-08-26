@@ -12,6 +12,7 @@ import uk.f
 import uk.n
 import xk.a2
 import xk.f0
+import xk.f0.a
 
 @f
 public data class PollMedia(text: String) {
@@ -55,12 +56,12 @@ public data class PollMedia(text: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PollMedia(text=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.text;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PollMedia(text=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<PollMedia> {
@@ -79,7 +80,7 @@ public data class PollMedia(text: String) {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{a2.a};
       }
 
@@ -125,8 +126,8 @@ public data class PollMedia(text: String) {
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return a.a(this);
       }
    }
 

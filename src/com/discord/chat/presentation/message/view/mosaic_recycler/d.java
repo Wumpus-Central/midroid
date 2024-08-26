@@ -4,7 +4,6 @@ import android.view.View;
 import android.view.View.OnLongClickListener;
 import com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory;
 
-// $VF: synthetic class
 public final class d implements OnLongClickListener {
    public final AttachmentMediaMosaicAdapter j;
    public final VideoAttachmentMessageAccessory k;

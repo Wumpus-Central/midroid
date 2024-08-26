@@ -85,18 +85,18 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public override fun toString(): String {
-      val var1: Int = this.connectionId;
-      val var3: java.lang.String = this.userId;
-      val var2: Int = this.isSpeaking;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UserSpeakingEvent(connectionId=");
-      var4.append(var1);
-      var4.append(", userId=");
-      var4.append(var3);
-      var4.append(", isSpeaking=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var2: Int = this.connectionId;
+      val var4: java.lang.String = this.userId;
+      val var1: Int = this.isSpeaking;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserSpeakingEvent(connectionId=");
+      var3.append(var2);
+      var3.append(", userId=");
+      var3.append(var4);
+      var3.append(", isSpeaking=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<UserSpeakingEvent> {
@@ -132,8 +132,8 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          if (var8.p()) {
             var4 = var8.i(var7, 0);
             var9 = var8.m(var7, 1);
-            var3 = var8.i(var7, 2);
-            var2 = 7;
+            var2 = var8.i(var7, 2);
+            var3 = 7;
          } else {
             var9 = null;
             var var5: Boolean = true;
@@ -164,10 +164,13 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                   var5 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.c(var7);
-         return new UserSpeakingEvent(var2, var4, var9, var3, null);
+         return new UserSpeakingEvent(var3, var4, var9, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

@@ -70,15 +70,15 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.uuid;
-      val var1: UserSearchQuerySetPayload = this.payload;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UserSearchQuerySetData(uuid=");
-      var2.append(var3);
-      var2.append(", payload=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.uuid;
+      val var3: UserSearchQuerySetPayload = this.payload;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("UserSearchQuerySetData(uuid=");
+      var1.append(var2);
+      var1.append(", payload=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : f0<UserSearchQuerySetData> {

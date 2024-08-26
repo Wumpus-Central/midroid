@@ -31,7 +31,7 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
    fun `bind$lambda$1$lambda$0`(var0: Function1, var1: ThreadEmbedMessageAccessory, var2: View) {
       kotlin.jvm.internal.r.h(var0, "$onTapThreadEmbed");
       kotlin.jvm.internal.r.h(var1, "$threadItem");
-      var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()));
+      var0.invoke(MessageId.box_impl(var1.getMessageId_3Eiw7ao()));
    }
 
    public fun bind(threadItem: ThreadEmbedMessageAccessory, onTapThreadEmbed: (MessageId) -> Unit) {
@@ -61,27 +61,27 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
          var17 = new DraweeSpanStringBuilder((java.lang.CharSequence)var17);
       } else if (var20.getContent() != null) {
-         var17 = var20.getContent();
-         val var10: Context = var14.getContext();
-         val var24: java.lang.String = var20.getId-3Eiw7ao();
+         val var24: StructurableText = var20.getContent();
+         var17 = var14.getContext();
+         val var10: java.lang.String = var20.getId_3Eiw7ao();
          val var6: Boolean = MessageKt.shouldAnimateEmoji(var20);
-         val var4: Boolean = MessageKt.shouldShowLinkDecorations(var20);
+         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var20);
          val var8: Boolean = var20.getShouldShowRoleDot();
-         val var7: Boolean = var20.getShouldShowRoleOnName();
+         val var4: Boolean = var20.getShouldShowRoleOnName();
          val var11: FontMetrics = var14.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
          kotlin.jvm.internal.r.g(var11, "binding.threadEmbedMostR…Content.paint.fontMetrics");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var11);
          val var30: TextPaint = var14.getBinding().threadEmbedMostRecentMessageContent.getPaint();
-         kotlin.jvm.internal.r.g(var10, "context");
+         kotlin.jvm.internal.r.g(var17, "context");
          kotlin.jvm.internal.r.g(var30, "paint");
          var17 = TextUtilsKt.toSpannable$default(
-            (StructurableText)var17,
-            var10,
             var24,
+            (Context)var17,
+            var10,
             var6,
-            var4,
-            var8,
             var7,
+            var8,
+            var4,
             var30,
             null,
             null,
@@ -165,11 +165,11 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
       val var21: GuildId;
       if (var20 != null) {
-         var21 = var20.getClanTagGuildId-qOKuAAo();
+         var21 = var20.getClanTagGuildId_qOKuAAo();
       } else {
          var21 = null;
       }
 
-      var14.setMessage-CKTq3AQ(var28, var29, var31, (DraweeSpanStringBuilder)var17, var22, var32, var33, var21);
+      var14.setMessage_CKTq3AQ(var28, var29, var31, (DraweeSpanStringBuilder)var17, var22, var32, var33, var21);
    }
 }

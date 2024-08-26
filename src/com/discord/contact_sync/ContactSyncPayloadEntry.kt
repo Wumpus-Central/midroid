@@ -12,7 +12,6 @@ import uk.f
 import uk.n
 import xk.a2
 import xk.f0
-import xk.f0.a
 
 @f
 public data class ContactSyncPayloadEntry(friendId: String) {
@@ -56,12 +55,12 @@ public data class ContactSyncPayloadEntry(friendId: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.friendId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContactSyncPayloadEntry(friendId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.friendId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ContactSyncPayloadEntry(friendId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : f0<ContactSyncPayloadEntry> {
@@ -80,7 +79,7 @@ public data class ContactSyncPayloadEntry(friendId: String) {
          descriptor = var1;
       }
 
-      public open fun childSerializers(): Array<KSerializer<*>> {
+      public override fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{a2.a};
       }
 
@@ -126,8 +125,8 @@ public data class ContactSyncPayloadEntry(friendId: String) {
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return a.a(this);
+      override fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return f0.a.a(this);
       }
    }
 

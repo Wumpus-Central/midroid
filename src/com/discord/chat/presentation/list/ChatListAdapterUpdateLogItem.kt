@@ -19,20 +19,20 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public override fun toString(): String {
          var var13: java.lang.String;
          label37: {
-            val var4: java.util.List = this.chatListItemUpdate.getListOperations();
-            if (var4 != null) {
-               val var5: java.util.Iterator = var4.iterator();
+            val var5: java.util.List = this.chatListItemUpdate.getListOperations();
+            if (var5 != null) {
+               val var4: java.util.Iterator = var5.iterator();
                var var1: Int = 0;
 
                var var2: java.lang.String;
-               for (var2 = ""; var5.hasNext(); var1++) {
-                  var13 = (java.lang.String)var5.next();
+               for (var2 = ""; var4.hasNext(); var1++) {
+                  var13 = (java.lang.String)var4.next();
                   if (var1 < 0) {
                      h.s();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
-                  if (var1 != var4.size() - 1) {
+                  if (var1 != var5.size() - 1) {
                      var13 = "-";
                   } else {
                      var13 = "";
@@ -129,6 +129,34 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var3.append("PortalView - ");
          var3.append(var4);
          return var3.toString();
+      }
+
+      // $VF: Class flags could not be determined
+      internal class WhenMappings {
+         @JvmStatic
+         public int[] $EnumSwitchMapping$0;
+
+         @JvmStatic
+         fun {
+            val var0: IntArray = new int[ChannelChatListAdapter.PortalViewUpdateType.values().length];
+
+            try {
+               var0[ChannelChatListAdapter.PortalViewUpdateType.ADD.ordinal()] = 1;
+            } catch (var4: NoSuchFieldError) {
+            }
+
+            try {
+               var0[ChannelChatListAdapter.PortalViewUpdateType.CHANGE.ordinal()] = 2;
+            } catch (var3: NoSuchFieldError) {
+            }
+
+            try {
+               var0[ChannelChatListAdapter.PortalViewUpdateType.REMOVE.ordinal()] = 3;
+            } catch (var2: NoSuchFieldError) {
+            }
+
+            $EnumSwitchMapping$0 = var0;
+         }
       }
    }
 

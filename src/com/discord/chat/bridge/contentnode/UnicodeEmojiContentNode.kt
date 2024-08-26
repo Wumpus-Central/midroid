@@ -96,18 +96,18 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.content;
-      val var2: java.lang.String = this.surrogate;
+      val var2: java.lang.String = this.content;
+      val var3: java.lang.String = this.surrogate;
       val var1: Boolean = this.getJumboable();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UnicodeEmojiContentNode(content=");
-      var3.append(var4);
-      var3.append(", surrogate=");
-      var3.append(var2);
-      var3.append(", jumboable=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UnicodeEmojiContentNode(content=");
+      var4.append(var2);
+      var4.append(", surrogate=");
+      var4.append(var3);
+      var4.append(", jumboable=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<UnicodeEmojiContentNode> {

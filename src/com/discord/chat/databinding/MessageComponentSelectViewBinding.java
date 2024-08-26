@@ -34,21 +34,21 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
 
    public static MessageComponentSelectViewBinding bind(View var0) {
       int var1 = R.id.select_component_chevron;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.select_component_loading;
-         ProgressBar var5 = (ProgressBar)a.a(var0, var1);
-         if (var5 != null) {
+         ProgressBar var4 = (ProgressBar)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.select_component_selection_icon;
-            SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var6 != null) {
+            SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.select_component_selection_text;
-               MaterialTextView var3 = (MaterialTextView)a.a(var0, var1);
-               if (var3 != null) {
+               MaterialTextView var2 = (MaterialTextView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.select_component_selections_root;
-                  FlexboxLayout var4 = (FlexboxLayout)a.a(var0, var1);
-                  if (var4 != null) {
-                     return new MessageComponentSelectViewBinding((SelectComponentView)var0, var2, var5, var6, var3, var4);
+                  FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
+                  if (var3 != null) {
+                     return new MessageComponentSelectViewBinding((SelectComponentView)var0, var6, var4, var5, var2, var3);
                   }
                }
             }

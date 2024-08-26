@@ -8,13 +8,13 @@ internal object CustomLineHeightSpanOverride {
    @JvmStatic
    fun `override$lambda$0`(var0: Array<Any>) {
       r.g(var0, "(fm, mHeight)");
-      var var2: Any = ((Object[])var0)[0];
+      var var1: Any = ((Object[])var0)[0];
       var0 = ((Object[])var0)[1];
-      val var1: CustomLineHeightSpanOverride = INSTANCE;
-      r.f(var2, "null cannot be cast to non-null type android.graphics.Paint.FontMetricsInt");
-      var2 = var2 as FontMetricsInt;
+      val var2: CustomLineHeightSpanOverride = INSTANCE;
+      r.f(var1, "null cannot be cast to non-null type android.graphics.Paint.FontMetricsInt");
+      var1 = var1 as FontMetricsInt;
       r.f(var0, "null cannot be cast to non-null type kotlin.Int");
-      var1.overrideLineHeight((FontMetricsInt)var2, var0 as Integer);
+      var2.overrideLineHeight((FontMetricsInt)var1, var0 as Integer);
    }
 
    private fun overrideLineHeight(fm: FontMetricsInt, mHeight: Int) {
@@ -33,12 +33,12 @@ internal object CustomLineHeightSpanOverride {
          var1.ascent = var1.top;
          var1.descent = var2;
       } else {
-         val var12: Int = var1.descent - var1.ascent;
+         var6 = var1.descent - var1.ascent;
          if (var1.descent - var1.ascent <= 0) {
             return;
          }
 
-         var6 = sh.a.b((float)var1.descent * ((float)var2 * 0.75F / (float)var12));
+         var6 = sh.a.b((float)var1.descent * ((float)var2 * 0.75F / (float)var6));
          var1.descent = var6;
          var1.ascent = var6 - var2;
       }
