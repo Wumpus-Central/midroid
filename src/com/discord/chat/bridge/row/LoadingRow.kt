@@ -145,29 +145,29 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
 
       public open fun deserialize(decoder: Decoder): LoadingRow {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
          var var2: Int;
          var var3: Int;
          var var4: Int;
          var var7: Any;
-         var var11: Any;
-         if (var10.p()) {
-            var4 = var10.i(var9, 0);
-            var11 = var10.y(var9, 1, ChangeType.Serializer.INSTANCE, null);
-            var7 = var10.y(var9, 2, LoadMoreButton.$serializer.INSTANCE, null);
-            var3 = var10.C(var9, 3);
+         var var10: Any;
+         if (var9.p()) {
+            var4 = var9.i(var8, 0);
+            var7 = var9.y(var8, 1, ChangeType.Serializer.INSTANCE, null);
+            var10 = var9.y(var8, 2, LoadMoreButton.$serializer.INSTANCE, null);
+            var3 = var9.C(var8, 3);
             var2 = 15;
          } else {
             var var5: Boolean = true;
             var4 = 0;
             var2 = 0;
             var7 = null;
-            var11 = null;
+            var10 = null;
             var3 = 0;
 
             while (var5) {
-               val var6: Int = var10.o(var9);
+               val var6: Int = var9.o(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -176,31 +176,28 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
                               throw new n(var6);
                            }
 
-                           var3 = var10.C(var9, 3);
+                           var3 = var9.C(var8, 3);
                            var2 |= 8;
                         } else {
-                           var11 = var10.y(var9, 2, LoadMoreButton.$serializer.INSTANCE, var11);
+                           var10 = var9.y(var8, 2, LoadMoreButton.$serializer.INSTANCE, var10);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.y(var9, 1, ChangeType.Serializer.INSTANCE, var7);
+                        var7 = var9.y(var8, 1, ChangeType.Serializer.INSTANCE, var7);
                         var2 |= 2;
                      }
                   } else {
-                     var4 = var10.i(var9, 0);
+                     var4 = var9.i(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var5 = false;
                }
             }
-
-            var11 = var7;
-            var7 = var11;
          }
 
-         var10.c(var9);
-         return new LoadingRow(var2, var4, var11 as ChangeType, var7 as LoadMoreButton, (boolean)var3, null);
+         var9.c(var8);
+         return new LoadingRow(var2, var4, var7 as ChangeType, var10 as LoadMoreButton, (boolean)var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadingRow) {

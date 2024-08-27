@@ -202,9 +202,9 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var2: a2 = a2.a;
          val var1: KSerializer = a.u(a2.a);
-         val var3: KSerializer = a.u(var2);
-         val var4: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
-         return new KSerializer[]{var1, var3, a.u(StructurableTextSerializer.INSTANCE), a.u(var4)};
+         val var4: KSerializer = a.u(var2);
+         val var3: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
+         return new KSerializer[]{var1, var4, a.u(StructurableTextSerializer.INSTANCE), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedField {

@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.view.mosaic
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -99,10 +98,9 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       );
       this.attachmentAdapter = var5;
       val var6: RecyclerView = var4.mosaic;
-      r.g(var4.mosaic, "_init_$lambda$1");
+      r.g(var4.mosaic, "_init_$lambda$0");
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
       var6.setRecycledViewPool(new AccessoriesViewPool());
-      var3.setRecycleChildrenOnDetach(true);
       var6.setLayoutManager(var3);
       var6.setAdapter(var5);
    }
@@ -123,11 +121,6 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       }
 
       return var2;
-   }
-
-   public open fun endViewTransition(view: View?) {
-      super.endViewTransition(var1);
-      this.mosaicLayoutManager.disableRecycling(false);
    }
 
    public fun setAttachments(
@@ -151,7 +144,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       r.h(var6, "onTapInlineForward");
       r.h(var10, "messageState");
       val var15: InlineForwardButtonView = this.binding.forward;
-      r.g(this.binding.forward, "setAttachments$lambda$2");
+      r.g(this.binding.forward, "setAttachments$lambda$1");
       var var14: Boolean = false;
       val var13: Byte;
       if (var7) {
@@ -177,10 +170,5 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       this.onAttachmentSpoilerClicked = var5;
       this.attachmentAdapter.setChatEventHandler(var2);
       this.attachmentAdapter.setMediaItems(var1, var11);
-   }
-
-   public open fun startViewTransition(view: View?) {
-      this.mosaicLayoutManager.disableRecycling(true);
-      super.startViewTransition(var1);
    }
 }

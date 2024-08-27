@@ -158,18 +158,18 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
          val var5: Boolean = var10.p();
          var var6: Any = null;
          var var2: Int;
+         var var7: Any;
          var var11: Any;
-         var var13: Any;
          if (var5) {
-            var6 = var10.y(var9, 0, MessageFrameType.Serializer.INSTANCE, null);
-            var13 = a2.a;
-            var11 = var10.n(var9, 1, a2.a, null);
-            var13 = var10.n(var9, 2, (DeserializationStrategy)var13, null);
+            var11 = var10.y(var9, 0, MessageFrameType.Serializer.INSTANCE, null);
+            var6 = a2.a;
+            var7 = var10.n(var9, 1, a2.a, null);
+            var6 = var10.n(var9, 2, (DeserializationStrategy)var6, null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var13 = null;
+            var7 = null;
             var11 = null;
 
             while (var3) {
@@ -184,7 +184,7 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
                         var11 = var10.n(var9, 2, a2.a, var11);
                         var2 |= 4;
                      } else {
-                        var13 = var10.n(var9, 1, a2.a, var13);
+                        var7 = var10.n(var9, 1, a2.a, var7);
                         var2 |= 2;
                      }
                   } else {
@@ -196,12 +196,12 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
                }
             }
 
-            var13 = var11;
-            var11 = var13;
+            var11 = var6;
+            var6 = var11;
          }
 
          var10.c(var9);
-         return new MessageFrameJump(var2, var6 as MessageFrameType, var11 as java.lang.String, var13 as java.lang.String, null);
+         return new MessageFrameJump(var2, var11 as MessageFrameType, var7 as java.lang.String, var6 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageFrameJump) {

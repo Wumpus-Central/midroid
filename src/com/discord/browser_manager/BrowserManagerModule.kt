@@ -73,10 +73,10 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
    public fun openInChromeURL(url: String, newTab: Boolean, promise: Promise) {
       r.h(var1, "url");
       r.h(var3, "promise");
-      val var5: BrowserManager = BrowserManager.INSTANCE;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var4, "reactApplicationContext");
-      var5.tryOpenUrlExternally(var4, var1, new Function1<Exception, Unit>(var3) {
+      val var4: BrowserManager = BrowserManager.INSTANCE;
+      val var5: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var5, "reactApplicationContext");
+      var4.tryOpenUrlExternally(var5, var1, new Function1<Exception, Unit>(var3) {
          final Promise $promise;
 
          {

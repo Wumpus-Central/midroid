@@ -152,26 +152,26 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
 
       public open fun deserialize(decoder: Decoder): BulletListContentNode {
          r.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
          var var2: Int;
          var var5: Boolean;
-         var var6: Any;
-         var var9: Any;
-         if (var8.p()) {
-            var6 = var8.n(var7, 0, w0.a, null);
-            var5 = var8.C(var7, 1);
-            var9 = var8.y(var7, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), null);
+         val var7: Any;
+         var var10: Any;
+         if (var9.p()) {
+            var10 = var9.n(var8, 0, w0.a, null);
+            var5 = var9.C(var8, 1);
+            var7 = var9.y(var8, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var6 = null;
-            var9 = null;
+            var var6: Any = null;
+            var10 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -179,24 +179,27 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
                            throw new n(var4);
                         }
 
-                        var9 = var8.y(var7, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), var9);
+                        var10 = var9.y(var8, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), var10);
                         var2 |= 4;
                      } else {
-                        var5 = var8.C(var7, 1);
+                        var5 = var9.C(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var8.n(var7, 0, w0.a, var6);
+                     var6 = var9.n(var8, 0, w0.a, var6);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var7 = var10;
+            var10 = var6;
          }
 
-         var8.c(var7);
-         return new BulletListContentNode(var2, var6 as java.lang.Long, var5, var9 as java.util.List, null);
+         var9.c(var8);
+         return new BulletListContentNode(var2, var10 as java.lang.Long, var5, var7 as java.util.List, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BulletListContentNode) {

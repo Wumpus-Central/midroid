@@ -142,27 +142,27 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
-         var var4: Int;
+         val var5: Int;
          var var7: java.lang.String;
          var var10: Any;
          var var11: Int;
          if (var9.p()) {
             var11 = var9.i(var8, 0);
             var7 = var9.m(var8, 1);
-            val var5: Byte = var9.C(var8, 2);
+            val var4: Byte = var9.C(var8, 2);
             var10 = var9.y(var8, 3, SeparatorSpacingSize.Serializer.INSTANCE, null);
             var2 = 15;
-            var4 = var11;
-            var11 = var5;
+            var5 = var11;
+            var11 = var4;
          } else {
-            var var12: Boolean = true;
-            var4 = 0;
+            var var13: Boolean = true;
+            var var12: Int = 0;
             var2 = 0;
             var7 = null;
             var10 = null;
             var11 = 0;
 
-            while (var12) {
+            while (var13) {
                val var6: Int = var9.o(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -183,17 +183,19 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
                         var2 |= 2;
                      }
                   } else {
-                     var4 = var9.i(var8, 0);
+                     var12 = var9.i(var8, 0);
                      var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var13 = false;
                }
             }
+
+            var5 = var12;
          }
 
          var9.c(var8);
-         return new SeparatorDisplayComponent(var2, var4, var7, (boolean)var11, var10 as SeparatorSpacingSize, null);
+         return new SeparatorDisplayComponent(var2, var5, var7, (boolean)var11, var10 as SeparatorSpacingSize, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SeparatorDisplayComponent) {

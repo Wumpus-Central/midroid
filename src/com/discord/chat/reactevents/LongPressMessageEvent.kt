@@ -122,10 +122,10 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.messageId.hashCode();
-      val var6: Int = this.channelId.hashCode();
-      val var4: Int = Integer.hashCode(this.mediaIndex);
-      val var3: Int = this.mediaType.hashCode();
+      val var6: Int = this.messageId.hashCode();
+      val var4: Int = this.channelId.hashCode();
+      val var3: Int = Integer.hashCode(this.mediaIndex);
+      val var5: Int = this.mediaType.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.componentId == null) {
@@ -138,7 +138,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var5 * 31 + var6) * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((((var6 * 31 + var4) * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2;
    }
 
    fun serialize(): WritableMap {
@@ -146,27 +146,27 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var6: java.lang.String = this.channelId;
+      val var7: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var4: java.lang.String = this.mediaType;
-      val var2: java.lang.String = this.componentId;
+      val var3: java.lang.String = this.mediaType;
+      val var6: java.lang.String = this.componentId;
       val var5: Int = this.componentMediaIndex;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("LongPressMessageEvent(messageId=");
-      var7.append(var3);
-      var7.append(", channelId=");
-      var7.append(var6);
-      var7.append(", mediaIndex=");
-      var7.append(var1);
-      var7.append(", mediaType=");
-      var7.append(var4);
-      var7.append(", componentId=");
-      var7.append(var2);
-      var7.append(", componentMediaIndex=");
-      var7.append(var5);
-      var7.append(")");
-      return var7.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LongPressMessageEvent(messageId=");
+      var4.append(var7);
+      var4.append(", channelId=");
+      var4.append(var2);
+      var4.append(", mediaIndex=");
+      var4.append(var1);
+      var4.append(", mediaType=");
+      var4.append(var3);
+      var4.append(", componentId=");
+      var4.append(var6);
+      var4.append(", componentMediaIndex=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<LongPressMessageEvent> {
@@ -191,8 +191,8 @@ internal data class LongPressMessageEvent(messageId: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: m0 = m0.a;
-         return new KSerializer[]{a2.a, a2.a, m0.a, a2.a, a.u(a2.a), a.u(var1)};
+         val var2: m0 = m0.a;
+         return new KSerializer[]{a2.a, a2.a, m0.a, a2.a, a.u(a2.a), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): LongPressMessageEvent {
@@ -201,28 +201,28 @@ internal data class LongPressMessageEvent(messageId: String,
          val var12: c = var1.b(var11);
          var var2: Int;
          var var3: Int;
+         var var6: Any;
          var var7: java.lang.String;
          var var8: java.lang.String;
          var var9: Any;
-         val var10: Any;
-         val var13: java.lang.String;
+         val var10: java.lang.String;
          if (var12.p()) {
-            val var6: java.lang.String = var12.m(var11, 0);
+            var10 = var12.m(var11, 0);
             var7 = var12.m(var11, 1);
-            var2 = var12.i(var11, 2);
-            var13 = var12.m(var11, 3);
+            var3 = var12.i(var11, 2);
+            val var13: java.lang.String = var12.m(var11, 3);
             var9 = var12.n(var11, 4, a2.a, null);
-            var10 = var12.n(var11, 5, m0.a, null);
-            var3 = 63;
-            var8 = var6;
+            var6 = var12.n(var11, 5, m0.a, null);
+            var2 = 63;
+            var8 = var13;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var var14: java.lang.String = null;
-            var7 = null;
+            var6 = null;
             var8 = null;
+            var7 = null;
             var9 = null;
-            var var18: Any = null;
+            var var14: Any = null;
             var2 = 0;
 
             while (var4) {
@@ -232,11 +232,11 @@ internal data class LongPressMessageEvent(messageId: String,
                      var4 = false;
                      break;
                   case 0:
-                     var14 = var12.m(var11, 0);
+                     var6 = var12.m(var11, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var7 = var12.m(var11, 1);
+                     var8 = var12.m(var11, 1);
                      var2 |= 2;
                      break;
                   case 2:
@@ -244,7 +244,7 @@ internal data class LongPressMessageEvent(messageId: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var8 = var12.m(var11, 3);
+                     var7 = var12.m(var11, 3);
                      var2 |= 8;
                      break;
                   case 4:
@@ -252,7 +252,7 @@ internal data class LongPressMessageEvent(messageId: String,
                      var2 |= 16;
                      break;
                   case 5:
-                     var18 = var12.n(var11, 5, m0.a, var18);
+                     var14 = var12.n(var11, 5, m0.a, var14);
                      var2 |= 32;
                      break;
                   default:
@@ -260,15 +260,14 @@ internal data class LongPressMessageEvent(messageId: String,
                }
             }
 
-            var3 = var2;
-            var13 = var8;
-            var2 = var3;
-            var8 = var14;
-            var10 = var18;
+            var7 = var8;
+            var8 = var7;
+            var10 = (java.lang.String)var6;
+            var6 = var14;
          }
 
          var12.c(var11);
-         return new LongPressMessageEvent(var3, var8, var7, var2, var13, var9 as java.lang.String, var10 as Integer, null);
+         return new LongPressMessageEvent(var2, var10, var7, var3, var8, var9 as java.lang.String, var6 as Integer, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressMessageEvent) {

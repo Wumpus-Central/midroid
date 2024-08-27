@@ -212,37 +212,37 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun toString(): String {
-      val var4: Boolean = this.isAtBottom;
-      val var10: Boolean = this.isNearBottom;
-      val var9: Boolean = this.isNearTop;
-      val var5: Boolean = this.dragging;
-      val var6: Boolean = this.decelerating;
-      val var8: Boolean = this.shouldShowJumpToPresent;
-      val var7: Boolean = this.isFirstMessageVisible;
-      val var1: Int = this.firstVisibleMessageIndex;
-      val var3: Int = this.lastVisibleMessageIndex;
-      val var2: Int = this.changesetUpdateId;
+      val var6: Boolean = this.isAtBottom;
+      val var7: Boolean = this.isNearBottom;
+      val var8: Boolean = this.isNearTop;
+      val var4: Boolean = this.dragging;
+      val var5: Boolean = this.decelerating;
+      val var9: Boolean = this.shouldShowJumpToPresent;
+      val var10: Boolean = this.isFirstMessageVisible;
+      val var2: Int = this.firstVisibleMessageIndex;
+      val var1: Int = this.lastVisibleMessageIndex;
+      val var3: Int = this.changesetUpdateId;
       val var11: StringBuilder = new StringBuilder();
       var11.append("ChatScrollPositionEvent(isAtBottom=");
-      var11.append(var4);
-      var11.append(", isNearBottom=");
-      var11.append(var10);
-      var11.append(", isNearTop=");
-      var11.append(var9);
-      var11.append(", dragging=");
-      var11.append(var5);
-      var11.append(", decelerating=");
       var11.append(var6);
-      var11.append(", shouldShowJumpToPresent=");
-      var11.append(var8);
-      var11.append(", isFirstMessageVisible=");
+      var11.append(", isNearBottom=");
       var11.append(var7);
+      var11.append(", isNearTop=");
+      var11.append(var8);
+      var11.append(", dragging=");
+      var11.append(var4);
+      var11.append(", decelerating=");
+      var11.append(var5);
+      var11.append(", shouldShowJumpToPresent=");
+      var11.append(var9);
+      var11.append(", isFirstMessageVisible=");
+      var11.append(var10);
       var11.append(", firstVisibleMessageIndex=");
-      var11.append(var1);
-      var11.append(", lastVisibleMessageIndex=");
-      var11.append(var3);
-      var11.append(", changesetUpdateId=");
       var11.append(var2);
+      var11.append(", lastVisibleMessageIndex=");
+      var11.append(var1);
+      var11.append(", changesetUpdateId=");
+      var11.append(var3);
       var11.append(")");
       return var11.toString();
    }
@@ -282,6 +282,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          val var17: c = var1.b(var16);
          var var15: Boolean = var17.p();
          var var2: Int = 0;
+         var var6: Int;
          var var7: Int;
          var var8: Int;
          var var9: Int;
@@ -291,42 +292,40 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var var13: Int;
          val var14: Int;
          var var20: Int;
-         var var23: Int;
          if (var15) {
             var15 = var17.C(var16, 0);
             var8 = var17.C(var16, 1);
-            var7 = var17.C(var16, 2);
-            var13 = var17.C(var16, 3);
-            var14 = var17.C(var16, 4);
-            val var6: Byte = var17.C(var16, 5);
+            var13 = var17.C(var16, 2);
+            var9 = var17.C(var16, 3);
+            var12 = var17.C(var16, 4);
+            var6 = var17.C(var16, 5);
             val var4: Byte = var17.C(var16, 6);
             val var3: Int = var17.i(var16, 7);
             val var5: Int = var17.i(var16, 8);
             var2 = var17.i(var16, 9);
-            var12 = 1023;
-            var11 = var6;
-            var23 = var4;
-            var9 = var3;
-            var20 = var5;
-            var10 = var2;
+            var7 = 1023;
+            var14 = var4;
+            var10 = var3;
+            var11 = var5;
+            var20 = var2;
          } else {
-            var var30: Boolean = true;
+            var var29: Boolean = true;
             var15 = false;
             var11 = 0;
-            var23 = 0;
-            var7 = 0;
+            var6 = 0;
+            var8 = 0;
             var9 = 0;
             var var19: Int = 0;
             var10 = 0;
-            var8 = 0;
+            var7 = 0;
             var var22: Int = 0;
             var20 = 0;
 
-            while (var30) {
+            while (var29) {
                var13 = var17.o(var16);
                switch (var13) {
                   case -1:
-                     var30 = false;
+                     var29 = false;
                      break;
                   case 0:
                      var15 = var17.C(var16, 0);
@@ -345,7 +344,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
                      var2 |= 8;
                      break;
                   case 4:
-                     var8 = var17.C(var16, 4);
+                     var7 = var17.C(var16, 4);
                      var2 |= 16;
                      break;
                   case 5:
@@ -353,11 +352,11 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
                      var2 |= 32;
                      break;
                   case 6:
-                     var7 = var17.C(var16, 6);
+                     var8 = var17.C(var16, 6);
                      var2 |= 64;
                      break;
                   case 7:
-                     var23 = var17.i(var16, 7);
+                     var6 = var17.i(var16, 7);
                      var2 |= 128;
                      break;
                   case 8:
@@ -373,21 +372,21 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
                }
             }
 
-            var10 = var11;
-            var20 = var10;
-            var9 = var23;
-            var23 = var7;
-            var11 = var9;
             var14 = var8;
-            var13 = var19;
-            var7 = var22;
             var8 = var20;
-            var12 = var2;
+            var20 = var11;
+            var11 = var10;
+            var10 = var6;
+            var6 = var9;
+            var12 = var7;
+            var9 = var19;
+            var13 = var22;
+            var7 = var2;
          }
 
          var17.c(var16);
          return new ChatScrollPositionEvent(
-            var12, var15, (boolean)var8, (boolean)var7, (boolean)var13, (boolean)var14, (boolean)var11, (boolean)var23, var9, var20, var10, null
+            var7, var15, (boolean)var8, (boolean)var13, (boolean)var9, (boolean)var12, (boolean)var6, (boolean)var14, var10, var11, var20, null
          );
       }
 

@@ -35,13 +35,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "embeddedActivityInviteAccessory");
-      val var14: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var6: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var14.getSplashUrl(), var1.getConstrainedWidth());
-      var6.setTitleText(var14.getTitleText());
-      var6.setHeaderText(var14.getHeaderText());
-      var6.setSubtitleText_oCLp7l4(
-         var14.getStructurableSubtitleText(),
+      val var4: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var10: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var4.getSplashUrl(), var1.getConstrainedWidth());
+      var10.setTitleText(var4.getTitleText());
+      var10.setHeaderText(var4.getHeaderText());
+      var10.setSubtitleText_oCLp7l4(
+         var4.getStructurableSubtitleText(),
          var1.getMessageId_3Eiw7ao(),
          new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
             {
@@ -195,9 +195,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var6.setNoParticipantsText(var14.getNoParticipantsText());
-      var6.setLaunchButton(var14.getAcceptLabelText(), var14.getAcceptLabelBackgroundColor(), var14.getCtaEnabled());
-      var6.setAvatarUris(var14.getParticipantAvatarUris());
-      var6.setOnLaunchButtonClickListener(new k(this, var1));
+      var10.setNoParticipantsText(var4.getNoParticipantsText());
+      var10.setLaunchButton(var4.getAcceptLabelText(), var4.getAcceptLabelBackgroundColor(), var4.getCtaEnabled());
+      var10.setAvatarUris(var4.getParticipantAvatarUris());
+      var10.setOnLaunchButtonClickListener(new k(this, var1));
    }
 }

@@ -276,16 +276,16 @@ public data class SeparatorRow(changeType: ChangeType,
          var var11: Any;
          var var13: Any;
          var var17: Any;
-         var var20: Any;
+         var var21: Any;
          if (var8) {
-            var10 = var16.y(var15, 0, ChangeType.Serializer.INSTANCE, null);
+            var11 = var16.y(var15, 0, ChangeType.Serializer.INSTANCE, null);
             var3 = var16.i(var15, 1);
             var9 = var16.m(var15, 2);
             var17 = var16.m(var15, 3);
             var4 = var16.i(var15, 4);
-            var20 = h.a;
-            var11 = var16.n(var15, 5, h.a, null);
-            var20 = var16.n(var15, 6, (DeserializationStrategy)var20, null);
+            var21 = h.a;
+            var10 = var16.n(var15, 5, h.a, null);
+            var21 = var16.n(var15, 6, (DeserializationStrategy)var21, null);
             var13 = var16.n(var15, 7, Summary.$serializer.INSTANCE, null);
             var2 = 255;
          } else {
@@ -293,7 +293,7 @@ public data class SeparatorRow(changeType: ChangeType,
             var4 = 0;
             var2 = 0;
             var13 = null;
-            var20 = null;
+            var21 = null;
             var9 = null;
             var10 = null;
             var17 = null;
@@ -332,7 +332,7 @@ public data class SeparatorRow(changeType: ChangeType,
                      var2 |= 32;
                      break;
                   case 6:
-                     var20 = var16.n(var15, 6, h.a, var20);
+                     var21 = var16.n(var15, 6, h.a, var21);
                      var2 |= 64;
                      break;
                   case 7:
@@ -344,20 +344,21 @@ public data class SeparatorRow(changeType: ChangeType,
                }
             }
 
-            var10 = var9;
             var9 = var10;
+            var10 = var11;
+            var11 = var9;
          }
 
          var16.c(var15);
          return new SeparatorRow(
             var2,
-            var10 as ChangeType,
+            var11 as ChangeType,
             var3,
             (java.lang.String)var9,
             (java.lang.String)var17,
             var4,
-            var11 as java.lang.Boolean,
-            var20 as java.lang.Boolean,
+            var10 as java.lang.Boolean,
+            var21 as java.lang.Boolean,
             var13 as Summary,
             null
          );

@@ -35,12 +35,12 @@ public class ChatInputManagerModule(reactContext: ReactApplicationContext) : Rea
 
       if (var9 == null) {
          try {
-            val var10: StringBuilder = new StringBuilder();
-            var10.append("View not found for tag ");
-            var10.append(var0);
-            var10.append(" of UIManagerType ");
-            var10.append(var3);
-            var2.reject(new Exception(var10.toString()));
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("View not found for tag ");
+            var4.append(var0);
+            var4.append(" of UIManagerType ");
+            var4.append(var3);
+            var2.reject(new Exception(var4.toString()));
          } catch (var6: IllegalViewOperationException) {
             var2.reject(var6);
          }

@@ -121,20 +121,20 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
 
    public override fun toString(): String {
       val var3: java.lang.String = this.userId;
-      val var5: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleName;
-      val var4: java.lang.String = this.parsedUserId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapMentionData(userId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var5);
-      var2.append(", roleName=");
-      var2.append(var1);
-      var2.append(", parsedUserId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.roleName;
+      val var2: java.lang.String = this.parsedUserId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapMentionData(userId=");
+      var4.append(var3);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", roleName=");
+      var4.append(var5);
+      var4.append(", parsedUserId=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<TapMentionData> {
@@ -169,23 +169,22 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
          var var8: Any = null;
          var var2: Int;
          var var6: Any;
-         val var9: java.lang.String;
-         val var10: Any;
+         val var9: Any;
          var var16: Any;
          if (var5) {
             var16 = a2.a;
             var6 = var12.n(var11, 0, a2.a, null);
-            var9 = var12.m(var11, 1);
+            var8 = var12.m(var11, 1);
             val var13: Any = var12.n(var11, 2, (DeserializationStrategy)var16, null);
-            var16 = var12.n(var11, 3, (DeserializationStrategy)var16, null);
+            var9 = var12.n(var11, 3, (DeserializationStrategy)var16, null);
             var2 = 15;
-            var10 = var13;
+            var16 = var13;
          } else {
             var var3: Boolean = true;
             var2 = 0;
+            var var14: java.lang.String = null;
             var6 = null;
             var16 = null;
-            var var14: Any = null;
 
             while (var3) {
                val var4: Int = var12.o(var11);
@@ -197,14 +196,14 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
                               throw new n(var4);
                            }
 
-                           var14 = var12.n(var11, 3, a2.a, var14);
+                           var16 = var12.n(var11, 3, a2.a, var16);
                            var2 |= 8;
                         } else {
-                           var16 = var12.n(var11, 2, a2.a, var16);
+                           var6 = var12.n(var11, 2, a2.a, var6);
                            var2 |= 4;
                         }
                      } else {
-                        var6 = var12.m(var11, 1);
+                        var14 = var12.m(var11, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -216,14 +215,14 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
                }
             }
 
-            var10 = var16;
-            var9 = (java.lang.String)var6;
+            var16 = var6;
+            var8 = var14;
             var6 = var8;
-            var16 = var14;
+            var9 = var16;
          }
 
          var12.c(var11);
-         return new TapMentionData(var2, var6 as java.lang.String, var9, var10 as java.lang.String, var16 as java.lang.String, null);
+         return new TapMentionData(var2, var6 as java.lang.String, (java.lang.String)var8, var16 as java.lang.String, var9 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapMentionData) {

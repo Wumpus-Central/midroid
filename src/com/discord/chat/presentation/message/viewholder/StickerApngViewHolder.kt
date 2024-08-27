@@ -34,8 +34,8 @@ public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHo
       kotlin.jvm.internal.r.h(var1, "sticker");
       kotlin.jvm.internal.r.h(var2, "onStickerClicked");
       kotlin.jvm.internal.r.h(var3, "onStickerLongClicked");
-      val var7: StickerView = this.stickerView;
-      val var8: java.lang.String = var1.getUrl();
+      val var8: StickerView = this.stickerView;
+      val var7: java.lang.String = var1.getUrl();
       val var6: Boolean;
       if (var1.getRenderMode() == 0) {
          var6 = true;
@@ -43,7 +43,7 @@ public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHo
          var6 = false;
       }
 
-      var7.asApng(var8, var4, var5, var6);
+      var8.asApng(var7, var4, var5, var6);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new r(var2, var1), 1, null);
       NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new s(var3, var1), 1, null);
    }

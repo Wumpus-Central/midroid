@@ -133,27 +133,26 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
       public open fun deserialize(decoder: Decoder): ContentInventoryEntryComponent {
          r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.b(var7);
          var var2: Int;
          var var3: Int;
-         var var6: Any;
-         val var7: java.lang.String;
-         if (var9.p()) {
-            var3 = var9.i(var8, 0);
-            val var10: java.lang.String = var9.m(var8, 1);
-            var6 = var9.n(var8, 2, ContentInventoryEntry.$serializer.INSTANCE, null);
-            var2 = 7;
-            var7 = var10;
+         var var6: java.lang.String;
+         var var9: Any;
+         if (var8.p()) {
+            var2 = var8.i(var7, 0);
+            var6 = var8.m(var7, 1);
+            var9 = var8.n(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null);
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var6 = null;
-            var var11: Any = null;
+            var9 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var9.o(var8);
+               val var5: Int = var8.o(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -161,14 +160,14 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                            throw new n(var5);
                         }
 
-                        var11 = var9.n(var8, 2, ContentInventoryEntry.$serializer.INSTANCE, var11);
+                        var9 = var8.n(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, var9);
                         var2 |= 4;
                      } else {
-                        var6 = var9.m(var8, 1);
+                        var6 = var8.m(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var9.i(var8, 0);
+                     var3 = var8.i(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -176,12 +175,12 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                }
             }
 
-            var7 = (java.lang.String)var6;
-            var6 = var11;
+            var2 = var3;
+            var3 = var2;
          }
 
-         var9.c(var8);
-         return new ContentInventoryEntryComponent(var2, var3, var7, var6 as ContentInventoryEntry, null);
+         var8.c(var7);
+         return new ContentInventoryEntryComponent(var3, var2, var6, var9 as ContentInventoryEntry, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentInventoryEntryComponent) {

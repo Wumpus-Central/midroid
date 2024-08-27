@@ -13,24 +13,24 @@ public class ClientInfoManagerModule(reactContext: ReactApplicationContext) : Na
    }
 
    public open fun getConstants(): MutableMap<String, String> {
-      val var1: ClientInfo = ClientInfo.INSTANCE;
-      val var3: Pair = w.a("Identifier", ClientInfo.INSTANCE.getPackageName());
-      val var5: Pair = w.a("Version", var1.getVersionName());
-      val var4: Pair = w.a("Build", var1.getVersionCode());
-      val var6: Pair = w.a("Manifest", var1.getOtaManifestETag());
-      val var2: Pair = w.a("OTABuild", var1.getOtaVersion());
-      val var7: ClientInfoCache = ClientInfoCache.INSTANCE;
-      val var8: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var8, "reactApplicationContext");
+      val var7: ClientInfo = ClientInfo.INSTANCE;
+      val var8: Pair = w.a("Identifier", ClientInfo.INSTANCE.getPackageName());
+      val var1: Pair = w.a("Version", var7.getVersionName());
+      val var3: Pair = w.a("Build", var7.getVersionCode());
+      val var5: Pair = w.a("Manifest", var7.getOtaManifestETag());
+      val var2: Pair = w.a("OTABuild", var7.getOtaVersion());
+      val var6: ClientInfoCache = ClientInfoCache.INSTANCE;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var4, "reactApplicationContext");
       return s.m(
          new Pair[]{
+            var8,
+            var1,
             var3,
             var5,
-            var4,
-            var6,
             var2,
-            w.a("DeviceVendorID", var7.getDeviceVendorId(var8)),
-            w.a("ReleaseChannel", var1.getReleaseChannel()),
+            w.a("DeviceVendorID", var6.getDeviceVendorId(var4)),
+            w.a("ReleaseChannel", var7.getReleaseChannel()),
             w.a("SentryDsn", "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"),
             w.a("SentryStaffDsn", "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"),
             w.a("SentryAlphaBetaDsn", "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375")

@@ -159,21 +159,22 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          val var5: Boolean = var11.p();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var7: Any;
          val var9: java.lang.String;
          var var14: java.lang.String;
+         var var16: java.lang.String;
          if (var5) {
             var14 = var11.m(var10, 0);
-            var9 = var11.m(var10, 1);
+            var16 = var11.m(var10, 1);
             val var12: java.lang.String = var11.m(var10, 2);
-            var7 = var11.n(var10, 3, a2.a, null);
+            var8 = (java.lang.String)var11.n(var10, 3, a2.a, null);
             var2 = 15;
-            var8 = var14;
-            var14 = var12;
+            var9 = var14;
+            var14 = var16;
+            var16 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
+            var16 = null;
             var14 = null;
             var var13: Any = null;
 
@@ -194,7 +195,7 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.m(var10, 1);
+                        var16 = var11.m(var10, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -206,12 +207,14 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                }
             }
 
-            var9 = (java.lang.String)var7;
-            var7 = var13;
+            var16 = var14;
+            var14 = var16;
+            var9 = var8;
+            var8 = (java.lang.String)var13;
          }
 
          var11.c(var10);
-         return new ForwardFooterInfo(var2, var8, var9, var14, var7 as java.lang.String, null);
+         return new ForwardFooterInfo(var2, var9, var14, var16, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardFooterInfo) {

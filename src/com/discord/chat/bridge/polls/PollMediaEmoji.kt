@@ -195,31 +195,30 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
 
       public open fun deserialize(decoder: Decoder): PollMediaEmoji {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
          var var2: Int;
          var var5: Boolean;
-         var var6: Any;
-         val var8: java.lang.String;
-         var var12: Any;
-         if (var10.p()) {
-            var12 = a2.a;
-            var6 = var10.n(var9, 0, a2.a, null);
-            val var7: java.lang.String = var10.m(var9, 1);
-            var12 = var10.n(var9, 2, (DeserializationStrategy)var12, null);
-            var5 = var10.C(var9, 3);
+         var var6: java.lang.String;
+         var var7: Any;
+         var var11: Any;
+         if (var9.p()) {
+            var11 = a2.a;
+            var7 = var9.n(var8, 0, a2.a, null);
+            var6 = var9.m(var8, 1);
+            var11 = var9.n(var8, 2, (DeserializationStrategy)var11, null);
+            var5 = var9.C(var8, 3);
             var2 = 15;
-            var8 = var7;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var var14: Any = null;
+            var7 = null;
             var6 = null;
-            var12 = null;
+            var11 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -228,31 +227,28 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
                               throw new n(var4);
                            }
 
-                           var5 = var10.C(var9, 3);
+                           var5 = var9.C(var8, 3);
                            var2 |= 8;
                         } else {
-                           var12 = var10.n(var9, 2, a2.a, var12);
+                           var11 = var9.n(var8, 2, a2.a, var11);
                            var2 |= 4;
                         }
                      } else {
-                        var6 = var10.m(var9, 1);
+                        var6 = var9.m(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var14 = var10.n(var9, 0, a2.a, var14);
+                     var7 = var9.n(var8, 0, a2.a, var7);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var8 = (java.lang.String)var6;
-            var6 = var14;
          }
 
-         var10.c(var9);
-         return new PollMediaEmoji(var2, var6 as java.lang.String, var8, var12 as java.lang.String, var5, null);
+         var9.c(var8);
+         return new PollMediaEmoji(var2, var7 as java.lang.String, var6, var11 as java.lang.String, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollMediaEmoji) {

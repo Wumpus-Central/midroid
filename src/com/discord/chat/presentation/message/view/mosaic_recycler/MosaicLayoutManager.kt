@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.view.mosaic_recycler
 
 import android.content.Context
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import androidx.recyclerview.widget.RecyclerView.Recycler
@@ -14,11 +13,9 @@ import kotlin.jvm.internal.r
 public class MosaicLayoutManager(context: Context) : LayoutManager {
    private final var constrainedWidth: Int
    public final val context: Context
-   private final var disableRecycling: Boolean
    private final var isForwardedContent: Boolean
    private final var isShowingInlineForward: Boolean
    private final val mediaMaxHeight: Int
-   private final var recycleChildrenOnDetach: Boolean
    private final val spacingPx: Int
 
    init {
@@ -194,32 +191,12 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
       return false;
    }
 
-   public fun disableRecycling(disableRecycling: Boolean) {
-      this.disableRecycling = var1;
-   }
-
    public open fun generateDefaultLayoutParams(): LayoutParams {
       return new LayoutParams(-2, -2);
    }
 
    public open fun isAutoMeasureEnabled(): Boolean {
       return true;
-   }
-
-   public open fun onDetachedFromWindow(view: RecyclerView?, recycler: Recycler?) {
-      super.onDetachedFromWindow(var1, var2);
-      if (this.recycleChildrenOnDetach) {
-         if (this.disableRecycling) {
-            this.removeAllViews();
-         } else {
-            r.e(var2);
-            this.removeAndRecycleAllViews(var2);
-         }
-
-         if (var2 != null) {
-            var2.c();
-         }
-      }
    }
 
    public open fun onLayoutChildren(recycler: Recycler, state: State?) {
@@ -237,9 +214,5 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
 
    public fun setIsShowingInlineForward(isShowingInlineForward: Boolean) {
       this.isShowingInlineForward = var1;
-   }
-
-   public fun setRecycleChildrenOnDetach(recycleChildrenOnDetach: Boolean) {
-      this.recycleChildrenOnDetach = var1;
    }
 }

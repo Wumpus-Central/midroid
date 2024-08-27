@@ -80,10 +80,10 @@ public object DCDModuleProvider {
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
             var var3: NativeModule = null;
             if (var2 != null) {
-               val var6: Function1 = this.$onNativeModule;
+               val var5: Function1 = this.$onNativeModule;
                var3 = null;
                if (r.c(var1, this.$moduleName)) {
-                  var3 = var6.invoke(var2) as NativeModule;
+                  var3 = var5.invoke(var2) as NativeModule;
                }
             }
 

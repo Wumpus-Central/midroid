@@ -286,7 +286,6 @@ public data class UploadProgress(headerText: String,
          val var13: Boolean = var18.p();
          var var3: Int = 0;
          var var2: Float;
-         var var4: Int;
          var var6: Int;
          var var7: Int;
          var var8: Int;
@@ -295,53 +294,55 @@ public data class UploadProgress(headerText: String,
          val var11: Int;
          var var12: Int;
          var var14: java.lang.String;
-         val var16: java.lang.String;
+         var var15: java.lang.String;
          val var19: java.lang.String;
+         var var22: Int;
          if (var13) {
-            var14 = var18.m(var17, 0);
-            var12 = var18.i(var17, 1);
-            var8 = var18.i(var17, 2);
+            var15 = var18.m(var17, 0);
+            var6 = var18.i(var17, 1);
+            var9 = var18.i(var17, 2);
             var2 = var18.u(var17, 3);
-            var16 = var18.m(var17, 4);
+            var14 = var18.m(var17, 4);
             var19 = var18.m(var17, 5);
-            var6 = var18.i(var17, 6);
+            var8 = var18.i(var17, 6);
             val var5: Int = var18.i(var17, 7);
-            var7 = var18.i(var17, 8);
-            var4 = var18.i(var17, 9);
+            var11 = var18.i(var17, 8);
+            var22 = var18.i(var17, 9);
             var3 = var18.i(var17, 10);
-            var9 = 2047;
-            var11 = var5;
-            var10 = var3;
+            var7 = 2047;
+            var10 = var5;
+            var12 = var22;
+            var22 = var3;
          } else {
-            var var15: java.lang.String = null;
+            var15 = null;
             var14 = null;
             var var20: java.lang.String = null;
-            var var28: Boolean = true;
+            var var31: Boolean = true;
             var9 = 0;
             var8 = 0;
             var7 = 0;
             var6 = 0;
-            var4 = 0;
-            var var23: Int = 0;
+            var22 = 0;
+            var var24: Int = 0;
             var2 = 0.0F;
             var10 = 0;
 
-            while (var28) {
+            while (var31) {
                var12 = var18.o(var17);
                switch (var12) {
                   case -1:
-                     var28 = false;
+                     var31 = false;
                      break;
                   case 0:
                      var15 = var18.m(var17, 0);
                      var3 |= 1;
                      break;
                   case 1:
-                     var23 = var18.i(var17, 1);
+                     var24 = var18.i(var17, 1);
                      var3 |= 2;
                      break;
                   case 2:
-                     var4 = var18.i(var17, 2);
+                     var22 = var18.i(var17, 2);
                      var3 |= 4;
                      break;
                   case 3:
@@ -381,20 +382,20 @@ public data class UploadProgress(headerText: String,
                }
             }
 
-            var16 = var20;
-            var6 = var7;
-            var4 = var9;
-            var7 = var6;
-            var11 = var8;
+            var11 = var6;
+            var14 = var20;
+            var22 = var10;
+            var12 = var9;
+            var10 = var8;
+            var8 = var7;
             var19 = var14;
-            var8 = var4;
-            var12 = var23;
-            var14 = var15;
-            var9 = var3;
+            var9 = var22;
+            var6 = var24;
+            var7 = var3;
          }
 
          var18.c(var17);
-         return new UploadProgress(var9, var14, var12, var8, var2, var16, var19, var6, var11, var7, var4, var10, null);
+         return new UploadProgress(var7, var15, var6, var9, var2, var14, var19, var8, var10, var11, var12, var22, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgress) {

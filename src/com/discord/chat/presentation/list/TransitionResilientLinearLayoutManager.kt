@@ -13,7 +13,6 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    init {
       r.h(var1, "context");
       super(var1, var2, var3);
-      this.setRecycleChildrenOnDetach(true);
    }
 
    public fun disableRecycling(disableRecycling: Boolean) {

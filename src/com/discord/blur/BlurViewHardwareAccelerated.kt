@@ -67,10 +67,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var1 = true;
       }
 
-      val var2: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
-      if (var2 != null && !var1 && this.blurViewPropertiesDirty) {
-         var2.setBlurAmount(this.getId(), this.blurAmount);
-         var2.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
+      val var3: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
+      if (var3 != null && !var1 && this.blurViewPropertiesDirty) {
+         var3.setBlurAmount(this.getId(), this.blurAmount);
+         var3.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
          this.setBackgroundColor(BlurView.Companion.mapBlurTint$blur_release(this.blurTintIOSParityCompensation, this.blurTint, this.blurAmount));
          this.blurViewPropertiesDirty = false;
       }

@@ -1124,49 +1124,49 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var4: m0 = m0.a;
-         val var3: a2 = a2.a;
-         val var7: KSerializer = a.u(a2.a);
-         val var2: InviteType.Serializer = InviteType.Serializer.INSTANCE;
-         val var11: KSerializer = a.u(var4);
-         val var5: KSerializer = a.u(var4);
-         val var1: KSerializer = a.u(var4);
-         val var8: KSerializer = a.u(var3);
-         val var10: KSerializer = a.u(var3);
-         val var9: KSerializer = a.u(var4);
-         val var6: h = h.a;
+         val var7: m0 = m0.a;
+         val var8: a2 = a2.a;
+         val var9: KSerializer = a.u(a2.a);
+         val var11: InviteType.Serializer = InviteType.Serializer.INSTANCE;
+         val var10: KSerializer = a.u(var7);
+         val var5: KSerializer = a.u(var7);
+         val var6: KSerializer = a.u(var7);
+         val var3: KSerializer = a.u(var8);
+         val var2: KSerializer = a.u(var8);
+         val var1: KSerializer = a.u(var7);
+         val var4: h = h.a;
          return new KSerializer[]{
-            var4,
-            var4,
-            var4,
             var7,
-            var2,
-            var11,
-            var5,
-            var1,
-            var8,
-            var10,
+            var7,
+            var7,
             var9,
+            var11,
+            var10,
+            var5,
+            var6,
+            var3,
+            var2,
+            var1,
             a.u(h.a),
-            a.u(var3),
-            a.u(var3),
-            a.u(var6),
-            a.u(var3),
-            a.u(var3),
+            a.u(var8),
+            a.u(var8),
             a.u(var4),
+            a.u(var8),
+            a.u(var8),
+            a.u(var7),
+            a.u(var7),
             a.u(var4),
-            a.u(var6),
-            a.u(var4),
-            a.u(var3),
-            a.u(var3),
-            a.u(var3),
-            a.u(var4),
-            a.u(var4),
-            a.u(var4),
-            a.u(var3),
-            a.u(var3),
-            a.u(var4),
-            a.u(var3)
+            a.u(var7),
+            a.u(var8),
+            a.u(var8),
+            a.u(var8),
+            a.u(var7),
+            a.u(var7),
+            a.u(var7),
+            a.u(var8),
+            a.u(var8),
+            a.u(var7),
+            a.u(var8)
          };
       }
 
@@ -1177,12 +1177,13 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
          val var8: Boolean = var45.p();
          var var2: Int = 0;
          var var27: Any = null;
+         var var3: Int;
          var var4: Int;
          var var5: Int;
          val var6: Int;
+         var var10: Any;
          var var13: Any;
          var var15: Any;
-         var var16: Any;
          var var17: Any;
          var var18: Any;
          var var19: Any;
@@ -1192,6 +1193,7 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
          var var23: Any;
          var var24: Any;
          var var25: Any;
+         var var26: Any;
          var var28: Any;
          var var29: Any;
          var var30: Any;
@@ -1200,67 +1202,62 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
          var var33: Any;
          var var34: Any;
          var var35: Any;
-         var var36: Any;
+         val var36: Any;
          val var37: Any;
-         val var38: Any;
+         var var38: Any;
          var var47: Any;
-         var var51: Int;
-         var var56: Any;
-         var var58: Any;
-         var var64: Any;
+         var var54: Any;
+         var var61: Any;
          if (var8) {
-            var5 = var45.i(var44, 0);
-            var51 = var45.i(var44, 1);
+            var6 = var45.i(var44, 0);
+            var3 = var45.i(var44, 1);
             var2 = var45.i(var44, 2);
-            var56 = a2.a;
+            var54 = a2.a;
             var25 = var45.n(var44, 3, a2.a, null);
-            var32 = var45.y(var44, 4, InviteType.Serializer.INSTANCE, null);
+            var17 = var45.y(var44, 4, InviteType.Serializer.INSTANCE, null);
             var47 = m0.a;
-            var58 = var45.n(var44, 5, m0.a, null);
-            var23 = var45.n(var44, 6, (DeserializationStrategy)var47, null);
-            var18 = var45.n(var44, 7, (DeserializationStrategy)var47, null);
-            val var14: Any = var45.n(var44, 8, (DeserializationStrategy)var56, null);
-            var20 = var45.n(var44, 9, (DeserializationStrategy)var56, null);
-            var17 = var45.n(var44, 10, (DeserializationStrategy)var47, null);
-            var64 = h.a;
-            var16 = var45.n(var44, 11, h.a, null);
-            var30 = var45.n(var44, 12, (DeserializationStrategy)var56, null);
-            var19 = var45.n(var44, 13, (DeserializationStrategy)var56, null);
-            var27 = var45.n(var44, 14, (DeserializationStrategy)var64, null);
-            var22 = var45.n(var44, 15, (DeserializationStrategy)var56, null);
-            var24 = var45.n(var44, 16, (DeserializationStrategy)var56, null);
-            var21 = var45.n(var44, 17, (DeserializationStrategy)var47, null);
+            var10 = var45.n(var44, 5, m0.a, null);
+            var20 = var45.n(var44, 6, (DeserializationStrategy)var47, null);
+            var23 = var45.n(var44, 7, (DeserializationStrategy)var47, null);
+            val var14: Any = var45.n(var44, 8, (DeserializationStrategy)var54, null);
+            var22 = var45.n(var44, 9, (DeserializationStrategy)var54, null);
+            var37 = var45.n(var44, 10, (DeserializationStrategy)var47, null);
+            var61 = h.a;
+            var36 = var45.n(var44, 11, h.a, null);
+            var18 = var45.n(var44, 12, (DeserializationStrategy)var54, null);
+            var19 = var45.n(var44, 13, (DeserializationStrategy)var54, null);
+            var21 = var45.n(var44, 14, (DeserializationStrategy)var61, null);
+            var31 = var45.n(var44, 15, (DeserializationStrategy)var54, null);
+            var32 = var45.n(var44, 16, (DeserializationStrategy)var54, null);
+            var38 = var45.n(var44, 17, (DeserializationStrategy)var47, null);
             var15 = var45.n(var44, 18, (DeserializationStrategy)var47, null);
-            var33 = var45.n(var44, 19, (DeserializationStrategy)var64, null);
+            var33 = var45.n(var44, 19, (DeserializationStrategy)var61, null);
             var13 = var45.n(var44, 20, (DeserializationStrategy)var47, null);
-            var28 = var45.n(var44, 21, (DeserializationStrategy)var56, null);
-            var34 = var45.n(var44, 22, (DeserializationStrategy)var56, null);
-            var37 = var45.n(var44, 23, (DeserializationStrategy)var56, null);
+            var28 = var45.n(var44, 21, (DeserializationStrategy)var54, null);
+            var34 = var45.n(var44, 22, (DeserializationStrategy)var54, null);
+            var26 = var45.n(var44, 23, (DeserializationStrategy)var54, null);
             var29 = var45.n(var44, 24, (DeserializationStrategy)var47, null);
             var35 = var45.n(var44, 25, (DeserializationStrategy)var47, null);
-            val var26: Any = var45.n(var44, 26, (DeserializationStrategy)var47, null);
-            var64 = var45.n(var44, 27, (DeserializationStrategy)var56, null);
-            val var12: Any = var45.n(var44, 28, (DeserializationStrategy)var56, null);
+            val var16: Any = var45.n(var44, 26, (DeserializationStrategy)var47, null);
+            val var12: Any = var45.n(var44, 27, (DeserializationStrategy)var54, null);
+            var61 = var45.n(var44, 28, (DeserializationStrategy)var54, null);
             var47 = var45.n(var44, 29, (DeserializationStrategy)var47, null);
-            var56 = var45.n(var44, 30, (DeserializationStrategy)var56, null);
-            var4 = Integer.MAX_VALUE;
-            var36 = var58;
-            var38 = var14;
-            var58 = var26;
-            var31 = var64;
-            var64 = var12;
-            var6 = var51;
-            var51 = var2;
+            var54 = var45.n(var44, 30, (DeserializationStrategy)var54, null);
+            var5 = Integer.MAX_VALUE;
+            var30 = var14;
+            var24 = var16;
+            var27 = var12;
+            var4 = var2;
          } else {
-            var var54: Boolean = true;
+            var var52: Boolean = true;
             var5 = 0;
             var4 = 0;
-            var51 = 0;
+            var3 = 0;
             var47 = null;
-            var56 = null;
-            var23 = null;
+            var54 = null;
+            var24 = null;
             var33 = null;
-            var var136: Any = null;
+            var26 = null;
             var32 = null;
             var30 = null;
             var31 = null;
@@ -1269,11 +1266,11 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
             var34 = null;
             var28 = null;
             var25 = null;
-            var var67: Any = null;
-            var64 = null;
-            var58 = null;
-            var var75: Any = null;
-            var16 = null;
+            var var64: Any = null;
+            var61 = null;
+            var10 = null;
+            var var74: Any = null;
+            var var81: Any = null;
             var13 = null;
             var15 = null;
             var17 = null;
@@ -1281,10 +1278,10 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
             var19 = null;
             var20 = null;
             var22 = null;
-            var24 = null;
+            var23 = null;
             var21 = null;
 
-            while (var54) {
+            while (var52) {
                label61: {
                   label60: {
                      label59: {
@@ -1292,14 +1289,14 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                            var var7: Int = var45.o(var44);
                            switch (var7) {
                               case -1:
-                                 var54 = false;
+                                 var52 = false;
                                  break label59;
                               case 0:
                                  var5 = var45.i(var44, 0);
                                  var2 |= 1;
                                  break label59;
                               case 1:
-                                 var51 = var45.i(var44, 1);
+                                 var3 = var45.i(var44, 1);
                                  var2 |= 2;
                                  break label59;
                               case 2:
@@ -1311,56 +1308,56 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                                  var2 |= 8;
                                  break label59;
                               case 4:
-                                 var16 = var18;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var67 = var45.y(var44, 4, InviteType.Serializer.INSTANCE, var67);
+                                 var64 = var45.y(var44, 4, InviteType.Serializer.INSTANCE, var64);
                                  var2 |= 16;
                                  var24 = var17;
                                  var23 = var15;
                                  var22 = var13;
-                                 var21 = var16;
-                                 var20 = var75;
-                                 var19 = var58;
-                                 var18 = var64;
-                                 var17 = var67;
-                                 var75 = var20;
+                                 var21 = var81;
+                                 var20 = var74;
+                                 var19 = var10;
+                                 var18 = var61;
+                                 var17 = var64;
+                                 var74 = var20;
                                  var13 = var22;
-                                 var67 = var24;
-                                 var64 = var21;
-                                 var58 = var23;
+                                 var64 = var23;
+                                 var61 = var21;
+                                 var10 = var24;
                                  break label60;
                               case 5:
-                                 var16 = var18;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var13 = var22;
-                                 var19 = var58;
-                                 var18 = var45.n(var44, 5, m0.a, var64);
+                                 var19 = var10;
+                                 var18 = var45.n(var44, 5, m0.a, var61);
                                  var2 |= 32;
-                                 var17 = var67;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var17 = var64;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
                                  break label60;
                               case 6:
-                                 var16 = var18;
+                                 var81 = var18;
                                  var15 = var19;
                                  var13 = var22;
-                                 var20 = var75;
-                                 var19 = var45.n(var44, 6, m0.a, var58);
+                                 var20 = var74;
+                                 var19 = var45.n(var44, 6, m0.a, var10);
                                  var2 |= 64;
-                                 var18 = var64;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
-                                 var75 = var20;
-                                 var17 = var67;
-                                 var21 = var16;
+                                 var18 = var61;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
+                                 var74 = var20;
+                                 var17 = var64;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
@@ -1368,17 +1365,17 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                               case 7:
                                  var15 = var19;
                                  var13 = var22;
-                                 var21 = var16;
-                                 var22 = var45.n(var44, 7, m0.a, var75);
+                                 var21 = var81;
+                                 var22 = var45.n(var44, 7, m0.a, var74);
                                  var2 |= 128;
-                                 var19 = var58;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
-                                 var75 = var20;
-                                 var16 = var18;
-                                 var17 = var67;
-                                 var18 = var64;
+                                 var19 = var10;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
+                                 var74 = var20;
+                                 var81 = var18;
+                                 var17 = var64;
+                                 var18 = var61;
                                  var20 = var22;
                                  var22 = var13;
                                  var23 = var15;
@@ -1387,18 +1384,18 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                               case 8:
                                  var15 = var19;
                                  var22 = var13;
-                                 var21 = var45.n(var44, 8, a2.a, var16);
+                                 var21 = var45.n(var44, 8, a2.a, var81);
                                  var2 |= 256;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
                                  var13 = var22;
-                                 var75 = var20;
-                                 var16 = var18;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
+                                 var74 = var20;
+                                 var81 = var18;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
                                  var23 = var15;
                                  var24 = var17;
                                  break label60;
@@ -1406,185 +1403,185 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                                  var23 = var15;
                                  var22 = var45.n(var44, 9, a2.a, var13);
                                  var2 |= 512;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
                                  var13 = var22;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var15 = var19;
-                                 var16 = var18;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var81 = var18;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var24 = var17;
                                  break label60;
                               case 10:
                                  var24 = var17;
                                  var23 = var45.n(var44, 10, m0.a, var15);
                                  var2 |= 1024;
-                                 var17 = var67;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
+                                 var17 = var64;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
                                  var13 = var22;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var15 = var19;
-                                 var16 = var18;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var81 = var18;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  break label60;
                               case 11:
                                  var24 = var45.n(var44, 11, h.a, var17);
                                  var2 |= 2048;
-                                 var17 = var67;
-                                 var23 = var15;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
+                                 var17 = var64;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
                                  var13 = var22;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var15 = var19;
-                                 var16 = var18;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var81 = var18;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
+                                 var23 = var15;
                                  break label60;
                               case 12:
                                  var18 = var45.n(var44, 12, a2.a, var18);
                                  var2 |= 4096;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
                                  var13 = var22;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var15 = var19;
-                                 var16 = var18;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var81 = var18;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
                                  break label60;
                               case 13:
-                                 var36 = var45.n(var44, 13, a2.a, var19);
+                                 var38 = var45.n(var44, 13, a2.a, var19);
                                  var2 |= 8192;
-                                 var19 = var58;
-                                 var16 = var18;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
+                                 var19 = var10;
+                                 var81 = var18;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
                                  var13 = var22;
-                                 var75 = var20;
-                                 var15 = var36;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var74 = var20;
+                                 var15 = var38;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
                                  break label60;
                               case 14:
-                                 val var292: Any = var45.n(var44, 14, h.a, var20);
+                                 val var289: Any = var45.n(var44, 14, h.a, var20);
                                  var2 |= 16384;
-                                 var23 = var15;
-                                 var16 = var18;
+                                 var20 = var74;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
                                  var13 = var22;
-                                 var75 = var292;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var74 = var289;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var21 = var81;
                                  var22 = var13;
+                                 var23 = var15;
                                  var24 = var17;
                                  break label60;
                               case 15:
-                                 val var291: Any = var45.n(var44, 15, a2.a, var22);
+                                 val var288: Any = var45.n(var44, 15, a2.a, var22);
                                  var2 |= 32768;
-                                 var16 = var18;
+                                 var24 = var17;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var75 = var20;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var24;
-                                 var13 = var291;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var74 = var20;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var23;
+                                 var13 = var288;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
-                                 var24 = var17;
                                  break label60;
                               case 16:
-                                 val var290: Any = var45.n(var44, 16, a2.a, var24);
+                                 val var287: Any = var45.n(var44, 16, a2.a, var23);
                                  var2 |= 65536;
-                                 var16 = var18;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var13 = var22;
-                                 var58 = var23;
-                                 var64 = var21;
-                                 var67 = var290;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var10 = var24;
+                                 var61 = var21;
+                                 var64 = var287;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
                                  break label60;
                               case 17:
-                                 val var289: Any = var45.n(var44, 17, m0.a, var21);
+                                 val var286: Any = var45.n(var44, 17, m0.a, var21);
                                  var2 |= 131072;
-                                 var16 = var18;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var13 = var22;
-                                 var67 = var24;
-                                 var58 = var23;
-                                 var64 = var289;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var64 = var23;
+                                 var10 = var24;
+                                 var61 = var286;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
                                  break label60;
                               case 18:
-                                 val var288: Any = var45.n(var44, 18, m0.a, var23);
+                                 val var285: Any = var45.n(var44, 18, m0.a, var24);
                                  var2 |= 262144;
-                                 var16 = var18;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var13 = var22;
-                                 var67 = var24;
-                                 var64 = var21;
-                                 var58 = var288;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var64 = var23;
+                                 var61 = var21;
+                                 var10 = var285;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
@@ -1592,24 +1589,24 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                               case 19:
                                  var33 = var45.n(var44, 19, h.a, var33);
                                  var2 |= 524288;
-                                 var16 = var18;
+                                 var81 = var18;
                                  var15 = var19;
-                                 var75 = var20;
+                                 var74 = var20;
                                  var13 = var22;
-                                 var67 = var24;
-                                 var64 = var21;
-                                 var58 = var23;
-                                 var17 = var67;
-                                 var18 = var64;
-                                 var19 = var58;
-                                 var20 = var75;
-                                 var21 = var16;
+                                 var64 = var23;
+                                 var61 = var21;
+                                 var10 = var24;
+                                 var17 = var64;
+                                 var18 = var61;
+                                 var19 = var10;
+                                 var20 = var74;
+                                 var21 = var81;
                                  var22 = var13;
                                  var23 = var15;
                                  var24 = var17;
                                  break label60;
                               case 20:
-                                 var56 = var45.n(var44, 20, m0.a, var56);
+                                 var54 = var45.n(var44, 20, m0.a, var54);
                                  var7 = 1048576;
                                  break;
                               case 21:
@@ -1621,7 +1618,7 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                                  var2 |= 4194304;
                                  break label58;
                               case 23:
-                                 var136 = var45.n(var44, 23, a2.a, var136);
+                                 var26 = var45.n(var44, 23, a2.a, var26);
                                  var2 |= 8388608;
                                  break label58;
                               case 24:
@@ -1659,40 +1656,40 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                            var2 |= var7;
                         }
 
-                        var16 = var18;
+                        var81 = var18;
                         var15 = var19;
-                        var75 = var20;
+                        var74 = var20;
                         var13 = var22;
-                        var67 = var24;
-                        var64 = var21;
-                        var58 = var23;
-                        var17 = var67;
-                        var18 = var64;
-                        var19 = var58;
-                        var20 = var75;
-                        var21 = var16;
+                        var64 = var23;
+                        var61 = var21;
+                        var10 = var24;
+                        var17 = var64;
+                        var18 = var61;
+                        var19 = var10;
+                        var20 = var74;
+                        var21 = var81;
                         var22 = var13;
                         var23 = var15;
                         var24 = var17;
                         break label60;
                      }
 
-                     var16 = var18;
-                     var15 = var19;
-                     var64 = var21;
-                     var58 = var23;
+                     var61 = var21;
+                     var10 = var24;
                      var47 = var25;
                      var24 = var17;
                      var23 = var15;
                      var22 = var13;
-                     var21 = var16;
-                     var20 = var75;
-                     var19 = var58;
-                     var18 = var64;
-                     var17 = var67;
-                     var75 = var20;
+                     var21 = var81;
+                     var20 = var74;
+                     var19 = var10;
+                     var18 = var61;
+                     var17 = var64;
+                     var81 = var18;
+                     var15 = var19;
+                     var74 = var20;
                      var13 = var22;
-                     var67 = var24;
+                     var64 = var23;
                      var25 = var47;
                      break label61;
                   }
@@ -1702,81 +1699,80 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                }
 
                var25 = var47;
-               var67 = var17;
-               var64 = var18;
-               var58 = var19;
-               var75 = var20;
-               var16 = var21;
+               var64 = var17;
+               var61 = var18;
+               var10 = var19;
+               var74 = var20;
+               var81 = var21;
                var13 = var22;
                var15 = var23;
                var17 = var24;
                var47 = var25;
-               var23 = var58;
-               var18 = var16;
+               var24 = var10;
+               var18 = var81;
                var19 = var15;
-               var20 = var75;
+               var20 = var74;
                var22 = var13;
-               var24 = var67;
-               var21 = var64;
+               var23 = var64;
+               var21 = var61;
             }
 
-            var36 = var64;
-            var6 = var51;
-            var64 = var31;
-            var23 = var58;
-            var58 = var47;
-            var51 = var4;
-            var4 = var2;
-            var56 = var32;
+            var61 = var31;
+            var6 = var5;
+            var37 = var15;
+            var24 = var47;
+            var5 = var2;
+            var54 = var32;
             var47 = var30;
-            var31 = var27;
-            var38 = var16;
-            var13 = var56;
-            var15 = var23;
-            var16 = var17;
-            var30 = var18;
-            var27 = var20;
-            var17 = var15;
-            var20 = var13;
-            var18 = var75;
-            var32 = var67;
-            var37 = var136;
+            var30 = var81;
+            var13 = var54;
+            var15 = var24;
+            var38 = var21;
+            var32 = var23;
+            var10 = var61;
+            var31 = var22;
+            var36 = var17;
+            var21 = var20;
+            var22 = var13;
+            var20 = var10;
+            var23 = var74;
+            var17 = var64;
          }
 
          var45.c(var44);
          return new GuildInviteEmbedImpl(
-            var4,
             var5,
             var6,
-            var51,
+            var3,
+            var4,
             var25 as java.lang.String,
-            var32 as InviteType,
-            var36 as Integer,
+            var17 as InviteType,
+            var10 as Integer,
+            var20 as Integer,
             var23 as Integer,
-            var18 as Integer,
-            var38 as java.lang.String,
-            var20 as java.lang.String,
-            var17 as Integer,
-            var16 as java.lang.Boolean,
             var30 as java.lang.String,
-            var19 as java.lang.String,
-            var27 as java.lang.Boolean,
             var22 as java.lang.String,
-            var24 as java.lang.String,
-            var21 as Integer,
+            var37 as Integer,
+            var36 as java.lang.Boolean,
+            var18 as java.lang.String,
+            var19 as java.lang.String,
+            var21 as java.lang.Boolean,
+            var31 as java.lang.String,
+            var32 as java.lang.String,
+            var38 as Integer,
             var15 as Integer,
             var33 as java.lang.Boolean,
             var13 as Integer,
             var28 as java.lang.String,
             var34 as java.lang.String,
-            var37 as java.lang.String,
+            var26 as java.lang.String,
             var29 as Integer,
             var35 as Integer,
-            var58 as Integer,
-            var31 as java.lang.String,
-            var64 as java.lang.String,
+            var24 as Integer,
+            var27 as java.lang.String,
+            var61 as java.lang.String,
             var47 as Integer,
-            var56 as java.lang.String,
+            var54 as java.lang.String,
             null
          );
       }

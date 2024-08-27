@@ -185,8 +185,8 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
                }
             }
 
-            var2 = var3;
             var3 = var2;
+            var2 = var3;
          }
 
          var9.c(var8);

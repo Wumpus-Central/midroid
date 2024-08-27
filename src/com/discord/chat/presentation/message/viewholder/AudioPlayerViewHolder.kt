@@ -40,8 +40,8 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
    public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler, onLongClicked: ((String, Int?) -> Unit)?) {
       kotlin.jvm.internal.r.h(var1, "accessory");
       kotlin.jvm.internal.r.h(var2, "eventHandler");
-      val var7: Attachment = var1.getAttachment();
-      val var8: UploadItemProps = var1.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var2) {
+      val var6: Attachment = var1.getAttachment();
+      val var7: UploadItemProps = var1.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -52,37 +52,37 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var6: AudioPlayerView = this.view;
+      val var8: AudioPlayerView = this.view;
       this.view.setSourceUrl(var1);
-      val var4: ByteArray = var7.getWaveformByteArray();
+      val var4: ByteArray = var6.getWaveformByteArray();
       val var10: Unit;
       if (var4 != null) {
-         var6.setSampleData(var4);
+         var8.setSampleData(var4);
          var10 = Unit.a;
       } else {
          var10 = null;
       }
 
       if (var10 == null) {
-         var6.setAudioFileDetails(var1.getAttachment());
+         var8.setAudioFileDetails(var1.getAttachment());
       }
 
-      val var9: java.lang.Float = var7.getDurationSecs();
+      val var9: java.lang.Float = var6.getDurationSecs();
       var var11: Unit = null;
       if (var9 != null) {
-         var6.setDurationMs((long)(var9.floatValue() * (float)1000));
+         var8.setDurationMs((long)(var9.floatValue() * (float)1000));
          var11 = Unit.a;
       }
 
       if (var11 == null) {
-         var6.setUnknownDuration();
+         var8.setUnknownDuration();
       }
 
-      var6.setUploadProgress(var8);
-      var6.setOnLongPress(new d(var3, var1));
-      var6.shouldAnimate(var7.isAnimated());
-      var6.setContainerBackgroundColor(var1.getColor());
-      var6.setListener(new AudioPlayerView.Listener(var7, var2, var1) {
+      var8.setUploadProgress(var7);
+      var8.setOnLongPress(new d(var3, var1));
+      var8.shouldAnimate(var6.isAnimated());
+      var8.setContainerBackgroundColor(var1.getColor());
+      var8.setListener(new AudioPlayerView.Listener(var6, var2, var1) {
          final AudioAttachmentMessageAccessory $accessory;
          final ChatEventHandler $eventHandler;
          final Attachment $this_with;
@@ -135,29 +135,29 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var2 = var6;
             } else {
                val var12: MediaPlayer = AudioPlayerManager.INSTANCE.getPlayer(AudioPlayerUtilsKt.toAudioSource(this.$accessory));
-               val var4: Long;
+               val var3: Long;
                if (var12 != null) {
-                  var4 = var12.durationMs();
+                  var3 = var12.durationMs();
                } else {
-                  var4 = 0L;
+                  var3 = 0L;
                }
 
-               var2 = (float)var4 * 1000.0F;
+               var2 = (float)var3 * 1000.0F;
             }
 
-            val var9: ChatEventHandler = this.$eventHandler;
-            val var8: java.lang.String = this.$accessory.getMessageId_3Eiw7ao();
+            val var8: ChatEventHandler = this.$eventHandler;
+            val var9: java.lang.String = this.$accessory.getMessageId_3Eiw7ao();
             val var13: UserId = this.$accessory.getAuthorId_wUX8bhU();
             if (var13 != null) {
                val var10: Long = var13.unbox_impl();
-               val var3: Boolean = this.$accessory.isVoiceMessage();
+               val var5: Boolean = this.$accessory.isVoiceMessage();
                val var7: java.lang.String = this.$accessory.getAttachment().getId();
                var var14: java.lang.String = var7;
                if (var7 == null) {
                   var14 = "";
                }
 
-               var9.mediaAttachmentPlaybackStarted_jd4C3YQ(var8, var2, var1, var10, var3, var14);
+               var8.mediaAttachmentPlaybackStarted_jd4C3YQ(var9, var2, var1, var10, var5, var14);
             }
          }
 

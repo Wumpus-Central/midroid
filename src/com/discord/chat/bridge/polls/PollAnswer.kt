@@ -314,24 +314,24 @@ public data class PollAnswer(answerId: String,
          var var3: Int;
          var var4: Int;
          val var5: Int;
+         var var7: Any;
          var var8: Any;
          var var9: Any;
          var var10: Any;
          var var11: Any;
          var var12: Any;
-         var var16: Any;
-         var var21: Any;
+         var var17: Any;
          if (var15.p()) {
-            var9 = var15.m(var14, 0);
-            var8 = var15.y(var14, 1, PollMedia.$serializer.INSTANCE, null);
+            var8 = var15.m(var14, 0);
+            var9 = var15.y(var14, 1, PollMedia.$serializer.INSTANCE, null);
             var4 = var15.C(var14, 2);
-            var16 = var15.m(var14, 3);
+            var7 = var15.m(var14, 3);
             val var2: Int = var15.i(var14, 4);
-            var21 = h.a;
+            var17 = h.a;
             var10 = var15.n(var14, 5, h.a, null);
-            var11 = var15.n(var14, 6, (DeserializationStrategy)var21, null);
-            var12 = var15.n(var14, 7, (DeserializationStrategy)var21, null);
-            var21 = var15.m(var14, 8);
+            var11 = var15.n(var14, 6, (DeserializationStrategy)var17, null);
+            var12 = var15.n(var14, 7, (DeserializationStrategy)var17, null);
+            var17 = var15.m(var14, 8);
             var3 = 511;
             var5 = var2;
          } else {
@@ -342,8 +342,8 @@ public data class PollAnswer(answerId: String,
             var11 = null;
             var9 = null;
             var8 = null;
-            var21 = null;
-            var16 = null;
+            var7 = null;
+            var17 = null;
             var10 = null;
             var4 = 0;
 
@@ -366,7 +366,7 @@ public data class PollAnswer(answerId: String,
                      var18 |= 4;
                      break;
                   case 3:
-                     var21 = var15.m(var14, 3);
+                     var7 = var15.m(var14, 3);
                      var18 |= 8;
                      break;
                   case 4:
@@ -386,7 +386,7 @@ public data class PollAnswer(answerId: String,
                      var18 |= 128;
                      break;
                   case 8:
-                     var16 = var15.m(var14, 8);
+                     var17 = var15.m(var14, 8);
                      var18 |= 256;
                      break;
                   default:
@@ -394,24 +394,24 @@ public data class PollAnswer(answerId: String,
                }
             }
 
-            var21 = var16;
             var5 = var3;
-            var16 = var21;
+            var9 = var8;
+            var8 = var9;
             var3 = var18;
          }
 
          var15.c(var14);
          return new PollAnswer(
             var3,
-            (java.lang.String)var9,
-            var8 as PollMedia,
+            (java.lang.String)var8,
+            var9 as PollMedia,
             (boolean)var4,
-            (java.lang.String)var16,
+            (java.lang.String)var7,
             var5,
             var10 as java.lang.Boolean,
             var11 as java.lang.Boolean,
             var12 as java.lang.Boolean,
-            (java.lang.String)var21,
+            (java.lang.String)var17,
             null
          );
       }

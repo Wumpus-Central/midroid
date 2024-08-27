@@ -181,21 +181,21 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var5: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.originalLink;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LongPressChannelData(guildId=");
-      var3.append(var4);
-      var3.append(", channelId=");
-      var3.append(var5);
-      var3.append(", messageId=");
-      var3.append(var2);
-      var3.append(", originalLink=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.originalLink;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressChannelData(guildId=");
+      var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var1);
+      var2.append(", originalLink=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<LongPressChannelData> {
@@ -234,8 +234,8 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
          var var14: Any;
          if (var5) {
             var14 = a2.a;
-            var12 = var11.n(var10, 0, a2.a, null);
-            var8 = var11.n(var10, 1, (DeserializationStrategy)var14, null);
+            var8 = var11.n(var10, 0, a2.a, null);
+            var12 = var11.n(var10, 1, (DeserializationStrategy)var14, null);
             var6 = var11.n(var10, 2, (DeserializationStrategy)var14, null);
             var14 = var11.n(var10, 3, (DeserializationStrategy)var14, null);
             var2 = 15;
@@ -275,13 +275,12 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
                }
             }
 
-            var12 = var8;
-            var8 = var14;
             var14 = var12;
+            var12 = var14;
          }
 
          var11.c(var10);
-         return new LongPressChannelData(var2, var12 as java.lang.String, var8 as java.lang.String, var6 as java.lang.String, var14 as java.lang.String, null);
+         return new LongPressChannelData(var2, var8 as java.lang.String, var12 as java.lang.String, var6 as java.lang.String, var14 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressChannelData) {

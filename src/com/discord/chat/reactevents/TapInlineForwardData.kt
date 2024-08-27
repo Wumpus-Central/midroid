@@ -92,14 +92,13 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          var var2: Int;
          var var6: java.lang.String;
          var var7: Any;
-         val var9: java.lang.String;
+         val var12: java.lang.String;
          if (var5) {
             var8 = var11.m(var10, 0);
             var6 = var11.m(var10, 1);
-            val var12: java.lang.String = var11.m(var10, 2);
+            var12 = var11.m(var10, 2);
             var7 = var11.n(var10, 3, m0.a, null);
             var2 = 15;
-            var9 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -136,13 +135,13 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                }
             }
 
-            var9 = var6;
+            var12 = var6;
             var6 = (java.lang.String)var7;
             var7 = var13;
          }
 
          var11.c(var10);
-         return new TapInlineForwardData(var2, var8, var6, var9, var7 as Integer, null);
+         return new TapInlineForwardData(var2, var8, var6, var12, var7 as Integer, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInlineForwardData) {

@@ -49,29 +49,29 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
          var10 = 1;
       }
 
-      val var15: Boolean = (boolean)(var10 xor true);
-      val var20: EmbedView = this.embedView;
-      val var18: Embed = var1.getEmbed();
+      val var13: Boolean = (boolean)(var10 xor true);
+      val var18: EmbedView = this.embedView;
+      val var20: Embed = var1.getEmbed();
       var10 = var1.getIndex();
-      val var12: Long = var1.getChannelId_o4g7jtM();
+      val var14: Long = var1.getChannelId_o4g7jtM();
       val var17: java.lang.String = var1.getMessageId_3Eiw7ao();
       val var11: Int = var1.getConstrainedWidth();
-      val var14: Boolean;
-      if (var1.getShouldAutoPlayGifs() && !var15) {
-         var14 = true;
+      val var12: Boolean;
+      if (var1.getShouldAutoPlayGifs() && !var13) {
+         var12 = true;
       } else {
-         var14 = false;
+         var12 = false;
       }
 
-      var20.setEmbed_UEgMTIk(
-         var18,
+      var18.setEmbed_UEgMTIk(
+         var20,
          var10,
-         var12,
+         var14,
          var17,
          var11,
          var2,
          var3,
-         var14,
+         var12,
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
          var1.getShouldShowRoleDot(),
@@ -210,7 +210,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
          },
          var5,
          var8,
-         var15,
+         var13,
          var1.isForwardedContent(),
          var1.isShowingInlineForward(),
          var1.getUseOldForwardIcon()

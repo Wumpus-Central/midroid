@@ -221,33 +221,33 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
 
       public open fun deserialize(decoder: Decoder): MessageReactionEmoji {
          r.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
-         val var5: Boolean = var11.p();
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
+         val var5: Boolean = var12.p();
          var var9: Any = null;
          var var2: Int;
          var var6: java.lang.String;
-         var var7: Any;
-         var var8: java.lang.String;
-         var var13: Any;
+         var var8: Any;
+         val var13: java.lang.String;
+         var var15: Any;
          if (var5) {
-            var13 = a2.a;
-            var9 = var11.n(var10, 0, a2.a, null);
-            var6 = var11.m(var10, 1);
-            var8 = var11.m(var10, 2);
-            var7 = var11.n(var10, 3, (DeserializationStrategy)var13, null);
-            var13 = var11.n(var10, 4, h.a, null);
+            var15 = a2.a;
+            var9 = var12.n(var11, 0, a2.a, null);
+            var6 = var12.m(var11, 1);
+            var13 = var12.m(var11, 2);
+            var15 = var12.n(var11, 3, (DeserializationStrategy)var15, null);
+            var8 = var12.n(var11, 4, h.a, null);
             var2 = 31;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var6 = null;
             var8 = null;
-            var7 = null;
-            var13 = null;
+            var15 = null;
+            var var14: Any = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var12.o(var11);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -257,32 +257,35 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
                                  throw new n(var4);
                               }
 
-                              var13 = var11.n(var10, 4, h.a, var13);
+                              var14 = var12.n(var11, 4, h.a, var14);
                               var2 |= 16;
                            } else {
-                              var7 = var11.n(var10, 3, a2.a, var7);
+                              var15 = var12.n(var11, 3, a2.a, var15);
                               var2 |= 8;
                            }
                         } else {
-                           var8 = var11.m(var10, 2);
+                           var8 = var12.m(var11, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var6 = var11.m(var10, 1);
+                        var6 = var12.m(var11, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var11.n(var10, 0, a2.a, var9);
+                     var9 = var12.n(var11, 0, a2.a, var9);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var13 = (java.lang.String)var8;
+            var8 = var14;
          }
 
-         var11.c(var10);
-         return new MessageReactionEmoji(var2, var9 as java.lang.String, var6, var8, var7 as java.lang.String, var13 as java.lang.Boolean, null);
+         var12.c(var11);
+         return new MessageReactionEmoji(var2, var9 as java.lang.String, var6, var13, var15 as java.lang.String, var8 as java.lang.Boolean, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageReactionEmoji) {

@@ -178,29 +178,30 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
 
       public open fun deserialize(decoder: Decoder): ChatInputNodeStyle {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         var var2: Int;
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
          var var3: Int;
+         val var4: Int;
          var var6: Any;
          var var7: Any;
-         var var11: Any;
-         if (var10.p()) {
-            var11 = var10.n(var9, 0, m0.a, null);
-            var3 = var10.i(var9, 1);
-            var6 = var10.n(var9, 2, com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE, null);
-            var7 = var10.n(var9, 3, ChatInputNodeFontWeight.Companion.serializer(), null);
-            var2 = 15;
+         var var10: Any;
+         if (var9.p()) {
+            var6 = var9.n(var8, 0, m0.a, null);
+            val var2: Int = var9.i(var8, 1);
+            var7 = var9.n(var8, 2, com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE, null);
+            var10 = var9.n(var8, 3, ChatInputNodeFontWeight.Companion.serializer(), null);
+            var4 = 15;
+            var3 = var2;
          } else {
-            var var4: Boolean = true;
+            var var12: Boolean = true;
             var3 = 0;
             var6 = null;
             var7 = null;
-            var11 = null;
-            var2 = 0;
+            var10 = null;
+            var var11: Int = 0;
 
-            while (var4) {
-               val var5: Int = var10.o(var9);
+            while (var12) {
+               val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -209,32 +210,30 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
                               throw new n(var5);
                            }
 
-                           var11 = var10.n(var9, 3, ChatInputNodeFontWeight.Companion.serializer(), var11);
-                           var2 |= 8;
+                           var10 = var9.n(var8, 3, ChatInputNodeFontWeight.Companion.serializer(), var10);
+                           var11 |= 8;
                         } else {
-                           var7 = var10.n(var9, 2, com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE, var7);
-                           var2 |= 4;
+                           var7 = var9.n(var8, 2, com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE, var7);
+                           var11 |= 4;
                         }
                      } else {
-                        var3 = var10.i(var9, 1);
-                        var2 |= 2;
+                        var3 = var9.i(var8, 1);
+                        var11 |= 2;
                      }
                   } else {
-                     var6 = var10.n(var9, 0, m0.a, var6);
-                     var2 |= 1;
+                     var6 = var9.n(var8, 0, m0.a, var6);
+                     var11 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
 
-            var6 = var7;
-            var7 = var11;
-            var11 = var6;
+            var4 = var11;
          }
 
-         var10.c(var9);
-         return new ChatInputNodeStyle(var2, var11 as Integer, var3, var6 as BackgroundStyle, var7 as ChatInputNodeFontWeight, null);
+         var9.c(var8);
+         return new ChatInputNodeStyle(var4, var6 as Integer, var3, var7 as BackgroundStyle, var10 as ChatInputNodeFontWeight, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChatInputNodeStyle) {

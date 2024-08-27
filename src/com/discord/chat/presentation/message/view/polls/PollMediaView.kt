@@ -94,11 +94,11 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeSpanTextView invoke() {
-            val var2: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
-            val var1: PollMediaView = this.this$0;
-            PollMediaView.access$getChildViews$p(this.this$0).add(var2);
-            var1.addView(var2, new LayoutParams(-2, -2, 17));
-            return var2;
+            val var1: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
+            val var2: PollMediaView = this.this$0;
+            PollMediaView.access$getChildViews$p(this.this$0).add(var1);
+            var2.addView(var1, new LayoutParams(-2, -2, 17));
+            return var1;
          }
       });
    }

@@ -161,8 +161,8 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
                }
             }
 
-            var5 = var11;
             var10 = var5;
+            var5 = var11;
          }
 
          var9.c(var8);

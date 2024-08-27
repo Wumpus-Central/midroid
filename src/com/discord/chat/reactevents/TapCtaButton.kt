@@ -88,18 +88,18 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.callback;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapCtaButton(channelId=");
-      var1.append(var4);
-      var1.append(", messageId=");
-      var1.append(var3);
-      var1.append(", callback=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.callback;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapCtaButton(channelId=");
+      var4.append(var1);
+      var4.append(", messageId=");
+      var4.append(var2);
+      var4.append(", callback=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<TapCtaButton> {
@@ -129,17 +129,19 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
-         var var5: java.lang.String;
-         val var7: java.lang.String;
+         var var6: java.lang.String;
          val var10: java.lang.String;
+         var var12: java.lang.String;
          if (var9.p()) {
-            var5 = var9.m(var8, 0);
-            var7 = var9.m(var8, 1);
+            var12 = var9.m(var8, 0);
+            val var7: java.lang.String = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
             var2 = 7;
+            var6 = var12;
+            var12 = var7;
          } else {
-            var var6: java.lang.String = null;
-            var5 = null;
+            var6 = null;
+            var12 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -153,7 +155,7 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
                            throw new n(var4);
                         }
 
-                        var5 = var9.m(var8, 2);
+                        var12 = var9.m(var8, 2);
                         var2 |= 4;
                      } else {
                         var11 = var9.m(var8, 1);
@@ -168,13 +170,12 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
                }
             }
 
-            var7 = var11;
-            var10 = var5;
-            var5 = var6;
+            var12 = var11;
+            var10 = var12;
          }
 
          var9.c(var8);
-         return new TapCtaButton(var2, var5, var7, var10, null);
+         return new TapCtaButton(var2, var6, var12, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapCtaButton) {

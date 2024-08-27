@@ -137,33 +137,33 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         return new KSerializer[]{AppManifestMetadata.$serializer.INSTANCE, new r0(a2.a, a2.a), new r0(var1, var1)};
+         val var2: a2 = a2.a;
+         return new KSerializer[]{AppManifestMetadata.$serializer.INSTANCE, new r0(a2.a, a2.a), new r0(var2, var2)};
       }
 
       public open fun deserialize(decoder: Decoder): AppManifest {
          r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: kotlinx.serialization.encoding.c = var1.b(var8);
-         val var5: Boolean = var9.p();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: kotlinx.serialization.encoding.c = var1.b(var9);
+         val var5: Boolean = var10.p();
          var var6: Any = null;
          var var2: Int;
-         var var7: Any;
-         var var12: Any;
+         var var11: Any;
+         var var13: Any;
          if (var5) {
-            var6 = var9.y(var8, 0, AppManifestMetadata.$serializer.INSTANCE, null);
-            var12 = a2.a;
-            var7 = var9.y(var8, 1, new r0(a2.a, a2.a), null);
-            var12 = var9.y(var8, 2, new r0((KSerializer)var12, (KSerializer)var12), null);
+            var6 = var10.y(var9, 0, AppManifestMetadata.$serializer.INSTANCE, null);
+            var13 = a2.a;
+            var11 = var10.y(var9, 1, new r0(a2.a, a2.a), null);
+            var13 = var10.y(var9, 2, new r0((KSerializer)var13, (KSerializer)var13), null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
-            var12 = null;
+            var13 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var10.o(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -171,24 +171,27 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
                            throw new n(var4);
                         }
 
-                        var12 = var9.y(var8, 2, new r0(a2.a, a2.a), var12);
+                        var11 = var10.y(var9, 2, new r0(a2.a, a2.a), var11);
                         var2 |= 4;
                      } else {
-                        var7 = var9.y(var8, 1, new r0(a2.a, a2.a), var7);
+                        var13 = var10.y(var9, 1, new r0(a2.a, a2.a), var13);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var9.y(var8, 0, AppManifestMetadata.$serializer.INSTANCE, var6);
+                     var6 = var10.y(var9, 0, AppManifestMetadata.$serializer.INSTANCE, var6);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var13 = var11;
+            var11 = var13;
          }
 
-         var9.c(var8);
-         return new AppManifest(var2, var6 as AppManifestMetadata, var7 as java.util.Map, var12 as java.util.Map, null);
+         var10.c(var9);
+         return new AppManifest(var2, var6 as AppManifestMetadata, var11 as java.util.Map, var13 as java.util.Map, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifest) {

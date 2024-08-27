@@ -466,21 +466,21 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var5: UnfurledMediaItem.$serializer = UnfurledMediaItem.$serializer.INSTANCE;
-         val var1: MediaGalleryItemType.Serializer = MediaGalleryItemType.Serializer.INSTANCE;
-         val var2: a2 = a2.a;
-         val var4: KSerializer = a.u(a2.a);
-         val var3: h = h.a;
-         return new KSerializer[]{var5, var1, var4, h.a, a.u(var2), var3, var3, a.u(var2), var3, a.u(var2), var2, var2, a.u(var2), a.u(var2), a.u(var2)};
+         val var1: UnfurledMediaItem.$serializer = UnfurledMediaItem.$serializer.INSTANCE;
+         val var3: MediaGalleryItemType.Serializer = MediaGalleryItemType.Serializer.INSTANCE;
+         val var4: a2 = a2.a;
+         val var2: KSerializer = a.u(a2.a);
+         val var5: h = h.a;
+         return new KSerializer[]{var1, var3, var2, h.a, a.u(var4), var5, var5, a.u(var4), var5, a.u(var4), var4, var4, a.u(var4), a.u(var4), a.u(var4)};
       }
 
       public open fun deserialize(decoder: Decoder): MediaGalleryItem {
          r.h(var1, "decoder");
-         val var22: SerialDescriptor = this.getDescriptor();
-         val var23: c = var1.b(var22);
-         val var3: Int;
+         val var21: SerialDescriptor = this.getDescriptor();
+         val var22: c = var1.b(var21);
+         var var3: Byte;
          var var4: Byte;
-         var var5: Byte;
+         val var5: Int;
          var var6: Byte;
          var var9: Boolean;
          var var11: Any;
@@ -492,156 +492,157 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var var18: Any;
          var var19: Any;
          val var20: Any;
-         var var31: Any;
+         var var29: Any;
          var var34: Any;
-         if (var23.p()) {
-            var16 = var23.y(var22, 0, UnfurledMediaItem.$serializer.INSTANCE, null);
-            var19 = var23.y(var22, 1, MediaGalleryItemType.Serializer.INSTANCE, null);
+         if (var22.p()) {
+            var16 = var22.y(var21, 0, UnfurledMediaItem.$serializer.INSTANCE, null);
+            var19 = var22.y(var21, 1, MediaGalleryItemType.Serializer.INSTANCE, null);
             var34 = a2.a;
-            var13 = var23.n(var22, 2, a2.a, null);
-            var4 = var23.C(var22, 3);
-            var11 = var23.n(var22, 4, (DeserializationStrategy)var34, null);
-            val var2: Byte = var23.C(var22, 5);
-            var9 = var23.C(var22, 6);
-            var14 = var23.n(var22, 7, (DeserializationStrategy)var34, null);
-            var5 = var23.C(var22, 8);
-            var12 = var23.n(var22, 9, (DeserializationStrategy)var34, null);
-            var31 = var23.m(var22, 10);
-            val var24: java.lang.String = var23.m(var22, 11);
-            var17 = var23.n(var22, 12, (DeserializationStrategy)var34, null);
-            var20 = var23.n(var22, 13, (DeserializationStrategy)var34, null);
-            var34 = var23.n(var22, 14, (DeserializationStrategy)var34, null);
-            var3 = 32767;
+            var17 = var22.n(var21, 2, a2.a, null);
+            var4 = var22.C(var21, 3);
+            var11 = var22.n(var21, 4, (DeserializationStrategy)var34, null);
+            val var2: Byte = var22.C(var21, 5);
+            var9 = var22.C(var21, 6);
+            var14 = var22.n(var21, 7, (DeserializationStrategy)var34, null);
+            var3 = var22.C(var21, 8);
+            var12 = var22.n(var21, 9, (DeserializationStrategy)var34, null);
+            var29 = var22.m(var21, 10);
+            val var23: java.lang.String = var22.m(var21, 11);
+            var20 = var22.n(var21, 12, (DeserializationStrategy)var34, null);
+            var13 = var22.n(var21, 13, (DeserializationStrategy)var34, null);
+            var34 = var22.n(var21, 14, (DeserializationStrategy)var34, null);
+            var5 = 32767;
             var6 = var2;
-            var18 = var31;
-            var31 = var24;
+            var18 = var29;
+            var29 = var23;
          } else {
-            var var27: Byte = 14;
+            var3 = 14;
             var var7: Boolean = true;
             var9 = false;
             var6 = 0;
-            var5 = 0;
+            var var28: Byte = 0;
             var4 = 0;
             var18 = null;
             var34 = null;
-            var var25: Any = null;
+            var var24: Any = null;
             var13 = null;
             var14 = null;
             var12 = null;
             var17 = null;
             var16 = null;
+            var29 = null;
             var11 = null;
-            var31 = null;
             var19 = null;
-            var var26: Int = 0;
+            var var25: Int = 0;
 
             while (var7) {
                label39: {
-                  val var8: Int = var23.o(var22);
+                  val var8: Int = var22.o(var21);
                   switch (var8) {
                      case -1:
                         var7 = false;
                         continue;
                      case 0:
-                        var16 = var23.y(var22, 0, UnfurledMediaItem.$serializer.INSTANCE, var16);
-                        var26 |= 1;
-                        var27 = 14;
+                        var16 = var22.y(var21, 0, UnfurledMediaItem.$serializer.INSTANCE, var16);
+                        var25 |= 1;
+                        var3 = 14;
                         continue;
                      case 1:
-                        var19 = var23.y(var22, 1, MediaGalleryItemType.Serializer.INSTANCE, var19);
-                        var26 |= 2;
+                        var19 = var22.y(var21, 1, MediaGalleryItemType.Serializer.INSTANCE, var19);
+                        var25 |= 2;
                         break;
                      case 2:
-                        var18 = var23.n(var22, 2, a2.a, var18);
-                        var26 |= 4;
+                        var18 = var22.n(var21, 2, a2.a, var18);
+                        var25 |= 4;
                         break;
                      case 3:
-                        var5 = var23.C(var22, 3);
-                        var26 |= 8;
+                        var28 = var22.C(var21, 3);
+                        var25 |= 8;
                         break;
                      case 4:
-                        var17 = var23.n(var22, 4, a2.a, var17);
-                        var26 |= 16;
+                        var17 = var22.n(var21, 4, a2.a, var17);
+                        var25 |= 16;
                         break;
                      case 5:
-                        var6 = var23.C(var22, 5);
-                        var26 |= 32;
+                        var6 = var22.C(var21, 5);
+                        var25 |= 32;
                         break;
                      case 6:
-                        var9 = var23.C(var22, 6);
-                        var26 |= 64;
+                        var9 = var22.C(var21, 6);
+                        var25 |= 64;
                         break;
                      case 7:
-                        var14 = var23.n(var22, 7, a2.a, var14);
-                        var26 |= 128;
+                        var14 = var22.n(var21, 7, a2.a, var14);
+                        var25 |= 128;
                         break;
                      case 8:
-                        var4 = var23.C(var22, 8);
-                        var26 |= 256;
-                        var27 = 14;
+                        var4 = var22.C(var21, 8);
+                        var25 |= 256;
+                        var3 = 14;
                         continue;
                      case 9:
-                        var12 = var23.n(var22, 9, a2.a, var12);
-                        var26 |= 512;
+                        var12 = var22.n(var21, 9, a2.a, var12);
+                        var25 |= 512;
                         break label39;
                      case 10:
-                        var11 = var23.m(var22, 10);
-                        var26 |= 1024;
+                        var29 = var22.m(var21, 10);
+                        var25 |= 1024;
                         break label39;
                      case 11:
-                        var31 = var23.m(var22, 11);
-                        var26 |= 2048;
+                        var11 = var22.m(var21, 11);
+                        var25 |= 2048;
                         break label39;
                      case 12:
-                        var13 = var23.n(var22, 12, a2.a, var13);
-                        var26 |= 4096;
+                        var13 = var22.n(var21, 12, a2.a, var13);
+                        var25 |= 4096;
                         break label39;
                      case 13:
-                        var25 = var23.n(var22, 13, a2.a, var25);
-                        var26 |= 8192;
+                        var24 = var22.n(var21, 13, a2.a, var24);
+                        var25 |= 8192;
                         break label39;
                      case 14:
-                        var34 = var23.n(var22, var27, a2.a, var34);
-                        var26 |= 16384;
+                        var34 = var22.n(var21, var3, a2.a, var34);
+                        var25 |= 16384;
                         continue;
                      default:
                         throw new n(var8);
                   }
 
-                  var27 = 14;
+                  var3 = 14;
                   continue;
                }
 
-               var27 = 14;
+               var3 = 14;
             }
 
-            var4 = var5;
-            var18 = var11;
-            var5 = var4;
-            var3 = var26;
-            var17 = var13;
-            var13 = var18;
+            var20 = var13;
+            var3 = var4;
+            var17 = var18;
+            var18 = var29;
+            var4 = var28;
+            var29 = var11;
+            var5 = var25;
             var11 = var17;
-            var20 = var25;
+            var13 = var24;
          }
 
-         var23.c(var22);
+         var22.c(var21);
          return new MediaGalleryItem(
-            var3,
+            var5,
             var16 as UnfurledMediaItem,
             var19 as MediaGalleryItemType,
-            var13 as java.lang.String,
+            var17 as java.lang.String,
             (boolean)var4,
             var11 as java.lang.String,
             (boolean)var6,
             var9,
             var14 as java.lang.String,
-            (boolean)var5,
+            (boolean)var3,
             var12 as java.lang.String,
             (java.lang.String)var18,
-            (java.lang.String)var31,
-            var17 as java.lang.String,
+            (java.lang.String)var29,
             var20 as java.lang.String,
+            var13 as java.lang.String,
             var34 as java.lang.String,
             null
          );

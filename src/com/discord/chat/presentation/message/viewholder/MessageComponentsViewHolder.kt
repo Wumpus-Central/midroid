@@ -55,10 +55,10 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       kotlin.jvm.internal.r.h(var5, "onTapSpoiler");
       kotlin.jvm.internal.r.h(var6, "eventHandler");
       val var11: Message = var1.getMessage();
-      var var9: java.lang.String = var1.getMessageId_3Eiw7ao();
+      val var9: java.lang.String = var1.getMessageId_3Eiw7ao();
       this.messageId = var9;
-      var9 = MessageId.toString_impl(var9);
-      val var10: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+      val var10: java.lang.String = MessageId.toString_impl(var9);
+      val var27: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
          MessageId.toString_impl(var11.getId_3Eiw7ao()),
          MessageKt.shouldAnimateEmoji(var11),
          MessageKt.shouldShowLinkDecorations(var11),
@@ -270,7 +270,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var9, var10, var28, var22, var24, var25, var7, var8), this);
+         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var10, var27, var28, var22, var24, var25, var7, var8), this);
    }
 
    fun getMessageId_3Eiw7ao(): java.lang.String {

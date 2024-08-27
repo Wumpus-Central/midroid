@@ -354,30 +354,30 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {
             kotlin.jvm.internal.r.h(var1, "decoder");
-            val var9: SerialDescriptor = this.getDescriptor();
-            val var10: kotlinx.serialization.encoding.c = var1.b(var9);
-            val var5: Boolean = var10.p();
+            val var10: SerialDescriptor = this.getDescriptor();
+            val var11: kotlinx.serialization.encoding.c = var1.b(var10);
+            val var5: Boolean = var11.p();
             var var8: Any = null;
             var var2: Int;
             var var6: Any;
             var var7: Any;
-            var var12: Any;
+            var var13: Any;
             if (var5) {
-               var12 = a2.a;
-               var8 = var10.n(var9, 0, a2.a, null);
-               var7 = var10.n(var9, 1, (DeserializationStrategy)var12, null);
-               var6 = var10.n(var9, 2, new xk.f((KSerializer)var12), null);
-               var12 = var10.n(var9, 3, (DeserializationStrategy)var12, null);
+               var13 = a2.a;
+               var8 = var11.n(var10, 0, a2.a, null);
+               var7 = var11.n(var10, 1, (DeserializationStrategy)var13, null);
+               var6 = var11.n(var10, 2, new xk.f((KSerializer)var13), null);
+               var13 = var11.n(var10, 3, (DeserializationStrategy)var13, null);
                var2 = 15;
             } else {
                var var3: Boolean = true;
                var2 = 0;
                var7 = null;
+               var13 = null;
                var6 = null;
-               var12 = null;
 
                while (var3) {
-                  val var4: Int = var10.o(var9);
+                  val var4: Int = var11.o(var10);
                   if (var4 != -1) {
                      if (var4 != 0) {
                         if (var4 != 1) {
@@ -386,29 +386,32 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
                                  throw new uk.n(var4);
                               }
 
-                              var12 = var10.n(var9, 3, a2.a, var12);
+                              var6 = var11.n(var10, 3, a2.a, var6);
                               var2 |= 8;
                            } else {
-                              var6 = var10.n(var9, 2, new xk.f(a2.a), var6);
+                              var13 = var11.n(var10, 2, new xk.f(a2.a), var13);
                               var2 |= 4;
                            }
                         } else {
-                           var7 = var10.n(var9, 1, a2.a, var7);
+                           var7 = var11.n(var10, 1, a2.a, var7);
                            var2 |= 2;
                         }
                      } else {
-                        var8 = var10.n(var9, 0, a2.a, var8);
+                        var8 = var11.n(var10, 0, a2.a, var8);
                         var2 |= 1;
                      }
                   } else {
                      var3 = false;
                   }
                }
+
+               var6 = var13;
+               var13 = var6;
             }
 
-            var10.c(var9);
+            var11.c(var10);
             return new MessageFrameFeedHeaderView.MessageBundleHeader(
-               var2, var8 as java.lang.String, var7 as java.lang.String, var6 as ArrayList, var12 as java.lang.String, null
+               var2, var8 as java.lang.String, var7 as java.lang.String, var6 as ArrayList, var13 as java.lang.String, null
             );
          }
 

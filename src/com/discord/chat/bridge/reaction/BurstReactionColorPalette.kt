@@ -156,30 +156,30 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
 
       public open fun deserialize(decoder: Decoder): BurstReactionColorPalette {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
          var var2: Float;
          var var3: Int;
-         val var8: Any;
+         var var6: Any;
+         var var7: Any;
          var var11: Any;
-         var var13: Any;
-         if (var10.p()) {
-            var13 = a2.a;
-            var11 = var10.n(var9, 0, a2.a, null);
-            var8 = var10.n(var9, 1, (DeserializationStrategy)var13, null);
-            var13 = var10.n(var9, 2, (DeserializationStrategy)var13, null);
-            var2 = var10.u(var9, 3);
+         if (var9.p()) {
+            var11 = a2.a;
+            var7 = var9.n(var8, 0, a2.a, null);
+            var6 = var9.n(var8, 1, (DeserializationStrategy)var11, null);
+            var11 = var9.n(var8, 2, (DeserializationStrategy)var11, null);
+            var2 = var9.u(var8, 3);
             var3 = 15;
          } else {
             var2 = 0.0F;
             var var4: Boolean = true;
-            var var7: Any = null;
-            var13 = null;
+            var7 = null;
+            var6 = null;
             var11 = null;
             var3 = 0;
 
             while (var4) {
-               val var5: Int = var10.o(var9);
+               val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -188,32 +188,28 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
                               throw new n(var5);
                            }
 
-                           var2 = var10.u(var9, 3);
+                           var2 = var9.u(var8, 3);
                            var3 |= 8;
                         } else {
-                           var11 = var10.n(var9, 2, a2.a, var11);
+                           var11 = var9.n(var8, 2, a2.a, var11);
                            var3 |= 4;
                         }
                      } else {
-                        var13 = var10.n(var9, 1, a2.a, var13);
+                        var6 = var9.n(var8, 1, a2.a, var6);
                         var3 |= 2;
                      }
                   } else {
-                     var7 = var10.n(var9, 0, a2.a, var7);
+                     var7 = var9.n(var8, 0, a2.a, var7);
                      var3 |= 1;
                   }
                } else {
                   var4 = false;
                }
             }
-
-            var8 = var13;
-            var13 = var11;
-            var11 = var7;
          }
 
-         var10.c(var9);
-         return new BurstReactionColorPalette(var3, var11 as java.lang.String, var8 as java.lang.String, var13 as java.lang.String, var2, null);
+         var9.c(var8);
+         return new BurstReactionColorPalette(var3, var7 as java.lang.String, var6 as java.lang.String, var11 as java.lang.String, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BurstReactionColorPalette) {

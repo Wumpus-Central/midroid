@@ -140,27 +140,27 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
          r.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
-         var var2: Int;
+         var var3: Int;
          var var4: Int;
          val var5: Int;
          var var7: java.lang.String;
          val var11: java.lang.String;
          if (var10.p()) {
-            var2 = var10.i(var9, 0);
-            val var3: Int = var10.i(var9, 1);
+            val var2: Int = var10.i(var9, 0);
+            var3 = var10.i(var9, 1);
             var7 = var10.m(var9, 2);
             var11 = var10.m(var9, 3);
             var4 = 15;
-            var5 = var3;
+            var5 = var2;
          } else {
             var7 = null;
             var var12: java.lang.String = null;
-            var var17: Boolean = true;
+            var var15: Boolean = true;
             var4 = 0;
-            var var14: Int = 0;
-            var2 = 0;
+            var3 = 0;
+            var var13: Int = 0;
 
-            while (var17) {
+            while (var15) {
                val var6: Int = var10.o(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -171,33 +171,32 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
                            }
 
                            var7 = var10.m(var9, 3);
-                           var2 |= 8;
+                           var13 |= 8;
                         } else {
                            var12 = var10.m(var9, 2);
-                           var2 |= 4;
+                           var13 |= 4;
                         }
                      } else {
-                        var14 = var10.i(var9, 1);
-                        var2 |= 2;
+                        var3 = var10.i(var9, 1);
+                        var13 |= 2;
                      }
                   } else {
                      var4 = var10.i(var9, 0);
-                     var2 |= 1;
+                     var13 |= 1;
                   }
                } else {
-                  var17 = false;
+                  var15 = false;
                }
             }
 
-            var5 = var14;
-            var11 = var7;
             var7 = var12;
-            var2 = var4;
-            var4 = var2;
+            var11 = var7;
+            var5 = var4;
+            var4 = var13;
          }
 
          var10.c(var9);
-         return new OnSelectionOrTextChangeEvent(var4, var2, var5, var7, var11, null);
+         return new OnSelectionOrTextChangeEvent(var4, var5, var3, var7, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSelectionOrTextChangeEvent) {
