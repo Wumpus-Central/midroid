@@ -58,7 +58,7 @@ public object CodeRules {
       val var8: Rule = toMatchGroupRule$default(this, var7, 0, var1.getGenericsStyleProvider(), 1, null);
       val var9: Pattern = this.createWordPattern$simpleast_core_release(Arrays.copyOf(var5, var5.length));
       r.g(var9, "createWordPattern(*keywords)");
-      return h.u0(
+      return h.v0(
          var2,
          h.l(
             new Rule[]{

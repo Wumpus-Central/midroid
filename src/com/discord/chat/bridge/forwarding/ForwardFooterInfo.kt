@@ -160,20 +160,22 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var var8: java.lang.String = null;
          var var2: Int;
          var var7: Any;
-         val var9: java.lang.String;
-         val var12: java.lang.String;
+         var var14: java.lang.String;
+         var var17: java.lang.String;
          if (var5) {
-            val var6: java.lang.String = var11.m(var10, 0);
-            var9 = var11.m(var10, 1);
-            var12 = var11.m(var10, 2);
+            var14 = var11.m(var10, 0);
+            var17 = var11.m(var10, 1);
+            val var12: java.lang.String = var11.m(var10, 2);
             var7 = var11.n(var10, 3, a2.a, null);
             var2 = 15;
-            var8 = var6;
+            var8 = var14;
+            var14 = var17;
+            var17 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
-            var var14: java.lang.String = null;
+            var14 = null;
             var var13: Any = null;
 
             while (var3) {
@@ -205,13 +207,13 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                }
             }
 
-            var12 = var14;
-            var9 = (java.lang.String)var7;
+            var17 = var14;
+            var14 = (java.lang.String)var7;
             var7 = var13;
          }
 
          var11.c(var10);
-         return new ForwardFooterInfo(var2, var8, var9, var12, var7 as java.lang.String, null);
+         return new ForwardFooterInfo(var2, var8, var14, var17, var7 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardFooterInfo) {

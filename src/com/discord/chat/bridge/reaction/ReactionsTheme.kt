@@ -221,25 +221,25 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var7: Int = this.getReactionBackgroundColor();
-      val var5: Int = this.getReactionBorderColor();
+      val var4: Int = this.getReactionBackgroundColor();
+      val var2: Int = this.getReactionBorderColor();
       val var1: Int = this.getReactionTextColor();
-      val var3: Int = this.getActiveReactionBackgroundColor();
-      val var4: Int = this.getActiveReactionBorderColor();
-      val var2: Int = this.getActiveReactionTextColor();
+      val var7: Int = this.getActiveReactionBackgroundColor();
+      val var5: Int = this.getActiveReactionBorderColor();
+      val var3: Int = this.getActiveReactionTextColor();
       val var6: StringBuilder = new StringBuilder();
       var6.append("ReactionsTheme(reactionBackgroundColor=");
-      var6.append(var7);
+      var6.append(var4);
       var6.append(", reactionBorderColor=");
-      var6.append(var5);
+      var6.append(var2);
       var6.append(", reactionTextColor=");
       var6.append(var1);
       var6.append(", activeReactionBackgroundColor=");
-      var6.append(var3);
+      var6.append(var7);
       var6.append(", activeReactionBorderColor=");
-      var6.append(var4);
+      var6.append(var5);
       var6.append(", activeReactionTextColor=");
-      var6.append(var2);
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }
@@ -278,26 +278,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
          var var10: Any = null;
          var var2: Int;
          var var6: Any;
-         var var8: Any;
+         var var7: Any;
          var var9: Any;
+         val var12: Any;
          var var15: Any;
          var var18: Any;
          if (var5) {
             var18 = m0.a;
-            var10 = var14.n(var13, 0, m0.a, null);
-            var6 = var14.n(var13, 1, (DeserializationStrategy)var18, null);
-            var15 = var14.n(var13, 2, (DeserializationStrategy)var18, null);
-            var9 = var14.n(var13, 3, (DeserializationStrategy)var18, null);
-            var8 = var14.n(var13, 4, (DeserializationStrategy)var18, null);
+            var15 = var14.n(var13, 0, m0.a, null);
+            var9 = var14.n(var13, 1, (DeserializationStrategy)var18, null);
+            var7 = var14.n(var13, 2, (DeserializationStrategy)var18, null);
+            var6 = var14.n(var13, 3, (DeserializationStrategy)var18, null);
+            var12 = var14.n(var13, 4, (DeserializationStrategy)var18, null);
             var18 = var14.n(var13, 5, (DeserializationStrategy)var18, null);
             var2 = 63;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
-            var8 = null;
-            var6 = null;
             var18 = null;
+            var6 = null;
+            var7 = null;
             var15 = null;
 
             while (var3) {
@@ -315,7 +316,7 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var14.n(var13, 2, m0.a, var8);
+                     var18 = var14.n(var13, 2, m0.a, var18);
                      var2 |= 4;
                      break;
                   case 3:
@@ -323,7 +324,7 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                      var2 |= 8;
                      break;
                   case 4:
-                     var18 = var14.n(var13, 4, m0.a, var18);
+                     var7 = var14.n(var13, 4, m0.a, var7);
                      var2 |= 16;
                      break;
                   case 5:
@@ -335,15 +336,14 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                }
             }
 
-            var9 = var6;
-            var6 = var9;
-            var15 = var8;
-            var8 = var18;
+            var12 = var7;
             var18 = var15;
+            var15 = var10;
+            var7 = var18;
          }
 
          var14.c(var13);
-         return new ReactionsTheme(var2, var10 as Integer, var6 as Integer, var15 as Integer, var9 as Integer, var8 as Integer, var18 as Integer, null);
+         return new ReactionsTheme(var2, var15 as Int, var9 as Int, var7 as Int, var6 as Int, var12 as Int, var18 as Int, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ReactionsTheme) {

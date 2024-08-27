@@ -93,14 +93,14 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          val var6: Boolean = var8.p();
-         var var3: Int = 1;
+         var var2: Int = 1;
          var var4: Boolean = true;
-         var var2: Int;
+         var var3: Int;
          if (var6) {
-            var2 = var8.i(var7, 0);
+            var3 = var8.i(var7, 0);
          } else {
-            var2 = 0;
             var3 = 0;
+            var2 = 0;
 
             while (var4) {
                val var5: Int = var8.o(var7);
@@ -109,8 +109,8 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
                      throw new n(var5);
                   }
 
-                  var2 = var8.i(var7, 0);
-                  var3 |= 1;
+                  var3 = var8.i(var7, 0);
+                  var2 |= 1;
                } else {
                   var4 = false;
                }
@@ -118,7 +118,7 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          }
 
          var8.c(var7);
-         return new IntervalEvent(var3, var2, null);
+         return new IntervalEvent(var2, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: IntervalEvent) {

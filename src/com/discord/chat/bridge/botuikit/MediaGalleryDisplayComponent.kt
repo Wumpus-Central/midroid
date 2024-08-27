@@ -81,17 +81,17 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.getType();
-      val var2: java.lang.String = this.getId();
-      val var3: java.util.List = this.items;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MediaGalleryDisplayComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", items=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.getId();
+      val var4: java.util.List = this.items;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaGalleryDisplayComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var3);
+      var2.append(", items=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<MediaGalleryDisplayComponent> {
@@ -118,26 +118,27 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
       public open fun deserialize(decoder: Decoder): MediaGalleryDisplayComponent {
          r.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
          var var2: Int;
          var var3: Int;
-         var var6: java.lang.String;
-         var var9: Any;
-         if (var8.p()) {
-            var3 = var8.i(var7, 0);
-            var6 = var8.m(var7, 1);
-            var9 = var8.y(var7, 2, new xk.f(MediaGalleryItem.$serializer.INSTANCE), null);
+         var var6: Any;
+         val var7: java.lang.String;
+         if (var9.p()) {
+            var3 = var9.i(var8, 0);
+            val var10: java.lang.String = var9.m(var8, 1);
+            var6 = var9.y(var8, 2, new xk.f(MediaGalleryItem.$serializer.INSTANCE), null);
             var2 = 7;
+            var7 = var10;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var6 = null;
-            var9 = null;
+            var var11: Any = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var8.o(var7);
+               val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -145,24 +146,27 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                            throw new n(var5);
                         }
 
-                        var9 = var8.y(var7, 2, new xk.f(MediaGalleryItem.$serializer.INSTANCE), var9);
+                        var11 = var9.y(var8, 2, new xk.f(MediaGalleryItem.$serializer.INSTANCE), var11);
                         var2 |= 4;
                      } else {
-                        var6 = var8.m(var7, 1);
+                        var6 = var9.m(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var8.i(var7, 0);
+                     var3 = var9.i(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var4 = false;
                }
             }
+
+            var7 = (java.lang.String)var6;
+            var6 = var11;
          }
 
-         var8.c(var7);
-         return new MediaGalleryDisplayComponent(var2, var3, var6, var9 as java.util.List, null);
+         var9.c(var8);
+         return new MediaGalleryDisplayComponent(var2, var3, var7, var6 as java.util.List, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaGalleryDisplayComponent) {

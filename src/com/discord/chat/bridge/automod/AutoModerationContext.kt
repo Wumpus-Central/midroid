@@ -313,32 +313,32 @@ public data class AutoModerationContext(headerText: String,
          var var9: Any;
          var var10: Any;
          var var11: Any;
+         var var12: Any;
          var var13: Any;
          var var14: Any;
          val var15: Any;
-         val var16: Any;
          if (var6) {
             var8 = var18.m(var17, 0);
-            var16 = var18.m(var17, 1);
+            var10 = var18.m(var17, 1);
             val var19: a2 = a2.a;
             var15 = var18.n(var17, 2, a2.a, null);
-            var9 = var18.n(var17, 3, var19, null);
-            var11 = var18.n(var17, 4, var19, null);
-            var7 = var18.m(var17, 5);
-            val var20: java.lang.String = var18.m(var17, 6);
+            var11 = var18.n(var17, 3, var19, null);
+            var12 = var18.n(var17, 4, var19, null);
+            val var20: java.lang.String = var18.m(var17, 5);
+            var7 = var18.m(var17, 6);
             var13 = var18.y(var17, 7, FlaggedMessageEmbed.$serializer.INSTANCE, null);
             var14 = var18.n(var17, 8, AutoModerationNotification.$serializer.INSTANCE, null);
             var2 = 511;
-            var10 = var20;
+            var9 = var20;
          } else {
             var var4: Boolean = true;
             var2 = 0;
             var14 = null;
             var13 = null;
-            var11 = null;
+            var12 = null;
             var7 = null;
             var var21: Any = null;
-            var var12: Any = null;
+            var11 = null;
             var9 = null;
             var10 = null;
 
@@ -361,12 +361,12 @@ public data class AutoModerationContext(headerText: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var12 = var18.n(var17, 3, a2.a, var12);
+                     var11 = var18.n(var17, 3, a2.a, var11);
                      var2 |= 8;
                      var3 = 7;
                      continue;
                   case 4:
-                     var11 = var18.n(var17, 4, a2.a, var11);
+                     var12 = var18.n(var17, 4, a2.a, var12);
                      var2 |= 16;
                      continue;
                   case 5:
@@ -392,22 +392,21 @@ public data class AutoModerationContext(headerText: String,
                var3 = 7;
             }
 
-            var16 = var7;
-            var7 = var9;
+            var7 = var10;
             var15 = var21;
-            var9 = var12;
+            var10 = var7;
          }
 
          var18.c(var17);
          return new AutoModerationContext(
             var2,
             var8,
-            (java.lang.String)var16,
-            var15 as java.lang.String,
-            var9 as java.lang.String,
-            var11 as java.lang.String,
-            (java.lang.String)var7,
             (java.lang.String)var10,
+            var15 as java.lang.String,
+            var11 as java.lang.String,
+            var12 as java.lang.String,
+            (java.lang.String)var9,
+            (java.lang.String)var7,
             var13 as FlaggedMessageEmbed,
             var14 as AutoModerationNotification,
             null

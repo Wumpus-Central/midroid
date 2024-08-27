@@ -528,12 +528,12 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
 
    public override fun hashCode(): Int {
       val var14: Int = ChannelId.hashCode-impl(this.parentChannelId);
-      val var16: Int = ChannelId.hashCode-impl(this.threadId);
-      val var15: Int = MessageId.hashCode-impl(this.messageId);
-      val var13: Int = GuildId.hashCode-impl(this.guildId);
-      val var18: Int = this.title.hashCode();
-      val var17: Int = this.ctaText.hashCode();
-      val var11: Int = Integer.hashCode(this.ctaButtonColor);
+      val var13: Int = ChannelId.hashCode-impl(this.threadId);
+      val var17: Int = MessageId.hashCode-impl(this.messageId);
+      val var18: Int = GuildId.hashCode-impl(this.guildId);
+      val var11: Int = this.title.hashCode();
+      val var15: Int = this.ctaText.hashCode();
+      val var16: Int = Integer.hashCode(this.ctaButtonColor);
       val var12: Int = this.footer.hashCode();
       var var8: Int = 0;
       val var1: Int;
@@ -607,18 +607,18 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
                                                                                                 (
                                                                                                          (
                                                                                                                   (
-                                                                                                                           ((var14 * 31 + var16) * 31 + var15)
+                                                                                                                           ((var14 * 31 + var13) * 31 + var17)
                                                                                                                                  * 31
-                                                                                                                              + var13
+                                                                                                                              + var18
                                                                                                                         )
                                                                                                                         * 31
-                                                                                                                     + var18
+                                                                                                                     + var11
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var17
+                                                                                                            + var15
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var11
+                                                                                                   + var16
                                                                                              )
                                                                                              * 31
                                                                                           + var12
@@ -653,55 +653,55 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
 
    public override fun toString(): String {
       val var3: java.lang.String = ChannelId.toString-impl(this.parentChannelId);
-      val var14: java.lang.String = ChannelId.toString-impl(this.threadId);
+      val var10: java.lang.String = ChannelId.toString-impl(this.threadId);
       val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var9: java.lang.String = this.title;
-      val var12: java.lang.String = this.ctaText;
+      val var11: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var7: java.lang.String = this.title;
+      val var18: java.lang.String = this.ctaText;
       val var1: Int = this.ctaButtonColor;
-      val var13: StructurableText = this.footer;
-      val var16: java.lang.String = this.subtitle;
-      val var18: java.lang.String = this.coverImage;
-      val var10: java.lang.String = this.blurredCoverImage;
-      val var5: java.lang.String = this.coverImageOverlayText;
-      val var7: java.lang.String = this.backgroundImage;
-      val var11: java.lang.String = this.spoiler;
-      val var8: java.lang.String = this.obscure;
-      val var15: java.lang.Boolean = this.obscureAwaitingScan;
+      val var5: StructurableText = this.footer;
+      val var12: java.lang.String = this.subtitle;
+      val var13: java.lang.String = this.coverImage;
+      val var15: java.lang.String = this.blurredCoverImage;
+      val var8: java.lang.String = this.coverImageOverlayText;
+      val var14: java.lang.String = this.backgroundImage;
+      val var9: java.lang.String = this.spoiler;
+      val var4: java.lang.String = this.obscure;
+      val var16: java.lang.Boolean = this.obscureAwaitingScan;
       val var2: Boolean = this.shouldSpoiler;
       val var17: StringBuilder = new StringBuilder();
       var17.append("PostPreviewEmbed(parentChannelId=");
       var17.append(var3);
       var17.append(", threadId=");
-      var17.append(var14);
+      var17.append(var10);
       var17.append(", messageId=");
       var17.append(var6);
       var17.append(", guildId=");
-      var17.append(var4);
+      var17.append(var11);
       var17.append(", title=");
-      var17.append(var9);
+      var17.append(var7);
       var17.append(", ctaText=");
-      var17.append(var12);
+      var17.append(var18);
       var17.append(", ctaButtonColor=");
       var17.append(var1);
       var17.append(", footer=");
-      var17.append(var13);
-      var17.append(", subtitle=");
-      var17.append(var16);
-      var17.append(", coverImage=");
-      var17.append(var18);
-      var17.append(", blurredCoverImage=");
-      var17.append(var10);
-      var17.append(", coverImageOverlayText=");
       var17.append(var5);
-      var17.append(", backgroundImage=");
-      var17.append(var7);
-      var17.append(", spoiler=");
-      var17.append(var11);
-      var17.append(", obscure=");
-      var17.append(var8);
-      var17.append(", obscureAwaitingScan=");
+      var17.append(", subtitle=");
+      var17.append(var12);
+      var17.append(", coverImage=");
+      var17.append(var13);
+      var17.append(", blurredCoverImage=");
       var17.append(var15);
+      var17.append(", coverImageOverlayText=");
+      var17.append(var8);
+      var17.append(", backgroundImage=");
+      var17.append(var14);
+      var17.append(", spoiler=");
+      var17.append(var9);
+      var17.append(", obscure=");
+      var17.append(var4);
+      var17.append(", obscureAwaitingScan=");
+      var17.append(var16);
       var17.append(", shouldSpoiler=");
       var17.append(var2);
       var17.append(")");
@@ -743,22 +743,22 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var14: com.discord.primitives.ChannelId..serializer = com.discord.primitives.ChannelId..serializer.INSTANCE;
-         val var13: com.discord.primitives.MessageId..serializer = com.discord.primitives.MessageId..serializer.INSTANCE;
-         val var2: com.discord.primitives.GuildId..serializer = com.discord.primitives.GuildId..serializer.INSTANCE;
-         val var8: a2 = a2.a;
-         val var11: m0 = m0.a;
-         val var1: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
-         val var7: KSerializer = a.u(a2.a);
-         val var5: KSerializer = a.u(var8);
-         val var12: KSerializer = a.u(var8);
-         val var10: KSerializer = a.u(var8);
-         val var3: KSerializer = a.u(var8);
-         val var6: KSerializer = a.u(var8);
-         val var9: KSerializer = a.u(var8);
-         val var4: h = h.a;
+         val var12: com.discord.primitives.ChannelId..serializer = com.discord.primitives.ChannelId..serializer.INSTANCE;
+         val var1: com.discord.primitives.MessageId..serializer = com.discord.primitives.MessageId..serializer.INSTANCE;
+         val var8: com.discord.primitives.GuildId..serializer = com.discord.primitives.GuildId..serializer.INSTANCE;
+         val var7: a2 = a2.a;
+         val var6: m0 = m0.a;
+         val var4: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
+         val var5: KSerializer = a.u(a2.a);
+         val var2: KSerializer = a.u(var7);
+         val var13: KSerializer = a.u(var7);
+         val var11: KSerializer = a.u(var7);
+         val var10: KSerializer = a.u(var7);
+         val var3: KSerializer = a.u(var7);
+         val var9: KSerializer = a.u(var7);
+         val var14: h = h.a;
          return new KSerializer[]{
-            var14, var14, var13, var2, var8, var8, var11, var1, var7, var5, var12, var10, var3, var6, var9, a.u(h.a), var4, a.u(var8), a.u(var8)
+            var12, var12, var1, var8, var7, var7, var6, var4, var5, var2, var13, var11, var10, var3, var9, a.u(h.a), var14, a.u(var7), a.u(var7)
          };
       }
 
@@ -782,49 +782,49 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
          var var18: Any;
          var var19: Any;
          var var20: Any;
+         var var21: Any;
          var var22: Any;
-         var var23: Any;
          var var24: Any;
-         val var26: Any;
+         val var25: Any;
          var var33: Any;
          if (var8) {
             var33 = com.discord.primitives.ChannelId..serializer.INSTANCE;
-            var26 = var31.y(var30, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var23 = var31.y(var30, 1, (DeserializationStrategy)var33, null);
-            var22 = var31.y(var30, 2, com.discord.primitives.MessageId..serializer.INSTANCE, null);
+            var25 = var31.y(var30, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var22 = var31.y(var30, 1, (DeserializationStrategy)var33, null);
+            var21 = (MessageId)var31.y(var30, 2, com.discord.primitives.MessageId..serializer.INSTANCE, null);
             var18 = var31.y(var30, 3, com.discord.primitives.GuildId..serializer.INSTANCE, null);
-            var17 = var31.m(var30, 4);
-            var15 = var31.m(var30, 5);
-            var4 = var31.i(var30, 6);
-            var16 = var31.y(var30, 7, StructurableTextSerializer.INSTANCE, null);
-            val var21: a2 = a2.a;
-            var12 = var31.n(var30, 8, a2.a, null);
-            var20 = var31.n(var30, 9, var21, null);
-            var11 = var31.n(var30, 10, var21, null);
-            var33 = var31.n(var30, 11, var21, null);
-            var13 = var31.n(var30, 12, var21, null);
-            var14 = var31.n(var30, 13, var21, null);
-            var9 = var31.n(var30, 14, var21, null);
+            var9 = var31.m(var30, 4);
+            var33 = var31.m(var30, 5);
+            var3 = var31.i(var30, 6);
+            var13 = var31.y(var30, 7, StructurableTextSerializer.INSTANCE, null);
+            val var23: a2 = a2.a;
+            var17 = var31.n(var30, 8, a2.a, null);
+            var15 = var31.n(var30, 9, var23, null);
+            var11 = var31.n(var30, 10, var23, null);
+            var10 = var31.n(var30, 11, var23, null);
+            var14 = var31.n(var30, 12, var23, null);
+            var12 = var31.n(var30, 13, var23, null);
+            var20 = var31.n(var30, 14, var23, null);
             var19 = var31.n(var30, 15, h.a, null);
             val var2: Byte = var31.C(var30, 16);
-            var10 = var31.n(var30, 17, var21, null);
-            var24 = var31.n(var30, 18, var21, null);
-            var3 = 524287;
+            var16 = var31.n(var30, 17, var23, null);
+            var24 = var31.n(var30, 18, var23, null);
+            var4 = 524287;
             var5 = var2;
          } else {
             var5 = 18;
-            var var36: Int = 0;
-            var var38: Byte = 0;
+            var var35: Int = 0;
+            var var36: Byte = 0;
             var3 = 0;
             var var6: Boolean = true;
             var9 = null;
             var33 = null;
             var10 = null;
-            var23 = null;
+            var var54: Any = null;
             var22 = null;
             var20 = null;
             var24 = null;
-            var var49: Any = null;
+            var21 = null;
             var19 = null;
             var17 = null;
             var13 = null;
@@ -844,80 +844,80 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
                            break;
                         case 0:
                            var12 = var31.y(var30, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, var12);
-                           var36 |= 1;
+                           var35 |= 1;
                            break;
                         case 1:
                            var14 = var31.y(var30, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var14);
-                           var36 |= 2;
+                           var35 |= 2;
                            break;
                         case 2:
                            var13 = var31.y(var30, 2, com.discord.primitives.MessageId..serializer.INSTANCE, var13);
-                           var36 |= 4;
+                           var35 |= 4;
                            break;
                         case 3:
                            var18 = var31.y(var30, 3, com.discord.primitives.GuildId..serializer.INSTANCE, var18);
-                           var36 |= 8;
+                           var35 |= 8;
                            break;
                         case 4:
                            var17 = var31.m(var30, 4);
-                           var36 |= 16;
+                           var35 |= 16;
                            break;
                         case 5:
                            var16 = var31.m(var30, 5);
-                           var36 |= 32;
+                           var35 |= 32;
                            break;
                         case 6:
                            var3 = var31.i(var30, 6);
-                           var36 |= 64;
+                           var35 |= 64;
                            break;
                         case 7:
                            var11 = var31.y(var30, 7, StructurableTextSerializer.INSTANCE, var11);
-                           var36 |= 128;
+                           var35 |= 128;
                            break;
                         case 8:
-                           var49 = var31.n(var30, 8, a2.a, var49);
-                           var36 |= 256;
+                           var21 = var31.n(var30, 8, a2.a, var21);
+                           var35 |= 256;
                            break;
                         case 9:
                            var15 = var31.n(var30, 9, a2.a, var15);
-                           var36 |= 512;
+                           var35 |= 512;
                            var5 = 18;
                            continue;
                         case 10:
                            var10 = var31.n(var30, 10, a2.a, var10);
-                           var36 |= 1024;
+                           var35 |= 1024;
                            break;
                         case 11:
                            var20 = var31.n(var30, 11, a2.a, var20);
-                           var36 |= 2048;
+                           var35 |= 2048;
                            break label50;
                         case 12:
                            var9 = var31.n(var30, 12, a2.a, var9);
-                           var36 |= 4096;
+                           var35 |= 4096;
                            break label51;
                         case 13:
                            var22 = var31.n(var30, 13, a2.a, var22);
-                           var36 |= 8192;
+                           var35 |= 8192;
                            break label51;
                         case 14:
-                           var23 = var31.n(var30, 14, a2.a, var23);
-                           var36 |= 16384;
+                           var54 = var31.n(var30, 14, a2.a, var54);
+                           var35 |= 16384;
                            break label51;
                         case 15:
                            var19 = var31.n(var30, 15, h.a, var19);
-                           var36 |= 32768;
+                           var35 |= 32768;
                            break label51;
                         case 16:
-                           var38 = var31.C(var30, 16);
-                           var36 |= 65536;
+                           var36 = var31.C(var30, 16);
+                           var35 |= 65536;
                            break label50;
                         case 17:
                            var33 = var31.n(var30, 17, a2.a, var33);
-                           var36 |= 131072;
+                           var35 |= 131072;
                            break label50;
                         case 18:
                            var24 = var31.n(var30, var5, a2.a, var24);
-                           var36 |= 262144;
+                           var35 |= 262144;
                            continue;
                         default:
                            throw new n(var7);
@@ -934,55 +934,54 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
                var5 = 18;
             }
 
-            var9 = var23;
-            var22 = var13;
-            var26 = var12;
-            var23 = var14;
-            var12 = var49;
-            var5 = var38;
-            var4 = var3;
-            var15 = var16;
-            var3 = var36;
-            var13 = var9;
-            var10 = var33;
-            var14 = var22;
-            var16 = var11;
-            var20 = var15;
+            var9 = var17;
+            var33 = var16;
+            var25 = var12;
+            var22 = var14;
+            var5 = var36;
+            var4 = var35;
+            var14 = var9;
+            var16 = var33;
+            var12 = var22;
+            var20 = var54;
+            var13 = var11;
             var11 = var10;
-            var33 = var20;
+            var10 = var20;
+            var21 = (MessageId)var13;
+            var17 = var21;
          }
 
          var31.c(var30);
-         val var56: ChannelId = var26 as ChannelId;
-         var23 = var23 as ChannelId;
-         val var51: MessageId = var22 as MessageId;
-         val var52: java.lang.String;
-         if (var22 as MessageId != null) {
-            var52 = var51.unbox-impl();
+         val var56: ChannelId = var25 as ChannelId;
+         var22 = var22 as ChannelId;
+         var21 = var21;
+         val var51: java.lang.String;
+         if (var21 != null) {
+            var51 = var21.unbox-impl();
          } else {
-            var52 = null;
+            var51 = null;
          }
 
          return new PostPreviewEmbed(
-            var3,
-            var56,
-            (ChannelId)var23,
-            var52,
-            var18 as GuildId,
-            (java.lang.String)var17,
-            (java.lang.String)var15,
             var4,
-            var16 as StructurableText,
+            var56,
+            (ChannelId)var22,
+            var51,
+            var18 as GuildId,
+            (java.lang.String)var9,
+            (java.lang.String)var33,
+            var3,
+            var13 as StructurableText,
+            var17 as java.lang.String,
+            var15 as java.lang.String,
+            var11 as java.lang.String,
+            var10 as java.lang.String,
+            var14 as java.lang.String,
             var12 as java.lang.String,
             var20 as java.lang.String,
-            var11 as java.lang.String,
-            var33 as java.lang.String,
-            var13 as java.lang.String,
-            var14 as java.lang.String,
-            var9 as java.lang.String,
             var19 as java.lang.Boolean,
             (boolean)var5,
-            var10 as java.lang.String,
+            var16 as java.lang.String,
             var24 as java.lang.String,
             null,
             null

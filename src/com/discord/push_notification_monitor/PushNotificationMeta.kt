@@ -186,27 +186,27 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
       val var2: Long = this.receivedTimestamp;
       val var1: Boolean = this.silent;
       val var7: java.lang.String = this.type;
-      val var4: java.lang.String = this.title;
-      val var8: java.lang.String = this.content;
+      val var9: java.lang.String = this.title;
+      val var6: java.lang.String = this.content;
       val var5: java.lang.String = this.channelId;
-      val var9: java.lang.String = this.messageId;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("PushNotificationMeta(receivedTimestamp=");
-      var6.append(var2);
-      var6.append(", silent=");
-      var6.append(var1);
-      var6.append(", type=");
-      var6.append(var7);
-      var6.append(", title=");
-      var6.append(var4);
-      var6.append(", content=");
-      var6.append(var8);
-      var6.append(", channelId=");
-      var6.append(var5);
-      var6.append(", messageId=");
-      var6.append(var9);
-      var6.append(")");
-      return var6.toString();
+      val var8: java.lang.String = this.messageId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PushNotificationMeta(receivedTimestamp=");
+      var4.append(var2);
+      var4.append(", silent=");
+      var4.append(var1);
+      var4.append(", type=");
+      var4.append(var7);
+      var4.append(", title=");
+      var4.append(var9);
+      var4.append(", content=");
+      var4.append(var6);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", messageId=");
+      var4.append(var8);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<PushNotificationMeta> {
@@ -243,22 +243,22 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var var2: Int;
          var var5: Long;
          var var7: Boolean;
+         var var8: Any;
          var var9: Any;
-         var var10: Any;
          var var11: Any;
          val var12: Any;
-         var var17: Any;
+         var var18: Any;
          if (var14.p()) {
             var5 = var14.f(var13, 0);
             var7 = var14.C(var13, 1);
-            var10 = var14.m(var13, 2);
+            var8 = var14.m(var13, 2);
             val var15: java.lang.String = var14.m(var13, 3);
-            var17 = a2.a;
+            var18 = a2.a;
             var11 = var14.n(var13, 4, a2.a, null);
-            var9 = var14.n(var13, 5, (DeserializationStrategy)var17, null);
-            var17 = var14.n(var13, 6, (DeserializationStrategy)var17, null);
+            var9 = var14.n(var13, 5, (DeserializationStrategy)var18, null);
+            var12 = var14.n(var13, 6, (DeserializationStrategy)var18, null);
             var2 = 127;
-            var12 = var15;
+            var18 = var15;
          } else {
             var var3: Boolean = true;
             var7 = false;
@@ -266,8 +266,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
             var9 = null;
             var var16: Any = null;
             var5 = 0L;
-            var10 = null;
-            var17 = null;
+            var18 = null;
+            var8 = null;
             var2 = 0;
 
             while (var3) {
@@ -285,11 +285,11 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
                      var2 |= 2;
                      break;
                   case 2:
-                     var10 = var14.m(var13, 2);
+                     var18 = var14.m(var13, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var17 = var14.m(var13, 3);
+                     var8 = var14.m(var13, 3);
                      var2 |= 8;
                      break;
                   case 4:
@@ -309,8 +309,9 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
                }
             }
 
-            var12 = var17;
-            var17 = var16;
+            var18 = var8;
+            var8 = var18;
+            var12 = var16;
          }
 
          var14.c(var13);
@@ -318,11 +319,11 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
             var2,
             var5,
             var7,
-            (java.lang.String)var10,
-            (java.lang.String)var12,
+            (java.lang.String)var8,
+            (java.lang.String)var18,
             var11 as java.lang.String,
             var9 as java.lang.String,
-            var17 as java.lang.String,
+            var12 as java.lang.String,
             null
          );
       }

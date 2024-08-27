@@ -184,11 +184,11 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var2 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
-      var3 = var2 * 9 / 16;
+      var3 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
+      var2 = var3 * 9 / 16;
       val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
       var4 = this.binding.itemHero;
       kotlin.jvm.internal.r.g(this.binding.itemHero, "binding.itemHero");
-      var5.resizeLayoutParams(var4, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
+      var5.resizeLayoutParams(var4, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
    }
 }

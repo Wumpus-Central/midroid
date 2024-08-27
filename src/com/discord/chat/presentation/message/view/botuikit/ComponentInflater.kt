@@ -13,10 +13,10 @@ import com.discord.chat.bridge.botuikit.TextDisplayComponent
 import com.discord.chat.presentation.message.view.botuikit.components.ActionRowComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.ButtonComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.ContentInventoryComponentView
-import com.discord.chat.presentation.message.view.botuikit.components.MediaGalleryDisplayComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.SelectComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.SeparatorDisplayComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.TextDisplayComponentView
+import com.discord.chat.presentation.message.view.botuikit.components.media_gallery.MediaGalleryDisplayComponentView
 import kotlin.jvm.internal.r
 
 public class ComponentInflater(context: Context) {

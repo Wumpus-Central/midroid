@@ -159,16 +159,16 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
          kotlin.jvm.internal.r.g(this.binding.sharePromptSubtitle, "setSharePrompt_LdU2QRA$lambda$13");
-         val var10: StructurableText = var2.getSubtitle();
-         val var14: Context = var13.getContext();
+         val var14: StructurableText = var2.getSubtitle();
+         val var10: Context = var13.getContext();
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
          kotlin.jvm.internal.r.g(var15, "paint.fontMetrics");
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
          val var16: TextPaint = var13.getPaint();
-         kotlin.jvm.internal.r.g(var14, "context");
+         kotlin.jvm.internal.r.g(var10, "context");
          kotlin.jvm.internal.r.g(var16, "paint");
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
-            var13, TextUtilsKt.toSpannable$default(var10, var14, var1, false, false, false, false, var16, new Function1<LinkContentNode, Unit>(var6, var1) {
+            var13, TextUtilsKt.toSpannable$default(var14, var10, var1, false, false, false, false, var16, new Function1<LinkContentNode, Unit>(var6, var1) {
                final java.lang.String $messageId;
                final Function2<MessageId, LinkContentNode, Unit> $onLinkClicked;
 
@@ -242,7 +242,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var34.setVisibility(8);
          }
       } else {
-         val var38: java.util.List = kotlin.collections.h.F0(var8, --var2);
+         val var38: java.util.List = kotlin.collections.h.G0(var8, --var2);
          val var23: ReactionsView = this.binding.reactionsView;
          kotlin.jvm.internal.r.g(this.binding.reactionsView, "binding.reactionsView");
          var23.setVisibility(0);

@@ -37,7 +37,7 @@ public object BundleUpdaterUtils {
          }
       }
 
-      return h.M0(var5);
+      return h.N0(var5);
    }
 
    public fun getManifestFromFile(file: File): AppManifest {
@@ -56,8 +56,8 @@ public object BundleUpdaterUtils {
          var var12: java.lang.String;
          try {
             val var11: cm.j = cm.j.m.a(m.b());
-            var10.T0(var11);
-            var12 = var11.a().r();
+            var10.w1(var11);
+            var12 = var11.b().r();
          } catch (var5: java.lang.Throwable) {
             val var2: java.lang.Throwable = var5;
 

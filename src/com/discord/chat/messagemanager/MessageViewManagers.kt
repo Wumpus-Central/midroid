@@ -11,6 +11,7 @@ import com.discord.chat.bridge.row.MessageRow
 import com.discord.chat.bridge.row.Row
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.events.CreateChatReactEventsKt
+import com.discord.chat.presentation.list.AccessoriesViewPool
 import com.discord.chat.presentation.list.messagebundling.MessageBundleView
 import com.discord.chat.presentation.message.DecoratedMessageView
 import com.discord.chat.presentation.message.MessageView
@@ -127,7 +128,7 @@ public object MessageViewManagers {
          MessageBundleView,
          com.discord.chat.messagemanager.MessageViewManagers.MessageBundleViewManager
       > = new DCDGuildFeedMessageItemViewManagerDelegate(this)
-      private final val messageAccessoriesViewPool: RecycledViewPool
+      private final val messageAccessoriesViewPool: AccessoriesViewPool
       private final val messageRowViewPool: RecycledViewPool
       private final val reactEvents: ReactEvents =
          new ReactEvents(
@@ -296,13 +297,13 @@ public object MessageViewManagers {
 
             val var10: MessageBase = var4.getMessage();
             r.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var10 as Message;
-            val var7: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var7: Message = var10 as Message;
+            val var6: MessageContext = MessageContextKt.getMessageContext(var4);
             val var11: MessageFrame = var4.getMessageFrame();
             val var5: Context = var1.getContext();
             r.g(var5, "view.context");
             DecoratedMessageView.setMessage$default(
-               var1, var6, var7, var11, MessageViewManagers.access$getEventHandler(var3, var4, var5), null, null, false, var4.isHighlight(), false, 368, null
+               var1, var7, var6, var11, MessageViewManagers.access$getEventHandler(var3, var4, var5), null, null, false, var4.isHighlight(), false, 368, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -344,11 +345,11 @@ public object MessageViewManagers {
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
             r.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var4 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var8: Context = var1.getContext();
-            r.g(var8, "view.context");
-            var1.setMessage(var6, var5, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            val var5: Message = var4 as Message;
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Context = var1.getContext();
+            r.g(var6, "view.context");
+            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
          }
       }
 

@@ -163,7 +163,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             val var2: SimpleDraweeSpanTextView = var0.text;
             val var3: Any = var1.getAnimatedValue();
             r.f(var3, "null cannot be cast to non-null type kotlin.Int");
-            var2.setTextColor(var3 as Integer);
+            var2.setTextColor(var3 as Int);
          }
 
          public final ValueAnimator invoke() {
@@ -187,7 +187,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             r.g(var0.button, "binding.button");
             val var3: Any = var1.getAnimatedValue();
             r.f(var3, "null cannot be cast to non-null type kotlin.Int");
-            ColorUtilsKt.setTintColor(var2, var3 as Integer);
+            ColorUtilsKt.setTintColor(var2, var3 as Int);
          }
 
          public final ValueAnimator invoke() {
@@ -210,7 +210,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             val var2: AudioWaveView = var0.wave;
             val var3: Any = var1.getAnimatedValue();
             r.f(var3, "null cannot be cast to non-null type kotlin.Int");
-            var2.setAudioProgressPaintColor(var3 as Integer);
+            var2.setAudioProgressPaintColor(var3 as Int);
          }
 
          public final ValueAnimator invoke() {

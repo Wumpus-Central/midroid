@@ -163,7 +163,7 @@ internal class FastestListView(context: Context,
       this.setAdapter(var23);
       this.setHorizontalScrollBarEnabled(var17);
       this.setVerticalScrollBarEnabled(var18);
-      this.getRecycledViewPool().m(0, 50);
+      this.getRecycledViewPool().setMaxRecycledViews(0, 50);
       this.addItemDecoration(var19);
       this.addOnScrollListener(var22);
       this.addOnLayoutChangeListener(var21);
@@ -172,9 +172,9 @@ internal class FastestListView(context: Context,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = h.i()) {
       if (var1.isEmpty() xor true) {
-         for (FastestListViewAdapter.DataChanged var4 : var1) {
-            val var2: Int = var4.component1();
-            val var3: Int = var4.component2();
+         for (FastestListViewAdapter.DataChanged var5 : var1) {
+            val var2: Int = var5.component1();
+            val var3: Int = var5.component2();
             if (var3 == 1) {
                this.typedAdapter.notifyItemChanged(var2);
             } else {
@@ -271,6 +271,28 @@ internal class FastestListView(context: Context,
 
    public fun setKeyboardDismissOnDrag(keyboardDismissOnDrag: Boolean) {
       this.onScrollListener.setKeyboardDismissOnDrag(var1);
+   }
+
+   public open fun setPadding(left: Int, top: Int, right: Int, bottom: Int) {
+      var var5: Int = var2;
+      var var6: Boolean;
+      if (var5.intValue() != 0) {
+         var6 = 1;
+      } else {
+         var6 = 0;
+      }
+
+      if (!var6) {
+         var5 = null;
+      }
+
+      if (var5 != null) {
+         var6 = var5;
+      } else {
+         var6 = -1;
+      }
+
+      super.setPadding(var1, var6, var3, var4);
    }
 
    public fun setPlaceholderConfig(placeholderConfig: FastestListPlaceholderConfig) {

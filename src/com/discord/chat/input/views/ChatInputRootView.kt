@@ -43,7 +43,7 @@ import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
-import nk.t
+import nk.u
 
 public class ChatInputRootView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : RelativeLayout, KeyboardEvent {
    private final val binding: ChatInputRootViewBinding
@@ -187,7 +187,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       val var4: java.lang.String = UUID.randomUUID().toString();
       r.g(var4, "randomUUID().toString()");
       this.lastEditId = var4;
-      this.currentTextFlow = t.a(null);
+      this.currentTextFlow = u.a(null);
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var7, 16.0F);
       var7.setOnRequestSend(new Function0<Unit>(this) {
@@ -311,10 +311,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var5: Int = var10.c().getItemCount();
 
          for (int var4 = 0; var4 < var5; var4++) {
-            val var9: Uri = var10.c().getItemAt(var4).getUri();
-            r.g(var9, "clip.getItemAt(itemIndex).uri");
+            val var8: Uri = var10.c().getItemAt(var4).getUri();
+            r.g(var8, "clip.getItemAt(itemIndex).uri");
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var9);
+               var0.listener.onImageInserted(var8);
             }
          }
 
@@ -423,8 +423,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(h.t(var1, 10));
 
-      for (ChatInputNode var6 : var1) {
-         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var5 : var1) {
+         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
       for (ChatInputNode var17 : var4) {
@@ -489,7 +489,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       r.h(var2, "chatInputNodes");
       if (r.c(this.lastEditId, var1) || var1 == null) {
          val var6: Editable = this.editText.getEditableText();
-         val var5: Array<DCDInputSpan> = var6.getSpans(0, var6.length(), DCDInputSpan.class) as DCDInputSpan[];
+         val var5: Array<DCDInputSpan> = var6.getSpans(0, var6.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
          if (var5 != null) {
             r.g(var5, "getSpans(0, length, DCDInputSpan::class.java)");
             val var4: Int = var5.length;

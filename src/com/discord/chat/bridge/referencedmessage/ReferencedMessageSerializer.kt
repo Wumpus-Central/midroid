@@ -20,7 +20,7 @@ public object ReferencedMessageSerializer : d(h0.b(ReferencedMessage.class)) {
          if (var1 != null) {
             val var4: JsonPrimitive = g.p(var1);
             if (var4 != null) {
-               var5 = var4.j();
+               var5 = var4.e();
                break label21;
             }
          }

@@ -151,26 +151,26 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
 
       public open fun deserialize(decoder: Decoder): HandleSurveyMessage {
          r.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.b(var9);
          var var2: Int;
          var var6: Any;
          var var7: Any;
-         var var12: Any;
-         if (var11.p()) {
-            var12 = var11.y(var10, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null);
-            var7 = var11.y(var10, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var6 = var11.n(var10, 2, a2.a, null);
+         var var11: Any;
+         if (var10.p()) {
+            var11 = var10.y(var9, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null);
+            var6 = var10.y(var9, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var7 = var10.n(var9, 2, a2.a, null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var12 = null;
+            var11 = null;
             var7 = null;
             var6 = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var10.o(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -178,33 +178,30 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
                            throw new n(var4);
                         }
 
-                        var7 = var11.n(var10, 2, a2.a, var7);
+                        var7 = var10.n(var9, 2, a2.a, var7);
                         var2 |= 4;
                      } else {
-                        var6 = var11.y(var10, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var6);
+                        var6 = var10.y(var9, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var6);
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var11.y(var10, 0, com.discord.primitives.MessageId..serializer.INSTANCE, var12);
+                     var11 = var10.y(var9, 0, com.discord.primitives.MessageId..serializer.INSTANCE, var11);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var7 = var6;
-            var6 = var7;
          }
 
-         var11.c(var10);
-         val var16: MessageId = var12 as MessageId;
-         var12 = null;
-         if (var16 != null) {
-            var12 = var16.unbox-impl();
+         var10.c(var9);
+         val var13: MessageId = var11 as MessageId;
+         var11 = null;
+         if (var13 != null) {
+            var11 = var13.unbox-impl();
          }
 
-         return new HandleSurveyMessage(var2, (java.lang.String)var12, var7 as ChannelId, var6 as java.lang.String, null, null);
+         return new HandleSurveyMessage(var2, (java.lang.String)var11, var6 as ChannelId, var7 as java.lang.String, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: HandleSurveyMessage) {

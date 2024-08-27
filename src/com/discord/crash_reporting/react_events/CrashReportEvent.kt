@@ -93,16 +93,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
          var1.putString("exitDescription", var4.getReason());
       }
 
-      val var5: SystemLogUtils.Tombstone = this.tombstone;
+      val var3: SystemLogUtils.Tombstone = this.tombstone;
       if (this.tombstone != null) {
          var1.putString("tombstoneGroupHash", this.tombstone.getGroupHash());
-         val var3: java.lang.String = var5.getCause();
-         if (var3 != null) {
-            var1.putString("tombstoneCause", var3);
+         val var5: java.lang.String = var3.getCause();
+         if (var5 != null) {
+            var1.putString("tombstoneCause", var5);
          }
 
-         if (h.n(new IntRange(0, 1000), c.j) == 0 && !f.x(var5.getText())) {
-            var1.putString("tombstone", f.b1(var5.getText(), 6291456));
+         if (h.n(new IntRange(0, 1000), c.j) == 0 && !f.x(var3.getText())) {
+            var1.putString("tombstone", f.b1(var3.getText(), 6291456));
          }
       }
 

@@ -59,16 +59,16 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       private final val typefaces: ConcurrentHashMap<DiscordFont, Typeface>
 
       private fun getFontFromRN(context: Context, font: DiscordFont): Typeface {
-         val var4: Typeface = ReactFontManager.getInstance().getTypeface(var2.getRawName(), 0, var1.getAssets());
-         r.g(var4, "getInstance()\n          …e.NORMAL, context.assets)");
-         if (!r.c(var4, Typeface.DEFAULT)) {
-            return var4;
+         val var3: Typeface = ReactFontManager.getInstance().getTypeface(var2.getRawName(), 0, var1.getAssets());
+         r.g(var3, "getInstance()\n          …e.NORMAL, context.assets)");
+         if (!r.c(var3, Typeface.DEFAULT)) {
+            return var3;
          } else {
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Cannot find typeface ");
-            var3.append(var4);
-            var3.append(".rawName");
-            throw new IllegalStateException(var3.toString().toString());
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("Cannot find typeface ");
+            var4.append(var3);
+            var4.append(".rawName");
+            throw new IllegalStateException(var4.toString().toString());
          }
       }
 

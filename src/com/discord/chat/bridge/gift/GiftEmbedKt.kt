@@ -22,7 +22,7 @@ private fun JsonObject.hasPrimitive(key: String): Boolean {
       val var5: JsonPrimitive = g.p(var4);
       var2 = false;
       if (var5 != null) {
-         val var6: java.lang.String = var5.j();
+         val var6: java.lang.String = var5.e();
          var2 = false;
          if (var6 != null) {
             var2 = false;

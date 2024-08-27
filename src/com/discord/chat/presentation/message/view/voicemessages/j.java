@@ -10,6 +10,6 @@ public final class j implements OnClickListener {
    public final boolean l;
 
    public final void onClick(View var1) {
-      AudioPlayerView.a(this.j, this.k, this.l, var1);
+      AudioPlayerView.b(this.j, this.k, this.l, var1);
    }
 }

@@ -27,9 +27,9 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       this.serialName = var9;
       val var6: Array<Any> = a.b(var1).getEnumConstants();
       r.e(var6);
-      val var10: Array<IntEnum> = var6 as IntEnum[];
+      val var10: Array<IntEnum> = var6 as Array<IntEnum>;
       this.choices = (T[])var6;
-      val var7: ArrayList = new ArrayList((var6 as IntEnum[]).length);
+      val var7: ArrayList = new ArrayList((var6 as Array<IntEnum>).length);
       val var5: Int = var10.length;
 
       for (int var3 = 0; var3 < var5; var3++) {

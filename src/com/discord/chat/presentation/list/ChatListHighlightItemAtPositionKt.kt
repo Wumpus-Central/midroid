@@ -91,7 +91,7 @@ fun `animateBackgroundColor$anim$lambda$1$lambda$0`(var0: View, var1: ValueAnima
    r.h(var1, "valueAnimator");
    val var2: Any = var1.getAnimatedValue();
    r.f(var2, "null cannot be cast to non-null type kotlin.Int");
-   var0.setBackgroundColor(var2 as Integer);
+   var0.setBackgroundColor(var2 as Int);
 }
 
 private fun View.animateHighlightBackgroundColor(delay: Long, startColor: Int, fullColor: Int, endColor: Int) {
@@ -111,7 +111,7 @@ fun `animateHighlightBackgroundColor$anim$4$lambda$3$lambda$2`(var0: View, var1:
    r.h(var1, "valueAnimator");
    val var2: Any = var1.getAnimatedValue();
    r.f(var2, "null cannot be cast to non-null type kotlin.Int");
-   var0.setBackgroundColor(var2 as Integer);
+   var0.setBackgroundColor(var2 as Int);
 }
 
 @JvmSynthetic

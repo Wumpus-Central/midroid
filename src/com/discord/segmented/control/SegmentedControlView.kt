@@ -108,7 +108,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
    public final var labels: List<String>
       public final get() {
-         return this.labels$delegate.getValue(this, $$delegatedProperties[8]) as java.util.List<java.lang.String>;
+         return this.labels$delegate.getValue(this, $$delegatedProperties[8]) as MutableList<java.lang.String>;
       }
 
       public final set(<set-?>) {
@@ -119,7 +119,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
    public final var accessibilityRoleDescriptions: List<String>
       public final get() {
-         return this.accessibilityRoleDescriptions$delegate.getValue(this, $$delegatedProperties[9]) as java.util.List<java.lang.String>;
+         return this.accessibilityRoleDescriptions$delegate.getValue(this, $$delegatedProperties[9]) as MutableList<java.lang.String>;
       }
 
       public final set(<set-?>) {

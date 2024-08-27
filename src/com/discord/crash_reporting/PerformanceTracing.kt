@@ -4,13 +4,13 @@ import com.facebook.react.bridge.ReactMarker
 import com.facebook.react.bridge.ReactMarkerConstants
 import com.facebook.react.bridge.ReactMarker.MarkerListener
 import io.sentry.ISpan
-import io.sentry.s0
-import io.sentry.w2
+import io.sentry.o3
+import io.sentry.y0
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.r
 
 public class PerformanceTracing : MarkerListener {
-   private final val ongoingTransactions: MutableMap<TraceTransaction, s0> = new LinkedHashMap()
+   private final val ongoingTransactions: MutableMap<TraceTransaction, y0> = new LinkedHashMap()
    private final val ongoingSpans: MutableMap<String, ISpan>
    private final val spanStarts: MutableMap<String, Long>
    private final var lastNativeModuleSetupStart: ISpan?
@@ -74,12 +74,12 @@ public class PerformanceTracing : MarkerListener {
       val var4: java.lang.String;
       if (var1.getTag() != null && !r.c(var1.getName(), "CREATE_REACT_CONTEXT")) {
          val var2: java.lang.String = var1.getName();
-         val var3: java.lang.String = var1.getTag();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var2);
-         var5.append(" ");
-         var5.append(var3);
-         var4 = var5.toString();
+         val var5: java.lang.String = var1.getTag();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" ");
+         var3.append(var5);
+         var4 = var3.toString();
       } else {
          var4 = var1.getName();
       }
@@ -94,7 +94,7 @@ public class PerformanceTracing : MarkerListener {
       } else if (this.wildcardEventNames.contains(var1.getName())) {
          val var3: java.lang.String = this.startupRootEventsTree.get(var1.getName());
          var2 = var3;
-         if (h.P(this.wildcardEventNames, var3)) {
+         if (h.Q(this.wildcardEventNames, var3)) {
             val var4: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
             val var6: StringBuilder = new StringBuilder();
             var6.append(var3);
@@ -115,7 +115,7 @@ public class PerformanceTracing : MarkerListener {
 
    private fun startTransaction(transaction: TraceTransaction) {
       if (!this.ongoingTransactions.containsKey(var1)) {
-         val var2: s0 = w2.A(var1.getTransactionName(), var1.getOperation());
+         val var2: y0 = o3.E(var1.getTransactionName(), var1.getOperation());
          r.g(var2, "startTransaction(transac…e, transaction.operation)");
          this.ongoingTransactions.put(var1, var2);
          this.ongoingSpans.put("root", var2);
@@ -124,9 +124,9 @@ public class PerformanceTracing : MarkerListener {
    }
 
    private fun stopTransaction(transaction: TraceTransaction) {
-      val var2: s0 = this.ongoingTransactions.get(var1);
+      val var2: y0 = this.ongoingTransactions.get(var1);
       if (var2 != null) {
-         var2.c();
+         var2.d();
       }
 
       this.ongoingTransactions.remove(var1);
@@ -201,7 +201,7 @@ public class PerformanceTracing : MarkerListener {
       // 04a: aload 4
       // 04c: ifnull 056
       // 04f: aload 4
-      // 051: invokeinterface io/sentry/ISpan.c ()V 1
+      // 051: invokeinterface io/sentry/ISpan.d ()V 1
       // 056: aload 0
       // 057: aconst_null
       // 058: putfield com/discord/crash_reporting/PerformanceTracing.lastNativeModuleSetupStart Lio/sentry/ISpan;
@@ -219,7 +219,7 @@ public class PerformanceTracing : MarkerListener {
       // 077: aload 4
       // 079: ifnull 083
       // 07c: aload 4
-      // 07e: invokeinterface io/sentry/ISpan.c ()V 1
+      // 07e: invokeinterface io/sentry/ISpan.d ()V 1
       // 083: aload 1
       // 084: invokevirtual com/discord/crash_reporting/PerformanceTracing$TransactionMarker.getName ()Ljava/lang/String;
       // 087: ldc "PROCESS_PACKAGE_MODULE"
@@ -277,7 +277,7 @@ public class PerformanceTracing : MarkerListener {
       // 0f7: ifnull 130
       // 0fa: aload 4
       // 0fc: aload 6
-      // 0fe: invokeinterface io/sentry/ISpan.f (Ljava/lang/String;)Lio/sentry/ISpan; 2
+      // 0fe: invokeinterface io/sentry/ISpan.g (Ljava/lang/String;)Lio/sentry/ISpan; 2
       // 103: astore 5
       // 105: aload 5
       // 107: ifnonnull 10d
@@ -306,7 +306,7 @@ public class PerformanceTracing : MarkerListener {
       // 13a: return
       // 13b: aload 5
       // 13d: aload 6
-      // 13f: invokeinterface io/sentry/ISpan.f (Ljava/lang/String;)Lio/sentry/ISpan; 2
+      // 13f: invokeinterface io/sentry/ISpan.g (Ljava/lang/String;)Lio/sentry/ISpan; 2
       // 144: astore 4
       // 146: aload 4
       // 148: ldc_w "parentSpan.startChild(markerName)"
@@ -382,7 +382,7 @@ public class PerformanceTracing : MarkerListener {
       // 1ed: aload 4
       // 1ef: ifnull 229
       // 1f2: aload 4
-      // 1f4: invokeinterface io/sentry/ISpan.c ()V 1
+      // 1f4: invokeinterface io/sentry/ISpan.d ()V 1
       // 1f9: aload 0
       // 1fa: getfield com/discord/crash_reporting/PerformanceTracing.ongoingSpans Ljava/util/Map;
       // 1fd: aload 6

@@ -190,25 +190,23 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          var var2: Int;
          var var5: java.lang.String;
          var var6: java.lang.String;
+         var var7: java.lang.String;
          var var8: java.lang.String;
          var var9: java.lang.String;
          val var15: java.lang.String;
-         var var19: java.lang.String;
          if (var14.p()) {
-            var19 = var14.m(var13, 0);
+            var8 = var14.m(var13, 0);
             var9 = var14.m(var13, 1);
-            val var10: java.lang.String = var14.m(var13, 2);
+            var7 = var14.m(var13, 2);
             var5 = var14.m(var13, 3);
             var6 = var14.m(var13, 4);
             var15 = var14.m(var13, 5);
             var2 = 63;
-            var8 = var19;
-            var19 = var10;
          } else {
             var8 = null;
             var9 = null;
             var6 = null;
-            var19 = null;
+            var7 = null;
             var5 = null;
             var var16: java.lang.String = null;
             var var3: Boolean = true;
@@ -237,7 +235,7 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                      var2 |= 8;
                      break;
                   case 4:
-                     var19 = var14.m(var13, 4);
+                     var7 = var14.m(var13, 4);
                      var2 |= 16;
                      break;
                   case 5:
@@ -250,14 +248,14 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
             }
 
             var15 = var9;
-            var6 = var19;
+            var6 = var7;
             var5 = var6;
-            var19 = var5;
+            var7 = var5;
             var9 = var16;
          }
 
          var14.c(var13);
-         return new SafetyPolicyNoticeEmbed(var2, var8, var9, var19, var5, var6, var15, null);
+         return new SafetyPolicyNoticeEmbed(var2, var8, var9, var7, var5, var6, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {

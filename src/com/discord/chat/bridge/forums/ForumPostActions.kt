@@ -294,15 +294,15 @@ public data class ForumPostActions(numDisplayedReactions: Int,
          var var17: Any;
          if (var15.p()) {
             val var2: Int = var15.i(var14, 0);
-            var5 = var15.C(var14, 1);
+            var4 = var15.C(var14, 1);
             var17 = a2.a;
-            var7 = var15.n(var14, 2, a2.a, null);
-            var9 = var15.m(var14, 3);
-            var8 = var15.n(var14, 4, (DeserializationStrategy)var17, null);
+            var9 = var15.n(var14, 2, a2.a, null);
+            var8 = var15.m(var14, 3);
+            var7 = var15.n(var14, 4, (DeserializationStrategy)var17, null);
             var17 = var15.m(var14, 5);
             var10 = var15.n(var14, 6, MessageReaction.$serializer.INSTANCE, null);
             var11 = var15.n(var14, 7, PostSharePrompt.$serializer.INSTANCE, null);
-            var4 = 255;
+            var5 = 255;
             var3 = var2;
          } else {
             var var22: Boolean = true;
@@ -360,22 +360,21 @@ public data class ForumPostActions(numDisplayedReactions: Int,
             }
 
             var17 = var7;
-            var9 = var8;
-            var5 = var3;
+            var4 = var3;
             var3 = var4;
-            var4 = var19;
-            var7 = var17;
-            var8 = var9;
+            var5 = var19;
+            var9 = var17;
+            var7 = var9;
          }
 
          var15.c(var14);
          return new ForumPostActions(
-            var4,
+            var5,
             var3,
-            (boolean)var5,
+            (boolean)var4,
+            var9 as java.lang.String,
+            (java.lang.String)var8,
             var7 as java.lang.String,
-            (java.lang.String)var9,
-            var8 as java.lang.String,
             (java.lang.String)var17,
             var10 as MessageReaction,
             var11 as PostSharePrompt,

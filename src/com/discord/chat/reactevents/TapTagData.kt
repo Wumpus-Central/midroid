@@ -107,18 +107,18 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.String = this.tagType;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapTagData(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(", tagType=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.tagType;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapTagData(messageId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", tagType=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<TapTagData> {

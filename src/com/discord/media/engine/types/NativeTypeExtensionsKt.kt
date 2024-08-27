@@ -49,10 +49,10 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
       var var2: Int = 1;
       if (var1 >= var3) {
          val var14: Pair = new Pair(var4, var5);
-         val var8: java.util.List = h.W(
+         val var8: java.util.List = h.X(
             h.l(
                new VideoInputDeviceDescription[]{
-                  h.b0(var14.a() as java.util.List) as VideoInputDeviceDescription, h.b0(var14.b() as java.util.List) as VideoInputDeviceDescription
+                  h.c0(var14.a() as java.util.List) as VideoInputDeviceDescription, h.c0(var14.b() as java.util.List) as VideoInputDeviceDescription
                }
             )
          );

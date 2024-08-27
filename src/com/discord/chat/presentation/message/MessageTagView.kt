@@ -130,12 +130,12 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          val var22: Context = this.getContext();
          kotlin.jvm.internal.r.g(var22, "context");
          var26.setTextColor(ColorUtilsKt.getColorCompat(var22, color.brand_560));
-         val var23: ConstraintLayout = this.binding.layout;
+         val var27: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "binding.layout");
-         val var27: Context = this.getContext();
-         kotlin.jvm.internal.r.g(var27, "context");
+         val var23: Context = this.getContext();
+         kotlin.jvm.internal.r.g(var23, "context");
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-            var23, ColorUtilsKt.getThemeColor(var27, color.brand_200, color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
+            var27, ColorUtilsKt.getThemeColor(var23, color.brand_200, color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
          );
          val var24: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "binding.layout");

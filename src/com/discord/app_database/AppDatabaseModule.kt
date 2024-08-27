@@ -25,10 +25,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, String?> {
-      val var2: com.discord.cache.CacheModule.Companion = CacheModule.Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      return s.m(new Pair[]{w.a("userId", var2.get(var1).getItem("_databaseUserId"))});
+      val var1: com.discord.cache.CacheModule.Companion = CacheModule.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      return s.m(new Pair[]{w.a("userId", var1.get(var2).getItem("_databaseUserId"))});
    }
 
    public open fun getName(): String {
@@ -99,17 +99,17 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
                var1 = this.databaseName(var1);
                val var9: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
                val var8: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "non_guild_versions");
-               val var27: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
-               val var18: a = Json.d;
+               var1 = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
+               val var27: a = Json.d;
                r.g(var9, "guildJson");
-               var18.a();
-               var32 = var18.b(new v1(h0.b(GuildVersion.class), GuildVersion.$serializer.INSTANCE), var9) as GuildVersion[];
+               var27.a();
+               var32 = var27.b(new v1(h0.b(GuildVersion.class), GuildVersion.$serializer.INSTANCE), var9) as Array<GuildVersion>;
                r.g(var8, "nonGuildJson");
-               var18.a();
-               var31 = var18.b(new v1(h0.b(NonGuildVersion.class), NonGuildVersion.$serializer.INSTANCE), var8) as NonGuildVersion[];
-               r.g(var27, "cacheVersionJson");
-               var18.a();
-               var19 = var18.b(new v1(h0.b(CacheVersion.class), CacheVersion.$serializer.INSTANCE), var27) as CacheVersion[];
+               var27.a();
+               var31 = var27.b(new v1(h0.b(NonGuildVersion.class), NonGuildVersion.$serializer.INSTANCE), var8) as Array<NonGuildVersion>;
+               r.g(var1, "cacheVersionJson");
+               var27.a();
+               var19 = var27.b(new v1(h0.b(CacheVersion.class), CacheVersion.$serializer.INSTANCE), var1) as Array<CacheVersion>;
                var6 = var19.length;
             } catch (var14: Exception) {
                val var15: Log = Log.INSTANCE;
@@ -122,18 +122,18 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
             }
 
             val var5: Boolean = false;
-            var var3: Int = 0;
+            var var4: Int = 0;
 
-            var var4: Boolean;
+            var var3: Boolean;
             while (true) {
-               var4 = var5;
-               if (var3 >= var6) {
+               var3 = var5;
+               if (var4 >= var6) {
                   break;
                }
 
                label43: {
                   try {
-                     if (r.c(var19[var3].getVersion(), var2)) {
+                     if (r.c(var19[var4].getVersion(), var2)) {
                         break label43;
                      }
                   } catch (var13: Exception) {
@@ -146,16 +146,16 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
                      return DatabaseVersions.Companion.getEMPTY();
                   }
 
-                  var3++;
+                  var4++;
                   continue;
                }
 
-               var4 = true;
+               var3 = true;
                break;
             }
 
             var var16: DatabaseVersions;
-            if (!var4) {
+            if (!var3) {
                try {
                   Log.e$default(Log.INSTANCE, "AppDatabase", "cache version mismatch, skipping guild versions", null, 4, null);
                   var16 = DatabaseVersions.Companion.getEMPTY();

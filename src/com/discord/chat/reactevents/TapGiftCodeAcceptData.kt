@@ -153,16 +153,16 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
          var var2: Int;
-         var var6: Any;
+         var var7: Any;
          val var11: java.lang.String;
          if (var10.p()) {
             var11 = var10.m(var9, 0);
-            var6 = var10.n(var9, 1, com.discord.primitives.MessageId..serializer.INSTANCE, null);
+            var7 = (MessageId)var10.n(var9, 1, com.discord.primitives.MessageId..serializer.INSTANCE, null);
             var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
+            var var6: java.lang.String = null;
             var var12: Any = null;
 
             while (var3) {
@@ -184,18 +184,18 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
                }
             }
 
-            var6 = var12;
-            var11 = (java.lang.String)var6;
+            var7 = (MessageId)var12;
+            var11 = var6;
          }
 
          var10.c(var9);
-         val var15: MessageId = var6 as MessageId;
-         var6 = null;
-         if (var15 != null) {
-            var6 = var15.unbox-impl();
+         var7 = var7;
+         var var13: java.lang.String = null;
+         if (var7 != null) {
+            var13 = var7.unbox-impl();
          }
 
-         return new TapGiftCodeAcceptData(var2, var11, (java.lang.String)var6, null, null);
+         return new TapGiftCodeAcceptData(var2, var11, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapGiftCodeAcceptData) {

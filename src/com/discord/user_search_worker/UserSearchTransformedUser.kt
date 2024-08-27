@@ -199,18 +199,18 @@ internal data class UserSearchTransformedUser(id: String,
          val var6: JsonObject = var12 as JsonObject;
          val var13: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var8 : var6.entrySet()) {
-            val var4: java.lang.String = var8.getKey() as java.lang.String;
-            val var5: JsonElement = var8.getValue() as JsonElement;
+         for (Entry var7 : var6.entrySet()) {
+            val var4: java.lang.String = var7.getKey() as java.lang.String;
+            val var5: JsonElement = var7.getValue() as JsonElement;
             val var2: Boolean;
-            if (TRANSFORMED_USER_KEYS.contains(var4) || !kotlinx.serialization.json.g.p(var5).n() && kotlinx.serialization.json.g.p(var5) !is JsonNull) {
+            if (TRANSFORMED_USER_KEYS.contains(var4) || !kotlinx.serialization.json.g.p(var5).m() && kotlinx.serialization.json.g.p(var5) !is JsonNull) {
                var2 = false;
             } else {
                var2 = true;
             }
 
             if (var2) {
-               var13.put(var8.getKey(), var8.getValue());
+               var13.put(var7.getKey(), var7.getValue());
             }
          }
 
@@ -228,10 +228,10 @@ internal data class UserSearchTransformedUser(id: String,
                   var33 = s.t(var24);
                   var var15: Any = var6.get("id");
                   r.e(var15);
-                  var9 = kotlinx.serialization.json.g.p(var15 as JsonElement).j();
+                  var9 = kotlinx.serialization.json.g.p(var15 as JsonElement).e();
                   var15 = var6.get("username");
                   r.e(var15);
-                  var10 = kotlinx.serialization.json.g.p(var15 as JsonElement).j();
+                  var10 = kotlinx.serialization.json.g.p(var15 as JsonElement).e();
                   var15 = var6.get("isBot") as JsonElement;
                   if (var15 != null) {
                      var15 = kotlinx.serialization.json.g.p((JsonElement)var15);
@@ -262,8 +262,8 @@ internal data class UserSearchTransformedUser(id: String,
                   if (var21 != null) {
                      val var22: JsonPrimitive = kotlinx.serialization.json.g.p(var21);
                      if (var22 != null) {
-                        if (var22.n()) {
-                           var23 = var22.j();
+                        if (var22.m()) {
+                           var23 = var22.e();
                         } else {
                            var23 = null;
                         }
@@ -281,8 +281,8 @@ internal data class UserSearchTransformedUser(id: String,
                   var28 = null;
                   if (var34 != null) {
                      var28 = null;
-                     if (var34.n()) {
-                        var28 = var34.j();
+                     if (var34.m()) {
+                        var28 = var34.e();
                      }
                   }
                }
@@ -293,8 +293,8 @@ internal data class UserSearchTransformedUser(id: String,
             val var31: Entry = var26.next() as Entry;
             val var30: java.lang.String = var31.getKey() as java.lang.String;
             val var32: JsonElement = var31.getValue() as JsonElement;
-            if (kotlinx.serialization.json.g.p(var32).n()) {
-               var14 = kotlinx.serialization.json.g.p(var32).j();
+            if (kotlinx.serialization.json.g.p(var32).m()) {
+               var14 = kotlinx.serialization.json.g.p(var32).e();
             }
 
             var24.add(w.a(var30, var14));

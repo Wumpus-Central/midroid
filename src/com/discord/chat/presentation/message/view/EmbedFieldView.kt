@@ -36,16 +36,16 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
-      val var6: EmbedFieldViewBinding = EmbedFieldViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var6;
+      val var4: EmbedFieldViewBinding = EmbedFieldViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var4, "inflate(LayoutInflater.from(context), this)");
+      this.binding = var4;
       this.setOrientation(1);
-      val var4: SimpleDraweeSpanTextView = var6.name;
-      var6.name.setTextColor(ColorUtilsKt.getThemeColor(var1, color.primary_500, color.primary_100));
-      kotlin.jvm.internal.r.g(var4, "_init_$lambda$0");
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
-      val var5: SimpleDraweeSpanTextView = var6.value;
-      kotlin.jvm.internal.r.g(var6.value, "_init_$lambda$1");
+      val var6: SimpleDraweeSpanTextView = var4.name;
+      var4.name.setTextColor(ColorUtilsKt.getThemeColor(var1, color.primary_500, color.primary_100));
+      kotlin.jvm.internal.r.g(var6, "_init_$lambda$0");
+      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
+      val var5: SimpleDraweeSpanTextView = var4.value;
+      kotlin.jvm.internal.r.g(var4.value, "_init_$lambda$1");
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextNormal());

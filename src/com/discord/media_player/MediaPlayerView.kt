@@ -72,11 +72,11 @@ public class MediaPlayerView(context: Context) {
       val var3: View = this.getPlayerView().getVideoSurfaceView();
       if (var3 is SurfaceView) {
          if (var1 != null) {
-            var1.k(var3 as SurfaceView);
+            var1.j(var3 as SurfaceView);
          }
       } else if (var3 is TextureView) {
          if (var1 != null) {
-            var1.z(var3 as TextureView);
+            var1.y(var3 as TextureView);
          }
       } else {
          val var2: Boolean;

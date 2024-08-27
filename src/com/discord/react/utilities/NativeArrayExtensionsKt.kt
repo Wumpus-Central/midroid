@@ -100,7 +100,7 @@ public fun <V> WritableNativeArray.push(value: Any) {
    r.h(var0, "<this>");
    if (var1 is java.lang.String) {
       var0.pushString(var1 as java.lang.String);
-   } else if (var1 is Integer) {
+   } else if (var1 is Int) {
       var0.pushInt((var1 as java.lang.Number).intValue());
    } else if (var1 is java.lang.Double) {
       var0.pushDouble((var1 as java.lang.Number).doubleValue());

@@ -63,19 +63,19 @@ public class FlaggedMessageActionBarView  public constructor(context: Context, a
       kotlin.jvm.internal.r.h(var1, "autoModerationContext");
       kotlin.jvm.internal.r.h(var2, "onTapAutoModerationActions");
       kotlin.jvm.internal.r.h(var3, "onTapAutoModerationFeedback");
-      val var4: java.lang.String = var1.getActionsIconURL();
+      val var6: java.lang.String = var1.getActionsIconURL();
       val var5: java.lang.String = var1.getActionsText();
-      val var6: DCDButton = this.binding.actionsButton;
-      if (var4 != null) {
-         this.binding.actionsButton.setIcon(var4, SizeUtilsKt.getDpToPx(16));
+      val var4: DCDButton = this.binding.actionsButton;
+      if (var6 != null) {
+         this.binding.actionsButton.setIcon(var6, SizeUtilsKt.getDpToPx(16));
       }
 
       this.binding.actionsButton.setText(var5);
-      var6.setOnClickButtonListener(var2);
-      val var8: java.lang.String = var1.getFeedbackText();
-      val var7: DCDButton = this.binding.feedbackButton;
-      this.binding.feedbackButton.setText(var8);
-      var7.setOnClickButtonListener(var3);
+      var4.setOnClickButtonListener(var2);
+      val var7: java.lang.String = var1.getFeedbackText();
+      val var8: DCDButton = this.binding.feedbackButton;
+      this.binding.feedbackButton.setText(var7);
+      var8.setOnClickButtonListener(var3);
    }
 
    public open fun spacingPxOverride(): Int {

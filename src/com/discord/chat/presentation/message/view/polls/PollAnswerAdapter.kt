@@ -12,7 +12,7 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.r
 
 public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>> : Adapter<THolder> {
-   private final var items: List<PollAnswerAccessory> = h.i()
+   private final var items: List<PollAnswerAccessory> = kotlin.collections.h.i()
    public final var onTapAnswer: (String) -> Unit = <unrepresentable>.INSTANCE
    private final var onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    public final var myAvatarUrl: String?

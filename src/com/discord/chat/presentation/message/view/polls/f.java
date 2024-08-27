@@ -9,6 +9,6 @@ public final class f implements OnClickListener {
    public final Function0 j;
 
    public final void onClick(View var1) {
-      PollMediaView.a(this.j, var1);
+      PollMediaView.b(this.j, var1);
    }
 }

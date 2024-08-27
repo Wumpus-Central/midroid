@@ -146,20 +146,18 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
          val var5: Boolean = var10.p();
          var var7: java.lang.String = null;
          var var2: Int;
-         val var8: Any;
-         val var12: java.lang.String;
+         var var6: Any;
+         val var11: java.lang.String;
          if (var5) {
-            val var11: java.lang.String = var10.m(var9, 0);
-            val var6: java.lang.String = var10.m(var9, 1);
-            var8 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), null);
+            var7 = var10.m(var9, 0);
+            var11 = var10.m(var9, 1);
+            var6 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), null);
             var2 = 7;
-            var7 = var11;
-            var12 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var14: java.lang.String = null;
-            var var13: Any = null;
+            var6 = null;
+            var var12: Any = null;
 
             while (var3) {
                val var4: Int = var10.o(var9);
@@ -170,10 +168,10 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
                            throw new n(var4);
                         }
 
-                        var13 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), var13);
+                        var12 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), var12);
                         var2 |= 4;
                      } else {
-                        var14 = var10.m(var9, 1);
+                        var6 = var10.m(var9, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -185,12 +183,12 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
                }
             }
 
-            var12 = var14;
-            var8 = var13;
+            var6 = var12;
+            var11 = (java.lang.String)var6;
          }
 
          var10.c(var9);
-         return new PollResources(var2, var7, var12, var8 as java.util.Map, null);
+         return new PollResources(var2, var7, var11, var6 as java.util.Map, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollResources) {

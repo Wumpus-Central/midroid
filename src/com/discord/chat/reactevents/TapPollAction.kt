@@ -129,19 +129,17 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
+         var var5: java.lang.String;
          var var6: java.lang.String;
          val var10: java.lang.String;
-         var var12: java.lang.String;
          if (var9.p()) {
-            var12 = var9.m(var8, 0);
-            val var7: java.lang.String = var9.m(var8, 1);
+            var6 = var9.m(var8, 0);
+            var5 = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
             var2 = 7;
-            var6 = var12;
-            var12 = var7;
          } else {
             var6 = null;
-            var12 = null;
+            var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -155,7 +153,7 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
                            throw new n(var4);
                         }
 
-                        var12 = var9.m(var8, 2);
+                        var5 = var9.m(var8, 2);
                         var2 |= 4;
                      } else {
                         var11 = var9.m(var8, 1);
@@ -170,12 +168,12 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
                }
             }
 
-            var10 = var12;
-            var12 = var11;
+            var5 = var11;
+            var10 = var5;
          }
 
          var9.c(var8);
-         return new TapPollAction(var2, var6, var12, var10, null);
+         return new TapPollAction(var2, var6, var5, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapPollAction) {

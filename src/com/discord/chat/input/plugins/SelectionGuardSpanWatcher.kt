@@ -29,9 +29,9 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
          val var13: Array<Any> = var1.getSpans(var4, var5, DCDNoSelectionSpan.class);
          r.g(var13, "getSpans(start, end, T::class.java)");
-         val var14: Array<DCDNoSelectionSpan> = var13 as DCDNoSelectionSpan[];
+         val var14: Array<DCDNoSelectionSpan> = var13 as Array<DCDNoSelectionSpan>;
          var var15: Boolean;
-         if ((var13 as DCDNoSelectionSpan[]).length == 0) {
+         if ((var13 as Array<DCDNoSelectionSpan>).length == 0) {
             var15 = 1;
          } else {
             var15 = 0;

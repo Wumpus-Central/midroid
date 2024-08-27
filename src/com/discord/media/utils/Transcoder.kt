@@ -61,7 +61,7 @@ internal object Transcoder {
             r.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            if (this.$continuation.a()) {
+            if (this.$continuation.b()) {
                kotlinx.coroutines.CancellableContinuation.a.a(this.$continuation, null, 1, null);
             }
          }
@@ -71,7 +71,7 @@ internal object Transcoder {
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var3: eh.r.a = eh.r.k;
+            val var4: eh.r.a = eh.r.k;
             this.$continuation.resumeWith(eh.r.b(this.$mediaSource.getOutputUri()));
          }
 
@@ -98,7 +98,7 @@ internal object Transcoder {
             this.$onProgress.invoke(0.0F);
          }
       }, null);
-      var6.l(new Function1<java.lang.Throwable, Unit>(var1) {
+      var6.j(new Function1<java.lang.Throwable, Unit>(var1) {
          final java.lang.String $requestId;
 
          {

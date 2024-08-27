@@ -17,7 +17,7 @@ private fun parseProperty(property: KProperty1<*, *>, jsonProperty: JsonElement)
    try {
       val var4: KClass = b.a(var0.getReturnType());
       if (r.c(var4, h0.b(java.lang.String.class))) {
-         g.p(var1).j();
+         g.p(var1).e();
       } else if (r.c(var4, h0.b(int.class))) {
          g.l(g.p(var1));
       } else if (r.c(var4, h0.b(double.class))) {

@@ -14,7 +14,7 @@ internal fun InputStream.writeTo(outputFile: File): File {
       val var2: BufferedSink = m.c(m.j(var1, false, 1, null));
 
       try {
-         var2.W(m.l(var0));
+         var2.k0(m.l(var0));
       } catch (var4: java.lang.Throwable) {
          val var10: java.lang.Throwable = var4;
 

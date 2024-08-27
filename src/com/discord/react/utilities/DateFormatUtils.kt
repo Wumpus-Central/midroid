@@ -13,10 +13,10 @@ public class DateFormatUtils(reactContext: ReactApplicationContext) : ReactConte
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun activate(): Boolean {
-      val var1: JSINativeModule = JSINativeModule.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      return var1.install(ReactContextExtensionsKt.jsiId(var2));
+      val var2: JSINativeModule = JSINativeModule.INSTANCE;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var1, "reactApplicationContext");
+      return var2.install(ReactContextExtensionsKt.jsiId(var1));
    }
 
    public open fun getName(): String {

@@ -51,7 +51,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
             }
          }
 
-         super(h.O0(var4));
+         super(h.P0(var4));
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
@@ -73,7 +73,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
          val var1: java.util.Collection = this.getChildren();
          val var3: java.lang.String;
          if (var1 != null) {
-            var3 = h.j0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
+            var3 = h.k0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
          } else {
             var3 = null;
          }

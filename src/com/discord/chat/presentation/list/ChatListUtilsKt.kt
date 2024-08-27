@@ -3,7 +3,6 @@ package com.discord.chat.presentation.list
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
-import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.presentation.message.decorations.BackgroundHighlightDecoration
 import kotlin.jvm.internal.r
 
@@ -20,13 +19,4 @@ public fun RecyclerView.configureMessageRecyclerView(context: Context, vararg de
    }
 
    var0.setItemAnimator(null);
-}
-
-public fun getMessageAccessoriesViewPool(): RecycledViewPool {
-   val var0: RecycledViewPool = new RecycledViewPool();
-   var0.m(0, 50);
-   var0.m(26, 20);
-   var0.m(1, 20);
-   var0.m(4, 10);
-   return var0;
 }

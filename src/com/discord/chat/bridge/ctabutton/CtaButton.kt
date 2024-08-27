@@ -189,22 +189,23 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
          val var5: Boolean = var11.p();
          var var8: java.lang.String = null;
          var var2: Int;
+         var var6: Any;
          var var7: Any;
-         val var12: java.lang.String;
-         var var14: Any;
+         val var9: java.lang.String;
+         var var13: Any;
          if (var5) {
-            var12 = var11.m(var10, 0);
-            var14 = m0.a;
-            var8 = (java.lang.String)var11.n(var10, 1, m0.a, null);
-            var14 = var11.n(var10, 2, (DeserializationStrategy)var14, null);
-            var7 = var11.n(var10, 3, a2.a, null);
+            var9 = var11.m(var10, 0);
+            var13 = m0.a;
+            var7 = var11.n(var10, 1, m0.a, null);
+            var13 = var11.n(var10, 2, (DeserializationStrategy)var13, null);
+            var6 = var11.n(var10, 3, a2.a, null);
             var2 = 15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
-            var14 = null;
-            var var13: Any = null;
+            var6 = null;
+            var13 = null;
 
             while (var3) {
                val var4: Int = var11.o(var10);
@@ -219,7 +220,7 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
                            var13 = var11.n(var10, 3, a2.a, var13);
                            var2 |= 8;
                         } else {
-                           var14 = var11.n(var10, 2, m0.a, var14);
+                           var6 = var11.n(var10, 2, m0.a, var6);
                            var2 |= 4;
                         }
                      } else {
@@ -235,13 +236,13 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
                }
             }
 
-            var12 = var8;
-            var8 = (java.lang.String)var7;
-            var7 = var13;
+            var9 = var8;
+            var6 = var13;
+            var13 = var6;
          }
 
          var11.c(var10);
-         return new CtaButton(var2, var12, var8 as Integer, var14 as Integer, var7 as java.lang.String, null);
+         return new CtaButton(var2, var9, var7 as Int, var13 as Int, var6 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CtaButton) {

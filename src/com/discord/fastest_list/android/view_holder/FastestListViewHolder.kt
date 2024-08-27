@@ -23,6 +23,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
    protected final val view: FrameLayout
    private final var viewPlaceholder: FastestListPlaceholder?
    private final var viewPortalId: String?
+   private final var viewPortalBound: Boolean
    private final val viewPortalSizeValidator: com.discord.fastest_list.android.view_holder.FastestListViewHolder.ViewPortalSizeValidator
    private final lateinit var item: Entry
    private final var horizontal: Boolean
@@ -68,7 +69,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
          this.viewPlaceholder = var3.get(var2);
       }
 
-      if (this.viewPlaceholder != null) {
+      if (!this.viewPortalBound && this.viewPlaceholder != null) {
          var var5: FastestListSections.Entry = this.item;
          if (this.item == null) {
             r.y("item");
@@ -99,6 +100,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       r.h(var1, "portalId");
       r.h(var2, "portalView");
       if (r.c(this.viewPortalId, var1)) {
+         this.viewPortalBound = true;
          if (this.viewPlaceholder != null) {
             this.viewPlaceholder.onPlaceholderShouldUnbind(this.view);
          }
@@ -112,14 +114,17 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
    public open fun onPortalFromJsRemoved(portalId: String, portalView: View) {
       r.h(var1, "portalId");
       r.h(var2, "portalView");
-      if ((this.view.getChildCount() == 1 || r.c(this.viewPortalId, var1)) && this.viewPlaceholder != null) {
-         var var6: FastestListSections.Entry = this.item;
-         if (this.item == null) {
-            r.y("item");
-            var6 = null;
-         }
+      if (r.c(this.viewPortalId, var1)) {
+         this.viewPortalBound = false;
+         if (this.viewPlaceholder != null) {
+            var var6: FastestListSections.Entry = this.item;
+            if (this.item == null) {
+               r.y("item");
+               var6 = null;
+            }
 
-         this.viewPlaceholder.onPlaceholderShouldBind(this.view, var6);
+            this.viewPlaceholder.onPlaceholderShouldBind(this.view, var6);
+         }
       }
 
       val var7: FrameLayout = this.view;
@@ -129,7 +134,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
 
    public open fun onViewRecycled() {
       if (this.viewPortalId != null) {
-         PortalFromJsContextManager.INSTANCE.removeContext(this.viewPortalId);
+         PortalFromJsContextManager.INSTANCE.removeContext(this.viewPortalId, this);
       }
 
       this.viewPortalId = null;

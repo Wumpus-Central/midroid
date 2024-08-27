@@ -301,32 +301,32 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
 
       public open fun deserialize(decoder: Decoder): ChannelPromptData {
          r.h(var1, "decoder");
-         val var16: SerialDescriptor = this.getDescriptor();
-         val var17: c = var1.b(var16);
-         val var6: Boolean = var17.p();
+         val var14: SerialDescriptor = this.getDescriptor();
+         val var15: c = var1.b(var14);
+         val var6: Boolean = var15.p();
          var var4: Byte = 6;
-         var var18: Any = null;
+         var var16: Any = null;
          var var2: Int;
          var var7: Any;
          var var8: Any;
          var var9: Any;
          var var10: Any;
          var var11: Any;
-         var var24: Any;
+         var var19: Any;
          if (var6) {
-            var24 = a2.a;
-            var8 = var17.n(var16, 0, a2.a, null);
-            var10 = var17.n(var16, 1, (DeserializationStrategy)var24, null);
-            var9 = var17.n(var16, 2, (DeserializationStrategy)var24, null);
-            var18 = var17.n(var16, 3, (DeserializationStrategy)var24, null);
-            var11 = var17.n(var16, 4, (DeserializationStrategy)var24, null);
-            var7 = var17.n(var16, 5, (DeserializationStrategy)var24, null);
-            var24 = var17.n(var16, 6, (DeserializationStrategy)var24, null);
+            var19 = a2.a;
+            var16 = var15.n(var14, 0, a2.a, null);
+            var8 = var15.n(var14, 1, (DeserializationStrategy)var19, null);
+            var10 = var15.n(var14, 2, (DeserializationStrategy)var19, null);
+            var9 = var15.n(var14, 3, (DeserializationStrategy)var19, null);
+            var11 = var15.n(var14, 4, (DeserializationStrategy)var19, null);
+            var7 = var15.n(var14, 5, (DeserializationStrategy)var19, null);
+            var19 = var15.n(var14, 6, (DeserializationStrategy)var19, null);
             var2 = 127;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var24 = null;
+            var19 = null;
             var11 = null;
             var10 = null;
             var9 = null;
@@ -334,38 +334,38 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
             var7 = null;
 
             while (var3) {
-               val var5: Int = var17.o(var16);
+               val var5: Int = var15.o(var14);
                switch (var5) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var18 = var17.n(var16, 0, a2.a, var18);
+                     var16 = var15.n(var14, 0, a2.a, var16);
                      var2 |= 1;
                      break;
                   case 1:
-                     var11 = var17.n(var16, 1, a2.a, var11);
+                     var11 = var15.n(var14, 1, a2.a, var11);
                      var2 |= 2;
                      var4 = 6;
                      continue;
                   case 2:
-                     var10 = var17.n(var16, 2, a2.a, var10);
+                     var10 = var15.n(var14, 2, a2.a, var10);
                      var2 |= 4;
                      continue;
                   case 3:
-                     var9 = var17.n(var16, 3, a2.a, var9);
+                     var9 = var15.n(var14, 3, a2.a, var9);
                      var2 |= 8;
                      continue;
                   case 4:
-                     var8 = var17.n(var16, 4, a2.a, var8);
+                     var8 = var15.n(var14, 4, a2.a, var8);
                      var2 |= 16;
                      continue;
                   case 5:
-                     var7 = var17.n(var16, 5, a2.a, var7);
+                     var7 = var15.n(var14, 5, a2.a, var7);
                      var2 |= 32;
                      continue;
                   case 6:
-                     var24 = var17.n(var16, var4, a2.a, var24);
+                     var19 = var15.n(var14, var4, a2.a, var19);
                      var2 |= 64;
                      continue;
                   default:
@@ -375,23 +375,20 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                var4 = 6;
             }
 
-            var18 = var9;
-            var8 = var18;
-            var10 = var11;
-            var9 = var10;
+            var8 = var11;
             var11 = var8;
          }
 
-         var17.c(var16);
+         var15.c(var14);
          return new ChannelPromptData(
             var2,
+            var16 as java.lang.String,
             var8 as java.lang.String,
             var10 as java.lang.String,
             var9 as java.lang.String,
-            var18 as java.lang.String,
             var11 as java.lang.String,
             var7 as java.lang.String,
-            var24 as java.lang.String,
+            var19 as java.lang.String,
             null
          );
       }

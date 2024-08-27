@@ -30,7 +30,7 @@ import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import mk.a
-import nk.p
+import nk.q
 
 public class ChatListManager(coroutineScope: CoroutineScope) {
    private final var isDisabled: Boolean
@@ -41,7 +41,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    init {
       r.h(var1, "coroutineScope");
       super();
-      this.updatesFlow = p.a(1, 3, a.j);
+      this.updatesFlow = q.a(1, 3, a.j);
       this.publishScope = g.j(var1, n0.a());
    }
 
@@ -74,7 +74,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       }
 
       if (var2 xor true) {
-         this.rows = h.O0(var1);
+         this.rows = h.P0(var1);
          return new ChatListManager.RowsModificationResult(var1, true, null);
       } else {
          throw new IllegalArgumentException("Deletes are not expected or allowed during syncs.".toString());
@@ -127,7 +127,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                   }
                }
 
-               for (Row var21 : h.I(var17)) {
+               for (Row var21 : h.J(var17)) {
                   if (var21 is DeleteRow) {
                      var5.remove(var21.getIndex());
                      var6.add(new ListOperation.Remove(var21.getIndex()));
@@ -140,7 +140,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                         var2 = false;
                      }
 
-                     val var18: Row = h.Z(var5) as Row;
+                     val var18: Row = h.a0(var5) as Row;
                      val var3: Boolean;
                      if (var18 is LoadingRow && (var18 as LoadingRow).isLoading()) {
                         var3 = true;
@@ -189,9 +189,8 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.String.lastIndexOf(String.java:2573)
-   //   at java.base/java.lang.String.lastIndexOf(String.java:2535)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:33)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -1213,6 +1212,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
@@ -1267,23 +1267,23 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var8, var7, var2, var3, var4, var5, h.I(var14));
+         var9 = new BlockedGroupChatListItem(var8, var7, var2, var3, var4, var5, h.J(var14));
       }
 
       return (ChatListItem)var9;
    }
 
-   public fun clearRows() {
-      val var1: Boolean;
+   public fun clearRows(changesetUpdateId: Int) {
+      val var2: Boolean;
       if (this.rows != null && !this.rows.isEmpty()) {
-         var1 = false;
+         var2 = false;
       } else {
-         var1 = true;
+         var2 = true;
       }
 
-      if (!var1) {
+      if (!var2) {
          SpoilerManager.INSTANCE.reset();
-         this.publishUpdate(new ChatListUpdate(h.i(), ChatListAction.Clear.INSTANCE, null));
+         this.publishUpdate(new ChatListUpdate(h.i(), ChatListAction.Clear.INSTANCE, null, var1));
       }
 
       this.rows = null;
@@ -1300,12 +1300,12 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       return var1;
    }
 
-   public fun handleError(errorJson: String, causeMessage: String) {
+   public fun handleError(errorJson: String, causeMessage: String, changesetUpdateId: Int) {
       r.h(var1, "errorJson");
       r.h(var2, "causeMessage");
       this.publishUpdate(
          new ChatListUpdate(
-            h.o(new DeserializationErrorChatListItem[]{new DeserializationErrorChatListItem("error-id", var1, var2)}), ChatListAction.Noop.INSTANCE, null
+            h.o(new DeserializationErrorChatListItem[]{new DeserializationErrorChatListItem("error-id", var1, var2)}), ChatListAction.Noop.INSTANCE, null, var3
          )
       );
       this.isDisabled = true;
@@ -1315,95 +1315,95 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       return this.updatesFlow;
    }
 
-   public fun updateRows(updates: List<Row>) {
+   public fun updateRows(updates: List<Row>, changesetUpdateId: Int) {
       r.h(var1, "updates");
       if (!this.isDisabled) {
-         val var7: ChatListManager.RowsModificationResult;
+         val var8: ChatListManager.RowsModificationResult;
          if (this.rows != null) {
-            var7 = this.modifyExistingRows(var1);
+            var8 = this.modifyExistingRows(var1);
          } else {
-            var7 = this.createNewRows(var1);
+            var8 = this.createNewRows(var1);
          }
 
-         val var10: java.util.List = var7.component1();
-         val var6: Boolean = var7.component2();
-         val var9: java.util.List = var7.component3();
-         val var8: ArrayList = new ArrayList(h.t(var10, 10));
-         val var18: java.util.Iterator = var10.iterator();
-         var var2: Int = 0;
+         val var11: java.util.List = var8.component1();
+         val var7: Boolean = var8.component2();
+         val var10: java.util.List = var8.component3();
+         val var9: ArrayList = new ArrayList(h.t(var11, 10));
+         val var19: java.util.Iterator = var11.iterator();
+         var var3: Int = 0;
 
-         for (var14 = null; var18.hasNext(); var2++) {
-            val var11: Any = var18.next();
-            if (var2 < 0) {
+         for (var15 = null; var19.hasNext(); var3++) {
+            val var12: Any = var19.next();
+            if (var3 < 0) {
                h.s();
             }
 
-            val var19: Row = var11 as Row;
-            var var5: Boolean = var11 as Row is MessageRow;
-            var var4: Boolean;
-            if (var11 as Row is MessageRow) {
-               var4 = r.c((var19 as MessageRow).getScrollTo(), java.lang.Boolean.TRUE);
-            } else if (var19 is SeparatorRow) {
-               var4 = r.c((var19 as SeparatorRow).getScrollTo(), java.lang.Boolean.TRUE);
+            val var20: Row = var12 as Row;
+            var var6: Boolean = var12 as Row is MessageRow;
+            var var5: Boolean;
+            if (var12 as Row is MessageRow) {
+               var5 = r.c((var20 as MessageRow).getScrollTo(), java.lang.Boolean.TRUE);
+            } else if (var20 is SeparatorRow) {
+               var5 = r.c((var20 as SeparatorRow).getScrollTo(), java.lang.Boolean.TRUE);
+            } else {
+               var5 = false;
+            }
+
+            val var4: Boolean;
+            if (var5 && var20.getChangeType() != ChangeType.DELETE) {
+               var4 = true;
             } else {
                var4 = false;
             }
 
-            val var3: Boolean;
-            if (var4 && var19.getChangeType() != ChangeType.DELETE) {
-               var3 = true;
-            } else {
-               var3 = false;
-            }
-
-            if (var3 && var1.contains(var19)) {
-               val var15: MessageRow;
-               if (var5) {
-                  var15 = var19 as MessageRow;
+            if (var4 && var1.contains(var20)) {
+               val var16: MessageRow;
+               if (var6) {
+                  var16 = var20 as MessageRow;
                } else {
-                  var15 = null;
+                  var16 = null;
                }
 
                label67: {
-                  if (var15 != null) {
-                     val var16: java.lang.Boolean = var15.getJumped();
-                     if (var16 != null) {
-                        var4 = var16;
+                  if (var16 != null) {
+                     val var17: java.lang.Boolean = var16.getJumped();
+                     if (var17 != null) {
+                        var5 = var17;
                         break label67;
                      }
                   }
 
-                  var4 = false;
-               }
-
-               val var17: MessageRow;
-               if (var5) {
-                  var17 = var19 as MessageRow;
-               } else {
-                  var17 = null;
-               }
-
-               if (var17 != null) {
-                  var5 = var17.isHighlight();
-               } else {
                   var5 = false;
                }
 
-               var14 = new ChatListAction.ScrollTo(var2, var4, false, var5, 4, null);
+               val var18: MessageRow;
+               if (var6) {
+                  var18 = var20 as MessageRow;
+               } else {
+                  var18 = null;
+               }
+
+               if (var18 != null) {
+                  var6 = var18.isHighlight();
+               } else {
+                  var6 = false;
+               }
+
+               var15 = new ChatListAction.ScrollTo(var3, var5, false, var6, 4, null);
             }
 
-            var8.add(this.toChatListItem(var19));
+            var9.add(this.toChatListItem(var20));
          }
 
-         if (var14 == null) {
-            if (var6) {
-               var14 = ChatListAction.StickToBottomIfAtBottom.INSTANCE;
+         if (var15 == null) {
+            if (var7) {
+               var15 = ChatListAction.StickToBottomIfAtBottom.INSTANCE;
             } else {
-               var14 = ChatListAction.Noop.INSTANCE;
+               var15 = ChatListAction.Noop.INSTANCE;
             }
          }
 
-         this.publishUpdate(new ChatListUpdate(var8, (ChatListAction)var14, var9));
+         this.publishUpdate(new ChatListUpdate(var9, (ChatListAction)var15, var10, var2));
       }
    }
 

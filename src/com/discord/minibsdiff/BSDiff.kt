@@ -44,9 +44,9 @@ public object BSDiff {
 
          while (var11 < var9) {
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            val var15: Long = InputStreamUtilsKt.readOffset(var3);
             var13 = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var17 + var15 > var9) {
+            val var15: Long = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var17 + var13 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
@@ -64,7 +64,7 @@ public object BSDiff {
                var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var15).iterator();
+            var19 = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -72,8 +72,8 @@ public object BSDiff {
                var6.write(var20, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var13);
-            var11 += var17 + var15;
+            var1.seek(var1.getFilePointer() + var15);
+            var11 += var17 + var13;
          }
 
          var6.close();
@@ -81,7 +81,7 @@ public object BSDiff {
    }
 
    private fun chunkRange(total: Long): Sequence<Int> {
-      return j.y(h.O(vh.h.q(vh.h.s(0, var1), 1000000L)), new Function1<java.lang.Long, Integer>(var1) {
+      return j.y(h.P(vh.h.q(vh.h.s(0, var1), 1000000L)), new Function1<java.lang.Long, Integer>(var1) {
          final long $total;
 
          {
@@ -234,42 +234,42 @@ public object BSDiff {
       // 0f5: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0f8: aload 7
       // 0fa: athrow
-      // 0fb: astore 3
-      // 0fc: aload 3
-      // 0fd: athrow
-      // 0fe: astore 6
-      // 100: aload 2
-      // 101: aload 3
-      // 102: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 105: aload 6
-      // 107: athrow
-      // 108: astore 3
-      // 109: aload 3
-      // 10a: athrow
-      // 10b: astore 2
-      // 10c: aload 4
-      // 10e: aload 3
-      // 10f: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 112: aload 2
-      // 113: athrow
-      // 114: astore 2
-      // 115: aload 2
-      // 116: athrow
-      // 117: astore 3
-      // 118: aload 1
-      // 119: aload 2
-      // 11a: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 11d: aload 3
-      // 11e: athrow
-      // 11f: astore 1
-      // 120: aload 1
-      // 121: athrow
-      // 122: astore 2
-      // 123: aload 5
-      // 125: aload 1
-      // 126: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 129: aload 2
-      // 12a: athrow
+      // 0fb: astore 6
+      // 0fd: aload 6
+      // 0ff: athrow
+      // 100: astore 3
+      // 101: aload 2
+      // 102: aload 6
+      // 104: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 107: aload 3
+      // 108: athrow
+      // 109: astore 3
+      // 10a: aload 3
+      // 10b: athrow
+      // 10c: astore 2
+      // 10d: aload 4
+      // 10f: aload 3
+      // 110: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 113: aload 2
+      // 114: athrow
+      // 115: astore 3
+      // 116: aload 3
+      // 117: athrow
+      // 118: astore 2
+      // 119: aload 1
+      // 11a: aload 3
+      // 11b: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11e: aload 2
+      // 11f: athrow
+      // 120: astore 2
+      // 121: aload 2
+      // 122: athrow
+      // 123: astore 1
+      // 124: aload 5
+      // 126: aload 2
+      // 127: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 12a: aload 1
+      // 12b: athrow
    }
 
    public class BsPatchError(message: String) : Exception {

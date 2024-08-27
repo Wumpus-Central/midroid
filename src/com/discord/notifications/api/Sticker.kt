@@ -464,15 +464,15 @@ public data class Sticker(id: StickerId = ...,
       }
 
       public override fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
+         val var2: a2 = a2.a;
          return new KSerializer[]{
             StickerId.$serializer.INSTANCE,
             a2.a,
             vk.a.u(w0.a),
             vk.a.u(GuildId.$serializer.INSTANCE),
-            var1,
+            var2,
             StickerFormatType.Serializer.INSTANCE,
-            var1,
+            var2,
             StickerType.Serializer.INSTANCE,
             vk.a.u(h.a)
          };
@@ -487,34 +487,35 @@ public data class Sticker(id: StickerId = ...,
          var var5: Byte = 6;
          var var9: Any = null;
          var var2: Int;
-         var var8: Any;
          var var10: Any;
          var var11: Any;
-         var var12: Any;
          var var13: Any;
          var var14: Any;
          var var15: Any;
+         val var16: Any;
+         val var17: Any;
          var var20: Any;
          if (var7) {
             var9 = var19.y(var18, 0, StickerId.$serializer.INSTANCE, null);
-            var12 = var19.m(var18, 1);
-            var20 = var19.n(var18, 2, w0.a, null);
+            var17 = var19.m(var18, 1);
+            val var8: Any = var19.n(var18, 2, w0.a, null);
             var10 = var19.n(var18, 3, GuildId.$serializer.INSTANCE, null);
-            var11 = var19.m(var18, 4);
-            var13 = var19.y(var18, 5, StickerFormatType.Serializer.INSTANCE, null);
-            var8 = var19.m(var18, 6);
+            var16 = var19.m(var18, 4);
+            var14 = var19.y(var18, 5, StickerFormatType.Serializer.INSTANCE, null);
+            var20 = var19.m(var18, 6);
             var15 = var19.y(var18, 7, StickerType.Serializer.INSTANCE, null);
-            var14 = var19.n(var18, 8, h.a, null);
+            var13 = var19.n(var18, 8, h.a, null);
             var2 = 511;
+            var11 = var8;
          } else {
             var var4: Boolean = true;
             var2 = 0;
-            var14 = null;
-            var15 = null;
             var13 = null;
-            var8 = null;
+            var15 = null;
+            var14 = null;
+            var var22: Any = null;
             var20 = null;
-            var12 = null;
+            var var12: Any = null;
             var11 = null;
             var10 = null;
 
@@ -531,7 +532,7 @@ public data class Sticker(id: StickerId = ...,
                         var3 = 7;
                         break;
                      case 1:
-                        var8 = var19.m(var18, 1);
+                        var22 = var19.m(var18, 1);
                         var2 |= 2;
                         break label42;
                      case 2:
@@ -548,7 +549,7 @@ public data class Sticker(id: StickerId = ...,
                         var2 |= 16;
                         continue;
                      case 5:
-                        var13 = var19.y(var18, 5, StickerFormatType.Serializer.INSTANCE, var13);
+                        var14 = var19.y(var18, 5, StickerFormatType.Serializer.INSTANCE, var14);
                         var2 |= 32;
                         continue;
                      case 6:
@@ -560,7 +561,7 @@ public data class Sticker(id: StickerId = ...,
                         var2 |= 128;
                         continue;
                      case 8:
-                        var14 = var19.n(var18, 8, h.a, (java.lang.Boolean)var14);
+                        var13 = var19.n(var18, 8, h.a, (java.lang.Boolean)var13);
                         var2 |= 256;
                         continue;
                      default:
@@ -574,8 +575,10 @@ public data class Sticker(id: StickerId = ...,
                var3 = 7;
             }
 
-            var8 = var10;
-            var12 = var8;
+            var16 = var11;
+            var11 = var20;
+            var20 = var10;
+            var17 = var22;
             var10 = var12;
          }
 
@@ -583,14 +586,14 @@ public data class Sticker(id: StickerId = ...,
          return new Sticker(
             var2,
             var9 as StickerId,
-            (java.lang.String)var12,
-            var20 as java.lang.Long,
+            (java.lang.String)var17,
+            var11 as java.lang.Long,
             var10 as GuildId,
-            (java.lang.String)var11,
-            var13 as StickerFormatType,
-            (java.lang.String)var8,
+            (java.lang.String)var16,
+            var14 as StickerFormatType,
+            (java.lang.String)var20,
             var15 as StickerType,
-            var14 as java.lang.Boolean,
+            var13 as java.lang.Boolean,
             null,
             null
          );

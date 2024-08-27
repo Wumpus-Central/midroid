@@ -52,9 +52,9 @@ public sealed class ListOperation protected constructor() {
          r.h(var1, "range");
          super(null);
          this.range = var1;
-         this.first = var1.j();
-         this.last = var1.n();
-         this.count = var1.n() - var1.j() + 1;
+         this.first = var1.e();
+         this.last = var1.m();
+         this.count = var1.m() - var1.e() + 1;
       }
 
       public operator fun component1(): IntRange {
@@ -139,9 +139,9 @@ public sealed class ListOperation protected constructor() {
          r.h(var1, "range");
          super(null);
          this.range = var1;
-         this.first = var1.j();
-         this.last = var1.n();
-         this.count = var1.n() - var1.j() + 1;
+         this.first = var1.e();
+         this.last = var1.m();
+         this.count = var1.m() - var1.e() + 1;
       }
 
       public operator fun component1(): IntRange {
@@ -226,9 +226,9 @@ public sealed class ListOperation protected constructor() {
          r.h(var1, "range");
          super(null);
          this.range = var1;
-         this.first = var1.j();
-         this.last = var1.n();
-         this.count = var1.n() - var1.j() + 1;
+         this.first = var1.e();
+         this.last = var1.m();
+         this.count = var1.m() - var1.e() + 1;
       }
 
       public operator fun component1(): IntRange {

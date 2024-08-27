@@ -76,17 +76,17 @@ public data class AutomodSystemMessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var4: Message = this.message;
+      val var2: Message = this.message;
       val var3: MessageContext = this.messageContext;
       val var1: Boolean = this.allowChildGestures;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AutomodSystemMessageItem(message=");
-      var2.append(var4);
-      var2.append(", messageContext=");
-      var2.append(var3);
-      var2.append(", allowChildGestures=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AutomodSystemMessageItem(message=");
+      var4.append(var2);
+      var4.append(", messageContext=");
+      var4.append(var3);
+      var4.append(", allowChildGestures=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

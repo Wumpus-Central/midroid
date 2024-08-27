@@ -84,30 +84,30 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.content.hashCode();
-      val var3: Int = this.surrogate.hashCode();
+      val var3: Int = this.content.hashCode();
+      val var4: Int = this.surrogate.hashCode();
       val var2: Byte = this.getJumboable();
       var var1: Byte = var2;
       if (var2 != 0) {
          var1 = 1;
       }
 
-      return (var4 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var3: java.lang.String = this.surrogate;
+      val var4: java.lang.String = this.content;
+      val var2: java.lang.String = this.surrogate;
       val var1: Boolean = this.getJumboable();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UnicodeEmojiContentNode(content=");
-      var4.append(var2);
-      var4.append(", surrogate=");
-      var4.append(var3);
-      var4.append(", jumboable=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UnicodeEmojiContentNode(content=");
+      var3.append(var4);
+      var3.append(", surrogate=");
+      var3.append(var2);
+      var3.append(", jumboable=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<UnicodeEmojiContentNode> {
@@ -134,27 +134,26 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
 
       public open fun deserialize(decoder: Decoder): UnicodeEmojiContentNode {
          r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.b(var7);
          var var2: Int;
          var var5: Boolean;
-         val var7: java.lang.String;
-         val var10: java.lang.String;
-         if (var9.p()) {
-            var10 = var9.m(var8, 0);
-            val var6: java.lang.String = var9.m(var8, 1);
-            var5 = var9.C(var8, 2);
+         var var6: java.lang.String;
+         var var9: java.lang.String;
+         if (var8.p()) {
+            var6 = var8.m(var7, 0);
+            var9 = var8.m(var7, 1);
+            var5 = var8.C(var7, 2);
             var2 = 7;
-            var7 = var6;
          } else {
-            var var12: java.lang.String = null;
-            var var11: java.lang.String = null;
+            var6 = null;
+            var9 = null;
             var var3: Boolean = true;
             var5 = false;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var8.o(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -162,27 +161,24 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
                            throw new n(var4);
                         }
 
-                        var5 = var9.C(var8, 2);
+                        var5 = var8.C(var7, 2);
                         var2 |= 4;
                      } else {
-                        var11 = var9.m(var8, 1);
+                        var9 = var8.m(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var9.m(var8, 0);
+                     var6 = var8.m(var7, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var7 = var11;
-            var10 = var12;
          }
 
-         var9.c(var8);
-         return new UnicodeEmojiContentNode(var2, var10, var7, var5, null);
+         var8.c(var7);
+         return new UnicodeEmojiContentNode(var2, var6, var9, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UnicodeEmojiContentNode) {

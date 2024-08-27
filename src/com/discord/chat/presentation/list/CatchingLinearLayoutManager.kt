@@ -1,20 +1,21 @@
-package com.discord.chat.presentation.message
+package com.discord.chat.presentation.list
 
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import com.discord.crash_reporting.CrashReporting
+import kotlin.jvm.internal.r
 
-public class AccessoriesLayoutManager(context: Context, orientation: Int, reverseLayout: Boolean) : LinearLayoutManager {
+public class CatchingLinearLayoutManager(context: Context, orientation: Int = 1, reverseLayout: Boolean = false) : LinearLayoutManager {
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
    }
 
    public open fun removeAndRecycleView(child: View, recycler: Recycler) {
-      kotlin.jvm.internal.r.h(var1, "child");
-      kotlin.jvm.internal.r.h(var2, "recycler");
+      r.h(var1, "child");
+      r.h(var2, "recycler");
 
       try {
          super.removeAndRecycleView(var1, var2);
@@ -24,7 +25,7 @@ public class AccessoriesLayoutManager(context: Context, orientation: Int, revers
    }
 
    public open fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
-      kotlin.jvm.internal.r.h(var2, "recycler");
+      r.h(var2, "recycler");
 
       try {
          super.removeAndRecycleViewAt(var1, var2);

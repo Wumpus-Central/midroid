@@ -46,13 +46,13 @@ public class DeviceResourceUsageRecorder {
       private final val xhr: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
 
       private fun requestStatsInterceptor(chain: Chain, stats: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats): Response {
-         val var4: Response = var1.a(var1.j());
-         val var3: ResponseBody = var4.a();
+         val var4: Response = var1.a(var1.p());
+         val var3: ResponseBody = var4.b();
          var2.setNumRequests(var2.getNumRequests() + 1);
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
-            var5.h(java.lang.Long.MAX_VALUE);
-            var2.setBytesReceived(var2.getBytesReceived() + var5.e().size());
+            var5.m(java.lang.Long.MAX_VALUE);
+            var2.setBytesReceived(var2.getBytesReceived() + var5.j().size());
          }
 
          return var4;
@@ -135,7 +135,7 @@ public class DeviceResourceUsageRecorder {
          }
 
          return NativeMapExtensionsKt.nativeMapOf(
-            w.a("signalStrengthLevel", var9.a() as Integer),
+            w.a("signalStrengthLevel", var9.a() as Int),
             w.a("isNetworkRoaming", var9.b() as java.lang.Boolean),
             w.a("cellularReceiveBytes", TrafficStats.getMobileRxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularReceiveBytes$cp()),
             w.a("cellularSendBytes", TrafficStats.getMobileTxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularSendBytes$cp()),

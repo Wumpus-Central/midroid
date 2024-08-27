@@ -59,7 +59,7 @@ internal object HistoricalProcessExitReason {
          } else {
             var5 = f.a((ActivityManager)var5, null, 0, 1);
             r.g(var5, "activityManager.getHisto…ssExitReasons(null, 0, 1)");
-            val var4: ApplicationExitInfo = h.b0((java.util.List)var5) as ApplicationExitInfo;
+            val var4: ApplicationExitInfo = h.c0((java.util.List)var5) as ApplicationExitInfo;
             if (var4 == null) {
                return null;
             } else {

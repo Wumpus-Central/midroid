@@ -46,7 +46,7 @@ public object DeviceFocusLockManager {
          var6.addAll(var8);
       }
 
-      return h.M0(var6);
+      return h.N0(var6);
    }
 
    public fun disableFocusLock() {

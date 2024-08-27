@@ -82,6 +82,10 @@
     <item type="id" name="ampm" />
     <item type="id" name="answers" />
     <item type="id" name="arrow" />
+    <item type="id" name="audio_details_view" />
+    <item type="id" name="audio_file_name" />
+    <item type="id" name="audio_file_size" />
+    <item type="id" name="audio_progress_bar" />
     <item type="id" name="author_avatar" />
     <item type="id" name="author_avatar_decoration" />
     <item type="id" name="author_container" />
@@ -311,7 +315,7 @@
     <item type="id" name="hero_text" />
     <item type="id" name="hide_button" />
     <item type="id" name="hide_ime_id" />
-    <item type="id" name="highlight_header" />
+    <item type="id" name="highlight_header_view" />
     <item type="id" name="highlight_icon" />
     <item type="id" name="home" />
     <item type="id" name="hour" />
@@ -556,6 +560,7 @@
     <item type="id" name="reply_leading_views" />
     <item type="id" name="reply_message_tag_view" />
     <item type="id" name="reply_preview" />
+    <item type="id" name="reply_preview_view" />
     <item type="id" name="reply_role_dot" />
     <item type="id" name="reply_spline" />
     <item type="id" name="reply_text" />
@@ -723,6 +728,7 @@
     <item type="id" name="thread_starter_header" />
     <item type="id" name="thread_starter_header_icon" />
     <item type="id" name="thread_starter_header_text" />
+    <item type="id" name="thread_starter_header_view" />
     <item type="id" name="thumbnail" />
     <item type="id" name="thumbnailGradient" />
     <item type="id" name="time" />

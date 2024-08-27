@@ -24,6 +24,6 @@ public abstract class PollAnswerViewHolder<T extends ViewBinding> : ViewHolder {
       this.binding = (T)var1;
    }
 
-   public abstract fun bind(accessory: PollAnswerAccessory, onTapImage: () -> Unit, onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit) {
+   public abstract fun bind(accessory: PollAnswerAccessory, onTapAnswer: () -> Unit, onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit) {
    }
 }

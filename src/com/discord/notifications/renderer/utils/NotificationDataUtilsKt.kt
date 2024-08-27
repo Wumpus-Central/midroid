@@ -713,7 +713,7 @@ public fun NotificationData.getKvMessage(rawMessage: String?): KvMessageEntry? {
          val var11: java.util.List = h.i();
          val var5: JsonObject = var4.getAuthor();
          r.e(var5);
-         val var13: java.util.List = h.u0(h.d(var5), var4.getMentions());
+         val var13: java.util.List = h.v0(h.d(var5), var4.getMentions());
          val var12: ArrayList = new ArrayList(h.t(var13, 10));
          val var6: java.util.Iterator = var13.iterator();
 

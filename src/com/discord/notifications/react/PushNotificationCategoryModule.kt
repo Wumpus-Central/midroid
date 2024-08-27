@@ -33,10 +33,10 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    public fun registerNotificationCategoriesAndGroups(localizedCategoryNames: ReadableMap, localizedGroupNames: ReadableMap) {
       r.h(var1, "localizedCategoryNames");
       r.h(var2, "localizedGroupNames");
-      val var4: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
-      var4.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var4, "reactApplicationContext");
+      var3.initNotificationCategories(var4, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
    }
 
    @ReactMethod
@@ -50,9 +50,9 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    @ReactMethod
    public fun setIncomingRingtone(name: String) {
       r.h(var1, "name");
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
-      var2.setIncomingRingtone(var3, var1);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      var3.setIncomingRingtone(var2, var1);
    }
 }

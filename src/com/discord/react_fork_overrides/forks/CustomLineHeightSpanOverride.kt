@@ -14,7 +14,7 @@ internal object CustomLineHeightSpanOverride {
       r.f(var2, "null cannot be cast to non-null type android.graphics.Paint.FontMetricsInt");
       var2 = var2 as FontMetricsInt;
       r.f(var0, "null cannot be cast to non-null type kotlin.Int");
-      var1.overrideLineHeight((FontMetricsInt)var2, var0 as Integer);
+      var1.overrideLineHeight((FontMetricsInt)var2, var0 as Int);
    }
 
    private fun overrideLineHeight(fm: FontMetricsInt, mHeight: Int) {

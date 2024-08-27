@@ -368,37 +368,37 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var var7: Any;
          var var8: Any;
          var var9: Any;
-         var var10: java.lang.String;
+         var var10: Any;
          var var12: Any;
          var var13: Any;
          var var14: Any;
          var var16: Any;
          var var20: Any;
-         var var24: Any;
+         var var23: Any;
          if (var6) {
-            var10 = var19.m(var18, 0);
+            var11 = var19.m(var18, 0);
             var12 = var19.m(var18, 1);
             var20 = var19.m(var18, 2);
             var7 = var19.m(var18, 3);
-            var24 = a2.a;
-            var9 = var19.n(var18, 4, a2.a, null);
-            var8 = var19.n(var18, 5, (DeserializationStrategy)var24, null);
-            var11 = (java.lang.String)var19.n(var18, 6, (DeserializationStrategy)var24, null);
-            var14 = var19.n(var18, 7, (DeserializationStrategy)var24, null);
-            var13 = var19.n(var18, 8, (DeserializationStrategy)var24, null);
-            var24 = var19.n(var18, 9, (DeserializationStrategy)var24, null);
+            var23 = a2.a;
+            var8 = var19.n(var18, 4, a2.a, null);
+            var9 = var19.n(var18, 5, (DeserializationStrategy)var23, null);
+            var10 = var19.n(var18, 6, (DeserializationStrategy)var23, null);
+            var14 = var19.n(var18, 7, (DeserializationStrategy)var23, null);
+            var13 = var19.n(var18, 8, (DeserializationStrategy)var23, null);
+            var23 = var19.n(var18, 9, (DeserializationStrategy)var23, null);
             var16 = var19.y(var18, 10, FooterTheme.Companion.serializer(), null);
             var2 = 2047;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var16 = null;
-            var24 = null;
+            var23 = null;
             var14 = null;
             var13 = null;
             var12 = null;
-            var8 = null;
             var9 = null;
+            var8 = null;
             var10 = null;
             var20 = null;
             var7 = null;
@@ -426,11 +426,11 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 8;
                      break;
                   case 4:
-                     var9 = var19.n(var18, 4, a2.a, var9);
+                     var8 = var19.n(var18, 4, a2.a, var8);
                      var2 |= 16;
                      break;
                   case 5:
-                     var8 = var19.n(var18, 5, a2.a, var8);
+                     var9 = var19.n(var18, 5, a2.a, var9);
                      var2 |= 32;
                      break;
                   case 6:
@@ -447,7 +447,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 256;
                      continue;
                   case 9:
-                     var24 = var19.n(var18, 9, a2.a, var24);
+                     var23 = var19.n(var18, 9, a2.a, var23);
                      var2 |= 512;
                      continue;
                   case 10:
@@ -462,23 +462,22 @@ public data class SafetySystemNotificationEmbed(titleText: String,
             }
 
             var12 = var10;
-            var10 = var11;
-            var11 = (java.lang.String)var12;
+            var10 = var12;
          }
 
          var19.c(var18);
          return new SafetySystemNotificationEmbed(
             var2,
-            var10,
+            var11,
             (java.lang.String)var12,
             (java.lang.String)var20,
             (java.lang.String)var7,
-            var9 as java.lang.String,
             var8 as java.lang.String,
-            var11,
+            var9 as java.lang.String,
+            var10 as java.lang.String,
             var14 as java.lang.String,
             var13 as java.lang.String,
-            var24 as java.lang.String,
+            var23 as java.lang.String,
             var16 as FooterTheme,
             null
          );

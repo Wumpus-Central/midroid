@@ -67,7 +67,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(r.b(var4));
          }
       }, access$getExecutorSupplier$p().d());
-      var6.l(new Function1<java.lang.Throwable, Unit>(var8) {
+      var6.j(new Function1<java.lang.Throwable, Unit>(var8) {
          final DataSource<CloseableReference<u5.c>> $imageDataSource;
 
          {

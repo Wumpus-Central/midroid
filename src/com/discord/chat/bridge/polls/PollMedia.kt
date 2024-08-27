@@ -208,20 +208,20 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = u
          var var2: Int;
          var var7: Any;
          var var8: Any;
-         var var13: Any;
+         var var12: Any;
          if (var5) {
-            var13 = a2.a;
-            var7 = var11.n(var10, 0, a2.a, null);
-            var8 = var11.y(var10, 1, new t0((KSerializer)var13), null);
+            var6 = a2.a;
+            var12 = var11.n(var10, 0, a2.a, null);
+            var8 = var11.y(var10, 1, new t0((KSerializer)var6), null);
             var6 = var11.n(var10, 2, PollMediaEmoji.$serializer.INSTANCE, null);
-            var13 = var11.n(var10, 3, w0.a, null);
+            var7 = var11.n(var10, 3, w0.a, null);
             var2 = 15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
             var7 = null;
-            var13 = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var11.o(var10);
@@ -233,7 +233,7 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = u
                               throw new n(var4);
                            }
 
-                           var13 = var11.n(var10, 3, w0.a, var13);
+                           var12 = var11.n(var10, 3, w0.a, var12);
                            var2 |= 8;
                         } else {
                            var7 = var11.n(var10, 2, PollMediaEmoji.$serializer.INSTANCE, var7);
@@ -252,12 +252,13 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = u
                }
             }
 
-            var7 = var6;
+            var7 = var12;
+            var12 = var6;
             var6 = var7;
          }
 
          var11.c(var10);
-         return new PollMedia(var2, var7 as java.lang.String, var8 as java.util.Set, var6 as PollMediaEmoji, var13 as java.lang.Long, null);
+         return new PollMedia(var2, var12 as java.lang.String, var8 as java.util.Set, var6 as PollMediaEmoji, var7 as java.lang.Long, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollMedia) {

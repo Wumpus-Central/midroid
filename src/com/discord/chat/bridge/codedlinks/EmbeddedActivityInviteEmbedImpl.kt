@@ -675,9 +675,9 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
    }
 
    public override fun hashCode(): Int {
-      val var28: Int = Integer.hashCode(this.getBackgroundColor());
+      val var30: Int = Integer.hashCode(this.getBackgroundColor());
       val var29: Int = Integer.hashCode(this.getBorderColor());
-      val var30: Int = Integer.hashCode(this.getHeaderColor());
+      val var28: Int = Integer.hashCode(this.getHeaderColor());
       val var34: java.lang.String = this.getHeaderText();
       var var25: Int = 0;
       val var1: Int;
@@ -848,8 +848,8 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
          var24 = this.getTitleText().hashCode();
       }
 
-      val var32: Int = this.getParticipantAvatarUris().hashCode();
-      val var31: Int = this.getExtendedType().hashCode();
+      val var31: Int = this.getParticipantAvatarUris().hashCode();
+      val var32: Int = this.getExtendedType().hashCode();
       if (this.getStructurableSubtitleText() != null) {
          var25 = this.getStructurableSubtitleText().hashCode();
       }
@@ -891,12 +891,12 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                                                                                                                                                                                                                                          (
                                                                                                                                                                                                                                                                   (
                                                                                                                                                                                                                                                                            (
-                                                                                                                                                                                                                                                                                    var28
+                                                                                                                                                                                                                                                                                    var30
                                                                                                                                                                                                                                                                                           * 31
                                                                                                                                                                                                                                                                                        + var29
                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                              + var30
+                                                                                                                                                                                                                                                                              + var28
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
                                                                                                                                                                                                                                                                      + var1
@@ -971,10 +971,10 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                                       + var24
                                                 )
                                                 * 31
-                                             + var32
+                                             + var31
                                        )
                                        * 31
-                                    + var31
+                                    + var32
                               )
                               * 31
                            + var25
@@ -990,102 +990,102 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
       val var1: Int = this.getBackgroundColor();
       val var2: Int = this.getBorderColor();
       val var3: Int = this.getHeaderColor();
-      val var12: java.lang.String = this.getHeaderText();
-      val var9: InviteType = this.getType();
-      val var11: Int = this.getAcceptLabelBackgroundColor();
-      val var10: Int = this.getAcceptLabelBorderColor();
-      val var30: Int = this.getAcceptLabelColor();
-      val var15: java.lang.String = this.getAcceptLabelText();
-      val var33: java.lang.String = this.getBodyText();
-      val var25: Int = this.getBodyTextColor();
-      val var6: java.lang.Boolean = this.getCanBeAccepted();
-      val var5: java.lang.Boolean = this.getEmbedCanBeTapped();
-      val var32: Int = this.getResolvingGradientEnd();
-      val var27: Int = this.getResolvingGradientStart();
-      val var24: java.lang.Boolean = this.getSplashHasRadialGradient();
-      val var7: Int = this.getSplashOpacity();
-      val var31: java.lang.String = this.getSplashUrl();
-      val var17: java.lang.String = this.getInviteSplash();
-      val var14: java.lang.String = this.getSubtitle();
-      val var16: Int = this.getSubtitleColor();
-      val var18: Int = this.getThumbnailBackgroundColor();
-      val var28: Int = this.getThumbnailCornerRadius();
-      val var8: java.lang.String = this.getThumbnailText();
-      val var13: java.lang.String = this.getThumbnailUrl();
+      val var23: java.lang.String = this.getHeaderText();
+      val var7: InviteType = this.getType();
+      val var13: Int = this.getAcceptLabelBackgroundColor();
+      val var21: Int = this.getAcceptLabelBorderColor();
+      val var8: Int = this.getAcceptLabelColor();
+      val var14: java.lang.String = this.getAcceptLabelText();
+      val var31: java.lang.String = this.getBodyText();
+      val var26: Int = this.getBodyTextColor();
+      val var17: java.lang.Boolean = this.getCanBeAccepted();
+      val var16: java.lang.Boolean = this.getEmbedCanBeTapped();
+      val var28: Int = this.getResolvingGradientEnd();
+      val var29: Int = this.getResolvingGradientStart();
+      val var27: java.lang.Boolean = this.getSplashHasRadialGradient();
+      val var15: Int = this.getSplashOpacity();
+      val var32: java.lang.String = this.getSplashUrl();
+      val var5: java.lang.String = this.getInviteSplash();
+      val var20: java.lang.String = this.getSubtitle();
+      val var9: Int = this.getSubtitleColor();
+      val var19: Int = this.getThumbnailBackgroundColor();
+      val var30: Int = this.getThumbnailCornerRadius();
+      val var24: java.lang.String = this.getThumbnailText();
+      val var25: java.lang.String = this.getThumbnailUrl();
       val var22: Int = this.getTitleColor();
-      val var21: java.lang.String = this.getTitleText();
-      val var20: java.util.List = this.getParticipantAvatarUris();
-      val var26: CodedLinkExtendedType = this.getExtendedType();
-      val var29: AnnotatedStructurableText = this.getStructurableSubtitleText();
-      val var19: java.lang.String = this.getNoParticipantsText();
+      val var11: java.lang.String = this.getTitleText();
+      val var33: java.util.List = this.getParticipantAvatarUris();
+      val var18: CodedLinkExtendedType = this.getExtendedType();
+      val var10: AnnotatedStructurableText = this.getStructurableSubtitleText();
+      val var6: java.lang.String = this.getNoParticipantsText();
       val var4: Boolean = this.getCtaEnabled();
-      val var23: StringBuilder = new StringBuilder();
-      var23.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
-      var23.append(var1);
-      var23.append(", borderColor=");
-      var23.append(var2);
-      var23.append(", headerColor=");
-      var23.append(var3);
-      var23.append(", headerText=");
-      var23.append(var12);
-      var23.append(", type=");
-      var23.append(var9);
-      var23.append(", acceptLabelBackgroundColor=");
-      var23.append(var11);
-      var23.append(", acceptLabelBorderColor=");
-      var23.append(var10);
-      var23.append(", acceptLabelColor=");
-      var23.append(var30);
-      var23.append(", acceptLabelText=");
-      var23.append(var15);
-      var23.append(", bodyText=");
-      var23.append(var33);
-      var23.append(", bodyTextColor=");
-      var23.append(var25);
-      var23.append(", canBeAccepted=");
-      var23.append(var6);
-      var23.append(", embedCanBeTapped=");
-      var23.append(var5);
-      var23.append(", resolvingGradientEnd=");
-      var23.append(var32);
-      var23.append(", resolvingGradientStart=");
-      var23.append(var27);
-      var23.append(", splashHasRadialGradient=");
-      var23.append(var24);
-      var23.append(", splashOpacity=");
-      var23.append(var7);
-      var23.append(", splashUrl=");
-      var23.append(var31);
-      var23.append(", inviteSplash=");
-      var23.append(var17);
-      var23.append(", subtitle=");
-      var23.append(var14);
-      var23.append(", subtitleColor=");
-      var23.append(var16);
-      var23.append(", thumbnailBackgroundColor=");
-      var23.append(var18);
-      var23.append(", thumbnailCornerRadius=");
-      var23.append(var28);
-      var23.append(", thumbnailText=");
-      var23.append(var8);
-      var23.append(", thumbnailUrl=");
-      var23.append(var13);
-      var23.append(", titleColor=");
-      var23.append(var22);
-      var23.append(", titleText=");
-      var23.append(var21);
-      var23.append(", participantAvatarUris=");
-      var23.append(var20);
-      var23.append(", extendedType=");
-      var23.append(var26);
-      var23.append(", structurableSubtitleText=");
-      var23.append(var29);
-      var23.append(", noParticipantsText=");
-      var23.append(var19);
-      var23.append(", ctaEnabled=");
-      var23.append(var4);
-      var23.append(")");
-      return var23.toString();
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
+      var12.append(var1);
+      var12.append(", borderColor=");
+      var12.append(var2);
+      var12.append(", headerColor=");
+      var12.append(var3);
+      var12.append(", headerText=");
+      var12.append(var23);
+      var12.append(", type=");
+      var12.append(var7);
+      var12.append(", acceptLabelBackgroundColor=");
+      var12.append(var13);
+      var12.append(", acceptLabelBorderColor=");
+      var12.append(var21);
+      var12.append(", acceptLabelColor=");
+      var12.append(var8);
+      var12.append(", acceptLabelText=");
+      var12.append(var14);
+      var12.append(", bodyText=");
+      var12.append(var31);
+      var12.append(", bodyTextColor=");
+      var12.append(var26);
+      var12.append(", canBeAccepted=");
+      var12.append(var17);
+      var12.append(", embedCanBeTapped=");
+      var12.append(var16);
+      var12.append(", resolvingGradientEnd=");
+      var12.append(var28);
+      var12.append(", resolvingGradientStart=");
+      var12.append(var29);
+      var12.append(", splashHasRadialGradient=");
+      var12.append(var27);
+      var12.append(", splashOpacity=");
+      var12.append(var15);
+      var12.append(", splashUrl=");
+      var12.append(var32);
+      var12.append(", inviteSplash=");
+      var12.append(var5);
+      var12.append(", subtitle=");
+      var12.append(var20);
+      var12.append(", subtitleColor=");
+      var12.append(var9);
+      var12.append(", thumbnailBackgroundColor=");
+      var12.append(var19);
+      var12.append(", thumbnailCornerRadius=");
+      var12.append(var30);
+      var12.append(", thumbnailText=");
+      var12.append(var24);
+      var12.append(", thumbnailUrl=");
+      var12.append(var25);
+      var12.append(", titleColor=");
+      var12.append(var22);
+      var12.append(", titleText=");
+      var12.append(var11);
+      var12.append(", participantAvatarUris=");
+      var12.append(var33);
+      var12.append(", extendedType=");
+      var12.append(var18);
+      var12.append(", structurableSubtitleText=");
+      var12.append(var10);
+      var12.append(", noParticipantsText=");
+      var12.append(var6);
+      var12.append(", ctaEnabled=");
+      var12.append(var4);
+      var12.append(")");
+      return var12.toString();
    }
 
    public object `$serializer` : f0<EmbeddedActivityInviteEmbedImpl> {
@@ -1138,50 +1138,50 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: m0 = m0.a;
+         val var10: m0 = m0.a;
          val var6: a2 = a2.a;
-         val var7: KSerializer = a.u(a2.a);
-         val var1: KSerializer = a.u(InviteType.Serializer.INSTANCE);
-         val var4: KSerializer = a.u(var2);
-         val var8: KSerializer = a.u(var2);
-         val var10: KSerializer = a.u(var2);
-         val var9: KSerializer = a.u(var6);
-         val var5: KSerializer = a.u(var6);
-         val var11: KSerializer = a.u(var2);
-         val var3: h = h.a;
+         val var9: KSerializer = a.u(a2.a);
+         val var5: KSerializer = a.u(InviteType.Serializer.INSTANCE);
+         val var7: KSerializer = a.u(var10);
+         val var3: KSerializer = a.u(var10);
+         val var2: KSerializer = a.u(var10);
+         val var4: KSerializer = a.u(var6);
+         val var1: KSerializer = a.u(var6);
+         val var8: KSerializer = a.u(var10);
+         val var11: h = h.a;
          return new KSerializer[]{
-            var2,
-            var2,
-            var2,
-            var7,
-            var1,
-            var4,
-            var8,
+            var10,
+            var10,
             var10,
             var9,
             var5,
-            var11,
+            var7,
+            var3,
+            var2,
+            var4,
+            var1,
+            var8,
             a.u(h.a),
-            a.u(var3),
-            a.u(var2),
-            a.u(var2),
-            a.u(var3),
-            a.u(var2),
+            a.u(var11),
+            a.u(var10),
+            a.u(var10),
+            a.u(var11),
+            a.u(var10),
             a.u(var6),
             a.u(var6),
             a.u(var6),
-            a.u(var2),
-            a.u(var2),
-            a.u(var2),
+            a.u(var10),
+            a.u(var10),
+            a.u(var10),
             a.u(var6),
             a.u(var6),
-            a.u(var2),
+            a.u(var10),
             a.u(var6),
             new xk.f(var6),
             CodedLinkExtendedType.Serializer.INSTANCE,
             a.u(AnnotatedStructurableTextSerializer.INSTANCE),
             var6,
-            var3
+            var11
          };
       }
 
@@ -1192,9 +1192,8 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
          var var2: Int;
          var var3: Int;
          var var4: Int;
-         var var5: Int;
          var var6: Int;
-         var var13: Any;
+         var var7: Int;
          var var16: Any;
          var var17: Any;
          var var18: Any;
@@ -1209,65 +1208,65 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
          var var27: Any;
          var var28: Any;
          var var29: Any;
+         var var30: Any;
          var var31: Any;
          var var32: Any;
          var var33: Any;
          var var34: Any;
          var var35: Any;
          var var36: Any;
+         var var37: Any;
          var var38: Any;
-         var var53: Any;
-         var var58: Any;
-         var var64: Any;
-         var var67: Any;
-         var var124: Any;
-         var var165: Any;
+         val var39: Any;
+         var var52: Any;
+         var var56: Any;
+         var var60: Any;
+         var var77: Any;
          if (var43.p()) {
             var6 = var43.i(var42, 0);
-            var5 = var43.i(var42, 1);
-            var2 = var43.i(var42, 2);
+            var4 = var43.i(var42, 1);
+            var3 = var43.i(var42, 2);
             val var44: a2 = a2.a;
             var33 = var43.n(var42, 3, a2.a, null);
-            var18 = var43.n(var42, 4, InviteType.Serializer.INSTANCE, null);
-            var53 = m0.a;
-            var64 = var43.n(var42, 5, m0.a, null);
-            var19 = var43.n(var42, 6, (DeserializationStrategy)var53, null);
-            var32 = var43.n(var42, 7, (DeserializationStrategy)var53, null);
-            var124 = var43.n(var42, 8, var44, null);
-            var16 = var43.n(var42, 9, var44, null);
-            var21 = var43.n(var42, 10, (DeserializationStrategy)var53, null);
-            var58 = h.a;
-            var20 = var43.n(var42, 11, h.a, null);
-            var24 = var43.n(var42, 12, (DeserializationStrategy)var58, null);
-            var36 = var43.n(var42, 13, (DeserializationStrategy)var53, null);
-            var27 = var43.n(var42, 14, (DeserializationStrategy)var53, null);
-            var23 = var43.n(var42, 15, (DeserializationStrategy)var58, null);
-            val var14: Any = var43.n(var42, 16, (DeserializationStrategy)var53, null);
-            var31 = var43.n(var42, 17, var44, null);
-            var17 = var43.n(var42, 18, var44, null);
+            var39 = var43.n(var42, 4, InviteType.Serializer.INSTANCE, null);
+            var52 = m0.a;
+            var60 = var43.n(var42, 5, m0.a, null);
+            var37 = var43.n(var42, 6, (DeserializationStrategy)var52, null);
+            var20 = var43.n(var42, 7, (DeserializationStrategy)var52, null);
+            var17 = var43.n(var42, 8, var44, null);
+            var21 = var43.n(var42, 9, var44, null);
+            var31 = var43.n(var42, 10, (DeserializationStrategy)var52, null);
+            var56 = h.a;
+            var28 = var43.n(var42, 11, h.a, null);
+            var38 = var43.n(var42, 12, (DeserializationStrategy)var56, null);
+            var26 = var43.n(var42, 13, (DeserializationStrategy)var52, null);
+            var32 = var43.n(var42, 14, (DeserializationStrategy)var52, null);
+            var22 = var43.n(var42, 15, (DeserializationStrategy)var56, null);
+            var77 = var43.n(var42, 16, (DeserializationStrategy)var52, null);
+            var19 = var43.n(var42, 17, var44, null);
+            var18 = var43.n(var42, 18, var44, null);
             var34 = var43.n(var42, 19, var44, null);
-            var35 = var43.n(var42, 20, (DeserializationStrategy)var53, null);
-            var28 = var43.n(var42, 21, (DeserializationStrategy)var53, null);
-            var29 = var43.n(var42, 22, (DeserializationStrategy)var53, null);
-            var25 = var43.n(var42, 23, var44, null);
-            var165 = var43.n(var42, 24, var44, null);
-            var67 = var43.n(var42, 25, (DeserializationStrategy)var53, null);
-            var13 = var43.n(var42, 26, var44, null);
-            var58 = var43.y(var42, 27, new xk.f(var44), null);
+            var35 = var43.n(var42, 20, (DeserializationStrategy)var52, null);
+            var16 = var43.n(var42, 21, (DeserializationStrategy)var52, null);
+            var29 = var43.n(var42, 22, (DeserializationStrategy)var52, null);
+            var23 = var43.n(var42, 23, var44, null);
+            var24 = var43.n(var42, 24, var44, null);
+            val var12: Any = var43.n(var42, 25, (DeserializationStrategy)var52, null);
+            val var13: Any = var43.n(var42, 26, var44, null);
+            var56 = var43.y(var42, 27, new xk.f(var44), null);
             val var15: Any = var43.y(var42, 28, CodedLinkExtendedType.Serializer.INSTANCE, null);
-            var53 = var43.n(var42, 29, AnnotatedStructurableTextSerializer.INSTANCE, null);
+            var52 = var43.n(var42, 29, AnnotatedStructurableTextSerializer.INSTANCE, null);
             val var45: java.lang.String = var43.m(var42, 30);
-            var3 = var43.C(var42, 31);
-            var4 = -1;
-            var22 = var14;
-            var26 = var64;
-            var64 = var165;
-            var165 = var67;
-            var67 = var124;
-            var38 = var15;
-            var124 = var45;
+            var2 = var43.C(var42, 31);
+            var7 = -1;
+            var36 = var77;
+            var27 = var60;
+            var25 = var12;
+            var77 = var13;
+            var60 = var15;
+            var30 = var45;
          } else {
-            var64 = null;
+            var var66: Any = null;
             var var8: Boolean = true;
             var24 = null;
             var23 = null;
@@ -1282,23 +1281,23 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
             var32 = null;
             var33 = null;
             var18 = null;
-            var var86: Any = null;
+            var var81: Any = null;
             var19 = null;
-            var58 = null;
+            var56 = null;
             var22 = null;
-            var67 = null;
+            var60 = null;
             var21 = null;
-            var13 = null;
+            var77 = null;
             var16 = null;
-            var53 = null;
+            var52 = null;
             var17 = null;
-            var var80: Any = null;
-            var124 = null;
+            var var67: Any = null;
+            var30 = null;
             var20 = null;
-            var var7: Int = 0;
+            var7 = 0;
             var6 = 0;
             var4 = 0;
-            var5 = 0;
+            var var5: Int = 0;
             var3 = 0;
             var35 = null;
 
@@ -1311,24 +1310,24 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                               var2 = var43.o(var42);
                               switch (var2) {
                                  case -1:
+                                    var52 = var67;
                                     var8 = false;
-                                    var86 = var13;
-                                    var80 = var67;
-                                    var13 = var58;
-                                    var67 = var86;
-                                    var58 = var53;
-                                    var53 = var80;
+                                    var81 = var77;
+                                    var77 = var60;
+                                    var67 = var56;
+                                    var60 = var81;
+                                    var56 = var52;
                                     var2 = var7;
                                     break label172;
                                  case 0:
-                                    var58 = var53;
-                                    var53 = var80;
+                                    var56 = var52;
+                                    var52 = var67;
                                     var6 = var43.i(var42, 0);
                                     var2 = var7 or 1;
-                                    var67 = var86;
-                                    var13 = var58;
-                                    var80 = var67;
-                                    var86 = var13;
+                                    var60 = var81;
+                                    var67 = var56;
+                                    var77 = var60;
+                                    var81 = var77;
                                     break label172;
                                  case 1:
                                     var4 = var43.i(var42, 1);
@@ -1339,16 +1338,17 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                     var2 = var7 or 4;
                                     break label148;
                                  case 3:
-                                    var53 = var80;
                                     var33 = var43.n(var42, 3, a2.a, var33);
                                     var2 = var7 or 8;
-                                    var86 = var13;
-                                    var80 = var67;
-                                    var13 = var58;
-                                    var67 = var86;
-                                    var58 = var53;
+                                    var81 = var77;
+                                    var77 = var60;
+                                    var67 = var56;
+                                    var60 = var81;
+                                    var56 = var52;
+                                    var52 = var67;
                                     break label172;
                                  case 4:
+                                    var16 = var20;
                                     var18 = var43.n(var42, 4, InviteType.Serializer.INSTANCE, var18);
                                     var2 = var7 or 16;
                                     var22 = var21;
@@ -1356,136 +1356,136 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                     var20 = var19;
                                     var19 = var18;
                                     var18 = var16;
-                                    var16 = var20;
                                     break label171;
                                  case 5:
-                                    var58 = var53;
-                                    var53 = var80;
-                                    var67 = var43.n(var42, 5, m0.a, var86);
+                                    var56 = var52;
+                                    var52 = var67;
+                                    var60 = var43.n(var42, 5, m0.a, var81);
                                     var2 = var7 or 32;
-                                    var13 = var58;
-                                    var80 = var67;
-                                    var86 = var13;
+                                    var67 = var56;
+                                    var77 = var60;
+                                    var81 = var77;
                                     break label172;
                                  case 6:
-                                    var22 = var21;
                                     var16 = var20;
                                     var20 = var43.n(var42, 6, m0.a, var19);
                                     var2 = var7 or 64;
                                     var19 = var18;
                                     var18 = var16;
                                     var21 = var22;
+                                    var22 = var21;
                                     break label171;
                                  case 7:
-                                    var53 = var80;
-                                    var13 = var43.n(var42, 7, m0.a, var58);
+                                    var52 = var67;
+                                    var67 = var43.n(var42, 7, m0.a, var56);
                                     var2 = var7 or 128;
-                                    var58 = var53;
-                                    var67 = var86;
-                                    var80 = var67;
-                                    var86 = var13;
+                                    var56 = var52;
+                                    var60 = var81;
+                                    var77 = var60;
+                                    var81 = var77;
                                     break label172;
                                  case 8:
                                     var16 = var20;
                                     var22 = var43.n(var42, 8, a2.a, var22);
                                     var2 = var7 or 256;
-                                    var20 = var19;
                                     var18 = var16;
                                     var19 = var18;
+                                    var20 = var19;
                                     var21 = var22;
                                     var22 = var21;
                                     break label171;
                                  case 9:
-                                    var53 = var80;
-                                    var80 = var43.n(var42, 9, a2.a, var67);
+                                    var52 = var67;
+                                    var37 = var43.n(var42, 9, a2.a, var60);
                                     var2 = var7 or 512;
-                                    var67 = var86;
-                                    var58 = var53;
-                                    var13 = var58;
-                                    var86 = var13;
+                                    var60 = var81;
+                                    var67 = var56;
+                                    var56 = var52;
+                                    var77 = var37;
+                                    var81 = var77;
                                     break label172;
                                  case 10:
                                     var16 = var20;
-                                    var165 = var43.n(var42, 10, m0.a, var21);
+                                    var37 = var43.n(var42, 10, m0.a, var21);
                                     var2 = var7 or 1024;
-                                    var21 = var22;
+                                    var20 = var19;
                                     var18 = var16;
                                     var19 = var18;
-                                    var20 = var19;
-                                    var22 = var165;
+                                    var21 = var22;
+                                    var22 = var37;
                                     break label171;
                                  case 11:
-                                    var53 = var80;
-                                    var165 = var43.n(var42, 11, h.a, var13);
+                                    var52 = var67;
+                                    var37 = var43.n(var42, 11, h.a, var77);
                                     var2 = var7 or 2048;
-                                    var13 = var58;
-                                    var80 = var67;
-                                    var58 = var53;
-                                    var67 = var86;
-                                    var86 = var165;
+                                    var67 = var56;
+                                    var77 = var60;
+                                    var56 = var52;
+                                    var60 = var81;
+                                    var81 = var37;
                                     break label172;
                                  case 12:
-                                    var38 = var43.n(var42, 12, h.a, var16);
+                                    var36 = var43.n(var42, 12, h.a, var16);
                                     var2 = var7 or 4096;
                                     var22 = var21;
                                     var16 = var20;
-                                    var18 = var38;
+                                    var18 = var36;
                                     var19 = var18;
                                     var20 = var19;
                                     var21 = var22;
                                     break label171;
                                  case 13:
-                                    var36 = var43.n(var42, 13, m0.a, var53);
+                                    var37 = var43.n(var42, 13, m0.a, var52);
                                     var2 = var7 or 8192;
-                                    var53 = var80;
-                                    var58 = var36;
-                                    var67 = var86;
-                                    var13 = var58;
-                                    var80 = var67;
-                                    var86 = var13;
+                                    var52 = var67;
+                                    var56 = var37;
+                                    var60 = var81;
+                                    var67 = var56;
+                                    var77 = var60;
+                                    var81 = var77;
                                     break label172;
                                  case 14:
                                     var17 = var43.n(var42, 14, m0.a, var17);
                                     var2 = var7 or 16384;
-                                    var22 = var21;
                                     var18 = var16;
                                     var16 = var20;
                                     var19 = var18;
                                     var20 = var19;
                                     var21 = var22;
+                                    var22 = var21;
                                     break label171;
                                  case 15:
-                                    var38 = var43.n(var42, 15, h.a, var80);
+                                    var38 = var43.n(var42, 15, h.a, var67);
                                     var2 = var7 or '耀';
-                                    var80 = var67;
-                                    var58 = var53;
-                                    var53 = var38;
-                                    var67 = var86;
-                                    var13 = var58;
-                                    var86 = var13;
+                                    var67 = var56;
+                                    var56 = var52;
+                                    var52 = var38;
+                                    var60 = var81;
+                                    var77 = var60;
+                                    var81 = var77;
                                     break label172;
                                  case 16:
                                     var38 = var43.n(var42, 16, m0.a, var20);
                                     var2 = var7 or 65536;
                                     var20 = var19;
-                                    var22 = var21;
                                     var18 = var16;
                                     var16 = var38;
                                     var19 = var18;
                                     var21 = var22;
+                                    var22 = var21;
                                     break label171;
                                  case 17:
                                     var46 = var43.n(var42, 17, a2.a, var46);
                                     var2 = var7 or 131072;
-                                    var58 = var53;
-                                    var53 = var80;
-                                    var67 = var86;
-                                    var13 = var58;
-                                    var80 = var67;
-                                    var86 = var13;
+                                    var56 = var52;
+                                    var52 = var67;
+                                    var60 = var81;
+                                    var67 = var56;
+                                    var77 = var60;
+                                    var81 = var77;
                                     break label172;
                                  case 18:
-                                    var64 = var43.n(var42, 18, a2.a, var64);
+                                    var66 = var43.n(var42, 18, a2.a, var66);
                                     var2 = var7 or 262144;
                                     var22 = var21;
                                     var18 = var16;
@@ -1497,12 +1497,12 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                  case 19:
                                     var34 = var43.n(var42, 19, a2.a, var34);
                                     var2 = var7 or 524288;
-                                    var86 = var13;
-                                    var58 = var53;
-                                    var53 = var80;
-                                    var67 = var86;
-                                    var13 = var58;
-                                    var80 = var67;
+                                    var56 = var52;
+                                    var52 = var67;
+                                    var60 = var81;
+                                    var67 = var56;
+                                    var77 = var60;
+                                    var81 = var77;
                                     break label172;
                                  case 20:
                                     var35 = var43.n(var42, 20, m0.a, var35);
@@ -1545,7 +1545,7 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                     var2 = var7 or 536870912;
                                     break label133;
                                  case 30:
-                                    var124 = var43.m(var42, 30);
+                                    var30 = var43.m(var42, 30);
                                     var2 = var7 or 1073741824;
                                     break label133;
                                  case 31:
@@ -1560,144 +1560,138 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                               break label133;
                            }
 
-                           var13 = var58;
-                           var67 = var86;
-                           var58 = var53;
-                           var53 = var80;
-                           var80 = var67;
-                           var86 = var13;
+                           var77 = var60;
+                           var60 = var81;
+                           var56 = var52;
+                           var52 = var67;
+                           var67 = var56;
+                           var81 = var77;
                         }
 
                         var21 = var22;
                         var19 = var18;
                         var18 = var16;
-                        var16 = var86;
+                        var16 = var81;
                         var22 = var21;
-                        var86 = var80;
                         var20 = var19;
-                        var24 = var67;
-                        var64 = var58;
-                        var58 = var53;
-                        var23 = var20;
-                        var67 = var46;
-                        var80 = var64;
-                        var53 = var23;
+                        var24 = var20;
+                        var23 = var46;
+                        var81 = var23;
                         var46 = var24;
                         break label134;
                      }
 
-                     var13 = var58;
-                     var58 = var80;
-                     var67 = var46;
-                     var53 = var23;
+                     var77 = var60;
+                     var60 = var81;
+                     var56 = var52;
+                     var52 = var67;
+                     var81 = var23;
                      var46 = var24;
-                     var80 = var64;
-                     var23 = var16;
-                     var64 = var53;
-                     var24 = var86;
-                     var86 = var67;
-                     var16 = var13;
+                     var23 = var46;
+                     var24 = var16;
+                     var67 = var56;
+                     var16 = var77;
                      break label134;
                   }
 
+                  var77 = var60;
                   var21 = var22;
-                  var13 = var58;
+                  var60 = var81;
                   var19 = var18;
-                  var58 = var80;
-                  var67 = var46;
+                  var56 = var52;
+                  var52 = var67;
                   var46 = var24;
-                  var53 = var23;
-                  var80 = var64;
-                  var23 = var20;
-                  var64 = var53;
+                  var81 = var23;
+                  var23 = var46;
+                  var24 = var20;
                   var18 = var16;
-                  var24 = var86;
                   var20 = var19;
-                  var86 = var67;
+                  var67 = var56;
                   var22 = var21;
-                  var16 = var13;
+                  var16 = var77;
                }
 
-               var46 = var67;
-               var80 = var58;
-               var53 = var64;
+               var46 = var23;
+               var52 = var56;
                var18 = var19;
                var19 = var20;
-               var21 = var22;
+               var56 = var67;
                var24 = var46;
-               var23 = var53;
-               var64 = var80;
+               var23 = var81;
                var7 = var2;
-               var86 = var24;
-               var58 = var13;
+               var81 = var60;
                var22 = var21;
-               var67 = var86;
-               var13 = var16;
+               var60 = var77;
+               var21 = var22;
+               var77 = var16;
                var16 = var18;
-               var20 = var23;
+               var67 = var52;
+               var20 = var24;
             }
 
-            var165 = var23;
-            var27 = var17;
-            var32 = var58;
-            var16 = var67;
-            var13 = var26;
-            var17 = var64;
-            var2 = var5;
-            var5 = var4;
-            var58 = var32;
-            var4 = var7;
-            var53 = var31;
-            var38 = var25;
-            var67 = var22;
-            var64 = var27;
-            var25 = var28;
-            var26 = var86;
-            var22 = var20;
-            var20 = var13;
-            var24 = var16;
-            var36 = var53;
-            var23 = var80;
-            var28 = var24;
-            var31 = var46;
+            var32 = var17;
+            var38 = var16;
+            var77 = var26;
+            var60 = var25;
+            var2 = var3;
+            var3 = var5;
+            var56 = var32;
+            var52 = var31;
+            var17 = var22;
+            var25 = var23;
+            var24 = var27;
+            var23 = var28;
+            var27 = var81;
+            var36 = var20;
+            var28 = var77;
+            var26 = var52;
+            var22 = var67;
+            var31 = var21;
+            var21 = var60;
+            var20 = var56;
+            var37 = var19;
+            var39 = var18;
+            var16 = var24;
+            var18 = var66;
+            var19 = var46;
          }
 
          var43.c(var42);
          return new EmbeddedActivityInviteEmbedImpl(
-            var4,
+            var7,
             0,
             var6,
-            var5,
-            var2,
+            var4,
+            var3,
             var33 as java.lang.String,
-            var18 as InviteType,
-            var26 as Integer,
-            var19 as Integer,
-            var32 as Integer,
-            var67 as java.lang.String,
-            var16 as java.lang.String,
-            var21 as Integer,
-            var20 as java.lang.Boolean,
-            var24 as java.lang.Boolean,
-            var36 as Integer,
-            var27 as Integer,
-            var23 as java.lang.Boolean,
-            var22 as Integer,
-            var31 as java.lang.String,
+            var39 as InviteType,
+            var27 as Int,
+            var37 as Int,
+            var20 as Int,
             var17 as java.lang.String,
+            var21 as java.lang.String,
+            var31 as Int,
+            var28 as java.lang.Boolean,
+            var38 as java.lang.Boolean,
+            var26 as Int,
+            var32 as Int,
+            var22 as java.lang.Boolean,
+            var36 as Int,
+            var19 as java.lang.String,
+            var18 as java.lang.String,
             var34 as java.lang.String,
-            var35 as Integer,
-            var28 as Integer,
-            var29 as Integer,
-            var25 as java.lang.String,
-            var64 as java.lang.String,
-            var165 as Integer,
-            var13 as java.lang.String,
-            var58 as java.util.List,
-            var38 as CodedLinkExtendedType,
-            var53 as AnnotatedStructurableText,
-            (java.lang.String)var124,
-            (boolean)var3,
+            var35 as Int,
+            var16 as Int,
+            var29 as Int,
+            var23 as java.lang.String,
+            var24 as java.lang.String,
+            var25 as Int,
+            var77 as java.lang.String,
+            var56 as java.util.List,
+            var60 as CodedLinkExtendedType,
+            var52 as AnnotatedStructurableText,
+            (java.lang.String)var30,
+            (boolean)var2,
             null
          );
       }

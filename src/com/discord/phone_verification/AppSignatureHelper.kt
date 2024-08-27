@@ -71,18 +71,18 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var1 = 0; var1 < var2; var1++) {
             val var7: Signature = var16[var1];
 
-            var var8: java.lang.String;
+            var var9: java.lang.String;
             try {
-               val var9: AppSignatureHelper.Companion = AppSignatureHelper.Companion;
+               val var8: AppSignatureHelper.Companion = AppSignatureHelper.Companion;
                r.g(var5, "packageName");
                val var17: java.lang.String = var7.toCharsString();
                r.g(var17, "signature.toCharsString()");
-               var8 = AppSignatureHelper.Companion.access$hash(var9, var5, var17);
+               var9 = AppSignatureHelper.Companion.access$hash(var8, var5, var17);
                val var18: Log = Log.INSTANCE;
-               val var10: java.lang.String = var9.getTAG();
+               val var10: java.lang.String = var8.getTAG();
                val var19: StringBuilder = new StringBuilder();
                var19.append("Hash ");
-               var19.append(var8);
+               var19.append(var9);
                Log.i$default(var18, var10, var19.toString(), null, 4, null);
             } catch (var12: NameNotFoundException) {
                Log.INSTANCE.e(AppSignatureHelper.Companion.getTAG(), "Unable to find package to obtain hash.", var12);
@@ -90,9 +90,9 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
                break;
             }
 
-            if (var8 != null) {
+            if (var9 != null) {
                try {
-                  var6.add(var8);
+                  var6.add(var9);
                } catch (var11: NameNotFoundException) {
                   Log.INSTANCE.e(AppSignatureHelper.Companion.getTAG(), "Unable to find package to obtain hash.", var11);
                   h.i();
@@ -105,7 +105,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
       }
    })
       public final get() {
-         return this.appSignatures$delegate.getValue() as java.util.List<java.lang.String>;
+         return this.appSignatures$delegate.getValue() as MutableList<java.lang.String>;
       }
 
 

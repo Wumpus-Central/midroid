@@ -5,6 +5,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import eh.w
 import kotlin.jvm.internal.r
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -145,16 +146,16 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.guildId;
       val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.messageId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapChannelData(guildId=");
-      var1.append(var3);
+      var1.append(var4);
       var1.append(", channelId=");
       var1.append(var2);
       var1.append(", messageId=");
-      var1.append(var4);
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }
@@ -189,19 +190,19 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
          val var5: Boolean = var10.p();
          var var7: Any = null;
          var var2: Int;
-         val var8: Any;
          var var11: Any;
+         var var13: Any;
          if (var5) {
-            val var6: a2 = a2.a;
-            var7 = var10.n(var9, 0, a2.a, null);
-            var11 = var10.n(var9, 1, var6, null);
-            var8 = var10.n(var9, 2, var6, null);
+            var13 = a2.a;
+            var11 = var10.n(var9, 0, a2.a, null);
+            var7 = var10.n(var9, 1, (DeserializationStrategy)var13, null);
+            var13 = var10.n(var9, 2, (DeserializationStrategy)var13, null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var13: Any = null;
             var11 = null;
+            var13 = null;
 
             while (var3) {
                val var4: Int = var10.o(var9);
@@ -212,10 +213,10 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
                            throw new n(var4);
                         }
 
-                        var11 = var10.n(var9, 2, a2.a, var11);
+                        var13 = var10.n(var9, 2, a2.a, var13);
                         var2 |= 4;
                      } else {
-                        var13 = var10.n(var9, 1, a2.a, var13);
+                        var11 = var10.n(var9, 1, a2.a, var11);
                         var2 |= 2;
                      }
                   } else {
@@ -227,12 +228,12 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
                }
             }
 
-            var8 = var11;
-            var11 = var13;
+            var7 = var11;
+            var11 = var7;
          }
 
          var10.c(var9);
-         return new TapChannelData(var2, var7 as java.lang.String, var11 as java.lang.String, var8 as java.lang.String, null);
+         return new TapChannelData(var2, var11 as java.lang.String, var7 as java.lang.String, var13 as java.lang.String, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapChannelData) {

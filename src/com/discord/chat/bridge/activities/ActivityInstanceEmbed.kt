@@ -341,9 +341,9 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
       public open fun deserialize(decoder: Decoder): ActivityInstanceEmbed {
          r.h(var1, "decoder");
-         val var17: SerialDescriptor = this.getDescriptor();
-         val var18: c = var1.b(var17);
-         val var9: Boolean = var18.p();
+         val var16: SerialDescriptor = this.getDescriptor();
+         val var17: c = var1.b(var16);
+         val var9: Boolean = var17.p();
          var var3: Byte = 7;
          val var4: Int;
          var var5: Byte;
@@ -353,29 +353,28 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          var var12: Any;
          var var13: Any;
          var var14: Any;
-         val var15: Any;
+         var var19: Any;
          if (var9) {
-            var11 = var18.y(var17, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, null);
-            var12 = var18.y(var17, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var10 = var18.m(var17, 2);
-            val var19: a2 = a2.a;
-            var13 = var18.n(var17, 3, a2.a, null);
-            var14 = var18.n(var17, 4, new xk.f(var19), null);
-            var5 = var18.C(var17, 5);
-            val var20: java.lang.String = var18.m(var17, 6);
-            val var2: Int = var18.i(var17, 7);
-            var3 = var18.C(var17, 8);
+            var12 = var17.y(var16, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, null);
+            var11 = var17.y(var16, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var10 = var17.m(var16, 2);
+            var19 = a2.a;
+            var13 = var17.n(var16, 3, a2.a, null);
+            var14 = var17.n(var16, 4, new xk.f((KSerializer)var19), null);
+            var5 = var17.C(var16, 5);
+            var19 = var17.m(var16, 6);
+            val var2: Int = var17.i(var16, 7);
+            var3 = var17.C(var16, 8);
             var4 = 511;
             var6 = var2;
-            var15 = var20;
          } else {
             var var7: Boolean = true;
             var6 = 0;
-            var var24: Byte = 0;
-            var var22: Int = 0;
+            var var23: Byte = 0;
+            var var21: Int = 0;
             var14 = null;
             var13 = null;
-            var var21: Any = null;
+            var19 = null;
             var12 = null;
             var11 = null;
             var10 = null;
@@ -383,47 +382,47 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
             while (var7) {
                label41: {
-                  val var8: Int = var18.o(var17);
+                  val var8: Int = var17.o(var16);
                   switch (var8) {
                      case -1:
                         var7 = false;
                         continue;
                      case 0:
-                        var21 = var18.y(var17, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, var21);
-                        var22 |= 1;
+                        var19 = var17.y(var16, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, var19);
+                        var21 |= 1;
                         break;
                      case 1:
-                        var10 = var18.y(var17, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var10);
-                        var22 |= 2;
+                        var10 = var17.y(var16, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var10);
+                        var21 |= 2;
                         break;
                      case 2:
-                        var12 = var18.m(var17, 2);
-                        var22 |= 4;
+                        var12 = var17.m(var16, 2);
+                        var21 |= 4;
                         break label41;
                      case 3:
-                        var13 = var18.n(var17, 3, a2.a, var13);
-                        var22 |= 8;
+                        var13 = var17.n(var16, 3, a2.a, var13);
+                        var21 |= 8;
                         break label41;
                      case 4:
-                        var14 = var18.n(var17, 4, new xk.f(a2.a), var14);
-                        var22 |= 16;
+                        var14 = var17.n(var16, 4, new xk.f(a2.a), var14);
+                        var21 |= 16;
                         var3 = 7;
                         continue;
                      case 5:
-                        var5 = var18.C(var17, 5);
-                        var22 |= 32;
+                        var5 = var17.C(var16, 5);
+                        var21 |= 32;
                         continue;
                      case 6:
-                        var11 = var18.m(var17, 6);
-                        var22 |= 64;
+                        var11 = var17.m(var16, 6);
+                        var21 |= 64;
                         continue;
                      case 7:
-                        var6 = var18.i(var17, var3);
-                        var22 |= 128;
+                        var6 = var17.i(var16, var3);
+                        var21 |= 128;
                         continue;
                      case 8:
-                        var24 = var18.C(var17, 8);
-                        var22 |= 256;
+                        var23 = var17.C(var16, 8);
+                        var21 |= 256;
                         continue;
                      default:
                         throw new n(var8);
@@ -437,23 +436,23 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
             }
 
             var10 = var12;
-            var15 = var11;
-            var3 = var24;
-            var12 = var10;
-            var4 = var22;
-            var11 = var21;
+            var12 = var19;
+            var19 = var11;
+            var3 = var23;
+            var11 = var10;
+            var4 = var21;
          }
 
-         var18.c(var17);
+         var17.c(var16);
          return new ActivityInstanceEmbed(
             var4,
-            var11 as ApplicationId,
-            var12 as ChannelId,
+            var12 as ApplicationId,
+            var11 as ChannelId,
             (java.lang.String)var10,
             var13 as java.lang.String,
             var14 as java.util.List,
             (boolean)var5,
-            (java.lang.String)var15,
+            (java.lang.String)var19,
             var6,
             (boolean)var3,
             null,

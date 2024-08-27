@@ -40,7 +40,7 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
       r.h(var8, "text");
       val var20: SpannedString = SpannedString.valueOf(var8);
       r.g(var20, "valueOf(this)");
-      val var22: Array<BackgroundSpan> = var20.getSpans(0, var8.length(), BackgroundSpan.class) as BackgroundSpan[];
+      val var22: Array<BackgroundSpan> = var20.getSpans(0, var8.length(), BackgroundSpan.class) as Array<BackgroundSpan>;
       val var21: Layout = this.provider.getLayout();
       r.g(var21, "provider.layout");
       r.g(var22, "backgroundSpans");

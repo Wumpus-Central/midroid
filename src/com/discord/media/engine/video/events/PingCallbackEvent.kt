@@ -104,22 +104,22 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
    }
 
    public override fun toString(): String {
-      val var3: Int = this.connectionId;
-      val var1: Int = this.ping;
+      val var2: Int = this.connectionId;
+      val var4: Int = this.ping;
       val var6: java.lang.String = this.server;
-      val var2: Int = this.port;
-      val var4: Int = this.seq;
+      val var3: Int = this.port;
+      val var1: Int = this.seq;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PingCallbackEvent(connectionId=");
-      var5.append(var3);
+      var5.append(var2);
       var5.append(", ping=");
-      var5.append(var1);
+      var5.append(var4);
       var5.append(", server=");
       var5.append(var6);
       var5.append(", port=");
-      var5.append(var2);
+      var5.append(var3);
       var5.append(", seq=");
-      var5.append(var4);
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
@@ -156,25 +156,25 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
          var var3: Int;
          var var4: Int;
          var var5: Int;
-         var var6: Int;
+         val var7: Int;
          var var11: java.lang.String;
          if (var10.p()) {
-            var6 = var10.i(var9, 0);
-            var5 = var10.i(var9, 1);
+            var4 = var10.i(var9, 0);
+            var7 = var10.i(var9, 1);
             var11 = var10.m(var9, 2);
-            var2 = var10.i(var9, 3);
-            var3 = var10.i(var9, 4);
-            var4 = 31;
+            var3 = var10.i(var9, 3);
+            var2 = var10.i(var9, 4);
+            var5 = 31;
          } else {
             var11 = null;
-            var var7: Boolean = true;
-            var6 = 0;
+            var var17: Boolean = true;
+            var var6: Int = 0;
             var5 = 0;
             var4 = 0;
             var3 = 0;
             var2 = 0;
 
-            while (var7) {
+            while (var17) {
                val var8: Int = var10.o(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -204,18 +204,19 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
                      var2 |= 1;
                   }
                } else {
-                  var7 = false;
+                  var17 = false;
                }
             }
 
-            var4 = var2;
-            var3 = var4;
-            var2 = var5;
-            var5 = var3;
+            var5 = var2;
+            var2 = var4;
+            var3 = var5;
+            var7 = var3;
+            var4 = var6;
          }
 
          var10.c(var9);
-         return new PingCallbackEvent(var4, var6, var5, var11, var2, var3, null);
+         return new PingCallbackEvent(var5, var4, var7, var11, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PingCallbackEvent) {

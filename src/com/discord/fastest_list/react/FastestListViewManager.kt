@@ -17,6 +17,7 @@ import com.discord.react.utilities.ReactStylesDiffMapExtensionsKt
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.module.annotations.ReactModule
+import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ReactStylesDiffMap
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
@@ -44,6 +45,10 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
             w.a("onVisibleItemsChanged", h0.b(OnVisibleItemsChangedEvent.class))
          }
       )
+
+   public open fun createShadowNodeInstance(): LayoutShadowNode {
+      return new FastestListShadowNode();
+   }
 
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): FastestListView {
       r.h(var1, "reactContext");
@@ -166,9 +171,20 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       return "FastestList";
    }
 
+   public open fun getShadowNodeClass(): Class<out LayoutShadowNode> {
+      return FastestListShadowNode::class.java;
+   }
+
+   protected open fun onAfterUpdateTransaction(view: FastestListView) {
+      r.h(var1, "view");
+      super.onAfterUpdateTransaction(var1);
+      FastestListShadowNode.Companion.updateFromShadowNode(var1);
+   }
+
    public open fun onDropViewInstance(view: FastestListView) {
       r.h(var1, "view");
       var1.onDrop();
+      FastestListShadowNode.Companion.dropShadowNode(var1);
    }
 
    public open fun scrollToLocation(view: FastestListView, section: Int, item: Int, animated: Boolean) {

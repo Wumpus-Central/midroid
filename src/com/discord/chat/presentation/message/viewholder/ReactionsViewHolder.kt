@@ -1,6 +1,7 @@
 package com.discord.chat.presentation.message.viewholder
 
 import android.view.View.OnClickListener
+import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.bridge.reaction.MessageReaction
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.chat.presentation.root.ChatView
@@ -10,13 +11,15 @@ import com.discord.reactions.ReactionView.Reaction
 import com.discord.theme.DiscordTheme
 import kotlin.jvm.functions.Function1
 
-public class ReactionsViewHolder(reactionsView: ReactionsView) : MessagePartViewHolder {
+public class ReactionsViewHolder(reactionsView: ReactionsView, recyclerViewPool: RecycledViewPool) : MessagePartViewHolder {
    private final val reactionsView: ReactionsView
 
    init {
       kotlin.jvm.internal.r.h(var1, "reactionsView");
+      kotlin.jvm.internal.r.h(var2, "recyclerViewPool");
       super(var1, null);
       this.reactionsView = var1;
+      var1.setViewPool(var2);
    }
 
    public fun bind(

@@ -61,17 +61,17 @@ public data class GuildInviteMessageAccessory(messageId: MessageId, codedLinkInd
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var4: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
       val var1: Int = this.codedLinkIndex;
       val var2: GuildInviteEmbedImpl = this.invite;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("GuildInviteMessageAccessory(messageId=");
-      var4.append(var3);
-      var4.append(", codedLinkIndex=");
-      var4.append(var1);
-      var4.append(", invite=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("GuildInviteMessageAccessory(messageId=");
+      var3.append(var4);
+      var3.append(", codedLinkIndex=");
+      var3.append(var1);
+      var3.append(", invite=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

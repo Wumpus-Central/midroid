@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.discord.chat.presentation.message.view.botuikit.components.MediaGalleryDisplayComponentView android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.discord.chat.presentation.message.view.mosaic.MediaGalleryComponentMediaMosaicView android:id="@id/mosaic" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</com.discord.chat.presentation.message.view.botuikit.components.MediaGalleryDisplayComponentView>
+<com.discord.chat.presentation.message.view.botuikit.components.media_gallery.MediaGalleryDisplayComponentView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/mosaic" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.discord.chat.presentation.message.view.botuikit.components.media_gallery.MediaGalleryDisplayComponentView>

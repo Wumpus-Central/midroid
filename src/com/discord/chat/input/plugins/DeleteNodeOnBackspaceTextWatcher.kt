@@ -51,8 +51,8 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
                var14 = new DCDDeleteOnBackspaceSpan[0];
             }
 
-            val var13: Array<DCDDeleteOnBackspaceSpan> = var14 as DCDDeleteOnBackspaceSpan[];
-            var5 = (var14 as DCDDeleteOnBackspaceSpan[]).length;
+            val var13: Array<DCDDeleteOnBackspaceSpan> = var14 as Array<DCDDeleteOnBackspaceSpan>;
+            var5 = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
             var2 = 0;
             var var11: Int = null;
 

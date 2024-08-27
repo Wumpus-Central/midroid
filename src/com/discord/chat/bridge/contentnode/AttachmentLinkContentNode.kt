@@ -91,16 +91,16 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    public override fun toString(): String {
       val var1: java.lang.String = this.attachmentUrl;
       val var3: java.lang.String = this.attachmentName;
-      val var4: java.util.List = this.getContent();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AttachmentLinkContentNode(attachmentUrl=");
-      var2.append(var1);
-      var2.append(", attachmentName=");
-      var2.append(var3);
-      var2.append(", content=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.getContent();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AttachmentLinkContentNode(attachmentUrl=");
+      var4.append(var1);
+      var4.append(", attachmentName=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<AttachmentLinkContentNode> {

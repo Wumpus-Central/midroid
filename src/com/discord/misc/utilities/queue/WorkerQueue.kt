@@ -28,9 +28,9 @@ public class WorkerQueue<T>(popFromEnd: Boolean = true) {
       } else if (r.c(this.currWorker, var1)) {
          val var4: Any;
          if (this.popFromEnd) {
-            var4 = h.m0(this.nextWorkers);
+            var4 = h.n0(this.nextWorkers);
          } else {
-            var4 = h.a0(this.nextWorkers);
+            var4 = h.b0(this.nextWorkers);
          }
 
          this.currWorker = (T)var4;

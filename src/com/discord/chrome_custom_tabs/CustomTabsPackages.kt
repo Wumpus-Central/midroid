@@ -124,7 +124,7 @@ internal object CustomTabsPackages {
                var3 = var10 as java.lang.String;
                var7 = var10 as java.lang.String;
                if (var3 == null) {
-                  var7 = h.b0(var5) as java.lang.String;
+                  var7 = h.c0(var5) as java.lang.String;
                }
             }
          }

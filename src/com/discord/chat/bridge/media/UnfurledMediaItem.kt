@@ -351,7 +351,7 @@ public data class UnfurledMediaItem(url: String,
             var4,
             (java.lang.String)var15,
             var9 as java.lang.String,
-            var10 as Integer,
+            var10 as Int,
             var11 as ContentScanMetadata,
             null
          );

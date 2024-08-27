@@ -20,6 +20,27 @@ public interface ChatEventHandler {
    public val onMessageLongPressed: ((MessageId, ChannelId, Int?, MediaType?, String?, Int?) -> Unit)?
    public val onMessageTapped: ((MessageId, ChannelId) -> Unit)?
 
+   public abstract fun mediaAttachmentPlaybackEnded(
+      messageId: MessageId,
+      totalDurationSecs: Float,
+      endDurationSecs: Float,
+      senderUserId: UserId,
+      durationListeningSecs: Float,
+      isVoiceMessage: Boolean,
+      attachmentId: String
+   ) {
+   }
+
+   public abstract fun mediaAttachmentPlaybackStarted(
+      messageId: MessageId,
+      totalDurationSecs: Float,
+      startDurationSecs: Float,
+      senderUserId: UserId,
+      isVoiceMessage: Boolean,
+      attachmentId: String
+   ) {
+   }
+
    public abstract fun onCompleteFirstLayout() {
    }
 
@@ -74,7 +95,7 @@ public interface ChatEventHandler {
    public abstract fun onMediaPlayFinishedAnalytics(analytics: MediaPlayFinishedAnalytics) {
    }
 
-   public abstract fun onScrollStateChanged(scrollState: ScrollState) {
+   public abstract fun onScrollStateChanged(scrollState: ScrollState, changesetUpdateId: Int) {
    }
 
    public abstract fun onStickerClicked(sticker: Sticker, messageId: MessageId) {
@@ -270,19 +291,7 @@ public interface ChatEventHandler {
    public abstract fun onWelcomeReplyClicked(sticker: Sticker, messageId: MessageId) {
    }
 
-   public abstract fun voiceMessagePlaybackEnded(
-      messageId: MessageId,
-      totalDurationSecs: Float,
-      endDurationSecs: Float,
-      senderUserId: UserId,
-      durationListeningSecs: Float
-   ) {
-   }
-
    public abstract fun voiceMessagePlaybackFailed(messageId: MessageId, errorMessage: String?) {
-   }
-
-   public abstract fun voiceMessagePlaybackStarted(messageId: MessageId, totalDurationSecs: Float, startDurationSecs: Float, senderUserId: UserId) {
    }
 
    // $VF: Class flags could not be determined
@@ -291,6 +300,31 @@ public interface ChatEventHandler {
    public object Empty : ChatEventHandler {
       public open val onMessageLongPressed: Nothing?
       public open val onMessageTapped: Nothing?
+
+      public override fun mediaAttachmentPlaybackEnded(
+         messageId: MessageId,
+         totalDurationSecs: Float,
+         endDurationSecs: Float,
+         senderUserId: UserId,
+         durationListeningSecs: Float,
+         isVoiceMessage: Boolean,
+         attachmentId: String
+      ) {
+         r.h(var1, "messageId");
+         r.h(var8, "attachmentId");
+      }
+
+      public override fun mediaAttachmentPlaybackStarted(
+         messageId: MessageId,
+         totalDurationSecs: Float,
+         startDurationSecs: Float,
+         senderUserId: UserId,
+         isVoiceMessage: Boolean,
+         attachmentId: String
+      ) {
+         r.h(var1, "messageId");
+         r.h(var7, "attachmentId");
+      }
 
       public override fun onCompleteFirstLayout() {
       }
@@ -364,7 +398,7 @@ public interface ChatEventHandler {
          r.h(var1, "analytics");
       }
 
-      public override fun onScrollStateChanged(scrollState: ScrollState) {
+      public override fun onScrollStateChanged(scrollState: ScrollState, changesetUpdateId: Int) {
          r.h(var1, "scrollState");
       }
 
@@ -637,21 +671,7 @@ public interface ChatEventHandler {
          r.h(var2, "messageId");
       }
 
-      public override fun voiceMessagePlaybackEnded(
-         messageId: MessageId,
-         totalDurationSecs: Float,
-         endDurationSecs: Float,
-         senderUserId: UserId,
-         durationListeningSecs: Float
-      ) {
-         r.h(var1, "messageId");
-      }
-
       public override fun voiceMessagePlaybackFailed(messageId: MessageId, errorMessage: String?) {
-         r.h(var1, "messageId");
-      }
-
-      public override fun voiceMessagePlaybackStarted(messageId: MessageId, totalDurationSecs: Float, startDurationSecs: Float, senderUserId: UserId) {
          r.h(var1, "messageId");
       }
    }

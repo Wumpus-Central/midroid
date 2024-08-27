@@ -93,7 +93,7 @@ public object MarkdownRules {
    public fun <R, S> createMarkdownRules(context: Context, headerStyles: List<Int>): List<Rule<R, Node<R>, S>> {
       r.h(var0, "context");
       r.h(var1, "headerStyles");
-      return h.v0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
+      return h.w0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
    }
 
    public open class HeaderLineClassedRule<RC, T, S>(styleSpanProvider: (Int) -> CharacterStyle,
@@ -106,7 +106,7 @@ public object MarkdownRules {
 
       public constructor(styleSpanProvider: (Int) -> CharacterStyle, classSpanProvider: (String) -> Any?) : r.h(var1, "styleSpanProvider") {
          r.h(var2, "classSpanProvider");
-         this(var1, var2, h.v0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule()));
+         this(var1, var2, h.w0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule()));
       }
 
       init {

@@ -67,17 +67,17 @@ public class InteractionStatusView  public constructor(context: Context, attrs: 
       var14.setVisibility(var4);
       val var15: TextView = this.binding.viewInteractionStatusLabelMessage;
       kotlin.jvm.internal.r.g(this.binding.viewInteractionStatusLabelMessage, "setInteractionStatus_ntcYbpo$lambda$2");
-      val var8: StructurableText = var2.getText();
-      val var9: Context = var15.getContext();
+      val var9: StructurableText = var2.getText();
+      val var8: Context = var15.getContext();
       val var10: FontMetrics = var15.getPaint().getFontMetrics();
       kotlin.jvm.internal.r.g(var10, "paint.fontMetrics");
       val var3: Float = TextUtilsKt.getBaselineHeightPx(var10);
       val var16: TextPaint = var15.getPaint();
-      kotlin.jvm.internal.r.g(var9, "context");
+      kotlin.jvm.internal.r.g(var8, "context");
       kotlin.jvm.internal.r.g(var16, "paint");
       val var11: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var8,
          var9,
+         var8,
          var1,
          false,
          false,

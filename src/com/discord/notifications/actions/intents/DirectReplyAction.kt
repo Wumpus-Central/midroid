@@ -84,8 +84,8 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.getTag().hashCode();
-      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var5: Int = this.getTag().hashCode();
+      val var4: Int = ChannelId.hashCode-impl(this.channelId);
       var var3: Int = 0;
       val var1: Int;
       if (this.channelName == null) {
@@ -105,24 +105,24 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
          var3 = this.guildName.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
       r.h(var1, "context");
       r.h(var2, "intent");
       val var4: java.lang.String = DirectReplyAction.Companion.access$getReplyText(Companion, var2);
-      val var5: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
-      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
-      var3.putString("channelName", this.channelName);
-      var3.putString("channelReplyText", var4);
+      val var3: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var5: Bundle = new Bundle();
+      var5.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var5.putString("channelName", this.channelName);
+      var5.putString("channelReplyText", var4);
       if (this.channelType != null) {
-         var3.putInt("channelType", this.channelType.intValue());
+         var5.putInt("channelType", this.channelType.intValue());
       }
 
-      var3.putString("guildName", this.guildName);
-      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "DirectReply", 0L, false, var3, true, 12, null);
+      var5.putString("guildName", this.guildName);
+      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "DirectReply", 0L, false, var5, true, 12, null);
    }
 
    public override fun onNotificationActionComplete(context: Context) {
@@ -134,24 +134,24 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.getTag();
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.channelName;
+      val var1: java.lang.String = this.getTag();
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.channelName;
       val var6: Int = this.channelType;
-      val var1: java.lang.String = this.guildName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("DirectReplyAction(tag=");
-      var3.append(var5);
-      var3.append(", channelId=");
-      var3.append(var2);
-      var3.append(", channelName=");
-      var3.append(var4);
-      var3.append(", channelType=");
-      var3.append(var6);
-      var3.append(", guildName=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.guildName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("DirectReplyAction(tag=");
+      var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", channelName=");
+      var4.append(var3);
+      var4.append(", channelType=");
+      var4.append(var6);
+      var4.append(", guildName=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {

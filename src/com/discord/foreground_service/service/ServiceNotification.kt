@@ -41,11 +41,11 @@ internal object ServiceNotification {
 
       val var8: Builder = var4.v(var7).S(drawable.ic_notification_24dp).J(true).R(true);
 
-      for (ServiceNotificationConfiguration.Action var9 : var2.getAuxiliaryActions()) {
+      for (ServiceNotificationConfiguration.Action var6 : var2.getAuxiliaryActions()) {
          var8.a(
             0,
-            var9.getTitle(),
-            DefaultImpls.toPendingIntent$default(new GenericAction(var9.getTag(), var9.getTaskName(), var9.getData()), var1, 0, false, 2, null)
+            var6.getTitle(),
+            DefaultImpls.toPendingIntent$default(new GenericAction(var6.getTag(), var6.getTaskName(), var6.getData()), var1, 0, false, 2, null)
          );
       }
 
@@ -66,18 +66,18 @@ internal object ServiceNotification {
       r.h(var1, "<this>");
       r.h(var2, "context");
       r.h(var3, "serviceNotificationConfigurations");
-      var3 = h.D0(var3, new Comparator() {
+      var3 = h.E0(var3, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var1 as ServiceNotificationConfiguration).getPriority(), (var2 as ServiceNotificationConfiguration).getPriority());
          }
       });
-      var var6: ServiceNotificationConfiguration = h.Z(var3) as ServiceNotificationConfiguration;
-      var3 = h.R(var3, 1);
+      var var6: ServiceNotificationConfiguration = h.a0(var3) as ServiceNotificationConfiguration;
+      var3 = h.S(var3, 1);
       ForegroundServiceUtilsKt.startForegroundCompat(var1, 8761, this.buildNotification(var2, var6));
 
       for (int var4 = 0; var4 < 6; var4++) {
-         var6 = h.c0(var3, var4) as ServiceNotificationConfiguration;
+         var6 = h.d0(var3, var4) as ServiceNotificationConfiguration;
          if (var6 != null) {
             val var10: Notification = this.buildNotification(var2, var6);
             val var5: Boolean;

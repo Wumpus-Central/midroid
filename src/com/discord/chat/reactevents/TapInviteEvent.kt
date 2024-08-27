@@ -89,8 +89,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.messageId.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
+      val var4: Int = this.messageId.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -103,7 +103,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    fun serialize(): WritableMap {
@@ -111,19 +111,19 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var4: java.lang.Boolean = this.primary;
-      val var2: java.lang.Boolean = this.secondary;
+      val var2: java.lang.Boolean = this.primary;
+      val var3: java.lang.Boolean = this.secondary;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapInviteEvent(messageId=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(", index=");
       var5.append(var1);
       var5.append(", primary=");
-      var5.append(var4);
-      var5.append(", secondary=");
       var5.append(var2);
+      var5.append(", secondary=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -156,28 +156,27 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          r.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: java.lang.String;
          var var7: Any;
          var var12: Any;
          if (var10.p()) {
             var6 = var10.m(var9, 0);
-            val var2: Int = var10.i(var9, 1);
+            var3 = var10.i(var9, 1);
             var12 = h.a;
             var7 = var10.n(var9, 2, h.a, null);
             var12 = var10.n(var9, 3, (DeserializationStrategy)var12, null);
-            var3 = 15;
-            var4 = var2;
+            var2 = 15;
          } else {
-            var var15: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
             var7 = null;
             var6 = null;
             var12 = null;
-            var var13: Int = 0;
+            var2 = 0;
 
-            while (var15) {
+            while (var4) {
                val var5: Int = var10.o(var9);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -188,32 +187,30 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
                            }
 
                            var12 = var10.n(var9, 3, h.a, var12);
-                           var13 |= 8;
+                           var2 |= 8;
                         } else {
                            var6 = (java.lang.String)var10.n(var9, 2, h.a, var6);
-                           var13 |= 4;
+                           var2 |= 4;
                         }
                      } else {
                         var3 = var10.i(var9, 1);
-                        var13 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var7 = var10.m(var9, 0);
-                     var13 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var4 = false;
                }
             }
 
-            var7 = var6;
-            var4 = var3;
             var6 = (java.lang.String)var7;
-            var3 = var13;
+            var7 = var6;
          }
 
          var10.c(var9);
-         return new TapInviteEvent(var3, var6, var4, var7 as java.lang.Boolean, var12 as java.lang.Boolean, null);
+         return new TapInviteEvent(var2, var6, var3, var7 as java.lang.Boolean, var12 as java.lang.Boolean, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInviteEvent) {

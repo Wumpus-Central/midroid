@@ -32,8 +32,6 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       descriptionHint: String?,
       useNewAltTextButton: Boolean,
       onAltTextButtonClicked: ((String) -> Unit)?,
-      maxWidthPx: Int,
-      maxHeightPx: Int,
       radiusPx: Int,
       resizeMode: ResizeMode,
       isPartOfMosaic: Boolean,
@@ -45,14 +43,14 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       filename: String?
    ) {
       kotlin.jvm.internal.r.h(var1, "url");
-      kotlin.jvm.internal.r.h(var18, "resizeMode");
-      this.view.setContent(var1, var2, var3, var16, var15, var18, var4, var5, var6, var7, var17, var22, var8, var9, var19, var24, var25);
-      if (var20 != null) {
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.view, false, var20, 1, null);
+      kotlin.jvm.internal.r.h(var16, "resizeMode");
+      this.view.setContent(var1, var2, var3, var16, var4, var5, var6, var7, var15, var20, var8, var9, var17, var22, var23);
+      if (var18 != null) {
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.view, false, var18, 1, null);
       }
 
-      if (var21 != null) {
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.view, false, var21, 1, null);
+      if (var19 != null) {
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.view, false, var19, 1, null);
       }
 
       this.view.setDescription(var11, var12);
@@ -70,6 +68,6 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       }
 
       this.view.showDescription(var6, var11);
-      this.view.setRole(var23);
+      this.view.setRole(var21);
    }
 }

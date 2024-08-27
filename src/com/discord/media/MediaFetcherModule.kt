@@ -51,7 +51,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
    public fun getPhotos(params: ReadableMap, promise: Promise) {
       r.h(var1, "params");
       r.h(var2, "promise");
-      val var4: Int = var1.getInt("first");
+      val var3: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
          var5 = var1.getInt("offset");
@@ -61,30 +61,30 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
       val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
-      var var3: Int;
+      var var4: Int;
       try {
-         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var12: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var12, "reactApplicationContext");
-         var16 = h.F0(h.D0(var7.getMedia(var12, var6, var4, var5), new Comparator() {
+         val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var7: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var7, "reactApplicationContext");
+         var16 = h.G0(h.E0(var12.getMedia(var7, var6, var3, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
-         }), var4);
-         var3 = var16.size();
+         }), var3);
+         var4 = var16.size();
       } catch (var11: Exception) {
          var2.reject("E_UNABLE_TO_LOAD", var11);
          return;
       }
 
       val var14: WritableNativeMap;
-      if (var3 == var4) {
+      if (var4 == var3) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
                new Pair[]{
-                  w.a("start_cursor", java.lang.String.valueOf((h.Z(var16) as ContentResolverMedia).getUri())),
-                  w.a("end_cursor", java.lang.String.valueOf((h.l0(var16) as ContentResolverMedia).getUri())),
+                  w.a("start_cursor", java.lang.String.valueOf((h.a0(var16) as ContentResolverMedia).getUri())),
+                  w.a("end_cursor", java.lang.String.valueOf((h.m0(var16) as ContentResolverMedia).getUri())),
                   w.a("has_next_page", java.lang.Boolean.TRUE)
                }
             );

@@ -115,21 +115,21 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = UserId.toString-impl(this.userId);
-      val var3: java.lang.String = this.avatar;
+      val var4: java.lang.String = UserId.toString-impl(this.userId);
+      val var5: java.lang.String = this.avatar;
       val var2: Boolean = this.speaking;
       val var1: Int = this.discriminator;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MobileVoiceOverlayDataUser(userId=");
-      var4.append(var5);
-      var4.append(", avatar=");
-      var4.append(var3);
-      var4.append(", speaking=");
-      var4.append(var2);
-      var4.append(", discriminator=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MobileVoiceOverlayDataUser(userId=");
+      var3.append(var4);
+      var3.append(", avatar=");
+      var3.append(var5);
+      var3.append(", speaking=");
+      var3.append(var2);
+      var3.append(", discriminator=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<MobileVoiceOverlayDataUser> {

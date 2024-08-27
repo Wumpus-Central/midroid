@@ -3,18 +3,18 @@ package com.discord.chat.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.InlineForwardButtonView;
-import com.discord.chat.presentation.message.view.mosaic.AttachmentMediaMosaicView;
 import n1.a;
 
 public final class AttachmentMediaMosaicContainerViewBinding implements ViewBinding {
    public final InlineForwardButtonView forward;
-   public final AttachmentMediaMosaicView mosaic;
+   public final RecyclerView mosaic;
    private final View rootView;
 
-   private AttachmentMediaMosaicContainerViewBinding(View var1, InlineForwardButtonView var2, AttachmentMediaMosaicView var3) {
+   private AttachmentMediaMosaicContainerViewBinding(View var1, InlineForwardButtonView var2, RecyclerView var3) {
       this.rootView = var1;
       this.forward = var2;
       this.mosaic = var3;
@@ -22,12 +22,12 @@ public final class AttachmentMediaMosaicContainerViewBinding implements ViewBind
 
    public static AttachmentMediaMosaicContainerViewBinding bind(View var0) {
       int var1 = R.id.forward;
-      InlineForwardButtonView var2 = (InlineForwardButtonView)a.a(var0, var1);
-      if (var2 != null) {
+      InlineForwardButtonView var3 = (InlineForwardButtonView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.mosaic;
-         AttachmentMediaMosaicView var3 = (AttachmentMediaMosaicView)a.a(var0, var1);
-         if (var3 != null) {
-            return new AttachmentMediaMosaicContainerViewBinding(var0, var2, var3);
+         RecyclerView var2 = (RecyclerView)a.a(var0, var1);
+         if (var2 != null) {
+            return new AttachmentMediaMosaicContainerViewBinding(var0, var3, var2);
          }
       }
 

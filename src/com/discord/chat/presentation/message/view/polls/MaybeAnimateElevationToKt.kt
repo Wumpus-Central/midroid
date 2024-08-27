@@ -33,12 +33,12 @@ public fun View.maybeAnimateElevationTo(tagValue: String, newElevation: Float) {
 
 public fun View.maybeEndAnimation() {
    r.h(var0, "<this>");
-   val var1: AnimateElevationContext = getTagObject(var0);
-   if (var1 != null) {
-      val var2: ObjectAnimator = var1.getAnimator();
-      if (var2 != null) {
-         var2.cancel();
-         var0.setElevation(var1.getElevation());
+   val var2: AnimateElevationContext = getTagObject(var0);
+   if (var2 != null) {
+      val var1: ObjectAnimator = var2.getAnimator();
+      if (var1 != null) {
+         var1.cancel();
+         var0.setElevation(var2.getElevation());
       }
    }
 }

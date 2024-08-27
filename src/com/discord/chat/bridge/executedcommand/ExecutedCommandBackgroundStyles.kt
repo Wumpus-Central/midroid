@@ -173,18 +173,18 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
 
       public open fun deserialize(decoder: Decoder): ExecutedCommandBackgroundStyles {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var6: Any = null;
          var var2: Int;
          var var7: Any;
          var var11: Any;
          if (var5) {
-            var6 = m0.a;
-            var11 = var10.n(var9, 0, m0.a, null);
-            var7 = var10.n(var9, 1, (DeserializationStrategy)var6, null);
-            var6 = var10.n(var9, 2, h.a, null);
+            var11 = m0.a;
+            var6 = var9.n(var8, 0, m0.a, null);
+            var7 = var9.n(var8, 1, (DeserializationStrategy)var11, null);
+            var11 = var9.n(var8, 2, h.a, null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
@@ -193,7 +193,7 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
             var11 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -201,27 +201,24 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
                            throw new n(var4);
                         }
 
-                        var11 = var10.n(var9, 2, h.a, var11);
+                        var11 = var9.n(var8, 2, h.a, var11);
                         var2 |= 4;
                      } else {
-                        var7 = var10.n(var9, 1, m0.a, var7);
+                        var7 = var9.n(var8, 1, m0.a, var7);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var10.n(var9, 0, m0.a, var6);
+                     var6 = var9.n(var8, 0, m0.a, var6);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var11 = var6;
-            var6 = var11;
          }
 
-         var10.c(var9);
-         return new ExecutedCommandBackgroundStyles(var2, var11 as Integer, var7 as Integer, var6 as java.lang.Boolean, null);
+         var9.c(var8);
+         return new ExecutedCommandBackgroundStyles(var2, var6 as Int, var7 as Int, var11 as java.lang.Boolean, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ExecutedCommandBackgroundStyles) {

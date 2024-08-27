@@ -130,17 +130,17 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
          val var5: Boolean = var10.p();
          var var7: Any = null;
          var var2: Int;
-         val var8: java.lang.String;
+         var var6: java.lang.String;
          val var11: java.lang.String;
          if (var5) {
             var7 = var10.y(var9, 0, StructurableTextSerializer.INSTANCE, null);
             var11 = var10.m(var9, 1);
-            var8 = var10.m(var9, 2);
+            var6 = var10.m(var9, 2);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var6: java.lang.String = null;
+            var6 = null;
             var var12: java.lang.String = null;
 
             while (var3) {
@@ -167,12 +167,12 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
                }
             }
 
-            var8 = var12;
+            var6 = var12;
             var11 = var6;
          }
 
          var10.c(var9);
-         return new EphemeralIndication(var2, var7 as StructurableText, var11, var8, null);
+         return new EphemeralIndication(var2, var7 as StructurableText, var11, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EphemeralIndication) {

@@ -63,7 +63,7 @@ public class OkHttpDNSSelector(mode: com.discord.utils.OkHttpDNSSelector.IPvMode
                }
             }
          } else {
-            var5 = h.D0((java.lang.Iterable)var5, new Comparator() {
+            var5 = h.E0((java.lang.Iterable)var5, new Comparator() {
                @Override
                public final int compare(T var1, T var2) {
                   return a.d(Inet6Address.class.isInstance(var1 as InetAddress), Inet6Address.class.isInstance(var2 as InetAddress));
@@ -71,7 +71,7 @@ public class OkHttpDNSSelector(mode: com.discord.utils.OkHttpDNSSelector.IPvMode
             });
          }
       } else {
-         var5 = h.D0((java.lang.Iterable)var5, new Comparator() {
+         var5 = h.E0((java.lang.Iterable)var5, new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d(Inet4Address.class.isInstance(var1 as InetAddress), Inet4Address.class.isInstance(var2 as InetAddress));

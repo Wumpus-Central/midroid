@@ -85,7 +85,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
       var5[0] = var4;
       val var8: Array<java.util.List> = this.dataSets;
       val var6: java.util.List = var1.getTrailing();
-      var6.set(h.k(var6), h.l0(this.coreData.getTrailing()));
+      var6.set(h.k(var6), h.m0(this.coreData.getTrailing()));
       var8[3] = var6;
       if (var1.getHasSearchData()) {
          this.dataSets[1] = h.i();
@@ -116,7 +116,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
    public fun setSpacerBottomHeight(spacerBottomHeight: Int, onChanged: (Int) -> Unit) {
       r.h(var2, "onChanged");
-      val var3: Any = h.l0(this.coreData.getTrailing());
+      val var3: Any = h.m0(this.coreData.getTrailing());
       r.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
       if ((var3 as EmojiPickerItem.Spacer).getHeight() != var1) {
          this.coreData.getTrailing().set(h.k(this.coreData.getTrailing()), new EmojiPickerItem.Spacer("bottom", var1));
@@ -126,7 +126,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
    public fun setSpacerTopHeight(spacerTopHeight: Int, onChanged: (Int) -> Unit) {
       r.h(var2, "onChanged");
-      val var3: Any = h.Z(this.coreData.getLeading());
+      val var3: Any = h.a0(this.coreData.getLeading());
       r.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
       if ((var3 as EmojiPickerItem.Spacer).getHeight() != var1) {
          this.coreData.getLeading().set(0, new EmojiPickerItem.Spacer("top", var1));
@@ -152,7 +152,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    ) {
       public final val categoryIndices: MutableMap<Long, Int>
          public final get() {
-            return this.categoryIndices$delegate.getValue() as java.util.Map<java.lang.Long, Integer>;
+            return this.categoryIndices$delegate.getValue() as MutableMap<java.lang.Long, Int>;
          }
 
 

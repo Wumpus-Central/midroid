@@ -36,11 +36,11 @@ public data class DeserializationErrorMessageItem(message: ErrorMessage) : ChatL
    }
 
    public override fun toString(): String {
-      val var1: ErrorMessage = this.message;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DeserializationErrorMessageItem(message=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: ErrorMessage = this.message;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("DeserializationErrorMessageItem(message=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

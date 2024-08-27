@@ -82,10 +82,10 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
    }
 
    private fun setCacheValue(key: String, value: String?) {
-      val var4: Companion = CacheModule.Companion;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
-      val var5: CacheModule = var4.get(var3);
+      val var3: Companion = CacheModule.Companion;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var4, "reactApplicationContext");
+      val var5: CacheModule = var3.get(var4);
       if (var2 == null) {
          var5.removeItem(var1);
       } else {
@@ -93,20 +93,17 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
       }
    }
 
-   public open fun getConstants(): MutableMap<String, out Any?> {
+   public open fun getConstants(): MutableMap<String, String?> {
       val var1: Companion = CacheModule.Companion;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
       r.g(var2, "reactApplicationContext");
-      val var6: Pair = w.a("clientState", var1.get(var2).getItem("_clientStateKey"));
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      val var5: Pair = w.a("clientState", var1.get(var2).getItem("_clientStateKey"));
+      var var3: ReactApplicationContext = this.getReactApplicationContext();
       r.g(var3, "reactApplicationContext");
-      val var7: Pair = w.a("userId", var1.get(var3).getItem("_userIdKey"));
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var4, "reactApplicationContext");
-      val var8: Pair = w.a("token", CacheModule.getToken$default(var1.get(var4), false, 1, null));
-      val var5: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var5, "reactApplicationContext");
-      return s.m(new Pair[]{var6, var7, var8, w.a("useZstdForFastConnect", r.c(var1.get(var5).getItem("_useZstd"), "true"))});
+      val var4: Pair = w.a("userId", var1.get(var3).getItem("_userIdKey"));
+      var3 = this.getReactApplicationContext();
+      r.g(var3, "reactApplicationContext");
+      return s.m(new Pair[]{var5, var4, w.a("token", CacheModule.getToken$default(var1.get(var3), false, 1, null))});
    }
 
    public open fun getName(): String {
@@ -143,14 +140,5 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
    public fun setClientState(userId: String?, clientState: String?) {
       this.setCacheValue("_userIdKey", var1);
       this.setCacheValue("_clientStateKey", var2);
-   }
-
-   @ReactMethod
-   public fun setUseZstd(useZstd: Boolean) {
-      if (var1) {
-         this.setCacheValue("_useZstd", "true");
-      } else {
-         this.setCacheValue("_useZstd", "false");
-      }
    }
 }

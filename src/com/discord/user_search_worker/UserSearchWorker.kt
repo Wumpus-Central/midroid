@@ -284,10 +284,10 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         throw new p();
                      }
 
-                     var31 = h.u0(h.l(var28.getUsername(), var28.getGlobalName(), var28.getFriendNickname()), var28.getNicknames().values());
+                     var31 = h.v0(h.l(var28.getUsername(), var28.getGlobalName(), var28.getFriendNickname()), var28.getNicknames().values());
                   }
 
-                  val var36: java.util.Iterator = h.W(var31).iterator();
+                  val var36: java.util.Iterator = h.X(var31).iterator();
                   var var35: UserSearchWorkerResult = null;
                   val var32: Regex = var24;
                   val var7: Boolean = var6;
@@ -324,7 +324,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
             }
          }
 
-         this.onResults.invoke(h.F0(h.D0(var11, a.b(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE)), var2.getLimit()), var14, var1);
+         this.onResults.invoke(h.G0(h.E0(var11, a.b(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE)), var2.getLimit()), var14, var1);
       }
    }
 

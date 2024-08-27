@@ -17,7 +17,7 @@ public object CookieValidator {
       if (var1 == null) {
          return null;
       } else {
-         val var8: java.lang.String = h.c0(f.A0(var1.g(), new java.lang.String[]{"."}, false, 0, 6, null), 1) as java.lang.String;
+         val var8: java.lang.String = h.d0(f.A0(var1.g(), new java.lang.String[]{"."}, false, 0, 6, null), 1) as java.lang.String;
          if (var8 == null) {
             return null;
          } else {

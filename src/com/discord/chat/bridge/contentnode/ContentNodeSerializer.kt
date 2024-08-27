@@ -28,7 +28,7 @@ public object ContentNodeSerializer : KSerializer<ContentNode> {
 
          val var2: JsonElement = (var1 as e).g();
          if (var2 is JsonPrimitive) {
-            var4 = new TextContentNode((var2 as JsonPrimitive).j());
+            var4 = new TextContentNode((var2 as JsonPrimitive).e());
          } else {
             var4 = (var1 as e).d().d(ContentNodeKt.access$getSealedClassSerializer$p(), var2) as ContentNode;
          }

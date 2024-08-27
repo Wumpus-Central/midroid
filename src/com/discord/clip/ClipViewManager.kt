@@ -49,29 +49,29 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          if (var4 != null) {
-            val var6: java.util.Iterator = var4.iterator();
+            val var7: java.util.Iterator = var4.iterator();
 
-            while (var6.hasNext()) {
-               val var7: ReadableMap = var2.getMap((var6 as p).nextInt());
-               r.g(var7, "cutouts.getMap(index)");
-               val var5: java.lang.String = var7.getString("shape");
+            while (var7.hasNext()) {
+               val var6: ReadableMap = var2.getMap((var7 as p).nextInt());
+               r.g(var6, "cutouts.getMap(index)");
+               val var5: java.lang.String = var6.getString("shape");
                if (var5 != null) {
                   val var3: Int = var5.hashCode();
                   if (var3 != -1360216880) {
                      if (var3 == 2002554116 && var5.equals("rounded-rect")) {
                         var1.addRoundedRectCutout(
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("x")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("y")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("width")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("height")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("cornerRadius"))
+                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("width")),
+                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("height")),
+                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("cornerRadius"))
                         );
                      }
                   } else if (var5.equals("circle")) {
                      var1.addCircleCutout(
-                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("x")),
-                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("y")),
-                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("size"))
+                        (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                        (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                        (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("size"))
                      );
                   }
                }

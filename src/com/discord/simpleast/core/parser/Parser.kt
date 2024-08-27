@@ -141,7 +141,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
       val var16: java.util.Collection = var9.getChildren();
       var var17: Any;
       if (var16 != null) {
-         var17 = h.O0(var16);
+         var17 = h.P0(var16);
       } else {
          var17 = null;
       }

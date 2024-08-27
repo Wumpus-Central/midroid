@@ -28,13 +28,13 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var3: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var3;
-      val var4: FrameLayout = var3.iconContainer;
-      kotlin.jvm.internal.r.g(var3.iconContainer, "binding.iconContainer");
-      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(8));
-      (var3.iconButton.getHierarchy() as GenericDraweeHierarchy).w(0);
+      val var4: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var4, "inflate(LayoutInflater.from(context), this)");
+      this.binding = var4;
+      val var3: FrameLayout = var4.iconContainer;
+      kotlin.jvm.internal.r.g(var4.iconContainer, "binding.iconContainer");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
+      (var4.iconButton.getHierarchy() as GenericDraweeHierarchy).w(0);
    }
 
    @JvmStatic

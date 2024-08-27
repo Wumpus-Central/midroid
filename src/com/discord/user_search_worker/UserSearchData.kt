@@ -27,7 +27,7 @@ internal sealed class UserSearchData protected constructor() {
             if (var3 != null) {
                val var5: JsonPrimitive = g.p(var3);
                if (var5 != null) {
-                  var6 = var5.j();
+                  var6 = var5.e();
                   break label34;
                }
             }

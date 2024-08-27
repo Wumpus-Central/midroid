@@ -54,13 +54,13 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
 
    public fun configureUI(user: MobileVoiceOverlayDataUser) {
       r.h(var1, "user");
-      val var2: SimpleDraweeView = this.binding.overlayBubbleIv;
+      val var4: SimpleDraweeView = this.binding.overlayBubbleIv;
       val var3: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var4: Context = this.getContext();
-      r.g(var4, "context");
-      var2.setImageURI(
+      val var2: Context = this.getContext();
+      r.g(var2, "context");
+      var4.setImageURI(
          IconUrlUtils.getForUser-_fRzTXg$default(
-            var3, var4, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
+            var3, var2, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
          )
       );
       if (var1.getSpeaking()) {
@@ -88,7 +88,7 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
 
    public override fun setData(data: MobileVoiceOverlayData) {
       r.h(var1, "data");
-      val var2: MobileVoiceOverlayDataUser = kotlin.collections.h.b0(var1.getUsers()) as MobileVoiceOverlayDataUser;
+      val var2: MobileVoiceOverlayDataUser = kotlin.collections.h.c0(var1.getUsers()) as MobileVoiceOverlayDataUser;
       if (var2 != null) {
          this.configureUI(var2);
       }

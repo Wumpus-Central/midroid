@@ -36,54 +36,60 @@ public object JSWatchdogManager {
       freezeTimer = null;
    }
 
-   private fun saveStallReport(stallTime: Int, sessionId: String) {
+   private fun saveStallReport(stallTime: Int, sessionId: String, enableTrace: Boolean) {
       if (storage != null) {
-         var var5: JSWatchdogStorage = null;
-         var var4: JSWatchdogStorage = storage;
-         if (storage == null) {
-            r.y("storage");
-            var4 = null;
-         }
+         var var6: JSWatchdogStorage;
+         var var10: java.lang.String;
+         label38: {
+            var6 = null;
+            if (var3) {
+               var var5: JSWatchdogStorage = storage;
+               if (storage == null) {
+                  r.y("storage");
+                  var5 = null;
+               }
 
-         val var8: java.lang.String = var4.getTrace();
-         val var3: Boolean;
-         if (var8 != null && var8.length() != 0) {
-            var3 = false;
-         } else {
-            var3 = true;
-         }
+               var10 = var5.getTrace();
+               val var4: Boolean;
+               if (var10 != null && var10.length() != 0) {
+                  var4 = false;
+               } else {
+                  var4 = true;
+               }
 
-         val var10: java.lang.String;
-         if (var3) {
-            var var9: File = cacheDir;
-            if (cacheDir == null) {
-               r.y("cacheDir");
-               var9 = null;
+               if (var4) {
+                  var var11: File = cacheDir;
+                  if (cacheDir == null) {
+                     r.y("cacheDir");
+                     var11 = null;
+                  }
+
+                  var10 = HermesSamplingProfilerUtil.INSTANCE.findSampleTrace(var11);
+                  break label38;
+               }
             }
 
-            var10 = HermesSamplingProfilerUtil.INSTANCE.findSampleTrace(var9);
-         } else {
             var10 = null;
          }
 
          if (storage == null) {
             r.y("storage");
          } else {
-            var5 = storage;
+            var6 = storage;
          }
 
-         var5.update(var1, var2, var10);
+         var6.update(var1, var2, var10);
       }
    }
 
-   private fun updateStallTime(sentTimestamp: Long, sessionId: String) {
+   private fun updateStallTime(sentTimestamp: Long, sessionId: String, enableTrace: Boolean) {
       var1 = System.currentTimeMillis() - var1 - 500;
       val var5: Log = Log.INSTANCE;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("updateStallTime: ");
-      var4.append(var1);
-      Log.i$default(var5, "JSWatchdogManager", var4.toString(), null, 4, null);
-      this.saveStallReport((int)var1, var3);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("updateStallTime: ");
+      var6.append(var1);
+      Log.i$default(var5, "JSWatchdogManager", var6.toString(), null, 4, null);
+      this.saveStallReport((int)var1, var3, var4);
    }
 
    public fun checkForExistingReport(): StallReport? {
@@ -130,19 +136,17 @@ public object JSWatchdogManager {
       }
    }
 
-   public fun ping(resetTimestamps: Boolean, sentTimestamp: Long, sessionId: String, promise: Promise) {
+   public fun ping(resetTimestamps: Boolean, sentTimestamp: Long, sessionId: String, enableTrace: Boolean, promise: Promise) {
       r.h(var4, "sessionId");
-      r.h(var5, "promise");
+      r.h(var6, "promise");
       this.cancelExistingJobs();
       pingCoroutineJob = f.d(
          w0.j,
          null,
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var2, var5, var4, null)// $VF: Couldn't be decompiled
+         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var2, var6, var4, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.String.substring(String.java:2807)
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:105)
    //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
@@ -1165,6 +1169,8 @@ public object JSWatchdogManager {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null

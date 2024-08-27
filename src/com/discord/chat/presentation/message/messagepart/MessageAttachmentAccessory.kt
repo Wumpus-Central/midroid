@@ -27,13 +27,13 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
 
    public fun getUploadItemProps(onCancelUploadItem: (String, String) -> Unit): UploadItemProps? {
       r.h(var1, "onCancelUploadItem");
-      val var4: java.lang.String = this.getAttachment().getUploaderId();
-      val var5: java.lang.String = this.getAttachment().getUploaderItemId();
-      val var2: Int = this.getAttachment().getProgress();
-      val var3: java.lang.Float = this.getAttachmentsOpacity();
-      if (var4 != null && var5 != null && var2 != null && var3 != null) {
-         val var6: UploadContext = new UploadContext(var4, var5);
-         return new UploadItemProps(var2, var6, var3, new Function0<Unit>(var1, var6) {
+      val var5: java.lang.String = this.getAttachment().getUploaderId();
+      val var4: java.lang.String = this.getAttachment().getUploaderItemId();
+      val var3: Int = this.getAttachment().getProgress();
+      val var2: java.lang.Float = this.getAttachmentsOpacity();
+      if (var5 != null && var4 != null && var3 != null && var2 != null) {
+         val var6: UploadContext = new UploadContext(var5, var4);
+         return new UploadItemProps(var3, var6, var2, new Function0<Unit>(var1, var6) {
             final Function2<java.lang.String, java.lang.String, Unit> $onCancelUploadItem;
             final UploadContext $uploadContext;
 
@@ -56,23 +56,23 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
          var var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            val var5: java.lang.String = var1.getUploaderId();
-            var3 = var1.getUploaderItemId();
+            var3 = var1.getUploaderId();
+            val var5: java.lang.String = var1.getUploaderItemId();
             val var4: StringBuilder = new StringBuilder();
-            var4.append(var5);
-            var4.append(" ");
             var4.append(var3);
+            var4.append(" ");
+            var4.append(var5);
             var3 = var4.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);
          }
 
-         val var8: java.lang.String = var1.type().getIndexLabel();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var8);
-         var6.append(" ");
-         var6.append(var3);
-         return var6.toString();
+         val var6: java.lang.String = var1.type().getIndexLabel();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append(var6);
+         var8.append(" ");
+         var8.append(var3);
+         return var8.toString();
       }
    }
 }

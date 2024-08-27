@@ -3,24 +3,24 @@ package com.discord.chat.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import com.discord.chat.presentation.message.view.botuikit.components.MediaGalleryDisplayComponentView;
-import com.discord.chat.presentation.message.view.mosaic.MediaGalleryComponentMediaMosaicView;
+import com.discord.chat.presentation.message.view.botuikit.components.media_gallery.MediaGalleryDisplayComponentView;
 import n1.a;
 
 public final class MessageComponentMediaGalleryDisplayViewBinding implements ViewBinding {
-   public final MediaGalleryComponentMediaMosaicView mosaic;
+   public final RecyclerView mosaic;
    private final MediaGalleryDisplayComponentView rootView;
 
-   private MessageComponentMediaGalleryDisplayViewBinding(MediaGalleryDisplayComponentView var1, MediaGalleryComponentMediaMosaicView var2) {
+   private MessageComponentMediaGalleryDisplayViewBinding(MediaGalleryDisplayComponentView var1, RecyclerView var2) {
       this.rootView = var1;
       this.mosaic = var2;
    }
 
    public static MessageComponentMediaGalleryDisplayViewBinding bind(View var0) {
       int var1 = R.id.mosaic;
-      MediaGalleryComponentMediaMosaicView var2 = (MediaGalleryComponentMediaMosaicView)a.a(var0, var1);
+      RecyclerView var2 = (RecyclerView)a.a(var0, var1);
       if (var2 != null) {
          return new MessageComponentMediaGalleryDisplayViewBinding((MediaGalleryDisplayComponentView)var0, var2);
       } else {

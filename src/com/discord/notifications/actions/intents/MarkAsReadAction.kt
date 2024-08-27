@@ -71,11 +71,11 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    public override fun onNotificationAction(context: Context, intent: Intent) {
       r.h(var1, "context");
       r.h(var2, "intent");
-      val var4: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
-      var3.putString("channelId", ChannelId.toString-impl(this.channelId));
-      var3.putString("messageId", MessageId.toString-impl(this.messageId));
-      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MarkAsRead", 0L, false, var3, true, 12, null);
+      val var3: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
+      var4.putString("channelId", ChannelId.toString-impl(this.channelId));
+      var4.putString("messageId", MessageId.toString-impl(this.messageId));
+      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "MarkAsRead", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -88,17 +88,17 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
 
    public override fun toString(): String {
       val var2: java.lang.String = this.getTag();
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MarkAsReadAction(tag=");
-      var3.append(var2);
-      var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(", messageId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MarkAsReadAction(tag=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var3);
+      var4.append(", messageId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {

@@ -152,15 +152,15 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       }
 
       public override fun toString(): String {
-         val var2: RecyclerView = this.recyclerView;
+         val var3: RecyclerView = this.recyclerView;
          val var1: Float = this.velocity;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("VelocityEvent(recyclerView=");
-         var3.append(var2);
-         var3.append(", velocity=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("VelocityEvent(recyclerView=");
+         var2.append(var3);
+         var2.append(", velocity=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

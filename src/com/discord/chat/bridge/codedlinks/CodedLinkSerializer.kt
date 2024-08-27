@@ -17,7 +17,7 @@ public object CodedLinkSerializer : d(h0.b(CodedLinkEmbed.class)) {
          if (var1 != null) {
             val var3: JsonPrimitive = g.p(var1);
             if (var3 != null) {
-               var4 = var3.j();
+               var4 = var3.e();
                break label26;
             }
          }

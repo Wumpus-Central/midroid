@@ -237,70 +237,70 @@ public data class VoiceInviteEmbed(guildId: String,
          var var9: java.lang.String;
          var var10: java.lang.String;
          var var11: Any;
-         var var15: java.lang.String;
-         var var19: java.lang.String;
+         val var15: java.lang.String;
+         var var21: java.lang.String;
          if (var14.p()) {
-            var19 = var14.m(var13, 0);
+            var21 = var14.m(var13, 0);
             var9 = var14.m(var13, 1);
             val var12: java.lang.String = var14.m(var13, 2);
-            var7 = var14.m(var13, 3);
-            var15 = var14.m(var13, 4);
+            var15 = var14.m(var13, 3);
+            var7 = var14.m(var13, 4);
             var11 = var14.n(var13, 5, a2.a, null);
             val var2: Byte = var14.C(var13, 6);
             var6 = var14.C(var13, 7);
             var3 = 255;
-            var10 = var19;
-            var19 = var12;
+            var10 = var21;
+            var21 = var12;
             var4 = var2;
          } else {
-            var var18: Boolean = true;
+            var var19: Boolean = true;
             var6 = false;
-            var var16: Int = 0;
+            var var17: Int = 0;
             var10 = null;
             var9 = null;
-            var19 = null;
+            var21 = null;
             var7 = null;
-            var15 = null;
+            var var16: java.lang.String = null;
             var11 = null;
             var3 = 0;
 
-            while (var18) {
+            while (var19) {
                val var5: Int = var14.o(var13);
                switch (var5) {
                   case -1:
-                     var18 = false;
+                     var19 = false;
                      break;
                   case 0:
                      var10 = var14.m(var13, 0);
-                     var16 |= 1;
+                     var17 |= 1;
                      break;
                   case 1:
                      var9 = var14.m(var13, 1);
-                     var16 |= 2;
+                     var17 |= 2;
                      break;
                   case 2:
-                     var19 = var14.m(var13, 2);
-                     var16 |= 4;
+                     var21 = var14.m(var13, 2);
+                     var17 |= 4;
                      break;
                   case 3:
                      var7 = var14.m(var13, 3);
-                     var16 |= 8;
+                     var17 |= 8;
                      break;
                   case 4:
-                     var15 = var14.m(var13, 4);
-                     var16 |= 16;
+                     var16 = var14.m(var13, 4);
+                     var17 |= 16;
                      break;
                   case 5:
                      var11 = var14.n(var13, 5, a2.a, var11);
-                     var16 |= 32;
+                     var17 |= 32;
                      break;
                   case 6:
                      var3 = var14.C(var13, 6);
-                     var16 |= 64;
+                     var17 |= 64;
                      break;
                   case 7:
                      var6 = var14.C(var13, 7);
-                     var16 |= 128;
+                     var17 |= 128;
                      break;
                   default:
                      throw new n(var5);
@@ -308,11 +308,13 @@ public data class VoiceInviteEmbed(guildId: String,
             }
 
             var4 = var3;
-            var3 = var16;
+            var7 = var16;
+            var15 = var7;
+            var3 = var17;
          }
 
          var14.c(var13);
-         return new VoiceInviteEmbed(var3, var10, var9, var19, var7, var15, var11 as java.lang.String, (boolean)var4, var6, null);
+         return new VoiceInviteEmbed(var3, var10, var9, var21, var15, var7, var11 as java.lang.String, (boolean)var4, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceInviteEmbed) {

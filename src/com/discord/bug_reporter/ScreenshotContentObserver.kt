@@ -39,7 +39,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          var3 = new java.lang.String[]{"_data"};
       }
 
-      return b.q(b.q(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as java.lang.String[];
+      return b.q(b.q(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
    }
 
    @SuppressLint(["Range"])

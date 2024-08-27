@@ -32,5 +32,5 @@ public abstract class NativeJSWatchdogSpec extends ReactContextBaseJavaModule im
 
    @ReactMethod
    @a
-   public abstract void ping(double var1, String var3, Boolean var4, Promise var5);
+   public abstract void ping(double var1, String var3, Boolean var4, Boolean var5, Promise var6);
 }

@@ -40,7 +40,7 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
    val var3: Builder = var1.P(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .T(var2.newSmallDiskCache(var0))
       .M(new FrescoBitmapSupplier(var0))
-      .Q(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().D().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+      .Q(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().B().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final Companion $receiver$inlined;
 
          {
@@ -60,20 +60,20 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var5: android.net.Uri.Builder = var1.buildUpon();
-            var5.clearQuery();
+            val var4: android.net.Uri.Builder = var1.buildUpon();
+            var4.clearQuery();
 
             for (java.lang.String var2 : var1.getQueryParameterNames()) {
                if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var4: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+                  val var5: java.util.Iterator = var1.getQueryParameters(var2).iterator();
 
-                  while (var4.hasNext()) {
-                     var5.appendQueryParameter(var2, var4.next() as java.lang.String);
+                  while (var5.hasNext()) {
+                     var4.appendQueryParameter(var2, var5.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var5.build();
+            var1 = var4.build();
             r.g(var1, "cacheKeyBuilder.build()");
             return var1;
          }
@@ -91,7 +91,7 @@ private fun isSignedUrl(uri: Uri): Boolean {
       return false;
    } else {
       var var1: Boolean = false;
-      if (h.P(ATTACHMENT_CDN_HOSTS, var0.getHost())) {
+      if (h.Q(ATTACHMENT_CDN_HOSTS, var0.getHost())) {
          var1 = true;
       }
 

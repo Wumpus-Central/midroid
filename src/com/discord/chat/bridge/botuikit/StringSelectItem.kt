@@ -164,24 +164,24 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.getLabel();
-      val var1: java.lang.String = this.getValue();
-      val var4: ComponentEmoji = this.emoji;
-      val var5: java.lang.String = this.description;
-      val var3: java.lang.Boolean = this.default;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("StringSelectItem(label=");
-      var6.append(var2);
-      var6.append(", value=");
-      var6.append(var1);
-      var6.append(", emoji=");
-      var6.append(var4);
-      var6.append(", description=");
-      var6.append(var5);
-      var6.append(", default=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var4: java.lang.String = this.getLabel();
+      val var5: java.lang.String = this.getValue();
+      val var1: ComponentEmoji = this.emoji;
+      val var2: java.lang.String = this.description;
+      val var6: java.lang.Boolean = this.default;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("StringSelectItem(label=");
+      var3.append(var4);
+      var3.append(", value=");
+      var3.append(var5);
+      var3.append(", emoji=");
+      var3.append(var1);
+      var3.append(", description=");
+      var3.append(var2);
+      var3.append(", default=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<StringSelectItem> {
@@ -216,25 +216,24 @@ public data class StringSelectItem(label: String,
          val var5: Boolean = var12.p();
          var var9: java.lang.String = null;
          var var2: Int;
+         var var6: Any;
          var var7: Any;
-         var var8: java.lang.String;
-         val var10: Any;
-         var var13: Any;
+         var var8: Any;
+         val var13: java.lang.String;
          if (var5) {
-            val var6: java.lang.String = var12.m(var11, 0);
-            var8 = var12.m(var11, 1);
-            var7 = var12.n(var11, 2, ComponentEmoji.$serializer.INSTANCE, null);
-            var10 = var12.n(var11, 3, a2.a, null);
-            var13 = var12.n(var11, 4, h.a, null);
+            var9 = var12.m(var11, 0);
+            var13 = var12.m(var11, 1);
+            var8 = var12.n(var11, 2, ComponentEmoji.$serializer.INSTANCE, null);
+            var6 = var12.n(var11, 3, a2.a, null);
+            var7 = var12.n(var11, 4, h.a, null);
             var2 = 31;
-            var9 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
             var7 = null;
+            var6 = null;
             var var14: Any = null;
-            var13 = null;
 
             while (var3) {
                val var4: Int = var12.o(var11);
@@ -247,10 +246,10 @@ public data class StringSelectItem(label: String,
                                  throw new n(var4);
                               }
 
-                              var13 = var12.n(var11, 4, h.a, var13);
+                              var14 = var12.n(var11, 4, h.a, var14);
                               var2 |= 16;
                            } else {
-                              var14 = var12.n(var11, 3, a2.a, var14);
+                              var6 = var12.n(var11, 3, a2.a, var6);
                               var2 |= 8;
                            }
                         } else {
@@ -270,11 +269,13 @@ public data class StringSelectItem(label: String,
                }
             }
 
-            var10 = var14;
+            var13 = (java.lang.String)var8;
+            var8 = var7;
+            var7 = var14;
          }
 
          var12.c(var11);
-         return new StringSelectItem(var2, var9, var8, var7 as ComponentEmoji, var10 as java.lang.String, var13 as java.lang.Boolean, null);
+         return new StringSelectItem(var2, var9, var13, var8 as ComponentEmoji, var6 as java.lang.String, var7 as java.lang.Boolean, null);
       }
 
       public open fun serialize(encoder: Encoder, value: StringSelectItem) {

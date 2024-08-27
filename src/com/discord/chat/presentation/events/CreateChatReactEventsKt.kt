@@ -1,7 +1,5 @@
 package com.discord.chat.presentation.events
 
-import com.discord.chat.reactevents.AudioFilePlaybackEndedData
-import com.discord.chat.reactevents.AudioFilePlaybackStartedData
 import com.discord.chat.reactevents.ChatScrollPositionEvent
 import com.discord.chat.reactevents.CompleteFirstLayoutData
 import com.discord.chat.reactevents.FirstLayoutData
@@ -17,6 +15,8 @@ import com.discord.chat.reactevents.LongPressPollImageData
 import com.discord.chat.reactevents.LongPressReactionData
 import com.discord.chat.reactevents.LongPressStickerData
 import com.discord.chat.reactevents.LongPressUsernameData
+import com.discord.chat.reactevents.MediaAttachmentPlaybackEndedData
+import com.discord.chat.reactevents.MediaAttachmentPlaybackStartedData
 import com.discord.chat.reactevents.TapActivityBookmarkEmbedData
 import com.discord.chat.reactevents.TapActivityInstanceEmbedData
 import com.discord.chat.reactevents.TapAttachmentLinkData
@@ -137,9 +137,9 @@ internal fun createChatReactEvents(): ReactEvents {
          w.a("onTapAutoModerationFeedback", h0.b(TapAutoModerationFeedbackData.class)),
          w.a("onTapOpTag", h0.b(TapOpTagData.class)),
          w.a("onTapShowAltText", h0.b(TapShowAltTextData.class)),
-         w.a("onAudioFilePlaybackEnded", h0.b(AudioFilePlaybackEndedData.class)),
+         w.a("onMediaAttachmentPlaybackEnded", h0.b(MediaAttachmentPlaybackEndedData.class)),
          w.a("onVoiceMessagePlaybackFailed", h0.b(VoiceMessagePlaybackFailedData.class)),
-         w.a("onAudioFilePlaybackStarted", h0.b(AudioFilePlaybackStartedData.class)),
+         w.a("onMediaAttachmentPlaybackStarted", h0.b(MediaAttachmentPlaybackStartedData.class)),
          w.a("onTapActivityBookmarkEmbed", h0.b(TapActivityBookmarkEmbedData.class)),
          w.a("onTapActivityInstanceEmbed", h0.b(TapActivityInstanceEmbedData.class)),
          w.a("onTapPostPreviewEmbed", h0.b(TapPostPreviewEmbedData.class)),

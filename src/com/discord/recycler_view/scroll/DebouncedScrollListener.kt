@@ -34,11 +34,11 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
          public final void invoke(DebouncedScrollListener.ScrollEvent var1) {
             r.h(var1, "<name for destructuring parameter 0>");
             val var4: RecyclerView = var1.component1();
-            val var2: Int = var1.component2();
-            val var3: Int = var1.component3();
+            val var3: Int = var1.component2();
+            val var2: Int = var1.component3();
             val var5: Function3 = DebouncedScrollListener.access$getOnScrolled$p(this.this$0);
             if (var5 != null) {
-               var5.invoke(var4, var2, var3);
+               var5.invoke(var4, var3, var2);
             }
          }
       }, false, 4, null);

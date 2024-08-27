@@ -96,7 +96,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          var3 = this.maxItems - 1;
       }
 
-      val var12: java.util.Iterator = kotlin.collections.h.F0(var1, var3).iterator();
+      val var12: java.util.Iterator = kotlin.collections.h.G0(var1, var3).iterator();
 
       for (int var16 = 0; var12.hasNext(); var16++) {
          var var11: OverlappingItem = (OverlappingItem)var12.next();

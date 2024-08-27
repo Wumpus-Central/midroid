@@ -146,16 +146,16 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          var var2: Float;
          var var3: Float;
          var var4: Float;
-         val var6: Float;
+         var var5: Float;
          var var7: Int;
          if (var11.p()) {
-            var3 = var11.u(var10, 0);
-            var6 = var11.u(var10, 1);
-            var4 = var11.u(var10, 2);
+            var5 = var11.u(var10, 0);
+            var4 = var11.u(var10, 1);
+            var3 = var11.u(var10, 2);
             var2 = var11.u(var10, 3);
             var7 = 15;
          } else {
-            var var5: Float = 0.0F;
+            var5 = 0.0F;
             var4 = 0.0F;
             var3 = 0.0F;
             var2 = 0.0F;
@@ -191,14 +191,12 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                }
             }
 
-            var6 = var2;
             var2 = var4;
-            var4 = var3;
-            var3 = var5;
+            var4 = var2;
          }
 
          var11.c(var10);
-         return new OnLayoutEvent(var7, var3, var6, var4, var2, null);
+         return new OnLayoutEvent(var7, var5, var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnLayoutEvent) {

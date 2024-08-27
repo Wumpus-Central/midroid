@@ -148,8 +148,8 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
                }
             }
 
-            var10 = var6;
             var6 = (java.lang.String)var11;
+            var10 = var6;
          }
 
          var9.c(var8);

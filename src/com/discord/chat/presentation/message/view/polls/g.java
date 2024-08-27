@@ -12,6 +12,6 @@ public final class g implements OnLongClickListener {
    public final Attachment l;
 
    public final boolean onLongClick(View var1) {
-      return PollMediaView.b(this.j, this.k, this.l, var1);
+      return PollMediaView.c(this.j, this.k, this.l, var1);
    }
 }

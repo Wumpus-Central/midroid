@@ -17,15 +17,15 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
 
    public open fun getAvailableIcons(promise: Promise) {
       r.h(var1, "promise");
-      val var5: Array<AppIcon> = AppIconUtil.INSTANCE.getAvailableIcons();
-      val var4: ArrayList = new ArrayList(var5.length);
-      val var3: Int = var5.length;
+      val var4: Array<AppIcon> = AppIconUtil.INSTANCE.getAvailableIcons();
+      val var5: ArrayList = new ArrayList(var4.length);
+      val var3: Int = var4.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         var4.add(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var5[var2].getId())}));
+         var5.add(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var4[var2].getId())}));
       }
 
-      var1.resolve(NativeArrayExtensionsKt.toNativeArray(var4));
+      var1.resolve(NativeArrayExtensionsKt.toNativeArray(var5));
    }
 
    public open fun getCurrentIcon(promise: Promise) {

@@ -96,7 +96,7 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
          val var6: Intent = new Intent("android.intent.action.SEND");
          var6.setAction("android.intent.action.SEND");
          var6.setType("text/plain");
-         var6.putExtra("android.intent.extra.TEXT", h.j0(h.n(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null));
+         var6.putExtra("android.intent.extra.TEXT", h.k0(h.n(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null));
          val var9: Activity = this.getReactApplicationContext().getCurrentActivity();
          if (var9 != null) {
             if (var3 == null) {

@@ -114,18 +114,18 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.Long = this.start;
+      val var2: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
       val var4: java.util.List = this.items;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BulletListContentNode(start=");
-      var2.append(var3);
-      var2.append(", ordered=");
-      var2.append(var1);
-      var2.append(", items=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BulletListContentNode(start=");
+      var3.append(var2);
+      var3.append(", ordered=");
+      var3.append(var1);
+      var3.append(", items=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<BulletListContentNode> {
@@ -159,15 +159,15 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
          var var6: Any;
          var var9: Any;
          if (var8.p()) {
-            var6 = var8.n(var7, 0, w0.a, null);
+            var9 = var8.n(var7, 0, w0.a, null);
             var5 = var8.C(var7, 1);
-            var9 = var8.y(var7, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), null);
+            var6 = var8.y(var7, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var6 = null;
             var9 = null;
+            var6 = null;
             var2 = 0;
 
             while (var3) {
@@ -179,14 +179,14 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
                            throw new n(var4);
                         }
 
-                        var9 = var8.y(var7, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), var9);
+                        var6 = var8.y(var7, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), var6);
                         var2 |= 4;
                      } else {
                         var5 = var8.C(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var8.n(var7, 0, w0.a, var6);
+                     var9 = var8.n(var7, 0, w0.a, var9);
                      var2 |= 1;
                   }
                } else {
@@ -196,7 +196,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
          }
 
          var8.c(var7);
-         return new BulletListContentNode(var2, var6 as java.lang.Long, var5, var9 as java.util.List, null);
+         return new BulletListContentNode(var2, var9 as java.lang.Long, var5, var6 as java.util.List, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BulletListContentNode) {

@@ -244,8 +244,8 @@ internal data class UserSearchQuerySetPayload(query: String,
             var9 = var13.n(var12, 2, new xk.f(a2.a), null);
             var8 = var13.n(var12, 3, new xk.f((KSerializer)var15), null);
             var15 = var13.y(var12, 4, new r0((KSerializer)var15, x.a), null);
-            var2 = var13.i(var12, 5);
-            var3 = 63;
+            var3 = var13.i(var12, 5);
+            var2 = 63;
          } else {
             var var5: Boolean = true;
             var3 = 0;
@@ -257,7 +257,7 @@ internal data class UserSearchQuerySetPayload(query: String,
             var2 = 0;
 
             while (var5) {
-               label29: {
+               label28: {
                   val var6: Int = var13.o(var12);
                   switch (var6) {
                      case -1:
@@ -275,15 +275,15 @@ internal data class UserSearchQuerySetPayload(query: String,
                      case 2:
                         var9 = var13.n(var12, 2, new xk.f(a2.a), var9);
                         var2 |= 4;
-                        break label29;
+                        break label28;
                      case 3:
                         var8 = var13.n(var12, 3, new xk.f(a2.a), var8);
                         var2 |= 8;
-                        break label29;
+                        break label28;
                      case 4:
                         var15 = var13.y(var12, 4, new r0(a2.a, x.a), var15);
                         var2 |= 16;
-                        break label29;
+                        break label28;
                      case 5:
                         var3 = var13.i(var12, var4);
                         var2 |= 32;
@@ -298,14 +298,11 @@ internal data class UserSearchQuerySetPayload(query: String,
 
                var4 = 5;
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var13.c(var12);
          return new UserSearchQuerySetPayload(
-            var3, var10, var11 as UserSearchQuerySetFilters, var9 as java.util.List, var8 as java.util.List, var15 as java.util.Map, var2, null
+            var2, var10, var11 as UserSearchQuerySetFilters, var9 as java.util.List, var8 as java.util.List, var15 as java.util.Map, var3, null
          );
       }
 

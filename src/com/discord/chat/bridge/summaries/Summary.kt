@@ -267,78 +267,77 @@ public data class Summary(id: String,
 
       public open fun deserialize(decoder: Decoder): Summary {
          r.h(var1, "decoder");
-         val var15: SerialDescriptor = this.getDescriptor();
-         val var16: c = var1.b(var15);
-         val var7: Boolean = var16.p();
-         var var4: Int = 7;
+         val var16: SerialDescriptor = this.getDescriptor();
+         val var17: c = var1.b(var16);
+         val var7: Boolean = var17.p();
+         var var4: Byte = 7;
          var var2: Int = 0;
          var var13: Any = null;
          var var3: Int;
-         var var9: Any;
-         var var10: Any;
+         var var8: Any;
+         var var9: java.lang.String;
          var var11: Any;
          var var14: Any;
-         val var17: java.lang.String;
-         var var21: Any;
+         var var18: Any;
+         var var22: Any;
          if (var7) {
-            var17 = var16.m(var15, 0);
-            var9 = var16.m(var15, 1);
-            var10 = var16.m(var15, 2);
-            var14 = var16.y(var15, 3, new xk.f(com.discord.primitives.UserId..serializer.INSTANCE), null);
-            var21 = com.discord.primitives.MessageId..serializer.INSTANCE;
-            var13 = var16.y(var15, 4, com.discord.primitives.MessageId..serializer.INSTANCE, null);
-            var11 = (MessageId)var16.y(var15, 5, (DeserializationStrategy)var21, null);
-            var2 = var16.i(var15, 6);
-            var21 = var16.y(var15, 7, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var4 = 255;
-            var3 = var2;
+            var9 = var17.m(var16, 0);
+            var18 = var17.m(var16, 1);
+            var8 = var17.m(var16, 2);
+            var14 = var17.y(var16, 3, new xk.f(com.discord.primitives.UserId..serializer.INSTANCE), null);
+            var22 = com.discord.primitives.MessageId..serializer.INSTANCE;
+            var13 = var17.y(var16, 4, com.discord.primitives.MessageId..serializer.INSTANCE, null);
+            var11 = (MessageId)var17.y(var16, 5, (DeserializationStrategy)var22, null);
+            var3 = var17.i(var16, 6);
+            var22 = var17.y(var16, 7, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var2 = 255;
          } else {
             var var5: Boolean = true;
             var3 = 0;
-            var10 = null;
+            var22 = null;
             var var12: Any = null;
             var11 = null;
-            var21 = null;
-            var var18: Any = null;
+            var8 = null;
+            var18 = null;
             var9 = null;
 
             while (var5) {
                label47: {
-                  val var6: Int = var16.o(var15);
+                  val var6: Int = var17.o(var16);
                   switch (var6) {
                      case -1:
                         var5 = false;
                         continue;
                      case 0:
-                        var10 = var16.m(var15, 0);
+                        var22 = var17.m(var16, 0);
                         var2 |= 1;
                         break;
                      case 1:
-                        var9 = var16.m(var15, 1);
+                        var9 = var17.m(var16, 1);
                         var2 |= 2;
                         break;
                      case 2:
-                        var18 = var16.m(var15, 2);
+                        var18 = var17.m(var16, 2);
                         var2 |= 4;
                         break label47;
                      case 3:
-                        var21 = var16.y(var15, 3, new xk.f(com.discord.primitives.UserId..serializer.INSTANCE), var21);
+                        var8 = var17.y(var16, 3, new xk.f(com.discord.primitives.UserId..serializer.INSTANCE), var8);
                         var2 |= 8;
                         break label47;
                      case 4:
-                        var13 = var16.y(var15, 4, com.discord.primitives.MessageId..serializer.INSTANCE, var13);
+                        var13 = var17.y(var16, 4, com.discord.primitives.MessageId..serializer.INSTANCE, var13);
                         var2 |= 16;
                         continue;
                      case 5:
-                        var11 = (MessageId)var16.y(var15, 5, com.discord.primitives.MessageId..serializer.INSTANCE, var11);
+                        var11 = (MessageId)var17.y(var16, 5, com.discord.primitives.MessageId..serializer.INSTANCE, var11);
                         var2 |= 32;
                         continue;
                      case 6:
-                        var3 = var16.i(var15, 6);
+                        var3 = var17.i(var16, 6);
                         var2 |= 64;
                         continue;
                      case 7:
-                        var12 = var16.y(var15, var4, com.discord.primitives.ChannelId..serializer.INSTANCE, var12);
+                        var12 = var17.y(var16, var4, com.discord.primitives.ChannelId..serializer.INSTANCE, var12);
                         var2 |= 128;
                         continue;
                      default:
@@ -352,14 +351,14 @@ public data class Summary(id: String,
                var4 = 7;
             }
 
-            var17 = (java.lang.String)var10;
-            var10 = var18;
-            var4 = var2;
-            var14 = var21;
-            var21 = var12;
+            var14 = var8;
+            var9 = (java.lang.String)var22;
+            var8 = var18;
+            var18 = var9;
+            var22 = var12;
          }
 
-         var16.c(var15);
+         var17.c(var16);
          var14 = var14 as java.util.List;
          val var26: MessageId = var13 as MessageId;
          val var27: java.lang.String;
@@ -378,7 +377,7 @@ public data class Summary(id: String,
          }
 
          return new Summary(
-            var4, var17, (java.lang.String)var9, (java.lang.String)var10, (java.util.List)var14, var27, var25, var3, var21 as ChannelId, null, null
+            var2, var9, (java.lang.String)var18, (java.lang.String)var8, (java.util.List)var14, var27, var25, var3, var22 as ChannelId, null, null
          );
       }
 

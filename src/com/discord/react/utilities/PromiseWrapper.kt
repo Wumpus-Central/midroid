@@ -46,11 +46,11 @@ public class PromiseWrapper(promise: Promise,
       r.h(var3, "userInfo");
       val var4: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(null, var2, null, var3)) as PromiseWrapper.Rejection;
       val var7: Promise = this.promise;
-      val var8: java.lang.String = var4.getCode();
-      var1 = var4.getMessage();
+      var1 = var4.getCode();
+      val var8: java.lang.String = var4.getMessage();
       val var9: WritableMap = var4.getUserInfo();
       r.e(var9);
-      var7.reject(var8, var1, var9);
+      var7.reject(var1, var8, var9);
    }
 
    public open fun reject(code: String?, message: String?, throwable: Throwable?) {

@@ -194,24 +194,24 @@ public data class MessageReaction(count: Int,
 
    public override fun toString(): String {
       val var1: Int = this.getCount();
-      val var4: Boolean = this.me;
-      val var3: Boolean = this.isMeBurst();
-      val var5: MessageReactionEmoji = this.getEmoji();
+      val var3: Boolean = this.me;
+      val var4: Boolean = this.isMeBurst();
+      val var6: MessageReactionEmoji = this.getEmoji();
       val var2: Int = this.getBurstCount();
-      val var6: ThemedBurstReactionColorPalette = this.getThemedBurstColors();
+      val var5: ThemedBurstReactionColorPalette = this.getThemedBurstColors();
       val var7: StringBuilder = new StringBuilder();
       var7.append("MessageReaction(count=");
       var7.append(var1);
       var7.append(", me=");
-      var7.append(var4);
-      var7.append(", isMeBurst=");
       var7.append(var3);
+      var7.append(", isMeBurst=");
+      var7.append(var4);
       var7.append(", emoji=");
-      var7.append(var5);
+      var7.append(var6);
       var7.append(", burstCount=");
       var7.append(var2);
       var7.append(", themedBurstColors=");
-      var7.append(var6);
+      var7.append(var5);
       var7.append(")");
       return var7.toString();
    }
@@ -258,19 +258,19 @@ public data class MessageReaction(count: Int,
          var var10: Any;
          var var13: Any;
          if (var12.p()) {
-            var6 = var12.i(var11, 0);
-            var5 = var12.C(var11, 1);
+            var5 = var12.i(var11, 0);
+            var6 = var12.C(var11, 1);
             var8 = var12.C(var11, 2);
             var13 = var12.y(var11, 3, MessageReactionEmoji.$serializer.INSTANCE, null);
             var3 = var12.i(var11, 4);
             var10 = var12.n(var11, 5, ThemedBurstReactionColorPalette.$serializer.INSTANCE, null);
             val var2: Byte = var12.C(var11, 6);
-            var7 = 127;
-            var4 = var2;
+            var4 = 127;
+            var7 = var2;
          } else {
             var var19: Boolean = true;
-            var6 = 0;
             var5 = 0;
+            var6 = 0;
             var4 = 0;
             var3 = 0;
             var var14: Int = 0;
@@ -285,7 +285,7 @@ public data class MessageReaction(count: Int,
                      var19 = false;
                      break;
                   case 0:
-                     var6 = var12.i(var11, 0);
+                     var5 = var12.i(var11, 0);
                      var14 |= 1;
                      break;
                   case 1:
@@ -301,7 +301,7 @@ public data class MessageReaction(count: Int,
                      var14 |= 8;
                      break;
                   case 4:
-                     var5 = var12.i(var11, 4);
+                     var6 = var12.i(var11, 4);
                      var14 |= 16;
                      break;
                   case 5:
@@ -318,15 +318,14 @@ public data class MessageReaction(count: Int,
             }
 
             var8 = var4;
-            var4 = var7;
-            var3 = var5;
-            var5 = var3;
-            var7 = var14;
+            var3 = var6;
+            var6 = var3;
+            var4 = var14;
          }
 
          var12.c(var11);
          return new MessageReaction(
-            var7, var6, (boolean)var5, (boolean)var8, var13 as MessageReactionEmoji, var3, var10 as ThemedBurstReactionColorPalette, (boolean)var4, null
+            var4, var5, (boolean)var6, (boolean)var8, var13 as MessageReactionEmoji, var3, var10 as ThemedBurstReactionColorPalette, (boolean)var7, null
          );
       }
 

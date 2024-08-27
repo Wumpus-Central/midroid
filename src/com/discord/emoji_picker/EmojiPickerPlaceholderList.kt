@@ -49,7 +49,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
          var10 = var5;
       }
 
-      this.listHeaderIndices = h.S((java.util.List)var10, 1);
+      this.listHeaderIndices = h.T((java.util.List)var10, 1);
    }
 
    public open operator fun get(index: Int): EmojiPickerItem {

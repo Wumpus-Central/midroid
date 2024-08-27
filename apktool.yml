@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 243016
-  versionName: 243.16 - Stable
+  versionCode: 244013
+  versionName: 244.13 - Stable
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -288,3 +288,4 @@ doNotCompress:
 - res/raw/design_components_lottieicon_native_generated_lotties_youtab.lottie
 - res/raw/emojis_json.gz
 - webm
+- res/raw/modules_intl_messages_secondtestcompiledmessages.jsona

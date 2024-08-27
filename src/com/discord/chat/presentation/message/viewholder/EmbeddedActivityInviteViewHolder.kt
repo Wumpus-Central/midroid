@@ -35,13 +35,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "embeddedActivityInviteAccessory");
-      val var11: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var14: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var11.getSplashUrl(), var1.getConstrainedWidth());
-      var14.setTitleText(var11.getTitleText());
-      var14.setHeaderText(var11.getHeaderText());
-      var14.setSubtitleText-oCLp7l4(
-         var11.getStructurableSubtitleText(),
+      val var6: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var17: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var6.getSplashUrl(), var1.getConstrainedWidth());
+      var17.setTitleText(var6.getTitleText());
+      var17.setHeaderText(var6.getHeaderText());
+      var17.setSubtitleText-oCLp7l4(
+         var6.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
             {
@@ -195,9 +195,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var14.setNoParticipantsText(var11.getNoParticipantsText());
-      var14.setLaunchButton(var11.getAcceptLabelText(), var11.getAcceptLabelBackgroundColor(), var11.getCtaEnabled());
-      var14.setAvatarUris(var11.getParticipantAvatarUris());
-      var14.setOnLaunchButtonClickListener(new j(this, var1));
+      var17.setNoParticipantsText(var6.getNoParticipantsText());
+      var17.setLaunchButton(var6.getAcceptLabelText(), var6.getAcceptLabelBackgroundColor(), var6.getCtaEnabled());
+      var17.setAvatarUris(var6.getParticipantAvatarUris());
+      var17.setOnLaunchButtonClickListener(new j(this, var1));
    }
 }

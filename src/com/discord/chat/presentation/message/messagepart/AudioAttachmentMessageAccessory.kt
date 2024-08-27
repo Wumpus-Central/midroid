@@ -10,16 +10,18 @@ public data class AudioAttachmentMessageAccessory(messageId: MessageId,
    attachmentIndex: Int,
    attachmentsOpacity: Float?,
    authorId: UserId?,
-   color: Int?
-) : AudioAttachmentMessageAccessory(var1, var2, var3, var4, var5, var6) {
+   color: Int?,
+   isVoiceMessage: Boolean
+) : AudioAttachmentMessageAccessory(var1, var2, var3, var4, var5, var6, var7) {
    public open val attachment: Attachment
    public open val attachmentIndex: Int
    public open val attachmentsOpacity: Float?
    public final val authorId: UserId?
    public final val color: Int?
+   public final val isVoiceMessage: Boolean
    public open val messageId: MessageId
 
-   fun AudioAttachmentMessageAccessory(var1: java.lang.String, var2: Attachment, var3: Int, var4: java.lang.Float, var5: UserId, var6: Int) {
+   fun AudioAttachmentMessageAccessory(var1: java.lang.String, var2: Attachment, var3: Int, var4: java.lang.Float, var5: UserId, var6: Int, var7: Boolean) {
       super(var1, var2, var3, var4, null);
       this.messageId = var1;
       this.attachment = var2;
@@ -27,6 +29,7 @@ public data class AudioAttachmentMessageAccessory(messageId: MessageId,
       this.attachmentsOpacity = var4;
       this.authorId = var5;
       this.color = var6;
+      this.isVoiceMessage = var7;
    }
 
    public operator fun component1(): MessageId {
@@ -53,17 +56,22 @@ public data class AudioAttachmentMessageAccessory(messageId: MessageId,
       return this.color;
    }
 
+   public operator fun component7(): Boolean {
+      return this.isVoiceMessage;
+   }
+
    public fun copy(
       messageId: MessageId = ...,
       attachment: Attachment = ...,
       attachmentIndex: Int = ...,
       attachmentsOpacity: Float? = ...,
       authorId: UserId? = ...,
-      color: Int? = ...
+      color: Int? = ...,
+      isVoiceMessage: Boolean = ...
    ): AudioAttachmentMessageAccessory {
       r.h(var1, "messageId");
       r.h(var2, "attachment");
-      return new AudioAttachmentMessageAccessory(var1, var2, var3, var4, var5, var6, null);
+      return new AudioAttachmentMessageAccessory(var1, var2, var3, var4, var5, var6, var7, null);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -83,20 +91,22 @@ public data class AudioAttachmentMessageAccessory(messageId: MessageId,
             return false;
          } else if (!r.c(this.authorId, var1.authorId)) {
             return false;
+         } else if (!r.c(this.color, var1.color)) {
+            return false;
          } else {
-            return r.c(this.color, var1.color);
+            return this.isVoiceMessage == var1.isVoiceMessage;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = MessageId.hashCode-impl(this.getMessageId-3Eiw7ao());
-      val var4: Int = this.getAttachment().hashCode();
-      val var5: Int = Integer.hashCode(this.getAttachmentIndex());
-      val var7: java.lang.Float = this.getAttachmentsOpacity();
+      val var7: Int = MessageId.hashCode-impl(this.getMessageId-3Eiw7ao());
+      val var6: Int = this.getAttachment().hashCode();
+      val var8: Int = Integer.hashCode(this.getAttachmentIndex());
+      val var9: java.lang.Float = this.getAttachmentsOpacity();
       var var3: Int = 0;
       val var1: Int;
-      if (var7 == null) {
+      if (var9 == null) {
          var1 = 0;
       } else {
          var1 = this.getAttachmentsOpacity().hashCode();
@@ -113,30 +123,38 @@ public data class AudioAttachmentMessageAccessory(messageId: MessageId,
          var3 = this.color.hashCode();
       }
 
-      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      var var4: Byte = this.isVoiceMessage;
+      if (this.isVoiceMessage != 0) {
+         var4 = 1;
+      }
+
+      return (((((var7 * 31 + var6) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var7: Attachment = this.getAttachment();
+      val var4: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var5: Attachment = this.getAttachment();
       val var1: Int = this.getAttachmentIndex();
-      val var3: java.lang.Float = this.getAttachmentsOpacity();
-      val var4: UserId = this.authorId;
-      val var6: Int = this.color;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("AudioAttachmentMessageAccessory(messageId=");
-      var5.append(var2);
-      var5.append(", attachment=");
-      var5.append(var7);
-      var5.append(", attachmentIndex=");
-      var5.append(var1);
-      var5.append(", attachmentsOpacity=");
-      var5.append(var3);
-      var5.append(", authorId=");
-      var5.append(var4);
-      var5.append(", color=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var8: java.lang.Float = this.getAttachmentsOpacity();
+      val var6: UserId = this.authorId;
+      val var3: Int = this.color;
+      val var2: Boolean = this.isVoiceMessage;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("AudioAttachmentMessageAccessory(messageId=");
+      var7.append(var4);
+      var7.append(", attachment=");
+      var7.append(var5);
+      var7.append(", attachmentIndex=");
+      var7.append(var1);
+      var7.append(", attachmentsOpacity=");
+      var7.append(var8);
+      var7.append(", authorId=");
+      var7.append(var6);
+      var7.append(", color=");
+      var7.append(var3);
+      var7.append(", isVoiceMessage=");
+      var7.append(var2);
+      var7.append(")");
+      return var7.toString();
    }
 }

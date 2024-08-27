@@ -123,7 +123,7 @@ private inline fun <reified T : Any, reified V> Any.getPrivateField(name: String
    var4.setAccessible(true);
    val var5: Any = var4.get(var0);
    r.m(3, "V");
-   if (var5 is Object) {
+   if (var5 is Any) {
       return (V)var5;
    } else {
       r.m(4, "V");

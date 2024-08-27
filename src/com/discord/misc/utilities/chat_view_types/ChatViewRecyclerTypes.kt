@@ -25,6 +25,8 @@ public object ChatViewRecyclerTypes {
    public const val GUILD_INVITE_DISABLED: Int = 25
    public const val INFO_LINK: Int = 35
    public const val INTERACTION_STATUS: Int = 19
+   public const val MEDIA_ATTACHMENT_MOSAIC_IMAGE: Int = 49
+   public const val MEDIA_ATTACHMENT_MOSAIC_VIDEO: Int = 50
    public const val MEDIA_MOSAIC_ATTACHMENT: Int = 26
    public const val POLL_IMAGE_ONLY: Int = 38
    public const val POLL_TEXT_AND_IMAGE: Int = 37

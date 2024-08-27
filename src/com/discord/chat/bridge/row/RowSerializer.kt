@@ -40,7 +40,7 @@ public object RowSerializer : d(h0.b(Row.class)) {
             if (var4 != null) {
                val var5: JsonPrimitive = g.p(var4);
                if (var5 != null) {
-                  var6 = var5.j();
+                  var6 = var5.e();
                   break label19;
                }
             }

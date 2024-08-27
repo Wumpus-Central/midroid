@@ -25,7 +25,7 @@ internal object BrowserManager {
          try {
             val var11: java.util.List = var1.getPackageManager().queryIntentActivities(var10, 0);
             r.g(var11, "context.packageManager.q…tentActivities(intent, 0)");
-            var10.setPackage(j.s(j.p(j.z(h.O(var11), <unrepresentable>.INSTANCE), new Function1<java.lang.String, java.lang.Boolean>(var1) {
+            var10.setPackage(j.s(j.p(j.z(h.P(var11), <unrepresentable>.INSTANCE), new Function1<java.lang.String, java.lang.Boolean>(var1) {
                final Context $context;
 
                {

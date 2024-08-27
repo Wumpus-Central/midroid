@@ -25,7 +25,7 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
    public ReactOkHttpNetworkFetcher(OkHttpClient var1) {
       super(var1);
       this.mOkHttpClient = var1;
-      this.mCancellationExecutor = var1.r().d();
+      this.mCancellationExecutor = var1.o().d();
    }
 
    private Map<String, String> getHeaders(ReadableMap var1) {

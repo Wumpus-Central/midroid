@@ -167,7 +167,7 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
    r.h(var1, "key");
    if (var2 is java.lang.String) {
       var0.putString(var1, var2 as java.lang.String);
-   } else if (var2 is Integer) {
+   } else if (var2 is Int) {
       var0.putInt(var1, (var2 as java.lang.Number).intValue());
    } else if (var2 is java.lang.Double) {
       var0.putDouble(var1, (var2 as java.lang.Number).doubleValue());
@@ -179,8 +179,8 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
       var0.putArray(var1, var2 as ReadableArray);
    } else if (var2 is ReadableMap) {
       var0.putMap(var1, var2 as ReadableMap);
-   } else if (var2 is int[]) {
-      var0.putArray(var1, NativeArrayExtensionsKt.toNativeArray(var2 as int[]));
+   } else if (var2 is IntArray) {
+      var0.putArray(var1, NativeArrayExtensionsKt.toNativeArray(var2 as IntArray));
    } else if (var2 is java.lang.Long) {
       var0.putDouble(var1, (double)(var2 as java.lang.Number).longValue());
    } else {

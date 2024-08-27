@@ -134,12 +134,12 @@ internal object SystemLogUtils {
                   // 05e: astore 3
                   // 05f: aload 5
                   // 061: invokevirtual java/lang/Process.getInputStream ()Ljava/io/InputStream;
-                  // 064: astore 8
+                  // 064: astore 6
                   // 066: aload 5
                   // 068: astore 4
                   // 06a: aload 5
                   // 06c: astore 3
-                  // 06d: aload 8
+                  // 06d: aload 6
                   // 06f: ldc "logcatProcess.inputStream"
                   // 071: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
                   // 074: aload 5
@@ -147,7 +147,7 @@ internal object SystemLogUtils {
                   // 078: aload 5
                   // 07a: astore 3
                   // 07b: getstatic ik/a.b Ljava/nio/charset/Charset;
-                  // 07e: astore 6
+                  // 07e: astore 8
                   // 080: aload 5
                   // 082: astore 4
                   // 084: aload 5
@@ -159,8 +159,8 @@ internal object SystemLogUtils {
                   // 090: aload 5
                   // 092: astore 3
                   // 093: aload 9
-                  // 095: aload 8
-                  // 097: aload 6
+                  // 095: aload 6
+                  // 097: aload 8
                   // 099: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
                   // 09c: aload 5
                   // 09e: astore 4
@@ -211,10 +211,10 @@ internal object SystemLogUtils {
                   // 0fa: goto 1cf
                   // 0fd: astore 3
                   // 0fe: goto 1de
-                  // 101: astore 5
+                  // 101: astore 6
                   // 103: aload 3
                   // 104: astore 4
-                  // 106: aload 5
+                  // 106: aload 6
                   // 108: invokevirtual java/lang/Throwable.printStackTrace ()V
                   // 10b: aload 3
                   // 10c: astore 4
@@ -229,54 +229,54 @@ internal object SystemLogUtils {
                   // 11e: aload 3
                   // 11f: astore 4
                   // 121: new java/lang/StringBuilder
-                  // 124: astore 6
+                  // 124: astore 5
                   // 126: aload 3
                   // 127: astore 4
-                  // 129: aload 6
+                  // 129: aload 5
                   // 12b: invokespecial java/lang/StringBuilder.<init> ()V
                   // 12e: aload 3
                   // 12f: astore 4
-                  // 131: aload 6
+                  // 131: aload 5
                   // 133: ldc "Exception getting system logs '"
                   // 135: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 138: pop
                   // 139: aload 3
                   // 13a: astore 4
-                  // 13c: aload 6
-                  // 13e: aload 5
+                  // 13c: aload 5
+                  // 13e: aload 6
                   // 140: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 143: pop
                   // 144: aload 3
                   // 145: astore 4
-                  // 147: aload 6
+                  // 147: aload 5
                   // 149: ldc "'"
                   // 14b: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 14e: pop
                   // 14f: aload 3
                   // 150: astore 4
                   // 152: aload 7
-                  // 154: aload 6
+                  // 154: aload 5
                   // 156: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 159: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 15c: pop
                   // 15d: aload 3
                   // 15e: astore 4
-                  // 160: aload 5
+                  // 160: aload 6
                   // 162: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-                  // 165: astore 8
+                  // 165: astore 5
                   // 167: aload 3
                   // 168: astore 4
-                  // 16a: aload 8
+                  // 16a: aload 5
                   // 16c: ldc "e.stackTrace"
                   // 16e: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
                   // 171: aload 3
                   // 172: astore 4
                   // 174: aload 0
                   // 175: getfield com/discord/crash_reporting/system_logs/SystemLogUtils$fetch$1.$output Ljava/util/LinkedList;
-                  // 178: astore 5
+                  // 178: astore 7
                   // 17a: aload 3
                   // 17b: astore 4
-                  // 17d: aload 8
+                  // 17d: aload 5
                   // 17f: arraylength
                   // 180: istore 2
                   // 181: bipush 0
@@ -284,34 +284,34 @@ internal object SystemLogUtils {
                   // 183: iload 1
                   // 184: iload 2
                   // 185: if_icmpge 1c8
-                  // 188: aload 8
+                  // 188: aload 5
                   // 18a: iload 1
                   // 18b: aaload
-                  // 18c: astore 6
+                  // 18c: astore 8
                   // 18e: aload 3
                   // 18f: astore 4
                   // 191: new java/lang/StringBuilder
-                  // 194: astore 7
+                  // 194: astore 6
                   // 196: aload 3
                   // 197: astore 4
-                  // 199: aload 7
+                  // 199: aload 6
                   // 19b: invokespecial java/lang/StringBuilder.<init> ()V
                   // 19e: aload 3
                   // 19f: astore 4
-                  // 1a1: aload 7
+                  // 1a1: aload 6
                   // 1a3: ldc "    "
                   // 1a5: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 1a8: pop
                   // 1a9: aload 3
                   // 1aa: astore 4
-                  // 1ac: aload 7
-                  // 1ae: aload 6
+                  // 1ac: aload 6
+                  // 1ae: aload 8
                   // 1b0: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 1b3: pop
                   // 1b4: aload 3
                   // 1b5: astore 4
-                  // 1b7: aload 5
-                  // 1b9: aload 7
+                  // 1b7: aload 7
+                  // 1b9: aload 6
                   // 1bb: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 1be: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 1c1: pop

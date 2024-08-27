@@ -54,10 +54,21 @@ public object PortalFromJsContextManager {
    public fun addContext(portalId: String, portalContext: PortalFromJsContext) {
       r.h(var1, "portalId");
       r.h(var2, "portalContext");
-      val var3: java.util.Map = portals;
-      this.removeFromContext(portals, var1);
-      portalContexts.put(var1, new WeakReference<>(var2));
-      this.addToContext(var3, var1);
+      val var4: java.util.Map = portalContexts;
+      val var3: WeakReference = portalContexts.get(var1);
+      val var5: PortalFromJsContext;
+      if (var3 != null) {
+         var5 = var3.get() as PortalFromJsContext;
+      } else {
+         var5 = null;
+      }
+
+      if (!r.c(var5, var2)) {
+         val var6: java.util.Map = portals;
+         this.removeFromContext(portals, var1);
+         var4.put(var1, new WeakReference<>(var2));
+         this.addToContext(var6, var1);
+      }
    }
 
    internal fun portalDidMount(portalId: String, portalView: View) {
@@ -76,9 +87,21 @@ public object PortalFromJsContextManager {
       var2.remove(var1);
    }
 
-   public fun removeContext(portalId: String) {
+   public fun removeContext(portalId: String, portalContext: PortalFromJsContext) {
       r.h(var1, "portalId");
-      this.removeFromContext(portals, var1);
-      portalContexts.remove(var1);
+      r.h(var2, "portalContext");
+      val var4: java.util.Map = portalContexts;
+      val var3: WeakReference = portalContexts.get(var1);
+      val var5: PortalFromJsContext;
+      if (var3 != null) {
+         var5 = var3.get() as PortalFromJsContext;
+      } else {
+         var5 = null;
+      }
+
+      if (r.c(var5, var2)) {
+         this.removeFromContext(portals, var1);
+         var4.remove(var1);
+      }
    }
 }

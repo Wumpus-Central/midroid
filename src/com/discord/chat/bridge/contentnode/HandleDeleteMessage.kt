@@ -186,9 +186,9 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
          var var13: Any;
          if (var12.p()) {
             var13 = var12.y(var11, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null);
-            var7 = var12.y(var11, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var6 = var12.n(var11, 2, a2.a, null);
-            var8 = var12.y(var11, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, null);
+            var6 = var12.y(var11, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var8 = var12.n(var11, 2, a2.a, null);
+            var7 = var12.y(var11, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, null);
             var2 = 15;
          } else {
             var var3: Boolean = true;
@@ -227,8 +227,8 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                }
             }
 
-            var7 = var6;
-            var6 = var7;
+            var8 = var7;
+            var7 = var8;
          }
 
          var12.c(var11);
@@ -239,7 +239,7 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
          }
 
          return new HandleDeleteMessage(
-            var2, (java.lang.String)var13, var7 as ChannelId, var6 as java.lang.String, var8 as HandleDeleteMessageAuthor, null, null
+            var2, (java.lang.String)var13, var6 as ChannelId, var8 as java.lang.String, var7 as HandleDeleteMessageAuthor, null, null
          );
       }
 

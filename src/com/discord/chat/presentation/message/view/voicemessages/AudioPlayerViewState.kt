@@ -50,16 +50,16 @@ public data class AudioPlayerViewState(messageId: MessageId? = ..., sourceUrl: S
          return false;
       } else {
          var var2: Boolean;
-         var var4: AudioPlayerViewState;
+         var var3: AudioPlayerViewState;
          label32: {
-            var4 = var1 as AudioPlayerViewState;
+            var3 = var1 as AudioPlayerViewState;
             if (this.messageId == null) {
-               if (var4.messageId == null) {
+               if (var3.messageId == null) {
                   var2 = true;
                   break label32;
                }
-            } else if (var4.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
+            } else if (var3.messageId != null) {
+               var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
                break label32;
             }
 
@@ -68,10 +68,10 @@ public data class AudioPlayerViewState(messageId: MessageId? = ..., sourceUrl: S
 
          if (!var2) {
             return false;
-         } else if (!r.c(this.sourceUrl, var4.sourceUrl)) {
+         } else if (!r.c(this.sourceUrl, var3.sourceUrl)) {
             return false;
          } else {
-            return this.attached == var4.attached;
+            return this.attached == var3.attached;
          }
       }
    }

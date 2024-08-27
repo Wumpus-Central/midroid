@@ -224,15 +224,15 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       this.binding.itemInviteTotalMemberText.setText(var2);
       val var17: LinearLayout = this.binding.itemInviteMemberContainer;
       kotlin.jvm.internal.r.g(this.binding.itemInviteMemberContainer, "binding.itemInviteMemberContainer");
-      val var4: Boolean;
+      var var11: Boolean;
       if (var1 != null && !kotlin.text.f.x(var1)) {
-         var4 = false;
+         var11 = 0;
       } else {
-         var4 = true;
+         var11 = 1;
       }
 
-      var var11: Byte = 1;
-      if (var4) {
+      var var4: Boolean = true;
+      if (var11) {
          if (var2 != null && !kotlin.text.f.x(var2)) {
             var11 = (boolean)0;
          } else {
@@ -240,13 +240,13 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
          }
 
          if (!var11) {
-            var11 = 1;
+            var4 = true;
          } else {
-            var11 = 0;
+            var4 = false;
          }
       }
 
-      if (var11) {
+      if (var4) {
          var11 = 0;
       } else {
          var11 = 8;

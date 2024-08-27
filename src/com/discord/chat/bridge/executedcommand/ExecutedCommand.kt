@@ -273,61 +273,61 @@ public data class ExecutedCommand(userId: UserId,
 
       public open fun deserialize(decoder: Decoder): ExecutedCommand {
          r.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.b(var11);
+         val var12: SerialDescriptor = this.getDescriptor();
+         val var13: c = var1.b(var12);
          var var2: Int;
          var var3: Int;
          var var6: Any;
          var var7: Any;
          var var8: Any;
-         val var10: Any;
-         var var13: Any;
-         if (var12.p()) {
-            var7 = var12.y(var11, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
-            var3 = var12.i(var11, 1);
-            var13 = var12.n(var11, 2, a2.a, null);
-            var8 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, null);
-            var6 = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null);
-            var10 = var12.n(var11, 5, h.a, null);
+         var var9: Any;
+         var var14: Any;
+         if (var13.p()) {
+            var9 = var13.y(var12, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
+            var3 = var13.i(var12, 1);
+            var7 = var13.n(var12, 2, a2.a, null);
+            var8 = var13.y(var12, 3, AnnotatedStructurableTextSerializer.INSTANCE, null);
+            var14 = var13.n(var12, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null);
+            var6 = var13.n(var12, 5, h.a, null);
             var2 = 63;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var7 = null;
-            var var9: Any = null;
+            var9 = null;
             var8 = null;
             var6 = null;
-            var13 = null;
+            var14 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var12.o(var11);
+               val var5: Int = var13.o(var12);
                switch (var5) {
                   case -1:
                      var4 = false;
                      break;
                   case 0:
-                     var7 = var12.y(var11, 0, com.discord.primitives.UserId..serializer.INSTANCE, var7);
+                     var7 = var13.y(var12, 0, com.discord.primitives.UserId..serializer.INSTANCE, var7);
                      var2 |= 1;
                      break;
                   case 1:
-                     var3 = var12.i(var11, 1);
+                     var3 = var13.i(var12, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var9 = var12.n(var11, 2, a2.a, var9);
+                     var9 = var13.n(var12, 2, a2.a, var9);
                      var2 |= 4;
                      break;
                   case 3:
-                     var8 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, var8);
+                     var8 = var13.y(var12, 3, AnnotatedStructurableTextSerializer.INSTANCE, var8);
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var6);
+                     var6 = var13.n(var12, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var6);
                      var2 |= 16;
                      break;
                   case 5:
-                     var13 = var12.n(var11, 5, h.a, var13);
+                     var14 = var13.n(var12, 5, h.a, var14);
                      var2 |= 32;
                      break;
                   default:
@@ -335,19 +335,21 @@ public data class ExecutedCommand(userId: UserId,
                }
             }
 
-            var10 = var13;
-            var13 = var9;
+            var6 = var14;
+            var9 = var7;
+            var7 = var9;
+            var14 = var6;
          }
 
-         var12.c(var11);
+         var13.c(var12);
          return new ExecutedCommand(
             var2,
-            var7 as UserId,
+            var9 as UserId,
             var3,
-            var13 as java.lang.String,
+            var7 as java.lang.String,
             var8 as AnnotatedStructurableText,
-            var6 as ExecutedCommandBackgroundStyles,
-            var10 as java.lang.Boolean,
+            var14 as ExecutedCommandBackgroundStyles,
+            var6 as java.lang.Boolean,
             null,
             null
          );

@@ -25,7 +25,7 @@ public data class NotificationMessage(stickerItems: List<Sticker> = h.i(),
 
    public final val embed: Embed?
       public final get() {
-         return h.b0(this.embeds) as Embed;
+         return h.c0(this.embeds) as Embed;
       }
 
 
@@ -35,7 +35,7 @@ public data class NotificationMessage(stickerItems: List<Sticker> = h.i(),
 
    public final val sticker: Sticker?
       public final get() {
-         return h.b0(this.stickerItems) as Sticker;
+         return h.c0(this.stickerItems) as Sticker;
       }
 
 
@@ -250,11 +250,11 @@ public data class NotificationMessage(stickerItems: List<Sticker> = h.i(),
          var var9: Any;
          var var15: Any;
          if (var5) {
-            var8 = var13.y(var12, 0, new xk.f<>(Sticker.$serializer.INSTANCE), null);
+            var6 = var13.y(var12, 0, new xk.f<>(Sticker.$serializer.INSTANCE), null);
             var15 = s.a;
             var9 = var13.n(var12, 1, s.a, null);
             var15 = var13.y(var12, 2, new xk.f((KSerializer)var15), null);
-            var6 = var13.n(var12, 3, Poll.$serializer.INSTANCE, null);
+            var8 = var13.n(var12, 3, Poll.$serializer.INSTANCE, null);
             var7 = var13.y(var12, 4, new xk.f<>(Embed.$serializer.INSTANCE), null);
             var2 = 31;
          } else {
@@ -299,13 +299,14 @@ public data class NotificationMessage(stickerItems: List<Sticker> = h.i(),
                }
             }
 
-            var8 = var7;
             var15 = var8;
             var7 = var15;
+            var8 = var6;
+            var6 = var7;
          }
 
          var13.c(var12);
-         return new NotificationMessage(var2, var8 as java.util.List, var9 as JsonObject, var15 as java.util.List, var6 as Poll, var7 as java.util.List, null);
+         return new NotificationMessage(var2, var6 as java.util.List, var9 as JsonObject, var15 as java.util.List, var8 as Poll, var7 as java.util.List, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NotificationMessage) {

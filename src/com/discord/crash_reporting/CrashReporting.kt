@@ -6,12 +6,12 @@ import com.discord.client_info.ClientInfo
 import com.discord.logging.Log
 import eh.p
 import fh.s
-import io.sentry.Scope
+import io.sentry.IScope
 import io.sentry.e
-import io.sentry.f4
-import io.sentry.w2
+import io.sentry.e5
+import io.sentry.o3
 import io.sentry.android.core.SentryAndroidOptions
-import io.sentry.android.core.l1
+import io.sentry.android.core.r1
 import java.io.File
 import java.net.ConnectException
 import java.net.SocketException
@@ -42,25 +42,25 @@ public object CrashReporting {
       private set
 
    @JvmStatic
-   fun `captureMessage$lambda$1`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: Scope) {
+   fun `captureMessage$lambda$1`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
       r.h(var0, "$tag");
       r.h(var1, "$message");
       r.h(var2, "$errorLevel");
       r.h(var3, "SentryScope");
-      var3.z(h.d(var0));
+      var3.h(h.d(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
-      val var5: f4;
+      val var5: e5;
       if (var4 != 1) {
          if (var4 != 2) {
             throw new p();
          }
 
-         var5 = f4.WARNING;
+         var5 = e5.WARNING;
       } else {
-         var5 = f4.INFO;
+         var5 = e5.INFO;
       }
 
-      w2.i(var1, var5);
+      o3.j(var1, var5);
    }
 
    @JvmStatic
@@ -83,7 +83,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("cfed2a89-15ec-4345-b51d-d42b71ef5aa7");
+      var5.setProguardUuid("bf67b3a9-ec0d-4591-91e6-48559cdaf529");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -94,21 +94,21 @@ public object CrashReporting {
       val var4: e = new e(var1);
 
       for (Entry var6 : var2.entrySet()) {
-         var4.m(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+         var4.n(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
-      var4.l(var3);
+      var4.m(var3);
       Log.i$default(Log.INSTANCE, "SentryBreadcrumb", var1, null, 4, null);
-      w2.c(var4);
+      o3.d(var4);
    }
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       r.h(var1, "throwable");
       Log.e$default(Log.INSTANCE, "SentryBreadcrumb", eh.e.b(var1), null, 4, null);
       if (!var2) {
-         w2.g(var1);
+         o3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(h0.b(var1.getClass()))) {
-         w2.g(var1);
+         o3.h(var1);
       }
    }
 
@@ -137,7 +137,7 @@ public object CrashReporting {
          Log.i$default(Log.INSTANCE, var1, var2, null, 4, null);
       }
 
-      w2.B(new b(var1, var2, var3));
+      o3.F(new b(var1, var2, var3));
    }
 
    public fun getSampleRate(context: Context): Double {
@@ -183,8 +183,8 @@ public object CrashReporting {
          }
 
          var7.j = var6;
-         l1.f(var1, new a(var7, var2, var1, this.getSampleRate(var1)));
-         isCrashedLastRun = w2.s();
+         r1.g(var1, new a(var7, var2, var1, this.getSampleRate(var1)));
+         isCrashedLastRun = o3.u();
       }
    }
 

@@ -61,16 +61,16 @@ public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId,
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var1: Message = this.message;
+      val var2: Message = this.message;
       val var4: AutoModerationContext = this.moderationContext;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AutoModerationNotificationEmbedAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", message=");
-      var2.append(var1);
-      var2.append(", moderationContext=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AutoModerationNotificationEmbedAccessory(messageId=");
+      var1.append(var3);
+      var1.append(", message=");
+      var1.append(var2);
+      var1.append(", moderationContext=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 }

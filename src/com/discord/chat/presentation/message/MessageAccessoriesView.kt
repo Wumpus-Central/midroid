@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.R
 import com.discord.chat.presentation.events.ChatEventHandler
+import com.discord.chat.presentation.list.CatchingLinearLayoutManager
 import com.discord.chat.presentation.message.decorations.MessageAccessoriesHorizontalSpacingDecoration
 import com.discord.chat.presentation.message.decorations.ThreadSpineItemDecoration
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
@@ -63,7 +64,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
+      val var6: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -72,9 +73,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var3;
-      val var6: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var6;
+      this.accessoriesAdapter = var6;
+      val var3: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var3;
       val var4: DefaultItemAnimator = new DefaultItemAnimator() {
          public boolean canReuseUpdatedViewHolder(ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.r.h(var1, "viewHolder");
@@ -104,11 +105,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      val var5: AccessoriesLayoutManager = new AccessoriesLayoutManager(var1, 1, false);
+      val var5: CatchingLinearLayoutManager = new CatchingLinearLayoutManager(var1, 1, false);
       var5.setRecycleChildrenOnDetach(false);
       this.setLayoutManager(var5);
-      this.setAdapter(var3);
-      var3.setMessageContentViewLifecycleListener(var6);
+      this.setAdapter(var6);
+      var6.setMessageContentViewLifecycleListener(var3);
    }
 
    private fun getForwardBarHeight(): Int {

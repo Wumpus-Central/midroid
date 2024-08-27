@@ -18,15 +18,15 @@ public object MessageFrameSerializer : d(h0.b(MessageFrame.class)) {
 
    @JvmStatic
    fun {
-      val var2: Array<MessageFrameType> = MessageFrameType.values();
-      val var3: ArrayList = new ArrayList(var2.length);
-      val var1: Int = var2.length;
+      val var3: Array<MessageFrameType> = MessageFrameType.values();
+      val var2: ArrayList = new ArrayList(var3.length);
+      val var1: Int = var3.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var3.add(var2[var0].getSerialNumber());
+         var2.add(var3[var0].getSerialNumber());
       }
 
-      knownTypes = var3;
+      knownTypes = var2;
       messageFrameClassSerializer = new SealedClassSerializer(
          "MessageFrame",
          h0.b(MessageFrame.class),
@@ -53,7 +53,7 @@ public object MessageFrameSerializer : d(h0.b(MessageFrame.class)) {
       }
 
       val var6: Any;
-      if (h.P(var2, var5)) {
+      if (h.Q(var2, var5)) {
          var6 = messageFrameClassSerializer;
       } else {
          var6 = UnknownMessageFrame.Companion.serializer();

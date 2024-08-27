@@ -199,23 +199,23 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
          val var10: c = var1.b(var9);
          var var2: Int;
          var var5: Boolean;
-         var var6: Any;
          val var8: java.lang.String;
-         var var14: Any;
+         var var11: Any;
+         var var13: Any;
          if (var10.p()) {
-            var14 = a2.a;
-            var6 = var10.n(var9, 0, a2.a, null);
-            val var11: java.lang.String = var10.m(var9, 1);
-            var14 = var10.n(var9, 2, (DeserializationStrategy)var14, null);
+            var13 = a2.a;
+            var11 = var10.n(var9, 0, a2.a, null);
+            val var7: java.lang.String = var10.m(var9, 1);
+            var13 = var10.n(var9, 2, (DeserializationStrategy)var13, null);
             var5 = var10.C(var9, 3);
             var2 = 15;
-            var8 = var11;
+            var8 = var7;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var14 = null;
-            var6 = null;
-            var var12: Any = null;
+            var var14: Any = null;
+            var11 = null;
+            var13 = null;
             var2 = 0;
 
             while (var3) {
@@ -231,11 +231,11 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
                            var5 = var10.C(var9, 3);
                            var2 |= 8;
                         } else {
-                           var12 = var10.n(var9, 2, a2.a, var12);
+                           var13 = var10.n(var9, 2, a2.a, var13);
                            var2 |= 4;
                         }
                      } else {
-                        var6 = var10.m(var9, 1);
+                        var11 = var10.m(var9, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -247,13 +247,12 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
                }
             }
 
-            var8 = (java.lang.String)var6;
-            var6 = var14;
-            var14 = var12;
+            var8 = (java.lang.String)var11;
+            var11 = var14;
          }
 
          var10.c(var9);
-         return new PollMediaEmoji(var2, var6 as java.lang.String, var8, var14 as java.lang.String, var5, null);
+         return new PollMediaEmoji(var2, var11 as java.lang.String, var8, var13 as java.lang.String, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollMediaEmoji) {

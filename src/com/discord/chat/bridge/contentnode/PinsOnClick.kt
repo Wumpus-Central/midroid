@@ -114,43 +114,46 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
 
       public open fun deserialize(decoder: Decoder): PinsOnClick {
          r.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var5: Boolean = var8.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var6: java.lang.String = null;
          var var2: Int;
-         var var9: Any;
+         val var7: Any;
          if (var5) {
-            var6 = var8.m(var7, 0);
-            var9 = var8.y(var7, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            val var10: java.lang.String = var9.m(var8, 0);
+            var7 = var9.y(var8, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
             var2 = 3;
+            var6 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var9 = null;
+            var var11: Any = null;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var8.y(var7, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var9);
+                     var11 = var9.y(var8, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var11);
                      var2 |= 2;
                   } else {
-                     var6 = var8.m(var7, 0);
+                     var6 = var9.m(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var7 = var11;
          }
 
-         var8.c(var7);
-         return new PinsOnClick(var2, var6, var9 as ChannelId, null, null);
+         var9.c(var8);
+         return new PinsOnClick(var2, var6, var7 as ChannelId, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PinsOnClick) {

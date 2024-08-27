@@ -27,35 +27,36 @@ public class ReactionsView  public constructor(context: Context, attrs: Attribut
    init {
       r.h(var1, "context");
       super(var1, var2);
-      this.setLayoutManager(new ReactionsFlexboxLayoutManager(var1));
-      val var4: ReactionsViewAdapter = new ReactionsViewAdapter(REACTION_HEIGHT);
-      this.adapter = var4;
-      this.setAdapter(var4);
+      val var4: ReactionsFlexboxLayoutManager = new ReactionsFlexboxLayoutManager(var1);
+      var4.setRecycleChildrenOnDetach(false);
+      this.setLayoutManager(var4);
+      val var5: ReactionsViewAdapter = new ReactionsViewAdapter(REACTION_HEIGHT);
+      this.adapter = var5;
+      this.setAdapter(var5);
       val var3: Int = SizeUtilsKt.getDpToPx(4);
       this.addItemDecoration(new HorizontalSpacingItemDecoration(var3));
       this.addItemDecoration(new VerticalSpacingItemDecoration(var3, 0, var3, false, 10, null));
-      this.setRecycledViewPool(ReactionsView.Companion.access$getSharedViewPool(Companion));
-      val var7: ItemAnimator = this.getItemAnimator();
-      var var5: DefaultItemAnimator = null;
-      if (var7 != null) {
-         var var6: ItemAnimator = var7;
-         if (var7 !is DefaultItemAnimator) {
-            var6 = null;
+      val var8: ItemAnimator = this.getItemAnimator();
+      var var6: DefaultItemAnimator = null;
+      if (var8 != null) {
+         var var7: ItemAnimator = var8;
+         if (var8 !is DefaultItemAnimator) {
+            var7 = null;
          }
 
-         var5 = var6 as DefaultItemAnimator;
+         var6 = var7 as DefaultItemAnimator;
       }
 
-      r.e(var5);
-      var5.setSupportsChangeAnimations(false);
-   }
-
-   @JvmStatic
-   fun `setReactions$lambda$0`(var0: View) {
+      r.e(var6);
+      var6.setSupportsChangeAnimations(false);
    }
 
    @JvmStatic
    fun `setReactions$lambda$1`(var0: View) {
+   }
+
+   @JvmStatic
+   fun `setReactions$lambda$2`(var0: View) {
    }
 
    public fun setReactions(
@@ -96,11 +97,5 @@ public class ReactionsView  public constructor(context: Context, attrs: Attribut
 
    public companion object {
       private final val REACTION_HEIGHT: Int
-
-      private final val sharedViewPool: RecycledViewPool
-         private final get() {
-            return ReactionsView.access$getSharedViewPool$delegate$cp().getValue() as RecycledViewPool;
-         }
-
    }
 }

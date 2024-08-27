@@ -81,15 +81,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
       r.h(var1, "context");
-      val var4: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var7: java.lang.String = this.taskName;
-      val var6: Bundle = new Bundle();
+      val var6: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: java.lang.String = this.taskName;
+      val var4: Bundle = new Bundle();
 
-      for (Entry var5 : this.data.entrySet()) {
-         var6.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var7 : this.data.entrySet()) {
+         var4.putString(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
       }
 
-      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, var7, 0L, false, var6, var2, 12, null);
+      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var6, var1, var3, 0L, false, var4, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -101,18 +101,18 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.getTag();
-      val var3: java.lang.String = this.taskName;
-      val var1: java.util.Map = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("GenericAction(tag=");
-      var2.append(var4);
-      var2.append(", taskName=");
-      var2.append(var3);
-      var2.append(", data=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.getTag();
+      val var2: java.lang.String = this.taskName;
+      val var4: java.util.Map = this.data;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("GenericAction(tag=");
+      var1.append(var3);
+      var1.append(", taskName=");
+      var1.append(var2);
+      var1.append(", data=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {

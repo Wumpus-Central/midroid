@@ -89,6 +89,6 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
 
       val var12: FlexboxLayout = this.binding.itemComponentsRoot;
       r.g(this.binding.itemComponentsRoot, "binding.itemComponentsRoot");
-      MessageComponentsViewKt.replaceViews(var12, h.W(var8));
+      MessageComponentsViewKt.replaceViews(var12, h.X(var8));
    }
 }

@@ -143,10 +143,10 @@ public class ForegroundServiceManager {
 
          try {
             r.h(var1, "context");
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = tag;
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = tag;
             r.g(tag, "tag");
-            Log.i$foreground_service_release$default(var2, var3, "On service created.", null, 4, null);
+            Log.i$foreground_service_release$default(var3, var2, "On service created.", null, 4, null);
             this.serviceWakelocks.acquire(var1);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit
@@ -182,15 +182,15 @@ public class ForegroundServiceManager {
          try {
             r.h(var1, "context");
             r.h(var2, "serviceConfigurations");
-            val var6: Log = Log.INSTANCE;
-            val var4: java.lang.String = tag;
+            val var4: Log = Log.INSTANCE;
+            val var5: java.lang.String = tag;
             r.g(tag, "tag");
             val var3: Int = var2.size();
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("Start service with ");
-            var5.append(var3);
-            var5.append(" configurations.");
-            Log.i$foreground_service_release$default(var6, var4, var5.toString(), null, 4, null);
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Start service with ");
+            var6.append(var3);
+            var6.append(" configurations.");
+            Log.i$foreground_service_release$default(var4, var5, var6.toString(), null, 4, null);
             this.serviceConfigurations = var2;
             ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
          } catch (var7: java.lang.Throwable) {

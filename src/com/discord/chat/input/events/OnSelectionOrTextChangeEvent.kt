@@ -98,17 +98,17 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    public override fun toString(): String {
       val var1: Int = this.start;
       val var2: Int = this.end;
-      val var3: java.lang.String = this.text;
-      val var4: java.lang.String = this.editId;
+      val var4: java.lang.String = this.text;
+      val var3: java.lang.String = this.editId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnSelectionOrTextChangeEvent(start=");
       var5.append(var1);
       var5.append(", end=");
       var5.append(var2);
       var5.append(", text=");
-      var5.append(var3);
-      var5.append(", editId=");
       var5.append(var4);
+      var5.append(", editId=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -144,14 +144,13 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
          var var3: Int;
          var var4: Int;
          var var7: java.lang.String;
-         val var8: java.lang.String;
+         val var11: java.lang.String;
          if (var10.p()) {
             var4 = var10.i(var9, 0);
             var3 = var10.i(var9, 1);
             var7 = var10.m(var9, 2);
-            val var11: java.lang.String = var10.m(var9, 3);
+            var11 = var10.m(var9, 3);
             var2 = 15;
-            var8 = var11;
          } else {
             var7 = null;
             var var12: java.lang.String = null;
@@ -189,12 +188,12 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
                }
             }
 
-            var8 = var7;
             var7 = var12;
+            var11 = var7;
          }
 
          var10.c(var9);
-         return new OnSelectionOrTextChangeEvent(var2, var4, var3, var7, var8, null);
+         return new OnSelectionOrTextChangeEvent(var2, var4, var3, var7, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSelectionOrTextChangeEvent) {

@@ -10,7 +10,7 @@ public class ListOperationsBuilder {
    private final val listOperations: MutableList<ListOperation> = new ArrayList()
 
    private fun addChange(changeOperation: Change) {
-      val var3: ListOperation = h.l0(this.listOperations) as ListOperation;
+      val var3: ListOperation = h.m0(this.listOperations) as ListOperation;
       if (var3 is ListOperation.Change) {
          val var5: ListOperation.Change = var3 as ListOperation.Change;
          val var2: Int = (var3 as ListOperation.Change).getIndex();
@@ -36,7 +36,7 @@ public class ListOperationsBuilder {
    }
 
    private fun addInsert(insertOperation: Insert) {
-      val var3: ListOperation = h.l0(this.listOperations) as ListOperation;
+      val var3: ListOperation = h.m0(this.listOperations) as ListOperation;
       if (var3 is ListOperation.Insert) {
          val var5: ListOperation.Insert = var3 as ListOperation.Insert;
          val var2: Int = (var3 as ListOperation.Insert).getIndex();
@@ -62,7 +62,7 @@ public class ListOperationsBuilder {
    }
 
    private fun addRemove(removeOperation: Remove) {
-      val var3: ListOperation = h.l0(this.listOperations) as ListOperation;
+      val var3: ListOperation = h.m0(this.listOperations) as ListOperation;
       if (var3 is ListOperation.Remove) {
          val var5: ListOperation.Remove = var3 as ListOperation.Remove;
          val var2: Int = (var3 as ListOperation.Remove).getIndex();

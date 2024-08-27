@@ -39,7 +39,7 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    private fun decodeStyleBlocks(blocks: String): List<ChatInputNode> {
       val var2: Json = this.json;
       this.json.a();
-      return var2.b(new f(ChatInputNode.$serializer.INSTANCE), var1) as java.util.List<ChatInputNode>;
+      return var2.b(new f(ChatInputNode.$serializer.INSTANCE), var1) as MutableList<ChatInputNode>;
    }
 
    public open fun backspace(view: ChatInputRootView) {

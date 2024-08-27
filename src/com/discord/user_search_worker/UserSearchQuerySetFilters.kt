@@ -172,27 +172,27 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetFilters {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var6: Any = null;
          var var2: Int;
+         var var7: Any;
          var var11: Any;
-         var var13: Any;
          if (var5) {
-            var6 = var10.n(var9, 0, a2.a, null);
-            var13 = h.a;
-            var11 = var10.n(var9, 1, h.a, null);
-            var13 = var10.n(var9, 2, (DeserializationStrategy)var13, null);
+            var6 = var9.n(var8, 0, a2.a, null);
+            var11 = h.a;
+            var7 = var9.n(var8, 1, h.a, null);
+            var11 = var9.n(var8, 2, (DeserializationStrategy)var11, null);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var13 = null;
+            var7 = null;
             var11 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -200,27 +200,24 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
                            throw new n(var4);
                         }
 
-                        var11 = var10.n(var9, 2, h.a, var11);
+                        var11 = var9.n(var8, 2, h.a, var11);
                         var2 |= 4;
                      } else {
-                        var13 = var10.n(var9, 1, h.a, var13);
+                        var7 = var9.n(var8, 1, h.a, var7);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var10.n(var9, 0, a2.a, var6);
+                     var6 = var9.n(var8, 0, a2.a, var6);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var11 = var13;
-            var13 = var11;
          }
 
-         var10.c(var9);
-         return new UserSearchQuerySetFilters(var2, var6 as java.lang.String, var11 as java.lang.Boolean, var13 as java.lang.Boolean, null);
+         var9.c(var8);
+         return new UserSearchQuerySetFilters(var2, var6 as java.lang.String, var7 as java.lang.Boolean, var11 as java.lang.Boolean, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSearchQuerySetFilters) {

@@ -78,25 +78,25 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
       r.h(var0, "this$0");
       r.h(var1, "$rects");
       val var2: Companion = ReactRootView.Companion;
-      val var3: ReactApplicationContext = var0.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      val var6: ReactApplicationContext = var0.getReactApplicationContext();
+      r.g(var6, "reactApplicationContext");
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-      val var6: ArrayList = new ArrayList(h.t(var4, 10));
-      val var5: java.util.Iterator = var4.iterator();
+      val var3: ArrayList = new ArrayList(h.t(var4, 10));
+      val var7: java.util.Iterator = var4.iterator();
 
-      while (var5.hasNext()) {
-         val var7: ReadableMap = var1.getMap((var5 as p).nextInt());
-         var6.add(
+      while (var7.hasNext()) {
+         val var5: ReadableMap = var1.getMap((var7 as p).nextInt());
+         var3.add(
             new Rect(
-               SizeUtilsKt.getDpToPx(var7.getInt("left")),
-               SizeUtilsKt.getDpToPx(var7.getInt("top")),
-               SizeUtilsKt.getDpToPx(var7.getInt("right")),
-               SizeUtilsKt.getDpToPx(var7.getInt("bottom"))
+               SizeUtilsKt.getDpToPx(var5.getInt("left")),
+               SizeUtilsKt.getDpToPx(var5.getInt("top")),
+               SizeUtilsKt.getDpToPx(var5.getInt("right")),
+               SizeUtilsKt.getDpToPx(var5.getInt("bottom"))
             )
          );
       }
 
-      var2.setSystemGestureExclusionRects(var3, var6);
+      var2.setSystemGestureExclusionRects(var6, var3);
    }
 
    public open fun getName(): String {
