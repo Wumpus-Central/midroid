@@ -3,8 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import eh.w
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -12,11 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
+import lj.w
 
 @f
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {
@@ -27,24 +27,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
    }
 
    init {
-      super();
       this.attachmentUrl = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TapAttachmentLinkData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      val var4: Boolean = var1.A(var2, 0);
-      var var3: Boolean = true;
-      if (!var4 && var0.attachmentUrl == null) {
-         var3 = false;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, a2.a, var0.attachmentUrl);
-      }
    }
 
    public operator fun component1(): String? {
@@ -61,7 +44,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       } else if (var1 !is TapAttachmentLinkData) {
          return false;
       } else {
-         return r.c(this.attachmentUrl, (var1 as TapAttachmentLinkData).attachmentUrl);
+         return q.c(this.attachmentUrl, (var1 as TapAttachmentLinkData).attachmentUrl);
       }
    }
 
@@ -89,7 +72,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       return var1.toString();
    }
 
-   public object `$serializer` : f0<TapAttachmentLinkData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -106,19 +89,19 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(a2.a)};
+         return new KSerializer[]{a.u(b2.a)};
       }
 
       public open fun deserialize(decoder: Decoder): TapAttachmentLinkData {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var8: java.lang.String;
          if (var5) {
-            var8 = var7.n(var6, 0, a2.a, null);
+            var8 = var7.n(var6, 0, b2.a, null) as java.lang.String;
          } else {
             var2 = 0;
             var8 = null;
@@ -130,7 +113,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
                      throw new n(var4);
                   }
 
-                  var8 = var7.n(var6, 0, a2.a, var8);
+                  var8 = var7.n(var6, 0, b2.a, var8) as java.lang.String;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -139,20 +122,20 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
          }
 
          var7.c(var6);
-         return new TapAttachmentLinkData(var2, var8 as java.lang.String, null);
+         return new TapAttachmentLinkData(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapAttachmentLinkData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         TapAttachmentLinkData.write$Self(var2, var4, var3);
+         TapAttachmentLinkData.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

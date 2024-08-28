@@ -4,16 +4,16 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class ChatListLinearLayout  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout, ChatListChildView {
    open fun ChatListLinearLayout(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
    }
 

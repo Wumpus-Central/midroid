@@ -16,15 +16,15 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
    private final val binding: ChannelPromptActionsViewBinding
 
    fun ChannelPromptActionsView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var3: ChannelPromptActionsViewBinding = ChannelPromptActionsViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
@@ -35,11 +35,11 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       onTapGamingStatsButton: OnClickListener,
       onTapGifButton: OnClickListener
    ) {
-      kotlin.jvm.internal.r.h(var1, "message");
-      kotlin.jvm.internal.r.h(var2, "onTapCameraButton");
-      kotlin.jvm.internal.r.h(var3, "onTapEmojiButton");
-      kotlin.jvm.internal.r.h(var4, "onTapGamingStatsButton");
-      kotlin.jvm.internal.r.h(var5, "onTapGifButton");
+      kotlin.jvm.internal.q.h(var1, "message");
+      kotlin.jvm.internal.q.h(var2, "onTapCameraButton");
+      kotlin.jvm.internal.q.h(var3, "onTapEmojiButton");
+      kotlin.jvm.internal.q.h(var4, "onTapGamingStatsButton");
+      kotlin.jvm.internal.q.h(var5, "onTapGifButton");
       val var8: DCDButton = this.binding.cameraButton;
       val var6: ChannelPromptData = var1.getChannelPromptData();
       val var17: java.lang.String;
@@ -52,10 +52,10 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       if (var17 != null) {
          var8.setIcon(var1.getChannelPromptData().getCameraButtonIcon(), SizeUtilsKt.getDpToPx(24));
          var8.setText(var1.getChannelPromptData().getCameraButtonText());
-         kotlin.jvm.internal.r.g(var8, "configure$lambda$0");
+         kotlin.jvm.internal.q.e(var8);
          var8.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.g(var8, "configure$lambda$0");
+         kotlin.jvm.internal.q.e(var8);
          var8.setVisibility(8);
       }
 
@@ -73,10 +73,10 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       if (var10 != null) {
          var18.setIcon(var1.getChannelPromptData().getGifButtonIcon(), SizeUtilsKt.getDpToPx(24));
          var18.setText(var1.getChannelPromptData().getGifButtonText());
-         kotlin.jvm.internal.r.g(var18, "configure$lambda$1");
+         kotlin.jvm.internal.q.e(var18);
          var18.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.g(var18, "configure$lambda$1");
+         kotlin.jvm.internal.q.e(var18);
          var18.setVisibility(8);
       }
 
@@ -94,10 +94,10 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       if (var12 != null) {
          var15.setIcon(var1.getChannelPromptData().getEmojiButtonIcon(), SizeUtilsKt.getDpToPx(24));
          var15.setText(var1.getChannelPromptData().getEmojiButtonText());
-         kotlin.jvm.internal.r.g(var15, "configure$lambda$2");
+         kotlin.jvm.internal.q.e(var15);
          var15.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.g(var15, "configure$lambda$2");
+         kotlin.jvm.internal.q.e(var15);
          var15.setVisibility(8);
       }
 
@@ -112,10 +112,10 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
 
       if (var13 != null) {
          var14.setText(var1.getChannelPromptData().getGamingStatsButtonText());
-         kotlin.jvm.internal.r.g(var14, "configure$lambda$3");
+         kotlin.jvm.internal.q.e(var14);
          var14.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.g(var14, "configure$lambda$3");
+         kotlin.jvm.internal.q.e(var14);
          var14.setVisibility(8);
       }
 

@@ -3,7 +3,7 @@ package com.discord.app_icon
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object AppIconUtil {
    private fun getAppIconFromId(id: String): AppIcon? {
@@ -18,7 +18,7 @@ public object AppIconUtil {
          }
 
          val var4: AppIcon = var5[var2];
-         if (r.c(var5[var2].getId(), var1)) {
+         if (q.c(var5[var2].getId(), var1)) {
             var6 = var4;
             break;
          }
@@ -45,62 +45,56 @@ public object AppIconUtil {
    }
 
    public fun getCurrentAppIcon(context: Context): AppIcon {
-      r.h(var1, "context");
-      val var7: PackageManager = var1.getPackageManager();
-      val var8: Array<AppIcon> = AppIcon.values();
-      val var4: Int = var8.length;
+      q.h(var1, "context");
+      val var5: PackageManager = var1.getPackageManager();
+      val var6: Array<AppIcon> = AppIcon.values();
+      val var3: Int = var6.length;
       var var2: Int = 0;
 
       while (true) {
-         if (var2 >= var4) {
-            var9 = null;
+         if (var2 >= var3) {
+            var7 = null;
             break;
          }
 
-         val var6: AppIcon = var8[var2];
-         val var5: Int = var7.getComponentEnabledSetting(new ComponentName(var1, var8[var2].getAlias()));
-         var var3: Boolean = true;
-         if (var5 != 1) {
-            var3 = false;
-         }
-
-         if (var3) {
-            var9 = var6;
+         val var4: AppIcon = var6[var2];
+         if (var5.getComponentEnabledSetting(new ComponentName(var1, var6[var2].getAlias())) == 1) {
+            var7 = var4;
             break;
          }
 
          var2++;
       }
 
-      var var10: AppIcon = var9;
-      if (var9 == null) {
-         var10 = AppIcon.DEFAULT;
+      var var8: AppIcon = var7;
+      if (var7 == null) {
+         var8 = AppIcon.DEFAULT;
       }
 
-      return var10;
+      return var8;
    }
 
    public fun setAppIcon(context: Context, id: String) {
-      r.h(var1, "context");
-      r.h(var2, "id");
+      q.h(var1, "context");
+      q.h(var2, "id");
       val var6: AppIcon = this.getAppIconFromId(var2);
       if (var6 != null) {
-         val var8: PackageManager = var1.getPackageManager();
+         val var7: PackageManager = var1.getPackageManager();
          val var9: Array<AppIcon> = AppIcon.values();
          val var4: Int = var9.length;
 
          for (int var3 = 0; var3 < var4; var3++) {
-            val var11: AppIcon = var9[var3];
-            val var7: ComponentName = new ComponentName(var1, var9[var3].getAlias());
+            val var8: AppIcon = var9[var3];
+            val var11: ComponentName = new ComponentName(var1, var9[var3].getAlias());
             val var5: Boolean;
-            if (var11 === var6) {
+            if (var8 === var6) {
                var5 = true;
             } else {
                var5 = false;
             }
 
-            r.g(var8, "packageManger");
-            this.setComponentState(var8, var7, var5);
+            q.e(var7);
+            this.setComponentState(var7, var11, var5);
          }
       } else {
          val var10: StringBuilder = new StringBuilder();

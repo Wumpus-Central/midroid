@@ -1,6 +1,10 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,10 +12,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.f0
 
 @f
 public data class Embed(fields: List<EmbedField>? = null) {
@@ -22,24 +22,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
    }
 
    init {
-      super();
       this.fields = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: Embed, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      val var4: Boolean = var1.A(var2, 0);
-      var var3: Boolean = true;
-      if (!var4 && var0.fields == null) {
-         var3 = false;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, new xk.f(EmbedField.$serializer.INSTANCE), var0.fields);
-      }
    }
 
    public operator fun component1(): List<EmbedField>? {
@@ -56,7 +39,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       } else if (var1 !is Embed) {
          return false;
       } else {
-         return r.c(this.fields, (var1 as Embed).fields);
+         return q.c(this.fields, (var1 as Embed).fields);
       }
    }
 
@@ -80,7 +63,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<Embed> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -97,22 +80,23 @@ public data class Embed(fields: List<EmbedField>? = null) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(new xk.f(EmbedField.$serializer.INSTANCE))};
+         return new KSerializer[]{a.u(Embed.access$get$childSerializers$cp()[0])};
       }
 
       public open fun deserialize(decoder: Decoder): Embed {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
+         val var8: Array<KSerializer> = Embed.access$get$childSerializers$cp();
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var9: java.util.List;
          if (var5) {
-            var8 = var7.n(var6, 0, new xk.f(EmbedField.$serializer.INSTANCE), null);
+            var9 = var7.n(var6, 0, var8[0], null) as java.util.List;
          } else {
             var2 = 0;
-            var8 = null;
+            var9 = null;
 
             while (var3) {
                val var4: Int = var7.o(var6);
@@ -121,7 +105,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.n(var6, 0, new xk.f(EmbedField.$serializer.INSTANCE), var8);
+                  var9 = var7.n(var6, 0, var8[0], var9) as java.util.List;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -130,20 +114,20 @@ public data class Embed(fields: List<EmbedField>? = null) {
          }
 
          var7.c(var6);
-         return new Embed(var2, var8 as java.util.List, null);
+         return new Embed(var2, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Embed) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         Embed.write$Self(var2, var4, var3);
+         Embed.write$Self$notification_api_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

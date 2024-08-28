@@ -5,31 +5,30 @@ import android.graphics.Canvas
 import android.view.View
 import android.view.ViewParent
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.presentation.message.view.MessageContentView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
 import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.misc.utilities.size.SizeUtilsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
-public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx: Int) : ItemDecoration {
+public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    public final var showThreadSpine: Boolean
       internal set
 
    private final val spineDrawer: SpineDrawer
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       this.spineDrawer = new SpineDrawer(var1, var2);
       this.showThreadSpine = true;
    }
 
-   public open fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
-      r.h(var1, "canvas");
-      r.h(var2, "parent");
-      r.h(var3, "state");
+   public override fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
+      q.h(var1, "canvas");
+      q.h(var2, "parent");
+      q.h(var3, "state");
       super.onDraw(var1, var2, var3);
       if (this.showThreadSpine) {
          val var8: ViewParent = var2.getParent();

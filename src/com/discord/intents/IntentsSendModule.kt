@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.NameNotFoundException
-import android.content.pm.PackageManager.PackageInfoFlags
 import android.net.Uri
 import android.os.Build.VERSION
 import com.discord.intents.packages.InstalledPackage
@@ -14,13 +13,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class IntentsSendModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
    }
@@ -92,13 +91,13 @@ public class IntentsSendModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun canSendMail(promise: Promise) {
-      r.h(var1, "promise");
+      q.h(var1, "promise");
       var1.resolve(this.canResolveActivityForIntent(createEmailIntent$default(this, null, null, 3, null)));
    }
 
    @ReactMethod
    public fun canSendSMS(promise: Promise) {
-      r.h(var1, "promise");
+      q.h(var1, "promise");
       var1.resolve(this.canResolveActivityForIntent(createSmsIntent$default(this, null, 1, null)));
    }
 
@@ -108,15 +107,15 @@ public class IntentsSendModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun isPackageInstalled(appName: String, promise: Promise) {
-      r.h(var1, "appName");
-      r.h(var2, "promise");
+      q.h(var1, "appName");
+      q.h(var2, "promise");
       val var3: java.lang.String = InstalledPackage.Companion.parse(var1).getAppPackage();
       val var8: PackageManager = this.reactContext.getPackageManager();
       if (var3 != null) {
          label33: {
             try {
                if (VERSION.SDK_INT >= 33) {
-                  var8.getPackageInfo(var3, PackageInfoFlags.of(0L));
+                  b.a(var8, var3, a.a(0L));
                   break label33;
                }
             } catch (var7: NameNotFoundException) {
@@ -148,8 +147,8 @@ public class IntentsSendModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun sendMail(options: ReadableMap, callback: Callback) {
-      r.h(var1, "options");
-      r.h(var2, "callback");
+      q.h(var1, "options");
+      q.h(var2, "callback");
       val var5: java.lang.String = var1.getString("subject");
       var var3: java.lang.String = var5;
       if (var5 == null) {
@@ -166,8 +165,8 @@ public class IntentsSendModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun sendSMS(options: ReadableMap, callback: Callback) {
-      r.h(var1, "options");
-      r.h(var2, "callback");
+      q.h(var1, "options");
+      q.h(var2, "callback");
       var2.invoke(new Object[]{this.startActivityWithIntent(this.createSmsIntent(var1.getString("body")))});
    }
 }

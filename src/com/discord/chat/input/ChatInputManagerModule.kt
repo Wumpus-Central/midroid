@@ -9,24 +9,24 @@ import com.facebook.react.bridge.UIManager
 import com.facebook.react.uimanager.IllegalViewOperationException
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.common.ViewUtil
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ChatInputManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
    // $VF: Duplicated exception handlers to handle obfuscated exceptions
    @JvmStatic
    fun `getText$lambda$0`(var0: Int, var1: ChatInputManagerModule, var2: Promise) {
-      r.h(var1, "this$0");
-      r.h(var2, "$promise");
+      q.h(var1, "this$0");
+      q.h(var2, "$promise");
       val var3: Int = ViewUtil.getUIManagerType(var0);
       val var8: UIManager = UIManagerHelper.getUIManager(var1.getReactApplicationContext(), var3);
 
       try {
-         r.e(var8);
+         q.e(var8);
          var9 = var8.resolveView(var0);
       } catch (var7: IllegalViewOperationException) {
          var2.reject(var7);
@@ -35,12 +35,12 @@ public class ChatInputManagerModule(reactContext: ReactApplicationContext) : Rea
 
       if (var9 == null) {
          try {
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("View not found for tag ");
-            var4.append(var0);
-            var4.append(" of UIManagerType ");
-            var4.append(var3);
-            var2.reject(new Exception(var4.toString()));
+            val var10: StringBuilder = new StringBuilder();
+            var10.append("View not found for tag ");
+            var10.append(var0);
+            var10.append(" of UIManagerType ");
+            var10.append(var3);
+            var2.reject(new Exception(var10.toString()));
          } catch (var6: IllegalViewOperationException) {
             var2.reject(var6);
          }
@@ -67,7 +67,7 @@ public class ChatInputManagerModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun getText(tag: Int, promise: Promise) {
-      r.h(var2, "promise");
+      q.h(var2, "promise");
       this.getReactApplicationContext().runOnUiQueueThread(new a(var1, this, var2));
    }
 }

@@ -3,7 +3,13 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.h
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.h
-import xk.m0
-import xk.f0.a
 
 @f
 internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
@@ -54,23 +54,6 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
       this.firstVisibleMessageIndex = var8;
       this.lastVisibleMessageIndex = var9;
       this.changesetUpdateId = var10;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ChatScrollPositionEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.x(var2, 0, var0.isAtBottom);
-      var1.x(var2, 1, var0.isNearBottom);
-      var1.x(var2, 2, var0.isNearTop);
-      var1.x(var2, 3, var0.dragging);
-      var1.x(var2, 4, var0.decelerating);
-      var1.x(var2, 5, var0.shouldShowJumpToPresent);
-      var1.x(var2, 6, var0.isFirstMessageVisible);
-      var1.w(var2, 7, var0.firstVisibleMessageIndex);
-      var1.w(var2, 8, var0.lastVisibleMessageIndex);
-      var1.w(var2, 9, var0.changesetUpdateId);
    }
 
    public operator fun component1(): Boolean {
@@ -160,44 +143,33 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun hashCode(): Int {
-      var var7: Byte = 1;
-      var var1: Byte = this.isAtBottom;
-      if (this.isAtBottom != 0) {
-         var1 = 1;
-      }
-
-      var var9: Byte = this.isNearBottom;
-      if (this.isNearBottom != 0) {
-         var9 = 1;
-      }
-
-      var var10: Byte = this.isNearTop;
-      if (this.isNearTop != 0) {
-         var10 = 1;
-      }
-
-      var var11: Byte = this.dragging;
-      if (this.dragging != 0) {
-         var11 = 1;
-      }
-
-      var var12: Byte = this.decelerating;
-      if (this.decelerating != 0) {
-         var12 = 1;
-      }
-
-      var var13: Byte = this.shouldShowJumpToPresent;
-      if (this.shouldShowJumpToPresent != 0) {
-         var13 = 1;
-      }
-
-      if (this.isFirstMessageVisible == 0) {
-         var7 = this.isFirstMessageVisible;
-      }
-
       return (
                (
-                        ((((((var1 * 31 + var9) * 31 + var10) * 31 + var11) * 31 + var12) * 31 + var13) * 31 + var7) * 31
+                        (
+                                 (
+                                          (
+                                                   (
+                                                            (
+                                                                     (
+                                                                              java.lang.Boolean.hashCode(this.isAtBottom) * 31
+                                                                                 + java.lang.Boolean.hashCode(this.isNearBottom)
+                                                                           )
+                                                                           * 31
+                                                                        + java.lang.Boolean.hashCode(this.isNearTop)
+                                                                  )
+                                                                  * 31
+                                                               + java.lang.Boolean.hashCode(this.dragging)
+                                                         )
+                                                         * 31
+                                                      + java.lang.Boolean.hashCode(this.decelerating)
+                                                )
+                                                * 31
+                                             + java.lang.Boolean.hashCode(this.shouldShowJumpToPresent)
+                                       )
+                                       * 31
+                                    + java.lang.Boolean.hashCode(this.isFirstMessageVisible)
+                              )
+                              * 31
                            + Integer.hashCode(this.firstVisibleMessageIndex)
                      )
                      * 31
@@ -213,11 +185,11 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
 
    public override fun toString(): String {
       val var6: Boolean = this.isAtBottom;
-      val var7: Boolean = this.isNearBottom;
-      val var8: Boolean = this.isNearTop;
-      val var4: Boolean = this.dragging;
-      val var5: Boolean = this.decelerating;
-      val var9: Boolean = this.shouldShowJumpToPresent;
+      val var8: Boolean = this.isNearBottom;
+      val var9: Boolean = this.isNearTop;
+      val var5: Boolean = this.dragging;
+      val var4: Boolean = this.decelerating;
+      val var7: Boolean = this.shouldShowJumpToPresent;
       val var10: Boolean = this.isFirstMessageVisible;
       val var2: Int = this.firstVisibleMessageIndex;
       val var1: Int = this.lastVisibleMessageIndex;
@@ -226,15 +198,15 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
       var11.append("ChatScrollPositionEvent(isAtBottom=");
       var11.append(var6);
       var11.append(", isNearBottom=");
-      var11.append(var7);
-      var11.append(", isNearTop=");
       var11.append(var8);
-      var11.append(", dragging=");
-      var11.append(var4);
-      var11.append(", decelerating=");
-      var11.append(var5);
-      var11.append(", shouldShowJumpToPresent=");
+      var11.append(", isNearTop=");
       var11.append(var9);
+      var11.append(", dragging=");
+      var11.append(var5);
+      var11.append(", decelerating=");
+      var11.append(var4);
+      var11.append(", shouldShowJumpToPresent=");
+      var11.append(var7);
       var11.append(", isFirstMessageVisible=");
       var11.append(var10);
       var11.append(", firstVisibleMessageIndex=");
@@ -247,7 +219,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
       return var11.toString();
    }
 
-   public object `$serializer` : f0<ChatScrollPositionEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -273,15 +245,17 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{h.a, h.a, h.a, h.a, h.a, h.a, h.a, m0.a, m0.a, m0.a};
+         return new KSerializer[]{h.a, h.a, h.a, h.a, h.a, h.a, h.a, n0.a, n0.a, n0.a};
       }
 
       public open fun deserialize(decoder: Decoder): ChatScrollPositionEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var16: SerialDescriptor = this.getDescriptor();
          val var17: c = var1.b(var16);
          var var15: Boolean = var17.p();
          var var2: Int = 0;
+         var var3: Int;
+         var var5: Int;
          var var6: Int;
          var var7: Int;
          var var8: Int;
@@ -289,40 +263,36 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var var10: Int;
          var var11: Int;
          val var12: Int;
-         var var13: Int;
-         val var14: Int;
          var var20: Int;
          if (var15) {
             var15 = var17.C(var16, 0);
-            var8 = var17.C(var16, 1);
-            var13 = var17.C(var16, 2);
-            var9 = var17.C(var16, 3);
-            var12 = var17.C(var16, 4);
+            var12 = var17.C(var16, 1);
+            var7 = var17.C(var16, 2);
+            var8 = var17.C(var16, 3);
+            var11 = var17.C(var16, 4);
             var6 = var17.C(var16, 5);
             val var4: Byte = var17.C(var16, 6);
-            val var3: Int = var17.i(var16, 7);
-            val var5: Int = var17.i(var16, 8);
+            var3 = var17.i(var16, 7);
+            var5 = var17.i(var16, 8);
             var2 = var17.i(var16, 9);
-            var7 = 1023;
-            var14 = var4;
-            var10 = var3;
-            var11 = var5;
+            var9 = 1023;
+            var10 = var4;
             var20 = var2;
          } else {
             var var29: Boolean = true;
             var15 = false;
             var11 = 0;
-            var6 = 0;
-            var8 = 0;
-            var9 = 0;
-            var var19: Int = 0;
             var10 = 0;
+            var9 = 0;
+            var8 = 0;
             var7 = 0;
-            var var22: Int = 0;
+            var6 = 0;
+            var5 = 0;
             var20 = 0;
+            var3 = 0;
 
             while (var29) {
-               var13 = var17.o(var16);
+               val var13: Int = var17.o(var16);
                switch (var13) {
                   case -1:
                      var29 = false;
@@ -332,35 +302,35 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
                      var2 |= 1;
                      break;
                   case 1:
-                     var20 = var17.C(var16, 1);
+                     var3 = var17.C(var16, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var22 = var17.C(var16, 2);
+                     var20 = var17.C(var16, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var19 = var17.C(var16, 3);
+                     var7 = var17.C(var16, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var7 = var17.C(var16, 4);
+                     var5 = var17.C(var16, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var9 = var17.C(var16, 5);
+                     var8 = var17.C(var16, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var8 = var17.C(var16, 6);
+                     var9 = var17.C(var16, 6);
                      var2 |= 64;
                      break;
                   case 7:
-                     var6 = var17.i(var16, 7);
+                     var10 = var17.i(var16, 7);
                      var2 |= 128;
                      break;
                   case 8:
-                     var10 = var17.i(var16, 8);
+                     var6 = var17.i(var16, 8);
                      var2 |= 256;
                      break;
                   case 9:
@@ -372,34 +342,34 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
                }
             }
 
-            var14 = var8;
-            var8 = var20;
             var20 = var11;
-            var11 = var10;
-            var10 = var6;
-            var6 = var9;
-            var12 = var7;
-            var9 = var19;
-            var13 = var22;
-            var7 = var2;
+            var5 = var6;
+            var3 = var10;
+            var10 = var9;
+            var6 = var8;
+            var11 = var5;
+            var8 = var7;
+            var7 = var20;
+            var12 = var3;
+            var9 = var2;
          }
 
          var17.c(var16);
          return new ChatScrollPositionEvent(
-            var7, var15, (boolean)var8, (boolean)var13, (boolean)var9, (boolean)var12, (boolean)var6, (boolean)var14, var10, var11, var20, null
+            var9, var15, (boolean)var12, (boolean)var7, (boolean)var8, (boolean)var11, (boolean)var6, (boolean)var10, var3, var5, var20, null
          );
       }
 
       public open fun serialize(encoder: Encoder, value: ChatScrollPositionEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ChatScrollPositionEvent.write$Self(var2, var4, var3);
+         ChatScrollPositionEvent.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

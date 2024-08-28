@@ -4,118 +4,104 @@ import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.snowflake.SnowflakeUtils
-import eh.w
-import fh.s
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
+import mj.r
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
-   r.h(var0, "<this>");
-   r.h(var1, "notification");
-   var var10: java.util.Map = (java.util.Map)var1.get("userInfo");
-   if (var10 is java.util.Map) {
-      var10 = var10;
+   q.h(var0, "<this>");
+   q.h(var1, "notification");
+   var var7: java.util.Map = (java.util.Map)var1.get("userInfo");
+   if (var7 is java.util.Map) {
+      var7 = var7;
    } else {
-      var10 = null;
+      var7 = null;
    }
 
-   label79: {
-      if (var10 != null) {
-         val var4: LinkedHashMap = new LinkedHashMap();
+   label73: {
+      if (var7 != null) {
+         val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var7 : var10.entrySet()) {
-            val var2: Boolean;
-            if (var7.getKey() is java.lang.String && var7.getValue() is java.lang.String) {
-               var2 = true;
-            } else {
-               var2 = false;
-            }
-
-            if (var2) {
-               var4.put(var7.getKey(), var7.getValue());
+         for (Entry var6 : var7.entrySet()) {
+            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
+               var3.put(var6.getKey(), var6.getValue());
             }
          }
 
-         val var13: ArrayList = new ArrayList(var4.size());
+         val var10: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var25 : var4.entrySet()) {
-            var var21: Any = var25.getKey();
-            val var26: Any = var25.getValue();
-            r.f(var21, "null cannot be cast to non-null type kotlin.String");
-            var21 = var21 as java.lang.String;
-            r.f(var26, "null cannot be cast to non-null type kotlin.String");
-            var13.add(w.a(var21, var26 as java.lang.String));
+         for (Entry var18 : var3.entrySet()) {
+            var var22: Any = var18.getKey();
+            val var19: Any = var18.getValue();
+            q.f(var22, "null cannot be cast to non-null type kotlin.String");
+            var22 = var22 as java.lang.String;
+            q.f(var19, "null cannot be cast to non-null type kotlin.String");
+            var10.add(w.a(var22, var19 as java.lang.String));
          }
 
-         var10 = s.t(var13);
-         if (var10 != null) {
-            break label79;
+         var7 = r.t(var10);
+         if (var7 != null) {
+            break label73;
          }
       }
 
-      var10 = s.h();
+      var7 = r.h();
    }
 
-   var var20: ChannelId;
+   var var17: ChannelId;
    label56: {
-      val var18: java.lang.String = var10.get("channel_id") as java.lang.String;
-      if (var18 != null) {
-         val var19: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var18);
-         if (var19 != null) {
-            var20 = ChannelId.box_impl(ChannelId.constructor_impl(var19));
+      val var15: java.lang.String = var7.get("channel_id") as java.lang.String;
+      if (var15 != null) {
+         val var16: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var15);
+         if (var16 != null) {
+            var17 = ChannelId.box-impl(ChannelId.constructor-impl(var16));
             break label56;
          }
       }
 
+      var17 = null;
+   }
+
+   var var20: java.lang.String = var7.get("message_id") as java.lang.String;
+   if (var20 != null) {
+      var20 = MessageId.constructor-impl(var20);
+   } else {
       var20 = null;
    }
 
-   var var23: java.lang.String = var10.get("message_id") as java.lang.String;
-   if (var23 != null) {
-      var23 = MessageId.constructor_impl(var23);
+   var var24: Any = var1.get("alertTitle");
+   if (var24 is java.lang.String) {
+      var24 = var24 as java.lang.String;
    } else {
-      var23 = null;
+      var24 = null;
    }
 
-   var var27: Any = var1.get("alertTitle");
-   if (var27 is java.lang.String) {
-      var27 = var27 as java.lang.String;
+   var var26: Any = var1.get("alertBody");
+   if (var26 is java.lang.String) {
+      var26 = var26 as java.lang.String;
    } else {
-      var27 = null;
+      var26 = null;
    }
 
-   var var29: Any = var1.get("alertBody");
-   if (var29 is java.lang.String) {
-      var29 = var29 as java.lang.String;
+   var var12: java.lang.Boolean = (java.lang.Boolean)var1.get("silent");
+   if (var12 is java.lang.Boolean) {
+      var12 = var12;
    } else {
-      var29 = null;
+      var12 = null;
    }
 
-   val var9: Any = var1.get("silent");
-   var var15: java.lang.Boolean = null;
-   if (var9 is java.lang.Boolean) {
-      var15 = var9 as java.lang.Boolean;
-   }
-
-   val var16: Boolean;
-   if (var15 != null) {
-      var16 = var15;
+   val var2: Boolean;
+   if (var12 != null) {
+      var2 = var12;
    } else {
-      var16 = false;
+      var2 = false;
    }
 
    return new NotificationData(
       "LOCAL_NOTIFICATION",
-      var23,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       var20,
       null,
       null,
@@ -124,6 +110,14 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       null,
       null,
       null,
+      var17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -146,8 +140,8 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       false,
       false,
       null,
-      (java.lang.String)var27,
-      (java.lang.String)var29,
+      (java.lang.String)var24,
+      (java.lang.String)var26,
       null,
       null,
       null,
@@ -155,8 +149,8 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       null,
       null,
       null,
-      var16,
-      var10,
+      var2,
+      var7,
       -516,
       65151,
       null

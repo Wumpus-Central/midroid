@@ -1,4 +1,5 @@
 package com.discord.react_fork_overrides.forks;
 
-public final class a {
+// $VF: synthetic class
+public abstract class a {
 }

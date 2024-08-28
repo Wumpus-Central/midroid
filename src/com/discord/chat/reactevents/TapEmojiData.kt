@@ -7,15 +7,15 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import eh.p
-import eh.w
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.p
+import lj.w
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
 
    init {
-      r.h(var1, "emoji");
+      q.h(var1, "emoji");
       super();
       this.emoji = var1;
    }
@@ -25,7 +25,7 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    }
 
    public fun copy(emoji: EmojiContentNode = var0.emoji): TapEmojiData {
-      r.h(var1, "emoji");
+      q.h(var1, "emoji");
       return new TapEmojiData(var1);
    }
 
@@ -35,7 +35,7 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       } else if (var1 !is TapEmojiData) {
          return false;
       } else {
-         return r.c(this.emoji, (var1 as TapEmojiData).emoji);
+         return q.c(this.emoji, (var1 as TapEmojiData).emoji);
       }
    }
 

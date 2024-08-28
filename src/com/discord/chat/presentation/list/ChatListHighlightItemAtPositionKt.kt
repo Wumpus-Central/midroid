@@ -6,12 +6,11 @@ import android.animation.Animator.AnimatorListener
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @JvmSynthetic
 fun a(var0: View, var1: ValueAnimator) {
@@ -24,7 +23,7 @@ private fun View.animateBackgroundColor(delay: Long, startColor: Int, endColor: 
       var0,
       var3,
       var4,
-      new Function1<Animator, Unit>(var4, var3, var1, var0) {
+      new Function1(var4, var3, var1, var0) {
          final long $delay;
          final int $endColor;
          final int $startColor;
@@ -39,7 +38,7 @@ private fun View.animateBackgroundColor(delay: Long, startColor: Int, endColor: 
          }
 
          public final void invoke(Animator var1) {
-            r.h(var1, "it");
+            q.h(var1, "it");
             ChatListHighlightItemAtPositionKt.animateBackgroundColor$anim$default(
                this.$delay, this.$this_animateBackgroundColor, this.$endColor, this.$startColor, null, 16, null
             );
@@ -48,10 +47,10 @@ private fun View.animateBackgroundColor(delay: Long, startColor: Int, endColor: 
    );
 }
 
-fun `animateBackgroundColor$anim`(var0: Long, var2: View, var3: Int, var4: Int, var5: (Animator?) -> Unit) {
+fun `animateBackgroundColor$anim`(var0: Long, var2: View, var3: Int, var4: Int, var5: Function1) {
    val var6: ValueAnimator = ValueAnimator.ofArgb(new int[]{var3, var4});
    var6.addUpdateListener(new a(var2));
-   r.g(var6, "animator");
+   q.e(var6);
    var6.addListener(new AnimatorListener(var5) {
       final Function1 $onEnd;
 
@@ -83,15 +82,15 @@ fun `animateBackgroundColor$anim$default`(var0: Long, var2: View, var3: Int, var
       var5 = <unrepresentable>.INSTANCE;
    }
 
-   animateBackgroundColor$anim(var0, var2, var3, var4, (Function1<? super Animator, Unit>)var5);
+   animateBackgroundColor$anim(var0, var2, var3, var4, (Function1)var5);
 }
 
 fun `animateBackgroundColor$anim$lambda$1$lambda$0`(var0: View, var1: ValueAnimator) {
-   r.h(var0, "$this_animateBackgroundColor");
-   r.h(var1, "valueAnimator");
+   q.h(var0, "$this_animateBackgroundColor");
+   q.h(var1, "valueAnimator");
    val var2: Any = var1.getAnimatedValue();
-   r.f(var2, "null cannot be cast to non-null type kotlin.Int");
-   var0.setBackgroundColor(var2 as Integer);
+   q.f(var2, "null cannot be cast to non-null type kotlin.Int");
+   var0.setBackgroundColor(var2 as Int);
 }
 
 private fun View.animateHighlightBackgroundColor(delay: Long, startColor: Int, fullColor: Int, endColor: Int) {
@@ -107,11 +106,11 @@ fun `animateHighlightBackgroundColor$anim$4`(var0: Long, var2: View, var3: Int, 
 }
 
 fun `animateHighlightBackgroundColor$anim$4$lambda$3$lambda$2`(var0: View, var1: ValueAnimator) {
-   r.h(var0, "$this_animateHighlightBackgroundColor");
-   r.h(var1, "valueAnimator");
+   q.h(var0, "$this_animateHighlightBackgroundColor");
+   q.h(var1, "valueAnimator");
    val var2: Any = var1.getAnimatedValue();
-   r.f(var2, "null cannot be cast to non-null type kotlin.Int");
-   var0.setBackgroundColor(var2 as Integer);
+   q.f(var2, "null cannot be cast to non-null type kotlin.Int");
+   var0.setBackgroundColor(var2 as Int);
 }
 
 @JvmSynthetic
@@ -120,16 +119,16 @@ fun b(var0: View, var1: ValueAnimator) {
 }
 
 internal fun RecyclerView.chatListEmphasizeHighlightItemAtPosition(position: Int, delayMilliseconds: Long = 300L) {
-   r.h(var0, "<this>");
-   val var4: LayoutManager = var0.getLayoutManager();
+   q.h(var0, "<this>");
+   val var4: RecyclerView.LayoutManager = var0.getLayoutManager();
    if (var4 != null) {
       val var8: View = var4.findViewByPosition(var1);
       if (var8 != null) {
          val var5: Context = var0.getContext();
-         r.g(var5, "context");
+         q.g(var5, "getContext(...)");
          var1 = ColorUtilsKt.getColorCompat(var5, 17170445);
          val var6: Context = var0.getContext();
-         r.g(var6, "context");
+         q.g(var6, "getContext(...)");
          animateHighlightBackgroundColor(
             var8,
             var2,
@@ -151,13 +150,13 @@ fun `chatListEmphasizeHighlightItemAtPosition$default`(var0: RecyclerView, var1:
 }
 
 internal fun RecyclerView.chatListHighlightItemAtPosition(position: Int, delayMilliseconds: Long = 300L) {
-   r.h(var0, "<this>");
-   val var4: LayoutManager = var0.getLayoutManager();
+   q.h(var0, "<this>");
+   val var4: RecyclerView.LayoutManager = var0.getLayoutManager();
    if (var4 != null) {
       val var6: View = var4.findViewByPosition(var1);
       if (var6 != null) {
          val var5: Context = var0.getContext();
-         r.g(var5, "context");
+         q.g(var5, "getContext(...)");
          animateBackgroundColor(var6, var2, ColorUtilsKt.getColorCompat(var5, 17170445), ThemeManagerKt.getTheme().getBackgroundModifierSelected());
       }
    }

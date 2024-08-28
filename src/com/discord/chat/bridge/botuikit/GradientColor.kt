@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.f0
+import gn.g0
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.e0
-import xk.f0
-import xk.m0
-import xk.f0.a
 
 @f
 public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
@@ -27,17 +27,6 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
       this.g = var2;
       this.b = var3;
       this.a = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: GradientColor, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      kotlin.jvm.internal.r.h(var0, "self");
-      kotlin.jvm.internal.r.h(var1, "output");
-      kotlin.jvm.internal.r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.r);
-      var1.w(var2, 1, var0.g);
-      var1.w(var2, 2, var0.b);
-      var1.r(var2, 3, var0.a);
    }
 
    public operator fun component1(): Int {
@@ -84,24 +73,24 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
    }
 
    public override fun toString(): String {
-      val var2: Int = this.r;
+      val var4: Int = this.r;
       val var3: Int = this.g;
-      val var4: Int = this.b;
+      val var2: Int = this.b;
       val var1: Float = this.a;
       val var5: StringBuilder = new StringBuilder();
       var5.append("GradientColor(r=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", g=");
       var5.append(var3);
       var5.append(", b=");
-      var5.append(var4);
+      var5.append(var2);
       var5.append(", a=");
       var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
 
-   public object `$serializer` : f0<GradientColor> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -121,33 +110,36 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, m0.a, m0.a, e0.a};
+         return new KSerializer[]{n0.a, n0.a, n0.a, f0.a};
       }
 
       public open fun deserialize(decoder: Decoder): GradientColor {
-         kotlin.jvm.internal.r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
          var var2: Float;
-         var var3: Int;
          var var4: Int;
-         var var5: Int;
          var var6: Int;
+         var var13: Int;
+         var var15: Int;
          if (var10.p()) {
-            var6 = var10.i(var9, 0);
-            var4 = var10.i(var9, 1);
-            var3 = var10.i(var9, 2);
+            var13 = var10.i(var9, 0);
+            var15 = var10.i(var9, 1);
+            val var3: Int = var10.i(var9, 2);
             var2 = var10.u(var9, 3);
-            var5 = 15;
+            var4 = 15;
+            var6 = var13;
+            var13 = var15;
+            var15 = var3;
          } else {
             var2 = 0.0F;
-            var var7: Boolean = true;
+            var var16: Boolean = true;
             var6 = 0;
-            var5 = 0;
+            var13 = 0;
             var4 = 0;
-            var3 = 0;
+            var var11: Int = 0;
 
-            while (var7) {
+            while (var16) {
                val var8: Int = var10.o(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -158,43 +150,44 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                            }
 
                            var2 = var10.u(var9, 3);
-                           var3 |= 8;
+                           var11 |= 8;
                         } else {
-                           var5 = var10.i(var9, 2);
-                           var3 |= 4;
+                           var13 = var10.i(var9, 2);
+                           var11 |= 4;
                         }
                      } else {
                         var4 = var10.i(var9, 1);
-                        var3 |= 2;
+                        var11 |= 2;
                      }
                   } else {
                      var6 = var10.i(var9, 0);
-                     var3 |= 1;
+                     var11 |= 1;
                   }
                } else {
-                  var7 = false;
+                  var16 = false;
                }
             }
 
-            var5 = var3;
-            var3 = var5;
+            var15 = var13;
+            var13 = var4;
+            var4 = var11;
          }
 
          var10.c(var9);
-         return new GradientColor(var5, var6, var4, var3, var2, null);
+         return new GradientColor(var4, var6, var13, var15, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GradientColor) {
-         kotlin.jvm.internal.r.h(var1, "encoder");
-         kotlin.jvm.internal.r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         GradientColor.write$Self(var2, var4, var3);
+         GradientColor.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

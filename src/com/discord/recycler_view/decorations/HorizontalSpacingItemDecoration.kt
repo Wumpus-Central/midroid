@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class HorizontalSpacingItemDecoration(spacingPx: Int) : ItemDecoration {
    private final val spacingPx: Int
@@ -16,19 +16,13 @@ public class HorizontalSpacingItemDecoration(spacingPx: Int) : ItemDecoration {
    }
 
    public open fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
-      r.h(var1, "outRect");
-      r.h(var2, "view");
-      r.h(var3, "parent");
-      r.h(var4, "state");
-      val var7: Adapter = var3.getAdapter();
-      r.e(var7);
-      val var6: Int = var7.getItemCount();
-      var var5: Boolean = true;
-      if (var3.getChildAdapterPosition(var2) != var6 - 1) {
-         var5 = false;
-      }
-
-      if (!var5) {
+      q.h(var1, "outRect");
+      q.h(var2, "view");
+      q.h(var3, "parent");
+      q.h(var4, "state");
+      val var6: Adapter = var3.getAdapter();
+      q.e(var6);
+      if (var3.getChildAdapterPosition(var2) != var6.getItemCount() - 1) {
          var1.right = this.spacingPx;
       }
    }

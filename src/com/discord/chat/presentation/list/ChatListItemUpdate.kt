@@ -5,7 +5,7 @@ import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.item.ChatListItem
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class ChatListItemUpdate(items: List<ChatListItem>,
       listOperations: List<ListOperation>?,
@@ -23,9 +23,9 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
    public open val postCommit: () -> Unit
 
    init {
-      r.h(var1, "items");
-      r.h(var5, "preCommit");
-      r.h(var6, "postCommit");
+      q.h(var1, "items");
+      q.h(var5, "preCommit");
+      q.h(var6, "postCommit");
       super(var4, var5, var6, null);
       this.items = var1;
       this.listOperations = var2;
@@ -48,28 +48,28 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
    }
 
    public operator fun component4(): Int {
-      return this.getUpdateId();
+      return this.updateId;
    }
 
    public operator fun component5(): (Boolean) -> Unit {
-      return this.getPreCommit();
+      return this.preCommit;
    }
 
    public operator fun component6(): () -> Unit {
-      return this.getPostCommit();
+      return this.postCommit;
    }
 
    public fun copy(
       items: List<ChatListItem> = var0.items,
       listOperations: List<ListOperation>? = var0.listOperations,
       chatListAction: ChatListAction? = var0.chatListAction,
-      updateId: Int = var0.getUpdateId(),
-      preCommit: (Boolean) -> Unit = var0.getPreCommit(),
-      postCommit: () -> Unit = var0.getPostCommit()
+      updateId: Int = var0.updateId,
+      preCommit: (Boolean) -> Unit = var0.preCommit,
+      postCommit: () -> Unit = var0.postCommit
    ): ChatListItemUpdate {
-      r.h(var1, "items");
-      r.h(var5, "preCommit");
-      r.h(var6, "postCommit");
+      q.h(var1, "items");
+      q.h(var5, "preCommit");
+      q.h(var6, "postCommit");
       return new ChatListItemUpdate(var1, var2, var3, var4, var5, var6);
    }
 
@@ -80,18 +80,18 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.items, var1.items)) {
+         if (!q.c(this.items, var1.items)) {
             return false;
-         } else if (!r.c(this.listOperations, var1.listOperations)) {
+         } else if (!q.c(this.listOperations, var1.listOperations)) {
             return false;
-         } else if (!r.c(this.chatListAction, var1.chatListAction)) {
+         } else if (!q.c(this.chatListAction, var1.chatListAction)) {
             return false;
-         } else if (this.getUpdateId() != var1.getUpdateId()) {
+         } else if (this.updateId != var1.updateId) {
             return false;
-         } else if (!r.c(this.getPreCommit(), var1.getPreCommit())) {
+         } else if (!q.c(this.preCommit, var1.preCommit)) {
             return false;
          } else {
-            return r.c(this.getPostCommit(), var1.getPostCommit());
+            return q.c(this.postCommit, var1.postCommit);
          }
       }
    }
@@ -110,31 +110,30 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
          var2 = this.chatListAction.hashCode();
       }
 
-      return ((((var3 * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.getUpdateId())) * 31 + this.getPreCommit().hashCode()) * 31
-         + this.getPostCommit().hashCode();
+      return ((((var3 * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.updateId)) * 31 + this.preCommit.hashCode()) * 31 + this.postCommit.hashCode();
    }
 
    public override fun toString(): String {
-      val var6: java.util.List = this.items;
-      val var3: java.util.List = this.listOperations;
-      val var4: ChatListAction = this.chatListAction;
-      val var1: Int = this.getUpdateId();
-      val var5: Function1 = this.getPreCommit();
-      val var7: Function0 = this.getPostCommit();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ChatListItemUpdate(items=");
-      var2.append(var6);
-      var2.append(", listOperations=");
-      var2.append(var3);
-      var2.append(", chatListAction=");
-      var2.append(var4);
-      var2.append(", updateId=");
-      var2.append(var1);
-      var2.append(", preCommit=");
-      var2.append(var5);
-      var2.append(", postCommit=");
-      var2.append(var7);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.util.List = this.items;
+      val var5: java.util.List = this.listOperations;
+      val var6: ChatListAction = this.chatListAction;
+      val var1: Int = this.updateId;
+      val var2: Function1 = this.preCommit;
+      val var3: Function0 = this.postCommit;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ChatListItemUpdate(items=");
+      var7.append(var4);
+      var7.append(", listOperations=");
+      var7.append(var5);
+      var7.append(", chatListAction=");
+      var7.append(var6);
+      var7.append(", updateId=");
+      var7.append(var1);
+      var7.append(", preCommit=");
+      var7.append(var2);
+      var7.append(", postCommit=");
+      var7.append(var3);
+      var7.append(")");
+      return var7.toString();
    }
 }

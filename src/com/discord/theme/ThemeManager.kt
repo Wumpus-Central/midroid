@@ -8,9 +8,9 @@ import android.view.View
 import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
-import eh.p
 import java.util.EnumMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.p
 
 public object ThemeManager {
    private final lateinit var resourceTheme: Theme
@@ -34,28 +34,28 @@ public object ThemeManager {
 
                var var7: Resources = resources;
                if (resources == null) {
-                  r.y("resources");
+                  q.y("resources");
                   var7 = null;
                }
 
+               var3 = resourceTheme;
                if (resourceTheme == null) {
-                  r.y("resourceTheme");
-               } else {
-                  var3 = resourceTheme;
+                  q.y("resourceTheme");
+                  var3 = null;
                }
 
                var8 = new MidnightTheme(var7, var3);
             } else {
                var var9: Resources = resources;
                if (resources == null) {
-                  r.y("resources");
+                  q.y("resources");
                   var9 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
-                  r.y("resourceTheme");
-                  var3 = null;
+                  q.y("resourceTheme");
+               } else {
+                  var3 = resourceTheme;
                }
 
                var8 = new DarkerTheme(var9, var3);
@@ -63,13 +63,13 @@ public object ThemeManager {
          } else {
             var var10: Resources = resources;
             if (resources == null) {
-               r.y("resources");
+               q.y("resources");
                var10 = null;
             }
 
             var3 = resourceTheme;
             if (resourceTheme == null) {
-               r.y("resourceTheme");
+               q.y("resourceTheme");
                var3 = null;
             }
 
@@ -78,13 +78,13 @@ public object ThemeManager {
       } else {
          var var11: Resources = resources;
          if (resources == null) {
-            r.y("resources");
+            q.y("resources");
             var11 = null;
          }
 
          var3 = resourceTheme;
          if (resourceTheme == null) {
-            r.y("resourceTheme");
+            q.y("resourceTheme");
             var3 = null;
          }
 
@@ -111,7 +111,7 @@ public object ThemeManager {
       if (theme != null) {
          var1 = theme;
          if (theme == null) {
-            r.y("theme");
+            q.y("theme");
             var1 = null;
          }
       } else {
@@ -126,7 +126,7 @@ public object ThemeManager {
          var4.put(var1, var5);
       }
 
-      r.g(var5, "themes.getOrPut(t) {\n   …tThemeObject(t)\n        }");
+      q.g(var5, "getOrPut(...)");
       return var5 as DiscordThemeObject;
    }
 
@@ -135,12 +135,12 @@ public object ThemeManager {
    }
 
    public fun init(context: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       val var2: Resources = var1.getResources();
-      r.g(var2, "context.resources");
+      q.g(var2, "getResources(...)");
       resources = var2;
       val var3: Theme = var1.getTheme();
-      r.g(var3, "context.theme");
+      q.g(var3, "getTheme(...)");
       resourceTheme = var3;
       this.setTheme(DiscordTheme.DARK);
    }
@@ -159,7 +159,7 @@ public object ThemeManager {
    public fun isThemeDark(): Boolean {
       var var2: DiscordTheme = theme;
       if (theme == null) {
-         r.y("theme");
+         q.y("theme");
          var2 = null;
       }
 
@@ -176,7 +176,7 @@ public object ThemeManager {
    public fun isThemeLight(): Boolean {
       var var2: DiscordTheme = theme;
       if (theme == null) {
-         r.y("theme");
+         q.y("theme");
          var2 = null;
       }
 
@@ -224,17 +224,17 @@ public object ThemeManager {
    }
 
    public fun updateSystemUi(activity: Activity) {
-      r.h(var1, "activity");
+      q.h(var1, "activity");
       UpdateSystemUiKt.updateSystemUi(var1);
    }
 
    public fun updateSystemUi(view: View) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       UpdateSystemUiKt.updateSystemUi(var1);
    }
 
    public fun updateWindowBackground(context: Context, showSplashImage: Boolean) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       showSplashImage = var2;
       val var3: Activity;
       if (var1 is Activity) {
@@ -262,39 +262,6 @@ public object ThemeManager {
 
       if (var5 != null) {
          ActivityThemeUtils.INSTANCE.updateWindowBackground$theme_release(var5);
-      }
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[DiscordTheme.values().length];
-
-         try {
-            var0[DiscordTheme.DARK_LEGACY.ordinal()] = 1;
-         } catch (var5: NoSuchFieldError) {
-         }
-
-         try {
-            var0[DiscordTheme.LIGHT.ordinal()] = 2;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[DiscordTheme.DARK.ordinal()] = 3;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[DiscordTheme.MIDNIGHT.ordinal()] = 4;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
       }
    }
 }

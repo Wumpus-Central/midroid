@@ -22,29 +22,29 @@ public class ForwardHeaderView  public constructor(context: Context, attrs: Attr
    public final val binding: ForwardHeaderViewBinding
 
    fun ForwardHeaderView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var3: ForwardHeaderViewBinding = ForwardHeaderViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
       this.setGravity(16);
       var3.getRoot().setPadding(0, SizeUtilsKt.getDpToPx(2), 0, 0);
       val var4: SimpleDraweeView = var3.icon;
-      kotlin.jvm.internal.r.g(var3.icon, "binding.icon");
+      kotlin.jvm.internal.q.g(var3.icon, "icon");
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.ChatArrowRightIcon);
       val var5: SimpleDraweeView = var3.icon;
-      kotlin.jvm.internal.r.g(var3.icon, "binding.icon");
+      kotlin.jvm.internal.q.g(var3.icon, "icon");
       ColorUtilsKt.setTintColor(var5, ThemeManagerKt.getTheme().getTextLowContrast());
       val var6: TextView = var3.label;
-      kotlin.jvm.internal.r.g(var3.label, "binding.label");
+      kotlin.jvm.internal.q.g(var3.label, "label");
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemiboldItalic);
       val var7: TextView = var3.label;
-      kotlin.jvm.internal.r.g(var3.label, "binding.label");
+      kotlin.jvm.internal.q.g(var3.label, "label");
       I18nUtilsKt.i18nSetText$default(var7, I18nMessage.MESSAGE_FORWARDED, null, 2, null);
       var3.label.setTextColor(ThemeManagerKt.getTheme().getTextLowContrast());
    }
@@ -52,16 +52,16 @@ public class ForwardHeaderView  public constructor(context: Context, attrs: Attr
    public fun setIcon(useOldIcon: Boolean) {
       if (var1) {
          val var2: SimpleDraweeView = this.binding.icon;
-         kotlin.jvm.internal.r.g(this.binding.icon, "binding.icon");
+         kotlin.jvm.internal.q.g(this.binding.icon, "icon");
          ReactAssetUtilsKt.setReactAsset(var2, ReactAsset.ArrowAngleRightUpIcon);
       } else {
          val var3: SimpleDraweeView = this.binding.icon;
-         kotlin.jvm.internal.r.g(this.binding.icon, "binding.icon");
+         kotlin.jvm.internal.q.g(this.binding.icon, "icon");
          ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.ChatArrowRightIcon);
       }
 
       val var4: SimpleDraweeView = this.binding.icon;
-      kotlin.jvm.internal.r.g(this.binding.icon, "binding.icon");
+      kotlin.jvm.internal.q.g(this.binding.icon, "icon");
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextLowContrast());
    }
 

@@ -8,6 +8,7 @@ import com.discord.primitives.ChannelId;
 import com.discord.primitives.GuildId;
 import com.discord.primitives.UserId;
 
+// $VF: synthetic class
 public final class b implements OnClickListener {
    public final ChatEventHandler j;
    public final UserId k;

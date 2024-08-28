@@ -6,39 +6,39 @@ import com.discord.chat.presentation.message.view.UploadItemProps
 import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public sealed class MessageAttachmentAccessory protected constructor(messageId: MessageId,
-   attachment: Attachment,
-   attachmentIndex: Int,
-   attachmentsOpacity: Float?
-) : MessageAccessory(var1, MessageAttachmentAccessory.Companion.access$createAccessoryDescription(Companion, var2, var3), false, 4) {
+      attachment: Attachment,
+      attachmentIndex: Int,
+      attachmentsOpacity: Float?
+   )
+   : MessageAccessory {
    public open val messageId: MessageId
    public open val attachment: Attachment
    public open val attachmentIndex: Int
    public open val attachmentsOpacity: Float?
 
    init {
+      q.h(var1, "messageId");
+      q.h(var2, "attachment");
+      super(var1, MessageAttachmentAccessory.Companion.access$createAccessoryDescription(Companion, var2, var3), false, 4, null);
       this.messageId = var1;
       this.attachment = var2;
       this.attachmentIndex = var3;
       this.attachmentsOpacity = var4;
    }
 
-   override fun getMessageId_3Eiw7ao(): java.lang.String {
-      return this.messageId;
-   }
-
    public fun getUploadItemProps(onCancelUploadItem: (String, String) -> Unit): UploadItemProps? {
-      r.h(var1, "onCancelUploadItem");
+      q.h(var1, "onCancelUploadItem");
       val var4: java.lang.String = this.getAttachment().getUploaderId();
       val var5: java.lang.String = this.getAttachment().getUploaderItemId();
       val var3: Int = this.getAttachment().getProgress();
       val var2: java.lang.Float = this.getAttachmentsOpacity();
       if (var4 != null && var5 != null && var3 != null && var2 != null) {
          val var6: UploadContext = new UploadContext(var4, var5);
-         return new UploadItemProps(var3, var6, var2, new Function0<Unit>(var1, var6) {
-            final Function2<java.lang.String, java.lang.String, Unit> $onCancelUploadItem;
+         return new UploadItemProps(var3, var6, var2, new Function0(var1, var6) {
+            final Function2 $onCancelUploadItem;
             final UploadContext $uploadContext;
 
             {
@@ -58,15 +58,15 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
 
    public companion object {
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
-         val var3: java.lang.String;
+         var var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            val var4: java.lang.String = var1.getUploaderId();
-            val var5: java.lang.String = var1.getUploaderItemId();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append(var4);
-            var7.append(" ");
-            var7.append(var5);
-            var3 = var7.toString();
+            var3 = var1.getUploaderId();
+            val var4: java.lang.String = var1.getUploaderItemId();
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var3);
+            var5.append(" ");
+            var5.append(var4);
+            var3 = var5.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);
          }

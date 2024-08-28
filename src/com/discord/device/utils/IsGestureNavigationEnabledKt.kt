@@ -2,11 +2,11 @@ package com.discord.device.utils
 
 import android.annotation.SuppressLint
 import android.content.Context
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @SuppressLint(["DiscouragedApi"])
 public fun Context.isGestureNavigationEnabled(): Boolean {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    var var1: Int = var0.getResources().getIdentifier("config_navBarInteractionMode", "integer", "android");
    var var2: Boolean = false;
    if (var1 > 0) {

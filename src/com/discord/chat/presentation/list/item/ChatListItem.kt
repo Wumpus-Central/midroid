@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.misc.utilities.ids.IdUtilsKt
-import eh.l
-import eh.o
 import kotlin.jvm.functions.Function0
+import lj.l
+import lj.o
 
 public sealed class ChatListItem protected constructor(id: String) {
    public open val id: String
@@ -16,7 +16,7 @@ public sealed class ChatListItem protected constructor(id: String) {
 
    init {
       this.id = var1;
-      this.recyclerItemId$delegate = l.a(o.l, new Function0<java.lang.Long>(this) {
+      this.recyclerItemId$delegate = l.b(o.l, new Function0(this) {
          final ChatListItem this$0;
 
          {

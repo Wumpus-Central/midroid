@@ -3,11 +3,8 @@ package com.discord.emoji_picker
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
-import androidx.core.view.a3
+import androidx.core.view.v0
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Adapter
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.emoji_picker.EmojiPickerItem.ItemType
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerScroller.ScrollEvent
@@ -15,13 +12,13 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
-import eh.l
-import eh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.l
+import lj.p
 
 @SuppressLint(["ViewConstructor"])
 internal class EmojiPickerView(context: Context,
@@ -56,34 +53,34 @@ internal class EmojiPickerView(context: Context,
 
    private final val typedAdapter: EmojiPickerViewAdapter
       private final get() {
-         val var1: Adapter = this.getAdapter();
-         r.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerViewAdapter");
+         val var1: RecyclerView.Adapter = this.getAdapter();
+         q.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerViewAdapter");
          return var1 as EmojiPickerViewAdapter;
       }
 
 
    private final val typedLayoutManager: EmojiPickerLayoutManager
       private final get() {
-         val var1: LayoutManager = this.getLayoutManager();
-         r.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerLayoutManager");
+         val var1: RecyclerView.LayoutManager = this.getLayoutManager();
+         q.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerLayoutManager");
          return var1 as EmojiPickerLayoutManager;
       }
 
 
    init {
-      r.h(var1, "context");
-      r.h(var4, "coreData");
-      r.h(var5, "onPressEmoji");
-      r.h(var6, "onScroll");
-      r.h(var7, "onScrollBeginDrag");
-      r.h(var8, "onScrollEndDrag");
-      r.h(var9, "onLongPressEmoji");
-      r.h(var10, "onStickyHeaderRender");
-      r.h(var11, "onShowNitroUpsell");
-      r.h(var13, "config");
+      q.h(var1, "context");
+      q.h(var4, "coreData");
+      q.h(var5, "onPressEmoji");
+      q.h(var6, "onScroll");
+      q.h(var7, "onScrollBeginDrag");
+      q.h(var8, "onScrollEndDrag");
+      q.h(var9, "onLongPressEmoji");
+      q.h(var10, "onStickyHeaderRender");
+      q.h(var11, "onShowNitroUpsell");
+      q.h(var13, "config");
       super(var1);
-      this.visibilityTracker$delegate = l.b(new Function0<EmojiPickerVisibilityTracker>(var11, this) {
-         final Function2<View, java.lang.Boolean, Unit> $onShowNitroUpsell;
+      this.visibilityTracker$delegate = l.a(new Function0(var11, this) {
+         final Function2 $onShowNitroUpsell;
          final EmojiPickerView this$0;
 
          {
@@ -93,8 +90,8 @@ internal class EmojiPickerView(context: Context,
          }
 
          public final EmojiPickerVisibilityTracker invoke() {
-            return new EmojiPickerVisibilityTracker(new Function1<java.lang.Boolean, Unit>(this.$onShowNitroUpsell, this.this$0) {
-               final Function2<View, java.lang.Boolean, Unit> $onShowNitroUpsell;
+            return new EmojiPickerVisibilityTracker(new Function1(this.$onShowNitroUpsell, this.this$0) {
+               final Function2 $onShowNitroUpsell;
                final EmojiPickerView this$0;
 
                {
@@ -109,13 +106,13 @@ internal class EmojiPickerView(context: Context,
             });
          }
       });
-      this.scroller$delegate = l.b(
-         new Function0<EmojiPickerScroller>(this, var13, var10, var6, var7, var8) {
+      this.scroller$delegate = l.a(
+         new Function0(this, var13, var10, var6, var7, var8) {
             final EmojiPickerView.Config $config;
-            final Function2<EmojiPickerView, EmojiPickerScroller.ScrollEvent, Unit> $onScroll;
-            final Function2<EmojiPickerView, EmojiPickerScroller.ScrollEvent, Unit> $onScrollBeginDrag;
-            final Function2<EmojiPickerView, EmojiPickerScroller.ScrollEvent, Unit> $onScrollEndDrag;
-            final Function2<View, Integer, Unit> $onStickyHeaderRender;
+            final Function2 $onScroll;
+            final Function2 $onScrollBeginDrag;
+            final Function2 $onScrollEndDrag;
+            final Function2 $onStickyHeaderRender;
             final EmojiPickerView this$0;
 
             {
@@ -134,8 +131,8 @@ internal class EmojiPickerView(context: Context,
                   EmojiPickerView.access$getTypedAdapter(this.this$0),
                   EmojiPickerView.access$getTypedLayoutManager(this.this$0),
                   this.$config.getScrollFastVelocity(),
-                  new Function1<EmojiPickerScroller.ScrollEvent, Unit>(this.$onScroll, this.this$0) {
-                     final Function2<EmojiPickerView, EmojiPickerScroller.ScrollEvent, Unit> $onScroll;
+                  new Function1(this.$onScroll, this.this$0) {
+                     final Function2 $onScroll;
                      final EmojiPickerView this$0;
 
                      {
@@ -145,11 +142,11 @@ internal class EmojiPickerView(context: Context,
                      }
 
                      public final void invoke(EmojiPickerScroller.ScrollEvent var1) {
-                        r.h(var1, "scrollEvent");
+                        q.h(var1, "scrollEvent");
                         this.$onScroll.invoke(this.this$0, var1);
                      }
                   },
-                  new Function0<Unit>(this.this$0) {
+                  new Function0(this.this$0) {
                      final EmojiPickerView this$0;
 
                      {
@@ -161,9 +158,9 @@ internal class EmojiPickerView(context: Context,
                         EmojiPickerView.access$configureMountedChildren(this.this$0);
                      }
                   },
-                  new Function2<EmojiPickerScroller.ScrollEvent, java.lang.Boolean, Unit>(this.$onScrollBeginDrag, this.this$0, this.$onScrollEndDrag) {
-                     final Function2<EmojiPickerView, EmojiPickerScroller.ScrollEvent, Unit> $onScrollBeginDrag;
-                     final Function2<EmojiPickerView, EmojiPickerScroller.ScrollEvent, Unit> $onScrollEndDrag;
+                  new Function2(this.$onScrollBeginDrag, this.this$0, this.$onScrollEndDrag) {
+                     final Function2 $onScrollBeginDrag;
+                     final Function2 $onScrollEndDrag;
                      final EmojiPickerView this$0;
 
                      {
@@ -174,7 +171,7 @@ internal class EmojiPickerView(context: Context,
                      }
 
                      public final void invoke(EmojiPickerScroller.ScrollEvent var1, boolean var2) {
-                        r.h(var1, "scrollEvent");
+                        q.h(var1, "scrollEvent");
                         if (var2) {
                            this.$onScrollBeginDrag.invoke(this.this$0, var1);
                         } else {
@@ -191,7 +188,7 @@ internal class EmojiPickerView(context: Context,
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
       this.setItemAnimator(null);
-      this.setLayoutManager(new EmojiPickerLayoutManager(var1, var4.getRowSize(), new Function1<Integer, Integer>(this) {
+      this.setLayoutManager(new EmojiPickerLayoutManager(var1, var4.getRowSize(), new Function1(this) {
          final EmojiPickerView this$0;
 
          {
@@ -203,7 +200,7 @@ internal class EmojiPickerView(context: Context,
             return EmojiPickerView.access$getSpanSize(this.this$0, EmojiPickerView.access$getTypedAdapter(this.this$0).getItem(var1));
          }
       }));
-      this.setAdapter(new EmojiPickerViewAdapter(var4, SizeUtilsKt.getDpToPx(var2), SizeUtilsKt.getDpToPx(var3), new Function2<Integer, Integer, Unit>(this) {
+      this.setAdapter(new EmojiPickerViewAdapter(var4, SizeUtilsKt.getDpToPx(var2), SizeUtilsKt.getDpToPx(var3), new Function2(this) {
          final EmojiPickerView this$0;
 
          {
@@ -214,8 +211,8 @@ internal class EmojiPickerView(context: Context,
          public final void invoke(Integer var1, Integer var2) {
             EmojiPickerView.access$onItemsChanged(this.this$0, var1, var2);
          }
-      }, new Function2<java.lang.Long, java.lang.String, Unit>(var5, this) {
-         final Function3<View, java.lang.Long, java.lang.String, Unit> $onPressEmoji;
+      }, new Function2(var5, this) {
+         final Function3 $onPressEmoji;
          final EmojiPickerView this$0;
 
          {
@@ -225,11 +222,11 @@ internal class EmojiPickerView(context: Context,
          }
 
          public final void invoke(java.lang.Long var1, java.lang.String var2) {
-            r.h(var2, "emojiName");
+            q.h(var2, "emojiName");
             this.$onPressEmoji.invoke(this.this$0, var1, var2);
          }
-      }, new Function2<java.lang.Long, java.lang.String, Unit>(var9, this) {
-         final Function3<View, java.lang.Long, java.lang.String, Unit> $onLongPressEmoji;
+      }, new Function2(var9, this) {
+         final Function3 $onLongPressEmoji;
          final EmojiPickerView this$0;
 
          {
@@ -239,7 +236,7 @@ internal class EmojiPickerView(context: Context,
          }
 
          public final void invoke(java.lang.Long var1, java.lang.String var2) {
-            r.h(var2, "emojiName");
+            q.h(var2, "emojiName");
             this.$onLongPressEmoji.invoke(this.this$0, var1, var2);
          }
       }, var12, var13));
@@ -250,14 +247,14 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureMountedChild(view: View) {
-      val var2: ViewHolder = this.getChildViewHolder(var1);
+      val var2: RecyclerView.ViewHolder = this.getChildViewHolder(var1);
       if (var2 is EmojiPickerViewHolder.Emoji) {
          (var2 as EmojiPickerViewHolder.Emoji).updateImage(this.getTypedAdapter().getScrolling(), this.getTypedAdapter().getScrollingFast());
       }
    }
 
    private fun configureMountedChildren() {
-      val var1: java.util.Iterator = a3.a(this).iterator();
+      val var1: java.util.Iterator = v0.a(this).iterator();
 
       while (var1.hasNext()) {
          this.configureMountedChild(var1.next() as View);
@@ -269,53 +266,28 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureRecycledViewPool() {
-      val var1: Int = this.getTypedLayoutManager().getSpanCount() * 20;
-      val var2: Int = this.getTypedLayoutManager().getSpanCount();
-      this.setItemViewCacheSize(var1 / 4);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var1);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var2);
+      val var2: Int = this.getTypedLayoutManager().getSpanCount() * 20;
+      val var1: Int = this.getTypedLayoutManager().getSpanCount();
+      this.setItemViewCacheSize(var2 / 4);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var2);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var1);
       this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal(), 1);
    }
 
    private fun EmojiPickerItem.getSpanSize(): Int {
-      var var3: Boolean = var1 is EmojiPickerItem.EmojiPlaceholder;
-      var var2: Int = 1;
-      if (var3) {
-         var3 = true;
-      } else {
-         var3 = var1 is EmojiPickerItem.Emoji;
-      }
-
-      if (!var3) {
-         if (var1 is EmojiPickerItem.Category) {
-            var3 = true;
-         } else {
-            var3 = var1 is EmojiPickerItem.Spacer;
-         }
-
-         if (var3) {
-            var3 = true;
-         } else {
-            var3 = var1 is EmojiPickerItem.FooterUpsell;
-         }
-
-         if (var3) {
-            var3 = true;
-         } else {
-            var3 = var1 is EmojiPickerItem.PremiumInlineRoadblockHeader;
-         }
-
-         if (var3) {
-            var3 = true;
-         } else {
-            var3 = var1 is EmojiPickerItem.PremiumInlineRoadblockFooter;
-         }
-
-         if (!var3) {
+      val var2: Int;
+      if (var1 !is EmojiPickerItem.EmojiPlaceholder && var1 !is EmojiPickerItem.Emoji) {
+         if (var1 !is EmojiPickerItem.Category
+            && var1 !is EmojiPickerItem.Spacer
+            && var1 !is EmojiPickerItem.FooterUpsell
+            && var1 !is EmojiPickerItem.PremiumInlineRoadblockHeader
+            && var1 !is EmojiPickerItem.PremiumInlineRoadblockFooter) {
             throw new p();
          }
 
          var2 = this.getTypedLayoutManager().getSpanCount();
+      } else {
+         var2 = 1;
       }
 
       return var2;
@@ -336,27 +308,27 @@ internal class EmojiPickerView(context: Context,
       ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 
-   public open fun fling(velocityX: Int, velocityY: Int): Boolean {
+   public override fun fling(velocityX: Int, velocityY: Int): Boolean {
       val var3: RecyclerViewScrollLimiter = RecyclerViewScrollLimiter.INSTANCE;
       return super.fling(RecyclerViewScrollLimiter.INSTANCE.getClampedVelocity(var1), var3.getClampedVelocity(var2));
    }
 
-   public open fun onChildAttachedToWindow(child: View) {
-      r.h(var1, "child");
+   public override fun onChildAttachedToWindow(child: View) {
+      q.h(var1, "child");
       super.onChildAttachedToWindow(var1);
       this.getVisibilityTracker().trackViewVisibilityChanged(this, var1, true);
       this.configureMountedChild(var1);
    }
 
-   public open fun onChildDetachedFromWindow(child: View) {
-      r.h(var1, "child");
+   public override fun onChildDetachedFromWindow(child: View) {
+      q.h(var1, "child");
       super.onChildDetachedFromWindow(var1);
       this.getVisibilityTracker().trackViewVisibilityChanged(this, var1, false);
    }
 
    public override fun onContext(): Context {
       val var1: Context = this.getContext();
-      r.g(var1, "context");
+      q.g(var1, "getContext(...)");
       return var1;
    }
 
@@ -365,13 +337,13 @@ internal class EmojiPickerView(context: Context,
    }
 
    public override fun onEmojisUpdated(emojis: List<EmojiPickerItem>, emojisUnicode: List<EmojiPickerItem>) {
-      r.h(var1, "emojis");
-      r.h(var2, "emojisUnicode");
+      q.h(var1, "emojis");
+      q.h(var2, "emojisUnicode");
       this.getTypedAdapter().setEmojis(var1, var2);
    }
 
    public fun scrollToItemAtIndex(index: Int, animated: Boolean, itemType: ItemType) {
-      r.h(var3, "itemType");
+      q.h(var3, "itemType");
       this.getScroller().scrollToItemAtIndex(var1, var2, var3.ordinal());
    }
 
@@ -380,7 +352,7 @@ internal class EmojiPickerView(context: Context,
    }
 
    public fun setConfig(config: com.discord.emoji_picker.EmojiPickerView.Config) {
-      r.h(var1, "config");
+      q.h(var1, "config");
       this.getTypedAdapter().setConfig(var1);
       this.getScroller().setScrollFastVelocity(var1.getScrollFastVelocity());
    }
@@ -394,7 +366,7 @@ internal class EmojiPickerView(context: Context,
    }
 
    public fun setCoreData(coreData: CoreData) {
-      r.h(var1, "coreData");
+      q.h(var1, "coreData");
       this.getTypedAdapter().setCoreData(var1);
       this.getTypedLayoutManager().setSpanCount(var1.getRowSize());
       this.getVisibilityTracker().setTrackingEnabled(var1.getHasPremiumInlineRoadblock());
@@ -412,10 +384,10 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var2: Context = this.getContext();
-      r.g(var2, "context");
-      var3.setUseTier0UpsellContent(var2, var1);
+      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var3: Context = this.getContext();
+      q.g(var3, "getContext(...)");
+      var2.setUseTier0UpsellContent(var3, var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {
@@ -476,39 +448,28 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun hashCode(): Int {
-         var var3: Byte = 1;
-         var var1: Byte = this.animateEmoji;
-         if (this.animateEmoji != 0) {
-            var1 = 1;
-         }
-
-         var var6: Byte = this.scrollFastOptimizationEnabled;
-         if (this.scrollFastOptimizationEnabled != 0) {
-            var6 = 1;
-         }
-
-         val var5: Int = Integer.hashCode(this.scrollFastVelocity);
-         if (this.disableAnimationsOnScroll == 0) {
-            var3 = this.disableAnimationsOnScroll;
-         }
-
-         return ((var1 * 31 + var6) * 31 + var5) * 31 + var3;
+         return (
+                  (java.lang.Boolean.hashCode(this.animateEmoji) * 31 + java.lang.Boolean.hashCode(this.scrollFastOptimizationEnabled)) * 31
+                     + Integer.hashCode(this.scrollFastVelocity)
+               )
+               * 31
+            + java.lang.Boolean.hashCode(this.disableAnimationsOnScroll);
       }
 
       public override fun toString(): String {
-         val var2: Boolean = this.animateEmoji;
-         val var4: Boolean = this.scrollFastOptimizationEnabled;
+         val var4: Boolean = this.animateEmoji;
+         val var3: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var3: Boolean = this.disableAnimationsOnScroll;
+         val var2: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var2);
-         var5.append(", scrollFastOptimizationEnabled=");
          var5.append(var4);
+         var5.append(", scrollFastOptimizationEnabled=");
+         var5.append(var3);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var3);
+         var5.append(var2);
          var5.append(")");
          return var5.toString();
       }

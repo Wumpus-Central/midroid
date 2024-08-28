@@ -3,26 +3,25 @@ package com.discord.chat.presentation.list.delegate
 import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.row.LoadMoreButton
-import com.discord.chat.bridge.row.LoadingActionType
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
-import eh.p
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.p
 
 public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<LoadingChatListItem, ChatLoadingView> {
    init {
-      r.h(var1, "eventHandlerProvider");
+      q.h(var1, "eventHandlerProvider");
       super(var1, null, 2, null);
    }
 
    public open fun bindView(view: ChatLoadingView, item: LoadingChatListItem, metadata: Metadata<ChatLoadingView>) {
-      r.h(var1, "view");
-      r.h(var2, "item");
-      r.h(var3, "metadata");
+      q.h(var1, "view");
+      q.h(var2, "item");
+      q.h(var3, "metadata");
       if (var2.isLoading()) {
          var1.showProgress();
       } else {
@@ -34,7 +33,7 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
                throw new p();
             }
 
-            var6 = new Function0<Unit>(this.getEventHandler()) {
+            var6 = new Function0(this.getEventHandler()) {
                {
                   super(0, var1, ChatEventHandler::class.java, "onTapLoadMessagesAfter", "onTapLoadMessagesAfter()V", 0);
                }
@@ -44,7 +43,7 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
                }
             };
          } else {
-            var6 = new Function0<Unit>(this.getEventHandler()) {
+            var6 = new Function0(this.getEventHandler()) {
                {
                   super(0, var1, ChatEventHandler::class.java, "onTapLoadMessagesBefore", "onTapLoadMessagesBefore()V", 0);
                }
@@ -60,37 +59,14 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
    }
 
    public open fun createView(parent: ViewGroup): ChatLoadingView {
-      r.h(var1, "parent");
+      q.h(var1, "parent");
       val var2: Context = var1.getContext();
-      r.g(var2, "parent.context");
+      q.g(var2, "getContext(...)");
       return new ChatLoadingView(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      r.h(var1, "item");
+      q.h(var1, "item");
       return var1 is LoadingChatListItem;
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[LoadingActionType.values().length];
-
-         try {
-            var0[LoadingActionType.LOAD_MORE_BEFORE.ordinal()] = 1;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[LoadingActionType.LOAD_MORE_AFTER.ordinal()] = 2;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
-      }
    }
 }

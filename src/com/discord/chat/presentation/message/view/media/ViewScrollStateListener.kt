@@ -2,8 +2,8 @@ package com.discord.chat.presentation.message.view.media
 
 import android.view.View
 import android.view.ViewTreeObserver.OnScrollChangedListener
-import jb.g
-import kotlin.jvm.internal.r
+import ed.f
+import kotlin.jvm.internal.q
 
 public class ViewScrollStateListener(view: View, viewScrolling: (Boolean) -> Unit) : OnScrollChangedListener {
    private final val view: View
@@ -12,19 +12,19 @@ public class ViewScrollStateListener(view: View, viewScrolling: (Boolean) -> Uni
    private final var isScrollingStoppedRunnable: Runnable
 
    init {
-      r.h(var1, "view");
-      r.h(var2, "viewScrolling");
+      q.h(var1, "view");
+      q.h(var2, "viewScrolling");
       super();
       this.view = var1;
       this.viewScrolling = var2;
-      this.isScrollingDuration = var1.getResources().getInteger(g.c);
+      this.isScrollingDuration = var1.getResources().getInteger(f.b);
       this.isScrollingStoppedRunnable = new b(this);
       this.queueScrollStop();
    }
 
    @JvmStatic
    fun `isScrollingStoppedRunnable$lambda$0`(var0: ViewScrollStateListener) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       var0.viewScrolling.invoke(java.lang.Boolean.FALSE);
    }
 

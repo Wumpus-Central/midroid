@@ -7,7 +7,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.Animation.AnimationListener
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ProgressDot  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View {
    public final var onScaleDownCompleteListener: (() -> Unit)?
@@ -17,23 +17,23 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
    private final val scaleAndFadeUpAnimation: Animation
 
    fun ProgressDot(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ProgressDot(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
       val var5: Animation = AnimationUtils.loadAnimation(var1, R.anim.anim_progress_dots_scale_up);
-      r.g(var5, "loadAnimation(context, R…m_progress_dots_scale_up)");
+      q.g(var5, "loadAnimation(...)");
       this.scaleAndFadeUpAnimation = var5;
       val var4: Animation = AnimationUtils.loadAnimation(var1, R.anim.anim_progress_dots_scale_down);
-      r.g(var4, "loadAnimation(context, R…progress_dots_scale_down)");
+      q.g(var4, "loadAnimation(...)");
       this.scaleAndFadeDownAnimation = var4;
    }
 
@@ -52,7 +52,7 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
 
    public fun start(delay: Long = 0L) {
       this.scaleAndFadeUpAnimation.setStartOffset(var1);
-      this.scaleAndFadeUpAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new Function0<Unit>(this) {
+      this.scaleAndFadeUpAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new Function0(this) {
          final ProgressDot this$0;
 
          {
@@ -64,7 +64,7 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
             ProgressDot.access$startDownAnimation(this.this$0);
          }
       }));
-      this.scaleAndFadeDownAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new Function0<Unit>(this) {
+      this.scaleAndFadeDownAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new Function0(this) {
          final ProgressDot this$0;
 
          {
@@ -91,7 +91,7 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
       public final val onComplete: () -> Unit
 
       init {
-         r.h(var1, "onComplete");
+         q.h(var1, "onComplete");
          super();
          this.onComplete = var1;
       }

@@ -17,20 +17,20 @@ import com.discord.chat.presentation.message.view.botuikit.components.SelectComp
 import com.discord.chat.presentation.message.view.botuikit.components.SeparatorDisplayComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.TextDisplayComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.media_gallery.MediaGalleryDisplayComponentView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ComponentInflater(context: Context) {
    public final val context: Context
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       this.context = var1;
    }
 
    public fun <T : Component> inflateComponent(component: T, root: ViewGroup): ComponentView<T>? {
-      r.h(var1, "component");
-      r.h(var2, "root");
+      q.h(var1, "component");
+      q.h(var2, "root");
       val var5: Any;
       if (var1 is ActionRowComponent) {
          var5 = ActionRowComponentView.Companion.inflateComponent(this.context, var2);

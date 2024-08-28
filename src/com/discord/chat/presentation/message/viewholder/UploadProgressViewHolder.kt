@@ -9,14 +9,14 @@ public class UploadProgressViewHolder(uploadProgressView: UploadProgressView) : 
    private final val uploadProgressView: UploadProgressView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "uploadProgressView");
+      kotlin.jvm.internal.q.h(var1, "uploadProgressView");
       super(var1, null);
       this.uploadProgressView = var1;
    }
 
    public fun bind(uploadProgress: UploadProgress, eventHandler: ChatEventHandler) {
-      kotlin.jvm.internal.r.h(var1, "uploadProgress");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
+      kotlin.jvm.internal.q.h(var1, "uploadProgress");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
       this.uploadProgressView
          .set(
             var1.getHeaderText(),
@@ -26,7 +26,7 @@ public class UploadProgressViewHolder(uploadProgressView: UploadProgressView) : 
             var1.getProgressStartColor(),
             var1.getProgressTrackColor(),
             var1.getIconTintColor(),
-            new Function0<Unit>(var2, var1) {
+            new Function0(var2, var1) {
                final ChatEventHandler $eventHandler;
                final UploadProgress $uploadProgress;
 

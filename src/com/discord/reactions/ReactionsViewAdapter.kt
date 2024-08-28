@@ -12,10 +12,11 @@ import com.discord.reactions.ReactionView.ReactionsTheme
 import com.discord.recycler_view.utils.ItemDiffer
 import com.discord.theme.DiscordTheme
 import com.discord.theme.ThemeManager
+import com.google.android.flexbox.FlexboxLayoutManager
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
-internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
+internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
    private final lateinit var addNewBurstReactionAccessibilityLabel: String
    private final lateinit var addNewReactionAccessibilityLabel: String
    private final lateinit var addReactionLabel: String
@@ -33,7 +34,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
 
    init {
       this.reactionHeight = var1;
-      this.reactions = h.i();
+      this.reactions = i.j();
       this.setHasStableIds(true);
    }
 
@@ -60,11 +61,12 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
    }
 
    public open fun getItemCount(): Int {
-      var var2: Int = this.reactions.size();
+      val var2: Int = this.reactions.size();
       var var1: Int = var2;
       if (this.canAddNewReactions) {
-         var1 = ++var2;
          if (this.canAddNewBurstReactions) {
+            var1 = var2 + 2;
+         } else {
             var1 = var2 + 1;
          }
       }
@@ -74,64 +76,64 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
 
    public open fun getItemId(position: Int): Long {
       val var2: Int = this.getAddBurstReactionIndex();
-      var var6: java.lang.String = null;
       var var7: java.lang.String = null;
-      val var4: Long;
+      var var6: java.lang.String = null;
+      val var3: Long;
       if (var1 == var2) {
          var6 = this.messageId;
          if (this.messageId == null) {
-            r.y("messageId");
-            var6 = null;
-         }
-
-         if (this.addReactionLabel == null) {
-            r.y("addReactionLabel");
-         } else {
-            var7 = this.addReactionLabel;
-         }
-
-         val var17: StringBuilder = new StringBuilder();
-         var17.append(var6);
-         var17.append("_add_burst_reactions_");
-         var17.append(var7);
-         var4 = IdUtilsKt.convertToId(var17.toString());
-      } else if (var1 == this.getAddReactionIndex()) {
-         var6 = this.messageId;
-         if (this.messageId == null) {
-            r.y("messageId");
+            q.y("messageId");
             var6 = null;
          }
 
          var7 = this.addReactionLabel;
          if (this.addReactionLabel == null) {
-            r.y("addReactionLabel");
+            q.y("addReactionLabel");
             var7 = null;
+         }
+
+         val var15: StringBuilder = new StringBuilder();
+         var15.append(var6);
+         var15.append("_add_burst_reactions_");
+         var15.append(var7);
+         var3 = IdUtilsKt.convertToId(var15.toString());
+      } else if (var1 == this.getAddReactionIndex()) {
+         var6 = this.messageId;
+         if (this.messageId == null) {
+            q.y("messageId");
+            var6 = null;
+         }
+
+         if (this.addReactionLabel == null) {
+            q.y("addReactionLabel");
+         } else {
+            var7 = this.addReactionLabel;
          }
 
          val var18: StringBuilder = new StringBuilder();
          var18.append(var6);
          var18.append("_add_reactions_");
          var18.append(var7);
-         var4 = IdUtilsKt.convertToId(var18.toString());
+         var3 = IdUtilsKt.convertToId(var18.toString());
       } else {
          val var19: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
-            r.y("messageId");
+            q.y("messageId");
          } else {
             var6 = this.messageId;
          }
 
          var7 = var19.getEmoji().getEmojiId();
-         val var3: Boolean = var19.isBurstReaction();
+         val var5: Boolean = var19.isBurstReaction();
          val var20: StringBuilder = new StringBuilder();
          var20.append(var6);
          var20.append("_");
          var20.append(var7);
-         var20.append(var3);
-         var4 = IdUtilsKt.convertToId(var20.toString());
+         var20.append(var5);
+         var3 = IdUtilsKt.convertToId(var20.toString());
       }
 
-      return var4;
+      return var3;
    }
 
    public open fun getItemViewType(position: Int): Int {
@@ -150,10 +152,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
    }
 
    public open fun onBindViewHolder(holder: ViewHolder, position: Int) {
-      r.h(var1, "holder");
-      val var9: ThemeManager = ThemeManager.INSTANCE;
-      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var9.setThemeOverride(this.theme);
+      q.h(var1, "holder");
+      val var8: ThemeManager = ThemeManager.INSTANCE;
+      val var9: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var8.setThemeOverride(this.theme);
       val var3: Boolean = var1 is BurstReactionViewHolder;
       var var4: Function1 = null;
       var var5: OnClickListener = null;
@@ -162,13 +164,13 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          val var27: BurstReactionViewHolder = var1 as BurstReactionViewHolder;
          var var10: Function1 = this.onReactionClick;
          if (this.onReactionClick == null) {
-            r.y("onReactionClick");
+            q.y("onReactionClick");
             var10 = null;
          }
 
          var4 = this.onReactionLongPress;
          if (this.onReactionLongPress == null) {
-            r.y("onReactionLongPress");
+            q.y("onReactionLongPress");
             var4 = null;
          }
 
@@ -178,12 +180,12 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          val var31: ReactionViewHolder = var1 as ReactionViewHolder;
          var var11: Function1 = this.onReactionClick;
          if (this.onReactionClick == null) {
-            r.y("onReactionClick");
+            q.y("onReactionClick");
             var11 = null;
          }
 
          if (this.onReactionLongPress == null) {
-            r.y("onReactionLongPress");
+            q.y("onReactionLongPress");
          } else {
             var4 = this.onReactionLongPress;
          }
@@ -193,19 +195,19 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          val var32: AddReactionViewHolder = var1 as AddReactionViewHolder;
          var var12: java.lang.String = this.addReactionLabel;
          if (this.addReactionLabel == null) {
-            r.y("addReactionLabel");
+            q.y("addReactionLabel");
             var12 = null;
          }
 
          var var18: java.lang.String = this.addNewReactionAccessibilityLabel;
          if (this.addNewReactionAccessibilityLabel == null) {
-            r.y("addNewReactionAccessibilityLabel");
+            q.y("addNewReactionAccessibilityLabel");
             var18 = null;
          }
 
          var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
-            r.y("onAddReactionClick");
+            q.y("onAddReactionClick");
             var5 = null;
          }
 
@@ -222,18 +224,18 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          val var33: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;
          var var13: java.lang.String = this.addReactionLabel;
          if (this.addReactionLabel == null) {
-            r.y("addReactionLabel");
+            q.y("addReactionLabel");
             var13 = null;
          }
 
          var var20: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
          if (this.addNewBurstReactionAccessibilityLabel == null) {
-            r.y("addNewBurstReactionAccessibilityLabel");
+            q.y("addNewBurstReactionAccessibilityLabel");
             var20 = null;
          }
 
          if (this.onAddBurstReactionClick == null) {
-            r.y("onAddBurstReactionClick");
+            q.y("onAddBurstReactionClick");
          } else {
             var5 = this.onAddBurstReactionClick;
          }
@@ -241,41 +243,41 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          var33.bind(var13, var20, var5, this.reactionsTheme);
       }
 
-      var9.setThemeOverride(var8);
+      var8.setThemeOverride(var9);
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-      r.h(var1, "parent");
-      val var5: com.google.android.flexbox.FlexboxLayoutManager.b = new com.google.android.flexbox.FlexboxLayoutManager.b(-2, this.reactionHeight);
-      val var3: ThemeManager = ThemeManager.INSTANCE;
-      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var3.setThemeOverride(this.theme);
+      q.h(var1, "parent");
+      val var5: FlexboxLayoutManager.b = new FlexboxLayoutManager.b(-2, this.reactionHeight);
+      val var4: ThemeManager = ThemeManager.INSTANCE;
+      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var4.setThemeOverride(this.theme);
       var var9: Any;
       switch (var2) {
          case 45:
             val var14: Context = var1.getContext();
-            r.g(var14, "parent.context");
+            q.g(var14, "getContext(...)");
             val var15: BurstReactionView = new BurstReactionView(var14, null, 2, null);
             var15.setLayoutParams(var5);
             var9 = new BurstReactionViewHolder(var15);
             break;
          case 46:
             val var12: Context = var1.getContext();
-            r.g(var12, "parent.context");
+            q.g(var12, "getContext(...)");
             val var13: ReactionView = new ReactionView(var12, null, 2, null);
             var13.setLayoutParams(var5);
             var9 = new ReactionViewHolder(var13);
             break;
          case 47:
             val var10: Context = var1.getContext();
-            r.g(var10, "parent.context");
+            q.g(var10, "getContext(...)");
             val var11: AddReactionView = new AddReactionView(var10, null, 2, null);
             var11.setLayoutParams(var5);
             var9 = new AddReactionViewHolder(var11);
             break;
          case 48:
             val var7: Context = var1.getContext();
-            r.g(var7, "parent.context");
+            q.g(var7, "getContext(...)");
             val var8: AddReactionView = new AddReactionView(var7, null, 2, null);
             var8.setLayoutParams(var5);
             var9 = new AddBurstReactionViewHolder(var8);
@@ -287,7 +289,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
             throw new IllegalStateException(var6.toString().toString());
       }
 
-      var3.setThemeOverride(var4);
+      var4.setThemeOverride(var3);
       return (ViewHolder)var9;
    }
 
@@ -308,15 +310,15 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
       theme: DiscordTheme? = null,
       areChatAnimationsEnabled: Boolean = false
    ) {
-      r.h(var1, "messageId");
-      r.h(var2, "reactions");
-      r.h(var5, "addReactionLabel");
-      r.h(var6, "addNewReactionAccessibilityLabel");
-      r.h(var7, "addNewBurstReactionAccessibilityLabel");
-      r.h(var9, "onAddReactionClick");
-      r.h(var10, "onAddBurstReactionClick");
-      r.h(var11, "onReactionClick");
-      r.h(var12, "onReactionLongPress");
+      q.h(var1, "messageId");
+      q.h(var2, "reactions");
+      q.h(var5, "addReactionLabel");
+      q.h(var6, "addNewReactionAccessibilityLabel");
+      q.h(var7, "addNewBurstReactionAccessibilityLabel");
+      q.h(var9, "onAddReactionClick");
+      q.h(var10, "onAddBurstReactionClick");
+      q.h(var11, "onReactionClick");
+      q.h(var12, "onReactionLongPress");
       this.messageId = var1;
       this.canAddNewReactions = var3;
       this.canAddNewBurstReactions = var4;
@@ -333,7 +335,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
          val var15: java.util.List = this.reactions;
          this.reactions = var2;
          val var16: androidx.recyclerview.widget.c.e = androidx.recyclerview.widget.c.b(new ItemDiffer(var15, var2), true);
-         r.g(var16, "calculateDiff(differ, true)");
+         q.g(var16, "calculateDiff(...)");
          var16.c(this);
       } else {
          this.reactions = var2;

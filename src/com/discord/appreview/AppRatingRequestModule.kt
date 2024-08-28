@@ -7,26 +7,26 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "AppRatingRequestModule")
 public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestManagerSpec {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNAppRatingRequestManager";
    }
 
-   public open fun requestRating(promise: Promise) {
-      r.h(var1, "promise");
+   public override fun requestRating(promise: Promise) {
+      q.h(var1, "promise");
       val var2: Activity = this.getCurrentActivity();
       if (var2 == null) {
          var1.reject(new IllegalStateException("current activity is null"));
       } else {
-         new AppRatingRequester(var2, false, new Function0<Unit>(var1) {
+         new AppRatingRequester(var2, false, new Function0(var1) {
             final Promise $promise;
 
             {
@@ -37,7 +37,7 @@ public class AppRatingRequestModule(reactContext: ReactApplicationContext) : Nat
             public final void invoke() {
                this.$promise.resolve(0);
             }
-         }, new Function1<Exception, Unit>(var1) {
+         }, new Function1(var1) {
             final Promise $promise;
 
             {
@@ -46,7 +46,7 @@ public class AppRatingRequestModule(reactContext: ReactApplicationContext) : Nat
             }
 
             public final void invoke(Exception var1) {
-               r.h(var1, "exception");
+               q.h(var1, "exception");
                this.$promise.reject(var1);
             }
          }).executeRequest();

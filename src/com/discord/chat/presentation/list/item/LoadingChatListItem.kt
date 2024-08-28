@@ -1,14 +1,14 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.chat.bridge.row.LoadMoreButton
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class LoadingChatListItem(button: LoadMoreButton, isLoading: Boolean) : ChatListItem {
    public final val button: LoadMoreButton
    public final val isLoading: Boolean
 
    init {
-      r.h(var1, "button");
+      q.h(var1, "button");
       val var3: StringBuilder = new StringBuilder();
       var3.append("loading + ");
       var3.append(var2);
@@ -26,7 +26,7 @@ public data class LoadingChatListItem(button: LoadMoreButton, isLoading: Boolean
    }
 
    public fun copy(button: LoadMoreButton = var0.button, isLoading: Boolean = var0.isLoading): LoadingChatListItem {
-      r.h(var1, "button");
+      q.h(var1, "button");
       return new LoadingChatListItem(var1, var2);
    }
 
@@ -37,7 +37,7 @@ public data class LoadingChatListItem(button: LoadMoreButton, isLoading: Boolean
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.button, var1.button)) {
+         if (!q.c(this.button, var1.button)) {
             return false;
          } else {
             return this.isLoading == var1.isLoading;
@@ -46,13 +46,7 @@ public data class LoadingChatListItem(button: LoadMoreButton, isLoading: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.button.hashCode();
-      var var1: Byte = this.isLoading;
-      if (this.isLoading != 0) {
-         var1 = 1;
-      }
-
-      return var3 * 31 + var1;
+      return this.button.hashCode() * 31 + java.lang.Boolean.hashCode(this.isLoading);
    }
 
    public override fun toString(): String {

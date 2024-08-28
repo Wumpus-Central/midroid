@@ -14,20 +14,14 @@ fun `access$getContentlessPreviewText`(var0: Context, var1: Message): java.lang.
 
 private fun getContentlessPreviewText(context: Context, message: Message): CharSequence? {
    var var4: java.util.List = var1.getStickers();
-   var var3: Int = 0;
-   var var2: Int;
-   if (var4 != null) {
-      var2 = var4.size();
-   } else {
-      var2 = 0;
-   }
-
-   if (var2 > 0) {
+   if (var4 != null && var4.size() > 0) {
       return I18nUtilsKt.i18nFormat$default(var0, I18nMessage.REPLY_QUOTE_STICKER_MOBILE, null, 2, null);
    } else if (MessageFlagKt.hasMessageFlag(var1.getFlags(), MessageFlag.IS_VOICE_MESSAGE)) {
       return I18nUtilsKt.i18nFormat$default(var0, I18nMessage.REPLY_QUOTE_VOICE_MESSAGE_MOBILE, null, 2, null);
    } else {
       var4 = var1.getAttachments();
+      var var3: Int = 0;
+      val var2: Int;
       if (var4 != null) {
          var2 = var4.size();
       } else {

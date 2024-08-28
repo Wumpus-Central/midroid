@@ -3,15 +3,15 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
-import eh.p
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.p
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
    public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem {
       public final val chatListItemUpdate: ChatListItemUpdate
 
       init {
-         r.h(var1, "chatListItemUpdate");
+         q.h(var1, "chatListItemUpdate");
          super(null);
          this.chatListItemUpdate = var1;
       }
@@ -28,7 +28,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
                for (var2 = ""; var4.hasNext(); var1++) {
                   var13 = (java.lang.String)var4.next();
                   if (var1 < 0) {
-                     h.s();
+                     i.t();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
@@ -103,7 +103,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public final val updateType: PortalViewUpdateType
 
       init {
-         r.h(var1, "updateType");
+         q.h(var1, "updateType");
          super(null);
          this.updateType = var1;
       }
@@ -129,34 +129,6 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var3.append("PortalView - ");
          var3.append(var4);
          return var3.toString();
-      }
-
-      // $VF: Class flags could not be determined
-      internal class WhenMappings {
-         @JvmStatic
-         public int[] $EnumSwitchMapping$0;
-
-         @JvmStatic
-         fun {
-            val var0: IntArray = new int[ChannelChatListAdapter.PortalViewUpdateType.values().length];
-
-            try {
-               var0[ChannelChatListAdapter.PortalViewUpdateType.ADD.ordinal()] = 1;
-            } catch (var4: NoSuchFieldError) {
-            }
-
-            try {
-               var0[ChannelChatListAdapter.PortalViewUpdateType.CHANGE.ordinal()] = 2;
-            } catch (var3: NoSuchFieldError) {
-            }
-
-            try {
-               var0[ChannelChatListAdapter.PortalViewUpdateType.REMOVE.ordinal()] = 3;
-            } catch (var2: NoSuchFieldError) {
-            }
-
-            $EnumSwitchMapping$0 = var0;
-         }
       }
    }
 

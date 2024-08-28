@@ -12,7 +12,7 @@ import android.view.View.OnLayoutChangeListener
 import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootViewKt
 import com.facebook.react.uimanager.MeasureSpecAssertions
 import com.otaliastudios.zoom.ZoomLayout
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ZoomLayoutFixed  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ZoomLayout {
    public final var gestureEnabled: Boolean
@@ -22,17 +22,17 @@ public class ZoomLayoutFixed  public constructor(context: Context, attrs: Attrib
    private final val pinchDetector: ScaleGestureDetector
 
    fun ZoomLayoutFixed(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ZoomLayoutFixed(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
       this.pinchDetector = new ScaleGestureDetector(var1, new SimpleOnScaleGestureListener());
       this.gestureEnabled = true;
@@ -43,17 +43,17 @@ public class ZoomLayoutFixed  public constructor(context: Context, attrs: Attrib
    fun `layoutChangeListener$lambda$0`(
       var0: ZoomLayoutFixed, var1: View, var2: Int, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int
    ) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       var0.getEngine().Z((float)var1.getWidth(), (float)var1.getHeight(), true);
    }
 
    @JvmStatic
    fun `onMeasure$lambda$1`(var0: ZoomLayoutFixed) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       var0.getViewTreeObserver().dispatchOnGlobalLayout();
    }
 
-   protected override fun onDetachedFromWindow() {
+   protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
       val var1: View = this.getChildAt(0);
       if (var1 != null) {
@@ -61,7 +61,7 @@ public class ZoomLayoutFixed  public constructor(context: Context, attrs: Attrib
       }
    }
 
-   public override fun onGlobalLayout() {
+   public open fun onGlobalLayout() {
       super.onGlobalLayout();
       val var1: View = this.getChildAt(0);
       if (var1 != null) {
@@ -69,15 +69,15 @@ public class ZoomLayoutFixed  public constructor(context: Context, attrs: Attrib
       }
    }
 
-   protected override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+   protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
       MeasureSpecAssertions.assertExplicitMeasureSpec(var1, var2);
       this.setMeasuredDimension(MeasureSpec.getSize(var1), MeasureSpec.getSize(var2));
-      this.post(new com.discord.zoom_layout.a(this));
+      this.post(new a(this));
    }
 
    @SuppressLint(["ClickableViewAccessibility"])
-   public override fun onTouchEvent(ev: MotionEvent): Boolean {
-      r.h(var1, "ev");
+   public open fun onTouchEvent(ev: MotionEvent): Boolean {
+      q.h(var1, "ev");
       if (!this.gestureEnabled) {
          return true;
       } else {

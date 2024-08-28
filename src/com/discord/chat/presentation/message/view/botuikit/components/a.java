@@ -5,11 +5,12 @@ import android.view.View.OnClickListener;
 import com.discord.chat.bridge.botuikit.ButtonComponent;
 import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener;
 
+// $VF: synthetic class
 public final class a implements OnClickListener {
    public final ButtonComponent j;
    public final ComponentActionListener k;
 
    public final void onClick(View var1) {
-      ButtonComponentView.c(this.j, this.k, var1);
+      ButtonComponentView.h(this.j, this.k, var1);
    }
 }

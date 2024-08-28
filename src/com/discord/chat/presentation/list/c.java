@@ -1,4 +1,5 @@
 package com.discord.chat.presentation.list;
 
-public final class c {
+// $VF: synthetic class
+public abstract class c {
 }

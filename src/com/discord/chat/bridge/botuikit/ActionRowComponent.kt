@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.m0
 
 @f
 public data class ActionRowComponent(type: Int, id: String, errorText: String? = null, components: List<Component>) : BaseLayoutComponent {
@@ -23,8 +23,8 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    public open val type: Int
 
    init {
-      r.h(var2, "id");
-      r.h(var4, "components");
+      q.h(var2, "id");
+      q.h(var4, "components");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -32,50 +32,25 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
       this.components = var4;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: ActionRowComponent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      val var4: Int = var0.getType();
-      var var3: Boolean = false;
-      var1.w(var2, 0, var4);
-      var1.z(var2, 1, var0.getId());
-      if (var1.A(var2, 2) || var0.getErrorText() != null) {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 2, a2.a, var0.getErrorText());
-      }
-
-      var1.y(var2, 3, new xk.f(ComponentSerializer.INSTANCE), var0.components);
-   }
-
    public operator fun component1(): Int {
-      return this.getType();
+      return this.type;
    }
 
    public operator fun component2(): String {
-      return this.getId();
+      return this.id;
    }
 
    public operator fun component3(): String? {
-      return this.getErrorText();
+      return this.errorText;
    }
 
    public operator fun component4(): List<Component> {
       return this.components;
    }
 
-   public fun copy(
-      type: Int = var0.getType(),
-      id: String = var0.getId(),
-      errorText: String? = var0.getErrorText(),
-      components: List<Component> = var0.components
-   ): ActionRowComponent {
-      r.h(var2, "id");
-      r.h(var4, "components");
+   public fun copy(type: Int = var0.type, id: String = var0.id, errorText: String? = var0.errorText, components: List<Component> = var0.components): ActionRowComponent {
+      q.h(var2, "id");
+      q.h(var4, "components");
       return new ActionRowComponent(var1, var2, var3, var4);
    }
 
@@ -86,50 +61,50 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          return false;
       } else {
          var1 = var1;
-         if (this.getType() != var1.getType()) {
+         if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.getId(), var1.getId())) {
+         } else if (!q.c(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.getErrorText(), var1.getErrorText())) {
+         } else if (!q.c(this.errorText, var1.errorText)) {
             return false;
          } else {
-            return r.c(this.components, var1.components);
+            return q.c(this.components, var1.components);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.getType());
-      val var3: Int = this.getId().hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
-      if (this.getErrorText() == null) {
+      if (this.errorText == null) {
          var1 = 0;
       } else {
-         var1 = this.getErrorText().hashCode();
+         var1 = this.errorText.hashCode();
       }
 
       return ((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode();
    }
 
    public override fun toString(): String {
-      val var1: Int = this.getType();
-      val var2: java.lang.String = this.getId();
-      val var3: java.lang.String = this.getErrorText();
-      val var4: java.util.List = this.components;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ActionRowComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var2);
-      var5.append(", errorText=");
-      var5.append(var3);
-      var5.append(", components=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var1: Int = this.type;
+      val var4: java.lang.String = this.id;
+      val var5: java.lang.String = this.errorText;
+      val var3: java.util.List = this.components;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActionRowComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var4);
+      var2.append(", errorText=");
+      var2.append(var5);
+      var2.append(", components=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<ActionRowComponent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -149,34 +124,37 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, a2.a, a.u(a2.a), new xk.f(ComponentSerializer.INSTANCE)};
+         return new KSerializer[]{n0.a, b2.a, a.u(b2.a), ActionRowComponent.access$get$childSerializers$cp()[3]};
       }
 
       public open fun deserialize(decoder: Decoder): ActionRowComponent {
-         r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         q.h(var1, "decoder");
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.b(var9);
+         val var8: Array<KSerializer> = ActionRowComponent.access$get$childSerializers$cp();
          var var2: Int;
          var var3: Int;
-         var var6: Any;
+         var var6: java.lang.String;
          var var7: java.lang.String;
-         var var10: Any;
-         if (var9.p()) {
-            var3 = var9.i(var8, 0);
-            var7 = var9.m(var8, 1);
-            var6 = var9.n(var8, 2, a2.a, null);
-            var10 = var9.y(var8, 3, new xk.f(ComponentSerializer.INSTANCE), null);
+         var var12: Any;
+         if (var10.p()) {
+            var3 = var10.i(var9, 0);
+            var7 = var10.m(var9, 1);
+            var12 = var10.n(var9, 2, b2.a, null) as java.lang.String;
+            val var13: java.util.List = var10.y(var9, 3, var8[3], null) as java.util.List;
             var2 = 15;
+            var6 = (java.lang.String)var12;
+            var12 = var13;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var7 = null;
             var6 = null;
-            var10 = null;
+            var12 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var9.o(var8);
+               val var5: Int = var10.o(var9);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -185,18 +163,18 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
                               throw new n(var5);
                            }
 
-                           var10 = var9.y(var8, 3, new xk.f(ComponentSerializer.INSTANCE), var10);
+                           var12 = var10.y(var9, 3, var8[3], var12) as java.util.List;
                            var2 |= 8;
                         } else {
-                           var6 = var9.n(var8, 2, a2.a, var6);
+                           var6 = var10.n(var9, 2, b2.a, var6) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var9.m(var8, 1);
+                        var7 = var10.m(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var9.i(var8, 0);
+                     var3 = var10.i(var9, 0);
                      var2 |= 1;
                   }
                } else {
@@ -205,21 +183,21 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
             }
          }
 
-         var9.c(var8);
-         return new ActionRowComponent(var2, var3, var7, var6 as java.lang.String, var10 as java.util.List, null);
+         var10.c(var9);
+         return new ActionRowComponent(var2, var3, var7, var6, (java.util.List)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActionRowComponent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ActionRowComponent.write$Self(var2, var4, var3);
+         ActionRowComponent.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

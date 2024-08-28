@@ -7,9 +7,9 @@ import android.graphics.Rect
 import android.net.Uri.Builder
 import android.os.Build.VERSION
 import android.view.Window
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.i3
-import androidx.core.view.WindowInsetsCompat.m
+import androidx.core.view.d1
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react_activities.ReactRootView
@@ -20,13 +20,13 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
-import fh.p
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import mj.o
 
 public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -46,13 +46,13 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
       var1.startActivity(new Intent("android.settings.APP_NOTIFICATION_SETTINGS").putExtra("android.provider.extra.APP_PACKAGE", var1.getPackageName()));
    }
 
-   private fun setInsetsVisible(visible: Boolean, insetType: Int) {
-      UiThreadUtil.runOnUiThread(new c(this, var1, var2));
+   private fun setInsetsVisible(visible: Boolean, insetType: Int): Boolean {
+      return UiThreadUtil.runOnUiThread(new c(this, var1, var2));
    }
 
    @JvmStatic
    fun `setInsetsVisible$lambda$3`(var0: DeviceSettingsManagerModule, var1: Boolean, var2: Int) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       val var3: Activity = var0.getReactApplicationContext().getCurrentActivity();
       val var4: Window;
       if (var3 != null) {
@@ -62,8 +62,8 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
       }
 
       if (var4 != null) {
-         val var5: WindowInsetsControllerCompat = i3.a(var4, var4.getDecorView());
-         r.g(var5, "getInsetsController(window, window.decorView)");
+         val var5: WindowInsetsControllerCompat = d1.a(var4, var4.getDecorView());
+         q.g(var5, "getInsetsController(...)");
          var5.d(2);
          if (var1) {
             var5.e(var2);
@@ -75,18 +75,18 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
 
    @JvmStatic
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsManagerModule, var1: ReadableArray) {
-      r.h(var0, "this$0");
-      r.h(var1, "$rects");
+      q.h(var0, "this$0");
+      q.h(var1, "$rects");
       val var2: Companion = ReactRootView.Companion;
-      val var3: ReactApplicationContext = var0.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      val var6: ReactApplicationContext = var0.getReactApplicationContext();
+      q.g(var6, "getReactApplicationContext(...)");
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-      val var6: ArrayList = new ArrayList(h.t(var4, 10));
+      val var3: ArrayList = new ArrayList(i.u(var4, 10));
       val var5: java.util.Iterator = var4.iterator();
 
       while (var5.hasNext()) {
-         val var7: ReadableMap = var1.getMap((var5 as p).nextInt());
-         var6.add(
+         val var7: ReadableMap = var1.getMap((var5 as o).c());
+         var3.add(
             new Rect(
                SizeUtilsKt.getDpToPx(var7.getInt("left")),
                SizeUtilsKt.getDpToPx(var7.getInt("top")),
@@ -96,7 +96,7 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
          );
       }
 
-      var2.setSystemGestureExclusionRects(var3, var6);
+      var2.setSystemGestureExclusionRects(var6, var3);
    }
 
    public open fun getName(): String {
@@ -140,23 +140,23 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
    @ReactMethod
    public fun openPrivacySettings() {
       val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
+      q.g(var1, "getReactApplicationContext(...)");
       this.openApplicationDetailSettings(var1);
    }
 
    @ReactMethod
-   public fun setNavigationBarVisible(visible: Boolean) {
-      this.setInsetsVisible(var1, m.e());
+   public fun setNavigationBarVisible(visible: Boolean): Boolean {
+      return this.setInsetsVisible(var1, WindowInsetsCompat.m.e());
    }
 
    @ReactMethod
-   public fun setStatusBarVisible(visible: Boolean) {
-      this.setInsetsVisible(var1, m.f());
+   public fun setStatusBarVisible(visible: Boolean): Boolean {
+      return this.setInsetsVisible(var1, WindowInsetsCompat.m.f());
    }
 
    @ReactMethod
-   public fun setSystemGestureExclusionRects(rects: ReadableArray) {
-      r.h(var1, "rects");
-      UiThreadUtil.runOnUiThread(new d(this, var1));
+   public fun setSystemGestureExclusionRects(rects: ReadableArray): Boolean {
+      q.h(var1, "rects");
+      return UiThreadUtil.runOnUiThread(new d(this, var1));
    }
 }

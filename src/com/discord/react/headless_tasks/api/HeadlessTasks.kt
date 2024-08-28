@@ -7,7 +7,7 @@ import com.discord.react.headless_tasks.service.HeadlessTasksService
 import com.facebook.react.HeadlessJsTaskService
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.jstasks.HeadlessJsTaskConfig
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    public final val taskConfig: HeadlessJsTaskConfig
@@ -18,7 +18,7 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    }
 
    init {
-      r.h(var1, "taskConfig");
+      q.h(var1, "taskConfig");
       super();
       this.taskConfig = var1;
    }
@@ -28,7 +28,7 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    }
 
    public fun copy(taskConfig: HeadlessJsTaskConfig = var0.taskConfig): HeadlessTasks {
-      r.h(var1, "taskConfig");
+      q.h(var1, "taskConfig");
       return new HeadlessTasks(var1);
    }
 
@@ -38,7 +38,7 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
       } else if (var1 !is HeadlessTasks) {
          return false;
       } else {
-         return r.c(this.taskConfig, (var1 as HeadlessTasks).taskConfig);
+         return q.c(this.taskConfig, (var1 as HeadlessTasks).taskConfig);
       }
    }
 
@@ -81,22 +81,9 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
       }
 
       public fun fromIntent(intent: Intent?): HeadlessTasks? {
-         var var2: Boolean;
-         label17: {
-            if (var1 != null) {
-               val var3: Boolean = var1.hasExtra("intent.discord.headless_tasks_key");
-               var2 = true;
-               if (var3) {
-                  break label17;
-               }
-            }
-
-            var2 = false;
-         }
-
-         val var7: HeadlessTasks;
-         if (var2) {
-            var7 = new HeadlessTasks(
+         val var5: HeadlessTasks;
+         if (var1 != null && var1.hasExtra("intent.discord.headless_tasks_key")) {
+            var5 = new HeadlessTasks(
                new HeadlessJsTaskConfig(
                   var1.getStringExtra("intent.discord.headless_tasks_name"),
                   Arguments.fromBundle(var1.getBundleExtra("intent.discord.headless_tasks_params")),
@@ -105,10 +92,10 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
                )
             );
          } else {
-            var7 = null;
+            var5 = null;
          }
 
-         return var7;
+         return var5;
       }
 
       public fun startHeadlessTask(
@@ -119,9 +106,9 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
          taskParams: Bundle = new Bundle(),
          taskInvokingFromBroadcastReceiver: Boolean = false
       ) {
-         r.h(var1, "context");
-         r.h(var2, "taskName");
-         r.h(var6, "taskParams");
+         q.h(var1, "context");
+         q.h(var2, "taskName");
+         q.h(var6, "taskParams");
          var1.startService(this.toIntent(var1, var2, var3, var5, var6));
          if (var7) {
             HeadlessJsTaskService.acquireWakeLockNow(var1);

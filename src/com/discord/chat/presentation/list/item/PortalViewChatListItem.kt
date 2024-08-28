@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.list.item
 
 import android.view.View
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class PortalViewChatListItem(id: String, view: View, measuredDimensions: Pair<Int, Int>? = null) : ChatListItem {
    public open val id: String
@@ -9,8 +9,8 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    public final val view: View
 
    init {
-      r.h(var1, "id");
-      r.h(var2, "view");
+      q.h(var1, "id");
+      q.h(var2, "view");
       super(var1, null);
       this.id = var1;
       this.view = var2;
@@ -18,7 +18,7 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    }
 
    public operator fun component1(): String {
-      return this.getId();
+      return this.id;
    }
 
    public operator fun component2(): View {
@@ -29,9 +29,9 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
       return this.measuredDimensions;
    }
 
-   public fun copy(id: String = var0.getId(), view: View = var0.view, measuredDimensions: Pair<Int, Int>? = var0.measuredDimensions): PortalViewChatListItem {
-      r.h(var1, "id");
-      r.h(var2, "view");
+   public fun copy(id: String = var0.id, view: View = var0.view, measuredDimensions: Pair<Int, Int>? = var0.measuredDimensions): PortalViewChatListItem {
+      q.h(var1, "id");
+      q.h(var2, "view");
       return new PortalViewChatListItem(var1, var2, var3);
    }
 
@@ -42,19 +42,19 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.getId(), var1.getId())) {
+         if (!q.c(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.view, var1.view)) {
+         } else if (!q.c(this.view, var1.view)) {
             return false;
          } else {
-            return r.c(this.measuredDimensions, var1.measuredDimensions);
+            return q.c(this.measuredDimensions, var1.measuredDimensions);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.getId().hashCode();
-      val var3: Int = this.view.hashCode();
+      val var3: Int = this.id.hashCode();
+      val var2: Int = this.view.hashCode();
       val var1: Int;
       if (this.measuredDimensions == null) {
          var1 = 0;
@@ -62,21 +62,21 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
          var1 = this.measuredDimensions.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.getId();
-      val var3: View = this.view;
-      val var4: Pair = this.measuredDimensions;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PortalViewChatListItem(id=");
-      var1.append(var2);
-      var1.append(", view=");
-      var1.append(var3);
-      var1.append(", measuredDimensions=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.id;
+      val var4: View = this.view;
+      val var1: Pair = this.measuredDimensions;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PortalViewChatListItem(id=");
+      var3.append(var2);
+      var3.append(", view=");
+      var3.append(var4);
+      var3.append(", measuredDimensions=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

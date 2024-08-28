@@ -7,7 +7,7 @@ import java.util.ArrayList
 import java.util.Arrays
 import java.util.Comparator
 import java.util.PriorityQueue
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistogram?, maxColors: Int) {
    private final val mColorPopulations: SparseIntArray
@@ -109,22 +109,19 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       private fun isNearRedILine(hslColor: FloatArray): Boolean {
-         val var3: Boolean;
-         if (10.0F <= var1[0] && var1[0] <= 37.0F) {
-            var3 = true;
-         } else {
+         val var2: Float = var1[0];
+         var var3: Boolean = false;
+         if (10.0F <= var2) {
             var3 = false;
-         }
-
-         var var4: Boolean = false;
-         if (var3) {
-            var4 = false;
-            if (var1[1] <= 0.82F) {
-               var4 = true;
+            if (var2 <= 37.0F) {
+               var3 = false;
+               if (var1[1] <= 0.82F) {
+                  var3 = true;
+               }
             }
          }
 
-         return var4;
+         return var3;
       }
 
       private fun isWhite(hslColor: FloatArray): Boolean {
@@ -140,7 +137,7 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       private fun shouldIgnoreColor(color: Swatch): Boolean {
          val var2: FloatArray = var1.getHsl();
-         r.g(var2, "color.hsl");
+         q.g(var2, "getHsl(...)");
          return this.shouldIgnoreColor(var2);
       }
 
@@ -156,7 +153,7 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       public fun fromBitmap(bitmap: Bitmap, maxColors: Int): ColorCutQuantizer {
-         r.h(var1, "bitmap");
+         q.h(var1, "bitmap");
          val var4: Int = var1.getWidth();
          val var3: Int = var1.getHeight();
          val var5: IntArray = new int[var4 * var3];
@@ -262,24 +259,24 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       public fun findSplitPoint(): Int {
-         val var3: Int = this.getLongestColorDimension();
-         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var3, this.lowerIndex, this.upperIndex);
+         val var2: Int = this.getLongestColorDimension();
+         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var2, this.lowerIndex, this.upperIndex);
          Arrays.sort(ColorCutQuantizer.access$getMColors$p(this.this$0), this.lowerIndex, this.upperIndex + 1);
-         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var3, this.lowerIndex, this.upperIndex);
-         val var2: Int = this.midPoint(var3);
+         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var2, this.lowerIndex, this.upperIndex);
+         val var3: Int = this.midPoint(var2);
          var var1: Int = this.lowerIndex;
 
          for (int var4 = this.upperIndex; var1 < var4; var1++) {
             val var5: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var1];
-            if (var3 != -3) {
-               if (var3 != -2) {
-                  if (var3 == -1 && Color.blue(var5) > var2) {
+            if (var2 != -3) {
+               if (var2 != -2) {
+                  if (var2 == -1 && Color.blue(var5) > var3) {
                      return var1;
                   }
-               } else if (Color.green(var5) >= var2) {
+               } else if (Color.green(var5) >= var3) {
                   return var1;
                }
-            } else if (Color.red(var5) >= var2) {
+            } else if (Color.red(var5) >= var3) {
                return var1;
             }
          }

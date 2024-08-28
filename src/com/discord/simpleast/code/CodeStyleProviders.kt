@@ -1,7 +1,7 @@
 package com.discord.simpleast.code
 
 import com.discord.simpleast.core.node.StyleNode.SpanProvider
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class CodeStyleProviders<R>(defaultStyleProvider: SpanProvider<Any> = CodeStyleProvidersKt.access$emptyProvider(),
    commentStyleProvider: SpanProvider<Any> = CodeStyleProvidersKt.access$emptyProvider(),
@@ -26,14 +26,14 @@ public data class CodeStyleProviders<R>(defaultStyleProvider: SpanProvider<Any> 
    }
 
    init {
-      r.h(var1, "defaultStyleProvider");
-      r.h(var2, "commentStyleProvider");
-      r.h(var3, "literalStyleProvider");
-      r.h(var4, "keywordStyleProvider");
-      r.h(var5, "identifierStyleProvider");
-      r.h(var6, "typesStyleProvider");
-      r.h(var7, "genericsStyleProvider");
-      r.h(var8, "paramsStyleProvider");
+      q.h(var1, "defaultStyleProvider");
+      q.h(var2, "commentStyleProvider");
+      q.h(var3, "literalStyleProvider");
+      q.h(var4, "keywordStyleProvider");
+      q.h(var5, "identifierStyleProvider");
+      q.h(var6, "typesStyleProvider");
+      q.h(var7, "genericsStyleProvider");
+      q.h(var8, "paramsStyleProvider");
       super();
       this.defaultStyleProvider = var1;
       this.commentStyleProvider = var2;
@@ -87,14 +87,14 @@ public data class CodeStyleProviders<R>(defaultStyleProvider: SpanProvider<Any> 
       genericsStyleProvider: SpanProvider<Any> = var0.genericsStyleProvider,
       paramsStyleProvider: SpanProvider<Any> = var0.paramsStyleProvider
    ): CodeStyleProviders<Any> {
-      r.h(var1, "defaultStyleProvider");
-      r.h(var2, "commentStyleProvider");
-      r.h(var3, "literalStyleProvider");
-      r.h(var4, "keywordStyleProvider");
-      r.h(var5, "identifierStyleProvider");
-      r.h(var6, "typesStyleProvider");
-      r.h(var7, "genericsStyleProvider");
-      r.h(var8, "paramsStyleProvider");
+      q.h(var1, "defaultStyleProvider");
+      q.h(var2, "commentStyleProvider");
+      q.h(var3, "literalStyleProvider");
+      q.h(var4, "keywordStyleProvider");
+      q.h(var5, "identifierStyleProvider");
+      q.h(var6, "typesStyleProvider");
+      q.h(var7, "genericsStyleProvider");
+      q.h(var8, "paramsStyleProvider");
       return new CodeStyleProviders<>(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -104,14 +104,14 @@ public data class CodeStyleProviders<R>(defaultStyleProvider: SpanProvider<Any> 
             return false;
          }
 
-         if (!r.c(this.defaultStyleProvider, (var1 as CodeStyleProviders).defaultStyleProvider)
-            || !r.c(this.commentStyleProvider, (var1 as CodeStyleProviders).commentStyleProvider)
-            || !r.c(this.literalStyleProvider, (var1 as CodeStyleProviders).literalStyleProvider)
-            || !r.c(this.keywordStyleProvider, (var1 as CodeStyleProviders).keywordStyleProvider)
-            || !r.c(this.identifierStyleProvider, (var1 as CodeStyleProviders).identifierStyleProvider)
-            || !r.c(this.typesStyleProvider, (var1 as CodeStyleProviders).typesStyleProvider)
-            || !r.c(this.genericsStyleProvider, (var1 as CodeStyleProviders).genericsStyleProvider)
-            || !r.c(this.paramsStyleProvider, (var1 as CodeStyleProviders).paramsStyleProvider)) {
+         if (!q.c(this.defaultStyleProvider, (var1 as CodeStyleProviders).defaultStyleProvider)
+            || !q.c(this.commentStyleProvider, (var1 as CodeStyleProviders).commentStyleProvider)
+            || !q.c(this.literalStyleProvider, (var1 as CodeStyleProviders).literalStyleProvider)
+            || !q.c(this.keywordStyleProvider, (var1 as CodeStyleProviders).keywordStyleProvider)
+            || !q.c(this.identifierStyleProvider, (var1 as CodeStyleProviders).identifierStyleProvider)
+            || !q.c(this.typesStyleProvider, (var1 as CodeStyleProviders).typesStyleProvider)
+            || !q.c(this.genericsStyleProvider, (var1 as CodeStyleProviders).genericsStyleProvider)
+            || !q.c(this.paramsStyleProvider, (var1 as CodeStyleProviders).paramsStyleProvider)) {
             return false;
          }
       }

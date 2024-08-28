@@ -1,10 +1,79 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.IllegalStateException: Couldn't find method component2 ()Lcom/discord/primitives/MessageId; in class com/discord/chat/reactevents/TapStickerData
-  at org.vineflower.kotlin.struct.KFunction.parse(KFunction.java:112)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:221)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:194)
-*/
+package com.discord.chat.reactevents
+
+import com.discord.chat.bridge.sticker.Sticker
+import com.discord.primitives.MessageId
+import com.discord.react.utilities.NativeMapExtensionsKt
+import com.discord.reactevents.ReactEvent
+import com.facebook.react.bridge.WritableMap
+import kotlin.jvm.internal.q
+import lj.w
+
+public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapStickerData(var1, var2), ReactEvent {
+   public final val messageId: MessageId
+   public final val sticker: Sticker
+
+   fun TapStickerData(var1: Sticker, var2: java.lang.String) {
+      q.h(var1, "sticker");
+      q.h(var2, "messageId");
+      super();
+      this.sticker = var1;
+      this.messageId = var2;
+   }
+
+   public operator fun component1(): Sticker {
+      return this.sticker;
+   }
+
+   public operator fun component2(): MessageId {
+      return this.messageId;
+   }
+
+   public fun copy(sticker: Sticker = ..., messageId: MessageId = ...): TapStickerData {
+      q.h(var1, "sticker");
+      q.h(var2, "messageId");
+      return new TapStickerData(var1, var2, null);
+   }
+
+   public override operator fun equals(other: Any?): Boolean {
+      if (this === var1) {
+         return true;
+      } else if (var1 !is TapStickerData) {
+         return false;
+      } else {
+         var1 = var1;
+         if (!q.c(this.sticker, var1.sticker)) {
+            return false;
+         } else {
+            return MessageId.equals-impl0(this.messageId, var1.messageId);
+         }
+      }
+   }
+
+   public override fun hashCode(): Int {
+      return this.sticker.hashCode() * 31 + MessageId.hashCode-impl(this.messageId);
+   }
+
+   public open fun serialize(): WritableMap {
+      return NativeMapExtensionsKt.nativeMapOf(
+         new Pair[]{
+            w.a("messageId", this.messageId),
+            w.a(
+               "sticker",
+               NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", java.lang.String.valueOf(this.sticker.getId())), w.a("name", this.sticker.getName())})
+            )
+         }
+      );
+   }
+
+   public override fun toString(): String {
+      val var1: Sticker = this.sticker;
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapStickerData(sticker=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
+   }
+}

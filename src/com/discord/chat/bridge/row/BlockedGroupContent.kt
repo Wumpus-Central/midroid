@@ -1,7 +1,11 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.MessageBase
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,10 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
 
 @f
 public data class BlockedGroupContent(message: MessageBase) {
@@ -22,17 +22,9 @@ public data class BlockedGroupContent(message: MessageBase) {
    public final val message: MessageBase
 
    init {
-      r.h(var1, "message");
+      q.h(var1, "message");
       super();
       this.message = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: BlockedGroupContent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, MessageSerializer.INSTANCE, var0.message);
    }
 
    public operator fun component1(): MessageBase {
@@ -40,7 +32,7 @@ public data class BlockedGroupContent(message: MessageBase) {
    }
 
    public fun copy(message: MessageBase = var0.message): BlockedGroupContent {
-      r.h(var1, "message");
+      q.h(var1, "message");
       return new BlockedGroupContent(var1);
    }
 
@@ -50,7 +42,7 @@ public data class BlockedGroupContent(message: MessageBase) {
       } else if (var1 !is BlockedGroupContent) {
          return false;
       } else {
-         return r.c(this.message, (var1 as BlockedGroupContent).message);
+         return q.c(this.message, (var1 as BlockedGroupContent).message);
       }
    }
 
@@ -59,15 +51,15 @@ public data class BlockedGroupContent(message: MessageBase) {
    }
 
    public override fun toString(): String {
-      val var1: MessageBase = this.message;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BlockedGroupContent(message=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: MessageBase = this.message;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BlockedGroupContent(message=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : f0<BlockedGroupContent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -88,15 +80,15 @@ public data class BlockedGroupContent(message: MessageBase) {
       }
 
       public open fun deserialize(decoder: Decoder): BlockedGroupContent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var8: MessageBase;
          if (var5) {
-            var8 = var7.y(var6, 0, MessageSerializer.INSTANCE, null);
+            var8 = var7.y(var6, 0, MessageSerializer.INSTANCE, null) as MessageBase;
          } else {
             var2 = 0;
             var8 = null;
@@ -108,7 +100,7 @@ public data class BlockedGroupContent(message: MessageBase) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, MessageSerializer.INSTANCE, var8);
+                  var8 = var7.y(var6, 0, MessageSerializer.INSTANCE, var8) as MessageBase;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -117,19 +109,19 @@ public data class BlockedGroupContent(message: MessageBase) {
          }
 
          var7.c(var6);
-         return new BlockedGroupContent(var2, var8 as MessageBase, null);
+         return new BlockedGroupContent(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BlockedGroupContent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         BlockedGroupContent.write$Self(var2, var4, var3);
+         BlockedGroupContent.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

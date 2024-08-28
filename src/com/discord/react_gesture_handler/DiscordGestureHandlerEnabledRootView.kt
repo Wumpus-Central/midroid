@@ -5,7 +5,7 @@ import android.content.Context
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.a3
+import androidx.core.view.v0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchListener
 import com.discord.theme.ThemeManager
@@ -16,7 +16,7 @@ import java.util.LinkedHashMap
 import java.util.WeakHashMap
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestureHandlerRootView {
    private final val supplementalMotionEventReceivedCallbacks: MutableMap<(MotionEvent) -> Unit, Boolean>
@@ -29,13 +29,13 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1);
       this.supplementalMotionEventReceivedCallbacks = new LinkedHashMap<>();
    }
 
    public open fun dispatchTouchEvent(ev: MotionEvent): Boolean {
-      r.h(var1, "ev");
+      q.h(var1, "ev");
       val var3: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
 
       while (var3.hasNext()) {
@@ -60,12 +60,12 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      val var1: ThemeManager = ThemeManager.INSTANCE;
+      val var2: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
-      if (r.c(DiscordGestureHandlerEnabledRootView.Companion.access$getNullable(Companion, this), this)) {
-         val var2: Context = this.getContext();
-         r.g(var2, "context");
-         var1.updateWindowBackground(var2, false);
+      if (q.c(DiscordGestureHandlerEnabledRootView.Companion.access$getNullable(Companion, this), this)) {
+         val var1: Context = this.getContext();
+         q.g(var1, "getContext(...)");
+         var2.updateWindowBackground(var1, false);
       }
    }
 
@@ -77,7 +77,7 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
             return var1 as DiscordGestureHandlerEnabledRootView;
          } else {
             if (var1 is ViewGroup) {
-               for (View var2 : a3.a((ViewGroup)var1)) {
+               for (View var2 : v0.a((ViewGroup)var1)) {
                   val var4: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.find(var2);
                   if (var4 != null) {
                      return var4;
@@ -134,7 +134,7 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
          }
 
          DiscordGestureHandlerEnabledRootView.access$getGestureHandlersToRootView$cp().remove(var7);
-         r.g(var4, "rootView");
+         q.e(var4);
          val var8: DiscordGestureHandlerEnabledRootView = this.find(var4);
          var var13: DiscordGestureHandlerEnabledRootView = var8;
          if (var8 != null) {
@@ -152,9 +152,9 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
       }
 
       internal fun get(view: View): DiscordGestureHandlerEnabledRootView {
-         r.h(var1, "view");
+         q.h(var1, "view");
          val var2: DiscordGestureHandlerEnabledRootView = this.getNullable(var1);
-         r.e(var2);
+         q.e(var2);
          return var2;
       }
    }

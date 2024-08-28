@@ -1,14 +1,14 @@
 package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.Message
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class ChannelPromptActionsAccessory(message: Message) : MessageAccessory {
    public final val message: Message
 
    init {
-      r.h(var1, "message");
-      super(var1.getId_3Eiw7ao(), "channel deadchat prompt actions", false, 4, null);
+      q.h(var1, "message");
+      super(var1.getId-3Eiw7ao(), "channel deadchat prompt actions", false, 4, null);
       this.message = var1;
    }
 
@@ -17,7 +17,7 @@ public data class ChannelPromptActionsAccessory(message: Message) : MessageAcces
    }
 
    public fun copy(message: Message = var0.message): ChannelPromptActionsAccessory {
-      r.h(var1, "message");
+      q.h(var1, "message");
       return new ChannelPromptActionsAccessory(var1);
    }
 
@@ -27,7 +27,7 @@ public data class ChannelPromptActionsAccessory(message: Message) : MessageAcces
       } else if (var1 !is ChannelPromptActionsAccessory) {
          return false;
       } else {
-         return r.c(this.message, (var1 as ChannelPromptActionsAccessory).message);
+         return q.c(this.message, (var1 as ChannelPromptActionsAccessory).message);
       }
    }
 

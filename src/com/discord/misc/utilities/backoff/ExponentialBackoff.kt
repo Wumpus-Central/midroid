@@ -1,18 +1,17 @@
 package com.discord.misc.utilities.backoff
 
-import eh.s
-import kh.b
-import kk.f
-import kk.j0
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import vh.h
+import lj.s
+import rj.b
+import tm.g
+import tm.g0
 
 public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000L, maxDelay: Long = 300000L, maxAttempts: Int = 10) {
    private final var currentAttempt: Int
@@ -24,7 +23,7 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    private final val scope: CoroutineScope
 
    init {
-      r.h(var1, "scope");
+      q.h(var1, "scope");
       super();
       this.scope = var1;
       this.initialDelay = var2;
@@ -50,30 +49,30 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    }
 
    public fun fail(action: (Continuation<Unit>) -> Any?) {
-      r.h(var1, "action");
+      q.h(var1, "action");
       this.cancelCurrentJob();
       if (this.currentAttempt <= this.maxAttempts) {
          val var4: Long;
          if (this.currentDelay == 0L) {
-            var4 = h.d(this.initialDelay, 1L);
+            var4 = f.d(this.initialDelay, 1L);
          } else {
             var4 = this.currentDelay * 2;
          }
 
-         this.currentDelay = h.h(var4, this.maxDelay);
+         this.currentDelay = f.h(var4, this.maxDelay);
          this.currentAttempt++;
-         this.job = f.d(
+         this.job = g.d(
             this.scope,
             null,
             null,
-            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, null)// $VF: Couldn't be decompiled
+            new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1103,17 +1102,17 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    }
 
    public suspend fun <T> performBackoff(networkRequest: (Continuation<T>) -> Any?, shouldRetry: (T, Continuation<Boolean>) -> Any?): T {
-      label52: {
+      label53: {
          if (var3 is <unrepresentable>) {
             val var7: <unrepresentable> = var3 as <unrepresentable>;
             if (((var3 as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
                var7.label = (var3 as <unrepresentable>).label + Integer.MIN_VALUE;
-               var16 = var7;
-               break label52;
+               var18 = var7;
+               break label53;
             }
          }
 
-         var16 = new d(this, var3) {
+         var18 = new d(this, var3) {
             Object L$0;
             Object L$1;
             Object L$2;
@@ -1135,151 +1134,153 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
          };
       }
 
-      var var20: Any = ((<unrepresentable>)var16).result;
-      val var11: Any = b.c();
+      var var22: Any = ((<unrepresentable>)var18).result;
+      val var11: Any = b.f();
       val var8: ExponentialBackoff;
-      val var12: Function2;
-      val var14: Function1;
-      var var22: Any;
-      if (((<unrepresentable>)var16).label != 0) {
-         if (((<unrepresentable>)var16).label != 1) {
-            if (((<unrepresentable>)var16).label != 2) {
-               if (((<unrepresentable>)var16).label != 3) {
-                  if (((<unrepresentable>)var16).label != 4) {
+      var var28: Any;
+      if (((<unrepresentable>)var18).label != 0) {
+         if (((<unrepresentable>)var18).label != 1) {
+            if (((<unrepresentable>)var18).label != 2) {
+               if (((<unrepresentable>)var18).label != 3) {
+                  if (((<unrepresentable>)var18).label != 4) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  var12 = ((<unrepresentable>)var16).L$2 as Function2;
-                  var14 = ((<unrepresentable>)var16).L$1 as Function1;
-                  var8 = ((<unrepresentable>)var16).L$0 as ExponentialBackoff;
-                  s.b(var20);
+                  val var12: Function2 = ((<unrepresentable>)var18).L$2 as Function2;
+                  val var15: Function1 = ((<unrepresentable>)var18).L$1 as Function1;
+                  var8 = ((<unrepresentable>)var18).L$0 as ExponentialBackoff;
+                  s.b(var22);
+                  var2 = var12;
+                  var1 = var15;
                } else {
-                  var12 = ((<unrepresentable>)var16).L$2 as Function2;
-                  var14 = ((<unrepresentable>)var16).L$1 as Function1;
-                  var8 = ((<unrepresentable>)var16).L$0 as ExponentialBackoff;
-                  s.b(var20);
-                  ((<unrepresentable>)var16).L$0 = var8;
-                  ((<unrepresentable>)var16).L$1 = var14;
-                  ((<unrepresentable>)var16).L$2 = var12;
-                  ((<unrepresentable>)var16).label = 4;
-                  var22 = var14.invoke(var16);
-                  var20 = var22;
-                  if (var22 === var11) {
+                  val var13: Function2 = ((<unrepresentable>)var18).L$2 as Function2;
+                  val var16: Function1 = ((<unrepresentable>)var18).L$1 as Function1;
+                  var8 = ((<unrepresentable>)var18).L$0 as ExponentialBackoff;
+                  s.b(var22);
+                  ((<unrepresentable>)var18).L$0 = var8;
+                  ((<unrepresentable>)var18).L$1 = var16;
+                  ((<unrepresentable>)var18).L$2 = var13;
+                  ((<unrepresentable>)var18).label = 4;
+                  var28 = var16.invoke(var18);
+                  var22 = var28;
+                  if (var28 === var11) {
                      return var11;
                   }
+
+                  var2 = var13;
+                  var1 = var16;
                }
 
-               ((<unrepresentable>)var16).L$0 = var8;
-               ((<unrepresentable>)var16).L$1 = var14;
-               ((<unrepresentable>)var16).L$2 = var12;
-               ((<unrepresentable>)var16).L$3 = var20;
-               ((<unrepresentable>)var16).label = 2;
-               val var10: Any = var12.invoke(var20, var16);
-               var22 = var20;
-               var20 = var10;
+               ((<unrepresentable>)var18).L$0 = var8;
+               ((<unrepresentable>)var18).L$1 = var1;
+               ((<unrepresentable>)var18).L$2 = var2;
+               ((<unrepresentable>)var18).L$3 = var22;
+               ((<unrepresentable>)var18).label = 2;
+               val var10: Any = var2.invoke(var22, var18);
+               var28 = var22;
+               var22 = var10;
                if (var10 === var11) {
                   return var11;
                }
             } else {
-               var22 = ((<unrepresentable>)var16).L$3;
-               var12 = ((<unrepresentable>)var16).L$2 as Function2;
-               var14 = ((<unrepresentable>)var16).L$1 as Function1;
-               var8 = ((<unrepresentable>)var16).L$0 as ExponentialBackoff;
-               s.b(var20);
+               var28 = ((<unrepresentable>)var18).L$3;
+               var2 = ((<unrepresentable>)var18).L$2 as Function2;
+               var1 = ((<unrepresentable>)var18).L$1 as Function1;
+               var8 = ((<unrepresentable>)var18).L$0 as ExponentialBackoff;
+               s.b(var22);
             }
          } else {
-            var2 = ((<unrepresentable>)var16).L$2 as Function2;
-            var1 = ((<unrepresentable>)var16).L$1 as Function1;
-            var8 = ((<unrepresentable>)var16).L$0 as ExponentialBackoff;
-            s.b(var20);
-            var12 = var2;
-            var14 = var1;
-            ((<unrepresentable>)var16).L$0 = var8;
-            ((<unrepresentable>)var16).L$1 = var1;
-            ((<unrepresentable>)var16).L$2 = var2;
-            ((<unrepresentable>)var16).L$3 = var20;
-            ((<unrepresentable>)var16).label = 2;
-            val var26: Any = var2.invoke(var20, var16);
-            var22 = var20;
-            var20 = var26;
-            if (var26 === var11) {
+            var2 = ((<unrepresentable>)var18).L$2 as Function2;
+            var1 = ((<unrepresentable>)var18).L$1 as Function1;
+            var8 = ((<unrepresentable>)var18).L$0 as ExponentialBackoff;
+            s.b(var22);
+            ((<unrepresentable>)var18).L$0 = var8;
+            ((<unrepresentable>)var18).L$1 = var1;
+            ((<unrepresentable>)var18).L$2 = var2;
+            ((<unrepresentable>)var18).L$3 = var22;
+            ((<unrepresentable>)var18).label = 2;
+            val var31: Any = var2.invoke(var22, var18);
+            var28 = var22;
+            var22 = var31;
+            if (var31 === var11) {
                return var11;
             }
          }
       } else {
-         s.b(var20);
-         ((<unrepresentable>)var16).L$0 = this;
-         ((<unrepresentable>)var16).L$1 = var1;
-         ((<unrepresentable>)var16).L$2 = var2;
-         ((<unrepresentable>)var16).label = 1;
-         var20 = var1.invoke(var16);
-         if (var20 === var11) {
-            return var11;
-         }
-
-         var8 = this;
-         var12 = var2;
-         var14 = var1;
-         ((<unrepresentable>)var16).L$0 = this;
-         ((<unrepresentable>)var16).L$1 = var1;
-         ((<unrepresentable>)var16).L$2 = var2;
-         ((<unrepresentable>)var16).L$3 = var20;
-         ((<unrepresentable>)var16).label = 2;
-         val var27: Any = var2.invoke(var20, var16);
-         var22 = var20;
-         var20 = var27;
-         if (var27 === var11) {
-            return var11;
-         }
-      }
-
-      while ((java.lang.Boolean)var20) {
-         if (var8.currentAttempt > var8.maxAttempts) {
-            throw new MaxAttemptsExceededException();
-         }
-
-         var var18: Long;
-         if (var8.currentDelay == 0L) {
-            var18 = var8.initialDelay;
-         } else {
-            var18 = var8.currentDelay * 2;
-         }
-
-         var18 = h.h(var18, var8.maxDelay);
-         var8.currentDelay = var18;
-         var8.currentAttempt++;
-         ((<unrepresentable>)var16).L$0 = var8;
-         ((<unrepresentable>)var16).L$1 = var14;
-         ((<unrepresentable>)var16).L$2 = var12;
-         ((<unrepresentable>)var16).L$3 = null;
-         ((<unrepresentable>)var16).label = 3;
-         if (j0.a(var18, (Continuation)var16) === var11) {
-            return var11;
-         }
-
-         ((<unrepresentable>)var16).L$0 = var8;
-         ((<unrepresentable>)var16).L$1 = var14;
-         ((<unrepresentable>)var16).L$2 = var12;
-         ((<unrepresentable>)var16).label = 4;
-         var22 = var14.invoke(var16);
+         s.b(var22);
+         ((<unrepresentable>)var18).L$0 = this;
+         ((<unrepresentable>)var18).L$1 = var1;
+         ((<unrepresentable>)var18).L$2 = var2;
+         ((<unrepresentable>)var18).label = 1;
+         var22 = var1.invoke(var18);
          if (var22 === var11) {
             return var11;
          }
 
-         ((<unrepresentable>)var16).L$0 = var8;
-         ((<unrepresentable>)var16).L$1 = var14;
-         ((<unrepresentable>)var16).L$2 = var12;
-         ((<unrepresentable>)var16).L$3 = var22;
-         ((<unrepresentable>)var16).label = 2;
-         val var28: Any = var12.invoke(var22, var16);
-         var22 = var22;
-         var20 = var28;
-         if (var28 === var11) {
+         var8 = this;
+         ((<unrepresentable>)var18).L$0 = this;
+         ((<unrepresentable>)var18).L$1 = var1;
+         ((<unrepresentable>)var18).L$2 = var2;
+         ((<unrepresentable>)var18).L$3 = var22;
+         ((<unrepresentable>)var18).label = 2;
+         val var32: Any = var2.invoke(var22, var18);
+         var28 = var22;
+         var22 = var32;
+         if (var32 === var11) {
             return var11;
          }
       }
 
-      return var22;
+      while ((java.lang.Boolean)var22) {
+         if (var8.currentAttempt > var8.maxAttempts) {
+            throw new MaxAttemptsExceededException();
+         }
+
+         var var20: Long;
+         if (var8.currentDelay == 0L) {
+            var20 = var8.initialDelay;
+         } else {
+            var20 = var8.currentDelay * 2;
+         }
+
+         var20 = f.h(var20, var8.maxDelay);
+         var8.currentDelay = var20;
+         var8.currentAttempt++;
+         ((<unrepresentable>)var18).L$0 = var8;
+         ((<unrepresentable>)var18).L$1 = var1;
+         ((<unrepresentable>)var18).L$2 = var2;
+         ((<unrepresentable>)var18).L$3 = null;
+         ((<unrepresentable>)var18).label = 3;
+         if (g0.a(var20, (Continuation)var18) === var11) {
+            return var11;
+         }
+
+         ((<unrepresentable>)var18).L$0 = var8;
+         ((<unrepresentable>)var18).L$1 = var1;
+         ((<unrepresentable>)var18).L$2 = var2;
+         ((<unrepresentable>)var18).label = 4;
+         var28 = var1.invoke(var18);
+         if (var28 === var11) {
+            return var11;
+         }
+
+         val var30: Function1 = var1;
+         var2 = var2;
+         var1 = var1;
+         ((<unrepresentable>)var18).L$0 = var8;
+         ((<unrepresentable>)var18).L$1 = var30;
+         ((<unrepresentable>)var18).L$2 = var2;
+         ((<unrepresentable>)var18).L$3 = var28;
+         ((<unrepresentable>)var18).label = 2;
+         val var33: Any = var2.invoke(var28, var18);
+         var28 = var28;
+         var22 = var33;
+         if (var33 === var11) {
+            return var11;
+         }
+      }
+
+      return var28;
    }
 
    public fun succeed() {

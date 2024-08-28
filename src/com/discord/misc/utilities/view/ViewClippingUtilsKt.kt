@@ -3,18 +3,18 @@ package com.discord.misc.utilities.view
 import android.graphics.Outline
 import android.view.View
 import android.view.ViewOutlineProvider
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 private final val circleOutlineProvider: <unrepresentable> = new ViewOutlineProvider() {
    public void getOutline(View var1, Outline var2) {
-      r.h(var1, "view");
-      r.h(var2, "outline");
+      q.h(var1, "view");
+      q.h(var2, "outline");
       var2.setRoundRect(0, 0, var1.getWidth(), var1.getHeight(), (float)var1.getHeight() / 2.0F);
    }
 }
 
 public fun View.clipToCircle() {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    clipToOutline(var0, circleOutlineProvider);
 }
 
@@ -24,7 +24,7 @@ private fun View.clipToOutline(outlineProvider: ViewOutlineProvider) {
 }
 
 public fun View.clipToRoundedRectangle(radiusPx: Int) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    clipToOutline(var0, new ViewOutlineProvider(var1) {
       final int $radiusPx;
 
@@ -33,15 +33,15 @@ public fun View.clipToRoundedRectangle(radiusPx: Int) {
       }
 
       public void getOutline(View var1, Outline var2) {
-         r.h(var1, "view");
-         r.h(var2, "outline");
+         q.h(var1, "view");
+         q.h(var2, "outline");
          var2.setRoundRect(0, 0, var1.getWidth(), var1.getHeight(), (float)this.$radiusPx);
       }
    });
 }
 
 public fun View.clipToRoundedStartEdge(radiusPx: Int) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    clipToOutline(var0, new ViewOutlineProvider(var1) {
       final int $radiusPx;
 
@@ -50,8 +50,8 @@ public fun View.clipToRoundedStartEdge(radiusPx: Int) {
       }
 
       public void getOutline(View var1, Outline var2) {
-         r.h(var1, "view");
-         r.h(var2, "outline");
+         q.h(var1, "view");
+         q.h(var2, "outline");
          val var3: Int = var1.getLayoutDirection();
          if (var3 != 0) {
             if (var3 == 1) {

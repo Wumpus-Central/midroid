@@ -1,14 +1,14 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class MessageBundleMessageItem(messageItem: MessageItem) : MessageBundleItem {
    public final val messageItem: MessageItem
 
    init {
-      r.h(var1, "messageItem");
-      super(MessageId.toString_impl(var1.getMessage().getId_3Eiw7ao()), null);
+      q.h(var1, "messageItem");
+      super(MessageId.toString-impl(var1.getMessage().getId-3Eiw7ao()), null);
       this.messageItem = var1;
    }
 
@@ -17,7 +17,7 @@ public data class MessageBundleMessageItem(messageItem: MessageItem) : MessageBu
    }
 
    public fun copy(messageItem: MessageItem = var0.messageItem): MessageBundleMessageItem {
-      r.h(var1, "messageItem");
+      q.h(var1, "messageItem");
       return new MessageBundleMessageItem(var1);
    }
 
@@ -27,7 +27,7 @@ public data class MessageBundleMessageItem(messageItem: MessageItem) : MessageBu
       } else if (var1 !is MessageBundleMessageItem) {
          return false;
       } else {
-         return r.c(this.messageItem, (var1 as MessageBundleMessageItem).messageItem);
+         return q.c(this.messageItem, (var1 as MessageBundleMessageItem).messageItem);
       }
    }
 
@@ -36,11 +36,11 @@ public data class MessageBundleMessageItem(messageItem: MessageItem) : MessageBu
    }
 
    public override fun toString(): String {
-      val var2: MessageItem = this.messageItem;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MessageBundleMessageItem(messageItem=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: MessageItem = this.messageItem;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MessageBundleMessageItem(messageItem=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

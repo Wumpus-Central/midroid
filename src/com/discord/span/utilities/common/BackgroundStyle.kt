@@ -1,6 +1,11 @@
 package com.discord.span.utilities.common
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.m0
-import xk.f0.a
 
 @f
 public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
@@ -22,15 +22,6 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
    init {
       this.backgroundColor = var1;
       this.cornerRadius = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: BackgroundStyle, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.backgroundColor);
-      var1.w(var2, 1, var0.cornerRadius);
    }
 
    public operator fun component1(): Int {
@@ -76,7 +67,7 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
       return var3.toString();
    }
 
-   public object `$serializer` : f0<BackgroundStyle> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -94,11 +85,11 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, m0.a};
+         return new KSerializer[]{n0.a, n0.a};
       }
 
       public open fun deserialize(decoder: Decoder): BackgroundStyle {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          var var2: Int;
@@ -139,15 +130,15 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundStyle) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         BackgroundStyle.write$Self(var2, var4, var3);
+         BackgroundStyle.write$Self$span_utilities_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

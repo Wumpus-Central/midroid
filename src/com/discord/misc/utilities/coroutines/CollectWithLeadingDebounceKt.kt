@@ -1,14 +1,14 @@
 package com.discord.misc.utilities.coroutines
 
-import eh.h
-import eh.s
-import kh.b
-import kk.j0
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
+import lj.h
+import lj.s
+import rj.b
+import tm.g0
 
 public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMillis: Long, collector: FlowCollector<T>) {
    label23: {
@@ -38,7 +38,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
    }
 
    val var7: Any = ((<unrepresentable>)var9).result;
-   val var11: Any = b.c();
+   val var11: Any = b.f();
    if (((<unrepresentable>)var9).label != 0) {
       if (((<unrepresentable>)var9).label != 1) {
          throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -48,8 +48,8 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
    } else {
       s.b(var7);
       var3 = new FlowCollector(new LongRef(), var1, var3, var0) {
-         final FlowCollector<T> $collector;
-         final MutableSharedFlow<T> $this_collectWithLeadingDebounce;
+         final FlowCollector $collector;
+         final MutableSharedFlow $this_collectWithLeadingDebounce;
          final LongRef $timeLastEmitted;
          final long $timeoutMillis;
 
@@ -60,7 +60,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             this.$this_collectWithLeadingDebounce = var5;
          }
 
-         public final Object emit(T var1, Continuation<? super Unit> var2) {
+         public final Object emit(T var1, Continuation var2) {
             label39: {
                if (var2 is <unrepresentable>) {
                   val var10: <unrepresentable> = var2 as <unrepresentable>;
@@ -91,12 +91,12 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                };
             }
 
-            var var15: Any = ((<unrepresentable>)var12).result;
-            val var11: Any = b.c();
+            var var11: Any = ((<unrepresentable>)var12).result;
+            val var15: Any = b.f();
             val var13: <unrepresentable>;
             if (((<unrepresentable>)var12).label != 0) {
                if (((<unrepresentable>)var12).label == 1) {
-                  s.b(var15);
+                  s.b(var11);
                   return Unit.a;
                }
 
@@ -106,18 +106,18 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
 
                var1 = ((<unrepresentable>)var12).L$1;
                var13 = ((<unrepresentable>)var12).L$0 as <unrepresentable>;
-               s.b(var15);
+               s.b(var11);
             } else {
-               s.b(var15);
+               s.b(var11);
                val var6: Long = System.currentTimeMillis();
                val var8: Long = var6 - this.$timeLastEmitted.j;
                val var4: Long = this.$timeoutMillis;
                if (var8 > this.$timeoutMillis) {
                   this.$timeLastEmitted.j = var6;
-                  var15 = this.$collector;
+                  var11 = this.$collector;
                   ((<unrepresentable>)var12).label = 1;
-                  if (var15.emit(var1, (Continuation)var12) === var11) {
-                     return var11;
+                  if (var11.emit(var1, (Continuation)var12) === var15) {
+                     return var15;
                   }
 
                   return Unit.a;
@@ -126,8 +126,8 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                ((<unrepresentable>)var12).L$0 = this;
                ((<unrepresentable>)var12).L$1 = var1;
                ((<unrepresentable>)var12).label = 2;
-               if (j0.a(var4 - var8, (Continuation)var12) === var11) {
-                  return var11;
+               if (g0.a(var4 - var8, (Continuation)var12) === var15) {
+                  return var15;
                }
 
                var13 = this;

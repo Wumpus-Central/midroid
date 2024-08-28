@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.structurabletext
 
-import kotlin.jvm.internal.r
+import dn.f
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import uk.f
 
 @f(with = PrimitiveStructurableTextSerializer::class)
 public data class PrimitiveStructurableText(content: String) : StructurableText {
@@ -10,7 +10,7 @@ public data class PrimitiveStructurableText(content: String) : StructurableText 
    public open val hasContent: Boolean
 
    init {
-      r.h(var1, "content");
+      q.h(var1, "content");
       super(null);
       this.content = var1;
       val var2: Boolean;
@@ -28,7 +28,7 @@ public data class PrimitiveStructurableText(content: String) : StructurableText 
    }
 
    public fun copy(content: String = var0.content): PrimitiveStructurableText {
-      r.h(var1, "content");
+      q.h(var1, "content");
       return new PrimitiveStructurableText(var1);
    }
 
@@ -38,7 +38,7 @@ public data class PrimitiveStructurableText(content: String) : StructurableText 
       } else if (var1 !is PrimitiveStructurableText) {
          return false;
       } else {
-         return r.c(this.content, (var1 as PrimitiveStructurableText).content);
+         return q.c(this.content, (var1 as PrimitiveStructurableText).content);
       }
    }
 
@@ -47,12 +47,12 @@ public data class PrimitiveStructurableText(content: String) : StructurableText 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PrimitiveStructurableText(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PrimitiveStructurableText(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

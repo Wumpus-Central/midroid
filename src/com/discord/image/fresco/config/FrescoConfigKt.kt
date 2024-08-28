@@ -10,17 +10,18 @@ import com.facebook.imagepipeline.core.ImagePipelineConfig.Builder
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.modules.fresco.FrescoModule
 import com.facebook.react.modules.network.OkHttpClientProvider
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import l7.c0
+import l7.e0
+import l7.f0
+import l7.o
+import l7.c0.a
 import okhttp3.Interceptor
 import okhttp3.Response
-import x5.l
-import x5.x
-import x5.y
-import x5.z
-import x5.x.b
+import okhttp3.Interceptor.Chain
 
-private final val ATTACHMENT_CDN_HOSTS: Set<String> = u.i(new java.lang.String[]{"cdn.discordapp.com", "media.discordapp.net", "images.discordapp.net"})
-private final val SIGNED_QUERY_PARAMS: Set<String> = u.i(new java.lang.String[]{"ex", "hm", "is"})
+private final val ATTACHMENT_CDN_HOSTS: Set<String> = w.i(new java.lang.String[]{"cdn.discordapp.com", "media.discordapp.net", "images.discordapp.net"})
+private final val SIGNED_QUERY_PARAMS: Set<String> = w.i(new java.lang.String[]{"ex", "hm", "is"})
 
 @JvmSynthetic
 fun `access$getSIGNED_QUERY_PARAMS$p`(): java.util.Set {
@@ -33,30 +34,29 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 }
 
 internal fun Context.frescoConfig(): ImagePipelineConfig {
-   r.h(var0, "<this>");
-   var var2: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
+   q.h(var0, "<this>");
+   val var2: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
    val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   var2 = var2.P(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .T(var1.newSmallDiskCache(var0))
-      .M(new FrescoBitmapSupplier(var0))
-      .Q(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().B().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+   val var3: Builder = var2.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Y(var1.newSmallDiskCache(var0))
+      .Q(new FrescoBitmapSupplier(var0))
+      .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().B().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final Companion $receiver$inlined;
 
          {
             this.$receiver$inlined = var1;
          }
 
-         @Override
-         public final Response intercept(Interceptor.Chain var1) {
-            r.h(var1, "chain");
+         public final Response intercept(Chain var1) {
+            q.h(var1, "chain");
             return this.$receiver$inlined.frescoInterceptor(var1);
          }
       }).c()));
-   val var5: b = x.n();
-   val var3: z = l.a();
-   val var4: ImagePipelineConfig = var2.R(new y(var5.n(new z(var3.b, var3.a * 2, var3.c)).m())).N(new DefaultCacheKeyFactory() {
+   val var6: a = c0.n();
+   val var5: f0 = o.a();
+   val var4: Builder = var3.W(new e0(var6.n(new f0(var5.b, var5.a * 2, var5.c)).m())).R(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
-         r.h(var1, "sourceUri");
+         q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
@@ -74,24 +74,24 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             }
 
             var1 = var3.build();
-            r.g(var1, "cacheKeyBuilder.build()");
+            q.g(var1, "build(...)");
             return var1;
          }
       }
-   }).O(true).L().t(true).K();
-   r.g(var4, "getDefaultConfigBuilder(…ns(true)\n        .build()");
-   return var4;
+   }).S(true);
+   var4.b().c(true);
+   return var4.a();
 }
 
 private fun isSignedUrl(uri: Uri): Boolean {
    val var3: java.lang.String = var0.getPath();
    if (var3 == null) {
       return false;
-   } else if (!f.I(var3, "/attachments/", false, 2, null) && !f.I(var3, "/ephemeral-attachments/", false, 2, null)) {
+   } else if (!h.H(var3, "/attachments/", false, 2, null) && !h.H(var3, "/ephemeral-attachments/", false, 2, null)) {
       return false;
    } else {
       var var1: Boolean = false;
-      if (h.Q(ATTACHMENT_CDN_HOSTS, var0.getHost())) {
+      if (i.T(ATTACHMENT_CDN_HOSTS, var0.getHost())) {
          var1 = true;
       }
 

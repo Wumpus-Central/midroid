@@ -10,11 +10,11 @@ import android.view.ViewGroup.LayoutParams
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ExternalPipTransitionView(context: Context) : View {
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1);
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
       this.setTag(transitionViewTag);
@@ -26,22 +26,22 @@ public class ExternalPipTransitionView(context: Context) : View {
       animDuration: Long = (long)var0.getResources().getInteger(17694721),
       onComplete: () -> Unit
    ): Boolean {
-      return this.postDelayed(new e(this, var3, var5), var1);
+      return this.postDelayed(new g(this, var3, var5), var1);
    }
 
    @JvmStatic
    fun `fadeOut$lambda$0`(var0: ExternalPipTransitionView, var1: Long, var3: Function0) {
-      r.h(var0, "this$0");
-      r.h(var3, "$onComplete");
+      q.h(var0, "this$0");
+      q.h(var3, "$onComplete");
       var0.animate().alpha(0.0F).setDuration(var1).setListener(new AnimatorListenerAdapter(var3) {
-         final Function0<Unit> $onComplete;
+         final Function0 $onComplete;
 
          {
             this.$onComplete = var1;
          }
 
          public void onAnimationEnd(Animator var1) {
-            r.h(var1, "animation");
+            q.h(var1, "animation");
             this.$onComplete.invoke();
          }
       });
@@ -67,7 +67,7 @@ public class ExternalPipTransitionView(context: Context) : View {
             val var5: ExternalPipTransitionView = var3.findViewWithTag(ExternalPipTransitionView.access$getTransitionViewTag$cp()) as ExternalPipTransitionView;
             if (var5 != null) {
                if (var2) {
-                  ExternalPipTransitionView.fadeOut$default(var5, 0L, 0L, new Function0<Unit>(var3, var5) {
+                  ExternalPipTransitionView.fadeOut$default(var5, 0L, 0L, new Function0(var3, var5) {
                      final ExternalPipTransitionView $transitionView;
                      final ViewGroup $viewRoot;
 
@@ -104,7 +104,7 @@ public class ExternalPipTransitionView(context: Context) : View {
 
          if (var2 != null) {
             val var4: Context = var2.getContext();
-            r.g(var4, "viewRoot.context");
+            q.g(var4, "getContext(...)");
             var2.addView(new ExternalPipTransitionView(var4));
          }
       }

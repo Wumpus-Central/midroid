@@ -38,8 +38,8 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import mj.r
 
 @ReactModule(name = "VoiceEngine")
 public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -52,7 +52,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
    private final var streamPermissions: Intent?
 
    init {
-      r.h(var1, "reactContext");
+      kotlin.jvm.internal.q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
       this.startNs = System.nanoTime();
@@ -60,19 +60,19 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       Debug.INSTANCE.logDebugLoggingConfig();
       this.reactEvents = new ReactEvents(
          new Pair[]{
-            eh.w.a("no-input-callback", h0.b(NoInputCallbackEvent.class)),
-            eh.w.a("on-voice", h0.b(OnVoiceEvent.class)),
-            eh.w.a("device-changed", h0.b(DeviceChangedEvent.class)),
-            eh.w.a("on-broadcast-requested", h0.b(OnBroadcastRequestedEvent.class)),
-            eh.w.a("on-broadcast-thumbnail", h0.b(OnBroadcastThumbnailEvent.class)),
-            eh.w.a("user-speaking", h0.b(UserSpeakingEvent.class)),
-            eh.w.a("ping-callback", h0.b(PingCallbackEvent.class)),
-            eh.w.a("ping-timeout-callback", h0.b(PingTimeoutCallbackEvent.class)),
-            eh.w.a("on-video-callback", h0.b(OnVideoCallbackEvent.class)),
-            eh.w.a("active-sinks-change", h0.b(ActiveSinksChangeEvent.class)),
-            eh.w.a("on-first-frame-callback", h0.b(FirstFrameCallbackEvent.class)),
-            eh.w.a("mls-failure-callback", h0.b(MlsFailureCallbackEvent.class)),
-            eh.w.a("secure-frames-state-update-callback", h0.b(SecureFramesStateUpdateCallbackEvent.class))
+            lj.w.a("no-input-callback", g0.b(NoInputCallbackEvent.class)),
+            lj.w.a("on-voice", g0.b(OnVoiceEvent.class)),
+            lj.w.a("device-changed", g0.b(DeviceChangedEvent.class)),
+            lj.w.a("on-broadcast-requested", g0.b(OnBroadcastRequestedEvent.class)),
+            lj.w.a("on-broadcast-thumbnail", g0.b(OnBroadcastThumbnailEvent.class)),
+            lj.w.a("user-speaking", g0.b(UserSpeakingEvent.class)),
+            lj.w.a("ping-callback", g0.b(PingCallbackEvent.class)),
+            lj.w.a("ping-timeout-callback", g0.b(PingTimeoutCallbackEvent.class)),
+            lj.w.a("on-video-callback", g0.b(OnVideoCallbackEvent.class)),
+            lj.w.a("active-sinks-change", g0.b(ActiveSinksChangeEvent.class)),
+            lj.w.a("on-first-frame-callback", g0.b(FirstFrameCallbackEvent.class)),
+            lj.w.a("mls-failure-callback", g0.b(MlsFailureCallbackEvent.class)),
+            lj.w.a("secure-frames-state-update-callback", g0.b(SecureFramesStateUpdateCallbackEvent.class))
          }
       );
       this.activityEventListener = new ActivityEventListener(this) {
@@ -98,7 +98,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine
          .connectionInstanceSetOnSpeakingCallback$media_engine_release(
             var1,
-            new Function2<java.lang.String, Integer, Unit>(this, var1) {
+            new Function2(this, var1) {
                final int $connectionId;
                final MediaEngineModule this$0;
 
@@ -109,7 +109,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(java.lang.String var1, int var2) {
-                  r.h(var1, "userId");
+                  kotlin.jvm.internal.q.h(var1, "userId");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new UserSpeakingEvent(this.$connectionId, var1, var2));
                }
@@ -118,7 +118,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine
          .connectionInstanceSetOnPingCallback$media_engine_release(
             var1,
-            new Function4<Integer, java.lang.String, Integer, Integer, Unit>(this, var1) {
+            new Function4(this, var1) {
                final int $connectionId;
                final MediaEngineModule this$0;
 
@@ -129,7 +129,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(int var1, java.lang.String var2, int var3, int var4) {
-                  r.h(var2, "server");
+                  kotlin.jvm.internal.q.h(var2, "server");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new PingCallbackEvent(this.$connectionId, var1, var2, var3, var4));
                }
@@ -138,7 +138,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine
          .connectionInstanceSetOnPingTimeoutCallback$media_engine_release(
             var1,
-            new Function4<java.lang.String, Integer, Integer, Integer, Unit>(this, var1) {
+            new Function4(this, var1) {
                final int $connectionId;
                final MediaEngineModule this$0;
 
@@ -149,7 +149,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(java.lang.String var1, int var2, int var3, int var4) {
-                  r.h(var1, "server");
+                  kotlin.jvm.internal.q.h(var1, "server");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new PingTimeoutCallbackEvent(this.$connectionId, var1, var2, var3, var4));
                }
@@ -158,7 +158,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine
          .connectionInstanceSetOnFirstFrameCallback$media_engine_release(
             var1,
-            new Function3<java.lang.String, java.lang.Long, java.lang.String, Unit>(this, var1) {
+            new Function3(this, var1) {
                final int $connectionId;
                final MediaEngineModule this$0;
 
@@ -169,8 +169,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(java.lang.String var1, long var2, java.lang.String var4) {
-                  r.h(var1, "userId");
-                  r.h(var4, "streamId");
+                  kotlin.jvm.internal.q.h(var1, "userId");
+                  kotlin.jvm.internal.q.h(var4, "streamId");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new FirstFrameCallbackEvent(this.$connectionId, var1, var2, var4));
                }
@@ -179,7 +179,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine
          .connectionInstanceSetOnMLSFailureCallback$media_engine_release(
             var1,
-            new Function2<java.lang.String, java.lang.String, Unit>(this, var1) {
+            new Function2(this, var1) {
                final int $connectionId;
                final MediaEngineModule this$0;
 
@@ -190,8 +190,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(java.lang.String var1, java.lang.String var2) {
-                  r.h(var1, "source");
-                  r.h(var2, "reason");
+                  kotlin.jvm.internal.q.h(var1, "source");
+                  kotlin.jvm.internal.q.h(var2, "reason");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new MlsFailureCallbackEvent(this.$connectionId, var1, var2));
                }
@@ -200,7 +200,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine
          .connectionInstanceSetSecureFramesStateUpdateCallback$media_engine_release(
             var1,
-            new Function1<java.lang.String, Unit>(this, var1) {
+            new Function1(this, var1) {
                final int $connectionId;
                final MediaEngineModule this$0;
 
@@ -211,7 +211,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(java.lang.String var1) {
-                  r.h(var1, "stateUpdateJSON");
+                  kotlin.jvm.internal.q.h(var1, "stateUpdateJSON");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new SecureFramesStateUpdateCallbackEvent(this.$connectionId, var1));
                }
@@ -225,7 +225,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      kotlin.jvm.internal.q.h(var1, "type");
    }
 
    @ReactMethod
@@ -243,7 +243,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceDestroyUser(connectionId: Int, userId: String): Unit? {
-      r.h(var2, "userId");
+      kotlin.jvm.internal.q.h(var2, "userId");
       return this.mediaEngine.connectionInstanceDestroyUser$media_engine_release(var1, var2);
    }
 
@@ -259,8 +259,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceGetEncryptionModes(connectionId: Int, callback: Callback): Unit? {
-      r.h(var2, "callback");
-      return this.mediaEngine.connectionInstanceGetEncryptionModes$media_engine_release(var1, new Function1<java.lang.String[], Unit>(var2) {
+      kotlin.jvm.internal.q.h(var2, "callback");
+      return this.mediaEngine.connectionInstanceGetEncryptionModes$media_engine_release(var1, new Function1(var2) {
          final Callback $callback;
 
          {
@@ -269,7 +269,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String[] var1) {
-            r.h(var1, "modes");
+            kotlin.jvm.internal.q.h(var1, "modes");
             this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(var1)});
          }
       });
@@ -277,8 +277,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceGetFilteredStats(connectionId: Int, filter: Int, callback: Callback): Unit? {
-      r.h(var3, "callback");
-      return this.mediaEngine.connectionInstanceGetFilteredStats$media_engine_release(var1, var2, new Function1<java.lang.String, Unit>(var3) {
+      kotlin.jvm.internal.q.h(var3, "callback");
+      return this.mediaEngine.connectionInstanceGetFilteredStats$media_engine_release(var1, var2, new Function1(var3) {
          final Callback $callback;
 
          {
@@ -287,7 +287,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "stats");
+            kotlin.jvm.internal.q.h(var1, "stats");
             this.$callback.invoke(new Object[]{var1});
          }
       });
@@ -295,8 +295,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceGetMLSKeyPackageB64(connectionId: Int, callback: Callback): Unit? {
-      r.h(var2, "callback");
-      return this.mediaEngine.connectionInstanceGetMLSKeyPackageB64$media_engine_release(var1, new Function1<java.lang.String, Unit>(var2) {
+      kotlin.jvm.internal.q.h(var2, "callback");
+      return this.mediaEngine.connectionInstanceGetMLSKeyPackageB64$media_engine_release(var1, new Function1(var2) {
          final Callback $callback;
 
          {
@@ -305,7 +305,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "keyPackageB64");
+            kotlin.jvm.internal.q.h(var1, "keyPackageB64");
             this.$callback.invoke(new Object[]{var1});
          }
       });
@@ -313,8 +313,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceGetStats(connectionId: Int, callback: Callback): Unit? {
-      r.h(var2, "callback");
-      return this.mediaEngine.connectionInstanceGetStats$media_engine_release(var1, new Function1<java.lang.String, Unit>(var2) {
+      kotlin.jvm.internal.q.h(var2, "callback");
+      return this.mediaEngine.connectionInstanceGetStats$media_engine_release(var1, new Function1(var2) {
          final Callback $callback;
 
          {
@@ -323,7 +323,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "stats");
+            kotlin.jvm.internal.q.h(var1, "stats");
             this.$callback.invoke(new Object[]{var1});
          }
       });
@@ -331,43 +331,40 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceMergeUsers(connectionId: Int, users: ReadableArray): Unit? {
-      r.h(var2, "users");
+      kotlin.jvm.internal.q.h(var2, "users");
       return this.mediaEngine.connectionInstanceMergeUsers$media_engine_release(var1, NativeArrayExtensionsKt.toJsonString(var2));
    }
 
    @ReactMethod
    public fun connectionInstancePrepareMLSCommitTransitionB64(connectionId: Int, transitionId: Int, commit: String, callback: Callback): Unit? {
-      r.h(var3, "commit");
-      r.h(var4, "callback");
-      return this.mediaEngine
-         .connectionInstancePrepareMLSCommitTransitionB64$media_engine_release(
-            var1, var2, var3, new Function3<java.lang.Boolean, Integer, java.lang.String, Unit>(var4) {
-               final Callback $callback;
+      kotlin.jvm.internal.q.h(var3, "commit");
+      kotlin.jvm.internal.q.h(var4, "callback");
+      return this.mediaEngine.connectionInstancePrepareMLSCommitTransitionB64$media_engine_release(var1, var2, var3, new Function3(var4) {
+         final Callback $callback;
 
-               {
-                  super(3);
-                  this.$callback = var1;
-               }
+         {
+            super(3);
+            this.$callback = var1;
+         }
 
-               public final void invoke(boolean var1, int var2, java.lang.String var3) {
-                  r.h(var3, "rosterChange");
-                  this.$callback.invoke(new Object[]{var1, var2, var3});
-               }
-            }
-         );
+         public final void invoke(boolean var1, int var2, java.lang.String var3) {
+            kotlin.jvm.internal.q.h(var3, "rosterChange");
+            this.$callback.invoke(new Object[]{var1, var2, var3});
+         }
+      });
    }
 
    @ReactMethod
    public fun connectionInstancePrepareSecureFramesEpoch(connectionId: Int, epoch: String, transitionId: Int, groupId: String): Unit? {
-      r.h(var2, "epoch");
-      r.h(var4, "groupId");
+      kotlin.jvm.internal.q.h(var2, "epoch");
+      kotlin.jvm.internal.q.h(var4, "groupId");
       return this.mediaEngine.connectionInstancePrepareSecureFramesEpoch$media_engine_release(var1, var2, var3, var4);
    }
 
    @ReactMethod
    public fun connectionInstancePrepareSecureFramesTransition(connectionId: Int, transitionId: Int, protocolVersion: Int, callback: Callback): Unit? {
-      r.h(var4, "callback");
-      return this.mediaEngine.connectionInstancePrepareSecureFramesTransition$media_engine_release(var1, var2, var3, new Function0<Unit>(var4) {
+      kotlin.jvm.internal.q.h(var4, "callback");
+      return this.mediaEngine.connectionInstancePrepareSecureFramesTransition$media_engine_release(var1, var2, var3, new Function0(var4) {
          final Callback $callback;
 
          {
@@ -383,9 +380,9 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceProcessMLSProposalsB64(connectionId: Int, proposals: String, callback: Callback): Unit? {
-      r.h(var2, "proposals");
-      r.h(var3, "callback");
-      return this.mediaEngine.connectionInstanceProcessMLSProposalsB64$media_engine_release(var1, var2, new Function1<java.lang.String, Unit>(var3) {
+      kotlin.jvm.internal.q.h(var2, "proposals");
+      kotlin.jvm.internal.q.h(var3, "callback");
+      return this.mediaEngine.connectionInstanceProcessMLSProposalsB64$media_engine_release(var1, var2, new Function1(var3) {
          final Callback $callback;
 
          {
@@ -394,7 +391,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "commitWelcome");
+            kotlin.jvm.internal.q.h(var1, "commitWelcome");
             this.$callback.invoke(new Object[]{var1});
          }
       });
@@ -402,47 +399,44 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceProcessMLSWelcomeB64(connectionId: Int, transitionId: Int, welcome: String, callback: Callback): Unit? {
-      r.h(var3, "welcome");
-      r.h(var4, "callback");
-      return this.mediaEngine
-         .connectionInstanceProcessMLSWelcomeB64$media_engine_release(
-            var1, var2, var3, new Function3<java.lang.Boolean, Integer, java.lang.String, Unit>(var4) {
-               final Callback $callback;
+      kotlin.jvm.internal.q.h(var3, "welcome");
+      kotlin.jvm.internal.q.h(var4, "callback");
+      return this.mediaEngine.connectionInstanceProcessMLSWelcomeB64$media_engine_release(var1, var2, var3, new Function3(var4) {
+         final Callback $callback;
 
-               {
-                  super(3);
-                  this.$callback = var1;
-               }
+         {
+            super(3);
+            this.$callback = var1;
+         }
 
-               public final void invoke(boolean var1, int var2, java.lang.String var3) {
-                  r.h(var3, "rosterChange");
-                  this.$callback.invoke(new Object[]{var1, var2, var3});
-               }
-            }
-         );
+         public final void invoke(boolean var1, int var2, java.lang.String var3) {
+            kotlin.jvm.internal.q.h(var3, "rosterChange");
+            this.$callback.invoke(new Object[]{var1, var2, var3});
+         }
+      });
    }
 
    @ReactMethod
    public fun connectionInstanceSetDesktopSource(connectionId: Int, stringId: String, useVideoHook: Boolean, type: String) {
-      r.h(var2, "stringId");
-      r.h(var4, "type");
+      kotlin.jvm.internal.q.h(var2, "stringId");
+      kotlin.jvm.internal.q.h(var4, "type");
    }
 
    @ReactMethod
    public fun connectionInstanceSetLocalMute(connectionId: Int, userId: String, mute: Boolean): Unit? {
-      r.h(var2, "userId");
+      kotlin.jvm.internal.q.h(var2, "userId");
       return this.mediaEngine.connectionInstanceSetLocalMute$media_engine_release(var1, var2, var3);
    }
 
    @ReactMethod
    public fun connectionInstanceSetLocalPan(connectionId: Int, userId: String, left: Float, right: Float): Unit? {
-      r.h(var2, "userId");
+      kotlin.jvm.internal.q.h(var2, "userId");
       return this.mediaEngine.connectionInstanceSetLocalPan$media_engine_release(var1, var2, var3, var4);
    }
 
    @ReactMethod
    public fun connectionInstanceSetLocalVolume(connectionId: Int, userId: String, volume: Float): Unit? {
-      r.h(var2, "userId");
+      kotlin.jvm.internal.q.h(var2, "userId");
       return this.mediaEngine.connectionInstanceSetLocalVolume$media_engine_release(var1, var2, var3);
    }
 
@@ -478,7 +472,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceSetTransportOptions(connectionId: Int, options: ReadableMap): Unit? {
-      r.h(var2, "options");
+      kotlin.jvm.internal.q.h(var2, "options");
       return this.mediaEngine.connectionInstanceSetTransportOptions$media_engine_release(var1, NativeMapExtensionsKt.toJsonString(var2));
    }
 
@@ -492,7 +486,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine
          .connectionInstanceSetOnVideoCallback$media_engine_release(
             var1,
-            new Function4<java.lang.String, java.lang.Long, java.lang.String, java.lang.String, Unit>(this, var1) {
+            new Function4(this, var1) {
                final int $connectionId;
                final MediaEngineModule this$0;
 
@@ -503,9 +497,9 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(java.lang.String var1, long var2, java.lang.String var4, java.lang.String var5) {
-                  r.h(var1, "userId");
-                  r.h(var4, "streamId");
-                  r.h(var5, "videoStreamParametersJSON");
+                  kotlin.jvm.internal.q.h(var1, "userId");
+                  kotlin.jvm.internal.q.h(var4, "streamId");
+                  kotlin.jvm.internal.q.h(var5, "videoStreamParametersJSON");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new OnVideoCallbackEvent(this.$connectionId, var1, var2, var4, var5));
                }
@@ -515,7 +509,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun connectionInstanceUpdateMLSExternalSenderB64(connectionId: Int, externalSenderB64: String): Unit? {
-      r.h(var2, "externalSenderB64");
+      kotlin.jvm.internal.q.h(var2, "externalSenderB64");
       return this.mediaEngine.connectionInstanceUpdateMLSExternalSenderB64$media_engine_release(var1, var2);
    }
 
@@ -525,10 +519,10 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun createOwnStreamConnectionWithOptions(connectionId: Int, userId: String, connectionOptions: ReadableMap, callback: Callback) {
-      r.h(var2, "userId");
-      r.h(var3, "connectionOptions");
-      r.h(var4, "callback");
-      this.createConnection(var1, var2, var3, new Function2<java.lang.String, java.util.Map<java.lang.String, ? extends Object>, Unit>(var4, this, var1) {
+      kotlin.jvm.internal.q.h(var2, "userId");
+      kotlin.jvm.internal.q.h(var3, "connectionOptions");
+      kotlin.jvm.internal.q.h(var4, "callback");
+      this.createConnection(var1, var2, var3, new Function2(var4, this, var1) {
          final Callback $callback;
          final int $connectionId;
          final MediaEngineModule this$0;
@@ -541,8 +535,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1, java.util.Map<java.lang.String, ? extends Object> var2) {
-            r.h(var1, "errorMessage");
-            r.h(var2, "connectionInfo");
+            kotlin.jvm.internal.q.h(var1, "errorMessage");
+            kotlin.jvm.internal.q.h(var2, "connectionInfo");
             this.$callback.invoke(new Object[]{var1, NativeMapExtensionsKt.toNativeMap(var2)});
             val var5: Intent = MediaEngineModule.access$getStreamPermissions$p(this.this$0);
             if (var5 != null) {
@@ -559,10 +553,10 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun createVoiceConnectionWithOptions(connectionId: Int, userId: String, connectionOptions: ReadableMap, callback: Callback) {
-      r.h(var2, "userId");
-      r.h(var3, "connectionOptions");
-      r.h(var4, "callback");
-      this.createConnection(var1, var2, var3, new Function2<java.lang.String, java.util.Map<java.lang.String, ? extends Object>, Unit>(var4) {
+      kotlin.jvm.internal.q.h(var2, "userId");
+      kotlin.jvm.internal.q.h(var3, "connectionOptions");
+      kotlin.jvm.internal.q.h(var4, "callback");
+      this.createConnection(var1, var2, var3, new Function2(var4) {
          final Callback $callback;
 
          {
@@ -571,8 +565,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1, java.util.Map<java.lang.String, ? extends Object> var2) {
-            r.h(var1, "errorMessage");
-            r.h(var2, "connectionInfo");
+            kotlin.jvm.internal.q.h(var1, "errorMessage");
+            kotlin.jvm.internal.q.h(var2, "connectionInfo");
             this.$callback.invoke(new Object[]{var1, NativeMapExtensionsKt.toNativeMap(var2)});
          }
       });
@@ -581,8 +575,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun getAudioSubsystem(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine.getAudioSubsystem$media_engine_release(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.getAudioSubsystem$media_engine_release(new Function2(var1) {
          final Callback $callback;
 
          {
@@ -591,8 +585,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2) {
-            r.h(var1, "subsystem");
-            r.h(var2, "audioLayer");
+            kotlin.jvm.internal.q.h(var1, "subsystem");
+            kotlin.jvm.internal.q.h(var2, "audioLayer");
             this.$callback.invoke(new Object[]{var1, var2});
          }
       });
@@ -600,8 +594,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun getCodecCapabilities(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine.getCodecCapabilities$media_engine_release(new Function1<java.lang.String, Unit>(var1) {
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.getCodecCapabilities$media_engine_release(new Function1(var1) {
          final Callback $callback;
 
          {
@@ -610,7 +604,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "codecs");
+            kotlin.jvm.internal.q.h(var1, "codecs");
             this.$callback.invoke(new Object[]{var1});
          }
       });
@@ -618,8 +612,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun getCodecSurvey(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine.getCodecSurvey$media_engine_release(new Function1<java.lang.String, Unit>(var1) {
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.getCodecSurvey$media_engine_release(new Function1(var1) {
          final Callback $callback;
 
          {
@@ -628,31 +622,31 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "jsonStr");
+            kotlin.jvm.internal.q.h(var1, "jsonStr");
             this.$callback.invoke(new Object[]{var1});
          }
       });
    }
 
    public open fun getConstants(): MutableMap<String, Any?> {
-      return fh.s.m(
+      return r.m(
          new Pair[]{
-            eh.w.a("DegradationPreference", fh.s.l(new Pair[]{eh.w.a("MAINTAIN_RESOLUTION", 0), eh.w.a("MAINTAIN_FRAMERATE", 1), eh.w.a("BALANCED", 2)})),
-            eh.w.a(
+            lj.w.a("DegradationPreference", r.l(new Pair[]{lj.w.a("MAINTAIN_RESOLUTION", 0), lj.w.a("MAINTAIN_FRAMERATE", 1), lj.w.a("BALANCED", 2)})),
+            lj.w.a(
                "AVAudioSessionMode",
-               fh.s.l(
+               r.l(
                   new Pair[]{
-                     eh.w.a("VOICE", "AVAudioSessionModeVoiceChat"),
-                     eh.w.a("VIDEO", "AVAudioSessionModeVideoChat"),
-                     eh.w.a("LISTEN", "AVAudioSessionModeSpokenAudio"),
-                     eh.w.a("DEFAULT", "AVAudioSessionModeDefault")
+                     lj.w.a("VOICE", "AVAudioSessionModeVoiceChat"),
+                     lj.w.a("VIDEO", "AVAudioSessionModeVideoChat"),
+                     lj.w.a("LISTEN", "AVAudioSessionModeSpokenAudio"),
+                     lj.w.a("DEFAULT", "AVAudioSessionModeDefault")
                   }
                )
             ),
-            eh.w.a("SupportedSecureFramesProtocolVersion", 113),
-            eh.w.a(
+            lj.w.a("SupportedSecureFramesProtocolVersion", 113),
+            lj.w.a(
                "supportedFeatures",
-               kotlin.collections.h.l(
+               kotlin.collections.i.m(
                   new java.lang.String[]{
                      "voice_sound_stop_loop",
                      "voice_relative_sounds",
@@ -692,28 +686,27 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun getInputDevices(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine
-         .getInputDevices$media_engine_release(new Function1<java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, Unit>(var1) {
-            final Callback $callback;
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.getInputDevices$media_engine_release(new Function1(var1) {
+         final Callback $callback;
 
-            {
-               super(1);
-               this.$callback = var1;
-            }
+         {
+            super(1);
+            this.$callback = var1;
+         }
 
-            public final void invoke(java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var1) {
-               r.h(var1, "devices");
-               this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArrayOfMaps(var1)});
-            }
-         });
+         public final void invoke(java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var1) {
+            kotlin.jvm.internal.q.h(var1, "devices");
+            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArrayOfMaps(var1)});
+         }
+      });
    }
 
    @ReactMethod
    public fun getMLSSigningKeyB64(sessionId: String, signatureVersion: Int, callback: Callback) {
-      r.h(var1, "sessionId");
-      r.h(var3, "callback");
-      this.mediaEngine.getMLSSigningKeyB64$media_engine_release(var1, var2, new Function2<java.lang.String, java.lang.String, Unit>(var3) {
+      kotlin.jvm.internal.q.h(var1, "sessionId");
+      kotlin.jvm.internal.q.h(var3, "callback");
+      this.mediaEngine.getMLSSigningKeyB64$media_engine_release(var1, var2, new Function2(var3) {
          final Callback $callback;
 
          {
@@ -722,8 +715,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2) {
-            r.h(var1, "key");
-            r.h(var2, "signature");
+            kotlin.jvm.internal.q.h(var1, "key");
+            kotlin.jvm.internal.q.h(var2, "signature");
             this.$callback.invoke(new Object[]{var1, var2});
          }
       });
@@ -735,27 +728,26 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun getOutputDevices(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine
-         .getOutputDevices$media_engine_release(new Function1<java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, Unit>(var1) {
-            final Callback $callback;
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.getOutputDevices$media_engine_release(new Function1(var1) {
+         final Callback $callback;
 
-            {
-               super(1);
-               this.$callback = var1;
-            }
+         {
+            super(1);
+            this.$callback = var1;
+         }
 
-            public final void invoke(java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var1) {
-               r.h(var1, "devices");
-               this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArrayOfMaps(var1)});
-            }
-         });
+         public final void invoke(java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var1) {
+            kotlin.jvm.internal.q.h(var1, "devices");
+            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArrayOfMaps(var1)});
+         }
+      });
    }
 
    @ReactMethod
    public fun getSupportedVideoCodecs(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine.getSupportedVideoCodecs$media_engine_release(new Function1<java.lang.String[], Unit>(var1) {
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.getSupportedVideoCodecs$media_engine_release(new Function1(var1) {
          final Callback $callback;
 
          {
@@ -764,7 +756,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String[] var1) {
-            r.h(var1, "codecs");
+            kotlin.jvm.internal.q.h(var1, "codecs");
             this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(var1)});
          }
       });
@@ -772,26 +764,25 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun getVideoInputDevices(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine
-         .getVideoInputDevices$media_engine_release(new Function1<java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, Unit>(var1) {
-            final Callback $callback;
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.getVideoInputDevices$media_engine_release(new Function1(var1) {
+         final Callback $callback;
 
-            {
-               super(1);
-               this.$callback = var1;
-            }
+         {
+            super(1);
+            this.$callback = var1;
+         }
 
-            public final void invoke(java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var1) {
-               r.h(var1, "devices");
-               this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArrayOfMaps(var1)});
-            }
-         });
+         public final void invoke(java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var1) {
+            kotlin.jvm.internal.q.h(var1, "devices");
+            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArrayOfMaps(var1)});
+         }
+      });
    }
 
    @ReactMethod
    public fun initializeEngine() {
-      this.mediaEngine.setOnNoInputCallback$media_engine_release(new Function1<java.lang.Boolean, Unit>(this) {
+      this.mediaEngine.setOnNoInputCallback$media_engine_release(new Function1(this) {
          final MediaEngineModule this$0;
 
          {
@@ -803,7 +794,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
             MediaEngineModule.access$getReactEvents$p(this.this$0).emitModuleEvent(this.this$0.getReactContext(), new NoInputCallbackEvent(var1));
          }
       });
-      this.mediaEngine.setOnVoiceCallback$media_engine_release(new Function2<java.lang.Float, Integer, Unit>(this) {
+      this.mediaEngine.setOnVoiceCallback$media_engine_release(new Function2(this) {
          final MediaEngineModule this$0;
 
          {
@@ -815,7 +806,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
             MediaEngineModule.access$getReactEvents$p(this.this$0).emitModuleEvent(this.this$0.getReactContext(), new OnVoiceEvent(var1, var2));
          }
       });
-      this.mediaEngine.setActiveSinksChangeCallback$media_engine_release(new Function2<java.lang.String, java.lang.Boolean, Unit>(this) {
+      this.mediaEngine.setActiveSinksChangeCallback$media_engine_release(new Function2(this) {
          final MediaEngineModule this$0;
 
          {
@@ -824,15 +815,13 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1, boolean var2) {
-            r.h(var1, "streamId");
+            kotlin.jvm.internal.q.h(var1, "streamId");
             MediaEngineModule.access$getReactEvents$p(this.this$0).emitModuleEvent(this.this$0.getReactContext(), new ActiveSinksChangeEvent(var1, var2));
          }
       });
       this.mediaEngine
          .setDeviceChangeCallback$media_engine_release(
-            new Function3<java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, Unit>(
-               this
-            ) {
+            new Function3(this) {
                final MediaEngineModule this$0;
 
                {
@@ -845,9 +834,9 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                   java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var2,
                   java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>> var3
                ) {
-                  r.h(var1, "inputDevices");
-                  r.h(var2, "outputDevices");
-                  r.h(var3, "videoInputDevices");
+                  kotlin.jvm.internal.q.h(var1, "inputDevices");
+                  kotlin.jvm.internal.q.h(var2, "outputDevices");
+                  kotlin.jvm.internal.q.h(var3, "videoInputDevices");
                   MediaEngineModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(this.this$0.getReactContext(), new DeviceChangedEvent(var1, var2, var3));
                }
@@ -864,9 +853,9 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun rankRtcRegions(regionsWithIps: ReadableArray, callback: Callback) {
-      r.h(var1, "regionsWithIps");
-      r.h(var2, "callback");
-      this.mediaEngine.rankRtcRegions$media_engine_release(NativeArrayExtensionsKt.toJsonString(var1), new Function1<java.lang.String[], Unit>(var2) {
+      kotlin.jvm.internal.q.h(var1, "regionsWithIps");
+      kotlin.jvm.internal.q.h(var2, "callback");
+      this.mediaEngine.rankRtcRegions$media_engine_release(NativeArrayExtensionsKt.toJsonString(var1), new Function1(var2) {
          final Callback $callback;
 
          {
@@ -875,7 +864,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String[] var1) {
-            r.h(var1, "regions");
+            kotlin.jvm.internal.q.h(var1, "regions");
             this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(var1)});
          }
       });
@@ -887,7 +876,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setAVAudioSessionMode(mode: String) {
-      r.h(var1, "mode");
+      kotlin.jvm.internal.q.h(var1, "mode");
    }
 
    @ReactMethod
@@ -897,7 +886,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setBroadcastThumbnailParams(width: Int, height: Int, intervalSeconds: Int) {
-      this.mediaEngine.setBroadcastThumbnailParams$media_engine_release(var1, var2, var3, new Function1<java.lang.String, Unit>(this) {
+      this.mediaEngine.setBroadcastThumbnailParams$media_engine_release(var1, var2, var3, new Function1(this) {
          final MediaEngineModule this$0;
 
          {
@@ -906,7 +895,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "imgdata");
+            kotlin.jvm.internal.q.h(var1, "imgdata");
             MediaEngineModule.access$getReactEvents$p(this.this$0).emitModuleEvent(this.this$0.getReactContext(), new OnBroadcastThumbnailEvent(var1));
          }
       });
@@ -924,7 +913,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setInputDevice(deviceIndex: Dynamic) {
-      r.h(var1, "deviceIndex");
+      kotlin.jvm.internal.q.h(var1, "deviceIndex");
       val var3: MediaEngine = this.mediaEngine;
       val var4: ReadableType = var1.getType();
       val var2: Int;
@@ -936,15 +925,15 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       if (var2 != 1) {
          if (var2 != 2) {
-            val var6: ReadableType = var1.getType();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unexpected deviceIndex type: ");
-            var7.append(var6);
-            throw new IllegalArgumentException(var7.toString());
+            val var7: ReadableType = var1.getType();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unexpected deviceIndex type: ");
+            var6.append(var7);
+            throw new IllegalArgumentException(var6.toString());
          }
 
          val var5: java.lang.String = var1.asString();
-         r.g(var5, "deviceIndex.asString()");
+         kotlin.jvm.internal.q.g(var5, "asString(...)");
          var3.setInputDevice$media_engine_release(var5);
       } else {
          var3.setInputDevice$media_engine_release(var1.asInt());
@@ -963,7 +952,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setOutputDevice(deviceIndex: Dynamic) {
-      r.h(var1, "deviceIndex");
+      kotlin.jvm.internal.q.h(var1, "deviceIndex");
       val var3: MediaEngine = this.mediaEngine;
       val var4: ReadableType = var1.getType();
       val var2: Int;
@@ -983,7 +972,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          val var5: java.lang.String = var1.asString();
-         r.g(var5, "deviceIndex.asString()");
+         kotlin.jvm.internal.q.g(var5, "asString(...)");
          var3.setOutputDevice$media_engine_release(var5);
       } else {
          var3.setOutputDevice$media_engine_release(var1.asInt());
@@ -1002,13 +991,13 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setTransportOptions(options: ReadableMap) {
-      r.h(var1, "options");
+      kotlin.jvm.internal.q.h(var1, "options");
       this.mediaEngine.setTransportOptions$media_engine_release(NativeMapExtensionsKt.toJsonString(var1));
    }
 
    @ReactMethod
    public fun setVideoInputDevice(deviceIndex: Dynamic) {
-      r.h(var1, "deviceIndex");
+      kotlin.jvm.internal.q.h(var1, "deviceIndex");
       val var3: MediaEngine = this.mediaEngine;
       val var4: ReadableType = var1.getType();
       val var2: Int;
@@ -1020,15 +1009,15 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       if (var2 != 1) {
          if (var2 != 2) {
-            val var6: ReadableType = var1.getType();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unexpected deviceIndex type: ");
-            var7.append(var6);
-            throw new IllegalArgumentException(var7.toString());
+            val var7: ReadableType = var1.getType();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unexpected deviceIndex type: ");
+            var6.append(var7);
+            throw new IllegalArgumentException(var6.toString());
          }
 
          val var5: java.lang.String = var1.asString();
-         r.g(var5, "deviceIndex.asString()");
+         kotlin.jvm.internal.q.g(var5, "asString(...)");
          var3.setVideoInputDevice$media_engine_release(var5);
       } else {
          var3.setVideoInputDevice$media_engine_release(var1.asInt());
@@ -1045,9 +1034,9 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun startLocalAudioRecording(options: ReadableMap, callback: Callback) {
-      r.h(var1, "options");
-      r.h(var2, "callback");
-      this.mediaEngine.startLocalAudioRecording$media_engine_release(NativeMapExtensionsKt.toJsonString(var1), new Function1<java.lang.Boolean, Unit>(var2) {
+      kotlin.jvm.internal.q.h(var1, "options");
+      kotlin.jvm.internal.q.h(var2, "callback");
+      this.mediaEngine.startLocalAudioRecording$media_engine_release(NativeMapExtensionsKt.toJsonString(var1), new Function1(var2) {
          final Callback $callback;
 
          {
@@ -1076,7 +1065,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun stopBroadcastWithError(errorCode: Int, errorMessage: String): Unit? {
-      r.h(var2, "errorMessage");
+      kotlin.jvm.internal.q.h(var2, "errorMessage");
       val var5: Unit;
       if (this.streamConnectionId != null) {
          this.mediaEngine.connectionInstanceStopBroadcastWithError$media_engine_release(this.streamConnectionId.intValue(), var1, var2);
@@ -1090,8 +1079,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun stopLocalAudioRecording(callback: Callback) {
-      r.h(var1, "callback");
-      this.mediaEngine.stopLocalAudioRecording$media_engine_release(new Function2<java.lang.String, Integer, Unit>(var1) {
+      kotlin.jvm.internal.q.h(var1, "callback");
+      this.mediaEngine.stopLocalAudioRecording$media_engine_release(new Function2(var1) {
          final Callback $callback;
 
          {
@@ -1100,9 +1089,9 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
          }
 
          public final void invoke(java.lang.String var1, int var2) {
-            r.h(var1, "fileName");
+            kotlin.jvm.internal.q.h(var1, "fileName");
             val var3: Uri = Uri.fromFile(new File(var1));
-            r.g(var3, "fromFile(this)");
+            kotlin.jvm.internal.q.g(var3, "fromFile(this)");
             this.$callback.invoke(new Object[]{var3.toString(), var2});
          }
       });
@@ -1115,9 +1104,9 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       private fun Context.createScreenCaptureIntent(): Intent {
          var var2: Intent = (Intent)var1.getSystemService("media_projection");
-         r.f(var2, "null cannot be cast to non-null type android.media.projection.MediaProjectionManager");
+         kotlin.jvm.internal.q.f(var2, "null cannot be cast to non-null type android.media.projection.MediaProjectionManager");
          var2 = (var2 as MediaProjectionManager).createScreenCaptureIntent();
-         r.g(var2, "getSystemService(Context…eateScreenCaptureIntent()");
+         kotlin.jvm.internal.q.g(var2, "createScreenCaptureIntent(...)");
          return var2;
       }
 
@@ -1132,41 +1121,18 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
          if (var4 != 1) {
             if (var4 != 2) {
-               val var7: ReadableType = var1.getType();
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("Unexpected deviceIndex type: ");
-               var8.append(var7);
-               throw new IllegalArgumentException(var8.toString());
+               val var8: ReadableType = var1.getType();
+               val var7: StringBuilder = new StringBuilder();
+               var7.append("Unexpected deviceIndex type: ");
+               var7.append(var8);
+               throw new IllegalArgumentException(var7.toString());
             }
 
             val var6: java.lang.String = var1.asString();
-            r.g(var6, "deviceIndex.asString()");
+            kotlin.jvm.internal.q.g(var6, "asString(...)");
             var3.invoke(var6);
          } else {
             var2.invoke(var1.asInt());
-         }
-      }
-
-      // $VF: Class flags could not be determined
-      internal class WhenMappings {
-         @JvmStatic
-         public int[] $EnumSwitchMapping$0;
-
-         @JvmStatic
-         fun {
-            val var0: IntArray = new int[ReadableType.values().length];
-
-            try {
-               var0[ReadableType.Number.ordinal()] = 1;
-            } catch (var3: NoSuchFieldError) {
-            }
-
-            try {
-               var0[ReadableType.String.ordinal()] = 2;
-            } catch (var2: NoSuchFieldError) {
-            }
-
-            $EnumSwitchMapping$0 = var0;
          }
       }
    }

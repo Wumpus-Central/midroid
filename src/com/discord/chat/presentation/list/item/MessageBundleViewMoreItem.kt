@@ -1,12 +1,12 @@
 package com.discord.chat.presentation.list.item
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class MessageBundleViewMoreItem(viewMoreText: String) : MessageBundleItem {
    public final val viewMoreText: String
 
    init {
-      r.h(var1, "viewMoreText");
+      q.h(var1, "viewMoreText");
       super("view more", null);
       this.viewMoreText = var1;
    }
@@ -16,7 +16,7 @@ public data class MessageBundleViewMoreItem(viewMoreText: String) : MessageBundl
    }
 
    public fun copy(viewMoreText: String = var0.viewMoreText): MessageBundleViewMoreItem {
-      r.h(var1, "viewMoreText");
+      q.h(var1, "viewMoreText");
       return new MessageBundleViewMoreItem(var1);
    }
 
@@ -26,7 +26,7 @@ public data class MessageBundleViewMoreItem(viewMoreText: String) : MessageBundl
       } else if (var1 !is MessageBundleViewMoreItem) {
          return false;
       } else {
-         return r.c(this.viewMoreText, (var1 as MessageBundleViewMoreItem).viewMoreText);
+         return q.c(this.viewMoreText, (var1 as MessageBundleViewMoreItem).viewMoreText);
       }
    }
 

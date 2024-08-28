@@ -6,48 +6,48 @@ import android.graphics.Path
 import android.graphics.RectF
 import android.graphics.Path.Direction
 import android.view.ViewGroup
+import bk.c
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.FeedItem
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
 import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.r
-import th.c
+import kotlin.jvm.internal.q
 
 internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestListPlaceholder {
    private final val config: FeedItem
    private final val placeholders: MutableMap<Int, CustomDrawDrawable>
 
    init {
-      r.h(var1, "config");
+      q.h(var1, "config");
       super(null);
       this.config = var1;
       this.placeholders = new LinkedHashMap<>();
    }
 
    public override fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {
-      r.h(var1, "view");
-      r.h(var2, "item");
+      q.h(var1, "view");
+      q.h(var2, "item");
       val var3: Int = Math.floorMod(var2.getKey().hashCode(), 20);
-      val var6: java.util.Map = this.placeholders;
-      val var5: Int = var3;
-      var var4: Any = var6.get(var5);
+      val var5: java.util.Map = this.placeholders;
+      val var6: Int = var3;
+      val var4: Any = var5.get(var6);
       var var7: Any = var4;
       if (var4 == null) {
-         var4 = Companion;
+         val var8: FastestListPlaceholderTypeFeedItem.Companion = Companion;
          var7 = new FastestListPlaceholderTypeFeedItem.FeedItemDrawable(
             this.config,
             FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default(Companion, 0.0F, 0.0F, 3, null),
-            FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default((FastestListPlaceholderTypeFeedItem.Companion)var4, 0.0F, 0.0F, 3, null)
+            FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default(var8, 0.0F, 0.0F, 3, null)
          );
-         var6.put(var5, var7);
+         var5.put(var6, var7);
       }
 
       var1.setBackground(var7 as CustomDrawDrawable);
    }
 
    public override fun onPlaceholderShouldUnbind(view: ViewGroup) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.setBackground(null);
    }
 
@@ -71,7 +71,7 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
       private final val pathRect: RectF
 
       init {
-         r.h(var1, "config");
+         q.h(var1, "config");
          super();
          this.config = var1;
          this.labelWidthRatio = var2;
@@ -228,85 +228,62 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
          this.pathCornerRadii = new float[]{var2, var3, var4, var5, var6, var7, var8, var9};
       }
 
-      public open fun draw(canvas: Canvas) {
-         r.h(var1, "canvas");
-         val var14: Int = this.getBounds().width();
-         val var15: Int = this.getBounds().height();
+      public override fun draw(canvas: Canvas) {
+         q.h(var1, "canvas");
+         val var15: Int = this.getBounds().width();
+         val var16: Int = this.getBounds().height();
          if (this.config.getBackgroundColor() != 0) {
             this.path.reset();
-            this.pathRect.set(0.0F, 0.0F, (float)var14, (float)var15);
+            this.pathRect.set(0.0F, 0.0F, (float)var15, (float)var16);
             this.path.addRoundRect(this.pathRect, this.pathCornerRadii, Direction.CW);
             this.paint.setColor(this.config.getBackgroundColor());
             var1.drawPath(this.path, this.paint);
             this.paint.setColor(this.config.getColor());
          }
 
-         val var16: Int = FastestListPlaceholderTypeFeedItem.FeedItemDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getShapeType().ordinal()];
-         if (var16 != 1) {
-            if (var16 == 2) {
-               val var3: Float = (var15 - this.config.getShapeSize()) / 2.0F;
+         val var14: Int = FastestListPlaceholderTypeFeedItem.FeedItemDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getShapeType().ordinal()];
+         if (var14 != 1) {
+            if (var14 == 2) {
+               val var3: Float = (var16 - this.config.getShapeSize()) / 2.0F;
                var1.drawRect(this.config.getPadding(), var3, this.config.getShapeSize(), this.config.getShapeSize() + var3, this.paint);
             }
          } else {
             var1.drawCircle(
                this.config.getShapeSize() / 2.0F + this.config.getPadding(),
-               this.config.getShapeSize() / 2.0F + ((float)var15 - this.config.getShapeSize()) / 2.0F,
+               this.config.getShapeSize() / 2.0F + ((float)var16 - this.config.getShapeSize()) / 2.0F,
                this.config.getShapeSize() / 2.0F,
                this.paint
             );
          }
 
-         val var8: Float = this.config.getLabelSize();
-         val var5: Float = this.config.getLabelSecondarySize();
+         val var11: Float = this.config.getLabelSize();
+         val var19: Float = this.config.getLabelSecondarySize();
          var var6: Float = 2;
-         val var21: Float = var8 / 2;
-         val var20: Float = var5 / 2;
-         val var19: Float = this.config.getLabelPaddingInnerRatio() * var8 / var6;
-         val var7: Float = this.config.getLabelPaddingInnerRatio() * var5 / var6;
-         val var9: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
-         var6 = var14;
-         val var11: Float = var14 - this.config.getPadding() - this.config.getLabelPadding();
-         val var12: Float = var15;
-         val var23: Float = (var15 - (var8 + var5)) / 2.0F + var8;
+         val var5: Float = var11 / 2;
+         val var21: Float = var19 / 2;
+         val var20: Float = this.config.getLabelPaddingInnerRatio() * var11 / var6;
+         val var13: Float = this.config.getLabelPaddingInnerRatio() * var19 / var6;
+         val var10: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
+         val var9: Float = var15;
+         val var12: Float = var15 - this.config.getPadding() - this.config.getLabelPadding();
+         var6 = var16;
+         val var23: Float = (var16 - (var11 + var19)) / 2.0F + var11;
          var1.drawRoundRect(
-            var9,
-            ((float)var15 - (var8 + var5)) / 2.0F + var19,
-            this.labelWidthRatio * var11,
-            ((float)var15 - (var8 + var5)) / 2.0F + var8 - var19,
-            var21,
-            var21,
+            var10,
+            ((float)var16 - (var11 + var19)) / 2.0F + var20,
+            this.labelWidthRatio * var12,
+            ((float)var16 - (var11 + var19)) / 2.0F + var11 - var20,
+            var5,
+            var5,
             this.paint
          );
-         var1.drawRoundRect(var9, var23 + var7, var11 * this.labelWidthRatioSecondary, var23 + var5 - var7, var20, var20, this.paint);
+         var1.drawRoundRect(var10, var23 + var13, var12 * this.labelWidthRatioSecondary, var23 + var19 - var13, var21, var21, this.paint);
          if (this.config.getDivider()) {
             this.paint.setColor(this.config.getDividerColor());
             var1.drawRect(
-               this.config.getDividerPaddingLeft(), var12 - (float)SizeUtilsKt.getDpToPx(1), var6 - this.config.getDividerPaddingRight(), var12, this.paint
+               this.config.getDividerPaddingLeft(), var6 - (float)SizeUtilsKt.getDpToPx(1), var9 - this.config.getDividerPaddingRight(), var6, this.paint
             );
             this.paint.setColor(this.config.getColor());
-         }
-      }
-
-      // $VF: Class flags could not be determined
-      internal class WhenMappings {
-         @JvmStatic
-         public int[] $EnumSwitchMapping$0;
-
-         @JvmStatic
-         fun {
-            val var0: IntArray = new int[FastestListPlaceholderType.Shape.Type.values().length];
-
-            try {
-               var0[FastestListPlaceholderType.Shape.Type.CIRCLE.ordinal()] = 1;
-            } catch (var3: NoSuchFieldError) {
-            }
-
-            try {
-               var0[FastestListPlaceholderType.Shape.Type.RECT.ordinal()] = 2;
-            } catch (var2: NoSuchFieldError) {
-            }
-
-            $EnumSwitchMapping$0 = var0;
          }
       }
    }

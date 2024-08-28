@@ -8,10 +8,10 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import eh.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
 
 public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val manager: NearbyManager
@@ -19,18 +19,18 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
          new Pair[]{
-            w.a("nearbyMessageReceived", h0.b(OnNearbyMessageReceivedEvent.class)),
-            w.a("nearbyMessageLost", h0.b(OnNearbyMessageLostEvent.class)),
-            w.a("nearbyError", h0.b(OnNearbyErrorEvent.class))
+            w.a("nearbyMessageReceived", g0.b(OnNearbyMessageReceivedEvent.class)),
+            w.a("nearbyMessageLost", g0.b(OnNearbyMessageLostEvent.class)),
+            w.a("nearbyError", g0.b(OnNearbyErrorEvent.class))
          }
       );
       this.manager = new NearbyManager(
-         new Function1<java.lang.String, Unit>(this) {
+         new Function1(this) {
             final NearbyHelperModule this$0;
 
             {
@@ -39,12 +39,12 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
             }
 
             public final void invoke(java.lang.String var1) {
-               r.h(var1, "it");
+               q.h(var1, "it");
                NearbyHelperModule.access$getReactEvents$p(this.this$0)
                   .emitModuleEvent(NearbyHelperModule.access$getReactContext$p(this.this$0), new OnNearbyMessageReceivedEvent(var1));
             }
          },
-         new Function1<java.lang.String, Unit>(this) {
+         new Function1(this) {
             final NearbyHelperModule this$0;
 
             {
@@ -53,12 +53,12 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
             }
 
             public final void invoke(java.lang.String var1) {
-               r.h(var1, "it");
+               q.h(var1, "it");
                NearbyHelperModule.access$getReactEvents$p(this.this$0)
                   .emitModuleEvent(NearbyHelperModule.access$getReactContext$p(this.this$0), new OnNearbyMessageLostEvent(var1));
             }
          },
-         new Function1<java.lang.String, Unit>(this) {
+         new Function1(this) {
             final NearbyHelperModule this$0;
 
             {
@@ -67,7 +67,7 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
             }
 
             public final void invoke(java.lang.String var1) {
-               r.h(var1, "it");
+               q.h(var1, "it");
                NearbyHelperModule.access$getReactEvents$p(this.this$0)
                   .emitModuleEvent(NearbyHelperModule.access$getReactContext$p(this.this$0), new OnNearbyErrorEvent(var1));
             }
@@ -77,7 +77,7 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      q.h(var1, "type");
    }
 
    public open fun getName(): String {
@@ -94,7 +94,7 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun publishNearbyMessage(message: String) {
-      r.h(var1, "message");
+      q.h(var1, "message");
       this.manager.setOutboundMessage(var1);
    }
 
@@ -104,7 +104,7 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun setupNearbyPermission(apiKey: String) {
-      r.h(var1, "apiKey");
+      q.h(var1, "apiKey");
    }
 
    @ReactMethod

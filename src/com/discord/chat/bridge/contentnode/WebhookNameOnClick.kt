@@ -1,6 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
 
 @f
 public data class WebhookNameOnClick(action: String, messageReference: MessageReference? = null) {
@@ -20,26 +20,10 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
    public final val messageReference: MessageReference?
 
    init {
-      r.h(var1, "action");
+      q.h(var1, "action");
       super();
       this.action = var1;
       this.messageReference = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: WebhookNameOnClick, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean = false;
-      var1.z(var2, 0, var0.action);
-      if (var1.A(var2, 1) || var0.messageReference != null) {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, MessageReference.$serializer.INSTANCE, var0.messageReference);
-      }
    }
 
    public operator fun component1(): String {
@@ -51,7 +35,7 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
    }
 
    public fun copy(action: String = var0.action, messageReference: MessageReference? = var0.messageReference): WebhookNameOnClick {
-      r.h(var1, "action");
+      q.h(var1, "action");
       return new WebhookNameOnClick(var1, var2);
    }
 
@@ -62,10 +46,10 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.action, var1.action)) {
+         if (!q.c(this.action, var1.action)) {
             return false;
          } else {
-            return r.c(this.messageReference, var1.messageReference);
+            return q.c(this.messageReference, var1.messageReference);
          }
       }
    }
@@ -84,17 +68,17 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
 
    public override fun toString(): String {
       val var2: java.lang.String = this.action;
-      val var3: MessageReference = this.messageReference;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("WebhookNameOnClick(action=");
-      var1.append(var2);
-      var1.append(", messageReference=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: MessageReference = this.messageReference;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("WebhookNameOnClick(action=");
+      var3.append(var2);
+      var3.append(", messageReference=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : f0<WebhookNameOnClick> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -112,19 +96,19 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a.u(MessageReference.$serializer.INSTANCE)};
+         return new KSerializer[]{b2.a, a.u(MessageReference.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): WebhookNameOnClick {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
-         var var5: Any;
+         var var5: MessageReference;
          var var8: java.lang.String;
          if (var7.p()) {
             var8 = var7.m(var6, 0);
-            var5 = var7.n(var6, 1, MessageReference.$serializer.INSTANCE, null);
+            var5 = var7.n(var6, 1, MessageReference.$serializer.INSTANCE, null) as MessageReference;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -140,7 +124,7 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
                         throw new n(var4);
                      }
 
-                     var5 = var7.n(var6, 1, MessageReference.$serializer.INSTANCE, var5);
+                     var5 = var7.n(var6, 1, MessageReference.$serializer.INSTANCE, var5) as MessageReference;
                      var2 |= 2;
                   } else {
                      var8 = var7.m(var6, 0);
@@ -153,20 +137,20 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
          }
 
          var7.c(var6);
-         return new WebhookNameOnClick(var2, var8, var5 as MessageReference, null);
+         return new WebhookNameOnClick(var2, var8, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: WebhookNameOnClick) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         WebhookNameOnClick.write$Self(var2, var4, var3);
+         WebhookNameOnClick.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

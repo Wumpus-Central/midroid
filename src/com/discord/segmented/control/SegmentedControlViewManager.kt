@@ -14,23 +14,23 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
-import eh.w
-import fh.p
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
+import mj.o
 
 @ReactModule(name = "DCDSegmentedControl")
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {
    private final val delegate: DCDSegmentedControlManagerDelegate<SegmentedControlView, SegmentedControlViewManager>
-   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{w.a("onValueChange", h0.b(ValueChangeEvent.class))})
+   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onValueChange", g0.b(ValueChangeEvent.class)))
 
    @SuppressLint(["InflateParams"])
    protected open fun createViewInstance(reactContext: ThemedReactContext): SegmentedControlView {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       val var2: SegmentedControlView = new SegmentedControlView(var1, null, 0, 6, null);
-      var2.setOnSegmentSelected(new Function2<Integer, java.lang.String, Unit>(this, var1, var2) {
+      var2.setOnSegmentSelected(new Function2(this, var1, var2) {
          final ThemedReactContext $reactContext;
          final SegmentedControlView $this_apply;
          final SegmentedControlViewManager this$0;
@@ -43,7 +43,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
          }
 
          public final void invoke(int var1, java.lang.String var2) {
-            r.h(var2, "label");
+            q.h(var2, "label");
             SegmentedControlViewManager.access$getReactEvents$p(this.this$0).emitEvent(this.$reactContext, this.$this_apply, new ValueChangeEvent(var2, var1));
          }
       });
@@ -54,24 +54,24 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDSegmentedControl";
    }
 
    @ReactProp(name = "accessibilityRoleDescriptions")
    public open fun setAccessibilityRoleDescriptions(view: SegmentedControlView, value: ReadableArray?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
          val var5: java.util.Iterator = var4.iterator();
 
          while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as p).nextInt());
+            val var6: java.lang.String = var2.getString((var5 as o).c());
             if (var6 != null) {
                var3.add(var6);
             }
@@ -83,7 +83,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "backgroundColor")
    public open fun setBackgroundColor(view: SegmentedControlView, value: String?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          var1.setContainerBgColor(Color.parseColor(var2));
       }
@@ -91,13 +91,13 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "cornerRadius")
    public open fun setCornerRadius(view: SegmentedControlView, value: Int) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.setCornerRadiusPx((float)SizeUtilsKt.getDpToPx(var2));
    }
 
    @ReactProp(name = "customSelectedTintColor")
    public open fun setCustomSelectedTintColor(view: SegmentedControlView, value: String?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          var1.setSelectedSegmentBgColor(Color.parseColor(var2));
       }
@@ -105,13 +105,13 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "selectedSegmentIndex")
    public open fun setSelectedSegmentIndex(view: SegmentedControlView, value: Int) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.setSelectedIndex(var2);
    }
 
    @ReactProp(name = "selectedTitleAttributes")
    public open fun setSelectedTitleAttributes(view: SegmentedControlView, value: ReadableMap?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          var1.setSelectedSegmentTextColor(var2.getInt("textColor"));
          var1.setSelectedSegmentFontSizeSp((float)var2.getInt("fontSize"));
@@ -120,7 +120,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "titleAttributes")
    public open fun setTitleAttributes(view: SegmentedControlView, value: ReadableMap?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          var1.setSegmentTextColor(var2.getInt("textColor"));
          var1.setSegmentFontSizeSp((float)var2.getInt("fontSize"));
@@ -129,16 +129,16 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "values")
    public open fun setValues(view: SegmentedControlView, value: ReadableArray?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
-         val var6: java.util.Iterator = var4.iterator();
+         val var5: java.util.Iterator = var4.iterator();
 
-         while (var6.hasNext()) {
-            val var5: java.lang.String = var2.getString((var6 as p).nextInt());
-            if (var5 != null) {
-               var3.add(var5);
+         while (var5.hasNext()) {
+            val var6: java.lang.String = var2.getString((var5 as o).c());
+            if (var6 != null) {
+               var3.add(var6);
             }
          }
 

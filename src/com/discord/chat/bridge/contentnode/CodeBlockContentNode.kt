@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.h
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.h
-import xk.f0.a
 
 @f
 public data class CodeBlockContentNode(lang: String, content: String, inQuote: Boolean) : ContentNode {
@@ -22,22 +22,12 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    public final val lang: String
 
    init {
-      r.h(var1, "lang");
-      r.h(var2, "content");
+      q.h(var1, "lang");
+      q.h(var2, "content");
       super(null);
       this.lang = var1;
       this.content = var2;
       this.inQuote = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: CodeBlockContentNode, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.lang);
-      var1.z(var2, 1, var0.content);
-      var1.x(var2, 2, var0.inQuote);
    }
 
    public operator fun component1(): String {
@@ -53,8 +43,8 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public fun copy(lang: String = var0.lang, content: String = var0.content, inQuote: Boolean = var0.inQuote): CodeBlockContentNode {
-      r.h(var1, "lang");
-      r.h(var2, "content");
+      q.h(var1, "lang");
+      q.h(var2, "content");
       return new CodeBlockContentNode(var1, var2, var3);
    }
 
@@ -65,9 +55,9 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.lang, var1.lang)) {
+         if (!q.c(this.lang, var1.lang)) {
             return false;
-         } else if (!r.c(this.content, var1.content)) {
+         } else if (!q.c(this.content, var1.content)) {
             return false;
          } else {
             return this.inQuote == var1.inQuote;
@@ -76,32 +66,25 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.lang.hashCode();
-      val var3: Int = this.content.hashCode();
-      var var1: Byte = this.inQuote;
-      if (this.inQuote != 0) {
-         var1 = 1;
-      }
-
-      return (var4 * 31 + var3) * 31 + var1;
+      return (this.lang.hashCode() * 31 + this.content.hashCode()) * 31 + java.lang.Boolean.hashCode(this.inQuote);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.lang;
-      val var3: java.lang.String = this.content;
+      val var3: java.lang.String = this.lang;
+      val var4: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CodeBlockContentNode(lang=");
-      var4.append(var2);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(", inQuote=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CodeBlockContentNode(lang=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(", inQuote=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<CodeBlockContentNode> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -120,11 +103,11 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a, h.a};
+         return new KSerializer[]{b2.a, b2.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): CodeBlockContentNode {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          var var2: Int;
@@ -173,15 +156,15 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
       }
 
       public open fun serialize(encoder: Encoder, value: CodeBlockContentNode) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         CodeBlockContentNode.write$Self(var2, var4, var3);
+         CodeBlockContentNode.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -3,7 +3,13 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.f0.a
 
 @f
 internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, reason: String) : ReactEvent {
@@ -25,22 +25,12 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
    public final val source: String
 
    init {
-      r.h(var2, "source");
-      r.h(var3, "reason");
+      q.h(var2, "source");
+      q.h(var3, "reason");
       super();
       this.connectionId = var1;
       this.source = var2;
       this.reason = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: MlsFailureCallbackEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.connectionId);
-      var1.z(var2, 1, var0.source);
-      var1.z(var2, 2, var0.reason);
    }
 
    public operator fun component1(): Int {
@@ -56,8 +46,8 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
    }
 
    public fun copy(connectionId: Int = var0.connectionId, source: String = var0.source, reason: String = var0.reason): MlsFailureCallbackEvent {
-      r.h(var2, "source");
-      r.h(var3, "reason");
+      q.h(var2, "source");
+      q.h(var3, "reason");
       return new MlsFailureCallbackEvent(var1, var2, var3);
    }
 
@@ -70,10 +60,10 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!r.c(this.source, var1.source)) {
+         } else if (!q.c(this.source, var1.source)) {
             return false;
          } else {
-            return r.c(this.reason, var1.reason);
+            return q.c(this.reason, var1.reason);
          }
       }
    }
@@ -89,19 +79,19 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
    public override fun toString(): String {
       val var1: Int = this.connectionId;
       val var2: java.lang.String = this.source;
-      val var3: java.lang.String = this.reason;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MlsFailureCallbackEvent(connectionId=");
-      var4.append(var1);
-      var4.append(", source=");
-      var4.append(var2);
-      var4.append(", reason=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.reason;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MlsFailureCallbackEvent(connectionId=");
+      var3.append(var1);
+      var3.append(", source=");
+      var3.append(var2);
+      var3.append(", reason=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : f0<MlsFailureCallbackEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -122,31 +112,31 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, a2.a, a2.a};
+         return new KSerializer[]{n0.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): MlsFailureCallbackEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: java.lang.String;
-         val var10: java.lang.String;
+         val var7: java.lang.String;
          if (var9.p()) {
-            val var2: Int = var9.i(var8, 0);
-            var6 = var9.m(var8, 1);
-            var10 = var9.m(var8, 2);
-            var3 = 7;
-            var4 = var2;
+            var3 = var9.i(var8, 0);
+            var7 = var9.m(var8, 1);
+            val var10: java.lang.String = var9.m(var8, 2);
+            var2 = 7;
+            var6 = var10;
          } else {
             var6 = null;
             var var11: java.lang.String = null;
-            var var14: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
-            var var12: Int = 0;
+            var2 = 0;
 
-            while (var14) {
+            while (var4) {
                val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -156,40 +146,37 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
                         }
 
                         var6 = var9.m(var8, 2);
-                        var12 |= 4;
+                        var2 |= 4;
                      } else {
                         var11 = var9.m(var8, 1);
-                        var12 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var3 = var9.i(var8, 0);
-                     var12 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var4 = false;
                }
             }
 
-            var10 = var6;
-            var6 = var11;
-            var4 = var3;
-            var3 = var12;
+            var7 = var11;
          }
 
          var9.c(var8);
-         return new MlsFailureCallbackEvent(var3, var4, var6, var10, null);
+         return new MlsFailureCallbackEvent(var2, var3, var7, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         MlsFailureCallbackEvent.write$Self(var2, var4, var3);
+         MlsFailureCallbackEvent.write$Self$media_engine_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

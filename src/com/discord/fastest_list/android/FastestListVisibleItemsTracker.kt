@@ -1,6 +1,7 @@
 package com.discord.fastest_list.android
 
-import kotlin.jvm.internal.r
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
 
 internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutManager,
    sections: FastestListSections,
@@ -34,9 +35,9 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
 
    init {
-      r.h(var1, "layoutManager");
-      r.h(var2, "sections");
-      r.h(var3, "onVisibleItemsChanged");
+      q.h(var1, "layoutManager");
+      q.h(var2, "sections");
+      q.h(var3, "onVisibleItemsChanged");
       super();
       this.layoutManager = var1;
       this.sections = var2;
@@ -54,12 +55,12 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       this.positionEndPrev = var1;
       val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
       val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
-      this.onVisibleItemsChanged.invoke(this.sectionsId, var4.getSection_sZRFyWU(), var3.getSection_sZRFyWU(), var4.getItem_JXkbwXs(), var3.getItem_JXkbwXs());
+      this.onVisibleItemsChanged.invoke(this.sectionsId, var4.getSection-sZRFyWU(), var3.getSection-sZRFyWU(), var4.getItem-JXkbwXs(), var3.getItem-JXkbwXs());
    }
 
    private fun isUnchanged(itemEndPosition: Int, itemStartPosition: Int): Boolean {
       val var3: Boolean;
-      if (r.c(this.sectionsId, this.sections.getId()) && var1 == this.positionEndPrev && var2 == this.positionStartPrev) {
+      if (q.c(this.sectionsId, this.sections.getId()) && var1 == this.positionEndPrev && var2 == this.positionStartPrev) {
          var3 = true;
       } else {
          var3 = false;
@@ -69,37 +70,27 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
    }
 
    public fun updateVisibleItemPositions() {
-      var var2: Int = this.layoutManager.findFirstVisibleItemPosition();
-      var var3: Int = this.layoutManager.findLastVisibleItemPosition();
-      if (var3 != -1 && var2 != -1) {
-         if (this.positionEndPrevRaw == var3 && this.positionStartPrevRaw == var2 && r.c(this.sectionsId, this.sections.getId())) {
+      var var1: Int = this.layoutManager.findFirstVisibleItemPosition();
+      var var2: Int = this.layoutManager.findLastVisibleItemPosition();
+      if (var2 != -1 && var1 != -1) {
+         if (this.positionEndPrevRaw == var2 && this.positionStartPrevRaw == var1 && q.c(this.sectionsId, this.sections.getId())) {
             return;
          }
 
-         this.positionEndPrevRaw = var3;
-         this.positionStartPrevRaw = var2;
-         var var1: Boolean;
+         this.positionEndPrevRaw = var2;
+         this.positionStartPrevRaw = var1;
          if (this.getLastItemPosition() < 0) {
-            var1 = 1;
-         } else {
-            var1 = 0;
-         }
-
-         if (var1) {
-            if (!this.isUnchanged(var3, var2)) {
-               this.computeVisibleItems(var3, var2);
+            if (!this.isUnchanged(var2, var1)) {
+               this.computeVisibleItems(var2, var1);
             }
 
             return;
          }
 
          if (this.getScrollingForward()) {
-            var3 = Math.min(this.getLastItemPosition(), var3 + this.getItemBuffer());
-            var1 = var2;
-            var2 = var3;
+            var2 = Math.min(this.getLastItemPosition(), var2 + this.getItemBuffer());
          } else {
-            var1 = Math.max(0, var2 - this.getItemBuffer());
-            var2 = var3;
+            var1 = Math.max(0, var1 - this.getItemBuffer());
          }
 
          if (this.isUnchanged(var2, var1)) {
@@ -108,8 +99,8 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
          val var6: Int = this.positionEndPrev - this.positionStartPrev;
          var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
-         var3 = var1;
-         var var4: Int = var2;
+         var var4: Int = var1;
+         var var3: Int = var2;
          if (var5 > 0) {
             var5 = Math.min(this.getLastItemPosition(), var2 + var5);
             var3 = var6 - (var5 - var1);
@@ -118,14 +109,14 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
                var2 = Math.max(0, var1 - var3);
             }
 
-            var3 = var2;
-            var4 = var5;
+            var4 = var2;
+            var3 = var5;
             if (this.isUnchanged(var5, var2)) {
                return;
             }
          }
 
-         this.computeVisibleItems(var4, var3);
+         this.computeVisibleItems(var3, var4);
       }
    }
 
@@ -135,17 +126,31 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       NOMINAL(1.0F)
       public final val extraLayoutPercent: Float
       @JvmStatic
-      private FastestListVisibleItemsTracker.RenderAhead[] $VALUES = $values();
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private FastestListVisibleItemsTracker.RenderAhead[] $VALUES;
       @JvmStatic
       public FastestListVisibleItemsTracker.RenderAhead.Companion Companion = new FastestListVisibleItemsTracker.RenderAhead.Companion(null);
+
+      @JvmStatic
+      fun {
+         val var0: Array<FastestListVisibleItemsTracker.RenderAhead> = $values();
+         $VALUES = var0;
+         $ENTRIES = sj.a.a(var0);
+      }
 
       init {
          this.extraLayoutPercent = var3;
       }
 
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
+      }
+
       public companion object {
          public fun create(value: String): com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhead {
-            r.h(var1, "value");
+            q.h(var1, "value");
             val var2: Int = var1.hashCode();
             if (var2 != 3154575) {
                if (var2 != 3194931) {

@@ -1,8 +1,11 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.BurstReactionView.ThemedBurstColorPalette
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -10,10 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
 
 @f
 public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) : ThemedBurstColorPalette {
@@ -21,34 +20,24 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
    public open val light: BurstReactionColorPalette
 
    init {
-      r.h(var1, "light");
-      r.h(var2, "dark");
+      q.h(var1, "light");
+      q.h(var2, "dark");
       super();
       this.light = var1;
       this.dark = var2;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: ThemedBurstReactionColorPalette, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      val var3: BurstReactionColorPalette.$serializer = BurstReactionColorPalette.$serializer.INSTANCE;
-      var1.y(var2, 0, BurstReactionColorPalette.$serializer.INSTANCE, var0.getLight());
-      var1.y(var2, 1, var3, var0.getDark());
-   }
-
    public operator fun component1(): BurstReactionColorPalette {
-      return this.getLight();
+      return this.light;
    }
 
    public operator fun component2(): BurstReactionColorPalette {
-      return this.getDark();
+      return this.dark;
    }
 
-   public fun copy(light: BurstReactionColorPalette = var0.getLight(), dark: BurstReactionColorPalette = var0.getDark()): ThemedBurstReactionColorPalette {
-      r.h(var1, "light");
-      r.h(var2, "dark");
+   public fun copy(light: BurstReactionColorPalette = var0.light, dark: BurstReactionColorPalette = var0.dark): ThemedBurstReactionColorPalette {
+      q.h(var1, "light");
+      q.h(var2, "dark");
       return new ThemedBurstReactionColorPalette(var1, var2);
    }
 
@@ -59,31 +48,31 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.getLight(), var1.getLight())) {
+         if (!q.c(this.light, var1.light)) {
             return false;
          } else {
-            return r.c(this.getDark(), var1.getDark());
+            return q.c(this.dark, var1.dark);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return this.getLight().hashCode() * 31 + this.getDark().hashCode();
+      return this.light.hashCode() * 31 + this.dark.hashCode();
    }
 
    public override fun toString(): String {
-      val var1: BurstReactionColorPalette = this.getLight();
-      val var2: BurstReactionColorPalette = this.getDark();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ThemedBurstReactionColorPalette(light=");
-      var3.append(var1);
-      var3.append(", dark=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: BurstReactionColorPalette = this.light;
+      val var3: BurstReactionColorPalette = this.dark;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ThemedBurstReactionColorPalette(light=");
+      var1.append(var2);
+      var1.append(", dark=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : f0<ThemedBurstReactionColorPalette> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -107,16 +96,16 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
       }
 
       public open fun deserialize(decoder: Decoder): ThemedBurstReactionColorPalette {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
-         var var5: Any;
-         var var9: Any;
+         var var5: BurstReactionColorPalette;
+         var var9: BurstReactionColorPalette;
          if (var7.p()) {
-            var9 = BurstReactionColorPalette.$serializer.INSTANCE;
-            var5 = var7.y(var6, 0, BurstReactionColorPalette.$serializer.INSTANCE, null);
-            var9 = var7.y(var6, 1, (DeserializationStrategy)var9, null);
+            val var8: BurstReactionColorPalette.$serializer = BurstReactionColorPalette.$serializer.INSTANCE;
+            var5 = var7.y(var6, 0, BurstReactionColorPalette.$serializer.INSTANCE, null) as BurstReactionColorPalette;
+            var9 = var7.y(var6, 1, var8, null) as BurstReactionColorPalette;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -132,10 +121,10 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
                         throw new n(var4);
                      }
 
-                     var9 = var7.y(var6, 1, BurstReactionColorPalette.$serializer.INSTANCE, var9);
+                     var9 = var7.y(var6, 1, BurstReactionColorPalette.$serializer.INSTANCE, var9) as BurstReactionColorPalette;
                      var2 |= 2;
                   } else {
-                     var5 = var7.y(var6, 0, BurstReactionColorPalette.$serializer.INSTANCE, var5);
+                     var5 = var7.y(var6, 0, BurstReactionColorPalette.$serializer.INSTANCE, var5) as BurstReactionColorPalette;
                      var2 |= 1;
                   }
                } else {
@@ -145,19 +134,19 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
          }
 
          var7.c(var6);
-         return new ThemedBurstReactionColorPalette(var2, var5 as BurstReactionColorPalette, var9 as BurstReactionColorPalette, null);
+         return new ThemedBurstReactionColorPalette(var2, var5, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ThemedBurstReactionColorPalette) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ThemedBurstReactionColorPalette.write$Self(var2, var4, var3);
+         ThemedBurstReactionColorPalette.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

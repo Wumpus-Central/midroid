@@ -3,21 +3,21 @@ package com.discord.media.utils
 import android.content.Context
 import android.net.Uri
 import com.linkedin.android.litr.MediaTransformer
-import eh.s
 import java.util.LinkedHashMap
-import kh.b
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
+import lj.r
+import lj.s
 
 internal object Transcoder {
    private final val cancelCallbacks: MutableMap<String, () -> Unit> = new LinkedHashMap()
 
    public fun cancel(requestId: String) {
-      r.h(var1, "requestId");
+      q.h(var1, "requestId");
       val var2: Function0 = cancelCallbacks.remove(var1);
       if (var2 != null) {
          var2.invoke();
@@ -25,10 +25,10 @@ internal object Transcoder {
    }
 
    public suspend fun convertCompress(requestId: String, context: Context, mediaSource: DiscordVideoMediaSource, onProgress: (Float) -> Unit = ...): Uri {
-      val var6: e = new e(b.b(var5), 1);
-      var6.D();
+      val var6: e = new e(rj.b.c(var5), 1);
+      var6.F();
       val var8: MediaTransformer = new MediaTransformer(var2);
-      access$getCancelCallbacks$p().put(var1, new Function0<Unit>(var8, var1) {
+      access$getCancelCallbacks$p().put(var1, new Function0(var8, var1) {
          final java.lang.String $requestId;
          final MediaTransformer $transformer;
 
@@ -42,10 +42,10 @@ internal object Transcoder {
             this.$transformer.a(this.$requestId);
          }
       });
-      var8.h(var1, var3.getInputUri(), var3.getOutputUri(), var3.getVideoFormat(), var3.getAudioFormat(), new ve.a(var4, var8, var1, var6, var3) {
-         final CancellableContinuation<Uri> $continuation;
+      var8.h(var1, var3.getInputUri(), var3.getOutputUri(), var3.getVideoFormat(), var3.getAudioFormat(), new ch.a(var4, var8, var1, var6, var3) {
+         final CancellableContinuation $continuation;
          final DiscordVideoMediaSource $mediaSource;
-         final Function1<java.lang.Float, Unit> $onProgress;
+         final Function1 $onProgress;
          final java.lang.String $requestId;
          final MediaTransformer $transformer;
 
@@ -57,48 +57,48 @@ internal object Transcoder {
             this.$mediaSource = var5;
          }
 
-         public void onCancelled(java.lang.String var1, java.util.List<we.a> var2) {
-            r.h(var1, "id");
+         public void onCancelled(java.lang.String var1, java.util.List<dh.a> var2) {
+            q.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            if (this.$continuation.b()) {
+            if (this.$continuation.e()) {
                kotlinx.coroutines.CancellableContinuation.a.a(this.$continuation, null, 1, null);
             }
          }
 
-         public void onCompleted(java.lang.String var1, java.util.List<we.a> var2) {
-            r.h(var1, "id");
+         public void onCompleted(java.lang.String var1, java.util.List<dh.a> var2) {
+            q.h(var1, "id");
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var4: eh.r.a = eh.r.k;
-            this.$continuation.resumeWith(eh.r.b(this.$mediaSource.getOutputUri()));
+            val var4: lj.r.a = r.k;
+            this.$continuation.resumeWith(r.b(this.$mediaSource.getOutputUri()));
          }
 
-         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<we.a> var3) {
-            r.h(var1, "id");
+         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<dh.a> var3) {
+            q.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var4: eh.r.a = eh.r.k;
+            val var4: lj.r.a = r.k;
             var var5: java.lang.Throwable = var2;
             if (var2 == null) {
                var5 = new java.lang.Throwable("Unknown transcoding error");
             }
 
-            this.$continuation.resumeWith(eh.r.b(s.a(var5)));
+            this.$continuation.resumeWith(r.b(s.a(var5)));
          }
 
          public void onProgress(java.lang.String var1, float var2) {
-            r.h(var1, "id");
+            q.h(var1, "id");
             this.$onProgress.invoke(var2);
          }
 
          public void onStarted(java.lang.String var1) {
-            r.h(var1, "id");
+            q.h(var1, "id");
             this.$onProgress.invoke(0.0F);
          }
       }, null);
-      var6.j(new Function1<java.lang.Throwable, Unit>(var1) {
+      var6.c(new Function1(var1) {
          final java.lang.String $requestId;
 
          {
@@ -110,8 +110,8 @@ internal object Transcoder {
             Transcoder.INSTANCE.cancel(this.$requestId);
          }
       });
-      val var7: Any = var6.A();
-      if (var7 === b.c()) {
+      val var7: Any = var6.z();
+      if (var7 === rj.b.f()) {
          g.c(var5);
       }
 

@@ -4,29 +4,30 @@ import com.android.billingclient.api.SkuDetails
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
-import eh.w
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
 
 internal fun List<SkuDetails>.serializeSkuDetails(): ReadableNativeArray {
-   r.h(var0, "<this>");
-   val var1: ArrayList = new ArrayList(h.t(var0, 10));
+   q.h(var0, "<this>");
+   val var1: java.lang.Iterable = var0;
+   val var3: ArrayList = new ArrayList(i.u(var0, 10));
 
-   for (SkuDetails var3 : var0) {
-      var1.add(
+   for (SkuDetails var4 : var1) {
+      var3.add(
          NativeMapExtensionsKt.nativeMapOf(
             new Pair[]{
-               w.a("identifier", var3.e()),
-               w.a("title", var3.g()),
-               w.a("description", var3.a()),
-               w.a("priceString", var3.b()),
-               w.a("currencyCode", var3.d()),
-               w.a("price", (int)(var3.c() / (long)10000)),
-               w.a("type", var3.h())
+               w.a("identifier", var4.e()),
+               w.a("title", var4.g()),
+               w.a("description", var4.a()),
+               w.a("priceString", var4.b()),
+               w.a("currencyCode", var4.d()),
+               w.a("price", (int)(var4.c() / (long)10000)),
+               w.a("type", var4.h())
             }
          )
       );
    }
 
-   return NativeArrayExtensionsKt.toNativeArray(var1);
+   return NativeArrayExtensionsKt.toNativeArray(var3);
 }

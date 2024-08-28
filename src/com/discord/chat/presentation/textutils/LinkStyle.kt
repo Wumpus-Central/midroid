@@ -3,7 +3,7 @@ package com.discord.chat.presentation.textutils
 import com.discord.fonts.DiscordFont
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    linkColor: Int = ThemeManagerKt.getTheme().getTextLink(),
@@ -20,7 +20,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    init {
-      r.h(var1, "font");
+      q.h(var1, "font");
       super();
       this.font = var1;
       this.linkColor = var2;
@@ -50,7 +50,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
       backgroundStyle: LinkBackgroundStyle? = var0.backgroundStyle,
       icon: ReactAsset? = var0.icon
    ): LinkStyle {
-      r.h(var1, "font");
+      q.h(var1, "font");
       return new LinkStyle(var1, var2, var3, var4);
    }
 
@@ -65,7 +65,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
             return false;
          } else if (this.linkColor != var1.linkColor) {
             return false;
-         } else if (!r.c(this.backgroundStyle, var1.backgroundStyle)) {
+         } else if (!q.c(this.backgroundStyle, var1.backgroundStyle)) {
             return false;
          } else {
             return this.icon === var1.icon;
@@ -74,8 +74,8 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.font.hashCode();
-      val var4: Int = Integer.hashCode(this.linkColor);
+      val var4: Int = this.font.hashCode();
+      val var3: Int = Integer.hashCode(this.linkColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.backgroundStyle == null) {
@@ -88,24 +88,24 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
          var2 = this.icon.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
       val var2: DiscordFont = this.font;
       val var1: Int = this.linkColor;
-      val var3: LinkBackgroundStyle = this.backgroundStyle;
-      val var5: ReactAsset = this.icon;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LinkStyle(font=");
-      var4.append(var2);
-      var4.append(", linkColor=");
-      var4.append(var1);
-      var4.append(", backgroundStyle=");
-      var4.append(var3);
-      var4.append(", icon=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: LinkBackgroundStyle = this.backgroundStyle;
+      val var4: ReactAsset = this.icon;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LinkStyle(font=");
+      var3.append(var2);
+      var3.append(", linkColor=");
+      var3.append(var1);
+      var3.append(", backgroundStyle=");
+      var3.append(var5);
+      var3.append(", icon=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

@@ -7,13 +7,13 @@ public class RoleSubscriptionPurchaseViewHolder(roleSubscriptionPurchaseView: Ro
    private final val roleSubscriptionPurchaseView: RoleSubscriptionPurchaseView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "roleSubscriptionPurchaseView");
+      kotlin.jvm.internal.q.h(var1, "roleSubscriptionPurchaseView");
       super(var1, null);
       this.roleSubscriptionPurchaseView = var1;
    }
 
    public fun bind(accessory: RoleSubscriptionPurchaseAccessory, widthPx: Int) {
-      kotlin.jvm.internal.r.h(var1, "accessory");
+      kotlin.jvm.internal.q.h(var1, "accessory");
       this.roleSubscriptionPurchaseView.configure(var1.getAuthorUsername(), var1.getAuthorAvatar(), var2);
    }
 }

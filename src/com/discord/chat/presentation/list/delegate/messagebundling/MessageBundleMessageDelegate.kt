@@ -12,13 +12,13 @@ import com.discord.chat.presentation.message.MessageView
 import com.discord.chat.presentation.message.MessageView.ChainPart
 import com.discord.chat.presentation.root.MessageContext
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) : MessageBundleBaseDelegate {
    public final var messageAccessoriesViewPool: RecycledViewPool?
 
    init {
-      r.h(var1, "onMeasured");
+      q.h(var1, "onMeasured");
       super(var1);
    }
 
@@ -39,37 +39,31 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
    }
 
    public open fun createView(context: Context): MessageView {
-      r.h(var1, "context");
+      q.h(var1, "context");
       return new MessageView(var1, null, 2, null);
    }
 
    protected open fun isForViewType(items: List<MessageBundleItem>, position: Int): Boolean {
-      r.h(var1, "items");
+      q.h(var1, "items");
       return var1.get(var2) is MessageBundleMessageItem;
    }
 
    public override fun onBindViewHolder(view: View, item: MessageBundleItem, items: List<MessageBundleItem>, position: Int) {
-      r.h(var1, "view");
-      r.h(var2, "item");
-      r.h(var3, "items");
+      q.h(var1, "view");
+      q.h(var2, "item");
+      q.h(var3, "items");
       if (var1 is MessageView) {
          if (var2 is MessageBundleMessageItem) {
             val var12: MessageView = var1 as MessageView;
-            val var8: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
+            val var13: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
             val var7: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
             val var9: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
-            val var13: MessageFrame = var8.getMessageItem().getMessageFrame();
-            val var11: MessageItem = var8.getMessageItem();
-            val var10: Context = var12.getContext();
-            r.g(var10, "view.context");
+            val var8: MessageFrame = var13.getMessageItem().getMessageFrame();
+            val var10: MessageItem = var13.getMessageItem();
+            val var11: Context = var12.getContext();
+            q.g(var11, "getContext(...)");
             MessageView.setMessage$default(
-               var12,
-               var7,
-               var9,
-               var13,
-               MessageBundleDelegateUtilsKt.getEventHandler(var11, var10),
-               null,
-               new Function0<MessageView.ChainPart>(this, var3, var4) {
+               var12, var7, var9, var8, MessageBundleDelegateUtilsKt.getEventHandler(var10, var11), null, new Function0(this, var3, var4) {
                   final java.util.List<MessageBundleItem> $items;
                   final int $position;
                   final MessageBundleMessageDelegate this$0;
@@ -84,12 +78,7 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
                   public final MessageView.ChainPart invoke() {
                      return MessageBundleMessageDelegate.access$getChainPart(this.this$0, this.$items, this.$position);
                   }
-               },
-               false,
-               var8.getMessageItem().isHighlight(),
-               var8.getMessageItem().getRenderContentOnly(),
-               80,
-               null
+               }, false, var13.getMessageItem().isHighlight(), var13.getMessageItem().getRenderContentOnly(), 80, null
             );
             if (this.messageAccessoriesViewPool != null) {
                var12.setAccessoriesRecycledViewPool(this.messageAccessoriesViewPool);

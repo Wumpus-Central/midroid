@@ -2,11 +2,13 @@ package com.discord.chat.bridge.polls
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import eh.l
-import eh.o
-import kotlin.jvm.internal.h0
+import dn.f
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.g0
 import kotlinx.serialization.KSerializer
-import uk.f
+import lj.l
+import lj.o
+import sj.a
 
 @f(with = ShadowType.Serializer::class)
 public enum class ShadowType(serialNumber: Int, elevationDp: Int) : IntEnum {
@@ -16,22 +18,36 @@ public enum class ShadowType(serialNumber: Int, elevationDp: Int) : IntEnum {
    public final val elevationDp: Int
    public open val serialNumber: Int
    @JvmStatic
-   private ShadowType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private ShadowType[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public ShadowType.Companion Companion = new ShadowType.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<ShadowType> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.serialNumber = var3;
       this.elevationDp = var4;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<ShadowType> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<ShadowType>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object Serializer : IntEnumSerializer(h0.b(ShadowType.class), ShadowType.NONE)
+   public object Serializer : IntEnumSerializer(g0.b(ShadowType.class), ShadowType.NONE)
 }

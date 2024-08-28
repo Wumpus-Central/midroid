@@ -7,8 +7,8 @@ public class AttachmentUploadOverlayViewManager {
    private final var attachmentUploadOverlayView: AttachmentUploadOverlayView?
 
    public fun configureAttachmentOverlay(rootView: View, containerView: ConstraintLayout, radiusPx: Int, uploadItemProps: UploadItemProps?) {
-      kotlin.jvm.internal.r.h(var1, "rootView");
-      kotlin.jvm.internal.r.h(var2, "containerView");
+      kotlin.jvm.internal.q.h(var1, "rootView");
+      kotlin.jvm.internal.q.h(var2, "containerView");
       if (var4 == null) {
          var1.setAlpha(1.0F);
          if (this.attachmentUploadOverlayView != null) {

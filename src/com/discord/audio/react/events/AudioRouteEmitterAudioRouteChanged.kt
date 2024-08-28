@@ -3,7 +3,13 @@ package com.discord.audio.react.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.h
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.h
-import xk.f0.a
 
 @f
 internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multipleRoutesAvailable: Boolean) : ReactEvent {
@@ -24,19 +24,10 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    public final val routeType: String
 
    init {
-      r.h(var1, "routeType");
+      q.h(var1, "routeType");
       super();
       this.routeType = var1;
       this.multipleRoutesAvailable = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: AudioRouteEmitterAudioRouteChanged, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.routeType);
-      var1.x(var2, 1, var0.multipleRoutesAvailable);
    }
 
    public operator fun component1(): String {
@@ -48,7 +39,7 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    }
 
    public fun copy(routeType: String = var0.routeType, multipleRoutesAvailable: Boolean = var0.multipleRoutesAvailable): AudioRouteEmitterAudioRouteChanged {
-      r.h(var1, "routeType");
+      q.h(var1, "routeType");
       return new AudioRouteEmitterAudioRouteChanged(var1, var2);
    }
 
@@ -59,7 +50,7 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.routeType, var1.routeType)) {
+         if (!q.c(this.routeType, var1.routeType)) {
             return false;
          } else {
             return this.multipleRoutesAvailable == var1.multipleRoutesAvailable;
@@ -68,13 +59,7 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.routeType.hashCode();
-      var var1: Byte = this.multipleRoutesAvailable;
-      if (this.multipleRoutesAvailable != 0) {
-         var1 = 1;
-      }
-
-      return var3 * 31 + var1;
+      return this.routeType.hashCode() * 31 + java.lang.Boolean.hashCode(this.multipleRoutesAvailable);
    }
 
    fun serialize(): WritableMap {
@@ -82,18 +67,18 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.routeType;
+      val var3: java.lang.String = this.routeType;
       val var1: Boolean = this.multipleRoutesAvailable;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AudioRouteEmitterAudioRouteChanged(routeType=");
-      var3.append(var2);
-      var3.append(", multipleRoutesAvailable=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AudioRouteEmitterAudioRouteChanged(routeType=");
+      var2.append(var3);
+      var2.append(", multipleRoutesAvailable=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<AudioRouteEmitterAudioRouteChanged> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -113,11 +98,11 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, h.a};
+         return new KSerializer[]{b2.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): AudioRouteEmitterAudioRouteChanged {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
@@ -158,15 +143,15 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
       }
 
       public open fun serialize(encoder: Encoder, value: AudioRouteEmitterAudioRouteChanged) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         AudioRouteEmitterAudioRouteChanged.write$Self(var2, var4, var3);
+         AudioRouteEmitterAudioRouteChanged.write$Self$audio_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

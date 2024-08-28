@@ -5,14 +5,12 @@ import com.discord.logging.Log
 import com.facebook.react.bridge.Promise
 import java.io.File
 import java.util.TimerTask
-import kk.f
-import kk.w0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
+import tm.g
+import tm.s0
 
 public object JSWatchdogManager {
    private final lateinit var cacheDir: File
@@ -38,47 +36,40 @@ public object JSWatchdogManager {
 
    private fun saveStallReport(stallTime: Int, sessionId: String, enableTrace: Boolean) {
       if (storage != null) {
-         var var6: JSWatchdogStorage;
-         var var10: java.lang.String;
-         label38: {
-            var6 = null;
+         var var5: JSWatchdogStorage;
+         var var9: java.lang.String;
+         label40: {
+            var5 = null;
             if (var3) {
-               var var5: JSWatchdogStorage = storage;
+               var var4: JSWatchdogStorage = storage;
                if (storage == null) {
-                  r.y("storage");
-                  var5 = null;
+                  q.y("storage");
+                  var4 = null;
                }
 
-               var10 = var5.getTrace();
-               val var4: Boolean;
-               if (var10 != null && var10.length() != 0) {
-                  var4 = false;
-               } else {
-                  var4 = true;
-               }
-
-               if (var4) {
-                  var var11: File = cacheDir;
+               var9 = var4.getTrace();
+               if (var9 == null || var9.length() == 0) {
+                  var var10: File = cacheDir;
                   if (cacheDir == null) {
-                     r.y("cacheDir");
-                     var11 = null;
+                     q.y("cacheDir");
+                     var10 = null;
                   }
 
-                  var10 = HermesSamplingProfilerUtil.INSTANCE.findSampleTrace(var11);
-                  break label38;
+                  var9 = HermesSamplingProfilerUtil.INSTANCE.findSampleTrace(var10);
+                  break label40;
                }
             }
 
-            var10 = null;
+            var9 = null;
          }
 
          if (storage == null) {
-            r.y("storage");
+            q.y("storage");
          } else {
-            var6 = storage;
+            var5 = storage;
          }
 
-         var6.update(var1, var2, var10);
+         var5.update(var1, var2, var9);
       }
    }
 
@@ -97,7 +88,7 @@ public object JSWatchdogManager {
       if (storage != null) {
          var var3: JSWatchdogStorage = storage;
          if (storage == null) {
-            r.y("storage");
+            q.y("storage");
             var3 = null;
          }
 
@@ -120,13 +111,13 @@ public object JSWatchdogManager {
 
    public fun initialize(context: Context) {
       label13: {
-         r.h(var1, "context");
+         q.h(var1, "context");
          synchronized (this){} // $VF: monitorenter 
 
          try {
             storage = JSWatchdogStorage.Companion.getInstance(var1);
             val var4: File = var1.getCacheDir();
-            r.g(var4, "context.cacheDir");
+            q.g(var4, "getCacheDir(...)");
             cacheDir = var4;
          } catch (var2: java.lang.Throwable) {
             // $VF: monitorexit
@@ -137,21 +128,20 @@ public object JSWatchdogManager {
    }
 
    public fun ping(resetTimestamps: Boolean, sentTimestamp: Long, sessionId: String, enableTrace: Boolean, promise: Promise) {
-      r.h(var4, "sessionId");
-      r.h(var6, "promise");
+      q.h(var4, "sessionId");
+      q.h(var6, "promise");
       this.cancelExistingJobs();
-      pingCoroutineJob = f.d(
-         w0.j,
+      pingCoroutineJob = g.d(
+         s0.j,
          null,
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var2, var6, var4, var5, null)// $VF: Couldn't be decompiled
+         new Function2(var1, var2, var6, var4, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1171,6 +1161,7 @@ public object JSWatchdogManager {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null

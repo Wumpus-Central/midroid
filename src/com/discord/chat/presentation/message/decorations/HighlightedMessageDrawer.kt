@@ -7,7 +7,7 @@ import android.graphics.Paint.Style
 import android.view.View
 import com.discord.chat.R
 import com.discord.chat.presentation.list.item.ChatListItem
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class HighlightedMessageDrawer(context: Context,
    cellHighlightColor: (ChatListItem) -> Int?,
@@ -24,44 +24,45 @@ public open class HighlightedMessageDrawer(context: Context,
    public final val shouldRenderHighlight: (ChatListItem) -> Boolean
 
    init {
-      r.h(var1, "context");
-      r.h(var2, "cellHighlightColor");
-      r.h(var3, "gutterColor");
-      r.h(var4, "shouldRenderHighlight");
+      q.h(var1, "context");
+      q.h(var2, "cellHighlightColor");
+      q.h(var3, "gutterColor");
+      q.h(var4, "shouldRenderHighlight");
       super();
       this.cellHighlightColor = var2;
       this.gutterColor = var3;
       this.shouldRenderHighlight = var4;
       this.gutterWidth = var1.getResources().getDimensionPixelSize(R.dimen.message_gutter_width);
-      val var5: Paint = new Paint();
-      var5.setStyle(Style.FILL);
-      this.backgroundPaint = var5;
       val var6: Paint = new Paint();
+      val var5: Style = Style.FILL;
       var6.setStyle(Style.FILL);
-      this.gutterPaint = var6;
+      this.backgroundPaint = var6;
+      val var7: Paint = new Paint();
+      var7.setStyle(var5);
+      this.gutterPaint = var7;
    }
 
    public fun drawHighlight(canvas: Canvas, child: View, topSpacing: Int = 0, bottomSpacing: Int = 0) {
-      r.h(var1, "canvas");
-      r.h(var2, "child");
-      val var6: Float = HighlightedMessageDrawerKt.access$getTranslatedLeft(var2);
-      val var5: Float = HighlightedMessageDrawerKt.access$getTranslatedRight(var2);
-      val var7: Float = HighlightedMessageDrawerKt.access$getTranslatedTop(var2) - var3;
-      val var8: Float = HighlightedMessageDrawerKt.access$getTranslatedBottom(var2) + var4;
+      q.h(var1, "canvas");
+      q.h(var2, "child");
+      val var7: Float = HighlightedMessageDrawerKt.access$getTranslatedLeft(var2);
+      val var6: Float = HighlightedMessageDrawerKt.access$getTranslatedRight(var2);
+      val var8: Float = HighlightedMessageDrawerKt.access$getTranslatedTop(var2) - var3;
+      val var5: Float = HighlightedMessageDrawerKt.access$getTranslatedBottom(var2) + var4;
       if (this.backgroundPaintColor != null) {
          this.backgroundPaint.setColor(this.backgroundPaintColor.intValue());
-         var1.drawRect(var6, var7, var5, var8, this.backgroundPaint);
+         var1.drawRect(var7, var8, var6, var5, this.backgroundPaint);
       }
 
       if (this.gutterPaintColor != null) {
          this.gutterPaint.setColor(this.gutterPaintColor.intValue());
-         var1.drawRect(var6, var7, var6 + (float)this.gutterWidth, var8, this.gutterPaint);
+         var1.drawRect(var7, var8, var7 + (float)this.gutterWidth, var5, this.gutterPaint);
       }
    }
 
    public fun setPaintStyles(chatListItem: ChatListItem) {
-      r.h(var1, "chatListItem");
-      this.backgroundPaintColor = this.cellHighlightColor.invoke(var1) as Integer;
-      this.gutterPaintColor = this.gutterColor.invoke(var1) as Integer;
+      q.h(var1, "chatListItem");
+      this.backgroundPaintColor = this.cellHighlightColor.invoke(var1) as Int;
+      this.gutterPaintColor = this.gutterColor.invoke(var1) as Int;
    }
 }

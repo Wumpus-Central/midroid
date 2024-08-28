@@ -1,4 +1,5 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-public final class m {
+// $VF: synthetic class
+public abstract class m {
 }

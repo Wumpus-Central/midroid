@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.InlineForwardButtonView;
-import n1.a;
+import v2.a;
 
 public final class AttachmentMediaMosaicContainerViewBinding implements ViewBinding {
    public final InlineForwardButtonView forward;
@@ -43,6 +43,7 @@ public final class AttachmentMediaMosaicContainerViewBinding implements ViewBind
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

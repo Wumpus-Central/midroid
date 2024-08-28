@@ -9,13 +9,13 @@ public class TimestampViewHolder(timestampView: TextView) : MessagePartViewHolde
    private final val timestampView: TextView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "timestampView");
+      kotlin.jvm.internal.q.h(var1, "timestampView");
       super(var1, null);
       this.timestampView = var1;
    }
 
    public fun bind(timestampItem: TimestampMessageAccessory) {
-      kotlin.jvm.internal.r.h(var1, "timestampItem");
+      kotlin.jvm.internal.q.h(var1, "timestampItem");
       this.timestampView.setText(var1.getTimestamp());
       SetTextSizeSpKt.setTextSizeSp(this.timestampView, 12.0F);
       this.timestampView.setTextColor(var1.getTextColor());

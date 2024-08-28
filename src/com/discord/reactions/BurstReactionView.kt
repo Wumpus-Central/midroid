@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.TextSwitcher
 import android.widget.TextView
-import androidx.core.graphics.f0
 import com.discord.SetTextSizeSpKt
 import com.discord.emoji.RenderableEmoji
 import com.discord.emoji.RenderableEmojiKt
@@ -18,10 +17,9 @@ import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.databinding.ReactionViewBinding
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class BurstReactionView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final val binding: ReactionViewBinding
@@ -30,15 +28,15 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
    private final var currentShouldAnimate: Boolean?
 
    fun BurstReactionView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
       val var4: ReactionViewBinding = ReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var4, "inflate(\n        LayoutI…ext),\n        this,\n    )");
+      q.g(var4, "inflate(...)");
       this.binding = var4;
       this.setOrientation(0);
       this.setGravity(16);
@@ -46,17 +44,17 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
       this.setMinimumWidth(ReactionView.Companion.getMINIMUM_WIDTH());
       this.setPadding(var5.getHORIZ_PADDING(), 0, var5.getHORIZ_PADDING(), 0);
       var var3: TextView = var4.reactionCount1;
-      r.g(var4.reactionCount1, "binding.reactionCount1");
+      q.g(var4.reactionCount1, "reactionCount1");
       val var6: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
       var3 = var4.reactionCount1;
-      r.g(var4.reactionCount1, "binding.reactionCount1");
+      q.g(var4.reactionCount1, "reactionCount1");
       SetTextSizeSpKt.setTextSizeSp(var3, 14.0F, 14.0F);
       var3 = var4.reactionCount2;
-      r.g(var4.reactionCount2, "binding.reactionCount2");
+      q.g(var4.reactionCount2, "reactionCount2");
       DiscordFontUtilsKt.setDiscordFont(var3, var6);
       val var7: TextView = var4.reactionCount2;
-      r.g(var4.reactionCount2, "binding.reactionCount2");
+      q.g(var4.reactionCount2, "reactionCount2");
       SetTextSizeSpKt.setTextSizeSp(var7, 14.0F, 14.0F);
       var4.reactionCountSwitcher.setMeasureAllChildren(false);
    }
@@ -64,7 +62,7 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.BurstReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = sh.a.b(var2.getOpacity() * (float)255);
+         var3 = ak.a.b(var2.getOpacity() * (float)255);
       }
 
       var var13: Int;
@@ -72,7 +70,7 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
          if (var2 != null) {
             val var5: java.lang.String = var2.getBackgroundColor();
             if (var5 != null) {
-               var13 = f0.k(Color.parseColor(var5), var3);
+               var13 = androidx.core.graphics.c.k(Color.parseColor(var5), var3);
                break label41;
             }
          }
@@ -96,8 +94,8 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
          var3 = var13;
       } else if (var1) {
          val var14: Context = this.getContext();
-         r.g(var14, "context");
-         var3 = ColorUtilsKt.getColorCompat(var14, color.brand_new_500_alpha_20);
+         q.g(var14, "getContext(...)");
+         var3 = ColorUtilsKt.getColorCompat(var14, com.discord.theme.R.color.brand_new_500_alpha_20);
       } else {
          var3 = ThemeManagerKt.getTheme().getBackgroundSecondary();
       }
@@ -109,8 +107,8 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
             var4 = var8;
          } else {
             val var9: Context = this.getContext();
-            r.g(var9, "context");
-            var4 = ColorUtilsKt.getColorCompat(var9, color.brand_560);
+            q.g(var9, "getContext(...)");
+            var4 = ColorUtilsKt.getColorCompat(var9, com.discord.theme.R.color.brand_560);
          }
 
          var13 = var4;
@@ -120,7 +118,7 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
    }
 
    private fun configureCount(count: Int, animate: Boolean) {
-      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var4: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var2) {
          val var3: Int;
          if (this.currentCount != null) {
@@ -131,13 +129,13 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
 
          if (var1 > var3) {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_up);
-            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
+            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_up);
          } else {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_down);
-            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
+            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_down);
          }
 
-         var5.setText(java.lang.String.valueOf(var1));
+         var4.setText(java.lang.String.valueOf(var1));
       } else {
          this.binding.reactionCountSwitcher.setCurrentText(java.lang.String.valueOf(var1));
       }
@@ -165,47 +163,58 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
    }
 
    public fun setReaction(reaction: Reaction) {
-      r.h(var1, "reaction");
+      q.h(var1, "reaction");
       this.binding.getRoot().setContentDescription(var1.getEmoji().getDisplayName());
-      val var6: Boolean = r.c(this.currentEmojiId, var1.getEmoji().getEmojiId());
-      var var5: Boolean = true;
       val var2: Boolean;
-      if (var6 && r.c(this.currentShouldAnimate, var1.getEmoji().getShouldAnimate())) {
+      if (q.c(this.currentEmojiId, var1.getEmoji().getEmojiId()) && q.c(this.currentShouldAnimate, var1.getEmoji().getShouldAnimate())) {
          var2 = true;
       } else {
          var2 = false;
       }
 
       val var3: Int = var1.getBurstCount();
-      if (!var2 || this.currentCount == null || this.currentCount != null && var1.getBurstCount() == this.currentCount) {
-         var5 = false;
+      var var10: Boolean = false;
+      if (var2) {
+         var10 = false;
+         label32:
+         if (this.currentCount != null) {
+            val var4: Int = var1.getBurstCount();
+            if (this.currentCount != null) {
+               var10 = false;
+               if (var4 == this.currentCount) {
+                  break label32;
+               }
+            }
+
+            var10 = true;
+         }
       }
 
-      this.configureCount(var3, var5);
-      var5 = ThemeManager.INSTANCE.isThemeDark();
-      var var11: BurstReactionView.BurstColorPalette = null;
-      if (var5) {
+      this.configureCount(var3, var10);
+      var10 = ThemeManager.INSTANCE.isThemeDark();
+      var var12: BurstReactionView.BurstColorPalette = null;
+      if (var10) {
          val var8: BurstReactionView.ThemedBurstColorPalette = var1.getThemedBurstColors();
          if (var8 != null) {
-            var11 = var8.getDark();
+            var12 = var8.getDark();
          }
       } else {
-         val var13: BurstReactionView.ThemedBurstColorPalette = var1.getThemedBurstColors();
-         if (var13 != null) {
-            var11 = var13.getLight();
+         val var14: BurstReactionView.ThemedBurstColorPalette = var1.getThemedBurstColors();
+         if (var14 != null) {
+            var12 = var14.getLight();
          }
       }
 
-      this.configureBackground(var1.isMeBurst(), var11);
-      this.configureTextColor(var11);
+      this.configureBackground(var1.isMeBurst(), var12);
+      this.configureTextColor(var12);
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var2) {
-         val var14: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var9: RenderableEmoji = var1.getEmoji().renderable();
-         val var12: Context = this.getContext();
-         r.g(var12, "context");
-         var14.setDraweeSpanStringBuilder(
-            RenderableEmojiKt.renderEmoji$default(var9, var12, ReactionView.Companion.getEMOJI_SIZE(), var1.getEmoji().getShouldAnimate(), 0, null, 48, null)
+         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var13: RenderableEmoji = var1.getEmoji().renderable();
+         val var15: Context = this.getContext();
+         q.g(var15, "getContext(...)");
+         var9.setDraweeSpanStringBuilder(
+            RenderableEmojiKt.renderEmoji$default(var13, var15, ReactionView.Companion.getEMOJI_SIZE(), var1.getEmoji().getShouldAnimate(), 0, null, 48, null)
          );
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }

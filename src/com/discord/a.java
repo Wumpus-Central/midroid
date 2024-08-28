@@ -1,4 +1,5 @@
 package com.discord;
 
-public final class a {
+// $VF: synthetic class
+public abstract class a {
 }

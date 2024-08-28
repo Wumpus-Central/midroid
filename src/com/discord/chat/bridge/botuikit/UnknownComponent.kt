@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.f0.a
 
 @f
 public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component {
@@ -25,54 +25,22 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
    }
 
    init {
-      r.h(var2, "id");
+      q.h(var2, "id");
       super(null);
       this.type = var1;
       this.id = var2;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: UnknownComponent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.getType() == 0) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.w(var2, 0, var0.getType());
-      }
-
-      label24: {
-         if (!var1.A(var2, 1)) {
-            var3 = false;
-            if (r.c(var0.getId(), "-1")) {
-               break label24;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.z(var2, 1, var0.getId());
-      }
-   }
-
    public operator fun component1(): Int {
-      return this.getType();
+      return this.type;
    }
 
    public operator fun component2(): String {
-      return this.getId();
+      return this.id;
    }
 
-   public fun copy(type: Int = var0.getType(), id: String = var0.getId()): UnknownComponent {
-      r.h(var2, "id");
+   public fun copy(type: Int = var0.type, id: String = var0.id): UnknownComponent {
+      q.h(var2, "id");
       return new UnknownComponent(var1, var2);
    }
 
@@ -83,31 +51,31 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
          return false;
       } else {
          var1 = var1;
-         if (this.getType() != var1.getType()) {
+         if (this.type != var1.type) {
             return false;
          } else {
-            return r.c(this.getId(), var1.getId());
+            return q.c(this.id, var1.id);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return Integer.hashCode(this.getType()) * 31 + this.getId().hashCode();
+      return Integer.hashCode(this.type) * 31 + this.id.hashCode();
    }
 
    public override fun toString(): String {
-      val var1: Int = this.getType();
-      val var2: java.lang.String = this.getId();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UnknownComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: Int = this.type;
+      val var3: java.lang.String = this.id;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UnknownComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<UnknownComponent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -125,11 +93,11 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, a2.a};
+         return new KSerializer[]{n0.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): UnknownComponent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
@@ -170,15 +138,15 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
       }
 
       public open fun serialize(encoder: Encoder, value: UnknownComponent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         UnknownComponent.write$Self(var2, var4, var3);
+         UnknownComponent.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

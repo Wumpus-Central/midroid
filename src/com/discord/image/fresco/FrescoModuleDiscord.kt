@@ -5,12 +5,12 @@ import com.discord.image.fresco.config.FrescoConfigKt
 import com.discord.image.fresco.config.FrescoMemoryTrimmer
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.fresco.FrescoModule
-import kotlin.jvm.internal.r
-import l4.c
+import kotlin.jvm.internal.q
+import w5.c
 
 public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : FrescoModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -25,7 +25,7 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
    public open fun initialize() {
       val var2: FrescoModuleDiscord.Companion = Companion;
       val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
+      q.g(var1, "getReactApplicationContext(...)");
       var2.initializeFresco(var1);
       this.initializeSkinny();
    }
@@ -56,44 +56,37 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
          // 00: aload 0
          // 01: monitorenter
          // 02: invokestatic com/discord/image/fresco/FrescoModuleDiscord.access$isFrescoExternallyInitialized$cp ()Z
-         // 05: ifne 18
+         // 05: ifne 1c
          // 08: invokestatic com/facebook/react/modules/fresco/FrescoModule.hasBeenInitialized ()Z
          // 0b: istore 1
          // 0c: iload 1
          // 0d: ifeq 13
-         // 10: goto 18
+         // 10: goto 1c
          // 13: bipush 0
          // 14: istore 1
-         // 15: goto 1a
-         // 18: bipush 1
-         // 19: istore 1
-         // 1a: aload 0
-         // 1b: monitorexit
-         // 1c: iload 1
-         // 1d: ireturn
-         // 1e: astore 2
-         // 1f: aload 0
-         // 20: monitorexit
-         // 21: aload 2
-         // 22: athrow
+         // 15: goto 1e
+         // 18: astore 2
+         // 19: goto 22
+         // 1c: bipush 1
+         // 1d: istore 1
+         // 1e: aload 0
+         // 1f: monitorexit
+         // 20: iload 1
+         // 21: ireturn
+         // 22: aload 0
+         // 23: monitorexit
+         // 24: aload 2
+         // 25: athrow
       }
 
       public fun initializeFresco(context: Context) {
-         label17: {
-            synchronized (this){} // $VF: monitorenter 
-
-            try {
-               r.h(var1, "context");
-               if (!this.isFrescoInitialized()) {
-                  FrescoModuleDiscord.access$setFrescoExternallyInitialized$cp(true);
-                  c.c(var1, FrescoConfigKt.frescoConfig(var1));
-                  FrescoMemoryTrimmer.INSTANCE.initialize(var1);
-               }
-            } catch (var2: java.lang.Throwable) {
-               // $VF: monitorexit
+         synchronized (this) {
+            q.h(var1, "context");
+            if (!this.isFrescoInitialized()) {
+               FrescoModuleDiscord.access$setFrescoExternallyInitialized$cp(true);
+               c.c(var1, FrescoConfigKt.frescoConfig(var1));
+               FrescoMemoryTrimmer.INSTANCE.initialize(var1);
             }
-
-            // $VF: monitorexit
          }
       }
    }

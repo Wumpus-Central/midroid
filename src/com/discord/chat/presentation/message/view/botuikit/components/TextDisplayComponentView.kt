@@ -20,25 +20,25 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.react.FontManager
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
 public class TextDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
    ComponentView<TextDisplayComponent> {
    fun TextDisplayComponentView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun TextDisplayComponentView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
    }
 
@@ -48,44 +48,44 @@ public class TextDisplayComponentView  public constructor(context: Context, attr
       componentActionListener: ComponentActionListener,
       componentContext: ComponentContext
    ) {
-      r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentActionListener");
-      r.h(var4, "componentContext");
+      q.h(var1, "component");
+      q.h(var2, "componentProvider");
+      q.h(var3, "componentActionListener");
+      q.h(var4, "componentContext");
       val var9: MessageComponentTextDisplayViewBinding = MessageComponentTextDisplayViewBinding.bind(this);
-      r.g(var9, "bind(this)");
+      q.g(var9, "bind(...)");
       val var10: Context = this.getContext();
-      r.g(var10, "context");
+      q.g(var10, "getContext(...)");
       val var11: MessageContentView = new MessageContentView(var10, null, 0, 6, null);
       var11.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      val var6: Context = this.getContext();
-      r.g(var6, "context");
+      var var6: Context = this.getContext();
+      q.g(var6, "getContext(...)");
       SetTextSizeSpKt.setTextSizeSp(var11, (float)MessageUtilsKt.getChatTextSizeSp(var6));
       DiscordFontUtilsKt.setDiscordFont(var11, DiscordFont.PrimaryMedium);
-      val var12: TextPaint = var11.getPaint();
-      r.g(var12, "view.paint");
+      val var8: TextPaint = var11.getPaint();
+      q.g(var8, "getPaint(...)");
       val var7: FontManager = FontManager.INSTANCE;
-      val var8: Context = this.getContext();
-      r.g(var8, "context");
+      var6 = this.getContext();
+      q.g(var6, "getContext(...)");
       var11.setMessageContent(
          var1.getContent(),
          var4.getMarkdownTextRenderOptions(),
          var4.getMarkdownTextRenderEventHandlers(),
-         TextUtilsKt.getBaselineHeightForFontSizePx(var12, var7.getScaledSpToPx(16, var8))
+         TextUtilsKt.getBaselineHeightForFontSizePx(var8, var7.getScaledSpToPx(16, var6))
       );
       var9.getRoot().addView(var11);
    }
 
    public override fun getComponentType(): KClass<TextDisplayComponent> {
-      return h0.b(TextDisplayComponent.class);
+      return g0.b(TextDisplayComponent.class);
    }
 
    public companion object {
       public fun inflateComponent(context: Context, root: ViewGroup): TextDisplayComponentView {
-         r.h(var1, "context");
-         r.h(var2, "root");
+         q.h(var1, "context");
+         q.h(var2, "root");
          val var3: TextDisplayComponentView = MessageComponentTextDisplayViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
-         r.g(var3, "inflate(\n               …false,\n            ).root");
+         q.g(var3, "getRoot(...)");
          return var3;
       }
    }

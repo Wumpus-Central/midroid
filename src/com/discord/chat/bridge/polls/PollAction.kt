@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.polls
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.h
+import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -9,12 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.h
 
 @f
 public data class PollAction(label: String,
@@ -32,8 +32,8 @@ public data class PollAction(label: String,
    public final val type: String?
 
    init {
-      r.h(var1, "label");
-      r.h(var2, "presentation");
+      q.h(var1, "label");
+      q.h(var2, "presentation");
       super();
       this.label = var1;
       this.presentation = var2;
@@ -41,51 +41,6 @@ public data class PollAction(label: String,
       this.type = var4;
       this.secondaryLabel = var5;
       this.accessibilityHint = var6;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: PollAction, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.label);
-      var1.y(var2, 1, PollActionPresentation.Companion.serializer(), var0.presentation);
-      var1.x(var2, 2, var0.enabled);
-      var var3: Boolean;
-      if (!var1.A(var2, 3) && var0.type == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 3, a2.a, var0.type);
-      }
-
-      if (!var1.A(var2, 4) && var0.secondaryLabel == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 4, a2.a, var0.secondaryLabel);
-      }
-
-      label32: {
-         if (!var1.A(var2, 5)) {
-            var3 = false;
-            if (var0.accessibilityHint == null) {
-               break label32;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 5, a2.a, var0.accessibilityHint);
-      }
    }
 
    public operator fun component1(): String {
@@ -120,8 +75,8 @@ public data class PollAction(label: String,
       secondaryLabel: String? = var0.secondaryLabel,
       accessibilityHint: String? = var0.accessibilityHint
    ): PollAction {
-      r.h(var1, "label");
-      r.h(var2, "presentation");
+      q.h(var1, "label");
+      q.h(var2, "presentation");
       return new PollAction(var1, var2, var3, var4, var5, var6);
    }
 
@@ -132,91 +87,87 @@ public data class PollAction(label: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.label, var1.label)) {
+         if (!q.c(this.label, var1.label)) {
             return false;
          } else if (this.presentation != var1.presentation) {
             return false;
          } else if (this.enabled != var1.enabled) {
             return false;
-         } else if (!r.c(this.type, var1.type)) {
+         } else if (!q.c(this.type, var1.type)) {
             return false;
-         } else if (!r.c(this.secondaryLabel, var1.secondaryLabel)) {
+         } else if (!q.c(this.secondaryLabel, var1.secondaryLabel)) {
             return false;
          } else {
-            return r.c(this.accessibilityHint, var1.accessibilityHint);
+            return q.c(this.accessibilityHint, var1.accessibilityHint);
          }
       }
    }
 
    public fun getFullTextLabel(): String {
-      val var3: java.lang.String = this.secondaryLabel;
+      val var1: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
          val var2: java.lang.String = this.label;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append(var2);
-         var1.append("  •  ");
-         var1.append(var3);
-         return var1.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append("  •  ");
+         var3.append(var1);
+         return var3.toString();
       }
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.label.hashCode();
-      val var5: Int = this.presentation.hashCode();
-      var var1: Byte = this.enabled;
-      if (this.enabled != 0) {
-         var1 = 1;
-      }
-
-      var var4: Int = 0;
-      val var8: Int;
+      val var5: Int = this.label.hashCode();
+      val var4: Int = this.presentation.hashCode();
+      val var6: Int = java.lang.Boolean.hashCode(this.enabled);
+      var var3: Int = 0;
+      val var1: Int;
       if (this.type == null) {
-         var8 = 0;
+         var1 = 0;
       } else {
-         var8 = this.type.hashCode();
+         var1 = this.type.hashCode();
       }
 
-      val var3: Int;
+      val var2: Int;
       if (this.secondaryLabel == null) {
-         var3 = 0;
+         var2 = 0;
       } else {
-         var3 = this.secondaryLabel.hashCode();
+         var2 = this.secondaryLabel.hashCode();
       }
 
       if (this.accessibilityHint != null) {
-         var4 = this.accessibilityHint.hashCode();
+         var3 = this.accessibilityHint.hashCode();
       }
 
-      return ((((var6 * 31 + var5) * 31 + var1) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((var5 * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.label;
+      val var6: java.lang.String = this.label;
       val var5: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var6: java.lang.String = this.type;
-      val var2: java.lang.String = this.secondaryLabel;
-      val var4: java.lang.String = this.accessibilityHint;
+      val var4: java.lang.String = this.type;
+      val var3: java.lang.String = this.secondaryLabel;
+      val var2: java.lang.String = this.accessibilityHint;
       val var7: StringBuilder = new StringBuilder();
       var7.append("PollAction(label=");
-      var7.append(var3);
+      var7.append(var6);
       var7.append(", presentation=");
       var7.append(var5);
       var7.append(", enabled=");
       var7.append(var1);
       var7.append(", type=");
-      var7.append(var6);
-      var7.append(", secondaryLabel=");
-      var7.append(var2);
-      var7.append(", accessibilityHint=");
       var7.append(var4);
+      var7.append(", secondaryLabel=");
+      var7.append(var3);
+      var7.append(", accessibilityHint=");
+      var7.append(var2);
       var7.append(")");
       return var7.toString();
    }
 
-   public object `$serializer` : f0<PollAction> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -238,68 +189,72 @@ public data class PollAction(label: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         return new KSerializer[]{a2.a, PollActionPresentation.Companion.serializer(), h.a, a.u(var1), a.u(var1), a.u(var1)};
+         val var2: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
+         val var1: b2 = b2.a;
+         return new KSerializer[]{b2.a, var2[1], h.a, a.u(b2.a), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): PollAction {
-         r.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
+         q.h(var1, "decoder");
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
+         val var10: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
          var var2: Int;
          var var5: Boolean;
-         var var6: java.lang.String;
          var var7: Any;
-         var var8: Any;
-         var var9: Any;
-         var var13: Any;
-         if (var11.p()) {
-            var6 = var11.m(var10, 0);
-            var9 = var11.y(var10, 1, PollActionPresentation.Companion.serializer(), null);
-            var5 = var11.C(var10, 2);
-            var13 = a2.a;
-            var8 = var11.n(var10, 3, a2.a, null);
-            var7 = var11.n(var10, 4, (DeserializationStrategy)var13, null);
-            var13 = var11.n(var10, 5, (DeserializationStrategy)var13, null);
+         var var8: PollActionPresentation;
+         var var9: java.lang.String;
+         var var14: Any;
+         var var15: Any;
+         if (var12.p()) {
+            var9 = var12.m(var11, 0);
+            var15 = var12.y(var11, 1, var10[1], null) as PollActionPresentation;
+            var5 = var12.C(var11, 2);
+            var14 = b2.a;
+            var7 = var12.n(var11, 3, b2.a, null) as java.lang.String;
+            val var16: java.lang.String = var12.n(var11, 4, (DeserializationStrategy)var14, null) as java.lang.String;
+            var14 = var12.n(var11, 5, (DeserializationStrategy)var14, null) as java.lang.String;
             var2 = 63;
+            var8 = (PollActionPresentation)var15;
+            var15 = var16;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var6 = null;
             var9 = null;
             var8 = null;
             var7 = null;
-            var13 = null;
+            var15 = null;
+            var14 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var12.o(var11);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var6 = var11.m(var10, 0);
+                     var9 = var12.m(var11, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var11.y(var10, 1, PollActionPresentation.Companion.serializer(), var9);
+                     var8 = var12.y(var11, 1, var10[1], var8) as PollActionPresentation;
                      var2 |= 2;
                      break;
                   case 2:
-                     var5 = var11.C(var10, 2);
+                     var5 = var12.C(var11, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var8 = var11.n(var10, 3, a2.a, var8);
+                     var7 = var12.n(var11, 3, b2.a, var7) as java.lang.String;
                      var2 |= 8;
                      break;
                   case 4:
-                     var7 = var11.n(var10, 4, a2.a, var7);
+                     var15 = var12.n(var11, 4, b2.a, var15) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
-                     var13 = var11.n(var10, 5, a2.a, var13);
+                     var14 = var12.n(var11, 5, b2.a, var14) as java.lang.String;
                      var2 |= 32;
                      break;
                   default:
@@ -308,23 +263,21 @@ public data class PollAction(label: String,
             }
          }
 
-         var11.c(var10);
-         return new PollAction(
-            var2, var6, var9 as PollActionPresentation, var5, var8 as java.lang.String, var7 as java.lang.String, var13 as java.lang.String, null
-         );
+         var12.c(var11);
+         return new PollAction(var2, var9, var8, var5, (java.lang.String)var7, (java.lang.String)var15, (java.lang.String)var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollAction) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         PollAction.write$Self(var2, var4, var3);
+         PollAction.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

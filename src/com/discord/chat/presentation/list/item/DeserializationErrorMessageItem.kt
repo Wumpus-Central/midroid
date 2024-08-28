@@ -1,14 +1,14 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.chat.bridge.ErrorMessage
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class DeserializationErrorMessageItem(message: ErrorMessage) : ChatListItem {
    public final val message: ErrorMessage
 
    init {
-      r.h(var1, "message");
-      super(var1.getId_3Eiw7ao(), null);
+      q.h(var1, "message");
+      super(var1.getId-3Eiw7ao(), null);
       this.message = var1;
    }
 
@@ -17,7 +17,7 @@ public data class DeserializationErrorMessageItem(message: ErrorMessage) : ChatL
    }
 
    public fun copy(message: ErrorMessage = var0.message): DeserializationErrorMessageItem {
-      r.h(var1, "message");
+      q.h(var1, "message");
       return new DeserializationErrorMessageItem(var1);
    }
 
@@ -27,7 +27,7 @@ public data class DeserializationErrorMessageItem(message: ErrorMessage) : ChatL
       } else if (var1 !is DeserializationErrorMessageItem) {
          return false;
       } else {
-         return r.c(this.message, (var1 as DeserializationErrorMessageItem).message);
+         return q.c(this.message, (var1 as DeserializationErrorMessageItem).message);
       }
    }
 

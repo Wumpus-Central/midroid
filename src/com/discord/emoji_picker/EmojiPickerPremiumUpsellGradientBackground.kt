@@ -6,15 +6,14 @@ import android.graphics.LinearGradient
 import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import android.view.View
-import androidx.core.view.a3
+import androidx.core.view.v0
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.theme.R.color
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
-public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTier0UpsellContent: Boolean) : ItemDecoration {
+public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTier0UpsellContent: Boolean) : RecyclerView.ItemDecoration {
    private final var attached: Boolean
    private final var linearGradient: LinearGradient?
    private final var linearGradientColors: IntArray
@@ -23,7 +22,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    private final var useTier0UpsellContent: Boolean
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       this.useTier0UpsellContent = var2;
       this.linearGradientColors = EmojiPickerPremiumUpsellGradientBackground.Companion.access$getColors(Companion, var1, var2);
@@ -33,35 +32,28 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    private fun drawGradient(c: Canvas, parent: RecyclerView) {
-      val var10: java.util.Iterator = a3.a(var2).iterator();
+      val var9: java.util.Iterator = v0.a(var2).iterator();
+      var var7: Int = 0;
       var var5: Float = -1.0F;
       var var4: Float = -1.0F;
-      var var7: Int = 0;
 
-      while (var10.hasNext()) {
-         val var11: Any = var10.next();
+      while (var9.hasNext()) {
+         var var10: Any = var9.next();
          if (var7 < 0) {
-            h.s();
+            i.t();
          }
 
-         val var15: View = var11 as View;
-         val var12: ViewHolder = var2.getChildViewHolder(var11 as View);
-         var var8: Boolean;
-         if (var5 == -1.0F) {
-            var8 = 1;
-         } else {
-            var8 = 0;
-         }
-
+         val var11: View = var10 as View;
+         var10 = var2.getChildViewHolder(var10 as View);
          var var3: Float;
          var var6: Float;
-         if (var8) {
-            r.g(var12, "childViewHolder");
+         if (var5 == -1.0F) {
+            q.e(var10);
             var3 = var5;
             var6 = var4;
-            if (this.isInsidePremiumRoadblock(var12)) {
-               if (var15.getTop() >= 0) {
-                  var3 = var15.getTop();
+            if (this.isInsidePremiumRoadblock((RecyclerView.ViewHolder)var10)) {
+               if (var11.getTop() >= 0) {
+                  var3 = var11.getTop();
                   var6 = var4;
                } else {
                   var3 = 0.0F;
@@ -69,27 +61,22 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
                }
             }
          } else {
-            if (var4 == -1.0F) {
-               var8 = (boolean)1;
-            } else {
-               var8 = (boolean)0;
-            }
-
             var3 = var5;
             var6 = var4;
-            label47:
-            if (var8) {
-               r.g(var12, "childViewHolder");
-               if (!this.isInsidePremiumRoadblock(var12)) {
-                  var8 = var15.getTop();
+            label38:
+            if (var4 == -1.0F) {
+               q.e(var10);
+               val var8: Int;
+               if (!this.isInsidePremiumRoadblock((RecyclerView.ViewHolder)var10)) {
+                  var8 = var11.getTop();
                } else {
                   var3 = var5;
                   var6 = var4;
                   if (!this.isLastChildIndex(var2, var7)) {
-                     break label47;
+                     break label38;
                   }
 
-                  var8 = var15.getTop() + var15.getHeight();
+                  var8 = var11.getTop() + var11.getHeight();
                }
 
                var6 = var8;
@@ -108,7 +95,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    private fun ViewHolder.isInsidePremiumRoadblock(): Boolean {
-      var var4: ViewHolder = var1;
+      var var4: RecyclerView.ViewHolder = var1;
       if (var1 !is EmojiPickerViewHolder) {
          var4 = null;
       }
@@ -135,10 +122,10 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       return var4;
    }
 
-   public open fun onDraw(c: Canvas, parent: RecyclerView, state: State) {
-      r.h(var1, "c");
-      r.h(var2, "parent");
-      r.h(var3, "state");
+   public override fun onDraw(c: Canvas, parent: RecyclerView, state: State) {
+      q.h(var1, "c");
+      q.h(var2, "parent");
+      q.h(var3, "state");
       super.onDraw(var1, var2, var3);
       if (this.linearGradientWidth != var2.getWidth()) {
          val var4: Int = var2.getWidth();
@@ -156,7 +143,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    public fun setEnabled(enabled: Boolean, recyclerView: RecyclerView) {
-      r.h(var2, "recyclerView");
+      q.h(var2, "recyclerView");
       if (var1) {
          if (!this.attached) {
             var2.addItemDecoration(this);
@@ -169,7 +156,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    public fun setUseTier0UpsellContent(context: Context, useTier0UpsellContent: Boolean) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       if (this.useTier0UpsellContent != var2) {
          this.useTier0UpsellContent = var2;
          val var3: EmojiPickerPremiumUpsellGradientBackground.Companion = Companion;
@@ -189,18 +176,18 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       }
 
       private fun Context.getColors(useTier0UpsellContent: Boolean): IntArray {
-         val var4: IntArray;
+         val var3: IntArray;
          if (var2) {
-            var4 = new int[]{var1.getColor(color.premium_tier_0_purple_for_gradients), var1.getColor(color.premium_tier_0_blue_for_gradients)};
+            var3 = new int[]{var1.getColor(color.premium_tier_0_purple_for_gradients), var1.getColor(color.premium_tier_0_blue_for_gradients)};
          } else {
-            var4 = new int[]{
+            var3 = new int[]{
                var1.getColor(color.premium_tier_2_purple_for_gradients),
                var1.getColor(color.premium_tier_2_purple_for_gradients_2),
                var1.getColor(color.premium_tier_2_pink_for_gradients)
             };
          }
 
-         return var4;
+         return var3;
       }
    }
 }

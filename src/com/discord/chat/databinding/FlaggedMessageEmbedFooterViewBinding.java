@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import n1.a;
+import v2.a;
 
 public final class FlaggedMessageEmbedFooterViewBinding implements ViewBinding {
    public final TextView flaggedMessageKeyword;
@@ -27,12 +27,12 @@ public final class FlaggedMessageEmbedFooterViewBinding implements ViewBinding {
       TextView var3 = (TextView)a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.flagged_message_rule_name;
-         TextView var4 = (TextView)a.a(var0, var1);
-         if (var4 != null) {
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.separator_dot;
-            ImageView var2 = (ImageView)a.a(var0, var1);
-            if (var2 != null) {
-               return new FlaggedMessageEmbedFooterViewBinding(var0, var3, var4, var2);
+            ImageView var4 = (ImageView)a.a(var0, var1);
+            if (var4 != null) {
+               return new FlaggedMessageEmbedFooterViewBinding(var0, var3, var2, var4);
             }
          }
       }
@@ -49,6 +49,7 @@ public final class FlaggedMessageEmbedFooterViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

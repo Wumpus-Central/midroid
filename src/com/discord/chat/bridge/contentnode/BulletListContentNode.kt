@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.g0
+import gn.h
+import gn.x0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.f0
-import xk.h
-import xk.w0
 
 @f
 public data class BulletListContentNode(start: Long? = null, ordered: Boolean = false, items: List<List<ContentNode>>) : ContentNode {
@@ -22,45 +22,11 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    public final val start: Long?
 
    init {
-      r.h(var3, "items");
+      q.h(var3, "items");
       super(null);
       this.start = var1;
       this.ordered = var2;
       this.items = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: BulletListContentNode, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.start == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, w0.a, var0.start);
-      }
-
-      label24: {
-         if (!var1.A(var2, 1)) {
-            var3 = false;
-            if (!var0.ordered) {
-               break label24;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.x(var2, 1, var0.ordered);
-      }
-
-      var1.y(var2, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), var0.items);
    }
 
    public operator fun component1(): Long? {
@@ -76,7 +42,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public fun copy(start: Long? = var0.start, ordered: Boolean = var0.ordered, items: List<List<ContentNode>> = var0.items): BulletListContentNode {
-      r.h(var3, "items");
+      q.h(var3, "items");
       return new BulletListContentNode(var1, var2, var3);
    }
 
@@ -87,12 +53,12 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.start, var1.start)) {
+         if (!q.c(this.start, var1.start)) {
             return false;
          } else if (this.ordered != var1.ordered) {
             return false;
          } else {
-            return r.c(this.items, var1.items);
+            return q.c(this.items, var1.items);
          }
       }
    }
@@ -105,12 +71,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
          var1 = this.start.hashCode();
       }
 
-      var var2: Byte = this.ordered;
-      if (this.ordered != 0) {
-         var2 = 1;
-      }
-
-      return (var1 * 31 + var2) * 31 + this.items.hashCode();
+      return (var1 * 31 + java.lang.Boolean.hashCode(this.ordered)) * 31 + this.items.hashCode();
    }
 
    public override fun toString(): String {
@@ -128,7 +89,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
       return var3.toString();
    }
 
-   public object `$serializer` : f0<BulletListContentNode> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -147,31 +108,32 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(w0.a), h.a, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE))};
+         return new KSerializer[]{a.u(x0.a), h.a, BulletListContentNode.access$get$childSerializers$cp()[2]};
       }
 
       public open fun deserialize(decoder: Decoder): BulletListContentNode {
-         r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         q.h(var1, "decoder");
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.b(var7);
+         val var9: Array<KSerializer> = BulletListContentNode.access$get$childSerializers$cp();
          var var2: Int;
          var var5: Boolean;
-         val var7: Any;
-         var var10: Any;
-         if (var9.p()) {
-            var10 = var9.n(var8, 0, w0.a, null);
-            var5 = var9.C(var8, 1);
-            var7 = var9.y(var8, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), null);
+         var var6: java.lang.Long;
+         var var10: java.util.List;
+         if (var8.p()) {
+            var6 = var8.n(var7, 0, x0.a, null) as java.lang.Long;
+            var5 = var8.C(var7, 1);
+            var10 = var8.y(var7, 2, var9[2], null) as java.util.List;
             var2 = 7;
          } else {
             var var3: Boolean = true;
-            var5 = false;
-            var var6: Any = null;
-            var10 = null;
             var2 = 0;
+            var6 = null;
+            var10 = null;
+            var5 = false;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var8.o(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -179,40 +141,37 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
                            throw new n(var4);
                         }
 
-                        var10 = var9.y(var8, 2, new xk.f(new xk.f(ContentNodeSerializer.INSTANCE)), var10);
+                        var10 = var8.y(var7, 2, var9[2], var10) as java.util.List;
                         var2 |= 4;
                      } else {
-                        var5 = var9.C(var8, 1);
+                        var5 = var8.C(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var9.n(var8, 0, w0.a, var6);
+                     var6 = var8.n(var7, 0, x0.a, var6) as java.lang.Long;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var7 = var10;
-            var10 = var6;
          }
 
-         var9.c(var8);
-         return new BulletListContentNode(var2, var10 as java.lang.Long, var5, var7 as java.util.List, null);
+         var8.c(var7);
+         return new BulletListContentNode(var2, var6, var5, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BulletListContentNode) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         BulletListContentNode.write$Self(var2, var4, var3);
+         BulletListContentNode.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

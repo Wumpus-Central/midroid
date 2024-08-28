@@ -2,11 +2,11 @@ package com.discord.misc.utilities.view
 
 import android.view.View
 import android.view.ViewGroup
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun ViewGroup.setUpLayoutForList(listSize: Int, inflater: () -> View) {
-   r.h(var0, "<this>");
-   r.h(var2, "inflater");
+   q.h(var0, "<this>");
+   q.h(var2, "inflater");
    if (var1 != var0.getChildCount()) {
       val var4: Int = var0.getChildCount();
       var var3: Int = 0;

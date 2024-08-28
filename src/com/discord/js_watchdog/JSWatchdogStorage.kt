@@ -3,7 +3,7 @@ package com.discord.js_watchdog
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class JSWatchdogStorage(context: Context) {
    private final val sessionId: String
@@ -33,16 +33,16 @@ public class JSWatchdogStorage(context: Context) {
 
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       val var2: SharedPreferences = var1.getSharedPreferences("js_watchdog", 0);
-      r.g(var2, "context.getSharedPrefere…g\", Context.MODE_PRIVATE)");
+      q.g(var2, "getSharedPreferences(...)");
       this.storage = var2;
    }
 
    public fun clear() {
       val var1: Editor = this.storage.edit();
-      r.g(var1, "editor");
+      q.g(var1, "editor");
       var1.clear();
       var1.apply();
    }
@@ -59,9 +59,9 @@ public class JSWatchdogStorage(context: Context) {
    }
 
    public fun update(stallTime: Int, sessionId: String, trace: String?) {
-      r.h(var2, "sessionId");
+      q.h(var2, "sessionId");
       val var4: Editor = this.storage.edit();
-      r.g(var4, "editor");
+      q.g(var4, "editor");
       var4.putInt("stall_time", var1);
       var4.putString("session_id", var2);
       if (var3 != null) {
@@ -75,13 +75,13 @@ public class JSWatchdogStorage(context: Context) {
       private final var instance: JSWatchdogStorage?
 
       public fun getInstance(context: Context): JSWatchdogStorage {
-         r.h(var1, "context");
+         q.h(var1, "context");
          if (JSWatchdogStorage.access$getInstance$cp() == null) {
             JSWatchdogStorage.access$setInstance$cp(new JSWatchdogStorage(var1));
          }
 
          val var2: JSWatchdogStorage = JSWatchdogStorage.access$getInstance$cp();
-         r.e(var2);
+         q.e(var2);
          return var2;
       }
    }

@@ -5,7 +5,12 @@ import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -13,11 +18,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 public data class LongPressCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
@@ -26,31 +26,20 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
    public final val commandKey: String
    public final val commandName: String
 
-   public constructor(node: CommandMentionContentNode) : r.h(var1, "node") {
-      this(ChannelId.toString_impl(var1.getChannelId_o4g7jtM()), var1.getCommandId(), var1.getCommandName(), var1.getCommandKey());
+   public constructor(node: CommandMentionContentNode) : q.h(var1, "node") {
+      this(ChannelId.toString-impl(var1.getChannelId-o4g7jtM()), var1.getCommandId(), var1.getCommandName(), var1.getCommandKey());
    }
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "commandId");
-      r.h(var3, "commandName");
-      r.h(var4, "commandKey");
+      q.h(var1, "channelId");
+      q.h(var2, "commandId");
+      q.h(var3, "commandName");
+      q.h(var4, "commandKey");
       super();
       this.channelId = var1;
       this.commandId = var2;
       this.commandName = var3;
       this.commandKey = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LongPressCommandData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.channelId);
-      var1.z(var2, 1, var0.commandId);
-      var1.z(var2, 2, var0.commandName);
-      var1.z(var2, 3, var0.commandKey);
    }
 
    public operator fun component1(): String {
@@ -75,10 +64,10 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
       commandName: String = var0.commandName,
       commandKey: String = var0.commandKey
    ): LongPressCommandData {
-      r.h(var1, "channelId");
-      r.h(var2, "commandId");
-      r.h(var3, "commandName");
-      r.h(var4, "commandKey");
+      q.h(var1, "channelId");
+      q.h(var2, "commandId");
+      q.h(var3, "commandName");
+      q.h(var4, "commandKey");
       return new LongPressCommandData(var1, var2, var3, var4);
    }
 
@@ -89,14 +78,14 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!q.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!r.c(this.commandId, var1.commandId)) {
+         } else if (!q.c(this.commandId, var1.commandId)) {
             return false;
-         } else if (!r.c(this.commandName, var1.commandName)) {
+         } else if (!q.c(this.commandName, var1.commandName)) {
             return false;
          } else {
-            return r.c(this.commandKey, var1.commandKey);
+            return q.c(this.commandKey, var1.commandKey);
          }
       }
    }
@@ -111,23 +100,23 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
 
    public override fun toString(): String {
       val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.commandId;
-      val var5: java.lang.String = this.commandName;
-      val var4: java.lang.String = this.commandKey;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LongPressCommandData(channelId=");
-      var1.append(var2);
-      var1.append(", commandId=");
-      var1.append(var3);
-      var1.append(", commandName=");
-      var1.append(var5);
-      var1.append(", commandKey=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.commandId;
+      val var1: java.lang.String = this.commandName;
+      val var3: java.lang.String = this.commandKey;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("LongPressCommandData(channelId=");
+      var5.append(var2);
+      var5.append(", commandId=");
+      var5.append(var4);
+      var5.append(", commandName=");
+      var5.append(var1);
+      var5.append(", commandKey=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
-   public object `$serializer` : f0<LongPressCommandData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -147,11 +136,11 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a, a2.a, a2.a};
+         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): LongPressCommandData {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
          var var2: Int;
@@ -204,9 +193,9 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
                }
             }
 
-            var13 = var12;
             var11 = var6;
             var6 = var13;
+            var13 = var12;
          }
 
          var10.c(var9);
@@ -214,15 +203,15 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressCommandData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         LongPressCommandData.write$Self(var2, var4, var3);
+         LongPressCommandData.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

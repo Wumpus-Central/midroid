@@ -7,13 +7,13 @@ import android.telephony.TelephonyManager
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import kotlin.jvm.internal.r
+import eo.e
+import kotlin.jvm.internal.q
+import lj.w
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
 import okio.BufferedSource
-import tl.e
 
 public class DeviceResourceUsageRecorder {
    @JvmStatic
@@ -46,40 +46,40 @@ public class DeviceResourceUsageRecorder {
       private final val xhr: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
 
       private fun requestStatsInterceptor(chain: Chain, stats: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats): Response {
-         val var4: Response = var1.a(var1.p());
-         val var3: ResponseBody = var4.b();
+         val var4: Response = var1.a(var1.q());
+         val var3: ResponseBody = var4.a();
          var2.setNumRequests(var2.getNumRequests() + 1);
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
-            var5.m(java.lang.Long.MAX_VALUE);
-            var2.setBytesReceived(var2.getBytesReceived() + var5.j().size());
+            var5.n(java.lang.Long.MAX_VALUE);
+            var2.setBytesReceived(var2.getBytesReceived() + var5.d().size());
          }
 
          return var4;
       }
 
       public fun bundleUpdaterInterceptor(chain: Chain): Response {
-         r.h(var1, "chain");
+         q.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getOta$cp());
       }
 
       public fun clientXHRInterceptor(chain: Chain): Response {
-         r.h(var1, "chain");
+         q.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getXhr$cp());
       }
 
       public fun downloadInterceptor(chain: Chain): Response {
-         r.h(var1, "chain");
+         q.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getDownloads$cp());
       }
 
       public fun frescoInterceptor(chain: Chain): Response {
-         r.h(var1, "chain");
+         q.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getFresco$cp());
       }
 
       public fun getNetworkUsage(reactApplicationContext: ReactApplicationContext): WritableNativeMap {
-         r.h(var1, "reactApplicationContext");
+         q.h(var1, "reactApplicationContext");
 
          label47: {
             var var4: TelephonyManager;
@@ -87,7 +87,7 @@ public class DeviceResourceUsageRecorder {
                label48: {
                   try {
                      val var10: Any = var1.getSystemService("phone");
-                     r.f(var10, "null cannot be cast to non-null type android.telephony.TelephonyManager");
+                     q.f(var10, "null cannot be cast to non-null type android.telephony.TelephonyManager");
                      var4 = var10 as TelephonyManager;
                      if (VERSION.SDK_INT < 28) {
                         break label48;
@@ -135,7 +135,7 @@ public class DeviceResourceUsageRecorder {
          }
 
          return NativeMapExtensionsKt.nativeMapOf(
-            w.a("signalStrengthLevel", var9.a() as Integer),
+            w.a("signalStrengthLevel", var9.a() as Int),
             w.a("isNetworkRoaming", var9.b() as java.lang.Boolean),
             w.a("cellularReceiveBytes", TrafficStats.getMobileRxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularReceiveBytes$cp()),
             w.a("cellularSendBytes", TrafficStats.getMobileTxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularSendBytes$cp()),

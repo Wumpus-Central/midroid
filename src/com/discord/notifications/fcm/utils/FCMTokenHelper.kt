@@ -4,22 +4,22 @@ import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
-import n3.a
-import n3.b
+import kotlin.jvm.internal.q
+import x4.a
+import x4.b
 
 internal object FCMTokenHelper {
    @JvmStatic
    fun `getToken$lambda$0`(var0: Exception) {
-      r.h(var0, "e");
+      q.h(var0, "e");
       INSTANCE.logError(var0);
    }
 
    // $VF: Duplicated exception handlers to handle obfuscated exceptions
    @JvmStatic
    fun `getToken$lambda$1`(var0: Function1, var1: Task) {
-      r.h(var0, "$onToken");
-      r.h(var1, "task");
+      q.h(var0, "$onToken");
+      q.h(var1, "task");
 
       var var2: java.lang.String;
       try {
@@ -58,17 +58,17 @@ internal object FCMTokenHelper {
    }
 
    private fun Throwable.logError() {
-      val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = var1.getClass().getSimpleName();
-      r.g(var3, "javaClass.simpleName");
-      var2.w(var3, "Fetching FCM registration token failed", var1);
+      val var3: Log = Log.INSTANCE;
+      val var2: java.lang.String = var1.getClass().getSimpleName();
+      q.g(var2, "getSimpleName(...)");
+      var3.w(var2, "Fetching FCM registration token failed", var1);
    }
 
    public fun getToken(onToken: (String) -> Unit) {
-      r.h(var1, "onToken");
+      q.h(var1, "onToken");
 
       try {
-         FirebaseMessaging.l().o().e(new a()).c(new b(var1));
+         FirebaseMessaging.n().q().e(new a()).c(new b(var1));
       } catch (var4: Exception) {
          this.logError(var4);
       }

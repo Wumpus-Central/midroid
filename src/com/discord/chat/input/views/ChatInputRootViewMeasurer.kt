@@ -1,10 +1,10 @@
 package com.discord.chat.input.views
 
 import android.content.Context
+import com.discord.misc.utilities.measure.HeadlessViewMeasurer
 import com.discord.misc.utilities.measure.HeadlessViewMeasurerExtensionsKt
-import com.discord.misc.utilities.measure.HeadlessViewMeasurer.MeasureBounds
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, onHeightChanged: (Int) -> Unit) {
    private final val chatInputRootView: ChatInputRootView
@@ -14,8 +14,8 @@ internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, o
    private final var minimumHeightPx: Int
 
    init {
-      r.h(var1, "chatInputRootView");
-      r.h(var2, "onHeightChanged");
+      q.h(var1, "chatInputRootView");
+      q.h(var2, "onHeightChanged");
       super();
       this.chatInputRootView = var1;
       this.onHeightChanged = var2;
@@ -29,8 +29,8 @@ internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, o
 
    private fun ChatInputRootView.measureHeight(): Int {
       val var2: Context = var1.getContext();
-      r.g(var2, "context");
-      return HeadlessViewMeasurerExtensionsKt.measureHeadlessView(var2, ChatInputRootView.class, new Function1<ChatInputRootView, Unit>(this) {
+      q.g(var2, "getContext(...)");
+      return HeadlessViewMeasurerExtensionsKt.measureHeadlessView(var2, ChatInputRootView.class, new Function1(this) {
          final ChatInputRootViewMeasurer this$0;
 
          {
@@ -39,10 +39,10 @@ internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, o
          }
 
          public final void invoke(ChatInputRootView var1) {
-            r.h(var1, "it");
+            q.h(var1, "it");
             var1.setText(ChatInputRootViewMeasurer.access$getChatInputRootView$p(this.this$0).getText());
          }
-      }, new MeasureBounds(this.chatInputRootView.getWidth(), null, 2, null)).getHeight();
+      }, new HeadlessViewMeasurer.MeasureBounds(this.chatInputRootView.getWidth(), null, 2, null)).getHeight();
    }
 
    public fun measure(measureWhenInitialized: Boolean) {

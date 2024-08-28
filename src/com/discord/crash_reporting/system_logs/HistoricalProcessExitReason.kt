@@ -4,11 +4,12 @@ import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import eh.w
-import fh.s
-import kotlin.jvm.internal.r
-import w1.f
-import w1.g
+import e3.e
+import e3.f
+import e3.g
+import kotlin.jvm.internal.q
+import lj.w
+import mj.r
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -17,23 +18,25 @@ internal object HistoricalProcessExitReason {
    fun {
       val var0: java.util.Map;
       if (VERSION.SDK_INT < 30) {
-         var0 = s.h();
+         var0 = r.h();
       } else {
-         var0 = s.l(
-            w.a(6, "ANR"),
-            w.a(4, "CRASH"),
-            w.a(5, "CRASH_NATIVE"),
-            w.a(12, "DEPENDENCY_DIED"),
-            w.a(9, "EXCESSIVE_RESOURCE_USAGE"),
-            w.a(1, "EXIT_SELF"),
-            w.a(7, "INITIALIZATION_FAILURE"),
-            w.a(3, "LOW_MEMORY"),
-            w.a(13, "OTHER"),
-            w.a(8, "PERMISSION_CHANGE"),
-            w.a(2, "SIGNALED"),
-            w.a(0, "UNKNOWN"),
-            w.a(10, "USER_REQUESTED"),
-            w.a(11, "USER_STOPPED")
+         var0 = r.l(
+            new Pair[]{
+               w.a(6, "ANR"),
+               w.a(4, "CRASH"),
+               w.a(5, "CRASH_NATIVE"),
+               w.a(12, "DEPENDENCY_DIED"),
+               w.a(9, "EXCESSIVE_RESOURCE_USAGE"),
+               w.a(1, "EXIT_SELF"),
+               w.a(7, "INITIALIZATION_FAILURE"),
+               w.a(3, "LOW_MEMORY"),
+               w.a(13, "OTHER"),
+               w.a(8, "PERMISSION_CHANGE"),
+               w.a(2, "SIGNALED"),
+               w.a(0, "UNKNOWN"),
+               w.a(10, "USER_REQUESTED"),
+               w.a(11, "USER_STOPPED")
+            }
          );
       }
 
@@ -41,7 +44,7 @@ internal object HistoricalProcessExitReason {
    }
 
    public fun lastReason(context: Context): com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason? {
-      r.h(var1, "context");
+      q.h(var1, "context");
       if (VERSION.SDK_INT < 30) {
          return null;
       } else {
@@ -55,9 +58,9 @@ internal object HistoricalProcessExitReason {
          if (var5 == null) {
             return null;
          } else {
-            var5 = f.a((ActivityManager)var5, null, 0, 1);
-            r.g(var5, "activityManager.getHisto…ssExitReasons(null, 0, 1)");
-            val var4: ApplicationExitInfo = h.c0((java.util.List)var5) as ApplicationExitInfo;
+            var5 = e.a((ActivityManager)var5, null, 0, 1);
+            q.g(var5, "getHistoricalProcessExitReasons(...)");
+            val var4: ApplicationExitInfo = f.a(i.f0((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {
@@ -71,7 +74,7 @@ internal object HistoricalProcessExitReason {
                   var5 = var5.toString();
                }
 
-               return new HistoricalProcessExitReason.Reason((java.lang.String)var5, a.a(var4));
+               return new HistoricalProcessExitReason.Reason((java.lang.String)var5, c.a(var4));
             }
          }
       }
@@ -82,7 +85,7 @@ internal object HistoricalProcessExitReason {
       public final val reason: String
 
       init {
-         r.h(var1, "reason");
+         q.h(var1, "reason");
          super();
          this.reason = var1;
          this.description = var2;
@@ -97,7 +100,7 @@ internal object HistoricalProcessExitReason {
       }
 
       public fun copy(reason: String = var0.reason, description: String? = var0.description): com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason {
-         r.h(var1, "reason");
+         q.h(var1, "reason");
          return new HistoricalProcessExitReason.Reason(var1, var2);
       }
 
@@ -108,10 +111,10 @@ internal object HistoricalProcessExitReason {
             return false;
          } else {
             var1 = var1;
-            if (!r.c(this.reason, var1.reason)) {
+            if (!q.c(this.reason, var1.reason)) {
                return false;
             } else {
-               return r.c(this.description, var1.description);
+               return q.c(this.description, var1.description);
             }
          }
       }

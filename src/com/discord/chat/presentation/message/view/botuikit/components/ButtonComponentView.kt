@@ -31,32 +31,32 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
    ComponentView<ButtonComponent> {
    fun ButtonComponentView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ButtonComponentView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
    }
 
    @JvmStatic
    fun `configure$lambda$1`(var0: ButtonComponent, var1: ComponentActionListener, var2: View) {
-      r.h(var0, "$component");
-      r.h(var1, "$componentActionListener");
+      q.h(var0, "$component");
+      q.h(var1, "$componentActionListener");
       if (var0.getUrl() != null) {
          var1.openLink(var0.getUrl());
       } else if (var0.getCustomId() != null || var0.getStyle() === ButtonStyle.PREMIUM) {
@@ -150,12 +150,12 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
       componentActionListener: ComponentActionListener,
       componentContext: ComponentContext
    ) {
-      r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentActionListener");
-      r.h(var4, "componentContext");
+      q.h(var1, "component");
+      q.h(var2, "componentProvider");
+      q.h(var3, "componentActionListener");
+      q.h(var4, "componentContext");
       val var14: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.bind(this);
-      r.g(var14, "bind(this)");
+      q.g(var14, "bind(...)");
       var var7: Boolean;
       if (var1.getState() != ActionComponentState.DISABLED && !var1.getDisabled()) {
          var7 = 0;
@@ -171,13 +171,13 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
       }
 
       val var16: MaterialButton = var14.button;
-      r.g(var14.button, "binding.button");
+      q.g(var14.button, "button");
       this.configureStyle(var16, var1.getStyle());
       val var17: SimpleDraweeSpanTextView = var14.emoji;
-      r.g(var14.emoji, "binding.emoji");
+      q.g(var14.emoji, "emoji");
       this.configureEmoji(var17, var1.getEmoji(), var9);
       val var18: SimpleDraweeView = var14.linkIcon;
-      r.g(var14.linkIcon, "binding.linkIcon");
+      q.g(var14.linkIcon, "linkIcon");
       val var10: Boolean;
       if (var1.getStyle() === ButtonStyle.LINK) {
          var10 = true;
@@ -187,7 +187,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
 
       this.configureLinkIcon(var18, var10);
       val var19: MaterialTextView = var14.label;
-      r.g(var14.label, "binding.label");
+      q.g(var14.label, "label");
       this.configureLabelPadding(var19, var1);
       var var5: Float;
       if (var7) {
@@ -213,7 +213,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
       var14.button.setEnabled((boolean)(var7 xor true));
       val var23: MaterialTextView = var14.label;
       var14.label.setText(var1.getLabel());
-      r.g(var23, "configure$lambda$0");
+      q.e(var23);
       if (var9) {
          var7 = 4;
       } else {
@@ -225,16 +225,18 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
       var23.setTextColor(ColorUtilsKt.getColorCompat(var23, color.white));
       if (!var9) {
          val var24: MaterialButton = var14.button;
-         r.g(var14.button, "binding.button");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new a(var1, var3), 1, null);
+         q.g(var14.button, "button");
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(
+            var24, false, new com.discord.chat.presentation.message.view.botuikit.components.a(var1, var3), 1, null
+         );
       } else {
          val var12: MaterialButton = var14.button;
-         r.g(var14.button, "binding.button");
+         q.g(var14.button, "button");
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var12, false, new b(), 1, null);
       }
 
       val var13: ProgressDots = var14.loadingDots;
-      r.g(var14.loadingDots, "binding.loadingDots");
+      q.g(var14.loadingDots, "loadingDots");
       if (var9) {
          var7 = 0;
       } else {
@@ -245,64 +247,16 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    public override fun getComponentType(): KClass<ButtonComponent> {
-      return h0.b(ButtonComponent.class);
+      return g0.b(ButtonComponent.class);
    }
 
    public companion object {
       public fun inflateComponent(context: Context, root: ViewGroup): ButtonComponentView {
-         r.h(var1, "context");
-         r.h(var2, "root");
+         q.h(var1, "context");
+         q.h(var2, "root");
          val var3: ButtonComponentView = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
-         r.g(var3, "inflate(\n               …false,\n            ).root");
+         q.g(var3, "getRoot(...)");
          return var3;
-      }
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[ButtonStyle.values().length];
-
-         try {
-            var0[ButtonStyle.UNKNOWN.ordinal()] = 1;
-         } catch (var8: NoSuchFieldError) {
-         }
-
-         try {
-            var0[ButtonStyle.PRIMARY.ordinal()] = 2;
-         } catch (var7: NoSuchFieldError) {
-         }
-
-         try {
-            var0[ButtonStyle.SECONDARY.ordinal()] = 3;
-         } catch (var6: NoSuchFieldError) {
-         }
-
-         try {
-            var0[ButtonStyle.LINK.ordinal()] = 4;
-         } catch (var5: NoSuchFieldError) {
-         }
-
-         try {
-            var0[ButtonStyle.DANGER.ordinal()] = 5;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[ButtonStyle.SUCCESS.ordinal()] = 6;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[ButtonStyle.PREMIUM.ordinal()] = 7;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
       }
    }
 }

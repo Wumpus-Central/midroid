@@ -3,7 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,28 +16,15 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 internal data class TapShowAltTextData(description: String) : ReactEvent {
    public final val description: String
 
    init {
-      r.h(var1, "description");
+      q.h(var1, "description");
       super();
       this.description = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TapShowAltTextData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.description);
    }
 
    public operator fun component1(): String {
@@ -40,7 +32,7 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
    }
 
    public fun copy(description: String = var0.description): TapShowAltTextData {
-      r.h(var1, "description");
+      q.h(var1, "description");
       return new TapShowAltTextData(var1);
    }
 
@@ -50,7 +42,7 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
       } else if (var1 !is TapShowAltTextData) {
          return false;
       } else {
-         return r.c(this.description, (var1 as TapShowAltTextData).description);
+         return q.c(this.description, (var1 as TapShowAltTextData).description);
       }
    }
 
@@ -71,7 +63,7 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<TapShowAltTextData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -88,11 +80,11 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a};
+         return new KSerializer[]{b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapShowAltTextData {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
@@ -125,15 +117,15 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
       }
 
       public open fun serialize(encoder: Encoder, value: TapShowAltTextData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         TapShowAltTextData.write$Self(var2, var4, var3);
+         TapShowAltTextData.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

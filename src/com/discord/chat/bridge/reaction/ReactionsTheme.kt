@@ -1,7 +1,11 @@
 package com.discord.chat.bridge.reaction
 
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import en.a
+import gn.g0
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.f0
-import xk.m0
 
 @f
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
@@ -36,7 +35,6 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    init {
-      super();
       this.reactionBackgroundColor = var1;
       this.reactionBorderColor = var2;
       this.reactionTextColor = var3;
@@ -45,109 +43,37 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       this.activeReactionTextColor = var6;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: ReactionsTheme, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.getReactionBackgroundColor() == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, m0.a, var0.getReactionBackgroundColor());
-      }
-
-      if (!var1.A(var2, 1) && var0.getReactionBorderColor() == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, m0.a, var0.getReactionBorderColor());
-      }
-
-      if (!var1.A(var2, 2) && var0.getReactionTextColor() == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 2, m0.a, var0.getReactionTextColor());
-      }
-
-      if (!var1.A(var2, 3) && var0.getActiveReactionBackgroundColor() == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 3, m0.a, var0.getActiveReactionBackgroundColor());
-      }
-
-      if (!var1.A(var2, 4) && var0.getActiveReactionBorderColor() == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 4, m0.a, var0.getActiveReactionBorderColor());
-      }
-
-      label56: {
-         if (!var1.A(var2, 5)) {
-            var3 = false;
-            if (var0.getActiveReactionTextColor() == null) {
-               break label56;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 5, m0.a, var0.getActiveReactionTextColor());
-      }
-   }
-
    public operator fun component1(): Int? {
-      return this.getReactionBackgroundColor();
+      return this.reactionBackgroundColor;
    }
 
    public operator fun component2(): Int? {
-      return this.getReactionBorderColor();
+      return this.reactionBorderColor;
    }
 
    public operator fun component3(): Int? {
-      return this.getReactionTextColor();
+      return this.reactionTextColor;
    }
 
    public operator fun component4(): Int? {
-      return this.getActiveReactionBackgroundColor();
+      return this.activeReactionBackgroundColor;
    }
 
    public operator fun component5(): Int? {
-      return this.getActiveReactionBorderColor();
+      return this.activeReactionBorderColor;
    }
 
    public operator fun component6(): Int? {
-      return this.getActiveReactionTextColor();
+      return this.activeReactionTextColor;
    }
 
    public fun copy(
-      reactionBackgroundColor: Int? = var0.getReactionBackgroundColor(),
-      reactionBorderColor: Int? = var0.getReactionBorderColor(),
-      reactionTextColor: Int? = var0.getReactionTextColor(),
-      activeReactionBackgroundColor: Int? = var0.getActiveReactionBackgroundColor(),
-      activeReactionBorderColor: Int? = var0.getActiveReactionBorderColor(),
-      activeReactionTextColor: Int? = var0.getActiveReactionTextColor()
+      reactionBackgroundColor: Int? = var0.reactionBackgroundColor,
+      reactionBorderColor: Int? = var0.reactionBorderColor,
+      reactionTextColor: Int? = var0.reactionTextColor,
+      activeReactionBackgroundColor: Int? = var0.activeReactionBackgroundColor,
+      activeReactionBorderColor: Int? = var0.activeReactionBorderColor,
+      activeReactionTextColor: Int? = var0.activeReactionTextColor
    ): ReactionsTheme {
       return new ReactionsTheme(var1, var2, var3, var4, var5, var6);
    }
@@ -159,92 +85,91 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.getReactionBackgroundColor(), var1.getReactionBackgroundColor())) {
+         if (!q.c(this.reactionBackgroundColor, var1.reactionBackgroundColor)) {
             return false;
-         } else if (!r.c(this.getReactionBorderColor(), var1.getReactionBorderColor())) {
+         } else if (!q.c(this.reactionBorderColor, var1.reactionBorderColor)) {
             return false;
-         } else if (!r.c(this.getReactionTextColor(), var1.getReactionTextColor())) {
+         } else if (!q.c(this.reactionTextColor, var1.reactionTextColor)) {
             return false;
-         } else if (!r.c(this.getActiveReactionBackgroundColor(), var1.getActiveReactionBackgroundColor())) {
+         } else if (!q.c(this.activeReactionBackgroundColor, var1.activeReactionBackgroundColor)) {
             return false;
-         } else if (!r.c(this.getActiveReactionBorderColor(), var1.getActiveReactionBorderColor())) {
+         } else if (!q.c(this.activeReactionBorderColor, var1.activeReactionBorderColor)) {
             return false;
          } else {
-            return r.c(this.getActiveReactionTextColor(), var1.getActiveReactionTextColor());
+            return q.c(this.activeReactionTextColor, var1.activeReactionTextColor);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = this.getReactionBackgroundColor();
       var var6: Int = 0;
       val var1: Int;
-      if (var7 == null) {
+      if (this.reactionBackgroundColor == null) {
          var1 = 0;
       } else {
-         var1 = this.getReactionBackgroundColor().hashCode();
+         var1 = this.reactionBackgroundColor.hashCode();
       }
 
       val var2: Int;
-      if (this.getReactionBorderColor() == null) {
+      if (this.reactionBorderColor == null) {
          var2 = 0;
       } else {
-         var2 = this.getReactionBorderColor().hashCode();
+         var2 = this.reactionBorderColor.hashCode();
       }
 
       val var3: Int;
-      if (this.getReactionTextColor() == null) {
+      if (this.reactionTextColor == null) {
          var3 = 0;
       } else {
-         var3 = this.getReactionTextColor().hashCode();
+         var3 = this.reactionTextColor.hashCode();
       }
 
       val var4: Int;
-      if (this.getActiveReactionBackgroundColor() == null) {
+      if (this.activeReactionBackgroundColor == null) {
          var4 = 0;
       } else {
-         var4 = this.getActiveReactionBackgroundColor().hashCode();
+         var4 = this.activeReactionBackgroundColor.hashCode();
       }
 
       val var5: Int;
-      if (this.getActiveReactionBorderColor() == null) {
+      if (this.activeReactionBorderColor == null) {
          var5 = 0;
       } else {
-         var5 = this.getActiveReactionBorderColor().hashCode();
+         var5 = this.activeReactionBorderColor.hashCode();
       }
 
-      if (this.getActiveReactionTextColor() != null) {
-         var6 = this.getActiveReactionTextColor().hashCode();
+      if (this.activeReactionTextColor != null) {
+         var6 = this.activeReactionTextColor.hashCode();
       }
 
       return ((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6;
    }
 
    public override fun toString(): String {
-      val var6: Int = this.getReactionBackgroundColor();
-      val var7: Int = this.getReactionBorderColor();
-      val var2: Int = this.getReactionTextColor();
-      val var3: Int = this.getActiveReactionBackgroundColor();
-      val var4: Int = this.getActiveReactionBorderColor();
-      val var1: Int = this.getActiveReactionTextColor();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ReactionsTheme(reactionBackgroundColor=");
-      var5.append(var6);
-      var5.append(", reactionBorderColor=");
-      var5.append(var7);
-      var5.append(", reactionTextColor=");
-      var5.append(var2);
-      var5.append(", activeReactionBackgroundColor=");
-      var5.append(var3);
-      var5.append(", activeReactionBorderColor=");
-      var5.append(var4);
-      var5.append(", activeReactionTextColor=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var5: Int = this.reactionBackgroundColor;
+      val var2: Int = this.reactionBorderColor;
+      val var3: Int = this.reactionTextColor;
+      val var6: Int = this.activeReactionBackgroundColor;
+      val var1: Int = this.activeReactionBorderColor;
+      val var7: Int = this.activeReactionTextColor;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ReactionsTheme(reactionBackgroundColor=");
+      var4.append(var5);
+      var4.append(", reactionBorderColor=");
+      var4.append(var2);
+      var4.append(", reactionTextColor=");
+      var4.append(var3);
+      var4.append(", activeReactionBackgroundColor=");
+      var4.append(var6);
+      var4.append(", activeReactionBorderColor=");
+      var4.append(var1);
+      var4.append(", activeReactionTextColor=");
+      var4.append(var7);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : f0<ReactionsTheme> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -266,39 +191,42 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: m0 = m0.a;
-         return new KSerializer[]{a.u(m0.a), a.u(var1), a.u(var1), a.u(var1), a.u(var1), a.u(var1)};
+         val var1: n0 = n0.a;
+         return new KSerializer[]{a.u(n0.a), a.u(var1), a.u(var1), a.u(var1), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): ReactionsTheme {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var12: SerialDescriptor = this.getDescriptor();
          val var13: c = var1.b(var12);
          val var5: Boolean = var13.p();
-         var var10: Any = null;
+         var var10: Int = null;
          var var2: Int;
-         var var7: Any;
-         var var8: Any;
-         var var9: Any;
-         var var14: Any;
-         var var16: Any;
+         var var8: Int;
+         var var9: Int;
+         var var15: Int;
+         var var16: Int;
+         var var17: Int;
          if (var5) {
-            var16 = m0.a;
-            var10 = var13.n(var12, 0, m0.a, null);
-            var9 = var13.n(var12, 1, (DeserializationStrategy)var16, null);
-            var8 = var13.n(var12, 2, (DeserializationStrategy)var16, null);
-            var14 = var13.n(var12, 3, (DeserializationStrategy)var16, null);
-            var7 = var13.n(var12, 4, (DeserializationStrategy)var16, null);
-            var16 = var13.n(var12, 5, (DeserializationStrategy)var16, null);
+            val var7: n0 = n0.a;
+            var10 = var13.n(var12, 0, n0.a, null) as Int;
+            var9 = var13.n(var12, 1, var7, null) as Int;
+            var8 = var13.n(var12, 2, var7, null) as Int;
+            var16 = var13.n(var12, 3, var7, null) as Int;
+            val var14: Int = var13.n(var12, 4, var7, null) as Int;
+            val var11: Int = var13.n(var12, 5, var7, null) as Int;
             var2 = 63;
+            var17 = var16;
+            var16 = var14;
+            var15 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
             var8 = null;
+            var17 = null;
             var16 = null;
-            var7 = null;
-            var14 = null;
+            var15 = null;
 
             while (var3) {
                val var4: Int = var13.o(var12);
@@ -307,53 +235,50 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                      var3 = false;
                      break;
                   case 0:
-                     var10 = var13.n(var12, 0, m0.a, var10);
+                     var10 = var13.n(var12, 0, n0.a, var10) as Int;
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var13.n(var12, 1, m0.a, var9);
+                     var9 = var13.n(var12, 1, n0.a, var9) as Int;
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var13.n(var12, 2, m0.a, var8);
+                     var8 = var13.n(var12, 2, n0.a, var8) as Int;
                      var2 |= 4;
                      break;
                   case 3:
-                     var16 = var13.n(var12, 3, m0.a, var16);
+                     var17 = var13.n(var12, 3, n0.a, var17) as Int;
                      var2 |= 8;
                      break;
                   case 4:
-                     var7 = var13.n(var12, 4, m0.a, var7);
+                     var16 = var13.n(var12, 4, n0.a, var16) as Int;
                      var2 |= 16;
                      break;
                   case 5:
-                     var14 = var13.n(var12, 5, m0.a, var14);
+                     var15 = var13.n(var12, 5, n0.a, var15) as Int;
                      var2 |= 32;
                      break;
                   default:
                      throw new n(var4);
                }
             }
-
-            var14 = var16;
-            var16 = var14;
          }
 
          var13.c(var12);
-         return new ReactionsTheme(var2, var10 as Integer, var9 as Integer, var8 as Integer, var14 as Integer, var7 as Integer, var16 as Integer, null);
+         return new ReactionsTheme(var2, var10, var9, var8, var17, var16, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ReactionsTheme) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ReactionsTheme.write$Self(var2, var4, var3);
+         ReactionsTheme.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

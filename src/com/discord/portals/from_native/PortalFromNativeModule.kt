@@ -12,15 +12,13 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import kk.f
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import tm.g
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -51,7 +49,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : R
          new DCDPortalViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): FrameLayout {
-         r.h(var1, "reactContext");
+         q.h(var1, "reactContext");
          return new FrameLayout(var1);
       }
 
@@ -65,12 +63,12 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : R
 
       @ReactProp(name = "portal")
       public open fun setPortal(portalView: FrameLayout, portal: Double) {
-         r.h(var1, "portalView");
-         f.d(
+         q.h(var1, "portalView");
+         g.d(
             CoroutineViewUtilsKt.getAttachedScope(var1),
             null,
             null,
-            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2(var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
    //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)

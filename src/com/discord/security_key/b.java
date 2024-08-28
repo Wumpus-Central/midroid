@@ -1,10 +1,12 @@
 package com.discord.security_key;
 
-import hb.e;
+import cd.g;
 
-public final class b implements e {
+// $VF: synthetic class
+public final class b implements g {
    public final WebAuthn a;
 
+   @Override
    public final void onFailure(Exception var1) {
       WebAuthn.d(this.a, var1);
    }

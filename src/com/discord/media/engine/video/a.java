@@ -3,6 +3,7 @@ package com.discord.media.engine.video;
 import java.util.function.BiFunction;
 import kotlin.jvm.functions.Function2;
 
+// $VF: synthetic class
 public final class a implements BiFunction {
    public final Function2 a;
 

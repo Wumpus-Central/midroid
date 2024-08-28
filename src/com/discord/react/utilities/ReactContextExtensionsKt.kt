@@ -2,10 +2,10 @@ package com.discord.react.utilities
 
 import com.facebook.react.bridge.JavaScriptContextHolder
 import com.facebook.react.bridge.ReactContext
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun JavaScriptContextHolder.jsiId(): Long {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var1: Long = var0.get();
    if (var1 != 0L) {
       return var1;
@@ -14,9 +14,15 @@ public fun JavaScriptContextHolder.jsiId(): Long {
    }
 }
 
-public fun ReactContext.jsiId(): Long {
-   r.h(var0, "<this>");
+public fun ReactContext.jsiId(): Long? {
+   q.h(var0, "<this>");
    val var1: JavaScriptContextHolder = var0.getJavaScriptContextHolder();
-   r.g(var1, "javaScriptContextHolder");
-   return jsiId(var1);
+   val var2: java.lang.Long;
+   if (var1 != null) {
+      var2 = jsiId(var1);
+   } else {
+      var2 = null;
+   }
+
+   return var2;
 }

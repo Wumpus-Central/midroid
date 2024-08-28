@@ -19,16 +19,16 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
    private final val binding: ErrorMessageViewBinding
 
    fun ErrorMessageView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var8: ErrorMessageViewBinding = ErrorMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var8, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var8;
+      val var6: ErrorMessageViewBinding = ErrorMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var6, "inflate(...)");
+      this.binding = var6;
       this.setOrientation(1);
       ViewBackgroundUtilsKt.setBackgroundRectangle(
          this,
@@ -37,19 +37,19 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
          ThemeManagerKt.getTheme().getStatusDangerBackground(),
          SizeUtilsKt.getDpToPx(1)
       );
-      var8.header.setText("Something went wrong here.");
-      var8.header.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      val var6: TextView = var8.header;
-      kotlin.jvm.internal.r.g(var8.header, "binding.header");
-      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
-      var8.errorLabel.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      val var7: TextView = var8.errorLabel;
-      kotlin.jvm.internal.r.g(var8.errorLabel, "binding.errorLabel");
+      var6.header.setText("Something went wrong here.");
+      var6.header.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      val var8: TextView = var6.header;
+      kotlin.jvm.internal.q.g(var6.header, "header");
+      DiscordFontUtilsKt.setDiscordFont(var8, DiscordFont.PrimarySemibold);
+      var6.errorLabel.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      val var7: TextView = var6.errorLabel;
+      kotlin.jvm.internal.q.g(var6.errorLabel, "errorLabel");
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
    }
 
    public fun setErrorMessage(message: ErrorMessage) {
-      kotlin.jvm.internal.r.h(var1, "message");
+      kotlin.jvm.internal.q.h(var1, "message");
       this.binding.errorLabel.setText(var1.getStackTrace());
    }
 }

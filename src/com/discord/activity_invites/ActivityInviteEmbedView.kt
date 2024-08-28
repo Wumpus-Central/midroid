@@ -24,12 +24,12 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
-import e4.f
-import eh.l
-import eh.o
 import java.util.ArrayList
-import kotlin.jvm.internal.r
-import l4.c
+import kotlin.jvm.internal.q
+import lj.l
+import lj.o
+import o5.f
+import w5.c
 
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ActivityInviteEmbedViewBinding
@@ -41,45 +41,45 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
 
    fun ActivityInviteEmbedView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ActivityInviteEmbedView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
       val var5: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var5, "inflate(LayoutInflater.from(context), this)");
+      q.g(var5, "inflate(...)");
       this.binding = var5;
-      this.grayscalePostprocessor$delegate = l.a(o.l, <unrepresentable>.INSTANCE);
+      this.grayscalePostprocessor$delegate = l.b(o.l, <unrepresentable>.INSTANCE);
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var6: SimpleDraweeView = var5.startImage;
-      r.g(var5.startImage, "binding.startImage");
+      q.g(var5.startImage, "startImage");
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(8));
       val var7: TextView = var5.header;
       var5.header.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      r.g(var7, "_init_$lambda$0");
+      q.e(var7);
       SetTextSizeSpKt.setTextSizeSp(var7, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryBold);
       var var4: TextView = var5.bottomEndLabel;
       var5.bottomEndLabel.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      r.g(var4, "_init_$lambda$1");
+      q.e(var4);
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
       val var8: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       var4 = var5.heroText;
       var5.heroText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      r.g(var4, "_init_$lambda$2");
+      q.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, var8);
       val var9: TextView = var5.subtext;
       var5.subtext.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      r.g(var9, "_init_$lambda$3");
+      q.e(var9);
       DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimaryMedium);
       var5.button.setBackgroundColor(ColorUtilsKt.getColorCompat(this, color.green_360));
       var5.bgGradient.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundSecondary()));
@@ -109,28 +109,28 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
    private fun configureImage(imageConfig: com.discord.activity_invites.ActivityInviteEmbedView.ImageConfig) {
       if (var1 is ActivityInviteEmbedView.ImageConfig.None) {
          val var4: View = this.binding.bgGradient;
-         r.g(this.binding.bgGradient, "binding.bgGradient");
+         q.g(this.binding.bgGradient, "bgGradient");
          var4.setVisibility(8);
          val var5: SimpleDraweeView = this.binding.endImage;
-         r.g(this.binding.endImage, "binding.endImage");
+         q.g(this.binding.endImage, "endImage");
          var5.setVisibility(8);
          val var6: SimpleDraweeView = this.binding.startImage;
-         r.g(this.binding.startImage, "binding.startImage");
+         q.g(this.binding.startImage, "startImage");
          var6.setVisibility(8);
       } else if (var1 is ActivityInviteEmbedView.ImageConfig.Start) {
          val var3: View = this.binding.bgGradient;
-         r.g(this.binding.bgGradient, "binding.bgGradient");
+         q.g(this.binding.bgGradient, "bgGradient");
          var3.setVisibility(8);
          val var8: SimpleDraweeView = this.binding.startImage;
-         r.g(this.binding.startImage, "binding.startImage");
+         q.g(this.binding.startImage, "startImage");
          var8.setVisibility(0);
          val var9: SimpleDraweeView = this.binding.endImage;
-         r.g(this.binding.endImage, "binding.endImage");
+         q.g(this.binding.endImage, "endImage");
          var9.setVisibility(8);
          this.binding.startImage.setImageURI((var1 as ActivityInviteEmbedView.ImageConfig.Start).getUri());
       } else if (var1 is ActivityInviteEmbedView.ImageConfig.End) {
          val var10: View = this.binding.bgGradient;
-         r.g(this.binding.bgGradient, "binding.bgGradient");
+         q.g(this.binding.bgGradient, "bgGradient");
          val var7: ActivityInviteEmbedView.ImageConfig.End = var1 as ActivityInviteEmbedView.ImageConfig.End;
          val var2: Byte;
          if ((var1 as ActivityInviteEmbedView.ImageConfig.End).getFullSize()) {
@@ -141,10 +141,10 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
          var10.setVisibility(var2);
          val var11: SimpleDraweeView = this.binding.startImage;
-         r.g(this.binding.startImage, "binding.startImage");
+         q.g(this.binding.startImage, "startImage");
          var11.setVisibility(8);
          val var12: SimpleDraweeView = this.binding.endImage;
-         r.g(this.binding.endImage, "binding.endImage");
+         q.g(this.binding.endImage, "endImage");
          var12.setVisibility(0);
          this.setEndImage(var7.getUri(), var7.getFullSize(), var7.getGrayscale());
       }
@@ -153,11 +153,11 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
    private fun setAvatars(avatars: List<String?>?) {
       var var3: java.util.List = var1;
       if (var1 == null) {
-         var3 = h.i();
+         var3 = i.j();
       }
 
       val var5: OverlappingCirclesView = this.binding.avatars;
-      r.g(this.binding.avatars, "binding.avatars");
+      q.g(this.binding.avatars, "avatars");
       val var2: Byte;
       if (var3.isEmpty() xor true) {
          var2 = 0;
@@ -167,19 +167,19 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
       var5.setVisibility(var2);
       val var6: OverlappingCirclesView = this.binding.avatars;
-      val var4: ArrayList = new ArrayList(h.t(var3, 10));
-      val var7: java.util.Iterator = var3.iterator();
+      val var7: ArrayList = new ArrayList(i.u(var3, 10));
+      val var8: java.util.Iterator = var3.iterator();
 
-      while (var7.hasNext()) {
-         var4.add(new OverlappingItem(var7.next() as java.lang.String));
+      while (var8.hasNext()) {
+         var7.add(new OverlappingItem(var8.next() as java.lang.String));
       }
 
-      var6.setItems(var4);
+      var6.setItems(var7);
    }
 
    private fun setBottomEndLabel(text: CharSequence?, color: Int) {
       val var3: TextView = this.binding.bottomEndLabel;
-      r.g(this.binding.bottomEndLabel, "binding.bottomEndLabel");
+      q.g(this.binding.bottomEndLabel, "bottomEndLabel");
       ViewUtilsKt.setOptionalText(var3, var1);
       this.binding.bottomEndLabel.setTextColor(var2);
    }
@@ -191,7 +191,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
    private fun setEndImage(uri: String, fullSize: Boolean, grayscale: Boolean) {
       if (var2) {
          val var4: SimpleDraweeView = this.binding.endImage;
-         r.g(this.binding.endImage, "binding.endImage");
+         q.g(this.binding.endImage, "endImage");
          val var5: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
          if (var5 == null) {
             throw new NullPointerException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
@@ -206,7 +206,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          var4.setLayoutParams(var8);
       } else {
          val var7: SimpleDraweeView = this.binding.endImage;
-         r.g(this.binding.endImage, "binding.endImage");
+         q.g(this.binding.endImage, "endImage");
          val var9: android.view.ViewGroup.LayoutParams = var7.getLayoutParams();
          if (var9 == null) {
             throw new NullPointerException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
@@ -221,29 +221,29 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          var7.setLayoutParams(var10);
       }
 
-      val var6: ImageRequestBuilder = ImageRequestBuilder.s(f.o(var1));
+      val var6: ImageRequestBuilder = ImageRequestBuilder.w(f.r(var1));
       if (var3) {
-         var6.A(this.getGrayscalePostprocessor());
+         var6.H(this.getGrayscalePostprocessor());
       }
 
-      this.binding.endImage.setController((c.g().D(var6.a()) as PipelineDraweeControllerBuilder).c());
+      this.binding.endImage.setController((c.g().F(var6.a()) as PipelineDraweeControllerBuilder).d());
    }
 
    private fun setHeaderText(headerText: CharSequence?) {
       val var2: TextView = this.binding.header;
-      r.g(this.binding.header, "binding.header");
+      q.g(this.binding.header, "header");
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
    private fun setHeroText(text: CharSequence?) {
       val var2: TextView = this.binding.heroText;
-      r.g(this.binding.heroText, "binding.heroText");
+      q.g(this.binding.heroText, "heroText");
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
    private fun setSubtext(text: CharSequence?) {
       val var2: TextView = this.binding.subtext;
-      r.g(this.binding.subtext, "binding.subtext");
+      q.g(this.binding.subtext, "subtext");
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
@@ -260,39 +260,36 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       ctaText: String,
       onButtonClickListener: OnClickListener
    ) {
-      r.h(var3, "headerText");
-      r.h(var4, "partyStatus");
-      r.h(var10, "ctaText");
-      r.h(var11, "onButtonClickListener");
+      q.h(var3, "headerText");
+      q.h(var4, "partyStatus");
+      q.h(var10, "ctaText");
+      q.h(var11, "onButtonClickListener");
       this.setHeaderText(var3);
       this.setButtonText(var10);
       this.setAvatars(var5);
       this.setSubtext(var8);
       val var12: ActivityInviteEmbedView.ImageConfig = this.buildImageConfig(var1, var2, var9);
-      var var15: Int = 1;
       if (var9) {
          this.setEnabled(true);
          this.setHeroText(var7);
          val var13: TextView = this.binding.bottomEndLabel;
-         r.g(this.binding.bottomEndLabel, "binding.bottomEndLabel");
+         q.g(this.binding.bottomEndLabel, "bottomEndLabel");
          var13.setVisibility(8);
          this.binding.button.setOnClickButtonListener(var11);
       } else {
          this.setEnabled(false);
          this.setHeroText(var4);
-         if (var12 !is ActivityInviteEmbedView.ImageConfig.End
-            || !(var12 as ActivityInviteEmbedView.ImageConfig.End).getFullSize()
-            || !(var12 as ActivityInviteEmbedView.ImageConfig.End).getGrayscale()) {
-            var15 = 0;
-         }
-
-         if (var15) {
-            var15 = -1;
+         label16:
+         if (var12 is ActivityInviteEmbedView.ImageConfig.End
+            && (var12 as ActivityInviteEmbedView.ImageConfig.End).getFullSize()
+            && (var12 as ActivityInviteEmbedView.ImageConfig.End).getGrayscale()) {
+            var6 = -1;
+            break label16;
          } else {
-            var15 = ThemeManagerKt.getTheme().getHeaderPrimary();
+            var6 = ThemeManagerKt.getTheme().getHeaderPrimary();
          }
 
-         this.setBottomEndLabel(var7, var15);
+         this.setBottomEndLabel(var7, var6);
          this.binding.button.setOnClickButtonListener(null);
       }
 
@@ -319,7 +316,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          public final val uri: String
 
          init {
-            r.h(var1, "uri");
+            q.h(var1, "uri");
             super(null);
             this.uri = var1;
             this.fullSize = var2;
@@ -339,7 +336,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public fun copy(uri: String = var0.uri, fullSize: Boolean = var0.fullSize, grayscale: Boolean = var0.grayscale): com.discord.activity_invites.ActivityInviteEmbedView.ImageConfig.End {
-            r.h(var1, "uri");
+            q.h(var1, "uri");
             return new ActivityInviteEmbedView.ImageConfig.End(var1, var2, var3);
          }
 
@@ -350,7 +347,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
                return false;
             } else {
                var1 = var1;
-               if (!r.c(this.uri, var1.uri)) {
+               if (!q.c(this.uri, var1.uri)) {
                   return false;
                } else if (this.fullSize != var1.fullSize) {
                   return false;
@@ -361,31 +358,20 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun hashCode(): Int {
-            val var4: Int = this.uri.hashCode();
-            var var2: Byte = 1;
-            var var1: Byte = this.fullSize;
-            if (this.fullSize != 0) {
-               var1 = 1;
-            }
-
-            if (this.grayscale == 0) {
-               var2 = this.grayscale;
-            }
-
-            return (var4 * 31 + var1) * 31 + var2;
+            return (this.uri.hashCode() * 31 + java.lang.Boolean.hashCode(this.fullSize)) * 31 + java.lang.Boolean.hashCode(this.grayscale);
          }
 
          public override fun toString(): String {
             val var3: java.lang.String = this.uri;
-            val var1: Boolean = this.fullSize;
-            val var2: Boolean = this.grayscale;
+            val var2: Boolean = this.fullSize;
+            val var1: Boolean = this.grayscale;
             val var4: StringBuilder = new StringBuilder();
             var4.append("End(uri=");
             var4.append(var3);
             var4.append(", fullSize=");
-            var4.append(var1);
-            var4.append(", grayscale=");
             var4.append(var2);
+            var4.append(", grayscale=");
+            var4.append(var1);
             var4.append(")");
             return var4.toString();
          }
@@ -397,7 +383,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          public final val uri: String
 
          init {
-            r.h(var1, "uri");
+            q.h(var1, "uri");
             super(null);
             this.uri = var1;
          }
@@ -407,7 +393,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public fun copy(uri: String = var0.uri): com.discord.activity_invites.ActivityInviteEmbedView.ImageConfig.Start {
-            r.h(var1, "uri");
+            q.h(var1, "uri");
             return new ActivityInviteEmbedView.ImageConfig.Start(var1);
          }
 
@@ -417,7 +403,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
             } else if (var1 !is ActivityInviteEmbedView.ImageConfig.Start) {
                return false;
             } else {
-               return r.c(this.uri, (var1 as ActivityInviteEmbedView.ImageConfig.Start).uri);
+               return q.c(this.uri, (var1 as ActivityInviteEmbedView.ImageConfig.Start).uri);
             }
          }
 

@@ -3,6 +3,7 @@ package com.discord.channel_spine;
 import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 
+// $VF: synthetic class
 public final class a implements OnLayoutChangeListener {
    public final ChannelSpineView j;
 

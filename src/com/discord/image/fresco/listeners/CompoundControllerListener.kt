@@ -1,14 +1,14 @@
 package com.discord.image.fresco.listeners
 
 import android.graphics.drawable.Animatable
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class CompoundControllerListener(vararg listeners: com.facebook.drawee.controller.ControllerListener<Any?>) :
-   com.facebook.drawee.controller.ControllerListener<Object> {
+   com.facebook.drawee.controller.ControllerListener {
    private final val internalListeners: Array<out com.facebook.drawee.controller.ControllerListener<Any?>>
 
    init {
-      r.h(var1, "listeners");
+      q.h(var1, "listeners");
       super();
       this.internalListeners = var1;
    }

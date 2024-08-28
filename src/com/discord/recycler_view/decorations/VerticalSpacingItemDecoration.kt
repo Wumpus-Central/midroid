@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: Int = 0, endItemSpacingPx: Int = 0, isRecyclerLayoutReversed: Boolean = false)
    : ItemDecoration {
@@ -30,7 +30,7 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
       val var2: Int;
       if (this.isRecyclerLayoutReversed) {
          val var3: Adapter = var1.getBindingAdapter();
-         r.e(var3);
+         q.e(var3);
          var2 = var3.getItemCount() - 1;
       } else {
          var2 = 0;
@@ -45,7 +45,7 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
          var2 = 0;
       } else {
          val var3: Adapter = var1.getBindingAdapter();
-         r.e(var3);
+         q.e(var3);
          var2 = var3.getItemCount() - 1;
       }
 
@@ -64,12 +64,12 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
    }
 
    public open fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
-      r.h(var1, "outRect");
-      r.h(var2, "view");
-      r.h(var3, "parent");
-      r.h(var4, "state");
+      q.h(var1, "outRect");
+      q.h(var2, "view");
+      q.h(var3, "parent");
+      q.h(var4, "state");
       val var10: ViewHolder = var3.getChildViewHolder(var2);
-      r.g(var10, "viewHolder");
+      q.e(var10);
       val var7: Boolean = this.isOrWasAtLastItemPosition(var10);
       val var6: Boolean = this.isOrWasAtFirstItemPosition(var10);
       val var8: VerticalSpacingItemDecoration.SpacingProviderView;

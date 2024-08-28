@@ -1,4 +1,5 @@
 package com.discord.external_pip;
 
-public final class a {
+// $VF: synthetic class
+public abstract class a {
 }

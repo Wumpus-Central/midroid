@@ -6,7 +6,7 @@ import android.graphics.Bitmap.Config
 import android.opengl.GLES20
 import java.nio.Buffer
 import java.nio.ByteBuffer
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import org.webrtc.GlRectDrawer
 import org.webrtc.GlTextureFrameBuffer
 import org.webrtc.GlUtil
@@ -35,7 +35,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
    }
 
    init {
-      r.h(var5, "onNextThumbnail");
+      q.h(var5, "onNextThumbnail");
       super();
       this.width = var1;
       this.height = var2;
@@ -55,19 +55,19 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       GlUtil.checkNoGLES2Error("glBindFramebuffer");
       GLES20.glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
       GLES20.glClear(16384);
-      val var5: Float = var1.getRotatedWidth();
-      val var2: Float = var1.getRotatedHeight();
-      if (var5 / var2 < (float)this.width / this.height) {
-         val var12: Float = var5 * (this.height / var2);
+      val var4: Float = var1.getRotatedWidth();
+      val var3: Float = var1.getRotatedHeight();
+      if (var4 / var3 < (float)this.width / this.height) {
+         val var10: Float = var4 * (this.height / var3);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, sh.a.b(((float)this.width - var5 * ((float)this.height / var2)) / 2.0F), 0, sh.a.b(var12), this.height
+               var1, this.rectDrawer, renderMatrix, ak.a.b(((float)this.width - var4 * ((float)this.height / var3)) / 2.0F), 0, ak.a.b(var10), this.height
             );
       } else {
-         val var11: Float = var2 * (this.width / var5);
+         val var13: Float = var3 * (this.width / var4);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, sh.a.b(((float)this.height - var2 * ((float)this.width / var5)) / 2.0F), this.width, sh.a.b(var11)
+               var1, this.rectDrawer, renderMatrix, 0, ak.a.b(((float)this.height - var3 * ((float)this.width / var4)) / 2.0F), this.width, ak.a.b(var13)
             );
       }
 
@@ -77,7 +77,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       var8.release();
       ((Buffer)this.outputByteBuffer).rewind();
       val var9: Bitmap = Bitmap.createBitmap(this.width, this.height, Config.ARGB_8888);
-      r.g(var9, "createBitmap(width, heig… Bitmap.Config.ARGB_8888)");
+      q.g(var9, "createBitmap(...)");
       var9.copyPixelsFromBuffer(this.outputByteBuffer);
       return var9;
    }
@@ -100,44 +100,46 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "frame"
-      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.released Z
-      // 0c: istore 2
-      // 0d: iload 2
-      // 0e: ifeq 14
-      // 11: aload 0
-      // 12: monitorexit
-      // 13: return
-      // 14: aload 1
-      // 15: invokevirtual org/webrtc/VideoFrame.getTimestampNs ()J
-      // 18: lstore 3
-      // 19: lload 3
-      // 1a: aload 0
-      // 1b: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.lastTimestampNs J
-      // 1e: lsub
-      // 1f: aload 0
-      // 20: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.periodNs J
-      // 23: lcmp
-      // 24: ifle 3b
-      // 27: aload 0
-      // 28: lload 3
-      // 29: putfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.lastTimestampNs J
-      // 2c: aload 0
-      // 2d: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.onNextThumbnail Lkotlin/jvm/functions/Function1;
-      // 30: aload 0
-      // 31: aload 1
-      // 32: invokespecial com/discord/media/engine/video/screen_capture/ThumbnailEmitter.createThumbnail (Lorg/webrtc/VideoFrame;)Landroid/graphics/Bitmap;
-      // 35: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 3a: pop
-      // 3b: aload 0
-      // 3c: monitorexit
-      // 3d: return
-      // 3e: astore 1
-      // 3f: aload 0
-      // 40: monitorexit
-      // 41: aload 1
-      // 42: athrow
+      // 0c: istore 4
+      // 0e: iload 4
+      // 10: ifeq 16
+      // 13: aload 0
+      // 14: monitorexit
+      // 15: return
+      // 16: aload 1
+      // 17: invokevirtual org/webrtc/VideoFrame.getTimestampNs ()J
+      // 1a: lstore 2
+      // 1b: lload 2
+      // 1c: aload 0
+      // 1d: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.lastTimestampNs J
+      // 20: lsub
+      // 21: aload 0
+      // 22: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.periodNs J
+      // 25: lcmp
+      // 26: ifle 44
+      // 29: aload 0
+      // 2a: lload 2
+      // 2b: putfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.lastTimestampNs J
+      // 2e: aload 0
+      // 2f: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.onNextThumbnail Lkotlin/jvm/functions/Function1;
+      // 32: aload 0
+      // 33: aload 1
+      // 34: invokespecial com/discord/media/engine/video/screen_capture/ThumbnailEmitter.createThumbnail (Lorg/webrtc/VideoFrame;)Landroid/graphics/Bitmap;
+      // 37: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 3c: pop
+      // 3d: goto 44
+      // 40: astore 1
+      // 41: goto 47
+      // 44: aload 0
+      // 45: monitorexit
+      // 46: return
+      // 47: aload 0
+      // 48: monitorexit
+      // 49: aload 1
+      // 4a: athrow
    }
 
    public fun release() {

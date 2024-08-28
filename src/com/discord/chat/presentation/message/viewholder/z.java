@@ -5,11 +5,12 @@ import android.view.View.OnClickListener;
 import com.discord.chat.presentation.message.messagepart.ThreadEmbedMessageAccessory;
 import kotlin.jvm.functions.Function1;
 
+// $VF: synthetic class
 public final class z implements OnClickListener {
    public final Function1 j;
    public final ThreadEmbedMessageAccessory k;
 
    public final void onClick(View var1) {
-      ThreadEmbedViewHolder.a(this.j, this.k, var1);
+      ThreadEmbedViewHolder.b(this.j, this.k, var1);
    }
 }

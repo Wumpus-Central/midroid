@@ -2,9 +2,9 @@ package com.discord.minibsdiff
 
 import java.io.InputStream
 import java.io.RandomAccessFile
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal fun RandomAccessFile.inputStream(): InputStream {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    return new RandomFileAccessInputStream(var0);
 }

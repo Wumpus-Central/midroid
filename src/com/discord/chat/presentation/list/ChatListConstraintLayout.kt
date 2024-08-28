@@ -4,20 +4,20 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import androidx.constraintlayout.widget.ConstraintLayout
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class ChatListConstraintLayout  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout, ChatListChildView {
    open fun ChatListConstraintLayout(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
    }
 
-   protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+   protected override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
       this.onMeasureConsiderFrozen(var1, var2);
    }
 

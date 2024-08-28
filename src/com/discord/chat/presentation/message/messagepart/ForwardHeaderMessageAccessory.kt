@@ -1,10 +1,60 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.IllegalStateException: Couldn't find method component1 ()Lcom/discord/primitives/MessageId; in class com/discord/chat/presentation/message/messagepart/ForwardHeaderMessageAccessory
-  at org.vineflower.kotlin.struct.KFunction.parse(KFunction.java:112)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:221)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:194)
-*/
+package com.discord.chat.presentation.message.messagepart
+
+import com.discord.primitives.MessageId
+import kotlin.jvm.internal.q
+
+public data class ForwardHeaderMessageAccessory(messageId: MessageId, useOldIcon: Boolean) : ForwardHeaderMessageAccessory(var1, var2) {
+   public open val messageId: MessageId
+   public final val useOldIcon: Boolean
+
+   fun ForwardHeaderMessageAccessory(var1: java.lang.String, var2: Boolean) {
+      q.h(var1, "messageId");
+      super(var1, "forwarded message header", false, 4, null);
+      this.messageId = var1;
+      this.useOldIcon = var2;
+   }
+
+   public operator fun component1(): MessageId {
+      return this.messageId;
+   }
+
+   public operator fun component2(): Boolean {
+      return this.useOldIcon;
+   }
+
+   public fun copy(messageId: MessageId = ..., useOldIcon: Boolean = ...): ForwardHeaderMessageAccessory {
+      q.h(var1, "messageId");
+      return new ForwardHeaderMessageAccessory(var1, var2, null);
+   }
+
+   public override operator fun equals(other: Any?): Boolean {
+      if (this === var1) {
+         return true;
+      } else if (var1 !is ForwardHeaderMessageAccessory) {
+         return false;
+      } else {
+         var1 = var1;
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
+            return false;
+         } else {
+            return this.useOldIcon == var1.useOldIcon;
+         }
+      }
+   }
+
+   public override fun hashCode(): Int {
+      return MessageId.hashCode-impl(this.messageId) * 31 + java.lang.Boolean.hashCode(this.useOldIcon);
+   }
+
+   public override fun toString(): String {
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Boolean = this.useOldIcon;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForwardHeaderMessageAccessory(messageId=");
+      var3.append(var2);
+      var3.append(", useOldIcon=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
+   }
+}

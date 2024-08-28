@@ -2,11 +2,13 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import eh.l
-import eh.o
-import kotlin.jvm.internal.h0
+import dn.f
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.g0
 import kotlinx.serialization.KSerializer
-import uk.f
+import lj.l
+import lj.o
+import sj.a
 
 @f(with = ActionComponentState.Serializer::class)
 public enum class ActionComponentState(serialNumber: Int) : IntEnum {
@@ -16,21 +18,35 @@ public enum class ActionComponentState(serialNumber: Int) : IntEnum {
    UNKNOWN(-1)
    public open val serialNumber: Int
    @JvmStatic
-   private ActionComponentState[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private ActionComponentState[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public ActionComponentState.Companion Companion = new ActionComponentState.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<ActionComponentState> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.serialNumber = var3;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<ActionComponentState> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<ActionComponentState>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object Serializer : IntEnumSerializer(h0.b(ActionComponentState.class), ActionComponentState.UNKNOWN)
+   public object Serializer : IntEnumSerializer(g0.b(ActionComponentState.class), ActionComponentState.UNKNOWN)
 }

@@ -6,14 +6,14 @@ import android.graphics.Point
 import android.graphics.Rect
 import android.media.AudioPlaybackCaptureConfiguration
 import android.media.AudioRecord
-import android.media.AudioPlaybackCaptureConfiguration.Builder
+import android.media.AudioRecord.Builder
 import android.media.projection.MediaProjection.Callback
 import android.os.Build.VERSION
 import android.view.WindowManager
 import co.discord.media_engine.NativeCapturerObserver
 import co.discord.media_engine.SoundshareAudioSource
 import com.discord.logging.Log
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import org.webrtc.CapturerObserver
 import org.webrtc.ScreenCapturerAndroid
 import org.webrtc.SurfaceTextureHelper
@@ -46,7 +46,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private final val watchdog: com.discord.media.engine.video.screen_capture.ScreenCapturer.Watchdog
 
    init {
-      r.h(var1, "mediaProjectionPermissionResultData");
+      q.h(var1, "mediaProjectionPermissionResultData");
       super(var1, ScreenCapturer.MediaProjectionObserver.INSTANCE);
       this.watchdog = new ScreenCapturer.Watchdog(this);
       this.soundshare = new SoundshareAudioSource();
@@ -58,14 +58,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private fun createRecorder(): AudioRecord? {
       var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
-         val var6: AudioPlaybackCaptureConfiguration = d.a(c.a(c.a(c.a(new Builder(this.mediaProjection), 1), 14), 0));
-         r.g(var6, "Builder(mediaProjection)…\n                .build()");
+         val var7: AudioPlaybackCaptureConfiguration = d.a(c.a(c.a(c.a(f.a(this.mediaProjection), 1), 14), 0));
+         q.g(var7, "build(...)");
 
          try {
             var1 = e.a(
-                  new android.media.AudioRecord.Builder()
-                     .setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()),
-                  var6
+                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var7
                )
                .build();
          } catch (var5: SecurityException) {
@@ -83,7 +81,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
          this.currentMeasuredSize.set(ScreenCapturer.MediaProjectionObserver.INSTANCE.getCurrentCaptureSize());
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
-         r.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
+         q.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
          var3.set(b.a(a.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
@@ -111,7 +109,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       this.lastFrameTimestamp = null;
    }
 
-   public override fun changeCaptureFormat(width: Int, height: Int, framerate: Int) {
+   public open fun changeCaptureFormat(width: Int, height: Int, framerate: Int) {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -144,7 +142,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc_w "measuredSize"
-      // 06: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 06: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 09: aload 1
       // 0a: invokevirtual android/graphics/Rect.width ()I
       // 0d: aload 1
@@ -152,7 +150,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 11: invokestatic java/lang/Math.max (II)I
       // 14: istore 4
       // 16: iload 4
-      // 18: ifle 71
+      // 18: ifle 78
       // 1b: iload 2
       // 1c: i2f
       // 1d: iload 4
@@ -176,15 +174,15 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 36: invokevirtual android/graphics/Point.set (II)V
       // 39: aload 0
       // 3a: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 3d: astore 5
-      // 3f: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
-      // 42: astore 1
-      // 43: aload 5
-      // 45: aload 1
-      // 46: aload 5
-      // 48: getfield android/graphics/Point.x I
-      // 4b: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 4e: aload 1
+      // 3d: astore 1
+      // 3e: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
+      // 41: astore 5
+      // 43: aload 1
+      // 44: aload 5
+      // 46: aload 1
+      // 47: getfield android/graphics/Point.x I
+      // 4a: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 4d: aload 5
       // 4f: aload 0
       // 50: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
       // 53: getfield android/graphics/Point.y I
@@ -201,29 +199,31 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 6a: aload 0
       // 6b: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.framerate I
       // 6e: invokespecial org/webrtc/ScreenCapturerAndroid.changeCaptureFormat (III)V
-      // 71: aload 0
-      // 72: monitorexit
-      // 73: return
+      // 71: goto 78
       // 74: astore 1
-      // 75: aload 0
-      // 76: monitorexit
-      // 77: aload 1
-      // 78: athrow
+      // 75: goto 7b
+      // 78: aload 0
+      // 79: monitorexit
+      // 7a: return
+      // 7b: aload 0
+      // 7c: monitorexit
+      // 7d: aload 1
+      // 7e: athrow
    }
 
-   public override fun dispose() {
+   public open fun dispose() {
       this.release();
       super.dispose();
    }
 
-   public override fun initialize(surfaceTextureHelper: SurfaceTextureHelper, applicationContext: Context, capturerObserver: CapturerObserver) {
+   public open fun initialize(surfaceTextureHelper: SurfaceTextureHelper, applicationContext: Context, capturerObserver: CapturerObserver) {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
          try {
-            r.h(var1, "surfaceTextureHelper");
-            r.h(var2, "applicationContext");
-            r.h(var3, "capturerObserver");
+            q.h(var1, "surfaceTextureHelper");
+            q.h(var2, "applicationContext");
+            q.h(var3, "capturerObserver");
             this.surfaceTextureHelper = var1;
             this.context = var2;
             this.nativeObserver = var3 as NativeCapturerObserver;
@@ -236,16 +236,16 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   public override fun onFrame(frame: VideoFrame?) {
+   public open fun onFrame(frame: VideoFrame?) {
       if (var1 != null) {
          var var2: Context = this.context;
          if (this.context == null) {
-            r.y("context");
+            q.y("context");
             var2 = null;
          }
 
          val var4: Rect = this.getScreenSize(var2);
-         if (!r.c(var4, this.lastMeasuredSize)) {
+         if (!q.c(var4, this.lastMeasuredSize)) {
             this.lastMeasuredSize.set(var4);
             this.changeCaptureFormatInternal(var4, this.maxDimension);
          }
@@ -269,7 +269,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       if (this.framerate > 0) {
          var var1: SurfaceTextureHelper = this.surfaceTextureHelper;
          if (this.surfaceTextureHelper == null) {
-            r.y("surfaceTextureHelper");
+            q.y("surfaceTextureHelper");
             var1 = null;
          }
 
@@ -277,7 +277,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   public override fun startCapture(width: Int, height: Int, framerate: Int) {
+   public open fun startCapture(width: Int, height: Int, framerate: Int) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
@@ -308,30 +308,32 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 14: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.setFramerate (I)V
       // 17: getstatic android/os/Build$VERSION.SDK_INT I
       // 1a: bipush 29
-      // 1c: if_icmplt 34
+      // 1c: if_icmplt 3c
       // 1f: aload 0
       // 20: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.createRecorder ()Landroid/media/AudioRecord;
       // 23: astore 4
       // 25: aload 4
-      // 27: ifnull 34
+      // 27: ifnull 3c
       // 2a: aload 0
       // 2b: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.soundshare Lco/discord/media_engine/SoundshareAudioSource;
       // 2e: aload 4
       // 30: invokevirtual co/discord/media_engine/SoundshareAudioSource.startRecording (Landroid/media/AudioRecord;)Z
       // 33: pop
-      // 34: aload 0
-      // 35: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.startWatchdog ()V
-      // 38: aload 0
-      // 39: monitorexit
-      // 3a: return
-      // 3b: astore 4
-      // 3d: aload 0
-      // 3e: monitorexit
-      // 3f: aload 4
-      // 41: athrow
+      // 34: goto 3c
+      // 37: astore 4
+      // 39: goto 43
+      // 3c: aload 0
+      // 3d: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.startWatchdog ()V
+      // 40: aload 0
+      // 41: monitorexit
+      // 42: return
+      // 43: aload 0
+      // 44: monitorexit
+      // 45: aload 4
+      // 47: athrow
    }
 
-   public override fun stopCapture() {
+   public open fun stopCapture() {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -347,7 +349,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   protected override fun updateVirtualDisplay() {
+   protected open fun updateVirtualDisplay() {
       try {
          super.updateVirtualDisplay();
       } catch (var2: java.lang.Throwable) {
@@ -389,14 +391,14 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
       public override fun run() {
          if (ScreenCapturer.access$getFramerate$p(this.this$0) > 0) {
-            val var4: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
-            if (var4 != null) {
-               val var3: ScreenCapturer = this.this$0;
-               if (TimestampAligner.getRtcTimeNanos() - var4.longValue() > ScreenCapturer.access$getIntervalNanos$p(var3)) {
-                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var3);
+            val var3: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
+            if (var3 != null) {
+               val var4: ScreenCapturer = this.this$0;
+               if (TimestampAligner.getRtcTimeNanos() - var3.longValue() > ScreenCapturer.access$getIntervalNanos$p(var4)) {
+                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var4);
                   var var5: NativeCapturerObserver = var6;
                   if (var6 == null) {
-                     r.y("nativeObserver");
+                     q.y("nativeObserver");
                      var5 = null;
                   }
 

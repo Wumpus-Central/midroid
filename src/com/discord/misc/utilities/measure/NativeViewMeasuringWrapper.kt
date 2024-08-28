@@ -3,7 +3,7 @@ package com.discord.misc.utilities.measure
 import android.annotation.SuppressLint
 import android.view.View
 import android.widget.FrameLayout
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @SuppressLint(["ViewConstructor"])
 public class NativeViewMeasuringWrapper<T extends View>(view: Any, onMeasured: (View, Int, Int) -> Unit) : FrameLayout {
@@ -12,8 +12,8 @@ public class NativeViewMeasuringWrapper<T extends View>(view: Any, onMeasured: (
    private final val runnable: Runnable
 
    init {
-      r.h(var1, "view");
-      r.h(var2, "onMeasured");
+      q.h(var1, "view");
+      q.h(var2, "onMeasured");
       super(var1.getContext());
       this.view = (T)var1;
       this.onMeasured = var2;
@@ -23,7 +23,7 @@ public class NativeViewMeasuringWrapper<T extends View>(view: Any, onMeasured: (
 
    @JvmStatic
    fun `runnable$lambda$0`(var0: NativeViewMeasuringWrapper) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 

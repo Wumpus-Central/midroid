@@ -1,10 +1,32 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.IllegalStateException: Couldn't find method isNotRevealed (Lcom/discord/chat/bridge/spoiler/SpoilerIdentifier;)Z in class com/discord/chat/bridge/spoiler/SpoilerManager
-  at org.vineflower.kotlin.struct.KFunction.parse(KFunction.java:112)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:221)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:194)
-*/
+package com.discord.chat.bridge.spoiler
+
+import java.util.LinkedHashSet
+import kotlin.jvm.internal.q
+
+public object SpoilerManager {
+   private final val revealedSpoilers: MutableSet<SpoilerIdentifier> = new LinkedHashSet()
+
+   public fun isNotRevealed(id: SpoilerIdentifier): Boolean {
+      q.h(var1, "id");
+      return this.isRevealed-V2PEE7g(var1) xor true;
+   }
+
+   public fun isRevealed(id: SpoilerIdentifier): Boolean {
+      q.h(var1, "id");
+      return revealedSpoilers.contains(SpoilerIdentifier.box-impl(var1));
+   }
+
+   public fun markHidden(id: SpoilerIdentifier) {
+      q.h(var1, "id");
+      revealedSpoilers.remove(SpoilerIdentifier.box-impl(var1));
+   }
+
+   public fun markRevealed(id: SpoilerIdentifier) {
+      q.h(var1, "id");
+      revealedSpoilers.add(SpoilerIdentifier.box-impl(var1));
+   }
+
+   public fun reset() {
+      revealedSpoilers.clear();
+   }
+}

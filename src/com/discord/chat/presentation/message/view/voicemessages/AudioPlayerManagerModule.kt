@@ -9,7 +9,7 @@ import com.facebook.react.module.annotations.ReactModule
 @ReactModule(name = "DCDAudioPlayerManager")
 public class AudioPlayerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      kotlin.jvm.internal.r.h(var1, "reactContext");
+      kotlin.jvm.internal.q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -31,7 +31,7 @@ public class AudioPlayerManagerModule(reactContext: ReactApplicationContext) : R
    public fun maybePlayCurrentPlayer() {
       val var1: Activity = this.getCurrentActivity();
       if (var1 != null) {
-         var1.runOnUiThread(new h());
+         var1.runOnUiThread(new i());
       }
    }
 
@@ -39,7 +39,7 @@ public class AudioPlayerManagerModule(reactContext: ReactApplicationContext) : R
    public fun pauseCurrentPlayer(storePauseState: Boolean) {
       val var2: Activity = this.getCurrentActivity();
       if (var2 != null) {
-         var2.runOnUiThread(new g(var1));
+         var2.runOnUiThread(new h(var1));
       }
    }
 

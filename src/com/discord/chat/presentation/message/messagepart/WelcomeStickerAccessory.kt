@@ -2,21 +2,21 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.sticker.Sticker
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : MessageAccessory {
    public final val message: Message
    public final val sticker: Sticker
 
    init {
-      r.h(var1, "message");
-      r.h(var2, "sticker");
-      val var5: java.lang.String = var1.getId_3Eiw7ao();
+      q.h(var1, "message");
+      q.h(var2, "sticker");
+      val var6: java.lang.String = var1.getId-3Eiw7ao();
       val var3: Long = var2.getId();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("welcome sticker ");
-      var6.append(var3);
-      super(var5, var6.toString(), false, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("welcome sticker ");
+      var5.append(var3);
+      super(var6, var5.toString(), false, 4, null);
       this.message = var1;
       this.sticker = var2;
    }
@@ -30,8 +30,8 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
    }
 
    public fun copy(message: Message = var0.message, sticker: Sticker = var0.sticker): WelcomeStickerAccessory {
-      r.h(var1, "message");
-      r.h(var2, "sticker");
+      q.h(var1, "message");
+      q.h(var2, "sticker");
       return new WelcomeStickerAccessory(var1, var2);
    }
 
@@ -42,10 +42,10 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.message, var1.message)) {
+         if (!q.c(this.message, var1.message)) {
             return false;
          } else {
-            return r.c(this.sticker, var1.sticker);
+            return q.c(this.sticker, var1.sticker);
          }
       }
    }
@@ -55,14 +55,14 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
    }
 
    public override fun toString(): String {
-      val var1: Message = this.message;
-      val var2: Sticker = this.sticker;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("WelcomeStickerAccessory(message=");
-      var3.append(var1);
-      var3.append(", sticker=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: Message = this.message;
+      val var1: Sticker = this.sticker;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("WelcomeStickerAccessory(message=");
+      var2.append(var3);
+      var2.append(", sticker=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

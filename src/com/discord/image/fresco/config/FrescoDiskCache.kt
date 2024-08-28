@@ -2,7 +2,7 @@ package com.discord.image.fresco.config
 
 import android.content.Context
 import com.facebook.cache.disk.DiskCacheConfig
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal object FrescoDiskCache {
    private const val CACHE_DIR: String = "app_images_cache"
@@ -11,17 +11,17 @@ internal object FrescoDiskCache {
 
    private fun Context.newDiskCacheConfig(directoryName: String): DiskCacheConfig {
       val var3: DiskCacheConfig = DiskCacheConfig.m(var1).p(var1.getCacheDir()).o(var2).q(62914560L).n();
-      r.g(var3, "newBuilder(this)\n       …IZE)\n            .build()");
+      q.g(var3, "build(...)");
       return var3;
    }
 
    public fun Context.newRegularDiskCache(): DiskCacheConfig {
-      r.h(var1, "<this>");
+      q.h(var1, "<this>");
       return this.newDiskCacheConfig(var1, "app_images_cache");
    }
 
    public fun Context.newSmallDiskCache(): DiskCacheConfig {
-      r.h(var1, "<this>");
+      q.h(var1, "<this>");
       return this.newDiskCacheConfig(var1, "app_images_cache_small");
    }
 }

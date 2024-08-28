@@ -1,7 +1,7 @@
 package com.discord.chat.listmanager
 
 import com.discord.chat.presentation.list.item.ChatListItem
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListAction, listOperations: List<ListOperation>?, changesetUpdateId: Int) {
    public final val action: ChatListAction
@@ -10,8 +10,8 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
    public final val listOperations: List<ListOperation>?
 
    init {
-      r.h(var1, "items");
-      r.h(var2, "action");
+      q.h(var1, "items");
+      q.h(var2, "action");
       super();
       this.items = var1;
       this.action = var2;
@@ -41,8 +41,8 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
       listOperations: List<ListOperation>? = var0.listOperations,
       changesetUpdateId: Int = var0.changesetUpdateId
    ): ChatListUpdate {
-      r.h(var1, "items");
-      r.h(var2, "action");
+      q.h(var1, "items");
+      q.h(var2, "action");
       return new ChatListUpdate(var1, var2, var3, var4);
    }
 
@@ -53,11 +53,11 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.items, var1.items)) {
+         if (!q.c(this.items, var1.items)) {
             return false;
-         } else if (!r.c(this.action, var1.action)) {
+         } else if (!q.c(this.action, var1.action)) {
             return false;
-         } else if (!r.c(this.listOperations, var1.listOperations)) {
+         } else if (!q.c(this.listOperations, var1.listOperations)) {
             return false;
          } else {
             return this.changesetUpdateId == var1.changesetUpdateId;
@@ -79,20 +79,20 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.items;
+      val var4: java.util.List = this.items;
       val var5: ChatListAction = this.action;
       val var2: java.util.List = this.listOperations;
       val var1: Int = this.changesetUpdateId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChatListUpdate(items=");
-      var4.append(var3);
-      var4.append(", action=");
-      var4.append(var5);
-      var4.append(", listOperations=");
-      var4.append(var2);
-      var4.append(", changesetUpdateId=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ChatListUpdate(items=");
+      var3.append(var4);
+      var3.append(", action=");
+      var3.append(var5);
+      var3.append(", listOperations=");
+      var3.append(var2);
+      var3.append(", changesetUpdateId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

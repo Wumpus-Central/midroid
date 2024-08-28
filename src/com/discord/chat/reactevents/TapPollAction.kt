@@ -3,7 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,11 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 public data class TapPollAction(channelId: String, messageId: String, type: String) : ReactEvent {
@@ -24,23 +24,13 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
    public final val type: String
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "type");
+      q.h(var1, "channelId");
+      q.h(var2, "messageId");
+      q.h(var3, "type");
       super();
       this.channelId = var1;
       this.messageId = var2;
       this.type = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TapPollAction, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.channelId);
-      var1.z(var2, 1, var0.messageId);
-      var1.z(var2, 2, var0.type);
    }
 
    public operator fun component1(): String {
@@ -56,9 +46,9 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId, type: String = var0.type): TapPollAction {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "type");
+      q.h(var1, "channelId");
+      q.h(var2, "messageId");
+      q.h(var3, "type");
       return new TapPollAction(var1, var2, var3);
    }
 
@@ -69,12 +59,12 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!q.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!r.c(this.messageId, var1.messageId)) {
+         } else if (!q.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.type, var1.type);
+            return q.c(this.type, var1.type);
          }
       }
    }
@@ -88,21 +78,21 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.type;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapPollAction(channelId=");
-      var2.append(var3);
-      var2.append(", messageId=");
-      var2.append(var4);
-      var2.append(", type=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.type;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapPollAction(channelId=");
+      var3.append(var2);
+      var3.append(", messageId=");
+      var3.append(var1);
+      var3.append(", type=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : f0<TapPollAction> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -121,11 +111,11 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a, a2.a};
+         return new KSerializer[]{b2.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapPollAction {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
@@ -168,8 +158,8 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
                }
             }
 
-            var10 = var5;
             var5 = var11;
+            var10 = var5;
          }
 
          var9.c(var8);
@@ -177,15 +167,15 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
       }
 
       public open fun serialize(encoder: Encoder, value: TapPollAction) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         TapPollAction.write$Self(var2, var4, var3);
+         TapPollAction.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

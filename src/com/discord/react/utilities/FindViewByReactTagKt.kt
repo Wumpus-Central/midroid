@@ -9,15 +9,15 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import java.lang.reflect.Field
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 private const val REACT_UPDATED_ERROR: String =
    "\n        findViewByReactTag failed likely due to a changed React Native internal implementation\n        from a version bump, please inspect this method and update as needed.\n    "
 
 private fun ReactContext.findViewByReactTag(tag: Int): View {
-   val var3: UIManagerModule = var0.getNativeModule(UIManagerModule.class) as UIManagerModule;
+   val var3: UIManagerModule = var0.getNativeModule(UIManagerModule.class);
    if (var3 != null) {
-      val var2: UIImplementation = var3.getUIImplementation();
+      var var2: UIImplementation = var3.getUIImplementation();
       if (var2 != null) {
          val var4: Class;
          if (var2.getClass().getSuperclass() === UIImplementation::class.java) {
@@ -50,19 +50,19 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 
                val var11: Field = var6.getDeclaredField("mNativeViewHierarchyManager");
                var11.setAccessible(true);
-               var6 = (Class)var11.get(var17);
-               if (var6 is NativeViewHierarchyManager) {
-                  val var13: View = (var6 as NativeViewHierarchyManager).resolveView(var1);
-                  r.g(var13, "nativeViewHierarchyManager.resolveView(tag)");
+               var2 = (UIImplementation)var11.get(var17);
+               if (var2 is NativeViewHierarchyManager) {
+                  val var13: View = (var2 as NativeViewHierarchyManager).resolveView(var1);
+                  q.g(var13, "resolveView(...)");
                   return var13;
                } else {
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Field ");
-                  var18.append(var6);
-                  var18.append(" not instance of ");
-                  var18.append(NativeViewHierarchyManager::class.java);
-                  var18.append(".");
-                  throw new IllegalStateException(var18.toString().toString());
+                  val var12: StringBuilder = new StringBuilder();
+                  var12.append("Field ");
+                  var12.append(var2);
+                  var12.append(" not instance of ");
+                  var12.append(NativeViewHierarchyManager::class.java);
+                  var12.append(".");
+                  throw new IllegalStateException(var12.toString().toString());
                }
             } else {
                val var16: StringBuilder = new StringBuilder();
@@ -91,8 +91,8 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 }
 
 public fun ReactContext.findViewByReactTag(tag: Int, onError: (Exception) -> Unit): View? {
-   r.h(var0, "<this>");
-   r.h(var2, "onError");
+   q.h(var0, "<this>");
+   q.h(var2, "onError");
 
    try {
       var6 = findViewByReactTag(var0, var1);
@@ -112,7 +112,7 @@ public fun ReactContext.findViewByReactTag(tag: Int, onError: (Exception) -> Uni
 @JvmSynthetic
 private inline fun <reified T : Any, reified V> Any.getPrivateField(name: String): Any {
    var var2: Class = var0.getClass().getSuperclass();
-   r.m(4, "T");
+   q.m(4, "T");
    if (var2 === Object::class.java) {
       var2 = var0.getClass().getSuperclass();
    } else {
@@ -122,11 +122,11 @@ private inline fun <reified T : Any, reified V> Any.getPrivateField(name: String
    val var4: Field = var2.getDeclaredField(var1);
    var4.setAccessible(true);
    var0 = var4.get(var0);
-   r.m(3, "V");
-   if (var0 is Object) {
+   q.m(3, "V");
+   if (var0 is Any) {
       return (V)var0;
    } else {
-      r.m(4, "V");
+      q.m(4, "V");
       val var5: StringBuilder = new StringBuilder();
       var5.append("Field ");
       var5.append(var0);

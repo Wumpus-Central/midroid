@@ -8,27 +8,25 @@ import com.discord.image.animated_image.animated_image_utils.AnimatedImageStateM
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.rlottie.RLottieDrawable
 import com.discord.theme.ThemeManagerKt
-import kk.f
-import kk.n0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import tm.g
+import tm.j0
 
 internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieImageView {
    private final val placeholder: ShapeDrawable
    private final val rLottieStateManager: AnimatedImageStateManager<com.discord.sticker.sticker_types.RLottieImageView.Config>
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1);
       val var2: ShapeDrawable = new ShapeDrawable();
       var2.setShape(new OvalShape());
       var2.getPaint().setColor(ThemeManagerKt.getTheme().getBackgroundAccent());
       this.placeholder = var2;
-      this.rLottieStateManager = new AnimatedImageStateManager(new Function0<Unit>(this) {
+      this.rLottieStateManager = new AnimatedImageStateManager(new Function0(this) {
          final RLottieImageView this$0;
 
          {
@@ -39,7 +37,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          public final void invoke() {
             this.this$0.playAnimation();
          }
-      }, new Function0<Unit>(this) {
+      }, new Function0(this) {
          final RLottieImageView this$0;
 
          {
@@ -50,7 +48,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          public final void invoke() {
             this.this$0.pauseAnimation();
          }
-      }, new Function1<RLottieImageView.Config, Unit>(this) {
+      }, new Function1(this) {
          final RLottieImageView this$0;
 
          {
@@ -59,10 +57,10 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          }
 
          public final void invoke(RLottieImageView.Config var1) {
-            r.h(var1, "it");
+            q.h(var1, "it");
             this.this$0.recycle(false);
          }
-      }, new Function1<RLottieImageView.Config, java.lang.Boolean>(this) {
+      }, new Function1(this) {
          final RLottieImageView this$0;
 
          {
@@ -71,10 +69,10 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          }
 
          public final java.lang.Boolean invoke(RLottieImageView.Config var1) {
-            r.h(var1, "it");
+            q.h(var1, "it");
             return this.this$0.isAttachedToWindow();
          }
-      }, new Function1<RLottieImageView.Config, Unit>(this) {
+      }, new Function1(this) {
          final RLottieImageView this$0;
 
          {
@@ -83,27 +81,25 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          }
 
          public final void invoke(RLottieImageView.Config var1) {
-            r.h(var1, "config");
+            q.h(var1, "config");
             RLottieImageView.access$fetchSticker(this.this$0, var1);
          }
       });
    }
 
    private fun fetchSticker(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      f.d(
+      g.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
-         n0.b(),
+         j0.b(),
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, null)// $VF: Couldn't be decompiled
+         new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.String.indexOf(String.java:2683)
-   //   at java.base/java.lang.String.indexOf(String.java:2634)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:53)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1121,6 +1117,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -1128,7 +1126,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    }
 
    public fun loadImage(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      r.h(var1, "config");
+      q.h(var1, "config");
       this.rLottieStateManager.onTryFetch(var1);
    }
 
@@ -1167,8 +1165,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       public final val widthDp: Int
 
       init {
-         r.h(var1, "url");
-         r.h(var5, "asset");
+         q.h(var1, "url");
+         q.h(var5, "asset");
          super();
          this.url = var1;
          this.animate = var2;
@@ -1210,8 +1208,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          asset: String = var0.asset,
          renderMode: Int = var0.renderMode
       ): com.discord.sticker.sticker_types.RLottieImageView.Config {
-         r.h(var1, "url");
-         r.h(var5, "asset");
+         q.h(var1, "url");
+         q.h(var5, "asset");
          return new RLottieImageView.Config(var1, var2, var3, var4, var5, var6);
       }
 
@@ -1222,7 +1220,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
             return false;
          } else {
             var1 = var1;
-            if (!r.c(this.url, var1.url)) {
+            if (!q.c(this.url, var1.url)) {
                return false;
             } else if (this.animate != var1.animate) {
                return false;
@@ -1230,7 +1228,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                return false;
             } else if (this.heightDp != var1.heightDp) {
                return false;
-            } else if (!r.c(this.asset, var1.asset)) {
+            } else if (!q.c(this.asset, var1.asset)) {
                return false;
             } else {
                return this.renderMode == var1.renderMode;
@@ -1239,38 +1237,40 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun hashCode(): Int {
-         val var3: Int = this.url.hashCode();
-         var var1: Byte = this.animate;
-         if (this.animate != 0) {
-            var1 = 1;
-         }
-
-         return ((((var3 * 31 + var1) * 31 + Integer.hashCode(this.widthDp)) * 31 + Integer.hashCode(this.heightDp)) * 31 + this.asset.hashCode()) * 31
+         return (
+                  (
+                           ((this.url.hashCode() * 31 + java.lang.Boolean.hashCode(this.animate)) * 31 + Integer.hashCode(this.widthDp)) * 31
+                              + Integer.hashCode(this.heightDp)
+                        )
+                        * 31
+                     + this.asset.hashCode()
+               )
+               * 31
             + Integer.hashCode(this.renderMode);
       }
 
       public override fun toString(): String {
          val var7: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var1: Int = this.widthDp;
+         val var2: Int = this.widthDp;
          val var3: Int = this.heightDp;
-         val var6: java.lang.String = this.asset;
-         val var2: Int = this.renderMode;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Config(url=");
-         var5.append(var7);
-         var5.append(", animate=");
-         var5.append(var4);
-         var5.append(", widthDp=");
-         var5.append(var1);
-         var5.append(", heightDp=");
-         var5.append(var3);
-         var5.append(", asset=");
-         var5.append(var6);
-         var5.append(", renderMode=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var5: java.lang.String = this.asset;
+         val var1: Int = this.renderMode;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Config(url=");
+         var6.append(var7);
+         var6.append(", animate=");
+         var6.append(var4);
+         var6.append(", widthDp=");
+         var6.append(var2);
+         var6.append(", heightDp=");
+         var6.append(var3);
+         var6.append(", asset=");
+         var6.append(var5);
+         var6.append(", renderMode=");
+         var6.append(var1);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

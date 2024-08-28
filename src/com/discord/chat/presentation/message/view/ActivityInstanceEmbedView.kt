@@ -24,26 +24,26 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
    private final val binding: ActivityInstanceEmbedViewBinding
 
    fun ActivityInstanceEmbedView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ActivityInstanceEmbedView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
       val var4: ActivityInstanceEmbedViewBinding = ActivityInstanceEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
       this.binding = var4;
       var3 = SizeUtilsKt.getDpToPx(16);
       this.setPadding(var3, var3, var3, var3);
       val var5: TextView = var4.statusText;
       var4.statusText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.g(var5, "lambda$1$lambda$0");
+      kotlin.jvm.internal.q.e(var5);
       SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
@@ -59,7 +59,7 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
 
    public fun setLaunchButton(text: String?, backgroundColor: Int?, enabled: Boolean = true, submitting: Boolean = false) {
       val var8: DCDButton = this.binding.launchButton;
-      kotlin.jvm.internal.r.g(this.binding.launchButton, "setLaunchButton$lambda$3");
+      kotlin.jvm.internal.q.e(this.binding.launchButton);
       var var6: Boolean;
       if (var1 != null && var1.length() != 0) {
          var6 = 0;
@@ -89,15 +89,15 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
    }
 
    public fun setOnLaunchButtonClickListener(onLaunchButtonClickListener: OnClickListener) {
-      kotlin.jvm.internal.r.h(var1, "onLaunchButtonClickListener");
+      kotlin.jvm.internal.q.h(var1, "onLaunchButtonClickListener");
       this.binding.launchButton.setOnClickButtonListener(var1);
    }
 
    public fun setParticipantAvatarUris(avatarUris: List<String>) {
-      kotlin.jvm.internal.r.h(var1, "avatarUris");
+      kotlin.jvm.internal.q.h(var1, "avatarUris");
       val var3: Boolean = var1.isEmpty();
       var var4: OverlappingCirclesView = this.binding.participants;
-      kotlin.jvm.internal.r.g(this.binding.participants, "binding.participants");
+      kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       val var2: Byte;
       if (var3 xor true) {
          var2 = 0;
@@ -107,14 +107,14 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
 
       var4.setVisibility(var2);
       var4 = this.binding.participants;
-      val var5: ArrayList = new ArrayList(kotlin.collections.h.t(var1, 10));
-      val var6: java.util.Iterator = var1.iterator();
+      val var6: ArrayList = new ArrayList(kotlin.collections.i.u(var1, 10));
+      val var8: java.util.Iterator = var1.iterator();
 
-      while (var6.hasNext()) {
-         var5.add(new OverlappingItem(var6.next() as java.lang.String));
+      while (var8.hasNext()) {
+         var6.add(new OverlappingItem(var8.next() as java.lang.String));
       }
 
-      var4.setItems(var5);
+      var4.setItems(var6);
    }
 
    public fun setStatusText(text: String?) {

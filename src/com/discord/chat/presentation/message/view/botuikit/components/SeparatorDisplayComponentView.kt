@@ -9,7 +9,6 @@ import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import com.discord.chat.bridge.botuikit.SeparatorDisplayComponent
-import com.discord.chat.bridge.botuikit.SeparatorSpacingSize
 import com.discord.chat.databinding.MessageComponentSeparatorDisplayViewBinding
 import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
@@ -17,26 +16,26 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
-import eh.p
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import lj.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,
    ComponentView<SeparatorDisplayComponent> {
    fun SeparatorDisplayComponentView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun SeparatorDisplayComponentView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
    }
 
@@ -46,13 +45,13 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       componentActionListener: ComponentActionListener,
       componentContext: ComponentContext
    ) {
-      r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentActionListener");
-      r.h(var4, "componentContext");
-      val var8: MessageComponentSeparatorDisplayViewBinding = MessageComponentSeparatorDisplayViewBinding.bind(this);
-      r.g(var8, "bind(this)");
-      var8.divider.setBackgroundColor(ThemeManagerKt.getTheme().getTextMuted());
+      q.h(var1, "component");
+      q.h(var2, "componentProvider");
+      q.h(var3, "componentActionListener");
+      q.h(var4, "componentContext");
+      val var10: MessageComponentSeparatorDisplayViewBinding = MessageComponentSeparatorDisplayViewBinding.bind(this);
+      q.g(var10, "bind(...)");
+      var10.divider.setBackgroundColor(ThemeManagerKt.getTheme().getTextMuted());
       val var7: Int = SeparatorDisplayComponentView.WhenMappings.$EnumSwitchMapping$0[var1.getSpacing().ordinal()];
       var var5: Int = 0;
       if (var7 != 1) {
@@ -67,8 +66,8 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
          }
       }
 
-      val var9: View = var8.divider;
-      r.g(var8.divider, "binding.divider");
+      val var9: View = var10.divider;
+      q.g(var10.divider, "divider");
       val var11: LayoutParams = var9.getLayoutParams();
       if (var11 != null) {
          val var12: MarginLayoutParams = var11 as MarginLayoutParams;
@@ -82,44 +81,16 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
    }
 
    public override fun getComponentType(): KClass<SeparatorDisplayComponent> {
-      return h0.b(SeparatorDisplayComponent.class);
+      return g0.b(SeparatorDisplayComponent.class);
    }
 
    public companion object {
       public fun inflateComponent(context: Context, root: ViewGroup): SeparatorDisplayComponentView {
-         r.h(var1, "context");
-         r.h(var2, "root");
+         q.h(var1, "context");
+         q.h(var2, "root");
          val var3: SeparatorDisplayComponentView = MessageComponentSeparatorDisplayViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
-         r.g(var3, "inflate(\n               …false,\n            ).root");
+         q.g(var3, "getRoot(...)");
          return var3;
-      }
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[SeparatorSpacingSize.values().length];
-
-         try {
-            var0[SeparatorSpacingSize.SMALL.ordinal()] = 1;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SeparatorSpacingSize.LARGE.ordinal()] = 2;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SeparatorSpacingSize.UNKNOWN.ordinal()] = 3;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
       }
    }
 }

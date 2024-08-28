@@ -1,6 +1,11 @@
 package com.discord.chat.bridge.policynotice
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -30,12 +30,12 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    public final val titleText: String
 
    init {
-      r.h(var1, "classificationId");
-      r.h(var2, "titleText");
-      r.h(var3, "titleIcon");
-      r.h(var4, "subtitleText");
-      r.h(var5, "descriptionText");
-      r.h(var6, "ctaText");
+      q.h(var1, "classificationId");
+      q.h(var2, "titleText");
+      q.h(var3, "titleIcon");
+      q.h(var4, "subtitleText");
+      q.h(var5, "descriptionText");
+      q.h(var6, "ctaText");
       super();
       this.classificationId = var1;
       this.titleText = var2;
@@ -43,19 +43,6 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
       this.subtitleText = var4;
       this.descriptionText = var5;
       this.ctaText = var6;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: SafetyPolicyNoticeEmbed, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.classificationId);
-      var1.z(var2, 1, var0.titleText);
-      var1.z(var2, 2, var0.titleIcon);
-      var1.z(var2, 3, var0.subtitleText);
-      var1.z(var2, 4, var0.descriptionText);
-      var1.z(var2, 5, var0.ctaText);
    }
 
    public operator fun component1(): String {
@@ -90,12 +77,12 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
       descriptionText: String = var0.descriptionText,
       ctaText: String = var0.ctaText
    ): SafetyPolicyNoticeEmbed {
-      r.h(var1, "classificationId");
-      r.h(var2, "titleText");
-      r.h(var3, "titleIcon");
-      r.h(var4, "subtitleText");
-      r.h(var5, "descriptionText");
-      r.h(var6, "ctaText");
+      q.h(var1, "classificationId");
+      q.h(var2, "titleText");
+      q.h(var3, "titleIcon");
+      q.h(var4, "subtitleText");
+      q.h(var5, "descriptionText");
+      q.h(var6, "ctaText");
       return new SafetyPolicyNoticeEmbed(var1, var2, var3, var4, var5, var6);
    }
 
@@ -106,18 +93,18 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.classificationId, var1.classificationId)) {
+         if (!q.c(this.classificationId, var1.classificationId)) {
             return false;
-         } else if (!r.c(this.titleText, var1.titleText)) {
+         } else if (!q.c(this.titleText, var1.titleText)) {
             return false;
-         } else if (!r.c(this.titleIcon, var1.titleIcon)) {
+         } else if (!q.c(this.titleIcon, var1.titleIcon)) {
             return false;
-         } else if (!r.c(this.subtitleText, var1.subtitleText)) {
+         } else if (!q.c(this.subtitleText, var1.subtitleText)) {
             return false;
-         } else if (!r.c(this.descriptionText, var1.descriptionText)) {
+         } else if (!q.c(this.descriptionText, var1.descriptionText)) {
             return false;
          } else {
-            return r.c(this.ctaText, var1.ctaText);
+            return q.c(this.ctaText, var1.ctaText);
          }
       }
    }
@@ -133,30 +120,30 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.classificationId;
-      val var4: java.lang.String = this.titleText;
+      val var5: java.lang.String = this.classificationId;
+      val var2: java.lang.String = this.titleText;
       val var6: java.lang.String = this.titleIcon;
-      val var5: java.lang.String = this.subtitleText;
+      val var1: java.lang.String = this.subtitleText;
       val var7: java.lang.String = this.descriptionText;
-      val var1: java.lang.String = this.ctaText;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var2.append(var3);
-      var2.append(", titleText=");
-      var2.append(var4);
-      var2.append(", titleIcon=");
-      var2.append(var6);
-      var2.append(", subtitleText=");
-      var2.append(var5);
-      var2.append(", descriptionText=");
-      var2.append(var7);
-      var2.append(", ctaText=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.ctaText;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var4.append(var5);
+      var4.append(", titleText=");
+      var4.append(var2);
+      var4.append(", titleIcon=");
+      var4.append(var6);
+      var4.append(", subtitleText=");
+      var4.append(var1);
+      var4.append(", descriptionText=");
+      var4.append(var7);
+      var4.append(", ctaText=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : f0<SafetyPolicyNoticeEmbed> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -180,33 +167,35 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a, a2.a, a2.a, a2.a, a2.a};
+         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): SafetyPolicyNoticeEmbed {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var12: SerialDescriptor = this.getDescriptor();
          val var13: c = var1.b(var12);
          var var2: Int;
          var var5: java.lang.String;
          var var6: java.lang.String;
-         var var7: java.lang.String;
          var var8: java.lang.String;
          var var9: java.lang.String;
          val var14: java.lang.String;
+         var var18: java.lang.String;
          if (var13.p()) {
-            var8 = var13.m(var12, 0);
-            var9 = var13.m(var12, 1);
-            var7 = var13.m(var12, 2);
+            var18 = var13.m(var12, 0);
+            val var10: java.lang.String = var13.m(var12, 1);
+            var8 = var13.m(var12, 2);
             var6 = var13.m(var12, 3);
             var5 = var13.m(var12, 4);
             var14 = var13.m(var12, 5);
             var2 = 63;
+            var9 = var18;
+            var18 = var10;
          } else {
-            var8 = null;
             var9 = null;
+            var8 = null;
+            var18 = null;
             var6 = null;
-            var7 = null;
             var5 = null;
             var var15: java.lang.String = null;
             var var3: Boolean = true;
@@ -219,7 +208,7 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                      var3 = false;
                      break;
                   case 0:
-                     var8 = var13.m(var12, 0);
+                     var9 = var13.m(var12, 0);
                      var2 |= 1;
                      break;
                   case 1:
@@ -231,15 +220,15 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var6 = var13.m(var12, 3);
+                     var18 = var13.m(var12, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var7 = var13.m(var12, 4);
+                     var6 = var13.m(var12, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var9 = var13.m(var12, 5);
+                     var8 = var13.m(var12, 5);
                      var2 |= 32;
                      break;
                   default:
@@ -247,26 +236,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                }
             }
 
-            var14 = var9;
-            var5 = var7;
-            var7 = var5;
-            var9 = var15;
+            var8 = var5;
+            var14 = var8;
+            var5 = var6;
+            var6 = var18;
+            var18 = var15;
          }
 
          var13.c(var12);
-         return new SafetyPolicyNoticeEmbed(var2, var8, var9, var7, var6, var5, var14, null);
+         return new SafetyPolicyNoticeEmbed(var2, var9, var18, var8, var6, var5, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         SafetyPolicyNoticeEmbed.write$Self(var2, var4, var3);
+         SafetyPolicyNoticeEmbed.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -11,11 +11,11 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
-import eh.w
 import io.sentry.react.RNSentryModule
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext
@@ -24,26 +24,26 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    private final val sentryModule: RNSentryModule
       private final get() {
          val var1: NativeModule = this.getReactApplicationContext().getNativeModule(RNSentryModule.class);
-         r.e(var1);
+         q.e(var1);
          return var1 as RNSentryModule;
       }
 
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("onCrashReportsReceived", h0.b(CrashReportEvent.class))});
+      this.reactEvents = new ReactEvents(new Pair[]{w.a("onCrashReportsReceived", g0.b(CrashReportEvent.class))});
    }
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
-      if (r.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
-         val var3: SystemLogReport = SystemLogReport.INSTANCE;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var2, "reactApplicationContext");
-         var3.reportLastCrash$crash_reporting_release(var2, new Function2<HistoricalProcessExitReason.Reason, SystemLogUtils.Tombstone, Unit>(this) {
+      q.h(var1, "type");
+      if (q.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
+         val var2: SystemLogReport = SystemLogReport.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var2.reportLastCrash$crash_reporting_release(var3, new Function2(this) {
             final CrashReportingModule this$0;
 
             {
@@ -52,10 +52,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
             }
 
             public final void invoke(HistoricalProcessExitReason.Reason var1, SystemLogUtils.Tombstone var2) {
-               val var4: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
-               val var3: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
-               r.g(var3, "reactApplicationContext");
-               var4.emitModuleEvent(var3, new CrashReportEvent(java.lang.Boolean.TRUE, var1, var2));
+               val var3: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
+               val var4: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
+               q.g(var4, "access$getReactApplicationContext(...)");
+               var3.emitModuleEvent(var4, new CrashReportEvent(java.lang.Boolean.TRUE, var1, var2));
             }
          });
       }
@@ -68,7 +68,7 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getDidCrashDuringPreviousExecution(callback: Callback) {
-      r.h(var1, "callback");
+      q.h(var1, "callback");
       val var2: java.lang.Boolean = CrashReporting.INSTANCE.isCrashedLastRun();
       if (var2 != null) {
          var1.invoke(new Object[]{var2});
@@ -77,10 +77,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getIsUserStaffForCrashReporting(callback: Callback) {
-      r.h(var1, "callback");
+      q.h(var1, "callback");
       val var2: CrashReportingCache.Companion = CrashReportingCache.Companion;
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      q.g(var3, "getReactApplicationContext(...)");
       var1.invoke(new Object[]{var2.getInstance(var3).isStaff()});
    }
 
@@ -90,19 +90,19 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
-      r.h(var1, "callback");
-      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.invoke(new Object[]{var3.fetch(var2)});
+      q.h(var1, "callback");
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var2.fetch(var3)});
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.initSystemLogCapture(var2);
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.initSystemLogCapture(var1);
    }
 
    @ReactMethod
@@ -111,11 +111,11 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun setUser(user: ReadableMap) {
-      r.h(var1, "user");
+      q.h(var1, "user");
       val var2: Boolean = var1.getBoolean("staff");
       val var4: CrashReportingCache.Companion = CrashReportingCache.Companion;
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      q.g(var3, "getReactApplicationContext(...)");
       var4.getInstance(var3).setStaff(var2);
    }
 }

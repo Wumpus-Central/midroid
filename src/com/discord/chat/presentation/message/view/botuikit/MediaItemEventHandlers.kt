@@ -5,7 +5,7 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function4
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int, Double?) -> Unit,
    onMediaItemLongClicked: ((String, Int?) -> Unit)?,
@@ -18,9 +18,9 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
    public final val onMediaItemAltTextButtonClicked: (String) -> Unit
 
    init {
-      r.h(var1, "onMediaItemClicked");
-      r.h(var3, "onMediaItemSpoilerClicked");
-      r.h(var4, "onMediaItemAltTextButtonClicked");
+      q.h(var1, "onMediaItemClicked");
+      q.h(var3, "onMediaItemSpoilerClicked");
+      q.h(var4, "onMediaItemAltTextButtonClicked");
       super();
       this.onMediaItemClicked = var1;
       this.onMediaItemLongClicked = var2;
@@ -50,9 +50,9 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
       onMediaItemSpoilerClicked: () -> Unit = var0.onMediaItemSpoilerClicked,
       onMediaItemAltTextButtonClicked: (String) -> Unit = var0.onMediaItemAltTextButtonClicked
    ): MediaItemEventHandlers {
-      r.h(var1, "onMediaItemClicked");
-      r.h(var3, "onMediaItemSpoilerClicked");
-      r.h(var4, "onMediaItemAltTextButtonClicked");
+      q.h(var1, "onMediaItemClicked");
+      q.h(var3, "onMediaItemSpoilerClicked");
+      q.h(var4, "onMediaItemAltTextButtonClicked");
       return new MediaItemEventHandlers(var1, var2, var3, var4);
    }
 
@@ -63,14 +63,14 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.onMediaItemClicked, var1.onMediaItemClicked)) {
+         if (!q.c(this.onMediaItemClicked, var1.onMediaItemClicked)) {
             return false;
-         } else if (!r.c(this.onMediaItemLongClicked, var1.onMediaItemLongClicked)) {
+         } else if (!q.c(this.onMediaItemLongClicked, var1.onMediaItemLongClicked)) {
             return false;
-         } else if (!r.c(this.onMediaItemSpoilerClicked, var1.onMediaItemSpoilerClicked)) {
+         } else if (!q.c(this.onMediaItemSpoilerClicked, var1.onMediaItemSpoilerClicked)) {
             return false;
          } else {
-            return r.c(this.onMediaItemAltTextButtonClicked, var1.onMediaItemAltTextButtonClicked);
+            return q.c(this.onMediaItemAltTextButtonClicked, var1.onMediaItemAltTextButtonClicked);
          }
       }
    }
@@ -88,20 +88,20 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
    }
 
    public override fun toString(): String {
-      val var1: Function4 = this.onMediaItemClicked;
-      val var5: Function2 = this.onMediaItemLongClicked;
-      val var3: Function0 = this.onMediaItemSpoilerClicked;
-      val var2: Function1 = this.onMediaItemAltTextButtonClicked;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MediaItemEventHandlers(onMediaItemClicked=");
-      var4.append(var1);
-      var4.append(", onMediaItemLongClicked=");
-      var4.append(var5);
-      var4.append(", onMediaItemSpoilerClicked=");
-      var4.append(var3);
-      var4.append(", onMediaItemAltTextButtonClicked=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: Function4 = this.onMediaItemClicked;
+      val var4: Function2 = this.onMediaItemLongClicked;
+      val var2: Function0 = this.onMediaItemSpoilerClicked;
+      val var5: Function1 = this.onMediaItemAltTextButtonClicked;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MediaItemEventHandlers(onMediaItemClicked=");
+      var1.append(var3);
+      var1.append(", onMediaItemLongClicked=");
+      var1.append(var4);
+      var1.append(", onMediaItemSpoilerClicked=");
+      var1.append(var2);
+      var1.append(", onMediaItemAltTextButtonClicked=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 }

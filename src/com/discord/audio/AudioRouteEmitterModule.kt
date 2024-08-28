@@ -8,9 +8,9 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
-import eh.w
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterSpec {
    private final lateinit var audioManager: DiscordAudioManagerInterface
@@ -18,7 +18,7 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.audioManagerListener = new DiscordAudioManagerListener(this) {
          final AudioRouteEmitterModule this$0;
@@ -29,34 +29,34 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
-            r.h(var1, "activeAudioDevice");
+            q.h(var1, "activeAudioDevice");
             val var3: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
             val var2: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
             val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            r.g(var4, "reactApplicationContext");
+            q.g(var4, "access$getReactApplicationContext(...)");
             var2.emitModuleEvent(var4, var3);
          }
 
          @Override
          public void onAudioDevicesUpdated(java.util.List<AndroidAudioDevice> var1) {
-            r.h(var1, "audioDevices");
+            q.h(var1, "audioDevices");
          }
       };
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("audio-route-changed", h0.b(AudioRouteEmitterAudioRouteChanged.class))});
+      this.reactEvents = new ReactEvents(new Pair[]{w.a("audio-route-changed", g0.b(AudioRouteEmitterAudioRouteChanged.class))});
    }
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      q.h(var1, "type");
    }
 
-   public open fun getCurrentRoute(promise: Promise?) {
+   public override fun getCurrentRoute(promise: Promise?) {
       if (var1 != null) {
          var var2: DiscordAudioManagerInterface = this.audioManager;
          if (this.audioManager == null) {
-            r.y("audioManager");
+            q.y("audioManager");
             var2 = null;
          }
 
@@ -71,27 +71,27 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
       }
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNAudioRouteEmitter";
    }
 
    public open fun initialize() {
       super.initialize();
       if (VERSION.SDK_INT >= 33) {
-         val var1: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var2, "reactApplicationContext");
-         this.audioManager = var1.getInstance(var2);
+         val var2: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         this.audioManager = var2.getInstance(var1);
       } else {
-         val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var3, "reactApplicationContext");
-         this.audioManager = var5.getInstance(var3);
+         val var3: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var5, "getReactApplicationContext(...)");
+         this.audioManager = var3.getInstance(var5);
       }
 
       var var4: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
-         r.y("audioManager");
+         q.y("audioManager");
          var4 = null;
       }
 
@@ -102,7 +102,7 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
       super.invalidate();
       var var1: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
-         r.y("audioManager");
+         q.y("audioManager");
          var1 = null;
       }
 
@@ -162,39 +162,6 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          }
 
          return var3;
-      }
-
-      // $VF: Class flags could not be determined
-      internal class WhenMappings {
-         @JvmStatic
-         public int[] $EnumSwitchMapping$0;
-
-         @JvmStatic
-         fun {
-            val var0: IntArray = new int[SimpleDeviceType.values().length];
-
-            try {
-               var0[SimpleDeviceType.EARPIECE.ordinal()] = 1;
-            } catch (var5: NoSuchFieldError) {
-            }
-
-            try {
-               var0[SimpleDeviceType.BLUETOOTH_HEADSET.ordinal()] = 2;
-            } catch (var4: NoSuchFieldError) {
-            }
-
-            try {
-               var0[SimpleDeviceType.SPEAKERPHONE.ordinal()] = 3;
-            } catch (var3: NoSuchFieldError) {
-            }
-
-            try {
-               var0[SimpleDeviceType.WIRED_HEADSET.ordinal()] = 4;
-            } catch (var2: NoSuchFieldError) {
-            }
-
-            $EnumSwitchMapping$0 = var0;
-         }
       }
    }
 }

@@ -10,15 +10,15 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
-import fh.p
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import mj.o
 
 @ReactModule(name = "ClipView")
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {
    private final val delegate: ClipViewManagerDelegate<ClipView, ClipViewManager> = new ClipViewManagerDelegate(this)
 
    protected open fun createViewInstance(context: ThemedReactContext): ClipView {
-      r.h(var1, "context");
+      q.h(var1, "context");
       return new ClipView(var1);
    }
 
@@ -32,46 +32,46 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
 
    @ReactProp(name = "borderRadius")
    public open fun setBorderRadius(view: ClipView, borderRadius: Int) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.clipToBorderRadius((float)SizeUtilsKt.getDpToPx(var2));
    }
 
    @ReactProp(name = "clipToCircle")
    public open fun setClipToCircle(view: ClipView, clipToCircle: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.clipToCircle(var2);
    }
 
    @ReactProp(name = "cutouts")
    public open fun setCutouts(view: ClipView, cutouts: ReadableArray?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.resetCutouts();
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          if (var4 != null) {
-            val var5: java.util.Iterator = var4.iterator();
+            val var6: java.util.Iterator = var4.iterator();
 
-            while (var5.hasNext()) {
-               val var6: ReadableMap = var2.getMap((var5 as p).nextInt());
-               r.g(var6, "cutouts.getMap(index)");
-               val var7: java.lang.String = var6.getString("shape");
-               if (var7 != null) {
-                  val var3: Int = var7.hashCode();
+            while (var6.hasNext()) {
+               val var7: ReadableMap = var2.getMap((var6 as o).c());
+               q.g(var7, "getMap(...)");
+               val var5: java.lang.String = var7.getString("shape");
+               if (var5 != null) {
+                  val var3: Int = var5.hashCode();
                   if (var3 != -1360216880) {
-                     if (var3 == 2002554116 && var7.equals("rounded-rect")) {
+                     if (var3 == 2002554116 && var5.equals("rounded-rect")) {
                         var1.addRoundedRectCutout(
-                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
-                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
-                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("width")),
-                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("height")),
-                           (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("cornerRadius"))
+                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("x")),
+                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("y")),
+                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("width")),
+                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("height")),
+                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("cornerRadius"))
                         );
                      }
-                  } else if (var7.equals("circle")) {
+                  } else if (var5.equals("circle")) {
                      var1.addCircleCutout(
-                        (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
-                        (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
-                        (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("size"))
+                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("x")),
+                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("y")),
+                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("size"))
                      );
                   }
                }

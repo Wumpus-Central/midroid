@@ -1,35 +1,37 @@
 package com.discord.logging
 
 import java.util.NoSuchElementException
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import timber.log.a
+import timber.log.a.b
+import timber.log.a.c
 
-internal class LoggingLineNumberTree : a.c {
+internal class LoggingLineNumberTree : c {
    private final val ignoreClasses: List<String> =
-      h.l(
+      i.m(
          new java.lang.String[]{
-            a.class.getName(), a.b.class.getName(), a.c.class.getName(), a.a.class.getName(), LoggingLineNumberTree.class.getName(), Log.class.getName()
+            a.class.getName(), b.class.getName(), c.class.getName(), timber.log.a.a.class.getName(), LoggingLineNumberTree.class.getName(), Log.class.getName()
          }
       )
 
    private fun getCalleStackTraceElement(): StackTraceElement {
-      val var4: Array<StackTraceElement> = new java.lang.Throwable().getStackTrace();
-      r.g(var4, "Throwable().stackTrace");
-      val var2: Int = var4.length;
+      val var3: Array<StackTraceElement> = new java.lang.Throwable().getStackTrace();
+      q.g(var3, "getStackTrace(...)");
+      val var2: Int = var3.length;
 
       for (int var1 = 0; var1 < var2; var1++) {
-         val var3: StackTraceElement = var4[var1];
-         if (this.ignoreClasses.contains(var4[var1].getClassName()) xor true) {
-            r.g(var3, "Throwable().stackTrace\n …sName !in ignoreClasses }");
-            return var3;
+         val var4: StackTraceElement = var3[var1];
+         if (this.ignoreClasses.contains(var3[var1].getClassName()) xor true) {
+            q.g(var4, "first(...)");
+            return var4;
          }
       }
 
       throw new NoSuchElementException("Array contains no element matching the predicate.");
    }
 
-   protected override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-      r.h(var3, "message");
+   protected open fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
+      q.h(var3, "message");
       val var6: StackTraceElement = this.getCalleStackTraceElement();
       val var7: java.lang.String = var6.getFileName();
       val var5: Int = var6.getLineNumber();

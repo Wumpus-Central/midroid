@@ -11,34 +11,34 @@ public class StickerGifViewHolder(stickerView: StickerView) : StickerPartViewHol
    private final val stickerView: StickerView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "stickerView");
+      kotlin.jvm.internal.q.h(var1, "stickerView");
       super(var1);
       this.stickerView = var1;
    }
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function1, var1: Sticker, var2: View) {
-      kotlin.jvm.internal.r.h(var0, "$onStickerClicked");
-      kotlin.jvm.internal.r.h(var1, "$sticker");
+      kotlin.jvm.internal.q.h(var0, "$onStickerClicked");
+      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function1, var1: Sticker, var2: View): Boolean {
-      kotlin.jvm.internal.r.h(var0, "$onStickerLongClicked");
-      kotlin.jvm.internal.r.h(var1, "$sticker");
+      kotlin.jvm.internal.q.h(var0, "$onStickerLongClicked");
+      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
       return true;
    }
 
    public override fun bind(sticker: Sticker, onStickerClicked: (Sticker) -> Unit, onStickerLongClicked: (Sticker) -> Unit, widthDp: Int, heightDp: Int) {
-      kotlin.jvm.internal.r.h(var1, "sticker");
-      kotlin.jvm.internal.r.h(var2, "onStickerClicked");
-      kotlin.jvm.internal.r.h(var3, "onStickerLongClicked");
-      if (!kotlin.jvm.internal.r.c(var1, this.sticker)) {
+      kotlin.jvm.internal.q.h(var1, "sticker");
+      kotlin.jvm.internal.q.h(var2, "onStickerClicked");
+      kotlin.jvm.internal.q.h(var3, "onStickerLongClicked");
+      if (!kotlin.jvm.internal.q.c(var1, this.sticker)) {
          this.sticker = var1;
-         val var8: StickerView = this.stickerView;
-         val var7: java.lang.String = var1.getUrl();
+         val var7: StickerView = this.stickerView;
+         val var8: java.lang.String = var1.getUrl();
          val var6: Boolean;
          if (var1.getRenderMode() == 0) {
             var6 = true;
@@ -46,7 +46,7 @@ public class StickerGifViewHolder(stickerView: StickerView) : StickerPartViewHol
             var6 = false;
          }
 
-         var8.asGif(var7, var4, var5, var6);
+         var7.asGif(var8, var4, var5, var6);
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new t(var2, var1), 1, null);
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new u(var3, var1), 1, null);
       }

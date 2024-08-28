@@ -1,4 +1,5 @@
 package com.discord.chatreplay;
 
-public final class b {
+// $VF: synthetic class
+public abstract class b {
 }

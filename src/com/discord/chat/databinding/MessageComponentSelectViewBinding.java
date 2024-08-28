@@ -11,7 +11,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.textview.MaterialTextView;
-import n1.a;
+import v2.a;
 
 public final class MessageComponentSelectViewBinding implements ViewBinding {
    private final SelectComponentView rootView;
@@ -43,12 +43,12 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
             SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
             if (var2 != null) {
                var1 = R.id.select_component_selection_text;
-               MaterialTextView var4 = (MaterialTextView)a.a(var0, var1);
-               if (var4 != null) {
+               MaterialTextView var3 = (MaterialTextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.select_component_selections_root;
-                  FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new MessageComponentSelectViewBinding((SelectComponentView)var0, var6, var5, var2, var4, var3);
+                  FlexboxLayout var4 = (FlexboxLayout)a.a(var0, var1);
+                  if (var4 != null) {
+                     return new MessageComponentSelectViewBinding((SelectComponentView)var0, var6, var5, var2, var3, var4);
                   }
                }
             }

@@ -23,35 +23,35 @@ public class ThreadStarterMessageHeaderView  public constructor(context: Context
    private final val binding: ThreadStarterMessageHeaderViewBinding
 
    fun ThreadStarterMessageHeaderView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var3: ThreadStarterMessageHeaderViewBinding = ThreadStarterMessageHeaderViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(\n        LayoutI…ext),\n        this,\n    )");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
       this.setOrientation(0);
       val var5: SimpleDraweeView = var3.threadStarterHeaderIcon;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderIcon, "binding.threadStarterHeaderIcon");
+      kotlin.jvm.internal.q.g(var3.threadStarterHeaderIcon, "threadStarterHeaderIcon");
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.TextChannel);
       val var6: SimpleDraweeView = var3.threadStarterHeaderIcon;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderIcon, "binding.threadStarterHeaderIcon");
+      kotlin.jvm.internal.q.g(var3.threadStarterHeaderIcon, "threadStarterHeaderIcon");
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getInteractiveNormal());
       var3.threadStarterHeaderText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       val var7: TextView = var3.threadStarterHeaderText;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderText, "binding.threadStarterHeaderText");
+      kotlin.jvm.internal.q.g(var3.threadStarterHeaderText, "threadStarterHeaderText");
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
       val var4: TextView = var3.threadStarterHeaderText;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderText, "binding.threadStarterHeaderText");
+      kotlin.jvm.internal.q.g(var3.threadStarterHeaderText, "threadStarterHeaderText");
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
    }
 
    public fun configure(headerText: String?, hasMessageReference: Boolean) {
       val var5: View = this.binding.getRoot();
-      kotlin.jvm.internal.r.g(var5, "binding.root");
+      kotlin.jvm.internal.q.g(var5, "getRoot(...)");
       var var3: Boolean;
       if (var1 != null) {
          var3 = 1;
@@ -68,7 +68,7 @@ public class ThreadStarterMessageHeaderView  public constructor(context: Context
       var5.setVisibility(var3);
       this.binding.threadStarterHeaderText.setText(var1);
       val var6: View = this.binding.getRoot();
-      kotlin.jvm.internal.r.g(var6, "binding.root");
+      kotlin.jvm.internal.q.g(var6, "getRoot(...)");
       val var9: LayoutParams = var6.getLayoutParams();
       if (var9 != null) {
          val var10: MarginLayoutParams = var9 as MarginLayoutParams;

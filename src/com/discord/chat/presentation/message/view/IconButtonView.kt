@@ -21,38 +21,38 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
    private final val binding: IconButtonViewBinding
 
    fun IconButtonView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var3: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
       val var4: FrameLayout = var3.iconContainer;
-      kotlin.jvm.internal.r.g(var3.iconContainer, "binding.iconContainer");
+      kotlin.jvm.internal.q.g(var3.iconContainer, "iconContainer");
       ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(8));
-      (var3.iconButton.getHierarchy() as GenericDraweeHierarchy).w(0);
+      (var3.iconButton.getHierarchy() as GenericDraweeHierarchy).x(0);
    }
 
    @JvmStatic
    fun `configure$lambda$1`(var0: Function0, var1: View) {
-      kotlin.jvm.internal.r.h(var0, "$onClick");
+      kotlin.jvm.internal.q.h(var0, "$onClick");
       var0.invoke();
    }
 
    public fun configure(icon: ReactAsset, alt: I18nMessage, onClick: () -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "icon");
-      kotlin.jvm.internal.r.h(var2, "alt");
-      kotlin.jvm.internal.r.h(var3, "onClick");
+      kotlin.jvm.internal.q.h(var1, "icon");
+      kotlin.jvm.internal.q.h(var2, "alt");
+      kotlin.jvm.internal.q.h(var3, "onClick");
       val var4: SimpleDraweeView = this.binding.iconButton;
-      kotlin.jvm.internal.r.g(this.binding.iconButton, "it");
+      kotlin.jvm.internal.q.e(this.binding.iconButton);
       ReactAssetUtilsKt.setReactAsset(var4, var1);
       I18nUtilsKt.i18nContentDescription$default(var4, var2, null, 2, null);
       val var5: FrameLayout = this.binding.iconContainer;
-      kotlin.jvm.internal.r.g(this.binding.iconContainer, "binding.iconContainer");
+      kotlin.jvm.internal.q.g(this.binding.iconContainer, "iconContainer");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new h0(var3), 1, null);
    }
 }

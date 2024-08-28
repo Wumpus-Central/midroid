@@ -4,13 +4,12 @@ import android.app.Activity
 import android.view.View
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsCompat.m
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun WindowInsetsCompat.getDisplayCutoutInsets(ignoringVisibility: Boolean = false): Insets {
-   r.h(var0, "<this>");
-   return getInsets(var0, m.a(), var1);
+   q.h(var0, "<this>");
+   return getInsets(var0, WindowInsetsCompat.m.a(), var1);
 }
 
 @JvmSynthetic
@@ -23,8 +22,8 @@ fun `getDisplayCutoutInsets$default`(var0: WindowInsetsCompat, var1: Boolean, va
 }
 
 public fun WindowInsetsCompat.getImeInsets(ignoringVisibility: Boolean = false): Insets {
-   r.h(var0, "<this>");
-   return getInsets(var0, m.b(), var1);
+   q.h(var0, "<this>");
+   return getInsets(var0, WindowInsetsCompat.m.b(), var1);
 }
 
 @JvmSynthetic
@@ -44,7 +43,7 @@ private fun WindowInsetsCompat.getInsets(type: Int, ignoringVisibility: Boolean 
       var3 = var0.f(var1);
    }
 
-   r.g(var3, "if (ignoringVisibility) …    getInsets(type)\n    }");
+   q.e(var3);
    return var3;
 }
 
@@ -58,8 +57,8 @@ fun `getInsets$default`(var0: WindowInsetsCompat, var1: Int, var2: Boolean, var3
 }
 
 public fun WindowInsetsCompat.getNavigationBarsInsets(ignoringVisibility: Boolean = false): Insets {
-   r.h(var0, "<this>");
-   return getInsets(var0, m.e(), var1);
+   q.h(var0, "<this>");
+   return getInsets(var0, WindowInsetsCompat.m.e(), var1);
 }
 
 @JvmSynthetic
@@ -72,8 +71,8 @@ fun `getNavigationBarsInsets$default`(var0: WindowInsetsCompat, var1: Boolean, v
 }
 
 public fun WindowInsetsCompat.getSystemBarInsets(ignoringVisibility: Boolean = false): Insets {
-   r.h(var0, "<this>");
-   return getInsets(var0, m.g(), var1);
+   q.h(var0, "<this>");
+   return getInsets(var0, WindowInsetsCompat.m.g(), var1);
 }
 
 @JvmSynthetic
@@ -86,7 +85,7 @@ fun `getSystemBarInsets$default`(var0: WindowInsetsCompat, var1: Boolean, var2: 
 }
 
 public fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var1: View = ActivityExtensionsKt.getRootView(var0);
    val var2: WindowInsetsCompat;
    if (var1 != null) {

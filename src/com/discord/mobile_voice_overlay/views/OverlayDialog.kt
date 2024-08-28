@@ -8,9 +8,9 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import android.view.WindowManager.LayoutParams
-import androidx.core.view.f1
+import androidx.core.view.r0
 import com.discord.mobile_voice_overlay.utils.WindowUtils
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public abstract class OverlayDialog : OverlayBubbleWrap {
    public open var isMoving: Boolean
@@ -26,7 +26,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
       internal set
 
    open fun OverlayDialog(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1);
       this.onDialogClosed = <unrepresentable>.INSTANCE;
       this.setOnClickListener(new a(this));
@@ -41,7 +41,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
       this.onDialogClosed = <unrepresentable>.INSTANCE;
       this.setOnClickListener(new a(this));
@@ -56,7 +56,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet, var3: Int) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
       this.onDialogClosed = <unrepresentable>.INSTANCE;
       this.setOnClickListener(new a(this));
@@ -72,12 +72,12 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
    @JvmStatic
    fun `_init_$lambda$0`(var0: OverlayDialog, var1: View) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       var0.closeDialog();
    }
 
    public fun closeDialog() {
-      if (!f1.T(this)) {
+      if (!r0.T(this)) {
          this.onDialogClosed.invoke(this);
       } else {
          val var1: Animator = this.getClosingAnimator();
@@ -110,11 +110,11 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
             }
 
             public void onViewAttachedToWindow(View var1) {
-               r.h(var1, "v");
+               q.h(var1, "v");
             }
 
             public void onViewDetachedFromWindow(View var1) {
-               r.h(var1, "v");
+               q.h(var1, "v");
                this.$closingAnimator.end();
             }
          });

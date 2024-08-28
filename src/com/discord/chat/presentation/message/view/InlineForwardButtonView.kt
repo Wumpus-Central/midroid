@@ -16,12 +16,12 @@ import kotlin.jvm.functions.Function0
 
 public class InlineForwardButtonView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView {
    fun InlineForwardButtonView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          this, ThemeManagerKt.getTheme().getRedesignButtonTertiaryBackground(), SizeUtilsKt.getDpToPx(16), null, 0, 12, null
@@ -34,12 +34,12 @@ public class InlineForwardButtonView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `configure$lambda$0`(var0: Function0, var1: View) {
-      kotlin.jvm.internal.r.h(var0, "$onClick");
+      kotlin.jvm.internal.q.h(var0, "$onClick");
       var0.invoke();
    }
 
    public fun configure(isEnabled: Boolean, onClick: () -> Unit, useOldIcon: Boolean) {
-      kotlin.jvm.internal.r.h(var2, "onClick");
+      kotlin.jvm.internal.q.h(var2, "onClick");
       this.setEnabled(var1);
       if (var3) {
          ReactAssetUtilsKt.setReactAsset(this, ReactAsset.ArrowAngleRightUpIcon);

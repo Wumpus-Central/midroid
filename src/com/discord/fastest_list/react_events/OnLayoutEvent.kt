@@ -3,8 +3,12 @@ package com.discord.fastest_list.react_events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import eh.w
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.f0
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -12,10 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.e0
-import xk.f0
+import lj.w
 
 @f
 internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Float) : ReactEvent {
@@ -29,17 +30,6 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
       this.y = var2;
       this.width = var3;
       this.height = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnLayoutEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.r(var2, 0, var0.x);
-      var1.r(var2, 1, var0.y);
-      var1.r(var2, 2, var0.width);
-      var1.r(var2, 3, var0.height);
    }
 
    public operator fun component1(): Float {
@@ -99,23 +89,23 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
 
    public override fun toString(): String {
       val var3: Float = this.x;
-      val var1: Float = this.y;
-      val var2: Float = this.width;
-      val var4: Float = this.height;
+      val var2: Float = this.y;
+      val var4: Float = this.width;
+      val var1: Float = this.height;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnLayoutEvent(x=");
       var5.append(var3);
       var5.append(", y=");
-      var5.append(var1);
-      var5.append(", width=");
       var5.append(var2);
-      var5.append(", height=");
+      var5.append(", width=");
       var5.append(var4);
+      var5.append(", height=");
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
 
-   public object `$serializer` : f0<OnLayoutEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -134,12 +124,12 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{e0.a, e0.a, e0.a, e0.a};
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{f0.a, f0.a, f0.a, f0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnLayoutEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.b(var10);
          var var2: Float;
@@ -202,16 +192,16 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
       }
 
       public open fun serialize(encoder: Encoder, value: OnLayoutEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         OnLayoutEvent.write$Self(var2, var4, var3);
+         OnLayoutEvent.write$Self$fastest_list_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

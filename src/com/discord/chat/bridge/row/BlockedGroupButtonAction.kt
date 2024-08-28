@@ -1,6 +1,11 @@
 package com.discord.chat.bridge.row
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 public data class BlockedGroupButtonAction(type: String, context: String) {
@@ -20,20 +20,11 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
    public final val type: String
 
    init {
-      r.h(var1, "type");
-      r.h(var2, "context");
+      q.h(var1, "type");
+      q.h(var2, "context");
       super();
       this.type = var1;
       this.context = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: BlockedGroupButtonAction, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.type);
-      var1.z(var2, 1, var0.context);
    }
 
    public operator fun component1(): String {
@@ -45,8 +36,8 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
    }
 
    public fun copy(type: String = var0.type, context: String = var0.context): BlockedGroupButtonAction {
-      r.h(var1, "type");
-      r.h(var2, "context");
+      q.h(var1, "type");
+      q.h(var2, "context");
       return new BlockedGroupButtonAction(var1, var2);
    }
 
@@ -57,10 +48,10 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.type, var1.type)) {
+         if (!q.c(this.type, var1.type)) {
             return false;
          } else {
-            return r.c(this.context, var1.context);
+            return q.c(this.context, var1.context);
          }
       }
    }
@@ -81,7 +72,7 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<BlockedGroupButtonAction> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -99,11 +90,11 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a};
+         return new KSerializer[]{b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): BlockedGroupButtonAction {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
@@ -144,15 +135,15 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
       }
 
       public open fun serialize(encoder: Encoder, value: BlockedGroupButtonAction) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         BlockedGroupButtonAction.write$Self(var2, var4, var3);
+         BlockedGroupButtonAction.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

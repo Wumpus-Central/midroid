@@ -5,11 +5,9 @@ import com.discord.image.fresco.listeners.ControllerListener
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
-import kk.f
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import tm.g
 
 public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView, background: Drawable, placeholder: String?, placeholderVersion: Int?)
    : ControllerListener {
@@ -19,8 +17,8 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
    private final val placeholderVersion: Int?
 
    init {
-      r.h(var1, "draweeView");
-      r.h(var2, "background");
+      q.h(var1, "draweeView");
+      q.h(var2, "background");
       super();
       this.draweeView = var1;
       this.background = var2;
@@ -29,20 +27,20 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
    }
 
    public open fun onFailure(id: String?, throwable: Throwable?) {
-      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).u(this.background);
+      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);
    }
 
    public open fun onSubmit(id: String?, callerContext: Any?) {
-      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).z(null);
+      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).A(null);
       if (!Companion.canDisplay(this.placeholder, this.placeholderVersion)) {
-         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).u(this.background);
+         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);
       } else {
-         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).u(null);
-         f.d(
+         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(null);
+         g.d(
             CoroutineViewUtilsKt.getAttachedScope(this.draweeView),
             null,
             null,
-            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null)// $VF: Couldn't be decompiled
+            new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
    //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)

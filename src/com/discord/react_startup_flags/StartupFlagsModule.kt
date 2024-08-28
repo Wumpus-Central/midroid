@@ -5,19 +5,19 @@ import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import com.discord.codegen.NativeStartupFlagsSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class StartupFlagsModule(reactContext: ReactApplicationContext) : NativeStartupFlagsSpec {
    private final val sharedPreferences: SharedPreferences
       private final get() {
          val var1: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("StartupFlagsModule", 0);
-         r.g(var1, "reactApplicationContext.…EY, Context.MODE_PRIVATE)");
+         q.g(var1, "getSharedPreferences(...)");
          return var1;
       }
 
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -36,7 +36,7 @@ public class StartupFlagsModule(reactContext: ReactApplicationContext) : NativeS
 
    public open fun setReactProfilingEnabled(value: Boolean) {
       val var2: Editor = this.getSharedPreferences().edit();
-      r.g(var2, "editor");
+      q.g(var2, "editor");
       var2.putBoolean("reactProfilingEnabled", var1);
       var2.apply();
    }
@@ -48,7 +48,7 @@ public class StartupFlagsModule(reactContext: ReactApplicationContext) : NativeS
       private final var initialReactProfilingEnabledSetting: Boolean?
 
       public fun handleIntent(intent: Intent) {
-         r.h(var1, "intent");
+         q.h(var1, "intent");
          if (var1.hasExtra("reactProfilingEnabled")) {
             StartupFlagsModule.access$setInitialReactProfilingEnabledSetting$cp(var1.getBooleanExtra("reactProfilingEnabled", false));
          }

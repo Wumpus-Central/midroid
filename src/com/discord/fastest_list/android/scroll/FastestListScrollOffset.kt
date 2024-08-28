@@ -3,7 +3,7 @@ package com.discord.fastest_list.android.scroll
 import android.view.View
 import com.discord.fastest_list.android.FastestListLayoutManager
 import com.discord.fastest_list.android.FastestListSections
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, sections: FastestListSections) {
    private final var data: com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
@@ -11,8 +11,8 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
    private final val sections: FastestListSections
 
    init {
-      r.h(var1, "layoutManager");
-      r.h(var2, "sections");
+      q.h(var1, "layoutManager");
+      q.h(var2, "sections");
       super();
       this.layoutManager = var1;
       this.sections = var2;
@@ -182,15 +182,15 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
       }
 
       public override fun toString(): String {
-         val var2: Int = this.x;
+         val var6: Int = this.x;
          val var3: Int = this.y;
          val var1: Int = this.width;
          val var5: Int = this.height;
-         val var6: Int = this.contentWidth;
-         val var4: Int = this.contentHeight;
+         val var4: Int = this.contentWidth;
+         val var2: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Data(x=");
-         var7.append(var2);
+         var7.append(var6);
          var7.append(", y=");
          var7.append(var3);
          var7.append(", width=");
@@ -198,9 +198,9 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
          var7.append(", height=");
          var7.append(var5);
          var7.append(", contentWidth=");
-         var7.append(var6);
-         var7.append(", contentHeight=");
          var7.append(var4);
+         var7.append(", contentHeight=");
+         var7.append(var2);
          var7.append(")");
          return var7.toString();
       }

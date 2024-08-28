@@ -18,66 +18,60 @@ import com.discord.reactions.databinding.AddReactionViewBinding
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @SuppressLint(["SetTextI18n"])
 public class AddReactionView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final val binding: AddReactionViewBinding
 
    fun AddReactionView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
       val var8: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var8, "inflate(LayoutInflater.from(context), this)");
+      q.g(var8, "inflate(...)");
       this.binding = var8;
       this.setOrientation(0);
       this.setGravity(16);
       val var6: ReactionView.Companion = ReactionView.Companion;
-      val var4: Int = ReactionView.Companion.getHORIZ_PADDING();
-      val var3: Int = VERTICAL_PADDING;
-      this.setPadding(var4, VERTICAL_PADDING, var6.getHORIZ_PADDING(), var3);
+      val var3: Int = ReactionView.Companion.getHORIZ_PADDING();
+      val var4: Int = VERTICAL_PADDING;
+      this.setPadding(var3, VERTICAL_PADDING, var6.getHORIZ_PADDING(), var4);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundSecondary(), var6.getCORNER_RADIUS(), null, 0, 12, null);
       val var5: TextView = var8.addReactionText;
-      r.g(var8.addReactionText, "it");
+      q.e(var8.addReactionText);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       var5.setPadding(var6.getHORIZ_PADDING(), 0, var6.getHORIZ_PADDING(), 0);
       val var7: SimpleDraweeView = var8.addReactionImage;
-      r.g(var8.addReactionImage, "it");
+      q.e(var8.addReactionImage);
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.AddReaction);
       ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getInteractiveNormal());
       var7.setScaleType(ScaleType.FIT_CENTER);
    }
 
    public fun configure(addReactionLabel: String, reactionsTheme: ReactionsTheme?, isBurst: Boolean) {
-      r.h(var1, "addReactionLabel");
+      q.h(var1, "addReactionLabel");
       val var6: TextView = this.binding.addReactionText;
       this.binding.addReactionText.setText(var1);
-      var var4: Boolean;
       if (var1.length() == 0) {
-         var4 = 1;
-      } else {
-         var4 = 0;
-      }
-
-      if (var4) {
          var6.setVisibility(8);
       } else {
          var6.setVisibility(0);
       }
 
-      label40: {
+      var var4: Int;
+      label35: {
          if (var2 != null) {
             val var7: Int = var2.getReactionTextColor();
             if (var7 != null) {
                var4 = var7;
-               break label40;
+               break label35;
             }
          }
 
@@ -85,7 +79,7 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       }
 
       var6.setTextColor(var4);
-      val var14: SimpleDraweeView = this.binding.addReactionImage;
+      val var13: SimpleDraweeView = this.binding.addReactionImage;
       val var8: ReactAsset;
       if (var3) {
          var8 = ReactAsset.AddBurstReaction;
@@ -93,14 +87,14 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
          var8 = ReactAsset.AddReaction;
       }
 
-      label34: {
-         r.g(this.binding.addReactionImage, "it");
-         ReactAssetUtilsKt.setReactAsset(var14, var8);
+      label29: {
+         q.e(this.binding.addReactionImage);
+         ReactAssetUtilsKt.setReactAsset(var13, var8);
          if (var2 != null) {
             val var9: Int = var2.getReactionBackgroundColor();
             if (var9 != null) {
                var4 = var9;
-               break label34;
+               break label29;
             }
          }
 

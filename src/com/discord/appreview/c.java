@@ -1,9 +1,10 @@
 package com.discord.appreview;
 
+import cd.f;
 import com.google.android.gms.tasks.Task;
-import hb.d;
 
-public final class c implements d {
+// $VF: synthetic class
+public final class c implements f {
    public final AppRatingRequester a;
 
    public final void a(Task var1) {

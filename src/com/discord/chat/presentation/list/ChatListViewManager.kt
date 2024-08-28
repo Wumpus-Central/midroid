@@ -5,14 +5,14 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.viewmanagers.DCDChatListManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatListManagerInterface
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "DCDChatList")
 public class ChatListViewManager : SimpleViewManager<ChatListView>, DCDChatListManagerInterface<ChatListView> {
    private final val mDelegate: DCDChatListManagerDelegate<ChatListView, ChatListViewManager> = new DCDChatListManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatListView {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       return new ChatListView(var1, null, 0, 6, null);
    }
 
@@ -25,7 +25,7 @@ public class ChatListViewManager : SimpleViewManager<ChatListView>, DCDChatListM
    }
 
    public open fun onDropViewInstance(view: ChatListView) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.cleanup();
       super.onDropViewInstance(var1);
    }

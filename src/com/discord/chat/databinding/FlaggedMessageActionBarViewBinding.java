@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import n1.a;
+import v2.a;
 
 public final class FlaggedMessageActionBarViewBinding implements ViewBinding {
    public final DCDButton actionsButton;
@@ -49,6 +49,7 @@ public final class FlaggedMessageActionBarViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

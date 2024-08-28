@@ -7,13 +7,13 @@ public class InteractionStatusViewHolder(interactionStatusView: InteractionStatu
    private final val interactionStatusView: InteractionStatusView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "interactionStatusView");
+      kotlin.jvm.internal.q.h(var1, "interactionStatusView");
       super(var1, null);
       this.interactionStatusView = var1;
    }
 
    public fun bind(accessory: InteractionStatusMessageAccessory) {
-      kotlin.jvm.internal.r.h(var1, "accessory");
-      this.interactionStatusView.setInteractionStatus_ntcYbpo(var1.getMessageId_3Eiw7ao(), var1.getInteractionStatus());
+      kotlin.jvm.internal.q.h(var1, "accessory");
+      this.interactionStatusView.setInteractionStatus-ntcYbpo(var1.getMessageId-3Eiw7ao(), var1.getInteractionStatus());
    }
 }

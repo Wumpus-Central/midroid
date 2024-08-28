@@ -3,15 +3,14 @@ package com.discord.device
 import android.os.LocaleList
 import com.discord.codegen.NativeDeviceLocaleManagerSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import eh.w
-import fh.s
 import java.util.ArrayList
-import kotlin.jvm.internal.r
-import vh.h
+import kotlin.jvm.internal.q
+import lj.w
+import mj.r
 
 public class DeviceLocaleManagerModule(reactContext: ReactApplicationContext) : NativeDeviceLocaleManagerSpec {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -20,30 +19,30 @@ public class DeviceLocaleManagerModule(reactContext: ReactApplicationContext) : 
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any?> {
-      val var7: ArrayList = new ArrayList();
-      val var4: LocaleList = LocaleList.getAdjustedDefault();
-      r.g(var4, "getAdjustedDefault()");
-      val var3: Int = var4.size();
+      val var6: ArrayList = new ArrayList();
+      val var5: LocaleList = LocaleList.getAdjustedDefault();
+      q.g(var5, "getAdjustedDefault(...)");
+      val var3: Int = var5.size();
       var var2: Int = 10;
 
       for (int var1 = 0; var1 < var3; var1++) {
-         val var5: java.lang.String = var4.get(var1).toLanguageTag();
+         val var4: java.lang.String = var5.get(var1).toLanguageTag();
          if (var1 == 0) {
-            r.g(var5, "lang");
-            var7.add(var5);
+            q.e(var4);
+            var6.add(var4);
          } else {
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var5);
-            var6.append(";q=0.");
-            var6.append(var2);
-            var7.add(var6.toString());
+            val var7: StringBuilder = new StringBuilder();
+            var7.append(var4);
+            var7.append(";q=0.");
+            var7.append(var2);
+            var6.add(var7.toString());
          }
 
-         var2 = h.c(1, var2 - 1);
+         var2 = kotlin.ranges.f.c(1, var2 - 1);
       }
 
-      kotlin.collections.h.k0(var7, ",", null, null, 0, null, null, 62, null);
-      return s.m(w.a("Language", kotlin.collections.h.a0(var7)), w.a("Languages", var7));
+      i.n0(var6, ",", null, null, 0, null, null, 62, null);
+      return r.m(new Pair[]{w.a("Language", i.d0(var6)), w.a("Languages", var6)});
    }
 
    public companion object {

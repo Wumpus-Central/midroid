@@ -18,26 +18,26 @@ public class RoleIconView(context: Context, attrs: AttributeSet) : FrameLayout {
    private final val binding: RoleIconViewBinding
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "attrs");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "attrs");
       super(var1, var2);
       val var3: RoleIconViewBinding = RoleIconViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
    @JvmStatic
    fun `configureRoleIcon$lambda$3$lambda$2`(var0: ChatEventHandler, var1: RoleIcon, var2: RenderableEmoji, var3: View) {
-      kotlin.jvm.internal.r.h(var0, "$eventHandler");
-      kotlin.jvm.internal.r.h(var1, "$roleIcon");
+      kotlin.jvm.internal.q.h(var0, "$eventHandler");
+      kotlin.jvm.internal.q.h(var1, "$roleIcon");
       var0.onTapRoleIcon(var1.getName(), var2.getUrl(true, var1.getSize()));
    }
 
    public fun configureRoleIcon(roleIcon: RoleIcon, eventHandler: ChatEventHandler) {
       var var8: Any;
       label29: {
-         kotlin.jvm.internal.r.h(var1, "roleIcon");
-         kotlin.jvm.internal.r.h(var2, "eventHandler");
+         kotlin.jvm.internal.q.h(var1, "roleIcon");
+         kotlin.jvm.internal.q.h(var2, "eventHandler");
          var8 = var1.getSource();
          if (var8 != null) {
             var8 = RenderableEmoji.Companion.customWithUrl((java.lang.String)var8, var1.getAlt());
@@ -69,14 +69,14 @@ public class RoleIconView(context: Context, attrs: AttributeSet) : FrameLayout {
 
       this.setVisibility(var3);
       if (var8 != null) {
-         val var6: SimpleDraweeSpanTextView = this.binding.roleIconViewUnicodeEmoji;
-         val var5: Context = this.binding.roleIconViewUnicodeEmoji.getContext();
-         kotlin.jvm.internal.r.g(var5, "context");
-         var6.setDraweeSpanStringBuilder(
-            RenderableEmojiKt.renderEmoji$default((RenderableEmoji)var8, var5, SizeUtilsKt.getSpToPx(var1.getSize()), true, 0, null, 48, null)
+         val var5: SimpleDraweeSpanTextView = this.binding.roleIconViewUnicodeEmoji;
+         val var6: Context = this.binding.roleIconViewUnicodeEmoji.getContext();
+         kotlin.jvm.internal.q.g(var6, "getContext(...)");
+         var5.setDraweeSpanStringBuilder(
+            RenderableEmojiKt.renderEmoji$default((RenderableEmoji)var8, var6, SizeUtilsKt.getSpToPx(var1.getSize()), true, 0, null, 48, null)
          );
-         kotlin.jvm.internal.r.g(var6, "configureRoleIcon$lambda$3");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new x(var2, var1, (RenderableEmoji)var8), 1, null);
+         kotlin.jvm.internal.q.e(var5);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new x(var2, var1, (RenderableEmoji)var8), 1, null);
       }
    }
 }

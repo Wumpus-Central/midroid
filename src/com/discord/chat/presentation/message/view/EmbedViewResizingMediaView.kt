@@ -9,18 +9,18 @@ public class EmbedViewResizingMediaView  public constructor(context: Context, at
       internal set
 
    fun EmbedViewResizingMediaView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, 0, 4, null);
    }
 
    public fun setTarget(width: Int, height: Int, maxHeightPx: Int, maxWidthPx: Int) {
       val var5: EmbedViewResizingMediaView.Target = new EmbedViewResizingMediaView.Target(var1, var2, var3, var4);
-      if (this.target == null || !kotlin.jvm.internal.r.c(this.getTarget(), var5)) {
+      if (this.target == null || !kotlin.jvm.internal.q.c(this.getTarget(), var5)) {
          this.setTarget(var5);
       }
 
@@ -87,19 +87,19 @@ public class EmbedViewResizingMediaView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var3: Int = this.width;
-         val var1: Int = this.height;
-         val var4: Int = this.maxHeightPx;
-         val var2: Int = this.maxWidthPx;
+         val var2: Int = this.width;
+         val var4: Int = this.height;
+         val var1: Int = this.maxHeightPx;
+         val var3: Int = this.maxWidthPx;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Target(width=");
-         var5.append(var3);
-         var5.append(", height=");
-         var5.append(var1);
-         var5.append(", maxHeightPx=");
-         var5.append(var4);
-         var5.append(", maxWidthPx=");
          var5.append(var2);
+         var5.append(", height=");
+         var5.append(var4);
+         var5.append(", maxHeightPx=");
+         var5.append(var1);
+         var5.append(", maxWidthPx=");
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

@@ -1,6 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
 
 @f
 public data class HandleMessage(action: String, message: HandleSurveyMessage, notificationType: String? = null) {
@@ -21,29 +21,12 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
    public final val notificationType: String?
 
    init {
-      r.h(var1, "action");
-      r.h(var2, "message");
+      q.h(var1, "action");
+      q.h(var2, "message");
       super();
       this.action = var1;
       this.message = var2;
       this.notificationType = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: HandleMessage, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean = false;
-      var1.z(var2, 0, var0.action);
-      var1.y(var2, 1, HandleSurveyMessage.$serializer.INSTANCE, var0.message);
-      if (var1.A(var2, 2) || var0.notificationType != null) {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 2, a2.a, var0.notificationType);
-      }
    }
 
    public operator fun component1(): String {
@@ -59,8 +42,8 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
    }
 
    public fun copy(action: String = var0.action, message: HandleSurveyMessage = var0.message, notificationType: String? = var0.notificationType): HandleMessage {
-      r.h(var1, "action");
-      r.h(var2, "message");
+      q.h(var1, "action");
+      q.h(var2, "message");
       return new HandleMessage(var1, var2, var3);
    }
 
@@ -71,19 +54,19 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.action, var1.action)) {
+         if (!q.c(this.action, var1.action)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!q.c(this.message, var1.message)) {
             return false;
          } else {
-            return r.c(this.notificationType, var1.notificationType);
+            return q.c(this.notificationType, var1.notificationType);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.action.hashCode();
-      val var3: Int = this.message.hashCode();
+      val var3: Int = this.action.hashCode();
+      val var2: Int = this.message.hashCode();
       val var1: Int;
       if (this.notificationType == null) {
          var1 = 0;
@@ -91,25 +74,25 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
          var1 = this.notificationType.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: java.lang.String = this.action;
-      val var3: HandleSurveyMessage = this.message;
-      val var4: java.lang.String = this.notificationType;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("HandleMessage(action=");
-      var2.append(var1);
-      var2.append(", message=");
-      var2.append(var3);
-      var2.append(", notificationType=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: HandleSurveyMessage = this.message;
+      val var3: java.lang.String = this.notificationType;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("HandleMessage(action=");
+      var4.append(var1);
+      var4.append(", message=");
+      var4.append(var2);
+      var4.append(", notificationType=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : f0<HandleMessage> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -128,32 +111,31 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, HandleSurveyMessage.$serializer.INSTANCE, a.u(a2.a)};
+         return new KSerializer[]{b2.a, HandleSurveyMessage.$serializer.INSTANCE, a.u(b2.a)};
       }
 
       public open fun deserialize(decoder: Decoder): HandleMessage {
-         r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         q.h(var1, "decoder");
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var7: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
-         val var8: java.lang.String;
+         var var6: HandleSurveyMessage;
+         var var10: java.lang.String;
          if (var5) {
-            val var11: java.lang.String = var10.m(var9, 0);
-            var7 = (java.lang.String)var10.y(var9, 1, HandleSurveyMessage.$serializer.INSTANCE, null);
-            var6 = var10.n(var9, 2, a2.a, null);
+            var7 = var9.m(var8, 0);
+            var6 = var9.y(var8, 1, HandleSurveyMessage.$serializer.INSTANCE, null) as HandleSurveyMessage;
+            var10 = var9.n(var8, 2, b2.a, null) as java.lang.String;
             var2 = 7;
-            var8 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var6 = null;
-            var var12: Any = null;
+            var10 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -161,41 +143,37 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
                            throw new n(var4);
                         }
 
-                        var12 = var10.n(var9, 2, a2.a, var12);
+                        var10 = var9.n(var8, 2, b2.a, var10) as java.lang.String;
                         var2 |= 4;
                      } else {
-                        var6 = var10.y(var9, 1, HandleSurveyMessage.$serializer.INSTANCE, var6);
+                        var6 = var9.y(var8, 1, HandleSurveyMessage.$serializer.INSTANCE, var6) as HandleSurveyMessage;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.m(var9, 0);
+                     var7 = var9.m(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var8 = var7;
-            var7 = (java.lang.String)var6;
-            var6 = var12;
          }
 
-         var10.c(var9);
-         return new HandleMessage(var2, var8, var7 as HandleSurveyMessage, var6 as java.lang.String, null);
+         var9.c(var8);
+         return new HandleMessage(var2, var7, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: HandleMessage) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         HandleMessage.write$Self(var2, var4, var3);
+         HandleMessage.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

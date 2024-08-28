@@ -11,7 +11,7 @@ import com.discord.chat.presentation.message.view.SpoilerView;
 import com.discord.core.DCDButton;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class PostPreviewEmbedViewBinding implements ViewBinding {
    public final SimpleDraweeView backgroundImage;
@@ -57,33 +57,33 @@ public final class PostPreviewEmbedViewBinding implements ViewBinding {
       SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
       if (var6 != null) {
          var1 = R.id.cover_image;
-         SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-         if (var9 != null) {
+         SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.cover_image_overlay_button;
-            DCDButton var2 = (DCDButton)a.a(var0, var1);
-            if (var2 != null) {
+            DCDButton var11 = (DCDButton)a.a(var0, var1);
+            if (var11 != null) {
                var1 = R.id.cta;
-               DCDButton var4 = (DCDButton)a.a(var0, var1);
-               if (var4 != null) {
+               DCDButton var7 = (DCDButton)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.footer;
-                  SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                  if (var5 != null) {
+                  SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.header_divider;
-                     View var11 = a.a(var0, var1);
-                     if (var11 != null) {
+                     View var9 = a.a(var0, var1);
+                     if (var9 != null) {
                         var1 = R.id.image_blur_bg;
-                        FrameLayout var8 = (FrameLayout)a.a(var0, var1);
-                        if (var8 != null) {
+                        FrameLayout var3 = (FrameLayout)a.a(var0, var1);
+                        if (var3 != null) {
                            var1 = R.id.spoiler;
-                           SpoilerView var3 = (SpoilerView)a.a(var0, var1);
-                           if (var3 != null) {
+                           SpoilerView var5 = (SpoilerView)a.a(var0, var1);
+                           if (var5 != null) {
                               var1 = R.id.subtitle;
-                              TextView var7 = (TextView)a.a(var0, var1);
-                              if (var7 != null) {
+                              TextView var4 = (TextView)a.a(var0, var1);
+                              if (var4 != null) {
                                  var1 = R.id.title;
                                  TextView var10 = (TextView)a.a(var0, var1);
                                  if (var10 != null) {
-                                    return new PostPreviewEmbedViewBinding(var0, var6, var9, var2, var4, var5, var11, var8, var3, var7, var10);
+                                    return new PostPreviewEmbedViewBinding(var0, var6, var8, var11, var7, var2, var9, var3, var5, var4, var10);
                                  }
                               }
                            }
@@ -107,6 +107,7 @@ public final class PostPreviewEmbedViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

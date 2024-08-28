@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class SafetyPolicyNoticeBinding implements ViewBinding {
    public final TextView description;
@@ -31,24 +31,24 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
 
    public static SafetyPolicyNoticeBinding bind(View var0) {
       int var1 = R.id.description;
-      TextView var7 = (TextView)a.a(var0, var1);
-      if (var7 != null) {
+      TextView var4 = (TextView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.footer;
-         LinearLayout var6 = (LinearLayout)a.a(var0, var1);
-         if (var6 != null) {
+         LinearLayout var5 = (LinearLayout)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.icon;
             SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
             if (var3 != null) {
                var1 = R.id.learn_more;
-               TextView var2 = (TextView)a.a(var0, var1);
-               if (var2 != null) {
+               TextView var7 = (TextView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.subtitle_text;
-                  TextView var4 = (TextView)a.a(var0, var1);
-                  if (var4 != null) {
+                  TextView var2 = (TextView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.title;
-                     TextView var5 = (TextView)a.a(var0, var1);
-                     if (var5 != null) {
-                        return new SafetyPolicyNoticeBinding(var0, var7, var6, var3, var2, var4, var5);
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new SafetyPolicyNoticeBinding(var0, var4, var5, var3, var7, var2, var6);
                      }
                   }
                }
@@ -68,6 +68,7 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

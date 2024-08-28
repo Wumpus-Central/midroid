@@ -13,7 +13,7 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class EmojiPickerScroller(recyclerView: RecyclerView,
    emojiPickerViewAdapter: EmojiPickerViewAdapter,
@@ -38,13 +38,13 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
    private final var firstHeaderPosition: Int
 
    init {
-      r.h(var1, "recyclerView");
-      r.h(var2, "emojiPickerViewAdapter");
-      r.h(var3, "emojiPickerLayoutManager");
-      r.h(var5, "onScrolled");
-      r.h(var6, "onScrollStateChanged");
-      r.h(var7, "onDragStateChanged");
-      r.h(var8, "onStickyHeaderRender");
+      q.h(var1, "recyclerView");
+      q.h(var2, "emojiPickerViewAdapter");
+      q.h(var3, "emojiPickerLayoutManager");
+      q.h(var5, "onScrolled");
+      q.h(var6, "onScrollStateChanged");
+      q.h(var7, "onDragStateChanged");
+      q.h(var8, "onStickyHeaderRender");
       super();
       this.recyclerView = var1;
       this.emojiPickerViewAdapter = var2;
@@ -52,28 +52,26 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
       this.scrollFastVelocity = var4;
       this.scrollEvent = new EmojiPickerScroller.ScrollEvent(0, 0, 0, 0, 0, 0, 63, null);
       this.scroller = new Scroller(var1);
-      this.scrollListenerVelocityTracker = new DebouncedVelocityTrackingScrollListener(
-         var1, false, 0, new Function2<RecyclerView, java.lang.Float, Unit>(this, var6) {
-            final Function0<Unit> $onScrollStateChanged;
-            final EmojiPickerScroller this$0;
+      this.scrollListenerVelocityTracker = new DebouncedVelocityTrackingScrollListener(var1, false, 0, new Function2(this, var6) {
+         final Function0 $onScrollStateChanged;
+         final EmojiPickerScroller this$0;
 
-            {
-               super(2);
-               this.this$0 = var1;
-               this.$onScrollStateChanged = var2;
-            }
+         {
+            super(2);
+            this.this$0 = var1;
+            this.$onScrollStateChanged = var2;
+         }
 
-            public final void invoke(RecyclerView var1, float var2) {
-               r.h(var1, "<anonymous parameter 0>");
-               EmojiPickerScroller.access$onScrollVelocityChanged(this.this$0, var2);
-               this.$onScrollStateChanged.invoke();
-            }
-         }, 600L, 6, null
-      );
+         public final void invoke(RecyclerView var1, float var2) {
+            q.h(var1, "<anonymous parameter 0>");
+            EmojiPickerScroller.access$onScrollVelocityChanged(this.this$0, var2);
+            this.$onScrollStateChanged.invoke();
+         }
+      }, 600L, 6, null);
       this.scrollListenerDebounced = new DebouncedScrollListener(
-         new Function3<RecyclerView, Integer, Integer, Unit>(var5, this, var8) {
-            final Function1<EmojiPickerScroller.ScrollEvent, Unit> $onScrolled;
-            final Function2<View, Integer, Unit> $onStickyHeaderRender;
+         new Function3(var5, this, var8) {
+            final Function1 $onScrolled;
+            final Function2 $onStickyHeaderRender;
             final EmojiPickerScroller this$0;
 
             {
@@ -84,10 +82,10 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
             }
 
             public final void invoke(RecyclerView var1, int var2, int var3) {
-               r.h(var1, "<anonymous parameter 0>");
+               q.h(var1, "<anonymous parameter 0>");
                this.$onScrolled.invoke(EmojiPickerScroller.access$computeScrollEvent(this.this$0, EmojiPickerScroller.access$getRecyclerView$p(this.this$0)));
-               EmojiPickerScroller.access$findFirstHeaderIndex(this.this$0, new Function1<Integer, Unit>(this.$onStickyHeaderRender, this.this$0) {
-                  final Function2<View, Integer, Unit> $onStickyHeaderRender;
+               EmojiPickerScroller.access$findFirstHeaderIndex(this.this$0, new Function1(this.$onStickyHeaderRender, this.this$0) {
+                  final Function2 $onStickyHeaderRender;
                   final EmojiPickerScroller this$0;
 
                   {
@@ -102,8 +100,8 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
                });
             }
          },
-         new Function1<java.lang.Boolean, Unit>(var7, this) {
-            final Function2<EmojiPickerScroller.ScrollEvent, java.lang.Boolean, Unit> $onDragStateChanged;
+         new Function1(var7, this) {
+            final Function2 $onDragStateChanged;
             final EmojiPickerScroller this$0;
 
             {
@@ -123,15 +121,8 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
          }
 
          public void onScrolled(RecyclerView var1, int var2, int var3) {
-            r.h(var1, "recyclerView");
-            val var4: Boolean;
-            if (var2 == 0 && var3 == 0) {
-               var4 = true;
-            } else {
-               var4 = false;
-            }
-
-            if (!var4) {
+            q.h(var1, "recyclerView");
+            if (var2 != 0 || var3 != 0) {
                super.onScrolled(var1, var2, var3);
             }
          }
@@ -164,8 +155,8 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
    }
 
    private fun onScrollVelocityChanged(velocity: Float) {
-      val var9: Float;
-      val var4: Boolean = (boolean)(if ((var9 = var1 - 0.0F) == 0.0F) 0 else (if (var9 < 0.0F) -1 else 1));
+      val var6: Float;
+      val var3: Boolean = (boolean)(if ((var6 = var1 - 0.0F) == 0.0F) 0 else (if (var6 < 0.0F) -1 else 1));
       var var2: Boolean;
       if (var1 == 0.0F) {
          var2 = true;
@@ -173,15 +164,15 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
          var2 = false;
       }
 
-      val var5: Boolean = var2 xor true;
+      val var4: Boolean = var2 xor true;
       if (Math.abs(var1) > this.scrollFastVelocity) {
          var2 = true;
       } else {
          var2 = false;
       }
 
-      if (this.emojiPickerViewAdapter.getScrolling() != var5) {
-         this.emojiPickerViewAdapter.setScrolling(var5);
+      if (this.emojiPickerViewAdapter.getScrolling() != var4) {
+         this.emojiPickerViewAdapter.setScrolling(var4);
       }
 
       if (!this.scrollVelocityTrackingPaused) {
@@ -190,22 +181,10 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
          }
 
          if (!var2 && !this.scrollJumpingToPosition) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         if (var2) {
             this.emojiPickerViewAdapter.setScrollingFast(false);
          }
 
-         if (!var4) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         if (var2) {
+         if (!var3) {
             this.emojiPickerViewAdapter.setScrollingFast(false);
             this.scrollJumpingToPosition = false;
          }
@@ -216,10 +195,10 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
    fun `scrollViewLayoutChanged$lambda$0`(
       var0: EmojiPickerScroller, var1: Function2, var2: View, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int, var10: Int
    ) {
-      r.h(var0, "this$0");
-      r.h(var1, "$onStickyHeaderRender");
-      var0.findFirstHeaderIndex(new Function1<Integer, Unit>(var1, var0) {
-         final Function2<View, Integer, Unit> $onStickyHeaderRender;
+      q.h(var0, "this$0");
+      q.h(var1, "$onStickyHeaderRender");
+      var0.findFirstHeaderIndex(new Function1(var1, var0) {
+         final Function2 $onStickyHeaderRender;
          final EmojiPickerScroller this$0;
 
          {
@@ -242,28 +221,28 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
    public fun scrollToItemAtIndex(index: Int, animated: Boolean, itemType: Int) {
       val var5: Int = this.emojiPickerLayoutManager.findFirstVisibleItemPosition();
-      val var4: Int = this.emojiPickerViewAdapter.getItemPositionAtIndex(var1, var3);
-      if (var4 != -1 && this.firstHeaderPosition != -1) {
-         if (var4 == var5) {
+      var3 = this.emojiPickerViewAdapter.getItemPositionAtIndex(var1, var3);
+      if (var3 != -1 && this.firstHeaderPosition != -1) {
+         if (var3 == var5) {
             return;
          }
 
-         var3 = Math.abs(this.emojiPickerViewAdapter.getEstimatedDistance(var5, var4));
-         if (var4 < var5) {
+         val var4: Int = Math.abs(this.emojiPickerViewAdapter.getEstimatedDistance(var5, var3));
+         if (var3 < var5) {
             var1 = -this.recyclerView.getHeight();
          } else {
             var1 = this.recyclerView.getHeight();
          }
 
-         if (var3 >= Math.abs(var1)) {
+         if (var4 >= Math.abs(var1)) {
             this.scrollVelocityTrackingPaused = true;
             this.emojiPickerViewAdapter.setScrollingFast(true);
-            this.emojiPickerLayoutManager.scrollToPositionWithOffset(var4, var1);
+            this.emojiPickerLayoutManager.scrollToPositionWithOffset(var3, var1);
             ViewMeasureExtensionsKt.measureAndLayout(this.recyclerView);
          }
 
          this.scrollJumpingToPosition = true;
-         Scroller.scrollToPosition$default(this.scroller, var4, new Top(0), var2, new Function0<Unit>(this) {
+         Scroller.scrollToPosition$default(this.scroller, var3, new Top(0), var2, new Function0(this) {
             final EmojiPickerScroller this$0;
 
             {
@@ -399,25 +378,25 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
       }
 
       public override fun toString(): String {
-         val var5: Int = this.x;
-         val var1: Int = this.y;
+         val var2: Int = this.x;
+         val var3: Int = this.y;
          val var4: Int = this.width;
-         val var3: Int = this.height;
-         val var2: Int = this.contentWidth;
-         val var6: Int = this.contentHeight;
+         val var6: Int = this.height;
+         val var5: Int = this.contentWidth;
+         val var1: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ScrollEvent(x=");
-         var7.append(var5);
+         var7.append(var2);
          var7.append(", y=");
-         var7.append(var1);
+         var7.append(var3);
          var7.append(", width=");
          var7.append(var4);
          var7.append(", height=");
-         var7.append(var3);
-         var7.append(", contentWidth=");
-         var7.append(var2);
-         var7.append(", contentHeight=");
          var7.append(var6);
+         var7.append(", contentWidth=");
+         var7.append(var5);
+         var7.append(", contentHeight=");
+         var7.append(var1);
          var7.append(")");
          return var7.toString();
       }

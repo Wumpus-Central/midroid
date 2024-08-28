@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import n1.a;
+import v2.a;
 
 public final class MessageFrameJumpHeaderBinding implements ViewBinding {
    public final TextView messageHeaderSubtitle;
@@ -21,12 +21,12 @@ public final class MessageFrameJumpHeaderBinding implements ViewBinding {
 
    public static MessageFrameJumpHeaderBinding bind(View var0) {
       int var1 = R.id.message_header_subtitle;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var2 = (TextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.message_header_title;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new MessageFrameJumpHeaderBinding(var0, var3, var2);
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
+            return new MessageFrameJumpHeaderBinding(var0, var2, var3);
          }
       }
 
@@ -42,6 +42,7 @@ public final class MessageFrameJumpHeaderBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

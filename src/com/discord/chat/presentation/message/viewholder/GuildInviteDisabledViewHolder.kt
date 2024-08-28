@@ -11,22 +11,22 @@ public class GuildInviteDisabledViewHolder(guildInviteDisabledView: GuildInviteD
    private final val guildInviteDisabledView: GuildInviteDisabledView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "guildInviteDisabledView");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
+      kotlin.jvm.internal.q.h(var1, "guildInviteDisabledView");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
       super(var1, null);
       this.guildInviteDisabledView = var1;
       this.eventHandler = var2;
    }
 
    public fun bind(inviteAccessory: GuildInviteDisabledMessageAccessory) {
-      kotlin.jvm.internal.r.h(var1, "inviteAccessory");
+      kotlin.jvm.internal.q.h(var1, "inviteAccessory");
       val var2: GuildInviteDisabledEmbedImpl = var1.getInvite();
       val var3: GuildInviteDisabledView = this.guildInviteDisabledView;
       this.guildInviteDisabledView.setHeaderText(var2.getHeaderText());
       var3.setHelpIcon(
          var2.getHelpCenterArticleLabel(),
          var2.getHelpCenterArticleURL(),
-         new Function1<java.lang.String, Unit>(this, var1) {
+         new Function1(this, var1) {
             final GuildInviteDisabledMessageAccessory $inviteAccessory;
             final GuildInviteDisabledViewHolder this$0;
 
@@ -37,9 +37,9 @@ public class GuildInviteDisabledViewHolder(guildInviteDisabledView: GuildInviteD
             }
 
             public final void invoke(java.lang.String var1) {
-               kotlin.jvm.internal.r.h(var1, "it");
-               ChatEventHandler.DefaultImpls.onLinkClicked_u7_MRrM$default(
-                  this.this$0.getEventHandler(), this.$inviteAccessory.getMessageId_3Eiw7ao(), var1, null, 4, null
+               kotlin.jvm.internal.q.h(var1, "it");
+               ChatEventHandler.DefaultImpls.onLinkClicked-u7_MRrM$default(
+                  this.this$0.getEventHandler(), this.$inviteAccessory.getMessageId-3Eiw7ao(), var1, null, 4, null
                );
             }
          }

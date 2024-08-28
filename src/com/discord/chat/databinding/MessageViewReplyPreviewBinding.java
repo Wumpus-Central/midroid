@@ -13,7 +13,7 @@ import com.discord.chat.presentation.message.MessageTagView;
 import com.discord.chat.presentation.message.RoleDotView;
 import com.discord.chat.presentation.message.view.MessageContentView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class MessageViewReplyPreviewBinding implements ViewBinding {
    public final SimpleDraweeView replyAuthorAvatar;
@@ -59,39 +59,39 @@ public final class MessageViewReplyPreviewBinding implements ViewBinding {
 
    public static MessageViewReplyPreviewBinding bind(View var0) {
       int var1 = R.id.reply_author_avatar;
-      SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-      if (var10 != null) {
+      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.reply_author_name;
-         TextView var11 = (TextView)a.a(var0, var1);
-         if (var11 != null) {
+         TextView var5 = (TextView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.reply_icon;
-            SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.reply_leading_icon;
-               SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-               if (var7 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.reply_leading_views;
                   LinearLayout var3 = (LinearLayout)a.a(var0, var1);
                   if (var3 != null) {
                      var1 = R.id.reply_message_tag_view;
-                     MessageTagView var4 = (MessageTagView)a.a(var0, var1);
-                     if (var4 != null) {
+                     MessageTagView var8 = (MessageTagView)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.reply_role_dot;
-                        RoleDotView var8 = (RoleDotView)a.a(var0, var1);
-                        if (var8 != null) {
+                        RoleDotView var11 = (RoleDotView)a.a(var0, var1);
+                        if (var11 != null) {
                            var1 = R.id.reply_spline;
-                           ChannelSpineView var2 = (ChannelSpineView)a.a(var0, var1);
-                           if (var2 != null) {
+                           ChannelSpineView var9 = (ChannelSpineView)a.a(var0, var1);
+                           if (var9 != null) {
                               var1 = R.id.reply_text;
-                              MessageContentView var9 = (MessageContentView)a.a(var0, var1);
-                              if (var9 != null) {
+                              MessageContentView var10 = (MessageContentView)a.a(var0, var1);
+                              if (var10 != null) {
                                  var1 = R.id.reply_trailing_icon;
-                                 SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                                 if (var6 != null) {
+                                 SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+                                 if (var7 != null) {
                                     var1 = R.id.tag_chiplet;
                                     ClanTagChipletView var12 = (ClanTagChipletView)a.a(var0, var1);
                                     if (var12 != null) {
-                                       return new MessageViewReplyPreviewBinding(var0, var10, var11, var5, var7, var3, var4, var8, var2, var9, var6, var12);
+                                       return new MessageViewReplyPreviewBinding(var0, var4, var5, var2, var6, var3, var8, var11, var9, var10, var7, var12);
                                     }
                                  }
                               }
@@ -116,6 +116,7 @@ public final class MessageViewReplyPreviewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

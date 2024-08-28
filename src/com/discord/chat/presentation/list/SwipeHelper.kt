@@ -32,8 +32,7 @@ import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
-import kotlin.jvm.internal.r
-import vh.h
+import kotlin.jvm.internal.q
 
 internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> Unit) : ChatListCallback {
    private final var actionType: SwipeActionType
@@ -72,9 +71,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    init {
-      r.h(var1, "context");
-      r.h(var2, "onStart");
-      r.h(var3, "onEnd");
+      q.h(var1, "context");
+      q.h(var2, "onStart");
+      q.h(var3, "onEnd");
       super();
       this.context = var1;
       this.onStart = var2;
@@ -88,231 +87,216 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    private fun drawContextArea(canvas: Canvas) {
-      if (this.currentItemViewHolder != null) {
-         var var16: Boolean;
-         if (this.dX == 0.0F) {
-            var16 = 1;
-         } else {
-            var16 = 0;
+      if (this.currentItemViewHolder != null && this.dX != 0.0F) {
+         var var19: View = this.mView;
+         if (this.mView == null) {
+            q.y("mView");
+            var19 = null;
          }
 
-         if (!var16) {
-            var var19: View = this.mView;
-            if (this.mView == null) {
-               r.y("mView");
-               var19 = null;
-            }
+         var var3: Float = Math.abs(var19.getTranslationX());
+         var19 = this.mView;
+         if (this.mView == null) {
+            q.y("mView");
+            var19 = null;
+         }
 
-            var var3: Float = Math.abs(var19.getTranslationX());
-            var19 = this.mView;
-            if (this.mView == null) {
-               r.y("mView");
-               var19 = null;
-            }
+         var var5: Float = var19.getMeasuredHeight();
+         val var21: Paint = new Paint();
+         if (this.currentItemViewHolder != null) {
+            var19 = this.currentItemViewHolder.itemView;
+         } else {
+            var19 = null;
+         }
 
-            var var5: Float = var19.getMeasuredHeight();
-            val var21: Paint = new Paint();
-            if (this.currentItemViewHolder != null) {
-               var19 = this.currentItemViewHolder.itemView;
-            } else {
-               var19 = null;
-            }
+         val var44: SwipeReplyInitiator;
+         if (var19 is SwipeReplyInitiator) {
+            var44 = var19 as SwipeReplyInitiator;
+         } else {
+            var44 = null;
+         }
 
-            val var45: SwipeReplyInitiator;
-            if (var19 is SwipeReplyInitiator) {
-               var45 = var19 as SwipeReplyInitiator;
-            } else {
-               var45 = null;
-            }
+         val var22: Style = Style.FILL;
+         var21.setStyle(Style.FILL);
+         if (var44 != null && var44.getUsingGradientTheme()) {
+            var21.setColor(ThemeManagerKt.getTheme().getChatSwipeToReplyGradientBackground());
+         } else {
+            var21.setColor(ThemeManagerKt.getTheme().getChatSwipeToReplyBackground());
+         }
 
-            var21.setStyle(Style.FILL);
-            if (var45 != null && var45.getUsingGradientTheme()) {
-               var16 = (boolean)1;
-            } else {
-               var16 = (boolean)0;
-            }
+         var1.save();
+         var var2: Float = this.getSwipeProgress();
+         var var8: Float = this.getLeftBevelRadius(var2, var5);
+         val var12: Float = MAX_RIGHT_BEVEL_WIDTH * var2;
+         var19 = this.mView;
+         if (this.mView == null) {
+            q.y("mView");
+            var19 = null;
+         }
 
-            if (var16) {
-               var21.setColor(ThemeManagerKt.getTheme().getChatSwipeToReplyGradientBackground());
-            } else {
-               var21.setColor(ThemeManagerKt.getTheme().getChatSwipeToReplyBackground());
-            }
+         var var4: Float = var19.getMeasuredWidth();
+         var19 = this.mView;
+         if (this.mView == null) {
+            q.y("mView");
+            var19 = null;
+         }
 
+         val var6: Float = var4 + var19.getTranslationX();
+         val var10: Float = var6 - var8;
+         var4 = var6 + var3;
+         var var11: Float = var6 + var3 - var12;
+         var19 = this.mView;
+         if (this.mView == null) {
+            q.y("mView");
+            var19 = null;
+         }
+
+         val var7: Float = var19.getTop();
+         var var16: Int = RIGHT_BEVEL_HEIGHT;
+         val var14: Float = var7 - RIGHT_BEVEL_HEIGHT;
+         val var35: Float = RIGHT_BEVEL_HEIGHT + (var7 - RIGHT_BEVEL_HEIGHT);
+         val var15: Float = var7 - RIGHT_BEVEL_HEIGHT + var5 + RIGHT_BEVEL_HEIGHT * 2;
+         val var13: Float = var14 + var5 + RIGHT_BEVEL_HEIGHT * 2 - RIGHT_BEVEL_HEIGHT;
+         val var48: Path = new Path();
+         var48.moveTo(var11, var13);
+         var48.lineTo(var6, var13);
+         var48.lineTo(var6, var35 + var8);
+         val var9: Float = 2;
+         var48.addArc(var10 - var8, var35, var6, var35 + (float)2 * var8, 0.0F, -90.0F);
+         var48.lineTo(var11, var35);
+         val var38: Float = var12 * 0.55F + var11;
+         var48.cubicTo(var12 * 0.55F + var11, var35, var4, var14 + (float)var16 * 0.55F, var4, var14);
+         var48.lineTo(var4, var15);
+         var48.cubicTo(var4, var15 - (float)var16 * 0.55F, var38, var13, var11, var13);
+         var1.save();
+         var1.clipPath(var48);
+         var1.drawRect(var10, var14, var4, var15, var21);
+         var1.restore();
+         var1.save();
+         var48.reset();
+         var11 = var13 - var8;
+         var48.addCircle(var10, var13 - var8, var8, Direction.CW);
+         if (VERSION.SDK_INT >= 26) {
+            c.a(var1, var48);
+         } else {
+            var1.clipPath(var48, Op.DIFFERENCE);
+         }
+
+         var1.drawRect(var10, var11, var6, var13, var21);
+         var1.restore();
+         var8 = this.getArrowContainerBaseSize(var5) / var9;
+         var3 = var3 / var9;
+         val var17: Int = (int)(var5 / var9 + var35 - var8);
+         var16 = kotlin.ranges.f.k((int)((float)192 * var2) + 64, 0, 255);
+         var1.save();
+         var1.clipRect(var6, 0.0F, var4, (float)var1.getHeight());
+         var1.translate(var6 + var3 - var8 + var8, (float)var17 + var8);
+         var1.scale(this.easterEggArrowScale, this.easterEggArrowScale);
+         if (this.isCompleted) {
+            var3 = 1.0F;
+         } else {
+            var3 = var2;
+         }
+
+         var21.setColor(
+            ColorUtilsKt.interpolateColors(
+               ThemeManagerKt.getTheme().getBgSurfaceOverlay(), ColorUtilsKt.getColorCompat(this.context, color.brand_500), var3, 0.8F, 1.0F
+            )
+         );
+         var21.setStyle(var22);
+         var21.setAlpha(var16);
+         val var49: java.lang.String;
+         if (ThemeManager.INSTANCE.isThemeLight()) {
+            var49 = "#16000000";
+         } else {
+            var49 = "#24000000";
+         }
+
+         var21.setShadowLayer(10.0F, 0.0F, 5.0F, Color.parseColor(var49));
+         var1.drawCircle(0.0F, 0.0F, var8, var21);
+         var21.clearShadowLayer();
+         if (this.editCircleScale > 0.0F) {
             var1.save();
-            var var2: Float = this.getSwipeProgress();
-            var var8: Float = this.getLeftBevelRadius(var2, var5);
-            var var12: Float = MAX_RIGHT_BEVEL_WIDTH * var2;
-            var19 = this.mView;
-            if (this.mView == null) {
-               r.y("mView");
-               var19 = null;
-            }
-
-            var var4: Float = var19.getMeasuredWidth();
-            var19 = this.mView;
-            if (this.mView == null) {
-               r.y("mView");
-               var19 = null;
-            }
-
-            val var6: Float = var4 + var19.getTranslationX();
-            val var10: Float = var6 - var8;
-            var4 = var6 + var3;
-            val var13: Float = var6 + var3 - var12;
-            var19 = this.mView;
-            if (this.mView == null) {
-               r.y("mView");
-               var19 = null;
-            }
-
-            var var7: Float = var19.getTop();
-            var16 = RIGHT_BEVEL_HEIGHT;
-            val var14: Float = var7 - RIGHT_BEVEL_HEIGHT;
-            val var9: Float = RIGHT_BEVEL_HEIGHT + (var7 - RIGHT_BEVEL_HEIGHT);
-            val var15: Float = var7 - RIGHT_BEVEL_HEIGHT + var5 + RIGHT_BEVEL_HEIGHT * 2;
-            val var11: Float = var14 + var5 + RIGHT_BEVEL_HEIGHT * 2 - RIGHT_BEVEL_HEIGHT;
-            val var49: Path = new Path();
-            var49.moveTo(var13, var11);
-            var49.lineTo(var6, var11);
-            var49.lineTo(var6, var9 + var8);
-            var7 = 2;
-            var49.addArc(var10 - var8, var9, var6, var9 + (float)2 * var8, 0.0F, -90.0F);
-            var49.lineTo(var13, var9);
-            val var36: Float = var12 * 0.55F + var13;
-            var49.cubicTo(var12 * 0.55F + var13, var9, var4, var14 + (float)var16 * 0.55F, var4, var14);
-            var49.lineTo(var4, var15);
-            var49.cubicTo(var4, var15 - (float)var16 * 0.55F, var36, var11, var13, var11);
-            var1.save();
-            var1.clipPath(var49);
-            var1.drawRect(var10, var14, var4, var15, var21);
-            var1.restore();
-            var1.save();
-            var49.reset();
-            var12 = var11 - var8;
-            var49.addCircle(var10, var11 - var8, var8, Direction.CW);
-            if (VERSION.SDK_INT >= 26) {
-               c.a(var1, var49);
-            } else {
-               var1.clipPath(var49, Op.DIFFERENCE);
-            }
-
-            var1.drawRect(var10, var12, var6, var11, var21);
-            var1.restore();
-            var8 = this.getArrowContainerBaseSize(var5) / var7;
-            var3 = var3 / var7;
-            val var17: Int = (int)(var5 / var7 + var9 - var8);
-            var16 = h.k((int)((float)192 * var2) + 64, 0, 255);
-            var1.save();
-            var1.clipRect(var6, 0.0F, var4, (float)var1.getHeight());
-            var1.translate(var6 + var3 - var8 + var8, (float)var17 + var8);
-            var1.scale(this.easterEggArrowScale, this.easterEggArrowScale);
+            var1.scale(this.editCircleScale, this.editCircleScale);
             if (this.isCompleted) {
-               var3 = 1.0F;
+               var4 = 1.0F;
             } else {
-               var3 = var2;
+               var4 = var2;
             }
 
             var21.setColor(
                ColorUtilsKt.interpolateColors(
-                  ThemeManagerKt.getTheme().getBgSurfaceOverlay(), ColorUtilsKt.getColorCompat(this.context, color.brand_500), var3, 0.8F, 1.0F
+                  ThemeManagerKt.getTheme().getBgSurfaceOverlay(), ThemeManagerKt.getTheme().getBackgroundAccent(), var4, 0.8F, 1.0F
                )
             );
-            var21.setStyle(Style.FILL);
-            var21.setAlpha(var16);
-            val var50: java.lang.String;
-            if (ThemeManager.INSTANCE.isThemeLight()) {
-               var50 = "#16000000";
-            } else {
-               var50 = "#24000000";
-            }
-
-            var21.setShadowLayer(10.0F, 0.0F, 5.0F, Color.parseColor(var50));
+            var21.setStyle(var22);
+            var21.setAlpha(255);
             var1.drawCircle(0.0F, 0.0F, var8, var21);
-            var21.clearShadowLayer();
-            if (this.editCircleScale > 0.0F) {
-               var1.save();
-               var1.scale(this.editCircleScale, this.editCircleScale);
-               if (this.isCompleted) {
-                  var4 = 1.0F;
-               } else {
-                  var4 = var2;
-               }
-
-               var21.setColor(
-                  ColorUtilsKt.interpolateColors(
-                     ThemeManagerKt.getTheme().getBgSurfaceOverlay(), ThemeManagerKt.getTheme().getBackgroundAccent(), var4, 0.8F, 1.0F
-                  )
-               );
-               var21.setStyle(Style.FILL);
-               var21.setAlpha(255);
-               var1.drawCircle(0.0F, 0.0F, var8, var21);
-               var1.restore();
-            }
-
-            var1.save();
-            var4 = Math.max(0.0F, java.lang.Float.min(1.0F, (float)1 - this.editCircleScale));
-            var5 = this.getArrowIconBaseSize(var5);
-            val var58: PorterDuffColorFilter = new PorterDuffColorFilter(
-               ColorUtilsKt.interpolateColors(
-                  ThemeManagerKt.getTheme().getInteractiveNormal(), ColorUtilsKt.getColorCompat(this.context, color.white), var3, 0.8F, 1.0F
-               ),
-               Mode.SRC_ATOP
-            );
-            if (this.replyIcon != null) {
-               this.replyIcon.setColorFilter(var58);
-            }
-
-            if (DeviceReducedMotion.INSTANCE.isReducedMotionEnabled(this.context)) {
-               var2 = 0.0F;
-            } else {
-               var2 = (1.0F - var2) * 90.0F;
-            }
-
-            var3 = this.easterEggArrowRotationDegrees;
-            var1.translate(-1.0F, -1.0F);
-            val var23: Float = var2 + var3;
-            var1.rotate(var2 + var3);
-            var1.scale(var4, var4);
-            val var52: Rect = new Rect(-((int)(var5 / 2.0F)), -((int)(var5 / 2.0F)), (int)(var5 / 2.0F), (int)(var5 / 2.0F));
-            if (this.replyIcon != null) {
-               this.replyIcon.setBounds(var52);
-            }
-
-            if (this.replyIcon != null) {
-               this.replyIcon.setAlpha(var16);
-            }
-
-            if (this.replyIcon != null) {
-               this.replyIcon.draw(var1);
-            }
-
             var1.restore();
-            if (this.editCircleScale > 0.0F) {
-               var1.save();
-               if (this.editIcon != null) {
-                  this.editIcon.setColorFilter(var58);
-               }
-
-               var1.rotate(var23);
-               var1.scale(this.editCircleScale, this.editCircleScale);
-               if (this.editIcon != null) {
-                  this.editIcon.setBounds(var52);
-               }
-
-               if (this.editIcon != null) {
-                  this.editIcon.setAlpha(255);
-               }
-
-               if (this.editIcon != null) {
-                  this.editIcon.draw(var1);
-               }
-
-               var1.restore();
-            }
-
-            var1.restore();
-            return;
          }
+
+         var1.save();
+         var4 = Math.max(0.0F, java.lang.Float.min(1.0F, (float)1 - this.editCircleScale));
+         var5 = this.getArrowIconBaseSize(var5);
+         val var57: PorterDuffColorFilter = new PorterDuffColorFilter(
+            ColorUtilsKt.interpolateColors(
+               ThemeManagerKt.getTheme().getInteractiveNormal(), ColorUtilsKt.getColorCompat(this.context, color.white), var3, 0.8F, 1.0F
+            ),
+            Mode.SRC_ATOP
+         );
+         if (this.replyIcon != null) {
+            this.replyIcon.setColorFilter(var57);
+         }
+
+         if (DeviceReducedMotion.INSTANCE.isReducedMotionEnabled(this.context)) {
+            var2 = 0.0F;
+         } else {
+            var2 = 90.0F * (1.0F - var2);
+         }
+
+         var3 = this.easterEggArrowRotationDegrees;
+         var1.translate(-1.0F, -1.0F);
+         val var24: Float = var2 + var3;
+         var1.rotate(var2 + var3);
+         var1.scale(var4, var4);
+         val var51: Rect = new Rect(-((int)(var5 / 2.0F)), -((int)(var5 / 2.0F)), (int)(var5 / 2.0F), (int)(var5 / 2.0F));
+         if (this.replyIcon != null) {
+            this.replyIcon.setBounds(var51);
+         }
+
+         if (this.replyIcon != null) {
+            this.replyIcon.setAlpha(var16);
+         }
+
+         if (this.replyIcon != null) {
+            this.replyIcon.draw(var1);
+         }
+
+         var1.restore();
+         if (this.editCircleScale > 0.0F) {
+            var1.save();
+            if (this.editIcon != null) {
+               this.editIcon.setColorFilter(var57);
+            }
+
+            var1.rotate(var24);
+            var1.scale(this.editCircleScale, this.editCircleScale);
+            if (this.editIcon != null) {
+               this.editIcon.setBounds(var51);
+            }
+
+            if (this.editIcon != null) {
+               this.editIcon.setAlpha(255);
+            }
+
+            if (this.editIcon != null) {
+               this.editIcon.draw(var1);
+            }
+
+            var1.restore();
+         }
+
+         var1.restore();
       }
    }
 
@@ -320,29 +304,29 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (!DeviceReducedMotion.INSTANCE.isReducedMotionEnabled(this.context)) {
          var var3: View = this.mView;
          if (this.mView == null) {
-            r.y("mView");
+            q.y("mView");
             var3 = null;
          }
 
-         val var5: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
+         var var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
             "arrow-scale", new float[]{1.0F, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
          );
-         var var7: ValueAnimator = new ValueAnimator();
-         var7.setValues(new PropertyValuesHolder[]{var5});
-         var7.setDuration(300L);
-         var7.setInterpolator(new AccelerateDecelerateInterpolator());
-         var7.addUpdateListener(new e(this, var1));
-         this.easterEggArrowAnimator = var7;
-         var7.start();
-         val var6: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
-         var7 = new ValueAnimator();
-         var7.setValues(new PropertyValuesHolder[]{var6});
-         var7.setDuration(800L);
-         var7.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
-         var7.addUpdateListener(new f(this, var1));
-         var7.addListener(new AnimatorListener(this, var2, var1) {
+         val var5: ValueAnimator = new ValueAnimator();
+         var5.setValues(new PropertyValuesHolder[]{var7});
+         var5.setDuration(300L);
+         var5.setInterpolator(new AccelerateDecelerateInterpolator());
+         var5.addUpdateListener(new e(this, var1));
+         this.easterEggArrowAnimator = var5;
+         var5.start();
+         var7 = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
+         val var6: ValueAnimator = new ValueAnimator();
+         var6.setValues(new PropertyValuesHolder[]{var7});
+         var6.setDuration(800L);
+         var6.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
+         var6.addUpdateListener(new f(this, var1));
+         var6.addListener(new AnimatorListener(this, var2, var1) {
             final RecyclerView $recyclerView$inlined;
-            final ViewHolder $viewHolder$inlined;
+            final RecyclerView.ViewHolder $viewHolder$inlined;
             final SwipeHelper this$0;
 
             {
@@ -368,30 +352,30 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             public void onAnimationStart(Animator var1) {
             }
          });
-         this.easterEggArrowRotationAnimator = var7;
-         var7.start();
+         this.easterEggArrowRotationAnimator = var6;
+         var6.start();
          this.easterEggIsAnimating = true;
       }
    }
 
    @JvmStatic
    fun `easterEggStartAnimation$lambda$6$lambda$5`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      r.h(var0, "this$0");
-      r.h(var1, "$recyclerView");
-      r.h(var2, "it");
+      q.h(var0, "this$0");
+      q.h(var1, "$recyclerView");
+      q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("arrow-scale");
-      r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.easterEggArrowScale = var3 as java.lang.Float;
       var1.invalidate();
    }
 
    @JvmStatic
    fun `easterEggStartAnimation$lambda$9$lambda$7`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      r.h(var0, "this$0");
-      r.h(var1, "$recyclerView");
-      r.h(var2, "it");
+      q.h(var0, "this$0");
+      q.h(var1, "$recyclerView");
+      q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("arrow-rotation");
-      r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.easterEggArrowRotationDegrees = var3 as java.lang.Float;
       var1.invalidate();
    }
@@ -416,7 +400,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    private fun getSwipeProgress(): Float {
       var var1: View = this.mView;
       if (this.mView == null) {
-         r.y("mView");
+         q.y("mView");
          var1 = null;
       }
 
@@ -424,76 +408,62 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    private fun shouldStartEditEntrance(viewHolder: ViewHolder): Boolean {
-      var var3: Boolean = true;
-      var var2: Boolean;
+      var var2: Boolean = false;
       if (this.actionType === SwipeActionType.Reply) {
-         var2 = true;
-      } else {
+         var var8: View = this.mView;
+         if (this.mView == null) {
+            q.y("mView");
+            var8 = null;
+         }
+
          var2 = false;
-      }
+         if (var8.getTranslationX() <= EDIT_OFFSET_X) {
+            if (this.editCircleScaleAnimator != null && this.editCircleScaleAnimator.isRunning()) {
+               var2 = false;
+            } else {
+               var2 = false;
+               if (!this.easterEggIsAnimating) {
+                  var var7: SwipeReplyInitiator = null;
+                  if (var1.itemView is SwipeReplyInitiator) {
+                     var7 = var1.itemView as SwipeReplyInitiator;
+                  }
 
-      label50: {
-         if (var2) {
-            var var10: View = this.mView;
-            if (this.mView == null) {
-               r.y("mView");
-               var10 = null;
-            }
-
-            if (var10.getTranslationX() <= EDIT_OFFSET_X) {
-               if (this.editCircleScaleAnimator != null && this.editCircleScaleAnimator.isRunning()) {
-                  var2 = true;
-               } else {
                   var2 = false;
-               }
-
-               if (!var2 && !this.easterEggIsAnimating) {
-                  var2 = true;
-                  break label50;
+                  if (var7 != null) {
+                     var2 = false;
+                     if (var7.getEnableSwipeToEdit()) {
+                        var2 = true;
+                     }
+                  }
                }
             }
          }
-
-         var2 = false;
       }
 
-      if (!var2) {
-         return false;
-      } else {
-         var var7: SwipeReplyInitiator = null;
-         if (var1.itemView is SwipeReplyInitiator) {
-            var7 = var1.itemView as SwipeReplyInitiator;
-         }
-
-         if (var7 == null || !var7.getEnableSwipeToEdit()) {
-            var3 = false;
-         }
-
-         return var3;
-      }
+      return var2;
    }
 
    private fun triggerEditEntranceTransition(recyclerView: RecyclerView) {
       var var3: View = this.mView;
       if (this.mView == null) {
-         r.y("mView");
+         q.y("mView");
          var3 = null;
       }
 
-      val var8: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
+      val var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
          "edit-circle-scale", new float[]{this.editCircleScale, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
       );
-      val var7: ValueAnimator = new ValueAnimator();
-      var7.setValues(new PropertyValuesHolder[]{var8});
-      var7.setDuration(300L);
-      var7.setInterpolator(new AccelerateDecelerateInterpolator());
-      var7.addUpdateListener(new d(this, var1));
-      this.editCircleScaleAnimator = var7;
-      var7.start();
+      val var8: ValueAnimator = new ValueAnimator();
+      var8.setValues(new PropertyValuesHolder[]{var7});
+      var8.setDuration(300L);
+      var8.setInterpolator(new AccelerateDecelerateInterpolator());
+      var8.addUpdateListener(new d(this, var1));
+      this.editCircleScaleAnimator = var8;
+      var8.start();
       this.actionType = SwipeActionType.Edit;
       var var6: View = this.mView;
       if (this.mView == null) {
-         r.y("mView");
+         q.y("mView");
          var6 = null;
       }
 
@@ -502,11 +472,11 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
    @JvmStatic
    fun `triggerEditEntranceTransition$lambda$4$lambda$3`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      r.h(var0, "this$0");
-      r.h(var1, "$recyclerView");
-      r.h(var2, "it");
+      q.h(var0, "this$0");
+      q.h(var1, "$recyclerView");
+      q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("edit-circle-scale");
-      r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.editCircleScale = var3 as java.lang.Float;
       var1.invalidate();
    }
@@ -544,11 +514,11 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
    @JvmStatic
    fun `triggerEditExitTransition$lambda$2$lambda$0`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      r.h(var0, "this$0");
-      r.h(var1, "$recyclerView");
-      r.h(var2, "it");
+      q.h(var0, "this$0");
+      q.h(var1, "$recyclerView");
+      q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("edit-circle-scale");
-      r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.editCircleScale = var3 as java.lang.Float;
       var1.invalidate();
    }
@@ -556,25 +526,15 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    private fun updateEditTransition(recyclerView: RecyclerView, viewHolder: ViewHolder) {
       if (!this.isCompleted) {
          if (this.actionType === SwipeActionType.Edit) {
-            var var5: View = this.mView;
+            var var3: View = this.mView;
             if (this.mView == null) {
-               r.y("mView");
-               var5 = null;
+               q.y("mView");
+               var3 = null;
             }
 
-            if (var5.getTranslationX() > REPLY_RESET_X) {
-               var var3: Boolean = false;
-               if (this.editCircleScaleAnimator != null) {
-                  var3 = false;
-                  if (this.editCircleScaleAnimator.isRunning()) {
-                     var3 = true;
-                  }
-               }
-
-               if (!var3) {
-                  this.triggerEditExitTransition(var1);
-                  return;
-               }
+            if (var3.getTranslationX() > REPLY_RESET_X && (this.editCircleScaleAnimator == null || !this.editCircleScaleAnimator.isRunning())) {
+               this.triggerEditExitTransition(var1);
+               return;
             }
          }
 
@@ -588,14 +548,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (this.shouldPerformHapticFeedback) {
          var var5: View = this.mView;
          if (this.mView == null) {
-            r.y("mView");
+            q.y("mView");
             var5 = null;
          }
 
          if (var5.getTranslationX() <= HAPTIC_TRIGGER_X) {
             var5 = this.mView;
             if (this.mView == null) {
-               r.y("mView");
+               q.y("mView");
                var5 = null;
             }
 
@@ -614,7 +574,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (!this.shouldPerformHapticFeedback) {
          var var9: View = this.mView;
          if (this.mView == null) {
-            r.y("mView");
+            q.y("mView");
             var9 = null;
          }
 
@@ -628,7 +588,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (this.shouldTriggerReply) {
          var var2: View = this.mView;
          if (this.mView == null) {
-            r.y("mView");
+            q.y("mView");
             var2 = null;
          }
 
@@ -641,7 +601,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (!this.shouldTriggerReply) {
          var var5: View = this.mView;
          if (this.mView == null) {
-            r.y("mView");
+            q.y("mView");
             var5 = null;
          }
 
@@ -662,15 +622,15 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       }
 
       if (var9 != null) {
-         val var3: Float = this.getSwipeProgress();
-         val var4: Float = SizeUtilsKt.getDpToPx(12);
+         val var2: Float = this.getSwipeProgress();
+         val var3: Float = SizeUtilsKt.getDpToPx(12);
          if (this.mView == null) {
-            r.y("mView");
+            q.y("mView");
          } else {
             var6 = this.mView;
          }
 
-         val var2: Float = this.getLeftBevelRadius(var3, (float)var6.getMeasuredHeight());
+         val var4: Float = this.getLeftBevelRadius(var2, (float)var6.getMeasuredHeight());
          val var10: java.lang.String;
          if (ThemeManager.INSTANCE.isThemeLight()) {
             var10 = "#1F000000";
@@ -678,12 +638,12 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var10 = "#3E000000";
          }
 
-         var9.getShadowView().setParams(var4 * var3, var2, var10);
+         var9.getShadowView().setParams(var3 * var2, var4, var10);
       }
    }
 
-   public open fun getAnimationDuration(recyclerView: RecyclerView, animationType: Int, animateDx: Float, animateDy: Float): Long {
-      r.h(var1, "recyclerView");
+   public override fun getAnimationDuration(recyclerView: RecyclerView, animationType: Int, animateDx: Float, animateDy: Float): Long {
+      q.h(var1, "recyclerView");
       return 300L;
    }
 
@@ -694,33 +654,21 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          new Pair((float)SWIPE_STOP_OFFSET_X - (float)Math.atan((double)(Math.abs(var1 - (float)SWIPE_STOP_OFFSET_X) / 120.0F)) * 120.0F, var2);
    }
 
-   public open fun getMovementFlags(recyclerView: RecyclerView, viewHolder: ViewHolder): Int {
-      r.h(var1, "recyclerView");
-      r.h(var2, "viewHolder");
-      val var5: View = var2.itemView;
-      r.g(var2.itemView, "viewHolder.itemView");
-      this.mView = var5;
-      val var7: SwipeReplyInitiator;
+   public override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: ViewHolder): Int {
+      q.h(var1, "recyclerView");
+      q.h(var2, "viewHolder");
+      val var4: View = var2.itemView;
+      q.g(var2.itemView, "itemView");
+      this.mView = var4;
+      val var6: SwipeReplyInitiator;
       if (var2.itemView is SwipeReplyInitiator) {
-         var7 = var2.itemView as SwipeReplyInitiator;
+         var6 = var2.itemView as SwipeReplyInitiator;
       } else {
-         var7 = null;
+         var6 = null;
       }
 
-      var var3: Boolean;
-      label21: {
-         if (var7 != null) {
-            val var4: Boolean = var7.getEnableSwipeToReply();
-            var3 = 1;
-            if (var4) {
-               break label21;
-            }
-         }
-
-         var3 = 0;
-      }
-
-      if (var3) {
+      val var3: Byte;
+      if (var6 != null && var6.getEnableSwipeToReply()) {
          var3 = 4;
       } else {
          var3 = 0;
@@ -729,7 +677,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       return androidx.recyclerview.widget.e.makeMovementFlags(0, var3);
    }
 
-   public open fun onChildDraw(
+   public override fun onChildDraw(
       c: Canvas,
       recyclerView: RecyclerView,
       viewHolder: ViewHolder,
@@ -738,9 +686,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       actionState: Int,
       isCurrentlyActive: Boolean
    ) {
-      r.h(var1, "c");
-      r.h(var2, "recyclerView");
-      r.h(var3, "viewHolder");
+      q.h(var1, "c");
+      q.h(var2, "recyclerView");
+      q.h(var3, "viewHolder");
       super.onChildDraw(var1, var2, var3, var4, var5, var6, var7);
       this.dX = var4;
       this.currentItemViewHolder = var3;
@@ -766,15 +714,15 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       }
    }
 
-   public open fun onMove(recyclerView: RecyclerView, viewHolder: ViewHolder, target: ViewHolder): Boolean {
-      r.h(var1, "recyclerView");
-      r.h(var2, "viewHolder");
-      r.h(var3, "target");
+   public override fun onMove(recyclerView: RecyclerView, viewHolder: ViewHolder, target: ViewHolder): Boolean {
+      q.h(var1, "recyclerView");
+      q.h(var2, "viewHolder");
+      q.h(var3, "target");
       return false;
    }
 
    public override fun onReleased(recyclerView: RecyclerView, viewHolder: ViewHolder?) {
-      r.h(var1, "recyclerView");
+      q.h(var1, "recyclerView");
       this.swipeBack = true;
       if (this.shouldTriggerReply) {
          val var4: View;
@@ -808,7 +756,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       this.handler.removeCallbacksAndMessages(null);
    }
 
-   public open fun onSelectedChanged(viewHolder: ViewHolder?, actionState: Int) {
+   public override fun onSelectedChanged(viewHolder: ViewHolder?, actionState: Int) {
       super.onSelectedChanged(var1, var2);
       val var3: Boolean;
       if (var1 == null && var2 == 0) {
@@ -844,8 +792,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       }
    }
 
-   public open fun onSwiped(viewHolder: ViewHolder, direction: Int) {
-      r.h(var1, "viewHolder");
+   public override fun onSwiped(viewHolder: ViewHolder, direction: Int) {
+      q.h(var1, "viewHolder");
    }
 
    public override fun shouldReturnToOriginalPosition(): Boolean {
@@ -870,28 +818,5 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       private final val REPLY_RESET_X: Int
       private final val RIGHT_BEVEL_HEIGHT: Int
       private final val SWIPE_STOP_OFFSET_X: Int
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[SwipeActionType.values().length];
-
-         try {
-            var0[SwipeActionType.Reply.ordinal()] = 1;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SwipeActionType.Edit.ordinal()] = 2;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
-      }
    }
 }

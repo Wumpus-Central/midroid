@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.discord.qr.scanner.R;
-import n1.a;
+import v2.a;
 
 public final class QrScannerBinding implements ViewBinding {
    public final CodeScannerView qrScanner;
@@ -36,6 +36,7 @@ public final class QrScannerBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

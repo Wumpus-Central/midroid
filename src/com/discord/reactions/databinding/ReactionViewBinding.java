@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import n1.a;
+import v2.a;
 
 public final class ReactionViewBinding implements ViewBinding {
    public final TextView reactionCount1;
@@ -27,18 +27,18 @@ public final class ReactionViewBinding implements ViewBinding {
 
    public static ReactionViewBinding bind(View var0) {
       int var1 = R.id.reaction_count_1;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var5 = (TextView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.reaction_count_2;
-         TextView var5 = (TextView)a.a(var0, var1);
-         if (var5 != null) {
+         TextView var4 = (TextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.reaction_count_switcher;
             TextSwitcher var2 = (TextSwitcher)a.a(var0, var1);
             if (var2 != null) {
                var1 = R.id.reaction_emoji;
-               SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-               if (var4 != null) {
-                  return new ReactionViewBinding(var0, var3, var5, var2, var4);
+               SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+               if (var3 != null) {
+                  return new ReactionViewBinding(var0, var5, var4, var2, var3);
                }
             }
          }

@@ -1,15 +1,17 @@
 package com.discord.chat.bridge.sticker
 
-import eh.l
-import eh.o
+import dn.f
+import fn.g
 import java.util.NoSuchElementException
-import kotlin.jvm.internal.r
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import uk.f
-import wk.g
+import lj.l
+import lj.o
+import sj.a
 
 @f(with = StickerFormatType.StickerFormatTypeSerializer::class)
 public enum class StickerFormatType(intType: Int) {
@@ -19,46 +21,53 @@ public enum class StickerFormatType(intType: Int) {
    PNG(1)
    public final val intType: Int
    @JvmStatic
-   private StickerFormatType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private StickerFormatType[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public StickerFormatType.Companion Companion = new StickerFormatType.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<StickerFormatType> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.intType = var3;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<StickerFormatType> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<StickerFormatType>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object StickerFormatTypeSerializer : KSerializer<StickerFormatType> {
+   public object StickerFormatTypeSerializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return g.a("StickerFormatType", wk.e.f.a);
+            return g.a("StickerFormatType", fn.e.f.a);
          }
 
 
       public open fun deserialize(decoder: Decoder): StickerFormatType {
-         r.h(var1, "decoder");
-         val var5: Int = var1.h();
-         val var7: Array<StickerFormatType> = StickerFormatType.values();
-         val var4: Int = var7.length;
+         q.h(var1, "decoder");
+         val var3: Int = var1.h();
+         val var6: Array<StickerFormatType> = StickerFormatType.values();
+         val var4: Int = var6.length;
 
          for (int var2 = 0; var2 < var4; var2++) {
-            val var6: StickerFormatType = var7[var2];
-            val var3: Boolean;
-            if (var7[var2].getIntType() == var5) {
-               var3 = true;
-            } else {
-               var3 = false;
-            }
-
-            if (var3) {
-               return var6;
+            val var5: StickerFormatType = var6[var2];
+            if (var6[var2].getIntType() == var3) {
+               return var5;
             }
          }
 
@@ -66,8 +75,8 @@ public enum class StickerFormatType(intType: Int) {
       }
 
       public open fun serialize(encoder: Encoder, value: StickerFormatType) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          var1.B(var2.getIntType());
       }
    }

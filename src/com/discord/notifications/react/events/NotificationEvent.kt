@@ -3,13 +3,13 @@ package com.discord.notifications.react.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal data class NotificationEvent(notification: Map<String, String?>) : ReactEvent {
    public final val notification: Map<String, String?>
 
    init {
-      r.h(var1, "notification");
+      q.h(var1, "notification");
       super();
       this.notification = var1;
    }
@@ -19,7 +19,7 @@ internal data class NotificationEvent(notification: Map<String, String?>) : Reac
    }
 
    public fun copy(notification: Map<String, String?> = var0.notification): NotificationEvent {
-      r.h(var1, "notification");
+      q.h(var1, "notification");
       return new NotificationEvent(var1);
    }
 
@@ -29,7 +29,7 @@ internal data class NotificationEvent(notification: Map<String, String?>) : Reac
       } else if (var1 !is NotificationEvent) {
          return false;
       } else {
-         return r.c(this.notification, (var1 as NotificationEvent).notification);
+         return q.c(this.notification, (var1 as NotificationEvent).notification);
       }
    }
 

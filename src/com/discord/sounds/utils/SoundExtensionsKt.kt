@@ -3,35 +3,28 @@ package com.discord.sounds.utils
 import android.content.Context
 import android.net.Uri
 import com.discord.sounds.SoundManager
-import hh.a
 import java.io.File
 import java.util.Comparator
-import kk.f
-import kk.n0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.g
+import kotlin.jvm.internal.q
+import oj.a
+import tm.g
+import tm.j0
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
-   r.h(var0, "<this>");
-   r.h(var1, "url");
-   r.h(var2, "soundManager");
-   r.h(var5, "soundResIdPrepared");
+   q.h(var0, "<this>");
+   q.h(var1, "url");
+   q.h(var2, "soundManager");
+   q.h(var5, "soundResIdPrepared");
    tryPruneSoundsCache(var0);
-   f.d(
-      g.b(),
-      n0.b(),
+   g.d(
+      kotlinx.coroutines.g.b(),
+      j0.b(),
       null,
-      new Function2<CoroutineScope, Continuation<? super Unit>, Object>(
-         var0, var1, getRemoteSoundFilename(var1), getSoundsCacheDirectory(var0), var2, var3, var4, var5, null
-      )// $VF: Couldn't be decompiled
+      new Function2(var0, var1, getRemoteSoundFilename(var1), getSoundsCacheDirectory(var0), var2, var3, var4, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
+   //   at java.base/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
@@ -1053,6 +1046,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
       2,
       null
@@ -1060,30 +1055,30 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 }
 
 internal fun getRemoteSoundFilename(url: String): String {
-   r.h(var0, "url");
-   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append(var1);
-   var2.append(".mp3");
-   return var2.toString();
+   q.h(var0, "url");
+   var0 = Uri.parse(var0).getLastPathSegment();
+   val var1: StringBuilder = new StringBuilder();
+   var1.append(var0);
+   var1.append(".mp3");
+   return var1.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    return new File(var0.getCacheDir(), "sounds");
 }
 
 internal fun Context.tryPruneSoundsCache() {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var1: Array<File> = getSoundsCacheDirectory(var0).listFiles();
    if (var1 != null && var1.length >= 20) {
-      b.s(var1, new Comparator() {
+      c.s(var1, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var2 as File).lastModified(), (var1 as File).lastModified());
          }
       });
-      val var2: File = b.d0(var1) as File;
+      val var2: File = c.h0(var1) as File;
       if (var2 != null) {
          var2.delete();
       }

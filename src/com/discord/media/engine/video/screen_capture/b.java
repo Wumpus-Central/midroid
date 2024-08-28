@@ -1,4 +1,5 @@
 package com.discord.media.engine.video.screen_capture;
 
-public final class b {
+// $VF: synthetic class
+public abstract class b {
 }

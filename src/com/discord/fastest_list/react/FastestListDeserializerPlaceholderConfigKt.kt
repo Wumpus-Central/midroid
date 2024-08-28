@@ -5,11 +5,11 @@ import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderConfig.Companion
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal operator fun Companion.invoke(value: ReadableMap): FastestListPlaceholderConfig {
-   r.h(var0, "<this>");
-   r.h(var1, "value");
+   q.h(var0, "<this>");
+   q.h(var1, "value");
    val var2: FastestListPlaceholderType.Companion = FastestListPlaceholderType.Companion;
    return new FastestListPlaceholderConfig(
       FastestListDeserializerPlaceholderTypeKt.invoke(FastestListPlaceholderType.Companion, NativeMapExtensionsKt.getNonNullMap(var1, "listFooter")),

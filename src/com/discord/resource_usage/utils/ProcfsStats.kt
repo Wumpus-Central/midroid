@@ -1,8 +1,8 @@
 package com.discord.resource_usage.utils
 
 import java.io.File
-import oh.j
-import ol.c
+import wj.j
+import zn.c
 
 internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    public final val rssPages: Long
@@ -45,13 +45,13 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    }
 
    public override fun toString(): String {
-      val var3: Long = this.totalTime;
-      val var1: Long = this.rssPages;
+      val var1: Long = this.totalTime;
+      val var3: Long = this.rssPages;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ProcfsStats(totalTime=");
-      var5.append(var3);
-      var5.append(", rssPages=");
       var5.append(var1);
+      var5.append(", rssPages=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -64,44 +64,32 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
 
 
       private fun File.parsePidStats(): ProcfsStats? {
-         var var9: ProcfsStats = null;
+         var var8: ProcfsStats = null;
 
-         var var2: Boolean;
-         label27: {
-            label26: {
-               try {
-                  if (!var1.exists()) {
-                     return var9;
-                  }
-
-                  var13 = j.d(var1, null, 1, null);
-                  if (var13.length() > 0) {
-                     break label26;
-                  }
-               } catch (var12: Exception) {
-                  return null;
-               }
-
-               var2 = false;
-               break label27;
+         try {
+            if (!var1.exists()) {
+               return var8;
             }
 
-            var2 = true;
+            var12 = j.d(var1, null, 1, null);
+         } catch (var11: Exception) {
+            return null;
          }
 
-         var9 = null;
-         if (var2) {
-            try {
-               val var14: java.util.List = f.z0(var13, new char[]{' '}, false, 0, 6, null);
-               var9 = new ProcfsStats(
-                  c.T(var14.get(13) as java.lang.String, 0L) + c.T(var14.get(14) as java.lang.String, 0L), c.T(var14.get(23) as java.lang.String, 0L)
+         var8 = null;
+
+         try {
+            if (var12.length() > 0) {
+               val var13: java.util.List = h.y0(var12, new char[]{' '}, false, 0, 6, null);
+               var8 = new ProcfsStats(
+                  c.T(var13.get(13) as java.lang.String, 0L) + c.T(var13.get(14) as java.lang.String, 0L), c.T(var13.get(23) as java.lang.String, 0L)
                );
-            } catch (var11: Exception) {
-               var9 = null;
             }
+         } catch (var10: Exception) {
+            var8 = null;
          }
 
-         return var9;
+         return var8;
       }
 
       public fun readStatFile(): ProcfsStats? {

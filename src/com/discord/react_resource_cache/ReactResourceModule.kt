@@ -5,11 +5,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableNativeArray
 import java.util.HashMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactContextBaseJavaModule {
    open fun ReactResourceModule(var1: ReactApplicationContext) {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -20,32 +20,32 @@ public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactCo
    }
 
    public fun keysArray(): WritableNativeArray {
-      val var3: WritableNativeArray = new WritableNativeArray();
-      val var4: Array<java.lang.Enum> = this.keys();
-      val var2: Int = var4.length;
+      val var4: WritableNativeArray = new WritableNativeArray();
+      val var3: Array<java.lang.Enum> = this.keys();
+      val var2: Int = var3.length;
 
       for (int var1 = 0; var1 < var2; var1++) {
-         var3.pushString(var4[var1].name());
+         var4.pushString(var3[var1].name());
       }
 
-      return var3;
+      return var4;
    }
 
    public fun reactResources(values: ReadableArray): HashMap<String, String> {
-      r.h(var1, "values");
-      val var8: HashMap = new HashMap(var1.size());
-      val var6: Array<java.lang.Enum> = this.keys();
-      val var4: Int = var6.length;
+      q.h(var1, "values");
+      val var5: HashMap = new HashMap(var1.size());
+      val var7: Array<java.lang.Enum> = this.keys();
+      val var4: Int = var7.length;
       var var3: Int = 0;
 
       for (int var2 = 0; var3 < var4; var2++) {
-         val var7: java.lang.String = var6[var3].name();
-         val var5: java.lang.String = var1.getString(var2);
-         r.g(var5, "values.getString(index)");
-         var8.put(var7, var5);
+         val var8: java.lang.String = var7[var3].name();
+         val var6: java.lang.String = var1.getString(var2);
+         q.g(var6, "getString(...)");
+         var5.put(var8, var6);
          var3++;
       }
 
-      return var8;
+      return var5;
    }
 }

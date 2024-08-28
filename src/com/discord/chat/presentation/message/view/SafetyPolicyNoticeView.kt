@@ -22,22 +22,22 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
    public final val binding: SafetyPolicyNoticeBinding
 
    fun SafetyPolicyNoticeView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var5: SafetyPolicyNoticeBinding = SafetyPolicyNoticeBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var5, "inflate(...)");
       this.binding = var5;
       val var3: View = var5.getRoot();
       var3.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      kotlin.jvm.internal.r.g(var3, "_init_$lambda$0");
+      kotlin.jvm.internal.q.e(var3);
       ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
       val var4: SimpleDraweeView = var5.icon;
-      kotlin.jvm.internal.r.g(var5.icon, "_init_$lambda$1");
+      kotlin.jvm.internal.q.e(var5.icon);
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.WarningTriangle);
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getStatusDanger());
    }
@@ -47,7 +47,7 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
       val var2: TextView = this.binding.learnMore;
       this.binding.learnMore.setText(var1);
       var2.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.g(var2, "setCta$lambda$6");
+      kotlin.jvm.internal.q.e(var2);
       DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryMedium);
    }
 
@@ -55,7 +55,7 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
       val var2: TextView = this.binding.description;
       this.binding.description.setText(var1);
       var2.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      kotlin.jvm.internal.r.g(var2, "setDescription$lambda$4");
+      kotlin.jvm.internal.q.e(var2);
       DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryMedium);
    }
 
@@ -65,8 +65,8 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
 
    @JvmStatic
    fun `setOnClickListener$lambda$8$lambda$7`(var0: Function1, var1: java.lang.String, var2: View) {
-      kotlin.jvm.internal.r.h(var0, "$callback");
-      kotlin.jvm.internal.r.h(var1, "$classificationId");
+      kotlin.jvm.internal.q.h(var0, "$callback");
+      kotlin.jvm.internal.q.h(var1, "$classificationId");
       var0.invoke(var1);
    }
 
@@ -74,7 +74,7 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
       val var2: TextView = this.binding.subtitleText;
       this.binding.subtitleText.setText(var1);
       var2.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.g(var2, "setSubtitle$lambda$3");
+      kotlin.jvm.internal.q.e(var2);
       DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryMedium);
    }
 
@@ -82,17 +82,17 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
       val var2: TextView = this.binding.title;
       this.binding.title.setText(var1);
       var2.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.g(var2, "setTitle$lambda$2");
+      kotlin.jvm.internal.q.e(var2);
       DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryMedium);
    }
 
    public fun setContent(title: String, subtitle: String, description: String, ctaText: String, classificationId: String, onTapEmbed: (String) -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "title");
-      kotlin.jvm.internal.r.h(var2, "subtitle");
-      kotlin.jvm.internal.r.h(var3, "description");
-      kotlin.jvm.internal.r.h(var4, "ctaText");
-      kotlin.jvm.internal.r.h(var5, "classificationId");
-      kotlin.jvm.internal.r.h(var6, "onTapEmbed");
+      kotlin.jvm.internal.q.h(var1, "title");
+      kotlin.jvm.internal.q.h(var2, "subtitle");
+      kotlin.jvm.internal.q.h(var3, "description");
+      kotlin.jvm.internal.q.h(var4, "ctaText");
+      kotlin.jvm.internal.q.h(var5, "classificationId");
+      kotlin.jvm.internal.q.h(var6, "onTapEmbed");
       this.setTitle(var1);
       this.setSubtitle(var2);
       this.setDescription(var3);

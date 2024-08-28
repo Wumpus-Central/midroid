@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.view.botuikit
 
 import com.discord.primitives.UserId
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class UserEventHandlers(onTapUsername: (UserId) -> Unit, onTapAvatar: (UserId) -> Unit) {
    public final val onTapUsername: (UserId) -> Unit
    public final val onTapAvatar: (UserId) -> Unit
 
    init {
-      r.h(var1, "onTapUsername");
-      r.h(var2, "onTapAvatar");
+      q.h(var1, "onTapUsername");
+      q.h(var2, "onTapAvatar");
       super();
       this.onTapUsername = var1;
       this.onTapAvatar = var2;
@@ -25,8 +25,8 @@ public data class UserEventHandlers(onTapUsername: (UserId) -> Unit, onTapAvatar
    }
 
    public fun copy(onTapUsername: (UserId) -> Unit = var0.onTapUsername, onTapAvatar: (UserId) -> Unit = var0.onTapAvatar): UserEventHandlers {
-      r.h(var1, "onTapUsername");
-      r.h(var2, "onTapAvatar");
+      q.h(var1, "onTapUsername");
+      q.h(var2, "onTapAvatar");
       return new UserEventHandlers(var1, var2);
    }
 
@@ -37,10 +37,10 @@ public data class UserEventHandlers(onTapUsername: (UserId) -> Unit, onTapAvatar
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.onTapUsername, var1.onTapUsername)) {
+         if (!q.c(this.onTapUsername, var1.onTapUsername)) {
             return false;
          } else {
-            return r.c(this.onTapAvatar, var1.onTapAvatar);
+            return q.c(this.onTapAvatar, var1.onTapAvatar);
          }
       }
    }
@@ -50,14 +50,14 @@ public data class UserEventHandlers(onTapUsername: (UserId) -> Unit, onTapAvatar
    }
 
    public override fun toString(): String {
-      val var3: Function1 = this.onTapUsername;
-      val var2: Function1 = this.onTapAvatar;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UserEventHandlers(onTapUsername=");
-      var1.append(var3);
-      var1.append(", onTapAvatar=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: Function1 = this.onTapUsername;
+      val var3: Function1 = this.onTapAvatar;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UserEventHandlers(onTapUsername=");
+      var2.append(var1);
+      var2.append(", onTapAvatar=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 }

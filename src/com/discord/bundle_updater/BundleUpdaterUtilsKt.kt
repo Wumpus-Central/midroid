@@ -4,20 +4,18 @@ import android.content.res.AssetManager
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.l
-import oh.q
 
-public final val json: Json = l.b(null, <unrepresentable>.INSTANCE, 1, null)
+public final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
 
 internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
    label21: {
-      r.h(var0, "<this>");
-      r.h(var1, "asset");
+      q.h(var0, "<this>");
+      q.h(var1, "asset");
       val var9: InputStream = var0.open(var1);
-      r.g(var9, "open(asset)");
-      val var10: InputStreamReader = new InputStreamReader(var9, ik.a.b);
+      q.g(var9, "open(...)");
+      val var10: InputStreamReader = new InputStreamReader(var9, rm.a.b);
       val var11: BufferedReader;
       if (var10 is BufferedReader) {
          var11 = var10 as BufferedReader;
@@ -26,21 +24,21 @@ internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
       }
 
       try {
-         val var14: Json = json;
-         var1 = q.e(var11);
-         var14.a();
-         var13 = var14.b(AppManifest.Companion.serializer(), var1) as AppManifest;
+         val var12: Json = json;
+         val var14: java.lang.String = wj.q.e(var11);
+         var12.a();
+         var13 = var12.b(AppManifest.Companion.serializer(), var14) as AppManifest;
       } catch (var4: java.lang.Throwable) {
          val var2: java.lang.Throwable = var4;
 
          try {
             throw var2;
          } catch (var3: java.lang.Throwable) {
-            oh.c.a(var11, var4);
+            wj.c.a(var11, var4);
          }
       }
 
-      oh.c.a(var11, null);
+      wj.c.a(var11, null);
       return var13;
    }
 }

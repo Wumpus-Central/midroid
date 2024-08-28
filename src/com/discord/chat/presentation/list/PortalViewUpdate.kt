@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.list
 
 import com.discord.chat.presentation.list.item.PortalViewChatListItem
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, updateId: Int) : ChannelChatListAdapterUpdate(
       var2, <unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE
@@ -19,10 +19,10 @@ public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, 
    }
 
    public operator fun component2(): Int {
-      return this.getUpdateId();
+      return this.updateId;
    }
 
-   public fun copy(portalChatListItem: PortalViewChatListItem? = var0.portalChatListItem, updateId: Int = var0.getUpdateId()): PortalViewUpdate {
+   public fun copy(portalChatListItem: PortalViewChatListItem? = var0.portalChatListItem, updateId: Int = var0.updateId): PortalViewUpdate {
       return new PortalViewUpdate(var1, var2);
    }
 
@@ -33,10 +33,10 @@ public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.portalChatListItem, var1.portalChatListItem)) {
+         if (!q.c(this.portalChatListItem, var1.portalChatListItem)) {
             return false;
          } else {
-            return this.getUpdateId() == var1.getUpdateId();
+            return this.updateId == var1.updateId;
          }
       }
    }
@@ -49,12 +49,12 @@ public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, 
          var1 = this.portalChatListItem.hashCode();
       }
 
-      return var1 * 31 + Integer.hashCode(this.getUpdateId());
+      return var1 * 31 + Integer.hashCode(this.updateId);
    }
 
    public override fun toString(): String {
       val var2: PortalViewChatListItem = this.portalChatListItem;
-      val var1: Int = this.getUpdateId();
+      val var1: Int = this.updateId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("PortalViewUpdate(portalChatListItem=");
       var3.append(var2);

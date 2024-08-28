@@ -1,10 +1,80 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.IllegalStateException: Couldn't find method component1 ()Lcom/discord/primitives/MessageId; in class com/discord/chat/presentation/message/messagepart/ActivityInstanceEmbedMessageAccessory
-  at org.vineflower.kotlin.struct.KFunction.parse(KFunction.java:112)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:221)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:194)
-*/
+package com.discord.chat.presentation.message.messagepart
+
+import com.discord.chat.bridge.activities.ActivityInstanceEmbed
+import com.discord.primitives.MessageId
+import kotlin.jvm.internal.q
+
+public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, activityInstanceEmbed: ActivityInstanceEmbed, constrainedWidth: Int) : ActivityInstanceEmbedMessageAccessory(
+      var1, var2, var3
+   ) {
+   public final val activityInstanceEmbed: ActivityInstanceEmbed
+   public final val constrainedWidth: Int
+   public open val messageId: MessageId
+
+   fun ActivityInstanceEmbedMessageAccessory(var1: java.lang.String, var2: ActivityInstanceEmbed, var3: Int) {
+      q.h(var1, "messageId");
+      q.h(var2, "activityInstanceEmbed");
+      val var4: java.lang.String = var2.getInstanceId();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("activity instance ");
+      var5.append(var4);
+      super(var1, var5.toString(), false, 4, null);
+      this.messageId = var1;
+      this.activityInstanceEmbed = var2;
+      this.constrainedWidth = var3;
+   }
+
+   public operator fun component1(): MessageId {
+      return this.messageId;
+   }
+
+   public operator fun component2(): ActivityInstanceEmbed {
+      return this.activityInstanceEmbed;
+   }
+
+   public operator fun component3(): Int {
+      return this.constrainedWidth;
+   }
+
+   public fun copy(messageId: MessageId = ..., activityInstanceEmbed: ActivityInstanceEmbed = ..., constrainedWidth: Int = ...): ActivityInstanceEmbedMessageAccessory {
+      q.h(var1, "messageId");
+      q.h(var2, "activityInstanceEmbed");
+      return new ActivityInstanceEmbedMessageAccessory(var1, var2, var3, null);
+   }
+
+   public override operator fun equals(other: Any?): Boolean {
+      if (this === var1) {
+         return true;
+      } else if (var1 !is ActivityInstanceEmbedMessageAccessory) {
+         return false;
+      } else {
+         var1 = var1;
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
+            return false;
+         } else if (!q.c(this.activityInstanceEmbed, var1.activityInstanceEmbed)) {
+            return false;
+         } else {
+            return this.constrainedWidth == var1.constrainedWidth;
+         }
+      }
+   }
+
+   public override fun hashCode(): Int {
+      return (MessageId.hashCode-impl(this.messageId) * 31 + this.activityInstanceEmbed.hashCode()) * 31 + Integer.hashCode(this.constrainedWidth);
+   }
+
+   public override fun toString(): String {
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: ActivityInstanceEmbed = this.activityInstanceEmbed;
+      val var1: Int = this.constrainedWidth;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ActivityInstanceEmbedMessageAccessory(messageId=");
+      var3.append(var4);
+      var3.append(", activityInstanceEmbed=");
+      var3.append(var2);
+      var3.append(", constrainedWidth=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
+   }
+}

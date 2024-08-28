@@ -7,14 +7,14 @@ public class SafetyPolicyNoticeViewHolder(safetyPolicyNoticeView: SafetyPolicyNo
    private final val safetyPolicyNoticeView: SafetyPolicyNoticeView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "safetyPolicyNoticeView");
+      kotlin.jvm.internal.q.h(var1, "safetyPolicyNoticeView");
       super(var1, null);
       this.safetyPolicyNoticeView = var1;
    }
 
    public fun bind(accessory: SafetyPolicyNoticeMessageAccessory, onTapEmbed: (String) -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "accessory");
-      kotlin.jvm.internal.r.h(var2, "onTapEmbed");
+      kotlin.jvm.internal.q.h(var1, "accessory");
+      kotlin.jvm.internal.q.h(var2, "onTapEmbed");
       this.safetyPolicyNoticeView
          .setContent(
             var1.getSafetyPolicyNoticeEmbed().getTitleText(),

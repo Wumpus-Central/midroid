@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.text.TextPaint
 import android.text.style.CharacterStyle
 import android.text.style.UpdateAppearance
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class SpoilerSpan(isRevealed: Boolean, hiddenColor: Int, revealedColor: Int) : CharacterStyle, UpdateAppearance {
    private final val hiddenColor: Int
@@ -18,7 +18,7 @@ public class SpoilerSpan(isRevealed: Boolean, hiddenColor: Int, revealedColor: I
    }
 
    public open fun updateDrawState(tp: TextPaint) {
-      r.h(var1, "tp");
+      q.h(var1, "tp");
       if (this.isRevealed) {
          var1.bgColor = this.revealedColor;
       } else {

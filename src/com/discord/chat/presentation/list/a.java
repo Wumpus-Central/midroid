@@ -4,6 +4,7 @@ import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.view.View;
 
+// $VF: synthetic class
 public final class a implements AnimatorUpdateListener {
    public final View a;
 
