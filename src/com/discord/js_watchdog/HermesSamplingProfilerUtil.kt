@@ -10,21 +10,21 @@ public object HermesSamplingProfilerUtil {
       label18: {
          val var10: FileInputStream = new FileInputStream(var1);
 
-         var var11: ByteArray;
+         var var2: ByteArray;
          try {
-            var11 = b.c(var10);
+            var2 = b.c(var10);
          } catch (var5: java.lang.Throwable) {
-            val var2: java.lang.Throwable = var5;
+            val var3: java.lang.Throwable = var5;
 
             try {
-               throw var2;
+               throw var3;
             } catch (var4: java.lang.Throwable) {
                c.a(var10, var5);
             }
          }
 
          c.a(var10, null);
-         return f.r(var11);
+         return f.r(var2);
       }
    }
 
@@ -320,30 +320,30 @@ public object HermesSamplingProfilerUtil {
       // 23b: aload 13
       // 23d: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
       // 242: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 247: astore 14
+      // 247: astore 13
       // 249: aload 10
       // 24b: astore 1
-      // 24c: aload 14
+      // 24c: aload 13
       // 24e: invokeinterface java/util/Iterator.hasNext ()Z 1
       // 253: ifeq 2bf
       // 256: aload 10
       // 258: astore 1
-      // 259: aload 14
+      // 259: aload 13
       // 25b: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 260: checkcast java/util/Map$Entry
-      // 263: astore 13
+      // 263: astore 15
       // 265: aload 10
       // 267: astore 1
-      // 268: aload 13
+      // 268: aload 15
       // 26a: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
       // 26f: checkcast java/lang/String
       // 272: invokestatic kotlin/text/f.m (Ljava/lang/String;)Ljava/lang/Integer;
-      // 275: astore 15
-      // 277: aload 15
+      // 275: astore 14
+      // 277: aload 14
       // 279: ifnull 29d
       // 27c: aload 10
       // 27e: astore 1
-      // 27f: aload 15
+      // 27f: aload 14
       // 281: invokevirtual java/lang/Number.intValue ()I
       // 284: aload 12
       // 286: invokevirtual java/lang/Integer.intValue ()I
@@ -366,9 +366,9 @@ public object HermesSamplingProfilerUtil {
       // 2a3: aload 10
       // 2a5: astore 1
       // 2a6: aload 11
-      // 2a8: aload 13
+      // 2a8: aload 15
       // 2aa: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 2af: aload 13
+      // 2af: aload 15
       // 2b1: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 2b6: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 2bb: pop
@@ -392,7 +392,7 @@ public object HermesSamplingProfilerUtil {
       // 2e0: aload 10
       // 2e2: astore 1
       // 2e3: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
-      // 2e6: astore 13
+      // 2e6: astore 11
       // 2e8: aload 10
       // 2ea: astore 1
       // 2eb: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
@@ -401,17 +401,17 @@ public object HermesSamplingProfilerUtil {
       // 2f3: aload 10
       // 2f5: astore 1
       // 2f6: new kotlinx/serialization/json/JsonObject
-      // 2f9: astore 11
+      // 2f9: astore 13
       // 2fb: aload 10
       // 2fd: astore 1
-      // 2fe: aload 11
+      // 2fe: aload 13
       // 300: aload 9
       // 302: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
       // 305: aload 10
       // 307: astore 1
-      // 308: aload 13
+      // 308: aload 11
       // 30a: aload 12
-      // 30c: aload 11
+      // 30c: aload 13
       // 30e: invokevirtual kotlinx/serialization/json/Json.c (Luk/h;Ljava/lang/Object;)Ljava/lang/String;
       // 311: astore 9
       // 313: iload 5

@@ -49,29 +49,29 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
          var10 = 1;
       }
 
-      val var15: Boolean = (boolean)(var10 xor true);
+      val var13: Boolean = (boolean)(var10 xor true);
       val var20: EmbedView = this.embedView;
-      val var17: Embed = var1.getEmbed();
-      var10 = var1.getIndex();
-      val var12: Long = var1.getChannelId_o4g7jtM();
-      val var18: java.lang.String = var1.getMessageId_3Eiw7ao();
-      val var11: Int = var1.getConstrainedWidth();
-      val var14: Boolean;
-      if (var1.getShouldAutoPlayGifs() && !var15) {
-         var14 = true;
+      val var18: Embed = var1.getEmbed();
+      val var11: Int = var1.getIndex();
+      val var14: Long = var1.getChannelId-o4g7jtM();
+      val var17: java.lang.String = var1.getMessageId-3Eiw7ao();
+      var10 = var1.getConstrainedWidth();
+      val var12: Boolean;
+      if (var1.getShouldAutoPlayGifs() && !var13) {
+         var12 = true;
       } else {
-         var14 = false;
+         var12 = false;
       }
 
-      var20.setEmbed_UEgMTIk(
-         var17,
-         var10,
-         var12,
+      var20.setEmbed-UEgMTIk(
          var18,
          var11,
+         var14,
+         var17,
+         var10,
          var2,
          var3,
-         var14,
+         var12,
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
          var1.getShouldShowRoleDot(),
@@ -83,10 +83,10 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                );
             }
 
-            public final void invoke_u7_MRrM(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
+            public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
                kotlin.jvm.internal.r.h(var1, "p0");
                kotlin.jvm.internal.r.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked_u7_MRrM(var1, var2, var3);
+               (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
             }
          },
          new Function3<MessageId, java.lang.String, java.lang.String, Unit>(this.eventHandler) {
@@ -96,10 +96,10 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                );
             }
 
-            public final void invoke_u7_MRrM(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
+            public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
                kotlin.jvm.internal.r.h(var1, "p0");
                kotlin.jvm.internal.r.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked_u7_MRrM(var1, var2, var3);
+               (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
             }
          },
          var6,
@@ -116,10 +116,10 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                );
             }
 
-            public final void invoke_ntcYbpo(java.lang.String var1, LinkContentNode var2) {
+            public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
                kotlin.jvm.internal.r.h(var1, "p0");
                kotlin.jvm.internal.r.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked_ntcYbpo(var1, var2);
+               (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
             }
          },
          new Function1<LinkContentNode, Unit>(this.eventHandler) {
@@ -202,15 +202,15 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                );
             }
 
-            public final void invoke_JjTCmh4(long var1, java.lang.String var3, java.lang.String var4, Integer var5) {
+            public final void invoke_JjTCmh4/* $VF was: invoke-JjTCmh4*/(long var1, java.lang.String var3, java.lang.String var4, Integer var5) {
                kotlin.jvm.internal.r.h(var3, "p1");
                kotlin.jvm.internal.r.h(var4, "p2");
-               (super.receiver as ChatEventHandler).onTapInlineForward_JjTCmh4(var1, var3, var4, var5);
+               (super.receiver as ChatEventHandler).onTapInlineForward-JjTCmh4(var1, var3, var4, var5);
             }
          },
          var5,
          var8,
-         var15,
+         var13,
          var1.isForwardedContent(),
          var1.isShowingInlineForward(),
          var1.getUseOldForwardIcon()

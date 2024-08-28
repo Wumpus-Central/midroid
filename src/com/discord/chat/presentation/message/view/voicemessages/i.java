@@ -3,6 +3,7 @@ package com.discord.chat.presentation.message.view.voicemessages;
 import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 
+// $VF: synthetic class
 public final class i implements OnLayoutChangeListener {
    public final AudioPlayerView j;
 

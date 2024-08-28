@@ -53,27 +53,27 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
 
    public fun findFirstItemPositionAboveOrBelowPosition(position: Int, itemType: Int): Int {
       val var5: Int = this.getItemCount();
-      var var3: Int = var1;
+      var var4: Int = var1;
 
       while (true) {
-         var var4: Int = var1;
-         if (var3 < 0) {
-            while (var4 < var5) {
-               if (this.getItemViewType(var4) == var2) {
-                  return var4;
+         var var3: Int = var1;
+         if (var4 < 0) {
+            while (var3 < var5) {
+               if (this.getItemViewType(var3) == var2) {
+                  return var3;
                }
 
-               var4++;
+               var3++;
             }
 
             return -1;
          }
 
-         if (this.getItemViewType(var3) == var2) {
-            return var3;
+         if (this.getItemViewType(var4) == var2) {
+            return var4;
          }
 
-         var3--;
+         var4--;
       }
    }
 
@@ -194,15 +194,15 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
             var8 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
          );
       } else if (var1 is EmojiPickerViewHolder.Spacer) {
-         val var6: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
-         val var9: EmojiPickerItem = this.getItem(var2);
-         r.f(var9, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
-         var6.onBindViewHolder(var9 as EmojiPickerItem.Spacer);
+         val var9: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
+         val var6: EmojiPickerItem = this.getItem(var2);
+         r.f(var6, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
+         var9.onBindViewHolder(var6 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
-         val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
-         val var10: EmojiPickerItem = this.getItem(var2);
-         r.f(var10, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
-         var7.onBindViewHolder(var10 as EmojiPickerItem.FooterUpsell);
+         val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
+         val var7: EmojiPickerItem = this.getItem(var2);
+         r.f(var7, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
+         var10.onBindViewHolder(var7 as EmojiPickerItem.FooterUpsell);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockFooter) {
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockFooter).onBindViewHolder(this.useTier0UpsellContent);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockHeader) {
@@ -369,54 +369,6 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
       if (this.useTier0UpsellContent != var1) {
          this.useTier0UpsellContent = var1;
          this.onItemsChanged.invoke(null, null);
-      }
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[EmojiPickerItem.ItemType.values().length];
-
-         try {
-            var0[EmojiPickerItem.ItemType.EMOJI.ordinal()] = 1;
-         } catch (var8: NoSuchFieldError) {
-         }
-
-         try {
-            var0[EmojiPickerItem.ItemType.PLACEHOLDER.ordinal()] = 2;
-         } catch (var7: NoSuchFieldError) {
-         }
-
-         try {
-            var0[EmojiPickerItem.ItemType.CATEGORY.ordinal()] = 3;
-         } catch (var6: NoSuchFieldError) {
-         }
-
-         try {
-            var0[EmojiPickerItem.ItemType.SPACER.ordinal()] = 4;
-         } catch (var5: NoSuchFieldError) {
-         }
-
-         try {
-            var0[EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal()] = 5;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[EmojiPickerItem.ItemType.PREMIUM_INLINE_ROADBLOCK_HEADER.ordinal()] = 6;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[EmojiPickerItem.ItemType.PREMIUM_INLINE_ROADBLOCK_FOOTER.ordinal()] = 7;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
       }
    }
 }

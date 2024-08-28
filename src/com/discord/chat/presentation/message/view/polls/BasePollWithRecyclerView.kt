@@ -47,8 +47,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       val var5: PollRecyclerViewBinding = PollRecyclerViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var5, "inflate(LayoutInflater.from(context), this)");
       this.binding = var5;
-      val var4: RecyclerView = var5.answers;
-      val var7: NoMoveItemAnimator = new NoMoveItemAnimator() {
+      val var7: RecyclerView = var5.answers;
+      val var4: NoMoveItemAnimator = new NoMoveItemAnimator() {
          {
             super(null, null, 3, null);
          }
@@ -61,8 +61,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
             MaybeAnimateElevationToKt.maybeEndAnimation(var2);
          }
       };
-      var7.setSupportsChangeAnimations(false);
-      var4.setItemAnimator(var7);
+      var4.setSupportsChangeAnimations(false);
+      var7.setItemAnimator(var4);
       val var8: View = var5.getRoot();
       r.g(var8, "binding.root");
       var3 = SizeUtilsKt.getDpToPx(16);
@@ -105,7 +105,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
                public final void invoke(java.lang.String var1) {
                   r.h(var1, "answerId");
                   this.$onTapAnswer
-                     .invoke(ChannelId.box_impl(this.$accessory.getChannelId_o4g7jtM()), MessageId.box_impl(this.$accessory.getMessageId_3Eiw7ao()), var1);
+                     .invoke(ChannelId.box-impl(this.$accessory.getChannelId-o4g7jtM()), MessageId.box-impl(this.$accessory.getMessageId-3Eiw7ao()), var1);
                }
             },
             new Function6<java.lang.String, Integer, Integer, Integer, Integer, ViewResizeMode, Unit>(var4, var1) {
@@ -123,8 +123,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
                   r.h(var6, "viewResizeMode");
                   this.$onLongPressImage
                      .invoke(
-                        ChannelId.box_impl(this.$accessory.getChannelId_o4g7jtM()),
-                        MessageId.box_impl(this.$accessory.getMessageId_3Eiw7ao()),
+                        ChannelId.box-impl(this.$accessory.getChannelId-o4g7jtM()),
+                        MessageId.box-impl(this.$accessory.getMessageId-3Eiw7ao()),
                         var1,
                         var2,
                         var3,
@@ -145,9 +145,9 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       f1.D0(var12, 4);
       f1.A0(var12, 1);
       f1.q0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
-      var8 = this.binding.primaryAction.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
       val var9: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      val var10: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
       r.g(this.binding.promptText, "bind$lambda$5");
@@ -166,11 +166,11 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
 
       var13.setVisibility(var5);
       var13.setText(var1.getData().getPromptLabel());
-      this.binding.primaryAction.bind_urJ__Hs(var1.getData().getPrimaryAction(), var1.getChannelId_o4g7jtM(), var1.getMessageId_3Eiw7ao(), var3);
-      this.binding.secondaryActionButton.bind_urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId_o4g7jtM(), var1.getMessageId_3Eiw7ao(), var3);
-      this.binding.tertiaryActionButton.bind_urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId_o4g7jtM(), var1.getMessageId_3Eiw7ao(), var3);
+      this.binding.primaryAction.bind-urJ__Hs(var1.getData().getPrimaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
+      this.binding.secondaryActionButton.bind-urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
+      this.binding.tertiaryActionButton.bind-urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       val var15: Boolean;
-      if (var8 && !this.binding.primaryAction.hasAccessibilityFocus()) {
+      if (var10 && !this.binding.primaryAction.hasAccessibilityFocus()) {
          var15 = true;
       } else {
          var15 = false;
@@ -183,7 +183,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
          var6 = false;
       }
 
-      if (!var10 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 

@@ -21,16 +21,16 @@ public fun SimpleDraweeView.setTiledImageURI(uri: String) {
    } else {
       val var7: Resources = var0.getResources();
       r.g(var7, "resources");
-      val var8: TiledDraweeController = new TiledDraweeController(var7, var1, null, 4, null);
-      val var5: DraweeController = var0.getController();
-      if (var5 != null && var5.isSameImageRequest(var8)) {
+      val var5: TiledDraweeController = new TiledDraweeController(var7, var1, null, 4, null);
+      val var8: DraweeController = var0.getController();
+      if (var8 != null && var8.isSameImageRequest(var5)) {
          var2 = true;
       } else {
          var2 = false;
       }
 
       if (!var2) {
-         var0.setController(var8);
+         var0.setController(var5);
       }
    }
 }

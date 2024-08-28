@@ -84,9 +84,9 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
          var var2: Boolean;
          label17: {
             if (var1 != null) {
-               val var3: Boolean = var1.hasExtra("intent.discord.headless_tasks_key");
+               val var5: Boolean = var1.hasExtra("intent.discord.headless_tasks_key");
                var2 = true;
-               if (var3) {
+               if (var5) {
                   break label17;
                }
             }

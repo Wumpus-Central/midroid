@@ -59,23 +59,23 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
    }
 
    public open fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("type", this.type)});
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("type", this.type)});
       if (this.context != null) {
-         var2.putString("context", this.context);
+         var1.putString("context", this.context);
       }
 
-      return var2;
+      return var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.type;
-      val var2: java.lang.String = this.context;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapSeparatorData(type=");
-      var1.append(var3);
-      var1.append(", context=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.type;
+      val var1: java.lang.String = this.context;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapSeparatorData(type=");
+      var3.append(var2);
+      var3.append(", context=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

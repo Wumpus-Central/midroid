@@ -1,1 +1,8 @@
-{"swfLzc":[{"type":0,"value":"This message comes from a separate file"}]}
+{
+  "swfLzc": [
+    {
+      "type": 0,
+      "value": "This message comes from a separate file"
+    }
+  ]
+}

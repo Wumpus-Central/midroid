@@ -96,42 +96,4 @@ public class OkHttpDNSSelector(mode: com.discord.utils.OkHttpDNSSelector.IPvMode
          this.code = var3;
       }
    }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[OkHttpDNSSelector.IPvMode.values().length];
-
-         try {
-            var0[OkHttpDNSSelector.IPvMode.IPV6_FIRST.ordinal()] = 1;
-         } catch (var6: NoSuchFieldError) {
-         }
-
-         try {
-            var0[OkHttpDNSSelector.IPvMode.IPV4_FIRST.ordinal()] = 2;
-         } catch (var5: NoSuchFieldError) {
-         }
-
-         try {
-            var0[OkHttpDNSSelector.IPvMode.IPV6_ONLY.ordinal()] = 3;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[OkHttpDNSSelector.IPvMode.IPV4_ONLY.ordinal()] = 4;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[OkHttpDNSSelector.IPvMode.SYSTEM.ordinal()] = 5;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
-      }
-   }
 }

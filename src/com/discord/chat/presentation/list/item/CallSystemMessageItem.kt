@@ -9,7 +9,7 @@ public data class CallSystemMessageItem(message: Message) : ChatListItem {
 
    init {
       r.h(var1, "message");
-      super(var1.getId_3Eiw7ao(), null);
+      super(var1.getId-3Eiw7ao(), null);
       this.message = var1;
       if (!MessageKt.isCallMessage(var1)) {
          throw new IllegalArgumentException("Only \"call\" system messages are allowed".toString());

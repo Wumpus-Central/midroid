@@ -5,6 +5,7 @@ import io.sentry.j5;
 import io.sentry.android.core.SentryAndroidOptions;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
+// $VF: synthetic class
 public final class a implements io.sentry.o3.a {
    public final Ref$ObjectRef a;
    public final String b;

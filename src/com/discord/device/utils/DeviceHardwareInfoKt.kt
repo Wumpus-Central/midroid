@@ -15,37 +15,38 @@ internal fun getNumCpuCores(): Int {
 }
 
 internal fun getSocFromProcCpuInfo(): String {
-   val var0: Scanner = new Scanner(new File("/proc/cpuinfo"));
+   val var1: Scanner = new Scanner(new File("/proc/cpuinfo"));
 
+   var var0: java.lang.String;
    while (true) {
-      if (var0.hasNextLine()) {
-         val var1: java.lang.String = var0.nextLine();
-         r.g(var1, "line");
-         if (!f.I(var1, "Hardware", false, 2, null)) {
+      if (var1.hasNextLine()) {
+         var0 = var1.nextLine();
+         r.g(var0, "line");
+         if (!f.I(var0, "Hardware", false, 2, null)) {
             continue;
          }
 
-         var2 = f.W0(f.A0(var1, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
+         var0 = f.W0(f.A0(var0, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
          break;
       }
 
-      var2 = "";
+      var0 = "";
       break;
    }
 
-   return var2;
+   return var0;
 }
 
 internal fun maxCpuFreq(): String {
    val var3: Int = getNumCpuCores();
-   var var4: Long = 0L;
+   var var6: Long = 0L;
    var var2: Int = 0;
 
    while (true) {
       var var10: java.lang.String = "";
       if (var2 >= var3) {
-         if (var4 > 0L) {
-            val var0: Double = var4 / 1000000.0;
+         if (var6 > 0L) {
+            val var0: Double = var6 / 1000000.0;
             val var15: m0 = m0.a;
             var10 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
             r.g(var10, "format(locale, format, *args)");
@@ -67,13 +68,13 @@ internal fun maxCpuFreq(): String {
          return "";
       }
 
-      var var6: Long = var4;
-      if (var8 > var4) {
-         var6 = var8;
+      var var4: Long = var6;
+      if (var8 > var6) {
+         var4 = var8;
       }
 
       var2++;
-      var4 = var6;
+      var6 = var4;
    }
 }
 
@@ -150,13 +151,13 @@ internal fun socName(): String {
          }
       }
 
-      val var3: java.lang.String = a.a();
+      val var4: java.lang.String = a.a();
       var2 = b.a();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var3);
-      var4.append("_");
-      var4.append(var2);
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var4);
+      var3.append("_");
+      var3.append(var2);
+      return var3.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

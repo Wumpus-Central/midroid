@@ -4,6 +4,7 @@ import com.discord.native.engine.VideoInputDeviceDescription;
 import com.discord.native.engine.NativeEngine.GetVideoInputDevicesCallback;
 import kotlin.jvm.functions.Function1;
 
+// $VF: synthetic class
 public final class l implements GetVideoInputDevicesCallback {
    public final Function1 a;
 

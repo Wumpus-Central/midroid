@@ -200,12 +200,12 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
       this.configureTextColor(var11);
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var2) {
-         val var14: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var9: RenderableEmoji = var1.getEmoji().renderable();
-         val var12: Context = this.getContext();
-         r.g(var12, "context");
-         var14.setDraweeSpanStringBuilder(
-            RenderableEmojiKt.renderEmoji$default(var9, var12, ReactionView.Companion.getEMOJI_SIZE(), var1.getEmoji().getShouldAnimate(), 0, null, 48, null)
+         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var12: RenderableEmoji = var1.getEmoji().renderable();
+         val var14: Context = this.getContext();
+         r.g(var14, "context");
+         var9.setDraweeSpanStringBuilder(
+            RenderableEmojiKt.renderEmoji$default(var12, var14, ReactionView.Companion.getEMOJI_SIZE(), var1.getEmoji().getShouldAnimate(), 0, null, 48, null)
          );
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }

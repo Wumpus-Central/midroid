@@ -21,14 +21,14 @@ public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandl
    fun `bindView$lambda$2$lambda$0`(var0: SummarySeparatorDelegate, var1: SummarySeparatorChatListItem, var2: View) {
       r.h(var0, "this$0");
       r.h(var1, "$item");
-      var0.getEventHandler().onTapSummary_sekaTiM(var1.getSummary().getChannelId_o4g7jtM(), var1.getCurrentMsgId_3Eiw7ao(), var1.getSummary().getId());
+      var0.getEventHandler().onTapSummary-sekaTiM(var1.getSummary().getChannelId-o4g7jtM(), var1.getCurrentMsgId-3Eiw7ao(), var1.getSummary().getId());
    }
 
    @JvmStatic
    fun `bindView$lambda$2$lambda$1`(var0: SummarySeparatorDelegate, var1: SummarySeparatorChatListItem, var2: View) {
       r.h(var0, "this$0");
       r.h(var1, "$item");
-      var0.getEventHandler().onTapSummaryJump_sekaTiM(var1.getSummary().getChannelId_o4g7jtM(), var1.getJumpToMsgId_3Eiw7ao(), var1.getSummary().getId());
+      var0.getEventHandler().onTapSummaryJump-sekaTiM(var1.getSummary().getChannelId-o4g7jtM(), var1.getJumpToMsgId-3Eiw7ao(), var1.getSummary().getId());
    }
 
    public open fun bindView(view: SummarySeparatorView, item: SummarySeparatorChatListItem, metadata: Metadata<SummarySeparatorView>) {

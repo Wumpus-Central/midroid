@@ -14,10 +14,10 @@ import kotlin.jvm.internal.r
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val cacheModule: CacheModule
       private final get() {
-         val var1: CacheModule.Companion = CacheModule.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var2, "reactApplicationContext");
-         return var1.get(var2);
+         val var2: CacheModule.Companion = CacheModule.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var1, "reactApplicationContext");
+         return var2.get(var1);
       }
 
 

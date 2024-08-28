@@ -5,6 +5,7 @@ import android.view.View.OnClickListener;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
 import kotlin.jvm.functions.Function3;
 
+// $VF: synthetic class
 public final class s implements OnClickListener {
    public final Function3 j;
    public final String k;

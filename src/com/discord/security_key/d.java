@@ -2,6 +2,7 @@ package com.discord.security_key;
 
 import hb.e;
 
+// $VF: synthetic class
 public final class d implements e {
    public final WebAuthn a;
 

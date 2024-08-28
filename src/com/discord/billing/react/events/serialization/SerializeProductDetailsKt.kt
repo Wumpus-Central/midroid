@@ -22,54 +22,54 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          return NativeArrayExtensionsKt.toNativeArray(var8);
       }
 
-      var var3: Long;
+      var var2: Long;
       var var11: ArrayList;
       var var23: java.lang.String;
-      var var28: java.lang.String;
+      var var27: java.lang.String;
       label60: {
          var10 = var9.next() as ProductDetails;
          var11 = new ArrayList();
-         val var2: Boolean = r.c(var10.e(), "inapp");
+         val var4: Boolean = r.c(var10.e(), "inapp");
          var23 = null;
-         if (var2) {
+         if (var4) {
             val var13: a = var10.c();
             if (var13 == null) {
-               val var15: java.lang.String = var10.d();
-               val var21: StringBuilder = new StringBuilder();
-               var21.append("Could not find oneTimePurchaseOfferDetails for product: ");
-               var21.append(var15);
-               throw new AssertionError(var21.toString());
+               var23 = var10.d();
+               val var15: StringBuilder = new StringBuilder();
+               var15.append("Could not find oneTimePurchaseOfferDetails for product: ");
+               var15.append(var23);
+               throw new AssertionError(var15.toString());
             }
 
             r.g(var13, "productDetails.oneTimePu…oductDetails.productId}\")");
-            var3 = var13.b();
-            var28 = var13.a();
+            var2 = var13.b();
+            var27 = var13.a();
             var23 = var13.c();
             var14 = null;
          } else {
             if (!r.c(var10.e(), "subs")) {
-               var3 = 0L;
+               var2 = 0L;
+               var27 = null;
                var14 = null;
                var23 = null;
-               var28 = null;
                break label60;
             }
 
-            val var7: java.util.List = var10.f();
-            if (var7 == null) {
+            val var28: java.util.List = var10.f();
+            if (var28 == null) {
                break;
             }
 
-            val var27: java.util.Iterator = var7.iterator();
+            val var26: java.util.Iterator = var28.iterator();
 
             val var1: Boolean;
             do {
                var16 = var23;
-               if (!var27.hasNext()) {
+               if (!var26.hasNext()) {
                   break;
                }
 
-               var16 = var27.next();
+               var16 = var26.next();
                if ((var16 as c).b() == null) {
                   var1 = true;
                } else {
@@ -91,11 +91,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
                throw new AssertionError(var18.toString());
             }
 
-            var3 = var22.d();
-            var28 = var22.c();
+            var2 = var22.d();
+            var27 = var22.c();
             var14 = var22.b();
             var23 = var22.e();
-            val var29: java.util.Iterator = var7.iterator();
+            val var29: java.util.Iterator = var28.iterator();
 
             while (var29.hasNext()) {
                val var12: java.lang.String = (var29.next() as c).b();
@@ -105,8 +105,8 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
             }
          }
 
-         var28 = var23;
-         var23 = var28;
+         var27 = var23;
+         var23 = var27;
       }
 
       var8.add(
@@ -116,8 +116,8 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
                w.a("title", var10.g()),
                w.a("description", var10.a()),
                w.a("priceString", var23),
-               w.a("currencyCode", var28),
-               w.a("price", (int)(var3 / (long)10000)),
+               w.a("currencyCode", var27),
+               w.a("price", (int)(var2 / (long)10000)),
                w.a("type", var10.e()),
                w.a("offerIds", NativeArrayExtensionsKt.toNativeArray(var11)),
                w.a("billingPeriod", var14)
@@ -126,9 +126,9 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       );
    }
 
-   val var19: java.lang.String = var10.d();
-   val var25: StringBuilder = new StringBuilder();
-   var25.append("Could not find subscriptionOfferDetails for product: ");
-   var25.append(var19);
-   throw new AssertionError(var25.toString());
+   val var25: java.lang.String = var10.d();
+   val var19: StringBuilder = new StringBuilder();
+   var19.append("Could not find subscriptionOfferDetails for product: ");
+   var19.append(var25);
+   throw new AssertionError(var19.toString());
 }

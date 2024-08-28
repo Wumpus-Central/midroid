@@ -975,11 +975,11 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       if (var2 != 1) {
          if (var2 != 2) {
-            val var6: ReadableType = var1.getType();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unexpected deviceIndex type: ");
-            var7.append(var6);
-            throw new IllegalArgumentException(var7.toString());
+            val var7: ReadableType = var1.getType();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unexpected deviceIndex type: ");
+            var6.append(var7);
+            throw new IllegalArgumentException(var6.toString());
          }
 
          val var5: java.lang.String = var1.asString();
@@ -1132,11 +1132,11 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
          if (var4 != 1) {
             if (var4 != 2) {
-               val var7: ReadableType = var1.getType();
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("Unexpected deviceIndex type: ");
-               var8.append(var7);
-               throw new IllegalArgumentException(var8.toString());
+               val var8: ReadableType = var1.getType();
+               val var7: StringBuilder = new StringBuilder();
+               var7.append("Unexpected deviceIndex type: ");
+               var7.append(var8);
+               throw new IllegalArgumentException(var7.toString());
             }
 
             val var6: java.lang.String = var1.asString();
@@ -1144,29 +1144,6 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
             var3.invoke(var6);
          } else {
             var2.invoke(var1.asInt());
-         }
-      }
-
-      // $VF: Class flags could not be determined
-      internal class WhenMappings {
-         @JvmStatic
-         public int[] $EnumSwitchMapping$0;
-
-         @JvmStatic
-         fun {
-            val var0: IntArray = new int[ReadableType.values().length];
-
-            try {
-               var0[ReadableType.Number.ordinal()] = 1;
-            } catch (var3: NoSuchFieldError) {
-            }
-
-            try {
-               var0[ReadableType.String.ordinal()] = 2;
-            } catch (var2: NoSuchFieldError) {
-            }
-
-            $EnumSwitchMapping$0 = var0;
          }
       }
    }

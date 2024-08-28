@@ -224,42 +224,42 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.useSpeaker;
-      val var3: java.lang.String = this.mute;
-      val var10: java.lang.String = this.disconnectFromVoice;
-      val var1: java.lang.String = this.getInvite;
-      val var7: java.lang.String = this.switchChannels;
-      val var4: java.lang.String = this.openDiscord;
-      val var9: java.lang.String = this.inviteLinkCopied;
-      val var5: java.lang.String = this.channelSelect;
-      val var8: java.lang.String = this.closeWindow;
-      val var2: java.lang.String = this.searchChannels;
-      val var12: java.lang.String = this.noResults;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MobileVoiceOverlayAssets(useSpeaker=");
-      var11.append(var6);
-      var11.append(", mute=");
-      var11.append(var3);
-      var11.append(", disconnectFromVoice=");
-      var11.append(var10);
-      var11.append(", getInvite=");
-      var11.append(var1);
-      var11.append(", switchChannels=");
-      var11.append(var7);
-      var11.append(", openDiscord=");
-      var11.append(var4);
-      var11.append(", inviteLinkCopied=");
-      var11.append(var9);
-      var11.append(", channelSelect=");
-      var11.append(var5);
-      var11.append(", closeWindow=");
-      var11.append(var8);
-      var11.append(", searchChannels=");
-      var11.append(var2);
-      var11.append(", noResults=");
-      var11.append(var12);
-      var11.append(")");
-      return var11.toString();
+      val var2: java.lang.String = this.useSpeaker;
+      val var8: java.lang.String = this.mute;
+      val var3: java.lang.String = this.disconnectFromVoice;
+      val var6: java.lang.String = this.getInvite;
+      val var1: java.lang.String = this.switchChannels;
+      val var12: java.lang.String = this.openDiscord;
+      val var10: java.lang.String = this.inviteLinkCopied;
+      val var11: java.lang.String = this.channelSelect;
+      val var5: java.lang.String = this.closeWindow;
+      val var9: java.lang.String = this.searchChannels;
+      val var7: java.lang.String = this.noResults;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MobileVoiceOverlayAssets(useSpeaker=");
+      var4.append(var2);
+      var4.append(", mute=");
+      var4.append(var8);
+      var4.append(", disconnectFromVoice=");
+      var4.append(var3);
+      var4.append(", getInvite=");
+      var4.append(var6);
+      var4.append(", switchChannels=");
+      var4.append(var1);
+      var4.append(", openDiscord=");
+      var4.append(var12);
+      var4.append(", inviteLinkCopied=");
+      var4.append(var10);
+      var4.append(", channelSelect=");
+      var4.append(var11);
+      var4.append(", closeWindow=");
+      var4.append(var5);
+      var4.append(", searchChannels=");
+      var4.append(var9);
+      var4.append(", noResults=");
+      var4.append(var7);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<MobileVoiceOverlayAssets> {
@@ -294,100 +294,100 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
 
       public open fun deserialize(decoder: Decoder): MobileVoiceOverlayAssets {
          r.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         val var5: Boolean = var19.p();
+         val var19: SerialDescriptor = this.getDescriptor();
+         val var20: c = var1.b(var19);
+         val var5: Boolean = var20.p();
          var var2: Int = 0;
          var var6: java.lang.String;
-         var var8: java.lang.String;
-         var var11: java.lang.String;
+         var var9: java.lang.String;
+         var var10: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
          var var15: java.lang.String;
          val var16: java.lang.String;
          val var17: java.lang.String;
-         val var20: java.lang.String;
-         var var25: java.lang.String;
+         val var21: java.lang.String;
          var var28: java.lang.String;
+         var var31: java.lang.String;
          if (var5) {
-            var25 = var19.m(var18, 0);
-            var28 = var19.m(var18, 1);
-            var17 = var19.m(var18, 2);
-            var13 = var19.m(var18, 3);
-            var15 = var19.m(var18, 4);
-            var11 = var19.m(var18, 5);
-            var8 = var19.m(var18, 6);
-            val var7: java.lang.String = var19.m(var18, 7);
-            val var9: java.lang.String = var19.m(var18, 8);
-            var6 = var19.m(var18, 9);
-            var20 = var19.m(var18, 10);
+            var28 = var20.m(var19, 0);
+            var15 = var20.m(var19, 1);
+            var31 = var20.m(var19, 2);
+            var16 = var20.m(var19, 3);
+            var13 = var20.m(var19, 4);
+            var10 = var20.m(var19, 5);
+            val var8: java.lang.String = var20.m(var19, 6);
+            val var7: java.lang.String = var20.m(var19, 7);
+            var9 = var20.m(var19, 8);
+            var6 = var20.m(var19, 9);
+            var21 = var20.m(var19, 10);
             var2 = 2047;
-            var14 = var25;
-            var25 = var28;
-            var28 = var7;
-            var16 = var9;
+            var14 = var28;
+            var28 = var31;
+            var17 = var8;
+            var31 = var7;
          } else {
             var14 = null;
             var15 = null;
             var13 = null;
+            var31 = null;
+            var9 = null;
             var28 = null;
-            var8 = null;
-            var11 = null;
-            var var24: java.lang.String = null;
-            var25 = null;
+            var var25: java.lang.String = null;
+            var10 = null;
             var6 = null;
-            var var21: java.lang.String = null;
-            var var23: java.lang.String = null;
+            var var22: java.lang.String = null;
+            var var24: java.lang.String = null;
             var var3: Boolean = true;
 
             while (var3) {
-               val var4: Int = var19.o(var18);
+               val var4: Int = var20.o(var19);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var14 = var19.m(var18, 0);
+                     var14 = var20.m(var19, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var23 = var19.m(var18, 1);
+                     var24 = var20.m(var19, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var21 = var19.m(var18, 2);
+                     var22 = var20.m(var19, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var24 = var19.m(var18, 3);
+                     var25 = var20.m(var19, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var19.m(var18, 4);
+                     var6 = var20.m(var19, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var11 = var19.m(var18, 5);
+                     var28 = var20.m(var19, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var8 = var19.m(var18, 6);
+                     var9 = var20.m(var19, 6);
                      var2 |= 64;
                      break;
                   case 7:
-                     var28 = var19.m(var18, 7);
+                     var31 = var20.m(var19, 7);
                      var2 |= 128;
                      break;
                   case 8:
-                     var25 = var19.m(var18, 8);
+                     var10 = var20.m(var19, 8);
                      var2 |= 256;
                      break;
                   case 9:
-                     var13 = var19.m(var18, 9);
+                     var13 = var20.m(var19, 9);
                      var2 |= 512;
                      break;
                   case 10:
-                     var15 = var19.m(var18, 10);
+                     var15 = var20.m(var19, 10);
                      var2 |= 1024;
                      break;
                   default:
@@ -395,17 +395,19 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
                }
             }
 
-            var16 = var25;
-            var17 = var21;
-            var20 = var15;
+            var10 = var28;
+            var17 = var9;
+            var21 = var15;
             var6 = var13;
-            var15 = var6;
-            var13 = var24;
-            var25 = var23;
+            var9 = var10;
+            var13 = var6;
+            var16 = var25;
+            var28 = var22;
+            var15 = var24;
          }
 
-         var19.c(var18);
-         return new MobileVoiceOverlayAssets(var2, var14, var25, var17, var13, var15, var11, var8, var28, var16, var6, var20, null);
+         var20.c(var19);
+         return new MobileVoiceOverlayAssets(var2, var14, var15, var28, var16, var13, var10, var17, var31, var9, var6, var21, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MobileVoiceOverlayAssets) {

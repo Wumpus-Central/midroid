@@ -61,7 +61,7 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
          var4 = null;
       }
 
-      val var15: Array<StatusBarNotification> = var4 as StatusBarNotification[];
+      val var15: Array<StatusBarNotification> = var4 as Array<StatusBarNotification>;
       var8 = null;
       if (var15 != null) {
          val var3: Int = var15.length;

@@ -6,5 +6,5 @@ java.lang.NullPointerException: Cannot invoke "org.vineflower.kotlin.struct.KPro
   at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:389)
   at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
   at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:194)
+  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:195)
 */

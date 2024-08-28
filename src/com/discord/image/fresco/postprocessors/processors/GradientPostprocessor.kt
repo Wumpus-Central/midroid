@@ -5,7 +5,6 @@ import android.graphics.Canvas
 import android.graphics.LinearGradient
 import android.graphics.Paint
 import android.graphics.Shader.TileMode
-import com.discord.image.fresco.postprocessors.PostProcessor
 import com.discord.image.fresco.postprocessors.PostProcessor.Gradient
 import com.facebook.imagepipeline.request.BasePostprocessor
 import eh.p
@@ -58,8 +57,8 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var2: Float = var1.getWidth();
-      val var4: Float = var1.getHeight();
+      val var6: Float = var1.getWidth();
+      val var3: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -72,7 +71,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var2, var4, var15);
+      var18.drawRect(0.0F, 0.0F, var6, var3, var15);
    }
 
    public companion object {
@@ -127,39 +126,6 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             var3.append(")");
             return var3.toString();
          }
-      }
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[PostProcessor.Gradient.Direction.values().length];
-
-         try {
-            var0[PostProcessor.Gradient.Direction.LeftToRight.ordinal()] = 1;
-         } catch (var5: NoSuchFieldError) {
-         }
-
-         try {
-            var0[PostProcessor.Gradient.Direction.RightToLeft.ordinal()] = 2;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[PostProcessor.Gradient.Direction.TopToBottom.ordinal()] = 3;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[PostProcessor.Gradient.Direction.BottomToTop.ordinal()] = 4;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
       }
    }
 }

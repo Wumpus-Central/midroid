@@ -72,13 +72,13 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = Arrays.toString((Object[])this.guildVersions);
-      val var2: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
+      val var2: java.lang.String = Arrays.toString((Object[])this.guildVersions);
+      val var3: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
       val var1: StringBuilder = new StringBuilder();
       var1.append("DatabaseVersions(guildVersions=");
-      var1.append(var3);
-      var1.append(", nonGuildVersions=");
       var1.append(var2);
+      var1.append(", nonGuildVersions=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }
@@ -144,7 +144,7 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
          }
 
          var7.c(var6);
-         return new DatabaseVersions(var2, var8 as GuildVersion[], var5 as NonGuildVersion[], null);
+         return new DatabaseVersions(var2, var8 as Array<GuildVersion>, var5 as Array<NonGuildVersion>, null);
       }
 
       public open fun serialize(encoder: Encoder, value: DatabaseVersions) {

@@ -20,14 +20,14 @@ public class GGSansItalicSpan(context: Context) : StyleSpan {
    }
 
    private fun apply(paint: Paint, fallback: () -> Unit) {
-      val var5: Companion = DiscordFont.Companion;
-      val var6: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
+      val var6: Companion = DiscordFont.Companion;
+      var var5: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
       var var3: Typeface = null;
-      if (var6 != null) {
-         val var7: DiscordFont = Companion.findByStyle$default(var5, var6.getWeight(), true, false, 4, null);
+      if (var5 != null) {
+         var5 = Companion.findByStyle$default(var6, var5.getWeight(), true, false, 4, null);
          var3 = null;
-         if (var7 != null) {
-            var3 = var7.typeface(this.context);
+         if (var5 != null) {
+            var3 = var5.typeface(this.context);
          }
       }
 
@@ -51,7 +51,7 @@ public class GGSansItalicSpan(context: Context) : StyleSpan {
          }
 
          public final void invoke() {
-            GGSansItalicSpan.access$updateDrawState$s_485726085(this.this$0, this.$ds);
+            GGSansItalicSpan.access$updateDrawState$s-485726085(this.this$0, this.$ds);
          }
       });
    }
@@ -69,7 +69,7 @@ public class GGSansItalicSpan(context: Context) : StyleSpan {
          }
 
          public final void invoke() {
-            GGSansItalicSpan.access$updateMeasureState$s_485726085(this.this$0, this.$paint);
+            GGSansItalicSpan.access$updateMeasureState$s-485726085(this.this$0, this.$paint);
          }
       });
    }

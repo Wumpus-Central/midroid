@@ -172,9 +172,9 @@ internal class FastestListView(context: Context,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = h.i()) {
       if (var1.isEmpty() xor true) {
-         for (FastestListViewAdapter.DataChanged var4 : var1) {
-            val var2: Int = var4.component1();
-            val var3: Int = var4.component2();
+         for (FastestListViewAdapter.DataChanged var5 : var1) {
+            val var2: Int = var5.component1();
+            val var3: Int = var5.component2();
             if (var3 == 1) {
                this.typedAdapter.notifyItemChanged(var2);
             } else {
@@ -237,7 +237,7 @@ internal class FastestListView(context: Context,
 
    public fun scrollTo(section: Int, item: Int, animated: Boolean) {
       val var4: Int = this.sections
-         .getItemPosition_jEcWkE0(FastestListSections.Section.constructor_impl(var1), FastestListSections.Item.constructor_impl(var2));
+         .getItemPosition-jEcWkE0(FastestListSections.Section.constructor-impl(var1), FastestListSections.Item.constructor-impl(var2));
       if (var4 != null) {
          this.scrollTo(var4, var3);
       }

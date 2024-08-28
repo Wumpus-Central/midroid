@@ -99,7 +99,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    fun `configure$lambda$13$lambda$11`(var0: ComponentContext, var1: ContentInventoryEntryComponent, var2: View) {
       r.h(var0, "$componentContext");
       r.h(var1, "$component");
-      var0.getUserEventHandlers().getOnTapAvatar().invoke(UserId.box_impl(var1.getContentInventoryEntry().getAuthorId_re6GcUE()));
+      var0.getUserEventHandlers().getOnTapAvatar().invoke(UserId.box-impl(var1.getContentInventoryEntry().getAuthorId-re6GcUE()));
    }
 
    @JvmStatic
@@ -166,12 +166,12 @@ public class ContentInventoryComponentView  public constructor(context: Context,
             var10.add(ContentInventoryEntryComponentKt.toColorInt(var21.next() as GradientColor));
          }
 
-         val var11: IntArray = kotlin.collections.h.M0(var10);
-         val var22: ContentInventoryComponentView = this.getBinding().getRoot();
-         var22.setVisibility(0);
-         r.g(var22, "configure$lambda$3");
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var22, var11, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         var22.setOnClickListener(new c(var5, var4));
+         val var22: IntArray = kotlin.collections.h.M0(var10);
+         val var11: ContentInventoryComponentView = this.getBinding().getRoot();
+         var11.setVisibility(0);
+         r.g(var11, "configure$lambda$3");
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var11, var22, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         var11.setOnClickListener(new c(var5, var4));
          val var12: TextView = this.getBinding().contentInventoryComponentUsername;
          var12.setText(var5.getUserActionDescription());
          var12.setOnClickListener(new d(var5, var4));

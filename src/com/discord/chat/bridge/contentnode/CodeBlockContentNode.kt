@@ -87,18 +87,18 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.lang;
+      val var4: java.lang.String = this.lang;
       val var3: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CodeBlockContentNode(lang=");
-      var4.append(var2);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(", inQuote=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CodeBlockContentNode(lang=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var3);
+      var2.append(", inQuote=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<CodeBlockContentNode> {

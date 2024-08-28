@@ -49,42 +49,42 @@ internal class ExternalPipManager {
       }
 
       if (!var4 || !CAN_PIP) {
-         val var14: r.a = r.k;
+         val var17: r.a = r.k;
          var3.invoke(r.a(r.b(s.a(new Exception("Disabled or unsupported.")))));
       } else {
-         val var10: java.lang.Boolean;
+         val var11: java.lang.Boolean;
          if (var1 != null) {
             try {
-               val var15: ExternalPipManager.Companion = Companion;
+               val var5: ExternalPipManager.Companion = Companion;
                val var18: Builder = a.a(new Builder(), this.aspectRatio);
                kotlin.jvm.internal.r.g(var18, "Builder()\n              …tAspectRatio(aspectRatio)");
-               var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var15, var18, false)));
+               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var18, false)));
             } catch (var9: Exception) {
-               val var5: r.a = r.k;
+               val var10: r.a = r.k;
                var3.invoke(r.a(r.b(s.a(var9))));
                return;
             }
          } else {
-            var10 = null;
+            var11 = null;
          }
 
          try {
-            if (kotlin.jvm.internal.r.c(var10, java.lang.Boolean.TRUE)) {
-               val var13: r.a = r.k;
+            if (kotlin.jvm.internal.r.c(var11, java.lang.Boolean.TRUE)) {
+               val var16: r.a = r.k;
                var3.invoke(r.a(r.b(Unit.a)));
                return;
             }
          } catch (var8: Exception) {
-            val var16: r.a = r.k;
+            val var12: r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var8))));
             return;
          }
 
          try {
-            val var11: r.a = r.k;
+            val var14: r.a = r.k;
             var3.invoke(r.a(r.b(s.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var7: Exception) {
-            val var17: r.a = r.k;
+            val var13: r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var7))));
          }
       }

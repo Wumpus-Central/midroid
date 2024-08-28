@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 import kotlin.jvm.functions.Function5;
 
+// $VF: synthetic class
 public final class a implements OnLayoutChangeListener {
    public final FastestListView j;
    public final Function5 k;

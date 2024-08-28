@@ -56,8 +56,8 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       val var11: ReadableMap = var2.getMap("config");
       val var3: Float = var2.getFloat("paddingTop", 0.0F);
       val var4: Float = var2.getFloat("paddingBottom", 0.0F);
-      val var7: Int = var2.getInt("emojiSize", -1);
-      val var8: Int = var2.getInt("emojiMargin", -1);
+      val var8: Int = var2.getInt("emojiSize", -1);
+      val var7: Int = var2.getInt("emojiMargin", -1);
       val var10: ReadableMap = var2.getMap("emojiData");
       var var5: Boolean;
       if (var11 != null) {
@@ -67,14 +67,14 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       }
 
       if (var5) {
-         if (var7 != -1) {
+         if (var8 != -1) {
             var5 = true;
          } else {
             var5 = false;
          }
 
          if (var5) {
-            if (var8 != -1) {
+            if (var7 != -1) {
                var5 = true;
             } else {
                var5 = false;
@@ -92,8 +92,8 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                      .deserialize(EmojiPickerItemData.CoreData.Companion, var10, var4, var3);
                   val var12: EmojiPickerView = new EmojiPickerView(
                      var1,
-                     var7,
                      var8,
+                     var7,
                      var17,
                      new Function3<View, java.lang.Long, java.lang.String, Unit>(this, var1) {
                         final ThemedReactContext $reactContext;
@@ -174,7 +174,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                         public final void invoke(View var1, java.lang.Long var2, java.lang.String var3) {
                            r.h(var1, "view");
                            r.h(var3, "emojiName");
-                           val var5: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
+                           val var4: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
                            val var6: java.lang.String;
                            if (var2 != null) {
                               var6 = var2.toString();
@@ -182,7 +182,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                               var6 = null;
                            }
 
-                           var5.emitEvent(this.$reactContext, var1, new OnLongPressEmojiEvent(var3, var6));
+                           var4.emitEvent(this.$reactContext, var1, new OnLongPressEmojiEvent(var3, var6));
                         }
                      },
                      new Function2<View, Integer, Unit>(this, var1) {

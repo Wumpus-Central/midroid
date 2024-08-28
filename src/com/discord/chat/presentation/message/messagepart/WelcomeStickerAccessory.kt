@@ -11,7 +11,7 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
    init {
       r.h(var1, "message");
       r.h(var2, "sticker");
-      val var5: java.lang.String = var1.getId_3Eiw7ao();
+      val var5: java.lang.String = var1.getId-3Eiw7ao();
       val var3: Long = var2.getId();
       val var6: StringBuilder = new StringBuilder();
       var6.append("welcome sticker ");
@@ -56,13 +56,13 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
 
    public override fun toString(): String {
       val var1: Message = this.message;
-      val var2: Sticker = this.sticker;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("WelcomeStickerAccessory(message=");
-      var3.append(var1);
-      var3.append(", sticker=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: Sticker = this.sticker;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("WelcomeStickerAccessory(message=");
+      var2.append(var1);
+      var2.append(", sticker=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 }

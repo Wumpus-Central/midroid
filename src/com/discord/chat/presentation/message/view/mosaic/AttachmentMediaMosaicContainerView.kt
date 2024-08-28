@@ -46,9 +46,9 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       val var4: AttachmentMediaMosaicContainerViewBinding = AttachmentMediaMosaicContainerViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var4, "inflate(LayoutInflater.from(context), this)");
       this.binding = var4;
-      val var5: MosaicLayoutManager = new MosaicLayoutManager(var1);
-      this.mosaicLayoutManager = var5;
-      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(
+      val var3: MosaicLayoutManager = new MosaicLayoutManager(var1);
+      this.mosaicLayoutManager = var3;
+      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(
          var1, new Function2<MessageAttachmentAccessory, MessagePartViewHolder, Unit>(this) {
             final AttachmentMediaMosaicContainerView this$0;
 
@@ -97,14 +97,14 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
             }
          }
       );
-      this.attachmentAdapter = var3;
+      this.attachmentAdapter = var5;
       val var6: RecyclerView = var4.mosaic;
       r.g(var4.mosaic, "_init_$lambda$1");
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
       var6.setRecycledViewPool(new AccessoriesViewPool());
-      var5.setRecycleChildrenOnDetach(true);
-      var6.setLayoutManager(var5);
-      var6.setAdapter(var3);
+      var3.setRecycleChildrenOnDetach(true);
+      var6.setLayoutManager(var3);
+      var6.setAdapter(var5);
    }
 
    private fun getAttachmentIndex(item: MessageAttachmentAccessory): Int {

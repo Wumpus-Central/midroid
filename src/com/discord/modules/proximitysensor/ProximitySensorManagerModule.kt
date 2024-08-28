@@ -11,10 +11,10 @@ public class ProximitySensorManagerModule(reactContext: ReactApplicationContext)
    init {
       r.h(var1, "reactContext");
       super(var1);
-      val var2: ProximityWakeLock.Companion = ProximityWakeLock.Companion;
-      var1 = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      this.proximityWakeLock = var2.create(var1, 600000L, "discord:proximitywakelock");
+      val var3: ProximityWakeLock.Companion = ProximityWakeLock.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      this.proximityWakeLock = var3.create(var2, 600000L, "discord:proximitywakelock");
    }
 
    public open fun getName(): String {

@@ -1,6 +1,7 @@
 package com.discord.chat.bridge.safetysystemnotification
 
 import kotlin.jvm.internal.r
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -237,9 +238,9 @@ public data class SafetySystemNotificationEmbed(titleText: String,
 
    public override fun hashCode(): Int {
       val var9: Int = this.titleText.hashCode();
-      val var8: Int = this.titleIcon.hashCode();
-      val var10: Int = this.subtitleText.hashCode();
-      val var7: Int = this.descriptionText.hashCode();
+      val var10: Int = this.titleIcon.hashCode();
+      val var7: Int = this.subtitleText.hashCode();
+      val var8: Int = this.descriptionText.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.primaryCtaText == null) {
@@ -280,47 +281,47 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var6 = this.secondaryCtaKey.hashCode();
       }
 
-      return (((((((((var9 * 31 + var8) * 31 + var10) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return (((((((((var9 * 31 + var10) * 31 + var7) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + this.footerTheme.hashCode();
    }
 
    public override fun toString(): String {
-      val var11: java.lang.String = this.titleText;
-      val var12: java.lang.String = this.titleIcon;
-      val var8: java.lang.String = this.subtitleText;
-      val var9: java.lang.String = this.descriptionText;
-      val var4: java.lang.String = this.primaryCtaText;
-      val var1: java.lang.String = this.primaryCtaType;
-      val var10: java.lang.String = this.primaryCtaKey;
-      val var7: java.lang.String = this.secondaryCtaText;
-      val var3: java.lang.String = this.secondaryCtaType;
-      val var6: java.lang.String = this.secondaryCtaKey;
-      val var5: FooterTheme = this.footerTheme;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SafetySystemNotificationEmbed(titleText=");
-      var2.append(var11);
-      var2.append(", titleIcon=");
-      var2.append(var12);
-      var2.append(", subtitleText=");
-      var2.append(var8);
-      var2.append(", descriptionText=");
-      var2.append(var9);
-      var2.append(", primaryCtaText=");
-      var2.append(var4);
-      var2.append(", primaryCtaType=");
-      var2.append(var1);
-      var2.append(", primaryCtaKey=");
-      var2.append(var10);
-      var2.append(", secondaryCtaText=");
-      var2.append(var7);
-      var2.append(", secondaryCtaType=");
-      var2.append(var3);
-      var2.append(", secondaryCtaKey=");
-      var2.append(var6);
-      var2.append(", footerTheme=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.titleText;
+      val var9: java.lang.String = this.titleIcon;
+      val var7: java.lang.String = this.subtitleText;
+      val var3: java.lang.String = this.descriptionText;
+      val var5: java.lang.String = this.primaryCtaText;
+      val var4: java.lang.String = this.primaryCtaType;
+      val var2: java.lang.String = this.primaryCtaKey;
+      val var10: java.lang.String = this.secondaryCtaText;
+      val var12: java.lang.String = this.secondaryCtaType;
+      val var8: java.lang.String = this.secondaryCtaKey;
+      val var6: FooterTheme = this.footerTheme;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("SafetySystemNotificationEmbed(titleText=");
+      var11.append(var1);
+      var11.append(", titleIcon=");
+      var11.append(var9);
+      var11.append(", subtitleText=");
+      var11.append(var7);
+      var11.append(", descriptionText=");
+      var11.append(var3);
+      var11.append(", primaryCtaText=");
+      var11.append(var5);
+      var11.append(", primaryCtaType=");
+      var11.append(var4);
+      var11.append(", primaryCtaKey=");
+      var11.append(var2);
+      var11.append(", secondaryCtaText=");
+      var11.append(var10);
+      var11.append(", secondaryCtaType=");
+      var11.append(var12);
+      var11.append(", secondaryCtaKey=");
+      var11.append(var8);
+      var11.append(", footerTheme=");
+      var11.append(var6);
+      var11.append(")");
+      return var11.toString();
    }
 
    public object `$serializer` : f0<SafetySystemNotificationEmbed> {
@@ -358,99 +359,101 @@ public data class SafetySystemNotificationEmbed(titleText: String,
 
       public open fun deserialize(decoder: Decoder): SafetySystemNotificationEmbed {
          r.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         val var6: Boolean = var19.p();
+         val var19: SerialDescriptor = this.getDescriptor();
+         val var20: c = var1.b(var19);
+         val var6: Boolean = var20.p();
          var var4: Byte = 10;
          var var11: java.lang.String = null;
          var var2: Int;
          var var7: Any;
-         var var8: Any;
-         var var9: Any;
          var var10: Any;
+         var var12: Any;
          var var13: Any;
          var var14: Any;
-         var var15: Any;
          var var16: Any;
-         val var17: java.lang.String;
-         var var20: Any;
+         val var18: Any;
+         var var21: Any;
+         var var24: Any;
+         var var29: Any;
          if (var6) {
-            var17 = var19.m(var18, 0);
-            var10 = var19.m(var18, 1);
-            var20 = var19.m(var18, 2);
-            var7 = var19.m(var18, 3);
-            val var12: a2 = a2.a;
-            var8 = var19.n(var18, 4, a2.a, null);
-            var9 = var19.n(var18, 5, var12, null);
-            var11 = (java.lang.String)var19.n(var18, 6, var12, null);
-            var14 = var19.n(var18, 7, var12, null);
-            var13 = var19.n(var18, 8, var12, null);
-            var15 = var19.n(var18, 9, var12, null);
-            var16 = var19.y(var18, 10, FooterTheme.Companion.serializer(), null);
+            var11 = var20.m(var19, 0);
+            var12 = var20.m(var19, 1);
+            var21 = var20.m(var19, 2);
+            var7 = var20.m(var19, 3);
+            var29 = a2.a;
+            val var9: Any = var20.n(var19, 4, a2.a, null);
+            var24 = var20.n(var19, 5, (DeserializationStrategy)var29, null);
+            var10 = var20.n(var19, 6, (DeserializationStrategy)var29, null);
+            var14 = var20.n(var19, 7, (DeserializationStrategy)var29, null);
+            var13 = var20.n(var19, 8, (DeserializationStrategy)var29, null);
+            var29 = var20.n(var19, 9, (DeserializationStrategy)var29, null);
+            var16 = var20.y(var19, 10, FooterTheme.Companion.serializer(), null);
             var2 = 2047;
+            var18 = var24;
+            var24 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var16 = null;
-            var15 = null;
+            var29 = null;
             var14 = null;
             var13 = null;
-            var var22: Any = null;
-            var9 = null;
-            var8 = null;
+            var12 = null;
+            var var25: Any = null;
+            var24 = null;
             var10 = null;
-            var20 = null;
             var7 = null;
+            var21 = null;
 
             while (var3) {
-               val var5: Int = var19.o(var18);
+               val var5: Int = var20.o(var19);
                switch (var5) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var11 = var19.m(var18, 0);
+                     var11 = var20.m(var19, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var10 = var19.m(var18, 1);
+                     var10 = var20.m(var19, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var20 = var19.m(var18, 2);
+                     var7 = var20.m(var19, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var19.m(var18, 3);
+                     var21 = var20.m(var19, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var8 = var19.n(var18, 4, a2.a, var8);
+                     var24 = var20.n(var19, 4, a2.a, var24);
                      var2 |= 16;
                      break;
                   case 5:
-                     var9 = var19.n(var18, 5, a2.a, var9);
+                     var25 = var20.n(var19, 5, a2.a, var25);
                      var2 |= 32;
                      break;
                   case 6:
-                     var22 = var19.n(var18, 6, a2.a, var22);
+                     var12 = var20.n(var19, 6, a2.a, var12);
                      var2 |= 64;
                      break;
                   case 7:
-                     var14 = var19.n(var18, 7, a2.a, var14);
+                     var14 = var20.n(var19, 7, a2.a, var14);
                      var2 |= 128;
                      var4 = 10;
                      continue;
                   case 8:
-                     var13 = var19.n(var18, 8, a2.a, var13);
+                     var13 = var20.n(var19, 8, a2.a, var13);
                      var2 |= 256;
                      continue;
                   case 9:
-                     var15 = var19.n(var18, 9, a2.a, var15);
+                     var29 = var20.n(var19, 9, a2.a, var29);
                      var2 |= 512;
                      continue;
                   case 10:
-                     var16 = var19.y(var18, var4, FooterTheme.Companion.serializer(), var16);
+                     var16 = var20.y(var19, var4, FooterTheme.Companion.serializer(), var16);
                      var2 |= 1024;
                      continue;
                   default:
@@ -460,23 +463,26 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                var4 = 10;
             }
 
-            var17 = var11;
-            var11 = (java.lang.String)var22;
+            var21 = var7;
+            var18 = var25;
+            var7 = var21;
+            var12 = var10;
+            var10 = var12;
          }
 
-         var19.c(var18);
+         var20.c(var19);
          return new SafetySystemNotificationEmbed(
             var2,
-            var17,
-            (java.lang.String)var10,
-            (java.lang.String)var20,
-            (java.lang.String)var7,
-            var8 as java.lang.String,
-            var9 as java.lang.String,
             var11,
+            (java.lang.String)var12,
+            (java.lang.String)var21,
+            (java.lang.String)var7,
+            var24 as java.lang.String,
+            var18 as java.lang.String,
+            var10 as java.lang.String,
             var14 as java.lang.String,
             var13 as java.lang.String,
-            var15 as java.lang.String,
+            var29 as java.lang.String,
             var16 as FooterTheme,
             null
          );

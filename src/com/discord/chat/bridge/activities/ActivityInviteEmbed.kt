@@ -250,39 +250,39 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.coverImage;
+      val var11: java.lang.String = this.coverImage;
       val var3: Boolean = this.isListening;
-      val var4: java.lang.String = this.headerText;
-      val var8: java.lang.String = this.partyStatus;
-      val var6: java.util.List = this.avatarsToRender;
+      val var10: java.lang.String = this.headerText;
+      val var5: java.lang.String = this.partyStatus;
+      val var9: java.util.List = this.avatarsToRender;
       val var1: Int = this.maxPartySize;
-      val var9: java.lang.String = this.name;
-      val var10: java.lang.String = this.subtext;
+      val var6: java.lang.String = this.name;
+      val var4: java.lang.String = this.subtext;
       val var2: Boolean = this.joinable;
       val var7: java.lang.String = this.ctaText;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("ActivityInviteEmbed(coverImage=");
-      var11.append(var5);
-      var11.append(", isListening=");
-      var11.append(var3);
-      var11.append(", headerText=");
-      var11.append(var4);
-      var11.append(", partyStatus=");
-      var11.append(var8);
-      var11.append(", avatarsToRender=");
-      var11.append(var6);
-      var11.append(", maxPartySize=");
-      var11.append(var1);
-      var11.append(", name=");
-      var11.append(var9);
-      var11.append(", subtext=");
-      var11.append(var10);
-      var11.append(", joinable=");
-      var11.append(var2);
-      var11.append(", ctaText=");
-      var11.append(var7);
-      var11.append(")");
-      return var11.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ActivityInviteEmbed(coverImage=");
+      var8.append(var11);
+      var8.append(", isListening=");
+      var8.append(var3);
+      var8.append(", headerText=");
+      var8.append(var10);
+      var8.append(", partyStatus=");
+      var8.append(var5);
+      var8.append(", avatarsToRender=");
+      var8.append(var9);
+      var8.append(", maxPartySize=");
+      var8.append(var1);
+      var8.append(", name=");
+      var8.append(var6);
+      var8.append(", subtext=");
+      var8.append(var4);
+      var8.append(", joinable=");
+      var8.append(var2);
+      var8.append(", ctaText=");
+      var8.append(var7);
+      var8.append(")");
+      return var8.toString();
    }
 
    public object `$serializer` : f0<ActivityInviteEmbed> {
@@ -319,97 +319,97 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
 
       public open fun deserialize(decoder: Decoder): ActivityInviteEmbed {
          r.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         var var10: Boolean = var19.p();
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.b(var17);
+         var var10: Boolean = var18.p();
          var var3: Int = 9;
          var var8: Byte = 7;
          var var7: Byte = 6;
          var var4: Int;
-         val var5: Int;
+         var var5: Int;
          var var11: Any;
          var var12: Any;
-         var var13: Any;
          var var14: Any;
+         var var15: Any;
          var var16: Any;
-         val var17: Any;
-         var var21: Any;
+         var var19: Any;
+         var var26: Any;
          if (var10) {
-            var21 = a2.a;
-            var13 = var19.n(var18, 0, a2.a, null);
-            var4 = var19.C(var18, 1);
-            var12 = var19.m(var18, 2);
-            var17 = var19.m(var18, 3);
-            var16 = var19.n(var18, 4, new xk.f(a.u((KSerializer)var21)), null);
-            val var2: Int = var19.i(var18, 5);
-            var11 = var19.n(var18, 6, (DeserializationStrategy)var21, null);
-            var21 = var19.n(var18, 7, (DeserializationStrategy)var21, null);
-            var10 = var19.C(var18, 8);
-            var14 = var19.m(var18, 9);
+            var26 = a2.a;
+            var19 = var18.n(var17, 0, a2.a, null);
+            var4 = var18.C(var17, 1);
+            var12 = var18.m(var17, 2);
+            var11 = var18.m(var17, 3);
+            var16 = var18.n(var17, 4, new xk.f(a.u((KSerializer)var26)), null);
+            val var2: Int = var18.i(var17, 5);
+            var15 = var18.n(var17, 6, (DeserializationStrategy)var26, null);
+            var14 = var18.n(var17, 7, (DeserializationStrategy)var26, null);
+            var10 = var18.C(var17, 8);
+            var26 = var18.m(var17, 9);
             var3 = 1023;
             var5 = var2;
          } else {
-            var var26: Boolean = true;
+            var var6: Boolean = true;
             var10 = false;
-            var var23: Int = 0;
-            var var6: Int = 0;
+            var var20: Int = 0;
+            var5 = 0;
             var14 = null;
-            var var15: Any = null;
-            var21 = null;
+            var15 = null;
+            var19 = null;
             var12 = null;
             var11 = null;
-            var13 = null;
+            var26 = null;
             var16 = null;
             var4 = 0;
 
-            while (var26) {
+            while (var6) {
                label44: {
-                  val var9: Int = var19.o(var18);
+                  val var9: Int = var18.o(var17);
                   switch (var9) {
                      case -1:
-                        var26 = false;
+                        var6 = false;
                         break;
                      case 0:
-                        var21 = var19.n(var18, 0, a2.a, var21);
-                        var23 |= 1;
+                        var19 = var18.n(var17, 0, a2.a, var19);
+                        var20 |= 1;
                         var3 = 9;
                         break;
                      case 1:
-                        var6 = var19.C(var18, 1);
-                        var23 |= 2;
+                        var5 = var18.C(var17, 1);
+                        var20 |= 2;
                         break label44;
                      case 2:
-                        var12 = var19.m(var18, 2);
-                        var23 |= 4;
+                        var12 = var18.m(var17, 2);
+                        var20 |= 4;
                         break label44;
                      case 3:
-                        var11 = var19.m(var18, 3);
-                        var23 |= 8;
+                        var11 = var18.m(var17, 3);
+                        var20 |= 8;
                         break label44;
                      case 4:
-                        var16 = var19.n(var18, 4, new xk.f(a.u(a2.a)), var16);
-                        var23 |= 16;
+                        var16 = var18.n(var17, 4, new xk.f(a.u(a2.a)), var16);
+                        var20 |= 16;
                         var3 = 9;
                         continue;
                      case 5:
-                        var4 = var19.i(var18, 5);
-                        var23 |= 32;
+                        var4 = var18.i(var17, 5);
+                        var20 |= 32;
                         continue;
                      case 6:
-                        var15 = var19.n(var18, var7, a2.a, var15);
-                        var23 |= 64;
+                        var15 = var18.n(var17, var7, a2.a, var15);
+                        var20 |= 64;
                         continue;
                      case 7:
-                        var14 = var19.n(var18, var8, a2.a, var14);
-                        var23 |= 128;
+                        var14 = var18.n(var17, var8, a2.a, var14);
+                        var20 |= 128;
                         continue;
                      case 8:
-                        var10 = var19.C(var18, 8);
-                        var23 |= 256;
+                        var10 = var18.C(var17, 8);
+                        var20 |= 256;
                         continue;
                      case 9:
-                        var13 = var19.m(var18, var3);
-                        var23 |= 512;
+                        var26 = var18.m(var17, var3);
+                        var20 |= 512;
                         continue;
                      default:
                         throw new n(var9);
@@ -423,29 +423,24 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
                var3 = 9;
             }
 
-            var21 = var14;
-            var14 = var13;
-            var13 = var21;
             var5 = var4;
-            var17 = var11;
-            var4 = var6;
-            var11 = var15;
-            var3 = var23;
+            var4 = var5;
+            var3 = var20;
          }
 
-         var19.c(var18);
+         var18.c(var17);
          return new ActivityInviteEmbed(
             var3,
-            var13 as java.lang.String,
+            var19 as java.lang.String,
             (boolean)var4,
             (java.lang.String)var12,
-            (java.lang.String)var17,
+            (java.lang.String)var11,
             var16 as java.util.List,
             var5,
-            var11 as java.lang.String,
-            var21 as java.lang.String,
+            var15 as java.lang.String,
+            var14 as java.lang.String,
             var10,
-            (java.lang.String)var14,
+            (java.lang.String)var26,
             null
          );
       }

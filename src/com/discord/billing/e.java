@@ -4,6 +4,7 @@ import com.android.billingclient.api.BillingResult;
 import java.util.List;
 import t2.j;
 
+// $VF: synthetic class
 public final class e implements j {
    public final BillingManager j;
 

@@ -3,6 +3,7 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.OnSpeakingCallback;
 import kotlin.jvm.functions.Function2;
 
+// $VF: synthetic class
 public final class v implements OnSpeakingCallback {
    public final Function2 a;
 

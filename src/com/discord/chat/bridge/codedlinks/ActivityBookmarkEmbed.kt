@@ -10,8 +10,4 @@ public interface ActivityBookmarkEmbed {
    public val extendedType: CodedLinkExtendedType
    public val participantAvatarUris: List<String>
    public val participantsText: String
-
-   fun getApplicationId_VavddsQ(): Long
-
-   fun getChannelId_o4g7jtM(): Long
 }

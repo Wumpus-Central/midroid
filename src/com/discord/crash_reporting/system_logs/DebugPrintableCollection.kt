@@ -75,20 +75,20 @@ public class DebugPrintableCollection {
       // 4e: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
       // 51: astore 13
       // 53: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 56: astore 12
+      // 56: astore 14
       // 58: new java/lang/ref/WeakReference
-      // 5b: astore 14
-      // 5d: aload 14
+      // 5b: astore 12
+      // 5d: aload 12
       // 5f: aload 1
       // 60: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 63: aload 12
+      // 63: aload 14
       // 65: aload 2
-      // 66: aload 14
+      // 66: aload 12
       // 68: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
       // 6b: aload 13
       // 6d: lload 7
       // 6f: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 72: aload 12
+      // 72: aload 14
       // 74: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 79: pop
       // 7a: aload 0
@@ -121,16 +121,16 @@ public class DebugPrintableCollection {
    }
 
    private fun removeDeadReferencesLocked() {
-      val var5: ArrayList = new ArrayList();
+      val var3: ArrayList = new ArrayList();
 
-      for (Entry var4 : this.collection.entrySet()) {
-         val var1: Long = (var4.getKey() as java.lang.Number).longValue();
-         if ((var4.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
-            var5.add(var1);
+      for (Entry var5 : this.collection.entrySet()) {
+         val var1: Long = (var5.getKey() as java.lang.Number).longValue();
+         if ((var5.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
+            var3.add(var1);
          }
       }
 
-      val var7: java.util.Iterator = var5.iterator();
+      val var7: java.util.Iterator = var3.iterator();
 
       while (var7.hasNext()) {
          this.collection.remove((var7.next() as java.lang.Number).longValue());

@@ -24,7 +24,7 @@ public class ActivityInstanceEmbedViewHolder(activityInstanceEmbedView: Activity
       kotlin.jvm.internal.r.h(var1, "this$0");
       kotlin.jvm.internal.r.h(var2, "$activityMessageAccessory");
       var1.eventHandler
-         .onTapActivityInstanceEmbed_Ewv8C84(var0.getApplicationId_VavddsQ(), var0.getChannelId_o4g7jtM(), var0.getInstanceId(), var2.getMessageId_3Eiw7ao());
+         .onTapActivityInstanceEmbed-Ewv8C84(var0.getApplicationId-VavddsQ(), var0.getChannelId-o4g7jtM(), var0.getInstanceId(), var2.getMessageId-3Eiw7ao());
    }
 
    public fun bind(activityMessageAccessory: ActivityInstanceEmbedMessageAccessory) {

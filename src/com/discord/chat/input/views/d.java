@@ -5,6 +5,7 @@ import android.view.View;
 import androidx.core.view.ContentInfoCompat;
 import androidx.core.view.s0;
 
+// $VF: synthetic class
 public final class d implements s0 {
    public final ChatInputRootView a;
    public final Context b;

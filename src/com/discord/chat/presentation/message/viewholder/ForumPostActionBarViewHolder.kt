@@ -41,8 +41,8 @@ public class ForumPostActionBarViewHolder(forumPostActionBarView: ForumPostActio
       kotlin.jvm.internal.r.h(var10, "onLinkClicked");
       val var11: ForumPostActions = var1.getPostActions();
       this.forumPostActionBarView
-         .configure_CgeVRR0(
-            var1.getMessageId_3Eiw7ao(),
+         .configure-CgeVRR0(
+            var1.getMessageId-3Eiw7ao(),
             var11.getNumDisplayedReactions(),
             var11.isFollowing(),
             var11.getFollowIcon(),

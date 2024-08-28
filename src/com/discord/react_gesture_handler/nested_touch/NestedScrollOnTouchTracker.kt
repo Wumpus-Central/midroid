@@ -83,10 +83,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   if (var35 != null) {
                      var var7: Int = (int)var2.getX() - var19.getTotalPaddingLeft() + var19.getScrollX();
                      val var33: Int = var19.getLayout().getLineForVertical((int)var2.getY() - var19.getTotalPaddingTop() + var19.getScrollY());
-                     val var5: Float = var19.getLayout().getLineRight(var33);
-                     val var4: Float = var19.getLayout().getLineLeft(var33);
+                     val var4: Float = var19.getLayout().getLineRight(var33);
+                     val var5: Float = var19.getLayout().getLineLeft(var33);
                      val var6: Float = var7;
-                     if (!(var7 > var5) && (var7 < 0 || !(var7 < var4))) {
+                     if (!(var7 > var4) && (var7 < 0 || !(var7 < var5))) {
                         var7 = var19.getLayout().getOffsetForHorizontal(var33, var6);
                         var14 = var35.getSpans(var7, var7, NestedClickableSpan.class);
                         r.g(var14, "spannableText.getSpans(\n…     T::class.java,\n    )");
@@ -97,7 +97,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   var14 = new NestedClickableSpan[0];
                }
 
-               var16 = var14 as NestedClickableSpan[];
+               var16 = var14 as Array<NestedClickableSpan>;
             } else {
                var16 = null;
             }
@@ -220,12 +220,11 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.String.indexOf(String.java:2634)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:53)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1244,6 +1243,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
                   3,
                   null

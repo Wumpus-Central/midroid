@@ -39,7 +39,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          var3 = new java.lang.String[]{"_data"};
       }
 
-      return b.q(b.q(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as java.lang.String[];
+      return b.q(b.q(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
    }
 
    @SuppressLint(["Range"])
@@ -233,11 +233,11 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var4: java.lang.String = var2.toString();
-         r.g(var4, "uri.toString()");
-         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
-         r.g(var3, "EXTERNAL_CONTENT_URI.toString()");
-         if (f.I(var4, var3, false, 2, null)) {
+         val var3: java.lang.String = var2.toString();
+         r.g(var3, "uri.toString()");
+         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         r.g(var4, "EXTERNAL_CONTENT_URI.toString()");
+         if (f.I(var3, var4, false, 2, null)) {
             try {
                this.process(var2);
             } catch (var5: Exception) {
@@ -347,23 +347,23 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
 
       public override fun toString(): String {
          val var3: Long = this.id;
-         val var5: java.lang.String = this.fileName;
-         val var6: java.lang.String = this.relativePath;
-         val var7: Uri = this.uri;
+         val var6: java.lang.String = this.fileName;
+         val var7: java.lang.String = this.relativePath;
+         val var8: Uri = this.uri;
          val var1: Long = this.dateAdded;
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("ScreenshotData(id=");
-         var8.append(var3);
-         var8.append(", fileName=");
-         var8.append(var5);
-         var8.append(", relativePath=");
-         var8.append(var6);
-         var8.append(", uri=");
-         var8.append(var7);
-         var8.append(", dateAdded=");
-         var8.append(var1);
-         var8.append(")");
-         return var8.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("ScreenshotData(id=");
+         var5.append(var3);
+         var5.append(", fileName=");
+         var5.append(var6);
+         var5.append(", relativePath=");
+         var5.append(var7);
+         var5.append(", uri=");
+         var5.append(var8);
+         var5.append(", dateAdded=");
+         var5.append(var1);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

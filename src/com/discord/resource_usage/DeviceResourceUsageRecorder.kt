@@ -135,7 +135,7 @@ public class DeviceResourceUsageRecorder {
          }
 
          return NativeMapExtensionsKt.nativeMapOf(
-            w.a("signalStrengthLevel", var9.a() as Integer),
+            w.a("signalStrengthLevel", var9.a() as Int),
             w.a("isNetworkRoaming", var9.b() as java.lang.Boolean),
             w.a("cellularReceiveBytes", TrafficStats.getMobileRxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularReceiveBytes$cp()),
             w.a("cellularSendBytes", TrafficStats.getMobileTxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularSendBytes$cp()),

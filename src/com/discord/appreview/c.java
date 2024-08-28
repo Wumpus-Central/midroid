@@ -3,6 +3,7 @@ package com.discord.appreview;
 import com.google.android.gms.tasks.Task;
 import hb.d;
 
+// $VF: synthetic class
 public final class c implements d {
    public final AppRatingRequester a;
 

@@ -247,10 +247,10 @@ public abstract class OverlayBubbleWrap : OverlayView {
       if (var1) {
          animateToCoordinate$default(this, this.actualPosition.x, this.actualPosition.y, null, 4, null);
       } else {
-         val var3: LayoutParams = this.windowLayoutParams;
-         val var4: Point = this.actualPosition;
+         val var4: LayoutParams = this.windowLayoutParams;
+         val var3: Point = this.actualPosition;
          this.windowLayoutParams.x = this.actualPosition.x;
-         var3.y = var4.y;
+         var4.y = var3.y;
          this.updateViewLayout();
       }
    }
@@ -264,11 +264,11 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
       r.h(var3, "screenBounds");
-      var var5: Int = var3.right;
+      val var5: Int = var3.right;
       this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var5 - this.getWidth()));
-      var1 = this.screenOffset[1];
-      var5 = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var1, var2), var5 - this.getHeight()));
+      val var12: Int = this.screenOffset[1];
+      val var10: Int = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var12, var2), var10 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {

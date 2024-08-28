@@ -72,16 +72,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var6.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(var8);
-      var7.append("/sentry");
-      var5.setCacheDirPath(var7.toString());
+      val var7: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var7);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("5ae1180f-937e-47b4-be85-481a9061b87e");
+      var5.setProguardUuid("6ef3d323-c4fc-481d-8326-7cd922fdbf81");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -91,8 +91,8 @@ public object CrashReporting {
       r.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.n(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.n(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       var4.m(var3);
@@ -190,28 +190,5 @@ public object CrashReporting {
       INFO,
       WARNING      @JvmStatic
       private CrashReporting.ErrorLevel[] $VALUES = $values();
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[CrashReporting.ErrorLevel.values().length];
-
-         try {
-            var0[CrashReporting.ErrorLevel.INFO.ordinal()] = 1;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[CrashReporting.ErrorLevel.WARNING.ordinal()] = 2;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
-      }
    }
 }

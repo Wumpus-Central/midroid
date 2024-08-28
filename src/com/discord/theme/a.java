@@ -1,5 +1,6 @@
 package com.discord.theme;
 
+// $VF: synthetic class
 public final class a implements Runnable {
    public final ThemeModule j;
 

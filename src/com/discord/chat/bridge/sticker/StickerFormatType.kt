@@ -45,20 +45,20 @@ public enum class StickerFormatType(intType: Int) {
       public open fun deserialize(decoder: Decoder): StickerFormatType {
          r.h(var1, "decoder");
          val var4: Int = var1.h();
-         val var6: Array<StickerFormatType> = StickerFormatType.values();
-         val var5: Int = var6.length;
+         val var7: Array<StickerFormatType> = StickerFormatType.values();
+         val var5: Int = var7.length;
 
          for (int var2 = 0; var2 < var5; var2++) {
-            val var7: StickerFormatType = var6[var2];
+            val var6: StickerFormatType = var7[var2];
             val var3: Boolean;
-            if (var6[var2].getIntType() == var4) {
+            if (var7[var2].getIntType() == var4) {
                var3 = true;
             } else {
                var3 = false;
             }
 
             if (var3) {
-               return var7;
+               return var6;
             }
          }
 

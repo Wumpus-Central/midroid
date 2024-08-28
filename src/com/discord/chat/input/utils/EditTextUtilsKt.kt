@@ -85,6 +85,7 @@ internal fun Editable.setChatInputNodeStyle(node: ChatInputNode) {
    }
 }
 // $VF: Class flags could not be determined
+@JvmSynthetic
 internal class WhenMappings {
    @JvmStatic
    public int[] $EnumSwitchMapping$0;

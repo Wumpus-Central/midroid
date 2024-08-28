@@ -19,16 +19,17 @@ public class GGSansBoldSpan(context: Context) : StyleSpan {
    }
 
    private fun apply(paint: Paint, fallback: () -> Unit) {
-      val var4: Companion = DiscordFont.Companion;
-      var var3: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
-      if (var3 != null) {
-         var3 = var4.findByStyle(DiscordFont.PrimaryBold.getWeight(), var3.getItalic(), var3.getMonospace());
+      val var3: Companion = DiscordFont.Companion;
+      val var4: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
+      val var5: DiscordFont;
+      if (var4 != null) {
+         var5 = var3.findByStyle(DiscordFont.PrimaryBold.getWeight(), var4.getItalic(), var4.getMonospace());
       } else {
-         var3 = null;
+         var5 = null;
       }
 
-      if (var3 != null) {
-         var1.setTypeface(var3.typeface(this.context));
+      if (var5 != null) {
+         var1.setTypeface(var5.typeface(this.context));
       } else {
          var2.invoke();
       }
@@ -47,7 +48,7 @@ public class GGSansBoldSpan(context: Context) : StyleSpan {
          }
 
          public final void invoke() {
-            GGSansBoldSpan.access$updateDrawState$s_485726085(this.this$0, this.$ds);
+            GGSansBoldSpan.access$updateDrawState$s-485726085(this.this$0, this.$ds);
          }
       });
    }
@@ -65,7 +66,7 @@ public class GGSansBoldSpan(context: Context) : StyleSpan {
          }
 
          public final void invoke() {
-            GGSansBoldSpan.access$updateMeasureState$s_485726085(this.this$0, this.$paint);
+            GGSansBoldSpan.access$updateMeasureState$s-485726085(this.this$0, this.$paint);
          }
       });
    }

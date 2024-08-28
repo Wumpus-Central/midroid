@@ -54,13 +54,13 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
                var var3: Int = var2.getIntExtra("android.media.extra.SCO_AUDIO_PREVIOUS_STATE", -1);
                val var4: Int = var2.getIntExtra("android.media.extra.SCO_AUDIO_STATE", -1);
                val var8: Log = Log.INSTANCE;
-               val var9: java.lang.String = this.this$0.scoStateToString(var3);
-               val var6: java.lang.String = this.this$0.scoStateToString(var4);
+               val var6: java.lang.String = this.this$0.scoStateToString(var3);
+               val var9: java.lang.String = this.this$0.scoStateToString(var4);
                val var5: StringBuilder = new StringBuilder();
                var5.append("Bluetooth SCO State Change - previous: ");
-               var5.append(var9);
-               var5.append(" current: ");
                var5.append(var6);
+               var5.append(" current: ");
+               var5.append(var9);
                Log.i$default(var8, "DiscordAudioManager", var5.toString(), null, 4, null);
                if (var4 == -1 || var4 == 0) {
                   if (DiscordAudioManager.access$getDesiredDeviceType$p(this.this$0) === SimpleDeviceType.BLUETOOTH_HEADSET) {
@@ -116,8 +116,8 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
          label74: {
             if (this.audioDevices !is java.util.Collection || !this.audioDevices.isEmpty()) {
                val var5: java.util.List;
-               for (AudioDeviceInfo var10 : var5) {
-                  if (AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var10.getType(), SimpleDeviceType.INVALID) === SimpleDeviceType.WIRED_HEADSET
+               for (AudioDeviceInfo var6 : var5) {
+                  if (AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var6.getType(), SimpleDeviceType.INVALID) === SimpleDeviceType.WIRED_HEADSET
                      )
                    {
                      var7 = true;
@@ -141,8 +141,8 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
             label75: {
                if (this.audioDevices !is java.util.Collection || !this.audioDevices.isEmpty()) {
                   val var11: java.util.List;
-                  for (AudioDeviceInfo var13 : var11) {
-                     if (AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var13.getType(), SimpleDeviceType.INVALID) === SimpleDeviceType.EARPIECE
+                  for (AudioDeviceInfo var12 : var11) {
+                     if (AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var12.getType(), SimpleDeviceType.INVALID) === SimpleDeviceType.EARPIECE
                         )
                       {
                         var7 = true;
@@ -173,20 +173,20 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       val var3: java.util.List = this.audioDevices;
       val var2: ArrayList = new ArrayList();
 
-      for (Object var5 : var3) {
-         val var6: AudioDeviceInfo = var5 as AudioDeviceInfo;
-         val var4: java.util.Map = AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping();
+      for (Object var4 : var3) {
+         val var6: AudioDeviceInfo = var4 as AudioDeviceInfo;
+         val var5: java.util.Map = AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping();
          val var1: Int = var6.getType();
          val var13: SimpleDeviceType = SimpleDeviceType.INVALID;
          val var7: Boolean;
-         if (var4.getOrDefault(var1, var13) != var13) {
+         if (var5.getOrDefault(var1, var13) != var13) {
             var7 = true;
          } else {
             var7 = false;
          }
 
          if (var7) {
-            var2.add(var5);
+            var2.add(var4);
          }
       }
 
@@ -282,19 +282,19 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
             }
 
             if (!var10) {
-               val var9: DiscordAudioManager = this.this$0;
-               val var7: java.util.List = DiscordAudioManager.access$getAudioDevices$p(this.this$0);
-               val var8: ArrayList = new ArrayList();
+               val var6: DiscordAudioManager = this.this$0;
+               val var8: java.util.List = DiscordAudioManager.access$getAudioDevices$p(this.this$0);
+               val var7: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
                for (int var11 = 0; var11 < var3; var11++) {
-                  val var6: AudioDeviceInfo = var1[var11];
+                  val var9: AudioDeviceInfo = var1[var11];
                   if (var1[var11].isSink()) {
-                     var8.add(var6);
+                     var7.add(var9);
                   }
                }
 
-               DiscordAudioManager.access$setAudioDevices$p(var9, h.v0(var7, var8));
+               DiscordAudioManager.access$setAudioDevices$p(var6, h.v0(var8, var7));
                DiscordAudioManager.access$notifyListeners(this.this$0, new Function1<DiscordAudioManagerListener, Unit>(this.this$0) {
                   final DiscordAudioManager this$0;
 
@@ -360,19 +360,19 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
             }
 
             if (!var2) {
-               val var6: DiscordAudioManager = this.this$0;
-               val var7: java.util.List = DiscordAudioManager.access$getAudioDevices$p(this.this$0);
-               val var8: ArrayList = new ArrayList();
+               val var8: DiscordAudioManager = this.this$0;
+               val var5: java.util.List = DiscordAudioManager.access$getAudioDevices$p(this.this$0);
+               val var6: ArrayList = new ArrayList();
                val var13: Int = var1.length;
 
                for (int var12 = 0; var12 < var13; var12++) {
-                  val var5: AudioDeviceInfo = var1[var12];
+                  val var7: AudioDeviceInfo = var1[var12];
                   if (var1[var12].isSink()) {
-                     var8.add(var5);
+                     var6.add(var7);
                   }
                }
 
-               DiscordAudioManager.access$setAudioDevices$p(var6, h.r0(var7, h.R0(var8)));
+               DiscordAudioManager.access$setAudioDevices$p(var8, h.r0(var5, h.R0(var6)));
                DiscordAudioManager.access$notifyListeners(this.this$0, new Function1<DiscordAudioManagerListener, Unit>(this.this$0) {
                   final DiscordAudioManager this$0;
 
@@ -423,20 +423,20 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       val var2: java.util.Set = this.getSimpleDevices();
       val var1: ArrayList = new ArrayList(h.t(var2, 10));
 
-      for (SimpleDeviceType var4 : var2) {
-         var1.add(AndroidAudioDevice.Companion.fromSimpleDeviceType(var4));
+      for (SimpleDeviceType var3 : var2) {
+         var1.add(AndroidAudioDevice.Companion.fromSimpleDeviceType(var3));
       }
 
       return h.Q0(var1);
    }
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
-      val var3: SimpleDeviceType = this.getActiveAudioDevice();
-      val var1: SimpleDeviceType = this.desiredDeviceType;
+      val var1: SimpleDeviceType = this.getActiveAudioDevice();
+      val var3: SimpleDeviceType = this.desiredDeviceType;
       if (this.desiredDeviceType === SimpleDeviceType.DEFAULT) {
-         return AndroidAudioDevice.Companion.fromSimpleDeviceType(var3);
+         return AndroidAudioDevice.Companion.fromSimpleDeviceType(var1);
       } else {
-         return if (var3 === SimpleDeviceType.WIRED_HEADSET && this.desiredDeviceType === SimpleDeviceType.EARPIECE)
+         return if (var1 === SimpleDeviceType.WIRED_HEADSET && this.desiredDeviceType === SimpleDeviceType.EARPIECE)
             AndroidAudioDevice.Companion.fromSimpleDeviceType(SimpleDeviceType.WIRED_HEADSET)
             else
             AndroidAudioDevice.Companion.fromSimpleDeviceType(this.desiredDeviceType);
@@ -479,11 +479,11 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
    public override fun setCommunicationModeOn(on: Boolean) {
       this.communicationModeOn = var1;
       this.scoRetryAttempts = 0;
-      val var3: Log = Log.INSTANCE;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("setCommunicationModeOn: ");
-      var2.append(var1);
-      Log.i$default(var3, "DiscordAudioManager", var2.toString(), null, 4, null);
+      val var2: Log = Log.INSTANCE;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("setCommunicationModeOn: ");
+      var3.append(var1);
+      Log.i$default(var2, "DiscordAudioManager", var3.toString(), null, 4, null);
       if (var1) {
          val var4: Array<AudioDeviceInfo> = this.androidAudioManager.getDevices(2);
          r.g(var4, "currentDevices");
@@ -533,49 +533,6 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
          val var2: DiscordAudioManager = DiscordAudioManager.access$getInstance$cp();
          r.e(var2);
          return var2;
-      }
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[SimpleDeviceType.values().length];
-
-         try {
-            var0[SimpleDeviceType.SPEAKERPHONE.ordinal()] = 1;
-         } catch (var7: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SimpleDeviceType.WIRED_HEADSET.ordinal()] = 2;
-         } catch (var6: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SimpleDeviceType.EARPIECE.ordinal()] = 3;
-         } catch (var5: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SimpleDeviceType.BLUETOOTH_HEADSET.ordinal()] = 4;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SimpleDeviceType.DEFAULT.ordinal()] = 5;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[SimpleDeviceType.INVALID.ordinal()] = 6;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
       }
    }
 }

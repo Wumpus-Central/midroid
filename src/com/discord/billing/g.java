@@ -5,6 +5,7 @@ import java.util.List;
 import kotlinx.coroutines.CompletableDeferred;
 import t2.m;
 
+// $VF: synthetic class
 public final class g implements m {
    public final CompletableDeferred a;
 

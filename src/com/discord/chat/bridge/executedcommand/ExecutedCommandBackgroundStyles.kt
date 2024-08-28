@@ -132,18 +132,18 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var3: Int = this.color;
-      val var2: Int = this.borderRadius;
-      val var4: java.lang.Boolean = this.spaceAround;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ExecutedCommandBackgroundStyles(color=");
-      var1.append(var3);
-      var1.append(", borderRadius=");
-      var1.append(var2);
-      var1.append(", spaceAround=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var2: Int = this.color;
+      val var1: Int = this.borderRadius;
+      val var3: java.lang.Boolean = this.spaceAround;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ExecutedCommandBackgroundStyles(color=");
+      var4.append(var2);
+      var4.append(", borderRadius=");
+      var4.append(var1);
+      var4.append(", spaceAround=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<ExecutedCommandBackgroundStyles> {
@@ -218,7 +218,7 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
          }
 
          var9.c(var8);
-         return new ExecutedCommandBackgroundStyles(var2, var6 as Integer, var7 as Integer, var11 as java.lang.Boolean, null);
+         return new ExecutedCommandBackgroundStyles(var2, var6 as Int, var7 as Int, var11 as java.lang.Boolean, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ExecutedCommandBackgroundStyles) {

@@ -5,6 +5,7 @@ import android.view.View.OnClickListener;
 import com.discord.chat.bridge.activities.ActivityInstanceEmbed;
 import com.discord.chat.presentation.message.messagepart.ActivityInstanceEmbedMessageAccessory;
 
+// $VF: synthetic class
 public final class b implements OnClickListener {
    public final ActivityInstanceEmbed j;
    public final ActivityInstanceEmbedViewHolder k;

@@ -3,7 +3,6 @@ package com.discord.chat.presentation.list.delegate
 import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.row.LoadMoreButton
-import com.discord.chat.bridge.row.LoadingActionType
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
 import com.discord.chat.presentation.list.item.ChatListItem
@@ -69,28 +68,5 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
       r.h(var1, "item");
       return var1 is LoadingChatListItem;
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[LoadingActionType.values().length];
-
-         try {
-            var0[LoadingActionType.LOAD_MORE_BEFORE.ordinal()] = 1;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[LoadingActionType.LOAD_MORE_AFTER.ordinal()] = 2;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
-      }
    }
 }

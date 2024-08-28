@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import kotlin.jvm.functions.Function0;
 
+// $VF: synthetic class
 public final class j0 implements OnClickListener {
    public final Function0 j;
 

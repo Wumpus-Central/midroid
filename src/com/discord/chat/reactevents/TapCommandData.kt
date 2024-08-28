@@ -27,7 +27,7 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    public final val commandName: String
 
    public constructor(node: CommandMentionContentNode) : r.h(var1, "node") {
-      this(ChannelId.toString_impl(var1.getChannelId_o4g7jtM()), var1.getCommandId(), var1.getCommandName(), var1.getCommandKey());
+      this(ChannelId.toString-impl(var1.getChannelId-o4g7jtM()), var1.getCommandId(), var1.getCommandName(), var1.getCommandKey());
    }
 
    init {
@@ -110,21 +110,21 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.commandId;
-      val var5: java.lang.String = this.commandName;
-      val var2: java.lang.String = this.commandKey;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapCommandData(channelId=");
-      var1.append(var4);
-      var1.append(", commandId=");
-      var1.append(var3);
-      var1.append(", commandName=");
-      var1.append(var5);
-      var1.append(", commandKey=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.commandId;
+      val var2: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandKey;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapCommandData(channelId=");
+      var4.append(var3);
+      var4.append(", commandId=");
+      var4.append(var5);
+      var4.append(", commandName=");
+      var4.append(var2);
+      var4.append(", commandKey=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<TapCommandData> {
@@ -204,9 +204,9 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
                }
             }
 
-            var13 = var12;
             var11 = var6;
             var6 = var13;
+            var13 = var12;
          }
 
          var10.c(var9);

@@ -6,10 +6,10 @@ import java.util.Locale
 import kotlin.jvm.internal.r
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "5ae1180f-937e-47b4-be85-481a9061b87e"
+   public const val PROGUARD_UUID: String = "6ef3d323-c4fc-481d-8326-7cd922fdbf81"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@245.11.0-1+245111"
+   public const val SENTRY_RELEASE: String = "discord_android@245.12.0-1+245112"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String
@@ -131,11 +131,11 @@ public object ClientInfo {
       var2 = var1.getPackageName();
       r.g(var2, "context.packageName");
       this.setPackageName(var2);
-      val var9: ClientUserAgent = ClientUserAgent.INSTANCE;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("Discord-Android/");
-      var10.append(var3);
-      var10.append(";RNA");
-      var9.init(var1, var10.toString());
+      val var10: ClientUserAgent = ClientUserAgent.INSTANCE;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Discord-Android/");
+      var9.append(var3);
+      var9.append(";RNA");
+      var10.init(var1, var9.toString());
    }
 }

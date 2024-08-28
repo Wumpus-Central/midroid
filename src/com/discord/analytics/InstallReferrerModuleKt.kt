@@ -19,7 +19,7 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 private suspend fun InstallReferrerClient.await(): Int {
    val var2: e = new e(b.b(var1), 1);
    var2.D();
-   val var4: a = new a(var2) {
+   val var3: a = new a(var2) {
       final CancellableContinuation<Integer> $continuation;
 
       {
@@ -53,11 +53,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: eh.r.a = r.k;
+               val var2: eh.r.a = r.k;
                var5.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var2: eh.r.a = r.k;
+               val var6: eh.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,11 +67,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var10: eh.r.a = r.k;
-      var0.d(var4);
+      val var4: eh.r.a = r.k;
+      var0.d(var3);
       var7 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var3: eh.r.a = r.k;
+      val var10: eh.r.a = r.k;
       var7 = r.b(s.a(var5));
       break label20;
    }

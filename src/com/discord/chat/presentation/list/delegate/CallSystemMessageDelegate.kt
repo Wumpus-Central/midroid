@@ -38,7 +38,7 @@ public class CallSystemMessageDelegate(eventHandlerProvider: () -> ChatEventHand
    fun `bindViewInternal$lambda$2`(var0: CallSystemMessageDelegate, var1: CallSystemMessageItem, var2: View) {
       r.h(var0, "this$0");
       r.h(var1, "$item");
-      var0.getEventHandler().onTapCall_pfaIj0E(var1.getMessage().getId_3Eiw7ao(), var1.getMessage().getChannelId_o4g7jtM());
+      var0.getEventHandler().onTapCall-pfaIj0E(var1.getMessage().getId-3Eiw7ao(), var1.getMessage().getChannelId-o4g7jtM());
    }
 
    public open fun bindView(view: CallSystemMessageView, item: CallSystemMessageItem, metadata: Metadata<CallSystemMessageView>) {

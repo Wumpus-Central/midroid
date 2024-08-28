@@ -26,17 +26,17 @@ public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : 
       ViewRemoveFromParentKt.removeFromParent(var2.getView());
       if (var2.getMeasuredDimensions() != null) {
          val var7: Pair = var2.getMeasuredDimensions();
-         val var4: Int = (var7.a() as java.lang.Number).intValue();
-         val var5: Int = (var7.b() as java.lang.Number).intValue();
-         val var8: View = var2.getView();
-         val var6: LayoutParams = var8.getLayoutParams();
-         if (var6 == null) {
+         val var5: Int = (var7.a() as java.lang.Number).intValue();
+         val var4: Int = (var7.b() as java.lang.Number).intValue();
+         val var6: View = var2.getView();
+         val var8: LayoutParams = var6.getLayoutParams();
+         if (var8 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var6.width = var4;
-         var6.height = var5;
-         var8.setLayoutParams(var6);
+         var8.width = var5;
+         var8.height = var4;
+         var6.setLayoutParams(var8);
       }
 
       var1.removeAllViews();

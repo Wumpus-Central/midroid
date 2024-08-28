@@ -40,11 +40,11 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
 
       while (var8.hasNext()) {
          val var2: Int = (var8 as p).nextInt();
-         val var7: ReactApplicationContext = var1.getReactApplicationContext();
-         r.g(var7, "reactApplicationContext");
-         val var6: java.lang.String = var0.getString(var2);
-         r.g(var6, "nativeIds.getString(index)");
-         val var9: View = ReactContextFindViewKt.findView(var7, var6);
+         val var6: ReactApplicationContext = var1.getReactApplicationContext();
+         r.g(var6, "reactApplicationContext");
+         val var7: java.lang.String = var0.getString(var2);
+         r.g(var7, "nativeIds.getString(index)");
+         val var9: View = ReactContextFindViewKt.findView(var6, var7);
          if (var9 != null) {
             var3.add(var9);
          }

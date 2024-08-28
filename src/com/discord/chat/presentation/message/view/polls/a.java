@@ -5,6 +5,7 @@ import android.view.View.OnClickListener;
 import com.discord.chat.bridge.polls.PollAction;
 import kotlin.jvm.functions.Function3;
 
+// $VF: synthetic class
 public final class a implements OnClickListener {
    public final PollAction j;
    public final Function3 k;

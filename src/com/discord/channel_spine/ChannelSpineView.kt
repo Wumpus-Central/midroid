@@ -118,9 +118,9 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    private fun createSpinePath(rowHeight: Float, rowIndex: Int, direction: com.discord.channel_spine.ChannelSpineView.SpineDirection): Path {
-      val var10: Path = new Path();
+      val var11: Path = new Path();
       val var6: Float = this.spinePaint.getStrokeWidth() / 2.0F;
-      val var11: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
+      val var10: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
       val var9: Int = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
       val var4: Float;
       if (var9 != 1) {
@@ -141,10 +141,10 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       }
 
       var1 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      var5 = this.getMeasuredWidth();
-      val var7: Float = this.horizontalPadding;
+      val var7: Float = this.getMeasuredWidth();
+      var5 = this.horizontalPadding;
       val var8: Float = this.arcPercent() * this.getMeasuredWidth();
-      var2 = var11[var3.ordinal()];
+      var2 = var10[var3.ordinal()];
       if (var2 != 1) {
          if (var2 == 2) {
             this.arcRect.set(var6, var1, var6 + var8, var8 + var1);
@@ -153,10 +153,10 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          this.arcRect.set(var6, var1 - var8, var8 + var6, var1);
       }
 
-      var10.moveTo(var6, var4);
-      var10.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var10.lineTo(var5 - var7, var1);
-      return var10;
+      var11.moveTo(var6, var4);
+      var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
+      var11.lineTo(var7 - var5, var1);
+      return var11;
    }
 
    private fun rebuildLayout() {
@@ -282,29 +282,6 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
 
       init {
          this.arcSweepAngle = var3;
-      }
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[ChannelSpineView.SpineDirection.values().length];
-
-         try {
-            var0[ChannelSpineView.SpineDirection.TOP_TO_BOTTOM.ordinal()] = 1;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[ChannelSpineView.SpineDirection.BOTTOM_TO_TOP.ordinal()] = 2;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
       }
    }
 }

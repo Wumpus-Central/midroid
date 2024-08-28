@@ -1,10 +1,23 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.IllegalStateException: Couldn't find method bind (Lcom/discord/primitives/ChannelId;Lcom/discord/primitives/MessageId;Lcom/discord/chat/bridge/ctabutton/CtaButton;Lkotlin/jvm/functions/Function3;)V in class com/discord/chat/presentation/message/viewholder/CtaButtonViewHolder
-  at org.vineflower.kotlin.struct.KFunction.parse(KFunction.java:112)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:221)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:194)
-*/
+package com.discord.chat.presentation.message.viewholder
+
+import com.discord.chat.bridge.ctabutton.CtaButton
+import com.discord.chat.presentation.message.view.CtaButtonView
+import com.discord.primitives.ChannelId
+import com.discord.primitives.MessageId
+
+public class CtaButtonViewHolder(ctaButtonView: CtaButtonView) : MessagePartViewHolder {
+   private final val ctaButtonView: CtaButtonView
+
+   init {
+      kotlin.jvm.internal.r.h(var1, "ctaButtonView");
+      super(var1, null);
+      this.ctaButtonView = var1;
+   }
+
+   public fun bind(channelId: ChannelId, messageId: MessageId, accessory: CtaButton, onTapCtaButton: (ChannelId, MessageId, String) -> Unit) {
+      kotlin.jvm.internal.r.h(var3, "messageId");
+      kotlin.jvm.internal.r.h(var4, "accessory");
+      kotlin.jvm.internal.r.h(var5, "onTapCtaButton");
+      this.ctaButtonView.setContent-P6jPPyA(var1, var3, var4.getText(), var4.getTextColor(), var4.getBackgroundColor(), var4.getCallback(), var5);
+   }
+}

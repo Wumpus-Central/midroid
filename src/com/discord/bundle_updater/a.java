@@ -3,6 +3,7 @@ package com.discord.bundle_updater;
 import android.net.Uri;
 import java.io.File;
 
+// $VF: synthetic class
 public final class a implements Runnable {
    public final AssetStatus j;
    public final BundleUpdater k;

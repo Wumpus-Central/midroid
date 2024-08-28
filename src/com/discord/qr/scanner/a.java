@@ -1,5 +1,6 @@
 package com.discord.qr.scanner;
 
+// $VF: synthetic class
 public final class a implements Runnable {
    public final QRScanner j;
 

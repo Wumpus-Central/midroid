@@ -50,8 +50,8 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
             this.this$0 = var1;
          }
 
-         public final void invoke_R7gqayM(long var1) {
-            this.this$0.getOnChannelSelected().invoke(ChannelId.box_impl(var1));
+         public final void invoke_R7gqayM/* $VF was: invoke-R7gqayM*/(long var1) {
+            this.this$0.getOnChannelSelected().invoke(ChannelId.box-impl(var1));
          }
       });
       WindowUtils.INSTANCE.removeFlag(this.getWindowLayoutParams(), 8);
@@ -72,8 +72,8 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
             this.this$0 = var1;
          }
 
-         public final void invoke_R7gqayM(long var1) {
-            this.this$0.getOnChannelSelected().invoke(ChannelId.box_impl(var1));
+         public final void invoke_R7gqayM/* $VF was: invoke-R7gqayM*/(long var1) {
+            this.this$0.getOnChannelSelected().invoke(ChannelId.box-impl(var1));
          }
       });
       WindowUtils.INSTANCE.removeFlag(this.getWindowLayoutParams(), 8);
@@ -94,8 +94,8 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
             this.this$0 = var1;
          }
 
-         public final void invoke_R7gqayM(long var1) {
-            this.this$0.getOnChannelSelected().invoke(ChannelId.box_impl(var1));
+         public final void invoke_R7gqayM/* $VF was: invoke-R7gqayM*/(long var1) {
+            this.this$0.getOnChannelSelected().invoke(ChannelId.box-impl(var1));
          }
       });
       WindowUtils.INSTANCE.removeFlag(this.getWindowLayoutParams(), 8);

@@ -26,7 +26,7 @@ public object ChannelListSerializer : KSerializer<java.util.List<? extends Chann
          val var5: java.lang.Long = f.o(var3.next() as java.lang.String);
          val var6: ChannelId;
          if (var5 != null) {
-            var6 = ChannelId.box_impl(ChannelId.constructor_impl(var5.longValue()));
+            var6 = ChannelId.box-impl(ChannelId.constructor-impl(var5.longValue()));
          } else {
             var6 = null;
          }

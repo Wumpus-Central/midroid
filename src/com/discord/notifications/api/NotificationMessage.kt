@@ -193,24 +193,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = h.i(),
    }
 
    public override fun toString(): String {
-      val var5: java.util.List = this.stickerItems;
+      val var2: java.util.List = this.stickerItems;
       val var4: JsonObject = this.author;
-      val var2: java.util.List = this.mentions;
-      val var6: Poll = this.poll;
-      val var3: java.util.List = this.embeds;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("NotificationMessage(stickerItems=");
-      var1.append(var5);
-      var1.append(", author=");
-      var1.append(var4);
-      var1.append(", mentions=");
-      var1.append(var2);
-      var1.append(", poll=");
-      var1.append(var6);
-      var1.append(", embeds=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.util.List = this.mentions;
+      val var1: Poll = this.poll;
+      val var6: java.util.List = this.embeds;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("NotificationMessage(stickerItems=");
+      var5.append(var2);
+      var5.append(", author=");
+      var5.append(var4);
+      var5.append(", mentions=");
+      var5.append(var3);
+      var5.append(", poll=");
+      var5.append(var1);
+      var5.append(", embeds=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : f0<NotificationMessage> {

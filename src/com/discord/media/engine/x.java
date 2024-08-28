@@ -3,6 +3,7 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.MLSCommitTransitionCallback;
 import kotlin.jvm.functions.Function3;
 
+// $VF: synthetic class
 public final class x implements MLSCommitTransitionCallback {
    public final Function3 a;
 

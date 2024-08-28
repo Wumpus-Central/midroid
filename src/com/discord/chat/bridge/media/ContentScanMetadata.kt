@@ -103,21 +103,20 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
          r.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Long;
          if (var9.p()) {
-            val var2: Int = var9.i(var8, 0);
+            var2 = var9.i(var8, 0);
             var6 = var9.f(var8, 1);
             var3 = 3;
-            var4 = var2;
          } else {
             var6 = 0L;
-            var var12: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
-            var var10: Int = 0;
+            var2 = 0;
 
-            while (var12) {
+            while (var4) {
                val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -126,22 +125,22 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
                      }
 
                      var6 = var9.f(var8, 1);
-                     var10 |= 2;
+                     var2 |= 2;
                   } else {
                      var3 = var9.i(var8, 0);
-                     var10 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var4 = false;
                }
             }
 
-            var4 = var3;
-            var3 = var10;
+            var2 = var3;
+            var3 = var2;
          }
 
          var9.c(var8);
-         return new ContentScanMetadata(var3, var4, var6, null);
+         return new ContentScanMetadata(var3, var2, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentScanMetadata) {

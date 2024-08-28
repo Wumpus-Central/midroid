@@ -6,6 +6,7 @@ import com.discord.chat.bridge.botuikit.MediaGalleryDisplayComponent;
 import com.discord.chat.bridge.botuikit.MediaGalleryItem;
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder;
 
+// $VF: synthetic class
 public final class c implements OnClickListener {
    public final MediaGalleryDisplayComponentAdapter j;
    public final MediaGalleryDisplayComponent k;

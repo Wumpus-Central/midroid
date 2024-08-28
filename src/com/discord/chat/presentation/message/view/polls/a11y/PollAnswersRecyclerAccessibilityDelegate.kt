@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.View
 import androidx.core.view.a
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
-import com.discord.chat.bridge.polls.PollChatAnswerInteractionType
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
@@ -36,23 +35,5 @@ public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAcce
       val var4: Context = var1.getContext();
       r.g(var4, "host.context");
       var2.T0(I18nUtilsKt.i18nFormat$default(var4, I18nMessage.POLL_OPTIONS_ARIA, null, 2, null));
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var1: IntArray = new int[PollChatAnswerInteractionType.values().length];
-
-         try {
-            var1[PollChatAnswerInteractionType.RADIO_BUTTONS.ordinal()] = 1;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var1;
-      }
    }
 }

@@ -75,43 +75,43 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
    init {
       r.h(var1, "context");
       super(var1, var2);
-      val var3: AutomodSystemMessageViewBinding = AutomodSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var3, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var3;
+      val var6: AutomodSystemMessageViewBinding = AutomodSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      r.g(var6, "inflate(LayoutInflater.from(context), this)");
+      this.binding = var6;
       this.allowChildGestures = true;
       RippleUtilsKt.addRipple$default(this, false, SizeUtilsKt.getDpToPx(4), 1, null);
-      var3.messageHeaderDivider.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, R.color.message_divider_light, R.color.message_divider_dark));
-      var var4: TextView = var3.messageHeaderTitle;
-      var3.messageHeaderTitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      var6.messageHeaderDivider.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, R.color.message_divider_light, R.color.message_divider_dark));
+      var var4: TextView = var6.messageHeaderTitle;
+      var6.messageHeaderTitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       r.g(var4, "_init_$lambda$0");
-      val var6: DiscordFont = DiscordFont.PrimarySemibold;
+      val var3: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
-      var4 = var3.messageHeaderSubtitle;
-      var3.messageHeaderSubtitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      var4 = var6.messageHeaderSubtitle;
+      var6.messageHeaderSubtitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       r.g(var4, "_init_$lambda$1");
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
-      var4 = var3.authorName;
-      var3.authorName.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
+      var4 = var6.authorName;
+      var6.authorName.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
       r.g(var4, "_init_$lambda$2");
-      DiscordFontUtilsKt.setDiscordFont(var4, var6);
+      DiscordFontUtilsKt.setDiscordFont(var4, var3);
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F, 20.0F);
-      val var9: SimpleDraweeView = var3.authorAvatar;
-      r.g(var3.authorAvatar, "binding.authorAvatar");
+      val var9: SimpleDraweeView = var6.authorAvatar;
+      r.g(var6.authorAvatar, "binding.authorAvatar");
       ViewClippingUtilsKt.clipToCircle(var9);
-      var4 = var3.automodMessageContextHeader;
-      r.g(var3.automodMessageContextHeader, "_init_$lambda$3");
-      DiscordFontUtilsKt.setDiscordFont(var4, var6);
+      var4 = var6.automodMessageContextHeader;
+      r.g(var6.automodMessageContextHeader, "_init_$lambda$3");
+      DiscordFontUtilsKt.setDiscordFont(var4, var3);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F, 20.0F);
-      var4 = var3.automodMessageChannel;
-      var3.automodMessageChannel.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, color.brand_500, color.brand_600));
+      var4 = var6.automodMessageChannel;
+      var6.automodMessageChannel.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, color.brand_500, color.brand_600));
       var4.setTextColor(ColorUtilsKt.getThemeColor(var1, color.white_100, color.white_160));
       r.g(var4, "_init_$lambda$4");
-      DiscordFontUtilsKt.setDiscordFont(var4, var6);
+      DiscordFontUtilsKt.setDiscordFont(var4, var3);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F, 15.0F);
       ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(4));
-      val var5: TextView = var3.timestamp;
-      r.g(var3.timestamp, "_init_$lambda$5");
+      val var5: TextView = var6.timestamp;
+      r.g(var6.timestamp, "_init_$lambda$5");
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var5, 12.0F, 15.0F);
@@ -120,14 +120,14 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
    @SuppressLint(["SetTextI18n"])
    private fun configureAuthor(message: Message, automodContext: AutoModerationContext, eventHandler: ChatEventHandler) {
-      val var6: SimpleDraweeView = this.binding.authorAvatar;
-      val var5: Context = this.getContext();
-      r.g(var5, "context");
-      var6.setImageURI(MessageKt.avatarUrl(var1, var5));
+      val var5: SimpleDraweeView = this.binding.authorAvatar;
+      val var6: Context = this.getContext();
+      r.g(var6, "context");
+      var5.setImageURI(MessageKt.avatarUrl(var1, var6));
       this.binding.authorName.setText(var1.getUsername());
       val var9: MessageTagView = this.binding.messageTagView;
       r.g(this.binding.messageTagView, "binding.messageTagView");
-      MessageTagView.configureTagView_Ul7AT2Q$default(
+      MessageTagView.configureTagView-Ul7AT2Q$default(
          var9,
          var2.getHeaderBadgeText(),
          java.lang.Boolean.FALSE,
@@ -135,8 +135,8 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          null,
          null,
          var3,
-         var1.getId_3Eiw7ao(),
-         var1.getChannelId_o4g7jtM(),
+         var1.getId-3Eiw7ao(),
+         var1.getChannelId-o4g7jtM(),
          var1.getTagType(),
          null,
          512,
@@ -177,11 +177,11 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
    fun `configureAuthor$lambda$8$lambda$7`(var0: ChatEventHandler, var1: AutoModerationContext, var2: View) {
       r.h(var0, "$eventHandler");
       r.h(var1, "$automodContext");
-      val var5: java.lang.String = ChannelId.toString_impl(var1.getMessage().getChannelId_o4g7jtM());
-      val var3: GuildId = var1.getMessage().getGuildId_qOKuAAo();
+      val var5: java.lang.String = ChannelId.toString-impl(var1.getMessage().getChannelId-o4g7jtM());
+      val var3: GuildId = var1.getMessage().getGuildId-qOKuAAo();
       val var4: java.lang.String;
       if (var3 != null) {
-         var4 = GuildId.toString_impl(var3.unbox_impl());
+         var4 = GuildId.toString-impl(var3.unbox-impl());
       } else {
          var4 = null;
       }
@@ -234,33 +234,33 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          return this.accessories;
       } else {
          val var18: FlaggedMessageEmbed = var9.getMessage();
-         val var14: MessageType = MessageType.DEFAULT;
-         val var15: java.lang.String = var18.getId_3Eiw7ao();
-         val var5: Long = var18.getChannelId_o4g7jtM();
-         val var16: GuildId = var18.getGuildId_qOKuAAo();
-         val var10: UserId = var18.getUserId_wUX8bhU();
-         val var17: java.lang.String = var18.getUsername();
-         val var11: java.lang.String = var18.getAvatarURL();
-         val var13: StructurableText = var18.getContent();
+         val var17: MessageType = MessageType.DEFAULT;
+         val var12: java.lang.String = var18.getId-3Eiw7ao();
+         val var7: Long = var18.getChannelId-o4g7jtM();
+         val var11: GuildId = var18.getGuildId-qOKuAAo();
+         val var13: UserId = var18.getUserId-wUX8bhU();
+         val var15: java.lang.String = var18.getUsername();
+         val var16: java.lang.String = var18.getAvatarURL();
+         val var10: StructurableText = var18.getContent();
          val var3: Int = var18.getUsernameColor();
-         val var12: Int = var18.getRoleColor();
-         val var8: Boolean = var18.getShouldShowRoleDot();
+         val var14: Int = var18.getRoleColor();
+         val var6: Boolean = var18.getShouldShowRoleDot();
          val var23: java.lang.Boolean = var18.getCommunicationDisabled();
-         val var7: Boolean;
+         val var5: Boolean;
          if (var23 != null) {
-            var7 = var23;
+            var5 = var23;
          } else {
-            var7 = false;
+            var5 = false;
          }
 
          val var22: Message = new Message(
-            var14,
-            var15,
+            var17,
+            var12,
             null,
-            var5,
-            var16,
+            var7,
+            var11,
             null,
-            var10,
+            var13,
             0L,
             null,
             null,
@@ -269,18 +269,18 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var17,
+            var15,
             var3,
-            var12,
-            var8,
+            var14,
+            var6,
             false,
             null,
-            var11,
+            var16,
             null,
             null,
             null,
             null,
-            var13,
+            var10,
             null,
             null,
             null,
@@ -298,7 +298,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var7,
+            var5,
             null,
             null,
             null,
@@ -350,10 +350,10 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null
          );
          if (var9.getNotification() != null) {
-            this.accessories.add(new AutoModerationNotificationEmbedAccessory(var22.getId_3Eiw7ao(), var1, var9, null));
+            this.accessories.add(new AutoModerationNotificationEmbedAccessory(var22.getId-3Eiw7ao(), var1, var9, null));
          } else {
-            this.accessories.add(new FlaggedMessageEmbedAccessory(var22.getId_3Eiw7ao(), var22, var2, null));
-            this.accessories.add(new FlaggedMessageActionBarAccessory(var22.getId_3Eiw7ao(), var1, var9, null));
+            this.accessories.add(new FlaggedMessageEmbedAccessory(var22.getId-3Eiw7ao(), var22, var2, null));
+            this.accessories.add(new FlaggedMessageActionBarAccessory(var22.getId-3Eiw7ao(), var1, var9, null));
          }
 
          val var21: java.util.List = var1.getReactions();
@@ -369,7 +369,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             this.accessories
                .add(
                   new ReactionsMessageAccessory(
-                     var1.getId_3Eiw7ao(),
+                     var1.getId-3Eiw7ao(),
                      var1.getReactions(),
                      var2.getCanAddNewReactions(),
                      var2.getUseAddBurstReaction(),
@@ -385,7 +385,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
          val var19: ThreadEmbed = var1.getThreadEmbed();
          if (var19 != null) {
-            this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId_3Eiw7ao(), var19, null));
+            this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId-3Eiw7ao(), var19, null));
          }
 
          return this.accessories;
@@ -418,28 +418,28 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          this.configureAuthor(var1, var8, var3);
          this.configureCommunicationDisabled(r.c(var1.getCommunicationDisabled(), java.lang.Boolean.TRUE));
          this.configureDivider(var2.getShowDivider());
-         var var9: java.lang.String = var1.getThreadStarterMessageHeader();
-         val var14: ThreadStarterMessageHeaderView = this.binding.threadStarterHeader;
+         val var14: java.lang.String = var1.getThreadStarterMessageHeader();
+         val var9: ThreadStarterMessageHeaderView = this.binding.threadStarterHeader;
          if (var1.getReferencedMessage() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var14.configure(var9, var5);
+         var9.configure(var14, var5);
          this.binding.replyPreview.clear();
-         val var11: java.util.List = this.generateMessageAccessories(var1, var2);
-         val var15: MessageAccessoriesView = this.binding.accessoriesView;
-         var9 = var1.getId_3Eiw7ao();
-         val var6: Long = var1.getChannelId_o4g7jtM();
-         val var10: GuildId = var1.getGuildId_qOKuAAo();
+         val var16: java.util.List = this.generateMessageAccessories(var1, var2);
+         val var10: MessageAccessoriesView = this.binding.accessoriesView;
+         val var11: java.lang.String = var1.getId-3Eiw7ao();
+         val var6: Long = var1.getChannelId-o4g7jtM();
+         val var15: GuildId = var1.getGuildId-qOKuAAo();
          if (var1.getForwardInfo() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var15.setAccessories_MNg_vQI(var9, var6, var10, var11, var3, var4, var5);
+         var10.setAccessories-MNg-vQI(var11, var6, var15, var16, var3, var4, var5);
       }
    }
 

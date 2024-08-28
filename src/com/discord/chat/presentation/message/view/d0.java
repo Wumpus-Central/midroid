@@ -5,6 +5,7 @@ import android.view.View.OnClickListener;
 import com.discord.chat.bridge.forwarding.ForwardInfo;
 import kotlin.jvm.functions.Function3;
 
+// $VF: synthetic class
 public final class d0 implements OnClickListener {
    public final Function3 j;
    public final ForwardInfo k;

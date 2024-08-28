@@ -101,8 +101,8 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.action.hashCode();
-      val var4: Int = this.guildId.hashCode();
+      val var4: Int = this.action.hashCode();
+      val var5: Int = this.guildId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.messageId == null) {
@@ -122,28 +122,28 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
          var3 = this.roleSubscriptionListingId.hashCode();
       }
 
-      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.action;
-      val var2: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.messageId;
-      val var6: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.roleSubscriptionListingId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("RoleSubscriptionOnClick(action=");
-      var5.append(var1);
-      var5.append(", guildId=");
-      var5.append(var2);
-      var5.append(", messageId=");
-      var5.append(var3);
-      var5.append(", channelId=");
-      var5.append(var6);
-      var5.append(", roleSubscriptionListingId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.action;
+      val var5: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
+      val var6: java.lang.String = this.roleSubscriptionListingId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("RoleSubscriptionOnClick(action=");
+      var4.append(var2);
+      var4.append(", guildId=");
+      var4.append(var5);
+      var4.append(", messageId=");
+      var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var3);
+      var4.append(", roleSubscriptionListingId=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<RoleSubscriptionOnClick> {

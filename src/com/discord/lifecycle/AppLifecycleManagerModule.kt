@@ -24,10 +24,10 @@ public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : 
    }
 
    public open fun onHostDestroy() {
-      val var2: ReactEvents = this.reactEvents;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      var2.emitModuleEvent(var1, new OnHostDestroyEvent());
+      val var1: ReactEvents = this.reactEvents;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      var1.emitModuleEvent(var2, new OnHostDestroyEvent());
    }
 
    public open fun onHostPause() {

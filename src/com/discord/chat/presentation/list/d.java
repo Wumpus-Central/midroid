@@ -4,6 +4,7 @@ import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import androidx.recyclerview.widget.RecyclerView;
 
+// $VF: synthetic class
 public final class d implements AnimatorUpdateListener {
    public final SwipeHelper a;
    public final RecyclerView b;

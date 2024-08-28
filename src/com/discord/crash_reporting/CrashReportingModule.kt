@@ -52,10 +52,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
             }
 
             public final void invoke(HistoricalProcessExitReason.Reason var1, SystemLogUtils.Tombstone var2) {
-               val var4: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
-               val var3: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
-               r.g(var3, "reactApplicationContext");
-               var4.emitModuleEvent(var3, new CrashReportEvent(java.lang.Boolean.TRUE, var1, var2));
+               val var3: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
+               val var4: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
+               r.g(var4, "reactApplicationContext");
+               var3.emitModuleEvent(var4, new CrashReportEvent(java.lang.Boolean.TRUE, var1, var2));
             }
          });
       }
@@ -91,10 +91,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
       r.h(var1, "callback");
-      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.invoke(new Object[]{var3.fetch(var2)});
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "reactApplicationContext");
+      var1.invoke(new Object[]{var2.fetch(var3)});
    }
 
    @ReactMethod
@@ -113,9 +113,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun setUser(user: ReadableMap) {
       r.h(var1, "user");
       val var2: Boolean = var1.getBoolean("staff");
-      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var4, "reactApplicationContext");
-      var3.getInstance(var4).setStaff(var2);
+      val var4: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "reactApplicationContext");
+      var4.getInstance(var3).setStaff(var2);
    }
 }

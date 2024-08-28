@@ -163,7 +163,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             val var2: SimpleDraweeSpanTextView = var0.text;
             val var3: Any = var1.getAnimatedValue();
             r.f(var3, "null cannot be cast to non-null type kotlin.Int");
-            var2.setTextColor(var3 as Integer);
+            var2.setTextColor(var3 as Int);
          }
 
          public final ValueAnimator invoke() {
@@ -187,7 +187,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             r.g(var0.button, "binding.button");
             val var3: Any = var1.getAnimatedValue();
             r.f(var3, "null cannot be cast to non-null type kotlin.Int");
-            ColorUtilsKt.setTintColor(var2, var3 as Integer);
+            ColorUtilsKt.setTintColor(var2, var3 as Int);
          }
 
          public final ValueAnimator invoke() {
@@ -210,7 +210,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             val var2: AudioWaveView = var0.wave;
             val var3: Any = var1.getAnimatedValue();
             r.f(var3, "null cannot be cast to non-null type kotlin.Int");
-            var2.setAudioProgressPaintColor(var3 as Integer);
+            var2.setAudioProgressPaintColor(var3 as Int);
          }
 
          public final ValueAnimator invoke() {
@@ -311,36 +311,36 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    }
 
    public fun startAnimator(animateToPlay: Boolean, shouldAnimate: Boolean) {
-      var var10: Long = 0L;
+      var var9: Long = 0L;
       if (var2) {
          if (this.animateToPlay == var1) {
             return;
          }
 
-         var10 = 0L;
+         var9 = 0L;
          if (this.animateToPlay != var1) {
-            var10 = 0L;
+            var9 = 0L;
             if (this.animatorSet != null) {
-               var var6: Long = 0L;
+               var var5: Long = 0L;
                if (VERSION.SDK_INT >= 26) {
                   if (this.animatorSet != null) {
-                     var6 = this.animatorSet.getDuration();
+                     var5 = this.animatorSet.getDuration();
                   } else {
-                     var6 = 0L;
+                     var5 = 0L;
                   }
 
                   if (this.animatorSet != null) {
-                     var10 = l.a(this.animatorSet);
+                     var9 = l.a(this.animatorSet);
                   } else {
-                     var10 = 0L;
+                     var9 = 0L;
                   }
 
-                  var var17: java.lang.Long = var6 - var10;
-                  var6 = var17.longValue();
+                  var var17: java.lang.Long = var5 - var9;
+                  var5 = var17.longValue();
                   var var3: Boolean = false;
-                  if (0L <= var6) {
+                  if (0L <= var5) {
                      var3 = false;
-                     if (var6 < 201L) {
+                     if (var5 < 201L) {
                         var3 = true;
                      }
                   }
@@ -349,23 +349,23 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
                      var17 = null;
                   }
 
-                  var6 = 0L;
+                  var5 = 0L;
                   if (var17 != null) {
-                     var6 = var17;
+                     var5 = var17;
                   }
                }
 
-               var10 = var6;
+               var9 = var5;
                if (this.animatorSet != null) {
                   this.animatorSet.cancel();
-                  var10 = var6;
+                  var9 = var5;
                }
             }
          }
       }
 
       this.animateToPlay = var1;
-      val var19: AnimatorSet = this.getAnimatorSet(var1, var10, var2);
+      val var19: AnimatorSet = this.getAnimatorSet(var1, var9, var2);
       var19.start();
       this.animatorSet = var19;
    }

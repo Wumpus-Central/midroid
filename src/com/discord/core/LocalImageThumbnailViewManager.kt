@@ -33,10 +33,10 @@ public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbn
       r.h(var1, "view");
       if (var2 != null) {
          val var5: Uri = Uri.parse(var2.getString("uri"));
-         val var3: Int = (int)var2.getDouble("width");
-         val var4: Int = (int)var2.getDouble("height");
+         val var4: Int = (int)var2.getDouble("width");
+         val var3: Int = (int)var2.getDouble("height");
          r.g(var5, "uri");
-         var1.setLocalImageSource(var5, var3, var4);
+         var1.setLocalImageSource(var5, var4, var3);
       }
    }
 

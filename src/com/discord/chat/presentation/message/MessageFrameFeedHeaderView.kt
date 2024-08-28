@@ -309,21 +309,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.channelIconURL;
-         val var3: java.lang.String = this.chatIconURL;
-         val var4: ArrayList = this.avatarURLs;
-         val var2: java.lang.String = this.channelName;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("MessageBundleHeader(channelIconURL=");
-         var1.append(var5);
-         var1.append(", chatIconURL=");
-         var1.append(var3);
-         var1.append(", avatarURLs=");
-         var1.append(var4);
-         var1.append(", channelName=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var3: java.lang.String = this.channelIconURL;
+         val var4: java.lang.String = this.chatIconURL;
+         val var1: ArrayList = this.avatarURLs;
+         val var5: java.lang.String = this.channelName;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MessageBundleHeader(channelIconURL=");
+         var2.append(var3);
+         var2.append(", chatIconURL=");
+         var2.append(var4);
+         var2.append(", avatarURLs=");
+         var2.append(var1);
+         var2.append(", channelName=");
+         var2.append(var5);
+         var2.append(")");
+         return var2.toString();
       }
 
       public object `$serializer` : f0<MessageFrameFeedHeaderView.MessageBundleHeader> {
@@ -360,21 +360,22 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
             var var8: Any = null;
             var var2: Int;
             var var6: Any;
-            var var12: Any;
-            var var14: Any;
+            val var9: Any;
+            var var15: Any;
             if (var5) {
-               var14 = a2.a;
-               var6 = var11.n(var10, 0, a2.a, null);
-               var8 = var11.n(var10, 1, (DeserializationStrategy)var14, null);
-               var12 = var11.n(var10, 2, new xk.f((KSerializer)var14), null);
-               var14 = var11.n(var10, 3, (DeserializationStrategy)var14, null);
+               var15 = a2.a;
+               var8 = var11.n(var10, 0, a2.a, null);
+               var6 = var11.n(var10, 1, (DeserializationStrategy)var15, null);
+               val var12: Any = var11.n(var10, 2, new xk.f((KSerializer)var15), null);
+               var15 = var11.n(var10, 3, (DeserializationStrategy)var15, null);
                var2 = 15;
+               var9 = var12;
             } else {
                var var3: Boolean = true;
                var2 = 0;
-               var14 = null;
-               var12 = null;
+               var15 = null;
                var6 = null;
+               var var13: Any = null;
 
                while (var3) {
                   val var4: Int = var11.o(var10);
@@ -386,14 +387,14 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
                                  throw new uk.n(var4);
                               }
 
-                              var6 = var11.n(var10, 3, a2.a, var6);
+                              var13 = var11.n(var10, 3, a2.a, var13);
                               var2 |= 8;
                            } else {
-                              var12 = var11.n(var10, 2, new xk.f(a2.a), var12);
+                              var6 = var11.n(var10, 2, new xk.f(a2.a), var6);
                               var2 |= 4;
                            }
                         } else {
-                           var14 = var11.n(var10, 1, a2.a, var14);
+                           var15 = var11.n(var10, 1, a2.a, var15);
                            var2 |= 2;
                         }
                      } else {
@@ -405,14 +406,14 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
                   }
                }
 
-               var6 = var8;
-               var8 = var14;
-               var14 = var6;
+               var9 = var6;
+               var6 = var15;
+               var15 = var13;
             }
 
             var11.c(var10);
             return new MessageFrameFeedHeaderView.MessageBundleHeader(
-               var2, var6 as java.lang.String, var8 as java.lang.String, var12 as ArrayList, var14 as java.lang.String, null
+               var2, var8 as java.lang.String, var6 as java.lang.String, var9 as ArrayList, var15 as java.lang.String, null
             );
          }
 

@@ -75,8 +75,8 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
       val var16: SpannableStringBuilder = new SpannableStringBuilder(var8);
       var8 = var16.getSpans(0, var16.length(), SpoilerSpan.class);
       kotlin.jvm.internal.r.g(var8, "augmentedText.getSpans(0… SpoilerSpan::class.java)");
-      val var18: Array<SpoilerSpan> = var8 as SpoilerSpan[];
-      var var4: Int = (var8 as SpoilerSpan[]).length;
+      val var18: Array<SpoilerSpan> = var8 as Array<SpoilerSpan>;
+      var var4: Int = (var8 as Array<SpoilerSpan>).length;
 
       for (int var3 = 0; var3 < var4; var3++) {
          val var9: SpoilerSpan = var18[var3];
@@ -91,8 +91,8 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
 
       var8 = var16.getSpans(0, var16.length(), EmojiAccessibilitySpan.class);
       kotlin.jvm.internal.r.g(var8, "augmentedText.getSpans(0…sibilitySpan::class.java)");
-      val var24: Array<EmojiAccessibilitySpan> = var8 as EmojiAccessibilitySpan[];
-      var4 = (var8 as EmojiAccessibilitySpan[]).length;
+      val var24: Array<EmojiAccessibilitySpan> = var8 as Array<EmojiAccessibilitySpan>;
+      var4 = (var8 as Array<EmojiAccessibilitySpan>).length;
 
       for (int var13 = 0; var13 < var4; var13++) {
          var16.replace(var16.getSpanStart(var24[var13]), var16.getSpanEnd(var24[var13]), var24[var13].getName());

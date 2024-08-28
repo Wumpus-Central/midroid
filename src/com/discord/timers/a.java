@@ -2,6 +2,7 @@ package com.discord.timers;
 
 import kotlin.jvm.functions.Function0;
 
+// $VF: synthetic class
 public final class a implements Runnable {
    public final TimersManager j;
    public final int k;

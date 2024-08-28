@@ -22,9 +22,9 @@ private final val hsv: FloatArray = new float[3]
 private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(\\d+),\\s*(\\d+(?:\\.\\d*)?|\\.\\d+)\\)")
 
 private fun applySaturationFactor(color: Int): Int {
-   val var6: Float = ThemeManager.INSTANCE.getSaturationFactor();
+   val var5: Float = ThemeManager.INSTANCE.getSaturationFactor();
    val var8: Boolean;
-   if (var6 == 1.0F) {
+   if (var5 == 1.0F) {
       var8 = true;
    } else {
       var8 = false;
@@ -37,7 +37,7 @@ private fun applySaturationFactor(color: Int): Int {
       var var1: Float = var10[2];
       val var7: Float = var10[2] * var3;
       val var4: Float = 2;
-      val var5: Float = var1 - var7 / 2;
+      val var6: Float = var1 - var7 / 2;
       var var11: Boolean;
       if (var1 - var7 / 2 == 0.0F) {
          var11 = true;
@@ -47,7 +47,7 @@ private fun applySaturationFactor(color: Int): Int {
 
       var1 = var3;
       if (!var11) {
-         if (var5 == 1.0F) {
+         if (var6 == 1.0F) {
             var11 = true;
          } else {
             var11 = false;
@@ -55,11 +55,11 @@ private fun applySaturationFactor(color: Int): Int {
 
          var1 = var3;
          if (!var11) {
-            var1 = var7 / (1 - Math.abs(2.0F * var5 - 1.0F));
+            var1 = var7 / (1 - Math.abs(2.0F * var6 - 1.0F));
          }
       }
 
-      var3 = var1 * var6 * Math.min(1.0F, 1.0F - var5) + var5;
+      var3 = var1 * var5 * Math.min(1.0F, 1.0F - var6) + var6;
       var11 = false;
       if (var3 == 0.0F) {
          var11 = true;
@@ -68,7 +68,7 @@ private fun applySaturationFactor(color: Int): Int {
       if (var11) {
          var1 = 0.0F;
       } else {
-         var1 = var4 * (1.0F - var5 / var3);
+         var1 = var4 * (1.0F - var6 / var3);
       }
 
       var10[1] = var1;
@@ -119,13 +119,13 @@ public fun interpolateColors(colorA: Int, colorB: Int, t: Float, minT: Float = 0
       return var1;
    } else {
       val var8: Int = Color.red(var0);
-      val var6: Int = Color.green(var0);
+      val var7: Int = Color.green(var0);
       val var5: Int = Color.blue(var0);
       var0 = Color.alpha(var0);
       return Color.argb(
          h.k((int)((float)var0 + (float)(Color.alpha(var1) - var0) * ((var2 - var3) / (var4 - var3))), 0, 255),
          h.k((int)((float)var8 + (float)(Color.red(var1) - var8) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         h.k((int)((float)var6 + (float)(Color.green(var1) - var6) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         h.k((int)((float)var7 + (float)(Color.green(var1) - var7) * ((var2 - var3) / (var4 - var3))), 0, 255),
          h.k((int)((float)var5 + (float)(Color.blue(var1) - var5) * ((var2 - var3) / (var4 - var3))), 0, 255)
       );
    }

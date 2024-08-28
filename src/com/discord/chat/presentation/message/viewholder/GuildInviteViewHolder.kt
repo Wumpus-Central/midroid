@@ -22,14 +22,14 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
    fun `bind$lambda$1$lambda$0`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
       kotlin.jvm.internal.r.h(var0, "this$0");
       kotlin.jvm.internal.r.h(var1, "$inviteAccessory");
-      var0.eventHandler.onTapInviteEmbed_AFFcxXc(var1.getMessageId_3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
+      var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
    }
 
    public fun bind(inviteAccessory: GuildInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "inviteAccessory");
-      val var6: GuildInviteEmbedImpl = var1.getInvite();
-      val var5: GuildInviteView = this.guildInviteView;
-      var var4: java.lang.String = var6.getSubtitle();
+      val var5: GuildInviteEmbedImpl = var1.getInvite();
+      val var6: GuildInviteView = this.guildInviteView;
+      var var4: java.lang.String = var5.getSubtitle();
       var var2: Boolean;
       if (var4 != null && !kotlin.text.f.x(var4)) {
          var2 = false;
@@ -38,10 +38,10 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
       }
 
       if (!var2) {
-         var4 = var6.getSubtitle();
+         var4 = var5.getSubtitle();
       } else {
          label22: {
-            var4 = var6.getChannelIcon();
+            var4 = var5.getChannelIcon();
             if (var4 != null) {
                var2 = false;
                if (!kotlin.text.f.x(var4)) {
@@ -53,26 +53,26 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
          }
 
          if (!var2) {
-            var4 = var6.getChannelName();
+            var4 = var5.getChannelName();
          } else {
             var4 = null;
          }
       }
 
-      var5.setInviteSplash(var6.getInviteSplash());
-      var5.setHeaderText(var6.getHeaderText());
-      var5.setHeaderColor(var6.getHeaderColor());
-      var5.setTitleText(var6.getTitleText());
-      var5.setTitleColor(var6.getTitleColor());
-      var5.setPresence(var6.getOnlineText(), var6.getMemberText());
-      var5.setGuildImage(var6.getThumbnailUrl(), var6.getThumbnailText(), var6.getThumbnailBackgroundColor());
-      var5.setSubtitle(var4);
-      var5.setSubtitleColor(var6.getSubtitleColor());
-      var5.setSubtitleIcon(var6.getChannelIcon());
-      var5.setOnButtonClickListener(new o(this, var1));
-      var5.setButtonText(var6.getAcceptLabelText());
-      var5.setButtonTextColor(var6.getAcceptLabelColor());
-      var5.setButtonBackgroundColor(var6.getAcceptLabelBackgroundColor());
-      var5.setBackgroundRectangleColor(var6.getBackgroundColor());
+      var6.setInviteSplash(var5.getInviteSplash());
+      var6.setHeaderText(var5.getHeaderText());
+      var6.setHeaderColor(var5.getHeaderColor());
+      var6.setTitleText(var5.getTitleText());
+      var6.setTitleColor(var5.getTitleColor());
+      var6.setPresence(var5.getOnlineText(), var5.getMemberText());
+      var6.setGuildImage(var5.getThumbnailUrl(), var5.getThumbnailText(), var5.getThumbnailBackgroundColor());
+      var6.setSubtitle(var4);
+      var6.setSubtitleColor(var5.getSubtitleColor());
+      var6.setSubtitleIcon(var5.getChannelIcon());
+      var6.setOnButtonClickListener(new o(this, var1));
+      var6.setButtonText(var5.getAcceptLabelText());
+      var6.setButtonTextColor(var5.getAcceptLabelColor());
+      var6.setButtonBackgroundColor(var5.getAcceptLabelBackgroundColor());
+      var6.setBackgroundRectangleColor(var5.getBackgroundColor());
    }
 }

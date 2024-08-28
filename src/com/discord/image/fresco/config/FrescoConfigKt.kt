@@ -34,10 +34,10 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    r.h(var0, "<this>");
-   var var2: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
-   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   var2 = var2.P(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .T(var1.newSmallDiskCache(var0))
+   val var1: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
+   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   val var3: Builder = var1.P(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .T(var2.newSmallDiskCache(var0))
       .M(new FrescoBitmapSupplier(var0))
       .Q(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().B().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final Companion $receiver$inlined;
@@ -53,8 +53,8 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
          }
       }).c()));
    val var5: b = x.n();
-   val var3: z = l.a();
-   val var4: ImagePipelineConfig = var2.R(new y(var5.n(new z(var3.b, var3.a * 2, var3.c)).m())).N(new DefaultCacheKeyFactory() {
+   val var6: z = l.a();
+   val var4: ImagePipelineConfig = var3.R(new y(var5.n(new z(var6.b, var6.a * 2, var6.c)).m())).N(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          r.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {

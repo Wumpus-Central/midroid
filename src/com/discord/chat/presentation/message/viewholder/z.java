@@ -5,6 +5,7 @@ import android.view.View.OnClickListener;
 import com.discord.chat.bridge.voiceinviteembed.VoiceInviteEmbed;
 import kotlin.jvm.functions.Function3;
 
+// $VF: synthetic class
 public final class z implements OnClickListener {
    public final Function3 j;
    public final VoiceInviteEmbed k;

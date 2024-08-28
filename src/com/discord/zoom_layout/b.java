@@ -3,6 +3,7 @@ package com.discord.zoom_layout;
 import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 
+// $VF: synthetic class
 public final class b implements OnLayoutChangeListener {
    public final ZoomLayoutFixed j;
 

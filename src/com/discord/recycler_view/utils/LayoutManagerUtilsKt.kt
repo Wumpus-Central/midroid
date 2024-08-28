@@ -31,30 +31,30 @@ internal fun LinearLayoutManager.isPositionVisible(position: Int): Boolean? {
       }
    }
 
-   var var6: Int = var0.findLastCompletelyVisibleItemPosition();
-   if (var6.intValue() != -1) {
+   var5 = var0.findLastCompletelyVisibleItemPosition();
+   if (var5.intValue() != -1) {
       var7 = true;
    } else {
       var7 = false;
    }
 
    if (!var7) {
-      var6 = null;
+      var5 = null;
    }
 
-   var5 = var6;
-   if (var6 == null) {
-      var5 = var0.findLastVisibleItemPosition();
-      if (var5.intValue() != -1) {
+   var var6: Int = var5;
+   if (var5 == null) {
+      var6 = var0.findLastVisibleItemPosition();
+      if (var6.intValue() != -1) {
          var7 = true;
       } else {
          var7 = false;
       }
 
       if (!var7) {
-         var5 = null;
+         var6 = null;
       }
    }
 
-   return if (var4 != null && var5 != null) new IntRange(var4, var5).contains(var1) else null;
+   return if (var4 != null && var6 != null) new IntRange(var4, var6).contains(var1) else null;
 }

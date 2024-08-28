@@ -16,7 +16,7 @@ internal object AnnotatedStructurableTextSerializer : KSerializer<AnnotatedStruc
 
    public open fun deserialize(decoder: Decoder): AnnotatedStructurableText {
       r.h(var1, "decoder");
-      return new AnnotatedStructurableText(var1.G(new f(ContentNodeSerializer.INSTANCE)) as java.util.List<? extends ContentNode>);
+      return new AnnotatedStructurableText(var1.G(new f(ContentNodeSerializer.INSTANCE)) as MutableList<ContentNode>);
    }
 
    public open fun serialize(encoder: Encoder, value: AnnotatedStructurableText) {

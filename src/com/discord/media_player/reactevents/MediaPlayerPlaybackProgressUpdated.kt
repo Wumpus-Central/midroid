@@ -139,21 +139,21 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
          r.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.b(var10);
-         val var5: Boolean = var11.p();
+         val var9: Boolean = var11.p();
          var var12: Any = null;
          var var2: Int;
-         var var6: Long;
-         var var8: Long;
-         if (var5) {
+         var var5: Long;
+         var var7: Long;
+         if (var9) {
             var12 = var11.n(var10, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null);
-            var8 = var11.f(var10, 1);
-            var6 = var11.f(var10, 2);
+            var7 = var11.f(var10, 1);
+            var5 = var11.f(var10, 2);
             var2 = 7;
          } else {
-            var8 = 0L;
+            var7 = 0L;
             var var3: Boolean = true;
             var2 = 0;
-            var6 = 0L;
+            var5 = 0L;
 
             while (var3) {
                val var4: Int = var11.o(var10);
@@ -164,10 +164,10 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
                            throw new n(var4);
                         }
 
-                        var6 = var11.f(var10, 2);
+                        var5 = var11.f(var10, 2);
                         var2 |= 4;
                      } else {
-                        var8 = var11.f(var10, 1);
+                        var7 = var11.f(var10, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -181,7 +181,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
          }
 
          var11.c(var10);
-         return new MediaPlayerPlaybackProgressUpdated(var2, var12 as MediaPlayerPlaybackSource, var8, var6, null);
+         return new MediaPlayerPlaybackProgressUpdated(var2, var12 as MediaPlayerPlaybackSource, var7, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackProgressUpdated) {

@@ -10,7 +10,6 @@ import android.widget.LinearLayout.LayoutParams
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.sticker.Sticker
-import com.discord.chat.bridge.sticker.StickerFormatType
 import com.discord.chat.databinding.WelcomeStickerViewBinding
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -76,7 +75,7 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
       r.h(var0, "$onWelcomeReplyClicked");
       r.h(var1, "$sticker");
       r.h(var2, "$message");
-      var0.invoke(var1, MessageId.box_impl(var2.getId_3Eiw7ao()));
+      var0.invoke(var1, MessageId.box-impl(var2.getId-3Eiw7ao()));
    }
 
    public fun setSticker(sticker: Sticker, message: Message, onWelcomeReplyClicked: (Sticker, MessageId) -> Unit) {
@@ -86,38 +85,5 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new a(var3, var1, var2), 1, null);
       this.binding.welcomeReplyText.setText(var2.getStickerLabel());
       this.bindSticker(var1);
-   }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[StickerFormatType.values().length];
-
-         try {
-            var0[StickerFormatType.PNG.ordinal()] = 1;
-         } catch (var5: NoSuchFieldError) {
-         }
-
-         try {
-            var0[StickerFormatType.APNG.ordinal()] = 2;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[StickerFormatType.LOTTIE.ordinal()] = 3;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[StickerFormatType.GIF.ordinal()] = 4;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
-      }
    }
 }

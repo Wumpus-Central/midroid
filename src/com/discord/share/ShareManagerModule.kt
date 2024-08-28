@@ -22,20 +22,20 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    public open fun initialize() {
       super.initialize();
-      val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      var2.register(var1, this.shareBroadcastReceiver);
+      val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      var1.register(var2, this.shareBroadcastReceiver);
    }
 
    public open fun invalidate() {
       super.invalidate();
 
       try {
-         val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var2, "reactApplicationContext");
-         var1.unregister(var2, this.shareBroadcastReceiver);
+         val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var1, "reactApplicationContext");
+         var2.unregister(var1, this.shareBroadcastReceiver);
       } catch (var3: Exception) {
       }
    }
@@ -105,10 +105,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
                var1 = var3;
             }
 
-            val var7: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-            val var11: ReactApplicationContext = this.getReactApplicationContext();
-            r.g(var11, "reactApplicationContext");
-            var9.startActivity(Intent.createChooser(var6, var1, var7.getPendingIntentSender(var11, var4)));
+            val var11: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+            val var7: ReactApplicationContext = this.getReactApplicationContext();
+            r.g(var7, "reactApplicationContext");
+            var9.startActivity(Intent.createChooser(var6, var1, var11.getPendingIntentSender(var7, var4)));
          }
       } else {
          val var10: StringBuilder = new StringBuilder();

@@ -10,7 +10,7 @@ public sealed class MessageAccessory protected constructor(messageId: MessageId,
 
    public open val itemId: Long
       public open get() {
-         val var3: java.lang.String = MessageId.toString_impl(this.getMessageId_3Eiw7ao());
+         val var3: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
          val var1: java.lang.String = this.accessoryDescription;
          val var2: StringBuilder = new StringBuilder();
          var2.append(var3);
@@ -26,9 +26,5 @@ public sealed class MessageAccessory protected constructor(messageId: MessageId,
       this.messageId = var1;
       this.accessoryDescription = var2;
       this.isForwardInner = var3;
-   }
-
-   open fun getMessageId_3Eiw7ao(): java.lang.String {
-      return this.messageId;
    }
 }

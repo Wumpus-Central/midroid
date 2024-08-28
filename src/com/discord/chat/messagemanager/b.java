@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.View.OnLongClickListener;
 import com.discord.chat.presentation.list.messagebundling.MessageBundleView;
 
+// $VF: synthetic class
 public final class b implements OnLongClickListener {
    public final MessageViewManagers.MessageBundleViewManager j;
    public final MessageBundleView k;

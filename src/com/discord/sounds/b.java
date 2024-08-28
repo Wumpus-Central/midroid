@@ -4,6 +4,7 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import kotlin.jvm.functions.Function1;
 
+// $VF: synthetic class
 public final class b implements OnPreparedListener {
    public final Function1 a;
 

@@ -22,8 +22,8 @@ public class SurveyIndicationViewHolder(surveyIndicationView: SurveyIndicationVi
    public fun bind(surveyAccessory: SurveyIndicationMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "surveyAccessory");
       this.surveyIndicationView
-         .setSurveyIndication_u7_MRrM(
-            var1.getMessageId_3Eiw7ao(),
+         .setSurveyIndication-u7_MRrM(
+            var1.getMessageId-3Eiw7ao(),
             var1.getSurveyIndication(),
             new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
                {
@@ -37,10 +37,10 @@ public class SurveyIndicationViewHolder(surveyIndicationView: SurveyIndicationVi
                   );
                }
 
-               public final void invoke_ntcYbpo(java.lang.String var1, LinkContentNode var2) {
+               public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
                   kotlin.jvm.internal.r.h(var1, "p0");
                   kotlin.jvm.internal.r.h(var2, "p1");
-                  (super.receiver as ChatEventHandler).onLinkClicked_ntcYbpo(var1, var2);
+                  (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
                }
             }
          );

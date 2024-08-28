@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import com.discord.chat.presentation.message.messagepart.GuildInviteMessageAccessory;
 
+// $VF: synthetic class
 public final class o implements OnClickListener {
    public final GuildInviteViewHolder j;
    public final GuildInviteMessageAccessory k;

@@ -108,7 +108,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
    public final var labels: List<String>
       public final get() {
-         return this.labels$delegate.getValue(this, $$delegatedProperties[8]) as java.util.List<java.lang.String>;
+         return this.labels$delegate.getValue(this, $$delegatedProperties[8]) as MutableList<java.lang.String>;
       }
 
       public final set(<set-?>) {
@@ -119,7 +119,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
    public final var accessibilityRoleDescriptions: List<String>
       public final get() {
-         return this.accessibilityRoleDescriptions$delegate.getValue(this, $$delegatedProperties[9]) as java.util.List<java.lang.String>;
+         return this.accessibilityRoleDescriptions$delegate.getValue(this, $$delegatedProperties[9]) as MutableList<java.lang.String>;
       }
 
       public final set(<set-?>) {
@@ -150,16 +150,16 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var6.selectedSegmentBg.setElevation(var4);
       var6.segmentContainer.setElevation(var4);
       var6.segmentContainer.setOutlineProvider(null);
-      val var5: Int = 0;
-      this.containerBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      val var7: Int = 0;
+      this.containerBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
       this.cornerRadiusPx$delegate = updateViewOnChange$default(this, (float)SizeUtilsKt.getDpToPx(4), false, 2, null);
-      this.selectedIndex$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.segmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      val var7: java.lang.Float = 0.0F;
-      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedIndex$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.segmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      val var5: java.lang.Float = 0.0F;
+      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
       this.labels$delegate = this.updateViewOnChange(h.i(), true);
       this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(h.i(), true);
    }
@@ -230,15 +230,15 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
       if (this.segmentWidth != var1) {
          this.segmentWidth = var1;
-         val var4: CardView = this.binding.selectedSegmentBg;
+         val var3: CardView = this.binding.selectedSegmentBg;
          r.g(this.binding.selectedSegmentBg, "binding.selectedSegmentBg");
-         val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
-         if (var3 == null) {
+         val var4: android.view.ViewGroup.LayoutParams = var3.getLayoutParams();
+         if (var4 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var3.width = var1;
-         var4.setLayoutParams(var3);
+         var4.width = var1;
+         var3.setLayoutParams(var4);
          ViewMeasureExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }

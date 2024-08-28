@@ -76,32 +76,4 @@ public object DeviceReducedMotion {
       REDUCE      @JvmStatic
       private DeviceReducedMotion.MotionPreference[] $VALUES = $values();
    }
-
-   // $VF: Class flags could not be determined
-   internal class WhenMappings {
-      @JvmStatic
-      public int[] $EnumSwitchMapping$0;
-
-      @JvmStatic
-      fun {
-         val var0: IntArray = new int[DeviceReducedMotion.MotionPreference.values().length];
-
-         try {
-            var0[DeviceReducedMotion.MotionPreference.REDUCE.ordinal()] = 1;
-         } catch (var4: NoSuchFieldError) {
-         }
-
-         try {
-            var0[DeviceReducedMotion.MotionPreference.NO_PREFERENCE.ordinal()] = 2;
-         } catch (var3: NoSuchFieldError) {
-         }
-
-         try {
-            var0[DeviceReducedMotion.MotionPreference.AUTO.ordinal()] = 3;
-         } catch (var2: NoSuchFieldError) {
-         }
-
-         $EnumSwitchMapping$0 = var0;
-      }
-   }
 }

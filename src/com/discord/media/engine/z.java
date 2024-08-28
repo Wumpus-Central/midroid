@@ -3,6 +3,7 @@ package com.discord.media.engine;
 import com.discord.native.engine.NativeConnection.OnVideoCallback;
 import kotlin.jvm.functions.Function4;
 
+// $VF: synthetic class
 public final class z implements OnVideoCallback {
    public final Function4 a;
 

@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.View.OnLongClickListener;
 import kotlin.jvm.functions.Function1;
 
+// $VF: synthetic class
 public final class o implements OnLongClickListener {
    public final Function1 j;
    public final String k;

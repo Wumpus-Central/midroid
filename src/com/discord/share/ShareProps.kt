@@ -116,20 +116,20 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
 
    public override fun toString(): String {
       val var3: java.lang.String = this.text;
-      val var5: java.util.List = this.attachments;
+      val var4: java.util.List = this.attachments;
       val var1: java.lang.String = this.targetChannelId;
-      val var4: java.lang.String = this.targetUserId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ShareProps(text=");
-      var2.append(var3);
-      var2.append(", attachments=");
-      var2.append(var5);
-      var2.append(", targetChannelId=");
-      var2.append(var1);
-      var2.append(", targetUserId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.targetUserId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ShareProps(text=");
+      var5.append(var3);
+      var5.append(", attachments=");
+      var5.append(var4);
+      var5.append(", targetChannelId=");
+      var5.append(var1);
+      var5.append(", targetUserId=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -199,18 +199,18 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.name;
+         val var3: java.lang.String = this.name;
          val var2: java.lang.String = this.uri;
-         val var3: java.lang.String = this.mimeType;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Attachment(name=");
-         var4.append(var1);
-         var4.append(", uri=");
-         var4.append(var2);
-         var4.append(", mimeType=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var4: java.lang.String = this.mimeType;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Attachment(name=");
+         var1.append(var3);
+         var1.append(", uri=");
+         var1.append(var2);
+         var1.append(", mimeType=");
+         var1.append(var4);
+         var1.append(")");
+         return var1.toString();
       }
    }
 

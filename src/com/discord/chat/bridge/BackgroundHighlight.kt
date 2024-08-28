@@ -178,7 +178,7 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          }
 
          var7.c(var6);
-         return new BackgroundHighlight(var2, var5 as Integer, var9 as Integer, null);
+         return new BackgroundHighlight(var2, var5 as Int, var9 as Int, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundHighlight) {

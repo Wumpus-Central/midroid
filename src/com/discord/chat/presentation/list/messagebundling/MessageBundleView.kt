@@ -195,13 +195,13 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             }
 
             var31.setShowThreadSpine(var15);
-            val var32: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
-            val var28: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
-            if (var28 != null) {
-               var32.configure(var28, new d(var3));
+            val var28: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
+            val var32: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
+            if (var32 != null) {
+               var28.configure(var32, new d(var3));
             }
 
-            r.g(var32, "setBundle$lambda$10");
+            r.g(var28, "setBundle$lambda$10");
             var var13: Boolean;
             if (var1.getMessageFrame() != null) {
                var13 = 1;
@@ -215,7 +215,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var13 = 8;
             }
 
-            var32.setVisibility(var13);
+            var28.setVisibility(var13);
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var2, 1, null);
             NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this, false, var3, 1, null);
             this.adapter.setItems(h.X(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1<MessageId, Unit>(var4) {
@@ -226,9 +226,9 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                   this.$onTapReply = var1;
                }
 
-               public final void invoke_1xi1bu0(java.lang.String var1) {
+               public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
                   r.h(var1, "it");
-                  this.$onTapReply.invoke(MessageId.box_impl(var1));
+                  this.$onTapReply.invoke(MessageId.box-impl(var1));
                }
             }, var5);
             return;
@@ -413,24 +413,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var3: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var1: java.util.List = this.rows;
+         val var5: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var4: java.util.List = this.rows;
          val var6: java.lang.Float = this.truncationThreshold;
-         val var4: java.util.List = this.referenceMessageRows;
+         val var3: java.util.List = this.referenceMessageRows;
          val var2: java.lang.String = this.viewMoreText;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("MessageBundle(messageFrame=");
-         var5.append(var3);
-         var5.append(", rows=");
-         var5.append(var1);
-         var5.append(", truncationThreshold=");
-         var5.append(var6);
-         var5.append(", referenceMessageRows=");
-         var5.append(var4);
-         var5.append(", viewMoreText=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("MessageBundle(messageFrame=");
+         var1.append(var5);
+         var1.append(", rows=");
+         var1.append(var4);
+         var1.append(", truncationThreshold=");
+         var1.append(var6);
+         var1.append(", referenceMessageRows=");
+         var1.append(var3);
+         var1.append(", viewMoreText=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
 
       public object `$serializer` : f0<MessageBundleView.MessageBundle> {
@@ -473,12 +473,12 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             var var13: Any;
             var var15: Any;
             if (var5) {
-               var7 = var12.n(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, null);
+               var13 = var12.n(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, null);
                var15 = MessageRow.$serializer.INSTANCE;
                var9 = var12.y(var11, 1, new xk.f(MessageRow.$serializer.INSTANCE), null);
-               var13 = var12.n(var11, 2, e0.a, null);
+               var8 = var12.n(var11, 2, e0.a, null);
                var15 = var12.y(var11, 3, new xk.f((KSerializer)var15), null);
-               var8 = var12.n(var11, 4, a2.a, null);
+               var7 = var12.n(var11, 4, a2.a, null);
                var2 = 31;
             } else {
                var var3: Boolean = true;
@@ -522,18 +522,18 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                   }
                }
 
-               var13 = var8;
-               var8 = var13;
+               var13 = var7;
+               var7 = var13;
             }
 
             var12.c(var11);
             return new MessageBundleView.MessageBundle(
                var2,
-               var7 as MessageFrameFeedHeaderView.MessageBundleHeader,
+               var13 as MessageFrameFeedHeaderView.MessageBundleHeader,
                var9 as java.util.List,
-               var13 as java.lang.Float,
+               var8 as java.lang.Float,
                var15 as java.util.List,
-               var8 as java.lang.String,
+               var7 as java.lang.String,
                null
             );
          }
