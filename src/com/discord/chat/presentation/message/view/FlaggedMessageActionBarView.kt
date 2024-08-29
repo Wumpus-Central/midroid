@@ -72,10 +72,10 @@ public class FlaggedMessageActionBarView  public constructor(context: Context, a
 
       this.binding.actionsButton.setText(var4);
       var5.setOnClickButtonListener(var2);
-      val var7: java.lang.String = var1.getFeedbackText();
-      val var8: DCDButton = this.binding.feedbackButton;
-      this.binding.feedbackButton.setText(var7);
-      var8.setOnClickButtonListener(var3);
+      val var8: java.lang.String = var1.getFeedbackText();
+      val var7: DCDButton = this.binding.feedbackButton;
+      this.binding.feedbackButton.setText(var8);
+      var7.setOnClickButtonListener(var3);
    }
 
    public open fun spacingPxOverride(): Int {

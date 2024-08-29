@@ -130,10 +130,10 @@ public data class SeparatorRow(changeType: ChangeType,
 
    public override fun hashCode(): Int {
       val var7: Int = this.changeType.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
-      val var5: Int = this.text.hashCode();
-      val var8: Int = this.id.hashCode();
-      val var6: Int = Integer.hashCode(this.color);
+      val var5: Int = Integer.hashCode(this.index);
+      val var6: Int = this.text.hashCode();
+      val var4: Int = this.id.hashCode();
+      val var8: Int = Integer.hashCode(this.color);
       var var3: Int = 0;
       val var1: Int;
       if (this.scrollTo == null) {
@@ -153,37 +153,37 @@ public data class SeparatorRow(changeType: ChangeType,
          var3 = this.summary.hashCode();
       }
 
-      return ((((((var7 * 31 + var4) * 31 + var5) * 31 + var8) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var7 * 31 + var5) * 31 + var6) * 31 + var4) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var3: ChangeType = this.changeType;
+      val var8: ChangeType = this.changeType;
       val var1: Int = this.index;
-      val var7: java.lang.String = this.text;
-      val var9: java.lang.String = this.id;
+      val var4: java.lang.String = this.text;
+      val var5: java.lang.String = this.id;
       val var2: Int = this.color;
       val var6: java.lang.Boolean = this.scrollTo;
-      val var8: java.lang.Boolean = this.isBeforeContent;
-      val var4: Summary = this.summary;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SeparatorRow(changeType=");
-      var5.append(var3);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", text=");
-      var5.append(var7);
-      var5.append(", id=");
-      var5.append(var9);
-      var5.append(", color=");
-      var5.append(var2);
-      var5.append(", scrollTo=");
-      var5.append(var6);
-      var5.append(", isBeforeContent=");
-      var5.append(var8);
-      var5.append(", summary=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.Boolean = this.isBeforeContent;
+      val var7: Summary = this.summary;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("SeparatorRow(changeType=");
+      var9.append(var8);
+      var9.append(", index=");
+      var9.append(var1);
+      var9.append(", text=");
+      var9.append(var4);
+      var9.append(", id=");
+      var9.append(var5);
+      var9.append(", color=");
+      var9.append(var2);
+      var9.append(", scrollTo=");
+      var9.append(var6);
+      var9.append(", isBeforeContent=");
+      var9.append(var3);
+      var9.append(", summary=");
+      var9.append(var7);
+      var9.append(")");
+      return var9.toString();
    }
 
    public object `$serializer` : g0 {
@@ -210,8 +210,8 @@ public data class SeparatorRow(changeType: ChangeType,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: h = h.a;
-         return new KSerializer[]{ChangeType.Serializer.INSTANCE, n0.a, b2.a, b2.a, n0.a, a.u(h.a), a.u(var3), a.u(Summary.$serializer.INSTANCE)};
+         val var1: h = h.a;
+         return new KSerializer[]{ChangeType.Serializer.INSTANCE, n0.a, b2.a, b2.a, n0.a, a.u(h.a), a.u(var1), a.u(Summary.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): SeparatorRow {
@@ -220,96 +220,95 @@ public data class SeparatorRow(changeType: ChangeType,
          val var17: c = var1.b(var16);
          val var8: Boolean = var17.p();
          var var6: Byte = 7;
-         var var2: Int;
          var var3: Int;
          var var4: Int;
+         val var5: Int;
+         var var9: java.lang.Boolean;
+         var var10: Any;
          var var11: Any;
          var var12: Any;
          val var13: java.lang.Boolean;
-         val var14: Any;
-         val var15: java.lang.Boolean;
          val var19: Summary;
          if (var8) {
-            var14 = var17.y(var16, 0, ChangeType.Serializer.INSTANCE, null) as ChangeType;
-            var3 = var17.i(var16, 1);
-            var12 = var17.m(var16, 2);
-            var11 = var17.m(var16, 3);
-            var2 = var17.i(var16, 4);
+            var10 = var17.y(var16, 0, ChangeType.Serializer.INSTANCE, null) as ChangeType;
+            var4 = var17.i(var16, 1);
+            var11 = var17.m(var16, 2);
+            var12 = var17.m(var16, 3);
+            val var2: Int = var17.i(var16, 4);
             val var18: h = h.a;
-            val var10: java.lang.Boolean = var17.n(var16, 5, h.a, null) as java.lang.Boolean;
-            val var9: java.lang.Boolean = var17.n(var16, 6, var18, null) as java.lang.Boolean;
+            var13 = var17.n(var16, 5, h.a, null) as java.lang.Boolean;
+            var9 = var17.n(var16, 6, var18, null) as java.lang.Boolean;
             var19 = var17.n(var16, 7, Summary.$serializer.INSTANCE, null) as Summary;
-            var4 = 255;
-            var15 = var10;
-            var13 = var9;
+            var3 = 255;
+            var5 = var2;
          } else {
-            var var5: Boolean = true;
+            var var24: Boolean = true;
             var4 = 0;
-            var2 = 0;
+            var var21: Int = 0;
             var var28: Summary = null;
             var12 = null;
-            var var25: Any = null;
-            var var24: Any = null;
+            var10 = null;
+            var9 = null;
             var var20: Any = null;
             var11 = null;
             var3 = 0;
 
-            while (var5) {
+            while (var24) {
                val var7: Int = var17.o(var16);
                switch (var7) {
                   case -1:
-                     var5 = false;
+                     var24 = false;
                      break;
                   case 0:
-                     var25 = var17.y(var16, 0, ChangeType.Serializer.INSTANCE, var25) as ChangeType;
-                     var2 |= 1;
+                     var10 = var17.y(var16, 0, ChangeType.Serializer.INSTANCE, var10) as ChangeType;
+                     var21 |= 1;
                      var6 = 7;
                      break;
                   case 1:
                      var3 = var17.i(var16, 1);
-                     var2 |= 2;
+                     var21 |= 2;
                      break;
                   case 2:
-                     var24 = var17.m(var16, 2);
-                     var2 |= 4;
+                     var9 = var17.m(var16, 2);
+                     var21 |= 4;
                      break;
                   case 3:
                      var20 = var17.m(var16, 3);
-                     var2 |= 8;
+                     var21 |= 8;
                      break;
                   case 4:
                      var4 = var17.i(var16, 4);
-                     var2 |= 16;
+                     var21 |= 16;
                      break;
                   case 5:
                      var11 = var17.n(var16, 5, h.a, var11) as java.lang.Boolean;
-                     var2 |= 32;
+                     var21 |= 32;
                      break;
                   case 6:
                      var12 = var17.n(var16, 6, h.a, var12) as java.lang.Boolean;
-                     var2 |= 64;
+                     var21 |= 64;
                      break;
                   case 7:
                      var28 = var17.n(var16, var6, Summary.$serializer.INSTANCE, var28) as Summary;
-                     var2 |= 128;
+                     var21 |= 128;
                      break;
                   default:
                      throw new n(var7);
                }
             }
 
-            var4 = var2;
             var19 = var28;
-            var13 = (java.lang.Boolean)var12;
-            var15 = (java.lang.Boolean)var11;
-            var2 = var4;
-            var11 = var20;
-            var12 = var24;
-            var14 = var25;
+            var9 = (java.lang.Boolean)var12;
+            var13 = (java.lang.Boolean)var11;
+            var5 = var4;
+            var12 = var20;
+            var11 = var9;
+            var4 = var3;
+            var3 = var21;
          }
 
          var17.c(var16);
-         return new SeparatorRow(var4, (ChangeType)var14, var3, (java.lang.String)var12, (java.lang.String)var11, var2, var15, var13, var19, null);
+         return new SeparatorRow(var3, (ChangeType)var10, var4, (java.lang.String)var11, (java.lang.String)var12, var5, var13, var9, var19, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SeparatorRow) {

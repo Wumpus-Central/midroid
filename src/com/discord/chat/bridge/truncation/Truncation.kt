@@ -151,39 +151,40 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: n0 = n0.a;
-         val var1: h = h.a;
-         return new KSerializer[]{n0.a, h.a, a.u(b2.a), a.u(var2), a.u(var1)};
+         val var1: n0 = n0.a;
+         val var2: h = h.a;
+         return new KSerializer[]{n0.a, h.a, a.u(b2.a), a.u(var1), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): Truncation {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.b(var10);
          var var2: Int;
          var var3: Int;
          var var4: Int;
-         var var7: Int;
          var var8: java.lang.String;
-         var var11: Any;
-         if (var10.p()) {
-            var4 = var10.i(var9, 0);
-            var2 = var10.C(var9, 1);
-            var8 = var10.n(var9, 2, b2.a, null) as java.lang.String;
-            var7 = var10.n(var9, 3, n0.a, null) as Int;
-            var11 = var10.n(var9, 4, h.a, null) as java.lang.Boolean;
+         val var9: Any;
+         val var12: Int;
+         if (var11.p()) {
+            var4 = var11.i(var10, 0);
+            var2 = var11.C(var10, 1);
+            var8 = var11.n(var10, 2, b2.a, null) as java.lang.String;
+            var12 = var11.n(var10, 3, n0.a, null) as Int;
+            val var7: java.lang.Boolean = var11.n(var10, 4, h.a, null) as java.lang.Boolean;
             var3 = 31;
+            var9 = var7;
          } else {
             var var5: Boolean = true;
             var4 = 0;
             var2 = 0;
             var8 = null;
-            var7 = null;
-            var11 = null;
+            var var17: Int = null;
+            var var13: Any = null;
             var3 = 0;
 
             while (var5) {
-               val var6: Int = var10.o(var9);
+               val var6: Int = var11.o(var10);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -193,22 +194,22 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
                                  throw new n(var6);
                               }
 
-                              var11 = var10.n(var9, 4, h.a, var11) as java.lang.Boolean;
+                              var13 = var11.n(var10, 4, h.a, var13) as java.lang.Boolean;
                               var2 |= 16;
                            } else {
-                              var7 = var10.n(var9, 3, n0.a, var7) as Int;
+                              var17 = var11.n(var10, 3, n0.a, var17) as Int;
                               var2 |= 8;
                            }
                         } else {
-                           var8 = var10.n(var9, 2, b2.a, var8) as java.lang.String;
+                           var8 = var11.n(var10, 2, b2.a, var8) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var3 = var10.C(var9, 1);
+                        var3 = var11.C(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var4 = var10.i(var9, 0);
+                     var4 = var11.i(var10, 0);
                      var2 |= 1;
                   }
                } else {
@@ -217,11 +218,13 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
             }
 
             var3 = var2;
+            var9 = var13;
+            var12 = var17;
             var2 = var3;
          }
 
-         var10.c(var9);
-         return new Truncation(var3, var4, (boolean)var2, var8, var7, (java.lang.Boolean)var11, null);
+         var11.c(var10);
+         return new Truncation(var3, var4, (boolean)var2, var8, var12, (java.lang.Boolean)var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Truncation) {

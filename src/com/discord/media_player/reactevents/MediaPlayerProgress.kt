@@ -71,16 +71,16 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
    }
 
    public override fun toString(): String {
-      val var5: Double = this.id;
-      val var3: Double = this.time;
-      val var1: Double = this.duration;
+      val var1: Double = this.id;
+      val var5: Double = this.time;
+      val var3: Double = this.duration;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MediaPlayerProgress(id=");
-      var7.append(var5);
-      var7.append(", time=");
-      var7.append(var3);
-      var7.append(", duration=");
       var7.append(var1);
+      var7.append(", time=");
+      var7.append(var5);
+      var7.append(", duration=");
+      var7.append(var3);
       var7.append(")");
       return var7.toString();
    }
@@ -109,54 +109,51 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
 
       public open fun deserialize(decoder: Decoder): MediaPlayerProgress {
          q.h(var1, "decoder");
-         val var13: SerialDescriptor = this.getDescriptor();
-         val var14: c = var1.b(var13);
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
          var var2: Double;
          var var4: Double;
          var var6: Double;
-         var var10: Int;
-         if (var14.p()) {
-            var4 = var14.F(var13, 0);
-            var6 = var14.F(var13, 1);
-            var2 = var14.F(var13, 2);
-            var10 = 7;
+         var var8: Int;
+         if (var12.p()) {
+            var4 = var12.F(var11, 0);
+            var2 = var12.F(var11, 1);
+            var6 = var12.F(var11, 2);
+            var8 = 7;
          } else {
             var6 = 0.0;
-            var var11: Boolean = true;
-            var10 = 0;
+            var var9: Boolean = true;
+            var8 = 0;
             var4 = 0.0;
             var2 = 0.0;
 
-            while (var11) {
-               val var12: Int = var14.o(var13);
-               if (var12 != -1) {
-                  if (var12 != 0) {
-                     if (var12 != 1) {
-                        if (var12 != 2) {
-                           throw new n(var12);
+            while (var9) {
+               val var10: Int = var12.o(var11);
+               if (var10 != -1) {
+                  if (var10 != 0) {
+                     if (var10 != 1) {
+                        if (var10 != 2) {
+                           throw new n(var10);
                         }
 
-                        var6 = var14.F(var13, 2);
-                        var10 |= 4;
+                        var6 = var12.F(var11, 2);
+                        var8 |= 4;
                      } else {
-                        var2 = var14.F(var13, 1);
-                        var10 |= 2;
+                        var2 = var12.F(var11, 1);
+                        var8 |= 2;
                      }
                   } else {
-                     var4 = var14.F(var13, 0);
-                     var10 |= 1;
+                     var4 = var12.F(var11, 0);
+                     var8 |= 1;
                   }
                } else {
-                  var11 = false;
+                  var9 = false;
                }
             }
-
-            var2 = var6;
-            var6 = var2;
          }
 
-         var14.c(var13);
-         return new MediaPlayerProgress(var10, var4, var6, var2, null);
+         var12.c(var11);
+         return new MediaPlayerProgress(var8, var4, var2, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerProgress) {

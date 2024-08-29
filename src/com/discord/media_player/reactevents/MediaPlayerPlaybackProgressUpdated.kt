@@ -87,18 +87,18 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
    }
 
    public override fun toString(): String {
-      val var6: MediaPlayerPlaybackSource = this.source;
-      val var1: Long = this.time;
-      val var3: Long = this.duration;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MediaPlayerPlaybackProgressUpdated(source=");
-      var5.append(var6);
-      var5.append(", time=");
-      var5.append(var1);
-      var5.append(", duration=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var5: MediaPlayerPlaybackSource = this.source;
+      val var3: Long = this.time;
+      val var1: Long = this.duration;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MediaPlayerPlaybackProgressUpdated(source=");
+      var6.append(var5);
+      var6.append(", time=");
+      var6.append(var3);
+      var6.append(", duration=");
+      var6.append(var1);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {

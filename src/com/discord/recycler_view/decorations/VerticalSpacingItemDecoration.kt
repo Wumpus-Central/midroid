@@ -70,8 +70,8 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
       q.h(var4, "state");
       val var10: ViewHolder = var3.getChildViewHolder(var2);
       q.e(var10);
-      val var7: Boolean = this.isOrWasAtLastItemPosition(var10);
-      val var6: Boolean = this.isOrWasAtFirstItemPosition(var10);
+      val var6: Boolean = this.isOrWasAtLastItemPosition(var10);
+      val var7: Boolean = this.isOrWasAtFirstItemPosition(var10);
       val var8: VerticalSpacingItemDecoration.SpacingProviderView;
       if (var2 is VerticalSpacingItemDecoration.SpacingProviderView) {
          var8 = var2 as VerticalSpacingItemDecoration.SpacingProviderView;
@@ -92,12 +92,12 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
          var5 = this.spacingPx;
       }
 
-      if (var7) {
+      if (var6) {
          var5 = this.endItemSpacingPx;
       }
 
       var1.bottom = var5;
-      if (var6) {
+      if (var7) {
          var1.top = this.firstItemSpacingPx;
       }
    }

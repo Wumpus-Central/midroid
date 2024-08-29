@@ -25,15 +25,15 @@ public final class DcdButtonBinding implements ViewBinding {
 
    public static DcdButtonBinding bind(View var0) {
       int var1 = R.id.button;
-      MaterialButton var3 = (MaterialButton)a.a(var0, var1);
-      if (var3 != null) {
+      MaterialButton var4 = (MaterialButton)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.loading_dots;
-         ProgressDots var2 = (ProgressDots)a.a(var0, var1);
-         if (var2 != null) {
+         ProgressDots var3 = (ProgressDots)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.progress;
-            ProgressBar var4 = (ProgressBar)a.a(var0, var1);
-            if (var4 != null) {
-               return new DcdButtonBinding(var0, var3, var2, var4);
+            ProgressBar var2 = (ProgressBar)a.a(var0, var1);
+            if (var2 != null) {
+               return new DcdButtonBinding(var0, var4, var3, var2);
             }
          }
       }

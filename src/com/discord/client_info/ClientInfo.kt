@@ -6,10 +6,10 @@ import kotlin.jvm.internal.q
 import lj.l
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "2ba6df29-de2d-4e24-af9c-1e91127407f5"
+   public const val PROGUARD_UUID: String = "489a2f44-a4f0-4566-a434-b9d25f6fb1ac"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@246.5.0-2+246205"
+   public const val SENTRY_RELEASE: String = "discord_android@246.8.0-2+246208"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String

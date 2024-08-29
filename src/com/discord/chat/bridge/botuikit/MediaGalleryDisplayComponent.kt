@@ -71,17 +71,17 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var2: java.util.List = this.items;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MediaGalleryDisplayComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var4);
-      var3.append(", items=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.id;
+      val var3: java.util.List = this.items;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MediaGalleryDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var2);
+      var4.append(", items=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -119,16 +119,16 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
             val var2: Int = var8.i(var7, 0);
             var6 = var8.m(var7, 1);
             var10 = var8.y(var7, 2, var9[2], null) as java.util.List;
-            var4 = 7;
-            var3 = var2;
+            var3 = 7;
+            var4 = var2;
          } else {
-            var var12: Boolean = true;
+            var var13: Boolean = true;
             var3 = 0;
             var6 = null;
             var10 = null;
             var var11: Int = 0;
 
-            while (var12) {
+            while (var13) {
                val var5: Int = var8.o(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -148,15 +148,16 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                      var11 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var13 = false;
                }
             }
 
-            var4 = var11;
+            var4 = var3;
+            var3 = var11;
          }
 
          var8.c(var7);
-         return new MediaGalleryDisplayComponent(var4, var3, var6, var10, null);
+         return new MediaGalleryDisplayComponent(var3, var4, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaGalleryDisplayComponent) {

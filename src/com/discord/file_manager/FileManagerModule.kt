@@ -3166,10 +3166,10 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
       var var1: Any = this.storageDirs.get("documents");
       q.e(var1);
-      val var2: Pair = w.a("DocumentsDirPath", var1);
-      var1 = this.storageDirs.get("cache");
-      q.e(var1);
-      return r.m(new Pair[]{var2, w.a("CacheDirPath", var1)});
+      var1 = w.a("DocumentsDirPath", var1);
+      val var2: Any = this.storageDirs.get("cache");
+      q.e(var2);
+      return r.m(new Pair[]{(Pair)var1, w.a("CacheDirPath", var2)});
    }
 
    @SuppressLint(["DiscouragedApi"])

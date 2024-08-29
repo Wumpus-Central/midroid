@@ -250,8 +250,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       }
 
       val var9: Function1 = this.emitReactEvent;
-      val var7: Boolean = var1.isAtBottom();
-      val var6: Boolean = var1.isDragging();
+      val var6: Boolean = var1.isAtBottom();
+      val var7: Boolean = var1.isDragging();
       val var8: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
@@ -262,7 +262,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var7, var3, var4, var6, var8, var5, var1.isFirstMessageVisible(), var1.getFirstVisibleMessageIndex(), var1.getLastVisibleMessageIndex(), var2
+            var6, var3, var4, var7, var8, var5, var1.isFirstMessageVisible(), var1.getFirstVisibleMessageIndex(), var1.getLastVisibleMessageIndex(), var2
          )
       );
    }

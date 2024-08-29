@@ -110,11 +110,11 @@ public data class MessageReaction(count: Int,
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.count);
-      val var6: Int = java.lang.Boolean.hashCode(this.me);
+      val var5: Int = Integer.hashCode(this.count);
+      val var2: Int = java.lang.Boolean.hashCode(this.me);
       val var4: Int = java.lang.Boolean.hashCode(this.isMeBurst);
-      val var3: Int = this.emoji.hashCode();
-      val var5: Int = Integer.hashCode(this.burstCount);
+      val var6: Int = this.emoji.hashCode();
+      val var3: Int = Integer.hashCode(this.burstCount);
       val var1: Int;
       if (this.themedBurstColors == null) {
          var1 = 0;
@@ -122,7 +122,7 @@ public data class MessageReaction(count: Int,
          var1 = this.themedBurstColors.hashCode();
       }
 
-      return ((((var2 * 31 + var6) * 31 + var4) * 31 + var3) * 31 + var5) * 31 + var1;
+      return ((((var5 * 31 + var2) * 31 + var4) * 31 + var6) * 31 + var3) * 31 + var1;
    }
 
    fun isBurstReaction(): Boolean {
@@ -133,24 +133,24 @@ public data class MessageReaction(count: Int,
       val var1: Int = this.count;
       val var3: Boolean = this.me;
       val var4: Boolean = this.isMeBurst;
-      val var5: MessageReactionEmoji = this.emoji;
+      val var7: MessageReactionEmoji = this.emoji;
       val var2: Int = this.burstCount;
-      val var7: ThemedBurstReactionColorPalette = this.themedBurstColors;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageReaction(count=");
-      var6.append(var1);
-      var6.append(", me=");
-      var6.append(var3);
-      var6.append(", isMeBurst=");
-      var6.append(var4);
-      var6.append(", emoji=");
-      var6.append(var5);
-      var6.append(", burstCount=");
-      var6.append(var2);
-      var6.append(", themedBurstColors=");
-      var6.append(var7);
-      var6.append(")");
-      return var6.toString();
+      val var6: ThemedBurstReactionColorPalette = this.themedBurstColors;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MessageReaction(count=");
+      var5.append(var1);
+      var5.append(", me=");
+      var5.append(var3);
+      var5.append(", isMeBurst=");
+      var5.append(var4);
+      var5.append(", emoji=");
+      var5.append(var7);
+      var5.append(", burstCount=");
+      var5.append(var2);
+      var5.append(", themedBurstColors=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -186,48 +186,48 @@ public data class MessageReaction(count: Int,
          q.h(var1, "decoder");
          val var12: SerialDescriptor = this.getDescriptor();
          val var13: c = var1.b(var12);
-         var var3: Int;
          var var4: Int;
          var var5: Int;
          var var6: Int;
          var var7: Int;
          val var8: Int;
          val var10: MessageReactionEmoji;
-         val var11: ThemedBurstReactionColorPalette;
+         val var14: ThemedBurstReactionColorPalette;
+         var var17: Int;
          if (var13.p()) {
             var7 = var13.i(var12, 0);
-            var6 = var13.C(var12, 1);
-            var4 = var13.C(var12, 2);
+            var4 = var13.C(var12, 1);
+            var6 = var13.C(var12, 2);
             var10 = var13.y(var12, 3, MessageReactionEmoji.$serializer.INSTANCE, null) as MessageReactionEmoji;
-            var3 = var13.i(var12, 4);
-            val var14: ThemedBurstReactionColorPalette = var13.n(var12, 5, ThemedBurstReactionColorPalette.$serializer.INSTANCE, null) as ThemedBurstReactionColorPalette;
+            var17 = var13.i(var12, 4);
+            var14 = var13.n(var12, 5, ThemedBurstReactionColorPalette.$serializer.INSTANCE, null) as ThemedBurstReactionColorPalette;
             val var2: Byte = var13.C(var12, 6);
             var5 = 127;
-            var11 = var14;
-            var8 = var2;
+            var8 = var17;
+            var17 = var2;
          } else {
-            var var20: Boolean = true;
+            var var23: Boolean = true;
             var7 = 0;
             var5 = 0;
             var4 = 0;
-            var3 = 0;
+            var17 = 0;
             var var16: Int = 0;
             var var15: MessageReactionEmoji = null;
-            var var21: ThemedBurstReactionColorPalette = null;
+            var var24: ThemedBurstReactionColorPalette = null;
             var6 = 0;
 
-            while (var20) {
+            while (var23) {
                val var9: Int = var13.o(var12);
                switch (var9) {
                   case -1:
-                     var20 = false;
+                     var23 = false;
                      break;
                   case 0:
                      var7 = var13.i(var12, 0);
                      var16 |= 1;
                      break;
                   case 1:
-                     var3 = var13.C(var12, 1);
+                     var17 = var13.C(var12, 1);
                      var16 |= 2;
                      break;
                   case 2:
@@ -243,7 +243,7 @@ public data class MessageReaction(count: Int,
                      var16 |= 16;
                      break;
                   case 5:
-                     var21 = var13.n(var12, 5, ThemedBurstReactionColorPalette.$serializer.INSTANCE, var21) as ThemedBurstReactionColorPalette;
+                     var24 = var13.n(var12, 5, ThemedBurstReactionColorPalette.$serializer.INSTANCE, var24) as ThemedBurstReactionColorPalette;
                      var16 |= 32;
                      break;
                   case 6:
@@ -255,16 +255,17 @@ public data class MessageReaction(count: Int,
                }
             }
 
-            var8 = var6;
-            var6 = var3;
-            var11 = var21;
-            var3 = var5;
+            var8 = var5;
             var10 = var15;
+            var17 = var6;
+            var14 = var24;
+            var6 = var4;
+            var4 = var17;
             var5 = var16;
          }
 
          var13.c(var12);
-         return new MessageReaction(var5, var7, (boolean)var6, (boolean)var4, var10, var3, var11, (boolean)var8, null);
+         return new MessageReaction(var5, var7, (boolean)var4, (boolean)var6, var10, var8, var14, (boolean)var17, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageReaction) {

@@ -130,11 +130,11 @@ public class ChatView(context: Context) : ReactViewGroup {
 
          var8.scrollToPosition(var1, var2, var3, var4);
       } else {
-         val var5: Thread = Thread.currentThread();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Expected to be on android main thread. Current: ");
-         var7.append(var5);
-         throw new IllegalStateException(var7.toString().toString());
+         val var7: Thread = Thread.currentThread();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Expected to be on android main thread. Current: ");
+         var5.append(var7);
+         throw new IllegalStateException(var5.toString().toString());
       }
    }
 
@@ -142,11 +142,11 @@ public class ChatView(context: Context) : ReactViewGroup {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setAreChatAnimationsEnabled$cp(var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

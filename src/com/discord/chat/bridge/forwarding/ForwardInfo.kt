@@ -119,10 +119,10 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          var var4: Int;
          var var9: ForwardFooterInfo;
          if (var8.p()) {
-            var4 = var8.i(var7, 0);
+            var3 = var8.i(var7, 0);
             var9 = var8.n(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, null) as ForwardFooterInfo;
             var2 = var8.C(var7, 2);
-            var3 = 7;
+            var4 = 7;
          } else {
             var var5: Boolean = true;
             var4 = 0;
@@ -154,12 +154,13 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                }
             }
 
-            var3 = var2;
             var2 = var3;
+            var3 = var4;
+            var4 = var2;
          }
 
          var8.c(var7);
-         return new ForwardInfo(var3, var4, var9, (boolean)var2, null);
+         return new ForwardInfo(var4, var3, var9, (boolean)var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardInfo) {

@@ -156,6 +156,11 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
       var1.setAnimated(var2);
    }
 
+   @ReactProp(name = "shouldCalculateMessageVisibilityPercentages")
+   public open fun setShouldCalculateMessageVisibilityPercentages(view: ChatView, value: Boolean) {
+      q.h(var1, "view");
+   }
+
    public companion object {
       private const val COMMAND_SCROLL_INTO_VIEW: String
       private const val COMMAND_SCROLL_TO: String

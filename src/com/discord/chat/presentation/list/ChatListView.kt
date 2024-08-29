@@ -82,7 +82,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
 
       q.e(var7);
       this.changeItemAnimators = var7;
-      val var5: Function0 = new Function0(this) {
+      val var9: Function0 = new Function0(this) {
          final ChatListView this$0;
 
          {
@@ -97,8 +97,8 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             var2.setItemAnimator(var1);
          }
       };
-      this.enableItemAnimations = var5;
-      val var9: Function0 = new Function0(this) {
+      this.enableItemAnimations = var9;
+      val var5: Function0 = new Function0(this) {
          final ChatListView this$0;
 
          {
@@ -110,7 +110,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             this.this$0.setItemAnimator(null);
          }
       };
-      this.disableItemAnimations = var9;
+      this.disableItemAnimations = var5;
       val var11: ChannelChatListAdapter = new ChannelChatListAdapter(new Function0(this) {
          final ChatListView this$0;
 
@@ -122,7 +122,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          public final void invoke() {
             ChatListView.access$measureAndLayout(this.this$0, false);
          }
-      }, var5, var9, new Function0(this) {
+      }, var9, var5, new Function0(this) {
          final ChatListView this$0;
 
          {
@@ -226,12 +226,12 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       var var4: Pair = w.a(RegularMessageDelegate.class, 50);
       val var3: Int = 25;
 
-      for (Entry var7 : r.l(new Pair[]{var4, w.a(SystemMessageDelegate.class, var3), w.a(SeparatorDelegate.class, var3)}).entrySet()) {
-         val var5: Class = var7.getKey() as Class;
-         val var1: Int = (var7.getValue() as java.lang.Number).intValue();
-         var4 = this.chatListAdapter.getDelegateViewTypes().get(var5);
+      for (Entry var5 : r.l(new Pair[]{var4, w.a(SystemMessageDelegate.class, var3), w.a(SeparatorDelegate.class, var3)}).entrySet()) {
+         val var7: Class = var5.getKey() as Class;
+         val var2: Int = (var5.getValue() as java.lang.Number).intValue();
+         var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
          q.e(var4);
-         this.getRecycledViewPool().setMaxRecycledViews((var4 as java.lang.Number).intValue(), var1);
+         this.getRecycledViewPool().setMaxRecycledViews((var4 as java.lang.Number).intValue(), var2);
       }
    }
 
@@ -246,15 +246,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       } catch (var8: IllegalArgumentException) {
          val var3: Field = RecyclerView.class.getDeclaredField("mState");
          var3.setAccessible(true);
-         val var4: Any = var3.get(this);
+         val var6: Any = var3.get(this);
          val var5: CrashReporting = CrashReporting.INSTANCE;
-         val var9: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("About to crash because of ChatList, dumping update log:\n");
-         var6.append(var9);
-         var6.append("\n Recycler State: ");
-         var6.append(var4);
-         CrashReporting.addBreadcrumb$default(var5, var6.toString(), null, null, 6, null);
+         val var4: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("About to crash because of ChatList, dumping update log:\n");
+         var9.append(var4);
+         var9.append("\n Recycler State: ");
+         var9.append(var6);
+         CrashReporting.addBreadcrumb$default(var5, var9.toString(), null, null, 6, null);
          throw var8;
       }
 
@@ -264,15 +264,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          } catch (var7: IllegalArgumentException) {
             val var10: Field = RecyclerView.class.getDeclaredField("mState");
             var10.setAccessible(true);
-            val var12: Any = var10.get(this);
+            val var14: Any = var10.get(this);
             val var13: CrashReporting = CrashReporting.INSTANCE;
-            val var11: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-            val var14: StringBuilder = new StringBuilder();
-            var14.append("About to crash because of ChatList, dumping update log:\n");
-            var14.append(var11);
-            var14.append("\n Recycler State: ");
-            var14.append(var12);
-            CrashReporting.addBreadcrumb$default(var13, var14.toString(), null, null, 6, null);
+            val var12: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+            val var11: StringBuilder = new StringBuilder();
+            var11.append("About to crash because of ChatList, dumping update log:\n");
+            var11.append(var12);
+            var11.append("\n Recycler State: ");
+            var11.append(var14);
+            CrashReporting.addBreadcrumb$default(var13, var11.toString(), null, null, 6, null);
             throw var7;
          }
       }
@@ -303,17 +303,17 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                }
 
                public final void invoke(boolean var1) {
-                  val var4: BooleanRef = this.$wasAtBottom;
-                  val var5: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
+                  val var5: BooleanRef = this.$wasAtBottom;
+                  val var4: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
                   var var2: Boolean = false;
-                  if (var5 != null) {
+                  if (var4 != null) {
                      var2 = false;
-                     if (var5.isAtBottom()) {
+                     if (var4.isAtBottom()) {
                         var2 = true;
                      }
                   }
 
-                  var4.j = var2;
+                  var5.j = var2;
                   if (this.$update.getAction() is ChatListAction.Clear) {
                      ChatListView.access$getScrollStateObserver$p(this.this$0).stopWatching();
                      if (!var1) {
@@ -337,9 +337,9 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                public final void invoke() {
                   if (this.$update.getAction() !is ChatListAction.Clear) {
                      ChatListView.access$getScrollStateObserver$p(this.this$0).startWatching(this.this$0, ChatScrollStateObserver.EmitMode.NO);
-                     val var2: Int = ChatListView.access$getLinearLayoutManager$p(this.this$0).findFirstVisibleItemPosition();
-                     val var1: Int = ChatListView.access$getLinearLayoutManager$p(this.this$0).findLastVisibleItemPosition();
-                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var2 >= 0 && var1 >= 0) {
+                     val var1: Int = ChatListView.access$getLinearLayoutManager$p(this.this$0).findFirstVisibleItemPosition();
+                     val var2: Int = ChatListView.access$getLinearLayoutManager$p(this.this$0).findLastVisibleItemPosition();
+                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var1 >= 0 && var2 >= 0) {
                         ChatListView.access$setFirstLayout$p(this.this$0, false);
                         val var3: Boolean = ChatListView.access$getLinearLayoutManager$p(this.this$0).getReverseLayout();
                         var var4: ChatEventHandler = null;
@@ -351,7 +351,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                               var4 = var10;
                            }
 
-                           var4.onFirstLayout(var1, var2);
+                           var4.onFirstLayout(var2, var1);
                         } else {
                            var4 = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var4 == null) {
@@ -359,7 +359,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                               var4 = null;
                            }
 
-                           var4.onFirstLayout(var2, var1);
+                           var4.onFirstLayout(var1, var2);
                         }
                      }
                   }
@@ -405,11 +405,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             null
          );
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 
@@ -429,11 +429,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)

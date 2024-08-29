@@ -206,8 +206,8 @@ public data class VoiceInviteEmbed(guildId: String,
          q.h(var1, "decoder");
          val var13: SerialDescriptor = this.getDescriptor();
          val var14: c = var1.b(var13);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Boolean;
          var var7: java.lang.String;
          var var9: java.lang.String;
@@ -219,78 +219,78 @@ public data class VoiceInviteEmbed(guildId: String,
             var10 = var14.m(var13, 0);
             var9 = var14.m(var13, 1);
             var12 = var14.m(var13, 2);
-            var7 = var14.m(var13, 3);
-            val var8: java.lang.String = var14.m(var13, 4);
+            val var8: java.lang.String = var14.m(var13, 3);
+            var7 = var14.m(var13, 4);
             var15 = var14.n(var13, 5, b2.a, null) as java.lang.String;
-            val var2: Byte = var14.C(var13, 6);
+            var2 = var14.C(var13, 6);
             var6 = var14.C(var13, 7);
             var3 = 255;
             var11 = var8;
-            var4 = var2;
          } else {
-            var var19: Boolean = true;
+            var var4: Boolean = true;
             var6 = false;
-            var var17: Int = 0;
+            var2 = 0;
             var10 = null;
             var9 = null;
-            var var20: java.lang.String = null;
+            var var21: java.lang.String = null;
             var7 = null;
             var var16: java.lang.String = null;
             var11 = null;
             var3 = 0;
 
-            while (var19) {
+            while (var4) {
                val var5: Int = var14.o(var13);
                switch (var5) {
                   case -1:
-                     var19 = false;
+                     var4 = false;
                      break;
                   case 0:
                      var10 = var14.m(var13, 0);
-                     var17 |= 1;
+                     var2 |= 1;
                      break;
                   case 1:
                      var9 = var14.m(var13, 1);
-                     var17 |= 2;
+                     var2 |= 2;
                      break;
                   case 2:
-                     var20 = var14.m(var13, 2);
-                     var17 |= 4;
+                     var21 = var14.m(var13, 2);
+                     var2 |= 4;
                      break;
                   case 3:
                      var7 = var14.m(var13, 3);
-                     var17 |= 8;
+                     var2 |= 8;
                      break;
                   case 4:
                      var16 = var14.m(var13, 4);
-                     var17 |= 16;
+                     var2 |= 16;
                      break;
                   case 5:
                      var11 = var14.n(var13, 5, b2.a, var11) as java.lang.String;
-                     var17 |= 32;
+                     var2 |= 32;
                      break;
                   case 6:
                      var3 = var14.C(var13, 6);
-                     var17 |= 64;
+                     var2 |= 64;
                      break;
                   case 7:
                      var6 = var14.C(var13, 7);
-                     var17 |= 128;
+                     var2 |= 128;
                      break;
                   default:
                      throw new n(var5);
                }
             }
 
-            var4 = var3;
+            var7 = var16;
+            var2 = var3;
             var15 = var11;
-            var11 = var16;
-            var12 = var20;
-            var3 = var17;
+            var11 = var7;
+            var12 = var21;
+            var3 = var2;
          }
 
          var14.c(var13);
-         return new VoiceInviteEmbed(var3, var10, var9, var12, var7, var11, var15, (boolean)var4, var6, null);
+         return new VoiceInviteEmbed(var3, var10, var9, var12, var11, var7, var15, (boolean)var2, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceInviteEmbed) {

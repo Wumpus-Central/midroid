@@ -175,8 +175,8 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var32: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var32, var10);
-      val var36: SpoilerViewManager = this.spoilerViewManager;
-      val var40: ConstraintLayout = this.binding.container;
+      val var40: SpoilerViewManager = this.spoilerViewManager;
+      val var36: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var33: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -194,7 +194,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var36.configureSpoiler(var13, var40, var33, var39, null, var11, var15, var12, var10);
+      var40.configureSpoiler(var13, var36, var33, var39, null, var11, var15, var12, var10);
       val var37: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var34: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -226,13 +226,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
+      val var3: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }

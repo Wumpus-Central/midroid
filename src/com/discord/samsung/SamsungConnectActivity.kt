@@ -242,14 +242,14 @@ public class SamsungConnectActivity : b {
    }
 
    private fun startAndBindSamsungAuthService() {
-      val var1: Log = Log.INSTANCE;
+      val var2: Log = Log.INSTANCE;
       Log.i$default(Log.INSTANCE, "Samsung", "Samsung starting SA Service", null, 4, null);
-      val var2: Intent = serviceIntent;
+      val var1: Intent = serviceIntent;
       if (this.startService(serviceIntent) == null) {
-         Log.e$default(var1, "Samsung", "Samsung Account service could not be started", null, 4, null);
+         Log.e$default(var2, "Samsung", "Samsung Account service could not be started", null, 4, null);
       } else {
-         if (!this.bindService(var2, this.serviceConnection, 1)) {
-            Log.e$default(var1, "Samsung", "Samsung Account service could not be bound", null, 4, null);
+         if (!this.bindService(var1, this.serviceConnection, 1)) {
+            Log.e$default(var2, "Samsung", "Samsung Account service could not be bound", null, 4, null);
          }
       }
    }
@@ -388,15 +388,15 @@ public class SamsungConnectActivity : b {
          }
 
          public override fun toString(): String {
-            val var2: java.lang.String = this.authCode;
+            val var1: java.lang.String = this.authCode;
             val var3: java.lang.String = this.serverUrl;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Success(authCode=");
-            var1.append(var2);
-            var1.append(", serverUrl=");
-            var1.append(var3);
-            var1.append(")");
-            return var1.toString();
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Success(authCode=");
+            var2.append(var1);
+            var2.append(", serverUrl=");
+            var2.append(var3);
+            var2.append(")");
+            return var2.toString();
          }
       }
    }

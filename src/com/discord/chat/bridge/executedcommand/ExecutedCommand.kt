@@ -233,28 +233,26 @@ public data class ExecutedCommand(userId: UserId,
          val var12: c = var1.b(var11);
          var var2: Int;
          var var3: Int;
+         var var6: Any;
+         var var7: Any;
          var var8: java.lang.String;
          var var9: UserId;
-         val var10: Any;
          var var13: Any;
-         var var17: Any;
          if (var12.p()) {
             var9 = var12.y(var11, 0, UserId.$serializer.INSTANCE, null) as UserId;
-            var2 = var12.i(var11, 1);
+            var3 = var12.i(var11, 1);
             var8 = var12.n(var11, 2, b2.a, null) as java.lang.String;
-            var17 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
-            val var7: ExecutedCommandBackgroundStyles = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null) as ExecutedCommandBackgroundStyles;
+            var6 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
+            var7 = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null) as ExecutedCommandBackgroundStyles;
             var13 = var12.n(var11, 5, h.a, null) as java.lang.Boolean;
-            var3 = 63;
-            var10 = var17;
-            var17 = var7;
+            var2 = 63;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var9 = null;
             var8 = null;
-            var var18: Any = null;
-            var17 = null;
+            var7 = null;
+            var6 = null;
             var13 = null;
             var2 = 0;
 
@@ -277,11 +275,11 @@ public data class ExecutedCommand(userId: UserId,
                      var2 |= 4;
                      break;
                   case 3:
-                     var18 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, var18) as AnnotatedStructurableText;
+                     var7 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, var7) as AnnotatedStructurableText;
                      var2 |= 8;
                      break;
                   case 4:
-                     var17 = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var17) as ExecutedCommandBackgroundStyles;
+                     var6 = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var6) as ExecutedCommandBackgroundStyles;
                      var2 |= 16;
                      break;
                   case 5:
@@ -293,14 +291,13 @@ public data class ExecutedCommand(userId: UserId,
                }
             }
 
-            var10 = var18;
-            var2 = var3;
-            var3 = var2;
+            var7 = var6;
+            var6 = var7;
          }
 
          var12.c(var11);
          return new ExecutedCommand(
-            var3, var9, var2, var8, (AnnotatedStructurableText)var10, (ExecutedCommandBackgroundStyles)var17, (java.lang.Boolean)var13, null, null
+            var2, var9, var3, var8, (AnnotatedStructurableText)var6, (ExecutedCommandBackgroundStyles)var7, (java.lang.Boolean)var13, null, null
          );
       }
 

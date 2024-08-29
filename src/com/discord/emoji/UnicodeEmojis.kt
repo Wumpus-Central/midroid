@@ -1621,9 +1621,9 @@ public object UnicodeEmojis {
             if (var6) {
                var9 = var17.y(var16, 0, var14[0], null) as java.util.List;
                var8 = var17.y(var16, 1, var14[1], null) as java.util.List;
-               var10 = var17.y(var16, 2, var14[2], null) as java.util.List;
-               var11 = var17.y(var16, 3, var14[3], null) as java.util.List;
-               var12 = var17.y(var16, 4, var14[4], null) as java.util.List;
+               var11 = var17.y(var16, 2, var14[2], null) as java.util.List;
+               var12 = var17.y(var16, 3, var14[3], null) as java.util.List;
+               var10 = var17.y(var16, 4, var14[4], null) as java.util.List;
                var7 = var17.y(var16, 5, var14[5], null) as java.util.List;
                var18 = var17.y(var16, 6, var14[6], null) as java.util.List;
                var13 = var17.y(var16, 7, var14[7], null) as java.util.List;
@@ -1687,13 +1687,12 @@ public object UnicodeEmojis {
 
                var18 = var12;
                var7 = var11;
-               var12 = var10;
-               var11 = var19;
-               var10 = var7;
+               var12 = var19;
+               var11 = var7;
             }
 
             var17.c(var16);
-            return new UnicodeEmojis.EmojiCategories(var2, var9, var8, var10, var11, var12, var7, var18, var13, null);
+            return new UnicodeEmojis.EmojiCategories(var2, var9, var8, var11, var12, var10, var7, var18, var13, null);
          }
 
          public open fun serialize(encoder: Encoder, value: com.discord.emoji.UnicodeEmojis.EmojiCategories) {

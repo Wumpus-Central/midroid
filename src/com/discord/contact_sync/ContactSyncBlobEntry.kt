@@ -234,8 +234,8 @@ public data class ContactSyncBlobEntry(phone: String,
                }
             }
 
-            var13 = var8;
             var8 = var14;
+            var13 = var8;
          }
 
          var12.c(var11);

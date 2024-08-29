@@ -202,13 +202,13 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
             public final java.util.Map<java.lang.Long, Integer> invoke() {
                val var2: LinkedHashMap = new LinkedHashMap();
                val var3: EmojiPickerItemData.CoreData = this.this$0;
-               val var5: java.util.Iterator = this.this$0.getLeading().iterator();
+               val var4: java.util.Iterator = this.this$0.getLeading().iterator();
                var var1: Int = 0;
 
-               while (var5.hasNext()) {
-                  val var4: EmojiPickerItem = var5.next() as EmojiPickerItem;
-                  if (var4 is EmojiPickerItem.Category) {
-                     var2.put(IdUtilsKt.convertToId((var4 as EmojiPickerItem.Category).getTitle()), var1);
+               while (var4.hasNext()) {
+                  val var5: EmojiPickerItem = var4.next() as EmojiPickerItem;
+                  if (var5 is EmojiPickerItem.Category) {
+                     var2.put(IdUtilsKt.convertToId((var5 as EmojiPickerItem.Category).getTitle()), var1);
                      var1++;
                   }
                }

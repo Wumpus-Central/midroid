@@ -320,126 +320,125 @@ public data class AutoModerationNotification(header: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: b2 = b2.a;
-         val var1: n0 = n0.a;
-         return new KSerializer[]{b2.a, n0.a, b2.a, n0.a, a.u(b2.a), a.u(var2), a.u(var2), h.a, a.u(var2), a.u(var2), a.u(var1), a.u(var2), a.u(var2)};
+         val var1: b2 = b2.a;
+         val var2: n0 = n0.a;
+         return new KSerializer[]{b2.a, n0.a, b2.a, n0.a, a.u(b2.a), a.u(var1), a.u(var1), h.a, a.u(var1), a.u(var1), a.u(var2), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): AutoModerationNotification {
          q.h(var1, "decoder");
-         val var23: SerialDescriptor = this.getDescriptor();
-         val var24: c = var1.b(var23);
-         var var9: Boolean = var24.p();
+         val var22: SerialDescriptor = this.getDescriptor();
+         val var23: c = var1.b(var22);
+         var var9: Boolean = var23.p();
          var var5: Int = 10;
          var var3: Int;
          var var4: Int;
          var var11: java.lang.String;
-         var var12: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
+         var var16: java.lang.String;
          var var17: java.lang.String;
-         var var25: Any;
-         var var35: java.lang.String;
-         var var40: java.lang.String;
-         var var42: java.lang.String;
-         var var46: java.lang.String;
+         var var18: java.lang.String;
+         val var19: Any;
+         val var24: java.lang.String;
+         var var33: java.lang.String;
+         var var39: java.lang.String;
          if (var9) {
-            var13 = var24.m(var23, 0);
-            var4 = var24.i(var23, 1);
-            var12 = var24.m(var23, 2);
-            val var2: Int = var24.i(var23, 3);
-            val var16: b2 = b2.a;
-            var14 = var24.n(var23, 4, b2.a, null) as java.lang.String;
-            var17 = var24.n(var23, 5, var16, null) as java.lang.String;
-            var40 = var24.n(var23, 6, var16, null) as java.lang.String;
-            var9 = var24.C(var23, 7);
-            var46 = var24.n(var23, 8, var16, null) as java.lang.String;
-            var11 = var24.n(var23, 9, var16, null) as java.lang.String;
-            var25 = var24.n(var23, 10, n0.a, null) as Int;
-            var35 = var24.n(var23, 11, var16, null) as java.lang.String;
-            val var19: java.lang.String = var24.n(var23, 12, var16, null) as java.lang.String;
+            var13 = var23.m(var22, 0);
+            var5 = var23.i(var22, 1);
+            var17 = var23.m(var22, 2);
+            val var2: Int = var23.i(var22, 3);
+            val var15: b2 = b2.a;
+            var14 = var23.n(var22, 4, b2.a, null) as java.lang.String;
+            var16 = var23.n(var22, 5, var15, null) as java.lang.String;
+            val var12: java.lang.String = var23.n(var22, 6, var15, null) as java.lang.String;
+            var9 = var23.C(var22, 7);
+            var18 = var23.n(var22, 8, var15, null) as java.lang.String;
+            var11 = var23.n(var22, 9, var15, null) as java.lang.String;
+            val var10: Int = var23.n(var22, 10, n0.a, null) as Int;
+            var24 = var23.n(var22, 11, var15, null) as java.lang.String;
+            val var20: java.lang.String = var23.n(var22, 12, var15, null) as java.lang.String;
             var3 = 8191;
-            var5 = var2;
-            var42 = var40;
-            var40 = var46;
-            var46 = var35;
-            var35 = var19;
+            var4 = var2;
+            var39 = var12;
+            var19 = var10;
+            var33 = var20;
          } else {
             var13 = null;
-            var12 = null;
+            var var36: java.lang.String = null;
             var17 = null;
-            var42 = null;
+            var16 = null;
             var14 = null;
-            var46 = null;
-            var40 = null;
+            var18 = null;
+            var39 = null;
             var11 = null;
             var var7: Boolean = true;
             var9 = false;
             var4 = 0;
             var3 = 0;
-            var35 = null;
-            var var27: Int = 0;
-            var25 = null;
+            var33 = null;
+            var var26: Int = 0;
+            var var25: java.lang.String = null;
 
             while (var7) {
                label39: {
                   label38: {
-                     val var8: Int = var24.o(var23);
+                     val var8: Int = var23.o(var22);
                      switch (var8) {
                         case -1:
                            var7 = false;
                            break label39;
                         case 0:
-                           var13 = var24.m(var23, 0);
-                           var27 |= 1;
+                           var13 = var23.m(var22, 0);
+                           var26 |= 1;
                            break;
                         case 1:
-                           var3 = var24.i(var23, 1);
-                           var27 |= 2;
+                           var3 = var23.i(var22, 1);
+                           var26 |= 2;
                            break;
                         case 2:
-                           var12 = var24.m(var23, 2);
-                           var27 |= 4;
+                           var36 = var23.m(var22, 2);
+                           var26 |= 4;
                            break;
                         case 3:
-                           var4 = var24.i(var23, 3);
-                           var27 |= 8;
+                           var4 = var23.i(var22, 3);
+                           var26 |= 8;
                            break;
                         case 4:
-                           var25 = var24.n(var23, 4, b2.a, var25) as java.lang.String;
-                           var27 |= 16;
+                           var25 = var23.n(var22, 4, b2.a, var25) as java.lang.String;
+                           var26 |= 16;
                            break;
                         case 5:
-                           var35 = var24.n(var23, 5, b2.a, var35) as java.lang.String;
-                           var27 |= 32;
+                           var33 = var23.n(var22, 5, b2.a, var33) as java.lang.String;
+                           var26 |= 32;
                            break;
                         case 6:
-                           var11 = var24.n(var23, 6, b2.a, var11) as java.lang.String;
-                           var27 |= 64;
+                           var11 = var23.n(var22, 6, b2.a, var11) as java.lang.String;
+                           var26 |= 64;
                            break;
                         case 7:
-                           var9 = var24.C(var23, 7);
-                           var27 |= 128;
+                           var9 = var23.C(var22, 7);
+                           var26 |= 128;
                            break label38;
                         case 8:
-                           var46 = var24.n(var23, 8, b2.a, var46) as java.lang.String;
-                           var27 |= 256;
+                           var18 = var23.n(var22, 8, b2.a, var18) as java.lang.String;
+                           var26 |= 256;
                            break label38;
                         case 9:
-                           var40 = var24.n(var23, 9, b2.a, var40) as java.lang.String;
-                           var27 |= 512;
+                           var39 = var23.n(var22, 9, b2.a, var39) as java.lang.String;
+                           var26 |= 512;
                            break label39;
                         case 10:
-                           var14 = var24.n(var23, var5, n0.a, var14) as Int;
-                           var27 |= 1024;
+                           var14 = var23.n(var22, var5, n0.a, var14) as Int;
+                           var26 |= 1024;
                            continue;
                         case 11:
-                           var42 = var24.n(var23, 11, b2.a, var42) as java.lang.String;
-                           var27 |= 2048;
+                           var16 = var23.n(var22, 11, b2.a, var16) as java.lang.String;
+                           var26 |= 2048;
                            continue;
                         case 12:
-                           var17 = var24.n(var23, 12, b2.a, var17) as java.lang.String;
-                           var27 |= 4096;
+                           var17 = var23.n(var22, 12, b2.a, var17) as java.lang.String;
+                           var26 |= 4096;
                            continue;
                         default:
                            throw new n(var8);
@@ -456,21 +455,20 @@ public data class AutoModerationNotification(header: String,
                var5 = 10;
             }
 
-            var35 = var17;
-            var46 = var42;
-            var25 = var14;
-            var11 = var40;
-            var40 = var46;
-            var42 = var11;
-            var17 = var35;
-            var14 = (java.lang.String)var25;
-            var5 = var4;
-            var4 = var3;
-            var3 = var27;
+            var19 = var14;
+            var39 = var11;
+            var33 = var17;
+            var24 = var16;
+            var11 = var39;
+            var16 = var33;
+            var14 = var25;
+            var17 = var36;
+            var5 = var3;
+            var3 = var26;
          }
 
-         var24.c(var23);
-         return new AutoModerationNotification(var3, var13, var4, var12, var5, var14, var17, var42, var9, var40, var11, (Integer)var25, var46, var35, null);
+         var23.c(var22);
+         return new AutoModerationNotification(var3, var13, var5, var17, var4, var14, var16, var39, var9, var18, var11, (Integer)var19, var24, var33, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AutoModerationNotification) {

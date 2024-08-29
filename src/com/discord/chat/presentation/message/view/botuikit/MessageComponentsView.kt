@@ -44,47 +44,48 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
       val var9: java.util.Iterator = var2.iterator();
 
       for (int var5 = 0; var9.hasNext(); var5++) {
-         var var14: ComponentView = (ComponentView)var9.next();
+         var var14: Any = var9.next();
          if (var5 < 0) {
             i.t();
          }
 
          val var10: Component = var14 as Component;
-         var var6: ComponentView = null;
+         var14 = null;
          if (var1 != null) {
             val var11: FlexboxLayout = this.binding.itemComponentsRoot;
             q.g(this.binding.itemComponentsRoot, "itemComponentsRoot");
             var14 = var11.getChildAt(var5);
+            var var6: ComponentView;
             if (var14 is ComponentView) {
-               var14 = var14 as ComponentView;
+               var6 = var14 as ComponentView;
             } else {
-               var14 = null;
+               var6 = null;
             }
 
             label32: {
-               if (var14 != null) {
-                  var6 = null;
-                  if (((ComponentView)var14).getComponentType() is Component) {
-                     var6 = (ComponentView)var14;
+               if (var6 != null) {
+                  var14 = null;
+                  if (var6.getComponentType() is Component) {
+                     var14 = var6;
                   }
 
-                  var14 = var6;
-                  if (var6 != null) {
+                  var6 = (ComponentView)var14;
+                  if (var14 != null) {
                      break label32;
                   }
                }
 
-               var14 = new ComponentInflater(var1.getContext()).inflateComponent(var10, var11);
+               var6 = new ComponentInflater(var1.getContext()).inflateComponent(var10, var11);
             }
 
-            var6 = var14;
-            if (var14 != null) {
-               var14.configure(var10, var1, var4, var3);
-               var6 = var14;
+            var14 = var6;
+            if (var6 != null) {
+               var6.configure(var10, var1, var4, var3);
+               var14 = var6;
             }
          }
 
-         var8.add(var6);
+         var8.add(var14);
       }
 
       val var12: FlexboxLayout = this.binding.itemComponentsRoot;

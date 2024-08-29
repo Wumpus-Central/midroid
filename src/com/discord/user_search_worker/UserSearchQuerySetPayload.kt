@@ -189,8 +189,8 @@ internal data class UserSearchQuerySetPayload(query: String,
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.b(var10);
          val var12: Array<KSerializer> = UserSearchQuerySetPayload.access$get$childSerializers$cp();
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Any;
          var var7: Any;
          var var8: UserSearchQuerySetFilters;
@@ -202,59 +202,59 @@ internal data class UserSearchQuerySetPayload(query: String,
             var7 = var11.n(var10, 2, var12[2], null) as java.util.List;
             var6 = var11.n(var10, 3, var12[3], null) as java.util.List;
             var13 = var11.y(var10, 4, var12[4], null) as java.util.Map;
-            val var2: Int = var11.i(var10, 5);
-            var4 = 63;
-            var3 = var2;
+            var2 = var11.i(var10, 5);
+            var3 = 63;
          } else {
-            var var15: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
             var9 = null;
             var8 = null;
             var7 = null;
             var6 = null;
             var13 = null;
-            var var14: Int = 0;
+            var2 = 0;
 
-            while (var15) {
+            while (var4) {
                val var5: Int = var11.o(var10);
                switch (var5) {
                   case -1:
-                     var15 = false;
+                     var4 = false;
                      break;
                   case 0:
                      var9 = var11.m(var10, 0);
-                     var14 |= 1;
+                     var2 |= 1;
                      break;
                   case 1:
                      var8 = var11.n(var10, 1, UserSearchQuerySetFilters.$serializer.INSTANCE, var8) as UserSearchQuerySetFilters;
-                     var14 |= 2;
+                     var2 |= 2;
                      break;
                   case 2:
                      var7 = var11.n(var10, 2, var12[2], var7) as java.util.List;
-                     var14 |= 4;
+                     var2 |= 4;
                      break;
                   case 3:
                      var6 = var11.n(var10, 3, var12[3], var6) as java.util.List;
-                     var14 |= 8;
+                     var2 |= 8;
                      break;
                   case 4:
                      var13 = var11.y(var10, 4, var12[4], var13) as java.util.Map;
-                     var14 |= 16;
+                     var2 |= 16;
                      break;
                   case 5:
                      var3 = var11.i(var10, 5);
-                     var14 |= 32;
+                     var2 |= 32;
                      break;
                   default:
                      throw new n(var5);
                }
             }
 
-            var4 = var14;
+            var3 = var2;
+            var2 = var3;
          }
 
          var11.c(var10);
-         return new UserSearchQuerySetPayload(var4, var9, var8, (java.util.List)var7, (java.util.List)var6, (java.util.Map)var13, var3, null);
+         return new UserSearchQuerySetPayload(var3, var9, var8, (java.util.List)var7, (java.util.List)var6, (java.util.Map)var13, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSearchQuerySetPayload) {

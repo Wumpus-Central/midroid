@@ -88,20 +88,20 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var5: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActionRowComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var4);
-      var2.append(", errorText=");
-      var2.append(var5);
-      var2.append(", components=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.id;
+      val var3: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ActionRowComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var2);
+      var4.append(", errorText=");
+      var4.append(var3);
+      var4.append(", components=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -134,23 +134,21 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          val var8: Array<KSerializer> = ActionRowComponent.access$get$childSerializers$cp();
          var var2: Int;
          var var3: Int;
-         var var6: java.lang.String;
+         var var6: Any;
          var var7: java.lang.String;
-         var var12: Any;
+         val var11: java.lang.String;
          if (var10.p()) {
             var3 = var10.i(var9, 0);
             var7 = var10.m(var9, 1);
-            var12 = var10.n(var9, 2, b2.a, null) as java.lang.String;
-            val var13: java.util.List = var10.y(var9, 3, var8[3], null) as java.util.List;
+            var11 = var10.n(var9, 2, b2.a, null) as java.lang.String;
+            var6 = var10.y(var9, 3, var8[3], null) as java.util.List;
             var2 = 15;
-            var6 = (java.lang.String)var12;
-            var12 = var13;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var7 = null;
             var6 = null;
-            var12 = null;
+            var var12: Any = null;
             var2 = 0;
 
             while (var4) {
@@ -181,10 +179,13 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
                   var4 = false;
                }
             }
+
+            var6 = var12;
+            var11 = (java.lang.String)var6;
          }
 
          var10.c(var9);
-         return new ActionRowComponent(var2, var3, var7, var6, (java.util.List)var12, null);
+         return new ActionRowComponent(var2, var3, var7, var11, (java.util.List)var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActionRowComponent) {

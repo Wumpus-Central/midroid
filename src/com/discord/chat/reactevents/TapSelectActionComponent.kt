@@ -81,15 +81,15 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.componentId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSelectActionComponent(messageId=");
-      var2.append(var1);
-      var2.append(", componentId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = this.componentId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapSelectActionComponent(messageId=");
+      var3.append(var2);
+      var3.append(", componentId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

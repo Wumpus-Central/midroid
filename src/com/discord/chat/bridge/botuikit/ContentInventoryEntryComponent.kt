@@ -78,17 +78,17 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var2: ContentInventoryEntry = this.contentInventoryEntry;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ContentInventoryEntryComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var4);
-      var3.append(", contentInventoryEntry=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ContentInventoryEntryComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", contentInventoryEntry=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

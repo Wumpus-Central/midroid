@@ -134,21 +134,20 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
          val var5: Boolean = var10.p();
          var var7: Int = null;
          var var2: Int;
-         val var8: Int;
-         var var13: java.lang.Boolean;
+         val var8: java.lang.Boolean;
+         val var12: Int;
          if (var5) {
             val var11: n0 = n0.a;
             var7 = var10.n(var9, 0, n0.a, null) as Int;
-            val var12: Int = var10.n(var9, 1, var11, null) as Int;
+            var12 = var10.n(var9, 1, var11, null) as Int;
             val var6: java.lang.Boolean = var10.n(var9, 2, h.a, null) as java.lang.Boolean;
             var2 = 7;
-            var8 = var12;
-            var13 = var6;
+            var8 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var var14: Int = null;
-            var13 = null;
+            var var13: java.lang.Boolean = null;
 
             while (var3) {
                val var4: Int = var10.o(var9);
@@ -174,11 +173,12 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
                }
             }
 
-            var8 = var14;
+            var8 = var13;
+            var12 = var14;
          }
 
          var10.c(var9);
-         return new ExecutedCommandBackgroundStyles(var2, var7, var8, var13, null);
+         return new ExecutedCommandBackgroundStyles(var2, var7, var12, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ExecutedCommandBackgroundStyles) {

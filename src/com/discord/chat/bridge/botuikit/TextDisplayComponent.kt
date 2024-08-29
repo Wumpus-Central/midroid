@@ -73,15 +73,15 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var2: java.lang.String = this.id;
-      val var4: StructurableText = this.content;
+      val var4: java.lang.String = this.id;
+      val var2: StructurableText = this.content;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TextDisplayComponent(type=");
       var3.append(var1);
       var3.append(", id=");
-      var3.append(var2);
-      var3.append(", content=");
       var3.append(var4);
+      var3.append(", content=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -112,23 +112,24 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: java.lang.String;
          var var9: StructurableText;
          if (var8.p()) {
-            var3 = var8.i(var7, 0);
+            val var2: Int = var8.i(var7, 0);
             var6 = var8.m(var7, 1);
             var9 = var8.y(var7, 2, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var2 = 7;
+            var3 = 7;
+            var4 = var2;
          } else {
-            var var4: Boolean = true;
+            var var12: Boolean = true;
             var3 = 0;
             var6 = null;
             var9 = null;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var4) {
+            while (var12) {
                val var5: Int = var8.o(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -138,23 +139,26 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
                         }
 
                         var9 = var8.y(var7, 2, StructurableTextSerializer.INSTANCE, var9) as StructurableText;
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var6 = var8.m(var7, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var3 = var8.i(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
+
+            var4 = var3;
+            var3 = var10;
          }
 
          var8.c(var7);
-         return new TextDisplayComponent(var2, var3, var6, var9, null);
+         return new TextDisplayComponent(var3, var4, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TextDisplayComponent) {

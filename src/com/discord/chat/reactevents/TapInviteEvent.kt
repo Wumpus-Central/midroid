@@ -98,21 +98,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var4: java.lang.Boolean = this.primary;
-      val var3: java.lang.Boolean = this.secondary;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapInviteEvent(messageId=");
-      var5.append(var2);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", primary=");
-      var5.append(var4);
-      var5.append(", secondary=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.Boolean = this.primary;
+      val var2: java.lang.Boolean = this.secondary;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapInviteEvent(messageId=");
+      var3.append(var4);
+      var3.append(", index=");
+      var3.append(var1);
+      var3.append(", primary=");
+      var3.append(var5);
+      var3.append(", secondary=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -194,8 +194,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
                }
             }
 
-            var3 = var2;
             var2 = var3;
+            var3 = var2;
          }
 
          var10.c(var9);

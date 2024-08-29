@@ -66,12 +66,12 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapJoinActivityData(messageId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapJoinActivityData(messageId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

@@ -98,9 +98,9 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
          var var3: Int;
          var var6: Long;
          if (var9.p()) {
-            var2 = var9.i(var8, 0);
+            var3 = var9.i(var8, 0);
             var6 = var9.f(var8, 1);
-            var3 = 3;
+            var2 = 3;
          } else {
             var6 = 0L;
             var var4: Boolean = true;
@@ -125,13 +125,10 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
                   var4 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var9.c(var8);
-         return new ContentScanMetadata(var3, var2, var6, null);
+         return new ContentScanMetadata(var2, var3, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentScanMetadata) {

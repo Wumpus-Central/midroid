@@ -68,9 +68,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
    public fun configure(messageFrame: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader, onOverflowClick: OnClickListener?) {
       kotlin.jvm.internal.q.h(var1, "messageFrame");
-      var var7: TextView = this.binding.feedChannelText;
+      val var6: TextView = this.binding.feedChannelText;
       kotlin.jvm.internal.q.e(this.binding.feedChannelText);
-      ViewUtilsKt.setOptionalText(var7, var1.getChannelName());
+      ViewUtilsKt.setOptionalText(var6, var1.getChannelName());
       var var3: Boolean;
       if (var1.getChannelIconURL() != null) {
          var3 = 1;
@@ -84,7 +84,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = (byte)8;
       }
 
-      var7.setVisibility(var3);
+      var6.setVisibility(var3);
       val var20: SimpleDraweeView = this.binding.feedChannelIcon;
       kotlin.jvm.internal.q.g(this.binding.feedChannelIcon, "feedChannelIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var20, var1.getChannelIconURL());
@@ -99,7 +99,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = 0;
       }
 
-      var7 = this.binding.feedReplyCount;
+      val var24: TextView = this.binding.feedReplyCount;
       kotlin.jvm.internal.q.g(this.binding.feedReplyCount, "feedReplyCount");
       val var11: java.lang.String;
       if (var3 > 3) {
@@ -110,7 +110,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var11 = null;
       }
 
-      ViewUtilsKt.setOptionalText(var7, var11);
+      ViewUtilsKt.setOptionalText(var24, var11);
       val var25: OverlappingCirclesView = this.binding.feedReplyParticipants;
       val var12: ArrayList = var1.getAvatarURLs();
       var var8: ArrayList = null;
@@ -291,9 +291,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
-            val var2: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var1: b2 = b2.a;
-            return new KSerializer[]{en.a.u(b2.a), en.a.u(var1), en.a.u(var2[2]), en.a.u(var1)};
+            val var1: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
+            val var2: b2 = b2.a;
+            return new KSerializer[]{en.a.u(b2.a), en.a.u(var2), en.a.u(var1[2]), en.a.u(var2)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {

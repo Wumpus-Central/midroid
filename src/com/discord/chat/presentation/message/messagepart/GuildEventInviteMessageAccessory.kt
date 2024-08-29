@@ -125,27 +125,27 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
    public override fun toString(): String {
       val var6: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
-      val var7: GuildEventInviteEmbedImpl = this.invite;
-      val var5: Boolean = this.shouldAnimateEmoji;
+      val var8: GuildEventInviteEmbedImpl = this.invite;
+      val var2: Boolean = this.shouldAnimateEmoji;
       val var4: Boolean = this.shouldShowLinkDecorations;
       val var3: Boolean = this.shouldShowRoleDot;
-      val var2: Boolean = this.shouldShowRoleOnName;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("GuildEventInviteMessageAccessory(messageId=");
-      var8.append(var6);
-      var8.append(", codedLinkIndex=");
-      var8.append(var1);
-      var8.append(", invite=");
-      var8.append(var7);
-      var8.append(", shouldAnimateEmoji=");
-      var8.append(var5);
-      var8.append(", shouldShowLinkDecorations=");
-      var8.append(var4);
-      var8.append(", shouldShowRoleDot=");
-      var8.append(var3);
-      var8.append(", shouldShowRoleOnName=");
-      var8.append(var2);
-      var8.append(")");
-      return var8.toString();
+      val var5: Boolean = this.shouldShowRoleOnName;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("GuildEventInviteMessageAccessory(messageId=");
+      var7.append(var6);
+      var7.append(", codedLinkIndex=");
+      var7.append(var1);
+      var7.append(", invite=");
+      var7.append(var8);
+      var7.append(", shouldAnimateEmoji=");
+      var7.append(var2);
+      var7.append(", shouldShowLinkDecorations=");
+      var7.append(var4);
+      var7.append(", shouldShowRoleDot=");
+      var7.append(var3);
+      var7.append(", shouldShowRoleOnName=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 }

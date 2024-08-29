@@ -1088,8 +1088,6 @@ public class NotificationRenderer {
          new Function2(var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -2112,6 +2110,8 @@ public class NotificationRenderer {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          1,
          null
@@ -2124,20 +2124,20 @@ public class NotificationRenderer {
       val var3: java.util.Iterator = var2.getAckChannelIds().iterator();
 
       while (var3.hasNext()) {
-         val var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("MESSAGE_CREATE");
-         var4.append(var5);
-         val var6: java.lang.String = var4.toString();
+         var var4: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("MESSAGE_CREATE");
+         var5.append(var4);
+         var4 = var5.toString();
          val var7: NotificationChannels = NotificationChannels.INSTANCE;
          if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
-               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var6)
+               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var4)
             )
             .i()
             .getBoolean("ignoreAck", false)) {
-            this.clear(var1, var6);
+            this.clear(var1, var4);
          } else {
-            this.markNotificationAsDirectReply(var1, var6, var7.getNotificationChannelId(var2, var1), false);
+            this.markNotificationAsDirectReply(var1, var4, var7.getNotificationChannelId(var2, var1), false);
          }
       }
    }

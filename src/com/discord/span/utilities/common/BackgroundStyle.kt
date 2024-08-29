@@ -97,8 +97,8 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
          var var4: Int;
          if (var8.p()) {
             var3 = var8.i(var7, 0);
-            var4 = var8.i(var7, 1);
-            var2 = 3;
+            var2 = var8.i(var7, 1);
+            var4 = 3;
          } else {
             var var5: Boolean = true;
             var3 = 0;
@@ -123,10 +123,13 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
                   var5 = false;
                }
             }
+
+            var4 = var2;
+            var2 = var4;
          }
 
          var8.c(var7);
-         return new BackgroundStyle(var2, var3, var4, null);
+         return new BackgroundStyle(var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundStyle) {

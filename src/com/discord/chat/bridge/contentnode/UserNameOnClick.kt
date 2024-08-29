@@ -171,10 +171,9 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
          if (var5) {
             var6 = var11.m(var10, 0);
             var7 = var11.y(var10, 1, UserId.$serializer.INSTANCE, null) as UserId;
-            val var14: ChannelId = var11.n(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var9 = var11.n(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var12 = var11.n(var10, 3, n0.a, null) as Int;
             var2 = 15;
-            var9 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
