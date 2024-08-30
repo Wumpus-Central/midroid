@@ -4096,6 +4096,7 @@
   "VIEW_PROFILE": "查看个人资料",
   "VIEW_PROFILE_USERNAME": "查看个人资料，!!{username}!!",
   "EDIT_PROFILE": "编辑个人资料",
+  "EDIT_MAIN_PROFILE": "编辑主要个人资料",
   "USER_PROFILE_MESSAGE": "消息",
   "USER_PROFILE_ADD_FRIEND": "添加好友",
   "USER_PROFILE_PENDING": "待定",

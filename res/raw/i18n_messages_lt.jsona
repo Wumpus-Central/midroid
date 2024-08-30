@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Peržiūrėti Profilį",
   "VIEW_PROFILE_USERNAME": "Peržiūrėti profilį – !!{username}!!",
   "EDIT_PROFILE": "Redaguoti profilį",
+  "EDIT_MAIN_PROFILE": "Redaguoti pagrindinį profilį",
   "USER_PROFILE_MESSAGE": "Pranešimas",
   "USER_PROFILE_ADD_FRIEND": "Pridėti draugą",
   "USER_PROFILE_PENDING": "Laukiama",

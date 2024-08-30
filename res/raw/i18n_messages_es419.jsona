@@ -4056,6 +4056,7 @@
   "VIEW_PROFILE": "Ver perfil",
   "VIEW_PROFILE_USERNAME": "Ver perfil, !!{username}!!",
   "EDIT_PROFILE": "Editar perfil",
+  "EDIT_MAIN_PROFILE": "Editar perfil principal",
   "USER_PROFILE_MESSAGE": "Enviar mensaje",
   "USER_PROFILE_ADD_FRIEND": "Añadir amigos",
   "USER_PROFILE_PENDING": "Pendiente",

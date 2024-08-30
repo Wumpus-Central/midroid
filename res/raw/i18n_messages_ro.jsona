@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Vezi profil",
   "VIEW_PROFILE_USERNAME": "Vezi profil, !!{username}!!",
   "EDIT_PROFILE": "Editează profilul",
+  "EDIT_MAIN_PROFILE": "Editează profilul principal",
   "USER_PROFILE_MESSAGE": "Mesaj",
   "USER_PROFILE_ADD_FRIEND": "Adaugă prieten",
   "USER_PROFILE_PENDING": "În așteptare",

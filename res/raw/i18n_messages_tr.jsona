@@ -4095,6 +4095,7 @@
   "VIEW_PROFILE": "Profili Görüntüle",
   "VIEW_PROFILE_USERNAME": "Profili Görüntüle: !!{username}!!",
   "EDIT_PROFILE": "Profili Düzenle",
+  "EDIT_MAIN_PROFILE": "Ana Profili Düzenle",
   "USER_PROFILE_MESSAGE": "Mesaj",
   "USER_PROFILE_ADD_FRIEND": "Arkadaş Ekle",
   "USER_PROFILE_PENDING": "Bekleyen",

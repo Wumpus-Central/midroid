@@ -4086,6 +4086,7 @@
   "VIEW_PROFILE": "Преглед на профил",
   "VIEW_PROFILE_USERNAME": "Преглед на профил, !!{username}!!",
   "EDIT_PROFILE": "Редактиране на профил",
+  "EDIT_MAIN_PROFILE": "Редактиране на основния профил",
   "USER_PROFILE_MESSAGE": "Съобщение",
   "USER_PROFILE_ADD_FRIEND": "Добавяне на приятел",
   "USER_PROFILE_PENDING": "Чакащи",

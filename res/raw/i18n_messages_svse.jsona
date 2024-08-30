@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Visa profil",
   "VIEW_PROFILE_USERNAME": "Visa profil, !!{username}!!",
   "EDIT_PROFILE": "Redigera profilen",
+  "EDIT_MAIN_PROFILE": "Redigera huvudprofil",
   "USER_PROFILE_MESSAGE": "Meddelande",
   "USER_PROFILE_ADD_FRIEND": "Lägg till vän",
   "USER_PROFILE_PENDING": "Väntande",

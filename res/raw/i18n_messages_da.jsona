@@ -4085,6 +4085,7 @@
   "VIEW_PROFILE": "Se profil",
   "VIEW_PROFILE_USERNAME": "Se profil, !!{username}!!",
   "EDIT_PROFILE": "Rediger profil",
+  "EDIT_MAIN_PROFILE": "Rediger hovedprofil",
   "USER_PROFILE_MESSAGE": "Besked",
   "USER_PROFILE_ADD_FRIEND": "Tilføj en ven",
   "USER_PROFILE_PENDING": "Afventer",

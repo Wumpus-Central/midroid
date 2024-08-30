@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Vis profil",
   "VIEW_PROFILE_USERNAME": "Vis profil, !!{username}!!",
   "EDIT_PROFILE": "Rediger profil",
+  "EDIT_MAIN_PROFILE": "Rediger hovedprofil",
   "USER_PROFILE_MESSAGE": "Melding",
   "USER_PROFILE_ADD_FRIEND": "Legg til venn",
   "USER_PROFILE_PENDING": "Venter",

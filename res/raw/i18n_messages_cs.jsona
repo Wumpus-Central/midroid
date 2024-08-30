@@ -4086,6 +4086,7 @@
   "VIEW_PROFILE": "Zobrazit profil",
   "VIEW_PROFILE_USERNAME": "Zobraz profil, !!{username}!!",
   "EDIT_PROFILE": "Upravit profil",
+  "EDIT_MAIN_PROFILE": "Upravit hlavní profil",
   "USER_PROFILE_MESSAGE": "Zpráva",
   "USER_PROFILE_ADD_FRIEND": "Přidat přítele",
   "USER_PROFILE_PENDING": "Nevyřízeno",

@@ -4096,6 +4096,7 @@
   "VIEW_PROFILE": "檢視個人檔案",
   "VIEW_PROFILE_USERNAME": "檢視個人資料，!!{username}!!",
   "EDIT_PROFILE": "編輯個人資料",
+  "EDIT_MAIN_PROFILE": "編輯主要個人資料",
   "USER_PROFILE_MESSAGE": "傳送訊息",
   "USER_PROFILE_ADD_FRIEND": "新增好友",
   "USER_PROFILE_PENDING": "等待中",

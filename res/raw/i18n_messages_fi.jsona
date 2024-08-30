@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Näytä profiili",
   "VIEW_PROFILE_USERNAME": "Näytä profiili, !!{username}!!",
   "EDIT_PROFILE": "Muokkaa profiilia",
+  "EDIT_MAIN_PROFILE": "Muokkaa pääprofiilia",
   "USER_PROFILE_MESSAGE": "Viesti",
   "USER_PROFILE_ADD_FRIEND": "Lisää kaveri",
   "USER_PROFILE_PENDING": "Odottaa",

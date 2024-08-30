@@ -4097,6 +4097,7 @@
   "VIEW_PROFILE": "Профиль",
   "VIEW_PROFILE_USERNAME": "!!{username}!!, посмотрите профиль",
   "EDIT_PROFILE": "Редактировать профиль",
+  "EDIT_MAIN_PROFILE": "Редактировать основной профиль",
   "USER_PROFILE_MESSAGE": "Сообщение",
   "USER_PROFILE_ADD_FRIEND": "Добавить в друзья",
   "USER_PROFILE_PENDING": "Ожидание",

@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "ดูโปรไฟล์",
   "VIEW_PROFILE_USERNAME": "ดูโปรไฟล์ !!{username}!!",
   "EDIT_PROFILE": "แก้ไขโปรไฟล์",
+  "EDIT_MAIN_PROFILE": "แก้ไขโปรไฟล์หลัก",
   "USER_PROFILE_MESSAGE": "ข้อความ",
   "USER_PROFILE_ADD_FRIEND": "เพิ่มเพื่อน",
   "USER_PROFILE_PENDING": "กำลังรอ",

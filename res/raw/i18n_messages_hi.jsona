@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "प्रोफ़ाइल देखें",
   "VIEW_PROFILE_USERNAME": "!!{username}!!, प्रोफ़ाइल देखें",
   "EDIT_PROFILE": "प्रोफ़ाइल एडिट करें",
+  "EDIT_MAIN_PROFILE": "मुख्य प्रोफ़ाइल एडिट करें",
   "USER_PROFILE_MESSAGE": "मैसेज",
   "USER_PROFILE_ADD_FRIEND": "फ्रेंड ऐड करें",
   "USER_PROFILE_PENDING": "पेंडिंग",

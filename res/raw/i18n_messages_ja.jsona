@@ -4088,6 +4088,7 @@
   "VIEW_PROFILE": "プロフィール表示",
   "VIEW_PROFILE_USERNAME": "プロフィールを表示、!!{username}!!",
   "EDIT_PROFILE": "プロフィールを編集",
+  "EDIT_MAIN_PROFILE": "メインプロフィールを編集",
   "USER_PROFILE_MESSAGE": "メッセージ",
   "USER_PROFILE_ADD_FRIEND": "フレンドに追加",
   "USER_PROFILE_PENDING": "保留中",

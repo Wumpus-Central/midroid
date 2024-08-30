@@ -4085,6 +4085,7 @@
   "VIEW_PROFILE": "Mostra profilo",
   "VIEW_PROFILE_USERNAME": "Mostra profilo, !!{username}!!",
   "EDIT_PROFILE": "Modifica profilo",
+  "EDIT_MAIN_PROFILE": "Modifica il profilo principale",
   "USER_PROFILE_MESSAGE": "Messaggio",
   "USER_PROFILE_ADD_FRIEND": "Aggiungi amico",
   "USER_PROFILE_PENDING": "In attesa",

@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "프로필 보기",
   "VIEW_PROFILE_USERNAME": "프로필 보기, !!{username}!!",
   "EDIT_PROFILE": "프로필 편집",
+  "EDIT_MAIN_PROFILE": "메인 프로필 편집",
   "USER_PROFILE_MESSAGE": "메시지",
   "USER_PROFILE_ADD_FRIEND": "친구 추가하기",
   "USER_PROFILE_PENDING": "대기 중",

@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Profiel bekijken",
   "VIEW_PROFILE_USERNAME": "Profiel bekijken, !!{username}!!",
   "EDIT_PROFILE": "Profiel bewerken",
+  "EDIT_MAIN_PROFILE": "Hoofdprofiel bewerken",
   "USER_PROFILE_MESSAGE": "Bericht",
   "USER_PROFILE_ADD_FRIEND": "Vriend toevoegen",
   "USER_PROFILE_PENDING": "In afwachting",

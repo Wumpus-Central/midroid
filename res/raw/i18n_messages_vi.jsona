@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Xem Hồ Sơ",
   "VIEW_PROFILE_USERNAME": "Xem Hồ Sơ, !!{username}!!",
   "EDIT_PROFILE": "Sửa Hồ Sơ",
+  "EDIT_MAIN_PROFILE": "Chỉnh sửa hồ sơ chính",
   "USER_PROFILE_MESSAGE": "Tin nhắn",
   "USER_PROFILE_ADD_FRIEND": "Thêm Bạn",
   "USER_PROFILE_PENDING": "Đang chờ xử lý",

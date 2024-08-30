@@ -4089,6 +4089,7 @@
   "VIEW_PROFILE": "Профіль",
   "VIEW_PROFILE_USERNAME": "!!{username}!!, перегляньте профіль",
   "EDIT_PROFILE": "Редагувати профіль",
+  "EDIT_MAIN_PROFILE": "Редагувати основний профіль",
   "USER_PROFILE_MESSAGE": "Повідомлення",
   "USER_PROFILE_ADD_FRIEND": "Додати друга",
   "USER_PROFILE_PENDING": "Очікується",

@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Prikaži profil",
   "VIEW_PROFILE_USERNAME": "Prikaži profil, !!{username}!!",
   "EDIT_PROFILE": "Uredi profil",
+  "EDIT_MAIN_PROFILE": "Uredi glavni profil",
   "USER_PROFILE_MESSAGE": "Poruka",
   "USER_PROFILE_ADD_FRIEND": "Dodaj prijatelja",
   "USER_PROFILE_PENDING": "U tijeku",

@@ -4086,6 +4086,7 @@
   "VIEW_PROFILE": "Προβολή προφίλ",
   "VIEW_PROFILE_USERNAME": "Προβολή προφίλ, !!{username}!!",
   "EDIT_PROFILE": "Επεξεργασία προφίλ",
+  "EDIT_MAIN_PROFILE": "Επεξεργασία βασικού προφίλ",
   "USER_PROFILE_MESSAGE": "Μήνυμα",
   "USER_PROFILE_ADD_FRIEND": "Προσθήκη φίλου",
   "USER_PROFILE_PENDING": "Εκκρεμεί",

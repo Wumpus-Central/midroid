@@ -4087,6 +4087,7 @@
   "VIEW_PROFILE": "Profil megtekintése",
   "VIEW_PROFILE_USERNAME": "Profil megtekintése, !!{username}!!",
   "EDIT_PROFILE": "Profil szerkesztése",
+  "EDIT_MAIN_PROFILE": "Fő profil szerkesztése",
   "USER_PROFILE_MESSAGE": "Üzenet",
   "USER_PROFILE_ADD_FRIEND": "Barát hozzáadása",
   "USER_PROFILE_PENDING": "Függőben lévő",
