@@ -141,30 +141,30 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    }
 
    public override fun toString(): String {
-      val var1: Long = this.receivedTimestamp;
-      val var3: Boolean = this.silent;
-      val var6: java.lang.String = this.type;
-      val var7: java.lang.String = this.title;
+      val var2: Long = this.receivedTimestamp;
+      val var1: Boolean = this.silent;
+      val var7: java.lang.String = this.type;
+      val var9: java.lang.String = this.title;
       val var8: java.lang.String = this.content;
-      val var9: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.messageId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PushNotificationMeta(receivedTimestamp=");
-      var4.append(var1);
-      var4.append(", silent=");
-      var4.append(var3);
-      var4.append(", type=");
-      var4.append(var6);
-      var4.append(", title=");
-      var4.append(var7);
-      var4.append(", content=");
-      var4.append(var8);
-      var4.append(", channelId=");
-      var4.append(var9);
-      var4.append(", messageId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("PushNotificationMeta(receivedTimestamp=");
+      var6.append(var2);
+      var6.append(", silent=");
+      var6.append(var1);
+      var6.append(", type=");
+      var6.append(var7);
+      var6.append(", title=");
+      var6.append(var9);
+      var6.append(", content=");
+      var6.append(var8);
+      var6.append(", channelId=");
+      var6.append(var5);
+      var6.append(", messageId=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -190,8 +190,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: b2 = b2.a;
-         return new KSerializer[]{x0.a, h.a, b2.a, b2.a, a.u(b2.a), a.u(var3), a.u(var3)};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{x0.a, h.a, b2.a, b2.a, a.u(b2.a), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): PushNotificationMeta {

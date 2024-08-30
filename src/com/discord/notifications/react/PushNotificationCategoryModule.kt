@@ -33,10 +33,10 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    public fun registerNotificationCategoriesAndGroups(localizedCategoryNames: ReadableMap, localizedGroupNames: ReadableMap) {
       q.h(var1, "localizedCategoryNames");
       q.h(var2, "localizedGroupNames");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var4, "getReactApplicationContext(...)");
-      var3.initNotificationCategories(var4, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
+      val var4: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var4.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
    }
 
    @ReactMethod

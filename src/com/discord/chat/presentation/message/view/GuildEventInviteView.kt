@@ -118,11 +118,11 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    }
 
    public fun setBadge(iconUrl: String?, count: String?) {
-      val var4: GuildEventInviteViewBinding = this.binding;
-      val var3: SimpleDraweeView = this.binding.badgeIcon;
+      val var3: GuildEventInviteViewBinding = this.binding;
+      val var4: SimpleDraweeView = this.binding.badgeIcon;
       kotlin.jvm.internal.q.g(this.binding.badgeIcon, "badgeIcon");
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var3, var1);
-      var4.badgeText.setText(var2);
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
+      var3.badgeText.setText(var2);
    }
 
    public fun setChannel(iconUrl: String?, text: String?) {
@@ -275,12 +275,12 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
 
    public fun setHeader(iconUrl: String?, text: String, color: Int) {
       kotlin.jvm.internal.q.h(var2, "text");
-      val var4: GuildEventInviteViewBinding = this.binding;
-      val var5: SimpleDraweeView = this.binding.headerIcon;
+      val var5: GuildEventInviteViewBinding = this.binding;
+      val var4: SimpleDraweeView = this.binding.headerIcon;
       kotlin.jvm.internal.q.g(this.binding.headerIcon, "headerIcon");
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var5, var1);
-      var4.headerText.setText(var2);
-      var4.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
+      var5.headerText.setText(var2);
+      var5.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
    }
 
    public fun setSecondaryButton(iconUrl: String?, listener: OnClickListener?) {

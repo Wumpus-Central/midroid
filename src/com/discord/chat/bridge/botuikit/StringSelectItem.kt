@@ -94,8 +94,8 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.label.hashCode();
-      val var5: Int = this.value.hashCode();
+      val var5: Int = this.label.hashCode();
+      val var4: Int = this.value.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.emoji == null) {
@@ -115,28 +115,28 @@ public data class StringSelectItem(label: String,
          var3 = this.default.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.label;
-      val var5: java.lang.String = this.value;
-      val var6: ComponentEmoji = this.emoji;
+      val var2: java.lang.String = this.label;
+      val var6: java.lang.String = this.value;
+      val var1: ComponentEmoji = this.emoji;
       val var4: java.lang.String = this.description;
-      val var2: java.lang.Boolean = this.default;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("StringSelectItem(label=");
-      var1.append(var3);
-      var1.append(", value=");
-      var1.append(var5);
-      var1.append(", emoji=");
-      var1.append(var6);
-      var1.append(", description=");
-      var1.append(var4);
-      var1.append(", default=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var5: java.lang.Boolean = this.default;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("StringSelectItem(label=");
+      var3.append(var2);
+      var3.append(", value=");
+      var3.append(var6);
+      var3.append(", emoji=");
+      var3.append(var1);
+      var3.append(", description=");
+      var3.append(var4);
+      var3.append(", default=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -172,21 +172,22 @@ public data class StringSelectItem(label: String,
          var var9: java.lang.String = null;
          var var2: Int;
          var var6: Any;
-         var var7: ComponentEmoji;
+         val var7: java.lang.String;
          var var8: java.lang.String;
+         val var10: ComponentEmoji;
          var var13: Any;
          if (var5) {
-            var9 = var12.m(var11, 0);
+            var7 = var12.m(var11, 0);
             var8 = var12.m(var11, 1);
-            var7 = var12.n(var11, 2, ComponentEmoji.$serializer.INSTANCE, null) as ComponentEmoji;
-            var13 = var12.n(var11, 3, b2.a, null) as java.lang.String;
-            var6 = var12.n(var11, 4, h.a, null) as java.lang.Boolean;
+            var10 = var12.n(var11, 2, ComponentEmoji.$serializer.INSTANCE, null) as ComponentEmoji;
+            var6 = var12.n(var11, 3, b2.a, null) as java.lang.String;
+            var13 = var12.n(var11, 4, h.a, null) as java.lang.Boolean;
             var2 = 31;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var7 = null;
+            var var14: ComponentEmoji = null;
             var6 = null;
             var13 = null;
 
@@ -208,7 +209,7 @@ public data class StringSelectItem(label: String,
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var12.n(var11, 2, ComponentEmoji.$serializer.INSTANCE, var7) as ComponentEmoji;
+                           var14 = var12.n(var11, 2, ComponentEmoji.$serializer.INSTANCE, var14) as ComponentEmoji;
                            var2 |= 4;
                         }
                      } else {
@@ -224,12 +225,12 @@ public data class StringSelectItem(label: String,
                }
             }
 
-            var6 = var13;
-            var13 = var6;
+            var10 = var14;
+            var7 = var9;
          }
 
          var12.c(var11);
-         return new StringSelectItem(var2, var9, var8, var7, (java.lang.String)var13, (java.lang.Boolean)var6, null);
+         return new StringSelectItem(var2, var7, var8, var10, (java.lang.String)var6, (java.lang.Boolean)var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: StringSelectItem) {

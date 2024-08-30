@@ -92,16 +92,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
          var1.putString("exitDescription", var4.getReason());
       }
 
-      val var5: SystemLogUtils.Tombstone = this.tombstone;
+      val var3: SystemLogUtils.Tombstone = this.tombstone;
       if (this.tombstone != null) {
          var1.putString("tombstoneGroupHash", this.tombstone.getGroupHash());
-         val var3: java.lang.String = var5.getCause();
-         if (var3 != null) {
-            var1.putString("tombstoneCause", var3);
+         val var5: java.lang.String = var3.getCause();
+         if (var5 != null) {
+            var1.putString("tombstoneCause", var5);
          }
 
-         if (f.n(new IntRange(0, 1000), c.j) == 0 && !h.x(var5.getText())) {
-            var1.putString("tombstone", h.c1(var5.getText(), 6291456));
+         if (f.n(new IntRange(0, 1000), c.j) == 0 && !h.x(var3.getText())) {
+            var1.putString("tombstone", h.c1(var3.getText(), 6291456));
          }
       }
 
@@ -109,17 +109,17 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.Boolean = this.crashedLastRun;
+      val var3: java.lang.Boolean = this.crashedLastRun;
       val var1: HistoricalProcessExitReason.Reason = this.reason;
       val var4: SystemLogUtils.Tombstone = this.tombstone;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CrashReportEvent(crashedLastRun=");
-      var3.append(var2);
-      var3.append(", reason=");
-      var3.append(var1);
-      var3.append(", tombstone=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CrashReportEvent(crashedLastRun=");
+      var2.append(var3);
+      var2.append(", reason=");
+      var2.append(var1);
+      var2.append(", tombstone=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

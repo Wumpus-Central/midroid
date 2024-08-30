@@ -76,7 +76,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
             }
 
             kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type android.view.ViewGroup");
-            val var4: ViewGroup = var3 as ViewGroup;
+            var3 = var3 as ViewGroup;
             var var1: Byte;
             if (this.$showImage) {
                var1 = 2;
@@ -86,9 +86,9 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
 
             val var5: androidx.transition.c = new androidx.transition.c(var1);
             val var2: Boolean = this.$showImage;
-            var3 = this.this$0;
+            val var4: SpoilerView = this.this$0;
             var5.b0(150L);
-            var5.b(new androidx.transition.i(var2, (SpoilerView)var3) {
+            var5.b(new androidx.transition.i(var2, var4) {
                final boolean $showImage;
                final SpoilerView this$0;
 
@@ -109,7 +109,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
                   }
                }
             });
-            androidx.transition.j.a(var4, var5);
+            androidx.transition.j.a((ViewGroup)var3, var5);
             if (this.$showImage xor true) {
                var1 = 0;
             } else {

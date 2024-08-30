@@ -91,12 +91,12 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var1: java.util.List = this.postprocessors;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Composite(postprocessors=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.util.List = this.postprocessors;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Composite(postprocessors=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 
@@ -197,24 +197,24 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var5: PostProcessor.Gradient.Direction = this.direction;
-         val var4: Int = this.startColor;
-         val var3: Int = this.endColor;
-         val var1: Float = this.startPosition;
-         val var2: Float = this.endPosition;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Gradient(direction=");
-         var6.append(var5);
-         var6.append(", startColor=");
-         var6.append(var4);
-         var6.append(", endColor=");
-         var6.append(var3);
-         var6.append(", startPosition=");
-         var6.append(var1);
-         var6.append(", endPosition=");
-         var6.append(var2);
-         var6.append(")");
-         return var6.toString();
+         val var6: PostProcessor.Gradient.Direction = this.direction;
+         val var3: Int = this.startColor;
+         val var4: Int = this.endColor;
+         val var2: Float = this.startPosition;
+         val var1: Float = this.endPosition;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Gradient(direction=");
+         var5.append(var6);
+         var5.append(", startColor=");
+         var5.append(var3);
+         var5.append(", endColor=");
+         var5.append(var4);
+         var5.append(", startPosition=");
+         var5.append(var2);
+         var5.append(", endPosition=");
+         var5.append(var1);
+         var5.append(")");
+         return var5.toString();
       }
 
       public enum class Direction {

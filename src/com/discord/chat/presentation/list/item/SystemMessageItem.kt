@@ -63,8 +63,8 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.message.hashCode();
-      val var3: Int = this.messageContext.hashCode();
+      val var3: Int = this.message.hashCode();
+      val var2: Int = this.messageContext.hashCode();
       val var1: Int;
       if (this.backgroundHighlight == null) {
          var1 = 0;
@@ -72,21 +72,21 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
          var1 = this.backgroundHighlight.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: Message = this.message;
-      val var2: MessageContext = this.messageContext;
-      val var3: BackgroundHighlight = this.backgroundHighlight;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SystemMessageItem(message=");
-      var4.append(var1);
-      var4.append(", messageContext=");
-      var4.append(var2);
-      var4.append(", backgroundHighlight=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: Message = this.message;
+      val var3: MessageContext = this.messageContext;
+      val var4: BackgroundHighlight = this.backgroundHighlight;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SystemMessageItem(message=");
+      var1.append(var2);
+      var1.append(", messageContext=");
+      var1.append(var3);
+      var1.append(", backgroundHighlight=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 }

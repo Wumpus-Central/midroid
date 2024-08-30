@@ -280,94 +280,95 @@ public data class ContentInventoryEntry(authorId: UserId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
-         val var2: b2 = b2.a;
-         return new KSerializer[]{UserId.$serializer.INSTANCE, b2.a, b2.a, b2.a, a.u(b2.a), var2, var2, var3[7], var3[8]};
+         val var2: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
+         val var1: b2 = b2.a;
+         return new KSerializer[]{UserId.$serializer.INSTANCE, b2.a, b2.a, b2.a, a.u(b2.a), var1, var1, var2[7], var2[8]};
       }
 
       public open fun deserialize(decoder: Decoder): ContentInventoryEntry {
          q.h(var1, "decoder");
-         val var16: SerialDescriptor = this.getDescriptor();
-         val var17: c = var1.b(var16);
-         val var18: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
-         val var6: Boolean = var17.p();
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.b(var17);
+         var var15: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
+         val var6: Boolean = var18.p();
          var var3: Byte = 6;
          var var11: UserId = null;
          var var2: Int;
-         var var7: Any;
          var var8: Any;
          var var9: Any;
          var var12: Any;
          var var13: Any;
-         var var14: java.util.List;
-         val var15: Any;
+         var var14: Any;
          val var20: java.util.List;
+         var var22: java.util.List;
          if (var6) {
-            var11 = var17.y(var16, 0, UserId.$serializer.INSTANCE, null) as UserId;
-            var15 = var17.m(var16, 1);
-            var9 = var17.m(var16, 2);
-            var13 = var17.m(var16, 3);
-            var12 = var17.n(var16, 4, b2.a, null) as java.lang.String;
-            var7 = var17.m(var16, 5);
-            val var19: java.lang.String = var17.m(var16, 6);
-            val var10: java.util.List = var17.y(var16, 7, var18[7], null) as java.util.List;
-            var14 = var17.y(var16, 8, var18[8], null) as java.util.List;
+            var11 = var18.y(var17, 0, UserId.$serializer.INSTANCE, null) as UserId;
+            var12 = var18.m(var17, 1);
+            var9 = var18.m(var17, 2);
+            var8 = var18.m(var17, 3);
+            var14 = var18.n(var17, 4, b2.a, null) as java.lang.String;
+            val var7: java.lang.String = var18.m(var17, 5);
+            val var19: java.lang.String = var18.m(var17, 6);
+            val var10: java.util.List = var18.y(var17, 7, var15[7], null) as java.util.List;
+            val var16: java.util.List = var18.y(var17, 8, var15[8], null) as java.util.List;
             var2 = 511;
-            var8 = var19;
-            var20 = var10;
+            var15 = var7;
+            var13 = var19;
+            var22 = var10;
+            var20 = var16;
          } else {
             var var4: Boolean = true;
             var2 = 0;
             var14 = null;
             var13 = null;
             var12 = null;
-            var var23: Any = null;
+            var var24: Any = null;
             var9 = null;
             var8 = null;
-            var7 = null;
+            var22 = null;
             var var21: Any = null;
 
             while (var4) {
-               val var5: Int = var17.o(var16);
+               val var5: Int = var18.o(var17);
                switch (var5) {
                   case -1:
                      var4 = false;
                      break;
                   case 0:
-                     var11 = var17.y(var16, 0, UserId.$serializer.INSTANCE, var11) as UserId;
+                     var11 = var18.y(var17, 0, UserId.$serializer.INSTANCE, var11) as UserId;
                      var2 |= 1;
                      var3 = 6;
                      break;
                   case 1:
-                     var23 = var17.m(var16, 1);
+                     var24 = var18.m(var17, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var9 = var17.m(var16, 2);
+                     var9 = var18.m(var17, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var8 = var17.m(var16, 3);
+                     var8 = var18.m(var17, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var12 = var17.n(var16, 4, b2.a, var12) as java.lang.String;
+                     var12 = var18.n(var17, 4, b2.a, var12) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
-                     var7 = var17.m(var16, 5);
+                     var22 = var18.m(var17, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var21 = var17.m(var16, var3);
+                     var21 = var18.m(var17, var3);
                      var2 |= 64;
                      break;
                   case 7:
-                     var13 = var17.y(var16, 7, var18[7], var13) as java.util.List;
+                     var13 = var18.y(var17, 7, var15[7], var13) as java.util.List;
                      var2 |= 128;
                      break;
                   case 8:
-                     var14 = var17.y(var16, 8, var18[8], var14) as java.util.List;
+                     var14 = var18.y(var17, 8, var15[8], var14) as java.util.List;
                      var2 |= 256;
                      break;
                   default:
@@ -375,24 +376,26 @@ public data class ContentInventoryEntry(authorId: UserId,
                }
             }
 
-            var8 = var21;
-            var20 = (java.util.List)var13;
-            var13 = var8;
-            var15 = var23;
+            var15 = var22;
+            var20 = (java.util.List)var14;
+            var22 = (java.util.List)var13;
+            var13 = var21;
+            var14 = var12;
+            var12 = var24;
          }
 
-         var17.c(var16);
+         var18.c(var17);
          return new ContentInventoryEntry(
             var2,
             var11,
-            (java.lang.String)var15,
-            (java.lang.String)var9,
-            (java.lang.String)var13,
             (java.lang.String)var12,
-            (java.lang.String)var7,
+            (java.lang.String)var9,
             (java.lang.String)var8,
+            (java.lang.String)var14,
+            var15,
+            (java.lang.String)var13,
+            var22,
             var20,
-            var14,
             null,
             null
          );

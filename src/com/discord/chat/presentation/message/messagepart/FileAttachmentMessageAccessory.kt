@@ -137,26 +137,26 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Attachment = this.attachment;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var5: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var6: java.lang.Float = this.attachmentsOpacity;
-      val var5: SpoilerAttributes = this.spoilerAttributes;
-      val var4: java.lang.String = this.uploaderId;
+      val var8: java.lang.Float = this.attachmentsOpacity;
+      val var6: SpoilerAttributes = this.spoilerAttributes;
+      val var3: java.lang.String = this.uploaderId;
       val var7: java.lang.String = this.uploaderItemId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("FileAttachmentMessageAccessory(messageId=");
-      var2.append(var8);
+      var2.append(var4);
       var2.append(", attachment=");
-      var2.append(var3);
+      var2.append(var5);
       var2.append(", attachmentIndex=");
       var2.append(var1);
       var2.append(", attachmentsOpacity=");
-      var2.append(var6);
+      var2.append(var8);
       var2.append(", spoilerAttributes=");
-      var2.append(var5);
+      var2.append(var6);
       var2.append(", uploaderId=");
-      var2.append(var4);
+      var2.append(var3);
       var2.append(", uploaderItemId=");
       var2.append(var7);
       var2.append(")");

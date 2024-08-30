@@ -2124,20 +2124,20 @@ public class NotificationRenderer {
       val var3: java.util.Iterator = var2.getAckChannelIds().iterator();
 
       while (var3.hasNext()) {
-         var var4: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("MESSAGE_CREATE");
-         var5.append(var4);
-         var4 = var5.toString();
+         val var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("MESSAGE_CREATE");
+         var4.append(var5);
+         val var6: java.lang.String = var4.toString();
          val var7: NotificationChannels = NotificationChannels.INSTANCE;
          if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
-               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var4)
+               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var6)
             )
             .i()
             .getBoolean("ignoreAck", false)) {
-            this.clear(var1, var4);
+            this.clear(var1, var6);
          } else {
-            this.markNotificationAsDirectReply(var1, var4, var7.getNotificationChannelId(var2, var1), false);
+            this.markNotificationAsDirectReply(var1, var6, var7.getNotificationChannelId(var2, var1), false);
          }
       }
    }

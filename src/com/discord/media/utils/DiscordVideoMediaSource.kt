@@ -39,12 +39,12 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
       super(var1, var2);
       this.inputUri = var2;
       this.outputUri = var3;
-      val var79: IntRange = f.r(0, this.getTrackCount());
-      val var67: ArrayList = new ArrayList(i.u(var79, 10));
-      val var80: java.util.Iterator = var79.iterator();
+      val var83: IntRange = f.r(0, this.getTrackCount());
+      val var67: ArrayList = new ArrayList(i.u(var83, 10));
+      val var84: java.util.Iterator = var83.iterator();
 
-      while (var80.hasNext()) {
-         var67.add(this.getTrackFormat((var80 as o).c()));
+      while (var84.hasNext()) {
+         var67.add(this.getTrackFormat((var84 as o).c()));
       }
 
       this.srcTrackFormats = var67;
@@ -53,7 +53,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
       var var95: java.lang.String;
       do {
          val var9: Boolean = var92.hasNext();
-         var81 = null;
+         var85 = null;
          if (!var9) {
             var68 = null;
             break;
@@ -69,7 +69,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
       val var93: java.util.Iterator = this.srcTrackFormats.iterator();
 
       do {
-         var69 = var81;
+         var69 = var85;
          if (!var93.hasNext()) {
             break;
          }
@@ -86,111 +86,111 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
       if (this.srcVideoFormat != null) {
          label141:
          try {
-            val var71: lj.r.a = r.k;
-            var70 = r.b(var98.getInteger("width"));
+            val var72: lj.r.a = r.k;
+            var71 = r.b(var98.getInteger("width"));
          } catch (var17: java.lang.Throwable) {
-            val var82: lj.r.a = r.k;
-            var70 = r.b(s.a(var17));
+            val var70: lj.r.a = r.k;
+            var71 = r.b(s.a(var17));
             break label141;
          }
 
-         var var83: Any = var70;
-         if (r.g(var70)) {
-            var83 = 640;
+         var var86: Any = var71;
+         if (r.g(var71)) {
+            var86 = 640;
          }
 
-         this.rawWidth = (var83 as java.lang.Number).intValue();
+         this.rawWidth = (var86 as java.lang.Number).intValue();
 
          label135:
          try {
-            var72 = r.b(var98.getInteger("height"));
+            var74 = r.b(var98.getInteger("height"));
          } catch (var16: java.lang.Throwable) {
-            var83 = r.k;
-            var72 = r.b(s.a(var16));
+            val var73: lj.r.a = r.k;
+            var74 = r.b(s.a(var16));
             break label135;
          }
 
-         var83 = var72;
-         if (r.g(var72)) {
-            var83 = 480;
+         var86 = var74;
+         if (r.g(var74)) {
+            var86 = 480;
          }
 
-         this.rawHeight = (var83 as java.lang.Number).intValue();
-         var var73: java.lang.String = MediaFormatUtilsKt.getCodecType(var98);
-         if (var73 == null) {
-            var73 = "unknown";
+         this.rawHeight = (var86 as java.lang.Number).intValue();
+         var var75: java.lang.String = MediaFormatUtilsKt.getCodecType(var98);
+         if (var75 == null) {
+            var75 = "unknown";
          }
 
-         this.rawVideoFormat = var73;
+         this.rawVideoFormat = var75;
 
          label128:
          try {
-            var74 = r.b(var98.getInteger("frame-rate"));
+            var77 = r.b(var98.getInteger("frame-rate"));
          } catch (var15: java.lang.Throwable) {
-            var83 = r.k;
-            var74 = r.b(s.a(var15));
+            val var76: lj.r.a = r.k;
+            var77 = r.b(s.a(var15));
             break label128;
          }
 
-         if (r.e(var74) != null) {
+         if (r.e(var77) != null) {
             label123:
             try {
-               var74 = r.b((int)var98.getFloat("frame-rate"));
+               var77 = r.b((int)var98.getFloat("frame-rate"));
             } catch (var14: java.lang.Throwable) {
-               var83 = r.k;
-               var74 = r.b(s.a(var14));
+               val var78: lj.r.a = r.k;
+               var77 = r.b(s.a(var14));
                break label123;
             }
          }
 
-         var83 = var74;
-         if (r.g(var74)) {
-            var83 = 30;
+         var86 = var77;
+         if (r.g(var77)) {
+            var86 = 30;
          }
 
-         this.frameRate = (var83 as java.lang.Number).intValue();
+         this.frameRate = (var86 as java.lang.Number).intValue();
 
          label117:
          try {
-            var76 = r.b(var98.getInteger("bitrate"));
+            var79 = r.b(var98.getInteger("bitrate"));
          } catch (var13: java.lang.Throwable) {
-            val var75: lj.r.a = r.k;
-            var76 = r.b(s.a(var13));
+            var86 = r.k;
+            var79 = r.b(s.a(var13));
             break label117;
          }
 
-         if (r.e(var76) != null) {
-            var76 = this.getAVCBitrate(this.rawWidth, this.rawHeight, this.frameRate);
+         if (r.e(var79) != null) {
+            var79 = this.getAVCBitrate(this.rawWidth, this.rawHeight, this.frameRate);
          }
 
-         this.rawBitrate = (var76 as java.lang.Number).intValue();
+         this.rawBitrate = (var79 as java.lang.Number).intValue();
 
          label111:
          try {
-            var77 = r.b(var98.getFloat("i-frame-interval"));
+            var80 = r.b(var98.getFloat("i-frame-interval"));
          } catch (var12: java.lang.Throwable) {
-            var83 = r.k;
-            var77 = r.b(s.a(var12));
+            var86 = r.k;
+            var80 = r.b(s.a(var12));
             break label111;
          }
 
-         if (r.e(var77) != null) {
+         if (r.e(var80) != null) {
             label106:
             try {
-               var77 = r.b((float)var98.getInteger("i-frame-interval"));
+               var80 = r.b((float)var98.getInteger("i-frame-interval"));
             } catch (var11: java.lang.Throwable) {
-               var83 = r.k;
-               var77 = r.b(s.a(var11));
+               val var81: lj.r.a = r.k;
+               var80 = r.b(s.a(var11));
                break label106;
             }
          }
 
-         var83 = var77;
-         if (r.g(var77)) {
-            var83 = 5.0F;
+         var86 = var80;
+         if (r.g(var80)) {
+            var86 = 5.0F;
          }
 
-         this.iFrameInterval = (var83 as java.lang.Number).floatValue();
+         this.iFrameInterval = (var86 as java.lang.Number).floatValue();
       } else {
          this.rawWidth = 640;
          this.rawHeight = 480;
@@ -224,19 +224,19 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
 
       this.bitRate = var8;
       if (var6 % 2 == 0 && var7 % 2 == 0) {
-         val var78: MediaFormat = new MediaFormat();
-         var78.setString("mime", "video/avc");
-         var78.setInteger("width", var6);
-         var78.setInteger("height", var7);
-         var78.setInteger("bitrate", var8);
-         var78.setInteger("frame-rate", this.frameRate);
+         val var82: MediaFormat = new MediaFormat();
+         var82.setString("mime", "video/avc");
+         var82.setInteger("width", var6);
+         var82.setInteger("height", var7);
+         var82.setInteger("bitrate", var8);
+         var82.setInteger("frame-rate", this.frameRate);
          if (VERSION.SDK_INT >= 25) {
-            var78.setFloat("i-frame-interval", this.iFrameInterval);
+            var82.setFloat("i-frame-interval", this.iFrameInterval);
          } else {
-            var78.setInteger("i-frame-interval", (int)this.iFrameInterval);
+            var82.setInteger("i-frame-interval", (int)this.iFrameInterval);
          }
 
-         this.videoFormat = var78;
+         this.videoFormat = var82;
          this.audioFormat = this.getAudioFormatWithBitrate(this.srcAudioFormat);
       } else {
          throw new IllegalArgumentException(

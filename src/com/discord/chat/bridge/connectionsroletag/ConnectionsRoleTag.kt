@@ -132,9 +132,9 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
          if (var9.p()) {
             var7 = var9.m(var8, 0);
             var10 = var9.m(var8, 1);
-            var4 = var9.i(var8, 2);
+            var3 = var9.i(var8, 2);
             var2 = var9.i(var8, 3);
-            var3 = 15;
+            var4 = 15;
          } else {
             var7 = null;
             var10 = null;
@@ -172,13 +172,12 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
                }
             }
 
+            var4 = var2;
             var2 = var4;
-            var4 = var3;
-            var3 = var2;
          }
 
          var9.c(var8);
-         return new ConnectionsRoleTag(var3, var7, var10, var4, var2, null);
+         return new ConnectionsRoleTag(var4, var7, var10, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ConnectionsRoleTag) {

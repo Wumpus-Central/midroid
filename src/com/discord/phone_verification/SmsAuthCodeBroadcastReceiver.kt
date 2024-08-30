@@ -64,11 +64,11 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
       }
 
       if (var5 != null && var5.length() != 0) {
-         val var6: Log = Log.INSTANCE;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Successfully extracted code from SMS: ");
-         var7.append(var5);
-         Log.i$default(var6, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
+         val var7: Log = Log.INSTANCE;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Successfully extracted code from SMS: ");
+         var6.append(var5);
+         Log.i$default(var7, "SmsAuthCodeBroadcastReceiver", var6.toString(), null, 4, null);
          this.onReceiveCallback.invoke(var5);
          this.handled = true;
       } else {

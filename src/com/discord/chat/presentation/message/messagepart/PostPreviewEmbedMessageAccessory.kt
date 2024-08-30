@@ -70,9 +70,9 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = MessageId.hashCode-impl(this.messageId);
-      val var4: Int = this.postPreviewEmbed.hashCode();
-      val var3: Int = Integer.hashCode(this.index);
+      val var4: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = this.postPreviewEmbed.hashCode();
+      val var2: Int = Integer.hashCode(this.index);
       val var1: Int;
       if (this.spoilerAttributes == null) {
          var1 = 0;
@@ -80,24 +80,24 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
          var1 = this.spoilerAttributes.hashCode();
       }
 
-      return ((var2 * 31 + var4) * 31 + var3) * 31 + var1;
+      return ((var4 * 31 + var3) * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: PostPreviewEmbed = this.postPreviewEmbed;
+      val var5: PostPreviewEmbed = this.postPreviewEmbed;
       val var1: Int = this.index;
-      val var3: SpoilerAttributes = this.spoilerAttributes;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PostPreviewEmbedMessageAccessory(messageId=");
-      var5.append(var4);
-      var5.append(", postPreviewEmbed=");
-      var5.append(var2);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", spoilerAttributes=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var2: SpoilerAttributes = this.spoilerAttributes;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PostPreviewEmbedMessageAccessory(messageId=");
+      var3.append(var4);
+      var3.append(", postPreviewEmbed=");
+      var3.append(var5);
+      var3.append(", index=");
+      var3.append(var1);
+      var3.append(", spoilerAttributes=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

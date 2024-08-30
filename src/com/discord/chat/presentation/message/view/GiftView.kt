@@ -87,7 +87,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       val var5: ImageRequest = ImageRequest.fromUri(var1.getSplashUrl());
       val var9: com.facebook.drawee.controller.a;
       if (var5 != null) {
-         val var12: PipelineDraweeControllerBuilder = w5.c.g()
+         val var6: PipelineDraweeControllerBuilder = w5.c.g()
             .F(
                ImageRequestBuilder.b(var5)
                   .H(
@@ -99,14 +99,14 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   )
                   .a()
             ) as PipelineDraweeControllerBuilder;
-         val var6: java.lang.String = var1.getGiftCode();
-         val var7: java.lang.String = var1.getSplashUrl();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("splash-");
-         var8.append(var6);
-         var8.append("-");
-         var8.append(var7);
-         var9 = ((var12.C(var8.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
+         val var12: java.lang.String = var1.getGiftCode();
+         val var8: java.lang.String = var1.getSplashUrl();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("splash-");
+         var7.append(var12);
+         var7.append("-");
+         var7.append(var8);
+         var9 = ((var6.C(var7.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
       } else {
          var9 = null;
       }
@@ -176,16 +176,16 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var12 = Orientation.RIGHT_LEFT;
          }
 
-         val var13: GradientDrawable = new GradientDrawable(
+         val var19: GradientDrawable = new GradientDrawable(
             var12, new int[]{(var9 as GiftEmbed.Resolving).getResolvingGradientStart(), (var9 as GiftEmbed.Resolving).getResolvingGradientEnd()}
          );
-         var13.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-         val var19: IntArray = this.binding.gradients.getReferencedIds();
-         kotlin.jvm.internal.q.g(var19, "getReferencedIds(...)");
-         val var23: Int = var19.length;
+         var19.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+         val var13: IntArray = this.binding.gradients.getReferencedIds();
+         kotlin.jvm.internal.q.g(var13, "getReferencedIds(...)");
+         val var23: Int = var13.length;
 
          for (int var4 = 0; var4 < var23; var4++) {
-            this.binding.getRoot().findViewById(var19[var4]).setBackground(var13);
+            this.binding.getRoot().findViewById(var13[var4]).setBackground(var19);
          }
 
          val var14: Group = this.binding.gradients;
@@ -211,25 +211,25 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          this.binding.thumbnail.setImageURI((var9 as GiftEmbed.Resolved).getThumbnailUrl());
          (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.a((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
-         var var11: TextView = this.binding.title;
+         val var32: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
-         var11.setTextColor(var27.getTitleColor());
-         kotlin.jvm.internal.q.e(var11);
-         val var32: java.lang.CharSequence = var11.getText();
-         kotlin.jvm.internal.q.g(var32, "getText(...)");
+         var32.setTextColor(var27.getTitleColor());
+         kotlin.jvm.internal.q.e(var32);
+         val var11: java.lang.CharSequence = var32.getText();
+         kotlin.jvm.internal.q.g(var11, "getText(...)");
          var var20: Byte;
-         if (kotlin.text.h.x(var32) xor true) {
+         if (kotlin.text.h.x(var11) xor true) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var11.setVisibility(var20);
-         var11 = this.binding.subtitle;
+         var32.setVisibility(var20);
+         val var35: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
-         var11.setTextColor(var27.getSubtitleColor());
-         kotlin.jvm.internal.q.e(var11);
-         val var33: java.lang.CharSequence = var11.getText();
+         var35.setTextColor(var27.getSubtitleColor());
+         kotlin.jvm.internal.q.e(var35);
+         val var33: java.lang.CharSequence = var35.getText();
          kotlin.jvm.internal.q.g(var33, "getText(...)");
          if (kotlin.text.h.x(var33) xor true) {
             var20 = 0;
@@ -237,7 +237,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var20 = 8;
          }
 
-         var11.setVisibility(var20);
+         var35.setVisibility(var20);
          if (var27 is GiftEmbed.Resolved.Invalid) {
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
                .v(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));

@@ -54,13 +54,13 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
 
    public fun configureUI(user: MobileVoiceOverlayDataUser) {
       q.h(var1, "user");
-      val var2: SimpleDraweeView = this.binding.overlayBubbleIv;
-      val var3: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var4: Context = this.getContext();
-      q.g(var4, "getContext(...)");
-      var2.setImageURI(
+      val var3: SimpleDraweeView = this.binding.overlayBubbleIv;
+      val var4: IconUrlUtils = IconUrlUtils.INSTANCE;
+      val var2: Context = this.getContext();
+      q.g(var2, "getContext(...)");
+      var3.setImageURI(
          IconUrlUtils.getForUser-_fRzTXg$default(
-            var3, var4, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
+            var4, var2, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
          )
       );
       if (var1.getSpeaking()) {

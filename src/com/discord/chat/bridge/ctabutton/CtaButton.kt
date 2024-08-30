@@ -134,9 +134,9 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         val var2: n0 = n0.a;
-         return new KSerializer[]{b2.a, a.u(n0.a), a.u(var2), a.u(var1)};
+         val var2: b2 = b2.a;
+         val var1: n0 = n0.a;
+         return new KSerializer[]{b2.a, a.u(n0.a), a.u(var1), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): CtaButton {

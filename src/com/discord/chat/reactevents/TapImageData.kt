@@ -116,10 +116,10 @@ public data class TapImageData(id: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.id.hashCode();
-      val var5: Int = Integer.hashCode(this.index);
-      val var7: Int = this.type.hashCode();
-      val var8: Int = this.layout.hashCode();
+      val var5: Int = this.id.hashCode();
+      val var7: Int = Integer.hashCode(this.index);
+      val var8: Int = this.type.hashCode();
+      val var6: Int = this.layout.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.portal == null) {
@@ -146,7 +146,7 @@ public data class TapImageData(id: String,
          var4 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((((var6 * 31 + var5) * 31 + var7) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((((var5 * 31 + var7) * 31 + var8) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public open fun serialize(): WritableMap {
@@ -165,33 +165,33 @@ public data class TapImageData(id: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.id;
+      val var2: java.lang.String = this.id;
       val var1: Int = this.index;
-      val var6: java.lang.String = this.type;
-      val var9: TapImageData.Layout = this.layout;
-      val var5: java.lang.Double = this.portal;
-      val var2: Int = this.embedIndex;
+      val var4: java.lang.String = this.type;
+      val var6: TapImageData.Layout = this.layout;
+      val var7: java.lang.Double = this.portal;
+      val var5: Int = this.embedIndex;
       val var3: java.lang.String = this.componentId;
-      val var7: Int = this.componentMediaIndex;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapImageData(id=");
-      var4.append(var8);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", type=");
-      var4.append(var6);
-      var4.append(", layout=");
-      var4.append(var9);
-      var4.append(", portal=");
-      var4.append(var5);
-      var4.append(", embedIndex=");
-      var4.append(var2);
-      var4.append(", componentId=");
-      var4.append(var3);
-      var4.append(", componentMediaIndex=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var9: Int = this.componentMediaIndex;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("TapImageData(id=");
+      var8.append(var2);
+      var8.append(", index=");
+      var8.append(var1);
+      var8.append(", type=");
+      var8.append(var4);
+      var8.append(", layout=");
+      var8.append(var6);
+      var8.append(", portal=");
+      var8.append(var7);
+      var8.append(", embedIndex=");
+      var8.append(var5);
+      var8.append(", componentId=");
+      var8.append(var3);
+      var8.append(", componentMediaIndex=");
+      var8.append(var9);
+      var8.append(")");
+      return var8.toString();
    }
 
    public data class Layout(width: Int, height: Int, x: Int, y: Int, resizeMode: ViewResizeMode) {

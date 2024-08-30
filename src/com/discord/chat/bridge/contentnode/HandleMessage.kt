@@ -116,28 +116,26 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
 
       public open fun deserialize(decoder: Decoder): HandleMessage {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var7: java.lang.String = null;
          var var2: Int;
-         var var11: java.lang.String;
-         var var12: HandleSurveyMessage;
+         var var6: HandleSurveyMessage;
+         var var10: java.lang.String;
          if (var5) {
-            val var6: java.lang.String = var10.m(var9, 0);
-            val var8: HandleSurveyMessage = var10.y(var9, 1, HandleSurveyMessage.$serializer.INSTANCE, null) as HandleSurveyMessage;
-            var11 = var10.n(var9, 2, b2.a, null) as java.lang.String;
+            var7 = var9.m(var8, 0);
+            var6 = var9.y(var8, 1, HandleSurveyMessage.$serializer.INSTANCE, null) as HandleSurveyMessage;
+            var10 = var9.n(var8, 2, b2.a, null) as java.lang.String;
             var2 = 7;
-            var7 = var6;
-            var12 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var12 = null;
-            var11 = null;
+            var6 = null;
+            var10 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -145,14 +143,14 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
                            throw new n(var4);
                         }
 
-                        var11 = var10.n(var9, 2, b2.a, var11) as java.lang.String;
+                        var10 = var9.n(var8, 2, b2.a, var10) as java.lang.String;
                         var2 |= 4;
                      } else {
-                        var12 = var10.y(var9, 1, HandleSurveyMessage.$serializer.INSTANCE, var12) as HandleSurveyMessage;
+                        var6 = var9.y(var8, 1, HandleSurveyMessage.$serializer.INSTANCE, var6) as HandleSurveyMessage;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.m(var9, 0);
+                     var7 = var9.m(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -161,8 +159,8 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
             }
          }
 
-         var10.c(var9);
-         return new HandleMessage(var2, var7, var12, var11, null);
+         var9.c(var8);
+         return new HandleMessage(var2, var7, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: HandleMessage) {

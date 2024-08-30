@@ -66,13 +66,13 @@ public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) :
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: Sticker = this.sticker;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: Sticker = this.sticker;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressStickerData(messageId=");
-      var2.append(var3);
-      var2.append(", sticker=");
       var2.append(var1);
+      var2.append(", sticker=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

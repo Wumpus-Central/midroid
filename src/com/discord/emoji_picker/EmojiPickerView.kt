@@ -266,11 +266,11 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureRecycledViewPool() {
-      val var1: Int = this.getTypedLayoutManager().getSpanCount() * 20;
-      val var2: Int = this.getTypedLayoutManager().getSpanCount();
-      this.setItemViewCacheSize(var1 / 4);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var1);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var2);
+      val var2: Int = this.getTypedLayoutManager().getSpanCount() * 20;
+      val var1: Int = this.getTypedLayoutManager().getSpanCount();
+      this.setItemViewCacheSize(var2 / 4);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var2);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var1);
       this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal(), 1);
    }
 
@@ -384,10 +384,10 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var2: Context = this.getContext();
-      q.g(var2, "getContext(...)");
-      var3.setUseTier0UpsellContent(var2, var1);
+      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var3: Context = this.getContext();
+      q.g(var3, "getContext(...)");
+      var2.setUseTier0UpsellContent(var3, var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {

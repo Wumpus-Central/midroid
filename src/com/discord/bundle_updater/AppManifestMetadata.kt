@@ -141,31 +141,29 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
 
       public open fun deserialize(decoder: Decoder): AppManifestMetadata {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: kotlinx.serialization.encoding.c = var1.b(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: kotlinx.serialization.encoding.c = var1.b(var8);
          var var2: Int;
          var var5: Boolean;
+         var var6: java.lang.String;
          var var7: java.lang.String;
-         var var11: java.lang.String;
-         var var12: java.lang.String;
-         if (var10.p()) {
-            var12 = var10.m(var9, 0);
-            val var8: java.lang.String = var10.n(var9, 1, b2.a, null) as java.lang.String;
-            var11 = var10.m(var9, 2);
-            var5 = var10.C(var9, 3);
+         var var10: java.lang.String;
+         if (var9.p()) {
+            var7 = var9.m(var8, 0);
+            var6 = var9.n(var8, 1, b2.a, null) as java.lang.String;
+            var10 = var9.m(var8, 2);
+            var5 = var9.C(var8, 3);
             var2 = 15;
-            var7 = var12;
-            var12 = var8;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var7 = null;
-            var12 = null;
-            var11 = null;
+            var6 = null;
+            var10 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -174,18 +172,18 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
                               throw new n(var4);
                            }
 
-                           var5 = var10.C(var9, 3);
+                           var5 = var9.C(var8, 3);
                            var2 |= 8;
                         } else {
-                           var11 = var10.m(var9, 2);
+                           var10 = var9.m(var8, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var12 = var10.n(var9, 1, b2.a, var12) as java.lang.String;
+                        var6 = var9.n(var8, 1, b2.a, var6) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.m(var9, 0);
+                     var7 = var9.m(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -194,8 +192,8 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
             }
          }
 
-         var10.c(var9);
-         return new AppManifestMetadata(var2, var7, var12, var11, var5, null);
+         var9.c(var8);
+         return new AppManifestMetadata(var2, var7, var6, var10, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifestMetadata) {

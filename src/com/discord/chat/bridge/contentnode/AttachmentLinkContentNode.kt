@@ -78,16 +78,16 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
-      val var3: java.util.List = this.content;
+      val var3: java.lang.String = this.attachmentUrl;
+      val var2: java.lang.String = this.attachmentName;
+      val var1: java.util.List = this.content;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AttachmentLinkContentNode(attachmentUrl=");
-      var4.append(var2);
-      var4.append(", attachmentName=");
-      var4.append(var1);
-      var4.append(", content=");
       var4.append(var3);
+      var4.append(", attachmentName=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

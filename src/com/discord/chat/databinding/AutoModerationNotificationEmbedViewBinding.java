@@ -65,49 +65,49 @@ public final class AutoModerationNotificationEmbedViewBinding implements ViewBin
 
    public static AutoModerationNotificationEmbedViewBinding bind(View var0) {
       int var1 = R.id.actions;
-      LinearLayout var13 = (LinearLayout)a.a(var0, var1);
-      if (var13 != null) {
+      LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+      if (var8 != null) {
          var1 = R.id.actions_button;
-         DCDButton var10 = (DCDButton)a.a(var0, var1);
-         if (var10 != null) {
+         DCDButton var4 = (DCDButton)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.body;
-            TextView var15 = (TextView)a.a(var0, var1);
-            if (var15 != null) {
+            TextView var5 = (TextView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.feedback_button;
-               DCDButton var2 = (DCDButton)a.a(var0, var1);
-               if (var2 != null) {
+               DCDButton var6 = (DCDButton)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.header;
-                  TextView var5 = (TextView)a.a(var0, var1);
-                  if (var5 != null) {
+                  TextView var3 = (TextView)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.header_icon;
-                     SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var3 != null) {
+                     SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.separator_dot;
-                        ImageView var11 = (ImageView)a.a(var0, var1);
-                        if (var11 != null) {
+                        ImageView var14 = (ImageView)a.a(var0, var1);
+                        if (var14 != null) {
                            var1 = R.id.subtitle_divider;
                            ImageView var9 = (ImageView)a.a(var0, var1);
                            if (var9 != null) {
                               var1 = R.id.subtitle_left;
-                              TextView var6 = (TextView)a.a(var0, var1);
-                              if (var6 != null) {
+                              TextView var11 = (TextView)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.subtitle_left_author;
-                                 TextView var4 = (TextView)a.a(var0, var1);
-                                 if (var4 != null) {
+                                 TextView var10 = (TextView)a.a(var0, var1);
+                                 if (var10 != null) {
                                     var1 = R.id.subtitle_left_avatar;
-                                    SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
-                                    if (var12 != null) {
+                                    SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+                                    if (var7 != null) {
                                        var1 = R.id.subtitle_left_wrapper;
-                                       LinearLayout var14 = (LinearLayout)a.a(var0, var1);
-                                       if (var14 != null) {
+                                       LinearLayout var15 = (LinearLayout)a.a(var0, var1);
+                                       if (var15 != null) {
                                           var1 = R.id.subtitle_right;
-                                          TextView var7 = (TextView)a.a(var0, var1);
-                                          if (var7 != null) {
+                                          TextView var12 = (TextView)a.a(var0, var1);
+                                          if (var12 != null) {
                                              var1 = R.id.subtitles_wrapper;
-                                             LinearLayout var8 = (LinearLayout)a.a(var0, var1);
-                                             if (var8 != null) {
+                                             LinearLayout var13 = (LinearLayout)a.a(var0, var1);
+                                             if (var13 != null) {
                                                 return new AutoModerationNotificationEmbedViewBinding(
-                                                   var0, var13, var10, var15, var2, var5, var3, var11, var9, var6, var4, var12, var14, var7, var8
+                                                   var0, var8, var4, var5, var6, var3, var2, var14, var9, var11, var10, var7, var15, var12, var13
                                                 );
                                              }
                                           }

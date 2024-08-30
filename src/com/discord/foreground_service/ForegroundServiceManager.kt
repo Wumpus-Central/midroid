@@ -30,15 +30,9 @@ public class ForegroundServiceManager {
       q.h(var1, "$context");
       q.h(var2, "$serviceConfigurations");
       q.h(var3, "result");
-      var var4: Any;
-      if (var3 is Array<Any>) {
-         var4 = (var3 as Array<Any>)[0];
-      } else {
-         var4 = var3;
-      }
-
-      if (var4 is java.lang.String) {
-         var4 = var4 as java.lang.String;
+      val var4: java.lang.String;
+      if (var3 is java.lang.String) {
+         var4 = var3 as java.lang.String;
       } else {
          var4 = null;
       }
@@ -48,33 +42,33 @@ public class ForegroundServiceManager {
       if (q.c(var4, var5)) {
          var0.startServiceInternal(var1, var2);
       } else {
-         val var7: CrashReporting = CrashReporting.INSTANCE;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Couldn't start ForegroundService, Result: ");
-         var6.append(var3);
-         CrashReporting.addBreadcrumb$default(var7, var6.toString(), null, null, 6, null);
+         val var6: CrashReporting = CrashReporting.INSTANCE;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Couldn't start ForegroundService, Result: ");
+         var7.append(var3);
+         CrashReporting.addBreadcrumb$default(var6, var7.toString(), null, null, 6, null);
       }
    }
 
    @JvmStatic
    fun `startService$lambda$1`(var0: Array<Any>) {
-      val var1: CrashReporting = CrashReporting.INSTANCE;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Couldn't start ForegroundService, Rejection: ");
-      var2.append(var0);
-      CrashReporting.addBreadcrumb$default(var1, var2.toString(), null, null, 6, null);
+      val var2: CrashReporting = CrashReporting.INSTANCE;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Couldn't start ForegroundService, Rejection: ");
+      var1.append(var0);
+      CrashReporting.addBreadcrumb$default(var2, var1.toString(), null, null, 6, null);
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
       val var6: Log = Log.INSTANCE;
-      val var5: java.lang.String = tag;
+      val var4: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Start service with ");
-      var4.append(var3);
-      var4.append(" configurations.");
-      Log.i$foreground_service_release$default(var6, var5, var4.toString(), null, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Start service with ");
+      var5.append(var3);
+      var5.append(" configurations.");
+      Log.i$foreground_service_release$default(var6, var4, var5.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
    }
@@ -205,10 +199,10 @@ public class ForegroundServiceManager {
 
          try {
             q.h(var1, "context");
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = tag;
+            val var2: Log = Log.INSTANCE;
+            val var3: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var3, var2, "On service created.", null, 4, null);
+            Log.i$foreground_service_release$default(var2, var3, "On service created.", null, 4, null);
             this.serviceWakelocks.acquire(var1);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit
@@ -223,10 +217,10 @@ public class ForegroundServiceManager {
          synchronized (this){} // $VF: monitorenter 
 
          try {
-            val var1: Log = Log.INSTANCE;
-            val var2: java.lang.String = tag;
+            val var2: Log = Log.INSTANCE;
+            val var1: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var1, var2, "On service destroyed.", null, 4, null);
+            Log.i$foreground_service_release$default(var2, var1, "On service destroyed.", null, 4, null);
             this.serviceWakelocks.release();
             this.service = null;
          } catch (var3: java.lang.Throwable) {

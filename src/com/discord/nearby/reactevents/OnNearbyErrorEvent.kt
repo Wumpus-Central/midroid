@@ -55,12 +55,12 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.body;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OnNearbyErrorEvent(body=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.body;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnNearbyErrorEvent(body=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

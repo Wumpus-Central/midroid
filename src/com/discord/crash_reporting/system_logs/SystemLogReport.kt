@@ -53,8 +53,8 @@ internal object SystemLogReport {
             if (var1 != null) {
                val var3: Context = this.$context;
 
-               for (java.lang.String var5 : h.z0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
-                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var5, "Tombstone");
+               for (java.lang.String var4 : h.z0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
+                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var4, "Tombstone");
                }
 
                val var7: SystemLogReport = SystemLogReport.INSTANCE;
@@ -64,13 +64,13 @@ internal object SystemLogReport {
                var2 = false;
             }
 
-            val var8: Function2 = this.$cb;
-            val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
+            val var6: Function2 = this.$cb;
+            val var8: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
             if (!var2) {
                var1 = null;
             }
 
-            var8.invoke(var6, var1);
+            var6.invoke(var8, var1);
          }
       });
    }

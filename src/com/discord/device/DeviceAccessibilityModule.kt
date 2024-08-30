@@ -33,24 +33,24 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
    fun `enableFocusLock$lambda$4`(var0: ReadableArray, var1: DeviceAccessibilityModule) {
       q.h(var0, "$nativeIds");
       q.h(var1, "this$0");
-      val var4: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
+      val var3: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
       val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var0);
-      val var3: ArrayList = new ArrayList();
+      val var4: ArrayList = new ArrayList();
       val var8: java.util.Iterator = var5.iterator();
 
       while (var8.hasNext()) {
          val var2: Int = (var8 as o).c();
-         val var7: ReactApplicationContext = var1.getReactApplicationContext();
-         q.g(var7, "getReactApplicationContext(...)");
-         val var6: java.lang.String = var0.getString(var2);
-         q.g(var6, "getString(...)");
-         val var9: View = ReactContextFindViewKt.findView(var7, var6);
+         val var6: ReactApplicationContext = var1.getReactApplicationContext();
+         q.g(var6, "getReactApplicationContext(...)");
+         val var7: java.lang.String = var0.getString(var2);
+         q.g(var7, "getString(...)");
+         val var9: View = ReactContextFindViewKt.findView(var6, var7);
          if (var9 != null) {
-            var3.add(var9);
+            var4.add(var9);
          }
       }
 
-      var4.enableFocusLock(var3);
+      var3.enableFocusLock(var4);
    }
 
    @ReactMethod
