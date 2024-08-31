@@ -75,16 +75,16 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public override fun toString(): String {
-      val var2: Int = this.connectionId;
+      val var1: Int = this.connectionId;
       val var3: java.lang.String = this.userId;
-      val var1: Int = this.isSpeaking;
+      val var2: Int = this.isSpeaking;
       val var4: StringBuilder = new StringBuilder();
       var4.append("UserSpeakingEvent(connectionId=");
-      var4.append(var2);
+      var4.append(var1);
       var4.append(", userId=");
       var4.append(var3);
       var4.append(", isSpeaking=");
-      var4.append(var1);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
@@ -120,19 +120,19 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          val var5: Int;
          var var9: java.lang.String;
          if (var8.p()) {
-            val var2: Int = var8.i(var7, 0);
+            var4 = var8.i(var7, 0);
             var9 = var8.m(var7, 1);
-            var5 = var8.i(var7, 2);
-            var3 = 7;
-            var4 = var2;
+            val var2: Int = var8.i(var7, 2);
+            var5 = 7;
+            var3 = var2;
          } else {
             var9 = null;
-            var var12: Boolean = true;
+            var var11: Boolean = true;
             var4 = 0;
             var3 = 0;
             var var10: Int = 0;
 
-            while (var12) {
+            while (var11) {
                val var6: Int = var8.o(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -152,16 +152,15 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                      var10 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var11 = false;
                }
             }
 
-            var5 = var3;
-            var3 = var10;
+            var5 = var10;
          }
 
          var8.c(var7);
-         return new UserSpeakingEvent(var3, var4, var9, var5, null);
+         return new UserSpeakingEvent(var5, var4, var9, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

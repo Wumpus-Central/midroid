@@ -244,12 +244,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          }
       }
 
-      val var26: Log = Log.INSTANCE;
+      val var4: Log = Log.INSTANCE;
       val var20: java.lang.String = this.target;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Missing target type in context: ");
-      var4.append(var20);
-      Log.e$default(var26, "TapLink", var4.toString(), null, 4, null);
+      val var26: StringBuilder = new StringBuilder();
+      var26.append("Missing target type in context: ");
+      var26.append(var20);
+      Log.e$default(var4, "TapLink", var26.toString(), null, 4, null);
       return var2;
    }
 
@@ -374,22 +374,22 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var7 = MessageId.toString-impl(this.messageId);
       }
 
-      val var6: java.lang.String = this.title;
-      val var4: java.lang.String = this.target;
-      val var2: java.lang.String = this.content;
-      val var3: LinkContext = this.context;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapLinkData(messageId=");
-      var5.append(var7);
-      var5.append(", title=");
-      var5.append(var6);
-      var5.append(", target=");
-      var5.append(var4);
-      var5.append(", content=");
-      var5.append(var2);
-      var5.append(", context=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.title;
+      val var2: java.lang.String = this.target;
+      val var5: java.lang.String = this.content;
+      val var6: LinkContext = this.context;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapLinkData(messageId=");
+      var4.append(var7);
+      var4.append(", title=");
+      var4.append(var3);
+      var4.append(", target=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var5);
+      var4.append(", context=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 }

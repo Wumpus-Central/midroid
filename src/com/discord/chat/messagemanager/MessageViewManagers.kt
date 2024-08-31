@@ -296,13 +296,13 @@ public object MessageViewManagers {
 
             val var10: MessageBase = var4.getMessage();
             q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var10 as Message;
-            val var7: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var11: MessageFrame = var4.getMessageFrame();
-            val var5: Context = var1.getContext();
-            q.g(var5, "getContext(...)");
+            val var5: Message = var10 as Message;
+            val var11: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var6: MessageFrame = var4.getMessageFrame();
+            val var7: Context = var1.getContext();
+            q.g(var7, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var6, var7, var11, MessageViewManagers.access$getEventHandler(var3, var4, var5), null, null, false, var4.isHighlight(), false, 368, null
+               var1, var5, var11, var6, MessageViewManagers.access$getEventHandler(var3, var4, var7), null, null, false, var4.isHighlight(), false, 368, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }

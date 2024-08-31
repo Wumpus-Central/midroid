@@ -90,8 +90,8 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
 
    public override fun hashCode(): Int {
       val var4: Int = this.action.hashCode();
-      val var5: Int = this.text.hashCode();
-      val var3: Int = Integer.hashCode(this.backgroundColor);
+      val var3: Int = this.text.hashCode();
+      val var5: Int = Integer.hashCode(this.backgroundColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.cornerRadius == null) {
@@ -104,28 +104,28 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          var2 = this.color.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2;
+      return (((var4 * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var6: LoadingAction = this.action;
-      val var5: java.lang.String = this.text;
+      val var5: LoadingAction = this.action;
+      val var6: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
-      val var3: Int = this.cornerRadius;
+      val var2: Int = this.cornerRadius;
       val var4: Int = this.color;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LoadMoreButton(action=");
-      var2.append(var6);
-      var2.append(", text=");
-      var2.append(var5);
-      var2.append(", backgroundColor=");
-      var2.append(var1);
-      var2.append(", cornerRadius=");
-      var2.append(var3);
-      var2.append(", color=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LoadMoreButton(action=");
+      var3.append(var5);
+      var3.append(", text=");
+      var3.append(var6);
+      var3.append(", backgroundColor=");
+      var3.append(var1);
+      var3.append(", cornerRadius=");
+      var3.append(var2);
+      var3.append(", color=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -159,23 +159,25 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          val var11: c = var1.b(var10);
          var var2: Int;
          var var3: Int;
-         val var7: LoadingAction;
-         val var9: java.lang.String;
+         var var8: LoadingAction;
          var var12: Any;
          var var14: Any;
+         var var16: java.lang.String;
          if (var11.p()) {
-            var7 = var11.y(var10, 0, LoadingAction.$serializer.INSTANCE, null) as LoadingAction;
-            var9 = var11.m(var10, 1);
+            val var7: LoadingAction = var11.y(var10, 0, LoadingAction.$serializer.INSTANCE, null) as LoadingAction;
+            val var9: java.lang.String = var11.m(var10, 1);
             var3 = var11.i(var10, 2);
             var14 = n0.a;
             var12 = var11.n(var10, 3, n0.a, null) as Int;
             var14 = var11.n(var10, 4, (DeserializationStrategy)var14, null) as Int;
             var2 = 31;
+            var8 = var7;
+            var16 = var9;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var var8: LoadingAction = null;
-            var var16: java.lang.String = null;
+            var8 = null;
+            var16 = null;
             var14 = null;
             var12 = null;
             var2 = 0;
@@ -216,12 +218,10 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
 
             var14 = var12;
             var12 = var14;
-            var9 = var16;
-            var7 = var8;
          }
 
          var11.c(var10);
-         return new LoadMoreButton(var2, var7, var9, var3, (Integer)var12, (Integer)var14, null);
+         return new LoadMoreButton(var2, var8, var16, var3, (Integer)var12, (Integer)var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadMoreButton) {

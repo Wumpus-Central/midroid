@@ -24,21 +24,21 @@ internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
       }
 
       try {
-         val var12: Json = json;
-         val var14: java.lang.String = wj.q.e(var11);
-         var12.a();
-         var13 = var12.b(AppManifest.Companion.serializer(), var14) as AppManifest;
+         val var2: Json = json;
+         var1 = wj.q.e(var11);
+         var2.a();
+         var14 = var2.b(AppManifest.Companion.serializer(), var1) as AppManifest;
       } catch (var4: java.lang.Throwable) {
-         val var2: java.lang.Throwable = var4;
+         val var12: java.lang.Throwable = var4;
 
          try {
-            throw var2;
+            throw var12;
          } catch (var3: java.lang.Throwable) {
             wj.c.a(var11, var4);
          }
       }
 
       wj.c.a(var11, null);
-      return var13;
+      return var14;
    }
 }

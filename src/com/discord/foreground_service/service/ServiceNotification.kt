@@ -7,12 +7,14 @@ import android.content.Context
 import android.os.Build.VERSION
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.os.e
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
 import java.util.Comparator
 import kotlin.jvm.internal.q
+import lj.w
 import oj.a
 
 internal object ServiceNotification {
@@ -30,7 +32,7 @@ internal object ServiceNotification {
 
 
    private fun buildNotification(context: Context, serviceNotificationConfiguration: ServiceNotificationConfiguration): Notification {
-      val var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
+      var var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
       val var3: ServiceNotificationConfiguration.Action = var2.getContentAction();
       val var7: PendingIntent;
       if (var3 != null) {
@@ -41,21 +43,21 @@ internal object ServiceNotification {
          var7 = null;
       }
 
-      val var8: NotificationCompat.Builder = var4.v(var7).S(R.drawable.ic_notification_24dp).J(true).R(true);
+      var4 = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var6 : var2.getAuxiliaryActions()) {
-         var8.a(
+      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
+         var4.a(
             0,
-            var6.getTitle(),
+            var8.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var6.getTag(), var6.getTaskName(), var6.getData()), var1, 0, false, 2, null
+               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
             )
          );
       }
 
-      val var5: Notification = var8.g();
-      q.g(var5, "build(...)");
-      return var5;
+      val var6: Notification = var4.A(e.a(w.a("permissionType", var2.getType().ordinal()))).g();
+      q.g(var6, "build(...)");
+      return var6;
    }
 
    public fun Context.clearNotifications() {

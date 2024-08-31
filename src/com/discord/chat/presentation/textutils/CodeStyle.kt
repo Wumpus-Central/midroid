@@ -28,20 +28,18 @@ import lj.s
 public object CodeStyle {
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
       private final get() {
-         val var4: java.util.Map = parsers;
-         val var3: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
-         q.g(var3, "getSimpleName(...)");
-         var var2: Any = var4.get(var3);
+         val var3: java.util.Map = parsers;
+         val var4: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
+         q.g(var4, "getSimpleName(...)");
+         var var2: Any = var3.get(var4);
          var var1: Any = var2;
          if (var2 == null) {
-            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new g(), new h(), null, null, null, null, null, null, 252, null);
-            val var5: CodeRules = CodeRules.INSTANCE;
-            var2 = CodeRules.createCodeRule$default(
-               CodeRules.INSTANCE, var2.getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
-            );
+            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new g(), new h(), null, null, null, null, null, null, 252, null);
+            var2 = CodeRules.INSTANCE;
+            var2 = CodeRules.createCodeRule$default(CodeRules.INSTANCE, var5.getDefaultStyleProvider(), var2.createCodeLanguageMap(var5), null, 4, null);
             var1 = new Parser(false, 1, null);
             var1.addRule((Rule)var2);
-            var4.put(var3, var1);
+            var3.put(var4, var1);
          }
 
          return var1 as Parser<RenderContext, Node<RenderContext>, Object>;
@@ -78,16 +76,16 @@ public object CodeStyle {
       label16:
       try {
          val var11: lj.r.a = r.k;
-         var9 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         var8 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var8: lj.r.a = r.k;
-         var9 = r.b(s.a(var4));
+         val var10: lj.r.a = r.k;
+         var8 = r.b(s.a(var4));
          break label16;
       }
 
       val var12: java.util.List = i.e(new TextNode(var2));
-      var2 = (java.lang.String)var9;
-      if (r.g(var9)) {
+      var2 = (java.lang.String)var8;
+      if (r.g(var8)) {
          var2 = var12;
       }
 
@@ -145,7 +143,7 @@ public object CodeStyle {
          var4 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var9: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var8: BlockBackgroundSpan = new BlockBackgroundSpan(
          var4,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -155,10 +153,10 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       var4 = SizeUtilsKt.getDpToPx(4);
-      val var8: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var6: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var9: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var7: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
       val var10: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var7: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var6: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var5: Int = var1.length();
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var4));
@@ -166,7 +164,7 @@ public object CodeStyle {
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var4));
 
       for (int var13 = 0; var13 < 5; var13++) {
-         val var11: Any = new Object[]{var9, var8, var6, var10, var7}[var13];
+         val var11: Any = new Object[]{var8, var9, var7, var10, var6}[var13];
          if (var11 != null) {
             var1.setSpan(var11, var5, var1.length(), 33);
          }

@@ -11,9 +11,9 @@ import mj.o
 
 internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    q.h(var0, "data");
-   val var3: Int = var0.getInt("rowContentWidth");
-   val var2: Int = var0.getInt("rowContentPaddingVertical");
-   val var1: Int = var0.getInt("itemSize");
+   val var1: Int = var0.getInt("rowContentWidth");
+   val var3: Int = var0.getInt("rowContentPaddingVertical");
+   val var2: Int = var0.getInt("itemSize");
    val var6: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var6);
    val var5: ArrayList = new ArrayList(i.u(var4, 10));
@@ -38,5 +38,5 @@ internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
       var5.add(var9);
    }
 
-   return new EmojiPickerRow(var3, var2, var1, var5, var0.getBoolean("isSectionNitroLocked"));
+   return new EmojiPickerRow(var1, var3, var2, var5, var0.getBoolean("isSectionNitroLocked"));
 }

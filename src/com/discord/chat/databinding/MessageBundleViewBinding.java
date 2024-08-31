@@ -22,12 +22,12 @@ public final class MessageBundleViewBinding implements ViewBinding {
 
    public static MessageBundleViewBinding bind(View var0) {
       int var1 = R.id.chat_list_view;
-      MessageBundleRecyclerView var3 = (MessageBundleRecyclerView)a.a(var0, var1);
-      if (var3 != null) {
+      MessageBundleRecyclerView var2 = (MessageBundleRecyclerView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.message_frame_header;
-         MessageFrameFeedHeaderView var2 = (MessageFrameFeedHeaderView)a.a(var0, var1);
-         if (var2 != null) {
-            return new MessageBundleViewBinding(var0, var3, var2);
+         MessageFrameFeedHeaderView var3 = (MessageFrameFeedHeaderView)a.a(var0, var1);
+         if (var3 != null) {
+            return new MessageBundleViewBinding(var0, var2, var3);
          }
       }
 

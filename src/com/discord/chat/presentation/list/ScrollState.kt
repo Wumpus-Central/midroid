@@ -122,12 +122,12 @@ public data class ScrollState(isDragging: Boolean,
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = java.lang.Boolean.hashCode(this.isDragging);
+      val var3: Int = java.lang.Boolean.hashCode(this.isDragging);
       val var4: Int = java.lang.Boolean.hashCode(this.isSettling);
-      val var6: Int = java.lang.Boolean.hashCode(this.isNearBottom);
-      val var5: Int = java.lang.Boolean.hashCode(this.isAtBottom);
-      val var3: Int = java.lang.Boolean.hashCode(this.isNearTop);
-      val var7: Int = java.lang.Boolean.hashCode(this.isAtTop);
+      val var5: Int = java.lang.Boolean.hashCode(this.isNearBottom);
+      val var6: Int = java.lang.Boolean.hashCode(this.isAtBottom);
+      val var7: Int = java.lang.Boolean.hashCode(this.isNearTop);
+      val var2: Int = java.lang.Boolean.hashCode(this.isAtTop);
       val var1: Int;
       if (this.scrollDirection == null) {
          var1 = 0;
@@ -137,7 +137,7 @@ public data class ScrollState(isDragging: Boolean,
 
       return (
                (
-                        ((((((var2 * 31 + var4) * 31 + var6) * 31 + var5) * 31 + var3) * 31 + var7) * 31 + var1) * 31
+                        ((((((var3 * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var2) * 31 + var1) * 31
                            + java.lang.Boolean.hashCode(this.isFirstMessageVisible)
                      )
                      * 31
@@ -148,38 +148,38 @@ public data class ScrollState(isDragging: Boolean,
    }
 
    public override fun toString(): String {
-      val var3: Boolean = this.isDragging;
+      val var7: Boolean = this.isDragging;
       val var8: Boolean = this.isSettling;
-      val var5: Boolean = this.isNearBottom;
-      val var6: Boolean = this.isAtBottom;
-      val var7: Boolean = this.isNearTop;
-      val var9: Boolean = this.isAtTop;
-      val var10: ScrollDirection = this.scrollDirection;
+      val var9: Boolean = this.isNearBottom;
+      val var5: Boolean = this.isAtBottom;
+      val var3: Boolean = this.isNearTop;
+      val var6: Boolean = this.isAtTop;
+      val var11: ScrollDirection = this.scrollDirection;
       val var4: Boolean = this.isFirstMessageVisible;
       val var1: Int = this.firstVisibleMessageIndex;
       val var2: Int = this.lastVisibleMessageIndex;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("ScrollState(isDragging=");
-      var11.append(var3);
-      var11.append(", isSettling=");
-      var11.append(var8);
-      var11.append(", isNearBottom=");
-      var11.append(var5);
-      var11.append(", isAtBottom=");
-      var11.append(var6);
-      var11.append(", isNearTop=");
-      var11.append(var7);
-      var11.append(", isAtTop=");
-      var11.append(var9);
-      var11.append(", scrollDirection=");
-      var11.append(var10);
-      var11.append(", isFirstMessageVisible=");
-      var11.append(var4);
-      var11.append(", firstVisibleMessageIndex=");
-      var11.append(var1);
-      var11.append(", lastVisibleMessageIndex=");
-      var11.append(var2);
-      var11.append(")");
-      return var11.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("ScrollState(isDragging=");
+      var10.append(var7);
+      var10.append(", isSettling=");
+      var10.append(var8);
+      var10.append(", isNearBottom=");
+      var10.append(var9);
+      var10.append(", isAtBottom=");
+      var10.append(var5);
+      var10.append(", isNearTop=");
+      var10.append(var3);
+      var10.append(", isAtTop=");
+      var10.append(var6);
+      var10.append(", scrollDirection=");
+      var10.append(var11);
+      var10.append(", isFirstMessageVisible=");
+      var10.append(var4);
+      var10.append(", firstVisibleMessageIndex=");
+      var10.append(var1);
+      var10.append(", lastVisibleMessageIndex=");
+      var10.append(var2);
+      var10.append(")");
+      return var10.toString();
    }
 }

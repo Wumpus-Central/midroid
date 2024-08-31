@@ -186,30 +186,30 @@ internal data class FastestListPlaceholderConfig(listFooter: FastestListPlacehol
 
    public override fun toString(): String {
       val var6: FastestListPlaceholderType = this.listFooter;
-      val var3: FastestListPlaceholderType = this.listHeader;
-      val var4: FastestListPlaceholderType = this.sectionFooter;
-      val var1: FastestListPlaceholderType = this.sectionHeader;
-      val var7: FastestListPlaceholderType = this.sectionItem;
-      val var9: FastestListPlaceholderType = this.sectionItemAtFront;
-      val var5: FastestListPlaceholderType = this.sectionItemAtRear;
-      val var2: FastestListPlaceholderType = this.sectionItemSingleton;
+      val var9: FastestListPlaceholderType = this.listHeader;
+      val var1: FastestListPlaceholderType = this.sectionFooter;
+      val var7: FastestListPlaceholderType = this.sectionHeader;
+      val var2: FastestListPlaceholderType = this.sectionItem;
+      val var3: FastestListPlaceholderType = this.sectionItemAtFront;
+      val var4: FastestListPlaceholderType = this.sectionItemAtRear;
+      val var5: FastestListPlaceholderType = this.sectionItemSingleton;
       val var8: StringBuilder = new StringBuilder();
       var8.append("FastestListPlaceholderConfig(listFooter=");
       var8.append(var6);
       var8.append(", listHeader=");
-      var8.append(var3);
-      var8.append(", sectionFooter=");
-      var8.append(var4);
-      var8.append(", sectionHeader=");
-      var8.append(var1);
-      var8.append(", sectionItem=");
-      var8.append(var7);
-      var8.append(", sectionItemAtFront=");
       var8.append(var9);
-      var8.append(", sectionItemAtRear=");
-      var8.append(var5);
-      var8.append(", sectionItemSingleton=");
+      var8.append(", sectionFooter=");
+      var8.append(var1);
+      var8.append(", sectionHeader=");
+      var8.append(var7);
+      var8.append(", sectionItem=");
       var8.append(var2);
+      var8.append(", sectionItemAtFront=");
+      var8.append(var3);
+      var8.append(", sectionItemAtRear=");
+      var8.append(var4);
+      var8.append(", sectionItemSingleton=");
+      var8.append(var5);
       var8.append(")");
       return var8.toString();
    }

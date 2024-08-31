@@ -190,13 +190,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       kotlin.jvm.internal.q.h(var0, "$callback");
       kotlin.jvm.internal.q.h(var1, "connectionInfo");
       kotlin.jvm.internal.q.h(var2, "errorMessage");
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("On created with ");
-      var3.append(var1);
-      var3.append(", ");
-      var3.append(var2);
-      Log.i$default(var4, "MediaEngine", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("On created with ");
+      var4.append(var1);
+      var4.append(", ");
+      var4.append(var2);
+      Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       var0.invoke(var2, NativeTypeExtensionsKt.toMap(var1));
    }
 
@@ -216,19 +216,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var4: NativeConnection = this.engineConnections.get(var1);
-      if (var4 == null) {
-         val var3: Log = Log.INSTANCE;
+      val var3: NativeConnection = this.engineConnections.get(var1);
+      if (var3 == null) {
+         val var4: Log = Log.INSTANCE;
          val var5: StringBuilder = new StringBuilder();
          var5.append("[");
          var5.append(var2);
          var5.append("] no NativeConnection for connectionId=");
          var5.append(var1);
          var5.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var5.toString(), null, 4, null);
+         Log.w$default(var4, "MediaEngine", var5.toString(), null, 4, null);
       }
 
-      return var4;
+      return var3;
    }
 
    @JvmStatic
@@ -883,28 +883,28 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          val var3: Int = var16.length;
 
          for (int var4 = 0; var4 < var3; var4++) {
-            val var12: MediaCodecInfo = var16[var4];
-            val var13: java.lang.String = var16[var4].getName();
-            kotlin.jvm.internal.q.g(var13, "getName(...)");
-            val var14: Array<java.lang.String> = var12.getSupportedTypes();
-            kotlin.jvm.internal.q.g(var14, "getSupportedTypes(...)");
-            val var8: ArrayList = new ArrayList();
-            val var6: Int = var14.length;
+            val var13: MediaCodecInfo = var16[var4];
+            val var12: java.lang.String = var16[var4].getName();
+            kotlin.jvm.internal.q.g(var12, "getName(...)");
+            val var8: Array<java.lang.String> = var13.getSupportedTypes();
+            kotlin.jvm.internal.q.g(var8, "getSupportedTypes(...)");
+            val var14: ArrayList = new ArrayList();
+            val var6: Int = var8.length;
 
             for (int var5 = var2; var5 < var6; var2 = 0) {
-               val var15: java.lang.String = var14[var5];
-               kotlin.jvm.internal.q.e(var14[var5]);
+               val var15: java.lang.String = var8[var5];
+               kotlin.jvm.internal.q.e(var8[var5]);
                if (kotlin.text.h.H(var15, "video", false, 2, null)) {
-                  var8.add(var15);
+                  var14.add(var15);
                }
 
                var5++;
             }
 
-            for (java.lang.String var21 : var8) {
+            for (java.lang.String var21 : var14) {
                val var18: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
-                  if (com.discord.a.a(var12)) {
+                  if (com.discord.a.a(var13)) {
                      var18 = "(HW)";
                   } else {
                      var18 = "(SW)";
@@ -914,9 +914,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                }
 
                val var19: java.lang.String = kotlin.collections.i.n0(
-                  kotlin.collections.i.m(new java.lang.String[]{var21, var13, var18}), " ", null, null, 0, null, null, 62, null
+                  kotlin.collections.i.m(new java.lang.String[]{var21, var12, var18}), " ", null, null, 0, null, null, 62, null
                );
-               if (var12.isEncoder()) {
+               if (var13.isEncoder()) {
                   var10 = kotlin.collections.c.p(var10, var19) as Array<java.lang.String>;
                } else {
                   var9 = kotlin.collections.c.p(var9, var19) as Array<java.lang.String>;
@@ -1051,11 +1051,11 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   new Function1(this, var4)// $VF: Couldn't be decompiled
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          // java.lang.StackOverflowError
-         //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-         //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-         //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-         //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+         //   at java.base/java.util.HashMap.hash(HashMap.java:338)
+         //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
+         //   at java.base/java.util.HashMap.get(HashMap.java:564)
+         //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2736,15 +2736,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var3: ScreenCapturer = this.screenCapturer;
+         val var2: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ScreenCapturerForConnection(screenCapturer=");
-         var2.append(var3);
-         var2.append(", connectionId=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ScreenCapturerForConnection(screenCapturer=");
+         var3.append(var2);
+         var3.append(", connectionId=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

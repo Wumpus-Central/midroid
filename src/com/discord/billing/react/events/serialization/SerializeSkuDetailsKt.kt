@@ -13,17 +13,17 @@ internal fun List<SkuDetails>.serializeSkuDetails(): ReadableNativeArray {
    val var1: java.lang.Iterable = var0;
    val var3: ArrayList = new ArrayList(i.u(var0, 10));
 
-   for (SkuDetails var4 : var1) {
+   for (SkuDetails var2 : var1) {
       var3.add(
          NativeMapExtensionsKt.nativeMapOf(
             new Pair[]{
-               w.a("identifier", var4.e()),
-               w.a("title", var4.g()),
-               w.a("description", var4.a()),
-               w.a("priceString", var4.b()),
-               w.a("currencyCode", var4.d()),
-               w.a("price", (int)(var4.c() / (long)10000)),
-               w.a("type", var4.h())
+               w.a("identifier", var2.e()),
+               w.a("title", var2.g()),
+               w.a("description", var2.a()),
+               w.a("priceString", var2.b()),
+               w.a("currencyCode", var2.d()),
+               w.a("price", (int)(var2.c() / (long)10000)),
+               w.a("type", var2.h())
             }
          )
       );

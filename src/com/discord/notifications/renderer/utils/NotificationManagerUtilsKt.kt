@@ -50,16 +50,16 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
    if (var4 != null) {
       label35:
       try {
-         val var11: a = r.k;
-         var10 = r.b(var4.getActiveNotifications());
+         val var10: a = r.k;
+         var9 = r.b(var4.getActiveNotifications());
       } catch (var6: java.lang.Throwable) {
-         val var9: a = r.k;
-         var10 = r.b(s.a(var6));
+         val var13: a = r.k;
+         var9 = r.b(s.a(var6));
          break label35;
       }
 
-      var4 = (NotificationManager)var10;
-      if (r.g(var10)) {
+      var4 = (NotificationManager)var9;
+      if (r.g(var9)) {
          var4 = null;
       }
 
@@ -71,13 +71,13 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
 
          while (true) {
             if (var2 >= var3) {
-               var13 = null;
+               var12 = null;
                break;
             }
 
-            val var12: StatusBarNotification = var15[var2];
+            val var11: StatusBarNotification = var15[var2];
             if (q.c(var15[var2].getTag(), var1)) {
-               var13 = var12;
+               var12 = var11;
                break;
             }
 
@@ -85,8 +85,8 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
          }
 
          var8 = null;
-         if (var13 != null) {
-            var8 = var13.getNotification();
+         if (var12 != null) {
+            var8 = var12.getNotification();
          }
       }
    }
@@ -156,11 +156,11 @@ internal fun Builder.setLegacyNotificationBehaviors(context: Context, behaviors:
       }
 
       if (var2.getLightsEnabled()) {
-         var0.F(ColorUtilsKt.getColorCompat(var1, color.brand_500), 1500, 1500);
+         var0.G(ColorUtilsKt.getColorCompat(var1, color.brand_500), 1500, 1500);
       }
 
       if (var2.getSoundsEnabled() && var3 != null) {
-         var0 = var0.V(var3).y(var4 and -2);
+         var0 = var0.W(var3).y(var4 and -2);
          q.e(var0);
       } else {
          var0 = var0.y(var4);

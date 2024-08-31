@@ -118,23 +118,23 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
 
    public override fun toString(): String {
       val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: java.lang.String = this.commandId;
-      val var4: java.lang.String = this.commandName;
+      val var6: java.lang.String = this.commandId;
+      val var3: java.lang.String = this.commandName;
       val var1: java.lang.String = this.commandKey;
-      val var6: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CommandMentionContentNode(channelId=");
-      var3.append(var5);
-      var3.append(", commandId=");
-      var3.append(var2);
-      var3.append(", commandName=");
-      var3.append(var4);
-      var3.append(", commandKey=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var6);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CommandMentionContentNode(channelId=");
+      var4.append(var5);
+      var4.append(", commandId=");
+      var4.append(var6);
+      var4.append(", commandName=");
+      var4.append(var3);
+      var4.append(", commandKey=");
+      var4.append(var1);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -170,25 +170,23 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
          var var9: ChannelId = null;
          var var2: Int;
          var var6: java.lang.String;
-         var var7: java.lang.String;
+         var var7: Any;
          var var8: java.lang.String;
-         var var14: Any;
+         val var13: java.lang.String;
          if (var5) {
             var9 = var12.y(var11, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var8 = var12.m(var11, 1);
             var6 = var12.m(var11, 2);
-            var14 = var12.m(var11, 3);
-            val var17: java.util.List = var12.y(var11, 4, var10[4], null) as java.util.List;
+            var13 = var12.m(var11, 3);
+            var7 = var12.y(var11, 4, var10[4], null) as java.util.List;
             var2 = 31;
-            var7 = (java.lang.String)var14;
-            var14 = var17;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
             var7 = null;
             var6 = null;
-            var14 = null;
+            var var14: Any = null;
 
             while (var3) {
                val var4: Int = var12.o(var11);
@@ -224,12 +222,13 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
                }
             }
 
-            var7 = var6;
-            var6 = var7;
+            var7 = var14;
+            var13 = var6;
+            var6 = (java.lang.String)var7;
          }
 
          var12.c(var11);
-         return new CommandMentionContentNode(var2, var9, var8, var6, var7, (java.util.List)var14, null, null);
+         return new CommandMentionContentNode(var2, var9, var8, var6, var13, (java.util.List)var7, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CommandMentionContentNode) {

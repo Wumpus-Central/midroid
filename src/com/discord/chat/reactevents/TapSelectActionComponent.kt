@@ -120,6 +120,7 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
          val var5: Boolean = var9.p();
          var var10: java.lang.String = null;
          var var2: Int;
+         var var11: java.lang.String;
          var var12: java.lang.String;
          if (var5) {
             val var6: MessageId = var9.y(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -127,12 +128,14 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
                var10 = var6.unbox-impl();
             }
 
-            var12 = var9.m(var8, 1);
+            val var7: java.lang.String = var9.m(var8, 1);
             var2 = 3;
+            var12 = var10;
+            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var11: java.lang.String = null;
+            var11 = null;
             var12 = null;
 
             while (var3) {
@@ -146,16 +149,16 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
                      var11 = var9.m(var8, 1);
                      var2 |= 2;
                   } else {
-                     val var14: MessageId;
+                     val var13: MessageId;
                      if (var12 != null) {
-                        var14 = MessageId.box-impl(var12);
+                        var13 = MessageId.box-impl(var12);
                      } else {
-                        var14 = null;
+                        var13 = null;
                      }
 
-                     val var15: MessageId = var9.y(var8, 0, MessageId.$serializer.INSTANCE, var14) as MessageId;
-                     if (var15 != null) {
-                        var12 = var15.unbox-impl();
+                     val var14: MessageId = var9.y(var8, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
+                     if (var14 != null) {
+                        var12 = var14.unbox-impl();
                      } else {
                         var12 = null;
                      }
@@ -166,13 +169,10 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
                   var3 = false;
                }
             }
-
-            var12 = var11;
-            var10 = var12;
          }
 
          var9.c(var8);
-         return new TapSelectActionComponent(var2, var10, var12, null, null);
+         return new TapSelectActionComponent(var2, var12, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapSelectActionComponent) {

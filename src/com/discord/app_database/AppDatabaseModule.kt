@@ -67,13 +67,13 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
          DiscordMobileApi.initialize(AppDatabaseModule.access$getDataDirectory$cp());
          val var4: java.lang.String = var1.getSharedPreferences("FastCacheStore", 0).getString("_databaseUserId", null);
          if (var4 != null && !q.c(var4, "")) {
-            val var2: java.lang.String = this.databaseName(var4);
-            DiscordMobileApi.openAsync(var2);
-            val var5: Log = Log.INSTANCE;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("speculatively opening ");
-            var3.append(var2);
-            Log.i$default(var5, "AppDatabase", var3.toString(), null, 4, null);
+            val var5: java.lang.String = this.databaseName(var4);
+            DiscordMobileApi.openAsync(var5);
+            val var3: Log = Log.INSTANCE;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("speculatively opening ");
+            var2.append(var5);
+            Log.i$default(var3, "AppDatabase", var2.toString(), null, 4, null);
          } else {
             Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
          }
@@ -113,11 +113,11 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
                var4 = var16.length;
             } catch (var11: Exception) {
                val var12: Log = Log.INSTANCE;
-               val var5: java.lang.String = var11.getMessage();
-               val var19: StringBuilder = new StringBuilder();
-               var19.append("couldn't load guild versions: ");
-               var19.append(var5);
-               Log.e$default(var12, "AppDatabase", var19.toString(), null, 4, null);
+               var2 = var11.getMessage();
+               val var5: StringBuilder = new StringBuilder();
+               var5.append("couldn't load guild versions: ");
+               var5.append(var2);
+               Log.e$default(var12, "AppDatabase", var5.toString(), null, 4, null);
                return DatabaseVersions.Companion.getEMPTY();
             }
 
@@ -130,11 +130,11 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
                      var13 = DatabaseVersions.Companion.getEMPTY();
                   } catch (var9: Exception) {
                      val var18: Log = Log.INSTANCE;
-                     val var25: java.lang.String = var9.getMessage();
-                     val var21: StringBuilder = new StringBuilder();
-                     var21.append("couldn't load guild versions: ");
-                     var21.append(var25);
-                     Log.e$default(var18, "AppDatabase", var21.toString(), null, 4, null);
+                     var2 = var9.getMessage();
+                     val var25: StringBuilder = new StringBuilder();
+                     var25.append("couldn't load guild versions: ");
+                     var25.append(var2);
+                     Log.e$default(var18, "AppDatabase", var25.toString(), null, 4, null);
                      var13 = DatabaseVersions.Companion.getEMPTY();
                   }
                   break;
@@ -147,11 +147,11 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
                   }
                } catch (var10: Exception) {
                   val var17: Log = Log.INSTANCE;
-                  val var24: java.lang.String = var10.getMessage();
-                  val var20: StringBuilder = new StringBuilder();
-                  var20.append("couldn't load guild versions: ");
-                  var20.append(var24);
-                  Log.e$default(var17, "AppDatabase", var20.toString(), null, 4, null);
+                  var2 = var10.getMessage();
+                  val var24: StringBuilder = new StringBuilder();
+                  var24.append("couldn't load guild versions: ");
+                  var24.append(var2);
+                  Log.e$default(var17, "AppDatabase", var24.toString(), null, 4, null);
                   var13 = DatabaseVersions.Companion.getEMPTY();
                   break;
                }

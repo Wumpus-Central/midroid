@@ -44,20 +44,20 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var3: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      this.binding = var4;
       this.spoiler = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
       this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      (var3.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var4: TextView = var3.imageAltText;
-      var3.imageAltText.setImportantForAccessibility(4);
-      kotlin.jvm.internal.q.e(var4);
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
-      var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      var3.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+      (var4.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var3: TextView = var4.imageAltText;
+      var4.imageAltText.setImportantForAccessibility(4);
+      kotlin.jvm.internal.q.e(var3);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
+      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
+      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
    }
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?) {
@@ -85,10 +85,10 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       if (var1) {
          return false;
       } else {
-         val var5: Int = GIF_INDICATOR_PADDING;
+         val var3: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var5 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var3 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -166,13 +166,13 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          }
 
          var34.x(var16);
-         val var21: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.q.g(this.binding.image, "image");
-         val var36: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var35: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
+         val var36: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var21: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var21, var1, var36, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var35, var5, var6)
+            var35, var1, var36, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var21, var5, var6)
          );
       }
 
@@ -248,13 +248,13 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var3: ConstraintLayout = this.binding.container;
+      val var4: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var4: LayoutParams = var3.getLayoutParams();
-      if (var4 != null) {
-         var4.width = var1;
-         var4.height = var2;
-         var3.setLayoutParams(var4);
+      val var3: LayoutParams = var4.getLayoutParams();
+      if (var3 != null) {
+         var3.width = var1;
+         var3.height = var2;
+         var4.setLayoutParams(var3);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }

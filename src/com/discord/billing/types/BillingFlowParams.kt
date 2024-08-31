@@ -108,14 +108,14 @@ internal object BillingFlowParams {
    }
 
    private fun getProrationMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var6: Long = this.getPriceAmountMicros(var1);
-      val var4: Long = this.getPriceAmountMicros(var2);
+      val var4: Long = this.getPriceAmountMicros(var1);
+      val var6: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
       q.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
       q.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
+      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
          var3 = 4;
       } else {
          var3 = 2;
@@ -125,14 +125,14 @@ internal object BillingFlowParams {
    }
 
    private fun getProrationMode(oldSkuDetails: SkuDetails, newSkuDetails: SkuDetails): Int {
-      val var4: Long = var1.c();
-      val var6: Long = var2.c();
+      val var6: Long = var1.c();
+      val var4: Long = var2.c();
       val var8: java.lang.String = var1.f();
       q.g(var8, "getSubscriptionPeriod(...)");
       val var9: java.lang.String = var2.f();
       q.g(var9, "getSubscriptionPeriod(...)");
       val var3: Byte;
-      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
+      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
          var3 = 4;
       } else {
          var3 = 2;
@@ -290,13 +290,13 @@ internal object BillingFlowParams {
                }
 
                if (var14 == null) {
-                  val var19: java.lang.String = var20.d();
-                  val var21: StringBuilder = new StringBuilder();
-                  var21.append("Could not find offer token for productId: ");
-                  var21.append(var19);
-                  var21.append(" offerId: ");
-                  var21.append(var6);
-                  throw new AssertionError(var21.toString());
+                  var2 = var20.d();
+                  val var19: StringBuilder = new StringBuilder();
+                  var19.append("Could not find offer token for productId: ");
+                  var19.append(var2);
+                  var19.append(" offerId: ");
+                  var19.append(var6);
+                  throw new AssertionError(var19.toString());
                }
 
                var25.b(var14);

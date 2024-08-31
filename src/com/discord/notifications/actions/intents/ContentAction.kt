@@ -81,15 +81,15 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
+      val var3: java.lang.String = this.tag;
       val var1: java.util.Map = this.data;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ContentAction(tag=");
-      var3.append(var2);
-      var3.append(", data=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContentAction(tag=");
+      var2.append(var3);
+      var2.append(", data=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -98,9 +98,9 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());
 
-      for (Entry var4 : var3.entrySet()) {
-         var1.writeString(var4.getKey() as java.lang.String);
-         var1.writeString(var4.getValue() as java.lang.String);
+      for (Entry var5 : var3.entrySet()) {
+         var1.writeString(var5.getKey() as java.lang.String);
+         var1.writeString(var5.getValue() as java.lang.String);
       }
    }
 
@@ -108,15 +108,15 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    internal class Creator : android.os.Parcelable.Creator<ContentAction> {
       fun createFromParcel(var1: Parcel): ContentAction {
          q.h(var1, "parcel");
-         val var5: java.lang.String = var1.readString();
+         val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var4: LinkedHashMap = new LinkedHashMap(var3);
+         val var5: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var4.put(var1.readString(), var1.readString());
+            var5.put(var1.readString(), var1.readString());
          }
 
-         return new ContentAction(var5, var4);
+         return new ContentAction(var4, var5);
       }
 
       fun newArray(var1: Int): Array<ContentAction> {

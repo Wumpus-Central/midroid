@@ -48,41 +48,41 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          this.initStartMs = System.currentTimeMillis();
       }
 
-      val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = this.name;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Initializing async dispatcher for ");
-      var4.append(var3);
-      var4.append(", ");
-      var4.append(var1);
-      var4.append(" queued tasks");
-      Log.i$default(var2, var3, var4.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: java.lang.String = this.name;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("Initializing async dispatcher for ");
+      var2.append(var4);
+      var2.append(", ");
+      var2.append(var1);
+      var2.append(" queued tasks");
+      Log.i$default(var3, var4, var2.toString(), null, 4, null);
    }
 
    private fun onInitFinish() {
       if (this.initStartMs != 0L) {
-         val var1: Long = System.currentTimeMillis() - this.initStartMs;
-         val var3: Long = this.longDispatchThresholdMs;
-         if (var1 < this.longDispatchThresholdMs) {
+         val var3: Long = System.currentTimeMillis() - this.initStartMs;
+         val var1: Long = this.longDispatchThresholdMs;
+         if (var3 < this.longDispatchThresholdMs) {
             val var5: Log = Log.INSTANCE;
-            val var7: java.lang.String = this.name;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var7);
-            var6.append(": queued tasks  took ");
-            var6.append(var1);
-            var6.append(" ms");
-            Log.i$default(var5, var7, var6.toString(), null, 4, null);
+            val var6: java.lang.String = this.name;
+            val var7: StringBuilder = new StringBuilder();
+            var7.append(var6);
+            var7.append(": queued tasks  took ");
+            var7.append(var3);
+            var7.append(" ms");
+            Log.i$default(var5, var6, var7.toString(), null, 4, null);
          } else {
-            val var8: Log = Log.INSTANCE;
+            val var10: Log = Log.INSTANCE;
             val var9: java.lang.String = this.name;
-            val var10: StringBuilder = new StringBuilder();
-            var10.append(var9);
-            var10.append(": running queued tasks on init took ");
-            var10.append(var1);
-            var10.append(" ms which exceeds threshold=");
-            var10.append(var3);
-            var10.append(" ms");
-            Log.w$default(var8, var9, var10.toString(), null, 4, null);
+            val var8: StringBuilder = new StringBuilder();
+            var8.append(var9);
+            var8.append(": running queued tasks on init took ");
+            var8.append(var3);
+            var8.append(" ms which exceeds threshold=");
+            var8.append(var1);
+            var8.append(" ms");
+            Log.w$default(var10, var9, var8.toString(), null, 4, null);
          }
       }
    }

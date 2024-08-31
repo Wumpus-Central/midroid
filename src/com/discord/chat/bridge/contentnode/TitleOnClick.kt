@@ -71,16 +71,16 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.action;
-      val var3: java.lang.String = this.targetChannelId;
-      val var2: java.lang.String = this.targetMessageId;
+      val var2: java.lang.String = this.action;
+      val var1: java.lang.String = this.targetChannelId;
+      val var3: java.lang.String = this.targetMessageId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TitleOnClick(action=");
-      var4.append(var1);
-      var4.append(", targetChannelId=");
-      var4.append(var3);
-      var4.append(", targetMessageId=");
       var4.append(var2);
+      var4.append(", targetChannelId=");
+      var4.append(var1);
+      var4.append(", targetMessageId=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
@@ -151,8 +151,8 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
                }
             }
 
-            var5 = var11;
             var10 = var5;
+            var5 = var11;
          }
 
          var9.c(var8);

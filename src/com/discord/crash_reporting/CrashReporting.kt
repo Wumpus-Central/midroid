@@ -84,7 +84,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("415c364b-4770-43b7-b6a7-0693b9aa48e1");
+      var5.setProguardUuid("179c91de-0ee8-4feb-a600-2db3cc7a980f");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -94,8 +94,8 @@ public object CrashReporting {
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.n(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.n(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var4.m(var3);
@@ -157,29 +157,29 @@ public object CrashReporting {
       q.h(var1, "context");
       q.h(var2, "releaseName");
       val var3: ClientInfo = ClientInfo.INSTANCE;
-      if (!ClientInfo.INSTANCE.isDebugBuild() && !var3.isDeveloperBuild()) {
-         if (var3.isProdBuild()) {
-            val var4: java.lang.String = Build.DEVICE;
-            q.g(Build.DEVICE, "DEVICE");
-            if (h.M(var4, "vivo", false, 2, null)) {
-               return;
-            }
+      if (ClientInfo.INSTANCE.isProdBuild()) {
+         val var4: java.lang.String = Build.DEVICE;
+         q.g(Build.DEVICE, "DEVICE");
+         if (h.M(var4, "vivo", false, 2, null)) {
+            return;
          }
-
-         val var6: ObjectRef = new ObjectRef();
-         val var5: java.lang.String;
-         if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
-            var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-         } else if (!var3.isProdBuild()) {
-            var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
-         } else {
-            var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
-         }
-
-         var6.j = var5;
-         r1.g(var1, new a(var6, var2, var1, this.getSampleRate(var1)));
-         isCrashedLastRun = n3.u();
       }
+
+      val var6: ObjectRef = new ObjectRef();
+      val var5: java.lang.String;
+      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
+         var5 = "";
+      } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
+         var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
+      } else if (!var3.isProdBuild()) {
+         var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
+      } else {
+         var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
+      }
+
+      var6.j = var5;
+      r1.g(var1, new a(var6, var2, var1, this.getSampleRate(var1)));
+      isCrashedLastRun = n3.u();
    }
 
    public enum class ErrorLevel {

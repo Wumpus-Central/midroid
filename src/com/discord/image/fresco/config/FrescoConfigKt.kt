@@ -35,10 +35,10 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   val var2: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
-   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var3: Builder = var2.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Y(var1.newSmallDiskCache(var0))
+   val var1: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
+   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   val var3: Builder = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Y(var2.newSmallDiskCache(var0))
       .Q(new FrescoBitmapSupplier(var0))
       .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().B().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final Companion $receiver$inlined;
@@ -60,20 +60,20 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var3: android.net.Uri.Builder = var1.buildUpon();
-            var3.clearQuery();
+            val var2: android.net.Uri.Builder = var1.buildUpon();
+            var2.clearQuery();
 
-            for (java.lang.String var5 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var5)) {
-                  val var4: java.util.Iterator = var1.getQueryParameters(var5).iterator();
+            for (java.lang.String var3 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
+                  val var5: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
-                  while (var4.hasNext()) {
-                     var3.appendQueryParameter(var5, var4.next() as java.lang.String);
+                  while (var5.hasNext()) {
+                     var2.appendQueryParameter(var3, var5.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var3.build();
+            var1 = var2.build();
             q.g(var1, "build(...)");
             return var1;
          }

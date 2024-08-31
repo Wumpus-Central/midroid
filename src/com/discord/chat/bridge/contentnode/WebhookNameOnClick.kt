@@ -67,15 +67,15 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.action;
+      val var3: java.lang.String = this.action;
       val var1: MessageReference = this.messageReference;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("WebhookNameOnClick(action=");
-      var3.append(var2);
-      var3.append(", messageReference=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("WebhookNameOnClick(action=");
+      var2.append(var3);
+      var2.append(", messageReference=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

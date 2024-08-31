@@ -16,8 +16,8 @@ public fun Builder.addShortcut(context: Context, shortcutInfo: ShortcutInfoCompa
    q.h(var0, "<this>");
    q.h(var1, "context");
    q.h(var2, "shortcutInfo");
-   var0.P(var2.g());
-   var0.H(new c(var2.g()));
+   var0.Q(var2.g());
+   var0.I(new c(var2.g()));
    b.g(var1, var2);
    return var0;
 }

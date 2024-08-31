@@ -30,13 +30,13 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
             q.h(var1, "activeAudioDevice");
-            val var3: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var4: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
             val var2: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            q.g(var4, "access$getReactApplicationContext(...)");
-            var2.emitModuleEvent(var4, var3);
+            val var3: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            q.g(var3, "access$getReactApplicationContext(...)");
+            var2.emitModuleEvent(var3, var4);
          }
 
          @Override
@@ -78,10 +78,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
    public open fun initialize() {
       super.initialize();
       if (VERSION.SDK_INT >= 33) {
-         val var2: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var1, "getReactApplicationContext(...)");
-         this.audioManager = var2.getInstance(var1);
+         val var1: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         this.audioManager = var1.getInstance(var2);
       } else {
          val var3: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
          val var5: ReactApplicationContext = this.getReactApplicationContext();

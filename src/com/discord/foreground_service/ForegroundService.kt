@@ -28,6 +28,7 @@ internal class ForegroundService : Service {
    }
 
    public companion object {
+      internal const val EXTRA_PERMISSION_TYPE: String
       private const val MINIMUM_SERVICE_LIFETIME: Long
       private final var lastServiceStartTime: Long
 

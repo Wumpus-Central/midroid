@@ -55,12 +55,12 @@ public data class TapGiftCodeEmbedData(giftCode: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.giftCode;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapGiftCodeEmbedData(giftCode=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.giftCode;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapGiftCodeEmbedData(giftCode=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

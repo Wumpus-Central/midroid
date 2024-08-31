@@ -138,11 +138,11 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          var var8: java.lang.String;
          val var12: java.lang.String;
          if (var11.p()) {
-            var2 = var11.i(var10, 0);
+            var3 = var11.i(var10, 0);
             var8 = var11.m(var10, 1);
             var6 = var11.f(var10, 2);
             var12 = var11.m(var10, 3);
-            var3 = 15;
+            var2 = 15;
          } else {
             var var13: java.lang.String = null;
             var var4: Boolean = true;
@@ -180,14 +180,12 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                }
             }
 
-            var8 = var13;
             var12 = var8;
-            var2 = var3;
-            var3 = var2;
+            var8 = var13;
          }
 
          var11.c(var10);
-         return new FirstFrameCallbackEvent(var3, var2, var8, var6, var12, null);
+         return new FirstFrameCallbackEvent(var2, var3, var8, var6, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {

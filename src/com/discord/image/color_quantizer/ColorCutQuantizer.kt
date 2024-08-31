@@ -165,9 +165,9 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
    private inner class Vbox(lowerIndex: Int, upperIndex: Int) {
       public final val averageColor: Swatch
          public final get() {
-            var var7: Int = this.lowerIndex;
+            var var6: Int = this.lowerIndex;
             val var8: Int = this.upperIndex;
-            var var6: Int = 0;
+            var var7: Int = 0;
             var var3: Int;
             var var4: Int;
             var var12: Int;
@@ -177,19 +177,19 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
                var4 = 0;
 
                while (true) {
-                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
+                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var6];
                   val var9: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var10);
-                  var6 += var9;
+                  var7 += var9;
                   var12 += Color.red(var10) * var9;
                   var3 += Color.green(var10) * var9;
                   var4 += var9 * Color.blue(var10);
-                  if (var7 == var8) {
+                  if (var6 == var8) {
                      var6 = var12;
-                     var12 = var6;
+                     var12 = var7;
                      break;
                   }
 
-                  var7++;
+                  var6++;
                }
             } else {
                var3 = 0;
@@ -259,24 +259,24 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       public fun findSplitPoint(): Int {
-         val var2: Int = this.getLongestColorDimension();
-         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var2, this.lowerIndex, this.upperIndex);
+         val var4: Int = this.getLongestColorDimension();
+         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var4, this.lowerIndex, this.upperIndex);
          Arrays.sort(ColorCutQuantizer.access$getMColors$p(this.this$0), this.lowerIndex, this.upperIndex + 1);
-         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var2, this.lowerIndex, this.upperIndex);
-         val var3: Int = this.midPoint(var2);
+         ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var4, this.lowerIndex, this.upperIndex);
+         val var2: Int = this.midPoint(var4);
          var var1: Int = this.lowerIndex;
 
-         for (int var4 = this.upperIndex; var1 < var4; var1++) {
+         for (int var3 = this.upperIndex; var1 < var3; var1++) {
             val var5: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var1];
-            if (var2 != -3) {
-               if (var2 != -2) {
-                  if (var2 == -1 && Color.blue(var5) > var3) {
+            if (var4 != -3) {
+               if (var4 != -2) {
+                  if (var4 == -1 && Color.blue(var5) > var2) {
                      return var1;
                   }
-               } else if (Color.green(var5) >= var3) {
+               } else if (Color.green(var5) >= var2) {
                   return var1;
                }
-            } else if (Color.red(var5) >= var3) {
+            } else if (Color.red(var5) >= var2) {
                return var1;
             }
          }

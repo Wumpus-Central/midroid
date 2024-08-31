@@ -30,15 +30,15 @@ public final class PremiumInlineRoadblockHeaderBinding implements ViewBinding {
       View var4 = a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.gradient_divider;
-         View var2 = a.a(var0, var1);
-         if (var2 != null) {
+         View var5 = a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.gradient_icon;
-            FrameLayout var5 = (FrameLayout)a.a(var0, var1);
-            if (var5 != null) {
+            FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.gradients;
                LinearLayout var3 = (LinearLayout)a.a(var0, var1);
                if (var3 != null) {
-                  return new PremiumInlineRoadblockHeaderBinding((RelativeLayout)var0, var4, var2, var5, var3);
+                  return new PremiumInlineRoadblockHeaderBinding((RelativeLayout)var0, var4, var5, var2, var3);
                }
             }
          }

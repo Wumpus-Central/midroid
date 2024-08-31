@@ -208,8 +208,8 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.users.hashCode();
-      val var3: Int = Integer.hashCode(this.extraUsers);
+      val var3: Int = this.users.hashCode();
+      val var2: Int = Integer.hashCode(this.extraUsers);
       val var1: Int;
       if (this.guildId == null) {
          var1 = 0;
@@ -223,7 +223,7 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
                                  (
                                           (
                                                    (
-                                                            (((var2 * 31 + var3) * 31 + var1) * 31 + ChannelId.hashCode-impl(this.channelId)) * 31
+                                                            (((var3 * 31 + var2) * 31 + var1) * 31 + ChannelId.hashCode-impl(this.channelId)) * 31
                                                                + this.channelName.hashCode()
                                                          )
                                                          * 31
@@ -246,40 +246,40 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun toString(): String {
-      val var8: java.util.List = this.users;
+      val var6: java.util.List = this.users;
       val var1: Int = this.extraUsers;
       val var12: GuildId = this.guildId;
-      val var11: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var9: java.lang.String = this.channelName;
-      val var10: java.lang.String = this.guildName;
-      val var3: Boolean = this.deafened;
-      val var4: Boolean = this.muted;
-      val var6: ConnectionQuality = this.connectionQuality;
+      val var10: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.channelName;
+      val var8: java.lang.String = this.guildName;
+      val var4: Boolean = this.deafened;
+      val var3: Boolean = this.muted;
+      val var9: ConnectionQuality = this.connectionQuality;
       val var2: Boolean = this.canGenerateInvite;
-      val var5: java.util.List = this.channelSelectorResults;
+      val var11: java.util.List = this.channelSelectorResults;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MobileVoiceOverlayData(users=");
-      var7.append(var8);
+      var7.append(var6);
       var7.append(", extraUsers=");
       var7.append(var1);
       var7.append(", guildId=");
       var7.append(var12);
       var7.append(", channelId=");
-      var7.append(var11);
-      var7.append(", channelName=");
-      var7.append(var9);
-      var7.append(", guildName=");
       var7.append(var10);
+      var7.append(", channelName=");
+      var7.append(var5);
+      var7.append(", guildName=");
+      var7.append(var8);
       var7.append(", deafened=");
-      var7.append(var3);
-      var7.append(", muted=");
       var7.append(var4);
+      var7.append(", muted=");
+      var7.append(var3);
       var7.append(", connectionQuality=");
-      var7.append(var6);
+      var7.append(var9);
       var7.append(", canGenerateInvite=");
       var7.append(var2);
       var7.append(", channelSelectorResults=");
-      var7.append(var5);
+      var7.append(var11);
       var7.append(")");
       return var7.toString();
    }
@@ -311,9 +311,9 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var4: Array<KSerializer> = MobileVoiceOverlayData.access$get$childSerializers$cp();
+         val var7: Array<KSerializer> = MobileVoiceOverlayData.access$get$childSerializers$cp();
          return new KSerializer[]{
-            var4[0], n0.a, en.a.u(GuildId.$serializer.INSTANCE), ChannelId.$serializer.INSTANCE, b2.a, b2.a, h.a, h.a, var4[8], h.a, var4[10]
+            var7[0], n0.a, en.a.u(GuildId.$serializer.INSTANCE), ChannelId.$serializer.INSTANCE, b2.a, b2.a, h.a, h.a, var7[8], h.a, var7[10]
          };
       }
 
@@ -325,43 +325,46 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
          var var9: Boolean = var18.p();
          var var6: Byte = 7;
          var var2: Int = 0;
-         var var3: Byte;
+         var var3: Int;
          val var4: Int;
-         val var5: Int;
-         var var10: ConnectionQuality;
+         var var10: Any;
          var var11: Any;
          var var12: Any;
          var var13: java.util.List;
-         var var14: java.util.List;
+         val var14: ConnectionQuality;
          var var15: Any;
-         var var19: Any;
+         val var20: java.util.List;
+         var var24: Byte;
          if (var9) {
             var13 = var18.y(var17, 0, var16[0], null) as java.util.List;
-            var4 = var18.i(var17, 1);
+            var3 = var18.i(var17, 1);
             var11 = var18.n(var17, 2, GuildId.$serializer.INSTANCE, null) as GuildId;
             var12 = var18.y(var17, 3, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var15 = var18.m(var17, 4);
-            var19 = var18.m(var17, 5);
-            var3 = var18.C(var17, 6);
-            val var20: Byte = var18.C(var17, 7);
-            var10 = var18.y(var17, 8, var16[8], null) as ConnectionQuality;
+            var10 = var18.m(var17, 4);
+            val var19: java.lang.String = var18.m(var17, 5);
+            var24 = var18.C(var17, 6);
+            val var22: Byte = var18.C(var17, 7);
+            var14 = var18.y(var17, 8, var16[8], null) as ConnectionQuality;
             var9 = var18.C(var17, 9);
-            var14 = var18.y(var17, 10, var16[10], null) as java.util.List;
-            var5 = 2047;
-            var6 = var20;
+            val var29: java.util.List = var18.y(var17, 10, var16[10], null) as java.util.List;
+            var4 = 2047;
+            var15 = var19;
+            var6 = var24;
+            var24 = var22;
+            var20 = var29;
          } else {
             var var7: Boolean = true;
             var9 = false;
-            var var22: Byte = 0;
+            var var23: Byte = 0;
             var3 = 0;
             var15 = null;
-            var14 = null;
+            var var27: java.util.List = null;
             var12 = null;
             var11 = null;
             var13 = null;
             var10 = null;
-            var19 = null;
-            var var23: Byte = 0;
+            var var21: Any = null;
+            var24 = 0;
 
             while (var7) {
                val var8: Int = var18.o(var17);
@@ -391,15 +394,15 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
                      var2 |= 16;
                      continue;
                   case 5:
-                     var19 = var18.m(var17, 5);
+                     var21 = var18.m(var17, 5);
                      var2 |= 32;
                      continue;
                   case 6:
-                     var22 = var18.C(var17, 6);
+                     var23 = var18.C(var17, 6);
                      var2 |= 64;
                      continue;
                   case 7:
-                     var23 = var18.C(var17, var6);
+                     var24 = var18.C(var17, var6);
                      var2 |= 128;
                      continue;
                   case 8:
@@ -411,7 +414,7 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
                      var2 |= 512;
                      continue;
                   case 10:
-                     var14 = var18.y(var17, 10, var16[10], var14) as java.util.List;
+                     var27 = var18.y(var17, 10, var16[10], var27) as java.util.List;
                      var2 |= 1024;
                      continue;
                   default:
@@ -421,28 +424,27 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
                var6 = 7;
             }
 
+            var20 = var27;
+            var14 = (ConnectionQuality)var15;
             var6 = var23;
-            var10 = (ConnectionQuality)var15;
-            var3 = var22;
-            var15 = var10;
-            var4 = var3;
-            var5 = var2;
+            var15 = var21;
+            var4 = var2;
          }
 
          var18.c(var17);
          return new MobileVoiceOverlayData(
-            var5,
-            var13,
             var4,
+            var13,
+            var3,
             (GuildId)var11,
             (ChannelId)var12,
+            (java.lang.String)var10,
             (java.lang.String)var15,
-            (java.lang.String)var19,
-            (boolean)var3,
             (boolean)var6,
-            var10,
-            var9,
+            (boolean)var24,
             var14,
+            var9,
+            var20,
             null,
             null
          );

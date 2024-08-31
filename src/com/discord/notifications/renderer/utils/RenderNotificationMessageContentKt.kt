@@ -8,17 +8,17 @@ import rm.b
 
 public fun renderNotificationMessageContent(content: String): String {
    q.h(var0, "content");
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var13: java.lang.String = var4.i(var3.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
-   var var14: java.lang.String = var0;
+   var var14: java.lang.String = var3.i(var4.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
+   var var13: java.lang.String = var0;
 
    while (true) {
       var0 = null;
-      val var6: MatchResult = Regex.c(var5, var13, 0, 2, null);
+      val var6: MatchResult = Regex.c(var5, var14, 0, 2, null);
       if (var6 == null) {
-         return var14;
+         return var13;
       }
 
       val var7: b = var6.d().get(1);
@@ -74,10 +74,10 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var12: Int = var6.c().a();
-      val var2: Int = var6.c().f();
+      val var2: Int = var6.c().a();
+      val var12: Int = var6.c().f();
       q.e(var10);
-      var14 = h.t0(var14, var12, var2 + 1, var10).toString();
-      var13 = h.t0(var13, var6.c().a(), var6.c().f() + 1, var10).toString();
+      var13 = h.t0(var13, var2, var12 + 1, var10).toString();
+      var14 = h.t0(var14, var6.c().a(), var6.c().f() + 1, var10).toString();
    }
 }

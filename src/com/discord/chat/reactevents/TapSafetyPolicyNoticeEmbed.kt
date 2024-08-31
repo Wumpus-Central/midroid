@@ -55,12 +55,12 @@ public data class TapSafetyPolicyNoticeEmbed(classificationId: String) : ReactEv
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.classificationId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSafetyPolicyNoticeEmbed(classificationId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.classificationId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapSafetyPolicyNoticeEmbed(classificationId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

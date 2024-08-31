@@ -80,18 +80,18 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
    }
 
    public override fun toString(): String {
-      val var2: MessageFrameType = this.type;
+      val var3: MessageFrameType = this.type;
       val var1: java.lang.String = this.guildName;
-      val var4: java.lang.String = this.channelName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MessageFrameJump(type=");
-      var3.append(var2);
-      var3.append(", guildName=");
-      var3.append(var1);
-      var3.append(", channelName=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.channelName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MessageFrameJump(type=");
+      var4.append(var3);
+      var4.append(", guildName=");
+      var4.append(var1);
+      var4.append(", channelName=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

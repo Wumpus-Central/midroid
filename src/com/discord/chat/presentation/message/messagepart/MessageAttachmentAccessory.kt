@@ -60,23 +60,23 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
          var var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            var3 = var1.getUploaderId();
-            val var4: java.lang.String = var1.getUploaderItemId();
+            val var4: java.lang.String = var1.getUploaderId();
+            var3 = var1.getUploaderItemId();
             val var5: StringBuilder = new StringBuilder();
-            var5.append(var3);
-            var5.append(" ");
             var5.append(var4);
+            var5.append(" ");
+            var5.append(var3);
             var3 = var5.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);
          }
 
-         val var6: java.lang.String = var1.type().getIndexLabel();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append(var6);
-         var8.append(" ");
-         var8.append(var3);
-         return var8.toString();
+         val var8: java.lang.String = var1.type().getIndexLabel();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var8);
+         var6.append(" ");
+         var6.append(var3);
+         return var6.toString();
       }
    }
 }

@@ -83,20 +83,20 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var5: ChangeType = this.changeType;
-      val var3: Message = this.message;
-      val var4: java.lang.String = this.fileId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UploadProgressRow(index=");
-      var2.append(var1);
-      var2.append(", changeType=");
-      var2.append(var5);
-      var2.append(", message=");
-      var2.append(var3);
-      var2.append(", fileId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var4: ChangeType = this.changeType;
+      val var2: Message = this.message;
+      val var3: java.lang.String = this.fileId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("UploadProgressRow(index=");
+      var5.append(var1);
+      var5.append(", changeType=");
+      var5.append(var4);
+      var5.append(", message=");
+      var5.append(var2);
+      var5.append(", fileId=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {

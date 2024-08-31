@@ -175,12 +175,12 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var32: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var32, var10);
-      val var36: SpoilerViewManager = this.spoilerViewManager;
-      val var40: ConstraintLayout = this.binding.container;
+      val var33: SpoilerViewManager = this.spoilerViewManager;
+      val var36: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var33: ConstraintLayout = this.binding.container;
+      val var39: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var39: MediaView = this.binding.mediaView;
+      val var40: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -194,7 +194,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var36.configureSpoiler(var13, var40, var33, var39, null, var11, var15, var12, var10);
+      var33.configureSpoiler(var13, var36, var39, var40, null, var11, var15, var12, var10);
       val var37: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var34: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -391,14 +391,14 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
       public override fun toString(): String {
          val var1: java.lang.String = this.sourceUrl;
-         val var2: java.lang.String = this.previewUrl;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetUrl(sourceUrl=");
-         var3.append(var1);
-         var3.append(", previewUrl=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.previewUrl;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("TargetUrl(sourceUrl=");
+         var2.append(var1);
+         var2.append(", previewUrl=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

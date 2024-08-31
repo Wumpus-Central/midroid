@@ -11,61 +11,61 @@ import lj.w
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
    q.h(var0, "<this>");
    val var7: ArrayList = new ArrayList(i.u(var0, 10));
-   val var10: java.util.Iterator = var0.iterator();
+   val var8: java.util.Iterator = var0.iterator();
 
    val var9: ProductDetails;
    while (true) {
-      if (!var10.hasNext()) {
+      if (!var8.hasNext()) {
          return NativeArrayExtensionsKt.toNativeArray(var7);
       }
 
-      var var2: Long;
-      var var8: ArrayList;
+      var var1: Long;
+      var var10: ArrayList;
       var var23: java.lang.String;
-      var var28: java.lang.String;
+      var var27: java.lang.String;
       label55: {
-         var9 = var10.next() as ProductDetails;
-         var8 = new ArrayList();
-         val var1: Boolean = q.c(var9.e(), "inapp");
+         var9 = var8.next() as ProductDetails;
+         var10 = new ArrayList();
+         val var3: Boolean = q.c(var9.e(), "inapp");
          var23 = null;
-         if (var1) {
+         if (var3) {
             val var13: ProductDetails.a = var9.c();
             if (var13 == null) {
-               var23 = var9.d();
-               val var15: StringBuilder = new StringBuilder();
-               var15.append("Could not find oneTimePurchaseOfferDetails for product: ");
-               var15.append(var23);
-               throw new AssertionError(var15.toString());
+               val var15: java.lang.String = var9.d();
+               val var21: StringBuilder = new StringBuilder();
+               var21.append("Could not find oneTimePurchaseOfferDetails for product: ");
+               var21.append(var15);
+               throw new AssertionError(var21.toString());
             }
 
             q.e(var13);
-            var2 = var13.b();
-            var28 = var13.a();
+            var1 = var13.b();
+            var27 = var13.a();
             var23 = var13.c();
             var14 = null;
          } else {
             if (!q.c(var9.e(), "subs")) {
-               var2 = 0L;
+               var1 = 0L;
+               var27 = null;
                var14 = null;
                var23 = null;
-               var28 = null;
                break label55;
             }
 
-            val var6: java.util.List = var9.f();
-            if (var6 == null) {
+            val var28: java.util.List = var9.f();
+            if (var28 == null) {
                break;
             }
 
-            val var27: java.util.Iterator = var6.iterator();
+            val var26: java.util.Iterator = var28.iterator();
 
             do {
                var16 = var23;
-               if (!var27.hasNext()) {
+               if (!var26.hasNext()) {
                   break;
                }
 
-               var16 = var27.next();
+               var16 = var26.next();
             } while (((ProductDetails.c)var16).b() != null);
 
             val var17: ProductDetails.c = var16 as ProductDetails.c;
@@ -82,22 +82,22 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
                throw new AssertionError(var18.toString());
             }
 
-            var2 = var22.d();
-            var28 = var22.c();
+            var1 = var22.d();
+            var27 = var22.c();
             var14 = var22.b();
             var23 = var22.e();
-            val var29: java.util.Iterator = var6.iterator();
+            val var29: java.util.Iterator = var28.iterator();
 
             while (var29.hasNext()) {
                val var11: java.lang.String = (var29.next() as ProductDetails.c).b();
                if (var11 != null) {
-                  var8.add(var11);
+                  var10.add(var11);
                }
             }
          }
 
-         var28 = var23;
-         var23 = var28;
+         var27 = var23;
+         var23 = var27;
       }
 
       var7.add(
@@ -107,10 +107,10 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
                w.a("title", var9.g()),
                w.a("description", var9.a()),
                w.a("priceString", var23),
-               w.a("currencyCode", var28),
-               w.a("price", (int)(var2 / (long)10000)),
+               w.a("currencyCode", var27),
+               w.a("price", (int)(var1 / (long)10000)),
                w.a("type", var9.e()),
-               w.a("offerIds", NativeArrayExtensionsKt.toNativeArray(var8)),
+               w.a("offerIds", NativeArrayExtensionsKt.toNativeArray(var10)),
                w.a("billingPeriod", var14)
             }
          )

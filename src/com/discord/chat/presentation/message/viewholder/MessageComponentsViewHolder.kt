@@ -202,7 +202,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             }
          }
       );
-      val var24: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1(var6) {
+      val var22: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1(var6) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
          }
@@ -212,7 +212,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       });
-      val var22: UserEventHandlers = new UserEventHandlers(new Function1(var6, this) {
+      val var24: UserEventHandlers = new UserEventHandlers(new Function1(var6, this) {
          final ChatEventHandler $eventHandler;
          final MessageComponentsViewHolder this$0;
 
@@ -265,7 +265,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var11, var27, var28, var24, var22, var25, var7, var8), this);
+         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var11, var27, var28, var22, var24, var25, var7, var8), this);
    }
 
    public override fun onTapButtonActionComponent(componentId: String) {

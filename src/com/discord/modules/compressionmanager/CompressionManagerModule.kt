@@ -65,13 +65,13 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun enableZlibStreamSupport(socketId: Int) {
-      val var5: java.util.Map = this.zlibInflaters;
-      val var4: Int = var1;
-      var var3: Any = var5.get(var4);
+      val var4: java.util.Map = this.zlibInflaters;
+      val var5: Int = var1;
+      var var3: Any = var4.get(var5);
       var var2: WebSocketModule = (WebSocketModule)var3;
       if (var3 == null) {
          var2 = new Inflater();
-         var5.put(var4, var2);
+         var4.put(var5, var2);
       }
 
       var3 = var2 as Inflater;
@@ -85,17 +85,17 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
    public fun enableZstdStreamSupport(socketId: Int, dictionaryId: Int) {
       val var6: java.util.Map = this.zstdInflaters;
       val var5: Int = var1;
-      var var4: Any = var6.get(var5);
-      var var3: WebSocketModule = (WebSocketModule)var4;
+      var var4: WebSocketModule = (WebSocketModule)var6.get(var5);
+      var var3: Any = var4;
       if (var4 == null) {
          var3 = new CompressionManagerModule.ZstdInflater();
          var6.put(var5, var3);
       }
 
-      var4 = var3 as CompressionManagerModule.ZstdInflater;
-      var3 = this.getWebSocketModule();
-      if (var3 != null) {
-         var3.setContentHandler(var1, new CompressionManagerModule.ZstdContentHandler((CompressionManagerModule.ZstdInflater)var4));
+      var3 = var3 as CompressionManagerModule.ZstdInflater;
+      var4 = this.getWebSocketModule();
+      if (var4 != null) {
+         var4.setContentHandler(var1, new CompressionManagerModule.ZstdContentHandler((CompressionManagerModule.ZstdInflater)var3));
       }
    }
 
@@ -194,20 +194,20 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
          q.h(var1, "byteString");
          q.h(var2, "params");
          val var6: TimeElapsed = new TimeElapsed(0L, 1, null);
-         val var4: java.lang.String = this.inflater.decompress(var1);
+         val var5: java.lang.String = this.inflater.decompress(var1);
          if (var6.getDurationMillis() > 100L) {
-            val var3: Log = Log.INSTANCE;
-            val var5: java.lang.String = CompressionManagerModule.access$getLogTag$cp();
-            q.g(var5, "access$getLogTag$cp(...)");
+            val var4: Log = Log.INSTANCE;
+            val var3: java.lang.String = CompressionManagerModule.access$getLogTag$cp();
+            q.g(var3, "access$getLogTag$cp(...)");
             val var7: java.lang.String = var6.getDuration();
             val var9: StringBuilder = new StringBuilder();
             var9.append("Decompressed ZLib message in ");
             var9.append(var7);
-            Log.i$default(var3, var5, var9.toString(), null, 4, null);
+            Log.i$default(var4, var3, var9.toString(), null, 4, null);
          }
 
          var2.putString("type", "text");
-         var2.putString("data", var4);
+         var2.putString("data", var5);
          var2.putInt("raw_length", var1.A());
          DeviceResourceUsageRecorder.Companion.setSocketBytesReceived(DeviceResourceUsageRecorder.Companion.getSocketBytesReceived() + (long)var1.A());
       }

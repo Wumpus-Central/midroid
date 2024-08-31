@@ -53,11 +53,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: lj.r.a = r.k;
+               val var2: lj.r.a = r.k;
                var5.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var2: lj.r.a = r.k;
+               val var6: lj.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -69,22 +69,22 @@ private suspend fun InstallReferrerClient.await(): Int {
    try {
       val var4: lj.r.a = r.k;
       var0.d(var3);
-      var8 = r.b(Unit.a);
+      var7 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var7: lj.r.a = r.k;
-      var8 = r.b(s.a(var5));
+      val var10: lj.r.a = r.k;
+      var7 = r.b(s.a(var5));
       break label20;
    }
 
-   val var9: java.lang.Throwable = r.e(var8);
-   if (var9 != null) {
-      var2.resumeWith(r.b(s.a(var9)));
+   val var8: java.lang.Throwable = r.e(var7);
+   if (var8 != null) {
+      var2.resumeWith(r.b(s.a(var8)));
    }
 
-   val var10: Any = var2.z();
-   if (var10 === b.f()) {
+   val var9: Any = var2.z();
+   if (var9 === b.f()) {
       g.c(var1);
    }
 
-   return var10;
+   return var9;
 }

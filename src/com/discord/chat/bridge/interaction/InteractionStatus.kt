@@ -84,15 +84,15 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public override fun toString(): String {
-      val var1: InteractionStatusViewState = this.state;
+      val var3: InteractionStatusViewState = this.state;
       val var2: StructurableText = this.text;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("InteractionStatus(state=");
-      var3.append(var1);
-      var3.append(", text=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InteractionStatus(state=");
+      var1.append(var3);
+      var1.append(", text=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

@@ -32,11 +32,11 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
 
    public final val alias: String
       public final get() {
-         val var2: java.lang.String = this.aliasSuffix;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("com.discord.main.");
-         var1.append(var2);
-         return var1.toString();
+         val var1: java.lang.String = this.aliasSuffix;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("com.discord.main.");
+         var2.append(var1);
+         return var2.toString();
       }
 
 

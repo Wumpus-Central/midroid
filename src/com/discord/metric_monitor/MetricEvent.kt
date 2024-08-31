@@ -85,13 +85,13 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var1: java.util.List = this.tags;
+      val var1: java.lang.String = this.name;
+      val var2: java.util.List = this.tags;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MetricEvent(name=");
-      var3.append(var2);
-      var3.append(", tags=");
       var3.append(var1);
+      var3.append(", tags=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

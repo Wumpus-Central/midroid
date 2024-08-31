@@ -39,7 +39,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
       kotlin.jvm.internal.q.h(var1, "accessory");
       kotlin.jvm.internal.q.h(var4, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var6, "onMediaClicked");
-      val var16: java.lang.String = var1.getEmbed().getObscure();
+      var var16: java.lang.String = var1.getEmbed().getObscure();
       var var10: Boolean;
       if (var16 != null && !kotlin.text.h.x(var16)) {
          var10 = 0;
@@ -48,11 +48,11 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
       }
 
       val var13: Boolean = (boolean)(var10 xor true);
-      val var17: EmbedView = this.embedView;
-      val var20: Embed = var1.getEmbed();
+      val var18: EmbedView = this.embedView;
+      val var17: Embed = var1.getEmbed();
       var10 = var1.getIndex();
       val var14: Long = var1.getChannelId-o4g7jtM();
-      val var18: java.lang.String = var1.getMessageId-3Eiw7ao();
+      var16 = var1.getMessageId-3Eiw7ao();
       val var11: Int = var1.getConstrainedWidth();
       val var12: Boolean;
       if (var1.getShouldAutoPlayGifs() && !var13) {
@@ -61,11 +61,11 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
          var12 = false;
       }
 
-      var17.setEmbed-UEgMTIk(
-         var20,
+      var18.setEmbed-UEgMTIk(
+         var17,
          var10,
          var14,
-         var18,
+         var16,
          var11,
          var2,
          var3,

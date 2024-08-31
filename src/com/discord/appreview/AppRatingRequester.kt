@@ -70,10 +70,10 @@ public class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolea
    }
 
    public fun executeRequest() {
-      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var2: Task = var1.a();
-      q.g(var2, "requestReviewFlow(...)");
-      var2.c(new a(var1, this));
-      var2.a(new b(this));
+      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var1: Task = var2.a();
+      q.g(var1, "requestReviewFlow(...)");
+      var1.c(new a(var2, this));
+      var1.a(new b(this));
    }
 }

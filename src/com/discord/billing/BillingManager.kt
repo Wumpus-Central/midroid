@@ -146,8 +146,6 @@ internal class BillingManager(isProdBuild: Boolean,
             new Function2(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -1170,6 +1168,8 @@ internal class BillingManager(isProdBuild: Boolean,
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
             2,
             null
@@ -3373,14 +3373,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: ArrayList = var1.k();
          q.g(var2, "getSkus(...)");
 
-         for (java.lang.String var5 : var2) {
-            val var4: Function3 = this.onPurchaseUpdated;
-            val var7: java.lang.String = var1.i();
-            q.g(var7, "getPurchaseToken(...)");
-            val var6: java.lang.String = var1.e();
-            q.g(var6, "getPackageName(...)");
-            q.e(var5);
-            var4.invoke(var7, var6, var5);
+         for (java.lang.String var7 : var2) {
+            val var3: Function3 = this.onPurchaseUpdated;
+            val var6: java.lang.String = var1.i();
+            q.g(var6, "getPurchaseToken(...)");
+            val var5: java.lang.String = var1.e();
+            q.g(var5, "getPackageName(...)");
+            q.e(var7);
+            var3.invoke(var6, var5, var7);
          }
       }
    }
@@ -3662,14 +3662,14 @@ internal class BillingManager(isProdBuild: Boolean,
 
       public override fun toString(): String {
          val var3: BillingResult = this.billingResult;
-         val var2: java.util.List = this.productDetails;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("ProductDetailsResponse(billingResult=");
-         var1.append(var3);
-         var1.append(", productDetails=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.util.List = this.productDetails;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ProductDetailsResponse(billingResult=");
+         var2.append(var3);
+         var2.append(", productDetails=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
@@ -3725,15 +3725,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var1: BillingResult = this.billingResult;
+         val var3: BillingResult = this.billingResult;
          val var2: java.util.List = this.skuDetails;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("SkuDetailsResponse(billingResult=");
-         var3.append(var1);
-         var3.append(", skuDetails=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("SkuDetailsResponse(billingResult=");
+         var1.append(var3);
+         var1.append(", skuDetails=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

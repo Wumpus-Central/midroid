@@ -94,21 +94,21 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.timestampLabel;
-      val var2: java.lang.String = this.originLabel;
-      val var4: java.lang.String = this.accessibilityLabel;
-      val var1: java.lang.String = this.originIconUrl;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ForwardFooterInfo(timestampLabel=");
-      var5.append(var3);
-      var5.append(", originLabel=");
-      var5.append(var2);
-      var5.append(", accessibilityLabel=");
-      var5.append(var4);
-      var5.append(", originIconUrl=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.timestampLabel;
+      val var1: java.lang.String = this.originLabel;
+      val var3: java.lang.String = this.accessibilityLabel;
+      val var2: java.lang.String = this.originIconUrl;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ForwardFooterInfo(timestampLabel=");
+      var4.append(var5);
+      var4.append(", originLabel=");
+      var4.append(var1);
+      var4.append(", accessibilityLabel=");
+      var4.append(var3);
+      var4.append(", originIconUrl=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -136,29 +136,31 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
 
       public open fun deserialize(decoder: Decoder): ForwardFooterInfo {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.b(var10);
+         val var5: Boolean = var11.p();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var11: java.lang.String;
+         val var9: java.lang.String;
+         var var12: java.lang.String;
+         var var13: java.lang.String;
          if (var5) {
-            var8 = var10.m(var9, 0);
-            var7 = var10.m(var9, 1);
-            var6 = var10.m(var9, 2);
-            var11 = var10.n(var9, 3, b2.a, null) as java.lang.String;
+            var13 = var11.m(var10, 0);
+            var9 = var11.m(var10, 1);
+            val var7: java.lang.String = var11.m(var10, 2);
+            var12 = var11.n(var10, 3, b2.a, null) as java.lang.String;
             var2 = 15;
+            var8 = var13;
+            var13 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
-            var6 = null;
-            var11 = null;
+            var var14: java.lang.String = null;
+            var13 = null;
+            var12 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var11.o(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -167,28 +169,30 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                               throw new n(var4);
                            }
 
-                           var11 = var10.n(var9, 3, b2.a, var11) as java.lang.String;
+                           var12 = var11.n(var10, 3, b2.a, var12) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var6 = var10.m(var9, 2);
+                           var13 = var11.m(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.m(var9, 1);
+                        var14 = var11.m(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.m(var9, 0);
+                     var8 = var11.m(var10, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var9 = var14;
          }
 
-         var10.c(var9);
-         return new ForwardFooterInfo(var2, var8, var7, var6, var11, null);
+         var11.c(var10);
+         return new ForwardFooterInfo(var2, var8, var9, var13, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardFooterInfo) {

@@ -44,9 +44,9 @@ public object BSDiff {
 
          while (var11 < var9) {
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            var13 = InputStreamUtilsKt.readOffset(var3);
             val var15: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var17 + var13 > var9) {
+            var13 = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var17 + var15 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
@@ -64,7 +64,7 @@ public object BSDiff {
                var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var13).iterator();
+            var19 = this.chunkRange(var15).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -72,8 +72,8 @@ public object BSDiff {
                var6.write(var20, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var15);
-            var11 += var17 + var13;
+            var1.seek(var1.getFilePointer() + var13);
+            var11 += var17 + var15;
          }
 
          var6.close();
@@ -227,20 +227,20 @@ public object BSDiff {
       // 0ea: return
       // 0eb: astore 2
       // 0ec: goto 12c
-      // 0ef: astore 2
+      // 0ef: astore 3
       // 0f0: goto 122
       // 0f3: astore 3
       // 0f4: goto 117
       // 0f7: astore 3
       // 0f8: goto 10b
-      // 0fb: astore 6
-      // 0fd: aload 6
+      // 0fb: astore 7
+      // 0fd: aload 7
       // 0ff: athrow
-      // 100: astore 7
+      // 100: astore 6
       // 102: aload 3
-      // 103: aload 6
+      // 103: aload 7
       // 105: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 108: aload 7
+      // 108: aload 6
       // 10a: athrow
       // 10b: aload 3
       // 10c: athrow
@@ -258,13 +258,13 @@ public object BSDiff {
       // 11d: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 120: aload 2
       // 121: athrow
-      // 122: aload 2
+      // 122: aload 3
       // 123: athrow
-      // 124: astore 3
+      // 124: astore 2
       // 125: aload 1
-      // 126: aload 2
+      // 126: aload 3
       // 127: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 12a: aload 3
+      // 12a: aload 2
       // 12b: athrow
       // 12c: aload 2
       // 12d: athrow

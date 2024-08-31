@@ -30,10 +30,10 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
 
    public override fun getCurrentIcon(promise: Promise) {
       q.h(var1, "promise");
-      val var2: AppIconUtil = AppIconUtil.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var2.getCurrentAppIcon(var3).getId())}));
+      val var3: AppIconUtil = AppIconUtil.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var3.getCurrentAppIcon(var2).getId())}));
    }
 
    public override fun setIcon(id: String, promise: Promise) {

@@ -122,13 +122,12 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          var var2: Int;
          var var3: Int;
          var var6: java.lang.String;
-         val var7: java.lang.String;
+         val var10: java.lang.String;
          if (var9.p()) {
-            var3 = var9.i(var8, 0);
-            var7 = var9.m(var8, 1);
-            val var10: java.lang.String = var9.m(var8, 2);
-            var2 = 7;
-            var6 = var10;
+            var2 = var9.i(var8, 0);
+            var6 = var9.m(var8, 1);
+            var10 = var9.m(var8, 2);
+            var3 = 7;
          } else {
             var6 = null;
             var var11: java.lang.String = null;
@@ -160,11 +159,14 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
                }
             }
 
-            var7 = var11;
+            var6 = var11;
+            var10 = var6;
+            var2 = var3;
+            var3 = var2;
          }
 
          var9.c(var8);
-         return new MlsFailureCallbackEvent(var2, var3, var7, var6, null);
+         return new MlsFailureCallbackEvent(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {

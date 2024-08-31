@@ -3,6 +3,7 @@ package com.discord.chat.presentation.message.view.botuikit.components
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -61,7 +62,7 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
       val var13: java.util.Iterator = var9.iterator();
 
       for (int var5 = 0; var13.hasNext(); var5++) {
-         var var27: ComponentView = (ComponentView)var13.next();
+         var var27: Any = var13.next();
          if (var5 < 0) {
             kotlin.collections.i.t();
          }
@@ -69,35 +70,36 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
          val var14: Component = var27 as Component;
          val var15: FlexboxLayout = var11.actionRowComponentViewGroup;
          q.g(var11.actionRowComponentViewGroup, "actionRowComponentViewGroup");
-         var27 = var15.getChildAt(var5);
-         val var8: Boolean = var27 is ComponentView;
-         var var10: ComponentView = null;
+         val var10: View = var15.getChildAt(var5);
+         val var8: Boolean = var10 is ComponentView;
+         var27 = null;
+         val var29: ComponentView;
          if (var8) {
-            var27 = var27 as ComponentView;
+            var29 = var10 as ComponentView;
          } else {
-            var27 = null;
+            var29 = null;
          }
 
          label52: {
-            if (var27 != null) {
-               if (((ComponentView)var27).getComponentType() is Component) {
-                  var10 = (ComponentView)var27;
+            if (var29 != null) {
+               if (var29.getComponentType() is Component) {
+                  var27 = var29;
                }
 
-               var27 = var10;
-               if (var10 != null) {
+               var30 = (ComponentView)var27;
+               if (var27 != null) {
                   break label52;
                }
             }
 
-            var27 = new ComponentInflater(var2.getContext()).inflateComponent(var14, var15);
+            var30 = new ComponentInflater(var2.getContext()).inflateComponent(var14, var15);
          }
 
-         if (var27 != null) {
-            var27.configure(var14, var2, var3, var4);
+         if (var30 != null) {
+            var30.configure(var14, var2, var3, var4);
          }
 
-         var12.add(var27);
+         var12.add(var30);
       }
 
       val var17: java.util.List = kotlin.collections.i.a0(var12);

@@ -30,6 +30,12 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       super(var1);
    }
 
+   private fun requestForegroundServicePermissionPreU(promise: Promise) {
+      val var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+      q.g(var2, "toLowerCase(...)");
+      var1.resolve(var2);
+   }
+
    public open fun getName(): String {
       return "NativePermissionManager";
    }
@@ -134,7 +140,19 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
          .requestPermission("android.permission.WRITE_EXTERNAL_STORAGE", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
    }
 
-   public fun requestForegroundServicePermission(promise: Promise) {
+   public fun requestForegroundServicePermissionFileUpload(promise: Promise) {
+      q.h(var1, "promise");
+      if (VERSION.SDK_INT >= 34) {
+         this.getPermissionsModule()
+            .requestPermission(
+               "android.permission.FOREGROUND_SERVICE_DATA_SYNC", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
+            );
+      } else {
+         this.requestForegroundServicePermissionPreU(var1);
+      }
+   }
+
+   public fun requestForegroundServicePermissionScreenShare(promise: Promise) {
       q.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
          this.getPermissionsModule()
@@ -142,9 +160,22 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
                "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
             );
       } else {
-         val var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-         q.g(var2, "toLowerCase(...)");
-         var1.resolve(var2);
+         this.requestForegroundServicePermissionPreU(var1);
+      }
+   }
+
+   public fun requestForegroundServicePermissionVoiceCall(promise: Promise) {
+      q.h(var1, "promise");
+      if (VERSION.SDK_INT >= 34) {
+         this.getPermissionsModule()
+            .requestMultiplePermissions(
+               NativeArrayExtensionsKt.toNativeArray(
+                  i.m(new java.lang.String[]{"android.permission.RECORD_AUDIO", "android.permission.FOREGROUND_SERVICE_MICROPHONE"})
+               ),
+               NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
+            );
+      } else {
+         this.requestForegroundServicePermissionPreU(var1);
       }
    }
 

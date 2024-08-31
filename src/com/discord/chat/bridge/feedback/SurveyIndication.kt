@@ -64,14 +64,14 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
 
    public override fun toString(): String {
       val var1: StructurableText = this.content;
-      val var2: java.lang.String = this.feedbackIconUrl;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SurveyIndication(content=");
-      var3.append(var1);
-      var3.append(", feedbackIconUrl=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.feedbackIconUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SurveyIndication(content=");
+      var2.append(var1);
+      var2.append(", feedbackIconUrl=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
