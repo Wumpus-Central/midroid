@@ -4,7 +4,12 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.o1
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -13,11 +18,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import xk.f0
-import xk.n1
-import xk.f0.a
 
 @f
 internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1), ReactEvent {
@@ -25,7 +25,7 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
 
    fun TapSeeMoreData(var1: Int, var2: java.lang.String, var3: SerializationConstructorMarker) {
       if (1 != (var1 and 1)) {
-         n1.b(var1, 1, TapSeeMoreData.$serializer.INSTANCE.getDescriptor());
+         o1.b(var1, 1, TapSeeMoreData.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -33,16 +33,9 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
    }
 
    fun TapSeeMoreData(var1: java.lang.String) {
+      q.h(var1, "messageId");
       super();
       this.messageId = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TapSeeMoreData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, com.discord.primitives.MessageId..serializer.INSTANCE, MessageId.box-impl(var0.messageId));
    }
 
    public operator fun component1(): MessageId {
@@ -50,7 +43,7 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
    }
 
    public fun copy(messageId: MessageId = ...): TapSeeMoreData {
-      r.h(var1, "messageId");
+      q.h(var1, "messageId");
       return new TapSeeMoreData(var1, null);
    }
 
@@ -81,7 +74,7 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
       return var1.toString();
    }
 
-   public object `$serializer` : f0<TapSeeMoreData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -98,22 +91,27 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{com.discord.primitives.MessageId..serializer.INSTANCE};
+         return new KSerializer[]{MessageId.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): TapSeeMoreData {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var10: java.lang.String;
          if (var5) {
-            var8 = (MessageId)var7.y(var6, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null);
+            val var9: MessageId = var7.y(var6, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var9 != null) {
+               var10 = var9.unbox-impl();
+            } else {
+               var10 = null;
+            }
          } else {
             var2 = 0;
-            var8 = null;
+            var10 = null;
 
             while (var3) {
                val var4: Int = var7.o(var6);
@@ -122,7 +120,20 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
                      throw new n(var4);
                   }
 
-                  var8 = (MessageId)var7.y(var6, 0, com.discord.primitives.MessageId..serializer.INSTANCE, var8);
+                  val var11: MessageId;
+                  if (var10 != null) {
+                     var11 = MessageId.box-impl(var10);
+                  } else {
+                     var11 = null;
+                  }
+
+                  val var12: MessageId = var7.y(var6, 0, MessageId.$serializer.INSTANCE, var11) as MessageId;
+                  if (var12 != null) {
+                     var10 = var12.unbox-impl();
+                  } else {
+                     var10 = null;
+                  }
+
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -131,27 +142,19 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
          }
 
          var7.c(var6);
-         var8 = var8;
-         val var10: java.lang.String;
-         if (var8 != null) {
-            var10 = var8.unbox-impl();
-         } else {
-            var10 = null;
-         }
-
          return new TapSeeMoreData(var2, var10, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapSeeMoreData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         TapSeeMoreData.write$Self(var2, var4, var3);
+         TapSeeMoreData.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

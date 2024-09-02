@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import com.discord.mobile_voice_overlay.views.OverlayMenuView;
-import n1.a;
+import v2.a;
 
 public final class OverlayMenuBubbleBinding implements ViewBinding {
    public final LinearLayout overlayHeader;
@@ -30,21 +30,21 @@ public final class OverlayMenuBubbleBinding implements ViewBinding {
 
    public static OverlayMenuBubbleBinding bind(View var0) {
       int var1 = R.id.overlay_header;
-      LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-      if (var5 != null) {
+      LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.overlay_linked_anchor_view;
-         View var6 = a.a(var0, var1);
-         if (var6 != null) {
+         View var4 = a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.overlay_members_overflow_text;
             TextView var2 = (TextView)a.a(var0, var1);
             if (var2 != null) {
                var1 = R.id.overlay_members_recycler;
-               RecyclerView var3 = (RecyclerView)a.a(var0, var1);
-               if (var3 != null) {
+               RecyclerView var6 = (RecyclerView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.overlay_menu;
-                  OverlayMenuView var4 = (OverlayMenuView)a.a(var0, var1);
-                  if (var4 != null) {
-                     return new OverlayMenuBubbleBinding((LinearLayout)var0, var5, var6, var2, var3, var4);
+                  OverlayMenuView var5 = (OverlayMenuView)a.a(var0, var1);
+                  if (var5 != null) {
+                     return new OverlayMenuBubbleBinding((LinearLayout)var0, var3, var4, var2, var6, var5);
                   }
                }
             }

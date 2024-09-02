@@ -8,18 +8,18 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerDelegate
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerInterface
 import com.facebook.react.views.view.ReactViewGroup
-import eh.w
-import fh.s
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
+import mj.r
 
 public class KeyCommandsViewManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
    public open fun getConstants(): MutableMap<String, Any?> {
-      return s.m(
+      return r.m(
          new Pair[]{
             w.a("keyModifierAlphaShift", 65536),
             w.a("keyModifierShift", 131072),
@@ -45,7 +45,7 @@ public class KeyCommandsViewManagerModule(reactContext: ReactApplicationContext)
          new KeyCommandsViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): ReactViewGroup {
-         r.h(var1, "reactContext");
+         q.h(var1, "reactContext");
          return new ReactViewGroup(var1);
       }
 

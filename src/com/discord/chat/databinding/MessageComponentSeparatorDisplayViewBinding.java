@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.botuikit.components.SeparatorDisplayComponentView;
-import n1.a;
+import v2.a;
 
 public final class MessageComponentSeparatorDisplayViewBinding implements ViewBinding {
    public final View divider;

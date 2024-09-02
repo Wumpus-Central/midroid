@@ -1,23 +1,39 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import eh.l
-import eh.o
+import dn.f
+import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import uk.f
+import lj.l
+import lj.o
+import sj.a
 
 @f
 public enum class FooterTheme {
    DANGER,
    DEFAULT   @JvmStatic
-   private FooterTheme[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private FooterTheme[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public FooterTheme.Companion Companion = new FooterTheme.Companion(null);
 
+   @JvmStatic
+   fun {
+      val var0: Array<FooterTheme> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<FooterTheme> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<FooterTheme>;
+         return this.get$cachedSerializer();
       }
    }
 }

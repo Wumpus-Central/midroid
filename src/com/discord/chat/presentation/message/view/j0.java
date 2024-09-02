@@ -9,6 +9,6 @@ public final class j0 implements OnClickListener {
    public final Function0 j;
 
    public final void onClick(View var1) {
-      InlineForwardButtonView.a(this.j, var1);
+      InlineForwardButtonView.d(this.j, var1);
    }
 }

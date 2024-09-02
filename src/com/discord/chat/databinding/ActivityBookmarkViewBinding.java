@@ -13,7 +13,7 @@ import com.discord.chat.R;
 import com.discord.core.DCDButton;
 import com.discord.overlapping_circles.OverlappingCirclesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class ActivityBookmarkViewBinding implements ViewBinding {
    public final Barrier barrierFooter;
@@ -59,39 +59,39 @@ public final class ActivityBookmarkViewBinding implements ViewBinding {
 
    public static ActivityBookmarkViewBinding bind(View var0) {
       int var1 = R.id.barrier_footer;
-      Barrier var3 = (Barrier)a.a(var0, var1);
-      if (var3 != null) {
+      Barrier var10 = (Barrier)a.a(var0, var1);
+      if (var10 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+         if (var9 != null) {
             var1 = R.id.item_bottom_container;
-            ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
-            if (var12 != null) {
+            ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.item_description;
-               TextView var9 = (TextView)a.a(var0, var1);
-               if (var9 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.item_header;
-                  TextView var4 = (TextView)a.a(var0, var1);
-                  if (var4 != null) {
+                  TextView var7 = (TextView)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.item_hero;
-                     SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var10 != null) {
+                     SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.launch_button;
-                        DCDButton var6 = (DCDButton)a.a(var0, var1);
-                        if (var6 != null) {
+                        DCDButton var8 = (DCDButton)a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.participants;
-                           OverlappingCirclesView var7 = (OverlappingCirclesView)a.a(var0, var1);
-                           if (var7 != null) {
+                           OverlappingCirclesView var4 = (OverlappingCirclesView)a.a(var0, var1);
+                           if (var4 != null) {
                               var1 = R.id.participants_container;
-                              FrameLayout var2 = (FrameLayout)a.a(var0, var1);
-                              if (var2 != null) {
+                              FrameLayout var12 = (FrameLayout)a.a(var0, var1);
+                              if (var12 != null) {
                                  var1 = R.id.participants_info;
-                                 TextView var11 = (TextView)a.a(var0, var1);
-                                 if (var11 != null) {
+                                 TextView var5 = (TextView)a.a(var0, var1);
+                                 if (var5 != null) {
                                     var1 = R.id.participants_info_container;
-                                    LinearLayout var8 = (LinearLayout)a.a(var0, var1);
-                                    if (var8 != null) {
-                                       return new ActivityBookmarkViewBinding(var0, var3, var5, var12, var9, var4, var10, var6, var7, var2, var11, var8);
+                                    LinearLayout var11 = (LinearLayout)a.a(var0, var1);
+                                    if (var11 != null) {
+                                       return new ActivityBookmarkViewBinding(var0, var10, var9, var6, var3, var7, var2, var8, var4, var12, var5, var11);
                                     }
                                  }
                               }
@@ -116,6 +116,7 @@ public final class ActivityBookmarkViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

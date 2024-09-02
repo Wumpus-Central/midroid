@@ -12,8 +12,8 @@ import java.util.Locale
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.m0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.l0
+import kotlin.jvm.internal.q
 import org.webrtc.ThreadUtils
 import org.webrtc.VideoFrame
 import org.webrtc.RendererCommon.RendererEvents
@@ -29,7 +29,7 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    private final var webRtcFrameCount: Int
 
    init {
-      r.h(var1, "name");
+      q.h(var1, "name");
       super(var1);
       this.layoutLock = new Object();
    }
@@ -64,7 +64,7 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
       // 06: monitorenter
       // 07: aload 0
       // 08: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.isFirstFrameRendered Z
-      // 0b: ifne 22
+      // 0b: ifne 29
       // 0e: aload 0
       // 0f: bipush 1
       // 10: putfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.isFirstFrameRendered Z
@@ -72,65 +72,67 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
       // 14: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rendererEvents Lorg/webrtc/RendererCommon$RendererEvents;
       // 17: astore 3
       // 18: aload 3
-      // 19: ifnull 22
+      // 19: ifnull 29
       // 1c: aload 3
       // 1d: invokeinterface org/webrtc/RendererCommon$RendererEvents.onFirstFrameRendered ()V 1
-      // 22: aload 0
-      // 23: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameWidth I
-      // 26: aload 1
-      // 27: invokevirtual org/webrtc/VideoFrame.getRotatedWidth ()I
-      // 2a: if_icmpne 43
-      // 2d: aload 0
-      // 2e: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameHeight I
-      // 31: aload 1
-      // 32: invokevirtual org/webrtc/VideoFrame.getRotatedHeight ()I
-      // 35: if_icmpne 43
-      // 38: aload 0
-      // 39: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.frameRotation I
-      // 3c: aload 1
-      // 3d: invokevirtual org/webrtc/VideoFrame.getRotation ()I
-      // 40: if_icmpeq 80
-      // 43: aload 0
-      // 44: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rendererEvents Lorg/webrtc/RendererCommon$RendererEvents;
-      // 47: astore 3
-      // 48: aload 3
-      // 49: ifnull 68
-      // 4c: aload 3
-      // 4d: aload 1
-      // 4e: invokevirtual org/webrtc/VideoFrame.getBuffer ()Lorg/webrtc/VideoFrame$Buffer;
-      // 51: invokeinterface org/webrtc/VideoFrame$Buffer.getWidth ()I 1
-      // 56: aload 1
-      // 57: invokevirtual org/webrtc/VideoFrame.getBuffer ()Lorg/webrtc/VideoFrame$Buffer;
-      // 5a: invokeinterface org/webrtc/VideoFrame$Buffer.getHeight ()I 1
-      // 5f: aload 1
-      // 60: invokevirtual org/webrtc/VideoFrame.getRotation ()I
-      // 63: invokeinterface org/webrtc/RendererCommon$RendererEvents.onFrameResolutionChanged (III)V 4
-      // 68: aload 0
-      // 69: aload 1
-      // 6a: invokevirtual org/webrtc/VideoFrame.getRotatedWidth ()I
-      // 6d: putfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameWidth I
-      // 70: aload 0
-      // 71: aload 1
-      // 72: invokevirtual org/webrtc/VideoFrame.getRotatedHeight ()I
-      // 75: putfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameHeight I
-      // 78: aload 0
-      // 79: aload 1
-      // 7a: invokevirtual org/webrtc/VideoFrame.getRotation ()I
-      // 7d: putfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.frameRotation I
-      // 80: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 83: astore 1
-      // 84: aload 2
-      // 85: monitorexit
-      // 86: return
-      // 87: astore 1
-      // 88: aload 2
-      // 89: monitorexit
-      // 8a: aload 1
-      // 8b: athrow
+      // 22: goto 29
+      // 25: astore 1
+      // 26: goto 8e
+      // 29: aload 0
+      // 2a: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameWidth I
+      // 2d: aload 1
+      // 2e: invokevirtual org/webrtc/VideoFrame.getRotatedWidth ()I
+      // 31: if_icmpne 4a
+      // 34: aload 0
+      // 35: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameHeight I
+      // 38: aload 1
+      // 39: invokevirtual org/webrtc/VideoFrame.getRotatedHeight ()I
+      // 3c: if_icmpne 4a
+      // 3f: aload 0
+      // 40: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.frameRotation I
+      // 43: aload 1
+      // 44: invokevirtual org/webrtc/VideoFrame.getRotation ()I
+      // 47: if_icmpeq 87
+      // 4a: aload 0
+      // 4b: getfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rendererEvents Lorg/webrtc/RendererCommon$RendererEvents;
+      // 4e: astore 3
+      // 4f: aload 3
+      // 50: ifnull 6f
+      // 53: aload 3
+      // 54: aload 1
+      // 55: invokevirtual org/webrtc/VideoFrame.getBuffer ()Lorg/webrtc/VideoFrame$Buffer;
+      // 58: invokeinterface org/webrtc/VideoFrame$Buffer.getWidth ()I 1
+      // 5d: aload 1
+      // 5e: invokevirtual org/webrtc/VideoFrame.getBuffer ()Lorg/webrtc/VideoFrame$Buffer;
+      // 61: invokeinterface org/webrtc/VideoFrame$Buffer.getHeight ()I 1
+      // 66: aload 1
+      // 67: invokevirtual org/webrtc/VideoFrame.getRotation ()I
+      // 6a: invokeinterface org/webrtc/RendererCommon$RendererEvents.onFrameResolutionChanged (III)V 4
+      // 6f: aload 0
+      // 70: aload 1
+      // 71: invokevirtual org/webrtc/VideoFrame.getRotatedWidth ()I
+      // 74: putfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameWidth I
+      // 77: aload 0
+      // 78: aload 1
+      // 79: invokevirtual org/webrtc/VideoFrame.getRotatedHeight ()I
+      // 7c: putfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.rotatedFrameHeight I
+      // 7f: aload 0
+      // 80: aload 1
+      // 81: invokevirtual org/webrtc/VideoFrame.getRotation ()I
+      // 84: putfield com/discord/media/engine/video/texture_view/TextureViewEglRenderer.frameRotation I
+      // 87: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 8a: astore 1
+      // 8b: aload 2
+      // 8c: monitorexit
+      // 8d: return
+      // 8e: aload 2
+      // 8f: monitorexit
+      // 90: aload 1
+      // 91: athrow
    }
 
    public fun initialize(rendererEvents: RendererEvents) {
-      r.h(var1, "rendererEvents");
+      q.h(var1, "rendererEvents");
       label15:
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setRendererEvents$p(this, var1);
@@ -148,16 +150,16 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
 
          // $VF: monitorexit
       } else {
-         val var5: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var5);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Expected to be on android main thread. Current: ");
+         var5.append(var2);
+         throw new IllegalStateException(var5.toString().toString());
       }
    }
 
    public override fun onFrame(frame: VideoFrame) {
-      r.h(var1, "frame");
+      q.h(var1, "frame");
       this.updateFrameDimensionsAndReportEvents(var1);
       super.onFrame(var1);
    }
@@ -167,32 +169,32 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    }
 
    public open fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
-      r.h(var1, "surface");
+      q.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var6: Log = Log.INSTANCE;
-         val var5: java.lang.String = access$getName(this);
+         val var5: Log = Log.INSTANCE;
+         val var6: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
          val var9: StringBuilder = new StringBuilder();
          var9.append("createEglSurface (");
          var9.append(var2);
          var9.append(" total)");
-         Log.i$default(var6, var5, var9.toString(), null, 4, null);
+         Log.i$default(var5, var6, var9.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var7);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var4);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 
    public open fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
-      r.h(var1, "surface");
+      q.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var3: Long = System.currentTimeMillis();
+         val var5: Long = System.currentTimeMillis();
          val var10: CountDownLatch = new CountDownLatch(1);
-         this.releaseEglSurface(new Function0<Unit>(var10) {
+         this.releaseEglSurface(new Function0(var10) {
             final CountDownLatch $completionLatch;
 
             {
@@ -205,17 +207,17 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
             }
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
-         val var5: Long = System.currentTimeMillis();
-         val var12: Log = Log.INSTANCE;
-         val var11: java.lang.String = access$getName(this);
+         val var3: Long = System.currentTimeMillis();
+         val var11: Log = Log.INSTANCE;
+         val var12: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
          val var8: StringBuilder = new StringBuilder();
          var8.append("releaseEglSurface (");
-         var8.append(var5 - var3);
+         var8.append(var3 - var5);
          var8.append(" ms) (");
          var8.append(var2);
          var8.append(" total)");
-         Log.i$default(var12, var11, var8.toString(), null, 4, null);
+         Log.i$default(var11, var12, var8.toString(), null, 4, null);
          return true;
       } else {
          val var7: Thread = Thread.currentThread();
@@ -227,20 +229,20 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    }
 
    public open fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, w: Int, h: Int) {
-      r.h(var1, "surface");
+      q.h(var1, "surface");
    }
 
    public open fun onSurfaceTextureUpdated(surface: SurfaceTexture) {
-      r.h(var1, "surface");
+      q.h(var1, "surface");
    }
 
    public companion object {
       private final val count: AtomicInteger
 
       private fun Float.toNiceString(): String {
-         val var2: m0 = m0.a;
+         val var2: l0 = l0.a;
          val var3: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.3f", Arrays.copyOf(new Object[]{var1}, 1));
-         r.g(var3, "format(locale, format, *args)");
+         q.g(var3, "format(...)");
          return var3;
       }
    }

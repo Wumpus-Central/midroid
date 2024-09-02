@@ -1,7 +1,7 @@
 package com.discord.media.engine.types
 
 import com.discord.logging.Log
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal object Debug {
    public const val ENABLE: Boolean = false
@@ -12,25 +12,25 @@ internal object Debug {
    private const val TAG: String = "Debug"
 
    public inline fun log(tag: String, method: String = "") {
-      r.h(var1, "tag");
-      r.h(var2, "method");
+      q.h(var1, "tag");
+      q.h(var2, "method");
    }
 
    public inline fun log(tag: String, method: String = "", startNs: Long) {
-      r.h(var1, "tag");
-      r.h(var2, "method");
+      q.h(var1, "tag");
+      q.h(var2, "method");
    }
 
    public inline fun log(tag: String, method: String = "", startNs: Long, lazyMsg: () -> Any?) {
-      r.h(var1, "tag");
-      r.h(var2, "method");
-      r.h(var5, "lazyMsg");
+      q.h(var1, "tag");
+      q.h(var2, "method");
+      q.h(var5, "lazyMsg");
    }
 
    public inline fun log(tag: String, method: String = "", lazyMsg: () -> Any?) {
-      r.h(var1, "tag");
-      r.h(var2, "method");
-      r.h(var3, "lazyMsg");
+      q.h(var1, "tag");
+      q.h(var2, "method");
+      q.h(var3, "lazyMsg");
    }
 
    public fun logDebugLoggingConfig() {

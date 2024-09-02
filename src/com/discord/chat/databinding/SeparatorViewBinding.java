@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import n1.a;
+import v2.a;
 
 public final class SeparatorViewBinding implements ViewBinding {
    public final View leftBar;
@@ -23,15 +23,15 @@ public final class SeparatorViewBinding implements ViewBinding {
 
    public static SeparatorViewBinding bind(View var0) {
       int var1 = R.id.left_bar;
-      View var2 = a.a(var0, var1);
-      if (var2 != null) {
+      View var3 = a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.middle_text;
-         TextView var4 = (TextView)a.a(var0, var1);
-         if (var4 != null) {
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.right_bar;
-            View var3 = a.a(var0, var1);
-            if (var3 != null) {
-               return new SeparatorViewBinding(var0, var2, var4, var3);
+            View var4 = a.a(var0, var1);
+            if (var4 != null) {
+               return new SeparatorViewBinding(var0, var3, var2, var4);
             }
          }
       }
@@ -48,6 +48,7 @@ public final class SeparatorViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

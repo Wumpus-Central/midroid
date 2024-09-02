@@ -5,13 +5,13 @@ import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class I18nModule(reactContext: ReactApplicationContext) : ReactResourceModule<I18nMessage> {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
    }
@@ -20,7 +20,7 @@ public class I18nModule(reactContext: ReactApplicationContext) : ReactResourceMo
       return I18nCache.INSTANCE;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "i18nManager";
    }
 
@@ -30,13 +30,13 @@ public class I18nModule(reactContext: ReactApplicationContext) : ReactResourceMo
 
    @ReactMethod
    public fun keysRequest(callback: Callback) {
-      r.h(var1, "callback");
-      var1.invoke(new Object[]{this.keysArray()});
+      q.h(var1, "callback");
+      var1.invoke(this.keysArray());
    }
 
    @ReactMethod
    public fun valuesResult(values: ReadableArray) {
-      r.h(var1, "values");
+      q.h(var1, "values");
       this.cache().set(this.reactContext, this.reactResources(var1));
    }
 }

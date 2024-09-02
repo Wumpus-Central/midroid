@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.viewholder
 
+import android.view.View
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.AudioAttachmentMessageAccessory
@@ -15,56 +16,73 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
    private final val view: AudioPlayerView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "view");
+      kotlin.jvm.internal.q.h(var1, "view");
       super(var1, null);
       this.view = var1;
    }
 
-   public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler) {
-      kotlin.jvm.internal.r.h(var1, "accessory");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
+   @JvmStatic
+   fun `bind$lambda$4$lambda$3$lambda$2`(var0: Function2, var1: AudioAttachmentMessageAccessory, var2: View): Boolean {
+      kotlin.jvm.internal.q.h(var1, "$accessory");
+      if (var0 != null) {
+         val var3: java.lang.String = var1.getAttachment().getId();
+         var var4: java.lang.String = var3;
+         if (var3 == null) {
+            var4 = "";
+         }
+
+         var0.invoke(var4, var1.getAttachmentIndex());
+      }
+
+      return true;
+   }
+
+   public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler, onLongClicked: ((String, Int?) -> Unit)?) {
+      kotlin.jvm.internal.q.h(var1, "accessory");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
       val var6: Attachment = var1.getAttachment();
-      val var7: UploadItemProps = var1.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var2) {
+      val var8: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2) {
-            kotlin.jvm.internal.r.h(var1, "p0");
-            kotlin.jvm.internal.r.h(var2, "p1");
+            kotlin.jvm.internal.q.h(var1, "p0");
+            kotlin.jvm.internal.q.h(var2, "p1");
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var5: AudioPlayerView = this.view;
+      val var7: AudioPlayerView = this.view;
       this.view.setSourceUrl(var1);
-      val var3: ByteArray = var6.getWaveformByteArray();
-      val var9: Unit;
-      if (var3 != null) {
-         var5.setSampleData(var3);
-         var9 = Unit.a;
-      } else {
-         var9 = null;
-      }
-
-      if (var9 == null) {
-         var5.setAudioFileDetails(var1.getAttachment());
-      }
-
-      val var8: java.lang.Float = var6.getDurationSecs();
-      var var10: Unit = null;
-      if (var8 != null) {
-         var5.setDurationMs((long)(var8.floatValue() * (float)1000));
+      val var4: ByteArray = var6.getWaveformByteArray();
+      val var10: Unit;
+      if (var4 != null) {
+         var7.setSampleData(var4);
          var10 = Unit.a;
+      } else {
+         var10 = null;
       }
 
       if (var10 == null) {
-         var5.setUnknownDuration();
+         var7.setAudioFileDetails(var1.getAttachment());
       }
 
-      var5.setUploadProgress(var7);
-      var5.shouldAnimate(var6.isAnimated());
-      var5.setContainerBackgroundColor(var1.getColor());
-      var5.setListener(new AudioPlayerView.Listener(var6, var2, var1) {
+      val var9: java.lang.Float = var6.getDurationSecs();
+      var var11: Unit = null;
+      if (var9 != null) {
+         var7.setDurationMs((long)(var9.floatValue() * (float)1000));
+         var11 = Unit.a;
+      }
+
+      if (var11 == null) {
+         var7.setUnknownDuration();
+      }
+
+      var7.setUploadProgress(var8);
+      var7.setOnLongPress(new d(var3, var1));
+      var7.shouldAnimate(var6.isAnimated());
+      var7.setContainerBackgroundColor(var1.getColor());
+      var7.setListener(new AudioPlayerView.Listener(var6, var2, var1) {
          final AudioAttachmentMessageAccessory $accessory;
          final ChatEventHandler $eventHandler;
          final Attachment $this_with;
@@ -127,8 +145,8 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var2 = (float)var3 * 1000.0F;
             }
 
-            val var9: ChatEventHandler = this.$eventHandler;
-            val var8: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
+            val var8: ChatEventHandler = this.$eventHandler;
+            val var9: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
             val var13: UserId = this.$accessory.getAuthorId-wUX8bhU();
             if (var13 != null) {
                val var10: Long = var13.unbox-impl();
@@ -139,7 +157,7 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                   var14 = "";
                }
 
-               var9.mediaAttachmentPlaybackStarted-jd4C3YQ(var8, var2, var1, var10, var5, var14);
+               var8.mediaAttachmentPlaybackStarted-jd4C3YQ(var9, var2, var1, var10, var5, var14);
             }
          }
 

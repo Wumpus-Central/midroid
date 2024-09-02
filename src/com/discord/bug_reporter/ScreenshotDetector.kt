@@ -2,7 +2,7 @@ package com.discord.bug_reporter
 
 import android.content.ContentResolver
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class ScreenshotDetector(contentResolver: ContentResolver) {
    public final var active: Boolean
@@ -22,9 +22,9 @@ internal class ScreenshotDetector(contentResolver: ContentResolver) {
 
 
    init {
-      r.h(var1, "contentResolver");
+      q.h(var1, "contentResolver");
       super();
-      this.screenshotContentObserver = new ScreenshotContentObserver(var1, new Function0<Unit>(this) {
+      this.screenshotContentObserver = new ScreenshotContentObserver(var1, new Function0(this) {
          final ScreenshotDetector this$0;
 
          {

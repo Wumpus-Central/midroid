@@ -1,7 +1,9 @@
 package com.discord.react_strings
 
 import android.content.Context
-import kotlin.jvm.internal.r
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
+import sj.a
 
 public enum class I18nMessage {
    CANCEL,
@@ -78,10 +80,24 @@ public enum class I18nMessage {
    VOICE_MESSAGES_A11Y_STATUS,
    VOICE_MESSAGES_PLAYING_A11Y_STATUS,
    VOICE_MESSAGES_SENT_NOTIFICATION   @JvmStatic
-   private I18nMessage[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private I18nMessage[] $VALUES;
+
+   @JvmStatic
+   fun {
+      val var0: Array<I18nMessage> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
 
    internal fun format(context: Context): String {
-      r.h(var1, "context");
+      q.h(var1, "context");
       return I18nCache.INSTANCE.get(var1, this);
    }
 }

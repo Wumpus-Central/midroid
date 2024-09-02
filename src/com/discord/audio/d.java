@@ -1,5 +1,5 @@
 package com.discord.audio;
 
 // $VF: synthetic class
-public final class d {
+public abstract class d {
 }

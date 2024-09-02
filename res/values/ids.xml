@@ -86,6 +86,7 @@
     <item type="id" name="audio_file_name" />
     <item type="id" name="audio_file_size" />
     <item type="id" name="audio_progress_bar" />
+    <item type="id" name="audio_progress_view" />
     <item type="id" name="author_avatar" />
     <item type="id" name="author_avatar_decoration" />
     <item type="id" name="author_container" />
@@ -347,6 +348,7 @@
     <item type="id" name="inline_media_view3" />
     <item type="id" name="inline_media_view4" />
     <item type="id" name="inline_media_volume_toggle" />
+    <item type="id" name="invalidate_transform" />
     <item type="id" name="invite_to_speak_button" />
     <item type="id" name="invite_to_speak_text" />
     <item type="id" name="is_pooling_container_tag" />
@@ -579,6 +581,7 @@
     <item type="id" name="rn_redbox_report_button" />
     <item type="id" name="rn_redbox_report_label" />
     <item type="id" name="rn_redbox_stack" />
+    <item type="id" name="role" />
     <item type="id" name="role_dot" />
     <item type="id" name="role_dot_view_background" />
     <item type="id" name="role_dot_view_dot" />
@@ -744,6 +747,8 @@
     <item type="id" name="topPanel" />
     <item type="id" name="top_guideline" />
     <item type="id" name="touch_outside" />
+    <item type="id" name="transform" />
+    <item type="id" name="transform_origin" />
     <item type="id" name="transition_current_scene" />
     <item type="id" name="transition_layout_save" />
     <item type="id" name="transition_position" />

@@ -10,14 +10,14 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import hh.a
 import java.util.Comparator
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
+import oj.a
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -49,8 +49,8 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getPhotos(params: ReadableMap, promise: Promise) {
-      r.h(var1, "params");
-      r.h(var2, "promise");
+      q.h(var1, "params");
+      q.h(var2, "promise");
       val var4: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
@@ -59,14 +59,14 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
       var var3: Int;
       try {
          val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var7: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var7, "reactApplicationContext");
-         var16 = h.G0(h.E0(var12.getMedia(var7, var6, var4, var5), new Comparator() {
+         val var6: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var6, "getReactApplicationContext(...)");
+         var16 = i.J0(i.H0(var12.getMedia(var6, var7, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
@@ -83,8 +83,8 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
                new Pair[]{
-                  w.a("start_cursor", java.lang.String.valueOf((h.a0(var16) as ContentResolverMedia).getUri())),
-                  w.a("end_cursor", java.lang.String.valueOf((h.m0(var16) as ContentResolverMedia).getUri())),
+                  w.a("start_cursor", java.lang.String.valueOf((i.d0(var16) as ContentResolverMedia).getUri())),
+                  w.a("end_cursor", java.lang.String.valueOf((i.p0(var16) as ContentResolverMedia).getUri())),
                   w.a("has_next_page", java.lang.Boolean.TRUE)
                }
             );

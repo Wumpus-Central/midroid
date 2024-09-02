@@ -1,15 +1,15 @@
 package com.discord.client_info
 
 import android.content.Context
-import eh.l
 import java.util.Locale
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.l
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "ae96cae0-ec43-41c3-81ae-d19182c3d655"
+   public const val PROGUARD_UUID: String = "6b660459-c5e2-43aa-8d9b-391d3999a636"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@245.14.0-1+245114"
+   public const val SENTRY_RELEASE: String = "discord_android@246.13.0-1+246113"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String
@@ -18,11 +18,11 @@ public object ClientInfo {
       public final get() {
          var var1: java.lang.String = buildType;
          if (buildType == null) {
-            r.y("buildType");
+            q.y("buildType");
             var1 = null;
          }
 
-         return r.c(var1, "debug");
+         return q.c(var1, "debug");
       }
 
 
@@ -30,18 +30,18 @@ public object ClientInfo {
       public final get() {
          var var1: java.lang.String = flavor;
          if (flavor == null) {
-            r.y("flavor");
+            q.y("flavor");
             var1 = null;
          }
 
-         return r.c(var1, "developer");
+         return q.c(var1, "developer");
       }
 
 
    public final val isPreProdRelease: Boolean
       public final get() {
          val var1: Boolean;
-         if (!r.c(this.getReleaseChannel(), "canaryRelease") && !r.c(this.getReleaseChannel(), "betaRelease")) {
+         if (!q.c(this.getReleaseChannel(), "canaryRelease") && !q.c(this.getReleaseChannel(), "betaRelease")) {
             var1 = false;
          } else {
             var1 = true;
@@ -51,7 +51,7 @@ public object ClientInfo {
       }
 
 
-   public final val isProdBuild: Boolean by l.b(<unrepresentable>.INSTANCE)
+   public final val isProdBuild: Boolean by l.a(<unrepresentable>.INSTANCE)
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }
@@ -68,44 +68,37 @@ public object ClientInfo {
 
    public final val releaseChannel: String
       public final get() {
-         var var2: java.lang.String = null;
-         var var3: java.lang.String = flavor;
+         var var1: java.lang.String = null;
+         var var2: java.lang.String = flavor;
          if (flavor == null) {
-            r.y("flavor");
-            var3 = null;
+            q.y("flavor");
+            var2 = null;
          }
 
          if (buildType == null) {
-            r.y("buildType");
+            q.y("buildType");
          } else {
-            var2 = buildType;
+            var1 = buildType;
          }
 
-         val var1: Boolean;
-         if (var2.length() > 0) {
-            var1 = true;
-         } else {
-            var1 = false;
+         var var8: java.lang.String = var1;
+         if (var1.length() > 0) {
+            val var9: StringBuilder = new StringBuilder();
+            var var4: java.lang.String = java.lang.String.valueOf(var1.charAt(0));
+            q.f(var4, "null cannot be cast to non-null type java.lang.String");
+            var4 = var4.toUpperCase(Locale.ROOT);
+            q.g(var4, "toUpperCase(...)");
+            var9.append((Object)var4);
+            var1 = var1.substring(1);
+            q.g(var1, "substring(...)");
+            var9.append(var1);
+            var8 = var9.toString();
          }
 
-         var var9: java.lang.String = var2;
-         if (var1) {
-            val var10: StringBuilder = new StringBuilder();
-            var var5: java.lang.String = java.lang.String.valueOf(var2.charAt(0));
-            r.f(var5, "null cannot be cast to non-null type java.lang.String");
-            var5 = var5.toUpperCase(Locale.ROOT);
-            r.g(var5, "this as java.lang.String).toUpperCase(Locale.ROOT)");
-            var10.append((Object)var5);
-            var2 = var2.substring(1);
-            r.g(var2, "this as java.lang.String).substring(startIndex)");
-            var10.append(var2);
-            var9 = var10.toString();
-         }
-
-         val var7: StringBuilder = new StringBuilder();
-         var7.append(var3);
-         var7.append(var9);
-         return var7.toString();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var2);
+         var6.append(var8);
+         return var6.toString();
       }
 
 
@@ -116,12 +109,12 @@ public object ClientInfo {
       internal set
 
    public fun init(context: Context, versionName: String, versionCode: Int, flavor: String, buildType: String, otaManifest: String, otaVersion: String) {
-      r.h(var1, "context");
-      r.h(var2, "versionName");
-      r.h(var4, "flavor");
-      r.h(var5, "buildType");
-      r.h(var6, "otaManifest");
-      r.h(var7, "otaVersion");
+      q.h(var1, "context");
+      q.h(var2, "versionName");
+      q.h(var4, "flavor");
+      q.h(var5, "buildType");
+      q.h(var6, "otaManifest");
+      q.h(var7, "otaVersion");
       this.setVersionName(var2);
       this.setVersionCode(java.lang.String.valueOf(var3));
       this.setOtaManifestETag(var6);
@@ -129,7 +122,7 @@ public object ClientInfo {
       flavor = var4;
       buildType = var5;
       var2 = var1.getPackageName();
-      r.g(var2, "context.packageName");
+      q.g(var2, "getPackageName(...)");
       this.setPackageName(var2);
       val var10: ClientUserAgent = ClientUserAgent.INSTANCE;
       val var9: StringBuilder = new StringBuilder();

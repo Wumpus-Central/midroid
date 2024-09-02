@@ -3,7 +3,14 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.n0
+import gn.x0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,13 +18,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.w0
-import xk.f0.a
 
 @f
 internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String, videoStreamParametersJSON: String) : ReactEvent {
@@ -28,27 +28,15 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
    public final val videoStreamParametersJSON: String
 
    init {
-      r.h(var2, "userId");
-      r.h(var5, "streamId");
-      r.h(var6, "videoStreamParametersJSON");
+      q.h(var2, "userId");
+      q.h(var5, "streamId");
+      q.h(var6, "videoStreamParametersJSON");
       super();
       this.connectionId = var1;
       this.userId = var2;
       this.ssrc = var3;
       this.streamId = var5;
       this.videoStreamParametersJSON = var6;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnVideoCallbackEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.connectionId);
-      var1.z(var2, 1, var0.userId);
-      var1.E(var2, 2, var0.ssrc);
-      var1.z(var2, 3, var0.streamId);
-      var1.z(var2, 4, var0.videoStreamParametersJSON);
    }
 
    public operator fun component1(): Int {
@@ -78,9 +66,9 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       streamId: String = var0.streamId,
       videoStreamParametersJSON: String = var0.videoStreamParametersJSON
    ): OnVideoCallbackEvent {
-      r.h(var2, "userId");
-      r.h(var5, "streamId");
-      r.h(var6, "videoStreamParametersJSON");
+      q.h(var2, "userId");
+      q.h(var5, "streamId");
+      q.h(var6, "videoStreamParametersJSON");
       return new OnVideoCallbackEvent(var1, var2, var3, var5, var6);
    }
 
@@ -93,14 +81,14 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!r.c(this.userId, var1.userId)) {
+         } else if (!q.c(this.userId, var1.userId)) {
             return false;
          } else if (this.ssrc != var1.ssrc) {
             return false;
-         } else if (!r.c(this.streamId, var1.streamId)) {
+         } else if (!q.c(this.streamId, var1.streamId)) {
             return false;
          } else {
-            return r.c(this.videoStreamParametersJSON, var1.videoStreamParametersJSON);
+            return q.c(this.videoStreamParametersJSON, var1.videoStreamParametersJSON);
          }
       }
    }
@@ -119,24 +107,24 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       val var1: Int = this.connectionId;
       val var4: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var5: java.lang.String = this.streamId;
+      val var7: java.lang.String = this.streamId;
       val var6: java.lang.String = this.videoStreamParametersJSON;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("OnVideoCallbackEvent(connectionId=");
-      var7.append(var1);
-      var7.append(", userId=");
-      var7.append(var4);
-      var7.append(", ssrc=");
-      var7.append(var2);
-      var7.append(", streamId=");
-      var7.append(var5);
-      var7.append(", videoStreamParametersJSON=");
-      var7.append(var6);
-      var7.append(")");
-      return var7.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("OnVideoCallbackEvent(connectionId=");
+      var5.append(var1);
+      var5.append(", userId=");
+      var5.append(var4);
+      var5.append(", ssrc=");
+      var5.append(var2);
+      var5.append(", streamId=");
+      var5.append(var7);
+      var5.append(", videoStreamParametersJSON=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
-   public object `$serializer` : f0<OnVideoCallbackEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -157,32 +145,32 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, a2.a, w0.a, a2.a, a2.a};
+         return new KSerializer[]{n0.a, b2.a, x0.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnVideoCallbackEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.b(var11);
          var var2: Int;
          var var3: Int;
          var var6: Long;
          var var8: java.lang.String;
-         var var9: java.lang.String;
+         val var10: java.lang.String;
          val var13: java.lang.String;
          if (var12.p()) {
-            var2 = var12.i(var11, 0);
-            var9 = var12.m(var11, 1);
+            var3 = var12.i(var11, 0);
+            var10 = var12.m(var11, 1);
             var6 = var12.f(var11, 2);
             var8 = var12.m(var11, 3);
             var13 = var12.m(var11, 4);
-            var3 = 31;
+            var2 = 31;
          } else {
             var var14: java.lang.String = null;
             var var4: Boolean = true;
             var2 = 0;
             var6 = 0L;
-            var9 = null;
+            var var9: java.lang.String = null;
             var8 = null;
             var3 = 0;
 
@@ -220,27 +208,25 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
                }
             }
 
-            var3 = var2;
+            var10 = var14;
             var13 = var8;
             var8 = var9;
-            var9 = var14;
-            var2 = var3;
          }
 
          var12.c(var11);
-         return new OnVideoCallbackEvent(var3, var2, var9, var6, var8, var13, null);
+         return new OnVideoCallbackEvent(var2, var3, var10, var6, var8, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnVideoCallbackEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         OnVideoCallbackEvent.write$Self(var2, var4, var3);
+         OnVideoCallbackEvent.write$Self$media_engine_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

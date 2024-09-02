@@ -3,7 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,11 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 public data class LongPressUsernameData(messageId: String, userId: String) : ReactEvent {
@@ -23,20 +23,11 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
    public final val userId: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "userId");
+      q.h(var1, "messageId");
+      q.h(var2, "userId");
       super();
       this.messageId = var1;
       this.userId = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LongPressUsernameData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.messageId);
-      var1.z(var2, 1, var0.userId);
    }
 
    public operator fun component1(): String {
@@ -48,8 +39,8 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
    }
 
    public fun copy(messageId: String = var0.messageId, userId: String = var0.userId): LongPressUsernameData {
-      r.h(var1, "messageId");
-      r.h(var2, "userId");
+      q.h(var1, "messageId");
+      q.h(var2, "userId");
       return new LongPressUsernameData(var1, var2);
    }
 
@@ -60,10 +51,10 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!q.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.userId, var1.userId);
+            return q.c(this.userId, var1.userId);
          }
       }
    }
@@ -88,7 +79,7 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
       return var2.toString();
    }
 
-   public object `$serializer` : f0<LongPressUsernameData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -106,11 +97,11 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a};
+         return new KSerializer[]{b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): LongPressUsernameData {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
@@ -151,15 +142,15 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressUsernameData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         LongPressUsernameData.write$Self(var2, var4, var3);
+         LongPressUsernameData.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

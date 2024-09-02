@@ -6,8 +6,8 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
 
 internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ...) : TapReactionData(var1, var2, var3), ReactEvent {
    public final val isBurst: Boolean?
@@ -15,6 +15,8 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    public final val reaction: Reaction?
 
    fun TapReactionData(var1: java.lang.String, var2: Reaction, var3: java.lang.Boolean) {
+      q.h(var1, "messageId");
+      super();
       this.messageId = var1;
       this.reaction = var2;
       this.isBurst = var3;
@@ -33,7 +35,7 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    }
 
    public fun copy(messageId: MessageId = ..., reaction: Reaction? = ..., isBurst: Boolean? = ...): TapReactionData {
-      r.h(var1, "messageId");
+      q.h(var1, "messageId");
       return new TapReactionData(var1, var2, var3, null);
    }
 
@@ -46,10 +48,10 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.reaction, var1.reaction)) {
+         } else if (!q.c(this.reaction, var1.reaction)) {
             return false;
          } else {
-            return r.c(this.isBurst, var1.isBurst);
+            return q.c(this.isBurst, var1.isBurst);
          }
       }
    }
@@ -101,17 +103,17 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: Reaction = this.reaction;
-      val var3: java.lang.Boolean = this.isBurst;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapReactionData(messageId=");
-      var2.append(var4);
-      var2.append(", reaction=");
-      var2.append(var1);
-      var2.append(", isBurst=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Reaction = this.reaction;
+      val var1: java.lang.Boolean = this.isBurst;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapReactionData(messageId=");
+      var4.append(var3);
+      var4.append(", reaction=");
+      var4.append(var2);
+      var4.append(", isBurst=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

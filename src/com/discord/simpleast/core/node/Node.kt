@@ -2,7 +2,7 @@ package com.discord.simpleast.core.node
 
 import android.text.SpannableStringBuilder
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    private final var children: MutableCollection<Node<Any>>?
@@ -16,7 +16,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    }
 
    public fun addChild(child: Node<Any>) {
-      r.h(var1, "child");
+      q.h(var1, "child");
       var var2: Any = this.children;
       if (this.children == null) {
          var2 = new ArrayList();
@@ -35,12 +35,12 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    }
 
    public open fun render(builder: SpannableStringBuilder, renderContext: Any) {
-      r.h(var1, "builder");
+      q.h(var1, "builder");
    }
 
    public open class Parent<R>(vararg children: Node<Any>?) : Node<R> {
       init {
-         r.h(var1, "children");
+         q.h(var1, "children");
          val var4: ArrayList = new ArrayList();
          val var3: Int = var1.length;
 
@@ -51,11 +51,11 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
             }
          }
 
-         super(h.P0(var4));
+         super(i.S0(var4));
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-         r.h(var1, "builder");
+         q.h(var1, "builder");
          val var3: java.util.Collection = this.getChildren();
          if (var3 != null) {
             val var4: java.util.Iterator = var3.iterator();
@@ -73,7 +73,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
          val var1: java.util.Collection = this.getChildren();
          val var3: java.lang.String;
          if (var1 != null) {
-            var3 = h.k0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
+            var3 = i.n0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
          } else {
             var3 = null;
          }

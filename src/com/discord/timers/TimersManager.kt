@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Handler
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class TimersManager(context: Context) {
    private final val intervals: ConcurrentHashMap<Int, Runnable>
@@ -12,7 +12,7 @@ internal class TimersManager(context: Context) {
    private final val timeouts: ConcurrentHashMap<Int, Runnable>
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       this.timeoutHandler = new Handler(var1.getMainLooper());
       this.timeouts = new ConcurrentHashMap<>();
@@ -21,8 +21,8 @@ internal class TimersManager(context: Context) {
 
    @JvmStatic
    fun `setTimeout$lambda$0`(var0: TimersManager, var1: Int, var2: Function0) {
-      r.h(var0, "this$0");
-      r.h(var2, "$onTimeout");
+      q.h(var0, "this$0");
+      q.h(var2, "$onTimeout");
       var0.timeouts.remove(var1);
       var2.invoke();
    }
@@ -48,10 +48,10 @@ internal class TimersManager(context: Context) {
    }
 
    public fun setInterval(id: Int, timeout: Double, onInterval: () -> Unit) {
-      r.h(var4, "onInterval");
+      q.h(var4, "onInterval");
       val var5: Long = (long)var2;
       val var7: Runnable = new Runnable(var4, this, (long)var2) {
-         final Function0<Unit> $onInterval;
+         final Function0 $onInterval;
          final long $timeoutLong;
          final TimersManager this$0;
 
@@ -72,7 +72,7 @@ internal class TimersManager(context: Context) {
    }
 
    public fun setTimeout(id: Int, timeout: Double, onTimeout: () -> Unit) {
-      r.h(var4, "onTimeout");
+      q.h(var4, "onTimeout");
       val var5: Long = (long)var2;
       val var7: a = new a(this, var1, var4);
       this.timeouts.put(var1, var7);

@@ -9,10 +9,8 @@ import android.view.ViewGroup.LayoutParams
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.f1
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
 import com.discord.chat.bridge.spoiler.SpoilerConfig
 import com.discord.chat.databinding.MediaImageViewBinding
 import com.discord.chat.presentation.media.MediaContainingViewResizer
@@ -21,6 +19,7 @@ import com.discord.chat.presentation.message.utils.GetMediaImagePlaceholderState
 import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicView
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
+import com.discord.image.fresco.R
 import com.discord.image.fresco.SetOptionalImageUrlKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
@@ -38,32 +37,32 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
    private final lateinit var targetUrl: String
 
    fun MediaImageView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var3: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var3;
+      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      this.binding = var4;
       this.spoiler = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
       this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      (var3.image.getHierarchy() as GenericDraweeHierarchy).z(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var4: TextView = var3.imageAltText;
-      var3.imageAltText.setImportantForAccessibility(4);
-      kotlin.jvm.internal.r.g(var4, "_init_$lambda$0");
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
-      var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      var3.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+      (var4.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var3: TextView = var4.imageAltText;
+      var4.imageAltText.setImportantForAccessibility(4);
+      kotlin.jvm.internal.q.e(var3);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
+      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
+      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
    }
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?) {
       val var4: SimpleDraweeView = this.binding.gifIndicator;
-      kotlin.jvm.internal.r.g(this.binding.gifIndicator, "binding.gifIndicator");
+      kotlin.jvm.internal.q.g(this.binding.gifIndicator, "gifIndicator");
       val var3: Byte;
       if (this.shouldShowGifIndicator(var1, var2)) {
          var3 = 0;
@@ -86,17 +85,17 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       if (var1) {
          return false;
       } else {
-         val var4: Int = GIF_INDICATOR_PADDING;
+         val var3: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var4 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var3 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
                   return false;
                }
 
-               if (!kotlin.text.f.s(var2, ".gif", true) && !kotlin.text.f.s(var2, ".gifv", true)) {
+               if (!kotlin.text.h.s(var2, ".gif", true) && !kotlin.text.h.s(var2, ".gifv", true)) {
                   return false;
                }
 
@@ -111,14 +110,14 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
    public override fun getSingleAspectRatio(): Float {
       var var2: MediaImageView.TargetSize = this.targetSize;
       if (this.targetSize == null) {
-         kotlin.jvm.internal.r.y("targetSize");
+         kotlin.jvm.internal.q.y("targetSize");
          var2 = null;
       }
 
       val var1: Float = var2.getWidth();
       var2 = this.targetSize;
       if (this.targetSize == null) {
-         kotlin.jvm.internal.r.y("targetSize");
+         kotlin.jvm.internal.q.y("targetSize");
          var2 = null;
       }
 
@@ -142,23 +141,23 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       shouldAutoPlayGif: Boolean,
       filename: String?
    ) {
-      label73: {
-         kotlin.jvm.internal.r.h(var1, "url");
-         kotlin.jvm.internal.r.h(var4, "resizeMode");
+      label67: {
+         kotlin.jvm.internal.q.h(var1, "url");
+         kotlin.jvm.internal.q.h(var4, "resizeMode");
          if (this.targetUrl != null) {
             var var18: java.lang.String = this.targetUrl;
             if (this.targetUrl == null) {
-               kotlin.jvm.internal.r.y("targetUrl");
+               kotlin.jvm.internal.q.y("targetUrl");
                var18 = null;
             }
 
-            if (kotlin.jvm.internal.r.c(var18, var1)) {
-               break label73;
+            if (kotlin.jvm.internal.q.c(var18, var1)) {
+               break label67;
             }
          }
 
          this.targetUrl = var1;
-         val var35: GenericDraweeHierarchy = this.binding.image.getHierarchy() as GenericDraweeHierarchy;
+         val var34: GenericDraweeHierarchy = this.binding.image.getHierarchy() as GenericDraweeHierarchy;
          val var16: Int;
          if (var11) {
             var16 = 0;
@@ -166,42 +165,35 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
             var16 = this.imageFadeDuration;
          }
 
-         var35.w(var16);
-         val var36: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
-         val var21: java.lang.Boolean = java.lang.Boolean.TRUE;
-         val var37: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
+         var34.x(var16);
+         val var35: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.q.g(this.binding.image, "image");
+         val var36: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var21: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var36, var1, var21, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var37, var5, var6)
+            var35, var1, var36, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var21, var5, var6)
          );
       }
 
-      val var34: Boolean;
-      if (!var11 && !var12) {
-         var34 = false;
-      } else {
-         var34 = true;
-      }
-
       val var17: Boolean;
-      if (var34 && !var13) {
+      if ((var11 || var12) && !var13) {
          var17 = true;
       } else {
          var17 = false;
       }
 
-      label54: {
+      label50: {
          val var27: MediaImageView.TargetSize = new MediaImageView.TargetSize(this.getWidth(var17, var2), this.getHeight(var17, var3), var4);
          var var22: MediaImageView.TargetSize = this.targetSize;
          if (this.targetSize != null) {
             if (this.targetSize == null) {
-               kotlin.jvm.internal.r.y("targetSize");
+               kotlin.jvm.internal.q.y("targetSize");
                var22 = null;
             }
 
-            if (kotlin.jvm.internal.r.c(var22, var27)) {
-               break label54;
+            if (kotlin.jvm.internal.q.c(var22, var27)) {
+               break label50;
             }
          }
 
@@ -209,16 +201,16 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       }
 
       val var23: SimpleDraweeView = this.binding.image;
-      kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
+      kotlin.jvm.internal.q.g(this.binding.image, "image");
       ViewClippingUtilsKt.clipToRoundedRectangle(var23, var9);
       val var24: FrameLayout = this.binding.imageBlurBg;
-      kotlin.jvm.internal.r.g(this.binding.imageBlurBg, "binding.imageBlurBg");
+      kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var24, var9);
-      val var31: SpoilerViewManager = this.spoiler;
-      val var25: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
+      val var28: SpoilerViewManager = this.spoiler;
+      val var31: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var30: SimpleDraweeView = this.binding.image;
-      kotlin.jvm.internal.r.g(this.binding.image, "binding.image");
+      kotlin.jvm.internal.q.g(this.binding.image, "image");
       if (var11 && !var13) {
          var13 = true;
       } else {
@@ -231,11 +223,11 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          var7 = true;
       }
 
-      var31.configureSpoiler(var8, this, var25, var30, this.binding.imageBlurBg, var13, var12, var7, var9);
-      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var26: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
-      var29.configureAttachmentOverlay(this, var26, var9, var10);
+      var28.configureSpoiler(var8, this, var31, var30, this.binding.imageBlurBg, var13, var12, var7, var9);
+      val var26: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var29: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.q.g(this.binding.container, "container");
+      var26.configureAttachmentOverlay(this, var29, var9, var10);
       this.configureGifIndicator(var14, var15);
    }
 
@@ -256,13 +248,13 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var3: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
-      val var4: LayoutParams = var3.getLayoutParams();
-      if (var4 != null) {
-         var4.width = var1;
-         var4.height = var2;
-         var3.setLayoutParams(var4);
+      val var4: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.q.g(this.binding.container, "container");
+      val var3: LayoutParams = var4.getLayoutParams();
+      if (var3 != null) {
+         var3.width = var1;
+         var3.height = var2;
+         var4.setLayoutParams(var3);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -270,16 +262,17 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         f1.q0(this.binding.image, new androidx.core.view.a(var1) {
+         androidx.core.view.r0.q0(this.binding.image, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
                this.$role = var1;
             }
 
+            @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
-               kotlin.jvm.internal.r.h(var1, "host");
-               kotlin.jvm.internal.r.h(var2, "info");
+               kotlin.jvm.internal.q.h(var1, "host");
+               kotlin.jvm.internal.q.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                var2.L0(this.$role);
             }
@@ -297,7 +290,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
 
    public fun showDescription(show: Boolean, description: String?) {
       val var5: TextView = this.binding.imageAltText;
-      kotlin.jvm.internal.r.g(this.binding.imageAltText, "showDescription$lambda$2");
+      kotlin.jvm.internal.q.e(this.binding.imageAltText);
       ViewUtilsKt.setOptionalText(var5, var2);
       var var3: Boolean;
       if (var2 != null && var1) {
@@ -327,7 +320,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       public final val width: Int
 
       init {
-         kotlin.jvm.internal.r.h(var3, "resizeMode");
+         kotlin.jvm.internal.q.h(var3, "resizeMode");
          super();
          this.width = var1;
          this.height = var2;
@@ -347,7 +340,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       }
 
       public fun copy(width: Int = var0.width, height: Int = var0.height, resizeMode: ResizeMode = var0.resizeMode): com.discord.chat.presentation.message.view.MediaImageView.TargetSize {
-         kotlin.jvm.internal.r.h(var3, "resizeMode");
+         kotlin.jvm.internal.q.h(var3, "resizeMode");
          return new MediaImageView.TargetSize(var1, var2, var3);
       }
 
@@ -373,14 +366,14 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var4: StringBuilder = new StringBuilder();
          var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
          var4.append(var1);
+         var4.append(", height=");
+         var4.append(var2);
          var4.append(", resizeMode=");
          var4.append(var3);
          var4.append(")");

@@ -1,7 +1,13 @@
 package com.discord.chat.bridge.automod
 
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.h
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,13 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.h
-import xk.m0
 
 @f
 public data class AutoModerationNotification(header: String,
@@ -47,8 +46,8 @@ public data class AutoModerationNotification(header: String,
    public final val subtitleRight: String?
 
    init {
-      r.h(var1, "header");
-      r.h(var3, "headerIconURL");
+      q.h(var1, "header");
+      q.h(var3, "headerIconURL");
       super();
       this.header = var1;
       this.headerColor = var2;
@@ -63,103 +62,6 @@ public data class AutoModerationNotification(header: String,
       this.enabledByColor = var11;
       this.severity = var12;
       this.startTime = var13;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: AutoModerationNotification, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.header);
-      var1.w(var2, 1, var0.headerColor);
-      var1.z(var2, 2, var0.headerIconURL);
-      var1.w(var2, 3, var0.headerIconColor);
-      var var3: Boolean;
-      if (!var1.A(var2, 4) && var0.subtitleLeft == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 4, a2.a, var0.subtitleLeft);
-      }
-
-      if (!var1.A(var2, 5) && var0.subtitleRight == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 5, a2.a, var0.subtitleRight);
-      }
-
-      if (!var1.A(var2, 6) && var0.body == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 6, a2.a, var0.body);
-      }
-
-      var1.x(var2, 7, var0.shouldShowActions);
-      if (!var1.A(var2, 8) && var0.enabledByUsername == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 8, a2.a, var0.enabledByUsername);
-      }
-
-      if (!var1.A(var2, 9) && var0.enabledByAvatarURL == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 9, a2.a, var0.enabledByAvatarURL);
-      }
-
-      if (!var1.A(var2, 10) && var0.enabledByColor == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 10, m0.a, var0.enabledByColor);
-      }
-
-      if (!var1.A(var2, 11) && var0.severity == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 11, a2.a, var0.severity);
-      }
-
-      label72: {
-         if (!var1.A(var2, 12)) {
-            var3 = false;
-            if (var0.startTime == null) {
-               break label72;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 12, a2.a, var0.startTime);
-      }
    }
 
    public operator fun component1(): String {
@@ -229,8 +131,8 @@ public data class AutoModerationNotification(header: String,
       severity: String? = var0.severity,
       startTime: String? = var0.startTime
    ): AutoModerationNotification {
-      r.h(var1, "header");
-      r.h(var3, "headerIconURL");
+      q.h(var1, "header");
+      q.h(var3, "headerIconURL");
       return new AutoModerationNotification(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13);
    }
 
@@ -241,42 +143,42 @@ public data class AutoModerationNotification(header: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.header, var1.header)) {
+         if (!q.c(this.header, var1.header)) {
             return false;
          } else if (this.headerColor != var1.headerColor) {
             return false;
-         } else if (!r.c(this.headerIconURL, var1.headerIconURL)) {
+         } else if (!q.c(this.headerIconURL, var1.headerIconURL)) {
             return false;
          } else if (this.headerIconColor != var1.headerIconColor) {
             return false;
-         } else if (!r.c(this.subtitleLeft, var1.subtitleLeft)) {
+         } else if (!q.c(this.subtitleLeft, var1.subtitleLeft)) {
             return false;
-         } else if (!r.c(this.subtitleRight, var1.subtitleRight)) {
+         } else if (!q.c(this.subtitleRight, var1.subtitleRight)) {
             return false;
-         } else if (!r.c(this.body, var1.body)) {
+         } else if (!q.c(this.body, var1.body)) {
             return false;
          } else if (this.shouldShowActions != var1.shouldShowActions) {
             return false;
-         } else if (!r.c(this.enabledByUsername, var1.enabledByUsername)) {
+         } else if (!q.c(this.enabledByUsername, var1.enabledByUsername)) {
             return false;
-         } else if (!r.c(this.enabledByAvatarURL, var1.enabledByAvatarURL)) {
+         } else if (!q.c(this.enabledByAvatarURL, var1.enabledByAvatarURL)) {
             return false;
-         } else if (!r.c(this.enabledByColor, var1.enabledByColor)) {
+         } else if (!q.c(this.enabledByColor, var1.enabledByColor)) {
             return false;
-         } else if (!r.c(this.severity, var1.severity)) {
+         } else if (!q.c(this.severity, var1.severity)) {
             return false;
          } else {
-            return r.c(this.startTime, var1.startTime);
+            return q.c(this.startTime, var1.startTime);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var13: Int = this.header.hashCode();
-      val var11: Int = Integer.hashCode(this.headerColor);
-      val var10: Int = this.headerIconURL.hashCode();
-      val var12: Int = Integer.hashCode(this.headerIconColor);
-      var var9: Int = 0;
+      val var11: Int = this.header.hashCode();
+      val var10: Int = Integer.hashCode(this.headerColor);
+      val var12: Int = this.headerIconURL.hashCode();
+      val var9: Int = Integer.hashCode(this.headerIconColor);
+      var var8: Int = 0;
       val var1: Int;
       if (this.subtitleLeft == null) {
          var1 = 0;
@@ -298,102 +200,98 @@ public data class AutoModerationNotification(header: String,
          var3 = this.body.hashCode();
       }
 
-      var var4: Byte = this.shouldShowActions;
-      if (this.shouldShowActions != 0) {
-         var4 = 1;
+      val var13: Int = java.lang.Boolean.hashCode(this.shouldShowActions);
+      val var4: Int;
+      if (this.enabledByUsername == null) {
+         var4 = 0;
+      } else {
+         var4 = this.enabledByUsername.hashCode();
       }
 
-      val var15: Int;
-      if (this.enabledByUsername == null) {
-         var15 = 0;
+      val var5: Int;
+      if (this.enabledByAvatarURL == null) {
+         var5 = 0;
       } else {
-         var15 = this.enabledByUsername.hashCode();
+         var5 = this.enabledByAvatarURL.hashCode();
       }
 
       val var6: Int;
-      if (this.enabledByAvatarURL == null) {
+      if (this.enabledByColor == null) {
          var6 = 0;
       } else {
-         var6 = this.enabledByAvatarURL.hashCode();
+         var6 = this.enabledByColor.hashCode();
       }
 
       val var7: Int;
-      if (this.enabledByColor == null) {
+      if (this.severity == null) {
          var7 = 0;
       } else {
-         var7 = this.enabledByColor.hashCode();
-      }
-
-      val var8: Int;
-      if (this.severity == null) {
-         var8 = 0;
-      } else {
-         var8 = this.severity.hashCode();
+         var7 = this.severity.hashCode();
       }
 
       if (this.startTime != null) {
-         var9 = this.startTime.hashCode();
+         var8 = this.startTime.hashCode();
       }
 
       return (
                (
-                        (((((((((var13 * 31 + var11) * 31 + var10) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var15) * 31 + var6)
+                        (((((((((var11 * 31 + var10) * 31 + var12) * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
                               * 31
-                           + var7
+                           + var6
                      )
                      * 31
-                  + var8
+                  + var7
             )
             * 31
-         + var9;
+         + var8;
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.header;
+      val var8: java.lang.String = this.header;
       val var1: Int = this.headerColor;
-      val var8: java.lang.String = this.headerIconURL;
+      val var13: java.lang.String = this.headerIconURL;
       val var2: Int = this.headerIconColor;
-      val var6: java.lang.String = this.subtitleLeft;
-      val var13: java.lang.String = this.subtitleRight;
-      val var7: java.lang.String = this.body;
+      val var14: java.lang.String = this.subtitleLeft;
+      val var5: java.lang.String = this.subtitleRight;
+      val var4: java.lang.String = this.body;
       val var3: Boolean = this.shouldShowActions;
-      val var10: java.lang.String = this.enabledByUsername;
-      val var12: java.lang.String = this.enabledByAvatarURL;
-      val var5: Int = this.enabledByColor;
-      val var14: java.lang.String = this.severity;
-      val var11: java.lang.String = this.startTime;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AutoModerationNotification(header=");
-      var4.append(var9);
-      var4.append(", headerColor=");
-      var4.append(var1);
-      var4.append(", headerIconURL=");
-      var4.append(var8);
-      var4.append(", headerIconColor=");
-      var4.append(var2);
-      var4.append(", subtitleLeft=");
-      var4.append(var6);
-      var4.append(", subtitleRight=");
-      var4.append(var13);
-      var4.append(", body=");
-      var4.append(var7);
-      var4.append(", shouldShowActions=");
-      var4.append(var3);
-      var4.append(", enabledByUsername=");
-      var4.append(var10);
-      var4.append(", enabledByAvatarURL=");
-      var4.append(var12);
-      var4.append(", enabledByColor=");
-      var4.append(var5);
-      var4.append(", severity=");
-      var4.append(var14);
-      var4.append(", startTime=");
-      var4.append(var11);
-      var4.append(")");
-      return var4.toString();
+      val var9: java.lang.String = this.enabledByUsername;
+      val var6: java.lang.String = this.enabledByAvatarURL;
+      val var11: Int = this.enabledByColor;
+      val var12: java.lang.String = this.severity;
+      val var10: java.lang.String = this.startTime;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("AutoModerationNotification(header=");
+      var7.append(var8);
+      var7.append(", headerColor=");
+      var7.append(var1);
+      var7.append(", headerIconURL=");
+      var7.append(var13);
+      var7.append(", headerIconColor=");
+      var7.append(var2);
+      var7.append(", subtitleLeft=");
+      var7.append(var14);
+      var7.append(", subtitleRight=");
+      var7.append(var5);
+      var7.append(", body=");
+      var7.append(var4);
+      var7.append(", shouldShowActions=");
+      var7.append(var3);
+      var7.append(", enabledByUsername=");
+      var7.append(var9);
+      var7.append(", enabledByAvatarURL=");
+      var7.append(var6);
+      var7.append(", enabledByColor=");
+      var7.append(var11);
+      var7.append(", severity=");
+      var7.append(var12);
+      var7.append(", startTime=");
+      var7.append(var10);
+      var7.append(")");
+      return var7.toString();
    }
 
-   public object `$serializer` : f0<AutoModerationNotification> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -422,182 +320,167 @@ public data class AutoModerationNotification(header: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         val var2: m0 = m0.a;
-         return new KSerializer[]{a2.a, m0.a, a2.a, m0.a, a.u(a2.a), a.u(var1), a.u(var1), h.a, a.u(var1), a.u(var1), a.u(var2), a.u(var1), a.u(var1)};
+         val var2: b2 = b2.a;
+         val var1: n0 = n0.a;
+         return new KSerializer[]{b2.a, n0.a, b2.a, n0.a, a.u(b2.a), a.u(var2), a.u(var2), h.a, a.u(var2), a.u(var2), a.u(var1), a.u(var2), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): AutoModerationNotification {
-         r.h(var1, "decoder");
-         val var23: SerialDescriptor = this.getDescriptor();
-         val var24: c = var1.b(var23);
-         val var10: Boolean = var24.p();
-         var var8: Byte = 11;
-         var var15: java.lang.String = null;
+         q.h(var1, "decoder");
+         val var22: SerialDescriptor = this.getDescriptor();
+         val var23: c = var1.b(var22);
+         var var9: Boolean = var23.p();
+         var var5: Int = 10;
          var var3: Int;
-         var var4: Byte;
-         val var5: Int;
-         val var6: Int;
+         var var4: Int;
+         var var10: Any;
+         var var11: java.lang.String;
          var var12: java.lang.String;
-         var var14: Any;
-         var var16: Any;
-         var var17: Any;
-         var var18: Any;
-         var var19: Any;
-         val var20: Any;
-         var var25: Any;
-         var var33: Any;
-         if (var10) {
-            var12 = var24.m(var23, 0);
-            var5 = var24.i(var23, 1);
-            var20 = var24.m(var23, 2);
-            val var2: Int = var24.i(var23, 3);
-            var33 = a2.a;
-            var25 = var24.n(var23, 4, a2.a, null);
-            val var11: Any = var24.n(var23, 5, (DeserializationStrategy)var33, null);
-            var16 = var24.n(var23, 6, (DeserializationStrategy)var33, null);
-            var4 = var24.C(var23, 7);
-            var17 = var24.n(var23, 8, (DeserializationStrategy)var33, null);
-            var15 = (java.lang.String)var24.n(var23, 9, (DeserializationStrategy)var33, null);
-            var18 = var24.n(var23, 10, m0.a, null);
-            var19 = var24.n(var23, 11, (DeserializationStrategy)var33, null);
-            var14 = var24.n(var23, 12, (DeserializationStrategy)var33, null);
+         var var13: java.lang.String;
+         var var14: java.lang.String;
+         var var15: java.lang.String;
+         var var16: java.lang.String;
+         var var18: java.lang.String;
+         val var25: java.lang.String;
+         var var39: java.lang.String;
+         if (var9) {
+            var13 = var23.m(var22, 0);
+            var5 = var23.i(var22, 1);
+            var12 = var23.m(var22, 2);
+            val var2: Int = var23.i(var22, 3);
+            val var17: b2 = b2.a;
+            var15 = var23.n(var22, 4, b2.a, null) as java.lang.String;
+            var18 = var23.n(var22, 5, var17, null) as java.lang.String;
+            var14 = var23.n(var22, 6, var17, null) as java.lang.String;
+            var9 = var23.C(var22, 7);
+            var16 = var23.n(var22, 8, var17, null) as java.lang.String;
+            var11 = var23.n(var22, 9, var17, null) as java.lang.String;
+            var10 = var23.n(var22, 10, n0.a, null) as Int;
+            val var24: java.lang.String = var23.n(var22, 11, var17, null) as java.lang.String;
+            val var19: java.lang.String = var23.n(var22, 12, var17, null) as java.lang.String;
             var3 = 8191;
-            var6 = var2;
-            var33 = var11;
+            var4 = var2;
+            var39 = var24;
+            var25 = var19;
          } else {
-            var var7: Byte = 12;
-            var17 = null;
-            var19 = null;
-            var18 = null;
-            var14 = null;
+            var13 = null;
+            var12 = null;
+            var39 = null;
             var16 = null;
-            var var31: Any = null;
-            var33 = null;
-            var var30: Boolean = true;
-            var var26: Int = 0;
-            var var29: Byte = 0;
+            var14 = null;
+            var18 = null;
+            var15 = null;
+            var11 = null;
+            var var7: Boolean = true;
+            var9 = false;
             var4 = 0;
             var3 = 0;
-            var12 = null;
-            var25 = null;
+            var10 = null;
+            var var27: Int = 0;
+            var var26: java.lang.String = null;
 
-            while (var30) {
-               label42: {
-                  val var9: Int = var24.o(var23);
-                  switch (var9) {
-                     case -1:
-                        var30 = false;
-                        break;
-                     case 0:
-                        var15 = var24.m(var23, 0);
-                        var26 |= 1;
-                        break label42;
-                     case 1:
-                        var3 = var24.i(var23, 1);
-                        var26 |= 2;
-                        break label42;
-                     case 2:
-                        var33 = var24.m(var23, 2);
-                        var26 |= 4;
-                        break label42;
-                     case 3:
-                        var4 = var24.i(var23, 3);
-                        var26 |= 8;
-                        break label42;
-                     case 4:
-                        var25 = var24.n(var23, 4, a2.a, var25);
-                        var26 |= 16;
-                        break label42;
-                     case 5:
-                        var12 = (java.lang.String)var24.n(var23, 5, a2.a, var12);
-                        var26 |= 32;
-                        break label42;
-                     case 6:
-                        var31 = var24.n(var23, 6, a2.a, var31);
-                        var26 |= 64;
-                        break label42;
-                     case 7:
-                        var29 = var24.C(var23, 7);
-                        var26 |= 128;
-                        break;
-                     case 8:
-                        var14 = var24.n(var23, 8, a2.a, var14);
-                        var26 |= 256;
-                        break;
-                     case 9:
-                        var16 = var24.n(var23, 9, a2.a, var16);
-                        var26 |= 512;
-                        var7 = 12;
-                        continue;
-                     case 10:
-                        var18 = var24.n(var23, 10, m0.a, var18);
-                        var26 |= 1024;
-                        continue;
-                     case 11:
-                        var19 = var24.n(var23, var8, a2.a, var19);
-                        var26 |= 2048;
-                        continue;
-                     case 12:
-                        var17 = var24.n(var23, var7, a2.a, var17);
-                        var26 |= 4096;
-                        continue;
-                     default:
-                        throw new n(var9);
+            while (var7) {
+               label39: {
+                  label38: {
+                     val var8: Int = var23.o(var22);
+                     switch (var8) {
+                        case -1:
+                           var7 = false;
+                           break label39;
+                        case 0:
+                           var13 = var23.m(var22, 0);
+                           var27 |= 1;
+                           break;
+                        case 1:
+                           var3 = var23.i(var22, 1);
+                           var27 |= 2;
+                           break;
+                        case 2:
+                           var12 = var23.m(var22, 2);
+                           var27 |= 4;
+                           break;
+                        case 3:
+                           var4 = var23.i(var22, 3);
+                           var27 |= 8;
+                           break;
+                        case 4:
+                           var26 = var23.n(var22, 4, b2.a, var26) as java.lang.String;
+                           var27 |= 16;
+                           break;
+                        case 5:
+                           var10 = var23.n(var22, 5, b2.a, var10) as java.lang.String;
+                           var27 |= 32;
+                           break;
+                        case 6:
+                           var11 = var23.n(var22, 6, b2.a, var11) as java.lang.String;
+                           var27 |= 64;
+                           break;
+                        case 7:
+                           var9 = var23.C(var22, 7);
+                           var27 |= 128;
+                           break label38;
+                        case 8:
+                           var18 = var23.n(var22, 8, b2.a, var18) as java.lang.String;
+                           var27 |= 256;
+                           break label38;
+                        case 9:
+                           var15 = var23.n(var22, 9, b2.a, var15) as java.lang.String;
+                           var27 |= 512;
+                           break label39;
+                        case 10:
+                           var14 = var23.n(var22, var5, n0.a, var14) as Int;
+                           var27 |= 1024;
+                           continue;
+                        case 11:
+                           var16 = var23.n(var22, 11, b2.a, var16) as java.lang.String;
+                           var27 |= 2048;
+                           continue;
+                        case 12:
+                           var39 = var23.n(var22, 12, b2.a, var39) as java.lang.String;
+                           var27 |= 4096;
+                           continue;
+                        default:
+                           throw new n(var8);
+                     }
+
+                     var5 = 10;
+                     continue;
                   }
 
-                  var7 = 12;
+                  var5 = 10;
                   continue;
                }
 
-               var7 = 12;
-               var8 = 11;
+               var5 = 10;
             }
 
-            var20 = var33;
-            var6 = var4;
-            var4 = var29;
-            var33 = var12;
-            var16 = var31;
+            var39 = var16;
+            var16 = var18;
+            var18 = (java.lang.String)var10;
+            var15 = var26;
+            var25 = var39;
+            var10 = var14;
+            var11 = var15;
+            var14 = var11;
             var5 = var3;
-            var12 = var15;
-            var3 = var26;
-            var15 = (java.lang.String)var16;
-            var17 = var14;
-            var14 = var17;
+            var3 = var27;
          }
 
-         var24.c(var23);
-         return new AutoModerationNotification(
-            var3,
-            var12,
-            var5,
-            (java.lang.String)var20,
-            var6,
-            var25 as java.lang.String,
-            var33 as java.lang.String,
-            var16 as java.lang.String,
-            (boolean)var4,
-            var17 as java.lang.String,
-            var15,
-            var18 as Int,
-            var19 as java.lang.String,
-            var14 as java.lang.String,
-            null
-         );
+         var23.c(var22);
+         return new AutoModerationNotification(var3, var13, var5, var12, var4, var15, var18, var14, var9, var16, var11, (Integer)var10, var39, var25, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AutoModerationNotification) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         AutoModerationNotification.write$Self(var2, var4, var3);
+         AutoModerationNotification.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

@@ -49,33 +49,19 @@ public data class NotificationBehaviors(soundsEnabled: Boolean, vibrationsEnable
    }
 
    public override fun hashCode(): Int {
-      var var3: Byte = 1;
-      var var1: Byte = this.soundsEnabled;
-      if (this.soundsEnabled != 0) {
-         var1 = 1;
-      }
-
-      var var5: Byte = this.vibrationsEnabled;
-      if (this.vibrationsEnabled != 0) {
-         var5 = 1;
-      }
-
-      if (this.lightsEnabled == 0) {
-         var3 = this.lightsEnabled;
-      }
-
-      return (var1 * 31 + var5) * 31 + var3;
+      return (java.lang.Boolean.hashCode(this.soundsEnabled) * 31 + java.lang.Boolean.hashCode(this.vibrationsEnabled)) * 31
+         + java.lang.Boolean.hashCode(this.lightsEnabled);
    }
 
    public override fun toString(): String {
-      val var3: Boolean = this.soundsEnabled;
-      val var1: Boolean = this.vibrationsEnabled;
+      val var1: Boolean = this.soundsEnabled;
+      val var3: Boolean = this.vibrationsEnabled;
       val var2: Boolean = this.lightsEnabled;
       val var4: StringBuilder = new StringBuilder();
       var4.append("NotificationBehaviors(soundsEnabled=");
-      var4.append(var3);
-      var4.append(", vibrationsEnabled=");
       var4.append(var1);
+      var4.append(", vibrationsEnabled=");
+      var4.append(var3);
       var4.append(", lightsEnabled=");
       var4.append(var2);
       var4.append(")");

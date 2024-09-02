@@ -6,7 +6,7 @@ import android.graphics.Bitmap.Config
 import android.opengl.GLES20
 import java.nio.Buffer
 import java.nio.ByteBuffer
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import org.webrtc.GlRectDrawer
 import org.webrtc.GlTextureFrameBuffer
 import org.webrtc.GlUtil
@@ -35,7 +35,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
    }
 
    init {
-      r.h(var5, "onNextThumbnail");
+      q.h(var5, "onNextThumbnail");
       super();
       this.width = var1;
       this.height = var2;
@@ -55,19 +55,19 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       GlUtil.checkNoGLES2Error("glBindFramebuffer");
       GLES20.glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
       GLES20.glClear(16384);
-      val var4: Float = var1.getRotatedWidth();
-      val var2: Float = var1.getRotatedHeight();
-      if (var4 / var2 < (float)this.width / this.height) {
-         val var10: Float = var4 * (this.height / var2);
+      val var3: Float = var1.getRotatedWidth();
+      val var4: Float = var1.getRotatedHeight();
+      if (var3 / var4 < (float)this.width / this.height) {
+         val var12: Float = var3 * (this.height / var4);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, sh.a.b(((float)this.width - var4 * ((float)this.height / var2)) / 2.0F), 0, sh.a.b(var10), this.height
+               var1, this.rectDrawer, renderMatrix, ak.a.b(((float)this.width - var3 * ((float)this.height / var4)) / 2.0F), 0, ak.a.b(var12), this.height
             );
       } else {
-         val var13: Float = var2 * (this.width / var4);
+         val var13: Float = var4 * (this.width / var3);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, sh.a.b(((float)this.height - var2 * ((float)this.width / var4)) / 2.0F), this.width, sh.a.b(var13)
+               var1, this.rectDrawer, renderMatrix, 0, ak.a.b(((float)this.height - var4 * ((float)this.width / var3)) / 2.0F), this.width, ak.a.b(var13)
             );
       }
 
@@ -77,7 +77,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       var8.release();
       ((Buffer)this.outputByteBuffer).rewind();
       val var9: Bitmap = Bitmap.createBitmap(this.width, this.height, Config.ARGB_8888);
-      r.g(var9, "createBitmap(width, heig… Bitmap.Config.ARGB_8888)");
+      q.g(var9, "createBitmap(...)");
       var9.copyPixelsFromBuffer(this.outputByteBuffer);
       return var9;
    }
@@ -100,7 +100,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "frame"
-      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.released Z
       // 0c: istore 2
@@ -119,7 +119,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       // 1f: aload 0
       // 20: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.periodNs J
       // 23: lcmp
-      // 24: ifle 3b
+      // 24: ifle 42
       // 27: aload 0
       // 28: lload 3
       // 29: putfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.lastTimestampNs J
@@ -130,14 +130,16 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       // 32: invokespecial com/discord/media/engine/video/screen_capture/ThumbnailEmitter.createThumbnail (Lorg/webrtc/VideoFrame;)Landroid/graphics/Bitmap;
       // 35: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 3a: pop
-      // 3b: aload 0
-      // 3c: monitorexit
-      // 3d: return
+      // 3b: goto 42
       // 3e: astore 1
-      // 3f: aload 0
-      // 40: monitorexit
-      // 41: aload 1
-      // 42: athrow
+      // 3f: goto 45
+      // 42: aload 0
+      // 43: monitorexit
+      // 44: return
+      // 45: aload 0
+      // 46: monitorexit
+      // 47: aload 1
+      // 48: athrow
    }
 
    public fun release() {

@@ -1,6 +1,6 @@
 package com.discord.native.engine
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class VideoInputDeviceDescription(name: String, guid: String, facing: VideoInputDeviceFacing) {
    public final val facing: VideoInputDeviceFacing
@@ -8,9 +8,9 @@ public data class VideoInputDeviceDescription(name: String, guid: String, facing
    public final val name: String
 
    init {
-      r.h(var1, "name");
-      r.h(var2, "guid");
-      r.h(var3, "facing");
+      q.h(var1, "name");
+      q.h(var2, "guid");
+      q.h(var3, "facing");
       super();
       this.name = var1;
       this.guid = var2;
@@ -30,9 +30,9 @@ public data class VideoInputDeviceDescription(name: String, guid: String, facing
    }
 
    public fun copy(name: String = var0.name, guid: String = var0.guid, facing: VideoInputDeviceFacing = var0.facing): VideoInputDeviceDescription {
-      r.h(var1, "name");
-      r.h(var2, "guid");
-      r.h(var3, "facing");
+      q.h(var1, "name");
+      q.h(var2, "guid");
+      q.h(var3, "facing");
       return new VideoInputDeviceDescription(var1, var2, var3);
    }
 
@@ -43,9 +43,9 @@ public data class VideoInputDeviceDescription(name: String, guid: String, facing
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.name, var1.name)) {
+         if (!q.c(this.name, var1.name)) {
             return false;
-         } else if (!r.c(this.guid, var1.guid)) {
+         } else if (!q.c(this.guid, var1.guid)) {
             return false;
          } else {
             return this.facing === var1.facing;
@@ -58,16 +58,16 @@ public data class VideoInputDeviceDescription(name: String, guid: String, facing
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.name;
-      val var1: java.lang.String = this.guid;
-      val var3: VideoInputDeviceFacing = this.facing;
+      val var1: java.lang.String = this.name;
+      val var3: java.lang.String = this.guid;
+      val var4: VideoInputDeviceFacing = this.facing;
       val var2: StringBuilder = new StringBuilder();
       var2.append("VideoInputDeviceDescription(name=");
-      var2.append(var4);
-      var2.append(", guid=");
       var2.append(var1);
-      var2.append(", facing=");
+      var2.append(", guid=");
       var2.append(var3);
+      var2.append(", facing=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

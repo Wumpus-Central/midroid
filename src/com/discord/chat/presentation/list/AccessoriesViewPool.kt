@@ -1,5 +1,5 @@
 package com.discord.chat.presentation.list
 
-import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
+import androidx.recyclerview.widget.RecyclerView
 
-public class AccessoriesViewPool : RecycledViewPool
+public class AccessoriesViewPool : RecyclerView.RecycledViewPool

@@ -13,13 +13,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import eh.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
@@ -27,18 +27,18 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
          new Pair[]{
-            w.a("billing-manager-connection-state-updated", h0.b(BillingManagerConnectionStateUpdated.class)),
-            w.a("billing-manager-purchase-updated", h0.b(BillingManagerPurchaseUpdated.class)),
-            w.a("billing-manager-downgrade-command", h0.b(BillingManagerDowngradeCommand.class)),
-            w.a("billing-manager-purchase-state-updated", h0.b(BillingManagerPurchaseStateUpdated.class))
+            w.a("billing-manager-connection-state-updated", g0.b(BillingManagerConnectionStateUpdated.class)),
+            w.a("billing-manager-purchase-updated", g0.b(BillingManagerPurchaseUpdated.class)),
+            w.a("billing-manager-downgrade-command", g0.b(BillingManagerDowngradeCommand.class)),
+            w.a("billing-manager-purchase-state-updated", g0.b(BillingManagerPurchaseStateUpdated.class))
          }
       );
-      this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new Function1<Integer, Unit>(this) {
+      this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new Function1(this) {
          final BillingManagerModule this$0;
 
          {
@@ -49,7 +49,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          public final void invoke(int var1) {
             BillingManagerModule.access$emitEvent(this.this$0, new BillingManagerConnectionStateUpdated(var1));
          }
-      }, new Function1<Integer, Unit>(this) {
+      }, new Function1(this) {
          final BillingManagerModule this$0;
 
          {
@@ -60,7 +60,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          public final void invoke(int var1) {
             BillingManagerModule.access$emitEvent(this.this$0, new BillingManagerPurchaseStateUpdated(var1));
          }
-      }, new Function3<java.lang.String, java.lang.String, java.lang.String, Unit>(this) {
+      }, new Function3(this) {
          final BillingManagerModule this$0;
 
          {
@@ -69,12 +69,12 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-            r.h(var1, "purchaseToken");
-            r.h(var2, "packageName");
-            r.h(var3, "sku");
+            q.h(var1, "purchaseToken");
+            q.h(var2, "packageName");
+            q.h(var3, "sku");
             BillingManagerModule.access$emitEvent(this.this$0, new BillingManagerPurchaseUpdated(var1, var2, var3));
          }
-      }, new Function1<Integer, Unit>(this) {
+      }, new Function1(this) {
          final BillingManagerModule this$0;
 
          {
@@ -94,16 +94,16 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    private fun BillingManager.getSkus(skuIds: ReadableArray, skuType: SkuType, promise: Promise) {
       val var5: ArrayList = var2.toArrayList();
-      r.g(var5, "skuIds.toArrayList()");
+      q.g(var5, "toArrayList(...)");
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 
-      val var9: Function1 = new Function1<BillingManagerException, Unit>(var4) {
+      val var10: Function1 = new Function1(var4) {
          final Promise $promise;
 
          {
@@ -112,18 +112,18 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(BillingManagerException var1) {
-            r.h(var1, "e");
+            q.h(var1, "e");
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       };
-      val var10: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var10, "reactApplicationContext");
-      var1.getSkus(var7, var3, var4, var9, var10);
+      val var9: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var9, "getReactApplicationContext(...)");
+      var1.getSkus(var7, var3, var4, var10, var9);
    }
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      q.h(var1, "type");
    }
 
    @ReactMethod
@@ -133,9 +133,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun consumePurchase(purchaseToken: String, promise: Promise) {
-      r.h(var1, "purchaseToken");
-      r.h(var2, "promise");
-      this.billingManager.consumePurchase(var1, new Function0<Unit>(var2) {
+      q.h(var1, "purchaseToken");
+      q.h(var2, "promise");
+      this.billingManager.consumePurchase(var1, new Function0(var2) {
          final Promise $promise;
 
          {
@@ -146,7 +146,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          public final void invoke() {
             this.$promise.resolve(java.lang.Boolean.TRUE);
          }
-      }, new Function1<BillingManagerException, Unit>(var2) {
+      }, new Function1(var2) {
          final Promise $promise;
 
          {
@@ -155,7 +155,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(BillingManagerException var1) {
-            r.h(var1, "e");
+            q.h(var1, "e");
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       });
@@ -163,8 +163,8 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getIAPSkus(skuIds: ReadableArray, promise: Promise) {
-      r.h(var1, "skuIds");
-      r.h(var2, "promise");
+      q.h(var1, "skuIds");
+      q.h(var2, "promise");
       this.getSkus(this.billingManager, var1, SkuType.IAP, var2);
    }
 
@@ -174,15 +174,15 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getSubscriptionSkus(skuIds: ReadableArray, promise: Promise) {
-      r.h(var1, "skuIds");
-      r.h(var2, "promise");
+      q.h(var1, "skuIds");
+      q.h(var2, "promise");
       this.getSkus(this.billingManager, var1, SkuType.SUBSCRIPTIONS, var2);
    }
 
    @ReactMethod
    public fun loadPurchases(promise: Promise) {
-      r.h(var1, "promise");
-      this.billingManager.loadPurchases(new Function0<Unit>(var1) {
+      q.h(var1, "promise");
+      this.billingManager.loadPurchases(new Function0(var1) {
          final Promise $promise;
 
          {
@@ -193,7 +193,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          public final void invoke() {
             this.$promise.resolve(java.lang.Boolean.TRUE);
          }
-      }, new Function1<Exception, Unit>(var1) {
+      }, new Function1(var1) {
          final Promise $promise;
 
          {
@@ -202,7 +202,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(Exception var1) {
-            r.h(var1, "e");
+            q.h(var1, "e");
             this.$promise.reject(var1);
          }
       });
@@ -210,18 +210,18 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var2: BillingManager = this.billingManager;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      var2.open(var1);
+      val var1: BillingManager = this.billingManager;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.open(var2);
    }
 
    @ReactMethod
    public fun purchase(skuId: String, userId: String, promise: Promise) {
-      r.h(var1, "skuId");
-      r.h(var2, "userId");
-      r.h(var3, "promise");
-      BillingManager.purchase$default(this.billingManager, this.getCurrentActivity(), var1, SkuType.IAP, var2, null, null, null, new Function0<Unit>(var3) {
+      q.h(var1, "skuId");
+      q.h(var2, "userId");
+      q.h(var3, "promise");
+      BillingManager.purchase$default(this.billingManager, this.getCurrentActivity(), var1, SkuType.IAP, var2, null, null, null, new Function0(var3) {
          final Promise $promise;
 
          {
@@ -232,7 +232,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          public final void invoke() {
             this.$promise.resolve(java.lang.Boolean.TRUE);
          }
-      }, new Function1<BillingManagerException, Unit>(var3) {
+      }, new Function1(var3) {
          final Promise $promise;
 
          {
@@ -241,7 +241,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(BillingManagerException var1) {
-            r.h(var1, "e");
+            q.h(var1, "e");
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       }, 112, null);
@@ -253,10 +253,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun subscribe(skuId: String, userId: String, oldSkuId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
-      r.h(var1, "skuId");
-      r.h(var2, "userId");
-      r.h(var6, "promise");
-      this.billingManager.purchase(this.getCurrentActivity(), var1, SkuType.SUBSCRIPTIONS, var2, var3, var4, var5, new Function0<Unit>(var6) {
+      q.h(var1, "skuId");
+      q.h(var2, "userId");
+      q.h(var6, "promise");
+      this.billingManager.purchase(this.getCurrentActivity(), var1, SkuType.SUBSCRIPTIONS, var2, var3, var4, var5, new Function0(var6) {
          final Promise $promise;
 
          {
@@ -267,7 +267,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          public final void invoke() {
             this.$promise.resolve(java.lang.Boolean.TRUE);
          }
-      }, new Function1<BillingManagerException, Unit>(var6) {
+      }, new Function1(var6) {
          final Promise $promise;
 
          {
@@ -276,7 +276,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(BillingManagerException var1) {
-            r.h(var1, "e");
+            q.h(var1, "e");
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       });

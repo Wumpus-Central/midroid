@@ -2,16 +2,16 @@ package com.discord.primitives
 
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
-import kotlin.jvm.internal.r
+import dn.f
+import gn.g0
+import gn.x0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.InlineClassDescriptor
-import uk.f
-import xk.f0
-import xk.w0
-import xk.f0.a
 
 @f
 public inline class UserId : SnowflakePrimitive {
@@ -72,7 +72,7 @@ public inline class UserId : SnowflakePrimitive {
 
    @JvmStatic
    public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      r.h(var2, "out");
+      q.h(var2, "out");
       var2.writeLong(var0);
    }
 
@@ -97,11 +97,11 @@ public inline class UserId : SnowflakePrimitive {
    }
 
    fun writeToParcel(var1: Parcel, var2: Int) {
-      r.h(var1, "out");
+      q.h(var1, "out");
       writeToParcel-impl(this.snowflake, var1, var2);
    }
 
-   public object `$serializer` : f0<UserId> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -118,23 +118,23 @@ public inline class UserId : SnowflakePrimitive {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{w0.a};
+         return new KSerializer[]{x0.a};
       }
 
       public open fun deserialize(decoder: Decoder): UserId {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          return UserId.constructor-impl(var1.q(this.getDescriptor()).l());
       }
 
       public open fun serialize(encoder: Encoder, value: UserId) {
-         r.h(var1, "encoder");
-         var1 = var1.j(this.getDescriptor());
+         q.h(var1, "encoder");
+         var1 = var1.l(this.getDescriptor());
          if (var1 != null) {
-            var1.k(var2);
+            var1.m(var2);
          }
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }
@@ -148,7 +148,7 @@ public inline class UserId : SnowflakePrimitive {
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<UserId> {
       fun `createFromParcel-PmcOV3I`(var1: Parcel): Long {
-         r.h(var1, "parcel");
+         q.h(var1, "parcel");
          return UserId.constructor-impl(var1.readLong());
       }
 

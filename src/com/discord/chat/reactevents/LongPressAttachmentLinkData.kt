@@ -3,9 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import eh.w
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -13,11 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
+import lj.w
 
 @f
 internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, attachmentName: String? = null) : ReactEvent {
@@ -29,41 +28,8 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
    }
 
    init {
-      super();
       this.attachmentUrl = var1;
       this.attachmentName = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LongPressAttachmentLinkData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.attachmentUrl == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, a2.a, var0.attachmentUrl);
-      }
-
-      label24: {
-         if (!var1.A(var2, 1)) {
-            var3 = false;
-            if (var0.attachmentName == null) {
-               break label24;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, a2.a, var0.attachmentName);
-      }
    }
 
    public operator fun component1(): String? {
@@ -85,10 +51,10 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.attachmentUrl, var1.attachmentUrl)) {
+         if (!q.c(this.attachmentUrl, var1.attachmentUrl)) {
             return false;
          } else {
-            return r.c(this.attachmentName, var1.attachmentName);
+            return q.c(this.attachmentName, var1.attachmentName);
          }
       }
    }
@@ -118,18 +84,18 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.attachmentUrl;
-      val var3: java.lang.String = this.attachmentName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressAttachmentLinkData(attachmentUrl=");
-      var2.append(var1);
-      var2.append(", attachmentName=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.attachmentUrl;
+      val var2: java.lang.String = this.attachmentName;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LongPressAttachmentLinkData(attachmentUrl=");
+      var1.append(var3);
+      var1.append(", attachmentName=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : f0<LongPressAttachmentLinkData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -147,21 +113,21 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         return new KSerializer[]{a.u(a2.a), a.u(var1)};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{a.u(b2.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): LongPressAttachmentLinkData {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
-         var var5: Any;
-         var var9: Any;
+         var var5: java.lang.String;
+         var var9: java.lang.String;
          if (var7.p()) {
-            var9 = a2.a;
-            var5 = var7.n(var6, 0, a2.a, null);
-            var9 = var7.n(var6, 1, (DeserializationStrategy)var9, null);
+            val var8: b2 = b2.a;
+            var5 = var7.n(var6, 0, b2.a, null) as java.lang.String;
+            var9 = var7.n(var6, 1, var8, null) as java.lang.String;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -177,10 +143,10 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
                         throw new n(var4);
                      }
 
-                     var9 = var7.n(var6, 1, a2.a, var9);
+                     var9 = var7.n(var6, 1, b2.a, var9) as java.lang.String;
                      var2 |= 2;
                   } else {
-                     var5 = var7.n(var6, 0, a2.a, var5);
+                     var5 = var7.n(var6, 0, b2.a, var5) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -190,20 +156,20 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
          }
 
          var7.c(var6);
-         return new LongPressAttachmentLinkData(var2, var5 as java.lang.String, var9 as java.lang.String, null);
+         return new LongPressAttachmentLinkData(var2, var5, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressAttachmentLinkData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         LongPressAttachmentLinkData.write$Self(var2, var4, var3);
+         LongPressAttachmentLinkData.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

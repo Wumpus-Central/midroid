@@ -6,6 +6,6 @@ public final class a implements Runnable {
 
    @Override
    public final void run() {
-      ZoomLayoutFixed.b(this.j);
+      ZoomLayoutFixed.c(this.j);
    }
 }

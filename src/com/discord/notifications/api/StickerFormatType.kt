@@ -2,11 +2,13 @@ package com.discord.notifications.api
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import eh.l
-import eh.o
-import kotlin.jvm.internal.h0
+import dn.f
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.g0
 import kotlinx.serialization.KSerializer
-import uk.f
+import lj.l
+import lj.o
+import sj.a
 
 @f(with = StickerFormatType.Serializer::class)
 public enum class StickerFormatType(serialNumber: Int) : IntEnum {
@@ -17,56 +19,63 @@ public enum class StickerFormatType(serialNumber: Int) : IntEnum {
    UNKNOWN(-1)
    public open val serialNumber: Int
    @JvmStatic
-   private StickerFormatType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private StickerFormatType[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public StickerFormatType.Companion Companion = new StickerFormatType.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<StickerFormatType> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.serialNumber = var3;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun fromInt(int: Int): StickerFormatType {
-         val var6: Array<StickerFormatType> = StickerFormatType.values();
-         val var4: Int = var6.length;
+         val var5: Array<StickerFormatType> = StickerFormatType.values();
+         val var3: Int = var5.length;
          var var2: Int = 0;
 
-         var var5: StickerFormatType;
+         var var4: StickerFormatType;
          while (true) {
-            if (var2 >= var4) {
-               var5 = null;
+            if (var2 >= var3) {
+               var4 = null;
                break;
             }
 
-            var5 = var6[var2];
-            val var3: Boolean;
-            if (var6[var2].getSerialNumber() == var1) {
-               var3 = true;
-            } else {
-               var3 = false;
-            }
-
-            if (var3) {
+            var4 = var5[var2];
+            if (var5[var2].getSerialNumber() == var1) {
                break;
             }
 
             var2++;
          }
 
-         var var7: StickerFormatType = var5;
-         if (var5 == null) {
-            var7 = StickerFormatType.UNKNOWN;
+         var var6: StickerFormatType = var4;
+         if (var4 == null) {
+            var6 = StickerFormatType.UNKNOWN;
          }
 
-         return var7;
+         return var6;
       }
 
       public fun serializer(): KSerializer<StickerFormatType> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<StickerFormatType>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object Serializer : IntEnumSerializer(h0.b(StickerFormatType.class), null, 2)
+   public object Serializer : IntEnumSerializer(g0.b(StickerFormatType.class), null, 2)
 }

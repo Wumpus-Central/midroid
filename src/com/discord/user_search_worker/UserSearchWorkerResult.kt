@@ -1,6 +1,6 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal data class UserSearchWorkerResult(id: String, username: String, comparator: String, score: Double) {
    public final val comparator: String
@@ -9,9 +9,9 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
    public final val username: String
 
    init {
-      r.h(var1, "id");
-      r.h(var2, "username");
-      r.h(var3, "comparator");
+      q.h(var1, "id");
+      q.h(var2, "username");
+      q.h(var3, "comparator");
       super();
       this.id = var1;
       this.username = var2;
@@ -36,9 +36,9 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
    }
 
    public fun copy(id: String = var0.id, username: String = var0.username, comparator: String = var0.comparator, score: Double = var0.score): UserSearchWorkerResult {
-      r.h(var1, "id");
-      r.h(var2, "username");
-      r.h(var3, "comparator");
+      q.h(var1, "id");
+      q.h(var2, "username");
+      q.h(var3, "comparator");
       return new UserSearchWorkerResult(var1, var2, var3, var4);
    }
 
@@ -49,11 +49,11 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!q.c(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.username, var1.username)) {
+         } else if (!q.c(this.username, var1.username)) {
             return false;
-         } else if (!r.c(this.comparator, var1.comparator)) {
+         } else if (!q.c(this.comparator, var1.comparator)) {
             return false;
          } else {
             return java.lang.Double.compare(this.score, var1.score) == 0;
@@ -68,18 +68,18 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
    public override fun toString(): String {
       val var4: java.lang.String = this.id;
       val var3: java.lang.String = this.username;
-      val var6: java.lang.String = this.comparator;
+      val var5: java.lang.String = this.comparator;
       val var1: Double = this.score;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UserSearchWorkerResult(id=");
-      var5.append(var4);
-      var5.append(", username=");
-      var5.append(var3);
-      var5.append(", comparator=");
-      var5.append(var6);
-      var5.append(", score=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("UserSearchWorkerResult(id=");
+      var6.append(var4);
+      var6.append(", username=");
+      var6.append(var3);
+      var6.append(", comparator=");
+      var6.append(var5);
+      var6.append(", score=");
+      var6.append(var1);
+      var6.append(")");
+      return var6.toString();
    }
 }

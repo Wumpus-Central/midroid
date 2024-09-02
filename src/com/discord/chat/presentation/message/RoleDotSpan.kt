@@ -22,7 +22,7 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
    private final val topPos: Int
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super();
       this.spSize = var3;
       val var4: Float = FontManager.INSTANCE.getFontScale(var1);

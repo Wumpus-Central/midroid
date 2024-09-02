@@ -11,7 +11,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.MessageContentView;
 import com.discord.core.DCDButton;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class GuildEventInviteViewBinding implements ViewBinding {
    public final DCDButton acceptButton;
@@ -78,79 +78,79 @@ public final class GuildEventInviteViewBinding implements ViewBinding {
 
    public static GuildEventInviteViewBinding bind(View var0) {
       int var1 = R.id.accept_button;
-      DCDButton var13 = (DCDButton)a.a(var0, var1);
-      if (var13 != null) {
+      DCDButton var18 = (DCDButton)a.a(var0, var1);
+      if (var18 != null) {
          var1 = R.id.badge_container;
-         ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
-         if (var7 != null) {
+         ConstraintLayout var14 = (ConstraintLayout)a.a(var0, var1);
+         if (var14 != null) {
             var1 = R.id.badge_icon;
-            SimpleDraweeView var18 = (SimpleDraweeView)a.a(var0, var1);
-            if (var18 != null) {
+            SimpleDraweeView var15 = (SimpleDraweeView)a.a(var0, var1);
+            if (var15 != null) {
                var1 = R.id.badge_text;
-               TextView var19 = (TextView)a.a(var0, var1);
-               if (var19 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.channel_bottom_barrier;
-                  Barrier var8 = (Barrier)a.a(var0, var1);
-                  if (var8 != null) {
+                  Barrier var6 = (Barrier)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.channel_icon;
-                     SimpleDraweeView var14 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var14 != null) {
+                     SimpleDraweeView var13 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var13 != null) {
                         var1 = R.id.channel_name;
-                        TextView var5 = (TextView)a.a(var0, var1);
-                        if (var5 != null) {
+                        TextView var7 = (TextView)a.a(var0, var1);
+                        if (var7 != null) {
                            var1 = R.id.channel_start_barrier;
-                           Barrier var2 = (Barrier)a.a(var0, var1);
-                           if (var2 != null) {
+                           Barrier var16 = (Barrier)a.a(var0, var1);
+                           if (var16 != null) {
                               var1 = R.id.channel_top_barrier;
-                              Barrier var9 = (Barrier)a.a(var0, var1);
-                              if (var9 != null) {
+                              Barrier var8 = (Barrier)a.a(var0, var1);
+                              if (var8 != null) {
                                  var1 = R.id.creator_avatar;
-                                 SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                                 if (var3 != null) {
+                                 SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+                                 if (var2 != null) {
                                     var1 = R.id.description_text;
-                                    MessageContentView var16 = (MessageContentView)a.a(var0, var1);
-                                    if (var16 != null) {
+                                    MessageContentView var19 = (MessageContentView)a.a(var0, var1);
+                                    if (var19 != null) {
                                        var1 = R.id.guild_icon;
-                                       SimpleDraweeView var15 = (SimpleDraweeView)a.a(var0, var1);
-                                       if (var15 != null) {
+                                       SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+                                       if (var11 != null) {
                                           var1 = R.id.guild_name;
-                                          TextView var4 = (TextView)a.a(var0, var1);
-                                          if (var4 != null) {
+                                          TextView var9 = (TextView)a.a(var0, var1);
+                                          if (var9 != null) {
                                              var1 = R.id.header_barrier;
-                                             Barrier var6 = (Barrier)a.a(var0, var1);
-                                             if (var6 != null) {
+                                             Barrier var17 = (Barrier)a.a(var0, var1);
+                                             if (var17 != null) {
                                                 var1 = R.id.header_icon;
-                                                SimpleDraweeView var17 = (SimpleDraweeView)a.a(var0, var1);
-                                                if (var17 != null) {
+                                                SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+                                                if (var12 != null) {
                                                    var1 = R.id.header_text;
-                                                   TextView var10 = (TextView)a.a(var0, var1);
-                                                   if (var10 != null) {
+                                                   TextView var4 = (TextView)a.a(var0, var1);
+                                                   if (var4 != null) {
                                                       var1 = R.id.secondary_button;
-                                                      SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
-                                                      if (var11 != null) {
+                                                      SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+                                                      if (var10 != null) {
                                                          var1 = R.id.title_text;
-                                                         TextView var12 = (TextView)a.a(var0, var1);
-                                                         if (var12 != null) {
+                                                         TextView var5 = (TextView)a.a(var0, var1);
+                                                         if (var5 != null) {
                                                             return new GuildEventInviteViewBinding(
                                                                var0,
+                                                               var18,
+                                                               var14,
+                                                               var15,
+                                                               var3,
+                                                               var6,
                                                                var13,
                                                                var7,
-                                                               var18,
-                                                               var19,
-                                                               var8,
-                                                               var14,
-                                                               var5,
-                                                               var2,
-                                                               var9,
-                                                               var3,
                                                                var16,
-                                                               var15,
-                                                               var4,
-                                                               var6,
-                                                               var17,
-                                                               var10,
+                                                               var8,
+                                                               var2,
+                                                               var19,
                                                                var11,
-                                                               var12
+                                                               var9,
+                                                               var17,
+                                                               var12,
+                                                               var4,
+                                                               var10,
+                                                               var5
                                                             );
                                                          }
                                                       }
@@ -183,6 +183,7 @@ public final class GuildEventInviteViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

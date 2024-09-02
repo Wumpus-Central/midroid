@@ -3,7 +3,13 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.f0.a
 
 @f
 internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeaking: Int) : ReactEvent {
@@ -25,21 +25,11 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    public final val userId: String
 
    init {
-      r.h(var2, "userId");
+      q.h(var2, "userId");
       super();
       this.connectionId = var1;
       this.userId = var2;
       this.isSpeaking = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: UserSpeakingEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.connectionId);
-      var1.z(var2, 1, var0.userId);
-      var1.w(var2, 2, var0.isSpeaking);
    }
 
    public operator fun component1(): Int {
@@ -55,7 +45,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public fun copy(connectionId: Int = var0.connectionId, userId: String = var0.userId, isSpeaking: Int = var0.isSpeaking): UserSpeakingEvent {
-      r.h(var2, "userId");
+      q.h(var2, "userId");
       return new UserSpeakingEvent(var1, var2, var3);
    }
 
@@ -68,7 +58,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!r.c(this.userId, var1.userId)) {
+         } else if (!q.c(this.userId, var1.userId)) {
             return false;
          } else {
             return this.isSpeaking == var1.isSpeaking;
@@ -86,20 +76,20 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var4: java.lang.String = this.userId;
+      val var3: java.lang.String = this.userId;
       val var2: Int = this.isSpeaking;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UserSpeakingEvent(connectionId=");
-      var3.append(var1);
-      var3.append(", userId=");
-      var3.append(var4);
-      var3.append(", isSpeaking=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSpeakingEvent(connectionId=");
+      var4.append(var1);
+      var4.append(", userId=");
+      var4.append(var3);
+      var4.append(", isSpeaking=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : f0<UserSpeakingEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -118,30 +108,31 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, a2.a, m0.a};
+         return new KSerializer[]{n0.a, b2.a, n0.a};
       }
 
       public open fun deserialize(decoder: Decoder): UserSpeakingEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
-         var var2: Int;
          var var3: Int;
          var var4: Int;
+         val var5: Int;
          var var9: java.lang.String;
          if (var8.p()) {
-            var3 = var8.i(var7, 0);
+            var4 = var8.i(var7, 0);
             var9 = var8.m(var7, 1);
-            var2 = var8.i(var7, 2);
-            var4 = 7;
+            val var2: Int = var8.i(var7, 2);
+            var5 = 7;
+            var3 = var2;
          } else {
             var9 = null;
-            var var5: Boolean = true;
+            var var11: Boolean = true;
             var4 = 0;
             var3 = 0;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var5) {
+            while (var11) {
                val var6: Int = var8.o(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -151,39 +142,37 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                         }
 
                         var3 = var8.i(var7, 2);
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var9 = var8.m(var7, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var4 = var8.i(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var11 = false;
                }
             }
 
-            var2 = var3;
-            var3 = var4;
-            var4 = var2;
+            var5 = var10;
          }
 
          var8.c(var7);
-         return new UserSpeakingEvent(var4, var3, var9, var2, null);
+         return new UserSpeakingEvent(var5, var4, var9, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         UserSpeakingEvent.write$Self(var2, var4, var3);
+         UserSpeakingEvent.write$Self$media_engine_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

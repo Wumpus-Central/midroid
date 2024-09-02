@@ -6,7 +6,7 @@ import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactNativeHost
 import java.io.File
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class DCDReactNativeHost(application: Application) : DefaultReactNativeHost {
    protected open val isHermesEnabled: Boolean
@@ -22,7 +22,7 @@ public class DCDReactNativeHost(application: Application) : DefaultReactNativeHo
 
 
    init {
-      r.h(var1, "application");
+      q.h(var1, "application");
       super(var1);
    }
 

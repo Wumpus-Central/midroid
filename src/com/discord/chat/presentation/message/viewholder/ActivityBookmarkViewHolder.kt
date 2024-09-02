@@ -11,8 +11,8 @@ public class ActivityBookmarkViewHolder(activityBookmarkView: ActivityBookmarkVi
    public final val eventHandler: ChatEventHandler
 
    init {
-      kotlin.jvm.internal.r.h(var1, "activityBookmarkView");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
+      kotlin.jvm.internal.q.h(var1, "activityBookmarkView");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
       super(var1, null);
       this.activityBookmarkView = var1;
       this.eventHandler = var2;
@@ -20,21 +20,21 @@ public class ActivityBookmarkViewHolder(activityBookmarkView: ActivityBookmarkVi
 
    @JvmStatic
    fun `bind$lambda$1$lambda$0`(var0: ActivityBookmarkEmbedImpl, var1: ActivityBookmarkViewHolder, var2: View) {
-      kotlin.jvm.internal.r.h(var0, "$activityBookmarkEmbed");
-      kotlin.jvm.internal.r.h(var1, "this$0");
+      kotlin.jvm.internal.q.h(var0, "$activityBookmarkEmbed");
+      kotlin.jvm.internal.q.h(var1, "this$0");
       var1.eventHandler.onTapActivityBookmarkEmbed-uU1mFKc(var0.getApplicationId-VavddsQ(), var0.getChannelId-o4g7jtM());
    }
 
    public fun bind(activityMessageAccessory: ActivityBookmarkMessageAccessory) {
-      kotlin.jvm.internal.r.h(var1, "activityMessageAccessory");
-      val var2: ActivityBookmarkEmbedImpl = var1.getActivityBookmarkEmbed();
-      val var3: ActivityBookmarkView = this.activityBookmarkView;
-      this.activityBookmarkView.setSplash(var2.getSplashUrl(), var1.getConstrainedWidth());
-      var3.setHeaderText(var2.getHeaderText());
-      var3.setLaunchButton(var2.getAcceptLabelText(), var2.getAcceptLabelBackgroundColor());
-      var3.setDescription(var2.getDescription());
-      var3.setAvatarUris(var2.getParticipantAvatarUris());
-      var3.setParticipantsText(var2.getParticipantsText());
-      var3.setOnLaunchButtonClickListener(new a(var2, this));
+      kotlin.jvm.internal.q.h(var1, "activityMessageAccessory");
+      val var3: ActivityBookmarkEmbedImpl = var1.getActivityBookmarkEmbed();
+      val var2: ActivityBookmarkView = this.activityBookmarkView;
+      this.activityBookmarkView.setSplash(var3.getSplashUrl(), var1.getConstrainedWidth());
+      var2.setHeaderText(var3.getHeaderText());
+      var2.setLaunchButton(var3.getAcceptLabelText(), var3.getAcceptLabelBackgroundColor());
+      var2.setDescription(var3.getDescription());
+      var2.setAvatarUris(var3.getParticipantAvatarUris());
+      var2.setParticipantsText(var3.getParticipantsText());
+      var2.setOnLaunchButtonClickListener(new a(var3, this));
    }
 }

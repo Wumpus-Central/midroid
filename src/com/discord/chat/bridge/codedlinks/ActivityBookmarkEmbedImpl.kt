@@ -2,7 +2,15 @@ package com.discord.chat.bridge.codedlinks
 
 import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.h
+import gn.n0
+import gn.o1
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,14 +19,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.h
-import xk.m0
-import xk.n1
 
 @f
 public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
@@ -162,6 +162,7 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
       var35: java.lang.String,
       var36: SerializationConstructorMarker
    ) {
+      var var38: Boolean = false;
       val var37: Boolean;
       if (1476395023 != (var1 and 1476395023)) {
          var37 = true;
@@ -169,15 +170,12 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
          var37 = false;
       }
 
-      val var38: Boolean;
       if (1 != (var2 and 1)) {
          var38 = true;
-      } else {
-         var38 = false;
       }
 
       if (var37 or var38) {
-         n1.a(new int[]{var1, var2}, new int[]{1476395023, 1}, ActivityBookmarkEmbedImpl.$serializer.INSTANCE.getDescriptor());
+         o1.a(new int[]{var1, var2}, new int[]{1476395023, 1}, ActivityBookmarkEmbedImpl.$serializer.INSTANCE.getDescriptor());
       }
 
       super(null);
@@ -325,14 +323,11 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
 
       this.applicationId = var30.unbox-impl();
       this.channelId = var31.unbox-impl();
-      val var39: CodedLinkExtendedType;
       if ((536870912 and var1) == 0) {
-         var39 = CodedLinkExtendedType.ACTIVITY_BOOKMARK;
-      } else {
-         var39 = var32;
+         var32 = CodedLinkExtendedType.ACTIVITY_BOOKMARK;
       }
 
-      this.extendedType = var39;
+      this.extendedType = var32;
       this.participantAvatarUris = var33;
       if ((var1 and Integer.MIN_VALUE) == 0) {
          this.description = null;
@@ -378,6 +373,9 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
       var34: java.lang.String,
       var35: java.lang.String
    ) {
+      q.h(var32, "extendedType");
+      q.h(var33, "participantAvatarUris");
+      q.h(var35, "participantsText");
       super(null);
       this.backgroundColor = var1;
       this.borderColor = var2;
@@ -414,408 +412,136 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
       this.participantsText = var35;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: ActivityBookmarkEmbedImpl, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.getBackgroundColor());
-      var1.w(var2, 1, var0.getBorderColor());
-      var1.w(var2, 2, var0.getHeaderColor());
-      val var5: a2 = a2.a;
-      var1.m(var2, 3, a2.a, var0.getHeaderText());
-      var var6: Boolean;
-      if (!var1.A(var2, 4) && var0.getType() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 4, InviteType.Serializer.INSTANCE, var0.getType());
-      }
-
-      if (!var1.A(var2, 5) && var0.getAcceptLabelBackgroundColor() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 5, m0.a, var0.getAcceptLabelBackgroundColor());
-      }
-
-      if (!var1.A(var2, 6) && var0.getAcceptLabelBorderColor() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 6, m0.a, var0.getAcceptLabelBorderColor());
-      }
-
-      if (!var1.A(var2, 7) && var0.getAcceptLabelColor() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 7, m0.a, var0.getAcceptLabelColor());
-      }
-
-      if (!var1.A(var2, 8) && var0.getAcceptLabelText() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 8, var5, var0.getAcceptLabelText());
-      }
-
-      if (!var1.A(var2, 9) && var0.getBodyText() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 9, var5, var0.getBodyText());
-      }
-
-      if (!var1.A(var2, 10) && var0.getBodyTextColor() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 10, m0.a, var0.getBodyTextColor());
-      }
-
-      if (!var1.A(var2, 11) && var0.getCanBeAccepted() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 11, h.a, var0.getCanBeAccepted());
-      }
-
-      if (!var1.A(var2, 12) && var0.getEmbedCanBeTapped() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 12, h.a, var0.getEmbedCanBeTapped());
-      }
-
-      if (!var1.A(var2, 13) && var0.getResolvingGradientEnd() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 13, m0.a, var0.getResolvingGradientEnd());
-      }
-
-      if (!var1.A(var2, 14) && var0.getResolvingGradientStart() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 14, m0.a, var0.getResolvingGradientStart());
-      }
-
-      if (!var1.A(var2, 15) && var0.getSplashHasRadialGradient() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 15, h.a, var0.getSplashHasRadialGradient());
-      }
-
-      if (!var1.A(var2, 16) && var0.getSplashOpacity() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 16, m0.a, var0.getSplashOpacity());
-      }
-
-      if (!var1.A(var2, 17) && var0.getSplashUrl() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 17, var5, var0.getSplashUrl());
-      }
-
-      if (!var1.A(var2, 18) && var0.getInviteSplash() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 18, var5, var0.getInviteSplash());
-      }
-
-      if (!var1.A(var2, 19) && var0.getSubtitle() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 19, var5, var0.getSubtitle());
-      }
-
-      if (!var1.A(var2, 20) && var0.getSubtitleColor() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 20, m0.a, var0.getSubtitleColor());
-      }
-
-      if (!var1.A(var2, 21) && var0.getThumbnailBackgroundColor() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 21, m0.a, var0.getThumbnailBackgroundColor());
-      }
-
-      if (!var1.A(var2, 22) && var0.getThumbnailCornerRadius() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 22, m0.a, var0.getThumbnailCornerRadius());
-      }
-
-      if (!var1.A(var2, 23) && var0.getThumbnailText() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 23, var5, var0.getThumbnailText());
-      }
-
-      if (!var1.A(var2, 24) && var0.getThumbnailUrl() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 24, var5, var0.getThumbnailUrl());
-      }
-
-      if (!var1.A(var2, 25) && var0.getTitleColor() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 25, m0.a, var0.getTitleColor());
-      }
-
-      if (!var1.A(var2, 26) && var0.getTitleText() == null) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 26, var5, var0.getTitleText());
-      }
-
-      var1.y(var2, 27, com.discord.primitives.ApplicationId..serializer.INSTANCE, ApplicationId.box-impl(var0.getApplicationId-VavddsQ()));
-      var1.y(var2, 28, com.discord.primitives.ChannelId..serializer.INSTANCE, ChannelId.box-impl(var0.getChannelId-o4g7jtM()));
-      if (!var1.A(var2, 29) && var0.getExtendedType() === CodedLinkExtendedType.ACTIVITY_BOOKMARK) {
-         var6 = false;
-      } else {
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.y(var2, 29, CodedLinkExtendedType.Serializer.INSTANCE, var0.getExtendedType());
-      }
-
-      label208: {
-         var1.y(var2, 30, new xk.f(var5), var0.getParticipantAvatarUris());
-         if (!var1.A(var2, 31)) {
-            var6 = false;
-            if (var0.getDescription() == null) {
-               break label208;
-            }
-         }
-
-         var6 = true;
-      }
-
-      if (var6) {
-         var1.m(var2, 31, var5, var0.getDescription());
-      }
-
-      var1.z(var2, 32, var0.getParticipantsText());
-   }
-
    public operator fun component1(): Int {
-      return this.getBackgroundColor();
+      return this.backgroundColor;
    }
 
    public operator fun component10(): String? {
-      return this.getBodyText();
+      return this.bodyText;
    }
 
    public operator fun component11(): Int? {
-      return this.getBodyTextColor();
+      return this.bodyTextColor;
    }
 
    public operator fun component12(): Boolean? {
-      return this.getCanBeAccepted();
+      return this.canBeAccepted;
    }
 
    public operator fun component13(): Boolean? {
-      return this.getEmbedCanBeTapped();
+      return this.embedCanBeTapped;
    }
 
    public operator fun component14(): Int? {
-      return this.getResolvingGradientEnd();
+      return this.resolvingGradientEnd;
    }
 
    public operator fun component15(): Int? {
-      return this.getResolvingGradientStart();
+      return this.resolvingGradientStart;
    }
 
    public operator fun component16(): Boolean? {
-      return this.getSplashHasRadialGradient();
+      return this.splashHasRadialGradient;
    }
 
    public operator fun component17(): Int? {
-      return this.getSplashOpacity();
+      return this.splashOpacity;
    }
 
    public operator fun component18(): String? {
-      return this.getSplashUrl();
+      return this.splashUrl;
    }
 
    public operator fun component19(): String? {
-      return this.getInviteSplash();
+      return this.inviteSplash;
    }
 
    public operator fun component2(): Int {
-      return this.getBorderColor();
+      return this.borderColor;
    }
 
    public operator fun component20(): String? {
-      return this.getSubtitle();
+      return this.subtitle;
    }
 
    public operator fun component21(): Int? {
-      return this.getSubtitleColor();
+      return this.subtitleColor;
    }
 
    public operator fun component22(): Int? {
-      return this.getThumbnailBackgroundColor();
+      return this.thumbnailBackgroundColor;
    }
 
    public operator fun component23(): Int? {
-      return this.getThumbnailCornerRadius();
+      return this.thumbnailCornerRadius;
    }
 
    public operator fun component24(): String? {
-      return this.getThumbnailText();
+      return this.thumbnailText;
    }
 
    public operator fun component25(): String? {
-      return this.getThumbnailUrl();
+      return this.thumbnailUrl;
    }
 
    public operator fun component26(): Int? {
-      return this.getTitleColor();
+      return this.titleColor;
    }
 
    public operator fun component27(): String? {
-      return this.getTitleText();
+      return this.titleText;
    }
 
    public operator fun component28(): ApplicationId {
-      return this.getApplicationId-VavddsQ();
+      return this.applicationId;
    }
 
    public operator fun component29(): ChannelId {
-      return this.getChannelId-o4g7jtM();
+      return this.channelId;
    }
 
    public operator fun component3(): Int {
-      return this.getHeaderColor();
+      return this.headerColor;
    }
 
    public operator fun component30(): CodedLinkExtendedType {
-      return this.getExtendedType();
+      return this.extendedType;
    }
 
    public operator fun component31(): List<String> {
-      return this.getParticipantAvatarUris();
+      return this.participantAvatarUris;
    }
 
    public operator fun component32(): String? {
-      return this.getDescription();
+      return this.description;
    }
 
    public operator fun component33(): String {
-      return this.getParticipantsText();
+      return this.participantsText;
    }
 
    public operator fun component4(): String? {
-      return this.getHeaderText();
+      return this.headerText;
    }
 
    public operator fun component5(): InviteType? {
-      return this.getType();
+      return this.type;
    }
 
    public operator fun component6(): Int? {
-      return this.getAcceptLabelBackgroundColor();
+      return this.acceptLabelBackgroundColor;
    }
 
    public operator fun component7(): Int? {
-      return this.getAcceptLabelBorderColor();
+      return this.acceptLabelBorderColor;
    }
 
    public operator fun component8(): Int? {
-      return this.getAcceptLabelColor();
+      return this.acceptLabelColor;
    }
 
    public operator fun component9(): String? {
-      return this.getAcceptLabelText();
+      return this.acceptLabelText;
    }
 
    public fun copy(
@@ -853,9 +579,9 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
       description: String? = ...,
       participantsText: String = ...
    ): ActivityBookmarkEmbedImpl {
-      r.h(var32, "extendedType");
-      r.h(var33, "participantAvatarUris");
-      r.h(var35, "participantsText");
+      q.h(var32, "extendedType");
+      q.h(var33, "participantAvatarUris");
+      q.h(var35, "participantsText");
       return new ActivityBookmarkEmbedImpl(
          var1,
          var2,
@@ -901,256 +627,255 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
          return false;
       } else {
          var1 = var1;
-         if (this.getBackgroundColor() != var1.getBackgroundColor()) {
+         if (this.backgroundColor != var1.backgroundColor) {
             return false;
-         } else if (this.getBorderColor() != var1.getBorderColor()) {
+         } else if (this.borderColor != var1.borderColor) {
             return false;
-         } else if (this.getHeaderColor() != var1.getHeaderColor()) {
+         } else if (this.headerColor != var1.headerColor) {
             return false;
-         } else if (!r.c(this.getHeaderText(), var1.getHeaderText())) {
+         } else if (!q.c(this.headerText, var1.headerText)) {
             return false;
-         } else if (this.getType() != var1.getType()) {
+         } else if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.getAcceptLabelBackgroundColor(), var1.getAcceptLabelBackgroundColor())) {
+         } else if (!q.c(this.acceptLabelBackgroundColor, var1.acceptLabelBackgroundColor)) {
             return false;
-         } else if (!r.c(this.getAcceptLabelBorderColor(), var1.getAcceptLabelBorderColor())) {
+         } else if (!q.c(this.acceptLabelBorderColor, var1.acceptLabelBorderColor)) {
             return false;
-         } else if (!r.c(this.getAcceptLabelColor(), var1.getAcceptLabelColor())) {
+         } else if (!q.c(this.acceptLabelColor, var1.acceptLabelColor)) {
             return false;
-         } else if (!r.c(this.getAcceptLabelText(), var1.getAcceptLabelText())) {
+         } else if (!q.c(this.acceptLabelText, var1.acceptLabelText)) {
             return false;
-         } else if (!r.c(this.getBodyText(), var1.getBodyText())) {
+         } else if (!q.c(this.bodyText, var1.bodyText)) {
             return false;
-         } else if (!r.c(this.getBodyTextColor(), var1.getBodyTextColor())) {
+         } else if (!q.c(this.bodyTextColor, var1.bodyTextColor)) {
             return false;
-         } else if (!r.c(this.getCanBeAccepted(), var1.getCanBeAccepted())) {
+         } else if (!q.c(this.canBeAccepted, var1.canBeAccepted)) {
             return false;
-         } else if (!r.c(this.getEmbedCanBeTapped(), var1.getEmbedCanBeTapped())) {
+         } else if (!q.c(this.embedCanBeTapped, var1.embedCanBeTapped)) {
             return false;
-         } else if (!r.c(this.getResolvingGradientEnd(), var1.getResolvingGradientEnd())) {
+         } else if (!q.c(this.resolvingGradientEnd, var1.resolvingGradientEnd)) {
             return false;
-         } else if (!r.c(this.getResolvingGradientStart(), var1.getResolvingGradientStart())) {
+         } else if (!q.c(this.resolvingGradientStart, var1.resolvingGradientStart)) {
             return false;
-         } else if (!r.c(this.getSplashHasRadialGradient(), var1.getSplashHasRadialGradient())) {
+         } else if (!q.c(this.splashHasRadialGradient, var1.splashHasRadialGradient)) {
             return false;
-         } else if (!r.c(this.getSplashOpacity(), var1.getSplashOpacity())) {
+         } else if (!q.c(this.splashOpacity, var1.splashOpacity)) {
             return false;
-         } else if (!r.c(this.getSplashUrl(), var1.getSplashUrl())) {
+         } else if (!q.c(this.splashUrl, var1.splashUrl)) {
             return false;
-         } else if (!r.c(this.getInviteSplash(), var1.getInviteSplash())) {
+         } else if (!q.c(this.inviteSplash, var1.inviteSplash)) {
             return false;
-         } else if (!r.c(this.getSubtitle(), var1.getSubtitle())) {
+         } else if (!q.c(this.subtitle, var1.subtitle)) {
             return false;
-         } else if (!r.c(this.getSubtitleColor(), var1.getSubtitleColor())) {
+         } else if (!q.c(this.subtitleColor, var1.subtitleColor)) {
             return false;
-         } else if (!r.c(this.getThumbnailBackgroundColor(), var1.getThumbnailBackgroundColor())) {
+         } else if (!q.c(this.thumbnailBackgroundColor, var1.thumbnailBackgroundColor)) {
             return false;
-         } else if (!r.c(this.getThumbnailCornerRadius(), var1.getThumbnailCornerRadius())) {
+         } else if (!q.c(this.thumbnailCornerRadius, var1.thumbnailCornerRadius)) {
             return false;
-         } else if (!r.c(this.getThumbnailText(), var1.getThumbnailText())) {
+         } else if (!q.c(this.thumbnailText, var1.thumbnailText)) {
             return false;
-         } else if (!r.c(this.getThumbnailUrl(), var1.getThumbnailUrl())) {
+         } else if (!q.c(this.thumbnailUrl, var1.thumbnailUrl)) {
             return false;
-         } else if (!r.c(this.getTitleColor(), var1.getTitleColor())) {
+         } else if (!q.c(this.titleColor, var1.titleColor)) {
             return false;
-         } else if (!r.c(this.getTitleText(), var1.getTitleText())) {
+         } else if (!q.c(this.titleText, var1.titleText)) {
             return false;
-         } else if (!ApplicationId.equals-impl0(this.getApplicationId-VavddsQ(), var1.getApplicationId-VavddsQ())) {
+         } else if (!ApplicationId.equals-impl0(this.applicationId, var1.applicationId)) {
             return false;
-         } else if (!ChannelId.equals-impl0(this.getChannelId-o4g7jtM(), var1.getChannelId-o4g7jtM())) {
+         } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (this.getExtendedType() != var1.getExtendedType()) {
+         } else if (this.extendedType != var1.extendedType) {
             return false;
-         } else if (!r.c(this.getParticipantAvatarUris(), var1.getParticipantAvatarUris())) {
+         } else if (!q.c(this.participantAvatarUris, var1.participantAvatarUris)) {
             return false;
-         } else if (!r.c(this.getDescription(), var1.getDescription())) {
+         } else if (!q.c(this.description, var1.description)) {
             return false;
          } else {
-            return r.c(this.getParticipantsText(), var1.getParticipantsText());
+            return q.c(this.participantsText, var1.participantsText);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var27: Int = Integer.hashCode(this.getBackgroundColor());
-      val var26: Int = Integer.hashCode(this.getBorderColor());
-      val var28: Int = Integer.hashCode(this.getHeaderColor());
-      val var33: java.lang.String = this.getHeaderText();
+      val var28: Int = Integer.hashCode(this.backgroundColor);
+      val var27: Int = Integer.hashCode(this.borderColor);
+      val var26: Int = Integer.hashCode(this.headerColor);
       var var25: Int = 0;
       val var1: Int;
-      if (var33 == null) {
+      if (this.headerText == null) {
          var1 = 0;
       } else {
-         var1 = this.getHeaderText().hashCode();
+         var1 = this.headerText.hashCode();
       }
 
       val var2: Int;
-      if (this.getType() == null) {
+      if (this.type == null) {
          var2 = 0;
       } else {
-         var2 = this.getType().hashCode();
+         var2 = this.type.hashCode();
       }
 
       val var3: Int;
-      if (this.getAcceptLabelBackgroundColor() == null) {
+      if (this.acceptLabelBackgroundColor == null) {
          var3 = 0;
       } else {
-         var3 = this.getAcceptLabelBackgroundColor().hashCode();
+         var3 = this.acceptLabelBackgroundColor.hashCode();
       }
 
       val var4: Int;
-      if (this.getAcceptLabelBorderColor() == null) {
+      if (this.acceptLabelBorderColor == null) {
          var4 = 0;
       } else {
-         var4 = this.getAcceptLabelBorderColor().hashCode();
+         var4 = this.acceptLabelBorderColor.hashCode();
       }
 
       val var5: Int;
-      if (this.getAcceptLabelColor() == null) {
+      if (this.acceptLabelColor == null) {
          var5 = 0;
       } else {
-         var5 = this.getAcceptLabelColor().hashCode();
+         var5 = this.acceptLabelColor.hashCode();
       }
 
       val var6: Int;
-      if (this.getAcceptLabelText() == null) {
+      if (this.acceptLabelText == null) {
          var6 = 0;
       } else {
-         var6 = this.getAcceptLabelText().hashCode();
+         var6 = this.acceptLabelText.hashCode();
       }
 
       val var7: Int;
-      if (this.getBodyText() == null) {
+      if (this.bodyText == null) {
          var7 = 0;
       } else {
-         var7 = this.getBodyText().hashCode();
+         var7 = this.bodyText.hashCode();
       }
 
       val var8: Int;
-      if (this.getBodyTextColor() == null) {
+      if (this.bodyTextColor == null) {
          var8 = 0;
       } else {
-         var8 = this.getBodyTextColor().hashCode();
+         var8 = this.bodyTextColor.hashCode();
       }
 
       val var9: Int;
-      if (this.getCanBeAccepted() == null) {
+      if (this.canBeAccepted == null) {
          var9 = 0;
       } else {
-         var9 = this.getCanBeAccepted().hashCode();
+         var9 = this.canBeAccepted.hashCode();
       }
 
       val var10: Int;
-      if (this.getEmbedCanBeTapped() == null) {
+      if (this.embedCanBeTapped == null) {
          var10 = 0;
       } else {
-         var10 = this.getEmbedCanBeTapped().hashCode();
+         var10 = this.embedCanBeTapped.hashCode();
       }
 
       val var11: Int;
-      if (this.getResolvingGradientEnd() == null) {
+      if (this.resolvingGradientEnd == null) {
          var11 = 0;
       } else {
-         var11 = this.getResolvingGradientEnd().hashCode();
+         var11 = this.resolvingGradientEnd.hashCode();
       }
 
       val var12: Int;
-      if (this.getResolvingGradientStart() == null) {
+      if (this.resolvingGradientStart == null) {
          var12 = 0;
       } else {
-         var12 = this.getResolvingGradientStart().hashCode();
+         var12 = this.resolvingGradientStart.hashCode();
       }
 
       val var13: Int;
-      if (this.getSplashHasRadialGradient() == null) {
+      if (this.splashHasRadialGradient == null) {
          var13 = 0;
       } else {
-         var13 = this.getSplashHasRadialGradient().hashCode();
+         var13 = this.splashHasRadialGradient.hashCode();
       }
 
       val var14: Int;
-      if (this.getSplashOpacity() == null) {
+      if (this.splashOpacity == null) {
          var14 = 0;
       } else {
-         var14 = this.getSplashOpacity().hashCode();
+         var14 = this.splashOpacity.hashCode();
       }
 
       val var15: Int;
-      if (this.getSplashUrl() == null) {
+      if (this.splashUrl == null) {
          var15 = 0;
       } else {
-         var15 = this.getSplashUrl().hashCode();
+         var15 = this.splashUrl.hashCode();
       }
 
       val var16: Int;
-      if (this.getInviteSplash() == null) {
+      if (this.inviteSplash == null) {
          var16 = 0;
       } else {
-         var16 = this.getInviteSplash().hashCode();
+         var16 = this.inviteSplash.hashCode();
       }
 
       val var17: Int;
-      if (this.getSubtitle() == null) {
+      if (this.subtitle == null) {
          var17 = 0;
       } else {
-         var17 = this.getSubtitle().hashCode();
+         var17 = this.subtitle.hashCode();
       }
 
       val var18: Int;
-      if (this.getSubtitleColor() == null) {
+      if (this.subtitleColor == null) {
          var18 = 0;
       } else {
-         var18 = this.getSubtitleColor().hashCode();
+         var18 = this.subtitleColor.hashCode();
       }
 
       val var19: Int;
-      if (this.getThumbnailBackgroundColor() == null) {
+      if (this.thumbnailBackgroundColor == null) {
          var19 = 0;
       } else {
-         var19 = this.getThumbnailBackgroundColor().hashCode();
+         var19 = this.thumbnailBackgroundColor.hashCode();
       }
 
       val var20: Int;
-      if (this.getThumbnailCornerRadius() == null) {
+      if (this.thumbnailCornerRadius == null) {
          var20 = 0;
       } else {
-         var20 = this.getThumbnailCornerRadius().hashCode();
+         var20 = this.thumbnailCornerRadius.hashCode();
       }
 
       val var21: Int;
-      if (this.getThumbnailText() == null) {
+      if (this.thumbnailText == null) {
          var21 = 0;
       } else {
-         var21 = this.getThumbnailText().hashCode();
+         var21 = this.thumbnailText.hashCode();
       }
 
       val var22: Int;
-      if (this.getThumbnailUrl() == null) {
+      if (this.thumbnailUrl == null) {
          var22 = 0;
       } else {
-         var22 = this.getThumbnailUrl().hashCode();
+         var22 = this.thumbnailUrl.hashCode();
       }
 
       val var23: Int;
-      if (this.getTitleColor() == null) {
+      if (this.titleColor == null) {
          var23 = 0;
       } else {
-         var23 = this.getTitleColor().hashCode();
+         var23 = this.titleColor.hashCode();
       }
 
       val var24: Int;
-      if (this.getTitleText() == null) {
+      if (this.titleText == null) {
          var24 = 0;
       } else {
-         var24 = this.getTitleText().hashCode();
+         var24 = this.titleText.hashCode();
       }
 
-      val var31: Int = ApplicationId.hashCode-impl(this.getApplicationId-VavddsQ());
-      val var29: Int = ChannelId.hashCode-impl(this.getChannelId-o4g7jtM());
-      val var32: Int = this.getExtendedType().hashCode();
-      val var30: Int = this.getParticipantAvatarUris().hashCode();
-      if (this.getDescription() != null) {
-         var25 = this.getDescription().hashCode();
+      val var32: Int = ApplicationId.hashCode-impl(this.applicationId);
+      val var30: Int = ChannelId.hashCode-impl(this.channelId);
+      val var29: Int = this.extendedType.hashCode();
+      val var31: Int = this.participantAvatarUris.hashCode();
+      if (this.description != null) {
+         var25 = this.description.hashCode();
       }
 
       return (
@@ -1184,12 +909,12 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
                                                                                                                                                                                                                                                                   (
                                                                                                                                                                                                                                                                            (
                                                                                                                                                                                                                                                                                     (
-                                                                                                                                                                                                                                                                                             var27
+                                                                                                                                                                                                                                                                                             var28
                                                                                                                                                                                                                                                                                                    * 31
-                                                                                                                                                                                                                                                                                                + var26
+                                                                                                                                                                                                                                                                                                + var27
                                                                                                                                                                                                                                                                                           )
                                                                                                                                                                                                                                                                                           * 31
-                                                                                                                                                                                                                                                                                       + var28
+                                                                                                                                                                                                                                                                                       + var26
                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                  * 31
                                                                                                                                                                                                                                                                               + var1
@@ -1264,130 +989,130 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
                                                                + var24
                                                          )
                                                          * 31
-                                                      + var31
+                                                      + var32
                                                 )
                                                 * 31
-                                             + var29
+                                             + var30
                                        )
                                        * 31
-                                    + var32
+                                    + var29
                               )
                               * 31
-                           + var30
+                           + var31
                      )
                      * 31
                   + var25
             )
             * 31
-         + this.getParticipantsText().hashCode();
+         + this.participantsText.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: Int = this.getBackgroundColor();
-      val var3: Int = this.getBorderColor();
-      val var1: Int = this.getHeaderColor();
-      val var9: java.lang.String = this.getHeaderText();
-      val var31: InviteType = this.getType();
-      val var7: Int = this.getAcceptLabelBackgroundColor();
-      val var33: Int = this.getAcceptLabelBorderColor();
-      val var20: Int = this.getAcceptLabelColor();
-      val var21: java.lang.String = this.getAcceptLabelText();
-      val var14: java.lang.String = this.getBodyText();
-      val var17: Int = this.getBodyTextColor();
-      val var30: java.lang.Boolean = this.getCanBeAccepted();
-      val var18: java.lang.Boolean = this.getEmbedCanBeTapped();
-      val var11: Int = this.getResolvingGradientEnd();
-      val var8: Int = this.getResolvingGradientStart();
-      val var19: java.lang.Boolean = this.getSplashHasRadialGradient();
-      val var12: Int = this.getSplashOpacity();
-      val var34: java.lang.String = this.getSplashUrl();
-      val var4: java.lang.String = this.getInviteSplash();
-      val var13: java.lang.String = this.getSubtitle();
-      val var15: Int = this.getSubtitleColor();
-      val var28: Int = this.getThumbnailBackgroundColor();
-      val var22: Int = this.getThumbnailCornerRadius();
-      val var29: java.lang.String = this.getThumbnailText();
-      val var16: java.lang.String = this.getThumbnailUrl();
-      val var26: Int = this.getTitleColor();
-      val var24: java.lang.String = this.getTitleText();
-      val var32: java.lang.String = ApplicationId.toString-impl(this.getApplicationId-VavddsQ());
-      val var6: java.lang.String = ChannelId.toString-impl(this.getChannelId-o4g7jtM());
-      val var23: CodedLinkExtendedType = this.getExtendedType();
-      val var27: java.util.List = this.getParticipantAvatarUris();
-      val var5: java.lang.String = this.getDescription();
-      val var25: java.lang.String = this.getParticipantsText();
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("ActivityBookmarkEmbedImpl(backgroundColor=");
-      var10.append(var2);
-      var10.append(", borderColor=");
-      var10.append(var3);
-      var10.append(", headerColor=");
-      var10.append(var1);
-      var10.append(", headerText=");
-      var10.append(var9);
-      var10.append(", type=");
-      var10.append(var31);
-      var10.append(", acceptLabelBackgroundColor=");
-      var10.append(var7);
-      var10.append(", acceptLabelBorderColor=");
-      var10.append(var33);
-      var10.append(", acceptLabelColor=");
-      var10.append(var20);
-      var10.append(", acceptLabelText=");
-      var10.append(var21);
-      var10.append(", bodyText=");
-      var10.append(var14);
-      var10.append(", bodyTextColor=");
-      var10.append(var17);
-      var10.append(", canBeAccepted=");
-      var10.append(var30);
-      var10.append(", embedCanBeTapped=");
-      var10.append(var18);
-      var10.append(", resolvingGradientEnd=");
-      var10.append(var11);
-      var10.append(", resolvingGradientStart=");
-      var10.append(var8);
-      var10.append(", splashHasRadialGradient=");
-      var10.append(var19);
-      var10.append(", splashOpacity=");
-      var10.append(var12);
-      var10.append(", splashUrl=");
-      var10.append(var34);
-      var10.append(", inviteSplash=");
-      var10.append(var4);
-      var10.append(", subtitle=");
-      var10.append(var13);
-      var10.append(", subtitleColor=");
-      var10.append(var15);
-      var10.append(", thumbnailBackgroundColor=");
-      var10.append(var28);
-      var10.append(", thumbnailCornerRadius=");
-      var10.append(var22);
-      var10.append(", thumbnailText=");
-      var10.append(var29);
-      var10.append(", thumbnailUrl=");
-      var10.append(var16);
-      var10.append(", titleColor=");
-      var10.append(var26);
-      var10.append(", titleText=");
-      var10.append(var24);
-      var10.append(", applicationId=");
-      var10.append(var32);
-      var10.append(", channelId=");
-      var10.append(var6);
-      var10.append(", extendedType=");
-      var10.append(var23);
-      var10.append(", participantAvatarUris=");
-      var10.append(var27);
-      var10.append(", description=");
-      var10.append(var5);
-      var10.append(", participantsText=");
-      var10.append(var25);
-      var10.append(")");
-      return var10.toString();
+      val var3: Int = this.backgroundColor;
+      val var2: Int = this.borderColor;
+      val var1: Int = this.headerColor;
+      val var9: java.lang.String = this.headerText;
+      val var6: InviteType = this.type;
+      val var32: Int = this.acceptLabelBackgroundColor;
+      val var24: Int = this.acceptLabelBorderColor;
+      val var14: Int = this.acceptLabelColor;
+      val var13: java.lang.String = this.acceptLabelText;
+      val var29: java.lang.String = this.bodyText;
+      val var31: Int = this.bodyTextColor;
+      val var30: java.lang.Boolean = this.canBeAccepted;
+      val var33: java.lang.Boolean = this.embedCanBeTapped;
+      val var7: Int = this.resolvingGradientEnd;
+      val var15: Int = this.resolvingGradientStart;
+      val var27: java.lang.Boolean = this.splashHasRadialGradient;
+      val var26: Int = this.splashOpacity;
+      val var8: java.lang.String = this.splashUrl;
+      val var11: java.lang.String = this.inviteSplash;
+      val var23: java.lang.String = this.subtitle;
+      val var34: Int = this.subtitleColor;
+      val var16: Int = this.thumbnailBackgroundColor;
+      val var22: Int = this.thumbnailCornerRadius;
+      val var25: java.lang.String = this.thumbnailText;
+      val var5: java.lang.String = this.thumbnailUrl;
+      val var4: Int = this.titleColor;
+      val var28: java.lang.String = this.titleText;
+      val var18: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var12: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var10: CodedLinkExtendedType = this.extendedType;
+      val var19: java.util.List = this.participantAvatarUris;
+      val var20: java.lang.String = this.description;
+      val var17: java.lang.String = this.participantsText;
+      val var21: StringBuilder = new StringBuilder();
+      var21.append("ActivityBookmarkEmbedImpl(backgroundColor=");
+      var21.append(var3);
+      var21.append(", borderColor=");
+      var21.append(var2);
+      var21.append(", headerColor=");
+      var21.append(var1);
+      var21.append(", headerText=");
+      var21.append(var9);
+      var21.append(", type=");
+      var21.append(var6);
+      var21.append(", acceptLabelBackgroundColor=");
+      var21.append(var32);
+      var21.append(", acceptLabelBorderColor=");
+      var21.append(var24);
+      var21.append(", acceptLabelColor=");
+      var21.append(var14);
+      var21.append(", acceptLabelText=");
+      var21.append(var13);
+      var21.append(", bodyText=");
+      var21.append(var29);
+      var21.append(", bodyTextColor=");
+      var21.append(var31);
+      var21.append(", canBeAccepted=");
+      var21.append(var30);
+      var21.append(", embedCanBeTapped=");
+      var21.append(var33);
+      var21.append(", resolvingGradientEnd=");
+      var21.append(var7);
+      var21.append(", resolvingGradientStart=");
+      var21.append(var15);
+      var21.append(", splashHasRadialGradient=");
+      var21.append(var27);
+      var21.append(", splashOpacity=");
+      var21.append(var26);
+      var21.append(", splashUrl=");
+      var21.append(var8);
+      var21.append(", inviteSplash=");
+      var21.append(var11);
+      var21.append(", subtitle=");
+      var21.append(var23);
+      var21.append(", subtitleColor=");
+      var21.append(var34);
+      var21.append(", thumbnailBackgroundColor=");
+      var21.append(var16);
+      var21.append(", thumbnailCornerRadius=");
+      var21.append(var22);
+      var21.append(", thumbnailText=");
+      var21.append(var25);
+      var21.append(", thumbnailUrl=");
+      var21.append(var5);
+      var21.append(", titleColor=");
+      var21.append(var4);
+      var21.append(", titleText=");
+      var21.append(var28);
+      var21.append(", applicationId=");
+      var21.append(var18);
+      var21.append(", channelId=");
+      var21.append(var12);
+      var21.append(", extendedType=");
+      var21.append(var10);
+      var21.append(", participantAvatarUris=");
+      var21.append(var19);
+      var21.append(", description=");
+      var21.append(var20);
+      var21.append(", participantsText=");
+      var21.append(var17);
+      var21.append(")");
+      return var21.toString();
    }
 
-   public object `$serializer` : f0<ActivityBookmarkEmbedImpl> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -1438,485 +1163,627 @@ public data class ActivityBookmarkEmbedImpl(backgroundColor: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var5: m0 = m0.a;
-         val var7: a2 = a2.a;
-         val var9: KSerializer = a.u(a2.a);
-         val var1: KSerializer = a.u(InviteType.Serializer.INSTANCE);
-         val var6: KSerializer = a.u(var5);
-         val var2: KSerializer = a.u(var5);
-         val var3: KSerializer = a.u(var5);
-         val var10: KSerializer = a.u(var7);
-         val var4: KSerializer = a.u(var7);
-         val var11: KSerializer = a.u(var5);
-         val var8: h = h.a;
+         val var5: Array<KSerializer> = ActivityBookmarkEmbedImpl.access$get$childSerializers$cp();
+         val var4: n0 = n0.a;
+         val var8: b2 = b2.a;
+         val var1: KSerializer = a.u(b2.a);
+         val var7: KSerializer = a.u(InviteType.Serializer.INSTANCE);
+         val var3: KSerializer = a.u(var4);
+         val var9: KSerializer = a.u(var4);
+         val var10: KSerializer = a.u(var4);
+         val var12: KSerializer = a.u(var8);
+         val var2: KSerializer = a.u(var8);
+         val var6: KSerializer = a.u(var4);
+         val var11: h = h.a;
          return new KSerializer[]{
-            var5,
-            var5,
-            var5,
-            var9,
-            var1,
-            var6,
-            var2,
-            var3,
-            var10,
             var4,
-            var11,
+            var4,
+            var4,
+            var1,
+            var7,
+            var3,
+            var9,
+            var10,
+            var12,
+            var2,
+            var6,
             a.u(h.a),
+            a.u(var11),
+            a.u(var4),
+            a.u(var4),
+            a.u(var11),
+            a.u(var4),
             a.u(var8),
-            a.u(var5),
-            a.u(var5),
             a.u(var8),
-            a.u(var5),
-            a.u(var7),
-            a.u(var7),
-            a.u(var7),
-            a.u(var5),
-            a.u(var5),
-            a.u(var5),
-            a.u(var7),
-            a.u(var7),
-            a.u(var5),
-            a.u(var7),
-            com.discord.primitives.ApplicationId..serializer.INSTANCE,
-            com.discord.primitives.ChannelId..serializer.INSTANCE,
+            a.u(var8),
+            a.u(var4),
+            a.u(var4),
+            a.u(var4),
+            a.u(var8),
+            a.u(var8),
+            a.u(var4),
+            a.u(var8),
+            ApplicationId.$serializer.INSTANCE,
+            ChannelId.$serializer.INSTANCE,
             CodedLinkExtendedType.Serializer.INSTANCE,
-            new xk.f(var7),
-            a.u(var7),
-            var7
+            var5[30],
+            a.u(var8),
+            var8
          };
       }
 
       public open fun deserialize(decoder: Decoder): ActivityBookmarkEmbedImpl {
-         r.h(var1, "decoder");
-         val var47: SerialDescriptor = this.getDescriptor();
-         val var48: c = var1.b(var47);
-         val var9: Boolean = var48.p();
-         var var2: Int = 0;
+         q.h(var1, "decoder");
+         val var46: SerialDescriptor = this.getDescriptor();
+         val var47: c = var1.b(var46);
+         var var40: Array<KSerializer> = ActivityBookmarkEmbedImpl.access$get$childSerializers$cp();
+         val var9: Boolean = var47.p();
+         var var5: Int = 0;
+         var var2: Int;
          var var3: Int;
          var var4: Int;
-         var var5: Int;
-         var var6: Int;
-         val var7: Int;
-         var var14: Any;
+         var var7: Int;
+         var var19: Any;
          var var20: Any;
-         var var21: Any;
          var var22: Any;
          var var23: Any;
-         var var25: Any;
+         var var24: java.lang.String;
+         var var25: InviteType;
          var var26: Any;
-         var var27: Any;
+         var var27: java.lang.String;
          var var28: Any;
-         var var29: Any;
-         var var30: Any;
+         var var29: java.lang.String;
+         var var30: java.lang.String;
          var var31: Any;
          var var32: Any;
-         var var33: Any;
+         var var33: java.lang.String;
          var var34: Any;
          var var35: Any;
-         var var36: Any;
-         var var37: Any;
+         var var36: java.lang.String;
+         var var37: java.lang.String;
          var var38: Any;
-         val var39: Any;
-         var var40: Any;
-         var var41: Any;
-         val var42: Any;
+         var var39: java.lang.String;
+         var var41: java.lang.String;
+         var var42: Any;
          val var43: Any;
          val var44: Any;
          val var45: Any;
-         var var85: Any;
-         var var89: Any;
-         var var91: Any;
-         var var97: Any;
+         var var104: Any;
+         var var108: Any;
+         var var113: java.lang.String;
+         var var116: java.lang.String;
          if (var9) {
-            var3 = var48.i(var47, 0);
-            var5 = var48.i(var47, 1);
-            var2 = var48.i(var47, 2);
-            var var10: a2 = a2.a;
-            var85 = var48.n(var47, 3, a2.a, null);
-            var35 = var48.n(var47, 4, InviteType.Serializer.INSTANCE, null);
-            val var49: m0 = m0.a;
-            var34 = var48.n(var47, 5, m0.a, null);
-            var22 = var48.n(var47, 6, var49, null);
-            var20 = var48.n(var47, 7, var49, null);
-            var25 = var48.n(var47, 8, var10, null);
-            var33 = var48.n(var47, 9, var10, null);
-            var40 = var48.n(var47, 10, var49, null);
-            var var11: h = h.a;
-            var36 = var48.n(var47, 11, h.a, null);
-            var43 = var48.n(var47, 12, var11, null);
-            var31 = var48.n(var47, 13, var49, null);
-            var41 = var48.n(var47, 14, var49, null);
-            var45 = var48.n(var47, 15, var11, null);
-            var14 = var48.n(var47, 16, var49, null);
-            var27 = var48.n(var47, 17, var10, null);
-            var21 = var48.n(var47, 18, var10, null);
-            var26 = var48.n(var47, 19, var10, null);
-            var91 = var48.n(var47, 20, var49, null);
-            var89 = var48.n(var47, 21, var49, null);
-            val var17: Any = var48.n(var47, 22, var49, null);
-            var97 = var48.n(var47, 23, var10, null);
-            var23 = var48.n(var47, 24, var10, null);
-            val var13: Any = var48.n(var47, 25, var49, null);
-            val var12: Any = var48.n(var47, 26, var10, null);
-            var38 = var48.y(var47, 27, com.discord.primitives.ApplicationId..serializer.INSTANCE, null);
-            var29 = var48.y(var47, 28, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var11 = (h)var48.y(var47, 29, CodedLinkExtendedType.Serializer.INSTANCE, null);
-            val var51: Any = var48.y(var47, 30, new xk.f(var10), null);
-            var10 = (a2)var48.n(var47, 31, var10, null);
-            val var16: java.lang.String = var48.m(var47, 32);
-            var6 = -1;
-            var4 = 1;
-            var37 = var85;
-            var85 = var97;
-            var28 = var13;
-            var97 = var11;
-            var44 = var16;
-            var30 = var91;
-            var42 = var89;
-            var89 = var17;
-            var91 = var12;
-            var32 = var51;
-            var39 = var10;
-            var7 = var2;
+            var4 = var47.i(var46, 0);
+            var3 = var47.i(var46, 1);
+            var2 = var47.i(var46, 2);
+            val var10: b2 = b2.a;
+            var37 = var47.n(var46, 3, b2.a, null) as java.lang.String;
+            var25 = var47.n(var46, 4, InviteType.Serializer.INSTANCE, null) as InviteType;
+            val var48: n0 = n0.a;
+            var23 = var47.n(var46, 5, n0.a, null) as Int;
+            var19 = var47.n(var46, 6, var48, null) as Int;
+            var20 = var47.n(var46, 7, var48, null) as Int;
+            var108 = var47.n(var46, 8, var10, null) as java.lang.String;
+            var24 = var47.n(var46, 9, var10, null) as java.lang.String;
+            var22 = var47.n(var46, 10, var48, null) as Int;
+            val var11: h = h.a;
+            var34 = var47.n(var46, 11, h.a, null) as java.lang.Boolean;
+            var31 = var47.n(var46, 12, var11, null) as java.lang.Boolean;
+            val var21: Int = var47.n(var46, 13, var48, null) as Int;
+            var44 = var47.n(var46, 14, var48, null) as Int;
+            var28 = var47.n(var46, 15, var11, null) as java.lang.Boolean;
+            val var18: Int = var47.n(var46, 16, var48, null) as Int;
+            var104 = var47.n(var46, 17, var10, null) as java.lang.String;
+            val var14: java.lang.String = var47.n(var46, 18, var10, null) as java.lang.String;
+            val var15: java.lang.String = var47.n(var46, 19, var10, null) as java.lang.String;
+            var26 = var47.n(var46, 20, var48, null) as Int;
+            var43 = var47.n(var46, 21, var48, null) as Int;
+            var32 = var47.n(var46, 22, var48, null) as Int;
+            var27 = var47.n(var46, 23, var10, null) as java.lang.String;
+            var29 = var47.n(var46, 24, var10, null) as java.lang.String;
+            var45 = var47.n(var46, 25, var48, null) as Int;
+            val var13: java.lang.String = var47.n(var46, 26, var10, null) as java.lang.String;
+            var38 = var47.y(var46, 27, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
+            var35 = var47.y(var46, 28, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var87: CodedLinkExtendedType = var47.y(var46, 29, CodedLinkExtendedType.Serializer.INSTANCE, null) as CodedLinkExtendedType;
+            val var49: java.util.List = var47.y(var46, 30, var40[30], null) as java.util.List;
+            val var82: java.lang.String = var47.n(var46, 31, var10, null) as java.lang.String;
+            val var12: java.lang.String = var47.m(var46, 32);
+            var5 = -1;
+            var40 = var21;
+            var7 = 1;
+            var116 = (java.lang.String)var108;
+            var108 = var18;
+            var39 = (java.lang.String)var104;
+            var36 = var14;
+            var33 = var15;
+            var113 = var13;
+            var104 = var87;
+            var42 = var49;
+            var41 = var82;
+            var30 = var12;
          } else {
-            var6 = 0;
-            var5 = 0;
-            var4 = 0;
+            var3 = 0;
+            var var6: Int = 0;
+            var7 = 0;
+            var25 = null;
+            var24 = null;
+            var23 = null;
+            var37 = null;
+            var22 = null;
+            var116 = null;
+            var20 = null;
+            var19 = null;
+            var38 = null;
+            var var101: Any = null;
+            var var97: Any = null;
+            var var94: Any = null;
+            var var91: Any = null;
+            var var88: Any = null;
+            var var83: Any = null;
+            var var50: java.lang.String = null;
+            var36 = null;
+            var113 = null;
             var35 = null;
             var34 = null;
-            var31 = null;
-            var37 = null;
-            var36 = null;
             var33 = null;
+            var32 = null;
+            var31 = null;
+            var30 = null;
+            var29 = null;
+            var28 = null;
             var27 = null;
             var26 = null;
-            var29 = null;
-            var38 = null;
-            var85 = null;
-            var var75: Any = null;
-            var var73: Any = null;
-            var var77: Any = null;
-            var14 = null;
-            var var52: Any = null;
-            var var61: Any = null;
-            var var87: Any = null;
-            var var88: Any = null;
-            var23 = null;
-            var21 = null;
-            var32 = null;
-            var30 = null;
-            var28 = null;
-            var20 = null;
-            var25 = null;
-            var97 = null;
-            var22 = null;
-            var91 = null;
-            var89 = null;
-            var var59: Boolean = true;
-            var3 = 0;
+            var104 = null;
+            var108 = null;
+            var var8: Boolean = true;
+            var4 = 0;
 
-            while (var59) {
-               label100: {
-                  label72: {
+            while (var8) {
+               label96: {
+                  label97: {
                      label71: {
-                        val var8: Int = var48.o(var47);
-                        switch (var8) {
-                           case -1:
-                              var59 = false;
-                              break;
-                           case 0:
-                              var6 = var48.i(var47, 0);
-                              var2 |= 1;
-                              break;
-                           case 1:
-                              var5 = var48.i(var47, 1);
-                              var2 |= 2;
-                              break;
-                           case 2:
-                              var75 = var77;
-                              var73 = var14;
-                              var52 = var61;
-                              var3 = var48.i(var47, 2);
-                              var2 |= 4;
-                              var61 = var52;
-                              var77 = var73;
-                              var14 = var75;
-                              break label100;
-                           case 3:
-                              var37 = var48.n(var47, 3, a2.a, var37);
-                              var2 |= 8;
-                              break;
-                           case 4:
-                              var35 = var48.n(var47, 4, InviteType.Serializer.INSTANCE, var35);
-                              var2 |= 16;
-                              break;
-                           case 5:
-                              var34 = var48.n(var47, 5, m0.a, var34);
-                              var2 |= 32;
-                              break;
-                           case 6:
-                              var29 = var48.n(var47, 6, m0.a, var29);
-                              var2 |= 64;
-                              break;
-                           case 7:
-                              var26 = var48.n(var47, 7, m0.a, var26);
-                              var2 |= 128;
-                              break;
-                           case 8:
-                              var27 = var48.n(var47, 8, a2.a, var27);
-                              var2 |= 256;
-                              break;
-                           case 9:
-                              var31 = var48.n(var47, 9, a2.a, var31);
-                              var2 |= 512;
-                              break;
-                           case 10:
-                              var33 = var48.n(var47, 10, m0.a, var33);
-                              var2 |= 1024;
-                              break;
-                           case 11:
-                              var36 = var48.n(var47, 11, h.a, var36);
-                              var2 |= 2048;
-                              break;
-                           case 12:
-                              var85 = var48.n(var47, 12, h.a, var85);
-                              var2 |= 4096;
-                              break label71;
-                           case 13:
-                              var14 = var48.n(var47, 13, m0.a, var75);
-                              var2 |= 8192;
-                              var77 = var73;
-                              var75 = var77;
-                              var73 = var14;
-                              var61 = var52;
-                              var52 = var61;
-                              break label100;
-                           case 14:
-                              var52 = var61;
-                              var41 = var48.n(var47, 14, m0.a, var73);
-                              var2 |= 16384;
-                              var61 = var52;
-                              var73 = var14;
-                              var75 = var77;
-                              var77 = var41;
-                              var14 = var75;
-                              break label100;
-                           case 15:
-                              var52 = var61;
-                              var77 = var48.n(var47, 15, h.a, var77);
-                              var2 |= 32768;
-                              var61 = var52;
-                              var73 = var14;
-                              var75 = var77;
-                              var77 = var73;
-                              var14 = var75;
-                              break label100;
-                           case 16:
-                              var40 = var48.n(var47, 16, m0.a, var14);
-                              var2 |= 65536;
-                              var14 = var75;
-                              var75 = var77;
-                              var52 = var61;
-                              var61 = var52;
-                              var73 = var40;
-                              var77 = var73;
-                              break label100;
-                           case 17:
-                              var41 = var48.n(var47, 17, a2.a, var52);
-                              var2 |= 131072;
-                              var75 = var77;
-                              var73 = var14;
-                              var52 = var61;
-                              var61 = var41;
-                              var77 = var73;
-                              var14 = var75;
-                              break label100;
-                           case 18:
-                              var61 = var48.n(var47, 18, a2.a, var61);
-                              var2 |= 262144;
-                              var75 = var77;
-                              var73 = var14;
-                              var52 = var61;
-                              var61 = var52;
-                              var77 = var73;
-                              var14 = var75;
-                              break label100;
-                           case 19:
-                              var87 = var48.n(var47, 19, a2.a, var87);
-                              var2 |= 524288;
-                              break label71;
-                           case 20:
-                              var88 = var48.n(var47, 20, m0.a, var88);
-                              var2 |= 1048576;
-                              break label72;
-                           case 21:
-                              var23 = var48.n(var47, 21, m0.a, var23);
-                              var2 |= 2097152;
-                              break label72;
-                           case 22:
-                              var21 = var48.n(var47, 22, m0.a, var21);
-                              var2 |= 4194304;
-                              break label72;
-                           case 23:
-                              var32 = var48.n(var47, 23, a2.a, var32);
-                              var2 |= 8388608;
-                              break label72;
-                           case 24:
-                              var30 = var48.n(var47, 24, a2.a, var30);
-                              var2 |= 16777216;
-                              break label72;
-                           case 25:
-                              var28 = var48.n(var47, 25, m0.a, var28);
-                              var2 |= 33554432;
-                              break label72;
-                           case 26:
-                              var20 = var48.n(var47, 26, a2.a, var20);
-                              var2 |= 67108864;
-                              break label72;
-                           case 27:
-                              var25 = var48.y(var47, 27, com.discord.primitives.ApplicationId..serializer.INSTANCE, var25);
-                              var2 |= 134217728;
-                              break label72;
-                           case 28:
-                              var97 = var48.y(var47, 28, com.discord.primitives.ChannelId..serializer.INSTANCE, var97);
-                              var2 |= 268435456;
-                              break label72;
-                           case 29:
-                              var22 = var48.y(var47, 29, CodedLinkExtendedType.Serializer.INSTANCE, var22);
-                              var2 |= 536870912;
-                              break label72;
-                           case 30:
-                              var91 = var48.y(var47, 30, new xk.f(a2.a), var91);
-                              var2 |= 1073741824;
-                              break label72;
-                           case 31:
-                              var89 = var48.n(var47, 31, a2.a, var89);
-                              var2 |= Integer.MIN_VALUE;
-                              break label72;
-                           case 32:
-                              var38 = var48.m(var47, 32);
-                              var4 |= 1;
-                              break label72;
-                           default:
-                              throw new n(var8);
+                        label70: {
+                           label69: {
+                              var2 = var47.o(var46);
+                              switch (var2) {
+                                 case -1:
+                                    var2 = var3;
+                                    var101 = var94;
+                                    var97 = var91;
+                                    var94 = var88;
+                                    var91 = var83;
+                                    var88 = var50;
+                                    var8 = false;
+                                    var51 = var101;
+                                    var83 = var19;
+                                    var19 = var97;
+                                    break label71;
+                                 case 0:
+                                    var101 = var94;
+                                    var97 = var91;
+                                    var94 = var88;
+                                    var91 = var83;
+                                    var88 = var50;
+                                    var2 = var47.i(var46, 0);
+                                    var5 |= 1;
+                                    var51 = var101;
+                                    var83 = var19;
+                                    var19 = var97;
+                                    break label71;
+                                 case 1:
+                                    var2 = var3;
+                                    var101 = var94;
+                                    var97 = var91;
+                                    var94 = var88;
+                                    var91 = var83;
+                                    var88 = var50;
+                                    var6 = var47.i(var46, 1);
+                                    var5 |= 2;
+                                    var51 = var101;
+                                    var83 = var19;
+                                    var19 = var97;
+                                    break label71;
+                                 case 2:
+                                    var2 = var3;
+                                    var101 = var94;
+                                    var97 = var91;
+                                    var94 = var88;
+                                    var91 = var83;
+                                    var88 = var50;
+                                    var4 = var47.i(var46, 2);
+                                    var5 |= 4;
+                                    var83 = var108;
+                                    var51 = var101;
+                                    var41 = (java.lang.String)var19;
+                                    var104 = var97;
+                                    var108 = var104;
+                                    break label96;
+                                 case 3:
+                                    var39 = (java.lang.String)var97;
+                                    var101 = var94;
+                                    var97 = var91;
+                                    var94 = var88;
+                                    var91 = var83;
+                                    var88 = var50;
+                                    var37 = var47.n(var46, 3, b2.a, var37) as java.lang.String;
+                                    var5 |= 8;
+                                    var51 = var101;
+                                    var83 = var19;
+                                    break label69;
+                                 case 4:
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var25 = var47.n(var46, 4, InviteType.Serializer.INSTANCE, var25) as InviteType;
+                                    var2 = var5 or 16;
+                                    var51 = var101;
+                                    break;
+                                 case 5:
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var23 = var47.n(var46, 5, n0.a, var23) as Int;
+                                    var2 = var5 or 32;
+                                    var51 = var101;
+                                    break;
+                                 case 6:
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var19 = var47.n(var46, 6, n0.a, var19) as Int;
+                                    var2 = var5 or 64;
+                                    var51 = var101;
+                                    break;
+                                 case 7:
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var20 = var47.n(var46, 7, n0.a, var20) as Int;
+                                    var2 = var5 or 128;
+                                    var51 = var101;
+                                    break;
+                                 case 8:
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var116 = var47.n(var46, 8, b2.a, var116) as java.lang.String;
+                                    var2 = var5 or 256;
+                                    var51 = var101;
+                                    break;
+                                 case 9:
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var24 = var47.n(var46, 9, b2.a, var24) as java.lang.String;
+                                    var2 = var5 or 512;
+                                    var51 = var101;
+                                    break;
+                                 case 10:
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var22 = var47.n(var46, 10, n0.a, var22) as Int;
+                                    var2 = var5 or 1024;
+                                    var51 = var101;
+                                    break;
+                                 case 11:
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var51 = var47.n(var46, 11, h.a, var101) as java.lang.Boolean;
+                                    var2 = var5 or 2048;
+                                    var97 = var94;
+                                    var101 = var97;
+                                    break;
+                                 case 12:
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var42 = var47.n(var46, 12, h.a, var97) as java.lang.Boolean;
+                                    var2 = var5 or 4096;
+                                    var51 = var101;
+                                    var94 = var91;
+                                    var97 = var94;
+                                    var101 = var42;
+                                    break;
+                                 case 13:
+                                    var88 = var83;
+                                    var83 = var50;
+                                    var42 = var47.n(var46, 13, n0.a, var94) as Int;
+                                    var2 = var5 or 8192;
+                                    var51 = var101;
+                                    var101 = var97;
+                                    var91 = var88;
+                                    var94 = var91;
+                                    var97 = var42;
+                                    break;
+                                 case 14:
+                                    var83 = var50;
+                                    var42 = var47.n(var46, 14, n0.a, var91) as Int;
+                                    var2 = var5 or 16384;
+                                    var51 = var101;
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var88 = var83;
+                                    var91 = var88;
+                                    var94 = var42;
+                                    break;
+                                 case 15:
+                                    var42 = var47.n(var46, 15, h.a, var88) as java.lang.Boolean;
+                                    var2 = var5 or '耀';
+                                    var51 = var101;
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var83 = var50;
+                                    var88 = var83;
+                                    var91 = var42;
+                                    break;
+                                 case 16:
+                                    val var172: Int = var47.n(var46, 16, n0.a, var83) as Int;
+                                    var2 = var5 or 65536;
+                                    var51 = var101;
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var83 = var50;
+                                    var88 = var172;
+                                    break;
+                                 case 17:
+                                    var39 = var47.n(var46, 17, b2.a, var50) as java.lang.String;
+                                    var2 = var5 or 131072;
+                                    var51 = var101;
+                                    var101 = var97;
+                                    var97 = var94;
+                                    var94 = var91;
+                                    var91 = var88;
+                                    var88 = var83;
+                                    var83 = var39;
+                                    break;
+                                 case 18:
+                                    var2 = var3;
+                                    var36 = var47.n(var46, 18, b2.a, var36) as java.lang.String;
+                                    var5 |= 262144;
+                                    var104 = var97;
+                                    var97 = var91;
+                                    var94 = var88;
+                                    var91 = var83;
+                                    var88 = var50;
+                                    var51 = var101;
+                                    var41 = (java.lang.String)var19;
+                                    var83 = var108;
+                                    var101 = var94;
+                                    var108 = var104;
+                                    break label96;
+                                 case 19:
+                                    var113 = var47.n(var46, 19, b2.a, var113) as java.lang.String;
+                                    var2 = var5 or 524288;
+                                    break label70;
+                                 case 20:
+                                    var35 = var47.n(var46, 20, n0.a, var35) as Int;
+                                    var2 = var5 or 1048576;
+                                    break label70;
+                                 case 21:
+                                    var34 = var47.n(var46, 21, n0.a, var34) as Int;
+                                    var2 = var5 or 2097152;
+                                    break label70;
+                                 case 22:
+                                    var33 = var47.n(var46, 22, n0.a, var33) as Int;
+                                    var2 = var5 or 4194304;
+                                    break label70;
+                                 case 23:
+                                    var32 = var47.n(var46, 23, b2.a, var32) as java.lang.String;
+                                    var2 = var5 or 8388608;
+                                    break label70;
+                                 case 24:
+                                    var31 = var47.n(var46, 24, b2.a, var31) as java.lang.String;
+                                    var2 = var5 or 16777216;
+                                    break label70;
+                                 case 25:
+                                    var30 = var47.n(var46, 25, n0.a, var30) as Int;
+                                    var2 = var5 or 33554432;
+                                    break label70;
+                                 case 26:
+                                    var29 = var47.n(var46, 26, b2.a, var29) as java.lang.String;
+                                    var2 = var5 or 67108864;
+                                    break label70;
+                                 case 27:
+                                    var28 = var47.y(var46, 27, ApplicationId.$serializer.INSTANCE, var28) as ApplicationId;
+                                    var2 = var5 or 134217728;
+                                    break label70;
+                                 case 28:
+                                    var27 = var47.y(var46, 28, ChannelId.$serializer.INSTANCE, var27) as ChannelId;
+                                    var2 = var5 or 268435456;
+                                    break label70;
+                                 case 29:
+                                    var26 = var47.y(var46, 29, CodedLinkExtendedType.Serializer.INSTANCE, var26) as CodedLinkExtendedType;
+                                    var2 = var5 or 536870912;
+                                    break label70;
+                                 case 30:
+                                    var104 = var47.y(var46, 30, var40[30], var104) as java.util.List;
+                                    var2 = var5 or 1073741824;
+                                    break label70;
+                                 case 31:
+                                    var39 = var47.n(var46, 31, b2.a, var108) as java.lang.String;
+                                    var2 = var5 or Integer.MIN_VALUE;
+                                    var108 = var104;
+                                    break label97;
+                                 case 32:
+                                    var42 = var47.m(var46, 32);
+                                    var7 |= 1;
+                                    var2 = var3;
+                                    var101 = var94;
+                                    var97 = var91;
+                                    var94 = var88;
+                                    var91 = var83;
+                                    var88 = var50;
+                                    var83 = var108;
+                                    var108 = var104;
+                                    var51 = var101;
+                                    var41 = (java.lang.String)var19;
+                                    var104 = var97;
+                                    var38 = var42;
+                                    break label96;
+                                 default:
+                                    throw new n(var2);
+                              }
+
+                              var39 = (java.lang.String)var101;
+                              var101 = var97;
+                              var97 = var94;
+                              var94 = var91;
+                              var91 = var88;
+                              var88 = var83;
+                              var83 = var19;
+                              var5 = var2;
+                           }
+
+                           var2 = var3;
+                           var19 = var39;
+                           break label71;
                         }
 
-                        var75 = var77;
-                        var14 = var75;
-                        var77 = var73;
-                        var73 = var14;
-                        var61 = var52;
-                        var52 = var61;
-                        break label100;
+                        var39 = (java.lang.String)var108;
+                        var108 = var104;
+                        break label97;
                      }
 
-                     var75 = var77;
-                     var73 = var14;
-                     var52 = var61;
-                     var61 = var52;
-                     var77 = var73;
-                     var14 = var75;
-                     break label100;
+                     var41 = (java.lang.String)var83;
+                     var83 = var108;
+                     var104 = var19;
+                     var108 = var104;
+                     break label96;
                   }
 
-                  var75 = var77;
-                  var73 = var14;
-                  var52 = var61;
-                  var61 = var52;
-                  var77 = var73;
-                  var14 = var75;
+                  var104 = var97;
+                  var97 = var91;
+                  var94 = var88;
+                  var91 = var83;
+                  var88 = var50;
+                  var51 = var101;
+                  var5 = var2;
+                  var41 = (java.lang.String)var19;
+                  var83 = var39;
+                  var101 = var94;
+                  var2 = var3;
                }
 
-               var52 = var61;
-               var73 = var77;
-               var75 = var14;
-               var77 = var75;
-               var14 = var73;
-               var61 = var52;
+               var50 = (java.lang.String)var88;
+               var88 = var94;
+               var91 = var97;
+               var94 = var101;
+               var97 = var104;
+               var104 = var108;
+               var108 = var83;
+               var3 = var2;
+               var19 = var41;
+               var101 = var51;
+               var83 = var91;
             }
 
-            var7 = var3;
-            var97 = var22;
+            var45 = var30;
+            var113 = var29;
+            var2 = var4;
+            var30 = (java.lang.String)var38;
+            var41 = (java.lang.String)var108;
+            var42 = var104;
+            var104 = var26;
+            var35 = var27;
+            var38 = var28;
+            var29 = (java.lang.String)var31;
+            var27 = (java.lang.String)var32;
+            var32 = var33;
+            var43 = var34;
+            var26 = var35;
+            var33 = var113;
+            var39 = var50;
+            var108 = var83;
+            var28 = var88;
+            var44 = var91;
+            var40 = (KSerializer[])var94;
+            var31 = var97;
+            var34 = var101;
             var3 = var6;
-            var43 = var85;
-            var22 = var29;
-            var39 = var89;
-            var32 = var91;
-            var91 = var20;
-            var89 = var21;
-            var42 = var23;
-            var30 = var88;
-            var44 = var38;
-            var29 = var97;
-            var38 = var25;
-            var23 = var30;
-            var85 = var32;
-            var31 = var75;
-            var41 = var73;
-            var40 = var33;
-            var33 = var31;
-            var25 = var27;
-            var20 = var26;
-            var6 = var2;
-            var26 = var87;
-            var21 = var61;
-            var27 = var52;
-            var45 = var77;
+            var4 = var3;
          }
 
-         var48.c(var47);
+         var47.c(var46);
          return new ActivityBookmarkEmbedImpl(
-            var6,
-            var4,
-            var3,
             var5,
             var7,
-            var37 as java.lang.String,
-            var35 as InviteType,
-            var34 as Int,
-            var22 as Int,
-            var20 as Int,
-            var25 as java.lang.String,
-            var33 as java.lang.String,
-            var40 as Int,
-            var36 as java.lang.Boolean,
-            var43 as java.lang.Boolean,
-            var31 as Int,
-            var41 as Int,
-            var45 as java.lang.Boolean,
-            var14 as Int,
-            var27 as java.lang.String,
-            var21 as java.lang.String,
-            var26 as java.lang.String,
-            var30 as Int,
-            var42 as Int,
-            var89 as Int,
-            var85 as java.lang.String,
-            var23 as java.lang.String,
-            var28 as Int,
-            var91 as java.lang.String,
-            var38 as ApplicationId,
-            var29 as ChannelId,
-            var97 as CodedLinkExtendedType,
-            var32 as java.util.List,
-            var39 as java.lang.String,
-            (java.lang.String)var44,
+            var4,
+            var3,
+            var2,
+            var37,
+            var25,
+            (Integer)var23,
+            (Integer)var19,
+            (Integer)var20,
+            var116,
+            var24,
+            (Integer)var22,
+            (java.lang.Boolean)var34,
+            (java.lang.Boolean)var31,
+            var40,
+            (Integer)var44,
+            (java.lang.Boolean)var28,
+            (Integer)var108,
+            var39,
+            var36,
+            var33,
+            (Integer)var26,
+            (Integer)var43,
+            (Integer)var32,
+            var27,
+            var29,
+            (Integer)var45,
+            var113,
+            (ApplicationId)var38,
+            (ChannelId)var35,
+            (CodedLinkExtendedType)var104,
+            (java.util.List)var42,
+            var41,
+            var30,
             null,
             null
          );
       }
 
       public open fun serialize(encoder: Encoder, value: ActivityBookmarkEmbedImpl) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ActivityBookmarkEmbedImpl.write$Self(var2, var4, var3);
+         ActivityBookmarkEmbedImpl.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

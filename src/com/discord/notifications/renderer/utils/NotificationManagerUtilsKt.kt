@@ -5,59 +5,61 @@ import android.app.NotificationManager
 import android.content.Context
 import android.net.Uri
 import android.service.notification.StatusBarNotification
+import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.NotificationCompat.Builder
 import androidx.core.app.NotificationCompat.MessagingStyle
 import com.discord.notifications.renderer.NotificationBehaviors
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
-import eh.s
-import eh.r.a
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.r
+import lj.s
+import lj.r.a
 
 private const val NOTIFICATION_LIGHT_PERIOD: Int = 1500
 
 internal final val messagingStyle: MessagingStyle?
    internal final get() {
-      r.h(var0, "<this>");
-      return MessagingStyle.q(var0);
+      q.h(var0, "<this>");
+      return NotificationCompat.MessagingStyle.q(var0);
    }
 
 
 internal final val notificationManager: NotificationManager?
    internal final get() {
-      r.h(var0, "<this>");
+      q.h(var0, "<this>");
       return var0.getSystemService("notification") as NotificationManager;
    }
 
 
 internal final val notificationManagerCompat: NotificationManagerCompat
    internal final get() {
-      r.h(var0, "<this>");
+      q.h(var0, "<this>");
       val var1: NotificationManagerCompat = NotificationManagerCompat.g(var0);
-      r.g(var1, "from(this)");
+      q.g(var1, "from(...)");
       return var1;
    }
 
 
 internal fun Context.getActiveNotification(tag: String): Notification? {
-   r.h(var0, "<this>");
-   r.h(var1, "tag");
+   q.h(var0, "<this>");
+   q.h(var1, "tag");
    var var4: NotificationManager = getNotificationManager(var0);
    var var8: Notification = null;
    if (var4 != null) {
       label35:
       try {
-         val var10: a = eh.r.k;
-         var9 = eh.r.b(var4.getActiveNotifications());
+         val var10: a = r.k;
+         var9 = r.b(var4.getActiveNotifications());
       } catch (var6: java.lang.Throwable) {
-         val var13: a = eh.r.k;
-         var9 = eh.r.b(s.a(var6));
+         val var13: a = r.k;
+         var9 = r.b(s.a(var6));
          break label35;
       }
 
       var4 = (NotificationManager)var9;
-      if (eh.r.g(var9)) {
+      if (r.g(var9)) {
          var4 = null;
       }
 
@@ -74,7 +76,7 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
             }
 
             val var11: StatusBarNotification = var15[var2];
-            if (r.c(var15[var2].getTag(), var1)) {
+            if (q.c(var15[var2].getTag(), var1)) {
                var12 = var11;
                break;
             }
@@ -93,11 +95,11 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
 }
 
 internal fun Context.getActiveNotificationMessageCount(tag: String): Int {
-   r.h(var0, "<this>");
-   r.h(var1, "tag");
+   q.h(var0, "<this>");
+   q.h(var1, "tag");
    val var3: Notification = getActiveNotification(var0, var1);
    if (var3 != null) {
-      val var4: MessagingStyle = getMessagingStyle(var3);
+      val var4: NotificationCompat.MessagingStyle = getMessagingStyle(var3);
       if (var4 != null) {
          val var5: java.util.List = var4.r();
          if (var5 != null) {
@@ -110,30 +112,30 @@ internal fun Context.getActiveNotificationMessageCount(tag: String): Int {
 }
 
 internal fun Context.getNotificationBuilderOrCreate(notificationChannelId: String, notificationExisting: Notification?): Builder {
-   r.h(var0, "<this>");
-   r.h(var1, "notificationChannelId");
-   val var3: Builder;
+   q.h(var0, "<this>");
+   q.h(var1, "notificationChannelId");
+   val var3: NotificationCompat.Builder;
    if (var2 != null) {
-      var3 = new Builder(var0, var2);
+      var3 = new NotificationCompat.Builder(var0, var2);
    } else {
-      var3 = new Builder(var0, var1);
+      var3 = new NotificationCompat.Builder(var0, var1);
    }
 
    return var3;
 }
 
 internal fun NotificationManagerCompat.notify(tag: String, notificationBuilder: Builder, additionalFlags: Int = 0) {
-   r.h(var0, "<this>");
-   r.h(var1, "tag");
-   r.h(var2, "notificationBuilder");
+   q.h(var0, "<this>");
+   q.h(var1, "tag");
+   q.h(var2, "notificationBuilder");
    val var4: Notification = var2.g();
-   r.g(var4, "notificationBuilder.build()");
+   q.g(var4, "build(...)");
    var4.flags |= var3;
    var0.o(var1, 0, var4);
 }
 
 @JvmSynthetic
-fun `notify$default`(var0: NotificationManagerCompat, var1: java.lang.String, var2: Builder, var3: Int, var4: Int, var5: Any) {
+fun `notify$default`(var0: NotificationManagerCompat, var1: java.lang.String, var2: NotificationCompat.Builder, var3: Int, var4: Int, var5: Any) {
    if ((var4 and 4) != 0) {
       var3 = 0;
    }
@@ -142,8 +144,8 @@ fun `notify$default`(var0: NotificationManagerCompat, var1: java.lang.String, va
 }
 
 internal fun Builder.setLegacyNotificationBehaviors(context: Context, behaviors: NotificationBehaviors?, sound: Uri?): Builder {
-   r.h(var0, "<this>");
-   r.h(var1, "context");
+   q.h(var0, "<this>");
+   q.h(var1, "context");
    if (var2 == null) {
       return var0;
    } else {
@@ -154,15 +156,15 @@ internal fun Builder.setLegacyNotificationBehaviors(context: Context, behaviors:
       }
 
       if (var2.getLightsEnabled()) {
-         var0.F(ColorUtilsKt.getColorCompat(var1, color.brand_500), 1500, 1500);
+         var0.G(ColorUtilsKt.getColorCompat(var1, color.brand_500), 1500, 1500);
       }
 
       if (var2.getSoundsEnabled() && var3 != null) {
-         var0 = var0.V(var3).y(var4 and -2);
-         r.g(var0, "{\n        // remove the …EFAULT_SOUND.inv())\n    }");
+         var0 = var0.W(var3).y(var4 and -2);
+         q.e(var0);
       } else {
          var0 = var0.y(var4);
-         r.g(var0, "{\n        setDefaults(defaults)\n    }");
+         q.e(var0);
       }
 
       return var0;

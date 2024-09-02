@@ -1,7 +1,9 @@
 package com.discord.react_asset_fetcher
 
 import android.content.Context
-import kotlin.jvm.internal.r
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
+import sj.a
 
 public enum class ReactAsset {
    Activity,
@@ -97,10 +99,24 @@ public enum class ReactAsset {
    VolumeMute,
    Warning,
    WarningTriangle   @JvmStatic
-   private ReactAsset[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private ReactAsset[] $VALUES;
+
+   @JvmStatic
+   fun {
+      val var0: Array<ReactAsset> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
 
    public fun getUri(context: Context): String {
-      r.h(var1, "context");
+      q.h(var1, "context");
       return ReactAssetCache.INSTANCE.get(var1, this);
    }
 }

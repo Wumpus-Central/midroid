@@ -1,7 +1,23 @@
 package com.discord.chat.presentation.list
 
+import kotlin.enums.EnumEntries
+
 public enum class ScrollDirection {
    DOWN,
    UP   @JvmStatic
-   private ScrollDirection[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private ScrollDirection[] $VALUES;
+
+   @JvmStatic
+   fun {
+      val var0: Array<ScrollDirection> = $values();
+      $VALUES = var0;
+      $ENTRIES = sj.a.a(var0);
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
 }

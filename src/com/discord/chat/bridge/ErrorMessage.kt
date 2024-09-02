@@ -1,7 +1,13 @@
 package com.discord.chat.bridge
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.o1
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -10,12 +16,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.n1
-import xk.f0.a
 
 @f
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {
@@ -24,7 +24,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
 
    fun ErrorMessage(var1: Int, var2: java.lang.String, var3: java.lang.String, var4: SerializationConstructorMarker) {
       if (3 != (var1 and 3)) {
-         n1.b(var1, 3, ErrorMessage.$serializer.INSTANCE.getDescriptor());
+         o1.b(var1, 3, ErrorMessage.$serializer.INSTANCE.getDescriptor());
       }
 
       super(var1, var4);
@@ -33,19 +33,11 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    fun ErrorMessage(var1: java.lang.String, var2: java.lang.String) {
+      q.h(var1, "id");
+      q.h(var2, "stackTrace");
       super(null);
       this.id = var1;
       this.stackTrace = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ErrorMessage, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      MessageBase.write$Self(var0, var1, var2);
-      var1.y(var2, 0, com.discord.primitives.MessageId..serializer.INSTANCE, MessageId.box-impl(var0.id));
-      var1.z(var2, 1, var0.stackTrace);
    }
 
    public operator fun component1(): MessageId {
@@ -57,8 +49,8 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public fun copy(id: MessageId = ..., stackTrace: String = ...): ErrorMessage {
-      r.h(var1, "id");
-      r.h(var2, "stackTrace");
+      q.h(var1, "id");
+      q.h(var2, "stackTrace");
       return new ErrorMessage(var1, var2, null);
    }
 
@@ -72,7 +64,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
          } else {
-            return r.c(this.stackTrace, var1.stackTrace);
+            return q.c(this.stackTrace, var1.stackTrace);
          }
       }
    }
@@ -82,18 +74,18 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var3: java.lang.String = this.stackTrace;
+      val var3: java.lang.String = MessageId.toString-impl(this.id);
+      val var2: java.lang.String = this.stackTrace;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ErrorMessage(id=");
-      var1.append(var2);
-      var1.append(", stackTrace=");
       var1.append(var3);
+      var1.append(", stackTrace=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }
 
-   public object `$serializer` : f0<ErrorMessage> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -111,25 +103,33 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{com.discord.primitives.MessageId..serializer.INSTANCE, a2.a};
+         return new KSerializer[]{MessageId.$serializer.INSTANCE, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): ErrorMessage {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
+         var var10: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         var var10: Any;
-         if (var9.p()) {
-            var10 = var9.y(var8, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null);
-            var6 = var9.m(var8, 1);
+         var var11: java.lang.String;
+         var var12: java.lang.String;
+         if (var5) {
+            val var6: MessageId = var9.y(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var6 != null) {
+               var10 = var6.unbox-impl();
+            }
+
+            val var7: java.lang.String = var9.m(var8, 1);
             var2 = 3;
+            var12 = var10;
+            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var10 = null;
-            var6 = null;
+            var11 = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var9.o(var8);
@@ -139,10 +139,23 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                         throw new n(var4);
                      }
 
-                     var6 = var9.m(var8, 1);
+                     var11 = var9.m(var8, 1);
                      var2 |= 2;
                   } else {
-                     var10 = var9.y(var8, 0, com.discord.primitives.MessageId..serializer.INSTANCE, var10);
+                     val var13: MessageId;
+                     if (var12 != null) {
+                        var13 = MessageId.box-impl(var12);
+                     } else {
+                        var13 = null;
+                     }
+
+                     val var14: MessageId = var9.y(var8, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
+                     if (var14 != null) {
+                        var12 = var14.unbox-impl();
+                     } else {
+                        var12 = null;
+                     }
+
                      var2 |= 1;
                   }
                } else {
@@ -152,25 +165,19 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          }
 
          var9.c(var8);
-         val var12: MessageId = var10 as MessageId;
-         var10 = null;
-         if (var12 != null) {
-            var10 = var12.unbox-impl();
-         }
-
-         return new ErrorMessage(var2, (java.lang.String)var10, var6, null, null);
+         return new ErrorMessage(var2, var12, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ErrorMessage) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ErrorMessage.write$Self(var2, var4, var3);
+         ErrorMessage.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

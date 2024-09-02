@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class BlockedMessageGroupViewBinding implements ViewBinding {
    public final TextView blockedMessageGroupButton;
@@ -28,12 +28,12 @@ public final class BlockedMessageGroupViewBinding implements ViewBinding {
       TextView var3 = (TextView)a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.blocked_messages;
-         RecyclerView var2 = (RecyclerView)a.a(var0, var1);
-         if (var2 != null) {
+         RecyclerView var4 = (RecyclerView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.close_icon;
-            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-            if (var4 != null) {
-               return new BlockedMessageGroupViewBinding(var0, var3, var2, var4);
+            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+            if (var2 != null) {
+               return new BlockedMessageGroupViewBinding(var0, var3, var4, var2);
             }
          }
       }
@@ -50,6 +50,7 @@ public final class BlockedMessageGroupViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -2,7 +2,7 @@ package com.discord.modules.proximitysensor
 
 import android.os.PowerManager
 import android.os.PowerManager.WakeLock
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 private class ProximityWakeLockImpl(powerManager: PowerManager, timeout: Long, tag: String) : ProximityWakeLock {
    private final val powerManager: PowerManager
@@ -11,8 +11,8 @@ private class ProximityWakeLockImpl(powerManager: PowerManager, timeout: Long, t
    private final val timeout: Long
 
    init {
-      r.h(var1, "powerManager");
-      r.h(var4, "tag");
+      q.h(var1, "powerManager");
+      q.h(var4, "tag");
       super();
       this.powerManager = var1;
       this.timeout = var2;

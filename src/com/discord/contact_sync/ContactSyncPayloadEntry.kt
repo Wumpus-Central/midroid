@@ -1,6 +1,11 @@
 package com.discord.contact_sync
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,27 +13,15 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
 
 @f
 public data class ContactSyncPayloadEntry(friendId: String) {
    public final val friendId: String
 
    init {
-      r.h(var1, "friendId");
+      q.h(var1, "friendId");
       super();
       this.friendId = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ContactSyncPayloadEntry, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.friendId);
    }
 
    public operator fun component1(): String {
@@ -36,7 +29,7 @@ public data class ContactSyncPayloadEntry(friendId: String) {
    }
 
    public fun copy(friendId: String = var0.friendId): ContactSyncPayloadEntry {
-      r.h(var1, "friendId");
+      q.h(var1, "friendId");
       return new ContactSyncPayloadEntry(var1);
    }
 
@@ -46,7 +39,7 @@ public data class ContactSyncPayloadEntry(friendId: String) {
       } else if (var1 !is ContactSyncPayloadEntry) {
          return false;
       } else {
-         return r.c(this.friendId, (var1 as ContactSyncPayloadEntry).friendId);
+         return q.c(this.friendId, (var1 as ContactSyncPayloadEntry).friendId);
       }
    }
 
@@ -63,7 +56,7 @@ public data class ContactSyncPayloadEntry(friendId: String) {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<ContactSyncPayloadEntry> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -79,12 +72,12 @@ public data class ContactSyncPayloadEntry(friendId: String) {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a};
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): ContactSyncPayloadEntry {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
@@ -117,16 +110,16 @@ public data class ContactSyncPayloadEntry(friendId: String) {
       }
 
       public open fun serialize(encoder: Encoder, value: ContactSyncPayloadEntry) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ContactSyncPayloadEntry.write$Self(var2, var4, var3);
+         ContactSyncPayloadEntry.write$Self$contact_sync_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

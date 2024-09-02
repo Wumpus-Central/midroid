@@ -1,12 +1,12 @@
 package com.discord.span.utilities.spannable
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class EmojiAccessibilitySpan(name: String) {
    public final val name: String
 
    init {
-      r.h(var1, "name");
+      q.h(var1, "name");
       super();
       this.name = var1;
    }

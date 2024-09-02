@@ -1,6 +1,6 @@
 package com.discord.contact_sync
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class ContactNameEntry(givenName: String?, familyName: String?) {
    public final val familyName: String?
@@ -30,10 +30,10 @@ public data class ContactNameEntry(givenName: String?, familyName: String?) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.givenName, var1.givenName)) {
+         if (!q.c(this.givenName, var1.givenName)) {
             return false;
          } else {
-            return r.c(this.familyName, var1.familyName);
+            return q.c(this.familyName, var1.familyName);
          }
       }
    }
@@ -55,13 +55,13 @@ public data class ContactNameEntry(givenName: String?, familyName: String?) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.givenName;
-      val var1: java.lang.String = this.familyName;
+      val var1: java.lang.String = this.givenName;
+      val var2: java.lang.String = this.familyName;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ContactNameEntry(givenName=");
-      var3.append(var2);
-      var3.append(", familyName=");
       var3.append(var1);
+      var3.append(", familyName=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

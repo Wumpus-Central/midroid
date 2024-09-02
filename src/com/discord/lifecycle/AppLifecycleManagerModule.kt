@@ -5,17 +5,17 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
-import eh.w
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
 
 public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule, LifecycleEventListener {
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("onHostDestroy", h0.b(OnHostDestroyEvent.class))});
+      this.reactEvents = new ReactEvents(new Pair[]{w.a("onHostDestroy", g0.b(OnHostDestroyEvent.class))});
       var1.addLifecycleEventListener(this);
    }
 
@@ -26,7 +26,7 @@ public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : 
    public open fun onHostDestroy() {
       val var1: ReactEvents = this.reactEvents;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
+      q.g(var2, "getReactApplicationContext(...)");
       var1.emitModuleEvent(var2, new OnHostDestroyEvent());
    }
 

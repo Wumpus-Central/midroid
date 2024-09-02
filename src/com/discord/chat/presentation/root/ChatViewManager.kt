@@ -15,7 +15,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatManagerInterface
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "DCDChat")
 public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterface<ChatView> {
@@ -23,11 +23,11 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    private final val reactEvents: ReactEvents = CreateChatReactEventsKt.createChatReactEvents()
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       val var3: ChatView = new ChatView(var1);
       val var2: Context = var3.getContext();
-      r.g(var2, "chatView.context");
-      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new Function0<Integer>(var3) {
+      q.g(var2, "getContext(...)");
+      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new Function0(var3) {
          final ChatView $chatView;
 
          {
@@ -55,8 +55,8 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    }
 
    public open fun receiveCommand(view: ChatView, commandId: String, args: ReadableArray?) {
-      r.h(var1, "view");
-      r.h(var2, "commandId");
+      q.h(var1, "view");
+      q.h(var2, "commandId");
       val var4: Int = var2.hashCode();
       if (var4 != -938100109) {
          if (var4 != -402165208) {
@@ -84,76 +84,81 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    }
 
    public open fun scrollIntoView(view: ChatView, index: Int, animated: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.scrollTo(var2, Anywhere.INSTANCE, var3, false);
    }
 
    public open fun scrollTo(view: ChatView, index: Int, animated: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.scrollTo(var2, new Top(SizeUtilsKt.getDpToPx(4)), var3, false);
    }
 
    public open fun scrollToBottom(view: ChatView, animated: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.scrollTo(0, Anywhere.INSTANCE, var2, false);
    }
 
    @ReactProp(name = "adjustContentOffsetWithBounds")
    public open fun setAdjustContentOffsetWithBounds(view: ChatView, value: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "alwaysRespectKeyboard")
    public open fun setAlwaysRespectKeyboard(view: ChatView, value: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "animateEmoji")
    public open fun setAnimateEmoji(view: ChatView, value: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "animatedCustomKeyboardHeight")
    public open fun setAnimatedCustomKeyboardHeight(view: ChatView, value: Float) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.setAnimatedCustomKeyboardHeight(var2);
    }
 
    @ReactProp(name = "HACK_fixModalInteraction")
    public open fun setHACK_fixModalInteraction(view: ChatView, value: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "inverted")
    public open fun setInverted(view: ChatView, inverted: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.setInverted(var2);
    }
 
    @ReactProp(name = "keyboardBackgroundRgba")
    public open fun setKeyboardBackgroundRgba(view: ChatView, value: String?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "keyboardResponderProxyTag")
    public open fun setKeyboardResponderProxyTag(view: ChatView, value: Int) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "roleStyle")
    public open fun setRoleStyle(view: ChatView, value: String?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "scrollEnabled")
    public open fun setScrollEnabled(view: ChatView, value: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
    }
 
    @ReactProp(name = "shouldAnimateAndroid")
    public open fun setShouldAnimateAndroid(view: ChatView, value: Boolean) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.setAnimated(var2);
+   }
+
+   @ReactProp(name = "shouldCalculateMessageVisibilityPercentages")
+   public open fun setShouldCalculateMessageVisibilityPercentages(view: ChatView, value: Boolean) {
+      q.h(var1, "view");
    }
 
    public companion object {

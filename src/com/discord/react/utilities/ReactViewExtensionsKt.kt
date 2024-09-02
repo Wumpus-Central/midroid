@@ -6,13 +6,13 @@ import com.facebook.react.uimanager.ReactShadowNode
 import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
-import eh.l
 import java.lang.reflect.Method
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.b(<unrepresentable>.INSTANCE)
+private final val viewOperationQueueMethod: Method by l.a(<unrepresentable>.INSTANCE)
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }
@@ -25,7 +25,7 @@ fun a(var0: ReactContext, var1: Int) {
 
 private fun ReactContext.getUIImplementation(): UIImplementation {
    val var1: NativeModule = var0.getNativeModule(UIManagerModule.class);
-   r.e(var1);
+   q.e(var1);
    return (var1 as UIManagerModule).getUIImplementation();
 }
 
@@ -41,22 +41,22 @@ private fun UIImplementation.getUIViewOperationQueue(): UIViewOperationQueue? {
 }
 
 public fun ReactContext.queueManualLayout(viewId: Int) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    if (!viewLayoutQueued.contains(var1)) {
       var0.runOnNativeModulesQueueThread(new a(var0, var1));
    }
 }
 
 fun `queueManualLayout$lambda$1`(var0: ReactContext, var1: Int) {
-   r.h(var0, "$this_queueManualLayout");
+   q.h(var0, "$this_queueManualLayout");
    val var2: UIImplementation = getUIImplementation(var0);
    val var4: ReactShadowNode = var2.resolveShadowNode(var1);
    if (var4 != null) {
-      r.g(var2, "uiImplementation");
+      q.e(var2);
       val var5: UIViewOperationQueue = getUIViewOperationQueue(var2);
       if (var5 != null) {
          val var3: ReactShadowNode = var4.getParent();
-         r.e(var3);
+         q.e(var3);
          var5.enqueueUpdateLayout(var3.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight());
       }
    }

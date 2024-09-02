@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class TrashWrapBinding implements ViewBinding {
    private final View rootView;
@@ -24,15 +24,15 @@ public final class TrashWrapBinding implements ViewBinding {
 
    public static TrashWrapBinding bind(View var0) {
       int var1 = R.id.trash_wrap_icon;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.trash_wrap_target_container;
-         FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-         if (var3 != null) {
+         FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.trash_wrap_target_zone;
             FrameLayout var4 = (FrameLayout)a.a(var0, var1);
             if (var4 != null) {
-               return new TrashWrapBinding(var0, var2, var3, var4);
+               return new TrashWrapBinding(var0, var3, var2, var4);
             }
          }
       }
@@ -49,6 +49,7 @@ public final class TrashWrapBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -18,35 +18,35 @@ public class VoiceInviteEmbedView  public constructor(context: Context, attrs: A
    public final val binding: VoiceInviteEmbedBinding
 
    fun VoiceInviteEmbedView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var3: VoiceInviteEmbedBinding = VoiceInviteEmbedBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
    public fun setContent(title: String, body: String, joinCTA: String, joinIcon: String?, joinDisabled: Boolean, onJoin: OnClickListener) {
-      kotlin.jvm.internal.r.h(var1, "title");
-      kotlin.jvm.internal.r.h(var2, "body");
-      kotlin.jvm.internal.r.h(var3, "joinCTA");
-      kotlin.jvm.internal.r.h(var6, "onJoin");
+      kotlin.jvm.internal.q.h(var1, "title");
+      kotlin.jvm.internal.q.h(var2, "body");
+      kotlin.jvm.internal.q.h(var3, "joinCTA");
+      kotlin.jvm.internal.q.h(var6, "onJoin");
       this.binding.card.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundAccent());
       var var7: TextView = this.binding.title;
       this.binding.title.setText(var1);
       var7.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      kotlin.jvm.internal.r.g(var7, "setContent$lambda$1");
+      kotlin.jvm.internal.q.e(var7);
       SetTextSizeSpKt.setTextSizeSp(var7, 16.0F);
       val var8: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimarySemibold);
       var7 = this.binding.body;
       this.binding.body.setText(var2);
       var7.setTextColor(ThemeManagerKt.getTheme().getTextPrimary());
-      kotlin.jvm.internal.r.g(var7, "setContent$lambda$2");
+      kotlin.jvm.internal.q.e(var7);
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryNormal);
       val var9: DCDButton = this.binding.joinCta;
       if (var4 != null) {

@@ -10,6 +10,6 @@ public final class e implements AnimatorUpdateListener {
    public final RecyclerView b;
 
    public final void onAnimationUpdate(ValueAnimator var1) {
-      SwipeHelper.c(this.a, this.b, var1);
+      SwipeHelper.d(this.a, this.b, var1);
    }
 }

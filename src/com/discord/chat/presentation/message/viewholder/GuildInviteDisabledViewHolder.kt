@@ -11,22 +11,22 @@ public class GuildInviteDisabledViewHolder(guildInviteDisabledView: GuildInviteD
    private final val guildInviteDisabledView: GuildInviteDisabledView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "guildInviteDisabledView");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
+      kotlin.jvm.internal.q.h(var1, "guildInviteDisabledView");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
       super(var1, null);
       this.guildInviteDisabledView = var1;
       this.eventHandler = var2;
    }
 
    public fun bind(inviteAccessory: GuildInviteDisabledMessageAccessory) {
-      kotlin.jvm.internal.r.h(var1, "inviteAccessory");
-      val var2: GuildInviteDisabledEmbedImpl = var1.getInvite();
-      val var3: GuildInviteDisabledView = this.guildInviteDisabledView;
-      this.guildInviteDisabledView.setHeaderText(var2.getHeaderText());
-      var3.setHelpIcon(
-         var2.getHelpCenterArticleLabel(),
-         var2.getHelpCenterArticleURL(),
-         new Function1<java.lang.String, Unit>(this, var1) {
+      kotlin.jvm.internal.q.h(var1, "inviteAccessory");
+      val var3: GuildInviteDisabledEmbedImpl = var1.getInvite();
+      val var2: GuildInviteDisabledView = this.guildInviteDisabledView;
+      this.guildInviteDisabledView.setHeaderText(var3.getHeaderText());
+      var2.setHelpIcon(
+         var3.getHelpCenterArticleLabel(),
+         var3.getHelpCenterArticleURL(),
+         new Function1(this, var1) {
             final GuildInviteDisabledMessageAccessory $inviteAccessory;
             final GuildInviteDisabledViewHolder this$0;
 
@@ -37,19 +37,19 @@ public class GuildInviteDisabledViewHolder(guildInviteDisabledView: GuildInviteD
             }
 
             public final void invoke(java.lang.String var1) {
-               kotlin.jvm.internal.r.h(var1, "it");
+               kotlin.jvm.internal.q.h(var1, "it");
                ChatEventHandler.DefaultImpls.onLinkClicked-u7_MRrM$default(
                   this.this$0.getEventHandler(), this.$inviteAccessory.getMessageId-3Eiw7ao(), var1, null, 4, null
                );
             }
          }
       );
-      var3.setHeaderColor(var2.getHeaderColor());
-      var3.setTitleText(var2.getTitleText());
-      var3.setTitleColor(var2.getTitleColor());
-      var3.setGuildImage(var2.getGuildIcon(), var2.getThumbnailText(), var2.getThumbnailBackgroundColor());
-      var3.setSubtitle(var2.getSubtitle(), var2.getGuildName());
-      var3.setSubtitleColor(var2.getSubtitleColor());
-      var3.setBackgroundRectangleColor(var2.getBackgroundColor());
+      var2.setHeaderColor(var3.getHeaderColor());
+      var2.setTitleText(var3.getTitleText());
+      var2.setTitleColor(var3.getTitleColor());
+      var2.setGuildImage(var3.getGuildIcon(), var3.getThumbnailText(), var3.getThumbnailBackgroundColor());
+      var2.setSubtitle(var3.getSubtitle(), var3.getGuildName());
+      var2.setSubtitleColor(var3.getSubtitleColor());
+      var2.setBackgroundRectangleColor(var3.getBackgroundColor());
    }
 }

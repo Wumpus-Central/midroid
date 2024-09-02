@@ -5,20 +5,20 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import eh.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
 
 public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactEvents: ReactEvents
    private final val smsAutofillManager: SmsAutofillManager
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("verificationCodeReceived", h0.b(VerificationCodeReceivedEvent.class))});
-      this.smsAutofillManager = new SmsAutofillManager(var1, new Function1<java.lang.String, Unit>(this, var1) {
+      this.reactEvents = new ReactEvents(new Pair[]{w.a("verificationCodeReceived", g0.b(VerificationCodeReceivedEvent.class))});
+      this.smsAutofillManager = new SmsAutofillManager(var1, new Function1(this, var1) {
          final ReactApplicationContext $reactContext;
          final SmsAutofillManagerModule this$0;
 
@@ -29,7 +29,7 @@ public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : R
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "it");
+            q.h(var1, "it");
             SmsAutofillManagerModule.access$getReactEvents$p(this.this$0).emitModuleEvent(this.$reactContext, new VerificationCodeReceivedEvent(var1));
          }
       });
@@ -37,7 +37,7 @@ public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      q.h(var1, "type");
    }
 
    public open fun getName(): String {

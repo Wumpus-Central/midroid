@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.codedlinks.ActivityBookmarkEmbedImpl
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class ActivityBookmarkMessageAccessory(messageId: MessageId,
    codedLinkIndex: Int,
@@ -15,6 +15,8 @@ public data class ActivityBookmarkMessageAccessory(messageId: MessageId,
    public open val messageId: MessageId
 
    fun ActivityBookmarkMessageAccessory(var1: java.lang.String, var2: Int, var3: ActivityBookmarkEmbedImpl, var4: Int) {
+      q.h(var1, "messageId");
+      q.h(var3, "activityBookmarkEmbed");
       val var5: StringBuilder = new StringBuilder();
       var5.append("activity launcher ");
       var5.append(var2);
@@ -26,7 +28,7 @@ public data class ActivityBookmarkMessageAccessory(messageId: MessageId,
    }
 
    public operator fun component1(): MessageId {
-      return this.getMessageId-3Eiw7ao();
+      return this.messageId;
    }
 
    public operator fun component2(): Int {
@@ -42,8 +44,8 @@ public data class ActivityBookmarkMessageAccessory(messageId: MessageId,
    }
 
    public fun copy(messageId: MessageId = ..., codedLinkIndex: Int = ..., activityBookmarkEmbed: ActivityBookmarkEmbedImpl = ..., constrainedWidth: Int = ...): ActivityBookmarkMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var3, "activityBookmarkEmbed");
+      q.h(var1, "messageId");
+      q.h(var3, "activityBookmarkEmbed");
       return new ActivityBookmarkMessageAccessory(var1, var2, var3, var4, null);
    }
 
@@ -54,11 +56,11 @@ public data class ActivityBookmarkMessageAccessory(messageId: MessageId,
          return false;
       } else {
          var1 = var1;
-         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else if (this.codedLinkIndex != var1.codedLinkIndex) {
             return false;
-         } else if (!r.c(this.activityBookmarkEmbed, var1.activityBookmarkEmbed)) {
+         } else if (!q.c(this.activityBookmarkEmbed, var1.activityBookmarkEmbed)) {
             return false;
          } else {
             return this.constrainedWidth == var1.constrainedWidth;
@@ -67,26 +69,25 @@ public data class ActivityBookmarkMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      return ((MessageId.hashCode-impl(this.getMessageId-3Eiw7ao()) * 31 + Integer.hashCode(this.codedLinkIndex)) * 31 + this.activityBookmarkEmbed.hashCode())
-            * 31
+      return ((MessageId.hashCode-impl(this.messageId) * 31 + Integer.hashCode(this.codedLinkIndex)) * 31 + this.activityBookmarkEmbed.hashCode()) * 31
          + Integer.hashCode(this.constrainedWidth);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
-      val var5: ActivityBookmarkEmbedImpl = this.activityBookmarkEmbed;
+      val var3: ActivityBookmarkEmbedImpl = this.activityBookmarkEmbed;
       val var2: Int = this.constrainedWidth;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ActivityBookmarkMessageAccessory(messageId=");
-      var3.append(var4);
-      var3.append(", codedLinkIndex=");
-      var3.append(var1);
-      var3.append(", activityBookmarkEmbed=");
-      var3.append(var5);
-      var3.append(", constrainedWidth=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ActivityBookmarkMessageAccessory(messageId=");
+      var5.append(var4);
+      var5.append(", codedLinkIndex=");
+      var5.append(var1);
+      var5.append(", activityBookmarkEmbed=");
+      var5.append(var3);
+      var5.append(", constrainedWidth=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 }

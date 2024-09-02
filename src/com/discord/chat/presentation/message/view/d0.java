@@ -13,6 +13,6 @@ public final class d0 implements OnClickListener {
    public final String m;
 
    public final void onClick(View var1) {
-      ForwardBreadcrumbView.b(this.j, this.k, this.l, this.m, var1);
+      ForwardBreadcrumbView.g(this.j, this.k, this.l, this.m, var1);
    }
 }

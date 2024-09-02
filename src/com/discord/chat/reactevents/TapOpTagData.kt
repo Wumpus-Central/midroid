@@ -3,8 +3,8 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import dn.f
 import kotlinx.serialization.KSerializer
-import uk.f
 
 @f
 public object TapOpTagData : ReactEvent {
@@ -13,6 +13,6 @@ public object TapOpTagData : ReactEvent {
    }
 
    public fun serializer(): KSerializer<TapOpTagData> {
-      return this.get$cachedSerializer$delegate().getValue() as KSerializer<TapOpTagData>;
+      return this.get$cachedSerializer();
    }
 }

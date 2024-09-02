@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.widget.FrameLayout
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @SuppressLint(["ViewConstructor"])
 internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId: String, blurTint: Int, blurTintIOSParityCompensation: Int, blurAmount: Float)
@@ -21,8 +21,8 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    private final var blurViewWidth: Int
 
    init {
-      r.h(var1, "context");
-      r.h(var2, "blurTargetNativeId");
+      q.h(var1, "context");
+      q.h(var2, "blurTargetNativeId");
       super(var1);
       this.blurTargetNativeId = var2;
       this.blurTint = var3;
@@ -32,7 +32,7 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
       this.blurViewWidth = -1;
       this.blurViewHeight = -1;
       this.blurViewLocation = new int[2];
-      val var6: Function0 = new Function0<Unit>(this) {
+      val var6: Function0 = new Function0(this) {
          final BlurViewHardwareAccelerated this$0;
 
          {
@@ -45,7 +45,7 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          }
       };
       this.blurTargetChangeListener = var6;
-      BlurView.Companion.updateListener$blur_release(var6, true, new Function0<Unit>(this) {
+      BlurView.Companion.updateListener$blur_release(var6, true, new Function0(this) {
          final BlurViewHardwareAccelerated this$0;
 
          {
@@ -67,10 +67,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var1 = true;
       }
 
-      val var2: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
-      if (var2 != null && !var1 && this.blurViewPropertiesDirty) {
-         var2.setBlurAmount(this.getId(), this.blurAmount);
-         var2.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
+      val var3: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
+      if (var3 != null && !var1 && this.blurViewPropertiesDirty) {
+         var3.setBlurAmount(this.getId(), this.blurAmount);
+         var3.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
          this.setBackgroundColor(BlurView.Companion.mapBlurTint$blur_release(this.blurTintIOSParityCompensation, this.blurTint, this.blurAmount));
          this.blurViewPropertiesDirty = false;
       }
@@ -78,7 +78,7 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new Function0<Unit>(this) {
+      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new Function0(this) {
          final BlurViewHardwareAccelerated this$0;
 
          {
@@ -94,7 +94,7 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
 
    protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
-      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new Function0<Unit>(this) {
+      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new Function0(this) {
          final BlurViewHardwareAccelerated this$0;
 
          {
@@ -121,10 +121,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var7 = true;
       }
 
-      var3 = this.blurViewLocation[0];
-      var4 = this.blurViewLocation[1];
+      var4 = this.blurViewLocation[0];
+      var3 = this.blurViewLocation[1];
       this.getLocationInWindow(this.blurViewLocation);
-      if (this.blurViewLocation[0] != var3 || this.blurViewLocation[1] != var4 || var7) {
+      if (this.blurViewLocation[0] != var4 || this.blurViewLocation[1] != var3 || var7) {
          this.blurViewWidth = this.getWidth();
          this.blurViewHeight = this.getHeight();
          this.blurViewPropertiesDirty = true;
@@ -134,14 +134,7 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    }
 
    public override fun setBlurAmount(rectId: Int, blurAmount: Float) {
-      val var3: Boolean;
-      if (this.blurAmount == var2) {
-         var3 = true;
-      } else {
-         var3 = false;
-      }
-
-      if (!var3) {
+      if (this.blurAmount != var2) {
          this.blurAmount = var2;
          this.blurViewPropertiesDirty = true;
       }
@@ -150,8 +143,8 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      r.h(var1, "nativeId");
-      if (!r.c(this.blurTargetNativeId, var1)) {
+      q.h(var1, "nativeId");
+      if (!q.c(this.blurTargetNativeId, var1)) {
          this.blurTargetNativeId = var1;
          this.blurViewPropertiesDirty = true;
       }

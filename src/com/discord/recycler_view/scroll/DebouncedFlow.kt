@@ -1,16 +1,13 @@
 package com.discord.recycler_view.scroll
 
-import kk.f
-import kk.n0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.g
 import kotlinx.coroutines.Job.a
 import kotlinx.coroutines.flow.MutableSharedFlow
-import nk.q
+import tm.j0
 
 internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, collectWithLeadingDebounce: Boolean = true) {
    private final val eventCoroutineScope: CoroutineScope
@@ -19,22 +16,21 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    private final val events: MutableSharedFlow<Any>
 
    init {
-      r.h(var3, "onEvent");
+      q.h(var3, "onEvent");
       super();
-      val var5: CoroutineScope = g.a(n0.c());
+      val var5: CoroutineScope = g.a(j0.c());
       this.eventCoroutineScope = var5;
       this.eventDetectorActive = true;
-      this.events = q.b(0, 1, null, 4, null);
-      this.eventDetectorJob = f.d(
+      this.events = wm.q.b(0, 1, null, 4, null);
+      this.eventDetectorJob = tm.g.d(
          var5,
          null,
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var4, this, var1, var3, null)// $VF: Couldn't be decompiled
+         new Function2(var4, this, var1, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.String.lastIndexOf(String.java:2573)
-   //   at java.base/java.lang.String.lastIndexOf(String.java:2535)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:33)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -1056,6 +1052,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
@@ -1071,7 +1068,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    }
 
    public fun tryEmit(event: Any) {
-      r.h(var1, "event");
+      q.h(var1, "event");
       this.events.a(var1);
    }
 }

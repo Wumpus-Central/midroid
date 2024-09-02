@@ -10,17 +10,17 @@ import com.discord.chat.bridge.messageframe.MessageFrameJump
 
 public class MessageFrameHeaderView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    fun MessageFrameHeaderView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun MessageFrameHeaderView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
    }
 
@@ -32,7 +32,7 @@ public class MessageFrameHeaderView  public constructor(context: Context, attrs:
          }
 
          val var3: Context = this.getContext();
-         kotlin.jvm.internal.r.g(var3, "context");
+         kotlin.jvm.internal.q.g(var3, "getContext(...)");
          var2 = new MessageFrameJumpHeaderView(var3, null, 0, 6, null);
          var2.setLayoutParams(new LayoutParams(-1, -2));
          this.addView((View)var2);
@@ -42,14 +42,8 @@ public class MessageFrameHeaderView  public constructor(context: Context, attrs:
    }
 
    public fun configure(messageFrame: MessageFrame) {
-      kotlin.jvm.internal.r.h(var1, "messageFrame");
-      val var3: Int = this.getChildCount();
-      var var2: Boolean = true;
-      if (var3 > 1) {
-         var2 = false;
-      }
-
-      if (var2) {
+      kotlin.jvm.internal.q.h(var1, "messageFrame");
+      if (this.getChildCount() <= 1) {
          if (var1 is MessageFrameJump) {
             this.configureMessageFrameJump(var1 as MessageFrameJump);
          }

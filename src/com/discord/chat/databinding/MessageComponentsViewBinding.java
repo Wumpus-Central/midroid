@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.google.android.flexbox.FlexboxLayout;
-import n1.a;
+import v2.a;
 
 public final class MessageComponentsViewBinding implements ViewBinding {
    public final FlexboxLayout itemComponentsRoot;
@@ -36,6 +36,7 @@ public final class MessageComponentsViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

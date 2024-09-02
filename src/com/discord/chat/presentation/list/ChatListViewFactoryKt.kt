@@ -7,11 +7,9 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.message.MessageAccessoriesAdapter
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import kk.n0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import tm.j0
 
 private final val accessoriesToCreate: Map<Int, Int>
 private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int>
@@ -27,17 +25,16 @@ fun `access$getRecycledViewPoolSizes$p`(): java.util.Map {
 }
 
 public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAccessoriesAdapter, accessoriesViewPool: RecycledViewPool) {
-   r.h(var0, "recycler");
-   r.h(var1, "accessoriesAdapter");
-   r.h(var2, "accessoriesViewPool");
-   kk.f.d(
+   q.h(var0, "recycler");
+   q.h(var1, "accessoriesAdapter");
+   q.h(var2, "accessoriesViewPool");
+   tm.g.d(
       CoroutineViewUtilsKt.attachedScope(var0, false),
-      n0.a(),
+      j0.a(),
       null,
-      new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, var2, null)// $VF: Couldn't be decompiled
+      new Function2(var1, var0, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:100)
    //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
@@ -1061,6 +1058,7 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
       2,
       null
@@ -1073,18 +1071,17 @@ public fun fillChatList(
    delegateViewTypes: Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int>,
    chatListViewPool: RecycledViewPool
 ) {
-   r.h(var0, "recycler");
-   r.h(var1, "chatListAdapter");
-   r.h(var2, "delegateViewTypes");
-   r.h(var3, "chatListViewPool");
-   kk.f.d(
+   q.h(var0, "recycler");
+   q.h(var1, "chatListAdapter");
+   q.h(var2, "delegateViewTypes");
+   q.h(var3, "chatListViewPool");
+   tm.g.d(
       CoroutineViewUtilsKt.attachedScope(var0, false),
-      n0.a(),
+      j0.a(),
       null,
-      new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, var1, var0, var3, null)// $VF: Couldn't be decompiled
+      new Function2(var2, var1, var0, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:100)
    //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
@@ -2108,6 +2105,7 @@ public fun fillChatList(
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
       2,
       null

@@ -1,15 +1,15 @@
 package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
+import en.a
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import vk.a
 
-public object ChannelListSerializer : KSerializer<java.util.List<? extends ChannelId>> {
+public object ChannelListSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
          return a.h(ChannelId.Companion.serializer()).getDescriptor();
@@ -17,13 +17,13 @@ public object ChannelListSerializer : KSerializer<java.util.List<? extends Chann
 
 
    public open fun deserialize(decoder: Decoder): List<ChannelId> {
-      r.h(var1, "decoder");
-      val var4: java.util.List = f.A0(var1.z(), new java.lang.String[]{","}, false, 0, 6, null);
+      q.h(var1, "decoder");
+      val var4: java.lang.Iterable = h.z0(var1.z(), new java.lang.String[]{","}, false, 0, 6, null);
       val var2: ArrayList = new ArrayList();
       val var3: java.util.Iterator = var4.iterator();
 
       while (var3.hasNext()) {
-         val var5: java.lang.Long = f.o(var3.next() as java.lang.String);
+         val var5: java.lang.Long = h.o(var3.next() as java.lang.String);
          val var6: ChannelId;
          if (var5 != null) {
             var6 = ChannelId.box-impl(ChannelId.constructor-impl(var5.longValue()));
@@ -40,8 +40,8 @@ public object ChannelListSerializer : KSerializer<java.util.List<? extends Chann
    }
 
    public open fun serialize(encoder: Encoder, value: List<ChannelId>) {
-      r.h(var1, "encoder");
-      r.h(var2, "value");
+      q.h(var1, "encoder");
+      q.h(var2, "value");
       throw new UnsupportedOperationException();
    }
 }

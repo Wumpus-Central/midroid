@@ -1,9 +1,14 @@
 package com.discord.segmented.control.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.f0.a
 
 @f
 internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) : ReactEvent {
@@ -24,19 +23,10 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
    public final val value: String
 
    init {
-      r.h(var1, "value");
+      q.h(var1, "value");
       super();
       this.value = var1;
       this.selectedSegmentIndex = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ValueChangeEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.value);
-      var1.w(var2, 1, var0.selectedSegmentIndex);
    }
 
    public operator fun component1(): String {
@@ -48,7 +38,7 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
    }
 
    public fun copy(value: String = var0.value, selectedSegmentIndex: Int = var0.selectedSegmentIndex): ValueChangeEvent {
-      r.h(var1, "value");
+      q.h(var1, "value");
       return new ValueChangeEvent(var1, var2);
    }
 
@@ -59,7 +49,7 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.value, var1.value)) {
+         if (!q.c(this.value, var1.value)) {
             return false;
          } else {
             return this.selectedSegmentIndex == var1.selectedSegmentIndex;
@@ -71,8 +61,8 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
       return this.value.hashCode() * 31 + Integer.hashCode(this.selectedSegmentIndex);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -87,7 +77,7 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
       return var3.toString();
    }
 
-   public object `$serializer` : f0<ValueChangeEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -105,11 +95,11 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, m0.a};
+         return new KSerializer[]{b2.a, n0.a};
       }
 
       public open fun deserialize(decoder: Decoder): ValueChangeEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
@@ -150,15 +140,15 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
       }
 
       public open fun serialize(encoder: Encoder, value: ValueChangeEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ValueChangeEvent.write$Self(var2, var4, var3);
+         ValueChangeEvent.write$Self$segmented_control_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

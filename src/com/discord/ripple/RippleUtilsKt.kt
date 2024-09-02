@@ -8,10 +8,10 @@ import android.graphics.drawable.shapes.RoundRectShape
 import android.graphics.drawable.shapes.Shape
 import android.view.View
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun View.addCircleRipple(foreground: Boolean = false) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    setDrawableRipple(var0, var1, new OvalShape());
 }
 
@@ -25,7 +25,7 @@ fun `addCircleRipple$default`(var0: View, var1: Boolean, var2: Int, var3: Any) {
 }
 
 public fun View.addRipple(foreground: Boolean = false, cornerRadius: Int = 0) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var3: Float = var2;
    val var4: FloatArray = new float[8];
 

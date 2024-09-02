@@ -1,48 +1,48 @@
 package com.discord.chat.bridge.botuikit
 
+import hn.d
+import hn.g
 import java.util.ArrayList
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import kotlinx.serialization.json.d
-import kotlinx.serialization.json.g
 
-public object ComponentSerializer : d(h0.b(Component.class)) {
+public object ComponentSerializer : d(g0.b(Component.class)) {
    private final val knownTypes: List<Int>
    private final val componentClassSerializer: SealedClassSerializer<Component>
 
    @JvmStatic
    fun {
-      val var2: Array<ComponentType> = ComponentType.values();
-      val var3: ArrayList = new ArrayList(var2.length);
-      val var1: Int = var2.length;
+      val var3: Array<ComponentType> = ComponentType.values();
+      val var2: ArrayList = new ArrayList(var3.length);
+      val var1: Int = var3.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var3.add(var2[var0].getSerialNumber());
+         var2.add(var3[var0].getSerialNumber());
       }
 
-      knownTypes = var3;
+      knownTypes = var2;
       componentClassSerializer = new SealedClassSerializer(
          "Component",
-         h0.b(Component.class),
+         g0.b(Component.class),
          new KClass[]{
-            h0.b(UnknownComponent.class),
-            h0.b(ActionRowComponent.class),
-            h0.b(ButtonComponent.class),
-            h0.b(StringSelectComponent.class),
-            h0.b(UserSelectComponent.class),
-            h0.b(RoleSelectComponent.class),
-            h0.b(MentionableSelectComponent.class),
-            h0.b(ChannelSelectComponent.class),
-            h0.b(TextDisplayComponent.class),
-            h0.b(MediaGalleryDisplayComponent.class),
-            h0.b(SeparatorDisplayComponent.class),
-            h0.b(ContentInventoryEntryComponent.class)
+            g0.b(UnknownComponent.class),
+            g0.b(ActionRowComponent.class),
+            g0.b(ButtonComponent.class),
+            g0.b(StringSelectComponent.class),
+            g0.b(UserSelectComponent.class),
+            g0.b(RoleSelectComponent.class),
+            g0.b(MentionableSelectComponent.class),
+            g0.b(ChannelSelectComponent.class),
+            g0.b(TextDisplayComponent.class),
+            g0.b(MediaGalleryDisplayComponent.class),
+            g0.b(SeparatorDisplayComponent.class),
+            g0.b(ContentInventoryEntryComponent.class)
          },
          new KSerializer[]{
             UnknownComponent.Companion.serializer(),
@@ -62,9 +62,9 @@ public object ComponentSerializer : d(h0.b(Component.class)) {
    }
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<Component> {
-      var var2: java.util.List;
+      var var2: java.lang.Iterable;
       label17: {
-         r.h(var1, "element");
+         q.h(var1, "element");
          var2 = knownTypes;
          var1 = g.o(var1).get("type") as JsonElement;
          if (var1 != null) {
@@ -79,12 +79,12 @@ public object ComponentSerializer : d(h0.b(Component.class)) {
       }
 
       val var6: Any;
-      if (h.Q(var2, var5)) {
+      if (i.T(var2, var5)) {
          var6 = componentClassSerializer;
       } else {
          var6 = UnknownComponent.Companion.serializer();
       }
 
-      return (DeserializationStrategy<Component>)var6;
+      return (DeserializationStrategy)var6;
    }
 }

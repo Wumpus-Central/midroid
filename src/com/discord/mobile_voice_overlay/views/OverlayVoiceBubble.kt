@@ -10,7 +10,7 @@ import com.discord.mobile_voice_overlay.MobileVoiceOverlayDataUser
 import com.discord.mobile_voice_overlay.databinding.OverlayVoiceBubbleBinding
 import com.discord.primitives.UserId
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class OverlayVoiceBubble : OverlayBubbleWrap {
    private final val binding: OverlayVoiceBubbleBinding
@@ -18,29 +18,29 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    internal final val imageView: SimpleDraweeView
       internal final get() {
          val var1: SimpleDraweeView = this.binding.overlayBubbleIv;
-         r.g(this.binding.overlayBubbleIv, "binding.overlayBubbleIv");
+         q.g(this.binding.overlayBubbleIv, "overlayBubbleIv");
          return var1;
       }
 
 
-   public constructor(context: Context) : r.h(var1, "context") {
+   public constructor(context: Context) : q.h(var1, "context") {
       super(var1);
       val var2: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      r.g(var2, "inflate(LayoutInflater.from(context), this, true)");
+      q.g(var2, "inflate(...)");
       this.binding = var2;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : r.h(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?) : q.h(var1, "context") {
       super(var1, var2);
       val var3: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      r.g(var3, "inflate(LayoutInflater.from(context), this, true)");
+      q.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : r.h(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : q.h(var1, "context") {
       super(var1, var2, var3);
       val var4: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      r.g(var4, "inflate(LayoutInflater.from(context), this, true)");
+      q.g(var4, "inflate(...)");
       this.binding = var4;
    }
 
@@ -53,14 +53,14 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    }
 
    public fun configureUI(user: MobileVoiceOverlayDataUser) {
-      r.h(var1, "user");
-      val var2: SimpleDraweeView = this.binding.overlayBubbleIv;
-      val var3: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var4: Context = this.getContext();
-      r.g(var4, "context");
-      var2.setImageURI(
+      q.h(var1, "user");
+      val var3: SimpleDraweeView = this.binding.overlayBubbleIv;
+      val var4: IconUrlUtils = IconUrlUtils.INSTANCE;
+      val var2: Context = this.getContext();
+      q.g(var2, "getContext(...)");
+      var3.setImageURI(
          IconUrlUtils.getForUser-_fRzTXg$default(
-            var3, var4, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
+            var4, var2, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
          )
       );
       if (var1.getSpeaking()) {
@@ -73,7 +73,7 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    protected override fun onConfigurationChanged(newConfig: Configuration?) {
       var var2: Int = this.getWindowLayoutParams().x;
       val var3: Context = this.getContext();
-      r.g(var3, "context");
+      q.g(var3, "getContext(...)");
       if (var2 > this.getAllowedAreaBounds(var3).centerX()) {
          var2 = Integer.MAX_VALUE;
       } else {
@@ -87,8 +87,8 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    }
 
    public override fun setData(data: MobileVoiceOverlayData) {
-      r.h(var1, "data");
-      val var2: MobileVoiceOverlayDataUser = kotlin.collections.h.c0(var1.getUsers()) as MobileVoiceOverlayDataUser;
+      q.h(var1, "data");
+      val var2: MobileVoiceOverlayDataUser = i.f0(var1.getUsers()) as MobileVoiceOverlayDataUser;
       if (var2 != null) {
          this.configureUI(var2);
       }

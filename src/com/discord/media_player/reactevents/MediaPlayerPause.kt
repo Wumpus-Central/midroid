@@ -3,7 +3,13 @@ package com.discord.media_player.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.h
+import gn.y
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.h
-import xk.x
-import xk.f0.a
 
 @f
 public data class MediaPlayerPause(id: Double, paused: Boolean) : ReactEvent {
@@ -26,15 +26,6 @@ public data class MediaPlayerPause(id: Double, paused: Boolean) : ReactEvent {
    init {
       this.id = var1;
       this.paused = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: MediaPlayerPause, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.D(var2, 0, var0.id);
-      var1.x(var2, 1, var0.paused);
    }
 
    public operator fun component1(): Double {
@@ -65,13 +56,7 @@ public data class MediaPlayerPause(id: Double, paused: Boolean) : ReactEvent {
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = java.lang.Double.hashCode(this.id);
-      var var1: Byte = this.paused;
-      if (this.paused != 0) {
-         var1 = 1;
-      }
-
-      return var3 * 31 + var1;
+      return java.lang.Double.hashCode(this.id) * 31 + java.lang.Boolean.hashCode(this.paused);
    }
 
    fun serialize(): WritableMap {
@@ -90,7 +75,7 @@ public data class MediaPlayerPause(id: Double, paused: Boolean) : ReactEvent {
       return var4.toString();
    }
 
-   public object `$serializer` : f0<MediaPlayerPause> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -108,11 +93,11 @@ public data class MediaPlayerPause(id: Double, paused: Boolean) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{x.a, h.a};
+         return new KSerializer[]{y.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPause {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Double;
@@ -153,15 +138,15 @@ public data class MediaPlayerPause(id: Double, paused: Boolean) : ReactEvent {
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPause) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         MediaPlayerPause.write$Self(var2, var4, var3);
+         MediaPlayerPause.write$Self$media_player_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -21,7 +21,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
    public final val messageContentView: MessageContentView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "messageContentView");
+      kotlin.jvm.internal.q.h(var1, "messageContentView");
       super(var1, null);
       this.messageContentView = var1;
    }
@@ -42,28 +42,28 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       onTapEmoji: (EmojiContentNode) -> Unit,
       onTapSeeMore: (MessageId) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageContentItem");
-      kotlin.jvm.internal.r.h(var2, "onLinkClicked");
-      kotlin.jvm.internal.r.h(var3, "onLinkLongClicked");
-      kotlin.jvm.internal.r.h(var4, "onTapChannel");
-      kotlin.jvm.internal.r.h(var5, "onLongPressChannel");
-      kotlin.jvm.internal.r.h(var6, "onTapAttachmentLink");
-      kotlin.jvm.internal.r.h(var7, "onLongPressAttachmentLink");
-      kotlin.jvm.internal.r.h(var8, "onTapMention");
-      kotlin.jvm.internal.r.h(var9, "onTapCommand");
-      kotlin.jvm.internal.r.h(var10, "onLongPressCommand");
-      kotlin.jvm.internal.r.h(var11, "onTapSpoiler");
-      kotlin.jvm.internal.r.h(var12, "onTapTimestamp");
-      kotlin.jvm.internal.r.h(var13, "onTapEmoji");
-      kotlin.jvm.internal.r.h(var14, "onTapSeeMore");
+      kotlin.jvm.internal.q.h(var1, "messageContentItem");
+      kotlin.jvm.internal.q.h(var2, "onLinkClicked");
+      kotlin.jvm.internal.q.h(var3, "onLinkLongClicked");
+      kotlin.jvm.internal.q.h(var4, "onTapChannel");
+      kotlin.jvm.internal.q.h(var5, "onLongPressChannel");
+      kotlin.jvm.internal.q.h(var6, "onTapAttachmentLink");
+      kotlin.jvm.internal.q.h(var7, "onLongPressAttachmentLink");
+      kotlin.jvm.internal.q.h(var8, "onTapMention");
+      kotlin.jvm.internal.q.h(var9, "onTapCommand");
+      kotlin.jvm.internal.q.h(var10, "onLongPressCommand");
+      kotlin.jvm.internal.q.h(var11, "onTapSpoiler");
+      kotlin.jvm.internal.q.h(var12, "onTapTimestamp");
+      kotlin.jvm.internal.q.h(var13, "onTapEmoji");
+      kotlin.jvm.internal.q.h(var14, "onTapSeeMore");
       this.messageContentView.setTextColor(var1.getMessageTextColor());
       DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
-      val var24: TextPaint = this.messageContentView.getPaint();
-      kotlin.jvm.internal.r.g(var24, "messageContentView.paint");
+      val var23: TextPaint = this.messageContentView.getPaint();
+      kotlin.jvm.internal.q.g(var23, "getPaint(...)");
       val var25: FontManager = FontManager.INSTANCE;
-      val var23: Context = this.messageContentView.getContext();
-      kotlin.jvm.internal.r.g(var23, "messageContentView.context");
+      val var24: Context = this.messageContentView.getContext();
+      kotlin.jvm.internal.q.g(var24, "getContext(...)");
       this.messageContentView
          .setMessageContent-2ZcwkLU(
             var1.getMessageContent(),
@@ -72,9 +72,9 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getShouldShowLinkDecorations(),
             var1.getShouldShowRoleDot(),
             var1.getShouldShowRoleOnName(),
-            new Function1<LinkContentNode, Unit>(var2, var1) {
+            new Function1(var2, var1) {
                final MessageContentAccessory $messageContentItem;
-               final Function2<MessageId, LinkContentNode, Unit> $onLinkClicked;
+               final Function2 $onLinkClicked;
 
                {
                   super(1);
@@ -83,7 +83,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
                }
 
                public final void invoke(LinkContentNode var1) {
-                  kotlin.jvm.internal.r.h(var1, "node");
+                  kotlin.jvm.internal.q.h(var1, "node");
                   this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageContentItem.getMessageId-3Eiw7ao()), var1);
                }
             },
@@ -99,7 +99,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var12,
             var13,
             var14,
-            new Function1<LinkContentNode, LinkStyle>(var1) {
+            new Function1(var1) {
                final MessageContentAccessory $messageContentItem;
 
                {
@@ -108,7 +108,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
                }
 
                public final LinkStyle invoke(LinkContentNode var1) {
-                  kotlin.jvm.internal.r.h(var1, "it");
+                  kotlin.jvm.internal.q.h(var1, "it");
                   val var2: DiscordFont;
                   if (this.$messageContentItem.getBoldLinkText()) {
                      var2 = DiscordFont.PrimarySemibold;
@@ -126,7 +126,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var24, var25.getScaledSpToPx(16, var23))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var23, var25.getScaledSpToPx(16, var24))
          );
    }
 }

@@ -3,10 +3,10 @@ package com.discord.portals.utils
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewParent
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun View.removeFromParent() {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var2: ViewParent = var0.getParent();
    if (var2 != null) {
       var var1: ViewParent = var2;

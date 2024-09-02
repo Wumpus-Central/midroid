@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.input.R;
 import com.discord.chat.input.views.DCDChatInput;
-import n1.a;
+import v2.a;
 
 public final class ChatInputRootViewBinding implements ViewBinding {
    public final DCDChatInput chatInputEditText;
@@ -36,6 +36,7 @@ public final class ChatInputRootViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -3,7 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,11 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: String, attachmentId: String, embedId: String) : ReactEvent {
@@ -25,26 +25,15 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    public final val messageId: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "embedId");
+      q.h(var1, "messageId");
+      q.h(var2, "channelId");
+      q.h(var3, "attachmentId");
+      q.h(var4, "embedId");
       super();
       this.messageId = var1;
       this.channelId = var2;
       this.attachmentId = var3;
       this.embedId = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TapObscuredMediaLearnMoreData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.messageId);
-      var1.z(var2, 1, var0.channelId);
-      var1.z(var2, 2, var0.attachmentId);
-      var1.z(var2, 3, var0.embedId);
    }
 
    public operator fun component1(): String {
@@ -69,10 +58,10 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
       attachmentId: String = var0.attachmentId,
       embedId: String = var0.embedId
    ): TapObscuredMediaLearnMoreData {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "embedId");
+      q.h(var1, "messageId");
+      q.h(var2, "channelId");
+      q.h(var3, "attachmentId");
+      q.h(var4, "embedId");
       return new TapObscuredMediaLearnMoreData(var1, var2, var3, var4);
    }
 
@@ -83,14 +72,14 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!q.c(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.channelId, var1.channelId)) {
+         } else if (!q.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!r.c(this.attachmentId, var1.attachmentId)) {
+         } else if (!q.c(this.attachmentId, var1.attachmentId)) {
             return false;
          } else {
-            return r.c(this.embedId, var1.embedId);
+            return q.c(this.embedId, var1.embedId);
          }
       }
    }
@@ -105,23 +94,23 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
 
    public override fun toString(): String {
       val var1: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.attachmentId;
+      val var2: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.attachmentId;
       val var3: java.lang.String = this.embedId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapObscuredMediaLearnMoreData(messageId=");
       var5.append(var1);
       var5.append(", channelId=");
-      var5.append(var4);
-      var5.append(", attachmentId=");
       var5.append(var2);
+      var5.append(", attachmentId=");
+      var5.append(var4);
       var5.append(", embedId=");
       var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
 
-   public object `$serializer` : f0<TapObscuredMediaLearnMoreData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -141,28 +130,30 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a, a2.a, a2.a};
+         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapObscuredMediaLearnMoreData {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
          var var2: Int;
-         var var5: java.lang.String;
          var var6: java.lang.String;
          var var7: java.lang.String;
          val var11: java.lang.String;
+         var var13: java.lang.String;
          if (var10.p()) {
-            var7 = var10.m(var9, 0);
-            var6 = var10.m(var9, 1);
-            var5 = var10.m(var9, 2);
+            var13 = var10.m(var9, 0);
+            val var8: java.lang.String = var10.m(var9, 1);
+            var6 = var10.m(var9, 2);
             var11 = var10.m(var9, 3);
             var2 = 15;
+            var7 = var13;
+            var13 = var8;
          } else {
             var7 = null;
             var6 = null;
-            var5 = null;
+            var13 = null;
             var var12: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -180,7 +171,7 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
                            var6 = var10.m(var9, 3);
                            var2 |= 8;
                         } else {
-                           var5 = var10.m(var9, 2);
+                           var13 = var10.m(var9, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -196,24 +187,25 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
                }
             }
 
-            var6 = var12;
             var11 = var6;
+            var6 = var13;
+            var13 = var12;
          }
 
          var10.c(var9);
-         return new TapObscuredMediaLearnMoreData(var2, var7, var6, var5, var11, null);
+         return new TapObscuredMediaLearnMoreData(var2, var7, var13, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapObscuredMediaLearnMoreData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         TapObscuredMediaLearnMoreData.write$Self(var2, var4, var3);
+         TapObscuredMediaLearnMoreData.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -1,15 +1,17 @@
 package com.discord.chat.bridge
 
-import eh.l
-import eh.o
-import kotlin.jvm.internal.r
+import dn.f
+import fn.g
+import fn.e.i
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import uk.f
-import wk.g
-import wk.e.i
+import lj.l
+import lj.o
+import sj.a
 
 @f(with = MessageState.Serializer::class)
 public enum class MessageState(key: String) {
@@ -19,19 +21,33 @@ public enum class MessageState(key: String) {
    Unknown("UNKNOWN")
    public final val key: String
    @JvmStatic
-   private MessageState[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private MessageState[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public MessageState.Companion Companion = new MessageState.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<MessageState> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.key = var3;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun fromValue(key: String): MessageState {
-         r.h(var1, "key");
+         q.h(var1, "key");
          val var5: Array<MessageState> = MessageState.values();
          val var3: Int = var5.length;
          var var2: Int = 0;
@@ -43,7 +59,7 @@ public enum class MessageState(key: String) {
             }
 
             val var4: MessageState = var5[var2];
-            if (r.c(var5[var2].getKey(), var1)) {
+            if (q.c(var5[var2].getKey(), var1)) {
                var6 = var4;
                break;
             }
@@ -60,11 +76,11 @@ public enum class MessageState(key: String) {
       }
 
       public fun serializer(): KSerializer<MessageState> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<MessageState>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object Serializer : KSerializer<MessageState> {
+   public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
             return g.a("MessageState", i.a);
@@ -72,13 +88,13 @@ public enum class MessageState(key: String) {
 
 
       public open fun deserialize(decoder: Decoder): MessageState {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          return MessageState.Companion.fromValue(var1.z());
       }
 
       public open fun serialize(encoder: Encoder, value: MessageState) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          throw new UnsupportedOperationException();
       }
    }

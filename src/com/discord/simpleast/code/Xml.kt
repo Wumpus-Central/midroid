@@ -6,11 +6,11 @@ import com.discord.simpleast.core.node.StyleNode
 import com.discord.simpleast.core.parser.ParseSpec
 import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
-import eh.w
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern
@@ -22,15 +22,15 @@ public object Xml {
    @JvmStatic
    fun {
       var var0: Pattern = Pattern.compile("^<!--[\\s\\S]*?-->", 32);
-      r.g(var0, "Pattern.compile(\"\"\"^<!--…*?-->\"\"\", Pattern.DOTALL)");
+      q.g(var0, "Pattern.compile(\"\"\"^<!--…*?-->\"\"\", Pattern.DOTALL)");
       PATTERN_XML_COMMENT = var0;
       var0 = Pattern.compile("^<([\\s\\S]+?)(?:>(.*?)<\\/([\\s\\S]+?))?>", 32);
-      r.g(var0, "Pattern.compile(\n      \"…?))?>\"\"\", Pattern.DOTALL)");
+      q.g(var0, "Pattern.compile(\n      \"…?))?>\"\"\", Pattern.DOTALL)");
       PATTERN_XML_TAG = var0;
    }
 
    public fun <RC, S> createTagRule(codeStyleProviders: CodeStyleProviders<RC>): Rule<RC, Node<RC>, S> {
-      r.h(var1, "codeStyleProviders");
+      q.h(var1, "codeStyleProviders");
       return new Rule<RC, Node<RC>, S>(this, var1, PATTERN_XML_TAG) {
          final CodeStyleProviders $codeStyleProviders;
          final Xml this$0;
@@ -43,10 +43,10 @@ public object Xml {
 
          @Override
          public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
-            r.h(var1, "matcher");
-            r.h(var2, "parser");
+            q.h(var1, "matcher");
+            q.h(var2, "parser");
             val var6: java.lang.String = var1.group(1);
-            r.e(var6);
+            q.e(var6);
             val var4: java.lang.String = var1.group(3);
             val var5: ParseSpec;
             if (var1.group(2) != null) {
@@ -66,8 +66,8 @@ public object Xml {
       public final val opening: String
 
       init {
-         r.h(var1, "opening");
-         r.h(var3, "codeStyleProviders");
+         q.h(var1, "opening");
+         q.h(var3, "codeStyleProviders");
          super();
          this.opening = var1;
          this.closing = var2;
@@ -75,54 +75,54 @@ public object Xml {
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-         r.h(var1, "builder");
-         var var8: java.lang.String = this.opening;
-         val var7: Int = this.opening.length();
+         q.h(var1, "builder");
+         var var7: java.lang.String = this.opening;
+         val var6: Int = this.opening.length();
          var var4: Int = 0;
 
+         var var5: Int;
          while (true) {
-            if (var4 >= var7) {
-               var4 = -1;
+            if (var4 >= var6) {
+               var5 = -1;
                break;
             }
 
-            val var3: Char = var8.charAt(var4);
-            val var5: Boolean;
-            if (!a.c(var3) && var3 != '/') {
-               var5 = false;
-            } else {
-               var5 = true;
+            val var3: Char = var7.charAt(var4);
+            var5 = var4;
+            if (a.c(var3)) {
+               break;
             }
 
-            if (var5) {
+            if (var3 == '/') {
+               var5 = var4;
                break;
             }
 
             var4++;
          }
 
-         val var19: Pair;
-         if (var4 != -1) {
+         val var17: Pair;
+         if (var5 != -1) {
             if (this.opening == null) {
                throw new NullPointerException("null cannot be cast to non-null type java.lang.String");
             }
 
-            var8 = this.opening.substring(0, var4);
-            r.g(var8, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+            var7 = this.opening.substring(0, var5);
+            q.g(var7, "(this as java.lang.Strin…ing(startIndex, endIndex)");
             if (this.opening == null) {
                throw new NullPointerException("null cannot be cast to non-null type java.lang.String");
             }
 
-            val var21: java.lang.String = this.opening.substring(var4);
-            r.g(var21, "(this as java.lang.String).substring(startIndex)");
-            var19 = w.a(var8, var21);
+            val var19: java.lang.String = this.opening.substring(var5);
+            q.g(var19, "(this as java.lang.String).substring(startIndex)");
+            var17 = w.a(var7, var19);
          } else {
-            var19 = w.a(this.opening, "");
+            var17 = w.a(this.opening, "");
          }
 
-         val var10: java.lang.String = var19.a() as java.lang.String;
-         val var22: java.lang.String = var19.b() as java.lang.String;
-         val var20: Function1 = new Function1<RC, java.lang.Iterable<?>>(this.codeStyleProviders.getGenericsStyleProvider()) {
+         val var9: java.lang.String = var17.a() as java.lang.String;
+         val var20: java.lang.String = var17.b() as java.lang.String;
+         val var18: Function1 = new Function1(this.codeStyleProviders.getGenericsStyleProvider()) {
             {
                super(1, var1, StyleNode.SpanProvider::class.java, "get", "get(Ljava/lang/Object;)Ljava/lang/Iterable;", 0);
             }
@@ -132,53 +132,42 @@ public object Xml {
             }
          };
          var4 = var1.length();
-         val var11: StringBuilder = new StringBuilder();
-         var11.append('<');
-         var11.append(var10);
-         var1.append(var11.toString());
-         val var27: java.util.Iterator = (var20.invoke(var2) as java.lang.Iterable).iterator();
+         val var10: StringBuilder = new StringBuilder();
+         var10.append('<');
+         var10.append(var9);
+         var1.append(var10.toString());
+         val var25: java.util.Iterator = (var18.invoke(var2) as java.lang.Iterable).iterator();
 
-         while (var27.hasNext()) {
-            var1.setSpan(var27.next(), var4, var1.length(), 33);
+         while (var25.hasNext()) {
+            var1.setSpan(var25.next(), var4, var1.length(), 33);
          }
 
          var4 = var1.length();
-         val var28: StringBuilder = new StringBuilder();
-         var28.append(var22);
-         var28.append('>');
-         var1.append(var28.toString());
-         val var23: java.util.Iterator = this.codeStyleProviders.getParamsStyleProvider().get((RC)var2).iterator();
+         val var26: StringBuilder = new StringBuilder();
+         var26.append(var20);
+         var26.append('>');
+         var1.append(var26.toString());
+         val var21: java.util.Iterator = this.codeStyleProviders.getParamsStyleProvider().get((RC)var2).iterator();
 
-         while (var23.hasNext()) {
-            var1.setSpan(var23.next(), var4, var1.length() - 1, 33);
+         while (var21.hasNext()) {
+            var1.setSpan(var21.next(), var4, var1.length() - 1, 33);
          }
 
-         val var24: java.util.Iterator = (var20.invoke(var2) as java.lang.Iterable).iterator();
+         val var22: java.util.Iterator = (var18.invoke(var2) as java.lang.Iterable).iterator();
 
-         while (var24.hasNext()) {
-            var1.setSpan(var24.next(), var1.length() - 1, var1.length(), 33);
+         while (var22.hasNext()) {
+            var1.setSpan(var22.next(), var1.length() - 1, var1.length(), 33);
          }
 
-         label55: {
-            super.render(var1, var2);
-            if (this.closing != null) {
-               var15 = false;
-               if (this.closing.length() != 0) {
-                  break label55;
-               }
-            }
-
-            var15 = true;
-         }
-
-         if (!var15) {
+         super.render(var1, var2);
+         if (this.closing != null && this.closing.length() != 0) {
             var4 = var1.length();
-            val var26: StringBuilder = new StringBuilder();
-            var26.append("</");
-            var26.append(this.closing);
-            var26.append('>');
-            var1.append(var26.toString());
-            var2 = (var20.invoke(var2) as java.lang.Iterable).iterator();
+            val var24: StringBuilder = new StringBuilder();
+            var24.append("</");
+            var24.append(this.closing);
+            var24.append('>');
+            var1.append(var24.toString());
+            var2 = (var18.invoke(var2) as java.lang.Iterable).iterator();
 
             while (var2.hasNext()) {
                var1.setSpan(var2.next(), var4 + 1, var1.length(), 33);

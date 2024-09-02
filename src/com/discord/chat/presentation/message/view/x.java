@@ -11,6 +11,6 @@ public final class x implements OnClickListener {
    public final EphemeralIndication k;
 
    public final void onClick(View var1) {
-      EphemeralIndicationView.b(this.j, this.k, var1);
+      EphemeralIndicationView.g(this.j, this.k, var1);
    }
 }

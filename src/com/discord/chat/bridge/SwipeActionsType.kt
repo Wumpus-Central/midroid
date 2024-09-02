@@ -2,11 +2,13 @@ package com.discord.chat.bridge
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import eh.l
-import eh.o
-import kotlin.jvm.internal.h0
+import dn.f
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.g0
 import kotlinx.serialization.KSerializer
-import uk.f
+import lj.l
+import lj.o
+import sj.a
 
 @f(with = SwipeActionsType.Serializer::class)
 public enum class SwipeActionsType(serialNumber: Int) : IntEnum {
@@ -15,21 +17,35 @@ public enum class SwipeActionsType(serialNumber: Int) : IntEnum {
    REPLY_EDIT(2)
    public open val serialNumber: Int
    @JvmStatic
-   private SwipeActionsType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private SwipeActionsType[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public SwipeActionsType.Companion Companion = new SwipeActionsType.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<SwipeActionsType> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.serialNumber = var3;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<SwipeActionsType> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<SwipeActionsType>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object Serializer : IntEnumSerializer(h0.b(SwipeActionsType.class), null, 2)
+   public object Serializer : IntEnumSerializer(g0.b(SwipeActionsType.class), null, 2)
 }

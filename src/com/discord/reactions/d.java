@@ -10,6 +10,6 @@ public final class d implements OnLongClickListener {
    public final ReactionView.Reaction k;
 
    public final boolean onLongClick(View var1) {
-      return ReactionViewHolder.a(this.j, this.k, var1);
+      return ReactionViewHolder.b(this.j, this.k, var1);
    }
 }

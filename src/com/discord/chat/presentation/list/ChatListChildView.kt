@@ -23,15 +23,8 @@ public interface ChatListChildView {
    internal class DefaultImpls {
       @JvmStatic
       fun onMeasureConsiderFrozen(var0: ChatListChildView, var1: Int, var2: Int) {
-         val var4: ViewParent = var0.getParent();
-         val var3: Boolean;
-         if (var4 is ChatListView && MeasureSpec.getMode(var1) == 1073741824 && (var4 as ChatListView).getMeasuredWidth() == 0) {
-            var3 = true;
-         } else {
-            var3 = false;
-         }
-
-         if (var3) {
+         val var3: ViewParent = var0.getParent();
+         if (var3 is ChatListView && MeasureSpec.getMode(var1) == 1073741824 && (var3 as ChatListView).getMeasuredWidth() == 0) {
             var0.superOnMeasure(
                MeasureSpec.makeMeasureSpec(var0.getMeasuredWidth(), 1073741824), MeasureSpec.makeMeasureSpec(var0.getMeasuredHeight(), 1073741824)
             );

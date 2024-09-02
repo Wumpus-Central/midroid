@@ -1,7 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.o1
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -10,12 +16,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.n1
-import xk.f0.a
 
 @f
 public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, var2) {
@@ -24,7 +24,7 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
 
    fun ActorHook(var1: Int, var2: java.lang.String, var3: UserId, var4: SerializationConstructorMarker) {
       if (3 != (var1 and 3)) {
-         n1.b(var1, 3, ActorHook.$serializer.INSTANCE.getDescriptor());
+         o1.b(var1, 3, ActorHook.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -33,18 +33,10 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
    }
 
    fun ActorHook(var1: java.lang.String, var2: Long) {
+      q.h(var1, "action");
       super();
       this.action = var1;
       this.userId = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ActorHook, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.action);
-      var1.y(var2, 1, com.discord.primitives.UserId..serializer.INSTANCE, UserId.box-impl(var0.userId));
    }
 
    public operator fun component1(): String {
@@ -56,7 +48,7 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
    }
 
    public fun copy(action: String = ..., userId: UserId = ...): ActorHook {
-      r.h(var1, "action");
+      q.h(var1, "action");
       return new ActorHook(var1, var2, null);
    }
 
@@ -67,7 +59,7 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.action, var1.action)) {
+         if (!q.c(this.action, var1.action)) {
             return false;
          } else {
             return UserId.equals-impl0(this.userId, var1.userId);
@@ -91,7 +83,7 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
       return var2.toString();
    }
 
-   public object `$serializer` : f0<ActorHook> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -109,20 +101,20 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, com.discord.primitives.UserId..serializer.INSTANCE};
+         return new KSerializer[]{b2.a, UserId.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): ActorHook {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          val var5: Boolean = var8.p();
          var var6: java.lang.String = null;
          var var2: Int;
-         var var9: Any;
+         var var9: UserId;
          if (var5) {
             var6 = var8.m(var7, 0);
-            var9 = var8.y(var7, 1, com.discord.primitives.UserId..serializer.INSTANCE, null);
+            var9 = var8.y(var7, 1, UserId.$serializer.INSTANCE, null) as UserId;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -137,7 +129,7 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
                         throw new n(var4);
                      }
 
-                     var9 = var8.y(var7, 1, com.discord.primitives.UserId..serializer.INSTANCE, var9);
+                     var9 = var8.y(var7, 1, UserId.$serializer.INSTANCE, var9) as UserId;
                      var2 |= 2;
                   } else {
                      var6 = var8.m(var7, 0);
@@ -150,19 +142,19 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
          }
 
          var8.c(var7);
-         return new ActorHook(var2, var6, var9 as UserId, null, null);
+         return new ActorHook(var2, var6, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActorHook) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ActorHook.write$Self(var2, var4, var3);
+         ActorHook.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.ctabutton
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -9,12 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.m0
 
 @f
 public data class CtaButton(text: String, textColor: Int? = null, backgroundColor: Int? = null, callback: String? = null) {
@@ -24,55 +24,12 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    public final val textColor: Int?
 
    init {
-      r.h(var1, "text");
+      q.h(var1, "text");
       super();
       this.text = var1;
       this.textColor = var2;
       this.backgroundColor = var3;
       this.callback = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: CtaButton, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.text);
-      var var3: Boolean;
-      if (!var1.A(var2, 1) && var0.textColor == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, m0.a, var0.textColor);
-      }
-
-      if (!var1.A(var2, 2) && var0.backgroundColor == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 2, m0.a, var0.backgroundColor);
-      }
-
-      label32: {
-         if (!var1.A(var2, 3)) {
-            var3 = false;
-            if (var0.callback == null) {
-               break label32;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 3, a2.a, var0.callback);
-      }
    }
 
    public operator fun component1(): String {
@@ -92,7 +49,7 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public fun copy(text: String = var0.text, textColor: Int? = var0.textColor, backgroundColor: Int? = var0.backgroundColor, callback: String? = var0.callback): CtaButton {
-      r.h(var1, "text");
+      q.h(var1, "text");
       return new CtaButton(var1, var2, var3, var4);
    }
 
@@ -103,14 +60,14 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.text, var1.text)) {
+         if (!q.c(this.text, var1.text)) {
             return false;
-         } else if (!r.c(this.textColor, var1.textColor)) {
+         } else if (!q.c(this.textColor, var1.textColor)) {
             return false;
-         } else if (!r.c(this.backgroundColor, var1.backgroundColor)) {
+         } else if (!q.c(this.backgroundColor, var1.backgroundColor)) {
             return false;
          } else {
-            return r.c(this.callback, var1.callback);
+            return q.c(this.callback, var1.callback);
          }
       }
    }
@@ -140,24 +97,24 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var3: Int = this.textColor;
-      val var4: Int = this.backgroundColor;
-      val var1: java.lang.String = this.callback;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("CtaButton(text=");
-      var5.append(var2);
-      var5.append(", textColor=");
-      var5.append(var3);
-      var5.append(", backgroundColor=");
-      var5.append(var4);
-      var5.append(", callback=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.text;
+      val var2: Int = this.textColor;
+      val var1: Int = this.backgroundColor;
+      val var5: java.lang.String = this.callback;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CtaButton(text=");
+      var3.append(var4);
+      var3.append(", textColor=");
+      var3.append(var2);
+      var3.append(", backgroundColor=");
+      var3.append(var1);
+      var3.append(", callback=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : f0<CtaButton> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -177,27 +134,27 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: a2 = a2.a;
-         val var1: m0 = m0.a;
-         return new KSerializer[]{a2.a, a.u(m0.a), a.u(var1), a.u(var2)};
+         val var2: b2 = b2.a;
+         val var1: n0 = n0.a;
+         return new KSerializer[]{b2.a, a.u(n0.a), a.u(var1), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): CtaButton {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
          val var5: Boolean = var10.p();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
-         var var7: Any;
+         var var6: Int;
+         var var7: Int;
          var var12: Any;
          if (var5) {
             var8 = var10.m(var9, 0);
-            var12 = m0.a;
-            var7 = var10.n(var9, 1, m0.a, null);
-            var6 = var10.n(var9, 2, (DeserializationStrategy)var12, null);
-            var12 = var10.n(var9, 3, a2.a, null);
+            var12 = n0.a;
+            var7 = var10.n(var9, 1, n0.a, null) as Int;
+            var6 = var10.n(var9, 2, (DeserializationStrategy)var12, null) as Int;
+            var12 = var10.n(var9, 3, b2.a, null) as java.lang.String;
             var2 = 15;
          } else {
             var var3: Boolean = true;
@@ -216,14 +173,14 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
                               throw new n(var4);
                            }
 
-                           var12 = var10.n(var9, 3, a2.a, var12);
+                           var12 = var10.n(var9, 3, b2.a, var12) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var6 = var10.n(var9, 2, m0.a, var6);
+                           var6 = var10.n(var9, 2, n0.a, var6) as Int;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.n(var9, 1, m0.a, var7);
+                        var7 = var10.n(var9, 1, n0.a, var7) as Int;
                         var2 |= 2;
                      }
                   } else {
@@ -237,20 +194,20 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
          }
 
          var10.c(var9);
-         return new CtaButton(var2, var8, var7 as Int, var6 as Int, var12 as java.lang.String, null);
+         return new CtaButton(var2, var8, var7, var6, (java.lang.String)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CtaButton) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         CtaButton.write$Self(var2, var4, var3);
+         CtaButton.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

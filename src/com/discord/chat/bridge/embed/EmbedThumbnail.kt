@@ -1,7 +1,13 @@
 package com.discord.chat.bridge.embed
 
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.h
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,13 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.h
-import xk.m0
 
 @f
 public data class EmbedThumbnail(url: String,
@@ -41,7 +40,7 @@ public data class EmbedThumbnail(url: String,
    public final val width: Int
 
    init {
-      r.h(var1, "url");
+      q.h(var1, "url");
       super();
       this.url = var1;
       this.proxyURL = var2;
@@ -57,97 +56,6 @@ public data class EmbedThumbnail(url: String,
       }
 
       this.embedUrl = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: EmbedThumbnail, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.url);
-      var var3: Boolean;
-      if (!var1.A(var2, 1) && var0.proxyURL == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, a2.a, var0.proxyURL);
-      }
-
-      if (!var1.A(var2, 2) && var0.videoUrl == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 2, a2.a, var0.videoUrl);
-      }
-
-      var1.w(var2, 3, var0.height);
-      var1.w(var2, 4, var0.width);
-      if (!var1.A(var2, 5) && var0.gifv == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 5, h.a, var0.gifv);
-      }
-
-      if (!var1.A(var2, 6) && var0.showPlayButton == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 6, h.a, var0.showPlayButton);
-      }
-
-      if (!var1.A(var2, 7) && var0.placeholder == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 7, a2.a, var0.placeholder);
-      }
-
-      if (!var1.A(var2, 8) && var0.placeholderVersion == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 8, m0.a, var0.placeholderVersion);
-      }
-
-      label68: {
-         if (!var1.A(var2, 9)) {
-            val var7: java.lang.String = var0.getEmbedUrl();
-            var var14: java.lang.String = var0.proxyURL;
-            if (var0.proxyURL == null) {
-               var14 = var0.url;
-            }
-
-            var3 = false;
-            if (r.c(var7, var14)) {
-               break label68;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.z(var2, 9, var0.getEmbedUrl());
-      }
    }
 
    public operator fun component1(): String {
@@ -197,7 +105,7 @@ public data class EmbedThumbnail(url: String,
       placeholder: String? = var0.placeholder,
       placeholderVersion: Int? = var0.placeholderVersion
    ): EmbedThumbnail {
-      r.h(var1, "url");
+      q.h(var1, "url");
       return new EmbedThumbnail(var1, var2, var3, var4, var5, var6, var7, var8, var9);
    }
 
@@ -208,24 +116,24 @@ public data class EmbedThumbnail(url: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.url, var1.url)) {
+         if (!q.c(this.url, var1.url)) {
             return false;
-         } else if (!r.c(this.proxyURL, var1.proxyURL)) {
+         } else if (!q.c(this.proxyURL, var1.proxyURL)) {
             return false;
-         } else if (!r.c(this.videoUrl, var1.videoUrl)) {
+         } else if (!q.c(this.videoUrl, var1.videoUrl)) {
             return false;
          } else if (this.height != var1.height) {
             return false;
          } else if (this.width != var1.width) {
             return false;
-         } else if (!r.c(this.gifv, var1.gifv)) {
+         } else if (!q.c(this.gifv, var1.gifv)) {
             return false;
-         } else if (!r.c(this.showPlayButton, var1.showPlayButton)) {
+         } else if (!q.c(this.showPlayButton, var1.showPlayButton)) {
             return false;
-         } else if (!r.c(this.placeholder, var1.placeholder)) {
+         } else if (!q.c(this.placeholder, var1.placeholder)) {
             return false;
          } else {
-            return r.c(this.placeholderVersion, var1.placeholderVersion);
+            return q.c(this.placeholderVersion, var1.placeholderVersion);
          }
       }
    }
@@ -278,39 +186,39 @@ public data class EmbedThumbnail(url: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.url;
+      val var9: java.lang.String = this.url;
       val var4: java.lang.String = this.proxyURL;
       val var3: java.lang.String = this.videoUrl;
-      val var1: Int = this.height;
-      val var2: Int = this.width;
-      val var7: java.lang.Boolean = this.gifv;
-      val var6: java.lang.Boolean = this.showPlayButton;
-      val var9: java.lang.String = this.placeholder;
-      val var5: Int = this.placeholderVersion;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("EmbedThumbnail(url=");
-      var10.append(var8);
-      var10.append(", proxyURL=");
-      var10.append(var4);
-      var10.append(", videoUrl=");
-      var10.append(var3);
-      var10.append(", height=");
-      var10.append(var1);
-      var10.append(", width=");
-      var10.append(var2);
-      var10.append(", gifv=");
-      var10.append(var7);
-      var10.append(", showPlayButton=");
-      var10.append(var6);
-      var10.append(", placeholder=");
-      var10.append(var9);
-      var10.append(", placeholderVersion=");
-      var10.append(var5);
-      var10.append(")");
-      return var10.toString();
+      val var2: Int = this.height;
+      val var1: Int = this.width;
+      val var10: java.lang.Boolean = this.gifv;
+      val var7: java.lang.Boolean = this.showPlayButton;
+      val var5: java.lang.String = this.placeholder;
+      val var8: Int = this.placeholderVersion;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("EmbedThumbnail(url=");
+      var6.append(var9);
+      var6.append(", proxyURL=");
+      var6.append(var4);
+      var6.append(", videoUrl=");
+      var6.append(var3);
+      var6.append(", height=");
+      var6.append(var2);
+      var6.append(", width=");
+      var6.append(var1);
+      var6.append(", gifv=");
+      var6.append(var10);
+      var6.append(", showPlayButton=");
+      var6.append(var7);
+      var6.append(", placeholder=");
+      var6.append(var5);
+      var6.append(", placeholderVersion=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
-   public object `$serializer` : f0<EmbedThumbnail> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -336,153 +244,167 @@ public data class EmbedThumbnail(url: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var4: a2 = a2.a;
-         val var1: KSerializer = a.u(a2.a);
-         val var2: KSerializer = a.u(var4);
-         val var5: m0 = m0.a;
-         val var3: h = h.a;
-         return new KSerializer[]{var4, var1, var2, m0.a, m0.a, a.u(h.a), a.u(var3), a.u(var4), a.u(var5), var4};
+         val var1: b2 = b2.a;
+         val var2: KSerializer = a.u(b2.a);
+         val var3: KSerializer = a.u(var1);
+         val var4: n0 = n0.a;
+         val var5: h = h.a;
+         return new KSerializer[]{var1, var2, var3, n0.a, n0.a, a.u(h.a), a.u(var5), a.u(var1), a.u(var4), var1};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedThumbnail {
-         r.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         val var9: Boolean = var19.p();
+         q.h(var1, "decoder");
+         val var21: SerialDescriptor = this.getDescriptor();
+         val var22: c = var1.b(var21);
+         val var9: Boolean = var22.p();
          var var6: Byte = 9;
          var var7: Byte = 7;
-         var var2: Int;
          var var3: Int;
          var var4: Int;
-         var var10: Any;
-         var var11: Any;
-         var var12: Any;
+         val var5: Int;
          var var15: Any;
          var var16: Any;
-         var var20: Any;
-         var var24: Any;
-         var var25: Any;
+         val var17: Int;
+         val var18: java.lang.Boolean;
+         val var19: Any;
+         val var20: Any;
+         var var33: java.lang.Boolean;
+         var var35: Any;
          if (var9) {
-            var11 = var19.m(var18, 0);
-            var24 = a2.a;
-            var20 = var19.n(var18, 1, a2.a, null);
-            var10 = var19.n(var18, 2, (DeserializationStrategy)var24, null);
-            var4 = var19.i(var18, 3);
-            var3 = var19.i(var18, 4);
-            var25 = h.a;
-            var12 = var19.n(var18, 5, h.a, null);
-            var15 = var19.n(var18, 6, (DeserializationStrategy)var25, null);
-            var25 = var19.n(var18, 7, (DeserializationStrategy)var24, null);
-            var16 = var19.n(var18, 8, m0.a, null);
-            var24 = var19.m(var18, 9);
-            var2 = 1023;
+            val var13: java.lang.String = var22.m(var21, 0);
+            val var23: b2 = b2.a;
+            var15 = var22.n(var21, 1, b2.a, null) as java.lang.String;
+            var20 = var22.n(var21, 2, var23, null) as java.lang.String;
+            val var2: Int = var22.i(var21, 3);
+            var3 = var22.i(var21, 4);
+            val var10: h = h.a;
+            var35 = var22.n(var21, 5, h.a, null) as java.lang.Boolean;
+            val var11: java.lang.Boolean = var22.n(var21, 6, var10, null) as java.lang.Boolean;
+            val var29: java.lang.String = var22.n(var21, 7, var23, null) as java.lang.String;
+            val var12: Int = var22.n(var21, 8, n0.a, null) as Int;
+            val var24: java.lang.String = var22.m(var21, 9);
+            var4 = 1023;
+            var19 = var13;
+            var5 = var2;
+            var33 = (java.lang.Boolean)var35;
+            var18 = var11;
+            var16 = var29;
+            var17 = var12;
+            var35 = var24;
          } else {
-            var var5: Boolean = true;
+            var var28: Boolean = true;
             var4 = 0;
-            var2 = 0;
+            var var26: Int = 0;
             var16 = null;
             var15 = null;
-            var25 = null;
-            var12 = null;
-            var11 = null;
-            var20 = null;
-            var24 = null;
-            var10 = null;
+            var35 = null;
+            var var31: java.lang.Boolean = null;
+            var var32: Any = null;
+            var var25: Any = null;
+            var33 = null;
+            var var30: Any = null;
             var3 = 0;
 
-            while (var5) {
+            while (var28) {
                label39: {
-                  val var8: Int = var19.o(var18);
+                  val var8: Int = var22.o(var21);
                   switch (var8) {
                      case -1:
-                        var5 = false;
-                        break;
+                        var28 = false;
+                        break label39;
                      case 0:
-                        var20 = var19.m(var18, 0);
-                        var2 |= 1;
-                        break label39;
+                        var25 = var22.m(var21, 0);
+                        var26 |= 1;
+                        break;
                      case 1:
-                        var10 = var19.n(var18, 1, a2.a, var10);
-                        var2 |= 2;
-                        break label39;
+                        var30 = var22.n(var21, 1, b2.a, var30) as java.lang.String;
+                        var26 |= 2;
+                        break;
                      case 2:
-                        var11 = var19.n(var18, 2, a2.a, var11);
-                        var2 |= 4;
-                        break label39;
+                        var32 = var22.n(var21, 2, b2.a, var32) as java.lang.String;
+                        var26 |= 4;
+                        break;
                      case 3:
-                        var4 = var19.i(var18, 3);
-                        var2 |= 8;
-                        break;
+                        var4 = var22.i(var21, 3);
+                        var26 |= 8;
+                        break label39;
                      case 4:
-                        var3 = var19.i(var18, 4);
-                        var2 |= 16;
-                        break;
+                        var3 = var22.i(var21, 4);
+                        var26 |= 16;
+                        break label39;
                      case 5:
-                        var12 = var19.n(var18, 5, h.a, var12);
-                        var2 |= 32;
-                        break;
+                        var31 = var22.n(var21, 5, h.a, var31) as java.lang.Boolean;
+                        var26 |= 32;
+                        break label39;
                      case 6:
-                        var15 = var19.n(var18, 6, h.a, var15);
-                        var2 |= 64;
+                        var15 = var22.n(var21, 6, h.a, var15) as java.lang.Boolean;
+                        var26 |= 64;
                         var6 = 9;
                         continue;
                      case 7:
-                        var25 = var19.n(var18, var7, a2.a, var25);
-                        var2 |= 128;
+                        var35 = var22.n(var21, var7, b2.a, var35) as java.lang.String;
+                        var26 |= 128;
                         continue;
                      case 8:
-                        var16 = var19.n(var18, 8, m0.a, var16);
-                        var2 |= 256;
+                        var16 = var22.n(var21, 8, n0.a, var16) as Int;
+                        var26 |= 256;
                         continue;
                      case 9:
-                        var24 = var19.m(var18, var6);
-                        var2 |= 512;
+                        var33 = var22.m(var21, var6);
+                        var26 |= 512;
                         continue;
                      default:
                         throw new n(var8);
                   }
 
                   var6 = 9;
+                  var7 = 7;
                   continue;
                }
 
                var6 = 9;
-               var7 = 7;
             }
 
-            var20 = var10;
-            var10 = var11;
-            var11 = var20;
+            var35 = var33;
+            var17 = (Integer)var16;
+            var16 = var35;
+            var18 = (java.lang.Boolean)var15;
+            var33 = var31;
+            var5 = var4;
+            var20 = var32;
+            var15 = var30;
+            var19 = var25;
+            var4 = var26;
          }
 
-         var19.c(var18);
+         var22.c(var21);
          return new EmbedThumbnail(
-            var2,
-            (java.lang.String)var11,
-            var20 as java.lang.String,
-            var10 as java.lang.String,
             var4,
+            (java.lang.String)var19,
+            (java.lang.String)var15,
+            (java.lang.String)var20,
+            var5,
             var3,
-            var12 as java.lang.Boolean,
-            var15 as java.lang.Boolean,
-            var25 as java.lang.String,
-            var16 as Int,
-            (java.lang.String)var24,
+            var33,
+            var18,
+            (java.lang.String)var16,
+            var17,
+            (java.lang.String)var35,
             null
          );
       }
 
       public open fun serialize(encoder: Encoder, value: EmbedThumbnail) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         EmbedThumbnail.write$Self(var2, var4, var3);
+         EmbedThumbnail.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

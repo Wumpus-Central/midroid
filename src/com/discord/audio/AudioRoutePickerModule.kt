@@ -4,11 +4,11 @@ import com.discord.logging.Log
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class AudioRoutePickerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -18,11 +18,11 @@ public class AudioRoutePickerModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun handleAudioRoute(isSpeaker: Boolean) {
-      val var2: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("handleAudioRoute ");
-      var3.append(var1);
-      Log.i$default(var2, "AudioRoutePickerModule", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("handleAudioRoute ");
+      var2.append(var1);
+      Log.i$default(var3, "AudioRoutePickerModule", var2.toString(), null, 4, null);
    }
 
    @ReactMethod
@@ -37,11 +37,11 @@ public class AudioRoutePickerModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun toggleSpeaker(isSpeaker: Boolean) {
-      val var2: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("toggleSpeaker ");
-      var3.append(var1);
-      Log.i$default(var2, "AudioRoutePickerModule", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("toggleSpeaker ");
+      var2.append(var1);
+      Log.i$default(var3, "AudioRoutePickerModule", var2.toString(), null, 4, null);
    }
 
    public companion object {

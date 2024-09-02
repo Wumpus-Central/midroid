@@ -15,8 +15,8 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
-import eh.p
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.p
 
 public fun MessageBase.toChatListMessageItem(
    messageFrame: MessageFrame? = null,
@@ -27,8 +27,8 @@ public fun MessageBase.toChatListMessageItem(
    reactTag: Int? = null,
    backgroundHighlight: BackgroundHighlight? = null
 ): ChatListItem {
-   r.h(var0, "<this>");
-   r.h(var2, "messageContext");
+   q.h(var0, "<this>");
+   q.h(var2, "messageContext");
    val var9: Any;
    if (var0 is Message) {
       val var8: Message = var0 as Message;
@@ -55,7 +55,7 @@ public fun MessageBase.toChatListMessageItem(
 }
 
 public fun MessageRow.toChatListMessageItem(): ChatListItem {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var3: MessageBase = var0.getMessage();
    val var4: MessageFrame = var0.getMessageFrame();
    val var2: MessageFrame = var0.getMessageFrame();

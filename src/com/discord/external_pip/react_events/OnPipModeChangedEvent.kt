@@ -3,7 +3,12 @@ package com.discord.external_pip.react_events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.h
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,10 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.h
 
 @f
 internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
@@ -23,14 +24,6 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
    init {
       super();
       this.isInPipMode = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnPipModeChangedEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.x(var2, 0, var0.isInPipMode);
    }
 
    public operator fun component1(): Boolean {
@@ -52,12 +45,7 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
    }
 
    public override fun hashCode(): Int {
-      var var1: Byte = this.isInPipMode;
-      if (this.isInPipMode != 0) {
-         var1 = 1;
-      }
-
-      return var1;
+      return java.lang.Boolean.hashCode(this.isInPipMode);
    }
 
    fun serialize(): WritableMap {
@@ -73,7 +61,7 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<OnPipModeChangedEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -89,12 +77,12 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{h.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnPipModeChangedEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var5: Boolean = var7.p();
@@ -126,16 +114,16 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
       }
 
       public open fun serialize(encoder: Encoder, value: OnPipModeChangedEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         OnPipModeChangedEvent.write$Self(var2, var4, var3);
+         OnPipModeChangedEvent.write$Self$external_pip_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

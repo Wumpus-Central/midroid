@@ -6,7 +6,7 @@ import android.graphics.RectF
 import android.graphics.Paint.Style
 import android.text.Spanned
 import android.text.style.LineBackgroundSpan
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class BlockBackgroundSpan(fillColor: Int, strokeColor: Int, strokeWidth: Int, strokeRadius: Int, insetStart: Int, insetTop: Int, insetBottom: Int) :
    LineBackgroundSpan {
@@ -49,18 +49,18 @@ public class BlockBackgroundSpan(fillColor: Int, strokeColor: Int, strokeWidth: 
       end: Int,
       lnum: Int
    ) {
-      r.h(var1, "canvas");
-      r.h(var2, "paint");
-      r.h(var8, "text");
+      q.h(var1, "canvas");
+      q.h(var2, "paint");
+      q.h(var8, "text");
       if (var8 is Spanned) {
-         val var16: Spanned = var8 as Spanned;
+         val var13: Spanned = var8 as Spanned;
          if ((var8 as Spanned).getSpanStart(this) == var9) {
-            val var13: RectF = this.rect;
+            val var16: RectF = this.rect;
             this.rect.left = (float)var3 + this.insetStart;
-            var13.top = (float)var5 + this.insetTop;
+            var16.top = (float)var5 + this.insetTop;
          }
 
-         if (var16.getSpanEnd(this) == var10) {
+         if (var13.getSpanEnd(this) == var10) {
             val var14: RectF = this.rect;
             this.rect.right = var4;
             var14.bottom = (float)var7 - this.insetBottom;

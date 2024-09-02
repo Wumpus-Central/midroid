@@ -14,30 +14,28 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import kk.f
-import kk.n0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
-import l4.c
+import kotlin.jvm.internal.q
+import tm.g
+import tm.j0
+import w5.c
 
 public class LocalImageThumbnailView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final var imageView: ImageView
    private final var simpleDraweeView: SimpleDraweeView
 
    fun LocalImageThumbnailView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun LocalImageThumbnailView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
       val var5: ImageView = new ImageView(var1);
       this.addToParent(var5);
@@ -45,7 +43,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
       this.imageView = var5;
       val var4: SimpleDraweeView = new SimpleDraweeView(var1);
       this.addToParent(var4);
-      (var4.getHierarchy() as GenericDraweeHierarchy).t(com.facebook.drawee.drawable.ScalingUtils.ScaleType.i);
+      (var4.getHierarchy() as GenericDraweeHierarchy).u(com.facebook.drawee.drawable.ScalingUtils.ScaleType.i);
       this.simpleDraweeView = var4;
    }
 
@@ -56,7 +54,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
 
    private fun SimpleDraweeView.loadDefaultBitmap(uri: Uri) {
       var1.setController(
-         (c.g().D(ImageRequestBuilder.s(var2).E(ResizeOptions.a(var1.getWidth(), var1.getHeight())).a()) as PipelineDraweeControllerBuilder).c()
+         (c.g().F(ImageRequestBuilder.w(var2).L(ResizeOptions.e.a(var1.getWidth(), var1.getHeight())).a()) as PipelineDraweeControllerBuilder).d()
       );
    }
 
@@ -69,30 +67,28 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
       }
 
       this.simpleDraweeView.setVisibility(var2);
+      var2 = 8;
       if (var1 xor true) {
          var2 = 0;
-      } else {
-         var2 = 8;
       }
 
       this.imageView.setVisibility(var2);
    }
 
    public fun setLocalImageSource(uri: Uri, widthDp: Int, heightDp: Int) {
-      r.h(var1, "uri");
-      f.d(
+      q.h(var1, "uri");
+      g.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
-         n0.b(),
+         j0.b(),
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, var3, this, var1, null)// $VF: Couldn't be decompiled
+         new Function2(var2, var3, this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1111,6 +1107,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null

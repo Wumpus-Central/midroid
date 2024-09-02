@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.progress_dots.ProgressDot;
 import com.discord.progress_dots.R;
-import n1.a;
+import v2.a;
 
 public final class ProgressDotsViewBinding implements ViewBinding {
    private final View rootView;
@@ -48,6 +48,7 @@ public final class ProgressDotsViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

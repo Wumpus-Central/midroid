@@ -5,7 +5,7 @@ import android.graphics.Paint
 import android.text.Layout
 import android.text.Spanned
 import android.text.style.LeadingMarginSpan
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class OrderedListBulletSpan(listItemIndex: Long, trailingMargin: Int, largestListItemIndex: Long, paint: Paint) : LeadingMarginSpan {
    private final val largestBulletContentWidth: Float
@@ -13,7 +13,7 @@ public class OrderedListBulletSpan(listItemIndex: Long, trailingMargin: Int, lar
    private final val trailingMargin: Int
 
    init {
-      r.h(var6, "paint");
+      q.h(var6, "paint");
       super();
       this.listItemIndex = var1;
       this.trailingMargin = var3;
@@ -43,27 +43,20 @@ public class OrderedListBulletSpan(listItemIndex: Long, trailingMargin: Int, lar
       first: Boolean,
       layout: Layout
    ) {
-      r.h(var1, "canvas");
-      r.h(var2, "paint");
-      r.h(var8, "text");
-      r.h(var12, "layout");
-      val var17: Boolean;
+      q.h(var1, "canvas");
+      q.h(var2, "paint");
+      q.h(var8, "text");
+      q.h(var12, "layout");
       if ((var8 as Spanned).getSpanStart(this) == var9) {
-         var17 = true;
-      } else {
-         var17 = false;
-      }
-
-      if (var17) {
-         val var18: java.lang.String = var2.getFontFeatureSettings();
+         val var17: java.lang.String = var2.getFontFeatureSettings();
          var2.setFontFeatureSettings("tnum");
          val var15: Long = this.listItemIndex;
-         val var19: StringBuilder = new StringBuilder();
-         var19.append(var15);
-         var19.append(".");
-         val var20: java.lang.String = var19.toString();
-         var1.drawText(var20, (float)var3 + (this.largestBulletContentWidth - this.calculateBulletContentWidth(var2, var20)), (float)var6, var2);
-         var2.setFontFeatureSettings(var18);
+         val var18: StringBuilder = new StringBuilder();
+         var18.append(var15);
+         var18.append(".");
+         val var19: java.lang.String = var18.toString();
+         var1.drawText(var19, (float)var3 + (this.largestBulletContentWidth - this.calculateBulletContentWidth(var2, var19)), (float)var6, var2);
+         var2.setFontFeatureSettings(var17);
       }
    }
 

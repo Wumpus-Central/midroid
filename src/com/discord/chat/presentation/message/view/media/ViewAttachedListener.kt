@@ -3,10 +3,10 @@ package com.discord.chat.presentation.message.view.media
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import eh.l
-import jb.g
+import ed.f
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.l
 
 public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, viewScrolling: (Boolean) -> Unit = <unrepresentable>.INSTANCE) :
    OnAttachStateChangeListener {
@@ -23,16 +23,16 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
 
 
    init {
-      r.h(var1, "view");
-      r.h(var2, "viewAttached");
-      r.h(var3, "viewScrolling");
+      q.h(var1, "view");
+      q.h(var2, "viewAttached");
+      q.h(var3, "viewScrolling");
       super();
       this.view = var1;
       this.viewAttached = var2;
       this.viewScrolling = var3;
-      this.isAttachedDelay = var1.getResources().getInteger(g.d);
+      this.isAttachedDelay = var1.getResources().getInteger(f.c);
       this.isAttachedRunnable = new a(this);
-      this.scrollStateListener$delegate = l.b(new Function0<ViewScrollStateListener>(this) {
+      this.scrollStateListener$delegate = l.a(new Function0(this) {
          final ViewAttachedListener this$0;
 
          {
@@ -48,12 +48,12 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
 
    @JvmStatic
    fun `isAttachedRunnable$lambda$0`(var0: ViewAttachedListener) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       var0.viewAttached.invoke(java.lang.Boolean.TRUE);
    }
 
    public open fun onViewAttachedToWindow(view: View) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.postDelayed(this.isAttachedRunnable, this.isAttachedDelay);
       val var2: ViewTreeObserver = var1.getViewTreeObserver();
       if (var2 != null) {
@@ -62,13 +62,13 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
    }
 
    public open fun onViewDetachedFromWindow(view: View) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.removeCallbacks(this.isAttachedRunnable);
-      val var3: ViewTreeObserver = var1.getViewTreeObserver();
-      if (var3 != null) {
-         val var2: ViewScrollStateListener = this.getScrollStateListener();
-         var2.reset();
-         var3.removeOnScrollChangedListener(var2);
+      val var2: ViewTreeObserver = var1.getViewTreeObserver();
+      if (var2 != null) {
+         val var3: ViewScrollStateListener = this.getScrollStateListener();
+         var3.reset();
+         var2.removeOnScrollChangedListener(var3);
       }
 
       this.viewAttached.invoke(java.lang.Boolean.FALSE);

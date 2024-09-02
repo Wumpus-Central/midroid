@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.automod.AutoModerationContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message: Message, autoModerationContext: AutoModerationContext) : FlaggedMessageActionBarAccessory(
       var1, var2, var3
@@ -13,6 +13,9 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
    public open val messageId: MessageId
 
    fun FlaggedMessageActionBarAccessory(var1: java.lang.String, var2: Message, var3: AutoModerationContext) {
+      q.h(var1, "messageId");
+      q.h(var2, "message");
+      q.h(var3, "autoModerationContext");
       super(var1, "flagged message actions", false, 4, null);
       this.messageId = var1;
       this.message = var2;
@@ -20,7 +23,7 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
    }
 
    public operator fun component1(): MessageId {
-      return this.getMessageId-3Eiw7ao();
+      return this.messageId;
    }
 
    public operator fun component2(): Message {
@@ -32,9 +35,9 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
    }
 
    public fun copy(messageId: MessageId = ..., message: Message = ..., autoModerationContext: AutoModerationContext = ...): FlaggedMessageActionBarAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "autoModerationContext");
+      q.h(var1, "messageId");
+      q.h(var2, "message");
+      q.h(var3, "autoModerationContext");
       return new FlaggedMessageActionBarAccessory(var1, var2, var3, null);
    }
 
@@ -45,32 +48,32 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
          return false;
       } else {
          var1 = var1;
-         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!q.c(this.message, var1.message)) {
             return false;
          } else {
-            return r.c(this.autoModerationContext, var1.autoModerationContext);
+            return q.c(this.autoModerationContext, var1.autoModerationContext);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return (MessageId.hashCode-impl(this.getMessageId-3Eiw7ao()) * 31 + this.message.hashCode()) * 31 + this.autoModerationContext.hashCode();
+      return (MessageId.hashCode-impl(this.messageId) * 31 + this.message.hashCode()) * 31 + this.autoModerationContext.hashCode();
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Message = this.message;
-      val var4: AutoModerationContext = this.autoModerationContext;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("FlaggedMessageActionBarAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", message=");
-      var2.append(var1);
-      var2.append(", autoModerationContext=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: AutoModerationContext = this.autoModerationContext;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("FlaggedMessageActionBarAccessory(messageId=");
+      var3.append(var4);
+      var3.append(", message=");
+      var3.append(var1);
+      var3.append(", autoModerationContext=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

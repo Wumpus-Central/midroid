@@ -7,7 +7,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.list.messagebundling.MessageBundleRecyclerView;
 import com.discord.chat.presentation.message.MessageFrameFeedHeaderView;
-import n1.a;
+import v2.a;
 
 public final class MessageBundleViewBinding implements ViewBinding {
    public final MessageBundleRecyclerView chatListView;
@@ -43,6 +43,7 @@ public final class MessageBundleViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

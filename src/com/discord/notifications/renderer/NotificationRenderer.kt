@@ -2,7 +2,7 @@ package com.discord.notifications.renderer
 
 import android.app.Notification
 import android.content.Context
-import androidx.core.app.NotificationCompat.Builder
+import androidx.core.app.NotificationCompat
 import androidx.core.os.e
 import com.discord.icons.IconUrlUtils
 import com.discord.image.fresco.FrescoModuleDiscord
@@ -10,28 +10,26 @@ import com.discord.notifications.api.NotificationData
 import com.discord.notifications.renderer.utils.NotificationManagerUtilsKt
 import com.discord.notifications.renderer.utils.SilenceCallWorker
 import com.discord.primitives.ChannelId
-import eh.w
-import kk.f
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import lj.w
+import tm.g
 
 public class NotificationRenderer {
    private fun runWorkers(context: Context, notification: NotificationData) {
-      if (r.c(var2.getType(), "CALL_RING")) {
+      if (q.c(var2.getType(), "CALL_RING")) {
          SilenceCallWorker.Companion.runWorker(var1, var2);
       }
    }
 
    public fun clear(context: Context, notificationTag: String) {
-      r.h(var1, "context");
-      r.h(var2, "notificationTag");
+      q.h(var1, "context");
+      q.h(var2, "notificationTag");
       NotificationManagerUtilsKt.getNotificationManagerCompat(var1).b(var2, 0);
    }
 
    public fun clearAllNotifications(context: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       NotificationManagerUtilsKt.getNotificationManagerCompat(var1).c();
    }
 
@@ -44,17 +42,17 @@ public class NotificationRenderer {
       makeOrUpdateShortcut: Boolean,
       notifyEveryTime: Boolean
    ) {
-      r.h(var1, "context");
-      r.h(var2, "notification");
-      r.h(var4, "notificationDataMap");
-      f.f(
+      q.h(var1, "context");
+      q.h(var2, "notification");
+      q.h(var4, "notificationDataMap");
+      g.f(
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, var1, var7, var4, var5, this, var3, var6, null)// $VF: Couldn't be decompiled
+         new Function2(var2, var1, var7, var4, var5, this, var3, var6, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1464)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1083,16 +1081,17 @@ public class NotificationRenderer {
    }
 
    public fun displayLocal(context: Context, notification: Map<String, Any>) {
-      r.h(var1, "context");
-      r.h(var2, "notification");
-      f.f(
+      q.h(var1, "context");
+      q.h(var2, "notification");
+      g.f(
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, var1, null)// $VF: Couldn't be decompiled
+         new Function2(var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1464)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2113,7 +2112,6 @@ public class NotificationRenderer {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          1,
          null
@@ -2121,61 +2119,61 @@ public class NotificationRenderer {
    }
 
    public fun handleAcks(context: Context, notification: NotificationData) {
-      r.h(var1, "context");
-      r.h(var2, "notification");
+      q.h(var1, "context");
+      q.h(var2, "notification");
       val var3: java.util.Iterator = var2.getAckChannelIds().iterator();
 
       while (var3.hasNext()) {
-         val var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("MESSAGE_CREATE");
-         var4.append(var5);
-         val var6: java.lang.String = var4.toString();
+         var var4: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("MESSAGE_CREATE");
+         var5.append(var4);
+         var4 = var5.toString();
          val var7: NotificationChannels = NotificationChannels.INSTANCE;
          if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
-               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var6)
+               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var4)
             )
             .i()
             .getBoolean("ignoreAck", false)) {
-            this.clear(var1, var6);
+            this.clear(var1, var4);
          } else {
-            this.markNotificationAsDirectReply(var1, var6, var7.getNotificationChannelId(var2, var1), false);
+            this.markNotificationAsDirectReply(var1, var4, var7.getNotificationChannelId(var2, var1), false);
          }
       }
    }
 
    public fun initFresco(context: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       FrescoModuleDiscord.Companion.initializeFresco(var1);
    }
 
    public fun initIconUrlUtils(context: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       IconUrlUtils.init$default(IconUrlUtils.INSTANCE, var1, null, null, 6, null);
    }
 
    public fun initNotificationCategories(context: Context, localizedCategoryNames: Map<String, String>, localizedGroupNames: Map<String, String>) {
-      r.h(var1, "context");
-      r.h(var2, "localizedCategoryNames");
-      r.h(var3, "localizedGroupNames");
+      q.h(var1, "context");
+      q.h(var2, "localizedCategoryNames");
+      q.h(var3, "localizedGroupNames");
       NotificationChannels.INSTANCE.init(var1, var2, var3);
    }
 
    public fun markNotificationAsDirectReply(context: Context, tag: String, channelId: String, shouldIgnoreAck: Boolean) {
-      r.h(var1, "context");
-      r.h(var2, "tag");
-      r.h(var3, "channelId");
+      q.h(var1, "context");
+      q.h(var2, "tag");
+      q.h(var3, "channelId");
       val var5: Notification = NotificationManagerUtilsKt.getActiveNotification(var1, var2);
       if (var5 != null) {
-         val var6: Builder = NotificationManagerUtilsKt.getNotificationBuilderOrCreate(var1, var3, var5).c(e.a(new Pair[]{w.a("ignoreAck", var4)}));
-         r.g(var6, "context.getNotificationB…_KEY to shouldIgnoreAck))");
+         val var6: NotificationCompat.Builder = NotificationManagerUtilsKt.getNotificationBuilderOrCreate(var1, var3, var5).c(e.a(w.a("ignoreAck", var4)));
+         q.g(var6, "addExtras(...)");
          NotificationManagerUtilsKt.notify$default(NotificationManagerUtilsKt.getNotificationManagerCompat(var1), var2, var6, 0, 4, null);
       }
    }
 
    public fun setIncomingRingtone(context: Context, name: String) {
-      r.h(var1, "context");
-      r.h(var2, "name");
+      q.h(var1, "context");
+      q.h(var2, "name");
       NotificationChannels.INSTANCE.setIncomingRingtone(var1, var2);
    }
 

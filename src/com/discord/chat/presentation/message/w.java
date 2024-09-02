@@ -9,6 +9,6 @@ public final class w implements OnClickListener {
    public final Function0 j;
 
    public final void onClick(View var1) {
-      MessageViewReplyPreview.b(this.j, var1);
+      MessageViewReplyPreview.g(this.j, var1);
    }
 }

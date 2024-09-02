@@ -1,6 +1,6 @@
 package com.discord.overlapping_circles
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class OverlappingItem(imageUri: String?) {
    public final val imageUri: String?
@@ -23,7 +23,7 @@ public data class OverlappingItem(imageUri: String?) {
       } else if (var1 !is OverlappingItem) {
          return false;
       } else {
-         return r.c(this.imageUri, (var1 as OverlappingItem).imageUri);
+         return q.c(this.imageUri, (var1 as OverlappingItem).imageUri);
       }
    }
 
@@ -39,11 +39,11 @@ public data class OverlappingItem(imageUri: String?) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.imageUri;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OverlappingItem(imageUri=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.imageUri;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OverlappingItem(imageUri=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

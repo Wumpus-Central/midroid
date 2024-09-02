@@ -3,7 +3,6 @@ package com.discord.media.engine
 import com.discord.media.engine.types.Debug
 import com.discord.native.engine.NativeConnection
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.r
 
 internal class MediaEngineNativeConnections {
    private final val connections: MutableMap<Int, NativeConnection> = new LinkedHashMap()
@@ -13,7 +12,7 @@ internal class MediaEngineNativeConnections {
    }
 
    public fun register(connectionId: Int, connection: NativeConnection) {
-      r.h(var2, "connection");
+      kotlin.jvm.internal.q.h(var2, "connection");
       if (this.connections.containsKey(var1) xor true) {
          if (this.connections.containsValue(var2) xor true) {
             this.connections.put(var1, var2);

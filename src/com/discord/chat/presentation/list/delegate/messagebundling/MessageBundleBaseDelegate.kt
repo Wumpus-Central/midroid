@@ -4,17 +4,18 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.presentation.list.item.MessageBundleItem
 import com.discord.misc.utilities.measure.NativeViewMeasuringWrapper
-import com.hannesdorfmann.adapterdelegates4.AdapterDelegate
-import kotlin.jvm.internal.r
+import kotlin.jvm.functions.Function3
+import kotlin.jvm.internal.q
 
-public abstract class MessageBundleBaseDelegate : AdapterDelegate<java.util.List<? extends MessageBundleItem>> {
+public abstract class MessageBundleBaseDelegate : com.hannesdorfmann.adapterdelegates4.b {
    private final val onMeasured: (View, Int, Int) -> Unit
 
-   open fun MessageBundleBaseDelegate(var1: (View?, Int?, Int?) -> Unit) {
-      r.h(var1, "onMeasured");
+   open fun MessageBundleBaseDelegate(var1: Function3) {
+      q.h(var1, "onMeasured");
       super();
       this.onMeasured = var1;
    }
@@ -26,11 +27,11 @@ public abstract class MessageBundleBaseDelegate : AdapterDelegate<java.util.List
    }
 
    protected open fun onBindViewHolder(items: List<MessageBundleItem>, position: Int, holder: ViewHolder, payloads: MutableList<Any>) {
-      r.h(var1, "items");
-      r.h(var3, "holder");
-      r.h(var4, "payloads");
+      q.h(var1, "items");
+      q.h(var3, "holder");
+      q.h(var4, "payloads");
       val var8: View = var3.itemView;
-      r.g(var3.itemView, "holder.itemView");
+      q.g(var3.itemView, "itemView");
       var var5: View = var8;
       if (var8 !is NativeViewMeasuringWrapper) {
          var5 = null;
@@ -47,25 +48,25 @@ public abstract class MessageBundleBaseDelegate : AdapterDelegate<java.util.List
    }
 
    protected open fun onCreateViewHolder(parent: ViewGroup): com.discord.chat.presentation.list.delegate.messagebundling.MessageBundleBaseDelegate.MessageBundleBaseViewHolder {
-      r.h(var1, "parent");
+      q.h(var1, "parent");
       val var2: Context = var1.getContext();
-      r.g(var2, "parent.context");
+      q.g(var2, "getContext(...)");
       val var3: View = this.createView(var2);
       var3.setLayoutParams(new LayoutParams(-1, -2));
-      val var4: NativeViewMeasuringWrapper = new NativeViewMeasuringWrapper(var3, this.onMeasured);
+      val var4: NativeViewMeasuringWrapper = new NativeViewMeasuringWrapper<>(var3, this.onMeasured);
       var4.setLayoutParams(new LayoutParams(-1, -2));
       return new MessageBundleBaseDelegate.MessageBundleBaseViewHolder(var4);
    }
 
    protected open fun onViewRecycled(holder: ViewHolder) {
-      r.h(var1, "holder");
+      q.h(var1, "holder");
       super.onViewRecycled(var1);
       var1.itemView.setId(-1);
    }
 
-   public class MessageBundleBaseViewHolder(itemView: View) : ViewHolder {
+   public class MessageBundleBaseViewHolder(itemView: View) : RecyclerView.ViewHolder {
       init {
-         r.h(var1, "itemView");
+         q.h(var1, "itemView");
          super(var1);
       }
    }

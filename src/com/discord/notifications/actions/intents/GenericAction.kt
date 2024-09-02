@@ -8,7 +8,7 @@ import android.os.Parcel
 import com.discord.react.headless_tasks.api.HeadlessTasks
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class GenericAction(tag: String, taskName: String, data: Map<String, String?>) : NotificationAction {
    public final val data: Map<String, String?>
@@ -16,9 +16,9 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    public final val taskName: String
 
    init {
-      r.h(var1, "tag");
-      r.h(var2, "taskName");
-      r.h(var3, "data");
+      q.h(var1, "tag");
+      q.h(var2, "taskName");
+      q.h(var3, "data");
       super();
       this.tag = var1;
       this.taskName = var2;
@@ -26,7 +26,7 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public operator fun component1(): String {
-      return this.getTag();
+      return this.tag;
    }
 
    public operator fun component2(): String {
@@ -37,10 +37,10 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
       return this.data;
    }
 
-   public fun copy(tag: String = var0.getTag(), taskName: String = var0.taskName, data: Map<String, String?> = var0.data): GenericAction {
-      r.h(var1, "tag");
-      r.h(var2, "taskName");
-      r.h(var3, "data");
+   public fun copy(tag: String = var0.tag, taskName: String = var0.taskName, data: Map<String, String?> = var0.data): GenericAction {
+      q.h(var1, "tag");
+      q.h(var2, "taskName");
+      q.h(var3, "data");
       return new GenericAction(var1, var2, var3);
    }
 
@@ -55,12 +55,12 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.getTag(), var1.getTag())) {
+         if (!q.c(this.tag, var1.tag)) {
             return false;
-         } else if (!r.c(this.taskName, var1.taskName)) {
+         } else if (!q.c(this.taskName, var1.taskName)) {
             return false;
          } else {
-            return r.c(this.data, var1.data);
+            return q.c(this.data, var1.data);
          }
       }
    }
@@ -70,26 +70,26 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public override fun hashCode(): Int {
-      return (this.getTag().hashCode() * 31 + this.taskName.hashCode()) * 31 + this.data.hashCode();
+      return (this.tag.hashCode() * 31 + this.taskName.hashCode()) * 31 + this.data.hashCode();
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      r.h(var1, "context");
-      r.h(var2, "intent");
+      q.h(var1, "context");
+      q.h(var2, "intent");
       this.onNotificationAction(var1, true);
    }
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
-      r.h(var1, "context");
-      val var7: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var4: java.lang.String = this.taskName;
-      val var5: Bundle = new Bundle();
+      q.h(var1, "context");
+      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var6: java.lang.String = this.taskName;
+      val var4: Bundle = new Bundle();
 
-      for (Entry var6 : this.data.entrySet()) {
-         var5.putString(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var7 : this.data.entrySet()) {
+         var4.putString(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
       }
 
-      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var7, var1, var4, 0L, false, var5, var2, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, var6, 0L, false, var4, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -101,22 +101,22 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.getTag();
-      val var2: java.lang.String = this.taskName;
-      val var4: java.util.Map = this.data;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("GenericAction(tag=");
-      var1.append(var3);
-      var1.append(", taskName=");
-      var1.append(var2);
-      var1.append(", data=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.tag;
+      val var4: java.lang.String = this.taskName;
+      val var2: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("GenericAction(tag=");
+      var3.append(var1);
+      var3.append(", taskName=");
+      var3.append(var4);
+      var3.append(", data=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      r.h(var1, "out");
+      q.h(var1, "out");
       var1.writeString(this.tag);
       var1.writeString(this.taskName);
       val var3: java.util.Map = this.data;
@@ -131,9 +131,9 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<GenericAction> {
       fun createFromParcel(var1: Parcel): GenericAction {
-         r.h(var1, "parcel");
-         val var6: java.lang.String = var1.readString();
+         q.h(var1, "parcel");
          val var4: java.lang.String = var1.readString();
+         val var6: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
          val var5: LinkedHashMap = new LinkedHashMap(var3);
 
@@ -141,7 +141,7 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
             var5.put(var1.readString(), var1.readString());
          }
 
-         return new GenericAction(var6, var4, var5);
+         return new GenericAction(var4, var6, var5);
       }
 
       fun newArray(var1: Int): Array<GenericAction> {

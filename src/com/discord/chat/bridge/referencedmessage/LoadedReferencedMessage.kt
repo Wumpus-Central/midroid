@@ -3,7 +3,11 @@ package com.discord.chat.bridge.referencedmessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,10 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.f0
 
 @f
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage {
@@ -22,26 +22,10 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    public final val systemContent: StructurableText?
 
    init {
-      r.h(var1, "message");
+      q.h(var1, "message");
       super(null);
       this.message = var1;
       this.systemContent = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LoadedReferencedMessage, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean = false;
-      var1.y(var2, 0, Message.$serializer.INSTANCE, var0.message);
-      if (var1.A(var2, 1) || var0.systemContent != null) {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, StructurableTextSerializer.INSTANCE, var0.systemContent);
-      }
    }
 
    public operator fun component1(): Message {
@@ -53,7 +37,7 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public fun copy(message: Message = var0.message, systemContent: StructurableText? = var0.systemContent): LoadedReferencedMessage {
-      r.h(var1, "message");
+      q.h(var1, "message");
       return new LoadedReferencedMessage(var1, var2);
    }
 
@@ -64,10 +48,10 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.message, var1.message)) {
+         if (!q.c(this.message, var1.message)) {
             return false;
          } else {
-            return r.c(this.systemContent, var1.systemContent);
+            return q.c(this.systemContent, var1.systemContent);
          }
       }
    }
@@ -85,18 +69,18 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
+      val var3: Message = this.message;
       val var1: StructurableText = this.systemContent;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LoadedReferencedMessage(message=");
-      var3.append(var2);
-      var3.append(", systemContent=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LoadedReferencedMessage(message=");
+      var2.append(var3);
+      var2.append(", systemContent=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<LoadedReferencedMessage> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -120,15 +104,15 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
       }
 
       public open fun deserialize(decoder: Decoder): LoadedReferencedMessage {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
-         var var5: Any;
-         var var8: Any;
+         var var5: StructurableText;
+         var var8: Message;
          if (var7.p()) {
-            var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, null);
-            var5 = var7.n(var6, 1, StructurableTextSerializer.INSTANCE, null);
+            var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, null) as Message;
+            var5 = var7.n(var6, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -144,10 +128,10 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
                         throw new n(var4);
                      }
 
-                     var5 = var7.n(var6, 1, StructurableTextSerializer.INSTANCE, var5);
+                     var5 = var7.n(var6, 1, StructurableTextSerializer.INSTANCE, var5) as StructurableText;
                      var2 |= 2;
                   } else {
-                     var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, var8);
+                     var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, var8) as Message;
                      var2 |= 1;
                   }
                } else {
@@ -157,20 +141,20 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
          }
 
          var7.c(var6);
-         return new LoadedReferencedMessage(var2, var8 as Message, var5 as StructurableText, null);
+         return new LoadedReferencedMessage(var2, var8, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadedReferencedMessage) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         LoadedReferencedMessage.write$Self(var2, var4, var3);
+         LoadedReferencedMessage.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

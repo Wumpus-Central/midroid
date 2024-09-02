@@ -1,6 +1,6 @@
 package com.discord.native.engine
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAddress: String, localPort: Int) {
    public final val isConnected: Boolean
@@ -9,8 +9,8 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
    public final val protocol: String
 
    init {
-      r.h(var2, "protocol");
-      r.h(var3, "localAddress");
+      q.h(var2, "protocol");
+      q.h(var3, "localAddress");
       super();
       this.isConnected = var1;
       this.protocol = var2;
@@ -40,8 +40,8 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
       localAddress: String = var0.localAddress,
       localPort: Int = var0.localPort
    ): ConnectionInfo {
-      r.h(var2, "protocol");
-      r.h(var3, "localAddress");
+      q.h(var2, "protocol");
+      q.h(var3, "localAddress");
       return new ConnectionInfo(var1, var2, var3, var4);
    }
 
@@ -54,9 +54,9 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
          var1 = var1;
          if (this.isConnected != var1.isConnected) {
             return false;
-         } else if (!r.c(this.protocol, var1.protocol)) {
+         } else if (!q.c(this.protocol, var1.protocol)) {
             return false;
-         } else if (!r.c(this.localAddress, var1.localAddress)) {
+         } else if (!q.c(this.localAddress, var1.localAddress)) {
             return false;
          } else {
             return this.localPort == var1.localPort;
@@ -75,19 +75,19 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
 
    public override fun toString(): String {
       val var2: Boolean = this.isConnected;
-      val var4: java.lang.String = this.protocol;
-      val var5: java.lang.String = this.localAddress;
+      val var5: java.lang.String = this.protocol;
+      val var3: java.lang.String = this.localAddress;
       val var1: Int = this.localPort;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ConnectionInfo(isConnected=");
-      var3.append(var2);
-      var3.append(", protocol=");
-      var3.append(var4);
-      var3.append(", localAddress=");
-      var3.append(var5);
-      var3.append(", localPort=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ConnectionInfo(isConnected=");
+      var4.append(var2);
+      var4.append(", protocol=");
+      var4.append(var5);
+      var4.append(", localAddress=");
+      var4.append(var3);
+      var4.append(", localPort=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

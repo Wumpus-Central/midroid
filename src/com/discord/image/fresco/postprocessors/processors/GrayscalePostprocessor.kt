@@ -1,5 +1,6 @@
 package com.discord.image.fresco.postprocessors.processors
 
+import a5.h
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.ColorMatrix
@@ -7,13 +8,12 @@ import android.graphics.ColorMatrixColorFilter
 import android.graphics.Paint
 import com.facebook.cache.common.CacheKey
 import com.facebook.imagepipeline.request.BasePostprocessor
-import kotlin.jvm.internal.r
-import q3.h
+import kotlin.jvm.internal.q
 
 internal object GrayscalePostprocessor : BasePostprocessor {
    public open fun getName(): String {
       val var1: java.lang.String = GrayscalePostprocessor.class.getSimpleName();
-      r.g(var1, "javaClass.simpleName");
+      q.g(var1, "getSimpleName(...)");
       return var1;
    }
 
@@ -22,13 +22,13 @@ internal object GrayscalePostprocessor : BasePostprocessor {
    }
 
    public open fun process(destBitmap: Bitmap, sourceBitmap: Bitmap) {
-      r.h(var1, "destBitmap");
-      r.h(var2, "sourceBitmap");
+      q.h(var1, "destBitmap");
+      q.h(var2, "sourceBitmap");
       super.process(var1, var2);
-      val var4: ColorMatrix = new ColorMatrix();
-      var4.setSaturation(0.0F);
-      val var3: Paint = new Paint();
-      var3.setColorFilter(new ColorMatrixColorFilter(var4));
-      new Canvas(var1).drawBitmap(var2, 0.0F, 0.0F, var3);
+      val var3: ColorMatrix = new ColorMatrix();
+      var3.setSaturation(0.0F);
+      val var4: Paint = new Paint();
+      var4.setColorFilter(new ColorMatrixColorFilter(var3));
+      new Canvas(var1).drawBitmap(var2, 0.0F, 0.0F, var4);
    }
 }

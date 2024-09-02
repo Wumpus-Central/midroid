@@ -5,8 +5,8 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import eh.w
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
 
 internal open class OnScrollEvent private constructor(x: Float, y: Float, width: Float, height: Float, contentWidth: Float, contentHeight: Float) : ReactEvent {
    private final val contentHeight: Float
@@ -25,7 +25,7 @@ internal open class OnScrollEvent private constructor(x: Float, y: Float, width:
       this.contentHeight = var6;
    }
 
-   public constructor(data: Data) : r.h(var1, "data") {
+   public constructor(data: Data) : q.h(var1, "data") {
       this(
          SizeUtilsKt.getPxToDp(var1.getX()),
          SizeUtilsKt.getPxToDp(var1.getY()),

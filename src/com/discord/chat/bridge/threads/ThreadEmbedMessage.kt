@@ -1,7 +1,11 @@
 package com.discord.chat.bridge.threads
 
 import com.discord.chat.bridge.Message
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,27 +13,15 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
 
 @f
 public data class ThreadEmbedMessage(message: Message) {
    public final val message: Message
 
    init {
-      r.h(var1, "message");
+      q.h(var1, "message");
       super();
       this.message = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ThreadEmbedMessage, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, Message.$serializer.INSTANCE, var0.message);
    }
 
    public operator fun component1(): Message {
@@ -37,7 +29,7 @@ public data class ThreadEmbedMessage(message: Message) {
    }
 
    public fun copy(message: Message = var0.message): ThreadEmbedMessage {
-      r.h(var1, "message");
+      q.h(var1, "message");
       return new ThreadEmbedMessage(var1);
    }
 
@@ -47,7 +39,7 @@ public data class ThreadEmbedMessage(message: Message) {
       } else if (var1 !is ThreadEmbedMessage) {
          return false;
       } else {
-         return r.c(this.message, (var1 as ThreadEmbedMessage).message);
+         return q.c(this.message, (var1 as ThreadEmbedMessage).message);
       }
    }
 
@@ -64,7 +56,7 @@ public data class ThreadEmbedMessage(message: Message) {
       return var1.toString();
    }
 
-   public object `$serializer` : f0<ThreadEmbedMessage> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -85,15 +77,15 @@ public data class ThreadEmbedMessage(message: Message) {
       }
 
       public open fun deserialize(decoder: Decoder): ThreadEmbedMessage {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var8: Message;
          if (var5) {
-            var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, null);
+            var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, null) as Message;
          } else {
             var2 = 0;
             var8 = null;
@@ -105,7 +97,7 @@ public data class ThreadEmbedMessage(message: Message) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, var8);
+                  var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, var8) as Message;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -114,19 +106,19 @@ public data class ThreadEmbedMessage(message: Message) {
          }
 
          var7.c(var6);
-         return new ThreadEmbedMessage(var2, var8 as Message, null);
+         return new ThreadEmbedMessage(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ThreadEmbedMessage) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ThreadEmbedMessage.write$Self(var2, var4, var3);
+         ThreadEmbedMessage.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

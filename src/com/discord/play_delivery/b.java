@@ -1,10 +1,10 @@
 package com.discord.play_delivery;
 
+import cd.f;
 import com.google.android.gms.tasks.Task;
-import hb.d;
 
 // $VF: synthetic class
-public final class b implements d {
+public final class b implements f {
    public final String a;
 
    public final void a(Task var1) {

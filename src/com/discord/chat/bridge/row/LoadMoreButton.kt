@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.row
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -9,12 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.m0
 
 @f
 public data class LoadMoreButton(action: LoadingAction, text: String, backgroundColor: Int, cornerRadius: Int? = null, color: Int? = null) {
@@ -25,49 +25,14 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
    public final val text: String
 
    init {
-      r.h(var1, "action");
-      r.h(var2, "text");
+      q.h(var1, "action");
+      q.h(var2, "text");
       super();
       this.action = var1;
       this.text = var2;
       this.backgroundColor = var3;
       this.cornerRadius = var4;
       this.color = var5;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LoadMoreButton, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, LoadingAction.$serializer.INSTANCE, var0.action);
-      var1.z(var2, 1, var0.text);
-      var1.w(var2, 2, var0.backgroundColor);
-      var var3: Boolean;
-      if (!var1.A(var2, 3) && var0.cornerRadius == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 3, m0.a, var0.cornerRadius);
-      }
-
-      label24: {
-         if (!var1.A(var2, 4)) {
-            var3 = false;
-            if (var0.color == null) {
-               break label24;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 4, m0.a, var0.color);
-      }
    }
 
    public operator fun component1(): LoadingAction {
@@ -97,8 +62,8 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
       cornerRadius: Int? = var0.cornerRadius,
       color: Int? = var0.color
    ): LoadMoreButton {
-      r.h(var1, "action");
-      r.h(var2, "text");
+      q.h(var1, "action");
+      q.h(var2, "text");
       return new LoadMoreButton(var1, var2, var3, var4, var5);
    }
 
@@ -109,24 +74,24 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.action, var1.action)) {
+         if (!q.c(this.action, var1.action)) {
             return false;
-         } else if (!r.c(this.text, var1.text)) {
+         } else if (!q.c(this.text, var1.text)) {
             return false;
          } else if (this.backgroundColor != var1.backgroundColor) {
             return false;
-         } else if (!r.c(this.cornerRadius, var1.cornerRadius)) {
+         } else if (!q.c(this.cornerRadius, var1.cornerRadius)) {
             return false;
          } else {
-            return r.c(this.color, var1.color);
+            return q.c(this.color, var1.color);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.action.hashCode();
-      val var5: Int = this.text.hashCode();
-      val var4: Int = Integer.hashCode(this.backgroundColor);
+      val var4: Int = this.action.hashCode();
+      val var3: Int = this.text.hashCode();
+      val var5: Int = Integer.hashCode(this.backgroundColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.cornerRadius == null) {
@@ -139,31 +104,31 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          var2 = this.color.hashCode();
       }
 
-      return (((var3 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2;
+      return (((var4 * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var3: LoadingAction = this.action;
-      val var2: java.lang.String = this.text;
+      val var5: LoadingAction = this.action;
+      val var6: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
-      val var5: Int = this.cornerRadius;
+      val var2: Int = this.cornerRadius;
       val var4: Int = this.color;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("LoadMoreButton(action=");
-      var6.append(var3);
-      var6.append(", text=");
-      var6.append(var2);
-      var6.append(", backgroundColor=");
-      var6.append(var1);
-      var6.append(", cornerRadius=");
-      var6.append(var5);
-      var6.append(", color=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LoadMoreButton(action=");
+      var3.append(var5);
+      var3.append(", text=");
+      var3.append(var6);
+      var3.append(", backgroundColor=");
+      var3.append(var1);
+      var3.append(", cornerRadius=");
+      var3.append(var2);
+      var3.append(", color=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : f0<LoadMoreButton> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -184,40 +149,41 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: m0 = m0.a;
-         return new KSerializer[]{LoadingAction.$serializer.INSTANCE, a2.a, m0.a, a.u(m0.a), a.u(var2)};
+         val var3: n0 = n0.a;
+         return new KSerializer[]{LoadingAction.$serializer.INSTANCE, b2.a, n0.a, a.u(n0.a), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): LoadMoreButton {
-         r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         q.h(var1, "decoder");
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.b(var10);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
-         var var6: Any;
-         var var7: Any;
-         var var8: java.lang.String;
+         var var8: LoadingAction;
          var var12: Any;
-         if (var10.p()) {
-            var7 = var10.y(var9, 0, LoadingAction.$serializer.INSTANCE, null);
-            var8 = var10.m(var9, 1);
-            val var2: Int = var10.i(var9, 2);
-            var12 = m0.a;
-            var6 = var10.n(var9, 3, m0.a, null);
-            var12 = var10.n(var9, 4, (DeserializationStrategy)var12, null);
-            var4 = 31;
-            var3 = var2;
+         var var14: Any;
+         var var16: java.lang.String;
+         if (var11.p()) {
+            val var7: LoadingAction = var11.y(var10, 0, LoadingAction.$serializer.INSTANCE, null) as LoadingAction;
+            val var9: java.lang.String = var11.m(var10, 1);
+            var3 = var11.i(var10, 2);
+            var14 = n0.a;
+            var12 = var11.n(var10, 3, n0.a, null) as Int;
+            var14 = var11.n(var10, 4, (DeserializationStrategy)var14, null) as Int;
+            var2 = 31;
+            var8 = var7;
+            var16 = var9;
          } else {
-            var var14: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
-            var7 = null;
             var8 = null;
-            var6 = null;
+            var16 = null;
+            var14 = null;
             var12 = null;
-            var var13: Int = 0;
+            var2 = 0;
 
-            while (var14) {
-               val var5: Int = var10.o(var9);
+            while (var4) {
+               val var5: Int = var11.o(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -227,47 +193,48 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
                                  throw new n(var5);
                               }
 
-                              var12 = var10.n(var9, 4, m0.a, var12);
-                              var13 |= 16;
+                              var12 = var11.n(var10, 4, n0.a, var12) as Int;
+                              var2 |= 16;
                            } else {
-                              var6 = var10.n(var9, 3, m0.a, var6);
-                              var13 |= 8;
+                              var14 = var11.n(var10, 3, n0.a, var14) as Int;
+                              var2 |= 8;
                            }
                         } else {
-                           var3 = var10.i(var9, 2);
-                           var13 |= 4;
+                           var3 = var11.i(var10, 2);
+                           var2 |= 4;
                         }
                      } else {
-                        var8 = var10.m(var9, 1);
-                        var13 |= 2;
+                        var16 = var11.m(var10, 1);
+                        var2 |= 2;
                      }
                   } else {
-                     var7 = var10.y(var9, 0, LoadingAction.$serializer.INSTANCE, var7);
-                     var13 |= 1;
+                     var8 = var11.y(var10, 0, LoadingAction.$serializer.INSTANCE, var8) as LoadingAction;
+                     var2 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var4 = false;
                }
             }
 
-            var4 = var13;
+            var14 = var12;
+            var12 = var14;
          }
 
-         var10.c(var9);
-         return new LoadMoreButton(var4, var7 as LoadingAction, var8, var3, var6 as Int, var12 as Int, null);
+         var11.c(var10);
+         return new LoadMoreButton(var2, var8, var16, var3, (Integer)var12, (Integer)var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadMoreButton) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         LoadMoreButton.write$Self(var2, var4, var3);
+         LoadMoreButton.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

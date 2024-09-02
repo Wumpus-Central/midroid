@@ -1,57 +1,54 @@
 package com.discord.file_downloader
 
 import android.content.Context
-import eh.l
-import fh.s
 import java.io.File
 import java.util.Map.Entry
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.FlowCollector
-import nk.d
+import lj.l
+import mj.r
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.Request.Builder
+import wm.d
 
 public object FileDownloader {
-   private final val defaultClient: OkHttpClient by l.b(<unrepresentable>.INSTANCE)
+   private final val defaultClient: OkHttpClient by l.a(<unrepresentable>.INSTANCE)
       private final get() {
          return defaultClient$delegate.getValue() as OkHttpClient;
       }
 
 
-   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = s.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
-      r.h(var1, "fileUrl");
-      r.h(var2, "headers");
-      r.h(var3, "client");
+   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = r.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
+      q.h(var1, "fileUrl");
+      q.h(var2, "headers");
+      q.h(var3, "client");
       val var4: Builder = new Builder();
 
       for (Entry var5 : var2.entrySet()) {
          var4.a(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
-      return var3.a(var4.l(var1).b()).execute();
+      return var3.b(var4.l(var1).b()).execute();
    }
 
    public fun downloadFile(context: Context, fileUrl: String, fileName: String, downloadDirectory: File = var1.getCacheDir(), logErrors: Boolean = false): Flow<
          DownloadState
       > {
-      r.h(var1, "context");
-      r.h(var2, "fileUrl");
-      r.h(var3, "fileName");
-      r.h(var4, "downloadDirectory");
+      q.h(var1, "context");
+      q.h(var2, "fileUrl");
+      q.h(var3, "fileName");
+      q.h(var4, "downloadDirectory");
       return d.l(
-         new Function2<FlowCollector<? super DownloadState>, Continuation<? super Unit>, Object>(var4, var3, var2, var5, null)// $VF: Couldn't be decompiled
+         new Function2(var4, var3, var2, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:100)
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1070,6 +1067,7 @@ public object FileDownloader {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    
       );
    }

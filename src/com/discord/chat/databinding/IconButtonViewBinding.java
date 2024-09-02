@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class IconButtonViewBinding implements ViewBinding {
    public final SimpleDraweeView iconButton;
@@ -22,12 +22,12 @@ public final class IconButtonViewBinding implements ViewBinding {
 
    public static IconButtonViewBinding bind(View var0) {
       int var1 = R.id.icon_button;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.icon_container;
-         FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-         if (var3 != null) {
-            return new IconButtonViewBinding(var0, var2, var3);
+         FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+         if (var2 != null) {
+            return new IconButtonViewBinding(var0, var3, var2);
          }
       }
 
@@ -43,6 +43,7 @@ public final class IconButtonViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

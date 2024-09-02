@@ -6,36 +6,36 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import eh.w
-import fh.s
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import lj.w
+import mj.r
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val cacheModule: CacheModule
       private final get() {
-         val var2: CacheModule.Companion = CacheModule.Companion;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var1, "reactApplicationContext");
-         return var2.get(var1);
+         val var1: CacheModule.Companion = CacheModule.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         return var1.get(var2);
       }
 
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
    public open fun getConstants(): MutableMap<String, Any?> {
       val var2: java.lang.String = this.getCacheModule().getItem("SELECTED_BROWSER");
       if (var2 != null) {
-         val var3: Int = f.m(var2);
+         val var3: Int = h.m(var2);
          if (var3 != null) {
-            return s.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return r.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return s.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return r.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
    public open fun getName(): String {
@@ -44,17 +44,17 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun openInAppURL(url: String, unused: String, promise: Promise) {
-      r.h(var1, "url");
-      r.h(var2, "unused");
-      r.h(var3, "promise");
+      q.h(var1, "url");
+      q.h(var2, "unused");
+      q.h(var3, "promise");
       val var4: BrowserManager = BrowserManager.INSTANCE;
       var var5: Any = this.getCurrentActivity();
       if (var5 == null) {
          var5 = this.getReactApplicationContext();
       }
 
-      r.g(var5, "currentActivity ?: reactApplicationContext");
-      var4.tryOpenUrlWithCustomTabs((Context)var5, var1, new Function1<Exception, Unit>(var3) {
+      q.e(var5);
+      var4.tryOpenUrlWithCustomTabs((Context)var5, var1, new Function1(var3) {
          final Promise $promise;
 
          {
@@ -63,7 +63,7 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(Exception var1) {
-            r.h(var1, "e");
+            q.h(var1, "e");
             this.$promise.reject(var1);
          }
       });
@@ -71,12 +71,12 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun openInChromeURL(url: String, newTab: Boolean, promise: Promise) {
-      r.h(var1, "url");
-      r.h(var3, "promise");
-      val var4: BrowserManager = BrowserManager.INSTANCE;
-      val var5: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var5, "reactApplicationContext");
-      var4.tryOpenUrlExternally(var5, var1, new Function1<Exception, Unit>(var3) {
+      q.h(var1, "url");
+      q.h(var3, "promise");
+      val var5: BrowserManager = BrowserManager.INSTANCE;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var4, "getReactApplicationContext(...)");
+      var5.tryOpenUrlExternally(var4, var1, new Function1(var3) {
          final Promise $promise;
 
          {
@@ -85,7 +85,7 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
          }
 
          public final void invoke(Exception var1) {
-            r.h(var1, "e");
+            q.h(var1, "e");
             this.$promise.reject(var1);
          }
       });

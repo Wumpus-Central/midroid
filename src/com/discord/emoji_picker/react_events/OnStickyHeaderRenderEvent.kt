@@ -3,7 +3,12 @@ package com.discord.emoji_picker.react_events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.n0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,10 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.m0
 
 @f
 internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
@@ -22,14 +23,6 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
 
    init {
       this.index = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnStickyHeaderRenderEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.index);
    }
 
    public operator fun component1(): Int {
@@ -67,7 +60,7 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<OnStickyHeaderRenderEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -85,12 +78,12 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a};
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{n0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnStickyHeaderRenderEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          val var6: Boolean = var8.p();
@@ -123,16 +116,16 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
       }
 
       public open fun serialize(encoder: Encoder, value: OnStickyHeaderRenderEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         OnStickyHeaderRenderEvent.write$Self(var2, var4, var3);
+         OnStickyHeaderRenderEvent.write$Self$emoji_picker_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

@@ -11,6 +11,6 @@ public final class c implements OnClickListener {
    public final ComponentContext k;
 
    public final void onClick(View var1) {
-      ContentInventoryComponentView.f(this.j, this.k, var1);
+      ContentInventoryComponentView.k(this.j, this.k, var1);
    }
 }

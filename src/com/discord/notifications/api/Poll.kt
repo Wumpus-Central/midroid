@@ -1,6 +1,10 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,27 +12,15 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
 
 @f
 public data class Poll(question: PollMedia) {
    public final val question: PollMedia
 
    init {
-      r.h(var1, "question");
+      q.h(var1, "question");
       super();
       this.question = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: Poll, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, PollMedia.$serializer.INSTANCE, var0.question);
    }
 
    public operator fun component1(): PollMedia {
@@ -36,7 +28,7 @@ public data class Poll(question: PollMedia) {
    }
 
    public fun copy(question: PollMedia = var0.question): Poll {
-      r.h(var1, "question");
+      q.h(var1, "question");
       return new Poll(var1);
    }
 
@@ -46,7 +38,7 @@ public data class Poll(question: PollMedia) {
       } else if (var1 !is Poll) {
          return false;
       } else {
-         return r.c(this.question, (var1 as Poll).question);
+         return q.c(this.question, (var1 as Poll).question);
       }
    }
 
@@ -55,15 +47,15 @@ public data class Poll(question: PollMedia) {
    }
 
    public override fun toString(): String {
-      val var1: PollMedia = this.question;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Poll(question=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: PollMedia = this.question;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Poll(question=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : f0<Poll> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -84,15 +76,15 @@ public data class Poll(question: PollMedia) {
       }
 
       public open fun deserialize(decoder: Decoder): Poll {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var8: PollMedia;
          if (var5) {
-            var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, null);
+            var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, null) as PollMedia;
          } else {
             var2 = 0;
             var8 = null;
@@ -104,7 +96,7 @@ public data class Poll(question: PollMedia) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, var8);
+                  var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, var8) as PollMedia;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -113,19 +105,19 @@ public data class Poll(question: PollMedia) {
          }
 
          var7.c(var6);
-         return new Poll(var2, var8 as PollMedia, null);
+         return new Poll(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Poll) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         Poll.write$Self(var2, var4, var3);
+         Poll.write$Self$notification_api_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

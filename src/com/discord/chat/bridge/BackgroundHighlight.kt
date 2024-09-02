@@ -1,7 +1,11 @@
 package com.discord.chat.bridge
 
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import en.a
+import gn.g0
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.f0
-import xk.m0
 
 @f
 public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor: Int? = null) {
@@ -25,41 +24,8 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
    }
 
    init {
-      super();
       this.backgroundColor = var1;
       this.gutterColor = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: BackgroundHighlight, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.backgroundColor == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, m0.a, var0.backgroundColor);
-      }
-
-      label24: {
-         if (!var1.A(var2, 1)) {
-            var3 = false;
-            if (var0.gutterColor == null) {
-               break label24;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, m0.a, var0.gutterColor);
-      }
    }
 
    public operator fun component1(): Int? {
@@ -81,10 +47,10 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.backgroundColor, var1.backgroundColor)) {
+         if (!q.c(this.backgroundColor, var1.backgroundColor)) {
             return false;
          } else {
-            return r.c(this.gutterColor, var1.gutterColor);
+            return q.c(this.gutterColor, var1.gutterColor);
          }
       }
    }
@@ -106,18 +72,18 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
-      val var3: Int = this.gutterColor;
+      val var3: Int = this.backgroundColor;
+      val var1: Int = this.gutterColor;
       val var2: StringBuilder = new StringBuilder();
       var2.append("BackgroundHighlight(backgroundColor=");
-      var2.append(var1);
-      var2.append(", gutterColor=");
       var2.append(var3);
+      var2.append(", gutterColor=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
 
-   public object `$serializer` : f0<BackgroundHighlight> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -135,21 +101,21 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: m0 = m0.a;
-         return new KSerializer[]{a.u(m0.a), a.u(var1)};
+         val var1: n0 = n0.a;
+         return new KSerializer[]{a.u(n0.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): BackgroundHighlight {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
-         var var5: Any;
-         var var9: Any;
+         var var5: Int;
+         var var9: Int;
          if (var7.p()) {
-            var9 = m0.a;
-            var5 = var7.n(var6, 0, m0.a, null);
-            var9 = var7.n(var6, 1, (DeserializationStrategy)var9, null);
+            val var8: n0 = n0.a;
+            var5 = var7.n(var6, 0, n0.a, null) as Int;
+            var9 = var7.n(var6, 1, var8, null) as Int;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -165,10 +131,10 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
                         throw new n(var4);
                      }
 
-                     var9 = var7.n(var6, 1, m0.a, var9);
+                     var9 = var7.n(var6, 1, n0.a, var9) as Int;
                      var2 |= 2;
                   } else {
-                     var5 = var7.n(var6, 0, m0.a, var5);
+                     var5 = var7.n(var6, 0, n0.a, var5) as Int;
                      var2 |= 1;
                   }
                } else {
@@ -178,20 +144,20 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          }
 
          var7.c(var6);
-         return new BackgroundHighlight(var2, var5 as Int, var9 as Int, null);
+         return new BackgroundHighlight(var2, var5, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundHighlight) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         BackgroundHighlight.write$Self(var2, var4, var3);
+         BackgroundHighlight.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

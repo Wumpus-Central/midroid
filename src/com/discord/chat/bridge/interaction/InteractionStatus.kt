@@ -2,7 +2,11 @@ package com.discord.chat.bridge.interaction
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -10,10 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
 
 @f
 public data class InteractionStatus(state: InteractionStatusViewState, text: StructurableText) {
@@ -21,20 +21,11 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    public final val text: StructurableText
 
    init {
-      r.h(var1, "state");
-      r.h(var2, "text");
+      q.h(var1, "state");
+      q.h(var2, "text");
       super();
       this.state = var1;
       this.text = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: InteractionStatus, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, InteractionStatusViewState.Serializer.INSTANCE, var0.state);
-      var1.y(var2, 1, StructurableTextSerializer.INSTANCE, var0.text);
    }
 
    public operator fun component1(): InteractionStatusViewState {
@@ -46,8 +37,8 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public fun copy(state: InteractionStatusViewState = var0.state, text: StructurableText = var0.text): InteractionStatus {
-      r.h(var1, "state");
-      r.h(var2, "text");
+      q.h(var1, "state");
+      q.h(var2, "text");
       return new InteractionStatus(var1, var2);
    }
 
@@ -61,7 +52,7 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
          if (this.state != var1.state) {
             return false;
          } else {
-            return r.c(this.text, var1.text);
+            return q.c(this.text, var1.text);
          }
       }
    }
@@ -93,18 +84,18 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public override fun toString(): String {
-      val var1: InteractionStatusViewState = this.state;
-      val var3: StructurableText = this.text;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InteractionStatus(state=");
-      var2.append(var1);
-      var2.append(", text=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: InteractionStatusViewState = this.state;
+      val var2: StructurableText = this.text;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InteractionStatus(state=");
+      var1.append(var3);
+      var1.append(", text=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : f0<InteractionStatus> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -126,15 +117,15 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
       }
 
       public open fun deserialize(decoder: Decoder): InteractionStatus {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          var var2: Int;
-         var var5: Any;
-         var var8: Any;
+         var var5: StructurableText;
+         var var8: InteractionStatusViewState;
          if (var7.p()) {
-            var8 = var7.y(var6, 0, InteractionStatusViewState.Serializer.INSTANCE, null);
-            var5 = var7.y(var6, 1, StructurableTextSerializer.INSTANCE, null);
+            var8 = var7.y(var6, 0, InteractionStatusViewState.Serializer.INSTANCE, null) as InteractionStatusViewState;
+            var5 = var7.y(var6, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -150,10 +141,10 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
                         throw new n(var4);
                      }
 
-                     var5 = var7.y(var6, 1, StructurableTextSerializer.INSTANCE, var5);
+                     var5 = var7.y(var6, 1, StructurableTextSerializer.INSTANCE, var5) as StructurableText;
                      var2 |= 2;
                   } else {
-                     var8 = var7.y(var6, 0, InteractionStatusViewState.Serializer.INSTANCE, var8);
+                     var8 = var7.y(var6, 0, InteractionStatusViewState.Serializer.INSTANCE, var8) as InteractionStatusViewState;
                      var2 |= 1;
                   }
                } else {
@@ -163,19 +154,19 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
          }
 
          var7.c(var6);
-         return new InteractionStatus(var2, var8 as InteractionStatusViewState, var5 as StructurableText, null);
+         return new InteractionStatus(var2, var8, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: InteractionStatus) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         InteractionStatus.write$Self(var2, var4, var3);
+         InteractionStatus.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

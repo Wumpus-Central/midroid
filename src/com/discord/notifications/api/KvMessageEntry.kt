@@ -2,8 +2,12 @@ package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import gn.g0
+import gn.o1
+import gn.g0.a
+import hn.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -13,12 +17,6 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
 import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.s
-import uk.f
-import uk.n
-import xk.f0
-import xk.n1
-import xk.f0.a
 
 @f
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -30,6 +28,12 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    public final val message: JsonObject
    public final val users: List<JsonObject>
 
+   @JvmStatic
+   fun {
+      val var0: q = q.a;
+      $childSerializers = new KSerializer[]{new gn.f(q.a), new gn.f(var0), null, null, null};
+   }
+
    fun KvMessageEntry(
       var1: Int,
       var2: MutableList<JsonObject>,
@@ -40,17 +44,17 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
       var7: SerializationConstructorMarker
    ) {
       if (28 != (var1 and 28)) {
-         n1.b(var1, 28, KvMessageEntry.$serializer.INSTANCE.getDescriptor());
+         o1.b(var1, 28, KvMessageEntry.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
       if ((var1 and 1) == 0) {
-         var2 = h.i();
+         var2 = i.j();
       }
 
       this.members = var2;
       if ((var1 and 2) == 0) {
-         this.users = h.i();
+         this.users = i.j();
       } else {
          this.users = var3;
       }
@@ -61,25 +65,16 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    fun KvMessageEntry(var1: MutableList<JsonObject>, var2: MutableList<JsonObject>, var3: JsonObject, var4: java.lang.String, var5: Long) {
+      kotlin.jvm.internal.q.h(var1, "members");
+      kotlin.jvm.internal.q.h(var2, "users");
+      kotlin.jvm.internal.q.h(var3, "message");
+      kotlin.jvm.internal.q.h(var4, "id");
       super();
       this.members = var1;
       this.users = var2;
       this.message = var3;
       this.id = var4;
       this.channelId = var5;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: KvMessageEntry, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      val var3: s = s.a;
-      var1.y(var2, 0, new xk.f(s.a), var0.members);
-      var1.y(var2, 1, new xk.f(var3), var0.users);
-      var1.y(var2, 2, var3, var0.message);
-      var1.y(var2, 3, MessageId.$serializer.INSTANCE, MessageId.box-impl(var0.id));
-      var1.y(var2, 4, ChannelId.$serializer.INSTANCE, ChannelId.box-impl(var0.channelId));
    }
 
    public operator fun component1(): List<JsonObject> {
@@ -103,10 +98,10 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public fun copy(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject = ..., id: MessageId = ..., channelId: ChannelId = ...): KvMessageEntry {
-      r.h(var1, "members");
-      r.h(var2, "users");
-      r.h(var3, "message");
-      r.h(var4, "id");
+      kotlin.jvm.internal.q.h(var1, "members");
+      kotlin.jvm.internal.q.h(var2, "users");
+      kotlin.jvm.internal.q.h(var3, "message");
+      kotlin.jvm.internal.q.h(var4, "id");
       return new KvMessageEntry(var1, var2, var3, var4, var5, null);
    }
 
@@ -117,11 +112,11 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.members, var1.members)) {
+         if (!kotlin.jvm.internal.q.c(this.members, var1.members)) {
             return false;
-         } else if (!r.c(this.users, var1.users)) {
+         } else if (!kotlin.jvm.internal.q.c(this.users, var1.users)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!kotlin.jvm.internal.q.c(this.message, var1.message)) {
             return false;
          } else if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
@@ -137,27 +132,27 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.members;
-      val var2: java.util.List = this.users;
-      val var4: JsonObject = this.message;
-      val var6: java.lang.String = MessageId.toString-impl(this.id);
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.util.List = this.members;
+      val var5: java.util.List = this.users;
+      val var6: JsonObject = this.message;
+      val var1: java.lang.String = MessageId.toString-impl(this.id);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: StringBuilder = new StringBuilder();
       var3.append("KvMessageEntry(members=");
-      var3.append(var1);
-      var3.append(", users=");
       var3.append(var2);
-      var3.append(", message=");
-      var3.append(var4);
-      var3.append(", id=");
-      var3.append(var6);
-      var3.append(", channelId=");
+      var3.append(", users=");
       var3.append(var5);
+      var3.append(", message=");
+      var3.append(var6);
+      var3.append(", id=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }
 
-   public object `$serializer` : f0<KvMessageEntry> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -178,39 +173,45 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: s = s.a;
-         return new KSerializer[]{new xk.f(s.a), new xk.f(var1), var1, MessageId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE};
+         val var1: Array<KSerializer> = KvMessageEntry.access$get$childSerializers$cp();
+         return new KSerializer[]{var1[0], var1[1], q.a, MessageId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): KvMessageEntry {
-         r.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.b(var11);
+         kotlin.jvm.internal.q.h(var1, "decoder");
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.b(var10);
+         val var9: Array<KSerializer> = KvMessageEntry.access$get$childSerializers$cp();
          var var2: Int;
-         var var6: Any;
+         var var5: Any;
+         var var6: java.util.List;
          var var7: Any;
-         var var9: Any;
-         var var13: Any;
-         var var16: Any;
-         if (var12.p()) {
-            var16 = s.a;
-            var13 = (MessageId)var12.y(var11, 0, new xk.f(s.a), null);
-            var9 = var12.y(var11, 1, new xk.f((KSerializer)var16), null);
-            var7 = var12.y(var11, 2, (DeserializationStrategy)var16, null);
-            var6 = var12.y(var11, 3, MessageId.$serializer.INSTANCE, null);
-            var16 = var12.y(var11, 4, ChannelId.$serializer.INSTANCE, null);
+         var var8: java.util.List;
+         var var14: Any;
+         if (var11.p()) {
+            var8 = var11.y(var10, 0, var9[0], null) as java.util.List;
+            var6 = var11.y(var10, 1, var9[1], null) as java.util.List;
+            var7 = var11.y(var10, 2, q.a, null) as JsonObject;
+            var14 = var11.y(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var14 != null) {
+               var14 = var14.unbox-impl();
+            } else {
+               var14 = null;
+            }
+
+            var5 = var11.y(var10, 4, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 31;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var13 = null;
-            var var8: Any = null;
-            var7 = null;
             var6 = null;
-            var16 = null;
+            var8 = null;
+            var7 = null;
+            var5 = null;
+            var14 = null;
 
             while (var3) {
-               val var4: Int = var12.o(var11);
+               val var4: Int = var11.o(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -220,22 +221,34 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
                                  throw new n(var4);
                               }
 
-                              var7 = var12.y(var11, 4, ChannelId.$serializer.INSTANCE, var7);
+                              var5 = var11.y(var10, 4, ChannelId.$serializer.INSTANCE, var5) as ChannelId;
                               var2 |= 16;
                            } else {
-                              var8 = var12.y(var11, 3, MessageId.$serializer.INSTANCE, var8);
+                              if (var7 != null) {
+                                 var7 = MessageId.box-impl((java.lang.String)var7);
+                              } else {
+                                 var7 = null;
+                              }
+
+                              var7 = var11.y(var10, 3, MessageId.$serializer.INSTANCE, var7) as MessageId;
+                              if (var7 != null) {
+                                 var7 = var7.unbox-impl();
+                              } else {
+                                 var7 = null;
+                              }
+
                               var2 |= 8;
                            }
                         } else {
-                           var6 = var12.y(var11, 2, s.a, var6);
+                           var14 = var11.y(var10, 2, q.a, var14) as JsonObject;
                            var2 |= 4;
                         }
                      } else {
-                        var16 = var12.y(var11, 1, new xk.f(s.a), var16);
+                        var6 = var11.y(var10, 1, var9[1], var6) as java.util.List;
                         var2 |= 2;
                      }
                   } else {
-                     var13 = (MessageId)var12.y(var11, 0, new xk.f(s.a), var13);
+                     var8 = var11.y(var10, 0, var9[0], var8) as java.util.List;
                      var2 |= 1;
                   }
                } else {
@@ -243,37 +256,24 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
                }
             }
 
-            var9 = var16;
-            var7 = var6;
-            var16 = var7;
-            var6 = var8;
+            var14 = (MessageId)var7;
+            var7 = var14;
          }
 
-         var12.c(var11);
-         val var21: java.util.List = var13 as java.util.List;
-         var9 = var9 as java.util.List;
-         var7 = var7 as JsonObject;
-         var13 = var6 as MessageId;
-         val var15: java.lang.String;
-         if (var6 as MessageId != null) {
-            var15 = var13.unbox-impl();
-         } else {
-            var15 = null;
-         }
-
-         return new KvMessageEntry(var2, var21, (java.util.List)var9, (JsonObject)var7, var15, var16 as ChannelId, null, null);
+         var11.c(var10);
+         return new KvMessageEntry(var2, var8, var6, var7, var14, (ChannelId)var5, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: KvMessageEntry) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         kotlin.jvm.internal.q.h(var1, "encoder");
+         kotlin.jvm.internal.q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         KvMessageEntry.write$Self(var2, var4, var3);
+         KvMessageEntry.write$Self$notification_api_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

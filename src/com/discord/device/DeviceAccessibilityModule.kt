@@ -13,14 +13,14 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import fh.p
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import mj.o
 
 public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -31,26 +31,26 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
 
    @JvmStatic
    fun `enableFocusLock$lambda$4`(var0: ReadableArray, var1: DeviceAccessibilityModule) {
-      r.h(var0, "$nativeIds");
-      r.h(var1, "this$0");
-      val var4: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
+      q.h(var0, "$nativeIds");
+      q.h(var1, "this$0");
+      val var3: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
       val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var0);
-      val var3: ArrayList = new ArrayList();
+      val var4: ArrayList = new ArrayList();
       val var8: java.util.Iterator = var5.iterator();
 
       while (var8.hasNext()) {
-         val var2: Int = (var8 as p).nextInt();
-         val var6: ReactApplicationContext = var1.getReactApplicationContext();
-         r.g(var6, "reactApplicationContext");
-         val var7: java.lang.String = var0.getString(var2);
-         r.g(var7, "nativeIds.getString(index)");
-         val var9: View = ReactContextFindViewKt.findView(var6, var7);
+         val var2: Int = (var8 as o).c();
+         val var7: ReactApplicationContext = var1.getReactApplicationContext();
+         q.g(var7, "getReactApplicationContext(...)");
+         val var6: java.lang.String = var0.getString(var2);
+         q.g(var6, "getString(...)");
+         val var9: View = ReactContextFindViewKt.findView(var7, var6);
          if (var9 != null) {
-            var3.add(var9);
+            var4.add(var9);
          }
       }
 
-      var4.enableFocusLock(var3);
+      var3.enableFocusLock(var4);
    }
 
    @ReactMethod
@@ -69,7 +69,7 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
 
    @ReactMethod
    public fun enableFocusLock(nativeIds: ReadableArray, focus: Boolean): Unit? {
-      r.h(var1, "nativeIds");
+      q.h(var1, "nativeIds");
       val var3: Activity = this.getCurrentActivity();
       val var4: Unit;
       if (var3 != null) {
@@ -88,17 +88,17 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
 
    @ReactMethod
    public fun handleSetPrefersReducedMotion(prefersReducedMotion: String) {
-      r.h(var1, "prefersReducedMotion");
+      q.h(var1, "prefersReducedMotion");
       DeviceReducedMotion.INSTANCE.setMotionPreference$device_release(var1);
    }
 
    @ReactMethod
    public fun setAccessibilityFocus(tag: Int, promise: Promise) {
-      r.h(var2, "promise");
+      q.h(var2, "promise");
       if (ThreadUtilsKt.isOnMainThread()) {
          val var3: ReactApplicationContext = access$getReactApplicationContext(this);
-         r.g(var3, "reactApplicationContext");
-         val var4: View = FindViewByReactTagKt.findViewByReactTag(var3, var1, new Function1<Exception, Unit>(var2) {
+         q.g(var3, "access$getReactApplicationContext(...)");
+         val var4: View = FindViewByReactTagKt.findViewByReactTag(var3, var1, new Function1(var2) {
             final Promise $promise;
 
             {
@@ -107,7 +107,7 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
             }
 
             public final void invoke(Exception var1) {
-               r.h(var1, "error");
+               q.h(var1, "error");
                this.$promise.reject(var1);
             }
          });
@@ -130,8 +130,8 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
             @Override
             public final void run() {
                val var1: ReactApplicationContext = DeviceAccessibilityModule.access$getReactApplicationContext(this.this$0);
-               r.g(var1, "reactApplicationContext");
-               val var2: View = FindViewByReactTagKt.findViewByReactTag(var1, this.$tag$inlined, new Function1<Exception, Unit>(this.$promise$inlined) {
+               q.g(var1, "access$getReactApplicationContext(...)");
+               val var2: View = FindViewByReactTagKt.findViewByReactTag(var1, this.$tag$inlined, new Function1(this.$promise$inlined) {
                   final Promise $promise;
 
                   {
@@ -140,7 +140,7 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
                   }
 
                   public final void invoke(Exception var1) {
-                     r.h(var1, "error");
+                     q.h(var1, "error");
                      this.$promise.reject(var1);
                   }
                });

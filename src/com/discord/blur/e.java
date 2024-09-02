@@ -1,5 +1,5 @@
 package com.discord.blur;
 
 // $VF: synthetic class
-public final class e {
+public abstract class e {
 }

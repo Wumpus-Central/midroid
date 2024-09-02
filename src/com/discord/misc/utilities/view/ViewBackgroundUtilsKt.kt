@@ -7,17 +7,17 @@ import android.graphics.drawable.PaintDrawable
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.view.View
 import com.discord.misc.utilities.drawable.GetDrawableCompatKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun View.setBackgroundDrawableRes(drawableResId: Int) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var2: Context = var0.getContext();
-   r.g(var2, "context");
+   q.g(var2, "getContext(...)");
    var0.setBackground(GetDrawableCompatKt.getDrawableCompat(var2, var1));
 }
 
 public fun View.setBackgroundOval(color: Int, radiusPx: Int = 0) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var3: GradientDrawable = new GradientDrawable();
    var3.setShape(1);
    var3.setColor(var1);
@@ -43,7 +43,7 @@ public fun View.setBackgroundRectangle(
    strokeColor: Int? = null,
    strokeWidth: Int = 0
 ) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var8: GradientDrawable = new GradientDrawable();
    var8.setShape(0);
    if (var6 != null) {
@@ -56,7 +56,7 @@ public fun View.setBackgroundRectangle(
 }
 
 public fun View.setBackgroundRectangle(color: Int, radiusPx: Int, strokeColor: Int? = null, strokeWidth: Int = 0) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var6: Any;
    if (var3 != null) {
       val var5: GradientDrawable = new GradientDrawable();
@@ -83,9 +83,9 @@ public fun View.setBackgroundRectangle(
    strokeColor: Int? = null,
    strokeWidth: Int = 0
 ) {
-   r.h(var0, "<this>");
-   r.h(var1, "colors");
-   r.h(var2, "gradientOrientation");
+   q.h(var0, "<this>");
+   q.h(var1, "colors");
+   q.h(var2, "gradientOrientation");
    val var9: GradientDrawable = new GradientDrawable();
    var9.setShape(0);
    if (var7 != null) {
@@ -99,9 +99,9 @@ public fun View.setBackgroundRectangle(
 }
 
 public fun View.setBackgroundRectangle(colors: IntArray, gradientOrientation: Orientation, radiusPx: Int, strokeColor: Int? = null, strokeWidth: Int = 0) {
-   r.h(var0, "<this>");
-   r.h(var1, "colors");
-   r.h(var2, "gradientOrientation");
+   q.h(var0, "<this>");
+   q.h(var1, "colors");
+   q.h(var2, "gradientOrientation");
    val var6: GradientDrawable = new GradientDrawable();
    var6.setShape(0);
    if (var4 != null) {

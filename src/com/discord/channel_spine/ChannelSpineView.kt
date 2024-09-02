@@ -14,9 +14,10 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
-import eh.p
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
+import lj.p
 
 public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
    private final val arcRect: RectF
@@ -70,12 +71,12 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       internal set
 
    fun ChannelSpineView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
       val var4: Paint = new Paint();
       val var3: Int;
@@ -94,7 +95,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       this.verticalPadding = SizeUtilsKt.getDpToPx(8);
       this.horizontalPadding = SizeUtilsKt.getDpToPx(0);
       this.arcRect = new RectF();
-      this.paths = h.i();
+      this.paths = i.j();
       this.setWillNotDraw(false);
    }
 
@@ -113,14 +114,14 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    fun `configureAsReplySpline$lambda$1`(
       var0: ChannelSpineView, var1: View, var2: Int, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int
    ) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       var0.setRowHeight(SizeUtilsKt.getPxToDp(var5 - var3));
    }
 
    private fun createSpinePath(rowHeight: Float, rowIndex: Int, direction: com.discord.channel_spine.ChannelSpineView.SpineDirection): Path {
-      val var11: Path = new Path();
+      val var10: Path = new Path();
       val var6: Float = this.spinePaint.getStrokeWidth() / 2.0F;
-      val var10: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
+      val var11: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
       val var9: Int = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
       val var4: Float;
       if (var9 != 1) {
@@ -141,10 +142,10 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       }
 
       var1 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      val var7: Float = this.getMeasuredWidth();
-      var5 = this.horizontalPadding;
+      var5 = this.getMeasuredWidth();
+      val var7: Float = this.horizontalPadding;
       val var8: Float = this.arcPercent() * this.getMeasuredWidth();
-      var2 = var10[var3.ordinal()];
+      var2 = var11[var3.ordinal()];
       if (var2 != 1) {
          if (var2 == 2) {
             this.arcRect.set(var6, var1, var6 + var8, var8 + var1);
@@ -153,16 +154,16 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          this.arcRect.set(var6, var1 - var8, var8 + var6, var1);
       }
 
-      var11.moveTo(var6, var4);
-      var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var11.lineTo(var7 - var5, var1);
-      return var11;
+      var10.moveTo(var6, var4);
+      var10.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
+      var10.lineTo(var5 - var7, var1);
+      return var10;
    }
 
    private fun rebuildLayout() {
       val var5: Int = this.numRows;
-      val var2: Float = SizeUtilsKt.getDpToPx(this.rowHeight);
-      if (var5 != 0 && !(var2 <= 1.0E-4F)) {
+      val var1: Float = SizeUtilsKt.getDpToPx(this.rowHeight);
+      if (var5 != 0 && !(var1 <= 1.0E-4F)) {
          var var4: Int = 0;
          var var3: Byte = 1;
          if (var5 <= 1) {
@@ -178,23 +179,23 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
                var6 = ChannelSpineView.SpineDirection.TOP_TO_BOTTOM;
             }
 
-            var7.add(this.createSpinePath(var2, var4, var6));
+            var7.add(this.createSpinePath(var1, var4, var6));
             if (var4 < var5 - 1) {
-               var7.add(this.createSpinePath(var2, var4, ChannelSpineView.SpineDirection.BOTTOM_TO_TOP));
+               var7.add(this.createSpinePath(var1, var4, ChannelSpineView.SpineDirection.BOTTOM_TO_TOP));
             }
          }
 
          if (var3 != 0) {
             val var8: Path = new Path();
-            val var1: Float = this.spinePaint.getStrokeWidth() / 2.0F;
-            var8.moveTo(var1, (float)this.verticalPadding);
-            var8.lineTo(var1, this.yOfRow(var2, var5 - 2) + var2 / 2.0F);
+            val var2: Float = this.spinePaint.getStrokeWidth() / 2.0F;
+            var8.moveTo(var2, (float)this.verticalPadding);
+            var8.lineTo(var2, this.yOfRow(var1, var5 - 2) + var1 / 2.0F);
             var7.add(var8);
          }
 
          this.paths = var7;
       } else {
-         this.paths = h.i();
+         this.paths = i.j();
       }
    }
 
@@ -211,7 +212,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      r.h(var1, "canvas");
+      q.h(var1, "canvas");
       super.onDraw(var1);
       val var2: Int = var1.save();
       val var3: java.util.Iterator = this.paths.iterator();
@@ -224,53 +225,40 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-      if (this.numRows != 0) {
-         var var4: Boolean;
-         if (this.rowHeight == 0.0F) {
-            var4 = 1;
+      if (this.numRows != 0 && this.rowHeight != 0.0F) {
+         var var5: Int = MeasureSpec.getMode(var1);
+         if (var5 != Integer.MIN_VALUE && var5 != 1073741824) {
+            var1 = 0;
          } else {
-            var4 = 0;
+            var1 = MeasureSpec.getSize(var1);
          }
 
-         if (!var4) {
-            var4 = MeasureSpec.getMode(var1);
-            if (var4 != Integer.MIN_VALUE && var4 != 1073741824) {
-               var1 = 0;
+         val var3: Float = this.numRows * this.rowHeight;
+         var5 = MeasureSpec.getMode(var2);
+         val var6: Any;
+         if (var5 != Integer.MIN_VALUE) {
+            if (var5 != 1073741824) {
+               var6 = var3;
             } else {
-               var1 = MeasureSpec.getSize(var1);
+               var6 = MeasureSpec.getSize(var2);
             }
-
-            val var9: Float = this.numRows * this.rowHeight;
-            var4 = MeasureSpec.getMode(var2);
-            val var6: Any;
-            if (var4 != Integer.MIN_VALUE) {
-               if (var4 != 1073741824) {
-                  var6 = var9;
-               } else {
-                  var6 = MeasureSpec.getSize(var2);
-               }
-            } else {
-               var6 = vh.h.f(var9, (float)MeasureSpec.getSize(var2));
-            }
-
-            val var8: Boolean;
-            if (var1 != this.getMeasuredWidth()) {
-               var8 = true;
-            } else {
-               var8 = false;
-            }
-
-            this.setMeasuredDimension(var1, var6.intValue());
-            if (var8) {
-               this.rebuildLayout();
-               this.invalidate();
-            }
-
-            return;
+         } else {
+            var6 = f.f(var3, (float)MeasureSpec.getSize(var2));
          }
+
+         var var8: Boolean = false;
+         if (var1 != this.getMeasuredWidth()) {
+            var8 = true;
+         }
+
+         this.setMeasuredDimension(var1, var6.intValue());
+         if (var8) {
+            this.rebuildLayout();
+            this.invalidate();
+         }
+      } else {
+         super.onMeasure(var1, var2);
       }
-
-      super.onMeasure(var1, var2);
    }
 
    private enum class SpineDirection(arcSweepAngle: Float) {
@@ -278,10 +266,24 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       TOP_TO_BOTTOM(-90.0F)
       public final val arcSweepAngle: Float
       @JvmStatic
-      private ChannelSpineView.SpineDirection[] $VALUES = $values();
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private ChannelSpineView.SpineDirection[] $VALUES;
+
+      @JvmStatic
+      fun {
+         val var0: Array<ChannelSpineView.SpineDirection> = $values();
+         $VALUES = var0;
+         $ENTRIES = sj.a.a(var0);
+      }
 
       init {
          this.arcSweepAngle = var3;
+      }
+
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
       }
    }
 }

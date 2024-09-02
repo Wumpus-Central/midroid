@@ -58,37 +58,22 @@ public sealed class ChatListAction protected constructor() {
       }
 
       public override fun hashCode(): Int {
-         val var5: Int = Integer.hashCode(this.position);
-         var var3: Byte = 1;
-         var var1: Byte = this.animated;
-         if (this.animated != 0) {
-            var1 = 1;
-         }
-
-         var var6: Byte = this.jumped;
-         if (this.jumped != 0) {
-            var6 = 1;
-         }
-
-         if (this.isHighlight == 0) {
-            var3 = this.isHighlight;
-         }
-
-         return ((var5 * 31 + var1) * 31 + var6) * 31 + var3;
+         return ((Integer.hashCode(this.position) * 31 + java.lang.Boolean.hashCode(this.animated)) * 31 + java.lang.Boolean.hashCode(this.jumped)) * 31
+            + java.lang.Boolean.hashCode(this.isHighlight);
       }
 
       public override fun toString(): String {
          val var1: Int = this.position;
-         val var3: Boolean = this.animated;
-         val var2: Boolean = this.jumped;
+         val var2: Boolean = this.animated;
+         val var3: Boolean = this.jumped;
          val var4: Boolean = this.isHighlight;
          val var5: StringBuilder = new StringBuilder();
          var5.append("ScrollTo(position=");
          var5.append(var1);
          var5.append(", animated=");
-         var5.append(var3);
-         var5.append(", jumped=");
          var5.append(var2);
+         var5.append(", jumped=");
+         var5.append(var3);
          var5.append(", isHighlight=");
          var5.append(var4);
          var5.append(")");

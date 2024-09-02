@@ -1,6 +1,10 @@
 package com.discord.chat.bridge.row
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,27 +12,15 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
 
 @f
 public data class LoadingAction(type: LoadingActionType) {
    public final val type: LoadingActionType
 
    init {
-      r.h(var1, "type");
+      q.h(var1, "type");
       super();
       this.type = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LoadingAction, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, LoadingActionType.Companion.serializer(), var0.type);
    }
 
    public operator fun component1(): LoadingActionType {
@@ -36,7 +28,7 @@ public data class LoadingAction(type: LoadingActionType) {
    }
 
    public fun copy(type: LoadingActionType = var0.type): LoadingAction {
-      r.h(var1, "type");
+      q.h(var1, "type");
       return new LoadingAction(var1);
    }
 
@@ -63,7 +55,7 @@ public data class LoadingAction(type: LoadingActionType) {
       return var1.toString();
    }
 
-   public object `$serializer` : f0<LoadingAction> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -80,22 +72,23 @@ public data class LoadingAction(type: LoadingActionType) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{LoadingActionType.Companion.serializer()};
+         return new KSerializer[]{LoadingAction.access$get$childSerializers$cp()[0]};
       }
 
       public open fun deserialize(decoder: Decoder): LoadingAction {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
+         val var8: Array<KSerializer> = LoadingAction.access$get$childSerializers$cp();
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var9: LoadingActionType;
          if (var5) {
-            var8 = var7.y(var6, 0, LoadingActionType.Companion.serializer(), null);
+            var9 = var7.y(var6, 0, var8[0], null) as LoadingActionType;
          } else {
             var2 = 0;
-            var8 = null;
+            var9 = null;
 
             while (var3) {
                val var4: Int = var7.o(var6);
@@ -104,7 +97,7 @@ public data class LoadingAction(type: LoadingActionType) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, LoadingActionType.Companion.serializer(), var8);
+                  var9 = var7.y(var6, 0, var8[0], var9) as LoadingActionType;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -113,19 +106,19 @@ public data class LoadingAction(type: LoadingActionType) {
          }
 
          var7.c(var6);
-         return new LoadingAction(var2, var8 as LoadingActionType, null);
+         return new LoadingAction(var2, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadingAction) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         LoadingAction.write$Self(var2, var4, var3);
+         LoadingAction.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

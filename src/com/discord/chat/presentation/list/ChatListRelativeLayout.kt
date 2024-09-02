@@ -4,16 +4,16 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.RelativeLayout
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class ChatListRelativeLayout  public constructor(context: Context, attrs: AttributeSet? = null) : RelativeLayout, ChatListChildView {
    open fun ChatListRelativeLayout(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
    }
 

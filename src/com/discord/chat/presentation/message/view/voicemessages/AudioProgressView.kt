@@ -17,9 +17,6 @@ public interface AudioProgressView {
       }
 
 
-   public var onAudioProgressChange: ((AudioProgressEvent) -> Unit)?
-      internal final set
-
    public var shouldAnimate: Boolean
       internal final set
 

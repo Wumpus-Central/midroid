@@ -5,21 +5,21 @@ import com.discord.user_search_worker.react_events.ReturnResultsEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import eh.w
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.w
 
 public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactEvents: ReactEvents
    private final var worker: UserSearchWorker
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("ReturnResults", h0.b(ReturnResultsEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("ReturnResults", g0.b(ReturnResultsEvent.class)));
       this.worker = new UserSearchWorker(
-         new Function3<java.util.List<? extends UserSearchWorkerResult>, java.lang.String, java.lang.String, Unit>(this, var1) {
+         new Function3(this, var1) {
             final ReactApplicationContext $reactContext;
             final UserSearchWorkerManagerModule this$0;
 
@@ -30,9 +30,9 @@ public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext
             }
 
             public final void invoke(java.util.List<UserSearchWorkerResult> var1, java.lang.String var2, java.lang.String var3) {
-               r.h(var1, "results");
-               r.h(var2, "query");
-               r.h(var3, "uuid");
+               q.h(var1, "results");
+               q.h(var2, "query");
+               q.h(var3, "uuid");
                UserSearchWorkerManagerModule.access$getReactEvents$p(this.this$0)
                   .emitModuleEvent(this.$reactContext, new ReturnResultsEvent(var1, var2, var3, "USER_RESULTS"));
             }
@@ -42,7 +42,7 @@ public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      q.h(var1, "type");
    }
 
    public override fun getName(): String {
@@ -51,7 +51,7 @@ public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun onmessage(dataJSON: String) {
-      r.h(var1, "dataJSON");
+      q.h(var1, "dataJSON");
       this.worker.onMessage(var1);
    }
 

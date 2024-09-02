@@ -1,5 +1,8 @@
 package com.discord.emoji_picker.react.deserialization
 
+import kotlin.enums.EnumEntries
+import sj.a
+
 internal enum class EmojiPickerItemTypes(unsupported: String = Companion, noop: Boolean = false) {
    EMOJI_ROW("Unsupported; don't send full emoji rows to native.", false, 2, null),
    EMOJI_ROW_NSFW("Unsupported; can't render NSFW rows in native.", false, 2, null),
@@ -12,19 +15,33 @@ internal enum class EmojiPickerItemTypes(unsupported: String = Companion, noop: 
    public final val noop: Boolean
    public final val unsupported: String
    @JvmStatic
-   private EmojiPickerItemTypes[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private EmojiPickerItemTypes[] $VALUES;
    @JvmStatic
    public EmojiPickerItemTypes.Companion Companion = new EmojiPickerItemTypes.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<EmojiPickerItemTypes> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.unsupported = var3;
       this.noop = var4;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun create(value: Int): EmojiPickerItemTypes {
          val var2: Array<EmojiPickerItemTypes> = EmojiPickerItemTypes.values();
-         if (var1 >= 0 && var1 <= b.I(var2)) {
+         if (var1 >= 0 && var1 <= c.M(var2)) {
             return var2[var1];
          } else {
             val var3: StringBuilder = new StringBuilder();

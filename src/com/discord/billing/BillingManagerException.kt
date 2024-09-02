@@ -1,6 +1,6 @@
 package com.discord.billing
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public sealed class BillingManagerException protected constructor(reason: String, errorCode: String) : Exception(var1) {
    public final val errorCode: String
@@ -15,7 +15,7 @@ public sealed class BillingManagerException protected constructor(reason: String
 
    public class BillingException(message: String) : BillingManagerException {
       init {
-         r.h(var1, "message");
+         q.h(var1, "message");
          super(var1, "5000", null);
       }
    }

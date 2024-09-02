@@ -1,7 +1,13 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.h
+import gn.n0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,13 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.h
-import xk.m0
 
 @f
 public data class RoleSelectComponent(type: Int,
@@ -42,10 +41,10 @@ public data class RoleSelectComponent(type: Int,
    public open val type: Int
 
    init {
-      r.h(var2, "id");
-      r.h(var3, "state");
-      r.h(var4, "customId");
-      r.h(var10, "selectedOptions");
+      q.h(var2, "id");
+      q.h(var3, "state");
+      q.h(var4, "customId");
+      q.h(var10, "selectedOptions");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -59,113 +58,62 @@ public data class RoleSelectComponent(type: Int,
       this.selectedOptions = var10;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: RoleSelectComponent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      SearchableSelectComponent.write$Self(var0, var1, var2);
-      var1.w(var2, 0, var0.getType());
-      var1.z(var2, 1, var0.getId());
-      var1.y(var2, 2, ActionComponentState.Serializer.INSTANCE, var0.getState());
-      var1.z(var2, 3, var0.getCustomId());
-      var var5: Boolean;
-      if (!var1.A(var2, 4) && var0.getPlaceholder() == null) {
-         var5 = false;
-      } else {
-         var5 = true;
-      }
-
-      if (var5) {
-         var1.m(var2, 4, a2.a, var0.getPlaceholder());
-      }
-
-      if (!var1.A(var2, 5) && var0.getAccessibilityLabel() == null) {
-         var5 = false;
-      } else {
-         var5 = true;
-      }
-
-      if (var5) {
-         var1.m(var2, 5, a2.a, var0.getAccessibilityLabel());
-      }
-
-      label32: {
-         var1.w(var2, 6, var0.getMinValues());
-         var1.w(var2, 7, var0.getMaxValues());
-         if (!var1.A(var2, 8)) {
-            var5 = false;
-            if (!var0.getDisabled()) {
-               break label32;
-            }
-         }
-
-         var5 = true;
-      }
-
-      if (var5) {
-         var1.x(var2, 8, var0.getDisabled());
-      }
-
-      var1.y(var2, 9, new xk.f(SearchableSelectItem.$serializer.INSTANCE), var0.getSelectedOptions());
-   }
-
    public operator fun component1(): Int {
-      return this.getType();
+      return this.type;
    }
 
    public operator fun component10(): List<SearchableSelectItem> {
-      return this.getSelectedOptions();
+      return this.selectedOptions;
    }
 
    public operator fun component2(): String {
-      return this.getId();
+      return this.id;
    }
 
    public operator fun component3(): ActionComponentState {
-      return this.getState();
+      return this.state;
    }
 
    public operator fun component4(): String {
-      return this.getCustomId();
+      return this.customId;
    }
 
    public operator fun component5(): String? {
-      return this.getPlaceholder();
+      return this.placeholder;
    }
 
    public operator fun component6(): String? {
-      return this.getAccessibilityLabel();
+      return this.accessibilityLabel;
    }
 
    public operator fun component7(): Int {
-      return this.getMinValues();
+      return this.minValues;
    }
 
    public operator fun component8(): Int {
-      return this.getMaxValues();
+      return this.maxValues;
    }
 
    public operator fun component9(): Boolean {
-      return this.getDisabled();
+      return this.disabled;
    }
 
    public fun copy(
-      type: Int = var0.getType(),
-      id: String = var0.getId(),
-      state: ActionComponentState = var0.getState(),
-      customId: String = var0.getCustomId(),
-      placeholder: String? = var0.getPlaceholder(),
-      accessibilityLabel: String? = var0.getAccessibilityLabel(),
-      minValues: Int = var0.getMinValues(),
-      maxValues: Int = var0.getMaxValues(),
-      disabled: Boolean = var0.getDisabled(),
-      selectedOptions: List<SearchableSelectItem> = var0.getSelectedOptions()
+      type: Int = var0.type,
+      id: String = var0.id,
+      state: ActionComponentState = var0.state,
+      customId: String = var0.customId,
+      placeholder: String? = var0.placeholder,
+      accessibilityLabel: String? = var0.accessibilityLabel,
+      minValues: Int = var0.minValues,
+      maxValues: Int = var0.maxValues,
+      disabled: Boolean = var0.disabled,
+      selectedOptions: List<SearchableSelectItem> = var0.selectedOptions
    ): RoleSelectComponent {
-      r.h(var2, "id");
-      r.h(var3, "state");
-      r.h(var4, "customId");
-      r.h(var10, "selectedOptions");
+      q.h(var2, "id");
+      q.h(var3, "state");
+      q.h(var4, "customId");
+      q.h(var10, "selectedOptions");
       return new RoleSelectComponent(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
    }
 
@@ -176,97 +124,96 @@ public data class RoleSelectComponent(type: Int,
          return false;
       } else {
          var1 = var1;
-         if (this.getType() != var1.getType()) {
+         if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.getId(), var1.getId())) {
+         } else if (!q.c(this.id, var1.id)) {
             return false;
-         } else if (this.getState() != var1.getState()) {
+         } else if (this.state != var1.state) {
             return false;
-         } else if (!r.c(this.getCustomId(), var1.getCustomId())) {
+         } else if (!q.c(this.customId, var1.customId)) {
             return false;
-         } else if (!r.c(this.getPlaceholder(), var1.getPlaceholder())) {
+         } else if (!q.c(this.placeholder, var1.placeholder)) {
             return false;
-         } else if (!r.c(this.getAccessibilityLabel(), var1.getAccessibilityLabel())) {
+         } else if (!q.c(this.accessibilityLabel, var1.accessibilityLabel)) {
             return false;
-         } else if (this.getMinValues() != var1.getMinValues()) {
+         } else if (this.minValues != var1.minValues) {
             return false;
-         } else if (this.getMaxValues() != var1.getMaxValues()) {
+         } else if (this.maxValues != var1.maxValues) {
             return false;
-         } else if (this.getDisabled() != var1.getDisabled()) {
+         } else if (this.disabled != var1.disabled) {
             return false;
          } else {
-            return r.c(this.getSelectedOptions(), var1.getSelectedOptions());
+            return q.c(this.selectedOptions, var1.selectedOptions);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = Integer.hashCode(this.getType());
-      val var6: Int = this.getId().hashCode();
-      val var5: Int = this.getState().hashCode();
-      val var7: Int = this.getCustomId().hashCode();
-      val var11: java.lang.String = this.getPlaceholder();
+      val var5: Int = Integer.hashCode(this.type);
+      val var4: Int = this.id.hashCode();
+      val var3: Int = this.state.hashCode();
+      val var6: Int = this.customId.hashCode();
       var var2: Int = 0;
       val var1: Int;
-      if (var11 == null) {
+      if (this.placeholder == null) {
          var1 = 0;
       } else {
-         var1 = this.getPlaceholder().hashCode();
+         var1 = this.placeholder.hashCode();
       }
 
-      if (this.getAccessibilityLabel() != null) {
-         var2 = this.getAccessibilityLabel().hashCode();
+      if (this.accessibilityLabel != null) {
+         var2 = this.accessibilityLabel.hashCode();
       }
 
-      val var10: Int = Integer.hashCode(this.getMinValues());
-      val var9: Int = Integer.hashCode(this.getMaxValues());
-      val var4: Byte = this.getDisabled();
-      var var3: Byte = var4;
-      if (var4 != 0) {
-         var3 = 1;
-      }
-
-      return ((((((((var8 * 31 + var6) * 31 + var5) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var9) * 31 + var3) * 31
-         + this.getSelectedOptions().hashCode();
+      return (
+               (
+                        ((((((var5 * 31 + var4) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                           + Integer.hashCode(this.maxValues)
+                     )
+                     * 31
+                  + java.lang.Boolean.hashCode(this.disabled)
+            )
+            * 31
+         + this.selectedOptions.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: Int = this.getType();
-      val var6: java.lang.String = this.getId();
-      val var10: ActionComponentState = this.getState();
-      val var11: java.lang.String = this.getCustomId();
-      val var7: java.lang.String = this.getPlaceholder();
-      val var8: java.lang.String = this.getAccessibilityLabel();
-      val var1: Int = this.getMinValues();
-      val var3: Int = this.getMaxValues();
-      val var4: Boolean = this.getDisabled();
-      val var5: java.util.List = this.getSelectedOptions();
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("RoleSelectComponent(type=");
-      var9.append(var2);
-      var9.append(", id=");
-      var9.append(var6);
-      var9.append(", state=");
-      var9.append(var10);
-      var9.append(", customId=");
-      var9.append(var11);
-      var9.append(", placeholder=");
-      var9.append(var7);
-      var9.append(", accessibilityLabel=");
-      var9.append(var8);
-      var9.append(", minValues=");
-      var9.append(var1);
-      var9.append(", maxValues=");
-      var9.append(var3);
-      var9.append(", disabled=");
-      var9.append(var4);
-      var9.append(", selectedOptions=");
-      var9.append(var5);
-      var9.append(")");
-      return var9.toString();
+      val var2: Int = this.type;
+      val var11: java.lang.String = this.id;
+      val var9: ActionComponentState = this.state;
+      val var10: java.lang.String = this.customId;
+      val var5: java.lang.String = this.placeholder;
+      val var7: java.lang.String = this.accessibilityLabel;
+      val var3: Int = this.minValues;
+      val var1: Int = this.maxValues;
+      val var4: Boolean = this.disabled;
+      val var8: java.util.List = this.selectedOptions;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("RoleSelectComponent(type=");
+      var6.append(var2);
+      var6.append(", id=");
+      var6.append(var11);
+      var6.append(", state=");
+      var6.append(var9);
+      var6.append(", customId=");
+      var6.append(var10);
+      var6.append(", placeholder=");
+      var6.append(var5);
+      var6.append(", accessibilityLabel=");
+      var6.append(var7);
+      var6.append(", minValues=");
+      var6.append(var3);
+      var6.append(", maxValues=");
+      var6.append(var1);
+      var6.append(", disabled=");
+      var6.append(var4);
+      var6.append(", selectedOptions=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
-   public object `$serializer` : f0<RoleSelectComponent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -292,171 +239,155 @@ public data class RoleSelectComponent(type: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: m0 = m0.a;
-         val var2: a2 = a2.a;
-         return new KSerializer[]{
-            m0.a,
-            a2.a,
-            ActionComponentState.Serializer.INSTANCE,
-            a2.a,
-            a.u(a2.a),
-            a.u(var2),
-            var1,
-            var1,
-            h.a,
-            new xk.f(SearchableSelectItem.$serializer.INSTANCE)
-         };
+         val var3: Array<KSerializer> = RoleSelectComponent.access$get$childSerializers$cp();
+         val var1: n0 = n0.a;
+         val var2: b2 = b2.a;
+         return new KSerializer[]{n0.a, b2.a, ActionComponentState.Serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var2), var1, var1, h.a, var3[9]};
       }
 
       public open fun deserialize(decoder: Decoder): RoleSelectComponent {
-         r.h(var1, "decoder");
-         val var20: SerialDescriptor = this.getDescriptor();
-         val var21: c = var1.b(var20);
-         val var12: Boolean = var21.p();
-         var var8: Byte = 9;
-         var var10: Byte = 7;
+         q.h(var1, "decoder");
+         val var18: SerialDescriptor = this.getDescriptor();
+         val var19: c = var1.b(var18);
+         val var17: Array<KSerializer> = RoleSelectComponent.access$get$childSerializers$cp();
+         val var11: Boolean = var19.p();
+         var var8: Byte = 7;
          var var9: Byte = 6;
          var var2: Int = 0;
          var var3: Int;
          var var4: Int;
          var var5: Int;
-         var var6: Int;
-         val var7: Int;
+         val var6: Int;
+         var var7: Int;
+         var var12: Any;
+         var var13: Any;
          var var14: Any;
          var var15: Any;
-         var var17: Any;
-         val var18: Any;
-         val var19: Any;
-         var var29: Any;
-         if (var12) {
-            var5 = var21.i(var20, 0);
-            val var22: java.lang.String = var21.m(var20, 1);
-            var15 = var21.y(var20, 2, ActionComponentState.Serializer.INSTANCE, null);
-            val var13: java.lang.String = var21.m(var20, 3);
-            var29 = a2.a;
-            var14 = var21.n(var20, 4, a2.a, null);
-            var17 = var21.n(var20, 5, (DeserializationStrategy)var29, null);
-            var2 = var21.i(var20, 6);
-            var4 = var21.i(var20, 7);
-            var3 = var21.C(var20, 8);
-            var29 = var21.y(var20, 9, new xk.f(SearchableSelectItem.$serializer.INSTANCE), null);
+         var var16: java.lang.String;
+         val var22: java.util.List;
+         if (var11) {
+            var3 = var19.i(var18, 0);
+            var12 = var19.m(var18, 1);
+            var13 = var19.y(var18, 2, ActionComponentState.Serializer.INSTANCE, null) as ActionComponentState;
+            var15 = var19.m(var18, 3);
+            val var20: b2 = b2.a;
+            var14 = var19.n(var18, 4, b2.a, null) as java.lang.String;
+            val var21: java.lang.String = var19.n(var18, 5, var20, null) as java.lang.String;
+            var5 = var19.i(var18, 6);
+            var2 = var19.i(var18, 7);
+            var4 = var19.C(var18, 8);
+            val var28: java.util.List = var19.y(var18, 9, var17[9], null) as java.util.List;
             var7 = 1023;
-            var18 = var13;
+            var16 = var21;
             var6 = var2;
-            var19 = var22;
+            var22 = var28;
          } else {
             var var25: Boolean = true;
-            var5 = 0;
-            var6 = 0;
             var3 = 0;
-            var17 = null;
-            var29 = null;
-            var var26: Any = null;
-            var var23: Any = null;
+            var5 = 0;
+            var4 = 0;
+            var16 = null;
             var15 = null;
             var14 = null;
-            var4 = 0;
+            var13 = null;
+            var12 = null;
+            var var23: Any = null;
+            var7 = 0;
 
             while (var25) {
-               label38: {
-                  label37: {
-                     val var11: Int = var21.o(var20);
-                     switch (var11) {
-                        case -1:
-                           var25 = false;
-                           break;
-                        case 0:
-                           var5 = var21.i(var20, 0);
-                           var2 |= 1;
-                           break label37;
-                        case 1:
-                           var15 = var21.m(var20, 1);
-                           var2 |= 2;
-                           break label37;
-                        case 2:
-                           var23 = var21.y(var20, 2, ActionComponentState.Serializer.INSTANCE, var23);
-                           var2 |= 4;
-                           break label37;
-                        case 3:
-                           var14 = var21.m(var20, 3);
-                           var2 |= 8;
-                           break;
-                        case 4:
-                           var26 = var21.n(var20, 4, a2.a, var26);
-                           var2 |= 16;
-                           break;
-                        case 5:
-                           var17 = var21.n(var20, 5, a2.a, var17);
-                           var2 |= 32;
-                           var8 = 9;
-                           continue;
-                        case 6:
-                           var6 = var21.i(var20, var9);
-                           var2 |= 64;
-                           continue;
-                        case 7:
-                           var4 = var21.i(var20, var10);
-                           var2 |= 128;
-                           break label38;
-                        case 8:
-                           var3 = var21.C(var20, 8);
-                           var2 |= 256;
-                           break label38;
-                        case 9:
-                           var29 = var21.y(var20, var8, new xk.f(SearchableSelectItem.$serializer.INSTANCE), var29);
-                           var2 |= 512;
-                           break label38;
-                        default:
-                           throw new n(var11);
-                     }
-
-                     var8 = 9;
-                     continue;
+               label41: {
+                  val var10: Int = var19.o(var18);
+                  switch (var10) {
+                     case -1:
+                        var25 = false;
+                        break label41;
+                     case 0:
+                        var3 = var19.i(var18, 0);
+                        var2 |= 1;
+                        break;
+                     case 1:
+                        var12 = var19.m(var18, 1);
+                        var2 |= 2;
+                        break;
+                     case 2:
+                        var13 = var19.y(var18, 2, ActionComponentState.Serializer.INSTANCE, var13) as ActionComponentState;
+                        var2 |= 4;
+                        break;
+                     case 3:
+                        var23 = var19.m(var18, 3);
+                        var2 |= 8;
+                        break label41;
+                     case 4:
+                        var14 = var19.n(var18, 4, b2.a, var14) as java.lang.String;
+                        var2 |= 16;
+                        break label41;
+                     case 5:
+                        var16 = var19.n(var18, 5, b2.a, var16) as java.lang.String;
+                        var2 |= 32;
+                        var8 = 7;
+                        continue;
+                     case 6:
+                        var5 = var19.i(var18, var9);
+                        var2 |= 64;
+                        continue;
+                     case 7:
+                        var7 = var19.i(var18, var8);
+                        var2 |= 128;
+                        continue;
+                     case 8:
+                        var4 = var19.C(var18, 8);
+                        var2 |= 256;
+                        continue;
+                     case 9:
+                        var15 = var19.y(var18, 9, var17[9], var15) as java.util.List;
+                        var2 |= 512;
+                        continue;
+                     default:
+                        throw new n(var10);
                   }
 
-                  var8 = 9;
-                  var10 = 7;
+                  var8 = 7;
+                  var9 = 6;
                   continue;
                }
 
-               var9 = 6;
+               var8 = 7;
             }
 
-            var19 = var15;
-            var18 = var14;
+            var6 = var7;
+            var22 = (java.util.List)var15;
             var15 = var23;
-            var14 = var26;
             var7 = var2;
          }
 
-         var21.c(var20);
+         var19.c(var18);
          return new RoleSelectComponent(
             var7,
+            var3,
+            (java.lang.String)var12,
+            (ActionComponentState)var13,
+            (java.lang.String)var15,
+            (java.lang.String)var14,
+            var16,
             var5,
-            (java.lang.String)var19,
-            var15 as ActionComponentState,
-            (java.lang.String)var18,
-            var14 as java.lang.String,
-            var17 as java.lang.String,
             var6,
-            var4,
-            (boolean)var3,
-            var29 as java.util.List,
+            (boolean)var4,
+            var22,
             null
          );
       }
 
       public open fun serialize(encoder: Encoder, value: RoleSelectComponent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         RoleSelectComponent.write$Self(var2, var4, var3);
+         RoleSelectComponent.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

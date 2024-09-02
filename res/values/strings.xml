@@ -51,14 +51,12 @@
     <string name="catalyst_change_bundle_location">Change Bundle Location</string>
     <string name="catalyst_copy_button">"Copy
 "</string>
-    <string name="catalyst_debug">Debug</string>
-    <string name="catalyst_debug_chrome">Debug with Chrome</string>
-    <string name="catalyst_debug_chrome_stop">Stop Chrome Debugging</string>
     <string name="catalyst_debug_connecting">Connecting to debugger...</string>
     <string name="catalyst_debug_error">Failed to connect to debugger!</string>
     <string name="catalyst_debug_open">Open Debugger</string>
-    <string name="catalyst_debug_stop">Stop Debugging</string>
-    <string name="catalyst_devtools_open">Open React DevTools</string>
+    <string name="catalyst_debug_open_disabled">Connect to the bundler to debug JavaScript</string>
+    <string name="catalyst_dev_menu_header">React Native Dev Menu (%1$s)</string>
+    <string name="catalyst_dev_menu_sub_header">Running %1$s</string>
     <string name="catalyst_dismiss_button">"Dismiss
 (ESC)"</string>
     <string name="catalyst_heap_capture">Capture Heap</string>
@@ -66,10 +64,9 @@
     <string name="catalyst_hot_reloading_auto_disable">Disabling Fast Refresh because it requires a development bundle.</string>
     <string name="catalyst_hot_reloading_auto_enable">Switching to development bundle in order to enable Fast Refresh.</string>
     <string name="catalyst_hot_reloading_stop">Disable Fast Refresh</string>
-    <string name="catalyst_inspector">Show Element Inspector</string>
-    <string name="catalyst_inspector_stop">Hide Element Inspector</string>
+    <string name="catalyst_inspector_toggle">Toggle Element Inspector</string>
     <string name="catalyst_loading_from_url">Loading from %1$s…</string>
-    <string name="catalyst_open_flipper_error">Failed to open Flipper. Please check that Metro is running.</string>
+    <string name="catalyst_open_debugger_error">Failed to open debugger. Please check that the dev server is running and reload the app.</string>
     <string name="catalyst_perf_monitor">Show Perf Monitor</string>
     <string name="catalyst_perf_monitor_stop">Hide Perf Monitor</string>
     <string name="catalyst_reload">Reload</string>
@@ -77,8 +74,7 @@
 (R, R)"</string>
     <string name="catalyst_reload_error">Failed to load bundle. Try restarting the bundler or reconnecting your device.</string>
     <string name="catalyst_report_button">Report</string>
-    <string name="catalyst_sample_profiler_disable">Disable Sampling Profiler</string>
-    <string name="catalyst_sample_profiler_enable">Enable Sampling Profiler</string>
+    <string name="catalyst_sample_profiler_toggle">Toggle Sampling Profiler</string>
     <string name="catalyst_settings">Settings</string>
     <string name="catalyst_settings_title">Debug Settings</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
@@ -176,9 +172,7 @@
     <string name="fallback_menu_item_copy_link">Copy link</string>
     <string name="fallback_menu_item_open_in_browser">Open in browser</string>
     <string name="fallback_menu_item_share_link">Share link</string>
-    <string name="fcm_2_args">First: %1$s and second %2$s</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
-    <string name="fcm_no_args">String with no arguments</string>
     <string name="firebase_database_url">https://adept-ethos-91518.firebaseio.com</string>
     <string name="gcm_defaultSenderId">162066849712</string>
     <string name="google_api_key">AIzaSyCY8pVLbcOlWDz6NdLbaGckvwhOmfNu02U</string>

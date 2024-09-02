@@ -1,7 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import fh.s
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,15 +13,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.r0
-import xk.f0.a
+import mj.r
 
 @f
-public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = s.h()) {
+public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = r.h()) {
    public final val checkmarkIcon: String
 
    public final val defaultStyle: PollStyleSet
@@ -36,30 +35,13 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    public final val styles: Map<String, PollStyleSet>
 
    init {
-      r.h(var1, "selectedIcon");
-      r.h(var2, "checkmarkIcon");
-      r.h(var3, "styles");
+      q.h(var1, "selectedIcon");
+      q.h(var2, "checkmarkIcon");
+      q.h(var3, "styles");
       super();
       this.selectedIcon = var1;
       this.checkmarkIcon = var2;
       this.styles = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: PollResources, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean = false;
-      var1.z(var2, 0, var0.selectedIcon);
-      var1.z(var2, 1, var0.checkmarkIcon);
-      if (var1.A(var2, 2) || !r.c(var0.styles, s.h())) {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.y(var2, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), var0.styles);
-      }
    }
 
    public operator fun component1(): String {
@@ -75,9 +57,9 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public fun copy(selectedIcon: String = var0.selectedIcon, checkmarkIcon: String = var0.checkmarkIcon, styles: Map<String, PollStyleSet> = var0.styles): PollResources {
-      r.h(var1, "selectedIcon");
-      r.h(var2, "checkmarkIcon");
-      r.h(var3, "styles");
+      q.h(var1, "selectedIcon");
+      q.h(var2, "checkmarkIcon");
+      q.h(var3, "styles");
       return new PollResources(var1, var2, var3);
    }
 
@@ -88,12 +70,12 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.selectedIcon, var1.selectedIcon)) {
+         if (!q.c(this.selectedIcon, var1.selectedIcon)) {
             return false;
-         } else if (!r.c(this.checkmarkIcon, var1.checkmarkIcon)) {
+         } else if (!q.c(this.checkmarkIcon, var1.checkmarkIcon)) {
             return false;
          } else {
-            return r.c(this.styles, var1.styles);
+            return q.c(this.styles, var1.styles);
          }
       }
    }
@@ -103,21 +85,21 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.selectedIcon;
+      val var4: java.lang.String = this.selectedIcon;
       val var2: java.lang.String = this.checkmarkIcon;
-      val var4: java.util.Map = this.styles;
+      val var3: java.util.Map = this.styles;
       val var1: StringBuilder = new StringBuilder();
       var1.append("PollResources(selectedIcon=");
-      var1.append(var3);
+      var1.append(var4);
       var1.append(", checkmarkIcon=");
       var1.append(var2);
       var1.append(", styles=");
-      var1.append(var4);
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }
 
-   public object `$serializer` : f0<PollResources> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -136,32 +118,32 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a, new r0(a2.a, PollStyleSet.$serializer.INSTANCE)};
+         return new KSerializer[]{b2.a, b2.a, PollResources.access$get$childSerializers$cp()[2]};
       }
 
       public open fun deserialize(decoder: Decoder): PollResources {
-         r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         q.h(var1, "decoder");
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var10: Array<KSerializer> = PollResources.access$get$childSerializers$cp();
+         val var5: Boolean = var9.p();
          var var7: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
-         val var8: Any;
+         var var11: java.util.Map;
          if (var5) {
-            var7 = var10.m(var9, 0);
-            val var11: java.lang.String = var10.m(var9, 1);
-            var8 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), null);
+            var7 = var9.m(var8, 0);
+            var6 = var9.m(var8, 1);
+            var11 = var9.y(var8, 2, var10[2], null) as java.util.Map;
             var2 = 7;
-            var6 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var6 = null;
-            var var12: Any = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -169,38 +151,36 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
                            throw new n(var4);
                         }
 
-                        var12 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), var12);
+                        var11 = var9.y(var8, 2, var10[2], var11) as java.util.Map;
                         var2 |= 4;
                      } else {
-                        var6 = var10.m(var9, 1);
+                        var6 = var9.m(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.m(var9, 0);
+                     var7 = var9.m(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var8 = var12;
          }
 
-         var10.c(var9);
-         return new PollResources(var2, var7, var6, var8 as java.util.Map, null);
+         var9.c(var8);
+         return new PollResources(var2, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollResources) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         PollResources.write$Self(var2, var4, var3);
+         PollResources.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

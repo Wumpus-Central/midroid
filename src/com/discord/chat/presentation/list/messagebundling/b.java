@@ -11,6 +11,6 @@ public final class b implements OnClickListener {
    public final Message k;
 
    public final void onClick(View var1) {
-      MessageBundleConversationView.c(this.j, this.k, var1);
+      MessageBundleConversationView.h(this.j, this.k, var1);
    }
 }

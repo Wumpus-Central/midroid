@@ -3,8 +3,12 @@ package com.discord.billing.react.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -12,11 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
+import lj.w
 
 @f
 internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName: String, sku: String) : ReactEvent {
@@ -25,23 +25,13 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
    private final val sku: String
 
    init {
-      r.h(var1, "purchaseToken");
-      r.h(var2, "packageName");
-      r.h(var3, "sku");
+      q.h(var1, "purchaseToken");
+      q.h(var2, "packageName");
+      q.h(var3, "sku");
       super();
       this.purchaseToken = var1;
       this.packageName = var2;
       this.sku = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: BillingManagerPurchaseUpdated, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.purchaseToken);
-      var1.z(var2, 1, var0.packageName);
-      var1.z(var2, 2, var0.sku);
    }
 
    public open fun serialize(): WritableNativeMap {
@@ -57,7 +47,7 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
       );
    }
 
-   public object `$serializer` : f0<BillingManagerPurchaseUpdated> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -78,27 +68,25 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a2.a, a2.a};
+         return new KSerializer[]{b2.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): BillingManagerPurchaseUpdated {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
-         var var6: java.lang.String;
+         var var5: java.lang.String;
+         val var7: java.lang.String;
          val var10: java.lang.String;
-         var var12: java.lang.String;
          if (var9.p()) {
-            var12 = var9.m(var8, 0);
-            val var7: java.lang.String = var9.m(var8, 1);
+            var5 = var9.m(var8, 0);
+            var7 = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
             var2 = 7;
-            var6 = var12;
-            var12 = var7;
          } else {
-            var6 = null;
-            var12 = null;
+            var var6: java.lang.String = null;
+            var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -112,7 +100,7 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
                            throw new n(var4);
                         }
 
-                        var12 = var9.m(var8, 2);
+                        var5 = var9.m(var8, 2);
                         var2 |= 4;
                      } else {
                         var11 = var9.m(var8, 1);
@@ -127,24 +115,25 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
                }
             }
 
-            var12 = var11;
-            var10 = var12;
+            var7 = var11;
+            var10 = var5;
+            var5 = var6;
          }
 
          var9.c(var8);
-         return new BillingManagerPurchaseUpdated(var2, var6, var12, var10, null);
+         return new BillingManagerPurchaseUpdated(var2, var5, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BillingManagerPurchaseUpdated) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         BillingManagerPurchaseUpdated.write$Self(var2, var4, var3);
+         BillingManagerPurchaseUpdated.write$Self$billing_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -1,6 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
 
 @f
 public data class TextContentNode(content: String? = null) : ContentNode() {
@@ -24,22 +24,6 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
 
    init {
       this.content = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TextContentNode, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      val var4: Boolean = var1.A(var2, 0);
-      var var3: Boolean = true;
-      if (!var4 && var0.content == null) {
-         var3 = false;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, a2.a, var0.content);
-      }
    }
 
    public operator fun component1(): String? {
@@ -56,7 +40,7 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
       } else if (var1 !is TextContentNode) {
          return false;
       } else {
-         return r.c(this.content, (var1 as TextContentNode).content);
+         return q.c(this.content, (var1 as TextContentNode).content);
       }
    }
 
@@ -72,15 +56,15 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TextContentNode(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TextContentNode(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : f0<TextContentNode> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -97,19 +81,19 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(a2.a)};
+         return new KSerializer[]{a.u(b2.a)};
       }
 
       public open fun deserialize(decoder: Decoder): TextContentNode {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var8: java.lang.String;
          if (var5) {
-            var8 = var7.n(var6, 0, a2.a, null);
+            var8 = var7.n(var6, 0, b2.a, null) as java.lang.String;
          } else {
             var2 = 0;
             var8 = null;
@@ -121,7 +105,7 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
                      throw new n(var4);
                   }
 
-                  var8 = var7.n(var6, 0, a2.a, var8);
+                  var8 = var7.n(var6, 0, b2.a, var8) as java.lang.String;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -130,20 +114,20 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
          }
 
          var7.c(var6);
-         return new TextContentNode(var2, var8 as java.lang.String, null);
+         return new TextContentNode(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TextContentNode) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         TextContentNode.write$Self(var2, var4, var3);
+         TextContentNode.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

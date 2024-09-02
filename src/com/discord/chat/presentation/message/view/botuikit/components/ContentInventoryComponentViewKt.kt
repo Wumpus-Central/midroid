@@ -5,11 +5,11 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.image.ImageInfo
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun getContentControllerListener(imageView: SimpleDraweeView): ControllerListener<ImageInfo> {
-   r.h(var0, "imageView");
-   return new ControllerListener<ImageInfo>(var0) {
+   q.h(var0, "imageView");
+   return new ControllerListener(var0) {
       final SimpleDraweeView $imageView;
 
       {

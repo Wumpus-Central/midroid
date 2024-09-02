@@ -1,6 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,27 +12,15 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
 
 @f
 public data class StrongContentNode(content: List<ContentNode>) : ContentNode {
    public final val content: List<ContentNode>
 
    init {
-      r.h(var1, "content");
+      q.h(var1, "content");
       super(null);
       this.content = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: StrongContentNode, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, new xk.f(ContentNodeSerializer.INSTANCE), var0.content);
    }
 
    public operator fun component1(): List<ContentNode> {
@@ -36,7 +28,7 @@ public data class StrongContentNode(content: List<ContentNode>) : ContentNode {
    }
 
    public fun copy(content: List<ContentNode> = var0.content): StrongContentNode {
-      r.h(var1, "content");
+      q.h(var1, "content");
       return new StrongContentNode(var1);
    }
 
@@ -46,7 +38,7 @@ public data class StrongContentNode(content: List<ContentNode>) : ContentNode {
       } else if (var1 !is StrongContentNode) {
          return false;
       } else {
-         return r.c(this.content, (var1 as StrongContentNode).content);
+         return q.c(this.content, (var1 as StrongContentNode).content);
       }
    }
 
@@ -55,15 +47,15 @@ public data class StrongContentNode(content: List<ContentNode>) : ContentNode {
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("StrongContentNode(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("StrongContentNode(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<StrongContentNode> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -80,22 +72,23 @@ public data class StrongContentNode(content: List<ContentNode>) : ContentNode {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{new xk.f(ContentNodeSerializer.INSTANCE)};
+         return new KSerializer[]{StrongContentNode.access$get$childSerializers$cp()[0]};
       }
 
       public open fun deserialize(decoder: Decoder): StrongContentNode {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.b(var6);
+         val var8: Array<KSerializer> = StrongContentNode.access$get$childSerializers$cp();
          val var5: Boolean = var7.p();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var9: java.util.List;
          if (var5) {
-            var8 = var7.y(var6, 0, new xk.f(ContentNodeSerializer.INSTANCE), null);
+            var9 = var7.y(var6, 0, var8[0], null) as java.util.List;
          } else {
             var2 = 0;
-            var8 = null;
+            var9 = null;
 
             while (var3) {
                val var4: Int = var7.o(var6);
@@ -104,7 +97,7 @@ public data class StrongContentNode(content: List<ContentNode>) : ContentNode {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, new xk.f(ContentNodeSerializer.INSTANCE), var8);
+                  var9 = var7.y(var6, 0, var8[0], var9) as java.util.List;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -113,19 +106,19 @@ public data class StrongContentNode(content: List<ContentNode>) : ContentNode {
          }
 
          var7.c(var6);
-         return new StrongContentNode(var2, var8 as java.util.List, null);
+         return new StrongContentNode(var2, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: StrongContentNode) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         StrongContentNode.write$Self(var2, var4, var3);
+         StrongContentNode.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

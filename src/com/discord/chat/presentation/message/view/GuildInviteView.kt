@@ -3,9 +3,9 @@ package com.discord.chat.presentation.message.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.view.View.OnClickListener
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
@@ -26,50 +26,50 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
    private final val binding: GuildInviteViewBinding
 
    fun GuildInviteView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun GuildInviteView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
       val var7: GuildInviteViewBinding = GuildInviteViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var7, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var7, "inflate(...)");
       this.binding = var7;
       var var4: TextView = var7.itemInviteHeader;
       var7.itemInviteHeader.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.g(var4, "lambda$6$lambda$0");
+      kotlin.jvm.internal.q.e(var4);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
       val var5: TextView = var7.itemInviteTitle;
       var7.itemInviteTitle.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      kotlin.jvm.internal.r.g(var5, "lambda$6$lambda$1");
+      kotlin.jvm.internal.q.e(var5);
       SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
       val var8: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
       var var6: TextView = var7.itemInviteSubtitle;
       var7.itemInviteSubtitle.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.g(var6, "lambda$6$lambda$2");
+      kotlin.jvm.internal.q.e(var6);
       val var10: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryMedium);
       var6 = var7.itemInviteOnlineText;
       var7.itemInviteOnlineText.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.g(var6, "lambda$6$lambda$3");
+      kotlin.jvm.internal.q.e(var6);
       SetTextSizeSpKt.setTextSizeSp(var6, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var6, var8);
       var6 = var7.itemInviteTotalMemberText;
       var7.itemInviteTotalMemberText.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.g(var6, "lambda$6$lambda$4");
+      kotlin.jvm.internal.q.e(var6);
       SetTextSizeSpKt.setTextSizeSp(var6, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var6, var8);
       var4 = var7.itemInviteHubLink;
       var7.itemInviteHubLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.g(var4, "lambda$6$lambda$5");
+      kotlin.jvm.internal.q.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, var10);
       var7.itemInviteJoinedButton.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.brand));
    }
@@ -80,7 +80,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
          var2 = var1;
       } else {
          val var3: Context = this.getContext();
-         kotlin.jvm.internal.r.g(var3, "context");
+         kotlin.jvm.internal.q.g(var3, "getContext(...)");
          var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(color.primary_100, color.primary_630));
       }
 
@@ -93,9 +93,9 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setButtonText(text: CharSequence?) {
       val var4: DCDButton = this.binding.itemInviteJoinedButton;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteJoinedButton, "binding.itemInviteJoinedButton");
+      kotlin.jvm.internal.q.g(this.binding.itemInviteJoinedButton, "itemInviteJoinedButton");
       var var2: Boolean;
-      if (var1 != null && !kotlin.text.f.x(var1)) {
+      if (var1 != null && !kotlin.text.h.x(var1)) {
          var2 = 0;
       } else {
          var2 = 1;
@@ -133,7 +133,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setHeaderText(headerText: CharSequence?) {
       val var4: TextView = this.binding.itemInviteHeader;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteHeader, "binding.itemInviteHeader");
+      kotlin.jvm.internal.q.g(this.binding.itemInviteHeader, "itemInviteHeader");
       var var2: Boolean;
       if (var1 != null && var1.length() != 0) {
          var2 = 0;
@@ -153,7 +153,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setInviteSplash(url: String?) {
       val var4: SimpleDraweeView = this.binding.itemInviteSplash;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteSplash, "binding.itemInviteSplash");
+      kotlin.jvm.internal.q.g(this.binding.itemInviteSplash, "itemInviteSplash");
       var var2: Boolean;
       if (var1 != null && var1.length() != 0) {
          var2 = 0;
@@ -173,7 +173,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setLoading(loading: Boolean) {
       val var2: DCDButton = this.binding.itemInviteJoinedButton;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteJoinedButton, "binding.itemInviteJoinedButton");
+      kotlin.jvm.internal.q.g(this.binding.itemInviteJoinedButton, "itemInviteJoinedButton");
       DCDButton.setLoading$default(var2, var1, false, 2, null);
    }
 
@@ -182,10 +182,10 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
    }
 
    public fun setPresence(onlineText: CharSequence?, memberText: CharSequence?) {
-      var var7: ImageView = this.binding.itemInviteOnlineDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteOnlineDot, "binding.itemInviteOnlineDot");
+      var var6: View = this.binding.itemInviteOnlineDot;
+      kotlin.jvm.internal.q.g(this.binding.itemInviteOnlineDot, "itemInviteOnlineDot");
       var var3: Boolean;
-      if (var1 != null && !kotlin.text.f.x(var1)) {
+      if (var1 != null && !kotlin.text.h.x(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -197,67 +197,63 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
          var3 = 8;
       }
 
-      var7.setVisibility(var3);
-      var7 = this.binding.itemInviteOnlineDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteOnlineDot, "binding.itemInviteOnlineDot");
-      ViewBackgroundUtilsKt.setBackgroundOval$default(var7, ColorUtilsKt.getColorCompat(this, color.green_360), 0, 2, null);
+      var6.setVisibility(var3);
+      var6 = this.binding.itemInviteOnlineDot;
+      kotlin.jvm.internal.q.g(this.binding.itemInviteOnlineDot, "itemInviteOnlineDot");
+      ViewBackgroundUtilsKt.setBackgroundOval$default(var6, ColorUtilsKt.getColorCompat(this, color.green_360), 0, 2, null);
       this.binding.itemInviteOnlineText.setText(var1);
-      var7 = this.binding.itemInviteTotalMemberDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteTotalMemberDot, "binding.itemInviteTotalMemberDot");
-      var var9: Boolean;
-      if (var2 != null && !kotlin.text.f.x(var2)) {
-         var9 = 0;
+      var6 = this.binding.itemInviteTotalMemberDot;
+      kotlin.jvm.internal.q.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
+      var var8: Boolean;
+      if (var2 != null && !kotlin.text.h.x(var2)) {
+         var8 = 0;
       } else {
-         var9 = 1;
+         var8 = 1;
       }
 
-      if (var9 xor true) {
-         var9 = 0;
+      if (var8 xor true) {
+         var8 = 0;
       } else {
-         var9 = 8;
+         var8 = 8;
       }
 
-      var7.setVisibility(var9);
-      var7 = this.binding.itemInviteTotalMemberDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteTotalMemberDot, "binding.itemInviteTotalMemberDot");
-      ViewBackgroundUtilsKt.setBackgroundOval$default(var7, ColorUtilsKt.getColorCompat(this, color.primary_500), 0, 2, null);
-      this.binding.itemInviteTotalMemberText.setText(var2);
-      val var17: LinearLayout = this.binding.itemInviteMemberContainer;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteMemberContainer, "binding.itemInviteMemberContainer");
-      val var4: Boolean;
-      if (var1 != null && !kotlin.text.f.x(var1)) {
-         var4 = false;
-      } else {
-         var4 = true;
-      }
-
-      var var11: Byte = 1;
-      if (var4) {
-         if (var2 != null && !kotlin.text.f.x(var2)) {
-            var11 = (boolean)0;
-         } else {
-            var11 = (boolean)1;
+      label55: {
+         var6.setVisibility(var8);
+         val var14: ImageView = this.binding.itemInviteTotalMemberDot;
+         kotlin.jvm.internal.q.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
+         ViewBackgroundUtilsKt.setBackgroundOval$default(var14, ColorUtilsKt.getColorCompat(this, color.primary_500), 0, 2, null);
+         this.binding.itemInviteTotalMemberText.setText(var2);
+         var6 = this.binding.itemInviteMemberContainer;
+         kotlin.jvm.internal.q.g(this.binding.itemInviteMemberContainer, "itemInviteMemberContainer");
+         if (var1 != null) {
+            var10 = true;
+            if (!kotlin.text.h.x(var1)) {
+               break label55;
+            }
          }
 
-         if (!var11) {
-            var11 = 1;
-         } else {
-            var11 = 0;
+         if (var2 != null) {
+            var10 = true;
+            if (!kotlin.text.h.x(var2)) {
+               break label55;
+            }
          }
+
+         var10 = false;
       }
 
-      if (var11) {
-         var11 = 0;
+      if (var10) {
+         var8 = 0;
       } else {
-         var11 = 8;
+         var8 = 8;
       }
 
-      var17.setVisibility(var11);
+      var6.setVisibility(var8);
    }
 
    public fun setSubtitle(subtitle: CharSequence?) {
       val var2: TextView = this.binding.itemInviteSubtitle;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteSubtitle, "binding.itemInviteSubtitle");
+      kotlin.jvm.internal.q.g(this.binding.itemInviteSubtitle, "itemInviteSubtitle");
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
@@ -267,13 +263,13 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       }
 
       val var3: SimpleDraweeView = this.binding.itemInviteSubtitleIcon;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteSubtitleIcon, "binding.itemInviteSubtitleIcon");
+      kotlin.jvm.internal.q.g(this.binding.itemInviteSubtitleIcon, "itemInviteSubtitleIcon");
       ColorUtilsKt.setTintColor(var3, var1);
    }
 
    public fun setSubtitleIcon(subtitleIconUrl: String?) {
       val var2: SimpleDraweeView = this.binding.itemInviteSubtitleIcon;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteSubtitleIcon, "setSubtitleIcon$lambda$9");
+      kotlin.jvm.internal.q.e(this.binding.itemInviteSubtitleIcon);
       ReactAssetUtilsKt.setOptionalReactImageUrl(var2, var1);
    }
 

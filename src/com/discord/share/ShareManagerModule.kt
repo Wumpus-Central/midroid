@@ -5,36 +5,36 @@ import android.content.Intent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val shareBroadcastReceiver: ShareBroadcastReceiver
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.shareBroadcastReceiver = new ShareBroadcastReceiver(var1);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ShareManager";
    }
 
-   public open fun initialize() {
+   public override fun initialize() {
       super.initialize();
-      val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.register(var2, this.shareBroadcastReceiver);
+      val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.register(var1, this.shareBroadcastReceiver);
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       super.invalidate();
 
       try {
          val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
          val var1: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var1, "reactApplicationContext");
+         q.g(var1, "getReactApplicationContext(...)");
          var2.unregister(var1, this.shareBroadcastReceiver);
       } catch (var3: Exception) {
       }
@@ -59,7 +59,7 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun setAuthenticationToken(authenticationToken: String?, superProperties: String) {
-      r.h(var2, "superProperties");
+      q.h(var2, "superProperties");
    }
 
    @ReactMethod
@@ -68,55 +68,30 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun share(text: String?, url: String?, chooserText: String?, location: String?) {
-      var var5: Boolean;
-      if (var1 != null && !f.x(var1)) {
-         var5 = false;
-      } else {
-         var5 = true;
-      }
-
-      label41: {
-         if (var5) {
-            if (var2 != null && !f.x(var2)) {
-               var5 = false;
-            } else {
-               var5 = true;
-            }
-
-            if (var5) {
-               var5 = false;
-               break label41;
-            }
-         }
-
-         var5 = true;
-      }
-
-      if (var5) {
-         val var6: Intent = new Intent("android.intent.action.SEND");
-         var6.setAction("android.intent.action.SEND");
-         var6.setType("text/plain");
-         var6.putExtra("android.intent.extra.TEXT", h.k0(h.n(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null));
-         val var9: Activity = this.getReactApplicationContext().getCurrentActivity();
-         if (var9 != null) {
+      if (var1 != null && !h.x(var1) || var2 != null && !h.x(var2)) {
+         val var5: Intent = new Intent("android.intent.action.SEND");
+         var5.setAction("android.intent.action.SEND");
+         var5.setType("text/plain");
+         var5.putExtra("android.intent.extra.TEXT", i.n0(i.o(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null));
+         val var8: Activity = this.getReactApplicationContext().getCurrentActivity();
+         if (var8 != null) {
+            var1 = var3;
             if (var3 == null) {
                var1 = "";
-            } else {
-               var1 = var3;
             }
 
-            val var11: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-            val var7: ReactApplicationContext = this.getReactApplicationContext();
-            r.g(var7, "reactApplicationContext");
-            var9.startActivity(Intent.createChooser(var6, var1, var11.getPendingIntentSender(var7, var4)));
+            val var6: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+            val var10: ReactApplicationContext = this.getReactApplicationContext();
+            q.g(var10, "getReactApplicationContext(...)");
+            var8.startActivity(Intent.createChooser(var5, var1, var6.getPendingIntentSender(var10, var4)));
          }
       } else {
-         val var10: StringBuilder = new StringBuilder();
-         var10.append("Text or url must not be null - text: ");
-         var10.append(var1);
-         var10.append(" url ");
-         var10.append(var2);
-         throw new IllegalArgumentException(var10.toString().toString());
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("Text or url must not be null - text: ");
+         var9.append(var1);
+         var9.append(" url ");
+         var9.append(var2);
+         throw new IllegalArgumentException(var9.toString().toString());
       }
    }
 }

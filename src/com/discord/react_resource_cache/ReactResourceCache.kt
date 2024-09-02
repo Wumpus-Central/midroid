@@ -6,7 +6,7 @@ import android.content.SharedPreferences.Editor
 import java.util.HashMap
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public abstract val cacheKey: String
@@ -15,14 +15,14 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    private final val cache: SharedPreferences
       private final get() {
          val var2: SharedPreferences = var1.getSharedPreferences(this.getCacheKey(), 0);
-         r.g(var2, "getSharedPreferences(cac…ey, Context.MODE_PRIVATE)");
+         q.g(var2, "getSharedPreferences(...)");
          return var2;
       }
 
 
    public fun get(context: Context, reactResource: Any): String {
-      r.h(var1, "context");
-      r.h(var2, "reactResource");
+      q.h(var1, "context");
+      q.h(var2, "reactResource");
       val var4: java.lang.String = this.reactResources.get(var2.name());
       var var3: java.lang.String = var4;
       if (var4 == null) {
@@ -49,10 +49,10 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    }
 
    public fun set(context: Context, newReactResources: Map<String, String>) {
-      r.h(var1, "context");
-      r.h(var2, "newReactResources");
+      q.h(var1, "context");
+      q.h(var2, "newReactResources");
       val var3: Editor = this.getCache(var1).edit();
-      r.g(var3, "editor");
+      q.g(var3, "editor");
       var3.clear();
 
       for (Entry var4 : var2.entrySet()) {

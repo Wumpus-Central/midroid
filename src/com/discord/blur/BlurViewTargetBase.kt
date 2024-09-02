@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.ViewGroup
 import com.discord.blur.BlurViewAPI.Target
 import com.facebook.react.views.view.ReactViewGroup
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal abstract class BlurViewTargetBase : ReactViewGroup, BlurViewAPI.Target {
    private final var blurTargetNativeId: String
@@ -22,8 +22,8 @@ internal abstract class BlurViewTargetBase : ReactViewGroup, BlurViewAPI.Target 
 
 
    open fun BlurViewTargetBase(var1: Context, var2: java.lang.String) {
-      r.h(var1, "context");
-      r.h(var2, "blurTargetNativeId");
+      q.h(var1, "context");
+      q.h(var2, "blurTargetNativeId");
       super(var1);
       this.blurTargetNativeId = var2;
       BlurViewTargetRegistry.INSTANCE.add(var2, this.getSelf());
@@ -40,8 +40,8 @@ internal abstract class BlurViewTargetBase : ReactViewGroup, BlurViewAPI.Target 
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      r.h(var1, "nativeId");
-      if (!r.c(this.blurTargetNativeId, var1)) {
+      q.h(var1, "nativeId");
+      if (!q.c(this.blurTargetNativeId, var1)) {
          this.blurTargetNativeId = var1;
          BlurViewTargetRegistry.INSTANCE.add(var1, this.getSelf());
       }

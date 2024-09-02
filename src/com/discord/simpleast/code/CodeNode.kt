@@ -5,15 +5,15 @@ import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
 import com.discord.simpleast.core.node.TextNode
 import com.discord.simpleast.core.node.StyleNode.SpanProvider
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class CodeNode<RC>(content: com.discord.simpleast.code.CodeNode.Content, language: String?, stylesProvider: SpanProvider<Any>) : TextNode<RC> {
    private final val language: String?
    private final val stylesProvider: SpanProvider<Any>
 
    init {
-      r.h(var1, "content");
-      r.h(var3, "stylesProvider");
+      q.h(var1, "content");
+      q.h(var3, "stylesProvider");
       super(var1.getBody());
       this.language = var2;
       this.stylesProvider = var3;
@@ -29,11 +29,11 @@ public open class CodeNode<RC>(content: com.discord.simpleast.code.CodeNode.Cont
    }
 
    public override operator fun equals(other: Any?): Boolean {
-      return var1 is CodeNode && r.c((var1 as CodeNode).language, this.language) && r.c((var1 as CodeNode).getContent(), this.getContent());
+      return var1 is CodeNode && q.c((var1 as CodeNode).language, this.language) && q.c((var1 as CodeNode).getContent(), this.getContent());
    }
 
    public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-      r.h(var1, "builder");
+      q.h(var1, "builder");
       val var5: java.lang.Iterable = this.stylesProvider.get((RC)var2);
       if (this.hasChildren()) {
          val var4: SpannableStringBuilder = new SpannableStringBuilder();
@@ -76,8 +76,8 @@ public open class CodeNode<RC>(content: com.discord.simpleast.code.CodeNode.Cont
          public final val children: List<Node<Any>>
 
          init {
-            r.h(var1, "raw");
-            r.h(var2, "children");
+            q.h(var1, "raw");
+            q.h(var2, "children");
             super(var1, null);
             this.children = var2;
          }
@@ -85,7 +85,7 @@ public open class CodeNode<RC>(content: com.discord.simpleast.code.CodeNode.Cont
 
       public class Raw(body: String) : CodeNode.Content {
          init {
-            r.h(var1, "body");
+            q.h(var1, "body");
             super(var1, null);
          }
       }
@@ -93,9 +93,9 @@ public open class CodeNode<RC>(content: com.discord.simpleast.code.CodeNode.Cont
 
    public class DefinitionNode<RC>(pre: String, name: String, codeStyleProviders: CodeStyleProviders<Any>) : Node.Parent<RC> {
       init {
-         r.h(var1, "pre");
-         r.h(var2, "name");
-         r.h(var3, "codeStyleProviders");
+         q.h(var1, "pre");
+         q.h(var2, "name");
+         q.h(var3, "codeStyleProviders");
          super(new StyleNode.TextStyledNode(var1, var3.getKeywordStyleProvider()), new StyleNode.TextStyledNode(var2, var3.getTypesStyleProvider()));
       }
    }

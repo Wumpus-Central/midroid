@@ -1,5 +1,8 @@
 package com.discord.primitives
 
+import kotlin.enums.EnumEntries
+import sj.a
+
 public enum class MessageFlag(value: Long) {
    CROSSPOSTED(1L),
    EPHEMERAL(64L),
@@ -17,9 +20,23 @@ public enum class MessageFlag(value: Long) {
    URGENT(16L)
    public final val value: Long
    @JvmStatic
-   private MessageFlag[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private MessageFlag[] $VALUES;
+
+   @JvmStatic
+   fun {
+      val var0: Array<MessageFlag> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.value = var3;
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
    }
 }

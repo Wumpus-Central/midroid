@@ -2,18 +2,18 @@ package com.discord.shortcuts
 
 import android.content.Context
 import android.content.Intent
-import fh.s
-import hk.j
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import mj.r
+import qm.j
 
 public data class ShortcutData(tag: String, data: Map<String, String>) {
    public final val data: Map<String, String>
    public final val tag: String
 
    init {
-      r.h(var1, "tag");
-      r.h(var2, "data");
+      q.h(var1, "tag");
+      q.h(var2, "data");
       super();
       this.tag = var1;
       this.data = var2;
@@ -28,8 +28,8 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public fun copy(tag: String = var0.tag, data: Map<String, String> = var0.data): ShortcutData {
-      r.h(var1, "tag");
-      r.h(var2, "data");
+      q.h(var1, "tag");
+      q.h(var2, "data");
       return new ShortcutData(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.tag, var1.tag)) {
+         if (!q.c(this.tag, var1.tag)) {
             return false;
          } else {
-            return r.c(this.data, var1.data);
+            return q.c(this.data, var1.data);
          }
       }
    }
@@ -53,15 +53,15 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
+      val var2: java.lang.String = this.tag;
       val var3: java.util.Map = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ShortcutData(tag=");
-      var2.append(var1);
-      var2.append(", data=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ShortcutData(tag=");
+      var1.append(var2);
+      var1.append(", data=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {
@@ -70,30 +70,30 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
       private const val KEY_TAG: String
 
       public fun createShortcutIntent(context: Context, action: String, clazz: Class<*>, tag: String, data: Map<String, String?>): Intent {
-         r.h(var1, "context");
-         r.h(var2, "action");
-         r.h(var3, "clazz");
-         r.h(var4, "tag");
-         r.h(var5, "data");
+         q.h(var1, "context");
+         q.h(var2, "action");
+         q.h(var3, "clazz");
+         q.h(var4, "tag");
+         q.h(var5, "data");
          val var6: Intent = new Intent(var2, null, var1, var3).putExtra("discord_shortcut", true).putExtra("discord_shortcut_tag", var4);
-         val var8: java.util.List = h.c();
+         val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
-            var4 = var12.getKey() as java.lang.String;
+            val var9: java.lang.String = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var8.add(var4);
+               var8.add(var9);
                var8.add(var13);
             }
          }
 
-         val var7: Intent = var6.putExtra("discord_shortcut_data", h.a(var8).toArray(new java.lang.String[0]));
-         r.g(var7, "Intent(action, null, con…rray(),\n                )");
+         val var7: Intent = var6.putExtra("discord_shortcut_data", i.a(var8).toArray(new java.lang.String[0]));
+         q.g(var7, "putExtra(...)");
          return var7;
       }
 
       public fun Intent.getShortcutIntentData(): ShortcutData? {
-         r.h(var1, "<this>");
+         q.h(var1, "<this>");
          val var10: ShortcutData;
          if (var1.hasExtra("discord_shortcut")) {
             val var3: java.lang.String = var1.getStringExtra("discord_shortcut_tag");
@@ -102,25 +102,25 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = s.c();
+            val var11: java.util.Map = r.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
-               val var7: Sequence = b.u(var6);
+               val var7: Sequence = c.u(var6);
                if (var7 != null) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var4: java.lang.String = var5.get(0) as java.lang.String;
+                        val var9: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        r.g(var4, "key");
-                        r.g(var12, "value");
-                        var11.put(var4, var12);
+                        q.e(var9);
+                        q.e(var12);
+                        var11.put(var9, var12);
                      }
                   }
                }
             }
 
-            var10 = new ShortcutData(var2, s.b(var11));
+            var10 = new ShortcutData(var2, r.b(var11));
          } else {
             var10 = null;
          }

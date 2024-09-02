@@ -10,7 +10,7 @@ import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class SeparatorSummaryViewBinding implements ViewBinding {
    public final Guideline bottomGuideline;
@@ -56,39 +56,39 @@ public final class SeparatorSummaryViewBinding implements ViewBinding {
 
    public static SeparatorSummaryViewBinding bind(View var0) {
       int var1 = R.id.bottom_guideline;
-      Guideline var3 = (Guideline)a.a(var0, var1);
-      if (var3 != null) {
+      Guideline var10 = (Guideline)a.a(var0, var1);
+      if (var10 != null) {
          var1 = R.id.button_wrapper;
-         FrameLayout var9 = (FrameLayout)a.a(var0, var1);
-         if (var9 != null) {
+         FrameLayout var12 = (FrameLayout)a.a(var0, var1);
+         if (var12 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.indicator_bottom;
-               SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-               if (var10 != null) {
+               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.indicator_end_barrier;
-                  Barrier var11 = (Barrier)a.a(var0, var1);
-                  if (var11 != null) {
+                  Barrier var2 = (Barrier)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.indicator_top;
-                     SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var7 != null) {
+                     SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.jump_button;
-                        SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                        if (var6 != null) {
+                        SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                        if (var3 != null) {
                            var1 = R.id.middle_text;
-                           TextView var4 = (TextView)a.a(var0, var1);
-                           if (var4 != null) {
+                           TextView var7 = (TextView)a.a(var0, var1);
+                           if (var7 != null) {
                               var1 = R.id.more_button;
-                              SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var8 != null) {
+                              SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var9 != null) {
                                  var1 = R.id.right_bar;
-                                 View var12 = a.a(var0, var1);
-                                 if (var12 != null) {
+                                 View var11 = a.a(var0, var1);
+                                 if (var11 != null) {
                                     var1 = R.id.top_guideline;
-                                    Guideline var2 = (Guideline)a.a(var0, var1);
-                                    if (var2 != null) {
-                                       return new SeparatorSummaryViewBinding(var0, var3, var9, var5, var10, var11, var7, var6, var4, var8, var12, var2);
+                                    Guideline var4 = (Guideline)a.a(var0, var1);
+                                    if (var4 != null) {
+                                       return new SeparatorSummaryViewBinding(var0, var10, var12, var6, var8, var2, var5, var3, var7, var9, var11, var4);
                                     }
                                  }
                               }
@@ -113,6 +113,7 @@ public final class SeparatorSummaryViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

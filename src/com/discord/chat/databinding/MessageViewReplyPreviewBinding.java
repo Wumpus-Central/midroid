@@ -13,7 +13,7 @@ import com.discord.chat.presentation.message.MessageTagView;
 import com.discord.chat.presentation.message.RoleDotView;
 import com.discord.chat.presentation.message.view.MessageContentView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class MessageViewReplyPreviewBinding implements ViewBinding {
    public final SimpleDraweeView replyAuthorAvatar;
@@ -62,36 +62,36 @@ public final class MessageViewReplyPreviewBinding implements ViewBinding {
       SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.reply_author_name;
-         TextView var8 = (TextView)a.a(var0, var1);
-         if (var8 != null) {
+         TextView var4 = (TextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.reply_icon;
-            SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
-            if (var11 != null) {
+            SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.reply_leading_icon;
-               SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-               if (var7 != null) {
+               SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+               if (var12 != null) {
                   var1 = R.id.reply_leading_views;
-                  LinearLayout var10 = (LinearLayout)a.a(var0, var1);
-                  if (var10 != null) {
+                  LinearLayout var9 = (LinearLayout)a.a(var0, var1);
+                  if (var9 != null) {
                      var1 = R.id.reply_message_tag_view;
-                     MessageTagView var9 = (MessageTagView)a.a(var0, var1);
-                     if (var9 != null) {
+                     MessageTagView var5 = (MessageTagView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.reply_role_dot;
-                        RoleDotView var4 = (RoleDotView)a.a(var0, var1);
-                        if (var4 != null) {
+                        RoleDotView var8 = (RoleDotView)a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.reply_spline;
-                           ChannelSpineView var5 = (ChannelSpineView)a.a(var0, var1);
-                           if (var5 != null) {
+                           ChannelSpineView var3 = (ChannelSpineView)a.a(var0, var1);
+                           if (var3 != null) {
                               var1 = R.id.reply_text;
-                              MessageContentView var12 = (MessageContentView)a.a(var0, var1);
-                              if (var12 != null) {
+                              MessageContentView var10 = (MessageContentView)a.a(var0, var1);
+                              if (var10 != null) {
                                  var1 = R.id.reply_trailing_icon;
                                  SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
                                  if (var6 != null) {
                                     var1 = R.id.tag_chiplet;
-                                    ClanTagChipletView var3 = (ClanTagChipletView)a.a(var0, var1);
-                                    if (var3 != null) {
-                                       return new MessageViewReplyPreviewBinding(var0, var2, var8, var11, var7, var10, var9, var4, var5, var12, var6, var3);
+                                    ClanTagChipletView var11 = (ClanTagChipletView)a.a(var0, var1);
+                                    if (var11 != null) {
+                                       return new MessageViewReplyPreviewBinding(var0, var2, var4, var7, var12, var9, var5, var8, var3, var10, var6, var11);
                                     }
                                  }
                               }
@@ -116,6 +116,7 @@ public final class MessageViewReplyPreviewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

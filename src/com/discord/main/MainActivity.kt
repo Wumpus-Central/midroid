@@ -12,7 +12,7 @@ import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
 import com.facebook.react.bridge.ReactContext
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])
@@ -30,26 +30,26 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            var var3: Context = this.getContext();
-            r.g(var3, "context");
-            var2.handleIntent(var3, var1);
+            val var3: NotificationClient = NotificationClient.Companion.getInstance();
+            val var2: Context = this.getContext();
+            q.g(var2, "getContext(...)");
+            var3.handleIntent(var2, var1);
             val var4: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
-            var3 = this.getContext();
-            r.g(var3, "context");
-            var4.handleIntent(var3, var1);
+            val var5: Context = this.getContext();
+            q.g(var5, "getContext(...)");
+            var4.handleIntent(var5, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
          }
 
          protected void onCreate(Bundle var1) {
             super.onCreate(var1);
             val var2: Intent = this.this$0.getIntent();
-            r.g(var2, "intent");
+            q.g(var2, "getIntent(...)");
             this.parseIntent(var2);
          }
 
          public boolean onNewIntent(Intent var1) {
-            r.h(var1, "intent");
+            q.h(var1, "intent");
             this.parseIntent(var1);
             return super.onNewIntent(var1);
          }
@@ -60,7 +60,13 @@ public class MainActivity : ReactActivity {
       return "Discord";
    }
 
-   public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration?) {
+   public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {
+      super.onPictureInPictureModeChanged(var1);
+      ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
+   }
+
+   public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
+      q.h(var2, "newConfig");
       super.onPictureInPictureModeChanged(var1, var2);
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }

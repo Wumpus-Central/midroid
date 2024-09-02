@@ -10,7 +10,7 @@ import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.e
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0F, bottomDp: Float = 0.0F, leftDp: Float = 0.0F) {
    public final val bottomDp: Float
@@ -29,7 +29,7 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
       this.leftDp = var4;
    }
 
-   public constructor(edgeInsets: EdgeInsets) : r.h(var1, "edgeInsets") {
+   public constructor(edgeInsets: EdgeInsets) : q.h(var1, "edgeInsets") {
       this(
          SizeUtilsKt.getPxToDp((int)var1.d()), SizeUtilsKt.getPxToDp((int)var1.c()), SizeUtilsKt.getPxToDp((int)var1.a()), SizeUtilsKt.getPxToDp((int)var1.b())
       );
@@ -80,19 +80,19 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
    }
 
    public override fun toString(): String {
-      val var1: Float = this.topDp;
+      val var3: Float = this.topDp;
       val var2: Float = this.rightDp;
-      val var4: Float = this.bottomDp;
-      val var3: Float = this.leftDp;
+      val var1: Float = this.bottomDp;
+      val var4: Float = this.leftDp;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SafeAreaEdgeInsets(topDp=");
-      var5.append(var1);
+      var5.append(var3);
       var5.append(", rightDp=");
       var5.append(var2);
       var5.append(", bottomDp=");
-      var5.append(var4);
+      var5.append(var1);
       var5.append(", leftDp=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

@@ -7,7 +7,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.MessageAccessoriesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import v2.a;
 
 public final class SystemMessageViewBinding implements ViewBinding {
    public final MessageAccessoriesView accessoriesView;
@@ -22,12 +22,12 @@ public final class SystemMessageViewBinding implements ViewBinding {
 
    public static SystemMessageViewBinding bind(View var0) {
       int var1 = R.id.accessories_view;
-      MessageAccessoriesView var2 = (MessageAccessoriesView)a.a(var0, var1);
-      if (var2 != null) {
+      MessageAccessoriesView var3 = (MessageAccessoriesView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-         if (var3 != null) {
-            return new SystemMessageViewBinding(var0, var2, var3);
+         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+         if (var2 != null) {
+            return new SystemMessageViewBinding(var0, var3, var2);
          }
       }
 
@@ -43,6 +43,7 @@ public final class SystemMessageViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

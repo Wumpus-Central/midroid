@@ -3,19 +3,19 @@ package com.discord.simpleast.markdown
 import android.text.SpannableStringBuilder
 import android.text.style.BulletSpan
 import com.discord.simpleast.core.node.Node
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class MarkdownListItemNode<R>(bulletSpanProvider: () -> BulletSpan) : Node<R> {
    public final val bulletSpanProvider: () -> BulletSpan
 
    init {
-      r.h(var1, "bulletSpanProvider");
+      q.h(var1, "bulletSpanProvider");
       super(null, 1, null);
       this.bulletSpanProvider = var1;
    }
 
    public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-      r.h(var1, "builder");
+      q.h(var1, "builder");
       val var3: Int = var1.length();
       val var4: java.util.Collection = this.getChildren();
       if (var4 != null) {

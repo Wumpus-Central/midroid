@@ -2,7 +2,13 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.presentation.message.view.botuikit.ContentInventoryEventHandlers
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.r
+import dn.f
+import dn.n
+import en.a
+import gn.b2
+import gn.g0
+import gn.o1
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +17,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.n1
 
 @f
 public data class ContentInventoryEntry(authorId: UserId,
@@ -38,7 +38,7 @@ public data class ContentInventoryEntry(authorId: UserId,
 
    public final val subtitle: Subtitle?
       public final get() {
-         return h.d0(this.subtitles, 0) as Subtitle;
+         return i.g0(this.subtitles, 0) as Subtitle;
       }
 
 
@@ -60,7 +60,7 @@ public data class ContentInventoryEntry(authorId: UserId,
       var11: SerializationConstructorMarker
    ) {
       if (495 != (var1 and 495)) {
-         n1.b(var1, 495, ContentInventoryEntry.$serializer.INSTANCE.getDescriptor());
+         o1.b(var1, 495, ContentInventoryEntry.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -91,6 +91,13 @@ public data class ContentInventoryEntry(authorId: UserId,
       var9: MutableList<Subtitle>,
       var10: MutableList<GradientColor>
    ) {
+      q.h(var3, "contentId");
+      q.h(var4, "imageUrl");
+      q.h(var5, "avatarUrl");
+      q.h(var7, "userActionDescription");
+      q.h(var8, "title");
+      q.h(var9, "subtitles");
+      q.h(var10, "gradientColors");
       super();
       this.authorId = var1;
       this.contentId = var3;
@@ -101,32 +108,6 @@ public data class ContentInventoryEntry(authorId: UserId,
       this.title = var8;
       this.subtitles = var9;
       this.gradientColors = var10;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ContentInventoryEntry, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      val var4: com.discord.primitives.UserId..serializer = com.discord.primitives.UserId..serializer.INSTANCE;
-      val var5: UserId = UserId.box-impl(var0.authorId);
-      var var3: Boolean = false;
-      var1.y(var2, 0, var4, var5);
-      var1.z(var2, 1, var0.contentId);
-      var1.z(var2, 2, var0.imageUrl);
-      var1.z(var2, 3, var0.avatarUrl);
-      if (var1.A(var2, 4) || var0.platformIconUrl != null) {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 4, a2.a, var0.platformIconUrl);
-      }
-
-      var1.z(var2, 5, var0.userActionDescription);
-      var1.z(var2, 6, var0.title);
-      var1.y(var2, 7, new xk.f(Subtitle.$serializer.INSTANCE), var0.subtitles);
-      var1.y(var2, 8, new xk.f(GradientColor.$serializer.INSTANCE), var0.gradientColors);
    }
 
    public operator fun component1(): UserId {
@@ -176,13 +157,13 @@ public data class ContentInventoryEntry(authorId: UserId,
       subtitles: List<Subtitle> = ...,
       gradientColors: List<GradientColor> = ...
    ): ContentInventoryEntry {
-      r.h(var3, "contentId");
-      r.h(var4, "imageUrl");
-      r.h(var5, "avatarUrl");
-      r.h(var7, "userActionDescription");
-      r.h(var8, "title");
-      r.h(var9, "subtitles");
-      r.h(var10, "gradientColors");
+      q.h(var3, "contentId");
+      q.h(var4, "imageUrl");
+      q.h(var5, "avatarUrl");
+      q.h(var7, "userActionDescription");
+      q.h(var8, "title");
+      q.h(var9, "subtitles");
+      q.h(var10, "gradientColors");
       return new ContentInventoryEntry(var1, var3, var4, var5, var6, var7, var8, var9, var10, null);
    }
 
@@ -195,31 +176,31 @@ public data class ContentInventoryEntry(authorId: UserId,
          var1 = var1;
          if (!UserId.equals-impl0(this.authorId, var1.authorId)) {
             return false;
-         } else if (!r.c(this.contentId, var1.contentId)) {
+         } else if (!q.c(this.contentId, var1.contentId)) {
             return false;
-         } else if (!r.c(this.imageUrl, var1.imageUrl)) {
+         } else if (!q.c(this.imageUrl, var1.imageUrl)) {
             return false;
-         } else if (!r.c(this.avatarUrl, var1.avatarUrl)) {
+         } else if (!q.c(this.avatarUrl, var1.avatarUrl)) {
             return false;
-         } else if (!r.c(this.platformIconUrl, var1.platformIconUrl)) {
+         } else if (!q.c(this.platformIconUrl, var1.platformIconUrl)) {
             return false;
-         } else if (!r.c(this.userActionDescription, var1.userActionDescription)) {
+         } else if (!q.c(this.userActionDescription, var1.userActionDescription)) {
             return false;
-         } else if (!r.c(this.title, var1.title)) {
+         } else if (!q.c(this.title, var1.title)) {
             return false;
-         } else if (!r.c(this.subtitles, var1.subtitles)) {
+         } else if (!q.c(this.subtitles, var1.subtitles)) {
             return false;
          } else {
-            return r.c(this.gradientColors, var1.gradientColors);
+            return q.c(this.gradientColors, var1.gradientColors);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = UserId.hashCode-impl(this.authorId);
-      val var4: Int = this.contentId.hashCode();
-      val var3: Int = this.imageUrl.hashCode();
-      val var5: Int = this.avatarUrl.hashCode();
+      val var4: Int = UserId.hashCode-impl(this.authorId);
+      val var3: Int = this.contentId.hashCode();
+      val var5: Int = this.imageUrl.hashCode();
+      val var2: Int = this.avatarUrl.hashCode();
       val var1: Int;
       if (this.platformIconUrl == null) {
          var1 = 0;
@@ -228,7 +209,7 @@ public data class ContentInventoryEntry(authorId: UserId,
       }
 
       return (
-               ((((((var2 * 31 + var4) * 31 + var3) * 31 + var5) * 31 + var1) * 31 + this.userActionDescription.hashCode()) * 31 + this.title.hashCode()) * 31
+               ((((((var4 * 31 + var3) * 31 + var5) * 31 + var2) * 31 + var1) * 31 + this.userActionDescription.hashCode()) * 31 + this.title.hashCode()) * 31
                   + this.subtitles.hashCode()
             )
             * 31
@@ -236,45 +217,45 @@ public data class ContentInventoryEntry(authorId: UserId,
    }
 
    public fun onTap(handlers: ContentInventoryEventHandlers, tappedElement: String) {
-      r.h(var1, "handlers");
-      r.h(var2, "tappedElement");
+      q.h(var1, "handlers");
+      q.h(var2, "tappedElement");
       var1.getOnTapContentInventoryEntry().invoke(UserId.box-impl(this.authorId), this.contentId, var2);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = UserId.toString-impl(this.authorId);
-      val var6: java.lang.String = this.contentId;
-      val var8: java.lang.String = this.imageUrl;
-      val var3: java.lang.String = this.avatarUrl;
-      val var1: java.lang.String = this.platformIconUrl;
-      val var2: java.lang.String = this.userActionDescription;
-      val var9: java.lang.String = this.title;
-      val var5: java.util.List = this.subtitles;
-      val var10: java.util.List = this.gradientColors;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ContentInventoryEntry(authorId=");
-      var7.append(var4);
-      var7.append(", contentId=");
-      var7.append(var6);
-      var7.append(", imageUrl=");
-      var7.append(var8);
-      var7.append(", avatarUrl=");
-      var7.append(var3);
-      var7.append(", platformIconUrl=");
-      var7.append(var1);
-      var7.append(", userActionDescription=");
-      var7.append(var2);
-      var7.append(", title=");
-      var7.append(var9);
-      var7.append(", subtitles=");
-      var7.append(var5);
-      var7.append(", gradientColors=");
-      var7.append(var10);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.lang.String = UserId.toString-impl(this.authorId);
+      val var8: java.lang.String = this.contentId;
+      val var1: java.lang.String = this.imageUrl;
+      val var9: java.lang.String = this.avatarUrl;
+      val var4: java.lang.String = this.platformIconUrl;
+      val var10: java.lang.String = this.userActionDescription;
+      val var5: java.lang.String = this.title;
+      val var6: java.util.List = this.subtitles;
+      val var2: java.util.List = this.gradientColors;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContentInventoryEntry(authorId=");
+      var3.append(var7);
+      var3.append(", contentId=");
+      var3.append(var8);
+      var3.append(", imageUrl=");
+      var3.append(var1);
+      var3.append(", avatarUrl=");
+      var3.append(var9);
+      var3.append(", platformIconUrl=");
+      var3.append(var4);
+      var3.append(", userActionDescription=");
+      var3.append(var10);
+      var3.append(", title=");
+      var3.append(var5);
+      var3.append(", subtitles=");
+      var3.append(var6);
+      var3.append(", gradientColors=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : f0<ContentInventoryEntry> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -299,103 +280,94 @@ public data class ContentInventoryEntry(authorId: UserId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         return new KSerializer[]{
-            com.discord.primitives.UserId..serializer.INSTANCE,
-            a2.a,
-            a2.a,
-            a2.a,
-            a.u(a2.a),
-            var1,
-            var1,
-            new xk.f(Subtitle.$serializer.INSTANCE),
-            new xk.f(GradientColor.$serializer.INSTANCE)
-         };
+         val var1: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
+         val var3: b2 = b2.a;
+         return new KSerializer[]{UserId.$serializer.INSTANCE, b2.a, b2.a, b2.a, a.u(b2.a), var3, var3, var1[7], var1[8]};
       }
 
       public open fun deserialize(decoder: Decoder): ContentInventoryEntry {
-         r.h(var1, "decoder");
-         val var17: SerialDescriptor = this.getDescriptor();
-         val var18: c = var1.b(var17);
-         val var6: Boolean = var18.p();
-         var var4: Byte = 7;
-         var var13: Any = null;
+         q.h(var1, "decoder");
+         val var16: SerialDescriptor = this.getDescriptor();
+         val var17: c = var1.b(var16);
+         val var15: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
+         val var6: Boolean = var17.p();
+         var var3: Byte = 6;
+         var var11: UserId = null;
          var var2: Int;
+         var var7: Any;
          var var9: Any;
          var var10: Any;
-         var var11: Any;
          var var12: Any;
-         var var14: Any;
-         val var16: Any;
-         var var21: Any;
-         var var23: Any;
+         var var13: Any;
+         var var14: java.util.List;
+         var var18: Any;
+         var var19: java.util.List;
          if (var6) {
-            var13 = var18.y(var17, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
-            var11 = var18.m(var17, 1);
-            var9 = var18.m(var17, 2);
-            var23 = var18.m(var17, 3);
-            var12 = var18.n(var17, 4, a2.a, null);
-            val var19: java.lang.String = var18.m(var17, 5);
-            var21 = var18.m(var17, 6);
-            var14 = var18.y(var17, 7, new xk.f(Subtitle.$serializer.INSTANCE), null);
-            var10 = var18.y(var17, 8, new xk.f(GradientColor.$serializer.INSTANCE), null);
+            var11 = var17.y(var16, 0, UserId.$serializer.INSTANCE, null) as UserId;
+            var10 = var17.m(var16, 1);
+            var9 = var17.m(var16, 2);
+            var13 = var17.m(var16, 3);
+            var12 = var17.n(var16, 4, b2.a, null) as java.lang.String;
+            var7 = var17.m(var16, 5);
+            var18 = var17.m(var16, 6);
+            var19 = var17.y(var16, 7, var15[7], null) as java.util.List;
+            val var23: java.util.List = var17.y(var16, 8, var15[8], null) as java.util.List;
             var2 = 511;
-            var16 = var21;
-            var21 = var23;
-            var23 = var19;
+            var14 = var19;
+            var19 = var23;
          } else {
-            var var3: Boolean = true;
+            var var4: Boolean = true;
             var2 = 0;
-            var10 = null;
             var14 = null;
-            var9 = null;
+            var13 = null;
             var12 = null;
-            var11 = null;
-            var var20: Any = null;
-            var23 = null;
-            var21 = null;
+            var10 = null;
+            var9 = null;
+            var19 = null;
+            var7 = null;
+            var18 = null;
 
-            while (var3) {
-               val var5: Int = var18.o(var17);
+            while (var4) {
+               val var5: Int = var17.o(var16);
                switch (var5) {
                   case -1:
-                     var3 = false;
+                     var4 = false;
                      break;
                   case 0:
-                     var13 = var18.y(var17, 0, com.discord.primitives.UserId..serializer.INSTANCE, var13);
+                     var11 = var17.y(var16, 0, UserId.$serializer.INSTANCE, var11) as UserId;
                      var2 |= 1;
-                     var4 = 7;
+                     var3 = 6;
                      break;
                   case 1:
-                     var12 = var18.m(var17, 1);
+                     var10 = var17.m(var16, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var11 = var18.m(var17, 2);
+                     var9 = var17.m(var16, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var20 = var18.m(var17, 3);
+                     var19 = var17.m(var16, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var9 = var18.n(var17, 4, a2.a, var9);
+                     var12 = var17.n(var16, 4, b2.a, var12) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
-                     var23 = var18.m(var17, 5);
+                     var7 = var17.m(var16, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var21 = var18.m(var17, 6);
+                     var18 = var17.m(var16, var3);
                      var2 |= 64;
                      break;
                   case 7:
-                     var14 = var18.y(var17, var4, new xk.f(Subtitle.$serializer.INSTANCE), var14);
+                     var13 = var17.y(var16, 7, var15[7], var13) as java.util.List;
                      var2 |= 128;
                      break;
                   case 8:
-                     var10 = var18.y(var17, 8, new xk.f(GradientColor.$serializer.INSTANCE), var10);
+                     var14 = var17.y(var16, 8, var15[8], var14) as java.util.List;
                      var2 |= 256;
                      break;
                   default:
@@ -403,41 +375,39 @@ public data class ContentInventoryEntry(authorId: UserId,
                }
             }
 
-            var16 = var21;
-            var21 = var20;
-            var12 = var9;
-            var9 = var11;
-            var11 = var12;
+            var19 = var14;
+            var14 = (java.util.List)var13;
+            var13 = var19;
          }
 
-         var18.c(var17);
+         var17.c(var16);
          return new ContentInventoryEntry(
             var2,
-            var13 as UserId,
-            (java.lang.String)var11,
+            var11,
+            (java.lang.String)var10,
             (java.lang.String)var9,
-            (java.lang.String)var21,
-            var12 as java.lang.String,
-            (java.lang.String)var23,
-            (java.lang.String)var16,
-            var14 as java.util.List,
-            var10 as java.util.List,
+            (java.lang.String)var13,
+            (java.lang.String)var12,
+            (java.lang.String)var7,
+            (java.lang.String)var18,
+            var14,
+            var19,
             null,
             null
          );
       }
 
       public open fun serialize(encoder: Encoder, value: ContentInventoryEntry) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
          val var4: CompositeEncoder = var1.b(var3);
-         ContentInventoryEntry.write$Self(var2, var4, var3);
+         ContentInventoryEntry.write$Self$chat_release(var2, var4, var3);
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return gn.g0.a.a(this);
       }
    }
 

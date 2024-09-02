@@ -2,10 +2,10 @@ package com.discord.reactions
 
 import com.discord.reactions.ReactionView.Reaction
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun copyReactionWithoutCount(reaction: Reaction, isBurstReaction: Boolean): Reaction {
-   r.h(var0, "reaction");
+   q.h(var0, "reaction");
    return new ReactionView.Reaction(var1, var0) {
       private final int burstCount;
       private final int count;

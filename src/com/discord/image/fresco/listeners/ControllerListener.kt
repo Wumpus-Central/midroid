@@ -2,7 +2,7 @@ package com.discord.image.fresco.listeners
 
 import android.graphics.drawable.Animatable
 
-public open class ControllerListener : com.facebook.drawee.controller.ControllerListener<Object> {
+public open class ControllerListener : com.facebook.drawee.controller.ControllerListener {
    public open fun onFailure(id: String?, throwable: Throwable?) {
    }
 

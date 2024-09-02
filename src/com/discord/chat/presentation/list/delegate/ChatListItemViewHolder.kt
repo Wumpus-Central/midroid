@@ -1,15 +1,15 @@
 package com.discord.chat.presentation.list.delegate
 
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.presentation.list.ChatListChildView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
-public class ChatListItemViewHolder<V extends View>(view: Any) : ViewHolder {
+public class ChatListItemViewHolder<V extends View>(view: Any) : RecyclerView.ViewHolder {
    public final val view: Any
 
    init {
-      r.h(var1, "view");
+      q.h(var1, "view");
       super(var1);
       this.view = (V)var1;
       if (var1 !is ChatListChildView) {

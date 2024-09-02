@@ -3,7 +3,7 @@ package com.discord.react_strings
 import java.util.HashMap
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class RenderContext {
    public final val argHooks: MutableMap<String, String?>
@@ -34,10 +34,10 @@ public class RenderContext {
       }
 
       public fun replace(input: CharSequence, onMatch: (String, String?, Boolean) -> CharSequence): String {
-         r.h(var1, "input");
-         r.h(var2, "onMatch");
-         return argumentRegex.i(var1, new Function1<MatchResult, java.lang.CharSequence>(var2) {
-            final Function3<java.lang.String, java.lang.String, java.lang.Boolean, java.lang.CharSequence> $onMatch;
+         q.h(var1, "input");
+         q.h(var2, "onMatch");
+         return argumentRegex.i(var1, new Function1(var2) {
+            final Function3 $onMatch;
 
             {
                super(1);
@@ -45,32 +45,24 @@ public class RenderContext {
             }
 
             public final java.lang.CharSequence invoke(MatchResult var1) {
-               r.h(var1, "match");
-               val var6: RenderContext.Argument = RenderContext.Argument.INSTANCE;
-               val var5: java.lang.String = RenderContext.Argument.access$get(RenderContext.Argument.INSTANCE, var1, 3);
-               val var8: Boolean;
-               if (RenderContext.Argument.access$contains(var6, var1, 2) && RenderContext.Argument.access$contains(var6, var1, 4)) {
-                  var8 = true;
+               q.h(var1, "match");
+               val var4: RenderContext.Argument = RenderContext.Argument.INSTANCE;
+               val var3: java.lang.String = RenderContext.Argument.access$get(RenderContext.Argument.INSTANCE, var1, 3);
+               val var2: Boolean;
+               if (RenderContext.Argument.access$contains(var4, var1, 2) && RenderContext.Argument.access$contains(var4, var1, 4)) {
+                  var2 = true;
                } else {
-                  var8 = false;
-               }
-
-               var var2: Boolean = false;
-               if (RenderContext.Argument.access$contains(var6, var1, 1)) {
                   var2 = false;
-                  if (RenderContext.Argument.access$contains(var6, var1, 5)) {
-                     var2 = true;
-                  }
                }
 
-               val var7: java.lang.String;
-               if (var2) {
-                  var7 = var1.b().get(7) as java.lang.String;
+               val var5: java.lang.String;
+               if (RenderContext.Argument.access$contains(var4, var1, 1) && RenderContext.Argument.access$contains(var4, var1, 5)) {
+                  var5 = var1.b().get(7) as java.lang.String;
                } else {
-                  var7 = null;
+                  var5 = null;
                }
 
-               return this.$onMatch.invoke(var5, var7, var8) as java.lang.CharSequence;
+               return this.$onMatch.invoke(var3, var5, var2) as java.lang.CharSequence;
             }
          });
       }

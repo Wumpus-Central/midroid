@@ -34,40 +34,40 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
    private final var binding: EphemeralActionViewBinding
 
    fun EphemeralIndicationView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun EphemeralIndicationView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
       val var4: EphemeralActionViewBinding = EphemeralActionViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
       this.binding = var4;
       val var5: SimpleDraweeSpanTextView = var4.chatListAdapterItemTextDismiss;
-      kotlin.jvm.internal.r.g(var4.chatListAdapterItemTextDismiss, "_init_$lambda$0");
+      kotlin.jvm.internal.q.e(var4.chatListAdapterItemTextDismiss);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
-      kotlin.jvm.internal.r.g(this.binding.chatListAdapterItemIconHelp, "_init_$lambda$1");
+      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemIconHelp);
       ReactAssetUtilsKt.setReactAsset(var6, ReactAsset.Help);
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getTextMuted());
       val var7: SimpleDraweeView = this.binding.chatListAdapterItemVisibilityIcon;
-      kotlin.jvm.internal.r.g(this.binding.chatListAdapterItemVisibilityIcon, "_init_$lambda$2");
+      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemVisibilityIcon);
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.ShowPassword);
       ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getTextMuted());
    }
 
    @JvmStatic
    fun `setEphemeralIndication_AFFcxXc$lambda$4$lambda$3`(var0: Function1, var1: EphemeralIndication, var2: View) {
-      kotlin.jvm.internal.r.h(var0, "$onHelpArticleClicked");
-      kotlin.jvm.internal.r.h(var1, "$ephemeralIndication");
+      kotlin.jvm.internal.q.h(var0, "$onHelpArticleClicked");
+      kotlin.jvm.internal.q.h(var1, "$ephemeralIndication");
       var0.invoke(var1.getHelpArticleLink());
    }
 
@@ -77,40 +77,38 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
       onLinkClicked: (MessageId, LinkContentNode) -> Unit,
       onHelpArticleClicked: (String) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageId");
-      kotlin.jvm.internal.r.h(var2, "ephemeralIndication");
-      kotlin.jvm.internal.r.h(var3, "onLinkClicked");
-      kotlin.jvm.internal.r.h(var4, "onHelpArticleClicked");
+      kotlin.jvm.internal.q.h(var1, "messageId");
+      kotlin.jvm.internal.q.h(var2, "ephemeralIndication");
+      kotlin.jvm.internal.q.h(var3, "onLinkClicked");
+      kotlin.jvm.internal.q.h(var4, "onHelpArticleClicked");
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
       this.binding.chatListAdapterItemIconHelp.setContentDescription(var2.getHelpButtonAccessibilityLabel());
       var6.setOnClickListener(new x(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
-      kotlin.jvm.internal.r.g(this.binding.chatListAdapterItemTextDismiss, "setEphemeralIndication_AFFcxXc$lambda$6");
+      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextDismiss);
       val var11: StructurableText = var2.getContent();
       val var9: Context = var10.getContext();
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
-      kotlin.jvm.internal.r.g(var7, "paint.fontMetrics");
+      kotlin.jvm.internal.q.g(var7, "getFontMetrics(...)");
       val var5: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var12: TextPaint = var10.getPaint();
-      kotlin.jvm.internal.r.g(var9, "context");
-      kotlin.jvm.internal.r.g(var12, "paint");
-      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var11, var9, var1, false, false, false, false, var12, new Function1<LinkContentNode, Unit>(var3, var1) {
-            final java.lang.String $messageId;
-            final Function2<MessageId, LinkContentNode, Unit> $onLinkClicked;
+      kotlin.jvm.internal.q.e(var9);
+      kotlin.jvm.internal.q.e(var12);
+      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var11, var9, var1, false, false, false, false, var12, new Function1(var3, var1) {
+         final java.lang.String $messageId;
+         final Function2 $onLinkClicked;
 
-            {
-               super(1);
-               this.$onLinkClicked = var1;
-               this.$messageId = var2;
-            }
+         {
+            super(1);
+            this.$onLinkClicked = var1;
+            this.$messageId = var2;
+         }
 
-            public final void invoke(LinkContentNode var1) {
-               kotlin.jvm.internal.r.h(var1, "node");
-               this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
-            }
-         }, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var5, null, 12582656, null
-      );
+         public final void invoke(LinkContentNode var1) {
+            kotlin.jvm.internal.q.h(var1, "node");
+            this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
+         }
+      }, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var5, null, 12582656, null);
       SpannableExtensionsKt.coverWithSpan(var8, new BackgroundSpanDrawer(var10));
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var10, var8);
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var10, false, 1, null);

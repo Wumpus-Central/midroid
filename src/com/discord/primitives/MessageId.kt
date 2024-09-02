@@ -2,16 +2,16 @@ package com.discord.primitives
 
 import android.os.Parcel
 import android.os.Parcelable
-import kotlin.jvm.internal.r
+import dn.f
+import gn.b2
+import gn.g0
+import gn.g0.a
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.InlineClassDescriptor
-import uk.f
-import xk.a2
-import xk.f0
-import xk.f0.a
 
 @f
 public inline class MessageId : Parcelable {
@@ -19,7 +19,7 @@ public inline class MessageId : Parcelable {
 
    @JvmStatic
    fun `constructor-impl`(var0: java.lang.String): java.lang.String {
-      r.h(var0, "value");
+      q.h(var0, "value");
       return var0;
    }
 
@@ -33,13 +33,13 @@ public inline class MessageId : Parcelable {
       if (var1 !is MessageId) {
          return false;
       } else {
-         return r.c(var0, (var1 as MessageId).unbox-impl());
+         return q.c(var0, (var1 as MessageId).unbox-impl());
       }
    }
 
    @JvmStatic
    fun `equals-impl0`(var0: java.lang.String, var1: java.lang.String): Boolean {
-      return r.c(var0, var1);
+      return q.c(var0, var1);
    }
 
    @JvmStatic
@@ -54,7 +54,7 @@ public inline class MessageId : Parcelable {
 
    @JvmStatic
    public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      r.h(var1, "out");
+      q.h(var1, "out");
       var1.writeString(var0);
    }
 
@@ -75,11 +75,11 @@ public inline class MessageId : Parcelable {
    }
 
    fun writeToParcel(var1: Parcel, var2: Int) {
-      r.h(var1, "out");
+      q.h(var1, "out");
       writeToParcel-impl(this.value, var1, var2);
    }
 
-   public object `$serializer` : f0<MessageId> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -96,24 +96,24 @@ public inline class MessageId : Parcelable {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a};
+         return new KSerializer[]{b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): MessageId {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          return MessageId.constructor-impl(var1.q(this.getDescriptor()).z());
       }
 
       public open fun serialize(encoder: Encoder, value: MessageId) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
-         var1 = var1.j(this.getDescriptor());
+         q.h(var1, "encoder");
+         q.h(var2, "value");
+         var1 = var1.l(this.getDescriptor());
          if (var1 != null) {
             var1.F(var2);
          }
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }
@@ -127,7 +127,7 @@ public inline class MessageId : Parcelable {
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<MessageId> {
       fun `createFromParcel-MpY7Jxs`(var1: Parcel): java.lang.String {
-         r.h(var1, "parcel");
+         q.h(var1, "parcel");
          return MessageId.constructor-impl(var1.readString());
       }
 

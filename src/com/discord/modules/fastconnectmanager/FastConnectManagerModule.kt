@@ -3,19 +3,18 @@ package com.discord.modules.fastconnectmanager
 import com.discord.app_database.AppDatabaseModule
 import com.discord.app_database.DatabaseVersions
 import com.discord.cache.CacheModule
-import com.discord.cache.CacheModule.Companion
 import com.discord.logging.Log
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.modules.websocket.WebSocketModule
-import eh.w
-import fh.s
 import java.util.concurrent.ConcurrentHashMap
-import kotlin.jvm.internal.r
-import m3.a
+import kotlin.jvm.internal.q
+import lj.w
+import mj.r
 import okhttp3.WebSocket
+import w4.a
 
 public class FastConnectManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final var identified: Boolean
@@ -40,7 +39,7 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
 
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.sockets = new ConcurrentHashMap<>();
       this.identifyPayload = "";
@@ -63,7 +62,7 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
             var7 = this.identifyPayload;
          }
 
-         if (!r.c(this.identifyPayload, var7)) {
+         if (!q.c(this.identifyPayload, var7)) {
             val var5: Log = Log.INSTANCE;
             var2 = var4.getGuildVersions().length;
             val var9: StringBuilder = new StringBuilder();
@@ -73,7 +72,7 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
          }
 
          TTIMetrics.record$default(TTIMetrics.INSTANCE, "Native WebSocket sent identify", 0L, null, false, 14, null);
-         var1.b(var7);
+         var1.send(var7);
          this.identified = true;
          return true;
       } else {
@@ -82,9 +81,9 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
    }
 
    private fun setCacheValue(key: String, value: String?) {
-      val var3: Companion = CacheModule.Companion;
+      val var3: CacheModule.Companion = CacheModule.Companion;
       val var4: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var4, "reactApplicationContext");
+      q.g(var4, "getReactApplicationContext(...)");
       val var5: CacheModule = var3.get(var4);
       if (var2 == null) {
          var5.removeItem(var1);
@@ -94,16 +93,16 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
    }
 
    public open fun getConstants(): MutableMap<String, String?> {
-      val var1: Companion = CacheModule.Companion;
+      val var1: CacheModule.Companion = CacheModule.Companion;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
+      q.g(var2, "getReactApplicationContext(...)");
       val var5: Pair = w.a("clientState", var1.get(var2).getItem("_clientStateKey"));
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      q.g(var3, "getReactApplicationContext(...)");
       val var6: Pair = w.a("userId", var1.get(var3).getItem("_userIdKey"));
       val var4: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var4, "reactApplicationContext");
-      return s.m(new Pair[]{var5, var6, w.a("token", CacheModule.getToken$default(var1.get(var4), false, 1, null))});
+      q.g(var4, "getReactApplicationContext(...)");
+      return r.m(new Pair[]{var5, var6, w.a("token", CacheModule.getToken$default(var1.get(var4), false, 1, null))});
    }
 
    public open fun getName(): String {
@@ -128,7 +127,7 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun prepareIdentify(userId: String?, payload: String, socketId: Int, requiredDatabaseVersion: String?) {
-      r.h(var2, "payload");
+      q.h(var2, "payload");
       this.socketId = var3;
       this.identifyUserId = var1;
       this.identifyPayload = var2;

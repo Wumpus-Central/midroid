@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.MessageState
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
    channelId: ChannelId,
@@ -36,6 +36,9 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
       var9: Boolean,
       var10: Boolean
    ) {
+      q.h(var1, "messageId");
+      q.h(var4, "attachments");
+      q.h(var8, "messageState");
       super(var1, "multimedia attachment", false, 4, null);
       this.messageId = var1;
       this.channelId = var2;
@@ -49,7 +52,7 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public operator fun component1(): MessageId {
-      return this.getMessageId-3Eiw7ao();
+      return this.messageId;
    }
 
    public operator fun component2(): ChannelId {
@@ -95,9 +98,9 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
       shouldAutoPlayGif: Boolean = ...,
       useOldForwardIcon: Boolean = ...
    ): MediaMosaicAttachmentMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var4, "attachments");
-      r.h(var8, "messageState");
+      q.h(var1, "messageId");
+      q.h(var4, "attachments");
+      q.h(var8, "messageState");
       return new MediaMosaicAttachmentMessageAccessory(var1, var2, var4, var5, var6, var7, var8, var9, var10, null);
    }
 
@@ -108,11 +111,11 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
          return false;
       } else {
          var1 = var1;
-         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!r.c(this.attachments, var1.attachments)) {
+         } else if (!q.c(this.attachments, var1.attachments)) {
             return false;
          } else if (this.constrainedWidth != var1.constrainedWidth) {
             return false;
@@ -131,64 +134,64 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = MessageId.hashCode-impl(this.getMessageId-3Eiw7ao());
-      val var6: Int = ChannelId.hashCode-impl(this.channelId);
-      val var8: Int = this.attachments.hashCode();
-      val var9: Int = Integer.hashCode(this.constrainedWidth);
-      var var4: Byte = 1;
-      var var1: Byte = this.isForwardedContent;
-      if (this.isForwardedContent != 0) {
-         var1 = 1;
-      }
-
-      var var11: Byte = this.isShowingInlineForward;
-      if (this.isShowingInlineForward != 0) {
-         var11 = 1;
-      }
-
-      val var10: Int = this.messageState.hashCode();
-      var var12: Byte = this.shouldAutoPlayGif;
-      if (this.shouldAutoPlayGif != 0) {
-         var12 = 1;
-      }
-
-      if (this.useOldForwardIcon == 0) {
-         var4 = this.useOldForwardIcon;
-      }
-
-      return (((((((var7 * 31 + var6) * 31 + var8) * 31 + var9) * 31 + var1) * 31 + var11) * 31 + var10) * 31 + var12) * 31 + var4;
+      return (
+               (
+                        (
+                                 (
+                                          (
+                                                   (
+                                                            (MessageId.hashCode-impl(this.messageId) * 31 + ChannelId.hashCode-impl(this.channelId)) * 31
+                                                               + this.attachments.hashCode()
+                                                         )
+                                                         * 31
+                                                      + Integer.hashCode(this.constrainedWidth)
+                                                )
+                                                * 31
+                                             + java.lang.Boolean.hashCode(this.isForwardedContent)
+                                       )
+                                       * 31
+                                    + java.lang.Boolean.hashCode(this.isShowingInlineForward)
+                              )
+                              * 31
+                           + this.messageState.hashCode()
+                     )
+                     * 31
+                  + java.lang.Boolean.hashCode(this.shouldAutoPlayGif)
+            )
+            * 31
+         + java.lang.Boolean.hashCode(this.useOldForwardIcon);
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var9: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var8: java.util.List = this.attachments;
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var10: java.util.List = this.attachments;
       val var1: Int = this.constrainedWidth;
-      val var3: Boolean = this.isForwardedContent;
-      val var2: Boolean = this.isShowingInlineForward;
-      val var7: MessageState = this.messageState;
-      val var4: Boolean = this.shouldAutoPlayGif;
-      val var5: Boolean = this.useOldForwardIcon;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("MediaMosaicAttachmentMessageAccessory(messageId=");
-      var10.append(var6);
-      var10.append(", channelId=");
-      var10.append(var9);
-      var10.append(", attachments=");
-      var10.append(var8);
-      var10.append(", constrainedWidth=");
-      var10.append(var1);
-      var10.append(", isForwardedContent=");
-      var10.append(var3);
-      var10.append(", isShowingInlineForward=");
-      var10.append(var2);
-      var10.append(", messageState=");
-      var10.append(var7);
-      var10.append(", shouldAutoPlayGif=");
-      var10.append(var4);
-      var10.append(", useOldForwardIcon=");
-      var10.append(var5);
-      var10.append(")");
-      return var10.toString();
+      val var5: Boolean = this.isForwardedContent;
+      val var4: Boolean = this.isShowingInlineForward;
+      val var9: MessageState = this.messageState;
+      val var3: Boolean = this.shouldAutoPlayGif;
+      val var2: Boolean = this.useOldForwardIcon;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MediaMosaicAttachmentMessageAccessory(messageId=");
+      var7.append(var8);
+      var7.append(", channelId=");
+      var7.append(var6);
+      var7.append(", attachments=");
+      var7.append(var10);
+      var7.append(", constrainedWidth=");
+      var7.append(var1);
+      var7.append(", isForwardedContent=");
+      var7.append(var5);
+      var7.append(", isShowingInlineForward=");
+      var7.append(var4);
+      var7.append(", messageState=");
+      var7.append(var9);
+      var7.append(", shouldAutoPlayGif=");
+      var7.append(var3);
+      var7.append(", useOldForwardIcon=");
+      var7.append(var2);
+      var7.append(")");
+      return var7.toString();
    }
 }

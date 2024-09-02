@@ -16,26 +16,26 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
-import eh.p
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import lj.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,
    ComponentView<SeparatorDisplayComponent> {
    fun SeparatorDisplayComponentView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun SeparatorDisplayComponentView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
    }
 
@@ -45,12 +45,12 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       componentActionListener: ComponentActionListener,
       componentContext: ComponentContext
    ) {
-      r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentActionListener");
-      r.h(var4, "componentContext");
+      q.h(var1, "component");
+      q.h(var2, "componentProvider");
+      q.h(var3, "componentActionListener");
+      q.h(var4, "componentContext");
       val var8: MessageComponentSeparatorDisplayViewBinding = MessageComponentSeparatorDisplayViewBinding.bind(this);
-      r.g(var8, "bind(this)");
+      q.g(var8, "bind(...)");
       var8.divider.setBackgroundColor(ThemeManagerKt.getTheme().getTextMuted());
       val var7: Int = SeparatorDisplayComponentView.WhenMappings.$EnumSwitchMapping$0[var1.getSpacing().ordinal()];
       var var5: Int = 0;
@@ -67,7 +67,7 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       }
 
       val var9: View = var8.divider;
-      r.g(var8.divider, "binding.divider");
+      q.g(var8.divider, "divider");
       val var11: LayoutParams = var9.getLayoutParams();
       if (var11 != null) {
          val var12: MarginLayoutParams = var11 as MarginLayoutParams;
@@ -81,15 +81,15 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
    }
 
    public override fun getComponentType(): KClass<SeparatorDisplayComponent> {
-      return h0.b(SeparatorDisplayComponent.class);
+      return g0.b(SeparatorDisplayComponent.class);
    }
 
    public companion object {
       public fun inflateComponent(context: Context, root: ViewGroup): SeparatorDisplayComponentView {
-         r.h(var1, "context");
-         r.h(var2, "root");
+         q.h(var1, "context");
+         q.h(var2, "root");
          val var3: SeparatorDisplayComponentView = MessageComponentSeparatorDisplayViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
-         r.g(var3, "inflate(\n               …false,\n            ).root");
+         q.g(var3, "getRoot(...)");
          return var3;
       }
    }

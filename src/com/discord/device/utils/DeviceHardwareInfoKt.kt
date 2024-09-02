@@ -7,8 +7,9 @@ import java.io.IOException
 import java.util.Arrays
 import java.util.Locale
 import java.util.Scanner
-import kotlin.jvm.internal.m0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.l0
+import kotlin.jvm.internal.q
+import p0.c
 
 internal fun getNumCpuCores(): Int {
    return Runtime.getRuntime().availableProcessors();
@@ -21,12 +22,12 @@ internal fun getSocFromProcCpuInfo(): String {
    while (true) {
       if (var1.hasNextLine()) {
          var0 = var1.nextLine();
-         r.g(var0, "line");
-         if (!f.I(var0, "Hardware", false, 2, null)) {
+         q.e(var0);
+         if (!h.H(var0, "Hardware", false, 2, null)) {
             continue;
          }
 
-         var0 = f.W0(f.A0(var0, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
+         var0 = h.X0(h.z0(var0, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
          break;
       }
 
@@ -39,17 +40,17 @@ internal fun getSocFromProcCpuInfo(): String {
 
 internal fun maxCpuFreq(): String {
    val var3: Int = getNumCpuCores();
-   var var6: Long = 0L;
    var var2: Int = 0;
+   var var6: Long = 0L;
 
    while (true) {
       var var10: java.lang.String = "";
       if (var2 >= var3) {
          if (var6 > 0L) {
             val var0: Double = var6 / 1000000.0;
-            val var15: m0 = m0.a;
+            val var15: l0 = l0.a;
             var10 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
-            r.g(var10, "format(locale, format, *args)");
+            q.g(var10, "format(...)");
          }
 
          return var10;
@@ -79,85 +80,65 @@ internal fun maxCpuFreq(): String {
 }
 
 internal fun ramSize(): String {
-   val var6: Scanner = new Scanner(new File("/proc/meminfo"));
+   val var5: Scanner = new Scanner(new File("/proc/meminfo"));
 
-   var var5: java.lang.String;
-   var var9: java.lang.String;
+   var var4: java.lang.String;
+   var var8: java.lang.String;
    while (true) {
-      val var3: Boolean = var6.hasNextLine();
-      var5 = "";
-      if (var3) {
-         var9 = var6.nextLine();
-         r.g(var9, "line");
-         if (!f.I(var9, "MemTotal", false, 2, null)) {
+      val var2: Boolean = var5.hasNextLine();
+      var4 = "";
+      if (var2) {
+         var8 = var5.nextLine();
+         q.e(var8);
+         if (!h.H(var8, "MemTotal", false, 2, null)) {
             continue;
          }
 
-         val var8: MatchResult = Regex.c(
-            new Regex("\\d+"), f.W0(f.A0(var9, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString(), 0, 2, null
+         val var7: MatchResult = Regex.c(
+            new Regex("\\d+"), h.X0(h.z0(var8, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString(), 0, 2, null
          );
-         if (var8 != null) {
-            val var11: java.lang.String = var8.getValue();
-            var9 = var11;
-            if (var11 != null) {
+         if (var7 != null) {
+            val var10: java.lang.String = var7.getValue();
+            var8 = var10;
+            if (var10 != null) {
                break;
             }
          }
       }
 
-      var9 = "";
+      var8 = "";
       break;
    }
 
-   val var2: Boolean;
-   if (var9.length() > 0) {
-      var2 = true;
-   } else {
-      var2 = false;
+   if (var8.length() > 0) {
+      val var0: Double = java.lang.Long.parseLong(var8) / 1048576.0;
+      val var9: l0 = l0.a;
+      var4 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
+      q.g(var4, "format(...)");
    }
 
-   if (var2) {
-      val var0: Double = java.lang.Long.parseLong(var9) / 1048576.0;
-      val var10: m0 = m0.a;
-      var5 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
-      r.g(var5, "format(locale, format, *args)");
-   }
-
-   return var5;
+   return var4;
 }
 
 internal fun socName(): String {
    if (VERSION.SDK_INT >= 31) {
-      var var2: java.lang.String = a.a();
-      r.g(var2, "SOC_MANUFACTURER");
-      var var5: Boolean;
-      if (var2.length() == 0) {
-         var5 = true;
-      } else {
-         var5 = false;
-      }
-
-      if (var5) {
-         var2 = b.a();
-         r.g(var2, "SOC_MODEL");
-         if (var2.length() == 0) {
-            var5 = true;
-         } else {
-            var5 = false;
-         }
-
-         if (var5) {
+      var var0: java.lang.String = a.a();
+      q.g(var0, "SOC_MANUFACTURER");
+      if (var0.length() == 0) {
+         var0 = c.a();
+         q.g(var0, "SOC_MODEL");
+         if (var0.length() == 0) {
             return getSocFromProcCpuInfo();
          }
       }
 
-      val var4: java.lang.String = a.a();
-      var2 = b.a();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var4);
-      var3.append("_");
-      var3.append(var2);
-      return var3.toString();
+      val var1: java.lang.String = a.a();
+      val var2: java.lang.String = c.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var1);
+      var4.append("_");
+      var4.append(var2);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

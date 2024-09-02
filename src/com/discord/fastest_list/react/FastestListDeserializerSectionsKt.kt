@@ -13,8 +13,8 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.Ref$IntRef
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
+import kotlin.jvm.internal.Ref.IntRef
 
 private fun createSectionFooter(
    listId: String,
@@ -93,14 +93,14 @@ private fun createSectionItem(
       var8 = var6;
    } else {
       val var16: ReadableMap = var7.getMap(var2);
-      r.g(var16, "itemSizes.getMap(sectionIndex)");
+      q.g(var16, "getMap(...)");
       var8 = SizeUtilsKt.getDpToPx(NativeMapExtensionsKt.getNonNullArray(var16, "sizes").getInt(var4));
    }
 
    val var15: java.lang.String;
    if (!var1) {
       val var14: ReadableMap = var5.getMap(var2);
-      r.g(var14, "itemKeys.getMap(sectionIndex)");
+      q.g(var14, "getMap(...)");
       var15 = NativeMapExtensionsKt.getNonNullArray(var14, "keys").getString(var4);
    } else {
       var15 = null;
@@ -109,90 +109,88 @@ private fun createSectionItem(
    var0 = FastestListSections.Entry.SectionItem.Companion.createKey(var0, var2, var4, var15);
    var2 = FastestListSections.Section.constructor-impl(var2);
    val var9: Int = FastestListSections.Item.constructor-impl(var4);
+   var var10: Boolean = false;
    if (var4 == 0) {
       var1 = true;
    } else {
       var1 = false;
    }
 
-   val var10: Boolean;
    if (var4 == var3 - 1) {
       var10 = true;
-   } else {
-      var10 = false;
    }
 
    return new FastestListSections.Entry.SectionItem(var0, var2, var9, var8, var1, var10, null);
 }
 
 internal operator fun Companion.invoke(value: ReadableMap): Versioned {
-   r.h(var0, "<this>");
-   r.h(var1, "value");
+   q.h(var0, "<this>");
+   q.h(var1, "value");
    val var18: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listId");
-   val var6: Boolean = var1.getBoolean("keysAreUniform");
-   val var17: ArrayList = new ArrayList();
-   val var19: Ref$IntRef = new Ref$IntRef();
-   val var13: ArrayList = new ArrayList();
-   val var21: java.util.List = NativeArrayExtensionsKt.toIntList(NativeMapExtensionsKt.getNonNullArray(var1, "sections"));
-   var var7: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "sectionsId");
-   val var20: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemKeys");
-   val var12: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemSizes");
-   val var8: Int;
+   val var5: Boolean = var1.getBoolean("keysAreUniform");
+   val var14: ArrayList = new ArrayList();
+   val var19: IntRef = new IntRef();
+   val var12: ArrayList = new ArrayList();
+   val var20: java.util.List = NativeArrayExtensionsKt.toIntList(NativeMapExtensionsKt.getNonNullArray(var1, "sections"));
+   val var15: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "sectionsId");
+   val var17: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemKeys");
+   val var10: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemSizes");
+   val var6: Int;
    if (var1.getBoolean("itemSizeIsUniform")) {
-      val var24: ReadableMap = var12.getMap(0);
-      r.g(var24, "itemSizes.getMap(0)");
-      var8 = SizeUtilsKt.getDpToPx(NativeMapExtensionsKt.getNonNullArray(var24, "sizes").getInt(0));
+      val var23: ReadableMap = var10.getMap(0);
+      q.g(var23, "getMap(...)");
+      var6 = SizeUtilsKt.getDpToPx(NativeMapExtensionsKt.getNonNullArray(var23, "sizes").getInt(0));
+   } else {
+      var6 = null;
+   }
+
+   val var21: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionHeaderKeys");
+   val var11: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionHeaderSizes");
+   val var7: Int;
+   if (var1.getBoolean("sectionHeaderSizeIsUniform")) {
+      var7 = SizeUtilsKt.getDpToPx(var11.getInt(0));
+   } else {
+      var7 = null;
+   }
+
+   val var22: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionFooterKeys");
+   val var13: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionFooterSizes");
+   val var8: Int;
+   if (var1.getBoolean("sectionFooterSizeIsUniform")) {
+      var8 = SizeUtilsKt.getDpToPx(var13.getInt(0));
    } else {
       var8 = null;
    }
 
-   val var22: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionHeaderKeys");
-   val var14: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionHeaderSizes");
-   val var9: Int;
-   if (var1.getBoolean("sectionHeaderSizeIsUniform")) {
-      var9 = SizeUtilsKt.getDpToPx(var14.getInt(0));
-   } else {
-      var9 = null;
-   }
-
-   val var23: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionFooterKeys");
-   val var15: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "sectionFooterSizes");
-   val var10: Int;
-   if (var1.getBoolean("sectionFooterSizeIsUniform")) {
-      var10 = SizeUtilsKt.getDpToPx(var15.getInt(0));
-   } else {
-      var10 = null;
-   }
-
-   val var25: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listHeaderKey");
+   val var24: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listHeaderKey");
    var var2: Int = SizeUtilsKt.getDpToPx(var1.getInt("listHeaderSize"));
-   val var26: FastestListSections.Entry.ListHeader;
+   val var25: FastestListSections.Entry.ListHeader;
    if (var2 > 0) {
-      var26 = new FastestListSections.Entry.ListHeader(
-         FastestListSections.Entry.ListHeader.Companion.createKey(var18, var25), FastestListSections.Section.constructor-impl(0), var2, null
+      var25 = new FastestListSections.Entry.ListHeader(
+         FastestListSections.Entry.ListHeader.Companion.createKey(var18, var24), FastestListSections.Section.constructor-impl(0), var2, null
       );
    } else {
-      var26 = null;
+      var25 = null;
    }
 
-   val var11: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listFooterKey");
+   val var9: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listFooterKey");
    var2 = SizeUtilsKt.getDpToPx(var1.getInt("listFooterSize"));
-   val var31: FastestListSections.Entry.ListFooter;
+   val var30: FastestListSections.Entry.ListFooter;
    if (var2 > 0) {
-      var31 = new FastestListSections.Entry.ListFooter(
-         FastestListSections.Entry.ListFooter.Companion.createKey(var18, var11),
-         FastestListSections.Section.constructor-impl(Math.max(0, h.k(var21))),
+      var30 = new FastestListSections.Entry.ListFooter(
+         FastestListSections.Entry.ListFooter.Companion.createKey(var18, var9),
+         FastestListSections.Section.constructor-impl(Math.max(0, i.l(var20))),
          var2,
          null
       );
    } else {
-      var31 = null;
+      var30 = null;
    }
 
-   val var16: Function1 = new Function1<FastestListSections.Entry, Unit>(var13, var17, var19) {
+   val var16: Function1 = new Function1(var12, var14, var19) {
       final java.util.List<FastestListSections.Entry> $sectionEntries;
       final java.util.List<Integer> $sectionOffsetAtPosition;
-      final Ref$IntRef $sectionsCumulativeSize;
+      final IntRef $sectionsCumulativeSize;
 
       {
          super(1);
@@ -210,40 +208,39 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
       }
    };
    var2 = 0;
-   val var27: FastestListSections.Entry.ListHeader = var26;
+   val var31: Function1 = var16;
 
-   while (var2 <= h.k(var21)) {
+   while (var2 <= i.l(var20)) {
       if (var2 == 0) {
-         var16.invoke(var27);
+         var31.invoke(var25);
       }
 
-      val var4: Int = (var21.get(var2) as java.lang.Number).intValue();
+      val var4: Int = (var20.get(var2) as java.lang.Number).intValue();
       if (var4 == 0) {
-         val var30: Int = var2 + 1;
+         val var29: Int = var2 + 1;
          var2 += 1;
-         if (var30 == h.k(var21)) {
-            var16.invoke(var31);
-            var2 = var30;
+         if (var29 == i.l(var20)) {
+            var31.invoke(var30);
+            var2 = var29;
          }
       } else {
-         var16.invoke(createSectionHeader(var18, var6, var2, var22, var9, var14));
+         var31.invoke(createSectionHeader(var18, var5, var2, var21, var7, var11));
 
          var var3: Int;
          for (var3 = 0; var3 < var4; var3++) {
-            var16.invoke(createSectionItem(var18, var6, var2, var4, var3, var20, var8, var12));
+            var31.invoke(createSectionItem(var18, var5, var2, var4, var3, var17, var6, var10));
          }
 
          if (var3 == var4) {
-            var16.invoke(createSectionFooter(var18, var6, var2, var23, var10, var15));
-            if (var2 == h.k(var21)) {
-               var16.invoke(var31);
+            var31.invoke(createSectionFooter(var18, var5, var2, var22, var8, var13));
+            if (var2 == i.l(var20)) {
+               var31.invoke(var30);
             }
          }
 
          var2++;
-         var7 = var7;
       }
    }
 
-   return new FastestListSections.Versioned(var7, var13, var19.j, var17);
+   return new FastestListSections.Versioned(var15, var12, var19.j, var14);
 }

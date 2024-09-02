@@ -3,18 +3,18 @@ package com.discord.modules.proximitysensor
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ProximitySensorManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val proximityWakeLock: ProximityWakeLock
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
-      val var3: ProximityWakeLock.Companion = ProximityWakeLock.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      this.proximityWakeLock = var3.create(var2, 600000L, "discord:proximitywakelock");
+      val var2: ProximityWakeLock.Companion = ProximityWakeLock.Companion;
+      var1 = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      this.proximityWakeLock = var2.create(var1, 600000L, "discord:proximitywakelock");
    }
 
    public open fun getName(): String {

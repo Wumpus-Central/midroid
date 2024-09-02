@@ -12,7 +12,7 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootViewKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
 
 public class DCDChatInput  public constructor(context: Context, attrs: AttributeSet? = null) : AppCompatEditText {
@@ -21,12 +21,12 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    private final val measureAndLayoutRunnable: Runnable
 
    fun DCDChatInput(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
       this.measureAndLayoutRunnable = new e(this);
       this.setupExternalKeyboardSendRequests();
@@ -34,7 +34,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
 
    @JvmStatic
    fun `measureAndLayoutRunnable$lambda$0`(var0: DCDChatInput) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 
@@ -44,49 +44,33 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
 
    @JvmStatic
    fun `setupExternalKeyboardSendRequests$lambda$2`(var0: BooleanRef, var1: DCDChatInput, var2: View, var3: Int, var4: KeyEvent): Boolean {
-      r.h(var0, "$isEnterHeldDown");
-      r.h(var1, "this$0");
-      r.h(var4, "event");
-      val var5: Boolean;
+      q.h(var0, "$isEnterHeldDown");
+      q.h(var1, "this$0");
+      q.h(var4, "event");
       if ((var4.getFlags() and 2) == 2) {
-         var5 = true;
-      } else {
-         var5 = false;
-      }
-
-      if (var5) {
          return false;
       } else {
-         val var8: Boolean;
          if (var3 == 66) {
-            var8 = true;
-         } else {
-            var8 = false;
-         }
-
-         if (!var8) {
-            return false;
-         } else {
-            val var6: Boolean = var0.j;
+            val var5: Boolean = var0.j;
             if (var4.getAction() == 0) {
                var0.j = true;
                if (var4.hasModifiers(1)) {
                   return false;
-               } else {
-                  if (!var6 && var1.onRequestSend != null) {
-                     var1.onRequestSend.invoke();
-                  }
-
-                  return true;
-               }
-            } else {
-               if (var4.getAction() == 1) {
-                  var0.j = false;
                }
 
-               return false;
+               if (!var5 && var1.onRequestSend != null) {
+                  var1.onRequestSend.invoke();
+               }
+
+               return true;
+            }
+
+            if (var4.getAction() == 1) {
+               var0.j = false;
             }
          }
+
+         return false;
       }
    }
 
@@ -118,7 +102,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
       }
    }
 
-   public open fun onTextContextMenuItem(id: Int): Boolean {
+   public override fun onTextContextMenuItem(id: Int): Boolean {
       var var2: Int = var1;
       if (var1 == 16908322) {
          var2 = 16908337;
@@ -129,7 +113,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
 
    @SuppressLint(["ClickableViewAccessibility"])
    public open fun onTouchEvent(event: MotionEvent): Boolean {
-      r.h(var1, "event");
+      q.h(var1, "event");
       if (var1.getAction() == 0) {
          GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this).requestDisallowInterceptTouchEvent(true);
       }
@@ -146,12 +130,12 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    }
 
    public fun setOnRequestSend(onRequestSend: () -> Unit) {
-      r.h(var1, "onRequestSend");
+      q.h(var1, "onRequestSend");
       this.onRequestSend = var1;
    }
 
    public fun setOnSelectionChanged(onSelectionChanged: (Int, Int) -> Unit) {
-      r.h(var1, "onSelectionChanged");
+      q.h(var1, "onSelectionChanged");
       this.onSelectionChanged = var1;
    }
 }

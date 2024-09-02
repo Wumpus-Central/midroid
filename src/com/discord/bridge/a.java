@@ -8,6 +8,6 @@ public final class a implements ReactModuleInfoProvider {
    public final String a;
 
    public final Map getReactModuleInfos() {
-      return <unrepresentable>.a(this.a);
+      return <unrepresentable>.b(this.a);
    }
 }

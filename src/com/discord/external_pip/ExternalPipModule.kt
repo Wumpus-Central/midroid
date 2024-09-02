@@ -13,11 +13,11 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import eh.w
-import fh.s
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
+import lj.r
+import lj.w
 
 @ReactModule(name = "ExternalPip")
 public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -25,15 +25,15 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.manager = new ExternalPipManager();
       this.reactEvents = new ReactEvents(
-         new Pair[]{w.a("onPipModeChanged", h0.b(OnPipModeChangedEvent.class)), w.a("onPipModeWillChange", h0.b(OnPipModeWillChangeEvent.class))}
+         new Pair[]{w.a("onPipModeChanged", g0.b(OnPipModeChangedEvent.class)), w.a("onPipModeWillChange", g0.b(OnPipModeWillChangeEvent.class))}
       );
    }
 
-   private fun enterPipMode(force: Boolean, onResult: (eh.r<Unit>) -> Unit) {
+   private fun enterPipMode(force: Boolean, onResult: (r<Unit>) -> Unit) {
       if (this.manager.getEnabled(var1)) {
          ExternalPipTransitionView.Companion.tryShow(this.getCurrentActivity());
       }
@@ -51,22 +51,22 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    private fun onPipModeChanged(isInPipMode: Boolean) {
       val var2: ReactEvents = this.reactEvents;
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      q.g(var3, "getReactApplicationContext(...)");
       var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var2: ReactEvents = this.reactEvents;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var1, "reactApplicationContext");
-         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
+         val var1: ReactEvents = this.reactEvents;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
       }
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return s.m(w.a("isSupported", ExternalPipManager.Companion.isSupported()));
+      return mj.r.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {
@@ -75,10 +75,10 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setActive(active: Boolean, onResultPromise: Promise) {
-      r.h(var2, "onResultPromise");
+      q.h(var2, "onResultPromise");
       if (ThreadUtilsKt.isOnMainThread()) {
          if (var1) {
-            access$enterPipMode(this, true, new Function1<eh.r<? extends Unit>, Unit>(var2) {
+            access$enterPipMode(this, true, new Function1(var2) {
                final Promise $onResultPromise;
 
                {
@@ -87,10 +87,10 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
                }
 
                public final void invoke(Object var1) {
-                  if (eh.r.h(var1)) {
+                  if (r.h(var1)) {
                      this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
                   } else {
-                     this.$onResultPromise.reject(eh.r.e(var1));
+                     this.$onResultPromise.reject(r.e(var1));
                   }
                }
             });
@@ -112,7 +112,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
             @Override
             public final void run() {
                if (this.$active$inlined) {
-                  ExternalPipModule.access$enterPipMode(this.this$0, true, new Function1<eh.r<? extends Unit>, Unit>(this.$onResultPromise$inlined) {
+                  ExternalPipModule.access$enterPipMode(this.this$0, true, new Function1(this.$onResultPromise$inlined) {
                      final Promise $onResultPromise;
 
                      {
@@ -121,10 +121,10 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
                      }
 
                      public final void invoke(Object var1) {
-                        if (eh.r.h(var1)) {
+                        if (r.h(var1)) {
                            this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
                         } else {
-                           this.$onResultPromise.reject(eh.r.e(var1));
+                           this.$onResultPromise.reject(r.e(var1));
                         }
                      }
                   });
@@ -176,7 +176,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
          if (var1 != null) {
             val var3: ExternalPipModule = this.getModule(var1);
             if (var3 != null) {
-               ExternalPipModule.access$enterPipMode(var3, false, new Function1<eh.r<? extends Unit>, Unit>(var1) {
+               ExternalPipModule.access$enterPipMode(var3, false, new Function1(var1) {
                   final ReactContext $reactContext;
 
                   {
@@ -185,7 +185,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
                   }
 
                   public final void invoke(Object var1) {
-                     if (!eh.r.h(var1)) {
+                     if (!r.h(var1)) {
                         var1 = ExternalPipModule.Companion.access$getModule(ExternalPipModule.Companion, this.$reactContext);
                         if (var1 != null) {
                            ExternalPipModule.access$onPipModeChanged(var1, false);

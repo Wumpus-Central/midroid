@@ -2,21 +2,21 @@ package com.discord.chat.presentation.list;
 
 import android.graphics.Canvas;
 import android.util.Pair;
-import androidx.core.view.f1;
+import androidx.core.view.r0;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import java.util.List;
 
 abstract class ChatListCallback extends androidx.recyclerview.widget.e {
-   final int getAbsoluteMovementFlags(RecyclerView var1, ViewHolder var2) {
-      return this.convertToAbsoluteDirection(this.getMovementFlags(var1, var2), f1.B(var1));
+   @Override
+   final int getAbsoluteMovementFlags(RecyclerView var1, RecyclerView.ViewHolder var2) {
+      return this.convertToAbsoluteDirection(this.getMovementFlags(var1, var2), r0.B(var1));
    }
 
    public Pair getEffectiveDxDy(float var1, float var2) {
       return new Pair(var1, var2);
    }
 
-   boolean hasDragFlag(RecyclerView var1, ViewHolder var2) {
+   boolean hasDragFlag(RecyclerView var1, RecyclerView.ViewHolder var2) {
       boolean var3;
       if ((this.getAbsoluteMovementFlags(var1, var2) & 0xFF0000) != 0) {
          var3 = true;
@@ -27,7 +27,9 @@ abstract class ChatListCallback extends androidx.recyclerview.widget.e {
       return var3;
    }
 
-   void onDraw(Canvas var1, RecyclerView var2, ViewHolder var3, List<ChatListItemTouchHelper.RecoverAnimation> var4, int var5, float var6, float var7) {
+   void onDraw(
+      Canvas var1, RecyclerView var2, RecyclerView.ViewHolder var3, List<ChatListItemTouchHelper.RecoverAnimation> var4, int var5, float var6, float var7
+   ) {
       int var9 = var4.size();
 
       for (int var8 = 0; var8 < var9; var8++) {
@@ -45,7 +47,9 @@ abstract class ChatListCallback extends androidx.recyclerview.widget.e {
       }
    }
 
-   void onDrawOver(Canvas var1, RecyclerView var2, ViewHolder var3, List<ChatListItemTouchHelper.RecoverAnimation> var4, int var5, float var6, float var7) {
+   void onDrawOver(
+      Canvas var1, RecyclerView var2, RecyclerView.ViewHolder var3, List<ChatListItemTouchHelper.RecoverAnimation> var4, int var5, float var6, float var7
+   ) {
       int var10 = var4.size();
       boolean var9 = false;
 
@@ -80,7 +84,7 @@ abstract class ChatListCallback extends androidx.recyclerview.widget.e {
       }
    }
 
-   public abstract void onReleased(RecyclerView var1, ViewHolder var2);
+   public abstract void onReleased(RecyclerView var1, RecyclerView.ViewHolder var2);
 
    public boolean shouldReturnToOriginalPosition() {
       return false;
