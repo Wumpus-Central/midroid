@@ -66,8 +66,8 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.items.hashCode();
-      val var3: Int = this.action.hashCode();
+      val var3: Int = this.items.hashCode();
+      val var2: Int = this.action.hashCode();
       val var1: Int;
       if (this.listOperations == null) {
          var1 = 0;
@@ -75,7 +75,7 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
          var1 = this.listOperations.hashCode();
       }
 
-      return ((var2 * 31 + var3) * 31 + var1) * 31 + Integer.hashCode(this.changesetUpdateId);
+      return ((var3 * 31 + var2) * 31 + var1) * 31 + Integer.hashCode(this.changesetUpdateId);
    }
 
    public override fun toString(): String {

@@ -8,7 +8,7 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
 
    init {
       this.maxCharacterCount = var1;
-      this.output = new ArrayDeque();
+      this.output = new ArrayDeque<>();
       this.sync = new Object();
    }
 

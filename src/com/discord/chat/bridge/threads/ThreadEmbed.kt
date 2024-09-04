@@ -190,27 +190,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.title;
-      val var6: java.lang.String = this.messageCountLabel;
-      val var7: java.lang.String = this.messagePreviewString;
+      val var7: java.lang.String = this.title;
+      val var4: java.lang.String = this.messageCountLabel;
+      val var1: java.lang.String = this.messagePreviewString;
       val var3: java.lang.Boolean = this.archived;
-      val var4: java.lang.String = this.archivedIconUrl;
-      val var5: ThreadEmbedMessage = this.referencedMessage;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ThreadEmbed(title=");
-      var1.append(var2);
-      var1.append(", messageCountLabel=");
-      var1.append(var6);
-      var1.append(", messagePreviewString=");
-      var1.append(var7);
-      var1.append(", archived=");
-      var1.append(var3);
-      var1.append(", archivedIconUrl=");
-      var1.append(var4);
-      var1.append(", referencedMessage=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var5: java.lang.String = this.archivedIconUrl;
+      val var6: ThreadEmbedMessage = this.referencedMessage;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThreadEmbed(title=");
+      var2.append(var7);
+      var2.append(", messageCountLabel=");
+      var2.append(var4);
+      var2.append(", messagePreviewString=");
+      var2.append(var1);
+      var2.append(", archived=");
+      var2.append(var3);
+      var2.append(", archivedIconUrl=");
+      var2.append(var5);
+      var2.append(", referencedMessage=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<ThreadEmbed> {
@@ -246,28 +246,29 @@ public data class ThreadEmbed(title: String,
          val var5: Boolean = var13.p();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
          var var7: java.lang.String;
          var var9: Any;
          var var10: Any;
-         var var15: Any;
+         val var11: java.lang.String;
+         var var16: Any;
          if (var5) {
-            var7 = var13.m(var12, 0);
-            var8 = var13.m(var12, 1);
-            var15 = a2.a;
+            val var14: java.lang.String = var13.m(var12, 0);
+            var7 = var13.m(var12, 1);
+            var16 = a2.a;
             var10 = var13.n(var12, 2, a2.a, null);
             var9 = var13.n(var12, 3, h.a, null);
-            var6 = var13.n(var12, 4, (DeserializationStrategy)var15, null);
-            var15 = var13.n(var12, 5, ThreadEmbedMessage.$serializer.INSTANCE, null);
+            var16 = var13.n(var12, 4, (DeserializationStrategy)var16, null);
+            var8 = (java.lang.String)var13.n(var12, 5, ThreadEmbedMessage.$serializer.INSTANCE, null);
             var2 = 63;
+            var11 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var10 = null;
             var9 = null;
-            var6 = null;
-            var15 = null;
+            var16 = null;
+            var var15: Any = null;
 
             while (var3) {
                val var4: Int = var13.o(var12);
@@ -292,7 +293,7 @@ public data class ThreadEmbed(title: String,
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var13.n(var12, 4, a2.a, var6);
+                     var16 = var13.n(var12, 4, a2.a, var16);
                      var2 |= 16;
                      break;
                   case 5:
@@ -304,13 +305,13 @@ public data class ThreadEmbed(title: String,
                }
             }
 
-            var8 = var7;
-            var7 = var8;
+            var11 = var8;
+            var8 = (java.lang.String)var15;
          }
 
          var13.c(var12);
          return new ThreadEmbed(
-            var2, var7, var8, var10 as java.lang.String, var9 as java.lang.Boolean, var6 as java.lang.String, var15 as ThreadEmbedMessage, null
+            var2, var11, var7, var10 as java.lang.String, var9 as java.lang.Boolean, var16 as java.lang.String, var8 as ThreadEmbedMessage, null
          );
       }
 

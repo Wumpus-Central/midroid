@@ -19,9 +19,9 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
+import kotlin.jvm.internal.Ref$ObjectRef
 import kotlin.jvm.internal.h0
 import kotlin.jvm.internal.r
-import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
 
 public object CrashReporting {
@@ -29,13 +29,11 @@ public object CrashReporting {
    private const val TAG_BUILD_NUMBER: String = "buildNumber"
    public final val ignoreNetworkExceptionList: List<KClass<out Throwable>> =
       h.l(
-         new KClass[]{
-            h0.b(UnknownHostException.class),
-            h0.b(SocketTimeoutException.class),
-            h0.b(SocketException.class),
-            h0.b(ConnectException.class),
-            h0.b(SSLException.class)
-         }
+         h0.b(UnknownHostException.class),
+         h0.b(SocketTimeoutException.class),
+         h0.b(SocketException.class),
+         h0.b(ConnectException.class),
+         h0.b(SSLException.class)
       )
 
    public final var isCrashedLastRun: Boolean?
@@ -64,7 +62,7 @@ public object CrashReporting {
    }
 
    @JvmStatic
-   fun `init$lambda$0`(var0: ObjectRef, var1: java.lang.String, var2: Context, var3: Double, var5: SentryAndroidOptions) {
+   fun `init$lambda$0`(var0: Ref$ObjectRef, var1: java.lang.String, var2: Context, var3: Double, var5: SentryAndroidOptions) {
       r.h(var0, "$dsn");
       r.h(var1, "$releaseName");
       r.h(var2, "$context");
@@ -83,7 +81,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("bf67b3a9-ec0d-4591-91e6-48559cdaf529");
+      var5.setProguardUuid("fc667b0f-72dd-4e22-9466-0e3d0bacb922");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -93,8 +91,8 @@ public object CrashReporting {
       r.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.n(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.n(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       var4.m(var3);
@@ -172,7 +170,7 @@ public object CrashReporting {
             }
          }
 
-         val var7: ObjectRef = new ObjectRef();
+         val var7: Ref$ObjectRef = new Ref$ObjectRef();
          val var6: java.lang.String;
          if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
             var6 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
@@ -182,7 +180,7 @@ public object CrashReporting {
             var6 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
          }
 
-         var7.j = var6;
+         var7.j = (T)var6;
          r1.g(var1, new a(var7, var2, var1, this.getSampleRate(var1)));
          isCrashedLastRun = o3.u();
       }

@@ -16,6 +16,6 @@ public class FastestListPackage : ReactPackage {
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       r.h(var1, "reactContext");
-      return h.o(new ViewManager[]{new FastestListViewManager()});
+      return h.o(new FastestListViewManager());
    }
 }

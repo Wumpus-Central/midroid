@@ -210,10 +210,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var1: BillingManager = this.billingManager;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.open(var2);
+      val var2: BillingManager = this.billingManager;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var1, "reactApplicationContext");
+      var2.open(var1);
    }
 
    @ReactMethod

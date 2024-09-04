@@ -48,13 +48,13 @@ public data class SurveyIndicationMessageAccessory(messageId: MessageId, surveyI
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var1: SurveyIndication = this.surveyIndication;
+      val var1: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var2: SurveyIndication = this.surveyIndication;
       val var3: StringBuilder = new StringBuilder();
       var3.append("SurveyIndicationMessageAccessory(messageId=");
-      var3.append(var2);
-      var3.append(", surveyIndication=");
       var3.append(var1);
+      var3.append(", surveyIndication=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

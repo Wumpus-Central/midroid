@@ -14,6 +14,7 @@ import kotlin.jvm.internal.r
 public class MosaicLayoutManager(context: Context) : LayoutManager {
    private final var constrainedWidth: Int
    public final val context: Context
+   private final var disableRecycling: Boolean
    private final var isForwardedContent: Boolean
    private final var isShowingInlineForward: Boolean
    private final val mediaMaxHeight: Int
@@ -184,6 +185,10 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
       return false;
    }
 
+   public fun disableRecycling(disableRecycling: Boolean) {
+      this.disableRecycling = var1;
+   }
+
    public open fun generateDefaultLayoutParams(): LayoutParams {
       return new LayoutParams(-2, -2);
    }
@@ -195,9 +200,16 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
    public open fun onDetachedFromWindow(view: RecyclerView?, recycler: Recycler?) {
       super.onDetachedFromWindow(var1, var2);
       if (this.recycleChildrenOnDetach) {
-         r.e(var2);
-         this.removeAndRecycleAllViews(var2);
-         var2.c();
+         if (this.disableRecycling) {
+            this.removeAllViews();
+         } else {
+            r.e(var2);
+            this.removeAndRecycleAllViews(var2);
+         }
+
+         if (var2 != null) {
+            var2.c();
+         }
       }
    }
 

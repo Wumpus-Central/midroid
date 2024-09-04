@@ -13,7 +13,6 @@ import uk.n
 import xk.a2
 import xk.f0
 import xk.h
-import xk.f0.a
 
 @f
 public data class ContactSyncBlobEntry(phone: String,
@@ -133,15 +132,15 @@ public data class ContactSyncBlobEntry(phone: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.phone;
+      val var2: java.lang.String = this.phone;
       val var4: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
       val var6: java.lang.String = this.deviceContactId;
-      val var2: java.lang.String = this.givenName;
+      val var7: java.lang.String = this.givenName;
       val var5: java.lang.String = this.familyName;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ContactSyncBlobEntry(phone=");
-      var3.append(var7);
+      var3.append(var2);
       var3.append(", unencryptedName=");
       var3.append(var4);
       var3.append(", hasImageData=");
@@ -149,7 +148,7 @@ public data class ContactSyncBlobEntry(phone: String,
       var3.append(", deviceContactId=");
       var3.append(var6);
       var3.append(", givenName=");
-      var3.append(var2);
+      var3.append(var7);
       var3.append(", familyName=");
       var3.append(var5);
       var3.append(")");
@@ -177,7 +176,7 @@ public data class ContactSyncBlobEntry(phone: String,
          descriptor = var1;
       }
 
-      public open fun childSerializers(): Array<KSerializer<*>> {
+      public override fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{a2.a, a2.a, h.a, a2.a, a2.a, a2.a};
       }
 
@@ -187,25 +186,28 @@ public data class ContactSyncBlobEntry(phone: String,
          val var13: c = var1.b(var12);
          var var2: Int;
          var var5: Boolean;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var9: java.lang.String;
-         val var10: java.lang.String;
+         var var8: java.lang.String;
          val var14: java.lang.String;
+         var var16: java.lang.String;
+         var var18: java.lang.String;
+         var var21: java.lang.String;
          if (var13.p()) {
-            var10 = var13.m(var12, 0);
-            var7 = var13.m(var12, 1);
+            var18 = var13.m(var12, 0);
+            var21 = var13.m(var12, 1);
             var5 = var13.C(var12, 2);
-            val var8: java.lang.String = var13.m(var12, 3);
-            var6 = var13.m(var12, 4);
+            var16 = var13.m(var12, 3);
+            val var9: java.lang.String = var13.m(var12, 4);
             var14 = var13.m(var12, 5);
             var2 = 63;
-            var9 = var8;
+            var8 = var18;
+            var18 = var21;
+            var21 = var16;
+            var16 = var9;
          } else {
-            var var18: java.lang.String = null;
-            var9 = null;
-            var6 = null;
-            var7 = null;
+            var8 = null;
+            var var20: java.lang.String = null;
+            var16 = null;
+            var18 = null;
             var var15: java.lang.String = null;
             var var3: Boolean = true;
             var5 = false;
@@ -218,7 +220,7 @@ public data class ContactSyncBlobEntry(phone: String,
                      var3 = false;
                      break;
                   case 0:
-                     var18 = var13.m(var12, 0);
+                     var8 = var13.m(var12, 0);
                      var2 |= 1;
                      break;
                   case 1:
@@ -230,15 +232,15 @@ public data class ContactSyncBlobEntry(phone: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var6 = var13.m(var12, 3);
+                     var16 = var13.m(var12, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var7 = var13.m(var12, 4);
+                     var18 = var13.m(var12, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var9 = var13.m(var12, 5);
+                     var20 = var13.m(var12, 5);
                      var2 |= 32;
                      break;
                   default:
@@ -246,15 +248,14 @@ public data class ContactSyncBlobEntry(phone: String,
                }
             }
 
-            var14 = var9;
-            var6 = var7;
-            var9 = var6;
-            var7 = var15;
-            var10 = var18;
+            var21 = var16;
+            var14 = var20;
+            var16 = var18;
+            var18 = var15;
          }
 
          var13.c(var12);
-         return new ContactSyncBlobEntry(var2, var10, var7, var5, var9, var6, var14, null);
+         return new ContactSyncBlobEntry(var2, var8, var18, var5, var21, var16, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContactSyncBlobEntry) {
@@ -266,8 +267,8 @@ public data class ContactSyncBlobEntry(phone: String,
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return a.a(this);
+      override fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return f0.a.a(this);
       }
    }
 

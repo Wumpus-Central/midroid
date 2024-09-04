@@ -23,10 +23,10 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
    }
 
    public open fun initialize() {
-      val var1: FrescoModuleDiscord.Companion = Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.initializeFresco(var2);
+      val var2: FrescoModuleDiscord.Companion = Companion;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var1, "reactApplicationContext");
+      var2.initializeFresco(var1);
       this.initializeSkinny();
    }
 

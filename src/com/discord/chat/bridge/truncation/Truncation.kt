@@ -208,29 +208,30 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
          r.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.b(var10);
-         var var2: Int;
          var var3: Int;
          var var4: Int;
+         val var5: Int;
          var var7: Any;
          var var8: Any;
          var var12: Any;
          if (var11.p()) {
-            var4 = var11.i(var10, 0);
+            val var2: Int = var11.i(var10, 0);
             var3 = var11.C(var10, 1);
             var12 = var11.n(var10, 2, a2.a, null);
             var7 = var11.n(var10, 3, m0.a, null);
             var8 = var11.n(var10, 4, h.a, null);
-            var2 = 31;
+            var5 = 31;
+            var4 = var2;
          } else {
-            var var5: Boolean = true;
+            var var15: Boolean = true;
             var4 = 0;
-            var2 = 0;
+            var var14: Int = 0;
             var8 = null;
             var7 = null;
             var12 = null;
             var3 = 0;
 
-            while (var5) {
+            while (var15) {
                val var6: Int = var11.o(var10);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -242,34 +243,35 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
                               }
 
                               var12 = var11.n(var10, 4, h.a, var12);
-                              var2 |= 16;
+                              var14 |= 16;
                            } else {
                               var7 = var11.n(var10, 3, m0.a, var7);
-                              var2 |= 8;
+                              var14 |= 8;
                            }
                         } else {
                            var8 = var11.n(var10, 2, a2.a, var8);
-                           var2 |= 4;
+                           var14 |= 4;
                         }
                      } else {
                         var3 = var11.C(var10, 1);
-                        var2 |= 2;
+                        var14 |= 2;
                      }
                   } else {
                      var4 = var11.i(var10, 0);
-                     var2 |= 1;
+                     var14 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var15 = false;
                }
             }
 
+            var5 = var14;
             var12 = var8;
             var8 = var12;
          }
 
          var11.c(var10);
-         return new Truncation(var2, var4, (boolean)var3, var12 as java.lang.String, var7 as Int, var8 as java.lang.Boolean, null);
+         return new Truncation(var5, var4, (boolean)var3, var12 as java.lang.String, var7 as Int, var8 as java.lang.Boolean, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Truncation) {

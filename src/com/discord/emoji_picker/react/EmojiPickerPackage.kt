@@ -16,6 +16,6 @@ public class EmojiPickerPackage : ReactPackage {
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       r.h(var1, "reactContext");
-      return h.o(new ViewManager[]{new EmojiPickerViewManager(), new EmojiPickerRowViewManager()});
+      return h.o(new EmojiPickerViewManager(), new EmojiPickerRowViewManager());
    }
 }

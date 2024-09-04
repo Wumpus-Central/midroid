@@ -49,7 +49,7 @@ internal class ExternalPipManager {
       }
 
       if (!var4 || !CAN_PIP) {
-         val var17: eh.r.a = r.k;
+         val var17: r.a = r.k;
          var3.invoke(r.a(r.b(s.a(new Exception("Disabled or unsupported.")))));
       } else {
          val var11: java.lang.Boolean;
@@ -60,7 +60,7 @@ internal class ExternalPipManager {
                kotlin.jvm.internal.r.g(var18, "Builder()\n              …tAspectRatio(aspectRatio)");
                var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var18, false)));
             } catch (var9: Exception) {
-               val var10: eh.r.a = r.k;
+               val var10: r.a = r.k;
                var3.invoke(r.a(r.b(s.a(var9))));
                return;
             }
@@ -70,21 +70,21 @@ internal class ExternalPipManager {
 
          try {
             if (kotlin.jvm.internal.r.c(var11, java.lang.Boolean.TRUE)) {
-               val var16: eh.r.a = r.k;
+               val var16: r.a = r.k;
                var3.invoke(r.a(r.b(Unit.a)));
                return;
             }
          } catch (var8: Exception) {
-            val var12: eh.r.a = r.k;
+            val var12: r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var8))));
             return;
          }
 
          try {
-            val var14: eh.r.a = r.k;
+            val var14: r.a = r.k;
             var3.invoke(r.a(r.b(s.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var7: Exception) {
-            val var13: eh.r.a = r.k;
+            val var13: r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var7))));
          }
       }

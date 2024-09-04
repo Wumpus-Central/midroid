@@ -56,8 +56,8 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
       r.h(var0, "self");
       r.h(var1, "output");
       r.h(var2, "serialDesc");
-      var1.y(var2, 0, com.discord.primitives.GuildId..serializer.INSTANCE, GuildId.box-impl(var0.guildId));
-      var1.y(var2, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, ChannelId.box-impl(var0.channelId));
+      var1.y(var2, 0, GuildId.$serializer.INSTANCE, GuildId.box-impl(var0.guildId));
+      var1.y(var2, 1, ChannelId.$serializer.INSTANCE, ChannelId.box-impl(var0.channelId));
       var1.z(var2, 2, var0.channelName);
       var1.z(var2, 3, var0.guildName);
       var1.z(var2, 4, var0.categoryName);
@@ -121,24 +121,24 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: java.lang.String = this.channelName;
-      val var4: java.lang.String = this.guildName;
+      val var6: java.lang.String = this.guildName;
       val var5: java.lang.String = this.categoryName;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var6.append(var2);
-      var6.append(", channelId=");
-      var6.append(var1);
-      var6.append(", channelName=");
-      var6.append(var3);
-      var6.append(", guildName=");
-      var6.append(var4);
-      var6.append(", categoryName=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MobileVoiceOverlaySelectorResult(guildId=");
+      var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var2);
+      var4.append(", channelName=");
+      var4.append(var3);
+      var4.append(", guildName=");
+      var4.append(var6);
+      var4.append(", categoryName=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<MobileVoiceOverlaySelectorResult> {
@@ -164,7 +164,7 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{com.discord.primitives.GuildId..serializer.INSTANCE, com.discord.primitives.ChannelId..serializer.INSTANCE, a2.a, a2.a, a2.a};
+         return new KSerializer[]{GuildId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, a2.a, a2.a, a2.a};
       }
 
       public open fun deserialize(decoder: Decoder): MobileVoiceOverlaySelectorResult {
@@ -179,8 +179,8 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
          var var8: Any;
          val var13: java.lang.String;
          if (var5) {
-            var9 = var12.y(var11, 0, com.discord.primitives.GuildId..serializer.INSTANCE, null);
-            var8 = var12.y(var11, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var9 = var12.y(var11, 0, GuildId.$serializer.INSTANCE, null);
+            var8 = var12.y(var11, 1, ChannelId.$serializer.INSTANCE, null);
             var7 = var12.m(var11, 2);
             var13 = var12.m(var11, 3);
             var6 = var12.m(var11, 4);
@@ -215,11 +215,11 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var12.y(var11, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var8);
+                        var8 = var12.y(var11, 1, ChannelId.$serializer.INSTANCE, var8);
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var12.y(var11, 0, com.discord.primitives.GuildId..serializer.INSTANCE, var9);
+                     var9 = var12.y(var11, 0, GuildId.$serializer.INSTANCE, var9);
                      var2 |= 1;
                   }
                } else {

@@ -134,43 +134,46 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
 
       public open fun deserialize(decoder: Decoder): MessageReference {
          r.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var5: Boolean = var8.p();
-         var var9: Any = null;
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
+         var var6: Any = null;
          var var2: Int;
-         var var6: Any;
+         var var10: Any;
          if (var5) {
-            var9 = var8.y(var7, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var6 = var8.n(var7, 1, com.discord.primitives.GuildId..serializer.INSTANCE, null);
+            var10 = var9.y(var8, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var6 = var9.n(var8, 1, com.discord.primitives.GuildId..serializer.INSTANCE, null);
             var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
+            var10 = null;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var6 = var8.n(var7, 1, com.discord.primitives.GuildId..serializer.INSTANCE, var6);
+                     var10 = var9.n(var8, 1, com.discord.primitives.GuildId..serializer.INSTANCE, var10);
                      var2 |= 2;
                   } else {
-                     var9 = var8.y(var7, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, var9);
+                     var6 = var9.y(var8, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, var6);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var6 = var10;
+            var10 = var6;
          }
 
-         var8.c(var7);
-         return new MessageReference(var2, var9 as ChannelId, var6 as GuildId, null, null);
+         var9.c(var8);
+         return new MessageReference(var2, var10 as ChannelId, var6 as GuildId, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageReference) {

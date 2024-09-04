@@ -87,18 +87,18 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    }
 
    public override fun toString(): String {
-      val var2: StructurableText = this.content;
-      val var1: java.lang.String = this.helpArticleLink;
-      val var3: java.lang.String = this.helpButtonAccessibilityLabel;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("EphemeralIndication(content=");
-      var4.append(var2);
-      var4.append(", helpArticleLink=");
-      var4.append(var1);
-      var4.append(", helpButtonAccessibilityLabel=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: StructurableText = this.content;
+      val var2: java.lang.String = this.helpArticleLink;
+      val var1: java.lang.String = this.helpButtonAccessibilityLabel;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("EphemeralIndication(content=");
+      var3.append(var4);
+      var3.append(", helpArticleLink=");
+      var3.append(var2);
+      var3.append(", helpButtonAccessibilityLabel=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<EphemeralIndication> {
@@ -125,26 +125,26 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
 
       public open fun deserialize(decoder: Decoder): EphemeralIndication {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.b(var8);
+         val var5: Boolean = var9.p();
          var var7: Any = null;
          var var2: Int;
          var var6: java.lang.String;
-         val var11: java.lang.String;
+         var var10: java.lang.String;
          if (var5) {
-            var7 = var10.y(var9, 0, StructurableTextSerializer.INSTANCE, null);
-            var11 = var10.m(var9, 1);
-            var6 = var10.m(var9, 2);
+            var7 = var9.y(var8, 0, StructurableTextSerializer.INSTANCE, null);
+            var6 = var9.m(var8, 1);
+            var10 = var9.m(var8, 2);
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var6 = null;
-            var var12: java.lang.String = null;
+            var10 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.o(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -152,27 +152,24 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
                            throw new n(var4);
                         }
 
-                        var12 = var10.m(var9, 2);
+                        var10 = var9.m(var8, 2);
                         var2 |= 4;
                      } else {
-                        var6 = var10.m(var9, 1);
+                        var6 = var9.m(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.y(var9, 0, StructurableTextSerializer.INSTANCE, var7);
+                     var7 = var9.y(var8, 0, StructurableTextSerializer.INSTANCE, var7);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = var12;
-            var11 = var6;
          }
 
-         var10.c(var9);
-         return new EphemeralIndication(var2, var7 as StructurableText, var11, var6, null);
+         var9.c(var8);
+         return new EphemeralIndication(var2, var7 as StructurableText, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EphemeralIndication) {

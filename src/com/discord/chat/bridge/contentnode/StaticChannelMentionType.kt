@@ -12,12 +12,14 @@ import wk.g
 import wk.e.i
 
 @f(with = StaticChannelMentionType.Serializer::class)
-public enum class StaticChannelMentionType(channelId: String) {
+public enum class StaticChannelMentionType(id: String) {
    Browse("browse"),
    Customize("customize"),
+   Guide("guide"),
    Home("home"),
+   LinkedRoles("linked-roles"),
    Unknown("")
-   public final val channelId: String
+   public final val id: String
    @JvmStatic
    private StaticChannelMentionType[] $VALUES = $values();
    @JvmStatic
@@ -26,12 +28,12 @@ public enum class StaticChannelMentionType(channelId: String) {
    public StaticChannelMentionType.Companion Companion = new StaticChannelMentionType.Companion(null);
 
    init {
-      this.channelId = var3;
+      this.id = var3;
    }
 
    public companion object {
-      public fun fromValue(channelId: String): StaticChannelMentionType {
-         r.h(var1, "channelId");
+      public fun fromValue(id: String): StaticChannelMentionType {
+         r.h(var1, "id");
          val var5: Array<StaticChannelMentionType> = StaticChannelMentionType.values();
          val var3: Int = var5.length;
          var var2: Int = 0;
@@ -43,7 +45,7 @@ public enum class StaticChannelMentionType(channelId: String) {
             }
 
             val var4: StaticChannelMentionType = var5[var2];
-            if (r.c(var5[var2].getChannelId(), var1)) {
+            if (r.c(var5[var2].getId(), var1)) {
                var6 = var4;
                break;
             }
@@ -79,7 +81,7 @@ public enum class StaticChannelMentionType(channelId: String) {
       public open fun serialize(encoder: Encoder, value: StaticChannelMentionType) {
          r.h(var1, "encoder");
          r.h(var2, "value");
-         var1.F(var2.getChannelId());
+         var1.F(var2.getId());
       }
    }
 }

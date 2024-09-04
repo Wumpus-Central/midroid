@@ -27,16 +27,16 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       this.serialName = var9;
       val var6: Array<Any> = a.b(var1).getEnumConstants();
       r.e(var6);
-      val var10: Array<IntEnum> = var6 as Array<IntEnum>;
+      val var7: Array<IntEnum> = var6 as Array<IntEnum>;
       this.choices = (T[])var6;
-      val var7: ArrayList = new ArrayList((var6 as Array<IntEnum>).length);
-      val var5: Int = var10.length;
+      val var10: ArrayList = new ArrayList((var6 as Array<IntEnum>).length);
+      val var5: Int = var7.length;
 
       for (int var3 = 0; var3 < var5; var3++) {
-         var7.add(var10[var3].getSerialNumber());
+         var10.add(var7[var3].getSerialNumber());
       }
 
-      val var8: Array<Int> = var7.toArray(new Integer[0]);
+      val var8: Array<Int> = var10.toArray(new Integer[0]);
       this.choicesNumbers = var8;
       this.descriptor = g.a(this.serialName, f.a);
       var var11: Boolean;
@@ -111,15 +111,15 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             r.g(this.choices[var4], "choices[index]");
             return (T)var9;
          } else {
-            val var8: java.lang.String = this.serialName;
+            val var6: java.lang.String = this.serialName;
             var11 = this.choices.length;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var4);
-            var6.append(" is not among valid ");
-            var6.append(var8);
-            var6.append(" choices, choices size is ");
-            var6.append(var11);
-            throw new IllegalStateException(var6.toString().toString());
+            val var8: StringBuilder = new StringBuilder();
+            var8.append(var4);
+            var8.append(" is not among valid ");
+            var8.append(var6);
+            var8.append(" choices, choices size is ");
+            var8.append(var11);
+            throw new IllegalStateException(var8.toString().toString());
          }
       }
    }

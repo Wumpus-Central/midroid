@@ -303,9 +303,9 @@ public data class AutoModerationContext(headerText: String,
 
       public open fun deserialize(decoder: Decoder): AutoModerationContext {
          r.h(var1, "decoder");
-         val var17: SerialDescriptor = this.getDescriptor();
-         val var18: c = var1.b(var17);
-         val var6: Boolean = var18.p();
+         val var16: SerialDescriptor = this.getDescriptor();
+         val var17: c = var1.b(var16);
+         val var6: Boolean = var17.p();
          var var3: Byte = 7;
          var var8: java.lang.String = null;
          var var2: Int;
@@ -316,73 +316,73 @@ public data class AutoModerationContext(headerText: String,
          var var12: Any;
          var var13: Any;
          var var14: Any;
-         val var15: Any;
+         val var15: java.lang.String;
          if (var6) {
-            var8 = var18.m(var17, 0);
-            var10 = var18.m(var17, 1);
-            val var19: a2 = a2.a;
-            var15 = var18.n(var17, 2, a2.a, null);
-            var11 = var18.n(var17, 3, var19, null);
-            var12 = var18.n(var17, 4, var19, null);
-            val var20: java.lang.String = var18.m(var17, 5);
-            var7 = var18.m(var17, 6);
-            var13 = var18.y(var17, 7, FlaggedMessageEmbed.$serializer.INSTANCE, null);
-            var14 = var18.n(var17, 8, AutoModerationNotification.$serializer.INSTANCE, null);
+            var15 = var17.m(var16, 0);
+            var8 = var17.m(var16, 1);
+            val var18: a2 = a2.a;
+            var9 = var17.n(var16, 2, a2.a, null);
+            var12 = var17.n(var16, 3, var18, null);
+            var11 = var17.n(var16, 4, var18, null);
+            val var19: java.lang.String = var17.m(var16, 5);
+            var7 = var17.m(var16, 6);
+            var13 = var17.y(var16, 7, FlaggedMessageEmbed.$serializer.INSTANCE, null);
+            var14 = var17.n(var16, 8, AutoModerationNotification.$serializer.INSTANCE, null);
             var2 = 511;
-            var9 = var20;
+            var10 = var19;
          } else {
             var var4: Boolean = true;
             var2 = 0;
             var14 = null;
             var13 = null;
-            var12 = null;
-            var7 = null;
-            var var21: Any = null;
             var11 = null;
+            var7 = null;
+            var var20: Any = null;
+            var12 = null;
             var9 = null;
             var10 = null;
 
             while (var4) {
-               val var5: Int = var18.o(var17);
+               val var5: Int = var17.o(var16);
                switch (var5) {
                   case -1:
                      var4 = false;
                      continue;
                   case 0:
-                     var8 = var18.m(var17, 0);
+                     var8 = var17.m(var16, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var7 = var18.m(var17, 1);
+                     var7 = var17.m(var16, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var21 = var18.n(var17, 2, a2.a, var21);
+                     var20 = var17.n(var16, 2, a2.a, var20);
                      var2 |= 4;
                      break;
                   case 3:
-                     var11 = var18.n(var17, 3, a2.a, var11);
+                     var12 = var17.n(var16, 3, a2.a, var12);
                      var2 |= 8;
                      var3 = 7;
                      continue;
                   case 4:
-                     var12 = var18.n(var17, 4, a2.a, var12);
+                     var11 = var17.n(var16, 4, a2.a, var11);
                      var2 |= 16;
                      continue;
                   case 5:
-                     var9 = var18.m(var17, 5);
+                     var9 = var17.m(var16, 5);
                      var2 |= 32;
                      continue;
                   case 6:
-                     var10 = var18.m(var17, 6);
+                     var10 = var17.m(var16, 6);
                      var2 |= 64;
                      continue;
                   case 7:
-                     var13 = var18.y(var17, var3, FlaggedMessageEmbed.$serializer.INSTANCE, var13);
+                     var13 = var17.y(var16, var3, FlaggedMessageEmbed.$serializer.INSTANCE, var13);
                      var2 |= 128;
                      continue;
                   case 8:
-                     var14 = var18.n(var17, 8, AutoModerationNotification.$serializer.INSTANCE, var14);
+                     var14 = var17.n(var16, 8, AutoModerationNotification.$serializer.INSTANCE, var14);
                      var2 |= 256;
                      continue;
                   default:
@@ -392,20 +392,22 @@ public data class AutoModerationContext(headerText: String,
                var3 = 7;
             }
 
+            var15 = var8;
+            var8 = (java.lang.String)var7;
             var7 = var10;
-            var15 = var21;
-            var10 = var7;
+            var10 = var9;
+            var9 = var20;
          }
 
-         var18.c(var17);
+         var17.c(var16);
          return new AutoModerationContext(
             var2,
+            var15,
             var8,
-            (java.lang.String)var10,
-            var15 as java.lang.String,
-            var11 as java.lang.String,
+            var9 as java.lang.String,
             var12 as java.lang.String,
-            (java.lang.String)var9,
+            var11 as java.lang.String,
+            (java.lang.String)var10,
             (java.lang.String)var7,
             var13 as FlaggedMessageEmbed,
             var14 as AutoModerationNotification,

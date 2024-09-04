@@ -149,16 +149,16 @@ public data class PollAction(label: String,
    }
 
    public fun getFullTextLabel(): String {
-      val var1: java.lang.String = this.secondaryLabel;
+      val var3: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var3: java.lang.String = this.label;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var3);
-         var2.append("  •  ");
-         var2.append(var1);
-         return var2.toString();
+         val var2: java.lang.String = this.label;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var2);
+         var1.append("  •  ");
+         var1.append(var3);
+         return var1.toString();
       }
    }
 
@@ -193,15 +193,15 @@ public data class PollAction(label: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.label;
+      val var2: java.lang.String = this.label;
       val var7: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
       val var5: java.lang.String = this.type;
-      val var3: java.lang.String = this.secondaryLabel;
-      val var2: java.lang.String = this.accessibilityHint;
+      val var4: java.lang.String = this.secondaryLabel;
+      val var3: java.lang.String = this.accessibilityHint;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PollAction(label=");
-      var6.append(var4);
+      var6.append(var2);
       var6.append(", presentation=");
       var6.append(var7);
       var6.append(", enabled=");
@@ -209,9 +209,9 @@ public data class PollAction(label: String,
       var6.append(", type=");
       var6.append(var5);
       var6.append(", secondaryLabel=");
-      var6.append(var3);
+      var6.append(var4);
       var6.append(", accessibilityHint=");
-      var6.append(var2);
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }
@@ -248,28 +248,29 @@ public data class PollAction(label: String,
          val var12: c = var1.b(var11);
          var var2: Int;
          var var5: Boolean;
-         var var6: java.lang.String;
          var var7: Any;
          var var8: Any;
          var var9: Any;
-         var var14: Any;
+         val var10: java.lang.String;
+         var var15: Any;
          if (var12.p()) {
-            var6 = var12.m(var11, 0);
+            val var13: java.lang.String = var12.m(var11, 0);
             var9 = var12.y(var11, 1, PollActionPresentation.Companion.serializer(), null);
             var5 = var12.C(var11, 2);
-            var14 = a2.a;
+            var15 = a2.a;
             var8 = var12.n(var11, 3, a2.a, null);
-            var7 = var12.n(var11, 4, (DeserializationStrategy)var14, null);
-            var14 = var12.n(var11, 5, (DeserializationStrategy)var14, null);
+            var7 = var12.n(var11, 4, (DeserializationStrategy)var15, null);
+            var15 = var12.n(var11, 5, (DeserializationStrategy)var15, null);
             var2 = 63;
+            var10 = var13;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var7 = null;
             var9 = null;
             var8 = null;
-            var6 = null;
-            var14 = null;
+            var15 = null;
+            var var14: Any = null;
             var2 = 0;
 
             while (var3) {
@@ -295,7 +296,7 @@ public data class PollAction(label: String,
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = (java.lang.String)var12.n(var11, 4, a2.a, var6);
+                     var15 = var12.n(var11, 4, a2.a, var15);
                      var2 |= 16;
                      break;
                   case 5:
@@ -307,13 +308,14 @@ public data class PollAction(label: String,
                }
             }
 
-            var6 = (java.lang.String)var7;
-            var7 = var6;
+            var10 = (java.lang.String)var7;
+            var7 = var15;
+            var15 = var14;
          }
 
          var12.c(var11);
          return new PollAction(
-            var2, var6, var9 as PollActionPresentation, var5, var8 as java.lang.String, var7 as java.lang.String, var14 as java.lang.String, null
+            var2, var10, var9 as PollActionPresentation, var5, var8 as java.lang.String, var7 as java.lang.String, var15 as java.lang.String, null
          );
       }
 

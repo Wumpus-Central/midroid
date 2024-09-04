@@ -78,21 +78,21 @@ public object PublicFileDownloader {
       // 45: pop
       // 46: goto 74
       // 49: new com/discord/file_downloader/DownloadState$Failure
-      // 4c: astore 5
+      // 4c: astore 8
       // 4e: new java/lang/IllegalStateException
-      // 51: astore 7
+      // 51: astore 5
       // 53: new java/io/FileNotFoundException
-      // 56: astore 8
-      // 58: aload 8
+      // 56: astore 7
+      // 58: aload 7
       // 5a: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 5d: aload 7
-      // 5f: aload 8
+      // 5d: aload 5
+      // 5f: aload 7
       // 61: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 64: aload 5
-      // 66: aload 7
+      // 64: aload 8
+      // 66: aload 5
       // 68: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 6b: aload 1
-      // 6c: aload 5
+      // 6c: aload 8
       // 6e: invokeinterface mk/t.c (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 73: pop
       // 74: aload 1
@@ -106,15 +106,15 @@ public object PublicFileDownloader {
       // 7f: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 82: iload 6
       // 84: ireturn
-      // 85: astore 5
-      // 87: aload 5
-      // 89: athrow
-      // 8a: astore 1
-      // 8b: aload 2
-      // 8c: aload 5
-      // 8e: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 91: aload 1
-      // 92: athrow
+      // 85: astore 1
+      // 86: aload 1
+      // 87: athrow
+      // 88: astore 5
+      // 8a: aload 2
+      // 8b: aload 1
+      // 8c: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8f: aload 5
+      // 91: athrow
    }
 
    public fun downloadFile(context: Context, url: String, fileName: String, description: String? = null): Flow<DownloadState> {
@@ -125,9 +125,10 @@ public object PublicFileDownloader {
          new Function2<ProducerScope<? super DownloadState>, Continuation<? super Unit>, Object>(var1, var2, var3, var4, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1148,7 +1149,6 @@ public object PublicFileDownloader {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    
       );
    }

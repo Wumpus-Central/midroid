@@ -12,10 +12,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executor;
+import okhttp3.CacheControl;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
-import okhttp3.CacheControl.a;
-import okhttp3.Request.Builder;
+import okhttp3.Request;
 
 class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
    private static final String TAG = "ReactOkHttpNetworkFetcher";
@@ -32,15 +32,15 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
       if (var1 == null) {
          return null;
       } else {
-         ReadableMapKeySetIterator var4 = var1.keySetIterator();
-         HashMap var3 = new HashMap();
+         ReadableMapKeySetIterator var2 = var1.keySetIterator();
+         HashMap var4 = new HashMap();
 
-         while (var4.hasNextKey()) {
-            String var2 = var4.nextKey();
-            var3.put(var2, var1.getString(var2));
+         while (var2.hasNextKey()) {
+            String var3 = var2.nextKey();
+            var4.put(var3, var1.getString(var3));
          }
 
-         return var3;
+         return var4;
       }
    }
 
@@ -59,6 +59,6 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
          var4 = Collections.emptyMap();
       }
 
-      this.fetchWithRequest(var1, var2, new Builder().c(new a().e().a()).l(var5.toString()).f(Headers.q(var4)).d().b());
+      this.fetchWithRequest(var1, var2, new Request.Builder().c(new CacheControl.a().e().a()).l(var5.toString()).f(Headers.q(var4)).d().b());
    }
 }

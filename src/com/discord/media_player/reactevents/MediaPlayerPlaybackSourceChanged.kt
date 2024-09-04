@@ -1,8 +1,11 @@
 package com.discord.media_player.reactevents
 
+import al.a
+import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import eh.w
+import fh.s
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +15,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
+import uk.j
 import uk.n
-import vk.a
 import xk.f0
 
 @f
@@ -62,17 +65,22 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
       return var1;
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   public open fun serialize(): WritableMap {
+      return if (this.source == null)
+         NativeMapExtensionsKt.toNativeMap(s.h())
+         else
+         NativeMapExtensionsKt.nativeMapOf(
+            new Pair[]{w.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source)))}
+         );
    }
 
    public override fun toString(): String {
-      val var2: MediaPlayerPlaybackSource = this.source;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MediaPlayerPlaybackSourceChanged(source=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: MediaPlayerPlaybackSource = this.source;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaPlayerPlaybackSourceChanged(source=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<MediaPlayerPlaybackSourceChanged> {
@@ -94,7 +102,7 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE)};
+         return new KSerializer[]{vk.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackSourceChanged {

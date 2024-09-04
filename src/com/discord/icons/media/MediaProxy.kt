@@ -8,9 +8,9 @@ internal object MediaProxy {
    private final val MEDIA_PROXY_SIZES: Array<Int>
 
    private fun getMediaProxySize(size: Int): Int {
-      var var8: Array<Int> = MEDIA_PROXY_SIZES;
+      var var7: Array<Int> = MEDIA_PROXY_SIZES;
       val var6: ArrayList = new ArrayList();
-      var var4: Int = var8.length;
+      var var4: Int = var7.length;
       var var2: Int = 0;
 
       while (true) {
@@ -18,28 +18,28 @@ internal object MediaProxy {
          if (var2 >= var4) {
             val var10: java.util.Iterator = var6.iterator();
             val var5: Boolean = var10.hasNext();
-            var8 = null;
+            val var23: Any = null;
             var var18: Any;
             if (!var5) {
                var18 = null;
             } else {
                var18 = (Integer)var10.next();
                if (var10.hasNext()) {
-                  var3 = var18.intValue();
-                  var var21: Any = var18;
+                  var2 = var18.intValue();
+                  var7 = var18;
 
                   do {
                      val var9: Any = var10.next();
                      var4 = (var9 as java.lang.Number).intValue();
-                     var18 = (Integer)var21;
-                     var2 = var3;
-                     if (var3 < var4) {
+                     var18 = var7;
+                     var3 = var2;
+                     if (var2 < var4) {
                         var18 = (Integer)var9;
-                        var2 = var4;
+                        var3 = var4;
                      }
 
-                     var21 = var18;
-                     var3 = var2;
+                     var7 = var18;
+                     var2 = var3;
                   } while (var10.hasNext());
                }
             }
@@ -48,19 +48,19 @@ internal object MediaProxy {
             if (var18 != null && (double)var1 / var18.intValue() <= 1.25) {
                return var18;
             } else {
-               val var22: Array<Int> = MEDIA_PROXY_SIZES;
+               var7 = MEDIA_PROXY_SIZES;
                var4 = MEDIA_PROXY_SIZES.length;
                var2 = 0;
 
                while (true) {
-                  var18 = var8;
+                  var18 = (Integer)var23;
                   if (var2 >= var4) {
                      break;
                   }
 
-                  var18 = var22[var2];
+                  var18 = var7[var2];
                   val var15: Boolean;
-                  if (var22[var2].intValue() >= var1) {
+                  if (var7[var2].intValue() >= var1) {
                      var15 = true;
                   } else {
                      var15 = false;
@@ -83,13 +83,13 @@ internal object MediaProxy {
             }
          }
 
-         val var7: Int = var8[var2];
-         if (var8[var2].intValue() > var1) {
+         val var8: Int = var7[var2];
+         if (var7[var2].intValue() > var1) {
             var3 = 0;
          }
 
          if (var3) {
-            var6.add(var7);
+            var6.add(var8);
          }
 
          var2++;

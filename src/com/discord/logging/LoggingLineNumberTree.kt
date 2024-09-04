@@ -3,14 +3,12 @@ package com.discord.logging
 import java.util.NoSuchElementException
 import kotlin.jvm.internal.r
 import timber.log.a
-import timber.log.a.b
-import timber.log.a.c
 
-internal class LoggingLineNumberTree : c {
+internal class LoggingLineNumberTree : a.c {
    private final val ignoreClasses: List<String> =
       h.l(
          new java.lang.String[]{
-            a.class.getName(), b.class.getName(), c.class.getName(), timber.log.a.a.class.getName(), LoggingLineNumberTree.class.getName(), Log.class.getName()
+            a.class.getName(), a.b.class.getName(), a.c.class.getName(), a.a.class.getName(), LoggingLineNumberTree.class.getName(), Log.class.getName()
          }
       )
 
@@ -30,7 +28,7 @@ internal class LoggingLineNumberTree : c {
       throw new NoSuchElementException("Array contains no element matching the predicate.");
    }
 
-   protected open fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
+   protected override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
       r.h(var3, "message");
       val var6: StackTraceElement = this.getCalleStackTraceElement();
       val var7: java.lang.String = var6.getFileName();

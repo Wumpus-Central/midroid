@@ -177,18 +177,18 @@ public class PromiseWrapper(promise: Promise,
          val var1: java.lang.String = this.code;
          val var3: java.lang.String = this.message;
          val var4: java.lang.Throwable = this.throwable;
-         val var2: WritableMap = this.userInfo;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Rejection(code=");
-         var5.append(var1);
-         var5.append(", message=");
-         var5.append(var3);
-         var5.append(", throwable=");
-         var5.append(var4);
-         var5.append(", userInfo=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var5: WritableMap = this.userInfo;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Rejection(code=");
+         var2.append(var1);
+         var2.append(", message=");
+         var2.append(var3);
+         var2.append(", throwable=");
+         var2.append(var4);
+         var2.append(", userInfo=");
+         var2.append(var5);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

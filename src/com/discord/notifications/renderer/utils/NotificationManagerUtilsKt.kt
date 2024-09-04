@@ -48,16 +48,16 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
    if (var4 != null) {
       label35:
       try {
-         val var11: a = eh.r.k;
-         var10 = eh.r.b(var4.getActiveNotifications());
+         val var10: a = eh.r.k;
+         var9 = eh.r.b(var4.getActiveNotifications());
       } catch (var6: java.lang.Throwable) {
-         val var9: a = eh.r.k;
-         var10 = eh.r.b(s.a(var6));
+         val var13: a = eh.r.k;
+         var9 = eh.r.b(s.a(var6));
          break label35;
       }
 
-      var4 = (NotificationManager)var10;
-      if (eh.r.g(var10)) {
+      var4 = (NotificationManager)var9;
+      if (eh.r.g(var9)) {
          var4 = null;
       }
 
@@ -69,13 +69,13 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
 
          while (true) {
             if (var2 >= var3) {
-               var13 = null;
+               var12 = null;
                break;
             }
 
-            val var12: StatusBarNotification = var15[var2];
+            val var11: StatusBarNotification = var15[var2];
             if (r.c(var15[var2].getTag(), var1)) {
-               var13 = var12;
+               var12 = var11;
                break;
             }
 
@@ -83,8 +83,8 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
          }
 
          var8 = null;
-         if (var13 != null) {
-            var8 = var13.getNotification();
+         if (var12 != null) {
+            var8 = var12.getNotification();
          }
       }
    }

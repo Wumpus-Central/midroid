@@ -151,35 +151,19 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
 
    public open fun onBindViewHolder(holder: ViewHolder, position: Int) {
       r.h(var1, "holder");
-      val var8: ThemeManager = ThemeManager.INSTANCE;
-      val var9: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var8.setThemeOverride(this.theme);
+      val var9: ThemeManager = ThemeManager.INSTANCE;
+      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var9.setThemeOverride(this.theme);
       val var3: Boolean = var1 is BurstReactionViewHolder;
-      var var5: OnClickListener = null;
       var var4: Function1 = null;
+      var var5: OnClickListener = null;
       if (var3) {
-         val var27: ReactionView.Reaction = this.reactions.get(var2);
-         val var31: BurstReactionViewHolder = var1 as BurstReactionViewHolder;
+         val var22: ReactionView.Reaction = this.reactions.get(var2);
+         val var27: BurstReactionViewHolder = var1 as BurstReactionViewHolder;
          var var10: Function1 = this.onReactionClick;
          if (this.onReactionClick == null) {
             r.y("onReactionClick");
             var10 = null;
-         }
-
-         if (this.onReactionLongPress == null) {
-            r.y("onReactionLongPress");
-         } else {
-            var4 = this.onReactionLongPress;
-         }
-
-         var31.bind(var27, var10, var4);
-      } else if (var1 is ReactionViewHolder) {
-         val var24: ReactionView.Reaction = this.reactions.get(var2);
-         val var28: ReactionViewHolder = var1 as ReactionViewHolder;
-         var var11: Function1 = this.onReactionClick;
-         if (this.onReactionClick == null) {
-            r.y("onReactionClick");
-            var11 = null;
          }
 
          var4 = this.onReactionLongPress;
@@ -188,7 +172,23 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
             var4 = null;
          }
 
-         var28.bind(var24, var11, var4, this.reactionsTheme);
+         var27.bind(var22, var10, var4);
+      } else if (var1 is ReactionViewHolder) {
+         val var28: ReactionView.Reaction = this.reactions.get(var2);
+         val var31: ReactionViewHolder = var1 as ReactionViewHolder;
+         var var11: Function1 = this.onReactionClick;
+         if (this.onReactionClick == null) {
+            r.y("onReactionClick");
+            var11 = null;
+         }
+
+         if (this.onReactionLongPress == null) {
+            r.y("onReactionLongPress");
+         } else {
+            var4 = this.onReactionLongPress;
+         }
+
+         var31.bind(var28, var11, var4, this.reactionsTheme);
       } else if (var1 is AddReactionViewHolder) {
          val var32: AddReactionViewHolder = var1 as AddReactionViewHolder;
          var var12: java.lang.String = this.addReactionLabel;
@@ -203,20 +203,20 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
             var18 = null;
          }
 
-         var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
             r.y("onAddReactionClick");
-            var5 = null;
+         } else {
+            var5 = this.onAddReactionClick;
          }
 
          var32.bind(var12, var18, var5, this.reactionsTheme);
       } else {
          if (var1 !is AddBurstReactionViewHolder) {
-            val var14: Class = var1.getClass();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Invalid view holder type ");
-            var21.append(var14);
-            throw new IllegalStateException(var21.toString().toString());
+            val var21: Class = var1.getClass();
+            val var14: StringBuilder = new StringBuilder();
+            var14.append("Invalid view holder type ");
+            var14.append(var21);
+            throw new IllegalStateException(var14.toString().toString());
          }
 
          val var33: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;
@@ -232,16 +232,16 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter<ViewHolder> {
             var20 = null;
          }
 
+         var5 = this.onAddBurstReactionClick;
          if (this.onAddBurstReactionClick == null) {
             r.y("onAddBurstReactionClick");
-         } else {
-            var5 = this.onAddBurstReactionClick;
+            var5 = null;
          }
 
          var33.bind(var13, var20, var5, this.reactionsTheme);
       }
 
-      var8.setThemeOverride(var9);
+      var9.setThemeOverride(var8);
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

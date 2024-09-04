@@ -79,7 +79,7 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
    public fun setAvatarUris(avatarUris: List<String>) {
       kotlin.jvm.internal.r.h(var1, "avatarUris");
       val var4: Boolean = var1.isEmpty() xor true;
-      var var5: OverlappingCirclesView = this.binding.participants;
+      val var5: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.r.g(this.binding.participants, "binding.participants");
       var var2: Byte;
       if (var4) {
@@ -89,15 +89,15 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
       }
 
       var5.setVisibility(var2);
-      var5 = this.binding.participants;
-      val var6: ArrayList = new ArrayList(kotlin.collections.h.t(var1, 10));
+      val var6: OverlappingCirclesView = this.binding.participants;
+      val var10: ArrayList = new ArrayList(kotlin.collections.h.t(var1, 10));
       val var7: java.util.Iterator = var1.iterator();
 
       while (var7.hasNext()) {
-         var6.add(new OverlappingItem(var7.next() as java.lang.String));
+         var10.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var5.setItems(var6);
+      var6.setItems(var10);
       val var8: LinearLayout = this.binding.participantsInfoContainer;
       kotlin.jvm.internal.r.g(this.binding.participantsInfoContainer, "binding.participantsInfoContainer");
       if (var4 xor true) {

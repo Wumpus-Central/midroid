@@ -258,9 +258,9 @@ public data class MessageContentAccessory(messageId: MessageId,
          var22 = 1;
       }
 
-      val var13: Int = Integer.hashCode(this.bottomSpacingPx);
-      val var17: Int = Integer.hashCode(this.linkColor);
-      val var15: Int = Integer.hashCode(this.messageTextColor);
+      val var17: Int = Integer.hashCode(this.bottomSpacingPx);
+      val var15: Int = Integer.hashCode(this.linkColor);
+      val var13: Int = Integer.hashCode(this.messageTextColor);
       val var14: Int = this.messageFont.hashCode();
       val var16: Int = Integer.hashCode(this.textSizeSp);
       var var23: Byte = this.boldLinkText;
@@ -325,13 +325,13 @@ public data class MessageContentAccessory(messageId: MessageId,
                                                                                                                      + var22
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var13
+                                                                                                            + var17
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var17
+                                                                                                   + var15
                                                                                              )
                                                                                              * 31
-                                                                                          + var15
+                                                                                          + var13
                                                                                     )
                                                                                     * 31
                                                                                  + var14
@@ -362,62 +362,62 @@ public data class MessageContentAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var15: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var14: StructurableText = this.messageContent;
-      val var7: Boolean = this.shouldAnimateEmoji;
-      val var9: Boolean = this.shouldShowLinkDecorations;
-      val var8: Boolean = this.shouldShowRoleDot;
-      val var11: Boolean = this.shouldShowRoleOnName;
-      val var1: Int = this.bottomSpacingPx;
+      val var17: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var13: StructurableText = this.messageContent;
+      val var8: Boolean = this.shouldAnimateEmoji;
+      val var6: Boolean = this.shouldShowLinkDecorations;
+      val var11: Boolean = this.shouldShowRoleDot;
+      val var9: Boolean = this.shouldShowRoleOnName;
+      val var3: Int = this.bottomSpacingPx;
       val var2: Int = this.linkColor;
-      val var5: Int = this.messageTextColor;
-      val var12: DiscordFont = this.messageFont;
-      val var4: Int = this.textSizeSp;
-      val var10: Boolean = this.boldLinkText;
-      val var3: Int = this.constrainedWidth;
-      val var16: java.lang.String = this.editedLabel;
-      val var18: Int = this.editedLabelTextColor;
-      val var6: Boolean = this.isForwardedContent;
-      val var19: Truncation = this.truncation;
-      val var13: DiscordThemeObject = this.theme;
-      val var17: StringBuilder = new StringBuilder();
-      var17.append("MessageContentAccessory(messageId=");
-      var17.append(var15);
-      var17.append(", messageContent=");
-      var17.append(var14);
-      var17.append(", shouldAnimateEmoji=");
-      var17.append(var7);
-      var17.append(", shouldShowLinkDecorations=");
-      var17.append(var9);
-      var17.append(", shouldShowRoleDot=");
-      var17.append(var8);
-      var17.append(", shouldShowRoleOnName=");
-      var17.append(var11);
-      var17.append(", bottomSpacingPx=");
-      var17.append(var1);
-      var17.append(", linkColor=");
-      var17.append(var2);
-      var17.append(", messageTextColor=");
-      var17.append(var5);
-      var17.append(", messageFont=");
-      var17.append(var12);
-      var17.append(", textSizeSp=");
-      var17.append(var4);
-      var17.append(", boldLinkText=");
-      var17.append(var10);
-      var17.append(", constrainedWidth=");
-      var17.append(var3);
-      var17.append(", editedLabel=");
-      var17.append(var16);
-      var17.append(", editedLabelTextColor=");
-      var17.append(var18);
-      var17.append(", isForwardedContent=");
-      var17.append(var6);
-      var17.append(", truncation=");
-      var17.append(var19);
-      var17.append(", theme=");
-      var17.append(var13);
-      var17.append(")");
-      return var17.toString();
+      val var4: Int = this.messageTextColor;
+      val var16: DiscordFont = this.messageFont;
+      val var1: Int = this.textSizeSp;
+      val var7: Boolean = this.boldLinkText;
+      val var5: Int = this.constrainedWidth;
+      val var14: java.lang.String = this.editedLabel;
+      val var12: Int = this.editedLabelTextColor;
+      val var10: Boolean = this.isForwardedContent;
+      val var15: Truncation = this.truncation;
+      val var19: DiscordThemeObject = this.theme;
+      val var18: StringBuilder = new StringBuilder();
+      var18.append("MessageContentAccessory(messageId=");
+      var18.append(var17);
+      var18.append(", messageContent=");
+      var18.append(var13);
+      var18.append(", shouldAnimateEmoji=");
+      var18.append(var8);
+      var18.append(", shouldShowLinkDecorations=");
+      var18.append(var6);
+      var18.append(", shouldShowRoleDot=");
+      var18.append(var11);
+      var18.append(", shouldShowRoleOnName=");
+      var18.append(var9);
+      var18.append(", bottomSpacingPx=");
+      var18.append(var3);
+      var18.append(", linkColor=");
+      var18.append(var2);
+      var18.append(", messageTextColor=");
+      var18.append(var4);
+      var18.append(", messageFont=");
+      var18.append(var16);
+      var18.append(", textSizeSp=");
+      var18.append(var1);
+      var18.append(", boldLinkText=");
+      var18.append(var7);
+      var18.append(", constrainedWidth=");
+      var18.append(var5);
+      var18.append(", editedLabel=");
+      var18.append(var14);
+      var18.append(", editedLabelTextColor=");
+      var18.append(var12);
+      var18.append(", isForwardedContent=");
+      var18.append(var10);
+      var18.append(", truncation=");
+      var18.append(var15);
+      var18.append(", theme=");
+      var18.append(var19);
+      var18.append(")");
+      return var18.toString();
    }
 }

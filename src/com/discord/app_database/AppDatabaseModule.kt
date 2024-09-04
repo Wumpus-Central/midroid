@@ -43,10 +43,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
          r.g(var3, "reactApplicationContext");
          var2.get(var3).setItem("_databaseUserId", var1);
       } else {
-         val var4: com.discord.cache.CacheModule.Companion = CacheModule.Companion;
-         val var5: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var5, "reactApplicationContext");
-         var4.get(var5).removeItem("_databaseUserId");
+         val var5: com.discord.cache.CacheModule.Companion = CacheModule.Companion;
+         val var4: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var4, "reactApplicationContext");
+         var5.get(var4).removeItem("_databaseUserId");
       }
    }
 

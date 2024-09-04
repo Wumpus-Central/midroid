@@ -173,8 +173,8 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
          var1 = this.proxyURL.hashCode();
       }
 
-      val var5: Int = Integer.hashCode(this.width);
-      val var6: Int = Integer.hashCode(this.height);
+      val var6: Int = Integer.hashCode(this.width);
+      val var5: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -186,14 +186,14 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
          var3 = this.placeholderVersion.hashCode();
       }
 
-      return ((((var4 * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var3;
+      return ((((var4 * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var4: java.lang.String = this.url;
       val var7: java.lang.String = this.proxyURL;
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var6: java.lang.String = this.placeholder;
       val var5: Int = this.placeholderVersion;
       val var3: StringBuilder = new StringBuilder();
@@ -202,9 +202,9 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
       var3.append(", proxyURL=");
       var3.append(var7);
       var3.append(", width=");
-      var3.append(var2);
-      var3.append(", height=");
       var3.append(var1);
+      var3.append(", height=");
+      var3.append(var2);
       var3.append(", placeholder=");
       var3.append(var6);
       var3.append(", placeholderVersion=");
@@ -237,9 +237,9 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var2: a2 = a2.a;
-         val var3: KSerializer = a.u(a2.a);
-         val var1: m0 = m0.a;
-         return new KSerializer[]{var2, var3, m0.a, m0.a, a.u(var2), a.u(var1), var2};
+         val var1: KSerializer = a.u(a2.a);
+         val var3: m0 = m0.a;
+         return new KSerializer[]{var2, var1, m0.a, m0.a, a.u(var2), a.u(var3), var2};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedMedia {

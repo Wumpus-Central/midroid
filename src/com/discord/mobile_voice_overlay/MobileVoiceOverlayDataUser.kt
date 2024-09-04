@@ -52,7 +52,7 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
       r.h(var0, "self");
       r.h(var1, "output");
       r.h(var2, "serialDesc");
-      var1.y(var2, 0, com.discord.primitives.UserId..serializer.INSTANCE, UserId.box-impl(var0.userId));
+      var1.y(var2, 0, UserId.$serializer.INSTANCE, UserId.box-impl(var0.userId));
       var1.m(var2, 1, a2.a, var0.avatar);
       var1.x(var2, 2, var0.speaking);
       var1.w(var2, 3, var0.discriminator);
@@ -152,7 +152,7 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{com.discord.primitives.UserId..serializer.INSTANCE, vk.a.u(a2.a), h.a, m0.a};
+         return new KSerializer[]{UserId.$serializer.INSTANCE, vk.a.u(a2.a), h.a, m0.a};
       }
 
       public open fun deserialize(decoder: Decoder): MobileVoiceOverlayDataUser {
@@ -165,8 +165,8 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
          var var7: Any;
          var var10: Any;
          if (var9.p()) {
-            var10 = var9.y(var8, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
-            var7 = var9.n(var8, 1, a2.a, null);
+            var7 = var9.y(var8, 0, UserId.$serializer.INSTANCE, null);
+            var10 = var9.n(var8, 1, a2.a, null);
             var3 = var9.C(var8, 2);
             var4 = var9.i(var8, 3);
             var2 = 15;
@@ -174,8 +174,8 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
             var var5: Boolean = true;
             var4 = 0;
             var2 = 0;
-            var10 = null;
             var7 = null;
+            var10 = null;
             var3 = 0;
 
             while (var5) {
@@ -195,11 +195,11 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var9.n(var8, 1, a2.a, var7);
+                        var10 = var9.n(var8, 1, a2.a, var10);
                         var2 |= 2;
                      }
                   } else {
-                     var10 = var9.y(var8, 0, com.discord.primitives.UserId..serializer.INSTANCE, var10);
+                     var7 = var9.y(var8, 0, UserId.$serializer.INSTANCE, var7);
                      var2 |= 1;
                   }
                } else {
@@ -209,7 +209,7 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
          }
 
          var9.c(var8);
-         return new MobileVoiceOverlayDataUser(var2, var10 as UserId, var7 as java.lang.String, (boolean)var3, var4, null, null);
+         return new MobileVoiceOverlayDataUser(var2, var7 as UserId, var10 as java.lang.String, (boolean)var3, var4, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MobileVoiceOverlayDataUser) {

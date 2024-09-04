@@ -13,7 +13,6 @@ import com.facebook.react.modules.network.OkHttpClientProvider
 import kotlin.jvm.internal.r
 import okhttp3.Interceptor
 import okhttp3.Response
-import okhttp3.Interceptor.Chain
 import x5.l
 import x5.x
 import x5.y
@@ -47,7 +46,8 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             this.$receiver$inlined = var1;
          }
 
-         public final Response intercept(Chain var1) {
+         @Override
+         public final Response intercept(Interceptor.Chain var1) {
             r.h(var1, "chain");
             return this.$receiver$inlined.frescoInterceptor(var1);
          }
@@ -60,20 +60,20 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var4: android.net.Uri.Builder = var1.buildUpon();
-            var4.clearQuery();
+            val var3: android.net.Uri.Builder = var1.buildUpon();
+            var3.clearQuery();
 
-            for (java.lang.String var2 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var5: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+            for (java.lang.String var5 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var5)) {
+                  val var4: java.util.Iterator = var1.getQueryParameters(var5).iterator();
 
-                  while (var5.hasNext()) {
-                     var4.appendQueryParameter(var2, var5.next() as java.lang.String);
+                  while (var4.hasNext()) {
+                     var3.appendQueryParameter(var5, var4.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var4.build();
+            var1 = var3.build();
             r.g(var1, "cacheKeyBuilder.build()");
             return var1;
          }

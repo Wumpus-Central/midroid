@@ -186,10 +186,10 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = java.lang.Long.hashCode(this.playWallTimeMs);
-      val var4: Int = java.lang.Long.hashCode(this.stallMs);
-      val var7: Int = Integer.hashCode(this.stallCount);
-      val var5: Int = Integer.hashCode(this.seekCount);
+      val var7: Int = java.lang.Long.hashCode(this.playWallTimeMs);
+      val var5: Int = java.lang.Long.hashCode(this.stallMs);
+      val var4: Int = Integer.hashCode(this.stallCount);
+      val var6: Int = Integer.hashCode(this.seekCount);
       val var3: Int = java.lang.Long.hashCode(this.firstPlayWaitingMs);
       var var2: Int = 0;
       val var1: Int;
@@ -207,7 +207,7 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       return (
                (
                         (
-                                 (((((((var6 * 31 + var4) * 31 + var7) * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var8) * 31 + var2) * 31
+                                 (((((((var7 * 31 + var5) * 31 + var4) * 31 + var6) * 31 + var3) * 31 + var1) * 31 + var8) * 31 + var2) * 31
                                     + Integer.hashCode(this.fatalErrorCount)
                               )
                               * 31
@@ -225,27 +225,27 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
    }
 
    public override fun toString(): String {
-      val var10: Long = this.playWallTimeMs;
-      val var12: Long = this.stallMs;
-      val var3: Int = this.stallCount;
-      val var4: Int = this.seekCount;
+      val var8: Long = this.playWallTimeMs;
+      val var10: Long = this.stallMs;
+      val var4: Int = this.stallCount;
+      val var3: Int = this.seekCount;
       val var6: Long = this.firstPlayWaitingMs;
       val var18: java.lang.String = this.mediaSource;
       val var1: Float = this.fileDurationSec;
       val var17: java.lang.String = this.mimeType;
       val var2: Int = this.fatalErrorCount;
       val var5: Int = this.nonFatalErrorCount;
-      val var14: Long = this.totalDroppedFrames;
-      val var8: Long = this.totalBandwidthBytes;
+      val var12: Long = this.totalDroppedFrames;
+      val var14: Long = this.totalBandwidthBytes;
       val var16: StringBuilder = new StringBuilder();
       var16.append("MediaPlayFinishedAnalytics(playWallTimeMs=");
-      var16.append(var10);
+      var16.append(var8);
       var16.append(", stallMs=");
-      var16.append(var12);
+      var16.append(var10);
       var16.append(", stallCount=");
-      var16.append(var3);
-      var16.append(", seekCount=");
       var16.append(var4);
+      var16.append(", seekCount=");
+      var16.append(var3);
       var16.append(", firstPlayWaitingMs=");
       var16.append(var6);
       var16.append(", mediaSource=");
@@ -259,9 +259,9 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       var16.append(", nonFatalErrorCount=");
       var16.append(var5);
       var16.append(", totalDroppedFrames=");
-      var16.append(var14);
+      var16.append(var12);
       var16.append(", totalBandwidthBytes=");
-      var16.append(var8);
+      var16.append(var14);
       var16.append(")");
       return var16.toString();
    }
@@ -296,136 +296,133 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: w0 = w0.a;
-         val var2: m0 = m0.a;
-         val var1: a2 = a2.a;
-         return new KSerializer[]{w0.a, w0.a, m0.a, m0.a, w0.a, a.u(a2.a), e0.a, a.u(var1), var2, var2, var3, var3};
+         val var2: w0 = w0.a;
+         val var1: m0 = m0.a;
+         val var3: a2 = a2.a;
+         return new KSerializer[]{w0.a, w0.a, m0.a, m0.a, w0.a, a.u(a2.a), e0.a, a.u(var3), var1, var1, var2, var2};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayFinishedAnalytics {
          r.h(var1, "decoder");
-         val var26: SerialDescriptor = this.getDescriptor();
-         val var27: c = var1.b(var26);
+         val var25: SerialDescriptor = this.getDescriptor();
+         val var26: c = var1.b(var25);
          var var2: Float;
          var var4: Int;
          var var5: Int;
          var var6: Int;
          var var7: Int;
          val var8: Int;
-         var var13: Long;
-         var var15: Long;
-         var var17: Long;
-         var var19: Long;
-         val var21: Long;
-         var var25: Any;
-         var var29: Any;
-         if (var27.p()) {
-            var15 = var27.f(var26, 0);
-            var21 = var27.f(var26, 1);
-            var6 = var27.i(var26, 2);
-            var5 = var27.i(var26, 3);
-            var17 = var27.f(var26, 4);
-            var29 = a2.a;
-            var25 = var27.n(var26, 5, a2.a, null);
-            var2 = var27.u(var26, 6);
-            var29 = var27.n(var26, 7, (DeserializationStrategy)var29, null);
-            var4 = var27.i(var26, 8);
-            val var3: Int = var27.i(var26, 9);
-            var13 = var27.f(var26, 10);
-            val var11: Long = var27.f(var26, 11);
-            var7 = 4095;
+         var var10: Long;
+         var var12: Long;
+         var var14: Long;
+         var var16: Long;
+         var var18: Long;
+         var var24: Any;
+         var var28: Any;
+         if (var26.p()) {
+            var14 = var26.f(var25, 0);
+            var18 = var26.f(var25, 1);
+            var5 = var26.i(var25, 2);
+            var7 = var26.i(var25, 3);
+            var16 = var26.f(var25, 4);
+            var28 = a2.a;
+            var24 = var26.n(var25, 5, a2.a, null);
+            var2 = var26.u(var25, 6);
+            var28 = var26.n(var25, 7, (DeserializationStrategy)var28, null);
+            var4 = var26.i(var25, 8);
+            val var3: Int = var26.i(var25, 9);
+            var12 = var26.f(var25, 10);
+            var10 = var26.f(var25, 11);
+            var6 = 4095;
             var8 = var3;
-            var19 = var11;
          } else {
             var2 = 0.0F;
-            var var35: Boolean = true;
+            var var33: Boolean = true;
             var5 = 0;
             var4 = 0;
-            var29 = null;
-            var13 = 0L;
-            var19 = 0L;
-            var var37: Long = 0L;
-            var17 = 0L;
-            var15 = 0L;
+            var28 = null;
+            var10 = 0L;
+            var12 = 0L;
+            var14 = 0L;
+            var16 = 0L;
+            var18 = 0L;
             var7 = 0;
             var6 = 0;
-            var25 = null;
-            var var30: Int = 0;
+            var24 = null;
+            var var29: Int = 0;
 
-            while (var35) {
-               val var9: Int = var27.o(var26);
+            while (var33) {
+               val var9: Int = var26.o(var25);
                switch (var9) {
                   case -1:
-                     var35 = false;
+                     var33 = false;
                      break;
                   case 0:
-                     var37 = var27.f(var26, 0);
-                     var30 |= 1;
+                     var14 = var26.f(var25, 0);
+                     var29 |= 1;
                      break;
                   case 1:
-                     var19 = var27.f(var26, 1);
-                     var30 |= 2;
+                     var12 = var26.f(var25, 1);
+                     var29 |= 2;
                      break;
                   case 2:
-                     var5 = var27.i(var26, 2);
-                     var30 |= 4;
+                     var5 = var26.i(var25, 2);
+                     var29 |= 4;
                      break;
                   case 3:
-                     var4 = var27.i(var26, 3);
-                     var30 |= 8;
+                     var4 = var26.i(var25, 3);
+                     var29 |= 8;
                      break;
                   case 4:
-                     var13 = var27.f(var26, 4);
-                     var30 |= 16;
+                     var10 = var26.f(var25, 4);
+                     var29 |= 16;
                      break;
                   case 5:
-                     var25 = var27.n(var26, 5, a2.a, var25);
-                     var30 |= 32;
+                     var24 = var26.n(var25, 5, a2.a, var24);
+                     var29 |= 32;
                      break;
                   case 6:
-                     var2 = var27.u(var26, 6);
-                     var30 |= 64;
+                     var2 = var26.u(var25, 6);
+                     var29 |= 64;
                      break;
                   case 7:
-                     var29 = var27.n(var26, 7, a2.a, var29);
-                     var30 |= 128;
+                     var28 = var26.n(var25, 7, a2.a, var28);
+                     var29 |= 128;
                      break;
                   case 8:
-                     var6 = var27.i(var26, 8);
-                     var30 |= 256;
+                     var6 = var26.i(var25, 8);
+                     var29 |= 256;
                      break;
                   case 9:
-                     var7 = var27.i(var26, 9);
-                     var30 |= 512;
+                     var7 = var26.i(var25, 9);
+                     var29 |= 512;
                      break;
                   case 10:
-                     var17 = var27.f(var26, 10);
-                     var30 |= 1024;
+                     var16 = var26.f(var25, 10);
+                     var29 |= 1024;
                      break;
                   case 11:
-                     var15 = var27.f(var26, 11);
-                     var30 |= 2048;
+                     var18 = var26.f(var25, 11);
+                     var29 |= 2048;
                      break;
                   default:
                      throw new n(var9);
                }
             }
 
-            var21 = var19;
-            var6 = var5;
-            var19 = var15;
-            var13 = var17;
             var8 = var7;
+            var18 = var12;
+            var7 = var4;
+            var10 = var18;
+            var12 = var16;
             var4 = var6;
-            var17 = var13;
-            var5 = var4;
-            var15 = var37;
-            var7 = var30;
+            var16 = var10;
+            var6 = var29;
          }
 
-         var27.c(var26);
+         var26.c(var25);
          return new MediaPlayFinishedAnalytics(
-            var7, var15, var21, var6, var5, var17, var25 as java.lang.String, var2, var29 as java.lang.String, var4, var8, var13, var19, null
+            var6, var14, var18, var5, var7, var16, var24 as java.lang.String, var2, var28 as java.lang.String, var4, var8, var12, var10, null
          );
       }
 

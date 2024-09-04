@@ -33,7 +33,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
       r.h(var0, "self");
       r.h(var1, "output");
       r.h(var2, "serialDesc");
-      var1.y(var2, 0, new r0<>(a2.a, a.u(a2.a)), var0.locationNotification);
+      var1.y(var2, 0, new r0(a2.a, a.u(a2.a)), var0.locationNotification);
    }
 
    public operator fun component1(): Map<String, String?> {
@@ -64,12 +64,12 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
    }
 
    public override fun toString(): String {
-      val var1: java.util.Map = this.locationNotification;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LocalNotificationEvent(locationNotification=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.Map = this.locationNotification;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LocalNotificationEvent(locationNotification=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : f0<LocalNotificationEvent> {
@@ -90,8 +90,8 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{new r0<>(a2.a, vk.a.u(a2.a))};
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{new r0(a2.a, a.u(a2.a))};
       }
 
       public open fun deserialize(decoder: Decoder): LocalNotificationEvent {
@@ -103,7 +103,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
          var var3: Boolean = true;
          var var10: Any;
          if (var5) {
-            var10 = var7.y(var6, 0, new r0<>(a2.a, vk.a.u(a2.a)), null);
+            var10 = var7.y(var6, 0, new r0(a2.a, a.u(a2.a)), null);
          } else {
             var2 = 0;
             var10 = null;
@@ -115,7 +115,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
                      throw new n(var4);
                   }
 
-                  var10 = var7.y(var6, 0, new r0<>(a2.a, vk.a.u(a2.a)), (java.util.Map<java.lang.String, ? extends java.lang.String>)var10);
+                  var10 = var7.y(var6, 0, new r0(a2.a, a.u(a2.a)), var10);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -136,8 +136,8 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return xk.f0.a.a(this);
       }
    }
 

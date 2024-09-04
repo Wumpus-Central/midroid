@@ -8,8 +8,8 @@ import com.facebook.react.bridge.ReactMethod
 import kk.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.Ref$ObjectRef
 import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Ref.ObjectRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 
@@ -23,8 +23,8 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
    public fun get(promise: Promise) {
       r.h(var1, "promise");
       val var3: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
-      val var4: Ref$ObjectRef = new Ref$ObjectRef();
-      var4.j = (T)var3.getString("referrer", null);
+      val var4: ObjectRef = new ObjectRef();
+      var4.j = var3.getString("referrer", null);
       val var2: Int = var3.getInt("attempts", 0);
       if (var4.j != null) {
          var1.resolve(var4.j);
@@ -33,14 +33,14 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
             g.b(),
             null,
             null,
-            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(new Ref$ObjectRef<>(), this, var4, var3, var1, var2, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(new ObjectRef(), this, var4, var3, var1, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)

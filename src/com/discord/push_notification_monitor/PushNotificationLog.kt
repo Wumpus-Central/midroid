@@ -11,6 +11,7 @@ import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
 import uk.n
 import xk.f0
+import xk.f0.a
 
 @f
 public data class PushNotificationLog(pushNotifications: List<PushNotificationMeta> = h.i()) {
@@ -38,7 +39,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
       }
 
       if (var3) {
-         var1.y(var2, 0, new xk.f<>(PushNotificationMeta.$serializer.INSTANCE), var0.pushNotifications);
+         var1.y(var2, 0, new xk.f(PushNotificationMeta.$serializer.INSTANCE), var0.pushNotifications);
       }
    }
 
@@ -90,8 +91,8 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{new xk.f<>(PushNotificationMeta.$serializer.INSTANCE)};
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{new xk.f(PushNotificationMeta.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): PushNotificationLog {
@@ -103,7 +104,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
          var var3: Boolean = true;
          var var8: Any;
          if (var5) {
-            var8 = var7.y(var6, 0, new xk.f<>(PushNotificationMeta.$serializer.INSTANCE), null);
+            var8 = var7.y(var6, 0, new xk.f(PushNotificationMeta.$serializer.INSTANCE), null);
          } else {
             var2 = 0;
             var8 = null;
@@ -115,7 +116,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, new xk.f<>(PushNotificationMeta.$serializer.INSTANCE), (java.util.List<? extends PushNotificationMeta>)var8);
+                  var8 = var7.y(var6, 0, new xk.f(PushNotificationMeta.$serializer.INSTANCE), var8);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -136,8 +137,8 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return a.a(this);
       }
    }
 

@@ -14,21 +14,21 @@ public class ClientInfoManagerModule(reactContext: ReactApplicationContext) : Na
 
    public open fun getConstants(): MutableMap<String, String> {
       val var7: ClientInfo = ClientInfo.INSTANCE;
-      val var1: Pair = w.a("Identifier", ClientInfo.INSTANCE.getPackageName());
-      val var8: Pair = w.a("Version", var7.getVersionName());
-      val var3: Pair = w.a("Build", var7.getVersionCode());
-      val var5: Pair = w.a("Manifest", var7.getOtaManifestETag());
-      val var6: Pair = w.a("OTABuild", var7.getOtaVersion());
+      val var6: Pair = w.a("Identifier", ClientInfo.INSTANCE.getPackageName());
+      val var3: Pair = w.a("Version", var7.getVersionName());
+      val var5: Pair = w.a("Build", var7.getVersionCode());
+      val var8: Pair = w.a("Manifest", var7.getOtaManifestETag());
+      val var1: Pair = w.a("OTABuild", var7.getOtaVersion());
       val var4: ClientInfoCache = ClientInfoCache.INSTANCE;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
       r.g(var2, "reactApplicationContext");
       return s.m(
          new Pair[]{
-            var1,
-            var8,
+            var6,
             var3,
             var5,
-            var6,
+            var8,
+            var1,
             w.a("DeviceVendorID", var4.getDeviceVendorId(var2)),
             w.a("ReleaseChannel", var7.getReleaseChannel()),
             w.a("SentryDsn", "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"),
@@ -38,7 +38,7 @@ public class ClientInfoManagerModule(reactContext: ReactApplicationContext) : Na
       );
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "RTNClientInfoManager";
    }
 

@@ -76,14 +76,14 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.lang.hashCode();
-      val var3: Int = this.content.hashCode();
+      val var3: Int = this.lang.hashCode();
+      val var4: Int = this.content.hashCode();
       var var1: Byte = this.inQuote;
       if (this.inQuote != 0) {
          var1 = 1;
       }
 
-      return (var4 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
@@ -125,28 +125,26 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
 
       public open fun deserialize(decoder: Decoder): CodeBlockContentNode {
          r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.b(var7);
          var var2: Int;
          var var5: Boolean;
          var var6: java.lang.String;
-         var var11: java.lang.String;
-         if (var9.p()) {
-            val var10: java.lang.String = var9.m(var8, 0);
-            val var7: java.lang.String = var9.m(var8, 1);
-            var5 = var9.C(var8, 2);
+         var var9: java.lang.String;
+         if (var8.p()) {
+            var6 = var8.m(var7, 0);
+            var9 = var8.m(var7, 1);
+            var5 = var8.C(var7, 2);
             var2 = 7;
-            var6 = var10;
-            var11 = var7;
          } else {
             var6 = null;
-            var11 = null;
+            var9 = null;
             var var3: Boolean = true;
             var5 = false;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var8.o(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -154,14 +152,14 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
                            throw new n(var4);
                         }
 
-                        var5 = var9.C(var8, 2);
+                        var5 = var8.C(var7, 2);
                         var2 |= 4;
                      } else {
-                        var11 = var9.m(var8, 1);
+                        var9 = var8.m(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var9.m(var8, 0);
+                     var6 = var8.m(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -170,8 +168,8 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
             }
          }
 
-         var9.c(var8);
-         return new CodeBlockContentNode(var2, var6, var11, var5, null);
+         var8.c(var7);
+         return new CodeBlockContentNode(var2, var6, var9, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CodeBlockContentNode) {

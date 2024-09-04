@@ -11,6 +11,7 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
 import uk.n
+import vk.a
 import xk.a2
 import xk.f0
 
@@ -105,15 +106,15 @@ public data class EmbedField(name: String? = null, value: String? = null) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
+      val var2: java.lang.String = this.name;
       val var1: java.lang.String = this.value;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("EmbedField(name=");
-      var2.append(var3);
-      var2.append(", value=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("EmbedField(name=");
+      var3.append(var2);
+      var3.append(", value=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<EmbedField> {
@@ -133,9 +134,9 @@ public data class EmbedField(name: String? = null, value: String? = null) {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: a2 = a2.a;
-         return new KSerializer[]{vk.a.u(a2.a), vk.a.u(var1)};
+         return new KSerializer[]{a.u(a2.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedField {
@@ -164,10 +165,10 @@ public data class EmbedField(name: String? = null, value: String? = null) {
                         throw new n(var4);
                      }
 
-                     var9 = var7.n(var6, 1, a2.a, (java.lang.String)var9);
+                     var9 = var7.n(var6, 1, a2.a, var9);
                      var2 |= 2;
                   } else {
-                     var5 = var7.n(var6, 0, a2.a, (java.lang.String)var5);
+                     var5 = var7.n(var6, 0, a2.a, var5);
                      var2 |= 1;
                   }
                } else {
@@ -189,8 +190,8 @@ public data class EmbedField(name: String? = null, value: String? = null) {
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return xk.f0.a.a(this);
       }
    }
 

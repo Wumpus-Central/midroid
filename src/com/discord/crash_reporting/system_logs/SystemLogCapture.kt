@@ -29,18 +29,18 @@ internal class SystemLogCapture {
       // 015: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 018: return
       // 019: aconst_null
-      // 01a: astore 5
+      // 01a: astore 6
       // 01c: aconst_null
-      // 01d: astore 6
-      // 01f: aload 6
+      // 01d: astore 5
+      // 01f: aload 5
       // 021: astore 4
-      // 023: aload 5
+      // 023: aload 6
       // 025: astore 3
       // 026: new java/lang/ProcessBuilder
       // 029: astore 7
-      // 02b: aload 6
+      // 02b: aload 5
       // 02d: astore 4
-      // 02f: aload 5
+      // 02f: aload 6
       // 031: astore 3
       // 032: aload 7
       // 034: bipush 1
@@ -50,9 +50,9 @@ internal class SystemLogCapture {
       // 03a: ldc "/system/bin/logcat"
       // 03c: aastore
       // 03d: invokespecial java/lang/ProcessBuilder.<init> ([Ljava/lang/String;)V
-      // 040: aload 6
+      // 040: aload 5
       // 042: astore 4
-      // 044: aload 5
+      // 044: aload 6
       // 046: astore 3
       // 047: aload 7
       // 049: bipush 1
@@ -65,12 +65,12 @@ internal class SystemLogCapture {
       // 058: astore 3
       // 059: aload 5
       // 05b: invokevirtual java/lang/Process.getInputStream ()Ljava/io/InputStream;
-      // 05e: astore 6
+      // 05e: astore 7
       // 060: aload 5
       // 062: astore 4
       // 064: aload 5
       // 066: astore 3
-      // 067: aload 6
+      // 067: aload 7
       // 069: ldc "logcatProcess.inputStream"
       // 06b: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 06e: aload 5
@@ -78,7 +78,7 @@ internal class SystemLogCapture {
       // 072: aload 5
       // 074: astore 3
       // 075: getstatic ik/a.b Ljava/nio/charset/Charset;
-      // 078: astore 7
+      // 078: astore 6
       // 07a: aload 5
       // 07c: astore 4
       // 07e: aload 5
@@ -90,8 +90,8 @@ internal class SystemLogCapture {
       // 08a: aload 5
       // 08c: astore 3
       // 08d: aload 8
-      // 08f: aload 6
-      // 091: aload 7
+      // 08f: aload 7
+      // 091: aload 6
       // 093: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
       // 096: aload 5
       // 098: astore 4
@@ -217,15 +217,15 @@ internal class SystemLogCapture {
       // 18f: astore 4
       // 191: aload 5
       // 193: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-      // 196: astore 7
+      // 196: astore 5
       // 198: aload 3
       // 199: astore 4
-      // 19b: aload 7
+      // 19b: aload 5
       // 19d: ldc "e.stackTrace"
       // 19f: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 1a2: aload 3
       // 1a3: astore 4
-      // 1a5: aload 7
+      // 1a5: aload 5
       // 1a7: arraylength
       // 1a8: istore 2
       // 1a9: bipush 0
@@ -233,39 +233,39 @@ internal class SystemLogCapture {
       // 1ab: iload 1
       // 1ac: iload 2
       // 1ad: if_icmpge 1f8
-      // 1b0: aload 7
+      // 1b0: aload 5
       // 1b2: iload 1
       // 1b3: aaload
-      // 1b4: astore 6
+      // 1b4: astore 7
       // 1b6: aload 3
       // 1b7: astore 4
       // 1b9: aload 0
       // 1ba: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 1bd: astore 8
+      // 1bd: astore 6
       // 1bf: aload 3
       // 1c0: astore 4
       // 1c2: new java/lang/StringBuilder
-      // 1c5: astore 5
+      // 1c5: astore 8
       // 1c7: aload 3
       // 1c8: astore 4
-      // 1ca: aload 5
+      // 1ca: aload 8
       // 1cc: invokespecial java/lang/StringBuilder.<init> ()V
       // 1cf: aload 3
       // 1d0: astore 4
-      // 1d2: aload 5
+      // 1d2: aload 8
       // 1d4: ldc "    "
       // 1d6: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 1d9: pop
       // 1da: aload 3
       // 1db: astore 4
-      // 1dd: aload 5
-      // 1df: aload 6
+      // 1dd: aload 8
+      // 1df: aload 7
       // 1e1: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 1e4: pop
       // 1e5: aload 3
       // 1e6: astore 4
-      // 1e8: aload 8
-      // 1ea: aload 5
+      // 1e8: aload 6
+      // 1ea: aload 8
       // 1ec: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 1ef: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 1f2: iinc 1 1

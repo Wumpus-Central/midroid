@@ -74,8 +74,8 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.font.hashCode();
-      val var3: Int = Integer.hashCode(this.linkColor);
+      val var3: Int = this.font.hashCode();
+      val var4: Int = Integer.hashCode(this.linkColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.backgroundStyle == null) {
@@ -88,24 +88,24 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
          var2 = this.icon.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var3: DiscordFont = this.font;
+      val var5: DiscordFont = this.font;
       val var1: Int = this.linkColor;
-      val var4: LinkBackgroundStyle = this.backgroundStyle;
-      val var2: ReactAsset = this.icon;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("LinkStyle(font=");
-      var5.append(var3);
-      var5.append(", linkColor=");
-      var5.append(var1);
-      var5.append(", backgroundStyle=");
-      var5.append(var4);
-      var5.append(", icon=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var2: LinkBackgroundStyle = this.backgroundStyle;
+      val var4: ReactAsset = this.icon;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LinkStyle(font=");
+      var3.append(var5);
+      var3.append(", linkColor=");
+      var3.append(var1);
+      var3.append(", backgroundStyle=");
+      var3.append(var2);
+      var3.append(", icon=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

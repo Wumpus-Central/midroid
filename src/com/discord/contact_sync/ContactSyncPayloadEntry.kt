@@ -12,7 +12,6 @@ import uk.f
 import uk.n
 import xk.a2
 import xk.f0
-import xk.f0.a
 
 @f
 public data class ContactSyncPayloadEntry(friendId: String) {
@@ -80,7 +79,7 @@ public data class ContactSyncPayloadEntry(friendId: String) {
          descriptor = var1;
       }
 
-      public open fun childSerializers(): Array<KSerializer<*>> {
+      public override fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{a2.a};
       }
 
@@ -126,8 +125,8 @@ public data class ContactSyncPayloadEntry(friendId: String) {
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return a.a(this);
+      override fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return f0.a.a(this);
       }
    }
 

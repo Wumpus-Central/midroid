@@ -204,20 +204,20 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    }
 
    private fun setFooter(footer: StructurableText, messageId: MessageId) {
-      val var4: SimpleDraweeSpanTextView = this.binding.footer;
+      val var5: SimpleDraweeSpanTextView = this.binding.footer;
       kotlin.jvm.internal.r.g(this.binding.footer, "setFooter_Ayv7vGE$lambda$4");
-      val var5: Context = var4.getContext();
-      val var6: FontMetrics = var4.getPaint().getFontMetrics();
+      val var4: Context = var5.getContext();
+      val var6: FontMetrics = var5.getPaint().getFontMetrics();
       kotlin.jvm.internal.r.g(var6, "paint.fontMetrics");
       val var3: Float = TextUtilsKt.getBaselineHeightPx(var6);
-      val var7: TextPaint = var4.getPaint();
-      kotlin.jvm.internal.r.g(var5, "context");
+      val var7: TextPaint = var5.getPaint();
+      kotlin.jvm.internal.r.g(var4, "context");
       kotlin.jvm.internal.r.g(var7, "paint");
       ViewUtilsKt.setOptionalText(
-         var4,
+         var5,
          TextUtilsKt.toSpannable$default(
             var1,
-            var5,
+            var4,
             var2,
             false,
             false,
@@ -245,7 +245,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
             null
          )
       );
-      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var4, false, 1, null);
+      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var5, false, 1, null);
    }
 
    private fun setSubtitle(subtitle: CharSequence?) {

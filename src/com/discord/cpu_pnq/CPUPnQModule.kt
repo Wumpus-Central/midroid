@@ -10,11 +10,11 @@ public class CPUPnQModule(reactContext: ReactApplicationContext) : NativeCPUPnQS
       super(var1);
    }
 
-   public open fun enable(cpuPercentage: Double) {
+   public override fun enable(cpuPercentage: Double) {
       CPUPnQManager.INSTANCE.enable(var1);
    }
 
-   public open fun hangNativeThread(durationMs: Double) {
+   public override fun hangNativeThread(durationMs: Double) {
       CPUPnQManager.INSTANCE.hangNativeThread(var1);
    }
 

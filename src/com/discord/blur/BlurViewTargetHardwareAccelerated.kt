@@ -73,11 +73,11 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       }
 
       if (var9 == null) {
-         val var10: java.util.Map = this.blurRectRenderNodes;
-         val var13: StringBuilder = new StringBuilder();
-         var13.append("blur-");
-         var13.append(var1);
-         var10.putIfAbsent(var1, new RenderNode(var13.toString()));
+         val var13: java.util.Map = this.blurRectRenderNodes;
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("blur-");
+         var10.append(var1);
+         var13.putIfAbsent(var1, new RenderNode(var10.toString()));
          this.blurRects.put(var1, new BlurViewTargetHardwareAccelerated.BlurRect(var2, var3, var4, var5));
          this.invalidate();
       }
@@ -136,22 +136,22 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
             var3 = false;
          }
 
-         val var14: Boolean;
+         val var5: Boolean;
          if (this.blurAmounts.getOrDefault(var4, -1.0F).floatValue() > 0.0F) {
-            var14 = true;
+            var5 = true;
          } else {
-            var14 = false;
+            var5 = false;
          }
 
-         var var5: Boolean = false;
+         var var14: Boolean = false;
          if (var3) {
-            var5 = false;
-            if (var14) {
-               var5 = true;
+            var14 = false;
+            if (var5) {
+               var14 = true;
             }
          }
 
-         if (var5) {
+         if (var14) {
             var8.put(var10.getKey(), var10.getValue());
          }
       }

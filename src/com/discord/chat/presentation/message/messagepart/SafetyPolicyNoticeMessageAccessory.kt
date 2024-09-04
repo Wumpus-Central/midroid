@@ -51,13 +51,13 @@ public data class SafetyPolicyNoticeMessageAccessory(messageId: MessageId, safet
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var3: SafetyPolicyNoticeEmbed = this.safetyPolicyNoticeEmbed;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SafetyPolicyNoticeMessageAccessory(messageId=");
-      var1.append(var2);
-      var1.append(", safetyPolicyNoticeEmbed=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: SafetyPolicyNoticeEmbed = this.safetyPolicyNoticeEmbed;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SafetyPolicyNoticeMessageAccessory(messageId=");
+      var3.append(var2);
+      var3.append(", safetyPolicyNoticeEmbed=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

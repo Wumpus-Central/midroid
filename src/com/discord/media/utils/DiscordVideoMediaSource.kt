@@ -147,7 +147,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
             try {
                var76 = eh.r.b((int)var103.getFloat("frame-rate"));
             } catch (var16: java.lang.Throwable) {
-               val var77: eh.r.a = eh.r.k;
+               var85 = eh.r.k;
                var76 = eh.r.b(s.a(var16));
                break label133;
             }
@@ -162,24 +162,24 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
 
          label127:
          try {
-            var78 = eh.r.b(var103.getInteger("bitrate"));
+            var77 = eh.r.b(var103.getInteger("bitrate"));
          } catch (var15: java.lang.Throwable) {
             var85 = eh.r.k;
-            var78 = eh.r.b(s.a(var15));
+            var77 = eh.r.b(s.a(var15));
             break label127;
          }
 
-         if (eh.r.e(var78) != null) {
-            var78 = this.getAVCBitrate(this.rawWidth, this.rawHeight, this.frameRate);
+         if (eh.r.e(var77) != null) {
+            var77 = this.getAVCBitrate(this.rawWidth, this.rawHeight, this.frameRate);
          }
 
-         this.rawBitrate = (var78 as java.lang.Number).intValue();
+         this.rawBitrate = (var77 as java.lang.Number).intValue();
 
          label121:
          try {
             var79 = eh.r.b(var103.getFloat("i-frame-interval"));
          } catch (var14: java.lang.Throwable) {
-            var85 = eh.r.k;
+            val var78: eh.r.a = eh.r.k;
             var79 = eh.r.b(s.a(var14));
             break label121;
          }

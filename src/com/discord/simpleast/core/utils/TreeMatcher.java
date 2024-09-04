@@ -47,14 +47,14 @@ public class TreeMatcher {
          return false;
       } else {
          for (int var3 = 0; var3 < var5.size(); var3++) {
-            Node var7 = (Node)var5.get(var3);
-            Node var6 = (Node)var4.get(var3);
-            if (var7.getClass() != var6.getClass()) {
+            Node var6 = (Node)var5.get(var3);
+            Node var8 = (Node)var4.get(var3);
+            if (var6.getClass() != var8.getClass()) {
                return false;
             }
 
-            Class var8 = var7.getClass();
-            if (this.matchers.containsKey(var8) && !this.matchers.get(var8).matches(var7, var6)) {
+            Class var7 = var6.getClass();
+            if (this.matchers.containsKey(var7) && !this.matchers.get(var7).matches(var6, var8)) {
                return false;
             }
          }
@@ -95,9 +95,9 @@ public class TreeMatcher {
                return false;
             } else {
                for (int var3 = 0; var3 < var7.size(); var3++) {
-                  CharacterStyle var9 = (CharacterStyle)var7.get(var3);
-                  CharacterStyle var4 = (CharacterStyle)var5.get(var3);
-                  if (var9.getClass() != var4.getClass()) {
+                  CharacterStyle var4 = (CharacterStyle)var7.get(var3);
+                  CharacterStyle var9 = (CharacterStyle)var5.get(var3);
+                  if (var4.getClass() != var9.getClass()) {
                      return false;
                   }
                }

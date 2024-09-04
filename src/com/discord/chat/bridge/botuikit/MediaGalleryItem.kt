@@ -320,8 +320,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
    }
 
    public override fun hashCode(): Int {
-      val var11: Int = this.media.hashCode();
-      val var10: Int = this.mediaType.hashCode();
+      val var10: Int = this.media.hashCode();
+      val var11: Int = this.mediaType.hashCode();
       var var9: Int = 0;
       val var1: Int;
       if (this.videoPreviewUrl == null) {
@@ -379,7 +379,7 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
 
       return (
                (
-                        (((((((((var11 * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var15) * 31 + var4) * 31 + var16) * 31 + var17) * 31 + var7) * 31 + var18)
+                        (((((((((var10 * 31 + var11) * 31 + var1) * 31 + var2) * 31 + var15) * 31 + var4) * 31 + var16) * 31 + var17) * 31 + var7) * 31 + var18)
                               * 31
                            + var12
                      )
@@ -391,48 +391,48 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
    }
 
    public override fun toString(): String {
-      val var6: UnfurledMediaItem = this.media;
-      val var11: MediaGalleryItemType = this.mediaType;
-      val var10: java.lang.String = this.videoPreviewUrl;
-      val var3: Boolean = this.isSpoiler;
-      val var13: java.lang.String = this.spoilerDescription;
-      val var2: Boolean = this.isObscure;
-      val var4: Boolean = this.isObscureAwaitingScan;
-      val var14: java.lang.String = this.obscureDescription;
-      val var1: Boolean = this.showDescription;
-      val var8: java.lang.String = this.description;
-      val var9: java.lang.String = this.descriptionHint;
-      val var7: java.lang.String = this.accessibilityRole;
-      val var5: java.lang.String = this.portalIdString;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("MediaGalleryItem(media=");
-      var12.append(var6);
-      var12.append(", mediaType=");
-      var12.append(var11);
-      var12.append(", videoPreviewUrl=");
-      var12.append(var10);
-      var12.append(", isSpoiler=");
-      var12.append(var3);
-      var12.append(", spoilerDescription=");
-      var12.append(var13);
-      var12.append(", isObscure=");
-      var12.append(var2);
-      var12.append(", isObscureAwaitingScan=");
-      var12.append(var4);
-      var12.append(", obscureDescription=");
-      var12.append(var14);
-      var12.append(", showDescription=");
-      var12.append(var1);
-      var12.append(", description=");
-      var12.append(var8);
-      var12.append(", descriptionHint=");
-      var12.append(var9);
-      var12.append(", accessibilityRole=");
-      var12.append(var7);
-      var12.append(", portalIdString=");
-      var12.append(var5);
-      var12.append(")");
-      return var12.toString();
+      val var14: UnfurledMediaItem = this.media;
+      val var7: MediaGalleryItemType = this.mediaType;
+      val var9: java.lang.String = this.videoPreviewUrl;
+      val var4: Boolean = this.isSpoiler;
+      val var10: java.lang.String = this.spoilerDescription;
+      val var3: Boolean = this.isObscure;
+      val var1: Boolean = this.isObscureAwaitingScan;
+      val var11: java.lang.String = this.obscureDescription;
+      val var2: Boolean = this.showDescription;
+      val var5: java.lang.String = this.description;
+      val var12: java.lang.String = this.descriptionHint;
+      val var13: java.lang.String = this.accessibilityRole;
+      val var8: java.lang.String = this.portalIdString;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MediaGalleryItem(media=");
+      var6.append(var14);
+      var6.append(", mediaType=");
+      var6.append(var7);
+      var6.append(", videoPreviewUrl=");
+      var6.append(var9);
+      var6.append(", isSpoiler=");
+      var6.append(var4);
+      var6.append(", spoilerDescription=");
+      var6.append(var10);
+      var6.append(", isObscure=");
+      var6.append(var3);
+      var6.append(", isObscureAwaitingScan=");
+      var6.append(var1);
+      var6.append(", obscureDescription=");
+      var6.append(var11);
+      var6.append(", showDescription=");
+      var6.append(var2);
+      var6.append(", description=");
+      var6.append(var5);
+      var6.append(", descriptionHint=");
+      var6.append(var12);
+      var6.append(", accessibilityRole=");
+      var6.append(var13);
+      var6.append(", portalIdString=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : f0<MediaGalleryItem> {
@@ -466,23 +466,24 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: UnfurledMediaItem.$serializer = UnfurledMediaItem.$serializer.INSTANCE;
-         val var2: MediaGalleryItemType.Serializer = MediaGalleryItemType.Serializer.INSTANCE;
-         val var4: a2 = a2.a;
-         val var5: KSerializer = a.u(a2.a);
+         val var5: UnfurledMediaItem.$serializer = UnfurledMediaItem.$serializer.INSTANCE;
+         val var4: MediaGalleryItemType.Serializer = MediaGalleryItemType.Serializer.INSTANCE;
+         val var1: a2 = a2.a;
+         val var2: KSerializer = a.u(a2.a);
          val var3: h = h.a;
-         return new KSerializer[]{var1, var2, var5, h.a, a.u(var4), var3, var3, a.u(var4), var3, a.u(var4), var4, var4, a.u(var4), a.u(var4), a.u(var4)};
+         return new KSerializer[]{var5, var4, var2, h.a, a.u(var1), var3, var3, a.u(var1), var3, a.u(var1), var1, var1, a.u(var1), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): MediaGalleryItem {
          r.h(var1, "decoder");
          val var22: SerialDescriptor = this.getDescriptor();
          val var23: c = var1.b(var22);
-         val var3: Int;
+         var var3: Byte;
          var var4: Byte;
-         var var5: Byte;
+         val var5: Int;
          var var6: Byte;
          var var9: Boolean;
+         var var10: Any;
          var var11: Any;
          var var12: Any;
          var var13: Any;
@@ -492,46 +493,44 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var var18: Any;
          var var19: Any;
          val var20: Any;
-         var var31: Any;
-         var var35: Any;
+         var var33: Any;
          if (var23.p()) {
             var16 = var23.y(var22, 0, UnfurledMediaItem.$serializer.INSTANCE, null);
             var19 = var23.y(var22, 1, MediaGalleryItemType.Serializer.INSTANCE, null);
-            var35 = a2.a;
+            var33 = a2.a;
             var11 = var23.n(var22, 2, a2.a, null);
             var6 = var23.C(var22, 3);
-            var13 = var23.n(var22, 4, (DeserializationStrategy)var35, null);
+            var17 = var23.n(var22, 4, (DeserializationStrategy)var33, null);
             val var2: Byte = var23.C(var22, 5);
             var9 = var23.C(var22, 6);
-            var14 = var23.n(var22, 7, (DeserializationStrategy)var35, null);
+            var14 = var23.n(var22, 7, (DeserializationStrategy)var33, null);
             var4 = var23.C(var22, 8);
-            var12 = var23.n(var22, 9, (DeserializationStrategy)var35, null);
-            var31 = var23.m(var22, 10);
+            var12 = var23.n(var22, 9, (DeserializationStrategy)var33, null);
+            var10 = var23.m(var22, 10);
             val var24: java.lang.String = var23.m(var22, 11);
-            var18 = var23.n(var22, 12, (DeserializationStrategy)var35, null);
-            var20 = var23.n(var22, 13, (DeserializationStrategy)var35, null);
-            var35 = var23.n(var22, 14, (DeserializationStrategy)var35, null);
-            var3 = 32767;
-            var5 = var2;
-            var17 = var31;
-            var31 = var24;
+            var18 = var23.n(var22, 12, (DeserializationStrategy)var33, null);
+            var13 = var23.n(var22, 13, (DeserializationStrategy)var33, null);
+            var33 = var23.n(var22, 14, (DeserializationStrategy)var33, null);
+            var5 = 32767;
+            var3 = var2;
+            var20 = var24;
          } else {
-            var var27: Byte = 14;
+            var3 = 14;
             var var7: Boolean = true;
             var9 = false;
             var6 = 0;
-            var5 = 0;
+            var var28: Byte = 0;
             var4 = 0;
             var18 = null;
-            var35 = null;
+            var33 = null;
             var var25: Any = null;
             var13 = null;
             var14 = null;
             var12 = null;
             var17 = null;
             var16 = null;
-            var31 = null;
             var11 = null;
+            var10 = null;
             var19 = null;
             var var26: Int = 0;
 
@@ -545,7 +544,7 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                      case 0:
                         var16 = var23.y(var22, 0, UnfurledMediaItem.$serializer.INSTANCE, var16);
                         var26 |= 1;
-                        var27 = 14;
+                        var3 = 14;
                         continue;
                      case 1:
                         var19 = var23.y(var22, 1, MediaGalleryItemType.Serializer.INSTANCE, var19);
@@ -556,7 +555,7 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                         var26 |= 4;
                         break;
                      case 3:
-                        var5 = var23.C(var22, 3);
+                        var28 = var23.C(var22, 3);
                         var26 |= 8;
                         break;
                      case 4:
@@ -578,18 +577,18 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                      case 8:
                         var4 = var23.C(var22, 8);
                         var26 |= 256;
-                        var27 = 14;
+                        var3 = 14;
                         continue;
                      case 9:
                         var12 = var23.n(var22, 9, a2.a, var12);
                         var26 |= 512;
                         break label39;
                      case 10:
-                        var31 = var23.m(var22, 10);
+                        var11 = var23.m(var22, 10);
                         var26 |= 1024;
                         break label39;
                      case 11:
-                        var11 = var23.m(var22, 11);
+                        var10 = var23.m(var22, 11);
                         var26 |= 2048;
                         break label39;
                      case 12:
@@ -601,49 +600,48 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                         var26 |= 8192;
                         break label39;
                      case 14:
-                        var35 = var23.n(var22, var27, a2.a, var35);
+                        var33 = var23.n(var22, var3, a2.a, var33);
                         var26 |= 16384;
                         continue;
                      default:
                         throw new n(var8);
                   }
 
-                  var27 = 14;
+                  var3 = 14;
                   continue;
                }
 
-               var27 = 14;
+               var3 = 14;
             }
 
-            var13 = var17;
-            var17 = var31;
-            var31 = var11;
-            var5 = var6;
-            var6 = var5;
-            var3 = var26;
+            var3 = var6;
+            var20 = var10;
+            var10 = var11;
+            var6 = var28;
+            var5 = var26;
             var18 = var13;
             var11 = var18;
-            var20 = var25;
+            var13 = var25;
          }
 
          var23.c(var22);
          return new MediaGalleryItem(
-            var3,
+            var5,
             var16 as UnfurledMediaItem,
             var19 as MediaGalleryItemType,
             var11 as java.lang.String,
             (boolean)var6,
-            var13 as java.lang.String,
-            (boolean)var5,
+            var17 as java.lang.String,
+            (boolean)var3,
             var9,
             var14 as java.lang.String,
             (boolean)var4,
             var12 as java.lang.String,
-            (java.lang.String)var17,
-            (java.lang.String)var31,
+            (java.lang.String)var10,
+            (java.lang.String)var20,
             var18 as java.lang.String,
-            var20 as java.lang.String,
-            var35 as java.lang.String,
+            var13 as java.lang.String,
+            var33 as java.lang.String,
             null
          );
       }

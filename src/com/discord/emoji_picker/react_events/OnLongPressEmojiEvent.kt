@@ -13,7 +13,6 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
 import uk.n
-import vk.a
 import xk.a2
 import xk.f0
 
@@ -118,8 +117,8 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
          descriptor = var1;
       }
 
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a.u(a2.a)};
+      public override fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{a2.a, vk.a.u(a2.a)};
       }
 
       public open fun deserialize(decoder: Decoder): OnLongPressEmojiEvent {
@@ -147,7 +146,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
                         throw new n(var4);
                      }
 
-                     var5 = var7.n(var6, 1, a2.a, var5);
+                     var5 = var7.n(var6, 1, a2.a, (java.lang.String)var5);
                      var2 |= 2;
                   } else {
                      var8 = var7.m(var6, 0);
@@ -172,8 +171,8 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      override fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return f0.a.a(this);
       }
    }
 

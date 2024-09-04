@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDVideoRendererManagerDelegate
 import com.facebook.react.viewmanagers.DCDVideoRendererManagerInterface
 import kotlin.jvm.internal.r
-import org.webrtc.RendererCommon.RendererEvents
+import org.webrtc.RendererCommon
 
 @ReactModule(name = "DCDVideoRenderer")
 public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>, DCDVideoRendererManagerInterface<VideoStreamTextureView> {
@@ -81,24 +81,24 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       // 2b: aload 1
       // 2c: checkcast com/facebook/react/bridge/ReactContext
       // 2f: invokevirtual com/facebook/react/bridge/ReactContext.getCurrentActivity ()Landroid/app/Activity;
-      // 32: astore 1
-      // 33: aload 1
+      // 32: astore 2
+      // 33: aload 2
       // 34: ifnull 5e
       // 37: getstatic com/discord/media/engine/video/AttachedVideoSinks.INSTANCE Lcom/discord/media/engine/video/AttachedVideoSinks;
-      // 3a: astore 2
-      // 3b: aload 2
+      // 3a: astore 1
+      // 3b: aload 1
       // 3c: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
       // 3f: ifeq 4e
       // 42: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
-      // 45: aload 1
+      // 45: aload 2
       // 46: ldc "DCDVideoRenderer"
       // 48: invokevirtual com/discord/wakelock/ScreenWakeLock.requestLock (Landroid/app/Activity;Ljava/lang/String;)V
       // 4b: goto 5e
-      // 4e: aload 2
+      // 4e: aload 1
       // 4f: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
       // 52: ifne 5e
       // 55: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
-      // 58: aload 1
+      // 58: aload 2
       // 59: ldc "DCDVideoRenderer"
       // 5b: invokevirtual com/discord/wakelock/ScreenWakeLock.releaseLock (Landroid/app/Activity;Ljava/lang/String;)V
       // 5e: getstatic kotlin/Unit.a Lkotlin/Unit;
@@ -119,7 +119,7 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       private final val reactEvents: ReactEvents
    }
 
-   private class RenderListener(view: View) : RendererEvents {
+   private class RenderListener(view: View) : RendererCommon.RendererEvents {
       private final val view: View
 
       init {
@@ -128,11 +128,11 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
          this.view = var1;
       }
 
-      public open fun onFirstFrameRendered() {
+      public override fun onFirstFrameRendered() {
          VideoStreamViewManager.access$getReactEvents$cp().emitEvent(this.view, new OnReadyEvent());
       }
 
-      public open fun onFrameResolutionChanged(width: Int, height: Int, rotation: Int) {
+      public override fun onFrameResolutionChanged(width: Int, height: Int, rotation: Int) {
          val var4: Int = var3 % 180;
          if (var3 % 180 == 0) {
             var3 = var1;

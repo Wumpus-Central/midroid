@@ -368,13 +368,13 @@ public data class CommandOnClick(action: String? = ...,
          var var6: Any;
          var var7: Any;
          var var8: Any;
-         var var10: Any;
+         val var11: Any;
          var var14: Any;
          var var17: Any;
          if (var13.p()) {
             var14 = (MessageId)var13.n(var12, 0, a2.a, null);
             var17 = com.discord.primitives.UserId..serializer.INSTANCE;
-            var10 = var13.n(var12, 1, com.discord.primitives.UserId..serializer.INSTANCE, null);
+            var11 = var13.n(var12, 1, com.discord.primitives.UserId..serializer.INSTANCE, null);
             var8 = var13.n(var12, 2, com.discord.primitives.MessageId..serializer.INSTANCE, null);
             var7 = var13.n(var12, 3, (DeserializationStrategy)var17, null);
             var17 = var13.n(var12, 4, MessageType.Serializer.INSTANCE, null);
@@ -425,7 +425,7 @@ public data class CommandOnClick(action: String? = ...,
                }
             }
 
-            var10 = var17;
+            var11 = var17;
             var8 = var6;
             var17 = var7;
             var7 = var8;
@@ -434,7 +434,7 @@ public data class CommandOnClick(action: String? = ...,
 
          var13.c(var12);
          val var22: java.lang.String = var14 as java.lang.String;
-         var10 = var10 as UserId;
+         val var23: UserId = var11 as UserId;
          var14 = var8 as MessageId;
          val var16: java.lang.String;
          if (var8 as MessageId != null) {
@@ -443,7 +443,7 @@ public data class CommandOnClick(action: String? = ...,
             var16 = null;
          }
 
-         return new CommandOnClick(var2, var22, (UserId)var10, var16, var7 as UserId, var17 as MessageType, var6 as ChannelId, null, null);
+         return new CommandOnClick(var2, var22, var23, var16, var7 as UserId, var17 as MessageType, var6 as ChannelId, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CommandOnClick) {

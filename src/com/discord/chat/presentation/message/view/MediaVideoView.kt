@@ -25,6 +25,8 @@ import com.discord.media_player.MediaPlayer.PlayerSettings
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
+import com.discord.primitives.ChannelId
+import com.discord.primitives.MessageId
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
@@ -77,6 +79,9 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public fun setContent(
+      channelId: ChannelId?,
+      messageId: MessageId?,
+      attachmentIndex: Int?,
       sourceUrl: String,
       previewUrl: String,
       width: Int,
@@ -100,38 +105,38 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       playerSettings: PlayerSettings
    ) {
       label56: {
-         kotlin.jvm.internal.r.h(var1, "sourceUrl");
-         kotlin.jvm.internal.r.h(var2, "previewUrl");
-         kotlin.jvm.internal.r.h(var22, "playerSettings");
-         val var26: MediaVideoView.TargetUrl = new MediaVideoView.TargetUrl(var1, var2);
+         kotlin.jvm.internal.r.h(var4, "sourceUrl");
+         kotlin.jvm.internal.r.h(var5, "previewUrl");
+         kotlin.jvm.internal.r.h(var25, "playerSettings");
+         val var29: MediaVideoView.TargetUrl = new MediaVideoView.TargetUrl(var4, var5);
          if (this.targetUrl != null) {
-            var var24: MediaVideoView.TargetUrl = this.targetUrl;
+            var var27: MediaVideoView.TargetUrl = this.targetUrl;
             if (this.targetUrl == null) {
                kotlin.jvm.internal.r.y("targetUrl");
-               var24 = null;
+               var27 = null;
             }
 
-            if (kotlin.jvm.internal.r.c(var24, var26)) {
+            if (kotlin.jvm.internal.r.c(var27, var29)) {
                break label56;
             }
          }
 
-         this.targetUrl = var26;
-         val var40: MediaView = this.binding.mediaView;
+         this.targetUrl = var29;
+         val var43: MediaView = this.binding.mediaView;
          kotlin.jvm.internal.r.g(this.binding.mediaView, "binding.mediaView");
-         val var41: StringBuilder = new StringBuilder();
-         var41.append("video attachment: ");
-         var41.append(var1);
-         val var27: MediaSource = new MediaSource(var1, var2, var5, var6, var41.toString(), MediaType.VIDEO, false, null, null, var20, 448, null);
-         val var23: Int;
-         if (var11) {
-            var23 = 0;
+         val var44: StringBuilder = new StringBuilder();
+         var44.append("video attachment: ");
+         var44.append(var4);
+         val var30: MediaSource = new MediaSource(var4, var5, var8, var9, var44.toString(), MediaType.VIDEO, false, var1, var2, var3, var23, 64, null);
+         val var26: Int;
+         if (var14) {
+            var26 = 0;
          } else {
-            var23 = this.thumbnailFadeDuration;
+            var26 = this.thumbnailFadeDuration;
          }
 
          MediaView.setMediaData$default(
-            var40, var27, false, false, false, null, false, null, null, var14, false, var15, var23, new Function0<Unit>(var11, this) {
+            var43, var30, false, false, false, null, false, null, null, var17, false, var18, var26, new Function0<Unit>(var14, this) {
                final boolean $isObscure;
                final MediaVideoView this$0;
 
@@ -149,54 +154,54 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
                      }
                   }
                }
-            }, var16, var17, var18, var19, var22, 766, null
+            }, var19, var20, var21, var22, var25, 766, null
          );
       }
 
       label47: {
-         val var35: MediaVideoView.TargetSize = new MediaVideoView.TargetSize(var3, var4);
+         val var38: MediaVideoView.TargetSize = new MediaVideoView.TargetSize(var6, var7);
          if (this.targetSize != null) {
-            var var28: MediaVideoView.TargetSize = this.targetSize;
+            var var31: MediaVideoView.TargetSize = this.targetSize;
             if (this.targetSize == null) {
                kotlin.jvm.internal.r.y("targetSize");
-               var28 = null;
+               var31 = null;
             }
 
-            if (kotlin.jvm.internal.r.c(var28, var35)) {
+            if (kotlin.jvm.internal.r.c(var31, var38)) {
                break label47;
             }
          }
 
-         this.targetSize = var35;
+         this.targetSize = var38;
       }
 
-      val var29: MediaView = this.binding.mediaView;
+      val var32: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.r.g(this.binding.mediaView, "binding.mediaView");
-      ViewClippingUtilsKt.clipToRoundedRectangle(var29, var7);
-      val var36: SpoilerViewManager = this.spoilerViewManager;
-      val var33: ConstraintLayout = this.binding.container;
+      ViewClippingUtilsKt.clipToRoundedRectangle(var32, var10);
+      val var40: SpoilerViewManager = this.spoilerViewManager;
+      val var36: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
-      val var30: ConstraintLayout = this.binding.container;
+      val var39: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
-      val var37: MediaView = this.binding.mediaView;
+      val var33: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.r.g(this.binding.mediaView, "binding.mediaView");
-      if (var11 && !var8) {
-         var8 = true;
+      if (var14 && !var11) {
+         var11 = true;
       } else {
-         var8 = false;
+         var11 = false;
       }
 
-      if (!var9 && !var11) {
-         var9 = false;
+      if (!var12 && !var14) {
+         var12 = false;
       } else {
-         var9 = true;
+         var12 = true;
       }
 
-      var36.configureSpoiler(var10, var33, var30, var37, null, var8, var12, var9, var7);
-      val var31: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      var40.configureSpoiler(var13, var36, var39, var33, null, var11, var15, var12, var10);
+      val var37: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var34: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "binding.container");
-      var31.configureAttachmentOverlay(this, var34, var7, var13);
+      var37.configureAttachmentOverlay(this, var34, var10, var16);
    }
 
    public fun setDescription(description: String?, hint: String?) {
@@ -387,13 +392,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.sourceUrl;
-         val var2: java.lang.String = this.previewUrl;
+         val var2: java.lang.String = this.sourceUrl;
+         val var1: java.lang.String = this.previewUrl;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetUrl(sourceUrl=");
-         var3.append(var1);
-         var3.append(", previewUrl=");
          var3.append(var2);
+         var3.append(", previewUrl=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

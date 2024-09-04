@@ -122,23 +122,25 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          r.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
-         var var2: Int;
          var var3: Int;
-         var var6: Any;
-         val var10: java.lang.String;
+         val var4: Int;
+         var var6: java.lang.String;
+         val var7: Any;
          if (var9.p()) {
-            var2 = var9.i(var8, 0);
-            var10 = var9.m(var8, 1);
-            var6 = var9.y(var8, 2, StructurableTextSerializer.INSTANCE, null);
+            val var2: Int = var9.i(var8, 0);
+            val var10: java.lang.String = var9.m(var8, 1);
+            var7 = var9.y(var8, 2, StructurableTextSerializer.INSTANCE, null);
             var3 = 7;
+            var4 = var2;
+            var6 = var10;
          } else {
-            var var4: Boolean = true;
+            var var14: Boolean = true;
             var3 = 0;
             var6 = null;
             var var11: Any = null;
-            var2 = 0;
+            var var12: Int = 0;
 
-            while (var4) {
+            while (var14) {
                val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -148,28 +150,27 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
                         }
 
                         var11 = var9.y(var8, 2, StructurableTextSerializer.INSTANCE, var11);
-                        var2 |= 4;
+                        var12 |= 4;
                      } else {
                         var6 = var9.m(var8, 1);
-                        var2 |= 2;
+                        var12 |= 2;
                      }
                   } else {
                      var3 = var9.i(var8, 0);
-                     var2 |= 1;
+                     var12 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var14 = false;
                }
             }
 
-            var6 = var11;
-            var10 = (java.lang.String)var6;
-            var2 = var3;
-            var3 = var2;
+            var4 = var3;
+            var3 = var12;
+            var7 = var11;
          }
 
          var9.c(var8);
-         return new TextDisplayComponent(var3, var2, var10, var6 as StructurableText, null);
+         return new TextDisplayComponent(var3, var4, var6, var7 as StructurableText, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TextDisplayComponent) {

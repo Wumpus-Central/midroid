@@ -71,14 +71,14 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
 
    public override fun toString(): String {
       val var1: java.lang.String = this.type;
-      val var3: java.lang.String = this.context;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BlockedGroupButtonAction(type=");
-      var2.append(var1);
-      var2.append(", context=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.context;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BlockedGroupButtonAction(type=");
+      var3.append(var1);
+      var3.append(", context=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<BlockedGroupButtonAction> {

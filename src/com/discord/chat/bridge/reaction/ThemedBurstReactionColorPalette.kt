@@ -72,13 +72,13 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
    }
 
    public override fun toString(): String {
-      val var2: BurstReactionColorPalette = this.getLight();
-      val var3: BurstReactionColorPalette = this.getDark();
+      val var3: BurstReactionColorPalette = this.getLight();
+      val var2: BurstReactionColorPalette = this.getDark();
       val var1: StringBuilder = new StringBuilder();
       var1.append("ThemedBurstReactionColorPalette(light=");
-      var1.append(var2);
-      var1.append(", dark=");
       var1.append(var3);
+      var1.append(", dark=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

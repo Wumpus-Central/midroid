@@ -44,7 +44,7 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
 
          if (var5) {
             var4 = var4 + var2;
-            val var18: Int = var2 + var3;
+            var5 = var2 + var3;
             val var9: Array<Any> = var10.getSpans(var4, var2 + var3, DCDDeleteOnBackspaceSpan.class);
             var var14: Any = var9;
             if (var9 == null) {
@@ -52,29 +52,29 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
             }
 
             val var13: Array<DCDDeleteOnBackspaceSpan> = var14 as Array<DCDDeleteOnBackspaceSpan>;
-            var5 = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
+            var3 = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
             var2 = 0;
             var var11: Int = null;
 
-            while (var2 < var5) {
-               val var6: Int = var10.getSpanStart(var13[var2]);
-               val var7: Int = var10.getSpanEnd(var13[var2]);
+            while (var2 < var3) {
+               val var7: Int = var10.getSpanStart(var13[var2]);
+               val var6: Int = var10.getSpanEnd(var13[var2]);
                if (var12 == null) {
-                  var14 = var6;
+                  var14 = var7;
                } else {
                   var14 = var12;
-                  if (var12 > var6) {
-                     var14 = var6;
+                  if (var12 > var7) {
+                     var14 = var7;
                   }
                }
 
                var var21: Int;
                if (var11 == null) {
-                  var21 = var7;
+                  var21 = var6;
                } else {
                   var21 = var11;
-                  if (var11 < var7) {
-                     var21 = var7;
+                  if (var11 < var6) {
+                     var21 = var6;
                   }
                }
 
@@ -84,7 +84,7 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
             }
 
             if (var12 != null && var11 != null) {
-               this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var18) - (var18 - var4));
+               this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var5) - (var5 - var4));
             }
          }
       }

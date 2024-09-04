@@ -120,10 +120,10 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
    @SuppressLint(["SetTextI18n"])
    private fun configureAuthor(message: Message, automodContext: AutoModerationContext, eventHandler: ChatEventHandler) {
-      val var6: SimpleDraweeView = this.binding.authorAvatar;
-      val var5: Context = this.getContext();
-      r.g(var5, "context");
-      var6.setImageURI(MessageKt.avatarUrl(var1, var5));
+      val var5: SimpleDraweeView = this.binding.authorAvatar;
+      val var6: Context = this.getContext();
+      r.g(var6, "context");
+      var5.setImageURI(MessageKt.avatarUrl(var1, var6));
       this.binding.authorName.setText(var1.getUsername());
       val var9: MessageTagView = this.binding.messageTagView;
       r.g(this.binding.messageTagView, "binding.messageTagView");
@@ -234,16 +234,16 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          return this.accessories;
       } else {
          val var18: FlaggedMessageEmbed = var9.getMessage();
-         val var12: MessageType = MessageType.DEFAULT;
-         val var15: java.lang.String = var18.getId-3Eiw7ao();
+         val var17: MessageType = MessageType.DEFAULT;
+         val var12: java.lang.String = var18.getId-3Eiw7ao();
          val var7: Long = var18.getChannelId-o4g7jtM();
          val var11: GuildId = var18.getGuildId-qOKuAAo();
-         val var10: UserId = var18.getUserId-wUX8bhU();
-         val var16: java.lang.String = var18.getUsername();
-         val var17: java.lang.String = var18.getAvatarURL();
-         val var14: StructurableText = var18.getContent();
+         val var13: UserId = var18.getUserId-wUX8bhU();
+         val var15: java.lang.String = var18.getUsername();
+         val var16: java.lang.String = var18.getAvatarURL();
+         val var10: StructurableText = var18.getContent();
          val var3: Int = var18.getUsernameColor();
-         val var13: Int = var18.getRoleColor();
+         val var14: Int = var18.getRoleColor();
          val var6: Boolean = var18.getShouldShowRoleDot();
          val var23: java.lang.Boolean = var18.getCommunicationDisabled();
          val var5: Boolean;
@@ -254,13 +254,13 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          }
 
          val var22: Message = new Message(
+            var17,
             var12,
-            var15,
             null,
             var7,
             var11,
             null,
-            var10,
+            var13,
             0L,
             null,
             null,
@@ -269,18 +269,18 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var16,
+            var15,
             var3,
-            var13,
+            var14,
             var6,
             false,
             null,
-            var17,
+            var16,
             null,
             null,
             null,
             null,
-            var14,
+            var10,
             null,
             null,
             null,
@@ -428,18 +428,18 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
          var9.configure(var14, var5);
          this.binding.replyPreview.clear();
-         val var10: java.util.List = this.generateMessageAccessories(var1, var2);
-         val var15: MessageAccessoriesView = this.binding.accessoriesView;
-         val var16: java.lang.String = var1.getId-3Eiw7ao();
+         val var16: java.util.List = this.generateMessageAccessories(var1, var2);
+         val var10: MessageAccessoriesView = this.binding.accessoriesView;
+         val var11: java.lang.String = var1.getId-3Eiw7ao();
          val var6: Long = var1.getChannelId-o4g7jtM();
-         val var11: GuildId = var1.getGuildId-qOKuAAo();
+         val var15: GuildId = var1.getGuildId-qOKuAAo();
          if (var1.getForwardInfo() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var15.setAccessories-MNg-vQI(var16, var6, var11, var10, var3, var4, var5);
+         var10.setAccessories-MNg-vQI(var11, var6, var15, var16, var3, var4, var5);
       }
    }
 

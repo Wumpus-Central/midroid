@@ -145,12 +145,12 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
       } else if (var1 is SamsungConnectActivity.Result.Failure) {
          val var8: SamsungConnectActivity.Result.Failure = var1 as SamsungConnectActivity.Result.Failure;
          if ((var1 as SamsungConnectActivity.Result.Failure).isRetryAllowed() && (var1 as SamsungConnectActivity.Result.Failure).getAttemptCount() < 2) {
-            val var5: Activity = this.getCurrentActivity();
-            r.e(var5);
-            val var6: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
+            val var6: Activity = this.getCurrentActivity();
+            r.e(var6);
+            val var5: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
             val var4: Activity = this.getCurrentActivity();
             r.e(var4);
-            var5.startActivityForResult(var6.getIntent(var4, var8.getAttemptCount()), 101);
+            var6.startActivityForResult(var5.getIntent(var4, var8.getAttemptCount()), 101);
          } else {
             val var2: Int = var8.getAttemptCount();
             val var3: Boolean = var8.isRetryAllowed();
@@ -255,9 +255,10 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, this, var3, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
+   //   at java.base/java.util.HashMap.put(HashMap.java:618)
+   //   at java.base/java.util.HashSet.add(HashSet.java:229)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1278,7 +1279,6 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          3,
          null

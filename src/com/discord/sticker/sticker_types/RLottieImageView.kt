@@ -1132,12 +1132,12 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       this.rLottieStateManager.onTryFetch(var1);
    }
 
-   protected open fun onAttachedToWindow() {
+   protected override fun onAttachedToWindow() {
       super.onAttachedToWindow();
       this.rLottieStateManager.onAttachedToWindow();
    }
 
-   protected open fun onDetachedFromWindow() {
+   protected override fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
       this.rLottieStateManager.onDetachedFromWindow();
    }
@@ -1253,24 +1253,24 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          val var5: java.lang.String = this.url;
          val var4: Boolean = this.animate;
          val var3: Int = this.widthDp;
-         val var2: Int = this.heightDp;
-         val var6: java.lang.String = this.asset;
-         val var1: Int = this.renderMode;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Config(url=");
-         var7.append(var5);
-         var7.append(", animate=");
-         var7.append(var4);
-         var7.append(", widthDp=");
-         var7.append(var3);
-         var7.append(", heightDp=");
-         var7.append(var2);
-         var7.append(", asset=");
-         var7.append(var6);
-         var7.append(", renderMode=");
-         var7.append(var1);
-         var7.append(")");
-         return var7.toString();
+         val var1: Int = this.heightDp;
+         val var7: java.lang.String = this.asset;
+         val var2: Int = this.renderMode;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Config(url=");
+         var6.append(var5);
+         var6.append(", animate=");
+         var6.append(var4);
+         var6.append(", widthDp=");
+         var6.append(var3);
+         var6.append(", heightDp=");
+         var6.append(var1);
+         var6.append(", asset=");
+         var6.append(var7);
+         var6.append(", renderMode=");
+         var6.append(var2);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

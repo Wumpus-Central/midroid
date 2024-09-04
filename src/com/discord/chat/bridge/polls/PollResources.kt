@@ -104,17 +104,17 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
 
    public override fun toString(): String {
       val var3: java.lang.String = this.selectedIcon;
-      val var1: java.lang.String = this.checkmarkIcon;
+      val var2: java.lang.String = this.checkmarkIcon;
       val var4: java.util.Map = this.styles;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PollResources(selectedIcon=");
-      var2.append(var3);
-      var2.append(", checkmarkIcon=");
-      var2.append(var1);
-      var2.append(", styles=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PollResources(selectedIcon=");
+      var1.append(var3);
+      var1.append(", checkmarkIcon=");
+      var1.append(var2);
+      var1.append(", styles=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : f0<PollResources> {
@@ -146,13 +146,14 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
          val var5: Boolean = var10.p();
          var var7: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
-         val var11: java.lang.String;
+         var var6: java.lang.String;
+         val var8: Any;
          if (var5) {
             var7 = var10.m(var9, 0);
-            var11 = var10.m(var9, 1);
-            var6 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), null);
+            val var11: java.lang.String = var10.m(var9, 1);
+            var8 = var10.y(var9, 2, new r0(a2.a, PollStyleSet.$serializer.INSTANCE), null);
             var2 = 7;
+            var6 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -183,12 +184,11 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
                }
             }
 
-            var6 = var12;
-            var11 = (java.lang.String)var6;
+            var8 = var12;
          }
 
          var10.c(var9);
-         return new PollResources(var2, var7, var11, var6 as java.util.Map, null);
+         return new PollResources(var2, var7, var6, var8 as java.util.Map, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollResources) {

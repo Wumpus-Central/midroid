@@ -313,19 +313,17 @@ public final class ThumbhashUtils {
       }
 
       int decode(byte[] var1, int var2, int var3, float var4) {
-         byte var6 = 0;
-         int var5 = var3;
-         var3 = var6;
+         int var5 = 0;
 
          while (true) {
-            float[] var7 = this.ac;
-            if (var3 >= var7.length) {
-               return var5;
+            float[] var6 = this.ac;
+            if (var5 >= var6.length) {
+               return var3;
             }
 
-            var7[var3] = ((var1[(var5 >> 1) + var2] >> ((var5 & 1) << 2) & 15) / 7.5F - 1.0F) * var4;
-            var5++;
+            var6[var5] = ((var1[(var3 >> 1) + var2] >> ((var3 & 1) << 2) & 15) / 7.5F - 1.0F) * var4;
             var3++;
+            var5++;
          }
       }
    }

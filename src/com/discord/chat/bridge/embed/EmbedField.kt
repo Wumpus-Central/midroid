@@ -163,21 +163,21 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.rawName;
+      val var1: java.lang.String = this.rawName;
       val var2: java.lang.String = this.rawValue;
-      val var1: StructurableText = this.name;
-      val var5: StructurableText = this.value;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EmbedField(rawName=");
-      var3.append(var4);
-      var3.append(", rawValue=");
-      var3.append(var2);
-      var3.append(", name=");
-      var3.append(var1);
-      var3.append(", value=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var4: StructurableText = this.name;
+      val var3: StructurableText = this.value;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("EmbedField(rawName=");
+      var5.append(var1);
+      var5.append(", rawValue=");
+      var5.append(var2);
+      var5.append(", name=");
+      var5.append(var4);
+      var5.append(", value=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : f0<EmbedField> {
@@ -209,31 +209,31 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
 
       public open fun deserialize(decoder: Decoder): EmbedField {
          r.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
-         val var5: Boolean = var11.p();
-         var var7: Any = null;
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.b(var9);
+         val var5: Boolean = var10.p();
+         var var6: Any = null;
          var var2: Int;
+         var var7: Any;
          var var8: Any;
          var var13: Any;
-         var var15: Any;
          if (var5) {
             var13 = a2.a;
-            var7 = var11.n(var10, 0, a2.a, null);
-            var8 = var11.n(var10, 1, (DeserializationStrategy)var13, null);
-            var15 = StructurableTextSerializer.INSTANCE;
-            var13 = var11.n(var10, 2, StructurableTextSerializer.INSTANCE, null);
-            var15 = var11.n(var10, 3, (DeserializationStrategy)var15, null);
+            var6 = var10.n(var9, 0, a2.a, null);
+            var8 = var10.n(var9, 1, (DeserializationStrategy)var13, null);
+            var13 = StructurableTextSerializer.INSTANCE;
+            var7 = var10.n(var9, 2, StructurableTextSerializer.INSTANCE, null);
+            var13 = var10.n(var9, 3, (DeserializationStrategy)var13, null);
             var2 = 15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var15 = null;
+            var7 = null;
             var13 = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var10.o(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -242,31 +242,28 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
                               throw new n(var4);
                            }
 
-                           var13 = var11.n(var10, 3, StructurableTextSerializer.INSTANCE, var13);
+                           var13 = var10.n(var9, 3, StructurableTextSerializer.INSTANCE, var13);
                            var2 |= 8;
                         } else {
-                           var15 = var11.n(var10, 2, StructurableTextSerializer.INSTANCE, var15);
+                           var7 = var10.n(var9, 2, StructurableTextSerializer.INSTANCE, var7);
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var11.n(var10, 1, a2.a, var8);
+                        var8 = var10.n(var9, 1, a2.a, var8);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var11.n(var10, 0, a2.a, var7);
+                     var6 = var10.n(var9, 0, a2.a, var6);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var15 = var13;
-            var13 = var15;
          }
 
-         var11.c(var10);
-         return new EmbedField(var2, var7 as java.lang.String, var8 as java.lang.String, var13 as StructurableText, var15 as StructurableText, null);
+         var10.c(var9);
+         return new EmbedField(var2, var6 as java.lang.String, var8 as java.lang.String, var7 as StructurableText, var13 as StructurableText, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EmbedField) {

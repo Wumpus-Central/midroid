@@ -140,10 +140,10 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var var6: java.lang.String;
          var var9: Any;
          if (var8.p()) {
-            var3 = var8.i(var7, 0);
+            var2 = var8.i(var7, 0);
             var6 = var8.m(var7, 1);
             var9 = var8.n(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null);
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -174,10 +174,13 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
          var8.c(var7);
-         return new ContentInventoryEntryComponent(var2, var3, var6, var9 as ContentInventoryEntry, null);
+         return new ContentInventoryEntryComponent(var3, var2, var6, var9 as ContentInventoryEntry, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentInventoryEntryComponent) {

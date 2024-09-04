@@ -71,17 +71,17 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
    r.h(var0, "<this>");
    r.h(var1, "callback");
 
-   var var6: java.util.Iterator;
+   var var5: java.util.Iterator;
    var var11: java.lang.String;
    var var12: ArrayList;
    try {
       val var3: java.util.Map = ContactSyncProvider.INSTANCE.getContactsMap(var0);
       var10 = Json.d;
       Json.d.a();
-      var11 = var10.c(new r0(a2.a, ContactSyncBlobEntry.$serializer.INSTANCE), var3);
+      var11 = var10.c(new r0<>(a2.a, ContactSyncBlobEntry.$serializer.INSTANCE), var3);
       val var4: java.util.Collection = var3.values();
       var12 = new ArrayList(h.t(var4, 10));
-      var6 = var4.iterator();
+      var5 = var4.iterator();
    } catch (var8: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission(NativePermissionStatus.DENIED.name()), null, null});
       return;
@@ -89,11 +89,11 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    while (true) {
       try {
-         if (!var6.hasNext()) {
+         if (!var5.hasNext()) {
             break;
          }
 
-         var12.add(new ContactSyncPayloadEntry((var6.next() as ContactSyncBlobEntry).getPhone()));
+         var12.add(new ContactSyncPayloadEntry((var5.next() as ContactSyncBlobEntry).getPhone()));
       } catch (var9: SecurityException) {
          var1.invoke(new Object[]{mapResultToContactSyncPermission(NativePermissionStatus.DENIED.name()), null, null});
          return;
@@ -102,7 +102,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    try {
       var10.a();
-      var1.invoke(new Object[]{null, var11, var10.c(new f(ContactSyncPayloadEntry.$serializer.INSTANCE), var12)});
+      var1.invoke(new Object[]{null, var11, var10.c(new f<>(ContactSyncPayloadEntry.$serializer.INSTANCE), var12)});
    } catch (var7: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission(NativePermissionStatus.DENIED.name()), null, null});
    }

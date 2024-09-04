@@ -11,6 +11,6 @@ public final class q implements OnLongClickListener {
    public final ChatEventHandler k;
 
    public final boolean onLongClick(View var1) {
-      return MessageView.f(this.j, this.k, var1);
+      return MessageView.e(this.j, this.k, var1);
    }
 }

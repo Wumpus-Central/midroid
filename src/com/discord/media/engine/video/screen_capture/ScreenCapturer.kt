@@ -58,14 +58,14 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private fun createRecorder(): AudioRecord? {
       var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
-         val var6: AudioPlaybackCaptureConfiguration = d.a(c.a(c.a(c.a(new Builder(this.mediaProjection), 1), 14), 0));
-         r.g(var6, "Builder(mediaProjection)…\n                .build()");
+         val var4: AudioPlaybackCaptureConfiguration = d.a(c.a(c.a(c.a(new Builder(this.mediaProjection), 1), 14), 0));
+         r.g(var4, "Builder(mediaProjection)…\n                .build()");
 
          try {
             var1 = e.a(
                   new android.media.AudioRecord.Builder()
                      .setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()),
-                  var6
+                  var4
                )
                .build();
          } catch (var5: SecurityException) {
@@ -111,7 +111,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       this.lastFrameTimestamp = null;
    }
 
-   public open fun changeCaptureFormat(width: Int, height: Int, framerate: Int) {
+   public override fun changeCaptureFormat(width: Int, height: Int, framerate: Int) {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -211,12 +211,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 78: athrow
    }
 
-   public open fun dispose() {
+   public override fun dispose() {
       this.release();
       super.dispose();
    }
 
-   public open fun initialize(surfaceTextureHelper: SurfaceTextureHelper, applicationContext: Context, capturerObserver: CapturerObserver) {
+   public override fun initialize(surfaceTextureHelper: SurfaceTextureHelper, applicationContext: Context, capturerObserver: CapturerObserver) {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -236,7 +236,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   public open fun onFrame(frame: VideoFrame?) {
+   public override fun onFrame(frame: VideoFrame?) {
       if (var1 != null) {
          var var2: Context = this.context;
          if (this.context == null) {
@@ -277,7 +277,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   public open fun startCapture(width: Int, height: Int, framerate: Int) {
+   public override fun startCapture(width: Int, height: Int, framerate: Int) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
@@ -331,7 +331,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 41: athrow
    }
 
-   public open fun stopCapture() {
+   public override fun stopCapture() {
       label13: {
          synchronized (this){} // $VF: monitorenter 
 
@@ -347,7 +347,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       }
    }
 
-   protected open fun updateVirtualDisplay() {
+   protected override fun updateVirtualDisplay() {
       try {
          super.updateVirtualDisplay();
       } catch (var2: java.lang.Throwable) {
@@ -389,11 +389,11 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
       public override fun run() {
          if (ScreenCapturer.access$getFramerate$p(this.this$0) > 0) {
-            val var4: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
-            if (var4 != null) {
-               val var3: ScreenCapturer = this.this$0;
-               if (TimestampAligner.getRtcTimeNanos() - var4.longValue() > ScreenCapturer.access$getIntervalNanos$p(var3)) {
-                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var3);
+            val var3: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
+            if (var3 != null) {
+               val var4: ScreenCapturer = this.this$0;
+               if (TimestampAligner.getRtcTimeNanos() - var3.longValue() > ScreenCapturer.access$getIntervalNanos$p(var4)) {
+                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var4);
                   var var5: NativeCapturerObserver = var6;
                   if (var6 == null) {
                      r.y("nativeObserver");

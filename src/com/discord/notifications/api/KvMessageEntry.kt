@@ -18,6 +18,7 @@ import uk.f
 import uk.n
 import xk.f0
 import xk.n1
+import xk.f0.a
 
 @f
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -74,8 +75,8 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
       r.h(var1, "output");
       r.h(var2, "serialDesc");
       val var3: s = s.a;
-      var1.y(var2, 0, new xk.f<>(s.a), var0.members);
-      var1.y(var2, 1, new xk.f<>(var3), var0.users);
+      var1.y(var2, 0, new xk.f(s.a), var0.members);
+      var1.y(var2, 1, new xk.f(var3), var0.users);
       var1.y(var2, 2, var3, var0.message);
       var1.y(var2, 3, MessageId.$serializer.INSTANCE, MessageId.box-impl(var0.id));
       var1.y(var2, 4, ChannelId.$serializer.INSTANCE, ChannelId.box-impl(var0.channelId));
@@ -136,24 +137,24 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.members;
-      val var1: java.util.List = this.users;
+      val var1: java.util.List = this.members;
+      val var2: java.util.List = this.users;
       val var4: JsonObject = this.message;
-      val var3: java.lang.String = MessageId.toString-impl(this.id);
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("KvMessageEntry(members=");
-      var5.append(var2);
-      var5.append(", users=");
-      var5.append(var1);
-      var5.append(", message=");
-      var5.append(var4);
-      var5.append(", id=");
-      var5.append(var3);
-      var5.append(", channelId=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var6: java.lang.String = MessageId.toString-impl(this.id);
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("KvMessageEntry(members=");
+      var3.append(var1);
+      var3.append(", users=");
+      var3.append(var2);
+      var3.append(", message=");
+      var3.append(var4);
+      var3.append(", id=");
+      var3.append(var6);
+      var3.append(", channelId=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : f0<KvMessageEntry> {
@@ -176,9 +177,9 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: s = s.a;
-         return new KSerializer[]{new xk.f<>(s.a), new xk.f<>(var1), var1, MessageId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE};
+         return new KSerializer[]{new xk.f(s.a), new xk.f(var1), var1, MessageId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): KvMessageEntry {
@@ -193,7 +194,7 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
          var var16: Any;
          if (var12.p()) {
             var16 = s.a;
-            var13 = var12.y(var11, 0, new xk.f<>(s.a), null);
+            var13 = (MessageId)var12.y(var11, 0, new xk.f(s.a), null);
             var9 = var12.y(var11, 1, new xk.f((KSerializer)var16), null);
             var7 = var12.y(var11, 2, (DeserializationStrategy)var16, null);
             var6 = var12.y(var11, 3, MessageId.$serializer.INSTANCE, null);
@@ -219,22 +220,22 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
                                  throw new n(var4);
                               }
 
-                              var7 = var12.y(var11, 4, ChannelId.$serializer.INSTANCE, (ChannelId)var7);
+                              var7 = var12.y(var11, 4, ChannelId.$serializer.INSTANCE, var7);
                               var2 |= 16;
                            } else {
-                              var8 = var12.y(var11, 3, MessageId.$serializer.INSTANCE, (MessageId)var8);
+                              var8 = var12.y(var11, 3, MessageId.$serializer.INSTANCE, var8);
                               var2 |= 8;
                            }
                         } else {
-                           var6 = var12.y(var11, 2, s.a, (JsonObject)var6);
+                           var6 = var12.y(var11, 2, s.a, var6);
                            var2 |= 4;
                         }
                      } else {
-                        var16 = var12.y(var11, 1, new xk.f<>(s.a), (java.util.List<? extends JsonObject>)var16);
+                        var16 = var12.y(var11, 1, new xk.f(s.a), var16);
                         var2 |= 2;
                      }
                   } else {
-                     var13 = var12.y(var11, 0, new xk.f<>(s.a), var13);
+                     var13 = (MessageId)var12.y(var11, 0, new xk.f(s.a), var13);
                      var2 |= 1;
                   }
                } else {
@@ -272,8 +273,8 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
          var4.c(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return a.a(this);
       }
    }
 

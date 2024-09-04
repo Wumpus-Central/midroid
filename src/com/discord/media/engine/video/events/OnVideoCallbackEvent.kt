@@ -167,25 +167,23 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
          var var2: Int;
          var var3: Int;
          var var6: Long;
+         var var8: java.lang.String;
          var var9: java.lang.String;
-         val var10: java.lang.String;
-         var var18: java.lang.String;
+         val var13: java.lang.String;
          if (var12.p()) {
             var2 = var12.i(var11, 0);
             var9 = var12.m(var11, 1);
             var6 = var12.f(var11, 2);
-            var18 = var12.m(var11, 3);
-            val var13: java.lang.String = var12.m(var11, 4);
+            var8 = var12.m(var11, 3);
+            var13 = var12.m(var11, 4);
             var3 = 31;
-            var10 = var18;
-            var18 = var13;
          } else {
             var var14: java.lang.String = null;
             var var4: Boolean = true;
             var2 = 0;
             var6 = 0L;
             var9 = null;
-            var18 = null;
+            var8 = null;
             var3 = 0;
 
             while (var4) {
@@ -199,7 +197,7 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
                                  throw new n(var5);
                               }
 
-                              var18 = var12.m(var11, 4);
+                              var8 = var12.m(var11, 4);
                               var2 |= 16;
                            } else {
                               var9 = var12.m(var11, 3);
@@ -222,14 +220,15 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
                }
             }
 
-            var10 = var9;
+            var3 = var2;
+            var13 = var8;
+            var8 = var9;
             var9 = var14;
             var2 = var3;
-            var3 = var2;
          }
 
          var12.c(var11);
-         return new OnVideoCallbackEvent(var3, var2, var9, var6, var10, var18, null);
+         return new OnVideoCallbackEvent(var3, var2, var9, var6, var8, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnVideoCallbackEvent) {

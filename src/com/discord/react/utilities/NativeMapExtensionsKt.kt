@@ -201,39 +201,39 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 
 public fun ReadableMap.toJson(): JSONObject {
    r.h(var0, "<this>");
-   val var2: JSONObject = new JSONObject();
+   val var3: JSONObject = new JSONObject();
    val var1: ReadableMapKeySetIterator = var0.keySetIterator();
    r.g(var1, "keySetIterator()");
 
    while (var1.hasNextKey()) {
-      val var3: java.lang.String = var1.nextKey();
-      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var3).ordinal()]) {
+      val var2: java.lang.String = var1.nextKey();
+      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var2).ordinal()]) {
          case 1:
-            var2.put(var3, JSONObject.NULL);
+            var3.put(var2, JSONObject.NULL);
             break;
          case 2:
-            var2.put(var3, var0.getBoolean(var3));
+            var3.put(var2, var0.getBoolean(var2));
             break;
          case 3:
-            var2.put(var3, var0.getDouble(var3));
+            var3.put(var2, var0.getDouble(var2));
             break;
          case 4:
-            var2.put(var3, var0.getString(var3));
+            var3.put(var2, var0.getString(var2));
             break;
          case 5:
-            val var6: ReadableMap = var0.getMap(var3);
+            val var6: ReadableMap = var0.getMap(var2);
             r.e(var6);
-            var2.put(var3, toJson(var6));
+            var3.put(var2, toJson(var6));
             break;
          case 6:
-            val var5: ReadableArray = var0.getArray(var3);
+            val var5: ReadableArray = var0.getArray(var2);
             r.e(var5);
-            var2.put(var3, NativeArrayExtensionsKt.toJson(var5));
+            var3.put(var2, NativeArrayExtensionsKt.toJson(var5));
          default:
       }
    }
 
-   return var2;
+   return var3;
 }
 
 public fun ReadableMap.toJsonString(): String {
@@ -258,8 +258,8 @@ public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    r.h(var0, "<this>");
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

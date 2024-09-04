@@ -11,6 +11,7 @@ import kotlinx.serialization.internal.InlineClassDescriptor
 import uk.f
 import xk.a2
 import xk.f0
+import xk.f0.a
 
 @f
 public inline class MessageId : Parcelable {
@@ -94,7 +95,7 @@ public inline class MessageId : Parcelable {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{a2.a};
       }
 
@@ -112,8 +113,8 @@ public inline class MessageId : Parcelable {
          }
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return a.a(this);
       }
    }
 

@@ -315,87 +315,87 @@ public data class ContentInventoryEntry(authorId: UserId,
 
       public open fun deserialize(decoder: Decoder): ContentInventoryEntry {
          r.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         val var6: Boolean = var19.p();
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.b(var17);
+         val var6: Boolean = var18.p();
          var var4: Byte = 7;
          var var13: Any = null;
          var var2: Int;
-         var var8: Any;
          var var9: Any;
+         var var10: Any;
          var var11: Any;
+         var var12: Any;
          var var14: Any;
-         val var15: Any;
          val var16: Any;
-         val var17: Any;
-         var var22: Any;
+         var var21: Any;
+         var var23: Any;
          if (var6) {
-            var13 = var19.y(var18, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
-            var9 = var19.m(var18, 1);
-            var17 = var19.m(var18, 2);
-            var8 = var19.m(var18, 3);
-            val var10: Any = var19.n(var18, 4, a2.a, null);
-            val var20: java.lang.String = var19.m(var18, 5);
-            var22 = var19.m(var18, 6);
-            var14 = var19.y(var18, 7, new xk.f(Subtitle.$serializer.INSTANCE), null);
-            var11 = var19.y(var18, 8, new xk.f(GradientColor.$serializer.INSTANCE), null);
+            var13 = var18.y(var17, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
+            var11 = var18.m(var17, 1);
+            var9 = var18.m(var17, 2);
+            var23 = var18.m(var17, 3);
+            var12 = var18.n(var17, 4, a2.a, null);
+            val var19: java.lang.String = var18.m(var17, 5);
+            var21 = var18.m(var17, 6);
+            var14 = var18.y(var17, 7, new xk.f(Subtitle.$serializer.INSTANCE), null);
+            var10 = var18.y(var17, 8, new xk.f(GradientColor.$serializer.INSTANCE), null);
             var2 = 511;
-            var15 = var10;
-            var16 = var22;
-            var22 = var20;
+            var16 = var21;
+            var21 = var23;
+            var23 = var19;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var25: Any = null;
+            var10 = null;
             var14 = null;
             var9 = null;
-            var var12: Any = null;
+            var12 = null;
             var11 = null;
-            var var21: Any = null;
-            var22 = null;
-            var8 = null;
+            var var20: Any = null;
+            var23 = null;
+            var21 = null;
 
             while (var3) {
-               val var5: Int = var19.o(var18);
+               val var5: Int = var18.o(var17);
                switch (var5) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var13 = var19.y(var18, 0, com.discord.primitives.UserId..serializer.INSTANCE, var13);
+                     var13 = var18.y(var17, 0, com.discord.primitives.UserId..serializer.INSTANCE, var13);
                      var2 |= 1;
                      var4 = 7;
                      break;
                   case 1:
-                     var12 = var19.m(var18, 1);
+                     var12 = var18.m(var17, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var11 = var19.m(var18, 2);
+                     var11 = var18.m(var17, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var21 = var19.m(var18, 3);
+                     var20 = var18.m(var17, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var9 = var19.n(var18, 4, a2.a, var9);
+                     var9 = var18.n(var17, 4, a2.a, var9);
                      var2 |= 16;
                      break;
                   case 5:
-                     var22 = var19.m(var18, 5);
+                     var23 = var18.m(var17, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var8 = var19.m(var18, 6);
+                     var21 = var18.m(var17, 6);
                      var2 |= 64;
                      break;
                   case 7:
-                     var14 = var19.y(var18, var4, new xk.f(Subtitle.$serializer.INSTANCE), var14);
+                     var14 = var18.y(var17, var4, new xk.f(Subtitle.$serializer.INSTANCE), var14);
                      var2 |= 128;
                      break;
                   case 8:
-                     var25 = var19.y(var18, 8, new xk.f(GradientColor.$serializer.INSTANCE), var25);
+                     var10 = var18.y(var17, 8, new xk.f(GradientColor.$serializer.INSTANCE), var10);
                      var2 |= 256;
                      break;
                   default:
@@ -403,26 +403,25 @@ public data class ContentInventoryEntry(authorId: UserId,
                }
             }
 
-            var17 = var11;
-            var16 = var8;
-            var8 = var21;
-            var15 = var9;
-            var11 = var25;
-            var9 = var12;
+            var16 = var21;
+            var21 = var20;
+            var12 = var9;
+            var9 = var11;
+            var11 = var12;
          }
 
-         var19.c(var18);
+         var18.c(var17);
          return new ContentInventoryEntry(
             var2,
             var13 as UserId,
+            (java.lang.String)var11,
             (java.lang.String)var9,
-            (java.lang.String)var17,
-            (java.lang.String)var8,
-            var15 as java.lang.String,
-            (java.lang.String)var22,
+            (java.lang.String)var21,
+            var12 as java.lang.String,
+            (java.lang.String)var23,
             (java.lang.String)var16,
             var14 as java.util.List,
-            var11 as java.util.List,
+            var10 as java.util.List,
             null,
             null
          );

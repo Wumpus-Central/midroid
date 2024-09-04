@@ -111,8 +111,8 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
       r.h(var2, "serialDesc");
       var1.y(var2, 0, new xk.f(MobileVoiceOverlayDataUser.$serializer.INSTANCE), var0.users);
       var1.w(var2, 1, var0.extraUsers);
-      var1.m(var2, 2, com.discord.primitives.GuildId..serializer.INSTANCE, var0.guildId);
-      var1.y(var2, 3, com.discord.primitives.ChannelId..serializer.INSTANCE, ChannelId.box-impl(var0.channelId));
+      var1.m(var2, 2, GuildId.$serializer.INSTANCE, var0.guildId);
+      var1.y(var2, 3, ChannelId.$serializer.INSTANCE, ChannelId.box-impl(var0.channelId));
       var1.z(var2, 4, var0.channelName);
       var1.z(var2, 5, var0.guildName);
       var1.x(var2, 6, var0.deafened);
@@ -221,8 +221,8 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.users.hashCode();
-      val var7: Int = Integer.hashCode(this.extraUsers);
+      val var7: Int = this.users.hashCode();
+      val var6: Int = Integer.hashCode(this.extraUsers);
       val var1: Int;
       if (this.guildId == null) {
          var1 = 0;
@@ -230,9 +230,9 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
          var1 = GuildId.hashCode-impl(this.guildId.unbox-impl());
       }
 
-      val var10: Int = ChannelId.hashCode-impl(this.channelId);
-      val var8: Int = this.channelName.hashCode();
-      val var9: Int = this.guildName.hashCode();
+      val var9: Int = ChannelId.hashCode-impl(this.channelId);
+      val var10: Int = this.channelName.hashCode();
+      val var8: Int = this.guildName.hashCode();
       var var4: Byte = 1;
       var var2: Byte = this.deafened;
       if (this.deafened != 0) {
@@ -249,47 +249,47 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
          var4 = this.canGenerateInvite;
       }
 
-      return (((((((((var6 * 31 + var7) * 31 + var1) * 31 + var10) * 31 + var8) * 31 + var9) * 31 + var2) * 31 + var13) * 31 + var11) * 31 + var4) * 31
+      return (((((((((var7 * 31 + var6) * 31 + var1) * 31 + var9) * 31 + var10) * 31 + var8) * 31 + var2) * 31 + var13) * 31 + var11) * 31 + var4) * 31
          + this.channelSelectorResults.hashCode();
    }
 
    public override fun toString(): String {
-      val var6: java.util.List = this.users;
+      val var10: java.util.List = this.users;
       val var1: Int = this.extraUsers;
-      val var7: GuildId = this.guildId;
-      val var12: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = this.channelName;
+      val var5: GuildId = this.guildId;
+      val var11: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var12: java.lang.String = this.channelName;
       val var8: java.lang.String = this.guildName;
-      val var2: Boolean = this.deafened;
+      val var4: Boolean = this.deafened;
       val var3: Boolean = this.muted;
-      val var10: ConnectionQuality = this.connectionQuality;
-      val var4: Boolean = this.canGenerateInvite;
-      val var11: java.util.List = this.channelSelectorResults;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("MobileVoiceOverlayData(users=");
-      var9.append(var6);
-      var9.append(", extraUsers=");
-      var9.append(var1);
-      var9.append(", guildId=");
-      var9.append(var7);
-      var9.append(", channelId=");
-      var9.append(var12);
-      var9.append(", channelName=");
-      var9.append(var5);
-      var9.append(", guildName=");
-      var9.append(var8);
-      var9.append(", deafened=");
-      var9.append(var2);
-      var9.append(", muted=");
-      var9.append(var3);
-      var9.append(", connectionQuality=");
-      var9.append(var10);
-      var9.append(", canGenerateInvite=");
-      var9.append(var4);
-      var9.append(", channelSelectorResults=");
-      var9.append(var11);
-      var9.append(")");
-      return var9.toString();
+      val var9: ConnectionQuality = this.connectionQuality;
+      val var2: Boolean = this.canGenerateInvite;
+      val var6: java.util.List = this.channelSelectorResults;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MobileVoiceOverlayData(users=");
+      var7.append(var10);
+      var7.append(", extraUsers=");
+      var7.append(var1);
+      var7.append(", guildId=");
+      var7.append(var5);
+      var7.append(", channelId=");
+      var7.append(var11);
+      var7.append(", channelName=");
+      var7.append(var12);
+      var7.append(", guildName=");
+      var7.append(var8);
+      var7.append(", deafened=");
+      var7.append(var4);
+      var7.append(", muted=");
+      var7.append(var3);
+      var7.append(", connectionQuality=");
+      var7.append(var9);
+      var7.append(", canGenerateInvite=");
+      var7.append(var2);
+      var7.append(", channelSelectorResults=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : f0<MobileVoiceOverlayData> {
@@ -319,34 +319,35 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var6: xk.f = new xk.f(MobileVoiceOverlayDataUser.$serializer.INSTANCE);
-         val var3: m0 = m0.a;
-         val var4: KSerializer = vk.a.u(com.discord.primitives.GuildId..serializer.INSTANCE);
-         val var5: h = h.a;
+         val var2: xk.f = new xk.f(MobileVoiceOverlayDataUser.$serializer.INSTANCE);
+         val var4: m0 = m0.a;
+         val var5: KSerializer = vk.a.u(GuildId.$serializer.INSTANCE);
+         val var1: h = h.a;
          return new KSerializer[]{
-            var6,
-            var3,
+            var2,
             var4,
-            com.discord.primitives.ChannelId..serializer.INSTANCE,
+            var5,
+            ChannelId.$serializer.INSTANCE,
             a2.a,
             a2.a,
             h.a,
             h.a,
             ConnectionQuality.Companion.serializer(),
-            var5,
+            var1,
             new xk.f(MobileVoiceOverlaySelectorResult.$serializer.INSTANCE)
          };
       }
 
       public open fun deserialize(decoder: Decoder): MobileVoiceOverlayData {
          r.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         var var10: Boolean = var19.p();
-         var var4: Byte = 10;
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.b(var17);
+         var var10: Boolean = var18.p();
+         var var4: Int = 10;
          var var8: Byte = 6;
          var var2: Int = 0;
-         var var5: Int;
+         var var3: Byte;
+         var var5: Byte;
          val var6: Int;
          var var11: Any;
          var var12: Any;
@@ -354,89 +355,86 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
          var var14: Any;
          var var15: Any;
          var var16: Any;
-         var var20: Any;
-         var var22: Byte;
+         var var19: Any;
          if (var10) {
-            var14 = var19.y(var18, 0, new xk.f(MobileVoiceOverlayDataUser.$serializer.INSTANCE), null);
-            var22 = var19.i(var18, 1);
-            var13 = var19.n(var18, 2, com.discord.primitives.GuildId..serializer.INSTANCE, null);
-            var16 = var19.y(var18, 3, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var15 = var19.m(var18, 4);
-            var12 = var19.m(var18, 5);
-            var4 = var19.C(var18, 6);
-            val var21: Byte = var19.C(var18, 7);
-            var11 = var19.y(var18, 8, ConnectionQuality.Companion.serializer(), null);
-            var10 = var19.C(var18, 9);
-            var20 = var19.y(var18, 10, new xk.f(MobileVoiceOverlaySelectorResult.$serializer.INSTANCE), null);
-            var6 = 2047;
-            var5 = var22;
-            var22 = var4;
-            var4 = var21;
+            var14 = var18.y(var17, 0, new xk.f(MobileVoiceOverlayDataUser.$serializer.INSTANCE), null);
+            var2 = var18.i(var17, 1);
+            var15 = var18.n(var17, 2, GuildId.$serializer.INSTANCE, null);
+            var16 = var18.y(var17, 3, ChannelId.$serializer.INSTANCE, null);
+            var13 = var18.m(var17, 4);
+            var12 = var18.m(var17, 5);
+            var3 = var18.C(var17, 6);
+            var5 = var18.C(var17, 7);
+            var11 = var18.y(var17, 8, ConnectionQuality.Companion.serializer(), null);
+            var10 = var18.C(var17, 9);
+            var19 = var18.y(var17, 10, new xk.f(MobileVoiceOverlaySelectorResult.$serializer.INSTANCE), null);
+            var4 = 2047;
+            var6 = var2;
          } else {
             var var7: Boolean = true;
             var10 = false;
-            var var26: Byte = 0;
+            var var25: Byte = 0;
             var5 = 0;
             var11 = null;
-            var20 = null;
+            var19 = null;
             var16 = null;
             var15 = null;
             var14 = null;
             var13 = null;
             var12 = null;
-            var var23: Byte = 0;
+            var3 = 0;
 
             while (var7) {
                label33: {
-                  val var9: Int = var19.o(var18);
+                  val var9: Int = var18.o(var17);
                   switch (var9) {
                      case -1:
                         var7 = false;
                         continue;
                      case 0:
-                        var14 = var19.y(var18, 0, new xk.f(MobileVoiceOverlayDataUser.$serializer.INSTANCE), var14);
+                        var14 = var18.y(var17, 0, new xk.f(MobileVoiceOverlayDataUser.$serializer.INSTANCE), var14);
                         var2 |= 1;
                         var4 = 10;
                         continue;
                      case 1:
-                        var5 = var19.i(var18, 1);
+                        var5 = var18.i(var17, 1);
                         var2 |= 2;
                         break;
                      case 2:
-                        var15 = var19.n(var18, 2, com.discord.primitives.GuildId..serializer.INSTANCE, var15);
+                        var15 = var18.n(var17, 2, GuildId.$serializer.INSTANCE, var15);
                         var2 |= 4;
                         break;
                      case 3:
-                        var16 = var19.y(var18, 3, com.discord.primitives.ChannelId..serializer.INSTANCE, var16);
+                        var16 = var18.y(var17, 3, ChannelId.$serializer.INSTANCE, var16);
                         var2 |= 8;
                         break;
                      case 4:
-                        var13 = var19.m(var18, 4);
+                        var13 = var18.m(var17, 4);
                         var2 |= 16;
                         var4 = 10;
                         continue;
                      case 5:
-                        var12 = var19.m(var18, 5);
+                        var12 = var18.m(var17, 5);
                         var2 |= 32;
                         continue;
                      case 6:
-                        var26 = var19.C(var18, var8);
+                        var25 = var18.C(var17, var8);
                         var2 |= 64;
                         continue;
                      case 7:
-                        var23 = var19.C(var18, 7);
+                        var3 = var18.C(var17, 7);
                         var2 |= 128;
                         break label33;
                      case 8:
-                        var11 = var19.y(var18, 8, ConnectionQuality.Companion.serializer(), var11);
+                        var11 = var18.y(var17, 8, ConnectionQuality.Companion.serializer(), var11);
                         var2 |= 256;
                         break label33;
                      case 9:
-                        var10 = var19.C(var18, 9);
+                        var10 = var18.C(var17, 9);
                         var2 |= 512;
                         break label33;
                      case 10:
-                        var20 = var19.y(var18, var4, new xk.f(MobileVoiceOverlaySelectorResult.$serializer.INSTANCE), var20);
+                        var19 = var18.y(var17, var4, new xk.f(MobileVoiceOverlaySelectorResult.$serializer.INSTANCE), var19);
                         var2 |= 1024;
                         break label33;
                      default:
@@ -450,27 +448,26 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
                var8 = 6;
             }
 
-            var4 = var23;
-            var22 = var26;
-            var13 = var15;
-            var15 = var13;
-            var6 = var2;
+            var3 = var25;
+            var6 = var5;
+            var5 = var3;
+            var4 = var2;
          }
 
-         var19.c(var18);
+         var18.c(var17);
          return new MobileVoiceOverlayData(
-            var6,
+            var4,
             var14 as java.util.List,
-            var5,
-            var13 as GuildId,
+            var6,
+            var15 as GuildId,
             var16 as ChannelId,
-            (java.lang.String)var15,
+            (java.lang.String)var13,
             (java.lang.String)var12,
-            (boolean)var22,
-            (boolean)var4,
+            (boolean)var3,
+            (boolean)var5,
             var11 as ConnectionQuality,
             var10,
-            var20 as java.util.List,
+            var19 as java.util.List,
             null,
             null
          );

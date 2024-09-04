@@ -25,16 +25,16 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var10 != null) {
          val var4: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var6 : var10.entrySet()) {
+         for (Entry var5 : var10.entrySet()) {
             val var2: Boolean;
-            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
+            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
                var2 = true;
             } else {
                var2 = false;
             }
 
             if (var2) {
-               var4.put(var6.getKey(), var6.getValue());
+               var4.put(var5.getKey(), var5.getValue());
             }
          }
 

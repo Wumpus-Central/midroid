@@ -128,22 +128,22 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    public override fun toString(): String {
       val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: java.lang.String = this.commandId;
-      val var6: java.lang.String = this.commandName;
-      val var4: java.lang.String = this.commandKey;
-      val var5: java.util.List = this.getContent();
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CommandMentionContentNode(channelId=");
-      var1.append(var2);
-      var1.append(", commandId=");
-      var1.append(var3);
-      var1.append(", commandName=");
-      var1.append(var6);
-      var1.append(", commandKey=");
-      var1.append(var4);
-      var1.append(", content=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var5: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandKey;
+      val var6: java.util.List = this.getContent();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CommandMentionContentNode(channelId=");
+      var4.append(var2);
+      var4.append(", commandId=");
+      var4.append(var3);
+      var4.append(", commandName=");
+      var4.append(var5);
+      var4.append(", commandKey=");
+      var4.append(var1);
+      var4.append(", content=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<CommandMentionContentNode> {

@@ -110,21 +110,21 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.commandId;
-      val var3: java.lang.String = this.commandName;
-      val var5: java.lang.String = this.commandKey;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapCommandData(channelId=");
-      var2.append(var1);
-      var2.append(", commandId=");
-      var2.append(var4);
-      var2.append(", commandName=");
-      var2.append(var3);
-      var2.append(", commandKey=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.commandId;
+      val var2: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandKey;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapCommandData(channelId=");
+      var4.append(var3);
+      var4.append(", commandId=");
+      var4.append(var5);
+      var4.append(", commandName=");
+      var4.append(var2);
+      var4.append(", commandKey=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<TapCommandData> {
@@ -155,20 +155,22 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
          var var2: Int;
-         var var5: java.lang.String;
          var var6: java.lang.String;
-         val var8: java.lang.String;
+         var var7: java.lang.String;
          val var11: java.lang.String;
+         var var13: java.lang.String;
          if (var10.p()) {
-            var5 = var10.m(var9, 0);
-            var8 = var10.m(var9, 1);
+            var13 = var10.m(var9, 0);
+            val var8: java.lang.String = var10.m(var9, 1);
             var6 = var10.m(var9, 2);
             var11 = var10.m(var9, 3);
             var2 = 15;
+            var7 = var13;
+            var13 = var8;
          } else {
-            var var7: java.lang.String = null;
+            var7 = null;
             var6 = null;
-            var5 = null;
+            var13 = null;
             var var12: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -186,7 +188,7 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
                            var6 = var10.m(var9, 3);
                            var2 |= 8;
                         } else {
-                           var5 = var10.m(var9, 2);
+                           var13 = var10.m(var9, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -202,14 +204,13 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
                }
             }
 
-            var8 = var12;
             var11 = var6;
-            var6 = var5;
-            var5 = var7;
+            var6 = var13;
+            var13 = var12;
          }
 
          var10.c(var9);
-         return new TapCommandData(var2, var5, var8, var6, var11, null);
+         return new TapCommandData(var2, var7, var13, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapCommandData) {

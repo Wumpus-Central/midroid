@@ -15,7 +15,6 @@ import uk.f
 import uk.n
 import xk.f0
 import xk.h
-import xk.f0.a
 
 @f
 internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
@@ -90,7 +89,7 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
          descriptor = var1;
       }
 
-      public open fun childSerializers(): Array<KSerializer<*>> {
+      public override fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{h.a};
       }
 
@@ -135,8 +134,8 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
          var4.c(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return a.a(this);
+      override fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return f0.a.a(this);
       }
    }
 

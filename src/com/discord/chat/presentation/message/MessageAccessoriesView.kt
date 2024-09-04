@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.R
 import com.discord.chat.presentation.events.ChatEventHandler
-import com.discord.chat.presentation.list.CatchingLinearLayoutManager
+import com.discord.chat.presentation.list.TransitionResilientLinearLayoutManager
 import com.discord.chat.presentation.message.decorations.MessageAccessoriesHorizontalSpacingDecoration
 import com.discord.chat.presentation.message.decorations.ThreadSpineItemDecoration
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
@@ -38,6 +38,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    private final var threadSpineDecoration: ThreadSpineItemDecoration
    private final val accessoriesAdapter: MessageAccessoriesAdapter
    private final val contentViewTracker: com.discord.chat.presentation.message.MessageAccessoriesView.ContentViewTracker
+   private final val transitionResilientLinearLayoutManager: TransitionResilientLinearLayoutManager
    private final val defaultItemAnimator: <unrepresentable>
    private final var messageAccessoriesDecoration: MessageAccessoriesHorizontalSpacingDecoration
 
@@ -74,9 +75,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          }
       });
       this.accessoriesAdapter = var6;
-      val var3: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var3;
-      val var4: DefaultItemAnimator = new DefaultItemAnimator() {
+      val var4: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var4;
+      val var5: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var5;
+      val var3: DefaultItemAnimator = new DefaultItemAnimator() {
          public boolean canReuseUpdatedViewHolder(ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.r.h(var1, "viewHolder");
             kotlin.jvm.internal.r.h(var2, "payloads");
@@ -90,8 +93,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var4.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var4;
+      var3.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var3;
       this.forwardBarPaint$delegate = eh.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -105,11 +108,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      val var5: CatchingLinearLayoutManager = new CatchingLinearLayoutManager(var1, 1, false);
-      var5.setRecycleChildrenOnDetach(false);
       this.setLayoutManager(var5);
       this.setAdapter(var6);
-      var6.setMessageContentViewLifecycleListener(var3);
+      var6.setMessageContentViewLifecycleListener(var4);
    }
 
    private fun getForwardBarHeight(): Int {
@@ -129,16 +130,21 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.removeAllViewsInLayout();
    }
 
+   public open fun endViewTransition(view: View?) {
+      super.endViewTransition(var1);
+      this.transitionResilientLinearLayoutManager.disableRecycling(false);
+   }
+
    public open fun onDraw(c: Canvas) {
       kotlin.jvm.internal.r.h(var1, "c");
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var2: Float = leftMarginPx;
          val var3: Float = leftMarginPx;
+         val var2: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var2, 0.0F, (float)FORWARD_BAR_WIDTH + var3, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var3, 0.0F, (float)FORWARD_BAR_WIDTH + var2, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -209,6 +215,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    public open fun setRecycledViewPool(pool: RecycledViewPool?) {
       super.setRecycledViewPool(var1);
       this.accessoriesAdapter.setNestedAccessoriesRecycledViewPool(var1);
+   }
+
+   public open fun startViewTransition(view: View?) {
+      super.startViewTransition(var1);
+      this.transitionResilientLinearLayoutManager.disableRecycling(true);
    }
 
    public fun updateLeftMargin(leftMargin: Int) {

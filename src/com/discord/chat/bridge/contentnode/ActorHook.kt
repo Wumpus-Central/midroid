@@ -114,46 +114,43 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
 
       public open fun deserialize(decoder: Decoder): ActorHook {
          r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
-         val var5: Boolean = var9.p();
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.b(var7);
+         val var5: Boolean = var8.p();
          var var6: java.lang.String = null;
          var var2: Int;
-         val var10: java.lang.String;
+         var var9: Any;
          if (var5) {
-            var10 = var9.m(var8, 0);
-            var6 = (java.lang.String)var9.y(var8, 1, com.discord.primitives.UserId..serializer.INSTANCE, null);
+            var6 = var8.m(var7, 0);
+            var9 = var8.y(var7, 1, com.discord.primitives.UserId..serializer.INSTANCE, null);
             var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var11: Any = null;
+            var9 = null;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var8.o(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var11 = var9.y(var8, 1, com.discord.primitives.UserId..serializer.INSTANCE, var11);
+                     var9 = var8.y(var7, 1, com.discord.primitives.UserId..serializer.INSTANCE, var9);
                      var2 |= 2;
                   } else {
-                     var6 = var9.m(var8, 0);
+                     var6 = var8.m(var7, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = (java.lang.String)var11;
-            var10 = var6;
          }
 
-         var9.c(var8);
-         return new ActorHook(var2, var10, var6 as UserId, null, null);
+         var8.c(var7);
+         return new ActorHook(var2, var6, var9 as UserId, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActorHook) {

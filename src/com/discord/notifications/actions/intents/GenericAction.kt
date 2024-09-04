@@ -81,15 +81,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
       r.h(var1, "context");
-      val var6: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: java.lang.String = this.taskName;
-      val var4: Bundle = new Bundle();
+      val var7: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: java.lang.String = this.taskName;
+      val var5: Bundle = new Bundle();
 
-      for (Entry var7 : this.data.entrySet()) {
-         var4.putString(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
+      for (Entry var6 : this.data.entrySet()) {
+         var5.putString(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
-      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var6, var1, var3, 0L, false, var4, var2, 12, null);
+      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var7, var1, var4, 0L, false, var5, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -132,16 +132,16 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    internal class Creator : android.os.Parcelable.Creator<GenericAction> {
       fun createFromParcel(var1: Parcel): GenericAction {
          r.h(var1, "parcel");
-         val var5: java.lang.String = var1.readString();
          val var6: java.lang.String = var1.readString();
+         val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var4: LinkedHashMap = new LinkedHashMap(var3);
+         val var5: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var4.put(var1.readString(), var1.readString());
+            var5.put(var1.readString(), var1.readString());
          }
 
-         return new GenericAction(var5, var6, var4);
+         return new GenericAction(var6, var4, var5);
       }
 
       fun newArray(var1: Int): Array<GenericAction> {

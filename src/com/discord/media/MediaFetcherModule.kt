@@ -51,7 +51,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
    public fun getPhotos(params: ReadableMap, promise: Promise) {
       r.h(var1, "params");
       r.h(var2, "promise");
-      val var3: Int = var1.getInt("first");
+      val var4: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
          var5 = var1.getInt("offset");
@@ -61,25 +61,25 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
       val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
-      var var4: Int;
+      var var3: Int;
       try {
          val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
          val var7: ReactApplicationContext = this.getReactApplicationContext();
          r.g(var7, "reactApplicationContext");
-         var16 = h.G0(h.E0(var12.getMedia(var7, var6, var3, var5), new Comparator() {
+         var16 = h.G0(h.E0(var12.getMedia(var7, var6, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
-         }), var3);
-         var4 = var16.size();
+         }), var4);
+         var3 = var16.size();
       } catch (var11: Exception) {
          var2.reject("E_UNABLE_TO_LOAD", var11);
          return;
       }
 
       val var14: WritableNativeMap;
-      if (var4 == var3) {
+      if (var3 == var4) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
                new Pair[]{

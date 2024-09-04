@@ -132,8 +132,8 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.action.hashCode();
-      val var4: Int = UserId.hashCode-impl(this.userId);
+      val var4: Int = this.action.hashCode();
+      val var3: Int = UserId.hashCode-impl(this.userId);
       var var2: Int = 0;
       val var1: Int;
       if (this.messageChannelId == null) {
@@ -146,21 +146,21 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
          var2 = this.linkColor.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.action;
-      val var3: java.lang.String = UserId.toString-impl(this.userId);
-      val var1: ChannelId = this.messageChannelId;
+      val var1: java.lang.String = this.action;
+      val var5: java.lang.String = UserId.toString-impl(this.userId);
+      val var3: ChannelId = this.messageChannelId;
       val var2: Int = this.linkColor;
       val var4: StringBuilder = new StringBuilder();
       var4.append("UserNameOnClick(action=");
-      var4.append(var5);
-      var4.append(", userId=");
-      var4.append(var3);
-      var4.append(", messageChannelId=");
       var4.append(var1);
+      var4.append(", userId=");
+      var4.append(var5);
+      var4.append(", messageChannelId=");
+      var4.append(var3);
       var4.append(", linkColor=");
       var4.append(var2);
       var4.append(")");
@@ -194,29 +194,30 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
 
       public open fun deserialize(decoder: Decoder): UserNameOnClick {
          r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var5: Boolean = var10.p();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.b(var10);
+         val var5: Boolean = var11.p();
          var var8: java.lang.String = null;
          var var2: Int;
          var var6: Any;
          var var7: Any;
-         var var11: Any;
+         val var9: Any;
          if (var5) {
-            var8 = var10.m(var9, 0);
-            var7 = var10.y(var9, 1, com.discord.primitives.UserId..serializer.INSTANCE, null);
-            var6 = var10.n(var9, 2, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var11 = var10.n(var9, 3, m0.a, null);
+            val var12: java.lang.String = var11.m(var10, 0);
+            var7 = var11.y(var10, 1, com.discord.primitives.UserId..serializer.INSTANCE, null);
+            var9 = var11.n(var10, 2, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var6 = var11.n(var10, 3, m0.a, null);
             var2 = 15;
+            var8 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var6 = null;
-            var11 = null;
+            var var13: Any = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var11.o(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -225,28 +226,31 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
                               throw new n(var4);
                            }
 
-                           var11 = var10.n(var9, 3, m0.a, var11);
+                           var13 = var11.n(var10, 3, m0.a, var13);
                            var2 |= 8;
                         } else {
-                           var6 = var10.n(var9, 2, com.discord.primitives.ChannelId..serializer.INSTANCE, var6);
+                           var6 = var11.n(var10, 2, com.discord.primitives.ChannelId..serializer.INSTANCE, var6);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.y(var9, 1, com.discord.primitives.UserId..serializer.INSTANCE, var7);
+                        var7 = var11.y(var10, 1, com.discord.primitives.UserId..serializer.INSTANCE, var7);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.m(var9, 0);
+                     var8 = var11.m(var10, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var9 = var6;
+            var6 = var13;
          }
 
-         var10.c(var9);
-         return new UserNameOnClick(var2, var8, var7 as UserId, var6 as ChannelId, var11 as Int, null, null);
+         var11.c(var10);
+         return new UserNameOnClick(var2, var8, var7 as UserId, var9 as ChannelId, var6 as Int, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserNameOnClick) {

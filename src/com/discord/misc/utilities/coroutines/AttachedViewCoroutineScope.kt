@@ -39,6 +39,6 @@ public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
 
    public fun cancelAllWork(message: String, cause: Throwable? = null) {
       r.h(var1, "message");
-      v.e(this.getCoroutineContext(), u0.a(var1, var2));
+      v.g(this.getCoroutineContext(), u0.a(var1, var2));
    }
 }

@@ -11,6 +11,7 @@ import kotlinx.serialization.internal.InlineClassDescriptor
 import uk.f
 import xk.f0
 import xk.w0
+import xk.f0.a
 
 @f
 public inline class GuildId : SnowflakePrimitive {
@@ -116,7 +117,7 @@ public inline class GuildId : SnowflakePrimitive {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{w0.a};
       }
 
@@ -133,8 +134,8 @@ public inline class GuildId : SnowflakePrimitive {
          }
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer<?>> {
+         return a.a(this);
       }
    }
 

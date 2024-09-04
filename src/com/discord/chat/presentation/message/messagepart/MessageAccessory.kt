@@ -10,12 +10,12 @@ public sealed class MessageAccessory protected constructor(messageId: MessageId,
 
    public open val itemId: Long
       public open get() {
-         val var1: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-         val var3: java.lang.String = this.accessoryDescription;
+         val var3: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+         val var1: java.lang.String = this.accessoryDescription;
          val var2: StringBuilder = new StringBuilder();
-         var2.append(var1);
-         var2.append(" - ");
          var2.append(var3);
+         var2.append(" - ");
+         var2.append(var1);
          return IdUtilsKt.convertToId(var2.toString());
       }
 

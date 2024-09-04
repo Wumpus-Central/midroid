@@ -57,6 +57,7 @@ public enum class ReactAsset {
    InvitesDisabled,
    JumpToBottom,
    Launch,
+   Link,
    LockClosed,
    LockOpen,
    MediaChannelNSFW,

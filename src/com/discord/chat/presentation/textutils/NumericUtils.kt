@@ -13,16 +13,16 @@ public object NumericUtils {
       val var2: java.util.List = kotlin.text.f.A0("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
       val var1: ArrayList = new ArrayList();
 
-      for (var2 : var2) {
+      for (Object var3 : var2) {
          val var0: Boolean;
-         if ((var2 as java.lang.String).length() == 0) {
+         if ((var3 as java.lang.String).length() == 0) {
             var0 = true;
          } else {
             var0 = false;
          }
 
          if (!var0) {
-            var1.add(var2);
+            var1.add(var3);
          }
       }
 
@@ -57,12 +57,12 @@ public object NumericUtils {
             return letters.get((int)var1 - 1);
          } else {
             val var11: Long = vh.h.d(var1 % (long)26, 1L);
-            val var9: java.lang.String = this.toLetter(var1 / (long)26);
-            val var12: java.lang.String = this.toLetter(var11);
-            val var10: StringBuilder = new StringBuilder();
-            var10.append(var9);
-            var10.append(var12);
-            return var10.toString();
+            val var10: java.lang.String = this.toLetter(var1 / (long)26);
+            val var9: java.lang.String = this.toLetter(var11);
+            val var12: StringBuilder = new StringBuilder();
+            var12.append(var10);
+            var12.append(var9);
+            return var12.toString();
          }
       } else {
          val var8: StringBuilder = new StringBuilder();
@@ -81,26 +81,25 @@ public object NumericUtils {
       }
 
       if (var3) {
-         val var9: TreeMap = romanNumeralMap;
-         var var7: Any = romanNumeralMap.floorKey(var1);
-         r.e(var7);
-         val var4: Long = (var7 as java.lang.Number).longValue();
-         val var11: java.lang.String;
+         val var7: TreeMap = romanNumeralMap;
+         var var9: java.lang.String = romanNumeralMap.floorKey(var1);
+         r.e(var9);
+         val var4: Long = (var9 as java.lang.Number).longValue();
          if (var1 == var4) {
-            val var10: Any = var9.get(var1);
-            r.e(var10);
-            r.g(var10, "{\n            romanNumeralMap[number]!!\n        }");
-            var11 = var10 as java.lang.String;
+            var9 = (java.lang.String)var7.get(var1);
+            r.e(var9);
+            r.g(var9, "{\n            romanNumeralMap[number]!!\n        }");
+            var9 = var9;
          } else {
-            var7 = var9.get(var4);
+            val var13: Any = var7.get(var4);
             val var8: java.lang.String = this.toRomanNumeral(var1 - var4);
             val var12: StringBuilder = new StringBuilder();
-            var12.append(var7);
+            var12.append(var13);
             var12.append(var8);
-            var11 = var12.toString();
+            var9 = var12.toString();
          }
 
-         return var11;
+         return var9;
       } else {
          val var6: StringBuilder = new StringBuilder();
          var6.append("Number must be at least 1. Provided: ");

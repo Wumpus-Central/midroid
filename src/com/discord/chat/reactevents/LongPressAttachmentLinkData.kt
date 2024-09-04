@@ -118,13 +118,13 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
+      val var1: java.lang.String = this.attachmentUrl;
+      val var3: java.lang.String = this.attachmentName;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressAttachmentLinkData(attachmentUrl=");
-      var2.append(var3);
-      var2.append(", attachmentName=");
       var2.append(var1);
+      var2.append(", attachmentName=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

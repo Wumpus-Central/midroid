@@ -1,5 +1,6 @@
 package com.discord.media_player
 
+import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import eh.p
 import kotlin.jvm.internal.r
@@ -11,10 +12,12 @@ public data class MediaSource(sourceUrl: String? = ...,
    featureTag: String,
    type: MediaType,
    shouldAutoPlay: Boolean = ...,
+   channelId: ChannelId?,
    messageId: MessageId? = ...,
    index: Int? = ...,
    portal: Double? = ...
-) : MediaSource(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10) {
+) : MediaSource(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11) {
+   public final val channelId: ChannelId?
    public final val featureTag: String
    public final val index: Int?
    public final val isGifv: Boolean
@@ -37,9 +40,10 @@ public data class MediaSource(sourceUrl: String? = ...,
       var5: java.lang.String,
       var6: MediaType,
       var7: Boolean,
-      var8: java.lang.String,
-      var9: Int,
-      var10: java.lang.Double
+      var8: ChannelId,
+      var9: java.lang.String,
+      var10: Int,
+      var11: java.lang.Double
    ) {
       this.sourceUrl = var1;
       this.previewUrl = var2;
@@ -48,9 +52,10 @@ public data class MediaSource(sourceUrl: String? = ...,
       this.featureTag = var5;
       this.type = var6;
       this.shouldAutoPlay = var7;
-      this.messageId = var8;
-      this.index = var9;
-      this.portal = var10;
+      this.channelId = var8;
+      this.messageId = var9;
+      this.index = var10;
+      this.portal = var11;
       if (var6 === MediaType.GIFV) {
          var7 = true;
       } else {
@@ -66,26 +71,14 @@ public data class MediaSource(sourceUrl: String? = ...,
 
       label52: {
          this.isVideo = var7;
-         val var11: Int = MediaSource.WhenMappings.$EnumSwitchMapping$0[var6.ordinal()];
-         if (var11 != 1) {
-            if (var11 != 2 && var11 != 3 && var11 != 4) {
+         val var12: Int = MediaSource.WhenMappings.$EnumSwitchMapping$0[var6.ordinal()];
+         if (var12 != 1) {
+            if (var12 != 2 && var12 != 3 && var12 != 4) {
                throw new p();
             }
 
-            val var17: Boolean;
-            if (var1 != null && !f.x(var1)) {
-               var17 = false;
-            } else {
-               var17 = true;
-            }
-
-            var7 = false;
-            if (var17) {
-               break label52;
-            }
-         } else {
             val var18: Boolean;
-            if (var2 != null && !f.x(var2)) {
+            if (var1 != null && !f.x(var1)) {
                var18 = false;
             } else {
                var18 = true;
@@ -93,6 +86,18 @@ public data class MediaSource(sourceUrl: String? = ...,
 
             var7 = false;
             if (var18) {
+               break label52;
+            }
+         } else {
+            val var19: Boolean;
+            if (var2 != null && !f.x(var2)) {
+               var19 = false;
+            } else {
+               var19 = true;
+            }
+
+            var7 = false;
+            if (var19) {
                break label52;
             }
          }
@@ -107,7 +112,11 @@ public data class MediaSource(sourceUrl: String? = ...,
       return this.sourceUrl;
    }
 
-   public operator fun component10(): Double? {
+   public operator fun component10(): Int? {
+      return this.index;
+   }
+
+   public operator fun component11(): Double? {
       return this.portal;
    }
 
@@ -135,12 +144,12 @@ public data class MediaSource(sourceUrl: String? = ...,
       return this.shouldAutoPlay;
    }
 
-   public operator fun component8(): MessageId? {
-      return this.messageId;
+   public operator fun component8(): ChannelId? {
+      return this.channelId;
    }
 
-   public operator fun component9(): Int? {
-      return this.index;
+   public operator fun component9(): MessageId? {
+      return this.messageId;
    }
 
    public fun copy(
@@ -151,13 +160,14 @@ public data class MediaSource(sourceUrl: String? = ...,
       featureTag: String = ...,
       type: MediaType = ...,
       shouldAutoPlay: Boolean = ...,
+      channelId: ChannelId? = ...,
       messageId: MessageId? = ...,
       index: Int? = ...,
       portal: Double? = ...
    ): MediaSource {
       r.h(var5, "featureTag");
       r.h(var6, "type");
-      return new MediaSource(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, null);
+      return new MediaSource(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, null);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -166,32 +176,34 @@ public data class MediaSource(sourceUrl: String? = ...,
       } else if (var1 !is MediaSource) {
          return false;
       } else {
-         val var3: MediaSource = var1 as MediaSource;
-         if (!r.c(this.sourceUrl, (var1 as MediaSource).sourceUrl)) {
+         var1 = var1;
+         if (!r.c(this.sourceUrl, var1.sourceUrl)) {
             return false;
-         } else if (!r.c(this.previewUrl, var3.previewUrl)) {
+         } else if (!r.c(this.previewUrl, var1.previewUrl)) {
             return false;
-         } else if (!r.c(this.placeholder, var3.placeholder)) {
+         } else if (!r.c(this.placeholder, var1.placeholder)) {
             return false;
-         } else if (!r.c(this.placeholderVersion, var3.placeholderVersion)) {
+         } else if (!r.c(this.placeholderVersion, var1.placeholderVersion)) {
             return false;
-         } else if (!r.c(this.featureTag, var3.featureTag)) {
+         } else if (!r.c(this.featureTag, var1.featureTag)) {
             return false;
-         } else if (this.type != var3.type) {
+         } else if (this.type != var1.type) {
             return false;
-         } else if (this.shouldAutoPlay != var3.shouldAutoPlay) {
+         } else if (this.shouldAutoPlay != var1.shouldAutoPlay) {
+            return false;
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
             var var2: Boolean;
-            label50: {
+            label52: {
                if (this.messageId == null) {
-                  if (var3.messageId == null) {
+                  if (var1.messageId == null) {
                      var2 = true;
-                     break label50;
+                     break label52;
                   }
-               } else if (var3.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
-                  break label50;
+               } else if (var1.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+                  break label52;
                }
 
                var2 = false;
@@ -199,17 +211,17 @@ public data class MediaSource(sourceUrl: String? = ...,
 
             if (!var2) {
                return false;
-            } else if (!r.c(this.index, var3.index)) {
+            } else if (!r.c(this.index, var1.index)) {
                return false;
             } else {
-               return r.c(this.portal, var3.portal);
+               return r.c(this.portal, var1.portal);
             }
          }
       }
    }
 
    public override fun hashCode(): Int {
-      var var8: Int = 0;
+      var var9: Int = 0;
       val var1: Int;
       if (this.sourceUrl == null) {
          var1 = 0;
@@ -239,72 +251,82 @@ public data class MediaSource(sourceUrl: String? = ...,
       }
 
       val var10: Int = this.featureTag.hashCode();
-      val var9: Int = this.type.hashCode();
+      val var11: Int = this.type.hashCode();
       var var5: Byte = this.shouldAutoPlay;
       if (this.shouldAutoPlay != 0) {
          var5 = 1;
       }
 
-      val var12: Int;
-      if (this.messageId == null) {
-         var12 = 0;
+      val var13: Int;
+      if (this.channelId == null) {
+         var13 = 0;
       } else {
-         var12 = MessageId.hashCode-impl(this.messageId);
+         var13 = ChannelId.hashCode-impl(this.channelId.unbox-impl());
       }
 
       val var7: Int;
-      if (this.index == null) {
+      if (this.messageId == null) {
          var7 = 0;
       } else {
-         var7 = this.index.hashCode();
+         var7 = MessageId.hashCode-impl(this.messageId);
+      }
+
+      val var8: Int;
+      if (this.index == null) {
+         var8 = 0;
+      } else {
+         var8 = this.index.hashCode();
       }
 
       if (this.portal != null) {
-         var8 = this.portal.hashCode();
+         var9 = this.portal.hashCode();
       }
 
-      return ((((((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var10) * 31 + var9) * 31 + var5) * 31 + var12) * 31 + var7) * 31 + var8;
+      return (((((((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var10) * 31 + var11) * 31 + var5) * 31 + var13) * 31 + var7) * 31 + var8) * 31 + var9;
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.sourceUrl;
+      val var6: java.lang.String = this.sourceUrl;
       val var5: java.lang.String = this.previewUrl;
-      val var3: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
-      val var6: java.lang.String = this.featureTag;
-      val var4: MediaType = this.type;
+      val var7: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
+      val var9: java.lang.String = this.featureTag;
+      val var3: MediaType = this.type;
       val var1: Boolean = this.shouldAutoPlay;
-      val var12: java.lang.String;
+      val var8: ChannelId = this.channelId;
+      val var13: java.lang.String;
       if (this.messageId == null) {
-         var12 = "null";
+         var13 = "null";
       } else {
-         var12 = MessageId.toString-impl(this.messageId);
+         var13 = MessageId.toString-impl(this.messageId);
       }
 
-      val var10: Int = this.index;
-      val var9: java.lang.Double = this.portal;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MediaSource(sourceUrl=");
-      var11.append(var7);
-      var11.append(", previewUrl=");
-      var11.append(var5);
-      var11.append(", placeholder=");
-      var11.append(var3);
-      var11.append(", placeholderVersion=");
-      var11.append(var8);
-      var11.append(", featureTag=");
-      var11.append(var6);
-      var11.append(", type=");
-      var11.append(var4);
-      var11.append(", shouldAutoPlay=");
-      var11.append(var1);
-      var11.append(", messageId=");
-      var11.append(var12);
-      var11.append(", index=");
-      var11.append(var10);
-      var11.append(", portal=");
-      var11.append(var9);
-      var11.append(")");
-      return var11.toString();
+      val var11: Int = this.index;
+      val var12: java.lang.Double = this.portal;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("MediaSource(sourceUrl=");
+      var10.append(var6);
+      var10.append(", previewUrl=");
+      var10.append(var5);
+      var10.append(", placeholder=");
+      var10.append(var7);
+      var10.append(", placeholderVersion=");
+      var10.append(var4);
+      var10.append(", featureTag=");
+      var10.append(var9);
+      var10.append(", type=");
+      var10.append(var3);
+      var10.append(", shouldAutoPlay=");
+      var10.append(var1);
+      var10.append(", channelId=");
+      var10.append(var8);
+      var10.append(", messageId=");
+      var10.append(var13);
+      var10.append(", index=");
+      var10.append(var11);
+      var10.append(", portal=");
+      var10.append(var12);
+      var10.append(")");
+      return var10.toString();
    }
 }

@@ -190,8 +190,8 @@ public data class ExecutedCommand(userId: UserId,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = UserId.hashCode-impl(this.userId);
-      val var5: Int = Integer.hashCode(this.usernameColor);
+      val var5: Int = UserId.hashCode-impl(this.userId);
+      val var4: Int = Integer.hashCode(this.usernameColor);
       var var3: Int = 0;
       val var1: Int;
       if (this.avatarURL == null) {
@@ -212,31 +212,31 @@ public data class ExecutedCommand(userId: UserId,
          var3 = this.showAppsIcon.hashCode();
       }
 
-      return ((((var4 * 31 + var5) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + var3;
+      return ((((var5 * 31 + var4) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = UserId.toString-impl(this.userId);
+      val var5: java.lang.String = UserId.toString-impl(this.userId);
       val var1: Int = this.usernameColor;
-      val var6: java.lang.String = this.avatarURL;
-      val var4: AnnotatedStructurableText = this.content;
-      val var7: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var5: java.lang.Boolean = this.showAppsIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ExecutedCommand(userId=");
-      var3.append(var2);
-      var3.append(", usernameColor=");
-      var3.append(var1);
-      var3.append(", avatarURL=");
-      var3.append(var6);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(", commandNameBackgroundStyles=");
-      var3.append(var7);
-      var3.append(", showAppsIcon=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.avatarURL;
+      val var6: AnnotatedStructurableText = this.content;
+      val var4: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var7: java.lang.Boolean = this.showAppsIcon;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ExecutedCommand(userId=");
+      var2.append(var5);
+      var2.append(", usernameColor=");
+      var2.append(var1);
+      var2.append(", avatarURL=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var6);
+      var2.append(", commandNameBackgroundStyles=");
+      var2.append(var4);
+      var2.append(", showAppsIcon=");
+      var2.append(var7);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : f0<ExecutedCommand> {
@@ -273,22 +273,22 @@ public data class ExecutedCommand(userId: UserId,
 
       public open fun deserialize(decoder: Decoder): ExecutedCommand {
          r.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.b(var12);
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
          var var2: Int;
          var var3: Int;
          var var6: Any;
          var var7: Any;
          var var8: Any;
          var var9: Any;
-         var var14: Any;
-         if (var13.p()) {
-            var9 = var13.y(var12, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
-            var3 = var13.i(var12, 1);
-            var7 = var13.n(var12, 2, a2.a, null);
-            var8 = var13.y(var12, 3, AnnotatedStructurableTextSerializer.INSTANCE, null);
-            var14 = var13.n(var12, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null);
-            var6 = var13.n(var12, 5, h.a, null);
+         var var13: Any;
+         if (var12.p()) {
+            var7 = var12.y(var11, 0, com.discord.primitives.UserId..serializer.INSTANCE, null);
+            var3 = var12.i(var11, 1);
+            var6 = var12.n(var11, 2, a2.a, null);
+            var8 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, null);
+            var9 = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null);
+            var13 = var12.n(var11, 5, h.a, null);
             var2 = 63;
          } else {
             var var4: Boolean = true;
@@ -297,37 +297,37 @@ public data class ExecutedCommand(userId: UserId,
             var9 = null;
             var8 = null;
             var6 = null;
-            var14 = null;
+            var13 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var13.o(var12);
+               val var5: Int = var12.o(var11);
                switch (var5) {
                   case -1:
                      var4 = false;
                      break;
                   case 0:
-                     var7 = var13.y(var12, 0, com.discord.primitives.UserId..serializer.INSTANCE, var7);
+                     var7 = var12.y(var11, 0, com.discord.primitives.UserId..serializer.INSTANCE, var7);
                      var2 |= 1;
                      break;
                   case 1:
-                     var3 = var13.i(var12, 1);
+                     var3 = var12.i(var11, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var9 = var13.n(var12, 2, a2.a, var9);
+                     var9 = var12.n(var11, 2, a2.a, var9);
                      var2 |= 4;
                      break;
                   case 3:
-                     var8 = var13.y(var12, 3, AnnotatedStructurableTextSerializer.INSTANCE, var8);
+                     var8 = var12.y(var11, 3, AnnotatedStructurableTextSerializer.INSTANCE, var8);
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var13.n(var12, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var6);
+                     var6 = var12.n(var11, 4, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var6);
                      var2 |= 16;
                      break;
                   case 5:
-                     var14 = var13.n(var12, 5, h.a, var14);
+                     var13 = var12.n(var11, 5, h.a, var13);
                      var2 |= 32;
                      break;
                   default:
@@ -335,21 +335,19 @@ public data class ExecutedCommand(userId: UserId,
                }
             }
 
-            var6 = var14;
-            var9 = var7;
-            var7 = var9;
-            var14 = var6;
+            var6 = var9;
+            var9 = var6;
          }
 
-         var13.c(var12);
+         var12.c(var11);
          return new ExecutedCommand(
             var2,
-            var9 as UserId,
+            var7 as UserId,
             var3,
-            var7 as java.lang.String,
+            var6 as java.lang.String,
             var8 as AnnotatedStructurableText,
-            var14 as ExecutedCommandBackgroundStyles,
-            var6 as java.lang.Boolean,
+            var9 as ExecutedCommandBackgroundStyles,
+            var13 as java.lang.Boolean,
             null,
             null
          );

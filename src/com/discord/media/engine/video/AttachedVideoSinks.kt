@@ -94,12 +94,12 @@ internal object AttachedVideoSinks {
                   r.h(var1, "<anonymous parameter 0>");
                   var var5: AttachedVideoSinks.VideoOutputSinks = null;
                   if (var2 != null) {
-                     val var3: MediaEngine = this.$mediaEngine;
-                     val var4: java.lang.String = this.$streamId;
+                     val var4: MediaEngine = this.$mediaEngine;
+                     val var3: java.lang.String = this.$streamId;
                      var2.remove(this.$sink);
                      var5 = var2;
                      if (var2.isEmpty()) {
-                        var3.setVideoOutputSink$media_engine_release(var4, null);
+                        var4.setVideoOutputSink$media_engine_release(var3, null);
                         var5 = null;
                      }
                   }

@@ -68,43 +68,43 @@ public final class AudioPlayerViewBinding implements ViewBinding {
       LinearLayout var5 = (LinearLayout)a.a(var0, var1);
       if (var5 != null) {
          var1 = R.id.audio_file_name;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
+         TextView var8 = (TextView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.audio_file_size;
-            TextView var14 = (TextView)a.a(var0, var1);
-            if (var14 != null) {
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.audio_progress_bar;
-               AudioProgressBar var13 = (AudioProgressBar)a.a(var0, var1);
-               if (var13 != null) {
+               AudioProgressBar var11 = (AudioProgressBar)a.a(var0, var1);
+               if (var11 != null) {
                   var1 = R.id.button;
-                  SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var3 != null) {
+                  SimpleDraweeView var14 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var14 != null) {
                      var1 = R.id.button_container;
-                     View var9 = a.a(var0, var1);
-                     if (var9 != null) {
+                     View var10 = a.a(var0, var1);
+                     if (var10 != null) {
                         var1 = R.id.player_container;
-                        LinearLayout var12 = (LinearLayout)a.a(var0, var1);
-                        if (var12 != null) {
+                        LinearLayout var9 = (LinearLayout)a.a(var0, var1);
+                        if (var9 != null) {
                            var1 = R.id.progress;
-                           ProgressBar var4 = (ProgressBar)a.a(var0, var1);
-                           if (var4 != null) {
+                           ProgressBar var7 = (ProgressBar)a.a(var0, var1);
+                           if (var7 != null) {
                               var1 = R.id.text;
-                              SimpleDraweeSpanTextView var7 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                              if (var7 != null) {
+                              SimpleDraweeSpanTextView var12 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                              if (var12 != null) {
                                  var1 = R.id.upload_overlay;
-                                 AttachmentUploadOverlayView var8 = (AttachmentUploadOverlayView)a.a(var0, var1);
-                                 if (var8 != null) {
+                                 AttachmentUploadOverlayView var2 = (AttachmentUploadOverlayView)a.a(var0, var1);
+                                 if (var2 != null) {
                                     var1 = R.id.upload_overlay_background;
-                                    LinearLayout var10 = (LinearLayout)a.a(var0, var1);
-                                    if (var10 != null) {
+                                    LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+                                    if (var3 != null) {
                                        var1 = R.id.wave;
-                                       AudioWaveView var11 = (AudioWaveView)a.a(var0, var1);
-                                       if (var11 != null) {
+                                       AudioWaveView var13 = (AudioWaveView)a.a(var0, var1);
+                                       if (var13 != null) {
                                           var1 = R.id.wipe;
                                           View var6 = a.a(var0, var1);
                                           if (var6 != null) {
                                              return new AudioPlayerViewBinding(
-                                                var0, var5, var2, var14, var13, var3, var9, var12, var4, var7, var8, var10, var11, var6
+                                                var0, var5, var8, var4, var11, var14, var10, var9, var7, var12, var2, var3, var13, var6
                                              );
                                           }
                                        }

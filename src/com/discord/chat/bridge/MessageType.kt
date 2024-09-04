@@ -94,107 +94,107 @@ public enum class MessageType(serialNumber: Int) : IntEnum {
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    @JvmStatic
    fun {
-      val var2: MessageType = new MessageType(1);
-      RECIPIENT_ADD = var2;
-      val var5: MessageType = new MessageType(2);
-      RECIPIENT_REMOVE = var5;
-      val var0: MessageType = new MessageType(3);
-      CALL = var0;
-      val var10: MessageType = new MessageType(4);
-      CHANNEL_NAME_CHANGE = var10;
-      val var22: MessageType = new MessageType(5);
-      CHANNEL_ICON_CHANGE = var22;
-      val var26: MessageType = new MessageType(6);
-      CHANNEL_PINNED_MESSAGE = var26;
-      val var6: MessageType = new MessageType(7);
-      USER_JOIN = var6;
-      val var19: MessageType = new MessageType(8);
-      USER_PREMIUM_GUILD_SUBSCRIPTION = var19;
-      val var8: MessageType = new MessageType(9);
-      USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1 = var8;
-      val var13: MessageType = new MessageType(10);
-      USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2 = var13;
-      val var18: MessageType = new MessageType(11);
-      USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3 = var18;
-      val var7: MessageType = new MessageType(12);
-      CHANNEL_FOLLOW_ADD = var7;
-      val var1: MessageType = new MessageType(13);
-      GUILD_STREAM = var1;
-      val var14: MessageType = new MessageType(14);
-      GUILD_DISCOVERY_DISQUALIFIED = var14;
-      val var3: MessageType = new MessageType(15);
-      GUILD_DISCOVERY_REQUALIFIED = var3;
-      val var4: MessageType = new MessageType(16);
-      GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING = var4;
-      val var21: MessageType = new MessageType(17);
-      GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING = var21;
-      val var11: MessageType = new MessageType(18);
-      THREAD_CREATED = var11;
-      val var15: MessageType = new MessageType(21);
-      THREAD_STARTER_MESSAGE = var15;
-      val var24: MessageType = new MessageType(22);
-      GUILD_INVITE_REMINDER = var24;
-      val var27: MessageType = new MessageType(25);
-      ROLE_SUBSCRIPTION_PURCHASE = var27;
-      val var20: MessageType = new MessageType(27);
-      STAGE_START = var20;
-      val var16: MessageType = new MessageType(28);
-      STAGE_END = var16;
-      val var17: MessageType = new MessageType(29);
-      STAGE_SPEAKER = var17;
-      val var23: MessageType = new MessageType(30);
-      STAGE_RAISE_HAND = var23;
-      val var31: MessageType = new MessageType(31);
-      STAGE_TOPIC = var31;
-      val var9: MessageType = new MessageType(32);
-      GUILD_APPLICATION_PREMIUM_SUBSCRIPTION = var9;
+      val var7: MessageType = new MessageType(1);
+      RECIPIENT_ADD = var7;
+      val var23: MessageType = new MessageType(2);
+      RECIPIENT_REMOVE = var23;
+      val var1: MessageType = new MessageType(3);
+      CALL = var1;
+      val var13: MessageType = new MessageType(4);
+      CHANNEL_NAME_CHANGE = var13;
+      val var11: MessageType = new MessageType(5);
+      CHANNEL_ICON_CHANGE = var11;
+      val var20: MessageType = new MessageType(6);
+      CHANNEL_PINNED_MESSAGE = var20;
+      val var9: MessageType = new MessageType(7);
+      USER_JOIN = var9;
+      val var6: MessageType = new MessageType(8);
+      USER_PREMIUM_GUILD_SUBSCRIPTION = var6;
+      val var21: MessageType = new MessageType(9);
+      USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1 = var21;
+      val var27: MessageType = new MessageType(10);
+      USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2 = var27;
+      val var22: MessageType = new MessageType(11);
+      USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3 = var22;
+      val var16: MessageType = new MessageType(12);
+      CHANNEL_FOLLOW_ADD = var16;
+      val var0: MessageType = new MessageType(13);
+      GUILD_STREAM = var0;
+      val var4: MessageType = new MessageType(14);
+      GUILD_DISCOVERY_DISQUALIFIED = var4;
+      val var18: MessageType = new MessageType(15);
+      GUILD_DISCOVERY_REQUALIFIED = var18;
+      val var28: MessageType = new MessageType(16);
+      GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING = var28;
+      val var24: MessageType = new MessageType(17);
+      GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING = var24;
+      val var31: MessageType = new MessageType(18);
+      THREAD_CREATED = var31;
+      val var19: MessageType = new MessageType(21);
+      THREAD_STARTER_MESSAGE = var19;
+      val var8: MessageType = new MessageType(22);
+      GUILD_INVITE_REMINDER = var8;
+      val var30: MessageType = new MessageType(25);
+      ROLE_SUBSCRIPTION_PURCHASE = var30;
+      val var15: MessageType = new MessageType(27);
+      STAGE_START = var15;
+      val var14: MessageType = new MessageType(28);
+      STAGE_END = var14;
+      val var10: MessageType = new MessageType(29);
+      STAGE_SPEAKER = var10;
+      val var17: MessageType = new MessageType(30);
+      STAGE_RAISE_HAND = var17;
+      val var2: MessageType = new MessageType(31);
+      STAGE_TOPIC = var2;
+      val var29: MessageType = new MessageType(32);
+      GUILD_APPLICATION_PREMIUM_SUBSCRIPTION = var29;
       val var12: MessageType = new MessageType(33);
       PRIVATE_CHANNEL_INTEGRATION_ADDED = var12;
-      val var29: MessageType = new MessageType(34);
-      PRIVATE_CHANNEL_INTEGRATION_REMOVED = var29;
-      val var25: MessageType = new MessageType(40);
-      GUILD_DEADCHAT_REVIVE_PROMPT = var25;
-      val var28: MessageType = new MessageType(42);
-      GUILD_GAMING_STATS_PROMPT = var28;
-      val var30: MessageType = new MessageType(46);
-      POLL_RESULT = var30;
+      val var25: MessageType = new MessageType(34);
+      PRIVATE_CHANNEL_INTEGRATION_REMOVED = var25;
+      val var5: MessageType = new MessageType(40);
+      GUILD_DEADCHAT_REVIVE_PROMPT = var5;
+      val var3: MessageType = new MessageType(42);
+      GUILD_GAMING_STATS_PROMPT = var3;
+      val var26: MessageType = new MessageType(46);
+      POLL_RESULT = var26;
       val var33: EnumSet = EnumSet.of(
-         var2,
-         var5,
-         var0,
-         var10,
-         var22,
-         var26,
+         var7,
+         var23,
+         var1,
+         var13,
+         var11,
+         var20,
+         var9,
          var6,
+         var21,
+         var27,
+         var22,
+         var16,
+         var0,
+         var4,
+         var18,
+         var28,
+         var24,
+         var31,
          var19,
          var8,
-         var13,
-         var18,
-         var7,
-         var1,
-         var14,
-         var3,
-         var4,
-         var21,
-         var11,
+         var30,
          var15,
-         var24,
-         var27,
-         var20,
-         var16,
+         var14,
+         var10,
          var17,
-         var23,
-         var31,
-         var9,
-         var12,
+         var2,
          var29,
+         var12,
          var25,
-         var28,
-         var30
+         var5,
+         var3,
+         var26
       );
       r.g(var33, "of(\n            RECIPIEN…   POLL_RESULT,\n        )");
       SystemTypes = var33;
-      val var32: EnumSet = EnumSet.of(var0, var1);
+      val var32: EnumSet = EnumSet.of(var1, var0);
       r.g(var32, "of(\n            CALL,\n  …  GUILD_STREAM,\n        )");
       CallTypes = var32;
    }

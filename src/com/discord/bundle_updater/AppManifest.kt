@@ -137,8 +137,8 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: a2 = a2.a;
-         return new KSerializer[]{AppManifestMetadata.$serializer.INSTANCE, new r0(a2.a, a2.a), new r0(var2, var2)};
+         val var1: a2 = a2.a;
+         return new KSerializer[]{AppManifestMetadata.$serializer.INSTANCE, new r0(a2.a, a2.a), new r0(var1, var1)};
       }
 
       public open fun deserialize(decoder: Decoder): AppManifest {

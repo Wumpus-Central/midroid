@@ -68,9 +68,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
    public fun configure(messageFrame: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader, onOverflowClick: OnClickListener?) {
       kotlin.jvm.internal.r.h(var1, "messageFrame");
-      val var6: TextView = this.binding.feedChannelText;
+      var var7: TextView = this.binding.feedChannelText;
       kotlin.jvm.internal.r.g(this.binding.feedChannelText, "configure$lambda$2");
-      ViewUtilsKt.setOptionalText(var6, var1.getChannelName());
+      ViewUtilsKt.setOptionalText(var7, var1.getChannelName());
       var var3: Boolean;
       if (var1.getChannelIconURL() != null) {
          var3 = 1;
@@ -84,7 +84,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = (byte)8;
       }
 
-      var6.setVisibility(var3);
+      var7.setVisibility(var3);
       val var19: SimpleDraweeView = this.binding.feedChannelIcon;
       kotlin.jvm.internal.r.g(this.binding.feedChannelIcon, "binding.feedChannelIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var19, var1.getChannelIconURL());
@@ -99,7 +99,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = 0;
       }
 
-      val var23: TextView = this.binding.feedReplyCount;
+      var7 = this.binding.feedReplyCount;
       kotlin.jvm.internal.r.g(this.binding.feedReplyCount, "binding.feedReplyCount");
       val var11: java.lang.String;
       if (var3 > 3) {
@@ -110,7 +110,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var11 = null;
       }
 
-      ViewUtilsKt.setOptionalText(var23, var11);
+      ViewUtilsKt.setOptionalText(var7, var11);
       val var24: OverlappingCirclesView = this.binding.feedReplyParticipants;
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
@@ -309,21 +309,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.channelIconURL;
-         val var5: java.lang.String = this.chatIconURL;
-         val var3: ArrayList = this.avatarURLs;
-         val var2: java.lang.String = this.channelName;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("MessageBundleHeader(channelIconURL=");
-         var1.append(var4);
-         var1.append(", chatIconURL=");
-         var1.append(var5);
-         var1.append(", avatarURLs=");
-         var1.append(var3);
-         var1.append(", channelName=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var3: java.lang.String = this.channelIconURL;
+         val var4: java.lang.String = this.chatIconURL;
+         val var1: ArrayList = this.avatarURLs;
+         val var5: java.lang.String = this.channelName;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MessageBundleHeader(channelIconURL=");
+         var2.append(var3);
+         var2.append(", chatIconURL=");
+         var2.append(var4);
+         var2.append(", avatarURLs=");
+         var2.append(var1);
+         var2.append(", channelName=");
+         var2.append(var5);
+         var2.append(")");
+         return var2.toString();
       }
 
       public object `$serializer` : f0<MessageFrameFeedHeaderView.MessageBundleHeader> {
@@ -360,21 +360,22 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
             var var8: Any = null;
             var var2: Int;
             var var6: Any;
-            var var7: Any;
-            var var13: Any;
+            val var9: Any;
+            var var15: Any;
             if (var5) {
-               var13 = a2.a;
+               var15 = a2.a;
                var8 = var11.n(var10, 0, a2.a, null);
-               var6 = var11.n(var10, 1, (DeserializationStrategy)var13, null);
-               var7 = var11.n(var10, 2, new xk.f((KSerializer)var13), null);
-               var13 = var11.n(var10, 3, (DeserializationStrategy)var13, null);
+               var6 = var11.n(var10, 1, (DeserializationStrategy)var15, null);
+               val var12: Any = var11.n(var10, 2, new xk.f((KSerializer)var15), null);
+               var15 = var11.n(var10, 3, (DeserializationStrategy)var15, null);
                var2 = 15;
+               var9 = var12;
             } else {
                var var3: Boolean = true;
                var2 = 0;
-               var7 = null;
+               var15 = null;
                var6 = null;
-               var13 = null;
+               var var13: Any = null;
 
                while (var3) {
                   val var4: Int = var11.o(var10);
@@ -393,7 +394,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
                               var2 |= 4;
                            }
                         } else {
-                           var7 = var11.n(var10, 1, a2.a, var7);
+                           var15 = var11.n(var10, 1, a2.a, var15);
                            var2 |= 2;
                         }
                      } else {
@@ -405,13 +406,14 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
                   }
                }
 
-               var7 = var6;
-               var6 = var7;
+               var9 = var6;
+               var6 = var15;
+               var15 = var13;
             }
 
             var11.c(var10);
             return new MessageFrameFeedHeaderView.MessageBundleHeader(
-               var2, var8 as java.lang.String, var6 as java.lang.String, var7 as ArrayList, var13 as java.lang.String, null
+               var2, var8 as java.lang.String, var6 as java.lang.String, var9 as ArrayList, var15 as java.lang.String, null
             );
          }
 

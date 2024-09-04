@@ -1,8 +1,11 @@
 package com.discord.media_player.reactevents
 
+import al.a
+import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import com.facebook.react.bridge.WritableNativeMap
+import eh.w
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +15,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import uk.f
+import uk.j
 import uk.n
-import vk.a
 import xk.f0
 import xk.w0
 
@@ -84,21 +87,26 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       return (var1 * 31 + java.lang.Long.hashCode(this.time)) * 31 + java.lang.Long.hashCode(this.duration);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   public open fun serialize(): WritableMap {
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("time", this.time), w.a("duration", this.duration)});
+      if (this.source != null) {
+         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source)));
+      }
+
+      return var1;
    }
 
    public override fun toString(): String {
       val var5: MediaPlayerPlaybackSource = this.source;
-      val var1: Long = this.time;
-      val var3: Long = this.duration;
+      val var3: Long = this.time;
+      val var1: Long = this.duration;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MediaPlayerPlaybackProgressUpdated(source=");
       var6.append(var5);
       var6.append(", time=");
-      var6.append(var1);
-      var6.append(", duration=");
       var6.append(var3);
+      var6.append(", duration=");
+      var6.append(var1);
       var6.append(")");
       return var6.toString();
    }
@@ -124,7 +132,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), w0.a, w0.a};
+         return new KSerializer[]{vk.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), w0.a, w0.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackProgressUpdated {

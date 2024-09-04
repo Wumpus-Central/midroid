@@ -185,21 +185,21 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
          val var10: kotlinx.serialization.encoding.c = var1.b(var9);
          var var2: Int;
          var var5: Boolean;
-         var var6: Any;
+         var var7: Any;
          val var8: Any;
          val var11: java.lang.String;
          if (var10.p()) {
             var11 = var10.m(var9, 0);
-            var6 = var10.n(var9, 1, a2.a, null);
-            val var7: java.lang.String = var10.m(var9, 2);
+            var7 = var10.n(var9, 1, a2.a, null);
+            val var6: java.lang.String = var10.m(var9, 2);
             var5 = var10.C(var9, 3);
             var2 = 15;
-            var8 = var7;
+            var8 = var6;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var var13: java.lang.String = null;
-            var6 = null;
+            var7 = null;
+            var var13: Any = null;
             var var12: Any = null;
             var2 = 0;
 
@@ -220,11 +220,11 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
                            var2 |= 4;
                         }
                      } else {
-                        var6 = var10.n(var9, 1, a2.a, var6);
+                        var13 = var10.n(var9, 1, a2.a, var13);
                         var2 |= 2;
                      }
                   } else {
-                     var13 = var10.m(var9, 0);
+                     var7 = var10.m(var9, 0);
                      var2 |= 1;
                   }
                } else {
@@ -233,11 +233,12 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
             }
 
             var8 = var12;
-            var11 = var13;
+            var11 = (java.lang.String)var7;
+            var7 = var13;
          }
 
          var10.c(var9);
-         return new AppManifestMetadata(var2, var11, var6 as java.lang.String, (java.lang.String)var8, var5, null);
+         return new AppManifestMetadata(var2, var11, var7 as java.lang.String, (java.lang.String)var8, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifestMetadata) {

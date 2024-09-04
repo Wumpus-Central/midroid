@@ -21,13 +21,13 @@ public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : ItemDecoration 
       r.h(var2, "view");
       r.h(var3, "parent");
       r.h(var4, "state");
-      val var6: Int = var3.getChildAdapterPosition(var2);
-      val var7: Int = this.spanCount;
-      val var5: Int = var6 % this.spanCount;
+      val var7: Int = var3.getChildAdapterPosition(var2);
+      val var6: Int = this.spanCount;
+      val var5: Int = var7 % this.spanCount;
       val var8: Int = this.gapPx;
       var1.left = var5 * this.gapPx / this.spanCount;
-      var1.right = var8 - (var5 + 1) * var8 / var7;
-      if (var6 >= var7) {
+      var1.right = var8 - (var5 + 1) * var8 / var6;
+      if (var7 >= var6) {
          var1.top = var8;
       }
    }

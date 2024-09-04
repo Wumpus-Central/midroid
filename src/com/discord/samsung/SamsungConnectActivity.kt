@@ -217,13 +217,13 @@ public class SamsungConnectActivity : b {
    }
 
    private fun finishWithResult(authCode: String?, authServerUrl: String?) {
-      val var5: Log = Log.INSTANCE;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Finishing With Result. AuthCode: ");
-      var6.append(var1);
-      var6.append(", AuthServerUrl: ");
-      var6.append(var2);
-      Log.i$default(var5, "Samsung", var6.toString(), null, 4, null);
+      val var6: Log = Log.INSTANCE;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Finishing With Result. AuthCode: ");
+      var5.append(var1);
+      var5.append(", AuthServerUrl: ");
+      var5.append(var2);
+      Log.i$default(var6, "Samsung", var5.toString(), null, 4, null);
       var var3: Boolean;
       if (var1 != null && !f.x(var1)) {
          var3 = false;
@@ -268,14 +268,14 @@ public class SamsungConnectActivity : b {
    }
 
    private fun startAndBindSamsungAuthService() {
-      val var1: Log = Log.INSTANCE;
+      val var2: Log = Log.INSTANCE;
       Log.i$default(Log.INSTANCE, "Samsung", "Samsung starting SA Service", null, 4, null);
-      val var2: Intent = serviceIntent;
+      val var1: Intent = serviceIntent;
       if (this.startService(serviceIntent) == null) {
-         Log.e$default(var1, "Samsung", "Samsung Account service could not be started", null, 4, null);
+         Log.e$default(var2, "Samsung", "Samsung Account service could not be started", null, 4, null);
       } else {
-         if (!this.bindService(var2, this.serviceConnection, 1)) {
-            Log.e$default(var1, "Samsung", "Samsung Account service could not be bound", null, 4, null);
+         if (!this.bindService(var1, this.serviceConnection, 1)) {
+            Log.e$default(var2, "Samsung", "Samsung Account service could not be bound", null, 4, null);
          }
       }
    }
@@ -420,14 +420,14 @@ public class SamsungConnectActivity : b {
 
          public override fun toString(): String {
             val var2: java.lang.String = this.authCode;
-            val var1: java.lang.String = this.serverUrl;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Success(authCode=");
-            var3.append(var2);
-            var3.append(", serverUrl=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var3: java.lang.String = this.serverUrl;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Success(authCode=");
+            var1.append(var2);
+            var1.append(", serverUrl=");
+            var1.append(var3);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

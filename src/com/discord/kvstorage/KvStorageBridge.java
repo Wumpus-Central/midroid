@@ -10,9 +10,9 @@ public class KvStorageBridge {
    private native void activateNative(long var1, CallInvokerHolderImpl var3, String var4);
 
    public void activate(ReactContext var1) {
-      JavaScriptContextHolder var2 = var1.getJavaScriptContextHolder();
-      CallInvokerHolderImpl var3 = (CallInvokerHolderImpl)var1.getCatalystInstance().getJSCallInvokerHolder();
+      JavaScriptContextHolder var3 = var1.getJavaScriptContextHolder();
+      CallInvokerHolderImpl var2 = (CallInvokerHolderImpl)var1.getCatalystInstance().getJSCallInvokerHolder();
       String var4 = var1.getFilesDir().getAbsolutePath();
-      this.activateNative(var2.get(), var3, var4);
+      this.activateNative(var3.get(), var2, var4);
    }
 }

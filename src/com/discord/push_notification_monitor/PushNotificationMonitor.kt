@@ -5,17 +5,18 @@ import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import kotlin.jvm.internal.r
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.Json.a
 
 public object PushNotificationMonitor {
    private const val MAX_PUSH_LOG_SIZE: Int = 100
 
    private fun writePushLog(context: Context, userId: String, pushLog: PushNotificationLog) {
-      val var4: Editor = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1).edit();
-      r.g(var4, "editor");
-      val var5: Json.a = Json.d;
+      val var5: Editor = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1).edit();
+      r.g(var5, "editor");
+      val var4: a = Json.d;
       Json.d.a();
-      var4.putString(var2, var5.c(PushNotificationLog.Companion.serializer(), var3));
-      var4.apply();
+      var5.putString(var2, var4.c(PushNotificationLog.Companion.serializer(), var3));
+      var5.apply();
    }
 
    public fun clearPushLog(context: Context) {
@@ -38,7 +39,7 @@ public object PushNotificationMonitor {
       val var4: SharedPreferences = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1);
       val var6: PushNotificationLog;
       if (var4.getString(var2, null) != null) {
-         val var3: Json.a = Json.d;
+         val var3: a = Json.d;
          var var5: java.lang.String = "";
          var2 = var4.getString(var2, "");
          if (var2 != null) {
@@ -46,7 +47,7 @@ public object PushNotificationMonitor {
          }
 
          var3.a();
-         var6 = var3.b(PushNotificationLog.Companion.serializer(), var5);
+         var6 = var3.b(PushNotificationLog.Companion.serializer(), var5) as PushNotificationLog;
       } else {
          var6 = new PushNotificationLog(null, 1, null);
       }

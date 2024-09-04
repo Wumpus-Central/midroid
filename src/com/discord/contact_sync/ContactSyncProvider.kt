@@ -32,48 +32,48 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 57
+      // 0e: ifnull 59
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 3f
+      // 17: ifnull 41
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
-      // 1e: astore 4
-      // 20: new java/io/ByteArrayOutputStream
-      // 23: astore 1
-      // 24: aload 1
-      // 25: invokespecial java/io/ByteArrayOutputStream.<init> ()V
-      // 28: aload 4
+      // 1e: astore 1
+      // 1f: new java/io/ByteArrayOutputStream
+      // 22: astore 4
+      // 24: aload 4
+      // 26: invokespecial java/io/ByteArrayOutputStream.<init> ()V
+      // 29: aload 1
       // 2a: getstatic android/graphics/Bitmap$CompressFormat.JPEG Landroid/graphics/Bitmap$CompressFormat;
       // 2d: iload 3
-      // 2e: aload 1
-      // 2f: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-      // 32: pop
-      // 33: aload 1
-      // 34: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
-      // 37: bipush 0
-      // 38: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
-      // 3b: astore 1
-      // 3c: goto 41
-      // 3f: aconst_null
-      // 40: astore 1
-      // 41: aload 2
-      // 42: aconst_null
-      // 43: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 46: goto 57
-      // 49: astore 4
-      // 4b: aload 4
-      // 4d: athrow
-      // 4e: astore 1
-      // 4f: aload 2
-      // 50: aload 4
-      // 52: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 55: aload 1
-      // 56: athrow
+      // 2e: aload 4
+      // 30: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+      // 33: pop
+      // 34: aload 4
+      // 36: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
+      // 39: bipush 0
+      // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
+      // 3d: astore 1
+      // 3e: goto 43
+      // 41: aconst_null
+      // 42: astore 1
+      // 43: aload 2
+      // 44: aconst_null
+      // 45: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 48: goto 59
+      // 4b: astore 4
+      // 4d: aload 4
+      // 4f: athrow
+      // 50: astore 1
+      // 51: aload 2
+      // 52: aload 4
+      // 54: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 57: aload 1
-      // 58: areturn
+      // 58: athrow
+      // 59: aload 1
+      // 5a: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -299,14 +299,14 @@ public object ContactSyncProvider {
       // 80: aload 1
       // 81: astore 2
       // 82: goto 90
-      // 85: astore 2
-      // 86: aload 2
+      // 85: astore 1
+      // 86: aload 1
       // 87: athrow
-      // 88: astore 1
+      // 88: astore 2
       // 89: aload 3
-      // 8a: aload 2
+      // 8a: aload 1
       // 8b: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8e: aload 1
+      // 8e: aload 2
       // 8f: athrow
       // 90: aload 2
       // 91: areturn

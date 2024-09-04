@@ -1,46 +1,58 @@
 package com.discord.chat.presentation.message.view.voicemessages
 
+import com.discord.chat.bridge.attachment.Attachment
+import com.discord.chat.presentation.message.messagepart.AudioAttachmentMessageAccessory
 import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource
 import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress
 import com.discord.media_player.MediaPlayer
 import com.discord.media_player.MediaPlayer.Event
-import com.discord.primitives.MessageId
 import kotlin.jvm.internal.r
 
-public data class AudioPlayerViewState(messageId: MessageId? = ..., sourceUrl: String? = ..., attached: Boolean = ...) : AudioPlayerViewState(var1, var2, var3) {
+public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessory? = null, attached: Boolean = false) {
+   public final val accessory: AudioAttachmentMessageAccessory?
    public final val attached: Boolean
    public final val audioSource: AudioSource?
-   public final val messageId: MessageId?
-   public final val sourceUrl: String?
 
-   fun AudioPlayerViewState(var1: java.lang.String, var2: java.lang.String, var3: Boolean) {
-      this.messageId = var1;
-      this.sourceUrl = var2;
-      this.attached = var3;
-      val var4: AudioPlayerManager.AudioSource;
-      if (var1 != null && var2 != null) {
-         var4 = new AudioPlayerManager.AudioSource(var1, var2, null, 4, null);
-      } else {
-         var4 = null;
+   public final val sourceUrl: String?
+      public final get() {
+         if (this.accessory != null) {
+            val var2: Attachment = this.accessory.getAttachment();
+            if (var2 != null) {
+               return var2.getUrl();
+            }
+         }
+
+         return null;
       }
 
-      this.audioSource = var4;
+
+   fun AudioPlayerViewState() {
+      this(null, false, 3, null);
    }
 
-   public operator fun component1(): MessageId? {
-      return this.messageId;
+   init {
+      this.accessory = var1;
+      this.attached = var2;
+      val var3: AudioPlayerManager.AudioSource;
+      if (var1 != null) {
+         var3 = AudioPlayerUtilsKt.toAudioSource(var1);
+      } else {
+         var3 = null;
+      }
+
+      this.audioSource = var3;
    }
 
-   public operator fun component2(): String? {
-      return this.sourceUrl;
+   public operator fun component1(): AudioAttachmentMessageAccessory? {
+      return this.accessory;
    }
 
-   public operator fun component3(): Boolean {
+   public operator fun component2(): Boolean {
       return this.attached;
    }
 
-   public fun copy(messageId: MessageId? = ..., sourceUrl: String? = ..., attached: Boolean = ...): AudioPlayerViewState {
-      return new AudioPlayerViewState(var1, var2, var3, null);
+   public fun copy(accessory: AudioAttachmentMessageAccessory? = var0.accessory, attached: Boolean = var0.attached): AudioPlayerViewState {
+      return new AudioPlayerViewState(var1, var2);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -49,29 +61,11 @@ public data class AudioPlayerViewState(messageId: MessageId? = ..., sourceUrl: S
       } else if (var1 !is AudioPlayerViewState) {
          return false;
       } else {
-         var var2: Boolean;
-         var var3: AudioPlayerViewState;
-         label32: {
-            var3 = var1 as AudioPlayerViewState;
-            if (this.messageId == null) {
-               if (var3.messageId == null) {
-                  var2 = true;
-                  break label32;
-               }
-            } else if (var3.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
-               break label32;
-            }
-
-            var2 = false;
-         }
-
-         if (!var2) {
-            return false;
-         } else if (!r.c(this.sourceUrl, var3.sourceUrl)) {
+         var1 = var1;
+         if (!r.c(this.accessory, var1.accessory)) {
             return false;
          } else {
-            return this.attached == var3.attached;
+            return this.attached == var1.attached;
          }
       }
    }
@@ -89,38 +83,33 @@ public data class AudioPlayerViewState(messageId: MessageId? = ..., sourceUrl: S
    }
 
    public override fun hashCode(): Int {
-      var var2: Int = 0;
       val var1: Int;
-      if (this.messageId == null) {
+      if (this.accessory == null) {
          var1 = 0;
       } else {
-         var1 = MessageId.hashCode-impl(this.messageId);
+         var1 = this.accessory.hashCode();
       }
 
-      if (this.sourceUrl != null) {
-         var2 = this.sourceUrl.hashCode();
-      }
-
-      var var3: Byte = this.attached;
+      var var2: Byte = this.attached;
       if (this.attached != 0) {
-         var3 = 1;
+         var2 = 1;
       }
 
-      return (var1 * 31 + var2) * 31 + var3;
+      return var1 * 31 + var2;
    }
 
    internal fun isPlaying(wasPlayingBeforeBeingPaused: Boolean): Boolean {
-      val var5: MediaPlayer = this.getPlayer$chat_release();
-      val var2: Boolean;
-      if (var5 != null && (var5.shouldPlay() || var5.isPlaying()) && !var5.hasError()) {
-         var2 = true;
-      } else {
-         var2 = false;
-      }
-
       var var3: Boolean = true;
-      if (!var2) {
-         if (var1) {
+      if (!var1) {
+         val var5: MediaPlayer = this.getPlayer$chat_release();
+         val var2: Boolean;
+         if (var5 != null && (var5.shouldPlay() || var5.isPlaying()) && !var5.hasError()) {
+            var2 = true;
+         } else {
+            var2 = false;
+         }
+
+         if (var2) {
             var3 = true;
          } else {
             var3 = false;
@@ -172,23 +161,14 @@ public data class AudioPlayerViewState(messageId: MessageId? = ..., sourceUrl: S
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String;
-      if (this.messageId == null) {
-         var5 = "null";
-      } else {
-         var5 = MessageId.toString-impl(this.messageId);
-      }
-
-      val var4: java.lang.String = this.sourceUrl;
+      val var3: AudioAttachmentMessageAccessory = this.accessory;
       val var1: Boolean = this.attached;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AudioPlayerViewState(messageId=");
-      var3.append(var5);
-      var3.append(", sourceUrl=");
-      var3.append(var4);
-      var3.append(", attached=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AudioPlayerViewState(accessory=");
+      var2.append(var3);
+      var2.append(", attached=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

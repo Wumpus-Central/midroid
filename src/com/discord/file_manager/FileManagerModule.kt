@@ -33,14 +33,12 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       super(var1);
       this.ioScope = g.a(n0.b());
       this.storageDirs = s.j(
-         new Pair[]{
-            w.a("cache", this.getReactApplicationContext().getCacheDir().getAbsolutePath()),
-            w.a("documents", this.getReactApplicationContext().getFilesDir().getAbsolutePath())
-         }
+         w.a("cache", this.getReactApplicationContext().getCacheDir().getAbsolutePath()),
+         w.a("documents", this.getReactApplicationContext().getFilesDir().getAbsolutePath())
       );
    }
 
-   public open fun clearFolder(storageDir: String, path: String, promise: Promise) {
+   public override fun clearFolder(storageDir: String, path: String, promise: Promise) {
       r.h(var1, "storageDir");
       r.h(var2, "path");
       r.h(var3, "promise");
@@ -51,6 +49,8 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, var3, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -1073,15 +1073,13 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
       );
    }
 
-   public open fun fileExists(path: String, promise: Promise) {
+   public override fun fileExists(path: String, promise: Promise) {
       r.h(var1, "path");
       r.h(var2, "promise");
       f.d(
@@ -1091,6 +1089,8 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -2113,19 +2113,17 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
       );
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNFileManager";
    }
 
-   public open fun getSize(uri: String, promise: Promise) {
+   public override fun getSize(uri: String, promise: Promise) {
       r.h(var1, "uri");
       r.h(var2, "promise");
       f.d(
@@ -2135,11 +2133,11 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.put(HashMap.java:618)
-   //   at java.base/java.util.HashSet.add(HashSet.java:229)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -3165,13 +3163,13 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       );
    }
 
-   protected open fun getTypedExportedConstants(): MutableMap<String, Any> {
+   protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
       var var1: Any = this.storageDirs.get("documents");
       r.e(var1);
-      var1 = w.a("DocumentsDirPath", var1);
-      val var2: Any = this.storageDirs.get("cache");
-      r.e(var2);
-      return s.m(new Pair[]{(Pair)var1, w.a("CacheDirPath", var2)});
+      val var2: Pair = w.a("DocumentsDirPath", var1);
+      var1 = this.storageDirs.get("cache");
+      r.e(var1);
+      return s.m(var2, w.a("CacheDirPath", var1));
    }
 
    @SuppressLint(["DiscouragedApi"])
@@ -3184,7 +3182,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       return var3;
    }
 
-   public open fun readAsset(assetUri: String, encoding: String, promise: Promise) {
+   public override fun readAsset(assetUri: String, encoding: String, promise: Promise) {
       r.h(var1, "assetUri");
       r.h(var2, "encoding");
       r.h(var3, "promise");
@@ -3195,13 +3193,11 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, this, var2, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.struct.StructClass.getMethod(StructClass.java:161)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1638)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -4219,13 +4215,15 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
       );
    }
 
-   public open fun readFile(path: String, encoding: String, promise: Promise) {
+   public override fun readFile(path: String, encoding: String, promise: Promise) {
       r.h(var1, "path");
       r.h(var2, "encoding");
       r.h(var3, "promise");
@@ -4236,13 +4234,11 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var2, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.struct.StructClass.getMethod(StructClass.java:161)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1638)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -5260,13 +5256,15 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
       );
    }
 
-   public open fun removeFile(storageDir: String, path: String, promise: Promise) {
+   public override fun removeFile(storageDir: String, path: String, promise: Promise) {
       r.h(var1, "storageDir");
       r.h(var2, "path");
       r.h(var3, "promise");
@@ -5277,13 +5275,11 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, var3, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.struct.StructClass.getMethod(StructClass.java:161)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1638)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -6301,13 +6297,15 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
       );
    }
 
-   public open fun saveFileToGallery(uri: String, fileName: String, fileType: String, promise: Promise) {
+   public override fun saveFileToGallery(uri: String, fileName: String, fileType: String, promise: Promise) {
       r.h(var1, "uri");
       r.h(var2, "fileName");
       r.h(var3, "fileType");
@@ -6352,7 +6350,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       }
    }
 
-   public open fun writeFile(storageDir: String, path: String, data: String, encoding: String, promise: Promise) {
+   public override fun writeFile(storageDir: String, path: String, data: String, encoding: String, promise: Promise) {
       r.h(var1, "storageDir");
       r.h(var2, "path");
       r.h(var3, "data");
@@ -6365,13 +6363,11 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
          new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, var5, var2, var4, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.struct.StructClass.getMethod(StructClass.java:161)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1638)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -7389,6 +7385,8 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null

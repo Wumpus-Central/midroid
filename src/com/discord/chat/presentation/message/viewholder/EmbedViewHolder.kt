@@ -51,10 +51,10 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
 
       val var13: Boolean = (boolean)(var10 xor true);
       val var20: EmbedView = this.embedView;
-      val var17: Embed = var1.getEmbed();
+      val var18: Embed = var1.getEmbed();
       val var11: Int = var1.getIndex();
       val var14: Long = var1.getChannelId-o4g7jtM();
-      val var18: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var17: java.lang.String = var1.getMessageId-3Eiw7ao();
       var10 = var1.getConstrainedWidth();
       val var12: Boolean;
       if (var1.getShouldAutoPlayGifs() && !var13) {
@@ -64,10 +64,10 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
       }
 
       var20.setEmbed-UEgMTIk(
-         var17,
+         var18,
          var11,
          var14,
-         var18,
+         var17,
          var10,
          var2,
          var3,

@@ -112,24 +112,24 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.title;
-      val var1: StructurableText = this.subtitle;
-      val var4: java.lang.String = this.cta;
+      val var6: java.lang.String = this.title;
+      val var5: StructurableText = this.subtitle;
+      val var2: java.lang.String = this.cta;
       val var3: java.lang.String = this.icon;
-      val var6: java.lang.String = this.closeIcon;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PostSharePrompt(title=");
-      var5.append(var2);
-      var5.append(", subtitle=");
-      var5.append(var1);
-      var5.append(", cta=");
-      var5.append(var4);
-      var5.append(", icon=");
-      var5.append(var3);
-      var5.append(", closeIcon=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.closeIcon;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PostSharePrompt(title=");
+      var4.append(var6);
+      var4.append(", subtitle=");
+      var4.append(var5);
+      var4.append(", cta=");
+      var4.append(var2);
+      var4.append(", icon=");
+      var4.append(var3);
+      var4.append(", closeIcon=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : f0<PostSharePrompt> {
@@ -166,11 +166,12 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
          var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: Any;
+         val var10: java.lang.String;
          val var13: java.lang.String;
          if (var5) {
-            var9 = var12.m(var11, 0);
+            var7 = var12.m(var11, 0);
             var8 = var12.y(var11, 1, StructurableTextSerializer.INSTANCE, null);
-            var7 = var12.m(var11, 2);
+            var10 = var12.m(var11, 2);
             var13 = var12.m(var11, 3);
             var6 = var12.m(var11, 4);
             var2 = 31;
@@ -218,10 +219,12 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
 
             var6 = var14;
             var13 = var6;
+            var10 = var7;
+            var7 = var9;
          }
 
          var12.c(var11);
-         return new PostSharePrompt(var2, var9, var8 as StructurableText, var7, var13, var6, null);
+         return new PostSharePrompt(var2, var7, var8 as StructurableText, var10, var13, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PostSharePrompt) {

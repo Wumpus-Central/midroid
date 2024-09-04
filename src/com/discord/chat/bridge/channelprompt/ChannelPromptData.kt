@@ -1,7 +1,6 @@
 package com.discord.chat.bridge.channelprompt
 
 import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -301,71 +300,71 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
 
       public open fun deserialize(decoder: Decoder): ChannelPromptData {
          r.h(var1, "decoder");
-         val var14: SerialDescriptor = this.getDescriptor();
-         val var15: c = var1.b(var14);
-         val var6: Boolean = var15.p();
+         val var15: SerialDescriptor = this.getDescriptor();
+         val var16: c = var1.b(var15);
+         val var6: Boolean = var16.p();
          var var4: Byte = 6;
-         var var16: Any = null;
+         var var17: Any = null;
          var var2: Int;
          var var7: Any;
          var var8: Any;
-         var var9: Any;
          var var10: Any;
          var var11: Any;
-         var var19: Any;
+         var var12: Any;
+         val var13: Any;
          if (var6) {
-            var19 = a2.a;
-            var16 = var15.n(var14, 0, a2.a, null);
-            var8 = var15.n(var14, 1, (DeserializationStrategy)var19, null);
-            var10 = var15.n(var14, 2, (DeserializationStrategy)var19, null);
-            var9 = var15.n(var14, 3, (DeserializationStrategy)var19, null);
-            var11 = var15.n(var14, 4, (DeserializationStrategy)var19, null);
-            var7 = var15.n(var14, 5, (DeserializationStrategy)var19, null);
-            var19 = var15.n(var14, 6, (DeserializationStrategy)var19, null);
+            val var9: a2 = a2.a;
+            var17 = var16.n(var15, 0, a2.a, null);
+            var11 = var16.n(var15, 1, var9, null);
+            var8 = var16.n(var15, 2, var9, null);
+            var7 = var16.n(var15, 3, var9, null);
+            var13 = var16.n(var15, 4, var9, null);
+            var10 = var16.n(var15, 5, var9, null);
+            var12 = var16.n(var15, 6, var9, null);
             var2 = 127;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var19 = null;
+            var12 = null;
             var11 = null;
             var10 = null;
-            var9 = null;
+            var var20: Any = null;
             var8 = null;
             var7 = null;
 
             while (var3) {
-               val var5: Int = var15.o(var14);
+               val var5: Int = var16.o(var15);
                switch (var5) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var16 = var15.n(var14, 0, a2.a, var16);
+                     var17 = var16.n(var15, 0, a2.a, var17);
                      var2 |= 1;
                      break;
                   case 1:
-                     var11 = var15.n(var14, 1, a2.a, var11);
+                     var11 = var16.n(var15, 1, a2.a, var11);
                      var2 |= 2;
                      var4 = 6;
                      continue;
                   case 2:
-                     var10 = var15.n(var14, 2, a2.a, var10);
+                     var10 = var16.n(var15, 2, a2.a, var10);
                      var2 |= 4;
                      continue;
                   case 3:
-                     var9 = var15.n(var14, 3, a2.a, var9);
+                     var20 = var16.n(var15, 3, a2.a, var20);
                      var2 |= 8;
                      continue;
                   case 4:
-                     var8 = var15.n(var14, 4, a2.a, var8);
+                     var8 = var16.n(var15, 4, a2.a, var8);
                      var2 |= 16;
                      continue;
                   case 5:
-                     var7 = var15.n(var14, 5, a2.a, var7);
+                     var7 = var16.n(var15, 5, a2.a, var7);
                      var2 |= 32;
                      continue;
                   case 6:
-                     var19 = var15.n(var14, var4, a2.a, var19);
+                     var12 = var16.n(var15, var4, a2.a, var12);
                      var2 |= 64;
                      continue;
                   default:
@@ -375,20 +374,22 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                var4 = 6;
             }
 
-            var8 = var11;
-            var11 = var8;
+            var10 = var7;
+            var8 = var10;
+            var13 = var8;
+            var7 = var20;
          }
 
-         var15.c(var14);
+         var16.c(var15);
          return new ChannelPromptData(
             var2,
-            var16 as java.lang.String,
-            var8 as java.lang.String,
-            var10 as java.lang.String,
-            var9 as java.lang.String,
+            var17 as java.lang.String,
             var11 as java.lang.String,
+            var8 as java.lang.String,
             var7 as java.lang.String,
-            var19 as java.lang.String,
+            var13 as java.lang.String,
+            var10 as java.lang.String,
+            var12 as java.lang.String,
             null
          );
       }

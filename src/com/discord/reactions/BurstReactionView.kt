@@ -176,12 +176,12 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
          var2 = false;
       }
 
-      val var4: Int = var1.getBurstCount();
+      val var3: Int = var1.getBurstCount();
       if (!var2 || this.currentCount == null || this.currentCount != null && var1.getBurstCount() == this.currentCount) {
          var5 = false;
       }
 
-      this.configureCount(var4, var5);
+      this.configureCount(var3, var5);
       var5 = ThemeManager.INSTANCE.isThemeDark();
       var var11: BurstReactionView.BurstColorPalette = null;
       if (var5) {

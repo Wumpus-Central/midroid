@@ -43,10 +43,10 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun isEnabled(): Boolean {
-      val var2: JSITraceCache = JSITraceCache.INSTANCE;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var1, "reactApplicationContext");
-      return var2.isEnabled(var1);
+      val var1: JSITraceCache = JSITraceCache.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "reactApplicationContext");
+      return var1.isEnabled(var2);
    }
 
    @ReactMethod

@@ -325,15 +325,15 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
+         val var2: a2 = a2.a;
          return new KSerializer[]{
             com.discord.primitives.ApplicationId..serializer.INSTANCE,
             com.discord.primitives.ChannelId..serializer.INSTANCE,
             a2.a,
             a.u(a2.a),
-            a.u(new xk.f(var1)),
+            a.u(new xk.f(var2)),
             h.a,
-            var1,
+            var2,
             m0.a,
             h.a
          };
@@ -353,20 +353,21 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          var var12: Any;
          var var13: Any;
          var var14: Any;
-         var var19: Any;
+         val var15: Any;
          if (var9) {
-            var12 = var17.y(var16, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, null);
-            var11 = var17.y(var16, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var10 = var17.m(var16, 2);
-            var19 = a2.a;
+            var11 = var17.y(var16, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, null);
+            var10 = var17.y(var16, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
+            var15 = var17.m(var16, 2);
+            val var18: a2 = a2.a;
             var13 = var17.n(var16, 3, a2.a, null);
-            var14 = var17.n(var16, 4, new xk.f((KSerializer)var19), null);
+            var14 = var17.n(var16, 4, new xk.f(var18), null);
             var5 = var17.C(var16, 5);
-            var19 = var17.m(var16, 6);
+            val var19: java.lang.String = var17.m(var16, 6);
             val var2: Int = var17.i(var16, 7);
             var3 = var17.C(var16, 8);
             var4 = 511;
             var6 = var2;
+            var12 = var19;
          } else {
             var var7: Boolean = true;
             var6 = 0;
@@ -374,7 +375,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
             var var21: Int = 0;
             var14 = null;
             var13 = null;
-            var19 = null;
+            var var20: Any = null;
             var12 = null;
             var11 = null;
             var10 = null;
@@ -388,7 +389,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                         var7 = false;
                         continue;
                      case 0:
-                        var19 = var17.y(var16, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, var19);
+                        var20 = var17.y(var16, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, var20);
                         var21 |= 1;
                         break;
                      case 1:
@@ -435,24 +436,23 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                var3 = 7;
             }
 
-            var10 = var12;
-            var12 = var19;
-            var19 = var11;
+            var15 = var12;
+            var12 = var11;
             var3 = var23;
-            var11 = var10;
             var4 = var21;
+            var11 = var20;
          }
 
          var17.c(var16);
          return new ActivityInstanceEmbed(
             var4,
-            var12 as ApplicationId,
-            var11 as ChannelId,
-            (java.lang.String)var10,
+            var11 as ApplicationId,
+            var10 as ChannelId,
+            (java.lang.String)var15,
             var13 as java.lang.String,
             var14 as java.util.List,
             (boolean)var5,
-            (java.lang.String)var19,
+            (java.lang.String)var12,
             var6,
             (boolean)var3,
             null,

@@ -70,67 +70,67 @@ public final class GiftViewBinding implements ViewBinding {
 
    public static GiftViewBinding bind(View var0) {
       int var1 = R.id.acceptButton;
-      DCDButton var15 = (DCDButton)a.a(var0, var1);
-      if (var15 != null) {
+      DCDButton var10 = (DCDButton)a.a(var0, var1);
+      if (var10 != null) {
          var1 = R.id.acceptButtonGradient;
-         View var10 = a.a(var0, var1);
-         if (var10 != null) {
+         View var15 = a.a(var0, var1);
+         if (var15 != null) {
             var1 = R.id.barrier;
-            Barrier var16 = (Barrier)a.a(var0, var1);
-            if (var16 != null) {
+            Barrier var14 = (Barrier)a.a(var0, var1);
+            if (var14 != null) {
                var1 = R.id.body;
                TextView var3 = (TextView)a.a(var0, var1);
                if (var3 != null) {
                   var1 = R.id.content;
-                  ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
-                  if (var6 != null) {
+                  ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
+                  if (var12 != null) {
                      var1 = R.id.gradients;
-                     Group var2 = (Group)a.a(var0, var1);
-                     if (var2 != null) {
+                     Group var11 = (Group)a.a(var0, var1);
+                     if (var11 != null) {
                         var1 = R.id.header;
-                        TextView var9 = (TextView)a.a(var0, var1);
-                        if (var9 != null) {
+                        TextView var7 = (TextView)a.a(var0, var1);
+                        if (var7 != null) {
                            var1 = R.id.headerGradient;
-                           View var12 = a.a(var0, var1);
-                           if (var12 != null) {
+                           View var5 = a.a(var0, var1);
+                           if (var5 != null) {
                               var1 = R.id.splash;
-                              SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var11 != null) {
+                              SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var4 != null) {
                                  var1 = R.id.subtitle;
-                                 TextView var14 = (TextView)a.a(var0, var1);
-                                 if (var14 != null) {
+                                 TextView var9 = (TextView)a.a(var0, var1);
+                                 if (var9 != null) {
                                     var1 = R.id.subtitleGradient;
-                                    View var13 = a.a(var0, var1);
-                                    if (var13 != null) {
+                                    View var2 = a.a(var0, var1);
+                                    if (var2 != null) {
                                        var1 = R.id.thumbnail;
-                                       SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-                                       if (var4 != null) {
+                                       SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+                                       if (var6 != null) {
                                           var1 = R.id.thumbnailGradient;
-                                          View var8 = a.a(var0, var1);
-                                          if (var8 != null) {
+                                          View var16 = a.a(var0, var1);
+                                          if (var16 != null) {
                                              var1 = R.id.title;
-                                             TextView var5 = (TextView)a.a(var0, var1);
-                                             if (var5 != null) {
+                                             TextView var8 = (TextView)a.a(var0, var1);
+                                             if (var8 != null) {
                                                 var1 = R.id.titleGradient;
-                                                View var7 = a.a(var0, var1);
-                                                if (var7 != null) {
+                                                View var13 = a.a(var0, var1);
+                                                if (var13 != null) {
                                                    return new GiftViewBinding(
                                                       (FrameLayout)var0,
-                                                      var15,
                                                       var10,
-                                                      var16,
+                                                      var15,
+                                                      var14,
                                                       var3,
-                                                      var6,
-                                                      var2,
-                                                      var9,
                                                       var12,
                                                       var11,
-                                                      var14,
-                                                      var13,
-                                                      var4,
-                                                      var8,
+                                                      var7,
                                                       var5,
-                                                      var7
+                                                      var4,
+                                                      var9,
+                                                      var2,
+                                                      var6,
+                                                      var16,
+                                                      var8,
+                                                      var13
                                                    );
                                                 }
                                              }

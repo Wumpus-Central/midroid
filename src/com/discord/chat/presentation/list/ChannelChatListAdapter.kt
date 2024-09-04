@@ -97,15 +97,15 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          var2 = false;
       }
 
-      val var3: Boolean;
+      val var4: Boolean;
       if (var2 && h.o0(var7) !is LoadingChatListItem) {
-         var3 = true;
+         var4 = true;
       } else {
-         var3 = false;
+         var4 = false;
       }
 
       var var10: java.util.List = var7;
-      if (var3) {
+      if (var4) {
          val var11: PortalViewChatListItem = this.portalChatListItem;
          r.e(this.portalChatListItem);
          var10 = h.w0(var7, var11);
@@ -113,15 +113,15 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
       this.setChatListItems$chat_release(var10);
       super.setItems(this.getChatListItems$chat_release());
-      var var4: Boolean = false;
+      var var3: Boolean = false;
       if (var2) {
-         var4 = false;
-         if (!var3) {
-            var4 = true;
+         var3 = false;
+         if (!var4) {
+            var3 = true;
          }
       }
 
-      if (var4) {
+      if (var3) {
          ChatListAdapterUpdateLog.INSTANCE.addPortalRemovalFromChatListItemUpdate();
          this.disableAnimations.invoke();
          this.notifyDataSetChanged();
@@ -272,11 +272,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
                new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null)// $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.StackOverflowError
-      //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+      //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
+      //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
+      //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1373,11 +1373,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 

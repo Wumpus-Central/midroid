@@ -27,18 +27,20 @@ import kotlin.jvm.internal.r
 public object CodeStyle {
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
       private final get() {
-         val var3: java.util.Map = parsers;
-         val var4: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
-         r.g(var4, "Theme::class.java.simpleName");
-         var var2: Any = var3.get(var4);
+         val var4: java.util.Map = parsers;
+         val var3: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
+         r.g(var3, "Theme::class.java.simpleName");
+         var var2: Any = var4.get(var3);
          var var1: Any = var2;
          if (var2 == null) {
-            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new g(), new h(), null, null, null, null, null, null, 252, null);
-            var2 = CodeRules.INSTANCE;
-            var2 = CodeRules.createCodeRule$default(CodeRules.INSTANCE, var5.getDefaultStyleProvider(), var2.createCodeLanguageMap(var5), null, 4, null);
+            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new g(), new h(), null, null, null, null, null, null, 252, null);
+            val var5: CodeRules = CodeRules.INSTANCE;
+            var2 = CodeRules.createCodeRule$default(
+               CodeRules.INSTANCE, var2.getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
+            );
             var1 = new Parser(false, 1, null);
             var1.addRule((Rule)var2);
-            var3.put(var4, var1);
+            var4.put(var3, var1);
          }
 
          return var1 as Parser<RenderContext, Node<RenderContext>, Object>;
@@ -75,16 +77,16 @@ public object CodeStyle {
       label16:
       try {
          val var11: eh.r.a = eh.r.k;
-         var9 = eh.r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         var8 = eh.r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var8: eh.r.a = eh.r.k;
-         var9 = eh.r.b(s.a(var4));
+         val var10: eh.r.a = eh.r.k;
+         var8 = eh.r.b(s.a(var4));
          break label16;
       }
 
       val var12: java.util.List = kotlin.collections.h.d(new TextNode(var2));
-      var2 = (java.lang.String)var9;
-      if (eh.r.g(var9)) {
+      var2 = (java.lang.String)var8;
+      if (eh.r.g(var8)) {
          var2 = var12;
       }
 
@@ -152,10 +154,10 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       val var6: Int = SizeUtilsKt.getDpToPx(4);
-      val var11: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var8: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
       val var9: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
       val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var8: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var11: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       var4 = 0;
       val var5: Int = var1.length();
@@ -164,7 +166,7 @@ public object CodeStyle {
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var6));
 
       for (; var4 < 5; var4++) {
-         val var12: Any = new Object[]{var10, var11, var9, var7, var8}[var4];
+         val var12: Any = new Object[]{var10, var8, var9, var7, var11}[var4];
          if (var12 != null) {
             var1.setSpan(var12, var5, var1.length(), 33);
          }

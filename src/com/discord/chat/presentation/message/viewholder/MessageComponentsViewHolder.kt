@@ -52,16 +52,16 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       kotlin.jvm.internal.r.h(var3, "onMediaItemClicked");
       kotlin.jvm.internal.r.h(var5, "onTapSpoiler");
       kotlin.jvm.internal.r.h(var6, "eventHandler");
-      val var11: Message = var1.getMessage();
-      val var9: java.lang.String = var1.getMessageId-3Eiw7ao();
-      this.messageId = var9;
-      val var10: java.lang.String = MessageId.toString-impl(var9);
+      val var9: Message = var1.getMessage();
+      val var10: java.lang.String = var1.getMessageId-3Eiw7ao();
+      this.messageId = var10;
+      val var11: java.lang.String = MessageId.toString-impl(var10);
       val var27: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
-         MessageId.toString-impl(var11.getId-3Eiw7ao()),
-         MessageKt.shouldAnimateEmoji(var11),
-         MessageKt.shouldShowLinkDecorations(var11),
-         var11.getShouldShowRoleDot(),
-         var11.getShouldShowRoleOnName()
+         MessageId.toString-impl(var9.getId-3Eiw7ao()),
+         MessageKt.shouldAnimateEmoji(var9),
+         MessageKt.shouldShowLinkDecorations(var9),
+         var9.getShouldShowRoleDot(),
+         var9.getShouldShowRoleOnName()
       );
       val var28: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
          new Function1<LinkContentNode, Unit>(var6, this) {
@@ -203,7 +203,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             }
          }
       );
-      val var22: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1<java.lang.String, Unit>(var6) {
+      val var24: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1<java.lang.String, Unit>(var6) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
          }
@@ -213,7 +213,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       });
-      val var24: UserEventHandlers = new UserEventHandlers(new Function1<UserId, Unit>(var6, this) {
+      val var22: UserEventHandlers = new UserEventHandlers(new Function1<UserId, Unit>(var6, this) {
          final ChatEventHandler $eventHandler;
          final MessageComponentsViewHolder this$0;
 
@@ -259,7 +259,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          }
       );
       val var7: Int = var1.getConstrainedWidth();
-      val var26: java.lang.Boolean = var11.getGifAutoPlay();
+      val var26: java.lang.Boolean = var9.getGifAutoPlay();
       val var8: Boolean;
       if (var26 != null) {
          var8 = var26;
@@ -268,7 +268,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var10, var27, var28, var22, var24, var25, var7, var8), this);
+         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var11, var27, var28, var24, var22, var25, var7, var8), this);
    }
 
    public override fun onTapButtonActionComponent(componentId: String) {

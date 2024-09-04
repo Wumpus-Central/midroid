@@ -21,6 +21,11 @@ import com.discord.native.engine.ConnectionInfo
 import com.discord.native.engine.NativeConnection
 import com.discord.native.engine.NativeEngine
 import com.discord.native.engine.VideoInputDeviceDescription
+import com.discord.native.engine.NativeEngine.DeviceChangeCallback
+import com.discord.native.engine.NativeEngine.GetAudioSubsystemCallback
+import com.discord.native.engine.NativeEngine.OnNoInputCallback
+import com.discord.native.engine.NativeEngine.OnVoiceCallback
+import com.discord.native.engine.NativeEngine.VideoFrameCallback
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
 import kk.c0
@@ -192,13 +197,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       r.h(var0, "$callback");
       r.h(var1, "connectionInfo");
       r.h(var2, "errorMessage");
-      val var3: Log = Log.INSTANCE;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("On created with ");
-      var4.append(var1);
-      var4.append(", ");
-      var4.append(var2);
-      Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
+      val var4: Log = Log.INSTANCE;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("On created with ");
+      var3.append(var1);
+      var3.append(", ");
+      var3.append(var2);
+      Log.i$default(var4, "MediaEngine", var3.toString(), null, 4, null);
       var0.invoke(var2, NativeTypeExtensionsKt.toMap(var1));
    }
 
@@ -218,19 +223,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var5: NativeConnection = this.engineConnections.get(var1);
-      if (var5 == null) {
-         val var3: Log = Log.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("[");
-         var4.append(var2);
-         var4.append("] no NativeConnection for connectionId=");
-         var4.append(var1);
-         var4.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
+      val var3: NativeConnection = this.engineConnections.get(var1);
+      if (var3 == null) {
+         val var4: Log = Log.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("[");
+         var5.append(var2);
+         var5.append("] no NativeConnection for connectionId=");
+         var5.append(var1);
+         var5.append(", returning null");
+         Log.w$default(var4, "MediaEngine", var5.toString(), null, 4, null);
       }
 
-      return var5;
+      return var3;
    }
 
    @JvmStatic
@@ -823,14 +828,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
-         access$getEngine(this).getAudioSubsystem(new NativeEngine.GetAudioSubsystemCallback(var1) {
+         access$getEngine(this).getAudioSubsystem(new GetAudioSubsystemCallback(var1) {
             final Function2<java.lang.String, java.lang.String, Unit> $cb;
 
             {
                this.$cb = var1;
             }
 
-            @Override
             public final void onAudioSubsystem(java.lang.String var1, java.lang.String var2) {
                r.h(var1, "subsystem");
                r.h(var2, "audioLayer");
@@ -849,14 +853,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             }
 
             public final void invoke() {
-               MediaEngine.access$getEngine(this.this$0).getAudioSubsystem(new NativeEngine.GetAudioSubsystemCallback(this.$cb$inlined) {
+               MediaEngine.access$getEngine(this.this$0).getAudioSubsystem(new GetAudioSubsystemCallback(this.$cb$inlined) {
                   final Function2<java.lang.String, java.lang.String, Unit> $cb;
 
                   {
                      this.$cb = var1;
                   }
 
-                  @Override
                   public final void onAudioSubsystem(java.lang.String var1, java.lang.String var2) {
                      r.h(var1, "subsystem");
                      r.h(var2, "audioLayer");
@@ -895,20 +898,20 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             val var11: MediaCodecInfo = var15[var3];
             val var12: java.lang.String = var15[var3].getName();
             r.g(var12, "codecInfo.name");
-            val var7: Array<java.lang.String> = var11.getSupportedTypes();
-            r.g(var7, "codecInfo.supportedTypes");
-            val var13: ArrayList = new ArrayList();
-            val var5: Int = var7.length;
+            val var13: Array<java.lang.String> = var11.getSupportedTypes();
+            r.g(var13, "codecInfo.supportedTypes");
+            val var7: ArrayList = new ArrayList();
+            val var5: Int = var13.length;
 
             for (int var4 = 0; var4 < var5; var4++) {
-               val var14: java.lang.String = var7[var4];
-               r.g(var7[var4], "type");
+               val var14: java.lang.String = var13[var4];
+               r.g(var13[var4], "type");
                if (kotlin.text.f.I(var14, "video", false, 2, null)) {
-                  var13.add(var14);
+                  var7.add(var14);
                }
             }
 
-            for (java.lang.String var20 : var13) {
+            for (java.lang.String var20 : var7) {
                val var17: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
                   if (com.discord.a.a(var11)) {
@@ -1058,10 +1061,11 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   new Function1<Bitmap, Unit>(this, var4)// $VF: Couldn't be decompiled
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          // java.lang.StackOverflowError
-         //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-         //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+         //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -2081,7 +2085,6 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
          
                )
             );
@@ -2095,14 +2098,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       if (var2.getInitialized()) {
          access$getEngine(this)
             .setOnDeviceChangeCallback(
-               new NativeEngine.DeviceChangeCallback(var1) {
+               new DeviceChangeCallback(var1) {
                   final Function3<java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, Unit> $callback;
 
                   {
                      this.$callback = var1;
                   }
 
-                  @Override
                   public final void onChange(AudioInputDeviceDescription[] var1, AudioOutputDeviceDescription[] var2, VideoInputDeviceDescription[] var3) {
                      r.h(var1, "inputDevices");
                      r.h(var2, "outputDevices");
@@ -2128,14 +2130,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   public final void invoke() {
                      MediaEngine.access$getEngine(this.this$0)
                         .setOnDeviceChangeCallback(
-                           new NativeEngine.DeviceChangeCallback(this.$callback$inlined) {
+                           new DeviceChangeCallback(this.$callback$inlined) {
                               final Function3<java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, java.util.List<? extends java.util.Map<java.lang.String, ? extends Object>>, Unit> $callback;
 
                               {
                                  this.$callback = var1;
                               }
 
-                              @Override
                               public final void onChange(
                                  AudioInputDeviceDescription[] var1, AudioOutputDeviceDescription[] var2, VideoInputDeviceDescription[] var3
                               ) {
@@ -2301,14 +2302,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
-         access$getEngine(this).setOnNoInputCallback(new NativeEngine.OnNoInputCallback(var1) {
+         access$getEngine(this).setOnNoInputCallback(new OnNoInputCallback(var1) {
             final Function1<java.lang.Boolean, Unit> $cb;
 
             {
                this.$cb = var1;
             }
 
-            @Override
             public final void onNoInput(boolean var1) {
                this.$cb.invoke(var1);
             }
@@ -2325,14 +2325,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             }
 
             public final void invoke() {
-               MediaEngine.access$getEngine(this.this$0).setOnNoInputCallback(new NativeEngine.OnNoInputCallback(this.$cb$inlined) {
+               MediaEngine.access$getEngine(this.this$0).setOnNoInputCallback(new OnNoInputCallback(this.$cb$inlined) {
                   final Function1<java.lang.Boolean, Unit> $cb;
 
                   {
                      this.$cb = var1;
                   }
 
-                  @Override
                   public final void onNoInput(boolean var1) {
                      this.$cb.invoke(var1);
                   }
@@ -2347,14 +2346,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
-         access$getEngine(this).setOnVoiceCallback(new NativeEngine.OnVoiceCallback(var1) {
+         access$getEngine(this).setOnVoiceCallback(new OnVoiceCallback(var1) {
             final Function2<java.lang.Float, Integer, Unit> $cb;
 
             {
                this.$cb = var1;
             }
 
-            @Override
             public final void onVoice(float var1, int var2) {
                this.$cb.invoke(var1, var2);
             }
@@ -2371,14 +2369,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             }
 
             public final void invoke() {
-               MediaEngine.access$getEngine(this.this$0).setOnVoiceCallback(new NativeEngine.OnVoiceCallback(this.$cb$inlined) {
+               MediaEngine.access$getEngine(this.this$0).setOnVoiceCallback(new OnVoiceCallback(this.$cb$inlined) {
                   final Function2<java.lang.Float, Integer, Unit> $cb;
 
                   {
                      this.$cb = var1;
                   }
 
-                  @Override
                   public final void onVoice(float var1, int var2) {
                      this.$cb.invoke(var1, var2);
                   }
@@ -2540,14 +2537,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          if (var2 == null) {
             access$getEngine(this).setVideoOutputSink(var1, null);
          } else {
-            access$getEngine(this).setVideoOutputSink(var1, new NativeEngine.VideoFrameCallback(var2) {
+            access$getEngine(this).setVideoOutputSink(var1, new VideoFrameCallback(var2) {
                final Function1<VideoFrame, java.lang.Boolean> $callback;
 
                {
                   this.$callback = var1;
                }
 
-               @Override
                public final boolean onFrame(VideoFrame var1) {
                   r.h(var1, "videoFrame");
                   return this.$callback.invoke(var1) as java.lang.Boolean;
@@ -2555,42 +2551,37 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             });
          }
       } else {
-         var3.getDelayedTasks()
-            .add(
-               new Function0<Unit>(var2, this, var1) {
-                  final Function1 $callback$inlined;
-                  final java.lang.String $streamIdentifier$inlined;
-                  final MediaEngine this$0;
+         var3.getDelayedTasks().add(new Function0<Unit>(var2, this, var1) {
+            final Function1 $callback$inlined;
+            final java.lang.String $streamIdentifier$inlined;
+            final MediaEngine this$0;
 
-                  {
-                     super(0);
-                     this.$callback$inlined = var1;
-                     this.this$0 = var2;
-                     this.$streamIdentifier$inlined = var3;
-                  }
+            {
+               super(0);
+               this.$callback$inlined = var1;
+               this.this$0 = var2;
+               this.$streamIdentifier$inlined = var3;
+            }
 
-                  public final void invoke() {
-                     if (this.$callback$inlined == null) {
-                        MediaEngine.access$getEngine(this.this$0).setVideoOutputSink(this.$streamIdentifier$inlined, null);
-                     } else {
-                        MediaEngine.access$getEngine(this.this$0)
-                           .setVideoOutputSink(this.$streamIdentifier$inlined, new NativeEngine.VideoFrameCallback(this.$callback$inlined) {
-                              final Function1<VideoFrame, java.lang.Boolean> $callback;
+            public final void invoke() {
+               if (this.$callback$inlined == null) {
+                  MediaEngine.access$getEngine(this.this$0).setVideoOutputSink(this.$streamIdentifier$inlined, null);
+               } else {
+                  MediaEngine.access$getEngine(this.this$0).setVideoOutputSink(this.$streamIdentifier$inlined, new VideoFrameCallback(this.$callback$inlined) {
+                     final Function1<VideoFrame, java.lang.Boolean> $callback;
 
-                              {
-                                 this.$callback = var1;
-                              }
-
-                              @Override
-                              public final boolean onFrame(VideoFrame var1) {
-                                 r.h(var1, "videoFrame");
-                                 return this.$callback.invoke(var1) as java.lang.Boolean;
-                              }
-                           });
+                     {
+                        this.$callback = var1;
                      }
-                  }
+
+                     public final boolean onFrame(VideoFrame var1) {
+                        r.h(var1, "videoFrame");
+                        return this.$callback.invoke(var1) as java.lang.Boolean;
+                     }
+                  });
                }
-            );
+            }
+         });
       }
    }
 

@@ -51,11 +51,11 @@ public class SilentNotificationManager(reactContext: Context) {
    }
 
    private fun ChannelId.toMessageCountKey(): String {
-      val var3: java.lang.String = ChannelId.toString-impl(var1);
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var3);
-      var4.append("_num");
-      return var4.toString();
+      val var4: java.lang.String = ChannelId.toString-impl(var1);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var4);
+      var3.append("_num");
+      return var3.toString();
    }
 
    private fun updateLastMessageReceivedForChannel(channelId: ChannelId) {

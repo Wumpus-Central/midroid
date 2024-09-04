@@ -15,6 +15,7 @@ import com.discord.chat.presentation.message.view.UploadItemProps
 import com.discord.chat.presentation.message.viewholder.MediaVideoViewHolder
 import com.discord.media_player.MediaPlayer
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
+import com.discord.primitives.ChannelId
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
@@ -37,8 +38,8 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       r.h(var2, "item");
       r.h(var4, "onClicked");
       r.h(var6, "onTapSpoiler");
-      val var13: Attachment = var2.getAttachment();
-      val var15: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
+      val var27: Attachment = var2.getAttachment();
+      val var25: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -49,53 +50,57 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var17: java.lang.String = var13.getVideoUrl();
-      r.e(var17);
-      val var14: java.lang.String = var13.getUrl();
-      val var8: Int = var13.getWidth();
-      val var9: Int = var13.getHeight();
-      val var16: java.lang.String = var13.getPlaceholder();
-      val var18: Int = var13.getPlaceholderVersion();
-      val var7: Int = var2.getRadiusPx();
-      val var12: Boolean = var13.isSpoiler();
-      val var19: SpoilerAttributes = var2.getSpoilerAttributes();
-      val var20: SpoilerConfig;
-      if (var19 != null) {
-         var20 = var19.configure(var6);
+      val var19: Long = var2.getChannelId-o4g7jtM();
+      val var26: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var10: Int = var2.getAttachmentIndex();
+      val var21: java.lang.String = var27.getVideoUrl();
+      r.e(var21);
+      val var23: java.lang.String = var27.getUrl();
+      val var12: Int = var27.getWidth();
+      val var9: Int = var27.getHeight();
+      val var22: java.lang.String = var27.getPlaceholder();
+      val var24: Int = var27.getPlaceholderVersion();
+      val var11: Int = var2.getRadiusPx();
+      val var15: Boolean = var27.isSpoiler();
+      val var28: SpoilerAttributes = var2.getSpoilerAttributes();
+      val var38: SpoilerConfig;
+      if (var28 != null) {
+         var38 = var28.configure(var6);
       } else {
-         var20 = null;
+         var38 = null;
       }
 
-      val var21: java.lang.Boolean = var13.getObscure();
-      val var10: Boolean;
-      if (var21 != null) {
-         var10 = var21;
+      val var39: java.lang.Boolean = var27.getObscure();
+      var var14: Boolean = false;
+      val var13: Boolean;
+      if (var39 != null) {
+         var13 = var39;
       } else {
-         var10 = false;
+         var13 = false;
       }
 
-      val var22: java.lang.Boolean = var13.getObscureAwaitingScan();
-      val var11: Boolean;
-      if (var22 != null) {
-         var11 = var22;
-      } else {
-         var11 = false;
+      val var40: java.lang.Boolean = var27.getObscureAwaitingScan();
+      if (var40 != null) {
+         var14 = var40;
       }
 
-      super.bind(
-         var17,
-         var14,
-         var9,
-         var8,
-         var16,
-         var18,
-         var12,
-         var20,
+      super.bind-kIVcwaw(
+         ChannelId.box-impl(var19),
+         var26,
          var10,
-         var11,
-         var13.getShowDescription(),
-         var13.getDescription(),
-         var13.getHint(),
+         var21,
+         var23,
+         var9,
+         var12,
+         var22,
+         var24,
+         var15,
+         var38,
+         var13,
+         var14,
+         var27.getShowDescription(),
+         var27.getDescription(),
+         var27.getHint(),
          var2.getUseNewAltTextButton(),
          new Function1<java.lang.String, Unit>(var1) {
             {
@@ -107,16 +112,16 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
                (super.receiver as ChatEventHandler).onTapShowAltText(var1);
             }
          },
-         var7,
+         var11,
          var3 xor true,
-         var15,
+         var25,
          var3,
          var2.getHideMediaPlayButton(),
-         var13.getAttachmentTagText(),
-         var13.getAttachmentTagIcon(),
-         var13.getAttachmentTagBackgroundColor(),
-         var13.getAttachmentTagTextColor(),
-         var13.getRole(),
+         var27.getAttachmentTagText(),
+         var27.getAttachmentTagIcon(),
+         var27.getAttachmentTagBackgroundColor(),
+         var27.getAttachmentTagTextColor(),
+         var27.getRole(),
          var2.getPortal(),
          var4,
          var5,
@@ -137,7 +142,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
                (super.receiver as ChatEventHandler).onMediaPlayFinishedAnalytics(var1);
             }
          },
-         var13.getPlayerSettings()
+         var27.getPlayerSettings()
       );
    }
 
@@ -164,14 +169,14 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       var20.append(var2);
       var20.append(").item[image]");
       val var24: SpoilerAttributes = var19.forGenericMedia(var3, var1, var20.toString(), var3.getMedia().getProxyUrl());
-      val var31: java.lang.String = var21.getProxyUrl();
-      var2 = var3.getVideoPreviewUrl();
-      r.e(var2);
+      var2 = var21.getProxyUrl();
+      val var31: java.lang.String = var3.getVideoPreviewUrl();
+      r.e(var31);
       val var12: Int = var21.getWidth();
-      val var11: Int = var21.getHeight();
+      val var13: Int = var21.getHeight();
       val var30: java.lang.String = var21.getPlaceholder();
       val var32: Int = var21.getPlaceholderVersion();
-      val var13: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
+      val var11: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
       val var15: Boolean = var3.isSpoiler();
       val var25: SpoilerConfig;
       if (var24 != null) {
@@ -180,32 +185,35 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          var25 = null;
       }
 
-      val var14: Boolean = var3.isObscure();
-      val var18: Boolean = var3.isObscureAwaitingScan();
-      val var17: Boolean = var3.getShowDescription();
-      val var22: java.lang.String = var3.getDescription();
-      val var29: java.lang.String = var3.getDescriptionHint();
-      val var16: Boolean = var3.getShowDescription();
-      val var23: java.lang.String = var3.getAccessibilityRole();
+      val var17: Boolean = var3.isObscure();
+      val var16: Boolean = var3.isObscureAwaitingScan();
+      val var18: Boolean = var3.getShowDescription();
+      val var29: java.lang.String = var3.getDescription();
+      val var23: java.lang.String = var3.getDescriptionHint();
+      val var14: Boolean = var3.getShowDescription();
+      val var22: java.lang.String = var3.getAccessibilityRole();
       val var27: java.lang.Double = var3.getPortalId();
       r.e(var27);
-      super.bind(
-         var31,
+      super.bind-kIVcwaw(
+         null,
+         null,
+         null,
          var2,
-         var11,
+         var31,
+         var13,
          var12,
          var30,
          var32,
          var15,
          var25,
-         var14,
-         var18,
          var17,
-         var22,
-         var29,
          var16,
+         var18,
+         var29,
+         var23,
+         var14,
          var8,
-         var13,
+         var11,
          var4 xor true,
          null,
          var4,
@@ -214,7 +222,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          null,
          null,
          null,
-         var23,
+         var22,
          var27,
          var5,
          var6,

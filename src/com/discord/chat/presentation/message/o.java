@@ -9,6 +9,6 @@ public final class o implements OnClickListener {
    public final ChatEventHandler j;
 
    public final void onClick(View var1) {
-      MessageView.i(this.j, var1);
+      MessageView.h(this.j, var1);
    }
 }

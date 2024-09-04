@@ -311,17 +311,17 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         val var3: KSerializer = a.u(a2.a);
-         val var2: h = h.a;
-         return new KSerializer[]{var3, h.a, var1, var1, a.u(new xk.f(a.u(var1))), m0.a, a.u(var1), a.u(var1), var2, var1};
+         val var2: a2 = a2.a;
+         val var1: KSerializer = a.u(a2.a);
+         val var3: h = h.a;
+         return new KSerializer[]{var1, h.a, var2, var2, a.u(new xk.f(a.u(var2))), m0.a, a.u(var2), a.u(var2), var3, var2};
       }
 
       public open fun deserialize(decoder: Decoder): ActivityInviteEmbed {
          r.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         var var10: Boolean = var19.p();
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.b(var17);
+         var var10: Boolean = var18.p();
          var var3: Int = 9;
          var var8: Byte = 7;
          var var7: Byte = 6;
@@ -332,30 +332,30 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
          var var14: Any;
          var var15: Any;
          var var16: Any;
-         var var20: Any;
+         var var19: Any;
          var var26: Any;
          if (var10) {
             var26 = a2.a;
-            var15 = var19.n(var18, 0, a2.a, null);
-            var5 = var19.C(var18, 1);
-            var12 = var19.m(var18, 2);
-            var11 = var19.m(var18, 3);
-            var16 = var19.n(var18, 4, new xk.f(a.u((KSerializer)var26)), null);
-            val var2: Int = var19.i(var18, 5);
-            var20 = var19.n(var18, 6, (DeserializationStrategy)var26, null);
-            var14 = var19.n(var18, 7, (DeserializationStrategy)var26, null);
-            var10 = var19.C(var18, 8);
-            var26 = var19.m(var18, 9);
-            var4 = 1023;
-            var3 = var2;
+            var19 = var18.n(var17, 0, a2.a, null);
+            var4 = var18.C(var17, 1);
+            var12 = var18.m(var17, 2);
+            var11 = var18.m(var17, 3);
+            var16 = var18.n(var17, 4, new xk.f(a.u((KSerializer)var26)), null);
+            val var2: Int = var18.i(var17, 5);
+            var15 = var18.n(var17, 6, (DeserializationStrategy)var26, null);
+            var14 = var18.n(var17, 7, (DeserializationStrategy)var26, null);
+            var10 = var18.C(var17, 8);
+            var26 = var18.m(var17, 9);
+            var3 = 1023;
+            var5 = var2;
          } else {
             var var6: Boolean = true;
             var10 = false;
-            var var22: Int = 0;
+            var var20: Int = 0;
             var5 = 0;
-            var15 = null;
             var14 = null;
-            var20 = null;
+            var15 = null;
+            var19 = null;
             var12 = null;
             var11 = null;
             var26 = null;
@@ -364,52 +364,52 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
 
             while (var6) {
                label44: {
-                  val var9: Int = var19.o(var18);
+                  val var9: Int = var18.o(var17);
                   switch (var9) {
                      case -1:
                         var6 = false;
                         break;
                      case 0:
-                        var20 = var19.n(var18, 0, a2.a, var20);
-                        var22 |= 1;
+                        var19 = var18.n(var17, 0, a2.a, var19);
+                        var20 |= 1;
                         var3 = 9;
                         break;
                      case 1:
-                        var5 = var19.C(var18, 1);
-                        var22 |= 2;
+                        var5 = var18.C(var17, 1);
+                        var20 |= 2;
                         break label44;
                      case 2:
-                        var12 = var19.m(var18, 2);
-                        var22 |= 4;
+                        var12 = var18.m(var17, 2);
+                        var20 |= 4;
                         break label44;
                      case 3:
-                        var11 = var19.m(var18, 3);
-                        var22 |= 8;
+                        var11 = var18.m(var17, 3);
+                        var20 |= 8;
                         break label44;
                      case 4:
-                        var16 = var19.n(var18, 4, new xk.f(a.u(a2.a)), var16);
-                        var22 |= 16;
+                        var16 = var18.n(var17, 4, new xk.f(a.u(a2.a)), var16);
+                        var20 |= 16;
                         var3 = 9;
                         continue;
                      case 5:
-                        var4 = var19.i(var18, 5);
-                        var22 |= 32;
+                        var4 = var18.i(var17, 5);
+                        var20 |= 32;
                         continue;
                      case 6:
-                        var14 = var19.n(var18, var7, a2.a, var14);
-                        var22 |= 64;
+                        var15 = var18.n(var17, var7, a2.a, var15);
+                        var20 |= 64;
                         continue;
                      case 7:
-                        var15 = var19.n(var18, var8, a2.a, var15);
-                        var22 |= 128;
+                        var14 = var18.n(var17, var8, a2.a, var14);
+                        var20 |= 128;
                         continue;
                      case 8:
-                        var10 = var19.C(var18, 8);
-                        var22 |= 256;
+                        var10 = var18.C(var17, 8);
+                        var20 |= 256;
                         continue;
                      case 9:
-                        var26 = var19.m(var18, var3);
-                        var22 |= 512;
+                        var26 = var18.m(var17, var3);
+                        var20 |= 512;
                         continue;
                      default:
                         throw new n(var9);
@@ -423,23 +423,21 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
                var3 = 9;
             }
 
-            var20 = var14;
-            var14 = var15;
-            var3 = var4;
-            var15 = var20;
-            var4 = var22;
+            var5 = var4;
+            var4 = var5;
+            var3 = var20;
          }
 
-         var19.c(var18);
+         var18.c(var17);
          return new ActivityInviteEmbed(
-            var4,
-            var15 as java.lang.String,
-            (boolean)var5,
+            var3,
+            var19 as java.lang.String,
+            (boolean)var4,
             (java.lang.String)var12,
             (java.lang.String)var11,
             var16 as java.util.List,
-            var3,
-            var20 as java.lang.String,
+            var5,
+            var15 as java.lang.String,
             var14 as java.lang.String,
             var10,
             (java.lang.String)var26,

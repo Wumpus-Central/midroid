@@ -50,14 +50,14 @@ public data class EphemeralIndicationMessageAccessory(messageId: MessageId, ephe
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var1: EphemeralIndication = this.ephemeralIndication;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("EphemeralIndicationMessageAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", ephemeralIndication=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var2: EphemeralIndication = this.ephemeralIndication;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("EphemeralIndicationMessageAccessory(messageId=");
+      var3.append(var1);
+      var3.append(", ephemeralIndication=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

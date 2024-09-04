@@ -130,26 +130,24 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
          val var10: c = var1.b(var9);
          var var2: Float;
          var var3: Int;
+         var var4: Int;
          var var5: Int;
          var var6: Int;
-         var var12: Int;
          if (var10.p()) {
-            var12 = var10.i(var9, 0);
-            val var7: Int = var10.i(var9, 1);
+            var6 = var10.i(var9, 0);
+            var5 = var10.i(var9, 1);
             var3 = var10.i(var9, 2);
             var2 = var10.u(var9, 3);
-            var5 = 15;
-            var6 = var12;
-            var12 = var7;
+            var4 = 15;
          } else {
             var2 = 0.0F;
-            var var14: Boolean = true;
+            var var7: Boolean = true;
             var6 = 0;
             var5 = 0;
-            var12 = 0;
+            var4 = 0;
             var3 = 0;
 
-            while (var14) {
+            while (var7) {
                val var8: Int = var10.o(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -166,7 +164,7 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                            var3 |= 4;
                         }
                      } else {
-                        var12 = var10.i(var9, 1);
+                        var4 = var10.i(var9, 1);
                         var3 |= 2;
                      }
                   } else {
@@ -174,16 +172,17 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                      var3 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var7 = false;
                }
             }
 
-            var5 = var3;
+            var5 = var4;
+            var4 = var3;
             var3 = var5;
          }
 
          var10.c(var9);
-         return new GradientColor(var5, var6, var12, var3, var2, null);
+         return new GradientColor(var4, var6, var5, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GradientColor) {
