@@ -120,25 +120,23 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
          var var2: Float;
          var var3: Int;
          var var4: Int;
-         var var6: Int;
-         var var13: Int;
+         var var5: Int;
+         val var7: Int;
          if (var10.p()) {
-            var13 = var10.i(var9, 0);
-            val var7: Int = var10.i(var9, 1);
+            var4 = var10.i(var9, 0);
+            var7 = var10.i(var9, 1);
             var3 = var10.i(var9, 2);
             var2 = var10.u(var9, 3);
-            var4 = 15;
-            var6 = var13;
-            var13 = var7;
+            var5 = 15;
          } else {
             var2 = 0.0F;
-            var var15: Boolean = true;
-            var6 = 0;
-            var13 = 0;
+            var var14: Boolean = true;
+            var var6: Int = 0;
+            var5 = 0;
             var4 = 0;
             var3 = 0;
 
-            while (var15) {
+            while (var14) {
                val var8: Int = var10.o(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -151,7 +149,7 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                            var2 = var10.u(var9, 3);
                            var3 |= 8;
                         } else {
-                           var13 = var10.i(var9, 2);
+                           var5 = var10.i(var9, 2);
                            var3 |= 4;
                         }
                      } else {
@@ -163,17 +161,18 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                      var3 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var14 = false;
                }
             }
 
-            var4 = var3;
-            var3 = var13;
-            var13 = var4;
+            var5 = var3;
+            var3 = var5;
+            var7 = var4;
+            var4 = var6;
          }
 
          var10.c(var9);
-         return new GradientColor(var4, var6, var13, var3, var2, null);
+         return new GradientColor(var5, var4, var7, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GradientColor) {

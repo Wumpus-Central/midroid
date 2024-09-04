@@ -78,17 +78,17 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var2: java.lang.String = this.source;
+      val var3: java.lang.String = this.source;
       val var4: java.lang.String = this.reason;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MlsFailureCallbackEvent(connectionId=");
-      var3.append(var1);
-      var3.append(", source=");
-      var3.append(var2);
-      var3.append(", reason=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MlsFailureCallbackEvent(connectionId=");
+      var2.append(var1);
+      var2.append(", source=");
+      var2.append(var3);
+      var2.append(", reason=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -121,15 +121,15 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          val var9: c = var1.b(var8);
          var var2: Int;
          var var3: Int;
-         var var6: java.lang.String;
+         val var7: java.lang.String;
          val var10: java.lang.String;
          if (var9.p()) {
-            var2 = var9.i(var8, 0);
-            var6 = var9.m(var8, 1);
+            var3 = var9.i(var8, 0);
+            var7 = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
-            var3 = 7;
+            var2 = 7;
          } else {
-            var6 = null;
+            var var6: java.lang.String = null;
             var var11: java.lang.String = null;
             var var4: Boolean = true;
             var3 = 0;
@@ -159,14 +159,12 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
                }
             }
 
-            var6 = var11;
+            var7 = var11;
             var10 = var6;
-            var2 = var3;
-            var3 = var2;
          }
 
          var9.c(var8);
-         return new MlsFailureCallbackEvent(var3, var2, var6, var10, null);
+         return new MlsFailureCallbackEvent(var2, var3, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {

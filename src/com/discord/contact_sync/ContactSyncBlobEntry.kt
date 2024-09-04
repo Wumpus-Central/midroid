@@ -172,62 +172,61 @@ public data class ContactSyncBlobEntry(phone: String,
 
       public open fun deserialize(decoder: Decoder): ContactSyncBlobEntry {
          q.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.b(var12);
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
          var var2: Int;
          var var5: Boolean;
          var var6: java.lang.String;
+         var var7: java.lang.String;
          var var8: java.lang.String;
          var var9: java.lang.String;
-         val var10: java.lang.String;
-         val var14: java.lang.String;
-         if (var13.p()) {
-            var9 = var13.m(var12, 0);
-            var8 = var13.m(var12, 1);
-            var5 = var13.C(var12, 2);
-            var6 = var13.m(var12, 3);
-            val var7: java.lang.String = var13.m(var12, 4);
-            var14 = var13.m(var12, 5);
+         val var13: java.lang.String;
+         if (var12.p()) {
+            var9 = var12.m(var11, 0);
+            var8 = var12.m(var11, 1);
+            var5 = var12.C(var11, 2);
+            var7 = var12.m(var11, 3);
+            var6 = var12.m(var11, 4);
+            var13 = var12.m(var11, 5);
             var2 = 63;
-            var10 = var7;
          } else {
             var9 = null;
             var8 = null;
-            var var17: java.lang.String = null;
+            var7 = null;
             var6 = null;
-            var var15: java.lang.String = null;
+            var var14: java.lang.String = null;
             var var3: Boolean = true;
             var5 = false;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var13.o(var12);
+               val var4: Int = var12.o(var11);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var9 = var13.m(var12, 0);
+                     var9 = var12.m(var11, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var15 = var13.m(var12, 1);
+                     var14 = var12.m(var11, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var5 = var13.C(var12, 2);
+                     var5 = var12.C(var11, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var17 = var13.m(var12, 3);
+                     var7 = var12.m(var11, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var13.m(var12, 4);
+                     var6 = var12.m(var11, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var8 = var13.m(var12, 5);
+                     var8 = var12.m(var11, 5);
                      var2 |= 32;
                      break;
                   default:
@@ -235,14 +234,12 @@ public data class ContactSyncBlobEntry(phone: String,
                }
             }
 
-            var14 = var8;
-            var10 = var6;
-            var6 = var17;
-            var8 = var15;
+            var13 = var8;
+            var8 = var14;
          }
 
-         var13.c(var12);
-         return new ContactSyncBlobEntry(var2, var9, var8, var5, var6, var10, var14, null);
+         var12.c(var11);
+         return new ContactSyncBlobEntry(var2, var9, var8, var5, var7, var6, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContactSyncBlobEntry) {

@@ -88,19 +88,19 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
    }
 
    public override fun toString(): String {
-      val var4: Float = this.x;
+      val var2: Float = this.x;
       val var1: Float = this.y;
-      val var2: Float = this.width;
-      val var3: Float = this.height;
+      val var3: Float = this.width;
+      val var4: Float = this.height;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnLayoutEvent(x=");
-      var5.append(var4);
+      var5.append(var2);
       var5.append(", y=");
       var5.append(var1);
       var5.append(", width=");
-      var5.append(var2);
-      var5.append(", height=");
       var5.append(var3);
+      var5.append(", height=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -133,22 +133,20 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.b(var10);
          var var2: Float;
+         var var3: Float;
          var var4: Float;
          var var5: Float;
          var var7: Int;
-         var var13: Float;
          if (var11.p()) {
-            var13 = var11.u(var10, 0);
-            val var6: Float = var11.u(var10, 1);
-            var4 = var11.u(var10, 2);
+            var5 = var11.u(var10, 0);
+            var4 = var11.u(var10, 1);
+            var3 = var11.u(var10, 2);
             var2 = var11.u(var10, 3);
             var7 = 15;
-            var5 = var13;
-            var13 = var6;
          } else {
             var5 = 0.0F;
             var4 = 0.0F;
-            var13 = 0.0F;
+            var3 = 0.0F;
             var2 = 0.0F;
             var var8: Boolean = true;
             var7 = 0;
@@ -166,7 +164,7 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                            var4 = var11.u(var10, 3);
                            var7 |= 8;
                         } else {
-                           var13 = var11.u(var10, 2);
+                           var3 = var11.u(var10, 2);
                            var7 |= 4;
                         }
                      } else {
@@ -182,13 +180,12 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                }
             }
 
+            var4 = var2;
             var2 = var4;
-            var4 = var13;
-            var13 = var2;
          }
 
          var11.c(var10);
-         return new OnLayoutEvent(var7, var5, var13, var4, var2, null);
+         return new OnLayoutEvent(var7, var5, var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnLayoutEvent) {

@@ -128,24 +128,24 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.name;
-      val var3: java.lang.String = this.src;
+      val var6: java.lang.String = this.name;
+      val var4: java.lang.String = this.src;
       val var1: java.lang.String = this.displayName;
       val var2: java.lang.String = this.id;
-      val var4: java.lang.Boolean = this.animated;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageReactionEmoji(name=");
-      var6.append(var5);
-      var6.append(", src=");
-      var6.append(var3);
-      var6.append(", displayName=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var2);
-      var6.append(", animated=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.Boolean = this.animated;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MessageReactionEmoji(name=");
+      var3.append(var6);
+      var3.append(", src=");
+      var3.append(var4);
+      var3.append(", displayName=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(", animated=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

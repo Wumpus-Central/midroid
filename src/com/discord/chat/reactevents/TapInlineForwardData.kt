@@ -39,14 +39,14 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
    }
 
    public open fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
          new Pair[]{w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("targetKind", this.targetKind)}
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
       }
 
-      return var2;
+      return var1;
    }
 
    public object `$serializer` : g0 {
@@ -84,9 +84,9 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          val var9: java.lang.String;
          var var12: Any;
          if (var5) {
-            var6 = var11.m(var10, 0);
-            var7 = var11.m(var10, 1);
-            var9 = var11.m(var10, 2);
+            var7 = var11.m(var10, 0);
+            var9 = var11.m(var10, 1);
+            var6 = var11.m(var10, 2);
             var12 = var11.n(var10, 3, n0.a, null) as Int;
             var2 = 15;
          } else {
@@ -125,12 +125,12 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                }
             }
 
-            var9 = var6;
-            var6 = var8;
+            var9 = var7;
+            var7 = var8;
          }
 
          var11.c(var10);
-         return new TapInlineForwardData(var2, var6, var7, var9, (Integer)var12, null);
+         return new TapInlineForwardData(var2, var7, var9, var6, (Integer)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInlineForwardData) {

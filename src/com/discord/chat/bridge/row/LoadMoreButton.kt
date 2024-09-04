@@ -159,26 +159,24 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          val var11: c = var1.b(var10);
          var var2: Int;
          var var3: Int;
-         var var8: LoadingAction;
+         val var7: LoadingAction;
+         val var9: java.lang.String;
          var var12: Any;
-         var var14: Any;
-         var var16: java.lang.String;
+         var var17: Any;
          if (var11.p()) {
-            val var7: LoadingAction = var11.y(var10, 0, LoadingAction.$serializer.INSTANCE, null) as LoadingAction;
-            val var9: java.lang.String = var11.m(var10, 1);
-            var3 = var11.i(var10, 2);
-            var14 = n0.a;
+            var7 = var11.y(var10, 0, LoadingAction.$serializer.INSTANCE, null) as LoadingAction;
+            var9 = var11.m(var10, 1);
+            var2 = var11.i(var10, 2);
+            var17 = n0.a;
             var12 = var11.n(var10, 3, n0.a, null) as Int;
-            var14 = var11.n(var10, 4, (DeserializationStrategy)var14, null) as Int;
-            var2 = 31;
-            var8 = var7;
-            var16 = var9;
+            var17 = var11.n(var10, 4, (DeserializationStrategy)var17, null) as Int;
+            var3 = 31;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var8 = null;
-            var16 = null;
-            var14 = null;
+            var var8: LoadingAction = null;
+            var var19: java.lang.String = null;
+            var17 = null;
             var12 = null;
             var2 = 0;
 
@@ -196,7 +194,7 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
                               var12 = var11.n(var10, 4, n0.a, var12) as Int;
                               var2 |= 16;
                            } else {
-                              var14 = var11.n(var10, 3, n0.a, var14) as Int;
+                              var17 = var11.n(var10, 3, n0.a, var17) as Int;
                               var2 |= 8;
                            }
                         } else {
@@ -204,7 +202,7 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
                            var2 |= 4;
                         }
                      } else {
-                        var16 = var11.m(var10, 1);
+                        var19 = var11.m(var10, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -216,12 +214,16 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
                }
             }
 
-            var14 = var12;
-            var12 = var14;
+            var17 = var12;
+            var12 = var17;
+            var2 = var3;
+            var9 = var19;
+            var7 = var8;
+            var3 = var2;
          }
 
          var11.c(var10);
-         return new LoadMoreButton(var2, var8, var16, var3, (Integer)var12, (Integer)var14, null);
+         return new LoadMoreButton(var3, var7, var9, var2, (Integer)var12, (Integer)var17, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadMoreButton) {

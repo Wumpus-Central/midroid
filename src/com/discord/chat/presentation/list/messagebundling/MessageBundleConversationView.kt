@@ -116,25 +116,25 @@ public class MessageBundleConversationView  public constructor(context: Context,
       if (var11.getContent() != null) {
          val var19: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var13: StructurableText = var11.getContent();
-         val var10: Context = this.getContext();
+         val var10: StructurableText = var11.getContent();
+         val var13: Context = this.getContext();
          val var14: java.lang.String = var11.getId-3Eiw7ao();
-         val var8: Boolean = MessageKt.shouldAnimateEmoji(var11);
-         val var6: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+         val var6: Boolean = MessageKt.shouldAnimateEmoji(var11);
+         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var11);
          val var9: Boolean = var11.getShouldShowRoleDot();
          val var7: Boolean = var11.getShouldShowRoleOnName();
          val var15: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          q.g(var15, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var15);
          val var35: TextPaint = this.binding.replyText.getPaint();
-         q.e(var10);
+         q.e(var13);
          q.e(var35);
-         val var26: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-            var13,
+         val var31: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
             var10,
+            var13,
             var14,
-            var8,
             var6,
+            var8,
             var9,
             var7,
             var35,
@@ -158,17 +158,17 @@ public class MessageBundleConversationView  public constructor(context: Context,
             11534208,
             null
          );
-         val var31: MessageContentView = this.binding.replyText;
+         val var26: MessageContentView = this.binding.replyText;
          q.g(this.binding.replyText, "replyText");
-         SpannableExtensionsKt.coverWithSpan(var26, new BackgroundSpanDrawer(var31));
-         var20 = ReplyUtilsKt.createReplyContent(var19, var26);
+         SpannableExtensionsKt.coverWithSpan(var31, new BackgroundSpanDrawer(var26));
+         var20 = ReplyUtilsKt.createReplyContent(var19, var31);
       } else {
-         val var27: TextView = this.binding.replyAuthorName;
+         val var21: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var21: Context = this.getContext();
-         q.g(var21, "getContext(...)");
+         val var27: Context = this.getContext();
+         q.g(var27, "getContext(...)");
          var20 = ReplyUtilsKt.createSystemReplyContent(
-            var27, I18nUtilsKt.i18nFormat$default(var21, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
+            var21, I18nUtilsKt.i18nFormat$default(var27, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
          );
       }
 
@@ -177,15 +177,15 @@ public class MessageBundleConversationView  public constructor(context: Context,
       if (var28.isLaidOut() && var28.getWidth() > 0) {
          var28.measure(MeasureSpec.makeMeasureSpec(var28.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
          var28.getLineBounds(0, this.replyTextLineBounds);
-         val var32: TextView = this.binding.replyAuthorName;
+         val var29: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var22: android.view.ViewGroup.LayoutParams = var32.getLayoutParams();
+         val var22: android.view.ViewGroup.LayoutParams = var29.getLayoutParams();
          if (var22 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
          var22.height = this.replyTextLineBounds.bottom - this.replyTextLineBounds.top;
-         var32.setLayoutParams(var22);
+         var29.setLayoutParams(var22);
       }
 
       val var33: ReactionsView = this.binding.reactionsView;

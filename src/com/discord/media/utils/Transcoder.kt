@@ -71,7 +71,7 @@ internal object Transcoder {
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var4: lj.r.a = r.k;
+            val var3: lj.r.a = r.k;
             this.$continuation.resumeWith(r.b(this.$mediaSource.getOutputUri()));
          }
 

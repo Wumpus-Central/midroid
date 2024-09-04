@@ -391,11 +391,11 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
       public override fun run() {
          if (ScreenCapturer.access$getFramerate$p(this.this$0) > 0) {
-            val var4: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
-            if (var4 != null) {
-               val var3: ScreenCapturer = this.this$0;
-               if (TimestampAligner.getRtcTimeNanos() - var4.longValue() > ScreenCapturer.access$getIntervalNanos$p(var3)) {
-                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var3);
+            val var3: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
+            if (var3 != null) {
+               val var4: ScreenCapturer = this.this$0;
+               if (TimestampAligner.getRtcTimeNanos() - var3.longValue() > ScreenCapturer.access$getIntervalNanos$p(var4)) {
+                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var4);
                   var var5: NativeCapturerObserver = var6;
                   if (var6 == null) {
                      q.y("nativeObserver");

@@ -64,7 +64,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var6: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var5: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -73,12 +73,12 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var6;
-      val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var5;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var4;
-      val var3: DefaultItemAnimator = new DefaultItemAnimator() {
+      this.accessoriesAdapter = var5;
+      val var3: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var3;
+      val var6: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var6;
+      val var4: DefaultItemAnimator = new DefaultItemAnimator() {
          @Override
          public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.q.h(var1, "viewHolder");
@@ -93,8 +93,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var3.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var3;
+      var4.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var4;
       this.forwardBarPaint$delegate = lj.l.a(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -108,9 +108,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
-      this.setAdapter(var6);
-      var6.setMessageContentViewLifecycleListener(var5);
+      this.setLayoutManager(var6);
+      this.setAdapter(var5);
+      var5.setMessageContentViewLifecycleListener(var3);
    }
 
    private fun getForwardBarHeight(): Int {

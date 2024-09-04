@@ -136,9 +136,9 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
-         val var2: n0 = n0.a;
-         return new KSerializer[]{a.u(n0.a), var2, a.u(com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE), a.u(var1[3])};
+         val var2: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
+         val var1: n0 = n0.a;
+         return new KSerializer[]{a.u(n0.a), var1, a.u(com.discord.span.utilities.common.BackgroundStyle..serializer.INSTANCE), a.u(var2[3])};
       }
 
       public open fun deserialize(decoder: Decoder): ChatInputNodeStyle {

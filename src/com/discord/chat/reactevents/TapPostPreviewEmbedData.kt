@@ -108,21 +108,21 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.parentChannelId;
+      val var4: java.lang.String = this.guildId;
+      val var5: java.lang.String = this.parentChannelId;
       val var3: java.lang.String = this.threadId;
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapPostPreviewEmbedData(guildId=");
-      var2.append(var5);
-      var2.append(", parentChannelId=");
-      var2.append(var4);
-      var2.append(", threadId=");
-      var2.append(var3);
-      var2.append(", messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapPostPreviewEmbedData(guildId=");
+      var1.append(var4);
+      var1.append(", parentChannelId=");
+      var1.append(var5);
+      var1.append(", threadId=");
+      var1.append(var3);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -155,30 +155,28 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
          val var5: Boolean = var11.p();
          var var12: java.lang.String = null;
          var var2: Int;
+         var var6: java.lang.String;
          var var7: java.lang.String;
-         var var13: java.lang.String;
+         val var9: java.lang.String;
          var var14: java.lang.String;
-         var var16: java.lang.String;
          if (var5) {
             var7 = var11.m(var10, 0);
-            var16 = var11.m(var10, 1);
-            var14 = var11.m(var10, 2);
-            val var9: MessageId = var11.y(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var9 != null) {
-               var12 = var9.unbox-impl();
+            var9 = var11.m(var10, 1);
+            var6 = var11.m(var10, 2);
+            val var8: MessageId = var11.y(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var8 != null) {
+               var12 = var8.unbox-impl();
             }
 
             var2 = 15;
-            var13 = var16;
-            var16 = var14;
             var14 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
+            var6 = null;
+            var var13: java.lang.String = null;
             var14 = null;
-            var13 = null;
-            var16 = null;
 
             while (var3) {
                val var4: Int = var11.o(var10);
@@ -190,23 +188,23 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
                               throw new n(var4);
                            }
 
-                           val var18: MessageId;
-                           if (var16 != null) {
-                              var18 = MessageId.box-impl(var16);
+                           val var15: MessageId;
+                           if (var14 != null) {
+                              var15 = MessageId.box-impl(var14);
                            } else {
-                              var18 = null;
+                              var15 = null;
                            }
 
-                           val var19: MessageId = var11.y(var10, 3, MessageId.$serializer.INSTANCE, var18) as MessageId;
-                           if (var19 != null) {
-                              var16 = var19.unbox-impl();
+                           val var16: MessageId = var11.y(var10, 3, MessageId.$serializer.INSTANCE, var15) as MessageId;
+                           if (var16 != null) {
+                              var14 = var16.unbox-impl();
                            } else {
-                              var16 = null;
+                              var14 = null;
                            }
 
                            var2 |= 8;
                         } else {
-                           var14 = var11.m(var10, 2);
+                           var6 = var11.m(var10, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -222,12 +220,11 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
                }
             }
 
-            var14 = var16;
-            var16 = var14;
+            var9 = var13;
          }
 
          var11.c(var10);
-         return new TapPostPreviewEmbedData(var2, var7, var13, var16, var14, null, null);
+         return new TapPostPreviewEmbedData(var2, var7, var9, var6, var14, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapPostPreviewEmbedData) {

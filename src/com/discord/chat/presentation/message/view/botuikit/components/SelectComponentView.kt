@@ -215,20 +215,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label68: {
                      if (var36 is SearchableSelectItem) {
-                        val var14: SearchableSelectItem = var36 as SearchableSelectItem;
+                        val var38: SearchableSelectItem = var36 as SearchableSelectItem;
                         if ((var36 as SearchableSelectItem).getIconSrc() != null) {
-                           val var38: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
+                           val var13: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var13: java.lang.String = var14.getIconSrc();
-                           val var21: Int = var14.getIconColor();
+                           val var21: java.lang.String = var38.getIconSrc();
+                           val var14: Int = var38.getIconColor();
                            val var30: Boolean;
-                           if (var14.getType() === SelectOptionType.USER) {
+                           if (var38.getType() === SelectOptionType.USER) {
                               var30 = true;
                            } else {
                               var30 = false;
                            }
 
-                           this.setImage(var38, var13, var21, var30);
+                           this.setImage(var13, var21, var14, var30);
                            val var22: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var22.setVisibility(0);

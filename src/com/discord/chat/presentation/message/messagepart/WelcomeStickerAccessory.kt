@@ -55,13 +55,13 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
    }
 
    public override fun toString(): String {
-      val var3: Message = this.message;
-      val var2: Sticker = this.sticker;
+      val var2: Message = this.message;
+      val var3: Sticker = this.sticker;
       val var1: StringBuilder = new StringBuilder();
       var1.append("WelcomeStickerAccessory(message=");
-      var1.append(var3);
-      var1.append(", sticker=");
       var1.append(var2);
+      var1.append(", sticker=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

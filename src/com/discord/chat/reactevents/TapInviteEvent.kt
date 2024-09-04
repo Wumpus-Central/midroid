@@ -76,8 +76,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.messageId.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
+      val var4: Int = this.messageId.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -90,7 +90,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    fun serialize(): WritableMap {
@@ -100,19 +100,19 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    public override fun toString(): String {
       val var3: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var5: java.lang.Boolean = this.primary;
+      val var4: java.lang.Boolean = this.primary;
       val var2: java.lang.Boolean = this.secondary;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapInviteEvent(messageId=");
-      var4.append(var3);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", primary=");
-      var4.append(var5);
-      var4.append(", secondary=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapInviteEvent(messageId=");
+      var5.append(var3);
+      var5.append(", index=");
+      var5.append(var1);
+      var5.append(", primary=");
+      var5.append(var4);
+      var5.append(", secondary=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -135,8 +135,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: h = h.a;
-         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var1)};
+         val var3: h = h.a;
+         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): TapInviteEvent {

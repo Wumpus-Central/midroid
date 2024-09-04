@@ -186,32 +186,32 @@ public data class EmbedThumbnail(url: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.url;
-      val var4: java.lang.String = this.proxyURL;
-      val var3: java.lang.String = this.videoUrl;
+      val var10: java.lang.String = this.url;
+      val var3: java.lang.String = this.proxyURL;
+      val var9: java.lang.String = this.videoUrl;
       val var2: Int = this.height;
       val var1: Int = this.width;
-      val var10: java.lang.Boolean = this.gifv;
-      val var7: java.lang.Boolean = this.showPlayButton;
-      val var5: java.lang.String = this.placeholder;
+      val var7: java.lang.Boolean = this.gifv;
+      val var5: java.lang.Boolean = this.showPlayButton;
+      val var4: java.lang.String = this.placeholder;
       val var8: Int = this.placeholderVersion;
       val var6: StringBuilder = new StringBuilder();
       var6.append("EmbedThumbnail(url=");
-      var6.append(var9);
+      var6.append(var10);
       var6.append(", proxyURL=");
-      var6.append(var4);
-      var6.append(", videoUrl=");
       var6.append(var3);
+      var6.append(", videoUrl=");
+      var6.append(var9);
       var6.append(", height=");
       var6.append(var2);
       var6.append(", width=");
       var6.append(var1);
       var6.append(", gifv=");
-      var6.append(var10);
-      var6.append(", showPlayButton=");
       var6.append(var7);
-      var6.append(", placeholder=");
+      var6.append(", showPlayButton=");
       var6.append(var5);
+      var6.append(", placeholder=");
+      var6.append(var4);
       var6.append(", placeholderVersion=");
       var6.append(var8);
       var6.append(")");
@@ -244,12 +244,12 @@ public data class EmbedThumbnail(url: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         val var2: KSerializer = a.u(b2.a);
-         val var3: KSerializer = a.u(var1);
-         val var4: n0 = n0.a;
-         val var5: h = h.a;
-         return new KSerializer[]{var1, var2, var3, n0.a, n0.a, a.u(h.a), a.u(var5), a.u(var1), a.u(var4), var1};
+         val var4: b2 = b2.a;
+         val var5: KSerializer = a.u(b2.a);
+         val var2: KSerializer = a.u(var4);
+         val var3: n0 = n0.a;
+         val var1: h = h.a;
+         return new KSerializer[]{var4, var5, var2, n0.a, n0.a, a.u(h.a), a.u(var1), a.u(var4), a.u(var3), var4};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedThumbnail {
@@ -262,46 +262,44 @@ public data class EmbedThumbnail(url: String,
          var var3: Int;
          var var4: Int;
          val var5: Int;
-         var var15: Any;
+         var var13: Any;
+         var var14: Any;
+         var var15: java.lang.Boolean;
          var var16: Any;
          val var17: Int;
-         val var18: java.lang.Boolean;
+         val var18: Any;
          val var19: Any;
-         val var20: Any;
-         var var33: java.lang.Boolean;
-         var var35: Any;
+         val var20: java.lang.Boolean;
          if (var9) {
-            val var13: java.lang.String = var22.m(var21, 0);
+            var13 = var22.m(var21, 0);
             val var23: b2 = b2.a;
-            var15 = var22.n(var21, 1, b2.a, null) as java.lang.String;
-            var20 = var22.n(var21, 2, var23, null) as java.lang.String;
+            var16 = var22.n(var21, 1, b2.a, null) as java.lang.String;
+            var19 = var22.n(var21, 2, var23, null) as java.lang.String;
             val var2: Int = var22.i(var21, 3);
             var3 = var22.i(var21, 4);
             val var10: h = h.a;
-            var35 = var22.n(var21, 5, h.a, null) as java.lang.Boolean;
+            var20 = var22.n(var21, 5, h.a, null) as java.lang.Boolean;
             val var11: java.lang.Boolean = var22.n(var21, 6, var10, null) as java.lang.Boolean;
             val var29: java.lang.String = var22.n(var21, 7, var23, null) as java.lang.String;
             val var12: Int = var22.n(var21, 8, n0.a, null) as Int;
             val var24: java.lang.String = var22.m(var21, 9);
             var4 = 1023;
-            var19 = var13;
             var5 = var2;
-            var33 = (java.lang.Boolean)var35;
-            var18 = var11;
-            var16 = var29;
+            var15 = var11;
+            var14 = var29;
             var17 = var12;
-            var35 = var24;
+            var18 = var24;
          } else {
             var var28: Boolean = true;
             var4 = 0;
             var var26: Int = 0;
             var16 = null;
             var15 = null;
-            var35 = null;
+            var14 = null;
             var var31: java.lang.Boolean = null;
             var var32: Any = null;
             var var25: Any = null;
-            var33 = null;
+            var13 = null;
             var var30: Any = null;
             var3 = 0;
 
@@ -342,7 +340,7 @@ public data class EmbedThumbnail(url: String,
                         var6 = 9;
                         continue;
                      case 7:
-                        var35 = var22.n(var21, var7, b2.a, var35) as java.lang.String;
+                        var14 = var22.n(var21, var7, b2.a, var14) as java.lang.String;
                         var26 |= 128;
                         continue;
                      case 8:
@@ -350,7 +348,7 @@ public data class EmbedThumbnail(url: String,
                         var26 |= 256;
                         continue;
                      case 9:
-                        var33 = var22.m(var21, var6);
+                        var13 = var22.m(var21, var6);
                         var26 |= 512;
                         continue;
                      default:
@@ -365,31 +363,29 @@ public data class EmbedThumbnail(url: String,
                var6 = 9;
             }
 
-            var35 = var33;
+            var18 = var13;
             var17 = (Integer)var16;
-            var16 = var35;
-            var18 = (java.lang.Boolean)var15;
-            var33 = var31;
+            var20 = var31;
             var5 = var4;
-            var20 = var32;
-            var15 = var30;
-            var19 = var25;
+            var19 = var32;
+            var16 = var30;
+            var13 = var25;
             var4 = var26;
          }
 
          var22.c(var21);
          return new EmbedThumbnail(
             var4,
+            (java.lang.String)var13,
+            (java.lang.String)var16,
             (java.lang.String)var19,
-            (java.lang.String)var15,
-            (java.lang.String)var20,
             var5,
             var3,
-            var33,
-            var18,
-            (java.lang.String)var16,
+            var20,
+            var15,
+            (java.lang.String)var14,
             var17,
-            (java.lang.String)var35,
+            (java.lang.String)var18,
             null
          );
       }

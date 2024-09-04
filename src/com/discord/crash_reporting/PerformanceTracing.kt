@@ -75,12 +75,12 @@ public class PerformanceTracing : MarkerListener {
       val var4: java.lang.String;
       if (var1.getTag() != null && !q.c(var1.getName(), "CREATE_REACT_CONTEXT")) {
          val var2: java.lang.String = var1.getName();
-         val var3: java.lang.String = var1.getTag();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var2);
-         var5.append(" ");
-         var5.append(var3);
-         var4 = var5.toString();
+         val var5: java.lang.String = var1.getTag();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" ");
+         var3.append(var5);
+         var4 = var3.toString();
       } else {
          var4 = var1.getName();
       }

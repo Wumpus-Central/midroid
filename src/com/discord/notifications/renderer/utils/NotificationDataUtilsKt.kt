@@ -67,29 +67,29 @@ public fun NotificationData.getAuthor(): JsonObject {
    val var4: UserId = var0.getUserId-wUX8bhU();
    q.e(var4);
    val var1: Long = var4.unbox-impl();
-   val var5: java.lang.String = var0.getUserUsername();
-   q.e(var5);
-   val var6: p = new p();
+   val var6: java.lang.String = var0.getUserUsername();
+   q.e(var6);
+   val var5: p = new p();
    if (var3 != null) {
-      f.c(var6, "avatar", var3);
+      f.c(var5, "avatar", var3);
    }
 
-   f.c(var6, "id", UserId.toString-impl(var1));
-   f.c(var6, "username", var5);
-   f.c(var6, "globalName", var0.getUserGlobalName());
-   f.a(var6, "incomplete", java.lang.Boolean.TRUE);
-   return var6.a();
+   f.c(var5, "id", UserId.toString-impl(var1));
+   f.c(var5, "username", var6);
+   f.c(var5, "globalName", var0.getUserGlobalName());
+   f.a(var5, "incomplete", java.lang.Boolean.TRUE);
+   return var5.a();
 }
 
 internal fun NotificationData.getButtonPendingIntent(context: Context, notificationDataMap: Map<String, String>): PendingIntent {
    q.h(var0, "<this>");
    q.h(var1, "context");
    q.h(var2, "notificationDataMap");
-   val var4: java.lang.String = getTag(var0);
-   val var3: StringBuilder = new StringBuilder();
-   var3.append(var4);
-   var3.append("button");
-   return getPendingIntent(var1, var2, var3.toString());
+   val var3: java.lang.String = getTag(var0);
+   val var4: StringBuilder = new StringBuilder();
+   var4.append(var3);
+   var4.append("button");
+   return getPendingIntent(var1, var2, var4.toString());
 }
 
 public fun NotificationData.getCallAction(context: Context, isAcceptAction: Boolean, notificationDataMap: Map<String, String>): Action? {
@@ -397,12 +397,12 @@ internal fun NotificationData.getConversationTitle(): CharSequence? {
          }
       } else {
          var2 = var0.getGuildName();
-         val var5: java.lang.String = var0.getChannelName();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append(var2);
-         var7.append(" #");
-         var7.append(var5);
-         var2 = var7.toString();
+         val var7: java.lang.String = var0.getChannelName();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var2);
+         var5.append(" #");
+         var5.append(var7);
+         var2 = var5.toString();
       }
    }
 
@@ -581,21 +581,21 @@ public fun NotificationData.getKvMessage(rawMessage: String?): KvMessageEntry? {
    if (var2 != null && var3 != null && q.c(var0.getType(), "MESSAGE_CREATE")) {
       val var4: NotificationMessage = var0.getMessage();
       if (var1 != null && var4 != null) {
-         val var11: JsonElement = Json.d.g(var1);
-         val var9: java.util.List = i.j();
+         val var9: JsonElement = Json.d.g(var1);
+         val var11: java.util.List = i.j();
          val var5: JsonObject = var4.getAuthor();
          q.e(var5);
          val var13: java.lang.Iterable = i.y0(i.e(var5), var4.getMentions());
          val var12: ArrayList = new ArrayList(i.u(var13, 10));
-         val var6: java.util.Iterator = var13.iterator();
+         val var14: java.util.Iterator = var13.iterator();
 
-         while (var6.hasNext()) {
-            val var14: java.util.Map = r.x(var6.next() as JsonObject);
-            var14.put("incomplete", g.b(java.lang.Boolean.TRUE));
-            var12.add(new JsonObject(var14));
+         while (var14.hasNext()) {
+            val var6: java.util.Map = r.x(var14.next() as JsonObject);
+            var6.put("incomplete", g.b(java.lang.Boolean.TRUE));
+            var12.add(new JsonObject(var6));
          }
 
-         return new KvMessageEntry(var9, var12, g.o(var11), var2, var3.unbox-impl(), null);
+         return new KvMessageEntry(var11, var12, g.o(var9), var2, var3.unbox-impl(), null);
       }
 
       try {
@@ -919,12 +919,12 @@ public fun NotificationData.getTag(): String {
             break label70;
          case 974015250:
             if (var1.equals("ACTIVITY_START")) {
-               var1 = var0.getType();
-               val var25: Int = var0.getActivityType();
+               val var25: java.lang.String = var0.getType();
+               val var17: Int = var0.getActivityType();
                val var8: java.lang.String = var0.getActivityName();
                val var32: StringBuilder = new StringBuilder();
-               var32.append(var1);
                var32.append(var25);
+               var32.append(var17);
                var32.append(var8);
                return var32.toString();
             }
@@ -936,8 +936,8 @@ public fun NotificationData.getTag(): String {
             break;
          case 1471047007:
             if (var1.equals("LOCAL_NOTIFICATION")) {
-               val var24: java.lang.String = var0.getType();
-               val var16: ChannelId = var0.getChannelId-qMVnFVQ();
+               var1 = var0.getType();
+               val var24: ChannelId = var0.getChannelId-qMVnFVQ();
                val var6: java.lang.String = var0.getMessageId-N_6c4I0();
                val var7: java.lang.String;
                if (var6 == null) {
@@ -947,20 +947,20 @@ public fun NotificationData.getTag(): String {
                }
 
                val var31: StringBuilder = new StringBuilder();
+               var31.append(var1);
                var31.append(var24);
-               var31.append(var16);
                var31.append(var7);
                return var31.toString();
             }
             break label70;
          case 1770025841:
             if (var1.equals("CALL_RING")) {
-               val var2: java.lang.String = var0.getType();
-               val var15: ChannelId = var0.getChannelId-qMVnFVQ();
+               var1 = var0.getType();
+               val var2: ChannelId = var0.getChannelId-qMVnFVQ();
                val var4: java.lang.String = var0.getTimeReceived();
                val var3: StringBuilder = new StringBuilder();
+               var3.append(var1);
                var3.append(var2);
-               var3.append(var15);
                var3.append(var4);
                return var3.toString();
             }
@@ -969,19 +969,19 @@ public fun NotificationData.getTag(): String {
       }
 
       var1 = var0.getType();
-      val var29: ChannelId = var0.getChannelId-qMVnFVQ();
-      val var12: StringBuilder = new StringBuilder();
-      var12.append(var1);
-      var12.append(var29);
-      return var12.toString();
+      val var12: ChannelId = var0.getChannelId-qMVnFVQ();
+      val var29: StringBuilder = new StringBuilder();
+      var29.append(var1);
+      var29.append(var12);
+      return var29.toString();
    }
 
-   val var13: java.lang.String = var0.getType();
-   val var22: StringBuilder = new StringBuilder();
-   var22.append("Unknown notification type: ");
-   var22.append(var13);
-   var22.append(".");
-   throw new IllegalArgumentException(var22.toString());
+   val var22: java.lang.String = var0.getType();
+   val var13: StringBuilder = new StringBuilder();
+   var13.append("Unknown notification type: ");
+   var13.append(var22);
+   var13.append(".");
+   throw new IllegalArgumentException(var13.toString());
 }
 
 public fun NotificationData.getTimedMuteAction(context: Context, numMessages: Int): Action? {
@@ -1208,12 +1208,12 @@ public fun NotificationData.getTitle(context: Context): CharSequence {
          }
 
          val var11: java.lang.String = var0.getGuildName();
-         var3 = var0.getChannelName();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append(var11);
-         var7.append(" #");
-         var7.append(var3);
-         return var7.toString();
+         val var7: java.lang.String = var0.getChannelName();
+         val var18: StringBuilder = new StringBuilder();
+         var18.append(var11);
+         var18.append(" #");
+         var18.append(var7);
+         return var18.toString();
       case 1770025841:
          if (!var3.equals("CALL_RING")) {
             return "";
@@ -1457,18 +1457,18 @@ public fun NotificationData.toNotificationMessage(author: JsonObject): JsonObjec
    q.e(var9);
    val var5: Long = var9.unbox-impl();
    val var14: GuildId = var0.getGuildId-qOKuAAo();
-   val var10: java.lang.String = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS", Locale.getDefault()).format(new Date());
-   val var11: p = new p();
-   f.c(var11, "content", var7);
-   f.b(var11, "flags", var3);
-   f.b(var11, "type", var2);
-   f.c(var11, "id", MessageId.toString-impl(var13));
-   f.c(var11, "channel_id", ChannelId.toString-impl(var5));
-   f.c(var11, "timestamp", var10);
-   var11.b("author", var1);
+   val var11: java.lang.String = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS", Locale.getDefault()).format(new Date());
+   val var10: p = new p();
+   f.c(var10, "content", var7);
+   f.b(var10, "flags", var3);
+   f.b(var10, "type", var2);
+   f.c(var10, "id", MessageId.toString-impl(var13));
+   f.c(var10, "channel_id", ChannelId.toString-impl(var5));
+   f.c(var10, "timestamp", var11);
+   var10.b("author", var1);
    if (var14 != null) {
-      f.c(var11, "guild_id", GuildId.toString-impl(var14.unbox-impl()));
+      f.c(var10, "guild_id", GuildId.toString-impl(var14.unbox-impl()));
    }
 
-   return var11.a();
+   return var10.a();
 }

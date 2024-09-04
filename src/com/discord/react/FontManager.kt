@@ -127,8 +127,8 @@ public object FontManager {
 
          try {
             q.h(var1, "context");
-            val var2: Float = this.getInitialFontSize();
-            val var3: Float = this.getFontScale(var1);
+            val var3: Float = this.getInitialFontSize();
+            val var2: Float = this.getFontScale(var1);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit
          }
@@ -158,13 +158,13 @@ public object FontManager {
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: iload 1
       // 09: i2f
-      // 0a: fstore 4
-      // 0c: aload 0
-      // 0d: aload 2
-      // 0e: invokevirtual com/discord/react/FontManager.getFontScale (Landroid/content/Context;)F
-      // 11: fstore 3
-      // 12: fload 4
-      // 14: fload 3
+      // 0a: fstore 3
+      // 0b: aload 0
+      // 0c: aload 2
+      // 0d: invokevirtual com/discord/react/FontManager.getFontScale (Landroid/content/Context;)F
+      // 10: fstore 4
+      // 12: fload 3
+      // 13: fload 4
       // 15: fmul
       // 16: f2i
       // 17: istore 1

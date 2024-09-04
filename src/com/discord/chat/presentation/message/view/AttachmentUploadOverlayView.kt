@@ -48,17 +48,17 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       this.transitionOutDuration = 175L;
       this.transitionDelay = 400L;
       this.animationStartDelay = 1000L;
-      val var5: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
-      this.binding = var5;
+      val var3: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      this.binding = var3;
       this.onAnimationComplete = <unrepresentable>.INSTANCE;
-      val var3: SimpleDraweeView = var5.uploadCancel;
-      kotlin.jvm.internal.q.e(var5.uploadCancel);
-      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.Cancel);
-      ColorUtilsKt.setTintColor(var3, Color.argb(255, 255, 255, 255));
-      I18nUtilsKt.i18nContentDescription$default(var3, I18nMessage.CANCEL, null, 2, null);
-      val var4: SimpleDraweeView = var5.uploadComplete;
-      kotlin.jvm.internal.q.e(var5.uploadComplete);
+      val var5: SimpleDraweeView = var3.uploadCancel;
+      kotlin.jvm.internal.q.e(var3.uploadCancel);
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.Cancel);
+      ColorUtilsKt.setTintColor(var5, Color.argb(255, 255, 255, 255));
+      I18nUtilsKt.i18nContentDescription$default(var5, I18nMessage.CANCEL, null, 2, null);
+      val var4: SimpleDraweeView = var3.uploadComplete;
+      kotlin.jvm.internal.q.e(var3.uploadComplete);
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Checkmark);
       ColorUtilsKt.setTintColor(var4, Color.argb(255, 88, 101, 242));
       I18nUtilsKt.i18nContentDescription$default(var4, I18nMessage.UPLOAD_COMPLETE, null, 2, null);
@@ -180,17 +180,17 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun uploadCompleteCheckmarkFadeOutAnim(): AnimatorSet {
-      val var1: AnimatorSet = new AnimatorSet();
-      var1.setDuration(this.transitionOutDuration);
-      var1.setStartDelay(this.transitionDelay);
-      val var2: ValueAnimator = new ValueAnimator();
-      var2.setFloatValues(new float[]{0.9F, 0.8F});
-      var2.addUpdateListener(new h(this));
+      val var2: AnimatorSet = new AnimatorSet();
+      var2.setDuration(this.transitionOutDuration);
+      var2.setStartDelay(this.transitionDelay);
+      val var1: ValueAnimator = new ValueAnimator();
+      var1.setFloatValues(new float[]{0.9F, 0.8F});
+      var1.addUpdateListener(new h(this));
       val var4: ValueAnimator = new ValueAnimator();
       var4.setFloatValues(new float[]{1.0F, 0.0F});
       var4.addUpdateListener(new i(this));
-      var1.playTogether(new Animator[]{var2, var4});
-      var1.addListener(new AnimatorListener(this) {
+      var2.playTogether(new Animator[]{var1, var4});
+      var2.addListener(new AnimatorListener(this) {
          final AttachmentUploadOverlayView this$0;
 
          {
@@ -215,7 +215,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          public void onAnimationStart(Animator var1) {
          }
       });
-      return var1;
+      return var2;
    }
 
    @JvmStatic

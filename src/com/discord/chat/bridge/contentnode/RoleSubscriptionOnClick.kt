@@ -164,25 +164,23 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
          val var5: Boolean = var12.p();
          var var9: java.lang.String = null;
          var var2: Int;
+         var var7: java.lang.String;
          var var8: java.lang.String;
          val var13: java.lang.String;
          var var15: java.lang.String;
-         var var17: java.lang.String;
          if (var5) {
-            var17 = var12.m(var11, 0);
+            var9 = var12.m(var11, 0);
             var8 = var12.m(var11, 1);
             val var6: b2 = b2.a;
-            val var10: java.lang.String = var12.n(var11, 2, b2.a, null) as java.lang.String;
+            var7 = var12.n(var11, 2, b2.a, null) as java.lang.String;
             var13 = var12.n(var11, 3, var6, null) as java.lang.String;
             var15 = var12.n(var11, 4, var6, null) as java.lang.String;
             var2 = 31;
-            var9 = var17;
-            var17 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var17 = null;
+            var7 = null;
             var15 = null;
             var var14: java.lang.String = null;
 
@@ -204,7 +202,7 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
                               var2 |= 8;
                            }
                         } else {
-                           var17 = var12.n(var11, 2, b2.a, var17) as java.lang.String;
+                           var7 = var12.n(var11, 2, b2.a, var7) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
@@ -225,7 +223,7 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
          }
 
          var12.c(var11);
-         return new RoleSubscriptionOnClick(var2, var9, var8, var17, var13, var15, null);
+         return new RoleSubscriptionOnClick(var2, var9, var8, var7, var13, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleSubscriptionOnClick) {

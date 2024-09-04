@@ -64,13 +64,13 @@ internal object SystemLogReport {
                var2 = false;
             }
 
-            val var8: Function2 = this.$cb;
-            val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
+            val var6: Function2 = this.$cb;
+            val var8: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
             if (!var2) {
                var1 = null;
             }
 
-            var8.invoke(var6, var1);
+            var6.invoke(var8, var1);
          }
       });
    }

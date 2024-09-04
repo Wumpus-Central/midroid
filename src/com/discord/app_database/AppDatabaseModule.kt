@@ -38,10 +38,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    @ReactMethod
    public fun setUserId(userId: String?) {
       if (var1 != null) {
-         val var3: CacheModule.Companion = CacheModule.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var3.get(var2).setItem("_databaseUserId", var1);
+         val var2: CacheModule.Companion = CacheModule.Companion;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var2.get(var3).setItem("_databaseUserId", var1);
       } else {
          val var4: CacheModule.Companion = CacheModule.Companion;
          val var5: ReactApplicationContext = this.getReactApplicationContext();

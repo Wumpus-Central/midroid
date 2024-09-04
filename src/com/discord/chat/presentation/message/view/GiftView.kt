@@ -211,33 +211,33 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          this.binding.thumbnail.setImageURI((var9 as GiftEmbed.Resolved).getThumbnailUrl());
          (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.a((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
-         val var32: TextView = this.binding.title;
+         val var11: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
-         var32.setTextColor(var27.getTitleColor());
-         kotlin.jvm.internal.q.e(var32);
-         val var11: java.lang.CharSequence = var32.getText();
-         kotlin.jvm.internal.q.g(var11, "getText(...)");
+         var11.setTextColor(var27.getTitleColor());
+         kotlin.jvm.internal.q.e(var11);
+         val var32: java.lang.CharSequence = var11.getText();
+         kotlin.jvm.internal.q.g(var32, "getText(...)");
          var var20: Byte;
-         if (kotlin.text.h.x(var11) xor true) {
+         if (kotlin.text.h.x(var32) xor true) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var32.setVisibility(var20);
-         val var35: TextView = this.binding.subtitle;
+         var11.setVisibility(var20);
+         val var33: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
-         var35.setTextColor(var27.getSubtitleColor());
-         kotlin.jvm.internal.q.e(var35);
-         val var33: java.lang.CharSequence = var35.getText();
-         kotlin.jvm.internal.q.g(var33, "getText(...)");
-         if (kotlin.text.h.x(var33) xor true) {
+         var33.setTextColor(var27.getSubtitleColor());
+         kotlin.jvm.internal.q.e(var33);
+         val var35: java.lang.CharSequence = var33.getText();
+         kotlin.jvm.internal.q.g(var35, "getText(...)");
+         if (kotlin.text.h.x(var35) xor true) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var35.setVisibility(var20);
+         var33.setVisibility(var20);
          if (var27 is GiftEmbed.Resolved.Invalid) {
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
                .v(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));

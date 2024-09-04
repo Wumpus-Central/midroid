@@ -251,53 +251,52 @@ public data class PollAnswer(answerId: String,
          val var16: c = var1.b(var15);
          var var2: Int;
          var var3: Int;
-         var var4: Int;
+         val var5: Int;
+         var var7: java.lang.Boolean;
          var var9: Any;
-         var var10: Any;
+         var var10: java.lang.Boolean;
          var var11: Any;
-         var var12: java.lang.Boolean;
-         val var13: java.lang.Boolean;
+         var var12: Any;
+         val var13: Any;
          val var18: java.lang.Boolean;
-         var var23: Any;
          if (var16.p()) {
             var9 = var16.m(var15, 0);
-            var10 = var16.y(var15, 1, PollMedia.$serializer.INSTANCE, null) as PollMedia;
-            var3 = var16.C(var15, 2);
-            var11 = var16.m(var15, 3);
+            var11 = var16.y(var15, 1, PollMedia.$serializer.INSTANCE, null) as PollMedia;
+            var5 = var16.C(var15, 2);
+            var12 = var16.m(var15, 3);
             var2 = var16.i(var15, 4);
             val var17: h = h.a;
-            var12 = var16.n(var15, 5, h.a, null) as java.lang.Boolean;
-            var23 = var16.n(var15, 6, var17, null) as java.lang.Boolean;
+            var10 = var16.n(var15, 5, h.a, null) as java.lang.Boolean;
+            var7 = var16.n(var15, 6, var17, null) as java.lang.Boolean;
             var18 = var16.n(var15, 7, var17, null) as java.lang.Boolean;
             val var8: java.lang.String = var16.m(var15, 8);
-            var4 = 511;
-            var13 = (java.lang.Boolean)var23;
-            var23 = var8;
+            var3 = 511;
+            var13 = var8;
          } else {
-            var var5: Boolean = true;
-            var4 = 0;
+            var var23: Boolean = true;
+            var var4: Int = 0;
             var2 = 0;
             var12 = null;
             var11 = null;
             var9 = null;
-            var var25: Any = null;
-            var23 = null;
+            var var26: Any = null;
+            var7 = null;
             var var19: Any = null;
             var10 = null;
             var3 = 0;
 
-            while (var5) {
+            while (var23) {
                val var6: Int = var16.o(var15);
                switch (var6) {
                   case -1:
-                     var5 = false;
+                     var23 = false;
                      break;
                   case 0:
                      var9 = var16.m(var15, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var25 = var16.y(var15, 1, PollMedia.$serializer.INSTANCE, var25) as PollMedia;
+                     var26 = var16.y(var15, 1, PollMedia.$serializer.INSTANCE, var26) as PollMedia;
                      var2 |= 2;
                      break;
                   case 2:
@@ -305,7 +304,7 @@ public data class PollAnswer(answerId: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var23 = var16.m(var15, 3);
+                     var7 = var16.m(var15, 3);
                      var2 |= 8;
                      break;
                   case 4:
@@ -333,19 +332,19 @@ public data class PollAnswer(answerId: String,
                }
             }
 
-            var23 = var19;
-            var18 = var12;
-            var13 = (java.lang.Boolean)var11;
-            var12 = (java.lang.Boolean)var10;
+            var13 = var19;
+            var18 = (java.lang.Boolean)var12;
+            var7 = (java.lang.Boolean)var11;
             var2 = var4;
-            var11 = var23;
-            var10 = var25;
-            var4 = var2;
+            var12 = var7;
+            var5 = var3;
+            var11 = var26;
+            var3 = var2;
          }
 
          var16.c(var15);
          return new PollAnswer(
-            var4, (java.lang.String)var9, (PollMedia)var10, (boolean)var3, (java.lang.String)var11, var2, var12, var13, var18, (java.lang.String)var23, null
+            var3, (java.lang.String)var9, (PollMedia)var11, (boolean)var5, (java.lang.String)var12, var2, var10, var7, var18, (java.lang.String)var13, null
          );
       }
 

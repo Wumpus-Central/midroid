@@ -32,10 +32,10 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
 
    public fun fillAdapter(recyclerView: RecyclerView) {
       q.h(var1, "recyclerView");
-      val var2: java.util.Map = this.delegateViewTypes;
-      val var3: RecyclerView.RecycledViewPool = var1.getRecycledViewPool();
-      q.g(var3, "getRecycledViewPool(...)");
-      ChatListViewFactoryKt.fillChatList(var1, this, var2, var3);
+      val var3: java.util.Map = this.delegateViewTypes;
+      val var2: RecyclerView.RecycledViewPool = var1.getRecycledViewPool();
+      q.g(var2, "getRecycledViewPool(...)");
+      ChatListViewFactoryKt.fillChatList(var1, this, var3, var2);
       ChatListViewFactoryKt.fillAccessories(var1, new MessageAccessoriesAdapter(null, 1, null), this.messageAccessoriesRecycledViewPool);
    }
 

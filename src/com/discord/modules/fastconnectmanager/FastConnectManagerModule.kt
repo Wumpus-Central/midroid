@@ -81,10 +81,10 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
    }
 
    private fun setCacheValue(key: String, value: String?) {
-      val var3: CacheModule.Companion = CacheModule.Companion;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var4, "getReactApplicationContext(...)");
-      val var5: CacheModule = var3.get(var4);
+      val var4: CacheModule.Companion = CacheModule.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      val var5: CacheModule = var4.get(var3);
       if (var2 == null) {
          var5.removeItem(var1);
       } else {

@@ -40,10 +40,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun addListener(type: String) {
       q.h(var1, "type");
       if (q.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
-         val var3: SystemLogReport = SystemLogReport.INSTANCE;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var3.reportLastCrash$crash_reporting_release(var2, new Function2(this) {
+         val var2: SystemLogReport = SystemLogReport.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var2.reportLastCrash$crash_reporting_release(var3, new Function2(this) {
             final CrashReportingModule this$0;
 
             {
@@ -52,10 +52,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
             }
 
             public final void invoke(HistoricalProcessExitReason.Reason var1, SystemLogUtils.Tombstone var2) {
-               val var3: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
-               val var4: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
-               q.g(var4, "access$getReactApplicationContext(...)");
-               var3.emitModuleEvent(var4, new CrashReportEvent(java.lang.Boolean.TRUE, var1, var2));
+               val var4: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
+               val var3: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
+               q.g(var3, "access$getReactApplicationContext(...)");
+               var4.emitModuleEvent(var3, new CrashReportEvent(java.lang.Boolean.TRUE, var1, var2));
             }
          });
       }

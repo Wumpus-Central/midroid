@@ -34,11 +34,11 @@ public object UnicodeEmojis {
          new Function2(var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1604,10 +1604,10 @@ public object UnicodeEmojis {
 
          public open fun deserialize(decoder: Decoder): com.discord.emoji.UnicodeEmojis.EmojiCategories {
             q.h(var1, "decoder");
-            val var16: SerialDescriptor = this.getDescriptor();
-            val var17: c = var1.b(var16);
-            val var14: Array<KSerializer> = UnicodeEmojis.EmojiCategories.access$get$childSerializers$cp();
-            val var6: Boolean = var17.p();
+            val var17: SerialDescriptor = this.getDescriptor();
+            val var18: c = var1.b(var17);
+            val var15: Array<KSerializer> = UnicodeEmojis.EmojiCategories.access$get$childSerializers$cp();
+            val var6: Boolean = var18.p();
             var var3: Byte = 7;
             var var9: java.util.List = null;
             var var2: Int;
@@ -1616,66 +1616,66 @@ public object UnicodeEmojis {
             var var10: java.util.List;
             var var11: java.util.List;
             var var12: java.util.List;
-            var var13: java.util.List;
-            val var18: java.util.List;
+            val var14: java.util.List;
+            val var19: java.util.List;
             if (var6) {
-               var9 = var17.y(var16, 0, var14[0], null) as java.util.List;
-               var8 = var17.y(var16, 1, var14[1], null) as java.util.List;
-               var11 = var17.y(var16, 2, var14[2], null) as java.util.List;
-               var12 = var17.y(var16, 3, var14[3], null) as java.util.List;
-               var10 = var17.y(var16, 4, var14[4], null) as java.util.List;
-               var7 = var17.y(var16, 5, var14[5], null) as java.util.List;
-               var18 = var17.y(var16, 6, var14[6], null) as java.util.List;
-               var13 = var17.y(var16, 7, var14[7], null) as java.util.List;
+               var9 = var18.y(var17, 0, var15[0], null) as java.util.List;
+               var8 = var18.y(var17, 1, var15[1], null) as java.util.List;
+               var12 = var18.y(var17, 2, var15[2], null) as java.util.List;
+               var11 = var18.y(var17, 3, var15[3], null) as java.util.List;
+               var14 = var18.y(var17, 4, var15[4], null) as java.util.List;
+               var7 = var18.y(var17, 5, var15[5], null) as java.util.List;
+               var19 = var18.y(var17, 6, var15[6], null) as java.util.List;
+               var10 = var18.y(var17, 7, var15[7], null) as java.util.List;
                var2 = 255;
             } else {
                var var4: Boolean = true;
                var2 = 0;
-               var13 = null;
+               var var13: java.util.List = null;
                var12 = null;
                var11 = null;
                var10 = null;
                var8 = null;
                var7 = null;
-               var var19: java.util.List = null;
+               var var20: java.util.List = null;
 
                while (var4) {
-                  val var5: Int = var17.o(var16);
+                  val var5: Int = var18.o(var17);
                   switch (var5) {
                      case -1:
                         var4 = false;
                         continue;
                      case 0:
-                        var9 = var17.y(var16, 0, var14[0], var9) as java.util.List;
+                        var9 = var18.y(var17, 0, var15[0], var9) as java.util.List;
                         var2 |= 1;
                         break;
                      case 1:
-                        var8 = var17.y(var16, 1, var14[1], var8) as java.util.List;
+                        var8 = var18.y(var17, 1, var15[1], var8) as java.util.List;
                         var2 |= 2;
                         break;
                      case 2:
-                        var7 = var17.y(var16, 2, var14[2], var7) as java.util.List;
+                        var7 = var18.y(var17, 2, var15[2], var7) as java.util.List;
                         var2 |= 4;
                         break;
                      case 3:
-                        var19 = var17.y(var16, 3, var14[3], var19) as java.util.List;
+                        var20 = var18.y(var17, 3, var15[3], var20) as java.util.List;
                         var2 |= 8;
                         break;
                      case 4:
-                        var10 = var17.y(var16, 4, var14[4], var10) as java.util.List;
+                        var10 = var18.y(var17, 4, var15[4], var10) as java.util.List;
                         var2 |= 16;
                         var3 = 7;
                         continue;
                      case 5:
-                        var11 = var17.y(var16, 5, var14[5], var11) as java.util.List;
+                        var11 = var18.y(var17, 5, var15[5], var11) as java.util.List;
                         var2 |= 32;
                         continue;
                      case 6:
-                        var12 = var17.y(var16, 6, var14[6], var12) as java.util.List;
+                        var12 = var18.y(var17, 6, var15[6], var12) as java.util.List;
                         var2 |= 64;
                         continue;
                      case 7:
-                        var13 = var17.y(var16, var3, var14[var3], var13) as java.util.List;
+                        var13 = var18.y(var17, var3, var15[var3], var13) as java.util.List;
                         var2 |= 128;
                         continue;
                      default:
@@ -1685,14 +1685,16 @@ public object UnicodeEmojis {
                   var3 = 7;
                }
 
-               var18 = var12;
+               var14 = var10;
+               var10 = var13;
+               var19 = var12;
                var7 = var11;
-               var12 = var19;
-               var11 = var7;
+               var11 = var20;
+               var12 = var7;
             }
 
-            var17.c(var16);
-            return new UnicodeEmojis.EmojiCategories(var2, var9, var8, var11, var12, var10, var7, var18, var13, null);
+            var18.c(var17);
+            return new UnicodeEmojis.EmojiCategories(var2, var9, var8, var12, var11, var14, var7, var19, var10, null);
          }
 
          public open fun serialize(encoder: Encoder, value: com.discord.emoji.UnicodeEmojis.EmojiCategories) {

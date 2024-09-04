@@ -91,12 +91,12 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                };
             }
 
-            var var15: Any = ((<unrepresentable>)var12).result;
-            val var11: Any = b.f();
+            var var11: Any = ((<unrepresentable>)var12).result;
+            val var15: Any = b.f();
             val var13: <unrepresentable>;
             if (((<unrepresentable>)var12).label != 0) {
                if (((<unrepresentable>)var12).label == 1) {
-                  s.b(var15);
+                  s.b(var11);
                   return Unit.a;
                }
 
@@ -106,18 +106,18 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
 
                var1 = ((<unrepresentable>)var12).L$1;
                var13 = ((<unrepresentable>)var12).L$0 as <unrepresentable>;
-               s.b(var15);
+               s.b(var11);
             } else {
-               s.b(var15);
-               val var8: Long = System.currentTimeMillis();
-               val var6: Long = var8 - this.$timeLastEmitted.j;
+               s.b(var11);
+               val var6: Long = System.currentTimeMillis();
+               val var8: Long = var6 - this.$timeLastEmitted.j;
                val var4: Long = this.$timeoutMillis;
-               if (var6 > this.$timeoutMillis) {
-                  this.$timeLastEmitted.j = var8;
-                  var15 = this.$collector;
+               if (var8 > this.$timeoutMillis) {
+                  this.$timeLastEmitted.j = var6;
+                  var11 = this.$collector;
                   ((<unrepresentable>)var12).label = 1;
-                  if (var15.emit(var1, (Continuation)var12) === var11) {
-                     return var11;
+                  if (var11.emit(var1, (Continuation)var12) === var15) {
+                     return var15;
                   }
 
                   return Unit.a;
@@ -126,8 +126,8 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                ((<unrepresentable>)var12).L$0 = this;
                ((<unrepresentable>)var12).L$1 = var1;
                ((<unrepresentable>)var12).label = 2;
-               if (g0.a(var4 - var6, (Continuation)var12) === var11) {
-                  return var11;
+               if (g0.a(var4 - var8, (Continuation)var12) === var15) {
+                  return var15;
                }
 
                var13 = this;

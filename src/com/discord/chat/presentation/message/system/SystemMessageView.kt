@@ -102,13 +102,13 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      val var13: StructurableText = var1.getContent();
-      if (var13 != null) {
+      var var12: StructurableText = var1.getContent();
+      if (var12 != null) {
          val var19: ArrayList = this.accessories;
-         val var12: java.lang.String = var1.getId-3Eiw7ao();
-         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var7: Boolean = var1.getShouldShowRoleDot();
+         val var13: java.lang.String = var1.getId-3Eiw7ao();
+         val var7: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var8: Boolean = var1.getShouldShowRoleDot();
          val var10: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
@@ -135,11 +135,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var19.add(
             new MessageContentAccessory(
-               var12,
                var13,
+               var12,
+               var7,
                var9,
                var8,
-               var7,
                var10,
                var4,
                var5,
@@ -190,7 +190,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var25: java.util.Iterator = var24.iterator();
 
             for (int var18 = 0; var25.hasNext(); var18++) {
-               val var28: Any = var25.next();
+               var12 = (StructurableText)var25.next();
                if (var18 < 0) {
                   i.t();
                }
@@ -203,7 +203,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var28 as Embed,
+                        var12 as Embed,
                         false,
                         false,
                         false,

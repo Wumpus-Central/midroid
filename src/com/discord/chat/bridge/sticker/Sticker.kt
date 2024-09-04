@@ -202,101 +202,97 @@ public data class Sticker(id: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: n0 = n0.a;
-         return new KSerializer[]{x0.a, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, b2.a, b2.a, b2.a, a.u(n0.a), a.u(var1), var1};
+         val var3: n0 = n0.a;
+         return new KSerializer[]{x0.a, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, b2.a, b2.a, b2.a, a.u(n0.a), a.u(var3), var3};
       }
 
       public open fun deserialize(decoder: Decoder): Sticker {
          q.h(var1, "decoder");
          val var15: SerialDescriptor = this.getDescriptor();
          val var16: c = var1.b(var15);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Long;
          var var8: Any;
-         var var9: Any;
+         var var9: java.lang.String;
+         var var10: Any;
          var var11: java.lang.String;
          val var12: java.lang.String;
-         val var13: java.lang.String;
          val var18: Int;
          if (var16.p()) {
             var6 = var16.f(var15, 0);
-            var9 = var16.y(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, null) as StickerFormatType;
-            var13 = var16.m(var15, 2);
+            var10 = var16.y(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, null) as StickerFormatType;
+            var9 = var16.m(var15, 2);
             var11 = var16.m(var15, 3);
             var12 = var16.m(var15, 4);
             val var17: n0 = n0.a;
             var8 = var16.n(var15, 5, n0.a, null) as Int;
             var18 = var16.n(var15, 6, var17, null) as Int;
-            val var2: Int = var16.i(var15, 7);
-            var4 = 255;
-            var3 = var2;
+            var3 = var16.i(var15, 7);
+            var2 = 255;
          } else {
-            var var21: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
-            var var25: Int = null;
+            var var22: Int = null;
             var8 = null;
             var var19: java.lang.String = null;
             var6 = 0L;
-            var var10: Any = null;
+            var10 = null;
             var9 = null;
             var11 = null;
-            var var20: Int = 0;
+            var2 = 0;
 
-            while (var21) {
+            while (var4) {
                val var5: Int = var16.o(var15);
                switch (var5) {
                   case -1:
-                     var21 = false;
+                     var4 = false;
                      break;
                   case 0:
                      var6 = var16.f(var15, 0);
-                     var20 |= 1;
+                     var2 |= 1;
                      break;
                   case 1:
                      var10 = var16.y(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, var10) as StickerFormatType;
-                     var20 |= 2;
+                     var2 |= 2;
                      break;
                   case 2:
                      var9 = var16.m(var15, 2);
-                     var20 |= 4;
+                     var2 |= 4;
                      break;
                   case 3:
                      var8 = var16.m(var15, 3);
-                     var20 |= 8;
+                     var2 |= 8;
                      break;
                   case 4:
                      var19 = var16.m(var15, 4);
-                     var20 |= 16;
+                     var2 |= 16;
                      break;
                   case 5:
                      var11 = var16.n(var15, 5, n0.a, var11) as Int;
-                     var20 |= 32;
+                     var2 |= 32;
                      break;
                   case 6:
-                     var25 = var16.n(var15, 6, n0.a, var25) as Int;
-                     var20 |= 64;
+                     var22 = var16.n(var15, 6, n0.a, var22) as Int;
+                     var2 |= 64;
                      break;
                   case 7:
                      var3 = var16.i(var15, 7);
-                     var20 |= 128;
+                     var2 |= 128;
                      break;
                   default:
                      throw new n(var5);
                }
             }
 
-            var18 = var25;
+            var18 = var22;
             var8 = var11;
             var12 = var19;
             var11 = (java.lang.String)var8;
-            var13 = (java.lang.String)var9;
-            var9 = var10;
-            var4 = var20;
          }
 
          var16.c(var15);
-         return new Sticker(var4, var6, (StickerFormatType)var9, var13, var11, var12, (Integer)var8, var18, var3, null);
+         return new Sticker(var2, var6, (StickerFormatType)var10, var9, var11, var12, (Integer)var8, var18, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Sticker) {

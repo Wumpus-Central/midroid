@@ -165,12 +165,12 @@ public class ContentInventoryComponentView  public constructor(context: Context,
             var10.add(ContentInventoryEntryComponentKt.toColorInt(var21.next() as GradientColor));
          }
 
-         val var22: IntArray = kotlin.collections.i.P0(var10);
-         val var11: ContentInventoryComponentView = this.getBinding().getRoot();
-         var11.setVisibility(0);
-         q.e(var11);
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var11, var22, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         var11.setOnClickListener(new c(var5, var4));
+         val var11: IntArray = kotlin.collections.i.P0(var10);
+         val var22: ContentInventoryComponentView = this.getBinding().getRoot();
+         var22.setVisibility(0);
+         q.e(var22);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var22, var11, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         var22.setOnClickListener(new c(var5, var4));
          val var12: TextView = this.getBinding().contentInventoryComponentUsername;
          var12.setText(var5.getUserActionDescription());
          var12.setOnClickListener(new d(var5, var4));

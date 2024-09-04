@@ -121,12 +121,12 @@ public open class StubbedList<T> : java.util.List<T>, a {
 
    public companion object {
       private fun unsupported(methodName: String): String {
-         val var2: java.lang.String = g0.b(StubbedList.class).n();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var2);
-         var3.append(" did not implement ");
-         var3.append(var1);
-         return var3.toString();
+         val var3: java.lang.String = g0.b(StubbedList.class).n();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append(var3);
+         var2.append(" did not implement ");
+         var2.append(var1);
+         return var2.toString();
       }
    }
 }

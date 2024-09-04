@@ -883,28 +883,28 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          val var3: Int = var16.length;
 
          for (int var4 = 0; var4 < var3; var4++) {
-            val var13: MediaCodecInfo = var16[var4];
-            val var12: java.lang.String = var16[var4].getName();
-            kotlin.jvm.internal.q.g(var12, "getName(...)");
-            val var8: Array<java.lang.String> = var13.getSupportedTypes();
-            kotlin.jvm.internal.q.g(var8, "getSupportedTypes(...)");
-            val var14: ArrayList = new ArrayList();
-            val var6: Int = var8.length;
+            val var12: MediaCodecInfo = var16[var4];
+            val var13: java.lang.String = var16[var4].getName();
+            kotlin.jvm.internal.q.g(var13, "getName(...)");
+            val var14: Array<java.lang.String> = var12.getSupportedTypes();
+            kotlin.jvm.internal.q.g(var14, "getSupportedTypes(...)");
+            val var8: ArrayList = new ArrayList();
+            val var6: Int = var14.length;
 
             for (int var5 = var2; var5 < var6; var2 = 0) {
-               val var15: java.lang.String = var8[var5];
-               kotlin.jvm.internal.q.e(var8[var5]);
+               val var15: java.lang.String = var14[var5];
+               kotlin.jvm.internal.q.e(var14[var5]);
                if (kotlin.text.h.H(var15, "video", false, 2, null)) {
-                  var14.add(var15);
+                  var8.add(var15);
                }
 
                var5++;
             }
 
-            for (java.lang.String var21 : var14) {
+            for (java.lang.String var21 : var8) {
                val var18: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
-                  if (com.discord.a.a(var13)) {
+                  if (com.discord.a.a(var12)) {
                      var18 = "(HW)";
                   } else {
                      var18 = "(SW)";
@@ -914,9 +914,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                }
 
                val var19: java.lang.String = kotlin.collections.i.n0(
-                  kotlin.collections.i.m(new java.lang.String[]{var21, var12, var18}), " ", null, null, 0, null, null, 62, null
+                  kotlin.collections.i.m(new java.lang.String[]{var21, var13, var18}), " ", null, null, 0, null, null, 62, null
                );
-               if (var13.isEncoder()) {
+               if (var12.isEncoder()) {
                   var10 = kotlin.collections.c.p(var10, var19) as Array<java.lang.String>;
                } else {
                   var9 = kotlin.collections.c.p(var9, var19) as Array<java.lang.String>;
@@ -1051,11 +1051,11 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   new Function1(this, var4)// $VF: Couldn't be decompiled
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          // java.lang.StackOverflowError
-         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+         //   at java.base/java.util.HashMap.hash(HashMap.java:338)
+         //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
+         //   at java.base/java.util.HashMap.get(HashMap.java:564)
+         //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)

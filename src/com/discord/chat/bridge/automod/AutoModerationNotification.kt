@@ -8,6 +8,7 @@ import gn.g0
 import gn.h
 import gn.n0
 import kotlin.jvm.internal.q
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -333,7 +334,6 @@ public data class AutoModerationNotification(header: String,
          var var5: Int = 10;
          var var3: Int;
          var var4: Int;
-         var var10: Any;
          var var11: java.lang.String;
          var var12: java.lang.String;
          var var13: java.lang.String;
@@ -342,30 +342,32 @@ public data class AutoModerationNotification(header: String,
          var var16: java.lang.String;
          var var18: java.lang.String;
          val var25: java.lang.String;
-         var var39: java.lang.String;
+         var var35: java.lang.String;
+         var var41: Any;
          if (var9) {
             var13 = var23.m(var22, 0);
             var5 = var23.i(var22, 1);
             var12 = var23.m(var22, 2);
             val var2: Int = var23.i(var22, 3);
-            val var17: b2 = b2.a;
+            var41 = b2.a;
             var15 = var23.n(var22, 4, b2.a, null) as java.lang.String;
-            var18 = var23.n(var22, 5, var17, null) as java.lang.String;
-            var14 = var23.n(var22, 6, var17, null) as java.lang.String;
+            var14 = var23.n(var22, 5, (DeserializationStrategy)var41, null) as java.lang.String;
+            var16 = var23.n(var22, 6, (DeserializationStrategy)var41, null) as java.lang.String;
             var9 = var23.C(var22, 7);
-            var16 = var23.n(var22, 8, var17, null) as java.lang.String;
-            var11 = var23.n(var22, 9, var17, null) as java.lang.String;
-            var10 = var23.n(var22, 10, n0.a, null) as Int;
-            val var24: java.lang.String = var23.n(var22, 11, var17, null) as java.lang.String;
-            val var19: java.lang.String = var23.n(var22, 12, var17, null) as java.lang.String;
-            var3 = 8191;
-            var4 = var2;
-            var39 = var24;
+            var18 = var23.n(var22, 8, (DeserializationStrategy)var41, null) as java.lang.String;
+            var11 = var23.n(var22, 9, (DeserializationStrategy)var41, null) as java.lang.String;
+            val var10: Int = var23.n(var22, 10, n0.a, null) as Int;
+            val var24: java.lang.String = var23.n(var22, 11, (DeserializationStrategy)var41, null) as java.lang.String;
+            val var19: java.lang.String = var23.n(var22, 12, (DeserializationStrategy)var41, null) as java.lang.String;
+            var4 = 8191;
+            var3 = var2;
+            var41 = var10;
+            var35 = var24;
             var25 = var19;
          } else {
             var13 = null;
             var12 = null;
-            var39 = null;
+            var41 = null;
             var16 = null;
             var14 = null;
             var18 = null;
@@ -375,7 +377,7 @@ public data class AutoModerationNotification(header: String,
             var9 = false;
             var4 = 0;
             var3 = 0;
-            var10 = null;
+            var35 = null;
             var var27: Int = 0;
             var var26: java.lang.String = null;
 
@@ -408,7 +410,7 @@ public data class AutoModerationNotification(header: String,
                            var27 |= 16;
                            break;
                         case 5:
-                           var10 = var23.n(var22, 5, b2.a, var10) as java.lang.String;
+                           var35 = var23.n(var22, 5, b2.a, var35) as java.lang.String;
                            var27 |= 32;
                            break;
                         case 6:
@@ -436,7 +438,7 @@ public data class AutoModerationNotification(header: String,
                            var27 |= 2048;
                            continue;
                         case 12:
-                           var39 = var23.n(var22, 12, b2.a, var39) as java.lang.String;
+                           var41 = var23.n(var22, 12, b2.a, var41) as java.lang.String;
                            var27 |= 4096;
                            continue;
                         default:
@@ -454,20 +456,20 @@ public data class AutoModerationNotification(header: String,
                var5 = 10;
             }
 
-            var39 = var16;
-            var16 = var18;
-            var18 = (java.lang.String)var10;
+            var14 = var35;
             var15 = var26;
-            var25 = var39;
-            var10 = var14;
-            var11 = var15;
-            var14 = var11;
             var5 = var3;
-            var3 = var27;
+            var25 = (java.lang.String)var41;
+            var35 = var16;
+            var41 = var14;
+            var11 = var15;
+            var16 = var11;
+            var3 = var4;
+            var4 = var27;
          }
 
          var23.c(var22);
-         return new AutoModerationNotification(var3, var13, var5, var12, var4, var15, var18, var14, var9, var16, var11, (Integer)var10, var39, var25, null);
+         return new AutoModerationNotification(var4, var13, var5, var12, var3, var15, var14, var16, var9, var18, var11, (Integer)var41, var35, var25, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AutoModerationNotification) {
