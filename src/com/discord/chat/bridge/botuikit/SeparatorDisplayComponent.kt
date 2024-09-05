@@ -1,12 +1,5 @@
 package com.discord.chat.bridge.botuikit
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.h
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +8,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.h
+import qn.n0
+import qn.g0.a
 
 @f
 public data class SeparatorDisplayComponent(type: Int, id: String, divider: Boolean, spacing: SeparatorSpacingSize) : Component {
@@ -80,20 +80,20 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var2: Boolean = this.divider;
       val var5: SeparatorSpacingSize = this.spacing;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SeparatorDisplayComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var4);
-      var3.append(", divider=");
-      var3.append(var2);
-      var3.append(", spacing=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SeparatorDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", divider=");
+      var4.append(var2);
+      var4.append(", spacing=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -108,10 +108,10 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
          val var0: SeparatorDisplayComponent.$serializer = new SeparatorDisplayComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("14", var0, 4);
-         var1.l("type", false);
-         var1.l("id", false);
-         var1.l("divider", false);
-         var1.l("spacing", false);
+         var1.c("type", false);
+         var1.c("id", false);
+         var1.c("divider", false);
+         var1.c("spacing", false);
          descriptor = var1;
       }
 
@@ -124,27 +124,26 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
+         var var4: Int;
          val var5: Int;
          var var7: java.lang.String;
          var var10: SeparatorSpacingSize;
-         var var11: Int;
          if (var9.p()) {
-            var11 = var9.i(var8, 0);
+            val var3: Int = var9.i(var8, 0);
             var7 = var9.m(var8, 1);
-            val var4: Byte = var9.C(var8, 2);
+            var2 = var9.C(var8, 2);
             var10 = var9.y(var8, 3, SeparatorSpacingSize.Serializer.INSTANCE, null) as SeparatorSpacingSize;
-            var2 = 15;
-            var5 = var11;
-            var11 = var4;
+            var4 = 15;
+            var5 = var3;
          } else {
-            var var13: Boolean = true;
-            var var12: Int = 0;
+            var var15: Boolean = true;
+            var4 = 0;
             var2 = 0;
             var7 = null;
             var10 = null;
-            var11 = 0;
+            var var12: Int = 0;
 
-            while (var13) {
+            while (var15) {
                val var6: Int = var9.o(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -157,7 +156,7 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
                            var10 = var9.y(var8, 3, SeparatorSpacingSize.Serializer.INSTANCE, var10) as SeparatorSpacingSize;
                            var2 |= 8;
                         } else {
-                           var11 = var9.C(var8, 2);
+                           var12 = var9.C(var8, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -165,19 +164,21 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var9.i(var8, 0);
+                     var4 = var9.i(var8, 0);
                      var2 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var15 = false;
                }
             }
 
-            var5 = var12;
+            var2 = var12;
+            var5 = var4;
+            var4 = var2;
          }
 
          var9.c(var8);
-         return new SeparatorDisplayComponent(var2, var5, var7, (boolean)var11, var10, null);
+         return new SeparatorDisplayComponent(var4, var5, var7, (boolean)var2, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SeparatorDisplayComponent) {

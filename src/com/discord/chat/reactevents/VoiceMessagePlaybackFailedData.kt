@@ -4,12 +4,6 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +13,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.o1
 
 @f
 public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMessage: String?) : VoiceMessagePlaybackFailedData(var1, var2), ReactEvent {
@@ -87,13 +87,13 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.errorMessage;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = this.errorMessage;
       val var1: StringBuilder = new StringBuilder();
       var1.append("VoiceMessagePlaybackFailedData(messageId=");
-      var1.append(var2);
-      var1.append(", errorMessage=");
       var1.append(var3);
+      var1.append(", errorMessage=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }
@@ -110,8 +110,8 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
          val var0: VoiceMessagePlaybackFailedData.$serializer = new VoiceMessagePlaybackFailedData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.VoiceMessagePlaybackFailedData", var0, 2);
-         var1.l("messageId", false);
-         var1.l("errorMessage", false);
+         var1.c("messageId", false);
+         var1.c("errorMessage", false);
          descriptor = var1;
       }
 
@@ -124,7 +124,7 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          var var2: Int;
-         val var6: java.lang.String;
+         var var5: java.lang.String;
          var var11: java.lang.String;
          if (var8.p()) {
             val var9: MessageId = var8.y(var7, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -135,14 +135,14 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
                var10 = null;
             }
 
-            val var5: java.lang.String = var8.n(var7, 1, b2.a, null) as java.lang.String;
+            val var6: java.lang.String = var8.n(var7, 1, b2.a, null) as java.lang.String;
             var2 = 3;
-            var6 = var10;
-            var11 = var5;
+            var5 = var10;
+            var11 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var12: java.lang.String = null;
+            var5 = null;
             var11 = null;
 
             while (var3) {
@@ -156,18 +156,18 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
                      var11 = var8.n(var7, 1, b2.a, var11) as java.lang.String;
                      var2 |= 2;
                   } else {
-                     val var13: MessageId;
-                     if (var12 != null) {
-                        var13 = MessageId.box-impl(var12);
-                     } else {
-                        var13 = null;
-                     }
-
-                     val var14: MessageId = var8.y(var7, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
-                     if (var14 != null) {
-                        var12 = var14.unbox-impl();
+                     val var12: MessageId;
+                     if (var5 != null) {
+                        var12 = MessageId.box-impl(var5);
                      } else {
                         var12 = null;
+                     }
+
+                     val var13: MessageId = var8.y(var7, 0, MessageId.$serializer.INSTANCE, var12) as MessageId;
+                     if (var13 != null) {
+                        var5 = var13.unbox-impl();
+                     } else {
+                        var5 = null;
                      }
 
                      var2 |= 1;
@@ -176,12 +176,10 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
                   var3 = false;
                }
             }
-
-            var6 = var12;
          }
 
          var8.c(var7);
-         return new VoiceMessagePlaybackFailedData(var2, var6, var11, null, null);
+         return new VoiceMessagePlaybackFailedData(var2, var5, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceMessagePlaybackFailedData) {
@@ -194,7 +192,7 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

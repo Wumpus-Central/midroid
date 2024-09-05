@@ -79,40 +79,40 @@ internal class SystemLogCapture {
       // 072: astore 4
       // 074: aload 5
       // 076: astore 3
-      // 077: getstatic rm/a.b Ljava/nio/charset/Charset;
-      // 07a: astore 6
+      // 077: getstatic bn/a.b Ljava/nio/charset/Charset;
+      // 07a: astore 7
       // 07c: aload 5
       // 07e: astore 4
       // 080: aload 5
       // 082: astore 3
       // 083: new java/io/InputStreamReader
-      // 086: astore 7
+      // 086: astore 6
       // 088: aload 5
       // 08a: astore 4
       // 08c: aload 5
       // 08e: astore 3
-      // 08f: aload 7
+      // 08f: aload 6
       // 091: aload 8
-      // 093: aload 6
+      // 093: aload 7
       // 095: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
       // 098: aload 5
       // 09a: astore 4
       // 09c: aload 5
       // 09e: astore 3
-      // 09f: aload 7
+      // 09f: aload 6
       // 0a1: instanceof java/io/BufferedReader
       // 0a4: ifeq 0c1
       // 0a7: aload 5
       // 0a9: astore 4
       // 0ab: aload 5
       // 0ad: astore 3
-      // 0ae: aload 7
+      // 0ae: aload 6
       // 0b0: checkcast java/io/BufferedReader
       // 0b3: astore 6
       // 0b5: goto 0d6
       // 0b8: astore 3
       // 0b9: goto 20b
-      // 0bc: astore 7
+      // 0bc: astore 5
       // 0be: goto 14c
       // 0c1: aload 5
       // 0c3: astore 4
@@ -120,7 +120,7 @@ internal class SystemLogCapture {
       // 0c7: astore 3
       // 0c8: new java/io/BufferedReader
       // 0cb: dup
-      // 0cc: aload 7
+      // 0cc: aload 6
       // 0ce: sipush 8192
       // 0d1: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
       // 0d4: astore 6
@@ -187,57 +187,57 @@ internal class SystemLogCapture {
       // 155: aload 3
       // 156: astore 4
       // 158: new java/lang/StringBuilder
-      // 15b: astore 5
+      // 15b: astore 7
       // 15d: aload 3
       // 15e: astore 4
-      // 160: aload 5
+      // 160: aload 7
       // 162: invokespecial java/lang/StringBuilder.<init> ()V
       // 165: aload 3
       // 166: astore 4
-      // 168: aload 5
+      // 168: aload 7
       // 16a: ldc "Exception getting system logs '"
       // 16c: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 16f: pop
       // 170: aload 3
       // 171: astore 4
-      // 173: aload 5
-      // 175: aload 7
+      // 173: aload 7
+      // 175: aload 5
       // 177: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 17a: pop
       // 17b: aload 3
       // 17c: astore 4
-      // 17e: aload 5
+      // 17e: aload 7
       // 180: ldc "'"
       // 182: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 185: pop
       // 186: aload 3
       // 187: astore 4
       // 189: aload 6
-      // 18b: aload 5
+      // 18b: aload 7
       // 18d: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 190: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 193: aload 3
       // 194: astore 4
-      // 196: aload 7
+      // 196: aload 5
       // 198: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-      // 19b: astore 6
+      // 19b: astore 8
       // 19d: aload 3
       // 19e: astore 4
-      // 1a0: aload 6
+      // 1a0: aload 8
       // 1a2: ldc "getStackTrace(...)"
       // 1a4: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 1a7: aload 3
       // 1a8: astore 4
-      // 1aa: aload 6
+      // 1aa: aload 8
       // 1ac: arraylength
       // 1ad: istore 2
       // 1ae: iload 1
       // 1af: iload 2
       // 1b0: if_icmpge 1fb
-      // 1b3: aload 6
+      // 1b3: aload 8
       // 1b5: iload 1
       // 1b6: aaload
-      // 1b7: astore 8
+      // 1b7: astore 6
       // 1b9: aload 3
       // 1ba: astore 4
       // 1bc: aload 0
@@ -260,7 +260,7 @@ internal class SystemLogCapture {
       // 1dd: aload 3
       // 1de: astore 4
       // 1e0: aload 7
-      // 1e2: aload 8
+      // 1e2: aload 6
       // 1e4: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 1e7: pop
       // 1e8: aload 3
@@ -294,7 +294,7 @@ internal class SystemLogCapture {
    }
 
    public fun startThread(): Thread {
-      return pj.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new Function0(this) {
+      return zj.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new Function0(this) {
          final SystemLogCapture this$0;
 
          {

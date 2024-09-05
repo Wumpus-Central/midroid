@@ -2,10 +2,6 @@ package com.discord.bundle_updater
 
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,7 +9,11 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import vj.w
 
 @f
 public data class BuildOverrideCookieBuild(type: String, id: String) {
@@ -67,14 +67,14 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
 
    public override fun toString(): String {
       val var3: java.lang.String = this.type;
-      val var2: java.lang.String = this.id;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("BuildOverrideCookieBuild(type=");
-      var1.append(var3);
-      var1.append(", id=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.id;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BuildOverrideCookieBuild(type=");
+      var2.append(var3);
+      var2.append(", id=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -89,8 +89,8 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
          val var0: BuildOverrideCookieBuild.$serializer = new BuildOverrideCookieBuild.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.bundle_updater.BuildOverrideCookieBuild", var0, 2);
-         var1.l("type", false);
-         var1.l("id", false);
+         var1.c("type", false);
+         var1.c("id", false);
          descriptor = var1;
       }
 
@@ -149,7 +149,7 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

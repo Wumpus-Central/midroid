@@ -5,11 +5,6 @@ import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,6 +13,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class TapCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
@@ -100,20 +100,20 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
 
    public override fun toString(): String {
       val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.commandId;
+      val var5: java.lang.String = this.commandId;
       val var1: java.lang.String = this.commandName;
-      val var4: java.lang.String = this.commandKey;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapCommandData(channelId=");
-      var5.append(var3);
-      var5.append(", commandId=");
-      var5.append(var2);
-      var5.append(", commandName=");
-      var5.append(var1);
-      var5.append(", commandKey=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.commandKey;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapCommandData(channelId=");
+      var4.append(var3);
+      var4.append(", commandId=");
+      var4.append(var5);
+      var4.append(", commandName=");
+      var4.append(var1);
+      var4.append(", commandKey=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -128,10 +128,10 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
          val var0: TapCommandData.$serializer = new TapCommandData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapCommandData", var0, 4);
-         var1.l("channelId", false);
-         var1.l("commandId", false);
-         var1.l("commandName", false);
-         var1.l("commandKey", false);
+         var1.c("channelId", false);
+         var1.c("commandId", false);
+         var1.c("commandName", false);
+         var1.c("commandKey", false);
          descriptor = var1;
       }
 
@@ -191,8 +191,8 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
                }
             }
 
-            var11 = var6;
             var6 = var12;
+            var11 = var6;
          }
 
          var10.c(var9);

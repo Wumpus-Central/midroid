@@ -1,5 +1,7 @@
 package com.discord.minibsdiff
 
+import an.j
+import bn.a
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
@@ -7,8 +9,6 @@ import java.io.RandomAccessFile
 import java.util.Arrays
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import qm.j
-import rm.a
 
 public object BSDiff {
    private final val BSDIFF_CONFIG_MAGIC: ByteArray
@@ -43,14 +43,14 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
-            val var17: Long = InputStreamUtilsKt.readOffset(var3);
             val var15: Long = InputStreamUtilsKt.readOffset(var3);
+            val var17: Long = InputStreamUtilsKt.readOffset(var3);
             var13 = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var17 + var15 > var9) {
+            if (var11 + var15 + var17 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var17).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
@@ -64,7 +64,7 @@ public object BSDiff {
                var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var15).iterator();
+            var19 = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -73,7 +73,7 @@ public object BSDiff {
             }
 
             var1.seek(var1.getFilePointer() + var13);
-            var11 += var17 + var15;
+            var11 += var15 + var17;
          }
 
          var6.close();
@@ -211,25 +211,25 @@ public object BSDiff {
       // 0cd: astore 6
       // 0cf: aload 3
       // 0d0: aconst_null
-      // 0d1: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0d1: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0d4: aload 2
       // 0d5: aconst_null
-      // 0d6: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0d6: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0d9: aload 4
       // 0db: aconst_null
-      // 0dc: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0dc: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0df: aload 1
       // 0e0: aconst_null
-      // 0e1: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0e1: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0e4: aload 5
       // 0e6: aconst_null
-      // 0e7: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0e7: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0ea: return
       // 0eb: astore 2
       // 0ec: goto 12c
-      // 0ef: astore 3
+      // 0ef: astore 2
       // 0f0: goto 122
-      // 0f3: astore 3
+      // 0f3: astore 2
       // 0f4: goto 117
       // 0f7: astore 3
       // 0f8: goto 10b
@@ -239,7 +239,7 @@ public object BSDiff {
       // 100: astore 6
       // 102: aload 3
       // 103: aload 7
-      // 105: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 105: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 108: aload 6
       // 10a: athrow
       // 10b: aload 3
@@ -247,31 +247,31 @@ public object BSDiff {
       // 10d: astore 6
       // 10f: aload 2
       // 110: aload 3
-      // 111: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 111: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 114: aload 6
       // 116: athrow
-      // 117: aload 3
+      // 117: aload 2
       // 118: athrow
-      // 119: astore 2
+      // 119: astore 3
       // 11a: aload 4
-      // 11c: aload 3
-      // 11d: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 120: aload 2
+      // 11c: aload 2
+      // 11d: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 120: aload 3
       // 121: athrow
-      // 122: aload 3
+      // 122: aload 2
       // 123: athrow
-      // 124: astore 2
+      // 124: astore 3
       // 125: aload 1
-      // 126: aload 3
-      // 127: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 12a: aload 2
+      // 126: aload 2
+      // 127: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 12a: aload 3
       // 12b: athrow
       // 12c: aload 2
       // 12d: athrow
       // 12e: astore 1
       // 12f: aload 5
       // 131: aload 2
-      // 132: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 132: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 135: aload 1
       // 136: athrow
    }

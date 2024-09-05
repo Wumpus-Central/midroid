@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.botuikit
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 public data class Subtitle(badgeUrl: String? = null, text: String) {
@@ -66,15 +66,15 @@ public data class Subtitle(badgeUrl: String? = null, text: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.badgeUrl;
-      val var2: java.lang.String = this.text;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Subtitle(badgeUrl=");
-      var3.append(var1);
-      var3.append(", text=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.badgeUrl;
+      val var3: java.lang.String = this.text;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Subtitle(badgeUrl=");
+      var1.append(var2);
+      var1.append(", text=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -89,8 +89,8 @@ public data class Subtitle(badgeUrl: String? = null, text: String) {
          val var0: Subtitle.$serializer = new Subtitle.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.botuikit.Subtitle", var0, 2);
-         var1.l("badgeUrl", true);
-         var1.l("text", false);
+         var1.c("badgeUrl", true);
+         var1.c("text", false);
          descriptor = var1;
       }
 
@@ -150,7 +150,7 @@ public data class Subtitle(badgeUrl: String? = null, text: String) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

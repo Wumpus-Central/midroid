@@ -7,11 +7,11 @@ import androidx.core.view.r0
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.RepeatOnLifecycleKt
 import androidx.lifecycle.Lifecycle.State
+import bk.b
 import com.discord.misc.utilities.R
 import kotlin.coroutines.Continuation
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import rj.b
 
 public final val attachedScope: AttachedViewCoroutineScope
    public final get() {

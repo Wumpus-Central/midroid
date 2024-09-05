@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,7 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import vj.w
 
 @f
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {
@@ -84,7 +84,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
          val var0: TapAttachmentLinkData.$serializer = new TapAttachmentLinkData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapAttachmentLinkData", var0, 1);
-         var1.l("attachmentUrl", true);
+         var1.c("attachmentUrl", true);
          descriptor = var1;
       }
 
@@ -135,7 +135,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

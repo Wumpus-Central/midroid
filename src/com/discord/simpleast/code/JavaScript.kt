@@ -123,11 +123,11 @@ public object JavaScript {
                   q.h(var2, "parser");
                   val var7: java.lang.String = var1.group(1);
                   val var4: java.lang.String = var1.group(2);
-                  val var6: java.lang.String = var1.group(3);
-                  val var5: ParseSpec.Companion = ParseSpec.Companion;
+                  val var5: java.lang.String = var1.group(3);
+                  val var6: ParseSpec.Companion = ParseSpec.Companion;
                   q.e(var7);
-                  q.e(var6);
-                  return (ParseSpec<RC, S>)var5.createTerminal(new JavaScript.FunctionNode<>(var7, var4, var6, this.$codeStyleProviders), var3);
+                  q.e(var5);
+                  return (ParseSpec<RC, S>)var6.createTerminal(new JavaScript.FunctionNode<>(var7, var4, var5, this.$codeStyleProviders), var3);
                }
             };
          }

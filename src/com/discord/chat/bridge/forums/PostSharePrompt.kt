@@ -2,11 +2,6 @@ package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class PostSharePrompt(title: String, subtitle: StructurableText, cta: String, icon: String, closeIcon: String) {
@@ -100,22 +100,22 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.title;
-      val var6: StructurableText = this.subtitle;
-      val var1: java.lang.String = this.cta;
-      val var2: java.lang.String = this.icon;
-      val var3: java.lang.String = this.closeIcon;
+      val var1: java.lang.String = this.title;
+      val var3: StructurableText = this.subtitle;
+      val var2: java.lang.String = this.cta;
+      val var6: java.lang.String = this.icon;
+      val var4: java.lang.String = this.closeIcon;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PostSharePrompt(title=");
-      var5.append(var4);
-      var5.append(", subtitle=");
-      var5.append(var6);
-      var5.append(", cta=");
       var5.append(var1);
-      var5.append(", icon=");
-      var5.append(var2);
-      var5.append(", closeIcon=");
+      var5.append(", subtitle=");
       var5.append(var3);
+      var5.append(", cta=");
+      var5.append(var2);
+      var5.append(", icon=");
+      var5.append(var6);
+      var5.append(", closeIcon=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -132,11 +132,11 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
          val var0: PostSharePrompt.$serializer = new PostSharePrompt.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.forums.PostSharePrompt", var0, 5);
-         var1.l("title", false);
-         var1.l("subtitle", false);
-         var1.l("cta", false);
-         var1.l("icon", false);
-         var1.l("closeIcon", false);
+         var1.c("title", false);
+         var1.c("subtitle", false);
+         var1.c("cta", false);
+         var1.c("icon", false);
+         var1.c("closeIcon", false);
          descriptor = var1;
       }
 
@@ -146,21 +146,22 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
 
       public open fun deserialize(decoder: Decoder): PostSharePrompt {
          q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
-         val var5: Boolean = var11.p();
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.b(var11);
+         val var5: Boolean = var12.p();
          var var9: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: StructurableText;
-         var var12: java.lang.String;
+         val var10: java.lang.String;
+         var var13: java.lang.String;
          if (var5) {
-            var9 = var11.m(var10, 0);
-            var8 = var11.y(var10, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var7 = var11.m(var10, 2);
-            var6 = var11.m(var10, 3);
-            var12 = var11.m(var10, 4);
+            var7 = var12.m(var11, 0);
+            var8 = var12.y(var11, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
+            var10 = var12.m(var11, 2);
+            var6 = var12.m(var11, 3);
+            var13 = var12.m(var11, 4);
             var2 = 31;
          } else {
             var var3: Boolean = true;
@@ -168,10 +169,10 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
             var8 = null;
             var7 = null;
             var6 = null;
-            var12 = null;
+            var13 = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var12.o(var11);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -181,32 +182,35 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
                                  throw new n(var4);
                               }
 
-                              var12 = var11.m(var10, 4);
+                              var13 = var12.m(var11, 4);
                               var2 |= 16;
                            } else {
-                              var6 = var11.m(var10, 3);
+                              var6 = var12.m(var11, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var11.m(var10, 2);
+                           var7 = var12.m(var11, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var11.y(var10, 1, StructurableTextSerializer.INSTANCE, var8) as StructurableText;
+                        var8 = var12.y(var11, 1, StructurableTextSerializer.INSTANCE, var8) as StructurableText;
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var11.m(var10, 0);
+                     var9 = var12.m(var11, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var10 = var7;
+            var7 = var9;
          }
 
-         var11.c(var10);
-         return new PostSharePrompt(var2, var9, var8, var7, var6, var12, null);
+         var12.c(var11);
+         return new PostSharePrompt(var2, var7, var8, var10, var6, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PostSharePrompt) {

@@ -3,13 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.x0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,6 +11,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.x0
+import qn.g0.a
 
 @f
 internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String) : ReactEvent {
@@ -87,20 +87,20 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var6: java.lang.String = this.userId;
+      val var5: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
       val var4: java.lang.String = this.streamId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("FirstFrameCallbackEvent(connectionId=");
-      var5.append(var1);
-      var5.append(", userId=");
-      var5.append(var6);
-      var5.append(", ssrc=");
-      var5.append(var2);
-      var5.append(", streamId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("FirstFrameCallbackEvent(connectionId=");
+      var6.append(var1);
+      var6.append(", userId=");
+      var6.append(var5);
+      var6.append(", ssrc=");
+      var6.append(var2);
+      var6.append(", streamId=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -117,10 +117,10 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media.engine.video.events.FirstFrameCallbackEvent", var0, 4
          );
-         var1.l("connectionId", false);
-         var1.l("userId", false);
-         var1.l("ssrc", false);
-         var1.l("streamId", false);
+         var1.c("connectionId", false);
+         var1.c("userId", false);
+         var1.c("ssrc", false);
+         var1.c("streamId", false);
          descriptor = var1;
       }
 
@@ -180,8 +180,8 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                }
             }
 
-            var12 = var8;
             var8 = var13;
+            var12 = var8;
          }
 
          var11.c(var10);

@@ -1,13 +1,7 @@
 package com.discord.qr.scanner.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 internal data class OnQRCodeFoundEvent(status: String, result: String? = null) : ReactEvent {
@@ -69,8 +68,8 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
       return var2 * 31 + var1;
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -97,8 +96,8 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
          val var0: OnQRCodeFoundEvent.$serializer = new OnQRCodeFoundEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.qr.scanner.events.OnQRCodeFoundEvent", var0, 2);
-         var1.l("status", false);
-         var1.l("result", true);
+         var1.c("status", false);
+         var1.c("result", true);
          descriptor = var1;
       }
 
@@ -157,7 +156,7 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

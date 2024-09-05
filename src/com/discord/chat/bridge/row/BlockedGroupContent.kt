@@ -1,10 +1,6 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.MessageBase
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +9,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
 
 @f
 public data class BlockedGroupContent(message: MessageBase) {
@@ -71,7 +71,7 @@ public data class BlockedGroupContent(message: MessageBase) {
          val var0: BlockedGroupContent.$serializer = new BlockedGroupContent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.row.BlockedGroupContent", var0, 1);
-         var1.l("message", false);
+         var1.c("message", false);
          descriptor = var1;
       }
 

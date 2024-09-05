@@ -1,9 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,6 +8,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
 
 @f
 public class NewLineContentNode : ContentNode() {

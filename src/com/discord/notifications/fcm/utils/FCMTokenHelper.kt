@@ -3,10 +3,10 @@ package com.discord.notifications.fcm.utils
 import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
+import h5.a
+import h5.b
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import x4.a
-import x4.b
 
 internal object FCMTokenHelper {
    @JvmStatic
@@ -68,7 +68,7 @@ internal object FCMTokenHelper {
       q.h(var1, "onToken");
 
       try {
-         FirebaseMessaging.n().q().e(new a()).c(new b(var1));
+         FirebaseMessaging.n().q().f(new a()).d(new b(var1));
       } catch (var4: Exception) {
          this.logError(var4);
       }

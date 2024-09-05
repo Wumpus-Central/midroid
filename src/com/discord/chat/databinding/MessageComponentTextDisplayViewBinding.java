@@ -7,7 +7,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.botuikit.components.TextDisplayComponentView;
 import com.google.android.flexbox.FlexboxLayout;
-import v2.a;
+import f3.a;
 
 public final class MessageComponentTextDisplayViewBinding implements ViewBinding {
    private final TextDisplayComponentView rootView;

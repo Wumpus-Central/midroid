@@ -4,12 +4,6 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import dn.f
-import dn.j
-import dn.n
-import gn.g0
-import gn.x0
-import kn.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,7 +12,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.j
+import nn.n
+import qn.g0
+import qn.x0
+import un.a
+import vj.w
 
 @f
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -87,18 +87,18 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
    }
 
    public override fun toString(): String {
-      val var5: MediaPlayerPlaybackSource = this.source;
+      val var6: MediaPlayerPlaybackSource = this.source;
       val var1: Long = this.time;
       val var3: Long = this.duration;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MediaPlayerPlaybackProgressUpdated(source=");
-      var6.append(var5);
-      var6.append(", time=");
-      var6.append(var1);
-      var6.append(", duration=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaPlayerPlaybackProgressUpdated(source=");
+      var5.append(var6);
+      var5.append(", time=");
+      var5.append(var1);
+      var5.append(", duration=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -115,14 +115,14 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media_player.reactevents.MediaPlayerPlaybackProgressUpdated", var0, 3
          );
-         var1.l("source", false);
-         var1.l("time", false);
-         var1.l("duration", false);
+         var1.c("source", false);
+         var1.c("time", false);
+         var1.c("duration", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{en.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), x0.a, x0.a};
+         return new KSerializer[]{on.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), x0.a, x0.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackProgressUpdated {
@@ -188,7 +188,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

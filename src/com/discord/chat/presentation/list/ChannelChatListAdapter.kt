@@ -21,7 +21,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
-import lj.p
+import vj.p
 
 public class ChannelChatListAdapter(doLayout: () -> Unit,
       enableAnimations: () -> Unit,
@@ -106,10 +106,9 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
       var var9: java.util.List = var6;
       if (var3) {
-         val var15: java.util.Collection = var6;
          val var10: PortalViewChatListItem = this.portalChatListItem;
          q.e(this.portalChatListItem);
-         var9 = i.z0(var15, var10);
+         var9 = i.z0(var6, var10);
       }
 
       this.setChatListItems$chat_release(var9);
@@ -206,7 +205,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             var8 = i.W(this.getChatListItems$chat_release(), 1);
          }
       } else {
-         val var13: java.util.Collection = this.getChatListItems$chat_release();
+         val var13: java.util.List = this.getChatListItems$chat_release();
          val var9: PortalViewChatListItem = var1.getPortalChatListItem();
          q.e(var9);
          var8 = i.z0(var13, var9);
@@ -258,13 +257,15 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
          access$setProcessNextUpdateJob$p(
             this,
-            tm.g.d(
+            dn.g.d(
                kotlinx.coroutines.g.b(),
                null,
                null,
                new Function2(this, null)// $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.StackOverflowError
+      //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
       //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
       //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -1287,19 +1288,17 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       ,
                3,
                null
             )
          );
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var4);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 
@@ -1425,7 +1424,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = sj.a.a(var0);
+         $ENTRIES = ck.a.a(var0);
       }
 
       @JvmStatic

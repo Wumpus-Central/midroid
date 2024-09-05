@@ -7,7 +7,7 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 public class AppIconManagerModule(reactContext: ReactApplicationContext) : NativeAppIconManagerSpec {
    init {
@@ -30,10 +30,10 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
 
    public override fun getCurrentIcon(promise: Promise) {
       q.h(var1, "promise");
-      val var3: AppIconUtil = AppIconUtil.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var3.getCurrentAppIcon(var2).getId())}));
+      val var2: AppIconUtil = AppIconUtil.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var2.getCurrentAppIcon(var3).getId())}));
    }
 
    public override fun setIcon(id: String, promise: Promise) {
@@ -41,10 +41,10 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
       q.h(var2, "promise");
 
       try {
-         val var3: AppIconUtil = AppIconUtil.INSTANCE;
-         val var4: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var4, "getReactApplicationContext(...)");
-         var3.setAppIcon(var4, var1);
+         val var4: AppIconUtil = AppIconUtil.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var4.setAppIcon(var3, var1);
          var2.resolve(java.lang.Boolean.TRUE);
       } catch (var5: Exception) {
          var2.reject(var5);

@@ -1,12 +1,12 @@
 package com.discord.notifications.api
 
-import en.a
 import kotlin.jvm.internal.c
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import on.a
 
 public object CanReplySerializer : KSerializer {
    public open val descriptor: SerialDescriptor

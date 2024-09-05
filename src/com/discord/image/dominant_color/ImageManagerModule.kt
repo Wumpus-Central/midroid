@@ -35,17 +35,17 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
          public final void invoke(Bitmap var1) {
             if (var1 != null) {
-               val var4: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
-               if (var4 != null) {
-                  val var5: ArrayList = new ArrayList(i.u(var4, 10));
-                  val var6: java.util.Iterator = var4.iterator();
+               val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
+               if (var3 != null) {
+                  val var4: ArrayList = new ArrayList(i.u(var3, 10));
+                  val var5: java.util.Iterator = var3.iterator();
 
-                  while (var6.hasNext()) {
-                     val var2: Int = (var6.next() as java.lang.Number).intValue();
-                     var5.add(NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255}));
+                  while (var5.hasNext()) {
+                     val var2: Int = (var5.next() as java.lang.Number).intValue();
+                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255}));
                   }
 
-                  this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray(var5));
+                  this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray(var4));
                } else {
                   this.$promise.reject(new Exception("Unable get representative color."));
                }

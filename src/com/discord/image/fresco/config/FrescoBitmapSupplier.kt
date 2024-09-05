@@ -2,9 +2,9 @@ package com.discord.image.fresco.config
 
 import android.app.ActivityManager
 import android.content.Context
-import b7.o
 import com.facebook.imagepipeline.cache.MemoryCacheParams
 import kotlin.jvm.internal.q
+import l7.o
 
 internal class FrescoBitmapSupplier(context: Context) : o {
    init {

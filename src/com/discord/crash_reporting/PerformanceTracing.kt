@@ -96,12 +96,12 @@ public class PerformanceTracing : MarkerListener {
          val var3: java.lang.String = this.startupRootEventsTree.get(var1.getName());
          var2 = var3;
          if (i.T(this.wildcardEventNames, var3)) {
-            val var6: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
-            val var4: StringBuilder = new StringBuilder();
-            var4.append(var3);
-            var4.append(" ");
-            var4.append(var6);
-            var2 = var4.toString();
+            val var4: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var3);
+            var6.append(" ");
+            var6.append(var4);
+            var2 = var6.toString();
          }
 
          return var2;
@@ -493,7 +493,7 @@ public class PerformanceTracing : MarkerListener {
       fun {
          val var0: Array<PerformanceTracing.MarkerEnd> = $values();
          $VALUES = var0;
-         $ENTRIES = sj.a.a(var0);
+         $ENTRIES = ck.a.a(var0);
       }
 
       @JvmStatic
@@ -564,18 +564,18 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.name;
-         val var1: java.lang.String = this.tag;
+         val var2: java.lang.String = this.name;
+         val var3: java.lang.String = this.tag;
          val var4: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("TransactionMarker(name=");
-         var2.append(var3);
-         var2.append(", tag=");
-         var2.append(var1);
-         var2.append(", markerEnd=");
-         var2.append(var4);
-         var2.append(")");
-         return var2.toString();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("TransactionMarker(name=");
+         var1.append(var2);
+         var1.append(", tag=");
+         var1.append(var3);
+         var1.append(", markerEnd=");
+         var1.append(var4);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

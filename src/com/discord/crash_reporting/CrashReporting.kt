@@ -22,8 +22,8 @@ import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
-import lj.p
-import mj.r
+import vj.p
+import wj.r
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
@@ -84,7 +84,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("55de721f-de45-464e-b5ea-0e7d4575ed9c");
+      var5.setProguardUuid("59e51a8e-743f-441e-9f10-e40c0762cd3d");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -94,8 +94,8 @@ public object CrashReporting {
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.n(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.n(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       var4.m(var3);
@@ -105,7 +105,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", lj.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", vj.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -193,7 +193,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = sj.a.a(var0);
+         $ENTRIES = ck.a.a(var0);
       }
 
       @JvmStatic

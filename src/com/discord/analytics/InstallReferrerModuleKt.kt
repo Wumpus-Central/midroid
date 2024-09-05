@@ -1,15 +1,15 @@
 package com.discord.analytics
 
+import bk.b
 import com.android.installreferrer.api.InstallReferrerClient
-import d4.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import lj.r
-import lj.s
-import rj.b
+import n4.a
+import vj.r
+import vj.s
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -19,7 +19,7 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 private suspend fun InstallReferrerClient.await(): Int {
    val var2: e = new e(b.c(var1), 1);
    var2.F();
-   val var3: a = new a(var2) {
+   val var4: a = new a(var2) {
       final CancellableContinuation $continuation;
 
       {
@@ -50,14 +50,14 @@ private suspend fun InstallReferrerClient.await(): Int {
          // $VF: Could not inline inconsistent finally blocks
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public final void invoke(java.lang.Throwable var1) {
-            val var5: InstallReferrerClient = this.$this_await;
+            val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var2: lj.r.a = r.k;
-               var5.a();
+               val var6: vj.r.a = r.k;
+               var2.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: lj.r.a = r.k;
+               val var5: vj.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,24 +67,24 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var4: lj.r.a = r.k;
-      var0.d(var3);
-      var7 = r.b(Unit.a);
+      val var3: vj.r.a = r.k;
+      var0.d(var4);
+      var8 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var10: lj.r.a = r.k;
-      var7 = r.b(s.a(var5));
+      val var7: vj.r.a = r.k;
+      var8 = r.b(s.a(var5));
       break label20;
    }
 
-   val var8: java.lang.Throwable = r.e(var7);
-   if (var8 != null) {
-      var2.resumeWith(r.b(s.a(var8)));
+   val var9: java.lang.Throwable = r.e(var8);
+   if (var9 != null) {
+      var2.resumeWith(r.b(s.a(var9)));
    }
 
-   val var9: Any = var2.z();
-   if (var9 === b.f()) {
+   val var10: Any = var2.z();
+   if (var10 === b.f()) {
       g.c(var1);
    }
 
-   return var9;
+   return var10;
 }

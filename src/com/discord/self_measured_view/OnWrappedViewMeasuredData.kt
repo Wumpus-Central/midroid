@@ -2,10 +2,6 @@ package com.discord.self_measured_view
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +9,10 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.n0
 
 @f
 internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredViewHeight: Int) : ReactEvent {
@@ -60,13 +60,13 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
    }
 
    public override fun toString(): String {
-      val var2: Int = this.measuredViewWidth;
-      val var1: Int = this.measuredViewHeight;
+      val var1: Int = this.measuredViewWidth;
+      val var2: Int = this.measuredViewHeight;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnWrappedViewMeasuredData(measuredViewWidth=");
-      var3.append(var2);
-      var3.append(", measuredViewHeight=");
       var3.append(var1);
+      var3.append(", measuredViewHeight=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -83,8 +83,8 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
          val var0: OnWrappedViewMeasuredData.$serializer = new OnWrappedViewMeasuredData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.self_measured_view.OnWrappedViewMeasuredData", var0, 2);
-         var1.l("measuredViewWidth", false);
-         var1.l("measuredViewHeight", false);
+         var1.c("measuredViewWidth", false);
+         var1.c("measuredViewHeight", false);
          descriptor = var1;
       }
 
@@ -143,7 +143,7 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

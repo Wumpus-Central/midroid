@@ -4,10 +4,6 @@ import android.media.AudioDeviceInfo
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,9 +11,13 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import vj.w
 
-@dn.f
+@nn.f
 public class AndroidAudioDevice {
    public final var deviceId: Int
       internal set
@@ -60,10 +60,10 @@ public class AndroidAudioDevice {
          val var0: AndroidAudioDevice.$serializer = new AndroidAudioDevice.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.audio.AndroidAudioDevice", var0, 4);
-         var1.l("deviceType", true);
-         var1.l("simpleDeviceType", true);
-         var1.l("deviceId", true);
-         var1.l("deviceName", true);
+         var1.c("deviceType", true);
+         var1.c("simpleDeviceType", true);
+         var1.c("deviceId", true);
+         var1.c("deviceName", true);
          descriptor = var1;
       }
 
@@ -77,29 +77,30 @@ public class AndroidAudioDevice {
          val var10: kotlinx.serialization.encoding.c = var1.b(var9);
          val var8: Array<KSerializer> = AndroidAudioDevice.access$get$childSerializers$cp();
          var var3: Int;
-         var var4: Int;
          val var5: Int;
+         var var6: Int;
          var var7: SimpleDeviceType;
          var var12: java.lang.String;
          if (var10.p()) {
             val var2: Int = var10.i(var9, 0);
             val var11: SimpleDeviceType = var10.y(var9, 1, var8[1], null) as SimpleDeviceType;
-            var5 = var10.i(var9, 2);
-            val var16: java.lang.String = var10.m(var9, 3);
+            val var4: Int = var10.i(var9, 2);
+            val var18: java.lang.String = var10.m(var9, 3);
             var3 = 15;
-            var4 = var2;
+            var5 = var2;
             var7 = var11;
-            var12 = var16;
+            var6 = var4;
+            var12 = var18;
          } else {
-            var var15: Boolean = true;
-            var4 = 0;
+            var var16: Boolean = true;
+            var var15: Int = 0;
             var var13: Int = 0;
             var7 = null;
             var12 = null;
             var3 = 0;
 
-            while (var15) {
-               val var6: Int = var10.o(var9);
+            while (var16) {
+               var6 = var10.o(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -119,20 +120,21 @@ public class AndroidAudioDevice {
                         var13 |= 2;
                      }
                   } else {
-                     var4 = var10.i(var9, 0);
+                     var15 = var10.i(var9, 0);
                      var13 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var16 = false;
                }
             }
 
-            var5 = var3;
+            var6 = var3;
+            var5 = var15;
             var3 = var13;
          }
 
          var10.c(var9);
-         return new AndroidAudioDevice(var3, var4, var7, var5, var12, null);
+         return new AndroidAudioDevice(var3, var5, var7, var6, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AndroidAudioDevice) {
@@ -145,7 +147,7 @@ public class AndroidAudioDevice {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

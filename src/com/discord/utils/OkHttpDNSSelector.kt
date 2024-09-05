@@ -1,5 +1,6 @@
 package com.discord.utils
 
+import io.l
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress
@@ -7,9 +8,8 @@ import java.util.ArrayList
 import java.util.Comparator
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import lj.p
-import oj.a
-import yn.l
+import vj.p
+import yj.a
 
 public class OkHttpDNSSelector(mode: com.discord.utils.OkHttpDNSSelector.IPvMode) : l {
    private final val mode: com.discord.utils.OkHttpDNSSelector.IPvMode
@@ -32,41 +32,39 @@ public class OkHttpDNSSelector(mode: com.discord.utils.OkHttpDNSSelector.IPvMode
                      throw new p();
                   }
                } else {
-                  val var6: java.lang.Iterable = var5 as java.lang.Iterable;
-                  val var10: ArrayList = new ArrayList();
-                  val var4: java.util.Iterator = var6.iterator();
+                  val var8: ArrayList = new ArrayList();
+                  val var4: java.util.Iterator = var5.iterator();
 
                   while (true) {
-                     var5 = var10;
+                     var5 = var8;
                      if (!var4.hasNext()) {
                         break;
                      }
 
-                     val var7: Any = var4.next();
-                     if (Inet4Address.class.isInstance(var7 as InetAddress)) {
-                        var10.add(var7);
+                     var5 = var4.next();
+                     if (Inet4Address.class.isInstance(var5 as InetAddress)) {
+                        var8.add(var5);
                      }
                   }
                }
             } else {
-               val var8: java.lang.Iterable = var5 as java.lang.Iterable;
-               val var11: ArrayList = new ArrayList();
-               val var12: java.util.Iterator = var8.iterator();
+               val var9: ArrayList = new ArrayList();
+               val var10: java.util.Iterator = var5.iterator();
 
                while (true) {
-                  var5 = var11;
-                  if (!var12.hasNext()) {
+                  var5 = var9;
+                  if (!var10.hasNext()) {
                      break;
                   }
 
-                  val var9: Any = var12.next();
-                  if (Inet6Address.class.isInstance(var9 as InetAddress)) {
-                     var11.add(var9);
+                  var5 = var10.next();
+                  if (Inet6Address.class.isInstance(var5 as InetAddress)) {
+                     var9.add(var5);
                   }
                }
             }
          } else {
-            var5 = i.H0(var5 as java.lang.Iterable, new Comparator() {
+            var5 = i.H0((java.lang.Iterable)var5, new Comparator() {
                @Override
                public final int compare(T var1, T var2) {
                   return a.d(Inet6Address.class.isInstance(var1 as InetAddress), Inet6Address.class.isInstance(var2 as InetAddress));
@@ -74,7 +72,7 @@ public class OkHttpDNSSelector(mode: com.discord.utils.OkHttpDNSSelector.IPvMode
             });
          }
       } else {
-         var5 = i.H0(var5 as java.lang.Iterable, new Comparator() {
+         var5 = i.H0((java.lang.Iterable)var5, new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d(Inet4Address.class.isInstance(var1 as InetAddress), Inet4Address.class.isInstance(var2 as InetAddress));
@@ -101,7 +99,7 @@ public class OkHttpDNSSelector(mode: com.discord.utils.OkHttpDNSSelector.IPvMode
       fun {
          val var0: Array<OkHttpDNSSelector.IPvMode> = $values();
          $VALUES = var0;
-         $ENTRIES = sj.a.a(var0);
+         $ENTRIES = ck.a.a(var0);
       }
 
       init {

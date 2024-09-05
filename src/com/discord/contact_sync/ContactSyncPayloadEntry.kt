@@ -1,10 +1,5 @@
 package com.discord.contact_sync
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class ContactSyncPayloadEntry(friendId: String) {
@@ -68,7 +68,7 @@ public data class ContactSyncPayloadEntry(friendId: String) {
          val var0: ContactSyncPayloadEntry.$serializer = new ContactSyncPayloadEntry.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.contact_sync.ContactSyncPayloadEntry", var0, 1);
-         var1.l("friend_id", false);
+         var1.c("friend_id", false);
          descriptor = var1;
       }
 

@@ -13,7 +13,7 @@ public fun CookieManager.getCookiesForUrl(url: String): List<Cookie> {
    if (var4 == null) {
       return i.j();
    } else {
-      val var2: java.lang.Iterable = h.z0(var4, new java.lang.String[]{"; "}, false, 0, 6, null);
+      val var2: java.util.List = h.z0(var4, new java.lang.String[]{"; "}, false, 0, 6, null);
       val var5: ArrayList = new ArrayList();
 
       for (java.lang.String var3 : var2) {

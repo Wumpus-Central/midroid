@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class TapAutoModerationActionsData(messageId: String, channelId: String) : ReactEvent {
@@ -68,15 +68,15 @@ public data class TapAutoModerationActionsData(messageId: String, channelId: Str
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapAutoModerationActionsData(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.channelId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapAutoModerationActionsData(messageId=");
+      var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -91,8 +91,8 @@ public data class TapAutoModerationActionsData(messageId: String, channelId: Str
          val var0: TapAutoModerationActionsData.$serializer = new TapAutoModerationActionsData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapAutoModerationActionsData", var0, 2);
-         var1.l("messageId", false);
-         var1.l("channelId", false);
+         var1.c("messageId", false);
+         var1.c("channelId", false);
          descriptor = var1;
       }
 

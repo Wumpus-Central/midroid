@@ -5,11 +5,6 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.o1
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +14,11 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import qn.g0
+import qn.o1
+import qn.g0.a
 
 @f
 internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId) : InitiateReplyData(var1, var2), ReactEvent {
@@ -79,15 +79,15 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InitiateReplyData(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("InitiateReplyData(messageId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -102,8 +102,8 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
          val var0: InitiateReplyData.$serializer = new InitiateReplyData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.InitiateReplyData", var0, 2);
-         var1.l("messageId", false);
-         var1.l("channelId", false);
+         var1.c("messageId", false);
+         var1.c("channelId", false);
          descriptor = var1;
       }
 

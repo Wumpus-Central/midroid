@@ -6,7 +6,7 @@ import com.facebook.react.HeadlessJsTaskService
 import com.facebook.react.jstasks.HeadlessJsTaskConfig
 
 public class HeadlessTasksService : HeadlessJsTaskService {
-   protected open fun getTaskConfig(intent: Intent?): HeadlessJsTaskConfig? {
+   protected override fun getTaskConfig(intent: Intent?): HeadlessJsTaskConfig? {
       val var2: HeadlessTasks = HeadlessTasks.Companion.fromIntent(var1);
       val var3: HeadlessJsTaskConfig;
       if (var2 != null) {

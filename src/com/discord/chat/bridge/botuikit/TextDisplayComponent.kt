@@ -2,12 +2,6 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +10,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component {
@@ -98,9 +98,9 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          val var0: TextDisplayComponent.$serializer = new TextDisplayComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("10", var0, 3);
-         var1.l("type", false);
-         var1.l("id", false);
-         var1.l("content", false);
+         var1.c("type", false);
+         var1.c("id", false);
+         var1.c("content", false);
          descriptor = var1;
       }
 
@@ -117,10 +117,10 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          var var6: java.lang.String;
          var var9: StructurableText;
          if (var8.p()) {
-            var3 = var8.i(var7, 0);
+            var2 = var8.i(var7, 0);
             var6 = var8.m(var7, 1);
             var9 = var8.y(var7, 2, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -151,10 +151,13 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
          var8.c(var7);
-         return new TextDisplayComponent(var2, var3, var6, var9, null);
+         return new TextDisplayComponent(var3, var2, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TextDisplayComponent) {

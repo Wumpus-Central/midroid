@@ -1,8 +1,8 @@
 package com.discord.appreview;
 
-import cd.f;
 import com.google.android.gms.tasks.Task;
 import com.google.android.play.core.review.ReviewManager;
+import md.f;
 
 // $VF: synthetic class
 public final class a implements f {

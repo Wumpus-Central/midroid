@@ -1,10 +1,5 @@
 package com.discord.chat.input.bridge
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class TapAction(action: String, channelId: String, optionName: String) {
@@ -97,9 +97,9 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
          val var0: TapAction.$serializer = new TapAction.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.input.bridge.TapAction", var0, 3);
-         var1.l("action", false);
-         var1.l("channelId", false);
-         var1.l("optionName", false);
+         var1.c("action", false);
+         var1.c("channelId", false);
+         var1.c("optionName", false);
          descriptor = var1;
       }
 

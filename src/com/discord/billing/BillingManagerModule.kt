@@ -19,7 +19,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
@@ -97,13 +97,13 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       q.g(var5, "toArrayList(...)");
       val var7: ArrayList = new ArrayList();
 
-      for (var5 : var5) {
-         if (var5 is java.lang.String) {
-            var7.add(var5);
+      for (Object var6 : var5) {
+         if (var6 is java.lang.String) {
+            var7.add(var6);
          }
       }
 
-      val var10: Function1 = new Function1(var4) {
+      val var9: Function1 = new Function1(var4) {
          final Promise $promise;
 
          {
@@ -116,9 +116,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       };
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var9, "getReactApplicationContext(...)");
-      var1.getSkus(var7, var3, var4, var10, var9);
+      val var10: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var10, "getReactApplicationContext(...)");
+      var1.getSkus(var7, var3, var4, var9, var10);
    }
 
    @ReactMethod
@@ -210,10 +210,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var1: BillingManager = this.billingManager;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.open(var2);
+      val var2: BillingManager = this.billingManager;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.open(var1);
    }
 
    @ReactMethod

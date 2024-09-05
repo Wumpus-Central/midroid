@@ -1,10 +1,5 @@
 package com.discord.user_search_worker
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
@@ -48,12 +48,12 @@ internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.uuid;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UserSearchQueryClearData(uuid=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.uuid;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UserSearchQueryClearData(uuid=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -68,7 +68,7 @@ internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
          val var0: UserSearchQueryClearData.$serializer = new UserSearchQueryClearData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.user_search_worker.UserSearchQueryClearData", var0, 1);
-         var1.l("uuid", false);
+         var1.c("uuid", false);
          descriptor = var1;
       }
 

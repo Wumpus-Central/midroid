@@ -131,12 +131,12 @@ public object MarkdownRules {
 
          q.g(var4, "headerBody");
 
-         for (Object var13 : var2.parse(var4, var3, this.innerRules)) {
-            if (var13 == null) {
+         for (var4 : var2.parse(var4, var3, this.innerRules)) {
+            if (var4 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            var5.addChild(var13 as Node);
+            var5.addChild(var4 as Node);
          }
 
          label42: {
@@ -152,34 +152,33 @@ public object MarkdownRules {
             var8 = null;
          }
 
-         var var10: Any;
+         var var9: Any;
          if (var8 != null) {
-            var10 = var8;
-            val var14: ArrayList = new ArrayList();
-            val var18: java.util.Iterator = var10.iterator();
+            val var13: ArrayList = new ArrayList();
+            val var17: java.util.Iterator = var8.iterator();
 
             while (true) {
-               var10 = var14;
-               if (!var18.hasNext()) {
+               var9 = var13;
+               if (!var17.hasNext()) {
                   break;
                }
 
-               var10 = (java.lang.Iterable)this.classSpanProvider.invoke(var18.next() as java.lang.String);
-               if (var10 != null) {
-                  var14.add(var10);
+               var9 = this.classSpanProvider.invoke(var17.next() as java.lang.String);
+               if (var9 != null) {
+                  var13.add(var9);
                }
             }
          } else {
-            var10 = i.j();
+            var9 = i.j();
          }
 
-         var var15: StyleNode = var5;
-         if ((var10 as java.util.Collection).isEmpty() xor true) {
-            var15 = new StyleNode(var10);
-            var15.addChild(var5);
+         var var14: StyleNode = var5;
+         if (var9.isEmpty() xor true) {
+            var14 = new StyleNode((java.util.List<? extends T>)var9);
+            var14.addChild(var5);
          }
 
-         return ParseSpec.Companion.createTerminal(var15, (S)var3);
+         return ParseSpec.Companion.createTerminal(var14, (S)var3);
       }
    }
 
@@ -206,10 +205,10 @@ public object MarkdownRules {
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
          q.h(var1, "matcher");
          q.h(var2, "parser");
-         val var5: ParseSpec.Companion = ParseSpec.Companion;
-         val var4: java.lang.String = var1.group(2);
-         q.g(var4, "matcher.group(2)");
-         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(1), var1.end(1));
+         val var4: ParseSpec.Companion = ParseSpec.Companion;
+         val var5: java.lang.String = var1.group(2);
+         q.g(var5, "matcher.group(2)");
+         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(1), var1.end(1));
       }
    }
 
@@ -235,10 +234,10 @@ public object MarkdownRules {
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
          q.h(var1, "matcher");
          q.h(var2, "parser");
-         val var5: ParseSpec.Companion = ParseSpec.Companion;
-         val var4: java.lang.String = var1.group(1);
-         q.g(var4, "matcher.group(1)");
-         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(2), var1.end(2));
+         val var4: ParseSpec.Companion = ParseSpec.Companion;
+         val var5: java.lang.String = var1.group(1);
+         q.g(var5, "matcher.group(1)");
+         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(2), var1.end(2));
       }
    }
 

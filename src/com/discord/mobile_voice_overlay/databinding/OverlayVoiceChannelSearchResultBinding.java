@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
-import v2.a;
+import f3.a;
 
 public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding {
    public final TextView categoryName;

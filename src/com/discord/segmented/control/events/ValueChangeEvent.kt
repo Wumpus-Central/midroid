@@ -2,12 +2,6 @@ package com.discord.segmented.control.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +10,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) : ReactEvent {
@@ -66,15 +66,15 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.value;
+      val var3: java.lang.String = this.value;
       val var1: Int = this.selectedSegmentIndex;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ValueChangeEvent(value=");
-      var3.append(var2);
-      var3.append(", selectedSegmentIndex=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ValueChangeEvent(value=");
+      var2.append(var3);
+      var2.append(", selectedSegmentIndex=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -89,8 +89,8 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
          val var0: ValueChangeEvent.$serializer = new ValueChangeEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.segmented.control.events.ValueChangeEvent", var0, 2);
-         var1.l("value", false);
-         var1.l("selectedSegmentIndex", false);
+         var1.c("value", false);
+         var1.c("selectedSegmentIndex", false);
          descriptor = var1;
       }
 

@@ -2,12 +2,6 @@ package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +10,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 public data class UploadProgressRow(index: Int, changeType: ChangeType, message: Message, fileId: String) : Row {
@@ -83,20 +83,20 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var4: ChangeType = this.changeType;
-      val var2: Message = this.message;
+      val var2: ChangeType = this.changeType;
+      val var5: Message = this.message;
       val var3: java.lang.String = this.fileId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UploadProgressRow(index=");
-      var5.append(var1);
-      var5.append(", changeType=");
-      var5.append(var4);
-      var5.append(", message=");
-      var5.append(var2);
-      var5.append(", fileId=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UploadProgressRow(index=");
+      var4.append(var1);
+      var4.append(", changeType=");
+      var4.append(var2);
+      var4.append(", message=");
+      var4.append(var5);
+      var4.append(", fileId=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -111,10 +111,10 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
          val var0: UploadProgressRow.$serializer = new UploadProgressRow.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("3", var0, 4);
-         var1.l("index", false);
-         var1.l("changeType", false);
-         var1.l("message", false);
-         var1.l("fileId", false);
+         var1.c("index", false);
+         var1.c("changeType", false);
+         var1.c("message", false);
+         var1.c("fileId", false);
          descriptor = var1;
       }
 

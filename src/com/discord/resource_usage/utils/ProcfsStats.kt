@@ -1,8 +1,8 @@
 package com.discord.resource_usage.utils
 
+import gk.j
 import java.io.File
-import wj.j
-import zn.c
+import jo.c
 
 internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    public final val rssPages: Long

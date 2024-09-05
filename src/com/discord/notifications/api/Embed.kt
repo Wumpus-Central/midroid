@@ -1,9 +1,5 @@
 package com.discord.notifications.api
 
-import dn.f
-import dn.n
-import en.a
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,6 +8,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.g0
 
 @f
 public data class Embed(fields: List<EmbedField>? = null) {
@@ -75,7 +75,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
          val var0: Embed.$serializer = new Embed.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.notifications.api.Embed", var0, 1);
-         var1.l("fields", true);
+         var1.c("fields", true);
          descriptor = var1;
       }
 
@@ -127,7 +127,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

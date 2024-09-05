@@ -25,10 +25,10 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatInputManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatInputManagerInterface
-import gn.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
+import qn.f
 
 @ReactModule(name = "DCDChatInput")
 public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChatInputManagerInterface<ChatInputRootView> {
@@ -92,11 +92,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          public void onImageInserted(Uri var1) {
             q.h(var1, "uri");
             val var4: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var5: ThemedReactContext = this.$reactContext;
-            val var2: ChatInputRootView = this.$view;
+            val var2: ThemedReactContext = this.$reactContext;
+            val var5: ChatInputRootView = this.$view;
             val var3: java.lang.String = var1.toString();
             q.g(var3, "toString(...)");
-            var4.emitEvent(var5, var2, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
+            var4.emitEvent(var2, var5, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override

@@ -16,7 +16,7 @@ import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : BroadcastReceiver {
    private final val reactApplicationContext: ReactApplicationContext

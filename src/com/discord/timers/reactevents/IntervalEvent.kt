@@ -2,11 +2,6 @@ package com.discord.timers.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class IntervalEvent(id: Int) : ReactEvent {
@@ -71,7 +71,7 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          val var0: IntervalEvent.$serializer = new IntervalEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.timers.reactevents.IntervalEvent", var0, 1);
-         var1.l("id", false);
+         var1.c("id", false);
          descriptor = var1;
       }
 
@@ -84,14 +84,14 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          val var6: Boolean = var8.p();
-         var var2: Int = 1;
+         var var3: Int = 1;
          var var4: Boolean = true;
-         var var3: Int;
+         var var2: Int;
          if (var6) {
-            var3 = var8.i(var7, 0);
+            var2 = var8.i(var7, 0);
          } else {
-            var3 = 0;
             var2 = 0;
+            var3 = 0;
 
             while (var4) {
                val var5: Int = var8.o(var7);
@@ -100,8 +100,8 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
                      throw new n(var5);
                   }
 
-                  var3 = var8.i(var7, 0);
-                  var2 |= 1;
+                  var2 = var8.i(var7, 0);
+                  var3 |= 1;
                } else {
                   var4 = false;
                }
@@ -109,7 +109,7 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          }
 
          var8.c(var7);
-         return new IntervalEvent(var2, var3, null);
+         return new IntervalEvent(var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: IntervalEvent) {

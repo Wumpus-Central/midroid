@@ -11,12 +11,12 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 @ReactModule(name = "DCDQRScanner")
 public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerManagerInterface<QRScanner> {
    private final val delegate: DCDQRScannerManagerDelegate<QRScanner, QRScannerViewManager>
-   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{w.a("onQRCodeFound", g0.b(OnQRCodeFoundEvent.class))})
+   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onQRCodeFound", g0.b(OnQRCodeFoundEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): QRScanner {
       q.h(var1, "reactContext");
@@ -57,11 +57,11 @@ public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerMan
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDQRScanner";
    }
 

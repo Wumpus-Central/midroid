@@ -24,7 +24,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: String? = ..., content: String = ..., context: LinkContext? = ...) : TapLinkData(
          var1, var2, var3, var4, var5
@@ -244,12 +244,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          }
       }
 
-      val var4: Log = Log.INSTANCE;
+      val var26: Log = Log.INSTANCE;
       val var20: java.lang.String = this.target;
-      val var26: StringBuilder = new StringBuilder();
-      var26.append("Missing target type in context: ");
-      var26.append(var20);
-      Log.e$default(var4, "TapLink", var26.toString(), null, 4, null);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Missing target type in context: ");
+      var4.append(var20);
+      Log.e$default(var26, "TapLink", var4.toString(), null, 4, null);
       return var2;
    }
 
@@ -375,21 +375,21 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       }
 
       val var3: java.lang.String = this.title;
-      val var2: java.lang.String = this.target;
+      val var4: java.lang.String = this.target;
       val var5: java.lang.String = this.content;
       val var6: LinkContext = this.context;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapLinkData(messageId=");
-      var4.append(var7);
-      var4.append(", title=");
-      var4.append(var3);
-      var4.append(", target=");
-      var4.append(var2);
-      var4.append(", content=");
-      var4.append(var5);
-      var4.append(", context=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapLinkData(messageId=");
+      var2.append(var7);
+      var2.append(", title=");
+      var2.append(var3);
+      var2.append(", target=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var5);
+      var2.append(", context=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 }

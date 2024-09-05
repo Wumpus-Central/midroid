@@ -18,8 +18,8 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import lj.w
-import mj.o
+import vj.w
+import wj.o
 
 @ReactModule(name = "DCDSegmentedControl")
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {

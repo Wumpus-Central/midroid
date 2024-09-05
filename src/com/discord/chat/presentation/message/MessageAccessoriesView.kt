@@ -64,7 +64,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var6: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -73,12 +73,12 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var6;
-      val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var5;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var4;
-      val var3: DefaultItemAnimator = new DefaultItemAnimator() {
+      this.accessoriesAdapter = var3;
+      val var4: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var4;
+      val var5: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var5;
+      val var6: DefaultItemAnimator = new DefaultItemAnimator() {
          @Override
          public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.q.h(var1, "viewHolder");
@@ -93,9 +93,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var3.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var3;
-      this.forwardBarPaint$delegate = lj.l.a(<unrepresentable>.INSTANCE);
+      var6.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var6;
+      this.forwardBarPaint$delegate = vj.l.a(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -108,13 +108,13 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
-      this.setAdapter(var6);
-      var6.setMessageContentViewLifecycleListener(var5);
+      this.setLayoutManager(var5);
+      this.setAdapter(var3);
+      var3.setMessageContentViewLifecycleListener(var4);
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : qm.j.H(v0.a(this))) {
+      for (Pair var3 : an.j.H(v0.a(this))) {
          val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ReactionsView || var4 is ThreadEmbedView) {
@@ -140,11 +140,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, (float)FORWARD_BAR_WIDTH + var2, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, (float)FORWARD_BAR_WIDTH + var3, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -180,29 +180,28 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.updateLeftMargin(leftMarginPx);
       }
 
-      val var14: ThreadSpineItemDecoration = this.threadSpineDecoration;
-      val var11: java.lang.Iterable = var5;
+      val var11: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var8 = var5 is java.util.Collection;
       val var9: Boolean = false;
-      if (var8 && (var11 as java.util.Collection).isEmpty()) {
+      if (var8 && var5.isEmpty()) {
          var8 = false;
       } else {
-         val var15: java.util.Iterator = var11.iterator();
+         val var14: java.util.Iterator = var5.iterator();
 
          while (true) {
             var8 = var9;
-            if (!var15.hasNext()) {
+            if (!var14.hasNext()) {
                break;
             }
 
-            if (var15.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var14.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var8 = true;
                break;
             }
          }
       }
 
-      var14.setShowThreadSpine(var8);
+      var11.setShowThreadSpine(var8);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

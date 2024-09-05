@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 public data class HeadingContentNode(level: Int, content: List<ContentNode>) : ContentNode {
@@ -60,14 +60,14 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var3: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("HeadingContentNode(level=");
-      var2.append(var1);
-      var2.append(", content=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.content;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("HeadingContentNode(level=");
+      var3.append(var1);
+      var3.append(", content=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -82,8 +82,8 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
          val var0: HeadingContentNode.$serializer = new HeadingContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("heading", var0, 2);
-         var1.l("level", false);
-         var1.l("content", false);
+         var1.c("level", false);
+         var1.c("content", false);
          descriptor = var1;
       }
 

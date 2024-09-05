@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import en.a
-import gn.g0
-import gn.h
-import gn.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.g0
+import qn.h
+import qn.x0
 
 @f
 public data class BulletListContentNode(start: Long? = null, ordered: Boolean = false, items: List<List<ContentNode>>) : ContentNode {
@@ -75,18 +75,18 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.Long = this.start;
+      val var4: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
       val var2: java.util.List = this.items;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("BulletListContentNode(start=");
-      var4.append(var3);
-      var4.append(", ordered=");
-      var4.append(var1);
-      var4.append(", items=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BulletListContentNode(start=");
+      var3.append(var4);
+      var3.append(", ordered=");
+      var3.append(var1);
+      var3.append(", items=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -101,9 +101,9 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
          val var0: BulletListContentNode.$serializer = new BulletListContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("list", var0, 3);
-         var1.l("start", true);
-         var1.l("ordered", true);
-         var1.l("items", false);
+         var1.c("start", true);
+         var1.c("ordered", true);
+         var1.c("items", false);
          descriptor = var1;
       }
 
@@ -171,7 +171,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

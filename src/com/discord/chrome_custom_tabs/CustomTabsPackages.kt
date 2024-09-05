@@ -5,11 +5,11 @@ import android.content.Intent
 import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.os.Build.VERSION
+import c5.a
+import c5.b
 import java.util.ArrayList
-import k3.d1
 import kotlin.jvm.internal.q
-import s4.a
-import s4.b
+import u3.d1
 
 internal object CustomTabsPackages {
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"
@@ -27,29 +27,28 @@ internal object CustomTabsPackages {
       }
 
       q.e(var5);
-      val var6: java.lang.Iterable = var5;
       val var3: ArrayList = new ArrayList();
 
-      for (ResolveInfo var7 : var6) {
-         var2 = new Intent().setAction("android.support.customtabs.action.CustomTabsService").setPackage(var7.activityInfo.packageName);
+      for (ResolveInfo var6 : var5) {
+         var2 = new Intent().setAction("android.support.customtabs.action.CustomTabsService").setPackage(var6.activityInfo.packageName);
          q.g(var2, "setPackage(...)");
-         val var9: ResolveInfo;
+         val var8: ResolveInfo;
          if (VERSION.SDK_INT >= 33) {
-            var9 = b.a(var1.getPackageManager(), var2, d1.a((long)0));
+            var8 = b.a(var1.getPackageManager(), var2, d1.a((long)0));
          } else {
-            var9 = var1.getPackageManager().resolveService(var2, 0);
+            var8 = var1.getPackageManager().resolveService(var2, 0);
          }
 
          label28:
-         if (var9 != null && var9.activityInfo != null) {
-            var11 = var9.activityInfo.packageName;
+         if (var8 != null && var8.activityInfo != null) {
+            var10 = var8.activityInfo.packageName;
             break label28;
          } else {
-            var11 = null;
+            var10 = null;
          }
 
-         if (var11 != null) {
-            var3.add(var11);
+         if (var10 != null) {
+            var3.add(var10);
          }
       }
 
@@ -68,7 +67,6 @@ internal object CustomTabsPackages {
    public fun Context.getCustomTabsDefaultPackage(): String? {
       q.h(var1, "<this>");
       val var5: java.util.List = this.getCustomTabsPackages(var1);
-      val var6: java.lang.Iterable = var5;
       var var4: java.util.Iterator = var5.iterator();
 
       var var3: Any;
@@ -76,64 +74,64 @@ internal object CustomTabsPackages {
          val var2: Boolean = var4.hasNext();
          var3 = null;
          if (!var2) {
-            var7 = null;
+            var6 = null;
             break;
          }
 
-         var7 = var4.next();
-      } while (!q.c((java.lang.String)var7, "com.android.chrome"));
+         var6 = var4.next();
+      } while (!q.c((java.lang.String)var6, "com.android.chrome"));
 
-      val var13: java.lang.String = var7 as java.lang.String;
-      var var8: java.lang.String = var7 as java.lang.String;
-      if (var13 == null) {
-         var4 = var6.iterator();
+      val var12: java.lang.String = var6 as java.lang.String;
+      var var7: java.lang.String = var6 as java.lang.String;
+      if (var12 == null) {
+         var4 = var5.iterator();
 
          do {
             if (!var4.hasNext()) {
-               var9 = null;
+               var8 = null;
                break;
             }
 
-            var9 = var4.next();
-         } while (!q.c((java.lang.String)var9, "com.chrome.beta"));
+            var8 = var4.next();
+         } while (!q.c((java.lang.String)var8, "com.chrome.beta"));
 
-         val var15: java.lang.String = var9 as java.lang.String;
-         var8 = var9 as java.lang.String;
-         if (var15 == null) {
-            var4 = var6.iterator();
+         val var14: java.lang.String = var8 as java.lang.String;
+         var7 = var8 as java.lang.String;
+         if (var14 == null) {
+            var4 = var5.iterator();
 
             do {
                if (!var4.hasNext()) {
-                  var10 = null;
+                  var9 = null;
                   break;
                }
 
-               var10 = var4.next();
-            } while (!q.c((java.lang.String)var10, "com.chrome.dev"));
+               var9 = var4.next();
+            } while (!q.c((java.lang.String)var9, "com.chrome.dev"));
 
-            val var17: java.lang.String = var10 as java.lang.String;
-            var8 = var10 as java.lang.String;
-            if (var17 == null) {
-               var4 = var6.iterator();
+            val var16: java.lang.String = var9 as java.lang.String;
+            var7 = var9 as java.lang.String;
+            if (var16 == null) {
+               var4 = var5.iterator();
 
                do {
-                  var11 = var3;
+                  var10 = var3;
                   if (!var4.hasNext()) {
                      break;
                   }
 
-                  var11 = var4.next();
-               } while (!q.c((java.lang.String)var11, "com.google.android.apps.chrome"));
+                  var10 = var4.next();
+               } while (!q.c((java.lang.String)var10, "com.google.android.apps.chrome"));
 
-               var3 = var11 as java.lang.String;
-               var8 = var11 as java.lang.String;
+               var3 = var10 as java.lang.String;
+               var7 = var10 as java.lang.String;
                if (var3 == null) {
-                  var8 = i.f0(var5) as java.lang.String;
+                  var7 = i.f0(var5) as java.lang.String;
                }
             }
          }
       }
 
-      return var8;
+      return var7;
    }
 }

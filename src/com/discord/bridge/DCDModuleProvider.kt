@@ -12,8 +12,8 @@ import com.facebook.react.uimanager.ViewManager
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lj.w
-import mj.r
+import vj.w
+import wj.r
 
 public object DCDModuleProvider {
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {

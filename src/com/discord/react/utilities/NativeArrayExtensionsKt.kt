@@ -7,8 +7,8 @@ import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import mj.o
 import org.json.JSONArray
+import wj.o
 
 public inline fun ReadableArray.forEach(action: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -245,14 +245,14 @@ public fun <T> Array<Any>.toNativeArray(): ReadableNativeArray {
 
 public fun <V> Collection<Map<String, Any>>.toNativeArrayOfMaps(): ReadableNativeArray {
    q.h(var0, "<this>");
-   val var2: ArrayList = new ArrayList(i.u(var0, 10));
-   val var3: java.util.Iterator = var0.iterator();
+   val var1: ArrayList = new ArrayList(i.u(var0, 10));
+   val var2: java.util.Iterator = var0.iterator();
 
-   while (var3.hasNext()) {
-      var2.add(NativeMapExtensionsKt.toNativeMap(var3.next() as java.util.Map));
+   while (var2.hasNext()) {
+      var1.add(NativeMapExtensionsKt.toNativeMap(var2.next() as java.util.Map));
    }
 
-   return toNativeArray(var2);
+   return toNativeArray(var1);
 }
 
 public fun ReadableArray.toStringList(): List<String> {

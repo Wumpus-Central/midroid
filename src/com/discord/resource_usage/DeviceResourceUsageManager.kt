@@ -2,8 +2,8 @@ package com.discord.resource_usage
 
 import android.system.Os
 import android.system.OsConstants
-import lj.r
-import lj.s
+import vj.r
+import vj.s
 
 internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
    private final var activeThreadId: Long?
@@ -29,17 +29,17 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
          var0 = r.k;
          var0 = r.b(Os.sysconf(OsConstants._SC_CLK_TCK));
       } catch (var4: java.lang.Throwable) {
-         val var1: lj.r.a = r.k;
+         val var1: vj.r.a = r.k;
          var0 = r.b(s.a(var4));
          break label42;
       }
 
-      var var18: Any = var0;
+      var var19: Any = var0;
       if (r.g(var0)) {
-         var18 = 100L;
+         var19 = 100L;
       }
 
-      SC_CLK_TCK = (var18 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var19 as java.lang.Number).longValue();
 
       label36:
       try {
@@ -50,28 +50,28 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
          break label36;
       }
 
-      var18 = var0;
+      var19 = var0;
       if (r.g(var0)) {
-         var18 = 4096L;
+         var19 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var18 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var19 as java.lang.Number).longValue();
 
       label30:
       try {
          var0 = r.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var18 = r.k;
+         var0 = r.k;
          var0 = r.b(s.a(var2));
          break label30;
       }
 
-      var18 = var0;
+      var19 = var0;
       if (r.g(var0)) {
-         var18 = 1;
+         var19 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var18 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var19 as java.lang.Number).intValue();
    }
 
    fun DeviceResourceUsageManager() {
@@ -117,15 +117,15 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 13: astore 10
       // 15: invokestatic java/lang/Thread.currentThread ()Ljava/lang/Thread;
       // 18: invokevirtual java/lang/Thread.getId ()J
-      // 1b: lstore 5
-      // 1d: aload 10
-      // 1f: ifnonnull 25
-      // 22: goto 32
-      // 25: aload 10
-      // 27: invokevirtual java/lang/Long.longValue ()J
-      // 2a: lstore 3
-      // 2b: lload 3
-      // 2c: lload 5
+      // 1b: lstore 3
+      // 1c: aload 10
+      // 1e: ifnonnull 24
+      // 21: goto 32
+      // 24: aload 10
+      // 26: invokevirtual java/lang/Long.longValue ()J
+      // 29: lstore 5
+      // 2b: lload 5
+      // 2d: lload 3
       // 2e: lcmp
       // 2f: ifeq 36
       // 32: aload 9
@@ -237,7 +237,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 1b: aload 3
       // 1c: bipush 4
       // 1d: aconst_null
-      // 1e: invokestatic pj/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+      // 1e: invokestatic zj/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
       // 21: astore 3
       // 22: aload 0
       // 23: aload 3

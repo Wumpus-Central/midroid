@@ -10,8 +10,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import lj.w
-import mj.r
+import vj.w
+import wj.r
 
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val ttiBroadcastReceiver: TTIBroadcastReceiver
@@ -98,10 +98,10 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
       val var1: java.lang.Boolean = BuildConfig.logTTIMetrics;
       q.g(BuildConfig.logTTIMetrics, "logTTIMetrics");
       if (var1) {
-         val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         var2.register(var3, this.ttiBroadcastReceiver);
+         val var3: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var3.register(var2, this.ttiBroadcastReceiver);
       }
    }
 

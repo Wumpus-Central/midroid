@@ -9,7 +9,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.progress_dots.ProgressDots;
 import com.facebook.drawee.view.SimpleDraweeView;
-import v2.a;
+import f3.a;
 
 public final class InteractionStatusViewBinding implements ViewBinding {
    private final View rootView;
@@ -34,12 +34,12 @@ public final class InteractionStatusViewBinding implements ViewBinding {
          LinearLayout var2 = (LinearLayout)a.a(var0, var1);
          if (var2 != null) {
             var1 = R.id.view_interaction_status_label_message;
-            TextView var4 = (TextView)a.a(var0, var1);
-            if (var4 != null) {
+            TextView var5 = (TextView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.view_interaction_status_loading_dots;
-               ProgressDots var5 = (ProgressDots)a.a(var0, var1);
-               if (var5 != null) {
-                  return new InteractionStatusViewBinding(var0, var3, var2, var4, var5);
+               ProgressDots var4 = (ProgressDots)a.a(var0, var1);
+               if (var4 != null) {
+                  return new InteractionStatusViewBinding(var0, var3, var2, var5, var4);
                }
             }
          }

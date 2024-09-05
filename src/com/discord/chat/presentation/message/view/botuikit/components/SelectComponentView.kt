@@ -51,8 +51,8 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import lj.l
-import lj.p
+import vj.l
+import vj.p
 
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -95,15 +95,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var8.H(this.getPostProcessor());
       }
 
-      val var9: com.facebook.drawee.controller.a = (w5.c.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
-      q.g(var9, "build(...)");
-      val var7: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScaleType.e);
-      q.g(var7, "setActualImageScaleType(...)");
+      val var7: com.facebook.drawee.controller.a = (g6.c.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
+      q.g(var7, "build(...)");
+      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScaleType.e);
+      q.g(var9, "setActualImageScaleType(...)");
       if (var3 != null) {
-         var7.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
+         var9.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
       }
 
-      var6.j(this.getContext(), var7.a(), var9, 0, var5, var5, false, 1);
+      var6.j(this.getContext(), var9.a(), var7, 0, var5, var5, false, 1);
       var1.setDraweeSpanStringBuilder(var6);
    }
 
@@ -217,9 +217,9 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                      if (var36 is SearchableSelectItem) {
                         val var14: SearchableSelectItem = var36 as SearchableSelectItem;
                         if ((var36 as SearchableSelectItem).getIconSrc() != null) {
-                           val var38: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
+                           val var13: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var13: java.lang.String = var14.getIconSrc();
+                           val var38: java.lang.String = var14.getIconSrc();
                            val var21: Int = var14.getIconColor();
                            val var30: Boolean;
                            if (var14.getType() === SelectOptionType.USER) {
@@ -228,7 +228,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                               var30 = false;
                            }
 
-                           this.setImage(var38, var13, var21, var30);
+                           this.setImage(var13, var38, var21, var30);
                            val var22: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var22.setVisibility(0);

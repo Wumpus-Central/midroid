@@ -4,7 +4,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 internal class OnVisibleItemsChangedEvent private constructor(data: WritableMap) : ReactEvent {
    private final val data: WritableMap

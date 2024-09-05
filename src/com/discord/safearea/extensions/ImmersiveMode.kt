@@ -11,10 +11,10 @@ import androidx.core.view.WindowInsetsCompat.b
 import androidx.core.view.WindowInsetsCompat.m
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
+import i5.a
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import y4.a
 
 public object ImmersiveMode {
    private final var rootViewInsetUpdateCallbacks: MutableList<(WindowInsetsCompat) -> Unit> = new ArrayList()

@@ -1,5 +1,6 @@
 package com.discord.billing.types
 
+import bn.a
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.SkuDetails
 import com.android.billingclient.api.ProductDetails.PricingPhase
@@ -7,7 +8,6 @@ import java.security.MessageDigest
 import java.util.ArrayList
 import java.util.Arrays
 import kotlin.jvm.internal.q
-import rm.a
 
 internal object BillingFlowParams {
    private fun calculateStandardizedUnits(oldPeriod: String, newPeriod: String): Int {
@@ -108,14 +108,14 @@ internal object BillingFlowParams {
    }
 
    private fun getProrationMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var4: Long = this.getPriceAmountMicros(var1);
-      val var6: Long = this.getPriceAmountMicros(var2);
+      val var6: Long = this.getPriceAmountMicros(var1);
+      val var4: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
       q.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
       q.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
+      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
          var3 = 4;
       } else {
          var3 = 2;
@@ -125,14 +125,14 @@ internal object BillingFlowParams {
    }
 
    private fun getProrationMode(oldSkuDetails: SkuDetails, newSkuDetails: SkuDetails): Int {
-      val var6: Long = var1.c();
-      val var4: Long = var2.c();
+      val var4: Long = var1.c();
+      val var6: Long = var2.c();
       val var8: java.lang.String = var1.f();
       q.g(var8, "getSubscriptionPeriod(...)");
       val var9: java.lang.String = var2.f();
       q.g(var9, "getSubscriptionPeriod(...)");
       val var3: Byte;
-      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
+      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
          var3 = 4;
       } else {
          var3 = 2;
@@ -209,111 +209,116 @@ internal object BillingFlowParams {
       q.h(var1, "productDetails");
       q.h(var2, "productId");
       q.h(var5, "userId");
-      val var9: java.lang.Iterable = var1;
       val var10: java.util.Iterator = var1.iterator();
 
-      do {
-         if (!var10.hasNext()) {
-            var12 = null;
+      while (true) {
+         if (var10.hasNext()) {
+            val var9: Any = var10.next();
+            if (!q.c((var9 as ProductDetails).d(), var2)) {
+               continue;
+            }
+
+            var19 = var9;
             break;
          }
 
-         var12 = var10.next();
-      } while (!q.c(((ProductDetails)var12).d(), var2));
+         var19 = null;
+         break;
+      }
 
-      val var20: ProductDetails = var12 as ProductDetails;
-      if (var12 as ProductDetails == null) {
+      val var20: ProductDetails = var19 as ProductDetails;
+      if (var19 as ProductDetails == null) {
          throw new AssertionError("Could not find product detail for new product");
       } else {
-         val var23: java.util.Iterator = var9.iterator();
+         val var23: java.util.Iterator = var1.iterator();
 
          do {
             if (!var23.hasNext()) {
-               var13 = null;
+               var12 = null;
                break;
             }
 
-            var13 = var23.next();
-         } while (!q.c(((ProductDetails)var13).d(), var3));
+            var12 = var23.next();
+         } while (!q.c(((ProductDetails)var12).d(), var3));
 
-         val var24: ProductDetails = var13 as ProductDetails;
-         if (var3 != null && var13 as ProductDetails == null) {
+         val var24: ProductDetails = var12 as ProductDetails;
+         if (var3 != null && var12 as ProductDetails == null) {
             return null;
          } else {
             val var22: ArrayList = new ArrayList();
             val var25: com.android.billingclient.api.BillingFlowParams.b.a = com.android.billingclient.api.BillingFlowParams.b.a().c(var20);
             q.g(var25, "setProductDetails(...)");
             if (q.c(var20.e(), "subs")) {
-               var var14: java.lang.String;
+               var var13: java.lang.String;
                if (var6 != null) {
                   val var28: java.util.List = var20.f();
-                  var14 = null;
+                  var13 = null;
                   if (var28 != null) {
                      val var29: java.util.Iterator = var28.iterator();
 
                      do {
                         if (!var29.hasNext()) {
-                           var16 = null;
+                           var15 = null;
                            break;
                         }
 
-                        var16 = var29.next();
-                     } while (!q.c(((ProductDetails.c)var16).b(), var6));
+                        var15 = var29.next();
+                     } while (!q.c(((ProductDetails.c)var15).b(), var6));
 
-                     val var30: ProductDetails.c = var16 as ProductDetails.c;
-                     var14 = null;
+                     val var30: ProductDetails.c = var15 as ProductDetails.c;
+                     var13 = null;
                      if (var30 != null) {
-                        var14 = var30.d();
+                        var13 = var30.d();
                      }
                   }
                } else {
                   val var11: java.util.List = var20.f();
-                  var14 = null;
+                  var13 = null;
                   if (var11 != null) {
                      val var26: java.util.Iterator = var11.iterator();
 
                      do {
                         if (!var26.hasNext()) {
-                           var15 = null;
+                           var14 = null;
                            break;
                         }
 
-                        var15 = var26.next();
-                     } while (((ProductDetails.c)var15).b() != null);
+                        var14 = var26.next();
+                     } while (((ProductDetails.c)var14).b() != null);
 
-                     val var27: ProductDetails.c = var15 as ProductDetails.c;
-                     var14 = null;
+                     val var27: ProductDetails.c = var14 as ProductDetails.c;
+                     var13 = null;
                      if (var27 != null) {
-                        var14 = var27.d();
+                        var13 = var27.d();
                      }
                   }
                }
 
-               if (var14 == null) {
-                  var2 = var20.d();
-                  val var19: StringBuilder = new StringBuilder();
-                  var19.append("Could not find offer token for productId: ");
-                  var19.append(var2);
-                  var19.append(" offerId: ");
-                  var19.append(var6);
-                  throw new AssertionError(var19.toString());
+               if (var13 == null) {
+                  val var18: java.lang.String = var20.d();
+                  val var21: StringBuilder = new StringBuilder();
+                  var21.append("Could not find offer token for productId: ");
+                  var21.append(var18);
+                  var21.append(" offerId: ");
+                  var21.append(var6);
+                  throw new AssertionError(var21.toString());
                }
 
-               var25.b(var14);
+               var25.b(var13);
             }
 
-            val var17: com.android.billingclient.api.BillingFlowParams.b = var25.a();
-            q.g(var17, "build(...)");
-            var22.add(var17);
-            val var18: com.android.billingclient.api.BillingFlowParams.a = com.android.billingclient.api.BillingFlowParams.a()
+            val var16: com.android.billingclient.api.BillingFlowParams.b = var25.a();
+            q.g(var16, "build(...)");
+            var22.add(var16);
+            val var17: com.android.billingclient.api.BillingFlowParams.a = com.android.billingclient.api.BillingFlowParams.a()
                .e(var22)
                .c(this.getObfuscatedUserId(var5))
                .b(false);
             if (var24 != null && var4 != null) {
-               var18.g(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).e(INSTANCE.getProrationMode(var24, var20)).a());
+               var17.g(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).e(INSTANCE.getProrationMode(var24, var20)).a());
             }
 
-            return var18.a();
+            return var17.a();
          }
       }
    }

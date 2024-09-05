@@ -5,14 +5,6 @@ import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.f0
-import gn.g0
-import gn.h
-import gn.o1
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -22,6 +14,14 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import qn.b2
+import qn.f0
+import qn.g0
+import qn.h
+import qn.o1
+import qn.g0.a
 
 @f
 public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
@@ -172,30 +172,30 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: Float = this.totalDurationSecs;
-      val var3: Float = this.endDurationSecs;
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: Float = this.totalDurationSecs;
+      val var1: Float = this.endDurationSecs;
       val var7: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var2: Float = this.durationListeningSecs;
       val var4: Boolean = this.isVoiceMessage;
-      val var6: java.lang.String = this.attachmentId;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("MediaAttachmentPlaybackEndedData(messageId=");
-      var8.append(var5);
-      var8.append(", totalDurationSecs=");
-      var8.append(var1);
-      var8.append(", endDurationSecs=");
-      var8.append(var3);
-      var8.append(", senderUserId=");
-      var8.append(var7);
-      var8.append(", durationListeningSecs=");
-      var8.append(var2);
-      var8.append(", isVoiceMessage=");
-      var8.append(var4);
-      var8.append(", attachmentId=");
-      var8.append(var6);
-      var8.append(")");
-      return var8.toString();
+      val var8: java.lang.String = this.attachmentId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaAttachmentPlaybackEndedData(messageId=");
+      var5.append(var6);
+      var5.append(", totalDurationSecs=");
+      var5.append(var3);
+      var5.append(", endDurationSecs=");
+      var5.append(var1);
+      var5.append(", senderUserId=");
+      var5.append(var7);
+      var5.append(", durationListeningSecs=");
+      var5.append(var2);
+      var5.append(", isVoiceMessage=");
+      var5.append(var4);
+      var5.append(", attachmentId=");
+      var5.append(var8);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -212,13 +212,13 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.reactevents.MediaAttachmentPlaybackEndedData", var0, 7
          );
-         var1.l("messageId", false);
-         var1.l("totalDurationSecs", false);
-         var1.l("endDurationSecs", false);
-         var1.l("senderUserId", false);
-         var1.l("durationListeningSecs", false);
-         var1.l("isVoiceMessage", false);
-         var1.l("attachmentId", false);
+         var1.c("messageId", false);
+         var1.c("totalDurationSecs", false);
+         var1.c("endDurationSecs", false);
+         var1.c("senderUserId", false);
+         var1.c("durationListeningSecs", false);
+         var1.c("isVoiceMessage", false);
+         var1.c("attachmentId", false);
          descriptor = var1;
       }
 

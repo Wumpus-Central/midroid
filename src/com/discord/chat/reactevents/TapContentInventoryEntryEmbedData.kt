@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class TapContentInventoryEntryEmbedData(messageId: String, authorId: String, contentId: String, tappedElement: String) : ReactEvent {
@@ -95,19 +95,19 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    public override fun toString(): String {
       val var4: java.lang.String = this.messageId;
       val var2: java.lang.String = this.authorId;
-      val var5: java.lang.String = this.contentId;
+      val var1: java.lang.String = this.contentId;
       val var3: java.lang.String = this.tappedElement;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapContentInventoryEntryEmbedData(messageId=");
-      var1.append(var4);
-      var1.append(", authorId=");
-      var1.append(var2);
-      var1.append(", contentId=");
-      var1.append(var5);
-      var1.append(", tappedElement=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapContentInventoryEntryEmbedData(messageId=");
+      var5.append(var4);
+      var5.append(", authorId=");
+      var5.append(var2);
+      var5.append(", contentId=");
+      var5.append(var1);
+      var5.append(", tappedElement=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -124,10 +124,10 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.reactevents.TapContentInventoryEntryEmbedData", var0, 4
          );
-         var1.l("messageId", false);
-         var1.l("authorId", false);
-         var1.l("contentId", false);
-         var1.l("tappedElement", false);
+         var1.c("messageId", false);
+         var1.c("authorId", false);
+         var1.c("contentId", false);
+         var1.c("tappedElement", false);
          descriptor = var1;
       }
 
@@ -140,22 +140,20 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.b(var9);
          var var2: Int;
+         var var5: java.lang.String;
+         var var6: java.lang.String;
          var var7: java.lang.String;
-         val var8: java.lang.String;
          val var11: java.lang.String;
-         var var13: java.lang.String;
          if (var10.p()) {
-            var13 = var10.m(var9, 0);
-            var8 = var10.m(var9, 1);
-            val var6: java.lang.String = var10.m(var9, 2);
+            var7 = var10.m(var9, 0);
+            var5 = var10.m(var9, 1);
+            var6 = var10.m(var9, 2);
             var11 = var10.m(var9, 3);
             var2 = 15;
-            var7 = var13;
-            var13 = var6;
          } else {
             var7 = null;
-            var var14: java.lang.String = null;
-            var13 = null;
+            var6 = null;
+            var5 = null;
             var var12: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -170,10 +168,10 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
                               throw new n(var4);
                            }
 
-                           var14 = var10.m(var9, 3);
+                           var6 = var10.m(var9, 3);
                            var2 |= 8;
                         } else {
-                           var13 = var10.m(var9, 2);
+                           var5 = var10.m(var9, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -189,12 +187,13 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
                }
             }
 
-            var8 = var12;
-            var11 = var14;
+            var6 = var5;
+            var5 = var12;
+            var11 = var6;
          }
 
          var10.c(var9);
-         return new TapContentInventoryEntryEmbedData(var2, var7, var8, var13, var11, null);
+         return new TapContentInventoryEntryEmbedData(var2, var7, var5, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapContentInventoryEntryEmbedData) {

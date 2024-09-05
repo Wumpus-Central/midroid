@@ -8,16 +8,16 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lj.w
-import mj.r
+import vj.w
+import wj.r
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val cacheModule: CacheModule
       private final get() {
-         val var1: CacheModule.Companion = CacheModule.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         return var1.get(var2);
+         val var2: CacheModule.Companion = CacheModule.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         return var2.get(var1);
       }
 
 
@@ -73,10 +73,10 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
    public fun openInChromeURL(url: String, newTab: Boolean, promise: Promise) {
       q.h(var1, "url");
       q.h(var3, "promise");
-      val var5: BrowserManager = BrowserManager.INSTANCE;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var4, "getReactApplicationContext(...)");
-      var5.tryOpenUrlExternally(var4, var1, new Function1(var3) {
+      val var4: BrowserManager = BrowserManager.INSTANCE;
+      val var5: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var5, "getReactApplicationContext(...)");
+      var4.tryOpenUrlExternally(var5, var1, new Function1(var3) {
          final Promise $promise;
 
          {

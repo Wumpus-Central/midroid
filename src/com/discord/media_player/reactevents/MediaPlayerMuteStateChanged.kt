@@ -3,12 +3,6 @@ package com.discord.media_player.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.h
-import gn.y
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.h
+import qn.y
+import qn.g0.a
 
 @f
 public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : ReactEvent {
@@ -89,8 +89,8 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media_player.reactevents.MediaPlayerMuteStateChanged", var0, 2
          );
-         var1.l("id", false);
-         var1.l("isMuted", false);
+         var1.c("id", false);
+         var1.c("isMuted", false);
          descriptor = var1;
       }
 

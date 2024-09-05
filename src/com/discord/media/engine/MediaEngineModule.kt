@@ -39,7 +39,7 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
 import kotlin.jvm.internal.g0
-import mj.r
+import wj.r
 
 @ReactModule(name = "VoiceEngine")
 public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -60,19 +60,19 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       Debug.INSTANCE.logDebugLoggingConfig();
       this.reactEvents = new ReactEvents(
          new Pair[]{
-            lj.w.a("no-input-callback", g0.b(NoInputCallbackEvent.class)),
-            lj.w.a("on-voice", g0.b(OnVoiceEvent.class)),
-            lj.w.a("device-changed", g0.b(DeviceChangedEvent.class)),
-            lj.w.a("on-broadcast-requested", g0.b(OnBroadcastRequestedEvent.class)),
-            lj.w.a("on-broadcast-thumbnail", g0.b(OnBroadcastThumbnailEvent.class)),
-            lj.w.a("user-speaking", g0.b(UserSpeakingEvent.class)),
-            lj.w.a("ping-callback", g0.b(PingCallbackEvent.class)),
-            lj.w.a("ping-timeout-callback", g0.b(PingTimeoutCallbackEvent.class)),
-            lj.w.a("on-video-callback", g0.b(OnVideoCallbackEvent.class)),
-            lj.w.a("active-sinks-change", g0.b(ActiveSinksChangeEvent.class)),
-            lj.w.a("on-first-frame-callback", g0.b(FirstFrameCallbackEvent.class)),
-            lj.w.a("mls-failure-callback", g0.b(MlsFailureCallbackEvent.class)),
-            lj.w.a("secure-frames-state-update-callback", g0.b(SecureFramesStateUpdateCallbackEvent.class))
+            vj.w.a("no-input-callback", g0.b(NoInputCallbackEvent.class)),
+            vj.w.a("on-voice", g0.b(OnVoiceEvent.class)),
+            vj.w.a("device-changed", g0.b(DeviceChangedEvent.class)),
+            vj.w.a("on-broadcast-requested", g0.b(OnBroadcastRequestedEvent.class)),
+            vj.w.a("on-broadcast-thumbnail", g0.b(OnBroadcastThumbnailEvent.class)),
+            vj.w.a("user-speaking", g0.b(UserSpeakingEvent.class)),
+            vj.w.a("ping-callback", g0.b(PingCallbackEvent.class)),
+            vj.w.a("ping-timeout-callback", g0.b(PingTimeoutCallbackEvent.class)),
+            vj.w.a("on-video-callback", g0.b(OnVideoCallbackEvent.class)),
+            vj.w.a("active-sinks-change", g0.b(ActiveSinksChangeEvent.class)),
+            vj.w.a("on-first-frame-callback", g0.b(FirstFrameCallbackEvent.class)),
+            vj.w.a("mls-failure-callback", g0.b(MlsFailureCallbackEvent.class)),
+            vj.w.a("secure-frames-state-update-callback", g0.b(SecureFramesStateUpdateCallbackEvent.class))
          }
       );
       this.activityEventListener = new ActivityEventListener(this) {
@@ -538,12 +538,12 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
             kotlin.jvm.internal.q.h(var1, "errorMessage");
             kotlin.jvm.internal.q.h(var2, "connectionInfo");
             this.$callback.invoke(new Object[]{var1, NativeMapExtensionsKt.toNativeMap(var2)});
-            val var5: Intent = MediaEngineModule.access$getStreamPermissions$p(this.this$0);
-            if (var5 != null) {
-               val var4: MediaEngineModule = this.this$0;
+            val var4: Intent = MediaEngineModule.access$getStreamPermissions$p(this.this$0);
+            if (var4 != null) {
+               val var5: MediaEngineModule = this.this$0;
                val var3: Int = this.$connectionId;
-               this.this$0.getMediaEngine().connectionInstanceStartBroadcast$media_engine_release(var3, var5);
-               MediaEngineModule.access$setStreamPermissions$p(var4, null);
+               this.this$0.getMediaEngine().connectionInstanceStartBroadcast$media_engine_release(var3, var4);
+               MediaEngineModule.access$setStreamPermissions$p(var5, null);
             }
          }
       });
@@ -631,20 +631,20 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
    public open fun getConstants(): MutableMap<String, Any?> {
       return r.m(
          new Pair[]{
-            lj.w.a("DegradationPreference", r.l(new Pair[]{lj.w.a("MAINTAIN_RESOLUTION", 0), lj.w.a("MAINTAIN_FRAMERATE", 1), lj.w.a("BALANCED", 2)})),
-            lj.w.a(
+            vj.w.a("DegradationPreference", r.l(new Pair[]{vj.w.a("MAINTAIN_RESOLUTION", 0), vj.w.a("MAINTAIN_FRAMERATE", 1), vj.w.a("BALANCED", 2)})),
+            vj.w.a(
                "AVAudioSessionMode",
                r.l(
                   new Pair[]{
-                     lj.w.a("VOICE", "AVAudioSessionModeVoiceChat"),
-                     lj.w.a("VIDEO", "AVAudioSessionModeVideoChat"),
-                     lj.w.a("LISTEN", "AVAudioSessionModeSpokenAudio"),
-                     lj.w.a("DEFAULT", "AVAudioSessionModeDefault")
+                     vj.w.a("VOICE", "AVAudioSessionModeVoiceChat"),
+                     vj.w.a("VIDEO", "AVAudioSessionModeVideoChat"),
+                     vj.w.a("LISTEN", "AVAudioSessionModeSpokenAudio"),
+                     vj.w.a("DEFAULT", "AVAudioSessionModeDefault")
                   }
                )
             ),
-            lj.w.a("SupportedSecureFramesProtocolVersion", 114),
-            lj.w.a(
+            vj.w.a("SupportedSecureFramesProtocolVersion", 114),
+            vj.w.a(
                "supportedFeatures",
                kotlin.collections.i.m(
                   new java.lang.String[]{

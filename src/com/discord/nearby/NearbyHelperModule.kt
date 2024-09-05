@@ -11,7 +11,7 @@ import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val manager: NearbyManager

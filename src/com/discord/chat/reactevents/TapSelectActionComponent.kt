@@ -4,12 +4,6 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.o1
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +13,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.o1
+import qn.g0.a
 
 @f
 public data class TapSelectActionComponent(messageId: MessageId, componentId: String) : TapSelectActionComponent(var1, var2), ReactEvent {
@@ -81,15 +81,15 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.componentId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSelectActionComponent(messageId=");
-      var2.append(var1);
-      var2.append(", componentId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = this.componentId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapSelectActionComponent(messageId=");
+      var3.append(var2);
+      var3.append(", componentId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -104,8 +104,8 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
          val var0: TapSelectActionComponent.$serializer = new TapSelectActionComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapSelectActionComponent", var0, 2);
-         var1.l("messageId", false);
-         var1.l("componentId", false);
+         var1.c("messageId", false);
+         var1.c("componentId", false);
          descriptor = var1;
       }
 

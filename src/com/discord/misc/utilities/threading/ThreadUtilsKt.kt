@@ -4,8 +4,8 @@ import android.os.Handler
 import android.os.Looper
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import lj.l
-import lj.o
+import vj.l
+import vj.o
 
 public final val isOnMainThread: Boolean
    public final get() {

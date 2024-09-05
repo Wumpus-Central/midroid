@@ -10,6 +10,7 @@ import android.os.Environment
 import com.discord.codegen.NativeFileManagerSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import dn.j0
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -18,9 +19,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import lj.w
-import mj.r
-import tm.j0
+import vj.w
+import wj.r
 
 public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFileManagerSpec {
    private final val ioScope: CoroutineScope
@@ -42,7 +42,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       q.h(var1, "storageDir");
       q.h(var2, "path");
       q.h(var3, "promise");
-      tm.g.d(
+      dn.g.d(
          this.ioScope,
          null,
          null,
@@ -1082,7 +1082,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    public override fun fileExists(path: String, promise: Promise) {
       q.h(var1, "path");
       q.h(var2, "promise");
-      tm.g.d(
+      dn.g.d(
          this.ioScope,
          null,
          null,
@@ -2126,7 +2126,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
    public override fun getSize(uri: String, promise: Promise) {
       q.h(var1, "uri");
       q.h(var2, "promise");
-      tm.g.d(
+      dn.g.d(
          this.ioScope,
          null,
          null,
@@ -3186,7 +3186,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       q.h(var1, "assetUri");
       q.h(var2, "encoding");
       q.h(var3, "promise");
-      tm.g.d(
+      dn.g.d(
          this.ioScope,
          null,
          null,
@@ -4227,7 +4227,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       q.h(var1, "path");
       q.h(var2, "encoding");
       q.h(var3, "promise");
-      tm.g.d(
+      dn.g.d(
          this.ioScope,
          null,
          null,
@@ -5268,7 +5268,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       q.h(var1, "storageDir");
       q.h(var2, "path");
       q.h(var3, "promise");
-      tm.g.d(
+      dn.g.d(
          this.ioScope,
          null,
          null,
@@ -6356,7 +6356,7 @@ public class FileManagerModule(reactContext: ReactApplicationContext) : NativeFi
       q.h(var3, "data");
       q.h(var4, "encoding");
       q.h(var5, "promise");
-      tm.g.d(
+      dn.g.d(
          this.ioScope,
          null,
          null,

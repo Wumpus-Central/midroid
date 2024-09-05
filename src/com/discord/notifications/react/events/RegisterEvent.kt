@@ -3,11 +3,6 @@ package com.discord.notifications.react.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class RegisterEvent(token: String) : ReactEvent {
@@ -75,7 +75,7 @@ internal data class RegisterEvent(token: String) : ReactEvent {
          val var0: RegisterEvent.$serializer = new RegisterEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.notifications.react.events.RegisterEvent", var0, 1);
-         var1.l("token", false);
+         var1.c("token", false);
          descriptor = var1;
       }
 

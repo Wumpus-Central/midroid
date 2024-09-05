@@ -11,7 +11,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
-import v2.a;
+import f3.a;
 
 public final class MessageComponentButtonViewBinding implements ViewBinding {
    public final MaterialButton button;
@@ -37,18 +37,18 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
       MaterialButton var5 = (MaterialButton)a.a(var0, var1);
       if (var5 != null) {
          var1 = R.id.emoji;
-         SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.label;
-            MaterialTextView var4 = (MaterialTextView)a.a(var0, var1);
-            if (var4 != null) {
+            MaterialTextView var2 = (MaterialTextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.link_icon;
                SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
                if (var6 != null) {
                   var1 = R.id.loading_dots;
-                  ProgressDots var3 = (ProgressDots)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new MessageComponentButtonViewBinding((ButtonComponentView)var0, var5, var2, var4, var6, var3);
+                  ProgressDots var4 = (ProgressDots)a.a(var0, var1);
+                  if (var4 != null) {
+                     return new MessageComponentButtonViewBinding((ButtonComponentView)var0, var5, var3, var2, var6, var4);
                   }
                }
             }

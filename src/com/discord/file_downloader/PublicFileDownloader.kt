@@ -8,13 +8,13 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Environment
 import com.discord.file_downloader.utils.FilenameSanitizedKt
+import gn.d
 import java.util.LinkedHashMap
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.flow.Flow
-import wm.d
 
 public object PublicFileDownloader {
    private final val onDownloadListeners: MutableMap<Long, () -> Unit> = new LinkedHashMap()
@@ -58,7 +58,7 @@ public object PublicFileDownloader {
       // 15: astore 2
       // 16: aload 2
       // 17: invokeinterface android/database/Cursor.moveToFirst ()Z 1
-      // 1c: ifeq 4d
+      // 1c: ifeq 4e
       // 1f: new java/io/File
       // 22: astore 7
       // 24: aload 7
@@ -73,48 +73,48 @@ public object PublicFileDownloader {
       // 3a: invokespecial com/discord/file_downloader/DownloadState$Completed.<init> (Ljava/io/File;)V
       // 3d: aload 1
       // 3e: aload 5
-      // 40: invokeinterface vm/s.d (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 40: invokeinterface fn/s.d (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
-      // 46: goto 78
-      // 49: astore 1
-      // 4a: goto 89
-      // 4d: new com/discord/file_downloader/DownloadState$Failure
-      // 50: astore 5
-      // 52: new java/lang/IllegalStateException
-      // 55: astore 7
-      // 57: new java/io/FileNotFoundException
-      // 5a: astore 8
-      // 5c: aload 8
-      // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 61: aload 7
-      // 63: aload 8
-      // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 68: aload 5
-      // 6a: aload 7
-      // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
-      // 6f: aload 1
-      // 70: aload 5
-      // 72: invokeinterface vm/s.d (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 77: pop
-      // 78: aload 1
-      // 79: aconst_null
-      // 7a: bipush 1
-      // 7b: aconst_null
-      // 7c: invokestatic vm/s$a.a (Lvm/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
-      // 7f: istore 6
-      // 81: aload 2
-      // 82: aconst_null
-      // 83: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 86: iload 6
-      // 88: ireturn
-      // 89: aload 1
-      // 8a: athrow
-      // 8b: astore 5
-      // 8d: aload 2
-      // 8e: aload 1
-      // 8f: invokestatic wj/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 92: aload 5
-      // 94: athrow
+      // 46: goto 79
+      // 49: astore 5
+      // 4b: goto 8a
+      // 4e: new com/discord/file_downloader/DownloadState$Failure
+      // 51: astore 8
+      // 53: new java/lang/IllegalStateException
+      // 56: astore 5
+      // 58: new java/io/FileNotFoundException
+      // 5b: astore 7
+      // 5d: aload 7
+      // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
+      // 62: aload 5
+      // 64: aload 7
+      // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
+      // 69: aload 8
+      // 6b: aload 5
+      // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
+      // 70: aload 1
+      // 71: aload 8
+      // 73: invokeinterface fn/s.d (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 78: pop
+      // 79: aload 1
+      // 7a: aconst_null
+      // 7b: bipush 1
+      // 7c: aconst_null
+      // 7d: invokestatic fn/s$a.a (Lfn/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
+      // 80: istore 6
+      // 82: aload 2
+      // 83: aconst_null
+      // 84: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 87: iload 6
+      // 89: ireturn
+      // 8a: aload 5
+      // 8c: athrow
+      // 8d: astore 1
+      // 8e: aload 2
+      // 8f: aload 5
+      // 91: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 94: aload 1
+      // 95: athrow
    }
 
    public fun downloadFile(context: Context, url: String, fileName: String, description: String? = null): Flow<DownloadState> {
@@ -125,10 +125,11 @@ public object PublicFileDownloader {
          new Function2(var1, var2, var3, var4, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1148,7 +1149,6 @@ public object PublicFileDownloader {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    
       );
    }

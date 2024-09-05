@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.h
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.h
+import qn.g0.a
 
 @f
 public data class CodeBlockContentNode(lang: String, content: String, inQuote: Boolean) : ContentNode {
@@ -70,14 +70,14 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.lang;
-      val var4: java.lang.String = this.content;
+      val var4: java.lang.String = this.lang;
+      val var3: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
       val var2: StringBuilder = new StringBuilder();
       var2.append("CodeBlockContentNode(lang=");
-      var2.append(var3);
-      var2.append(", content=");
       var2.append(var4);
+      var2.append(", content=");
+      var2.append(var3);
       var2.append(", inQuote=");
       var2.append(var1);
       var2.append(")");
@@ -96,9 +96,9 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          val var0: CodeBlockContentNode.$serializer = new CodeBlockContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("codeBlock", var0, 3);
-         var1.l("lang", false);
-         var1.l("content", false);
-         var1.l("inQuote", false);
+         var1.c("lang", false);
+         var1.c("content", false);
+         var1.c("inQuote", false);
          descriptor = var1;
       }
 

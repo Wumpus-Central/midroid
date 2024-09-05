@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.h
 
 @f
 public data class LinkContentNode(content: List<ContentNode>, target: String, context: LinkContext? = null) : ContentNode {
@@ -97,8 +97,8 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.content.hashCode();
-      val var2: Int = this.target.hashCode();
+      val var2: Int = this.content.hashCode();
+      val var3: Int = this.target.hashCode();
       val var1: Int;
       if (this.context == null) {
          var1 = 0;
@@ -106,22 +106,22 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          var1 = this.context.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
+      val var2: java.util.List = this.content;
       val var3: java.lang.String = this.target;
       val var4: LinkContext = this.context;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LinkContentNode(content=");
-      var2.append(var1);
-      var2.append(", target=");
-      var2.append(var3);
-      var2.append(", context=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LinkContentNode(content=");
+      var1.append(var2);
+      var1.append(", target=");
+      var1.append(var3);
+      var1.append(", context=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -136,49 +136,51 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          val var0: LinkContentNode.$serializer = new LinkContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("link", var0, 5);
-         var1.l("content", false);
-         var1.l("target", false);
-         var1.l("context", true);
-         var1.l("textContent", true);
-         var1.l("isUrl", true);
+         var1.c("content", false);
+         var1.c("target", false);
+         var1.c("context", true);
+         var1.c("textContent", true);
+         var1.c("isUrl", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
-         val var2: b2 = b2.a;
-         return new KSerializer[]{var1, b2.a, a.u(LinkContext.$serializer.INSTANCE), var2, h.a};
+         val var2: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
+         val var1: b2 = b2.a;
+         return new KSerializer[]{var2, b2.a, a.u(LinkContext.$serializer.INSTANCE), var1, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): LinkContentNode {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var11: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.b(var10);
+         val var9: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
          var var2: Int;
          var var5: Boolean;
-         var var6: Any;
          var var7: java.lang.String;
          var var8: java.util.List;
          var var12: java.lang.String;
-         if (var10.p()) {
-            var8 = var10.y(var9, 0, var11[0], null) as java.util.List;
-            var7 = var10.m(var9, 1);
-            var6 = var10.n(var9, 2, LinkContext.$serializer.INSTANCE, null) as LinkContext;
-            var12 = var10.m(var9, 3);
-            var5 = var10.C(var9, 4);
+         var var13: Any;
+         if (var11.p()) {
+            var13 = var11.y(var10, 0, var9[0], null) as java.util.List;
+            var7 = var11.m(var10, 1);
+            val var14: LinkContext = var11.n(var10, 2, LinkContext.$serializer.INSTANCE, null) as LinkContext;
+            var12 = var11.m(var10, 3);
+            var5 = var11.C(var10, 4);
             var2 = 31;
+            var8 = (java.util.List)var13;
+            var13 = var14;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var8 = null;
             var7 = null;
-            var6 = null;
+            var13 = null;
             var12 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var11.o(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -188,22 +190,22 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
                                  throw new n(var4);
                               }
 
-                              var5 = var10.C(var9, 4);
+                              var5 = var11.C(var10, 4);
                               var2 |= 16;
                            } else {
-                              var12 = var10.m(var9, 3);
+                              var12 = var11.m(var10, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var6 = var10.n(var9, 2, LinkContext.$serializer.INSTANCE, var6) as LinkContext;
+                           var13 = var11.n(var10, 2, LinkContext.$serializer.INSTANCE, var13) as LinkContext;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.m(var9, 1);
+                        var7 = var11.m(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.y(var9, 0, var11[0], var8) as java.util.List;
+                     var8 = var11.y(var10, 0, var9[0], var8) as java.util.List;
                      var2 |= 1;
                   }
                } else {
@@ -212,8 +214,8 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
             }
          }
 
-         var10.c(var9);
-         return new LinkContentNode(var2, var8, var7, (LinkContext)var6, var12, var5, null);
+         var11.c(var10);
+         return new LinkContentNode(var2, var8, var7, (LinkContext)var13, var12, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LinkContentNode) {
@@ -226,7 +228,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

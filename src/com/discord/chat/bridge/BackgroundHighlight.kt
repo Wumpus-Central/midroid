@@ -1,10 +1,5 @@
 package com.discord.chat.bridge
 
-import dn.f
-import dn.n
-import en.a
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.g0
+import qn.n0
 
 @f
 public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor: Int? = null) {
@@ -72,13 +72,13 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
    }
 
    public override fun toString(): String {
-      val var3: Int = this.backgroundColor;
-      val var1: Int = this.gutterColor;
+      val var1: Int = this.backgroundColor;
+      val var3: Int = this.gutterColor;
       val var2: StringBuilder = new StringBuilder();
       var2.append("BackgroundHighlight(backgroundColor=");
-      var2.append(var3);
-      var2.append(", gutterColor=");
       var2.append(var1);
+      var2.append(", gutterColor=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -95,8 +95,8 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          val var0: BackgroundHighlight.$serializer = new BackgroundHighlight.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.BackgroundHighlight", var0, 2);
-         var1.l("backgroundColor", true);
-         var1.l("gutterColor", true);
+         var1.c("backgroundColor", true);
+         var1.c("gutterColor", true);
          descriptor = var1;
       }
 
@@ -157,7 +157,7 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

@@ -9,12 +9,12 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.modules.websocket.WebSocketModule
+import g5.a
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
-import lj.w
-import mj.r
 import okhttp3.WebSocket
-import w4.a
+import vj.w
+import wj.r
 
 public class FastConnectManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final var identified: Boolean

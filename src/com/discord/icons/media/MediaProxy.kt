@@ -8,59 +8,60 @@ internal object MediaProxy {
    private final val MEDIA_PROXY_SIZES: Array<Int>
 
    private fun getMediaProxySize(size: Int): Int {
-      var var7: Int = MEDIA_PROXY_SIZES;
+      var var9: Array<Int> = MEDIA_PROXY_SIZES;
       val var8: ArrayList = new ArrayList();
-      var var3: Int = ((Object[])var7).length;
+      var var3: Int = var9.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var9: Int = ((Object[])var7)[var2];
-         if (((Object[])var7)[var2].intValue() <= var1) {
-            var8.add(var9);
+         val var7: Int = var9[var2];
+         if (var9[var2].intValue() <= var1) {
+            var8.add(var7);
          }
       }
 
       val var11: java.util.Iterator = var8.iterator();
       val var6: Boolean = var11.hasNext();
-      val var22: Any = null;
+      var9 = null;
+      var var17: Any;
       if (!var6) {
-         var7 = null;
+         var17 = null;
       } else {
-         var7 = (Integer[])var11.next();
+         var17 = (Integer)var11.next();
          if (var11.hasNext()) {
-            var var13: Int = (var7 as java.lang.Number).intValue();
-            var var20: Any = var7;
+            var3 = var17.intValue();
+            var var20: Any = var17;
 
             do {
                val var10: Any = var11.next();
                val var5: Int = (var10 as java.lang.Number).intValue();
-               var7 = (Integer[])var20;
-               var3 = var13;
-               if (var13 < var5) {
-                  var7 = (Integer[])var10;
-                  var3 = var5;
+               var17 = (Integer)var20;
+               var var13: Int = var3;
+               if (var3 < var5) {
+                  var17 = (Integer)var10;
+                  var13 = var5;
                }
 
-               var20 = var7;
-               var13 = var3;
+               var20 = var17;
+               var3 = var13;
             } while (var11.hasNext());
          }
       }
 
-      var7 = var7 as Int;
-      if (var7 as Int != null && (double)var1 / (var7 as Int).intValue() <= 1.25) {
-         return var7;
+      var17 = var17;
+      if (var17 != null && (double)var1 / var17.intValue() <= 1.25) {
+         return var17;
       } else {
          val var21: Array<Int> = MEDIA_PROXY_SIZES;
          var3 = MEDIA_PROXY_SIZES.length;
          var var14: Int = 0;
 
          while (true) {
-            var7 = (Integer)var22;
+            var17 = var9;
             if (var14 >= var3) {
                break;
             }
 
-            var7 = var21[var14];
+            var17 = var21[var14];
             if (var21[var14].intValue() >= var1) {
                break;
             }
@@ -68,8 +69,8 @@ internal object MediaProxy {
             var14++;
          }
 
-         if (var7 != null) {
-            var1 = var7;
+         if (var17 != null) {
+            var1 = var17;
          } else {
             var1 = (c.h0(MEDIA_PROXY_SIZES) as java.lang.Number).intValue();
          }

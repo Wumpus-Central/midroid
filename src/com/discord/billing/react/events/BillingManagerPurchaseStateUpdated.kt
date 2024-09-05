@@ -3,11 +3,6 @@ package com.discord.billing.react.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal class BillingManagerPurchaseStateUpdated(billingResult: Int) : ReactEvent {
@@ -43,7 +43,7 @@ internal class BillingManagerPurchaseStateUpdated(billingResult: Int) : ReactEve
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.billing.react.events.BillingManagerPurchaseStateUpdated", var0, 1
          );
-         var1.l("billingResult", false);
+         var1.c("billingResult", false);
          descriptor = var1;
       }
 
@@ -56,14 +56,14 @@ internal class BillingManagerPurchaseStateUpdated(billingResult: Int) : ReactEve
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.b(var7);
          val var6: Boolean = var8.p();
-         var var3: Int = 1;
+         var var2: Int = 1;
          var var4: Boolean = true;
-         var var2: Int;
+         var var3: Int;
          if (var6) {
-            var2 = var8.i(var7, 0);
+            var3 = var8.i(var7, 0);
          } else {
-            var2 = 0;
             var3 = 0;
+            var2 = 0;
 
             while (var4) {
                val var5: Int = var8.o(var7);
@@ -72,8 +72,8 @@ internal class BillingManagerPurchaseStateUpdated(billingResult: Int) : ReactEve
                      throw new n(var5);
                   }
 
-                  var2 = var8.i(var7, 0);
-                  var3 |= 1;
+                  var3 = var8.i(var7, 0);
+                  var2 |= 1;
                } else {
                   var4 = false;
                }
@@ -81,7 +81,7 @@ internal class BillingManagerPurchaseStateUpdated(billingResult: Int) : ReactEve
          }
 
          var8.c(var7);
-         return new BillingManagerPurchaseStateUpdated(var3, var2, null);
+         return new BillingManagerPurchaseStateUpdated(var2, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BillingManagerPurchaseStateUpdated) {

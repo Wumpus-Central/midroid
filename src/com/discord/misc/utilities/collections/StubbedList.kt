@@ -2,10 +2,10 @@ package com.discord.misc.utilities.collections
 
 import java.util.Comparator
 import java.util.function.UnaryOperator
+import jk.a
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.i
 import kotlin.jvm.internal.q
-import zj.a
 
 public open class StubbedList<T> : java.util.List<T>, a {
    public open val size: Int

@@ -21,6 +21,8 @@ import com.discord.native.engine.ConnectionInfo
 import com.discord.native.engine.NativeConnection
 import com.discord.native.engine.NativeEngine
 import com.discord.native.engine.VideoInputDeviceDescription
+import dn.j0
+import dn.r1
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
 import kotlin.coroutines.Continuation
@@ -35,8 +37,6 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.webrtc.VideoFrame
 import org.webrtc.voiceengine.WebRtcAudioManager
-import tm.j0
-import tm.r1
 
 public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = j0.a()) {
    private final val context: Context
@@ -74,7 +74,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       this.instanceCreationNs = System.nanoTime();
       this.engineConnections = new MediaEngineNativeConnections();
       this.dispatcher = new AsyncInitDispatcher("MediaEngine", 0L, 2, null);
-      this.coroutineScope = kotlinx.coroutines.g.a(var2.d1(new tm.z("MediaEngine")));
+      this.coroutineScope = kotlinx.coroutines.g.a(var2.e1(new dn.z("MediaEngine")));
    }
 
    @JvmStatic
@@ -216,19 +216,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var3: NativeConnection = this.engineConnections.get(var1);
-      if (var3 == null) {
-         val var4: Log = Log.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("[");
-         var5.append(var2);
-         var5.append("] no NativeConnection for connectionId=");
-         var5.append(var1);
-         var5.append(", returning null");
-         Log.w$default(var4, "MediaEngine", var5.toString(), null, 4, null);
+      val var5: NativeConnection = this.engineConnections.get(var1);
+      if (var5 == null) {
+         val var3: Log = Log.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("[");
+         var4.append(var2);
+         var4.append("] no NativeConnection for connectionId=");
+         var4.append(var1);
+         var4.append(", returning null");
+         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       }
 
-      return var3;
+      return var5;
    }
 
    @JvmStatic
@@ -886,22 +886,22 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             val var13: MediaCodecInfo = var16[var4];
             val var12: java.lang.String = var16[var4].getName();
             kotlin.jvm.internal.q.g(var12, "getName(...)");
-            val var8: Array<java.lang.String> = var13.getSupportedTypes();
-            kotlin.jvm.internal.q.g(var8, "getSupportedTypes(...)");
-            val var14: ArrayList = new ArrayList();
-            val var6: Int = var8.length;
+            val var14: Array<java.lang.String> = var13.getSupportedTypes();
+            kotlin.jvm.internal.q.g(var14, "getSupportedTypes(...)");
+            val var8: ArrayList = new ArrayList();
+            val var6: Int = var14.length;
 
             for (int var5 = var2; var5 < var6; var2 = 0) {
-               val var15: java.lang.String = var8[var5];
-               kotlin.jvm.internal.q.e(var8[var5]);
+               val var15: java.lang.String = var14[var5];
+               kotlin.jvm.internal.q.e(var14[var5]);
                if (kotlin.text.h.H(var15, "video", false, 2, null)) {
-                  var14.add(var15);
+                  var8.add(var15);
                }
 
                var5++;
             }
 
-            for (java.lang.String var21 : var14) {
+            for (java.lang.String var21 : var8) {
                val var18: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
                   if (com.discord.a.a(var13)) {
@@ -1051,6 +1051,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   new Function1(this, var4)// $VF: Couldn't be decompiled
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          // java.lang.StackOverflowError
+         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.AssignmentExprent.getAllExprents(AssignmentExprent.java:84)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
          //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
@@ -2073,8 +2075,6 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
          
                )
             );
@@ -2650,7 +2650,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
          label27: {
             val var5: Any = ((<unrepresentable>)var8).result;
-            val var10: Any = rj.b.f();
+            val var10: Any = bk.b.f();
             val var6: ByteArray;
             if (((<unrepresentable>)var8).label != 0) {
                if (((<unrepresentable>)var8).label != 1) {
@@ -2659,14 +2659,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   }
 
                   var7 = ((<unrepresentable>)var8).L$0 as java.lang.String;
-                  lj.s.b(var5);
+                  vj.s.b(var5);
                   break label27;
                }
 
                var6 = ((<unrepresentable>)var8).L$0 as ByteArray;
-               lj.s.b(var5);
+               vj.s.b(var5);
             } else {
-               lj.s.b(var5);
+               vj.s.b(var5);
                var6 = this.compressToJpegBytes(var1);
                ((<unrepresentable>)var8).L$0 = var6;
                ((<unrepresentable>)var8).label = 1;

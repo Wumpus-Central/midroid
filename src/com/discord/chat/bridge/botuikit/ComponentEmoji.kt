@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.botuikit
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.h
 
 @f
 public data class ComponentEmoji(id: String? = null, name: String, src: String? = null, animated: Boolean = false, surrogates: String? = null) {
@@ -111,22 +111,22 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.id;
-      val var3: java.lang.String = this.name;
-      val var2: java.lang.String = this.src;
+      val var2: java.lang.String = this.id;
+      val var6: java.lang.String = this.name;
+      val var4: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var4: java.lang.String = this.surrogates;
+      val var3: java.lang.String = this.surrogates;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ComponentEmoji(id=");
-      var5.append(var6);
-      var5.append(", name=");
-      var5.append(var3);
-      var5.append(", src=");
       var5.append(var2);
+      var5.append(", name=");
+      var5.append(var6);
+      var5.append(", src=");
+      var5.append(var4);
       var5.append(", animated=");
       var5.append(var1);
       var5.append(", surrogates=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -143,11 +143,11 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          val var0: ComponentEmoji.$serializer = new ComponentEmoji.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.botuikit.ComponentEmoji", var0, 5);
-         var1.l("id", true);
-         var1.l("name", false);
-         var1.l("src", true);
-         var1.l("animated", true);
-         var1.l("surrogates", true);
+         var1.c("id", true);
+         var1.c("name", false);
+         var1.c("src", true);
+         var1.c("animated", true);
+         var1.c("surrogates", true);
          descriptor = var1;
       }
 
@@ -235,7 +235,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

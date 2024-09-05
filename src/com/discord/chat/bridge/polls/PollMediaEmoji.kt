@@ -1,11 +1,6 @@
 package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +9,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -92,13 +92,13 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       if (this.id != null) {
          val var7: java.lang.Long = h.o(this.id);
          if (var7 != null) {
-            val var2: Long = var7.longValue();
+            val var1: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
             if (this.displayName == null) {
                var8 = this.name;
             }
 
-            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
+            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var1, this.animated, var8);
             if (var9 != null) {
                return var9;
             }
@@ -109,21 +109,21 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var5: java.lang.String = this.name;
-      val var3: java.lang.String = this.displayName;
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.name;
+      val var2: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PollMediaEmoji(id=");
-      var2.append(var4);
-      var2.append(", name=");
-      var2.append(var5);
-      var2.append(", displayName=");
-      var2.append(var3);
-      var2.append(", animated=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PollMediaEmoji(id=");
+      var5.append(var3);
+      var5.append(", name=");
+      var5.append(var4);
+      var5.append(", displayName=");
+      var5.append(var2);
+      var5.append(", animated=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -138,16 +138,16 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
          val var0: PollMediaEmoji.$serializer = new PollMediaEmoji.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.polls.PollMediaEmoji", var0, 4);
-         var1.l("id", false);
-         var1.l("name", false);
-         var1.l("displayName", true);
-         var1.l("animated", true);
+         var1.c("id", false);
+         var1.c("name", false);
+         var1.c("displayName", true);
+         var1.c("animated", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), gn.h.a};
+         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), qn.h.a};
       }
 
       public open fun deserialize(decoder: Decoder): PollMediaEmoji {
@@ -218,7 +218,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

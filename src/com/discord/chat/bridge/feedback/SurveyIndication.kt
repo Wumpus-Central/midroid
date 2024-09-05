@@ -2,11 +2,6 @@ package com.discord.chat.bridge.feedback
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class SurveyIndication(content: StructurableText, feedbackIconUrl: String) {
@@ -86,8 +86,8 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
          val var0: SurveyIndication.$serializer = new SurveyIndication.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.feedback.SurveyIndication", var0, 2);
-         var1.l("content", false);
-         var1.l("feedbackIconUrl", false);
+         var1.c("content", false);
+         var1.c("feedbackIconUrl", false);
          descriptor = var1;
       }
 

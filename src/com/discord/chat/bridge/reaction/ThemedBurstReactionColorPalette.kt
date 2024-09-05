@@ -1,10 +1,6 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.BurstReactionView.ThemedBurstColorPalette
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +9,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
 
 @f
 public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) : ThemedBurstColorPalette {
@@ -61,15 +61,15 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
    }
 
    public override fun toString(): String {
-      val var2: BurstReactionColorPalette = this.light;
-      val var3: BurstReactionColorPalette = this.dark;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ThemedBurstReactionColorPalette(light=");
-      var1.append(var2);
-      var1.append(", dark=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: BurstReactionColorPalette = this.light;
+      val var2: BurstReactionColorPalette = this.dark;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ThemedBurstReactionColorPalette(light=");
+      var3.append(var1);
+      var3.append(", dark=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -86,8 +86,8 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.bridge.reaction.ThemedBurstReactionColorPalette", var0, 2
          );
-         var1.l("LIGHT", false);
-         var1.l("DARK", false);
+         var1.c("LIGHT", false);
+         var1.c("DARK", false);
          descriptor = var1;
       }
 

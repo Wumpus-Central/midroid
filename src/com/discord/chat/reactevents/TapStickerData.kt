@@ -6,7 +6,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapStickerData(var1, var2), ReactEvent {
    public final val messageId: MessageId
@@ -66,13 +66,13 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
    }
 
    public override fun toString(): String {
-      val var3: Sticker = this.sticker;
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Sticker = this.sticker;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapStickerData(sticker=");
-      var1.append(var3);
-      var1.append(", messageId=");
       var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

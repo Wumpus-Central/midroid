@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.segmented.control.R;
-import v2.a;
+import f3.a;
 
 public final class SegmentedControlBinding implements ViewBinding {
    public final CardView rootCardView;

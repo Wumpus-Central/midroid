@@ -3,12 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stateUpdateJSON: String) : ReactEvent {
@@ -68,14 +68,14 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var2: java.lang.String = this.stateUpdateJSON;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
-      var3.append(var1);
-      var3.append(", stateUpdateJSON=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.stateUpdateJSON;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
+      var2.append(var1);
+      var2.append(", stateUpdateJSON=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -92,8 +92,8 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media.engine.video.events.SecureFramesStateUpdateCallbackEvent", var0, 2
          );
-         var1.l("connectionId", false);
-         var1.l("stateUpdateJSON", false);
+         var1.c("connectionId", false);
+         var1.c("stateUpdateJSON", false);
          descriptor = var1;
       }
 

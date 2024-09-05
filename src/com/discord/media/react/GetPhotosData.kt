@@ -6,7 +6,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 internal class GetPhotosData(edges: List<ContentResolverMedia>) {
    private final val edges: List<ContentResolverMedia>
@@ -39,7 +39,7 @@ internal class GetPhotosData(edges: List<ContentResolverMedia>) {
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var2: java.lang.Iterable = this.edges;
+      val var2: java.util.List = this.edges;
       val var1: ArrayList = new ArrayList(i.u(this.edges, 10));
       val var3: java.util.Iterator = var2.iterator();
 

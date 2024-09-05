@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import v2.a;
+import f3.a;
 
 public final class SpoilerOverlayViewBinding implements ViewBinding {
    public final TextView label;

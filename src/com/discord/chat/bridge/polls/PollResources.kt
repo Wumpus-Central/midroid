@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.polls
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,7 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import mj.r
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
+import wj.r
 
 @f
 public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = r.h()) {
@@ -86,17 +86,17 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
 
    public override fun toString(): String {
       val var4: java.lang.String = this.selectedIcon;
-      val var2: java.lang.String = this.checkmarkIcon;
-      val var3: java.util.Map = this.styles;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PollResources(selectedIcon=");
-      var1.append(var4);
-      var1.append(", checkmarkIcon=");
-      var1.append(var2);
-      var1.append(", styles=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.checkmarkIcon;
+      val var2: java.util.Map = this.styles;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollResources(selectedIcon=");
+      var3.append(var4);
+      var3.append(", checkmarkIcon=");
+      var3.append(var1);
+      var3.append(", styles=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -111,9 +111,9 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
          val var0: PollResources.$serializer = new PollResources.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.polls.PollResources", var0, 3);
-         var1.l("selectedIcon", false);
-         var1.l("checkmarkIcon", false);
-         var1.l("styles", true);
+         var1.c("selectedIcon", false);
+         var1.c("checkmarkIcon", false);
+         var1.c("styles", true);
          descriptor = var1;
       }
 

@@ -4,12 +4,6 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,7 +12,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.n0
+import vj.w
 
 @f
 public class TapInlineForwardData(channelId: String, messageId: String, targetKind: String, embedIndex: Int?) : ReactEvent {
@@ -39,14 +39,14 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
    }
 
    public open fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
          new Pair[]{w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("targetKind", this.targetKind)}
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
       }
 
-      return var2;
+      return var1;
    }
 
    public object `$serializer` : g0 {
@@ -61,10 +61,10 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          val var0: TapInlineForwardData.$serializer = new TapInlineForwardData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapInlineForwardData", var0, 4);
-         var1.l("channelId", false);
-         var1.l("messageId", false);
-         var1.l("targetKind", false);
-         var1.l("embedIndex", false);
+         var1.c("channelId", false);
+         var1.c("messageId", false);
+         var1.c("targetKind", false);
+         var1.c("embedIndex", false);
          descriptor = var1;
       }
 
@@ -86,9 +86,10 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          if (var5) {
             var6 = var11.m(var10, 0);
             var7 = var11.m(var10, 1);
-            var9 = var11.m(var10, 2);
+            var8 = var11.m(var10, 2);
             var12 = var11.n(var10, 3, n0.a, null) as Int;
             var2 = 15;
+            var9 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -143,7 +144,7 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

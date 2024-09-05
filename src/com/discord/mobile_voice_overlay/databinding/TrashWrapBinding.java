@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import v2.a;
+import f3.a;
 
 public final class TrashWrapBinding implements ViewBinding {
    private final View rootView;

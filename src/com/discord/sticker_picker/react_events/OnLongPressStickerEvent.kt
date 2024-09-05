@@ -2,11 +2,6 @@ package com.discord.sticker_picker.react_events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
@@ -76,7 +76,7 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.sticker_picker.react_events.OnLongPressStickerEvent", var0, 1
          );
-         var1.l("stickerId", false);
+         var1.c("stickerId", false);
          descriptor = var1;
       }
 

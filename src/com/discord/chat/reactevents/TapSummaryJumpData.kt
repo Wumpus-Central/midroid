@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class TapSummaryJumpData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -79,15 +79,15 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
 
    public override fun toString(): String {
       val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.summaryId;
+      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.summaryId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapSummaryJumpData(channelId=");
       var1.append(var2);
       var1.append(", messageId=");
-      var1.append(var3);
-      var1.append(", summaryId=");
       var1.append(var4);
+      var1.append(", summaryId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }
@@ -104,9 +104,9 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
          val var0: TapSummaryJumpData.$serializer = new TapSummaryJumpData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapSummaryJumpData", var0, 3);
-         var1.l("channelId", false);
-         var1.l("messageId", false);
-         var1.l("summaryId", false);
+         var1.c("channelId", false);
+         var1.c("messageId", false);
+         var1.c("summaryId", false);
          descriptor = var1;
       }
 

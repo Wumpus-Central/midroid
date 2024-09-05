@@ -19,6 +19,8 @@ import com.discord.chat.presentation.list.item.DeserializationErrorChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.root.MessageContext
+import dn.j0
+import fn.a
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
@@ -26,8 +28,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
-import tm.j0
-import vm.a
 
 public class ChatListManager(coroutineScope: CoroutineScope) {
    private final var isDisabled: Boolean
@@ -38,27 +38,26 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    init {
       q.h(var1, "coroutineScope");
       super();
-      this.updatesFlow = wm.q.a(1, 3, a.j);
+      this.updatesFlow = gn.q.a(1, 3, a.j);
       this.publishScope = g.j(var1, j0.a());
    }
 
    private fun createNewRows(updates: List<Row>): com.discord.chat.listmanager.ChatListManager.RowsModificationResult {
-      val var5: java.lang.Iterable = var1;
       val var4: Boolean = var1 is java.util.Collection;
       val var3: Boolean = false;
       var var2: Boolean;
-      if (var4 && (var5 as java.util.Collection).isEmpty()) {
+      if (var4 && var1.isEmpty()) {
          var2 = false;
       } else {
-         val var6: java.util.Iterator = var5.iterator();
+         val var5: java.util.Iterator = var1.iterator();
 
          while (true) {
             var2 = var3;
-            if (!var6.hasNext()) {
+            if (!var5.hasNext()) {
                break;
             }
 
-            if ((var6.next() as Row).getChangeType() === ChangeType.DELETE) {
+            if ((var5.next() as Row).getChangeType() === ChangeType.DELETE) {
                var2 = true;
                break;
             }
@@ -82,80 +81,79 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    }
 
    private fun modifyExistingRows(updates: List<Row>): com.discord.chat.listmanager.ChatListManager.RowsModificationResult {
-      val var6: java.util.List = this.rows;
+      val var5: java.util.List = this.rows;
       q.e(this.rows);
-      val var5: ListOperationsBuilder = new ListOperationsBuilder();
-      val var10: java.lang.Iterable = var1;
-      val var9: ArrayList = new ArrayList();
+      val var6: ListOperationsBuilder = new ListOperationsBuilder();
+      val var8: ArrayList = new ArrayList();
 
-      for (Object var8 : var10) {
-         if ((var8 as Row).getChangeType() === ChangeType.INSERT) {
-            var9.add(var8);
+      for (Object var9 : var1) {
+         if ((var9 as Row).getChangeType() === ChangeType.INSERT) {
+            var8.add(var9);
          }
       }
 
-      val var16: java.util.Iterator = var9.iterator();
+      val var15: java.util.Iterator = var8.iterator();
 
       label75:
       while (true) {
          var var4: Boolean;
-         for (var4 = false; var16.hasNext(); var4 = true) {
-            val var13: Row = var16.next() as Row;
-            this.insert(var6, var13);
-            var5.add(new ListOperation.Insert(var13.getIndex()));
-            if (!var4 && var13.getIndex() != 0) {
+         for (var4 = false; var15.hasNext(); var4 = true) {
+            val var12: Row = var15.next() as Row;
+            this.insert(var5, var12);
+            var6.add(new ListOperation.Insert(var12.getIndex()));
+            if (!var4 && var12.getIndex() != 0) {
                continue label75;
             }
          }
 
-         val var14: ArrayList = new ArrayList();
+         val var13: ArrayList = new ArrayList();
 
-         for (Object var11 : var10) {
-            if ((var11 as Row).getChangeType() === ChangeType.DELETE || (var11 as Row).getChangeType() === ChangeType.UPDATE) {
-               var14.add(var11);
+         for (Object var18 : var1) {
+            if ((var18 as Row).getChangeType() === ChangeType.DELETE || (var18 as Row).getChangeType() === ChangeType.UPDATE) {
+               var13.add(var18);
             }
          }
 
-         for (Row var15 : i.L(var14)) {
-            if (var15 is DeleteRow) {
-               var6.remove(var15.getIndex());
-               var5.add(new ListOperation.Remove(var15.getIndex()));
+         for (Row var17 : i.L(var13)) {
+            if (var17 is DeleteRow) {
+               var5.remove(var17.getIndex());
+               var6.add(new ListOperation.Remove(var17.getIndex()));
             } else {
                val var2: Boolean;
-               if (var15 is LoadingRow
-                  && (var15 as LoadingRow).getButton().getAction().getType() === LoadingActionType.LOAD_MORE_AFTER
-                  && var15.getIndex() == 0) {
+               if (var17 is LoadingRow
+                  && (var17 as LoadingRow).getButton().getAction().getType() === LoadingActionType.LOAD_MORE_AFTER
+                  && var17.getIndex() == 0) {
                   var2 = true;
                } else {
                   var2 = false;
                }
 
-               val var18: Row = i.d0(var6) as Row;
+               val var14: Row = i.d0(var5) as Row;
                val var3: Boolean;
-               if (var18 is LoadingRow && (var18 as LoadingRow).isLoading()) {
+               if (var14 is LoadingRow && (var14 as LoadingRow).isLoading()) {
                   var3 = true;
                } else {
                   var3 = false;
                }
 
                if (var2 && var3) {
-                  var6.add(1, var15);
-                  var6.remove(0);
-                  var5.add(new ListOperation.Insert(1));
-                  var5.add(new ListOperation.Remove(0));
+                  var5.add(1, var17);
+                  var5.remove(0);
+                  var6.add(new ListOperation.Insert(1));
+                  var6.add(new ListOperation.Remove(0));
                } else {
-                  var6.set(var15.getIndex(), var15);
-                  var5.add(new ListOperation.Change(var15.getIndex()));
+                  var5.set(var17.getIndex(), var17);
+                  var6.add(new ListOperation.Change(var17.getIndex()));
                }
             }
          }
 
-         return new ChatListManager.RowsModificationResult(var6, var4, var5.build());
+         return new ChatListManager.RowsModificationResult(var5, var4, var6.build());
       }
    }
 
    private fun publishUpdate(update: ChatListUpdate) {
-      tm.g.d(
+      dn.g.d(
          this.publishScope,
          null,
          null,
@@ -1220,13 +1218,13 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             var12 = i.j();
          }
 
-         val var13: ArrayList = new ArrayList(i.u(var12, 10));
-         val var15: java.util.Iterator = var12.iterator();
+         val var14: ArrayList = new ArrayList(i.u(var12, 10));
+         val var13: java.util.Iterator = var12.iterator();
 
-         while (var15.hasNext()) {
-            var13.add(
+         while (var13.hasNext()) {
+            var14.add(
                MessageRowKt.toChatListMessageItem$default(
-                  (var15.next() as BlockedGroupContent).getMessage(),
+                  (var13.next() as BlockedGroupContent).getMessage(),
                   null,
                   new MessageContext(false, false, null, null, null, null, false, null, false, false, false, false, false, null, null, 32767, null),
                   false,
@@ -1240,14 +1238,14 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var7, var8, var2, var3, var4, var5, i.L(var13));
+         var9 = new BlockedGroupChatListItem(var7, var8, var2, var3, var4, var5, i.L(var14));
       }
 
       return (ChatListItem)var9;
    }
 
    public fun clearRows(changesetUpdateId: Int) {
-      if (this.rows as java.util.Collection != null && !this.rows.isEmpty()) {
+      if (this.rows != null && !this.rows.isEmpty()) {
          SpoilerManager.INSTANCE.reset();
          this.publishUpdate(new ChatListUpdate(i.j(), ChatListAction.Clear.INSTANCE, null, var1));
       }
@@ -1291,15 +1289,15 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             var7 = this.createNewRows(var1);
          }
 
-         val var9: java.util.List = var7.component1();
+         val var10: java.util.List = var7.component1();
          val var6: Boolean = var7.component2();
-         val var8: java.util.List = var7.component3();
-         val var19: ArrayList = new ArrayList(i.u(var9, 10));
-         val var10: java.util.Iterator = var9.iterator();
-         var var15: MessageRow = null;
+         val var9: java.util.List = var7.component3();
+         val var8: ArrayList = new ArrayList(i.u(var10, 10));
+         val var18: java.util.Iterator = var10.iterator();
+         var var14: MessageRow = null;
 
-         for (int var3 = 0; var10.hasNext(); var3++) {
-            var var11: Any = var10.next();
+         for (int var3 = 0; var18.hasNext(); var3++) {
+            var var11: Any = var18.next();
             if (var3 < 0) {
                i.t();
             }
@@ -1320,16 +1318,16 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
 
                if (var4 && ((Row)var11).getChangeType() != ChangeType.DELETE && var1.contains(var11)) {
                   if (var5) {
-                     var15 = var11 as MessageRow;
+                     var14 = var11 as MessageRow;
                   } else {
-                     var15 = null;
+                     var14 = null;
                   }
 
                   label60: {
-                     if (var15 != null) {
-                        val var17: java.lang.Boolean = var15.getJumped();
-                        if (var17 != null) {
-                           var4 = var17;
+                     if (var14 != null) {
+                        val var16: java.lang.Boolean = var14.getJumped();
+                        if (var16 != null) {
+                           var4 = var16;
                            break label60;
                         }
                      }
@@ -1338,33 +1336,33 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                   }
 
                   if (var5) {
-                     var15 = var11 as MessageRow;
+                     var14 = var11 as MessageRow;
                   } else {
-                     var15 = null;
+                     var14 = null;
                   }
 
-                  if (var15 != null) {
-                     var5 = var15.isHighlight();
+                  if (var14 != null) {
+                     var5 = var14.isHighlight();
                   } else {
                      var5 = false;
                   }
 
-                  var15 = new ChatListAction.ScrollTo(var3, var4, false, var5, 4, null);
+                  var14 = new ChatListAction.ScrollTo(var3, var4, false, var5, 4, null);
                }
             }
 
-            var19.add(this.toChatListItem((Row)var11));
+            var8.add(this.toChatListItem((Row)var11));
          }
 
-         if (var15 == null) {
+         if (var14 == null) {
             if (var6) {
-               var15 = ChatListAction.StickToBottomIfAtBottom.INSTANCE;
+               var14 = ChatListAction.StickToBottomIfAtBottom.INSTANCE;
             } else {
-               var15 = ChatListAction.Noop.INSTANCE;
+               var14 = ChatListAction.Noop.INSTANCE;
             }
          }
 
-         this.publishUpdate(new ChatListUpdate(var19, var15, var8, var2));
+         this.publishUpdate(new ChatListUpdate(var8, var14, var9, var2));
       }
    }
 

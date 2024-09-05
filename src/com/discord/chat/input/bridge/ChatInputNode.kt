@@ -1,11 +1,5 @@
 package com.discord.chat.input.bridge
 
-import dn.f
-import dn.n
-import en.a
-import gn.g0
-import gn.h
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.g0
+import qn.h
+import qn.n0
 
 @f
 public data class ChatInputNode(type: Int,
@@ -129,28 +129,28 @@ public data class ChatInputNode(type: Int,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.type;
-      val var1: Int = this.location;
-      val var3: Int = this.length;
-      val var6: ChatInputNodeStyle = this.style;
-      val var4: Boolean = this.deleteNodeOnBackspace;
-      val var7: TapAction = this.tapAction;
-      val var5: Boolean = this.editDisabled;
+      val var1: Int = this.type;
+      val var3: Int = this.location;
+      val var2: Int = this.length;
+      val var7: ChatInputNodeStyle = this.style;
+      val var5: Boolean = this.deleteNodeOnBackspace;
+      val var6: TapAction = this.tapAction;
+      val var4: Boolean = this.editDisabled;
       val var8: StringBuilder = new StringBuilder();
       var8.append("ChatInputNode(type=");
-      var8.append(var2);
-      var8.append(", location=");
       var8.append(var1);
-      var8.append(", length=");
+      var8.append(", location=");
       var8.append(var3);
+      var8.append(", length=");
+      var8.append(var2);
       var8.append(", style=");
-      var8.append(var6);
-      var8.append(", deleteNodeOnBackspace=");
-      var8.append(var4);
-      var8.append(", tapAction=");
       var8.append(var7);
-      var8.append(", editDisabled=");
+      var8.append(", deleteNodeOnBackspace=");
       var8.append(var5);
+      var8.append(", tapAction=");
+      var8.append(var6);
+      var8.append(", editDisabled=");
+      var8.append(var4);
       var8.append(")");
       return var8.toString();
    }
@@ -167,13 +167,13 @@ public data class ChatInputNode(type: Int,
          val var0: ChatInputNode.$serializer = new ChatInputNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.input.bridge.ChatInputNode", var0, 7);
-         var1.l("type", false);
-         var1.l("location", false);
-         var1.l("length", false);
-         var1.l("style", true);
-         var1.l("deleteNodeOnBackspace", true);
-         var1.l("tapAction", true);
-         var1.l("editDisabled", true);
+         var1.c("type", false);
+         var1.c("location", false);
+         var1.c("length", false);
+         var1.c("style", true);
+         var1.c("deleteNodeOnBackspace", true);
+         var1.c("tapAction", true);
+         var1.c("editDisabled", true);
          descriptor = var1;
       }
 
@@ -188,55 +188,53 @@ public data class ChatInputNode(type: Int,
          q.h(var1, "decoder");
          val var12: SerialDescriptor = this.getDescriptor();
          val var13: c = var1.b(var12);
+         var var3: Byte;
          val var5: Int;
+         val var6: Int;
          var var7: Int;
-         val var8: Int;
          val var10: ChatInputNodeStyle;
-         val var11: TapAction;
-         var var17: Byte;
-         var var19: Int;
-         var var21: Byte;
+         val var14: TapAction;
+         var var18: Int;
+         var var23: Byte;
          if (var13.p()) {
-            var19 = var13.i(var12, 0);
-            var8 = var13.i(var12, 1);
-            var21 = var13.i(var12, 2);
+            var18 = var13.i(var12, 0);
+            var23 = var13.i(var12, 1);
+            var6 = var13.i(var12, 2);
             var10 = var13.n(var12, 3, ChatInputNodeStyle.$serializer.INSTANCE, null) as ChatInputNodeStyle;
-            var17 = var13.C(var12, 4);
-            val var14: TapAction = var13.n(var12, 5, TapAction.$serializer.INSTANCE, null) as TapAction;
+            var3 = var13.C(var12, 4);
+            var14 = var13.n(var12, 5, TapAction.$serializer.INSTANCE, null) as TapAction;
             val var2: Byte = var13.C(var12, 6);
             var5 = 127;
-            var7 = var19;
-            var19 = var21;
-            var21 = var17;
-            var11 = var14;
-            var17 = var2;
+            var7 = var18;
+            var18 = var23;
+            var23 = var2;
          } else {
-            var var23: Boolean = true;
+            var var24: Boolean = true;
             var7 = 0;
             var var20: Byte = 0;
-            var19 = 0;
-            var17 = 0;
+            var18 = 0;
+            var3 = 0;
             var var16: Int = 0;
             var var15: ChatInputNodeStyle = null;
-            var var24: TapAction = null;
+            var var26: TapAction = null;
             var var22: Byte = 0;
 
-            while (var23) {
+            while (var24) {
                val var9: Int = var13.o(var12);
                switch (var9) {
                   case -1:
-                     var23 = false;
+                     var24 = false;
                      break;
                   case 0:
                      var7 = var13.i(var12, 0);
                      var16 |= 1;
                      break;
                   case 1:
-                     var17 = var13.i(var12, 1);
+                     var3 = var13.i(var12, 1);
                      var16 |= 2;
                      break;
                   case 2:
-                     var19 = var13.i(var12, 2);
+                     var18 = var13.i(var12, 2);
                      var16 |= 4;
                      break;
                   case 3:
@@ -248,7 +246,7 @@ public data class ChatInputNode(type: Int,
                      var16 |= 16;
                      break;
                   case 5:
-                     var24 = var13.n(var12, 5, TapAction.$serializer.INSTANCE, var24) as TapAction;
+                     var26 = var13.n(var12, 5, TapAction.$serializer.INSTANCE, var26) as TapAction;
                      var16 |= 32;
                      break;
                   case 6:
@@ -260,16 +258,17 @@ public data class ChatInputNode(type: Int,
                }
             }
 
-            var8 = var17;
-            var17 = var22;
-            var11 = var24;
-            var21 = var20;
+            var18 = var3;
+            var23 = var22;
+            var14 = var26;
+            var3 = var20;
             var10 = var15;
+            var6 = var18;
             var5 = var16;
          }
 
          var13.c(var12);
-         return new ChatInputNode(var5, var7, var8, var19, var10, (boolean)var21, var11, (boolean)var17, null);
+         return new ChatInputNode(var5, var7, var18, var6, var10, (boolean)var3, var14, (boolean)var23, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChatInputNode) {
@@ -282,7 +281,7 @@ public data class ChatInputNode(type: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

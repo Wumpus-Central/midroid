@@ -11,15 +11,15 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
+import dn.j0
 import java.util.concurrent.CancellationException
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import lj.w
-import mj.r
-import tm.j0
+import vj.w
+import wj.r
 
 public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val mediaResolver: MediaResolver
@@ -41,12 +41,12 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
          public final void invoke(Uri var1, int var2) {
             q.h(var1, "uri");
-            val var3: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
-            val var4: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
-            q.g(var4, "access$getReactApplicationContext(...)");
+            val var4: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
+            val var3: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
+            q.g(var3, "access$getReactApplicationContext(...)");
             val var5: java.lang.String = var1.toString();
             q.g(var5, "toString(...)");
-            var3.emitModuleEvent(var4, new CompressionProgressEvent(var5, var2));
+            var4.emitModuleEvent(var3, new CompressionProgressEvent(var5, var2));
          }
       });
    }
@@ -106,7 +106,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    public fun downloadMediaAsset(uri: String, mediaType: Int, promise: Promise) {
       q.h(var1, "uri");
       q.h(var3, "promise");
-      tm.g.d(
+      dn.g.d(
          this.scope,
          j0.b(),
          null,
@@ -1155,7 +1155,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    public fun getVideoMetadata(uri: String, options: ReadableMap?, promise: Promise) {
       q.h(var1, "uri");
       q.h(var3, "promise");
-      tm.g.d(
+      dn.g.d(
          this.scope,
          null,
          null,
@@ -2214,7 +2214,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          var7 = null;
       }
 
-      tm.g.d(
+      dn.g.d(
          this.scope,
          null,
          null,

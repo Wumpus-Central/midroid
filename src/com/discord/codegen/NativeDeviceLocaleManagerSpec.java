@@ -3,8 +3,8 @@ package com.discord.codegen;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
+import f8.a;
 import java.util.Map;
-import v7.a;
 
 public abstract class NativeDeviceLocaleManagerSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "RTNDeviceLocaleManager";

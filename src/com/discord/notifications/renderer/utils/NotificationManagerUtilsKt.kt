@@ -13,9 +13,9 @@ import com.discord.notifications.renderer.NotificationBehaviors
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.internal.q
-import lj.r
-import lj.s
-import lj.r.a
+import vj.r
+import vj.s
+import vj.r.a
 
 private const val NOTIFICATION_LIGHT_PERIOD: Int = 1500
 

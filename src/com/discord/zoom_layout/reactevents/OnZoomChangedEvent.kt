@@ -2,11 +2,6 @@ package com.discord.zoom_layout.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.f0
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.f0
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
@@ -71,7 +71,7 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
          val var0: OnZoomChangedEvent.$serializer = new OnZoomChangedEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.zoom_layout.reactevents.OnZoomChangedEvent", var0, 1);
-         var1.l("zoomScale", false);
+         var1.c("zoomScale", false);
          descriptor = var1;
       }
 

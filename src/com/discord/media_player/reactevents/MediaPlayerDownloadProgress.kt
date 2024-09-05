@@ -3,11 +3,6 @@ package com.discord.media_player.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.y
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.y
+import qn.g0.a
 
 @f
 public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Double, progressPercent: Double, totalDurationSeconds: Double) : ReactEvent {
@@ -89,19 +89,19 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
    }
 
    public override fun toString(): String {
-      val var3: Double = this.id;
-      val var5: Double = this.progressSeconds;
-      val var7: Double = this.progressPercent;
-      val var1: Double = this.totalDurationSeconds;
+      val var5: Double = this.id;
+      val var1: Double = this.progressSeconds;
+      val var3: Double = this.progressPercent;
+      val var7: Double = this.totalDurationSeconds;
       val var9: StringBuilder = new StringBuilder();
       var9.append("MediaPlayerDownloadProgress(id=");
-      var9.append(var3);
-      var9.append(", progressSeconds=");
       var9.append(var5);
-      var9.append(", progressPercent=");
-      var9.append(var7);
-      var9.append(", totalDurationSeconds=");
+      var9.append(", progressSeconds=");
       var9.append(var1);
+      var9.append(", progressPercent=");
+      var9.append(var3);
+      var9.append(", totalDurationSeconds=");
+      var9.append(var7);
       var9.append(")");
       return var9.toString();
    }
@@ -120,10 +120,10 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media_player.reactevents.MediaPlayerDownloadProgress", var0, 4
          );
-         var1.l("id", false);
-         var1.l("progressSeconds", false);
-         var1.l("progressPercent", false);
-         var1.l("totalDurationSeconds", false);
+         var1.c("id", false);
+         var1.c("progressSeconds", false);
+         var1.c("progressPercent", false);
+         var1.c("totalDurationSeconds", false);
          descriptor = var1;
       }
 

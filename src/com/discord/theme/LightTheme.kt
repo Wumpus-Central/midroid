@@ -5,7 +5,7 @@ import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import lj.l
+import vj.l
 
 internal class LightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val actionSheetGradientBg: Int

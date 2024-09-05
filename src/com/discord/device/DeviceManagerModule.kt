@@ -9,8 +9,8 @@ import com.discord.device.utils.IsTabletKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.internal.q
-import lj.w
-import mj.r
+import vj.w
+import wj.r
 
 @ReactModule(name = "RTNDeviceManager")
 public class DeviceManagerModule(reactContext: ReactApplicationContext) : NativeDeviceManagerSpec {

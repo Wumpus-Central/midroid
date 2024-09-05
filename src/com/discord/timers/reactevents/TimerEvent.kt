@@ -2,11 +2,6 @@ package com.discord.timers.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class TimerEvent(id: Int) : ReactEvent {
@@ -71,7 +71,7 @@ internal data class TimerEvent(id: Int) : ReactEvent {
          val var0: TimerEvent.$serializer = new TimerEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.timers.reactevents.TimerEvent", var0, 1);
-         var1.l("id", false);
+         var1.c("id", false);
          descriptor = var1;
       }
 
