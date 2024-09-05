@@ -4118,6 +4118,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Avaa puhekanava",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Animoidun profiilibannerin GIF",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Käyttäjän {username} profiilin banneri",
+  "USER_PROFILE_REACTED_TO_STATUS": "Reagoi käyttäjän {username} tilaan",
   "NOISE_CANCELLATION_TOOLTIP": "Kohinanvaimennuksen tarjoaa Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Vaimenna mikrofonisi poimimat taustaäänet.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

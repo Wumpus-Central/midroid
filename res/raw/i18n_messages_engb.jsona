@@ -4117,6 +4117,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Open Voice Channel",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Animate Profile Banner GIF",
   "USER_PROFILE_HEADER_A11Y_LABEL": "{username}’s User Profile Banner",
+  "USER_PROFILE_REACTED_TO_STATUS": "Reacted to {username}’s status",
   "NOISE_CANCELLATION_TOOLTIP": "Noise Suppression powered by Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Suppress background noise from your mic.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

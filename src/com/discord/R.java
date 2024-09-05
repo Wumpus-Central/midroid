@@ -88,7 +88,6 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_chatmarkunreadicon;
       public static int design_components_icon_native_redesign_generated_images_chatplusicon;
       public static int design_components_icon_native_redesign_generated_images_chatwarningicon;
-      public static int design_components_icon_native_redesign_generated_images_chatxicon;
       public static int design_components_icon_native_redesign_generated_images_checkmarklargeboldicon;
       public static int design_components_icon_native_redesign_generated_images_checkmarklargeicon;
       public static int design_components_icon_native_redesign_generated_images_checkmarksmallboldicon;

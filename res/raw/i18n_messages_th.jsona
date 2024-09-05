@@ -4118,6 +4118,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "เปิดช่องสำหรับพูด",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "GIF ภาพเคลื่อนไหวในแบนเนอร์โปรไฟล์",
   "USER_PROFILE_HEADER_A11Y_LABEL": "แบนเนอร์โปรไฟล์ผู้ใช้ของ {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "ตอบสนองต่อสถานะของ {username}",
   "NOISE_CANCELLATION_TOOLTIP": "การลดเสียงรบกวนได้รับการสนับสนุนโดย Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "ลดเสียงรบกวนพื้นหลังออกจากไมโครโฟนของคุณ",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

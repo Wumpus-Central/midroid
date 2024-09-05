@@ -4118,6 +4118,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Spraakkanaal openen",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Gif voor animatie profielbanner",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Gebruikersprofielbanner van {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "Reageerde op de status van {username}",
   "NOISE_CANCELLATION_TOOLTIP": "Actieve ruisonderdrukking door Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Onderdruk achtergrondgeluiden van je microfoon.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

@@ -4118,6 +4118,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Ses Kanalı Aç",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Profil Afişi GIF'ini hareketli yap",
   "USER_PROFILE_HEADER_A11Y_LABEL": "{username} Üyesinin Kullanıcı Profili Afişi",
+  "USER_PROFILE_REACTED_TO_STATUS": "{username} kullanıcısının durumuna tepki verildi",
   "NOISE_CANCELLATION_TOOLTIP": "Krisp tarafından sağlanan Gürültü Azaltma",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Mikrofonunun algıladığı arka plan seslerini bastır.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

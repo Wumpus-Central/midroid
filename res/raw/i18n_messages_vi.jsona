@@ -4118,6 +4118,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Mở Kênh Thoại",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Ảnh GIF Biểu Ngữ Hồ Sơ Chuyển Động",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Biểu ngữ Hồ sơ người dùng của {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "Đã tương tác với trạng thái của {username}",
   "NOISE_CANCELLATION_TOOLTIP": "Tính năng Chặn Tiếng Ồn được tài trợ bởi Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Chặn các tiếng ồn xung quanh khỏi mic của bạn.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

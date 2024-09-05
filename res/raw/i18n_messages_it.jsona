@@ -4108,6 +4108,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Apri canale vocale",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Anima la GIF del banner del profilo",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Banner del profilo utente di {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "Ha reagito allo stato di {username}",
   "NOISE_CANCELLATION_TOOLTIP": "Riduzione del rumore a cura di Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Riduce il rumore di sottofondo catturato dal tuo microfono.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

@@ -4118,6 +4118,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Öppna röstkanal",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Animera profilbanner-GIF",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Användarprofilbanner för {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "Reagerade på statusen hos {username}",
   "NOISE_CANCELLATION_TOOLTIP": "Brusreducering från Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Minska din mikrofons bakgrundsbrus.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

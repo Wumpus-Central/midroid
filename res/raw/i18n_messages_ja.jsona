@@ -4119,6 +4119,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "ボイスチャンネルを開く",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "アニメプロフィールバナー GIF",
   "USER_PROFILE_HEADER_A11Y_LABEL": "{username}のユーザープロフィールバナー",
+  "USER_PROFILE_REACTED_TO_STATUS": "{username}のステータスにリアクションしました",
   "NOISE_CANCELLATION_TOOLTIP": "Krispによるノイズ抑制",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "マイクからのバックグラウンドノイズを抑制します。",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

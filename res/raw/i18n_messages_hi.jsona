@@ -4118,6 +4118,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "वॉयस चैनल ओपन करें",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "GIF प्रोफ़ाइल बैनर एनिमेट करें",
   "USER_PROFILE_HEADER_A11Y_LABEL": "{username} का यूज़र प्रोफ़ाइल बैनर",
+  "USER_PROFILE_REACTED_TO_STATUS": "{username} के स्टेटस पर रिएक्ट किया",
   "NOISE_CANCELLATION_TOOLTIP": "नॉइज़ सप्रेशन Krisp द्वारा संचालित",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "अपने माइक से बैकग्राउंड की नॉइस को सप्रेस करें.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

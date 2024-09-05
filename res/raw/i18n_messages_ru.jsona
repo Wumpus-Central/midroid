@@ -4120,6 +4120,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Открыть голосовой канал",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Анимированный баннер профиля в формате GIF",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Баннер профиля пользователя {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "Отреагировал(а) на статус пользователя {username}",
   "NOISE_CANCELLATION_TOOLTIP": "Шумоподавление с помощью Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Подавляйте фоновые шумы микрофона.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

@@ -4117,6 +4117,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Otevřít hlasový kanál",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Používej animovaný GIF jako banner profilu",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Banner profilu uživatele {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "Reagoval/a na stav uživatele {username}",
   "NOISE_CANCELLATION_TOOLTIP": "Potlačení šumu od Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Nepouštěj šum z pozadí do mikrofonu.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",

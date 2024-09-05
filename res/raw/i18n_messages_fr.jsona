@@ -4115,6 +4115,7 @@
   "IOS_PROFILE_OPEN_VOICE_CHANNEL": "Ouvrir un salon vocal",
   "USER_PROFILE_HEADER_A11Y_ANIMATE": "Animer le GIF de la bannière de profil",
   "USER_PROFILE_HEADER_A11Y_LABEL": "Bannière de profil d'utilisateur de {username}",
+  "USER_PROFILE_REACTED_TO_STATUS": "A réagi au statut de {username}",
   "NOISE_CANCELLATION_TOOLTIP": "Suppression du bruit optimisée par Krisp",
   "USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION": "Élimine le bruit de fond de ton micro.",
   "USER_SETTINGS_NOISE_CANCELLATION_KRISP": "Krisp",
