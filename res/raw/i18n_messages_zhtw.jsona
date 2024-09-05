@@ -1510,6 +1510,7 @@
   "GOOGLE_PLAY_TRIAL_PAYMENT_FLOW_CTA": "在 Google Play 商店繼續",
   "IOS_TRIAL_PAYMENT_FLOW_CTA": "在 App Store 上繼續",
   "UPLOAD_AREA_TOO_LARGE_TITLE": "您的檔案太過於強大",
+  "UPLOAD_AREA_PREMIUM_UPSELL_TIER_2_V2": "Nitro 可以上傳高達 500 MB 的檔案，最適合分享精彩遊戲片段或喜愛的作品。[瞭解更多](onClick)。",
   "UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2": "升級成 {premiumPlan} 便可上傳最多 {premiumMaxSize} 的檔案",
   "UPLOAD_AREA_TOO_LARGE_HELP": "請注意最大檔案大小是 {maxSize}。",
   "UPLOAD_AREA_REQUEST_LIMIT_HELP": "訊息總長度不能超過 {maxSize}",
@@ -3034,7 +3035,6 @@
   "PREMIUM_UPSELL_YEARLY_TITLE": "取得 {planName} {discountPercentage} 折扣",
   "PREMIUM_UPSELL_YEARLY_DESCRIPTION": "選擇年度訂閱，取得 {discountPercentage} 折扣",
   "PREMIUM_UPSELL_YEARLY_CTA": "年度訂閱 - 每年 !!{price}!!",
-  "PREMIUM_UPSELL_MOBILE_FEATURE_FILE_UPLOAD_TITLE": "您的檔案太過於強大",
   "PREMIUM_UPSELL_MOBILE_FEATURE_FILE_UPLOAD_DESCRIPTION_V3": "升級至 {nitroTierName}，即可上傳高達 {maxFileSize} 的檔案。這對於分享高解析度的影片來說，簡直再完美不過。",
   "PREMIUM_UPSELL_MOBILE_FEATURE_FILE_UPLOAD_POPUP_LABEL_V3": "透過 [{nitroTierName}](onClick)，最多可發送 {maxFileSize} 的檔案",
   "PREMIUM_UPSELL_MOBILE_FEATURE_SOUNDBOARD_TITLE": "用更多的聲音來表達自己",
@@ -3329,6 +3329,7 @@
   "PREMIUM_UPSELL_BADGE_ACTIVE_MOBILE": "想要新增徽章嗎？",
   "PREMIUM_UPSELL_BADGE_PASSIVE_MOBILE": "徽章實在太棒了！",
   "PREMIUM_UPSELL_UPLOAD_ACTIVE_MOBILE": "您的檔案太強大了！",
+  "PREMIUM_UPSELL_UPLOAD_ACTIVE_MOBILE_V2": "哎呀，這個檔案超過了大小限制。",
   "PREMIUM_UPSELL_UPLOAD_PASSIVE_MOBILE": "上傳更高品質的有趣影像",
   "PREMIUM_UPSELL_ANIMATED_AVATAR_ACTIVE_MOBILE": "您 (還) 無法擁有會跳舞的頭像！",
   "PREMIUM_UPSELL_ANIMATED_AVATAR_PASSIVE_MOBILE": "想要動態頭像嗎？",
@@ -7452,7 +7453,6 @@
   "POLL_OPTIONS_ARIA": "投票選項",
   "POLL_EXPIRY_DAYS_REMAINING": "剩下 {days, plural, one {{days, number} 天} other {{days, number} 天}}",
   "POLL_EXPIRY_HOURS_REMAINING": "剩下 {hours, plural, one {{hours, number} 小時} other {{hours, number} 小時}}",
-  "POLL_EXPIRY_MINUTES_REMAINING": "剩下 {minutes, plural, one {{minutes, number} 分鐘} other {{minutes, number} 分鐘}}",
   "POLL_EXPIRED": "投票已結束",
   "POLL_SELECT_ONE_ANSWER": "選擇一個答案",
   "POLL_SELECT_MULTIPLE_ANSWERS": "選擇一個或多個答案",
@@ -7569,7 +7569,7 @@
   "QUESTS_MOBILE_EMBED_TITLE": "在手機上無法使用任務。",
   "QUESTS_MOBILE_EMBED_BODY": "您可以透過桌面版 Discord 應用程式或瀏覽器前往\n「使用者設定」>「禮物庫存」，並在那裡接受任務。",
   "QUESTS_MOBILE_EMBED_BODY_QUEST_HOME": "您可以透過 Discord 電腦版或瀏覽器前往\n「探索」>「任務」，並在那裡接受任務。",
-  "QUESTS_MOBILE_EMBED_UNKNOWN_TITLE": "這是一個無效的任務",
+  "QUESTS_INVALID_QUEST": "無效的任務",
   "QUESTS_MOBILE_EMBED_UNKNOWN_BODY": "請檢查以確認您使用有效的 Quest URL",
   "QUESTS_MOBILE_EMBED_UNSUPPORTED_TITLE": "此任務無法在行動裝置上使用",
   "QUESTS_GET_THIS_GAME": "取得遊戲",
@@ -7803,5 +7803,5 @@
   "CHANNEL_LINKED_LOBBY_CHANNEL_HEADER": "與 **!!{applicationName}!!** 同步•[瞭解更多]({helpdeskArticle})",
   "CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_UNKNOWN_APPLICATION": "與應用程式同步•[瞭解更多]({helpdeskArticle})",
   "CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_TITLE": "與遊戲同步",
-  "CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_DESCRIPTION": "此頻道正在同步一個使用 Discord 來提供聊天功能的遊戲。[瞭解更多]({helpdeskArticle})"
+  "CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_DESCRIPTION": "此頻道正在與使用 Discord 提供聊天功能的遊戲進行同步。[瞭解更多]({helpdeskArticle})"
 }

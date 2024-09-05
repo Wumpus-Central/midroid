@@ -6,7 +6,7 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 public fun Embed.getMedia(): EmbedUrlProvider? {
    q.h(var0, "<this>");
@@ -45,12 +45,12 @@ public fun Embed.getMedia(): EmbedUrlProvider? {
 public fun Embed.getTag(): String {
    q.h(var0, "<this>");
    val var1: java.lang.String = var0.getClass().getSimpleName();
-   val var2: java.lang.String = var0.getType().name();
-   val var3: StringBuilder = new StringBuilder();
-   var3.append(var1);
-   var3.append(": ");
-   var3.append(var2);
-   return var3.toString();
+   val var3: java.lang.String = var0.getType().name();
+   val var2: StringBuilder = new StringBuilder();
+   var2.append(var1);
+   var2.append(": ");
+   var2.append(var3);
+   return var2.toString();
 }
 
 public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
@@ -157,17 +157,17 @@ public fun Embed.isInlineMedia(): Boolean {
 public fun Embed.toImageMediaSources(channelId: ChannelId, messageId: MessageId): List<MediaSource>? {
    q.h(var0, "$this$toImageMediaSources");
    q.h(var3, "messageId");
-   val var4: java.util.List = var0.getImages();
-   val var6: ArrayList;
-   if (var4 != null) {
-      var6 = new ArrayList(i.u(var4, 10));
-      val var7: java.util.Iterator = var4.iterator();
+   val var5: java.util.List = var0.getImages();
+   val var4: ArrayList;
+   if (var5 != null) {
+      var4 = new ArrayList(i.u(var5, 10));
+      val var6: java.util.Iterator = var5.iterator();
 
-      while (var7.hasNext()) {
-         var6.add(
+      while (var6.hasNext()) {
+         var4.add(
             new MediaSource(
                null,
-               (var7.next() as EmbedMedia).getEmbedUrl(),
+               (var6.next() as EmbedMedia).getEmbedUrl(),
                null,
                null,
                getTag(var0),
@@ -183,10 +183,10 @@ public fun Embed.toImageMediaSources(channelId: ChannelId, messageId: MessageId)
          );
       }
    } else {
-      var6 = null;
+      var4 = null;
    }
 
-   return var6;
+   return var4;
 }
 
 public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shouldAutoPlay: Boolean, portal: Double?): MediaSource? {
@@ -201,20 +201,20 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var8: java.lang.String = var17.getEmbedUrl();
-         if (var8 == null) {
+         val var18: java.lang.String = var17.getEmbedUrl();
+         if (var18 == null) {
             return null;
          }
 
-         val var19: java.lang.String = getTag(var0);
-         val var18: MediaType = MediaType.IMAGE;
+         val var8: java.lang.String = getTag(var0);
+         val var19: MediaType = MediaType.IMAGE;
          var12 = new MediaSource(
             null,
-            var8,
+            var18,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
+            var8,
             var19,
-            var18,
             false,
             ChannelId.box-impl(var1),
             var3,
@@ -240,8 +240,8 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             var25 = null;
          }
 
-         val var11: java.lang.String = getTag(var0);
-         val var10: MediaType = MediaType.VIDEO;
+         val var10: java.lang.String = getTag(var0);
+         val var11: MediaType = MediaType.VIDEO;
          val var9: EmbedMedia = var0.getVideo();
          val var28: java.lang.String;
          if (var9 != null) {
@@ -258,7 +258,7 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             var14 = null;
          }
 
-         var12 = new MediaSource(var21, var25, var28, var14, var11, var10, false, ChannelId.box-impl(var1), var3, null, var5, 512, null);
+         var12 = new MediaSource(var21, var25, var28, var14, var10, var11, false, ChannelId.box-impl(var1), var3, null, var5, 512, null);
       }
    } else {
       val var22: EmbedMedia = var0.getVideo();
@@ -277,8 +277,8 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var27 = null;
       }
 
-      val var32: java.lang.String = getTag(var0);
-      val var31: MediaType = MediaType.GIFV;
+      val var31: java.lang.String = getTag(var0);
+      val var32: MediaType = MediaType.GIFV;
       val var29: EmbedMedia = var0.getVideo();
       val var30: java.lang.String;
       if (var29 != null) {
@@ -295,7 +295,7 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var16 = null;
       }
 
-      var12 = new MediaSource(var23, var27, var30, var16, var32, var31, var4, ChannelId.box-impl(var1), var3, null, var5, 512, null);
+      var12 = new MediaSource(var23, var27, var30, var16, var31, var32, var4, ChannelId.box-impl(var1), var3, null, var5, 512, null);
    }
 
    return var12;

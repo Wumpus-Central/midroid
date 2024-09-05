@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.emoji_picker.R;
-import v2.a;
+import f3.a;
 
 public final class PremiumInlineRoadblockFooterBinding implements ViewBinding {
    public final View gradient;

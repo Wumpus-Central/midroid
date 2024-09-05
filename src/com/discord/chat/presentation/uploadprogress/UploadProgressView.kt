@@ -89,12 +89,12 @@ public class UploadProgressView  public constructor(context: Context, attrs: Att
       val var13: TextView = this.binding.progressText;
       q.g(this.binding.progressText, "progressText");
       DiscordFontUtilsKt.setDiscordFont(var13, DiscordFont.PrimarySemibold);
-      val var17: TextView = this.binding.progressSubtext;
-      val var14: StringBuilder = new StringBuilder();
-      var14.append("-- ");
-      var14.append(var4);
-      var14.append("%");
-      var17.setText(var14.toString());
+      val var14: TextView = this.binding.progressSubtext;
+      val var17: StringBuilder = new StringBuilder();
+      var17.append("-- ");
+      var17.append(var4);
+      var17.append("%");
+      var14.setText(var17.toString());
       this.binding.progressBg.setBackgroundColor(var6);
       this.binding.progressBar.setBackgroundColor(var5);
       val var9: Float = var4 / 100.0F;
@@ -108,6 +108,6 @@ public class UploadProgressView  public constructor(context: Context, attrs: Att
       this.binding.progressBar.animate().setInterpolator(this.interpolator).setDuration(var10).scaleX(var9).start();
       val var15: SimpleDraweeView = this.binding.progressCancel;
       q.g(this.binding.progressCancel, "progressCancel");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new r4.a(var8), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new b5.a(var8), 1, null);
    }
 }

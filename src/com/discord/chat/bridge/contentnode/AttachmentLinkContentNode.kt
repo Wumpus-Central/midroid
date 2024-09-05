@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
@@ -65,8 +65,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.attachmentUrl.hashCode();
-      val var3: Int = this.attachmentName.hashCode();
+      val var3: Int = this.attachmentUrl.hashCode();
+      val var2: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -74,22 +74,22 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.attachmentUrl;
-      val var3: java.lang.String = this.attachmentName;
-      val var4: java.util.List = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AttachmentLinkContentNode(attachmentUrl=");
-      var1.append(var2);
-      var1.append(", attachmentName=");
-      var1.append(var3);
-      var1.append(", content=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = this.attachmentUrl;
+      val var4: java.lang.String = this.attachmentName;
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AttachmentLinkContentNode(attachmentUrl=");
+      var2.append(var3);
+      var2.append(", attachmentName=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -104,9 +104,9 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          val var0: AttachmentLinkContentNode.$serializer = new AttachmentLinkContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("attachmentLink", var0, 3);
-         var1.l("attachmentUrl", false);
-         var1.l("attachmentName", false);
-         var1.l("content", false);
+         var1.c("attachmentUrl", false);
+         var1.c("attachmentName", false);
+         var1.c("content", false);
          descriptor = var1;
       }
 
@@ -177,7 +177,7 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

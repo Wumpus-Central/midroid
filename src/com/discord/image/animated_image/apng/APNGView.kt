@@ -5,19 +5,19 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
 import androidx.appcompat.widget.m
+import bn.a
 import com.discord.image.animated_image.animated_image_utils.AnimatedImageStateManager
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.linecorp.apng.ApngDrawable
+import dn.g
+import dn.j0
 import java.security.MessageDigest
 import java.util.Arrays
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import rm.a
-import tm.g
-import tm.j0
 
 public class APNGView(context: Context) : m {
    private final val placeholder: ShapeDrawable
@@ -106,11 +106,11 @@ public class APNGView(context: Context) : m {
          new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1208,12 +1208,12 @@ public class APNGView(context: Context) : m {
          var1 = "";
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-            q.g(var5, "format(...)");
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var1);
-            var6.append(var5);
-            var1 = var6.toString();
+            val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+            q.g(var6, "format(...)");
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var1);
+            var5.append(var6);
+            var1 = var5.toString();
          }
 
          return var1;
@@ -1305,8 +1305,8 @@ public class APNGView(context: Context) : m {
       }
 
       public override fun hashCode(): Int {
-         val var5: Int = this.url.hashCode();
-         val var3: Int = java.lang.Boolean.hashCode(this.animate);
+         val var3: Int = this.url.hashCode();
+         val var5: Int = java.lang.Boolean.hashCode(this.animate);
          val var4: Int = java.lang.Boolean.hashCode(this.showLoading);
          var var2: Int = 0;
          val var1: Int;
@@ -1320,7 +1320,7 @@ public class APNGView(context: Context) : m {
             var2 = this.heightDp.hashCode();
          }
 
-         return ((((var5 * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
+         return ((((var3 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
       }
 
       public override fun toString(): String {
@@ -1328,8 +1328,8 @@ public class APNGView(context: Context) : m {
          val var2: Boolean = this.animate;
          val var1: Boolean = this.showLoading;
          val var5: Int = this.widthDp;
-         val var7: Int = this.heightDp;
-         val var4: java.lang.String = this.cacheDirectory;
+         val var4: Int = this.heightDp;
+         val var7: java.lang.String = this.cacheDirectory;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Config(url=");
          var3.append(var6);
@@ -1340,9 +1340,9 @@ public class APNGView(context: Context) : m {
          var3.append(", widthDp=");
          var3.append(var5);
          var3.append(", heightDp=");
-         var3.append(var7);
-         var3.append(", cacheDirectory=");
          var3.append(var4);
+         var3.append(", cacheDirectory=");
+         var3.append(var7);
          var3.append(")");
          return var3.toString();
       }

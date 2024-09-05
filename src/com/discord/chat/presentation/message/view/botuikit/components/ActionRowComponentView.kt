@@ -57,7 +57,7 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
       q.h(var4, "componentContext");
       val var11: MessageComponentActionRowViewBinding = MessageComponentActionRowViewBinding.bind(this);
       q.g(var11, "bind(...)");
-      val var9: java.lang.Iterable = var1.getComponents();
+      val var9: java.util.List = var1.getComponents();
       val var12: ArrayList = new ArrayList(kotlin.collections.i.u(var9, 10));
       val var13: java.util.Iterator = var9.iterator();
 

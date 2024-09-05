@@ -11,9 +11,9 @@ import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
+import g6.c
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import w5.c
 
 public fun renderEmoji(
    emoji: RenderableEmoji,

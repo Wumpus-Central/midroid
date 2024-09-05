@@ -4,12 +4,6 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.o1
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +13,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.o1
+import qn.g0.a
 
 @f
 public data class TapButtonActionComponent(messageId: MessageId, componentId: String) : TapButtonActionComponent(var1, var2), ReactEvent {
@@ -81,13 +81,13 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = this.componentId;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = this.componentId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapButtonActionComponent(messageId=");
-      var3.append(var2);
-      var3.append(", componentId=");
       var3.append(var1);
+      var3.append(", componentId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -104,13 +104,13 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
          val var0: TapButtonActionComponent.$serializer = new TapButtonActionComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapButtonActionComponent", var0, 2);
-         var1.l("messageId", false);
-         var1.l("componentId", false);
+         var1.c("messageId", false);
+         var1.c("componentId", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{MessageId.$serializer.INSTANCE, b2.a};
+         return new KSerializer[]{com.discord.primitives.MessageId..serializer.INSTANCE, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapButtonActionComponent {
@@ -120,22 +120,19 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
          val var5: Boolean = var9.p();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var11: java.lang.String;
          var var12: java.lang.String;
          if (var5) {
-            val var6: MessageId = var9.y(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var6: MessageId = var9.y(var8, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null) as MessageId;
             if (var6 != null) {
                var10 = var6.unbox-impl();
             }
 
-            val var7: java.lang.String = var9.m(var8, 1);
+            var12 = var9.m(var8, 1);
             var2 = 3;
-            var12 = var10;
-            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var11 = null;
+            var var11: java.lang.String = null;
             var12 = null;
 
             while (var3) {
@@ -149,16 +146,16 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
                      var11 = var9.m(var8, 1);
                      var2 |= 2;
                   } else {
-                     val var13: MessageId;
+                     val var14: MessageId;
                      if (var12 != null) {
-                        var13 = MessageId.box-impl(var12);
+                        var14 = MessageId.box-impl(var12);
                      } else {
-                        var13 = null;
+                        var14 = null;
                      }
 
-                     val var14: MessageId = var9.y(var8, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
-                     if (var14 != null) {
-                        var12 = var14.unbox-impl();
+                     val var15: MessageId = var9.y(var8, 0, com.discord.primitives.MessageId..serializer.INSTANCE, var14) as MessageId;
+                     if (var15 != null) {
+                        var12 = var15.unbox-impl();
                      } else {
                         var12 = null;
                      }
@@ -169,10 +166,13 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
                   var3 = false;
                }
             }
+
+            var10 = var12;
+            var12 = var11;
          }
 
          var9.c(var8);
-         return new TapButtonActionComponent(var2, var12, var11, null, null);
+         return new TapButtonActionComponent(var2, var10, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapButtonActionComponent) {

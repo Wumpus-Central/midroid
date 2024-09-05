@@ -1,10 +1,5 @@
 package com.discord.chatreplay
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.x0
 
 @f
 public data class Replay(filename: String, lastModified: Long) {
@@ -82,8 +82,8 @@ public data class Replay(filename: String, lastModified: Long) {
          val var0: Replay.$serializer = new Replay.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chatreplay.Replay", var0, 2);
-         var1.l("filename", false);
-         var1.l("lastModified", false);
+         var1.c("filename", false);
+         var1.c("lastModified", false);
          descriptor = var1;
       }
 
@@ -142,7 +142,7 @@ public data class Replay(filename: String, lastModified: Long) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

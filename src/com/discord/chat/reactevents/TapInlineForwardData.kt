@@ -4,12 +4,6 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,7 +12,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.n0
+import vj.w
 
 @f
 public class TapInlineForwardData(channelId: String, messageId: String, targetKind: String, embedIndex: Int?) : ReactEvent {
@@ -61,10 +61,10 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          val var0: TapInlineForwardData.$serializer = new TapInlineForwardData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapInlineForwardData", var0, 4);
-         var1.l("channelId", false);
-         var1.l("messageId", false);
-         var1.l("targetKind", false);
-         var1.l("embedIndex", false);
+         var1.c("channelId", false);
+         var1.c("messageId", false);
+         var1.c("targetKind", false);
+         var1.c("embedIndex", false);
          descriptor = var1;
       }
 
@@ -79,21 +79,22 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          val var5: Boolean = var11.p();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
          val var9: java.lang.String;
          var var12: Any;
+         var var13: java.lang.String;
          if (var5) {
-            var7 = var11.m(var10, 0);
+            var13 = var11.m(var10, 0);
             var9 = var11.m(var10, 1);
-            var6 = var11.m(var10, 2);
+            val var7: java.lang.String = var11.m(var10, 2);
             var12 = var11.n(var10, 3, n0.a, null) as Int;
             var2 = 15;
+            var8 = var13;
+            var13 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
-            var6 = null;
+            var var14: java.lang.String = null;
+            var13 = null;
             var12 = null;
 
             while (var3) {
@@ -109,11 +110,11 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                            var12 = var11.n(var10, 3, n0.a, var12) as Int;
                            var2 |= 8;
                         } else {
-                           var6 = var11.m(var10, 2);
+                           var13 = var11.m(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.m(var10, 1);
+                        var14 = var11.m(var10, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -125,12 +126,11 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                }
             }
 
-            var9 = var7;
-            var7 = var8;
+            var9 = var14;
          }
 
          var11.c(var10);
-         return new TapInlineForwardData(var2, var7, var9, var6, (Integer)var12, null);
+         return new TapInlineForwardData(var2, var8, var9, var13, (Integer)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInlineForwardData) {
@@ -143,7 +143,7 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

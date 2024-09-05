@@ -3,10 +3,6 @@ package com.discord.chat.bridge.referencedmessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import dn.f
-import dn.n
-import en.a
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +11,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.g0
 
 @f
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage {
@@ -69,13 +69,13 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public override fun toString(): String {
-      val var3: Message = this.message;
-      val var2: StructurableText = this.systemContent;
+      val var2: Message = this.message;
+      val var3: StructurableText = this.systemContent;
       val var1: StringBuilder = new StringBuilder();
       var1.append("LoadedReferencedMessage(message=");
-      var1.append(var3);
-      var1.append(", systemContent=");
       var1.append(var2);
+      var1.append(", systemContent=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }
@@ -94,8 +94,8 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.bridge.referencedmessage.LoadedReferencedMessage", var0, 2
          );
-         var1.l("message", false);
-         var1.l("systemContent", true);
+         var1.c("message", false);
+         var1.c("systemContent", true);
          descriptor = var1;
       }
 
@@ -154,7 +154,7 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

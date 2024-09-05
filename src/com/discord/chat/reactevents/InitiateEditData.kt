@@ -5,11 +5,6 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.o1
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +14,11 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import qn.g0
+import qn.o1
+import qn.g0.a
 
 @f
 internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId) : InitiateEditData(var1, var2), ReactEvent {
@@ -79,15 +79,15 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("InitiateEditData(messageId=");
-      var3.append(var1);
-      var3.append(", channelId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("InitiateEditData(messageId=");
+      var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -102,13 +102,13 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
          val var0: InitiateEditData.$serializer = new InitiateEditData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.InitiateEditData", var0, 2);
-         var1.l("messageId", false);
-         var1.l("channelId", false);
+         var1.c("messageId", false);
+         var1.c("channelId", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{MessageId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE};
+         return new KSerializer[]{com.discord.primitives.MessageId..serializer.INSTANCE, com.discord.primitives.ChannelId..serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): InitiateEditData {
@@ -119,20 +119,19 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
          val var6: ChannelId;
          val var10: java.lang.String;
          if (var8.p()) {
-            val var9: MessageId = var8.y(var7, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var9: MessageId = var8.y(var7, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null) as MessageId;
             if (var9 != null) {
                var10 = var9.unbox-impl();
             } else {
                var10 = null;
             }
 
-            val var5: ChannelId = var8.y(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var6 = var8.y(var7, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
-            var6 = var5;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var12: java.lang.String = null;
+            var var5: java.lang.String = null;
             var var11: ChannelId = null;
 
             while (var3) {
@@ -143,21 +142,21 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
                         throw new n(var4);
                      }
 
-                     var11 = var8.y(var7, 1, ChannelId.$serializer.INSTANCE, var11) as ChannelId;
+                     var11 = var8.y(var7, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var11) as ChannelId;
                      var2 |= 2;
                   } else {
-                     val var13: MessageId;
-                     if (var12 != null) {
-                        var13 = MessageId.box-impl(var12);
-                     } else {
-                        var13 = null;
-                     }
-
-                     val var14: MessageId = var8.y(var7, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
-                     if (var14 != null) {
-                        var12 = var14.unbox-impl();
+                     val var12: MessageId;
+                     if (var5 != null) {
+                        var12 = MessageId.box-impl(var5);
                      } else {
                         var12 = null;
+                     }
+
+                     val var13: MessageId = var8.y(var7, 0, com.discord.primitives.MessageId..serializer.INSTANCE, var12) as MessageId;
+                     if (var13 != null) {
+                        var5 = var13.unbox-impl();
+                     } else {
+                        var5 = null;
                      }
 
                      var2 |= 1;
@@ -168,7 +167,7 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
             }
 
             var6 = var11;
-            var10 = var12;
+            var10 = var5;
          }
 
          var8.c(var7);

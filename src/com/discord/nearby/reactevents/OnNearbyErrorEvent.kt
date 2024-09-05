@@ -3,11 +3,6 @@ package com.discord.nearby.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class OnNearbyErrorEvent(body: String) : ReactEvent {
@@ -55,12 +55,12 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.body;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnNearbyErrorEvent(body=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.body;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnNearbyErrorEvent(body=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -75,7 +75,7 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
          val var0: OnNearbyErrorEvent.$serializer = new OnNearbyErrorEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.nearby.reactevents.OnNearbyErrorEvent", var0, 1);
-         var1.l("body", false);
+         var1.c("body", false);
          descriptor = var1;
       }
 

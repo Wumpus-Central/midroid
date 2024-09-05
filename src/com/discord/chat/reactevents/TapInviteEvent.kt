@@ -3,13 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.h
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,6 +11,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.h
+import qn.n0
 
 @f
 public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean?, secondary: Boolean?) : ReactEvent {
@@ -76,8 +76,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.messageId.hashCode();
-      val var3: Int = Integer.hashCode(this.index);
+      val var3: Int = this.messageId.hashCode();
+      val var4: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -90,7 +90,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    fun serialize(): WritableMap {
@@ -100,19 +100,19 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    public override fun toString(): String {
       val var3: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var4: java.lang.Boolean = this.primary;
-      val var2: java.lang.Boolean = this.secondary;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapInviteEvent(messageId=");
-      var5.append(var3);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", primary=");
-      var5.append(var4);
-      var5.append(", secondary=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.Boolean = this.primary;
+      val var4: java.lang.Boolean = this.secondary;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapInviteEvent(messageId=");
+      var2.append(var3);
+      var2.append(", index=");
+      var2.append(var1);
+      var2.append(", primary=");
+      var2.append(var5);
+      var2.append(", secondary=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -127,16 +127,16 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          val var0: TapInviteEvent.$serializer = new TapInviteEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapInviteEvent", var0, 4);
-         var1.l("messageId", false);
-         var1.l("index", false);
-         var1.l("primary", false);
-         var1.l("secondary", false);
+         var1.c("messageId", false);
+         var1.c("index", false);
+         var1.c("primary", false);
+         var1.c("secondary", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: h = h.a;
-         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var3)};
+         val var2: h = h.a;
+         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): TapInviteEvent {
@@ -207,7 +207,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

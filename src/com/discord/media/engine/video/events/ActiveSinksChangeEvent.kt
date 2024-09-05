@@ -3,12 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.h
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.h
+import qn.g0.a
 
 @f
 internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : ReactEvent {
@@ -67,15 +67,15 @@ internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.streamId;
+      val var2: java.lang.String = this.streamId;
       val var1: Boolean = this.active;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActiveSinksChangeEvent(streamId=");
-      var2.append(var3);
-      var2.append(", active=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ActiveSinksChangeEvent(streamId=");
+      var3.append(var2);
+      var3.append(", active=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -92,8 +92,8 @@ internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : 
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media.engine.video.events.ActiveSinksChangeEvent", var0, 2
          );
-         var1.l("streamId", false);
-         var1.l("active", false);
+         var1.c("streamId", false);
+         var1.c("active", false);
          descriptor = var1;
       }
 

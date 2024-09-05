@@ -3,12 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.f0
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.f0
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class OnVoiceEvent(level: Float, speaking: Int) : ReactEvent {
@@ -87,8 +87,8 @@ internal data class OnVoiceEvent(level: Float, speaking: Int) : ReactEvent {
          val var0: OnVoiceEvent.$serializer = new OnVoiceEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.media.engine.video.events.OnVoiceEvent", var0, 2);
-         var1.l("level", false);
-         var1.l("speaking", false);
+         var1.c("level", false);
+         var1.c("speaking", false);
          descriptor = var1;
       }
 

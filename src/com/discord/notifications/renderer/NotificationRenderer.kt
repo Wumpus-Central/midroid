@@ -10,10 +10,10 @@ import com.discord.notifications.api.NotificationData
 import com.discord.notifications.renderer.utils.NotificationManagerUtilsKt
 import com.discord.notifications.renderer.utils.SilenceCallWorker
 import com.discord.primitives.ChannelId
+import dn.g
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import lj.w
-import tm.g
+import vj.w
 
 public class NotificationRenderer {
    private fun runWorkers(context: Context, notification: NotificationData) {
@@ -2124,20 +2124,20 @@ public class NotificationRenderer {
       val var3: java.util.Iterator = var2.getAckChannelIds().iterator();
 
       while (var3.hasNext()) {
-         val var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
+         var var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
          val var4: StringBuilder = new StringBuilder();
          var4.append("MESSAGE_CREATE");
          var4.append(var5);
-         val var6: java.lang.String = var4.toString();
-         val var7: NotificationChannels = NotificationChannels.INSTANCE;
+         var5 = var4.toString();
+         val var6: NotificationChannels = NotificationChannels.INSTANCE;
          if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
-               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var6)
+               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var5)
             )
             .i()
             .getBoolean("ignoreAck", false)) {
-            this.clear(var1, var6);
+            this.clear(var1, var5);
          } else {
-            this.markNotificationAsDirectReply(var1, var6, var7.getNotificationChannelId(var2, var1), false);
+            this.markNotificationAsDirectReply(var1, var5, var6.getNotificationChannelId(var2, var1), false);
          }
       }
    }

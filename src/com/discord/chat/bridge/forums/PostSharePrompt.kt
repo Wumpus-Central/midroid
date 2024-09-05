@@ -2,11 +2,6 @@ package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class PostSharePrompt(title: String, subtitle: StructurableText, cta: String, icon: String, closeIcon: String) {
@@ -100,22 +100,22 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.title;
-      val var6: StructurableText = this.subtitle;
-      val var1: java.lang.String = this.cta;
-      val var2: java.lang.String = this.icon;
-      val var3: java.lang.String = this.closeIcon;
+      val var1: java.lang.String = this.title;
+      val var3: StructurableText = this.subtitle;
+      val var2: java.lang.String = this.cta;
+      val var6: java.lang.String = this.icon;
+      val var4: java.lang.String = this.closeIcon;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PostSharePrompt(title=");
-      var5.append(var4);
-      var5.append(", subtitle=");
-      var5.append(var6);
-      var5.append(", cta=");
       var5.append(var1);
-      var5.append(", icon=");
-      var5.append(var2);
-      var5.append(", closeIcon=");
+      var5.append(", subtitle=");
       var5.append(var3);
+      var5.append(", cta=");
+      var5.append(var2);
+      var5.append(", icon=");
+      var5.append(var6);
+      var5.append(", closeIcon=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -132,11 +132,11 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
          val var0: PostSharePrompt.$serializer = new PostSharePrompt.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.forums.PostSharePrompt", var0, 5);
-         var1.l("title", false);
-         var1.l("subtitle", false);
-         var1.l("cta", false);
-         var1.l("icon", false);
-         var1.l("closeIcon", false);
+         var1.c("title", false);
+         var1.c("subtitle", false);
+         var1.c("cta", false);
+         var1.c("icon", false);
+         var1.c("closeIcon", false);
          descriptor = var1;
       }
 

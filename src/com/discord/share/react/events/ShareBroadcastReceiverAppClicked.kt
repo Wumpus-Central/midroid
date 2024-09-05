@@ -2,11 +2,6 @@ package com.discord.share.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 internal data class ShareBroadcastReceiverAppClicked(app: String, location: String?) : ReactEvent {
@@ -73,15 +73,15 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.app;
+      val var1: java.lang.String = this.app;
       val var3: java.lang.String = this.location;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ShareBroadcastReceiverAppClicked(app=");
-      var1.append(var2);
-      var1.append(", location=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ShareBroadcastReceiverAppClicked(app=");
+      var2.append(var1);
+      var2.append(", location=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -98,8 +98,8 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.share.react.events.ShareBroadcastReceiverAppClicked", var0, 2
          );
-         var1.l("app", false);
-         var1.l("location", false);
+         var1.c("app", false);
+         var1.c("location", false);
          descriptor = var1;
       }
 
@@ -158,7 +158,7 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

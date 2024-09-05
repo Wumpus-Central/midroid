@@ -1,9 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,6 +8,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
 
 @f
 public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode {
@@ -67,7 +67,7 @@ public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode
          val var0: UnderlineContentNode.$serializer = new UnderlineContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("u", var0, 1);
-         var1.l("content", false);
+         var1.c("content", false);
          descriptor = var1;
       }
 

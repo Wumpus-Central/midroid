@@ -8,8 +8,8 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import lj.p
-import lj.w
+import vj.p
+import vj.w
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
@@ -69,11 +69,11 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: EmojiContentNode = this.emoji;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapEmojiData(emoji=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: EmojiContentNode = this.emoji;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapEmojiData(emoji=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

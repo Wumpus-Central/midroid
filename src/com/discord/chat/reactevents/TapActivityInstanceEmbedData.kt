@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class TapActivityInstanceEmbedData(applicationId: String, channelId: String, instanceId: String, messageId: String) : ReactEvent {
@@ -94,18 +94,18 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
 
    public override fun toString(): String {
       val var3: java.lang.String = this.applicationId;
-      val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.instanceId;
-      val var1: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.instanceId;
+      val var4: java.lang.String = this.messageId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapActivityInstanceEmbedData(applicationId=");
       var5.append(var3);
       var5.append(", channelId=");
-      var5.append(var2);
-      var5.append(", instanceId=");
-      var5.append(var4);
-      var5.append(", messageId=");
       var5.append(var1);
+      var5.append(", instanceId=");
+      var5.append(var2);
+      var5.append(", messageId=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -122,10 +122,10 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
          val var0: TapActivityInstanceEmbedData.$serializer = new TapActivityInstanceEmbedData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapActivityInstanceEmbedData", var0, 4);
-         var1.l("applicationId", false);
-         var1.l("channelId", false);
-         var1.l("instanceId", false);
-         var1.l("messageId", false);
+         var1.c("applicationId", false);
+         var1.c("channelId", false);
+         var1.c("instanceId", false);
+         var1.c("messageId", false);
          descriptor = var1;
       }
 
@@ -144,8 +144,8 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
          val var11: java.lang.String;
          if (var10.p()) {
             var7 = var10.m(var9, 0);
-            var5 = var10.m(var9, 1);
-            var6 = var10.m(var9, 2);
+            var6 = var10.m(var9, 1);
+            var5 = var10.m(var9, 2);
             var11 = var10.m(var9, 3);
             var2 = 15;
          } else {
@@ -185,13 +185,12 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
                }
             }
 
-            var5 = var12;
+            var6 = var12;
             var11 = var6;
-            var6 = var5;
          }
 
          var10.c(var9);
-         return new TapActivityInstanceEmbedData(var2, var7, var5, var6, var11, null);
+         return new TapActivityInstanceEmbedData(var2, var7, var6, var5, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapActivityInstanceEmbedData) {

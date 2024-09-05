@@ -3,13 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.x0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,6 +11,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.x0
+import qn.g0.a
 
 @f
 internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String, videoStreamParametersJSON: String) : ReactEvent {
@@ -105,23 +105,23 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var6: java.lang.String = this.userId;
+      val var7: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
       val var5: java.lang.String = this.streamId;
       val var4: java.lang.String = this.videoStreamParametersJSON;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("OnVideoCallbackEvent(connectionId=");
-      var7.append(var1);
-      var7.append(", userId=");
-      var7.append(var6);
-      var7.append(", ssrc=");
-      var7.append(var2);
-      var7.append(", streamId=");
-      var7.append(var5);
-      var7.append(", videoStreamParametersJSON=");
-      var7.append(var4);
-      var7.append(")");
-      return var7.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("OnVideoCallbackEvent(connectionId=");
+      var6.append(var1);
+      var6.append(", userId=");
+      var6.append(var7);
+      var6.append(", ssrc=");
+      var6.append(var2);
+      var6.append(", streamId=");
+      var6.append(var5);
+      var6.append(", videoStreamParametersJSON=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -136,11 +136,11 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
          val var0: OnVideoCallbackEvent.$serializer = new OnVideoCallbackEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.media.engine.video.events.OnVideoCallbackEvent", var0, 5);
-         var1.l("connectionId", false);
-         var1.l("userId", false);
-         var1.l("ssrc", false);
-         var1.l("streamId", false);
-         var1.l("videoStreamParametersJSON", false);
+         var1.c("connectionId", false);
+         var1.c("userId", false);
+         var1.c("ssrc", false);
+         var1.c("streamId", false);
+         var1.c("videoStreamParametersJSON", false);
          descriptor = var1;
       }
 

@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.reaction
 
-import dn.f
-import dn.n
-import en.a
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.g0
+import qn.n0
 
 @f
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
@@ -146,27 +146,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var5: Int = this.reactionBackgroundColor;
-      val var4: Int = this.reactionBorderColor;
-      val var1: Int = this.reactionTextColor;
-      val var6: Int = this.activeReactionBackgroundColor;
-      val var2: Int = this.activeReactionBorderColor;
-      val var3: Int = this.activeReactionTextColor;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ReactionsTheme(reactionBackgroundColor=");
-      var7.append(var5);
-      var7.append(", reactionBorderColor=");
-      var7.append(var4);
-      var7.append(", reactionTextColor=");
-      var7.append(var1);
-      var7.append(", activeReactionBackgroundColor=");
-      var7.append(var6);
-      var7.append(", activeReactionBorderColor=");
-      var7.append(var2);
-      var7.append(", activeReactionTextColor=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var2: Int = this.reactionBackgroundColor;
+      val var7: Int = this.reactionBorderColor;
+      val var5: Int = this.reactionTextColor;
+      val var3: Int = this.activeReactionBackgroundColor;
+      val var1: Int = this.activeReactionBorderColor;
+      val var4: Int = this.activeReactionTextColor;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ReactionsTheme(reactionBackgroundColor=");
+      var6.append(var2);
+      var6.append(", reactionBorderColor=");
+      var6.append(var7);
+      var6.append(", reactionTextColor=");
+      var6.append(var5);
+      var6.append(", activeReactionBackgroundColor=");
+      var6.append(var3);
+      var6.append(", activeReactionBorderColor=");
+      var6.append(var1);
+      var6.append(", activeReactionTextColor=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -181,12 +181,12 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
          val var0: ReactionsTheme.$serializer = new ReactionsTheme.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.reaction.ReactionsTheme", var0, 6);
-         var1.l("reactionBackgroundColor", true);
-         var1.l("reactionBorderColor", true);
-         var1.l("reactionTextColor", true);
-         var1.l("activeReactionBackgroundColor", true);
-         var1.l("activeReactionBorderColor", true);
-         var1.l("activeReactionTextColor", true);
+         var1.c("reactionBackgroundColor", true);
+         var1.c("reactionBorderColor", true);
+         var1.c("reactionTextColor", true);
+         var1.c("activeReactionBackgroundColor", true);
+         var1.c("activeReactionBorderColor", true);
+         var1.c("activeReactionTextColor", true);
          descriptor = var1;
       }
 
@@ -202,31 +202,28 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
          val var5: Boolean = var13.p();
          var var10: Int = null;
          var var2: Int;
+         var var6: Int;
          var var8: Int;
          var var9: Int;
-         var var15: Int;
-         var var16: Int;
+         val var14: Int;
          var var17: Int;
          if (var5) {
             val var7: n0 = n0.a;
             var10 = var13.n(var12, 0, n0.a, null) as Int;
             var9 = var13.n(var12, 1, var7, null) as Int;
             var8 = var13.n(var12, 2, var7, null) as Int;
-            var16 = var13.n(var12, 3, var7, null) as Int;
-            val var14: Int = var13.n(var12, 4, var7, null) as Int;
-            val var11: Int = var13.n(var12, 5, var7, null) as Int;
+            var6 = var13.n(var12, 3, var7, null) as Int;
+            var14 = var13.n(var12, 4, var7, null) as Int;
+            var17 = var13.n(var12, 5, var7, null) as Int;
             var2 = 63;
-            var17 = var16;
-            var16 = var14;
-            var15 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
             var8 = null;
             var17 = null;
-            var16 = null;
-            var15 = null;
+            var6 = null;
+            var var15: Int = null;
 
             while (var3) {
                val var4: Int = var13.o(var12);
@@ -251,7 +248,7 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                      var2 |= 8;
                      break;
                   case 4:
-                     var16 = var13.n(var12, 4, n0.a, var16) as Int;
+                     var6 = var13.n(var12, 4, n0.a, var6) as Int;
                      var2 |= 16;
                      break;
                   case 5:
@@ -262,10 +259,14 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                      throw new n(var4);
                }
             }
+
+            var17 = var15;
+            var14 = var6;
+            var6 = var17;
          }
 
          var13.c(var12);
-         return new ReactionsTheme(var2, var10, var9, var8, var17, var16, var15, null);
+         return new ReactionsTheme(var2, var10, var9, var8, var6, var14, var17, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ReactionsTheme) {
@@ -278,7 +279,7 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

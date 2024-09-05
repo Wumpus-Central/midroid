@@ -3,11 +3,6 @@ package com.discord.emoji_picker.react_events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = null) : ReactEvent {
@@ -74,15 +74,15 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.emojiName;
-      val var1: java.lang.String = this.emojiId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("OnLongPressEmojiEvent(emojiName=");
-      var3.append(var2);
-      var3.append(", emojiId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.emojiName;
+      val var3: java.lang.String = this.emojiId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnLongPressEmojiEvent(emojiName=");
+      var2.append(var1);
+      var2.append(", emojiId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -97,8 +97,8 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
          val var0: OnLongPressEmojiEvent.$serializer = new OnLongPressEmojiEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.emoji_picker.react_events.OnLongPressEmojiEvent", var0, 2);
-         var1.l("emojiName", false);
-         var1.l("emojiId", true);
+         var1.c("emojiName", false);
+         var1.c("emojiId", true);
          descriptor = var1;
       }
 
@@ -157,7 +157,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

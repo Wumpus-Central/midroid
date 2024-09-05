@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.h
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.h
+import qn.g0.a
 
 @f
 public data class CodeBlockContentNode(lang: String, content: String, inQuote: Boolean) : ContentNode {
@@ -70,18 +70,18 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.lang;
-      val var3: java.lang.String = this.content;
+      val var2: java.lang.String = this.lang;
+      val var4: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CodeBlockContentNode(lang=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var3);
-      var2.append(", inQuote=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CodeBlockContentNode(lang=");
+      var3.append(var2);
+      var3.append(", content=");
+      var3.append(var4);
+      var3.append(", inQuote=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -96,9 +96,9 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          val var0: CodeBlockContentNode.$serializer = new CodeBlockContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("codeBlock", var0, 3);
-         var1.l("lang", false);
-         var1.l("content", false);
-         var1.l("inQuote", false);
+         var1.c("lang", false);
+         var1.c("content", false);
+         var1.c("inQuote", false);
          descriptor = var1;
       }
 
@@ -112,17 +112,17 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          val var9: c = var1.b(var8);
          var var2: Int;
          var var5: Boolean;
-         val var7: java.lang.String;
+         var var6: java.lang.String;
          var var11: java.lang.String;
          if (var9.p()) {
             val var10: java.lang.String = var9.m(var8, 0);
-            val var6: java.lang.String = var9.m(var8, 1);
+            val var7: java.lang.String = var9.m(var8, 1);
             var5 = var9.C(var8, 2);
             var2 = 7;
-            var7 = var10;
-            var11 = var6;
+            var6 = var10;
+            var11 = var7;
          } else {
-            var var12: java.lang.String = null;
+            var6 = null;
             var11 = null;
             var var3: Boolean = true;
             var5 = false;
@@ -144,19 +144,17 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var9.m(var8, 0);
+                     var6 = var9.m(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var7 = var12;
          }
 
          var9.c(var8);
-         return new CodeBlockContentNode(var2, var7, var11, var5, null);
+         return new CodeBlockContentNode(var2, var6, var11, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CodeBlockContentNode) {

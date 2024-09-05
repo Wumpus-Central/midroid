@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.botuikit
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 public data class MediaGalleryDisplayComponent(type: Int, id: String, items: List<MediaGalleryItem>) : Component {
@@ -71,15 +71,15 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: java.util.List = this.items;
+      val var4: java.lang.String = this.id;
+      val var3: java.util.List = this.items;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MediaGalleryDisplayComponent(type=");
       var2.append(var1);
       var2.append(", id=");
-      var2.append(var3);
-      var2.append(", items=");
       var2.append(var4);
+      var2.append(", items=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -96,9 +96,9 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
          val var0: MediaGalleryDisplayComponent.$serializer = new MediaGalleryDisplayComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("12", var0, 3);
-         var1.l("type", false);
-         var1.l("id", false);
-         var1.l("items", false);
+         var1.c("type", false);
+         var1.c("id", false);
+         var1.c("items", false);
          descriptor = var1;
       }
 
@@ -116,10 +116,10 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
          var var6: java.lang.String;
          var var10: java.util.List;
          if (var8.p()) {
-            var3 = var8.i(var7, 0);
+            var2 = var8.i(var7, 0);
             var6 = var8.m(var7, 1);
             var10 = var8.y(var7, 2, var9[2], null) as java.util.List;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -150,10 +150,13 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
          var8.c(var7);
-         return new MediaGalleryDisplayComponent(var2, var3, var6, var10, null);
+         return new MediaGalleryDisplayComponent(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaGalleryDisplayComponent) {

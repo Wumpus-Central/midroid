@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.automod
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 public data class AutoModerationContext(headerText: String,
@@ -138,8 +138,8 @@ public data class AutoModerationContext(headerText: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.headerText.hashCode();
-      val var5: Int = this.headerBadgeText.hashCode();
+      val var5: Int = this.headerText.hashCode();
+      val var6: Int = this.headerBadgeText.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.ruleDisplayText == null) {
@@ -162,47 +162,47 @@ public data class AutoModerationContext(headerText: String,
          var3 = this.actionsIconURL.hashCode();
       }
 
-      val var8: Int = this.actionsText.hashCode();
+      val var9: Int = this.actionsText.hashCode();
       val var7: Int = this.feedbackText.hashCode();
-      val var9: Int = this.message.hashCode();
+      val var8: Int = this.message.hashCode();
       if (this.notification != null) {
          var4 = this.notification.hashCode();
       }
 
-      return (((((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var7) * 31 + var9) * 31 + var4;
+      return (((((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var9) * 31 + var7) * 31 + var8) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.headerText;
-      val var3: java.lang.String = this.headerBadgeText;
-      val var9: java.lang.String = this.ruleDisplayText;
-      val var5: java.lang.String = this.keywordDisplayText;
-      val var10: java.lang.String = this.actionsIconURL;
-      val var4: java.lang.String = this.actionsText;
-      val var1: java.lang.String = this.feedbackText;
-      val var8: FlaggedMessageEmbed = this.message;
-      val var7: AutoModerationNotification = this.notification;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AutoModerationContext(headerText=");
-      var2.append(var6);
-      var2.append(", headerBadgeText=");
-      var2.append(var3);
-      var2.append(", ruleDisplayText=");
-      var2.append(var9);
-      var2.append(", keywordDisplayText=");
-      var2.append(var5);
-      var2.append(", actionsIconURL=");
-      var2.append(var10);
-      var2.append(", actionsText=");
-      var2.append(var4);
-      var2.append(", feedbackText=");
-      var2.append(var1);
-      var2.append(", message=");
-      var2.append(var8);
-      var2.append(", notification=");
-      var2.append(var7);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = this.headerText;
+      val var4: java.lang.String = this.headerBadgeText;
+      val var3: java.lang.String = this.ruleDisplayText;
+      val var1: java.lang.String = this.keywordDisplayText;
+      val var6: java.lang.String = this.actionsIconURL;
+      val var2: java.lang.String = this.actionsText;
+      val var10: java.lang.String = this.feedbackText;
+      val var7: FlaggedMessageEmbed = this.message;
+      val var9: AutoModerationNotification = this.notification;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("AutoModerationContext(headerText=");
+      var8.append(var5);
+      var8.append(", headerBadgeText=");
+      var8.append(var4);
+      var8.append(", ruleDisplayText=");
+      var8.append(var3);
+      var8.append(", keywordDisplayText=");
+      var8.append(var1);
+      var8.append(", actionsIconURL=");
+      var8.append(var6);
+      var8.append(", actionsText=");
+      var8.append(var2);
+      var8.append(", feedbackText=");
+      var8.append(var10);
+      var8.append(", message=");
+      var8.append(var7);
+      var8.append(", notification=");
+      var8.append(var9);
+      var8.append(")");
+      return var8.toString();
    }
 
    public object `$serializer` : g0 {
@@ -217,15 +217,15 @@ public data class AutoModerationContext(headerText: String,
          val var0: AutoModerationContext.$serializer = new AutoModerationContext.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.automod.AutoModerationContext", var0, 9);
-         var1.l("headerText", false);
-         var1.l("headerBadgeText", false);
-         var1.l("ruleDisplayText", true);
-         var1.l("keywordDisplayText", true);
-         var1.l("actionsIconURL", true);
-         var1.l("actionsText", false);
-         var1.l("feedbackText", false);
-         var1.l("message", false);
-         var1.l("notification", true);
+         var1.c("headerText", false);
+         var1.c("headerBadgeText", false);
+         var1.c("ruleDisplayText", true);
+         var1.c("keywordDisplayText", true);
+         var1.c("actionsIconURL", true);
+         var1.c("actionsText", false);
+         var1.c("feedbackText", false);
+         var1.c("message", false);
+         var1.c("notification", true);
          descriptor = var1;
       }
 
@@ -253,36 +253,35 @@ public data class AutoModerationContext(headerText: String,
          var var8: java.lang.String = null;
          var var2: Int;
          var var11: Any;
-         var var12: java.lang.String;
-         var var13: Any;
-         val var15: FlaggedMessageEmbed;
+         var var12: Any;
+         var var13: FlaggedMessageEmbed;
+         var var14: Any;
+         val var15: java.lang.String;
          val var16: Any;
-         val var17: AutoModerationNotification;
+         val var17: Any;
          var var25: Any;
-         var var26: Any;
-         var var31: Any;
+         var var26: AutoModerationNotification;
          if (var6) {
-            var26 = var19.m(var18, 0);
-            var31 = var19.m(var18, 1);
+            val var10: java.lang.String = var19.m(var18, 0);
+            var12 = var19.m(var18, 1);
             val var20: b2 = b2.a;
             var11 = var19.n(var18, 2, b2.a, null) as java.lang.String;
-            var13 = var19.n(var18, 3, var20, null) as java.lang.String;
+            var17 = var19.n(var18, 3, var20, null) as java.lang.String;
             var16 = var19.n(var18, 4, var20, null) as java.lang.String;
             var25 = var19.m(var18, 5);
             val var7: java.lang.String = var19.m(var18, 6);
             val var21: FlaggedMessageEmbed = var19.y(var18, 7, FlaggedMessageEmbed.$serializer.INSTANCE, null) as FlaggedMessageEmbed;
             val var24: AutoModerationNotification = var19.n(var18, 8, AutoModerationNotification.$serializer.INSTANCE, null) as AutoModerationNotification;
             var2 = 511;
-            var12 = (java.lang.String)var26;
-            var26 = var31;
-            var31 = var25;
+            var15 = var10;
+            var14 = var25;
             var25 = var7;
-            var15 = var21;
-            var17 = var24;
+            var13 = var21;
+            var26 = var24;
          } else {
             var var4: Boolean = true;
             var2 = 0;
-            var31 = null;
+            var14 = null;
             var13 = null;
             var12 = null;
             var var23: Any = null;
@@ -331,7 +330,7 @@ public data class AutoModerationContext(headerText: String,
                      var2 |= 128;
                      continue;
                   case 8:
-                     var31 = var19.n(var18, 8, AutoModerationNotification.$serializer.INSTANCE, var31) as AutoModerationNotification;
+                     var14 = var19.n(var18, 8, AutoModerationNotification.$serializer.INSTANCE, var14) as AutoModerationNotification;
                      var2 |= 256;
                      continue;
                   default:
@@ -341,28 +340,27 @@ public data class AutoModerationContext(headerText: String,
                var3 = 7;
             }
 
-            var17 = (AutoModerationNotification)var31;
-            var15 = (FlaggedMessageEmbed)var13;
-            var31 = var26;
+            var26 = (AutoModerationNotification)var14;
+            var14 = var26;
             var16 = var12;
-            var13 = var11;
+            var17 = var11;
             var11 = var22;
-            var26 = var23;
-            var12 = var8;
+            var12 = var23;
+            var15 = var8;
          }
 
          var19.c(var18);
          return new AutoModerationContext(
             var2,
-            var12,
-            (java.lang.String)var26,
-            (java.lang.String)var11,
-            (java.lang.String)var13,
-            (java.lang.String)var16,
-            (java.lang.String)var31,
-            (java.lang.String)var25,
             var15,
-            var17,
+            (java.lang.String)var12,
+            (java.lang.String)var11,
+            (java.lang.String)var17,
+            (java.lang.String)var16,
+            (java.lang.String)var14,
+            (java.lang.String)var25,
+            var13,
+            var26,
             null
          );
       }
@@ -377,7 +375,7 @@ public data class AutoModerationContext(headerText: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

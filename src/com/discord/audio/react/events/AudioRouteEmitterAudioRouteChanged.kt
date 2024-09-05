@@ -3,12 +3,6 @@ package com.discord.audio.react.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.h
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.h
+import qn.g0.a
 
 @f
 internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multipleRoutesAvailable: Boolean) : ReactEvent {
@@ -67,15 +67,15 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.routeType;
+      val var2: java.lang.String = this.routeType;
       val var1: Boolean = this.multipleRoutesAvailable;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioRouteEmitterAudioRouteChanged(routeType=");
-      var2.append(var3);
-      var2.append(", multipleRoutesAvailable=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AudioRouteEmitterAudioRouteChanged(routeType=");
+      var3.append(var2);
+      var3.append(", multipleRoutesAvailable=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -92,8 +92,8 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged", var0, 2
          );
-         var1.l("routeType", false);
-         var1.l("multipleRoutesAvailable", false);
+         var1.c("routeType", false);
+         var1.c("multipleRoutesAvailable", false);
          descriptor = var1;
       }
 

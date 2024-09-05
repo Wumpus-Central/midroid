@@ -5,14 +5,6 @@ import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.f0
-import gn.g0
-import gn.h
-import gn.o1
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -22,6 +14,14 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import qn.b2
+import qn.f0
+import qn.g0
+import qn.h
+import qn.o1
+import qn.g0.a
 
 @f
 public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
@@ -172,28 +172,28 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Float = this.totalDurationSecs;
-      val var3: Float = this.endDurationSecs;
-      val var6: java.lang.String = UserId.toString-impl(this.senderUserId);
-      val var1: Float = this.durationListeningSecs;
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: Float = this.totalDurationSecs;
+      val var1: Float = this.endDurationSecs;
+      val var5: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var2: Float = this.durationListeningSecs;
       val var4: Boolean = this.isVoiceMessage;
-      val var8: java.lang.String = this.attachmentId;
+      val var6: java.lang.String = this.attachmentId;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MediaAttachmentPlaybackEndedData(messageId=");
-      var7.append(var5);
+      var7.append(var8);
       var7.append(", totalDurationSecs=");
-      var7.append(var2);
-      var7.append(", endDurationSecs=");
       var7.append(var3);
-      var7.append(", senderUserId=");
-      var7.append(var6);
-      var7.append(", durationListeningSecs=");
+      var7.append(", endDurationSecs=");
       var7.append(var1);
+      var7.append(", senderUserId=");
+      var7.append(var5);
+      var7.append(", durationListeningSecs=");
+      var7.append(var2);
       var7.append(", isVoiceMessage=");
       var7.append(var4);
       var7.append(", attachmentId=");
-      var7.append(var8);
+      var7.append(var6);
       var7.append(")");
       return var7.toString();
    }
@@ -212,34 +212,36 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.reactevents.MediaAttachmentPlaybackEndedData", var0, 7
          );
-         var1.l("messageId", false);
-         var1.l("totalDurationSecs", false);
-         var1.l("endDurationSecs", false);
-         var1.l("senderUserId", false);
-         var1.l("durationListeningSecs", false);
-         var1.l("isVoiceMessage", false);
-         var1.l("attachmentId", false);
+         var1.c("messageId", false);
+         var1.c("totalDurationSecs", false);
+         var1.c("endDurationSecs", false);
+         var1.c("senderUserId", false);
+         var1.c("durationListeningSecs", false);
+         var1.c("isVoiceMessage", false);
+         var1.c("attachmentId", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{MessageId.$serializer.INSTANCE, f0.a, f0.a, UserId.$serializer.INSTANCE, f0.a, h.a, b2.a};
+         return new KSerializer[]{
+            com.discord.primitives.MessageId..serializer.INSTANCE, f0.a, f0.a, com.discord.primitives.UserId..serializer.INSTANCE, f0.a, h.a, b2.a
+         };
       }
 
       public open fun deserialize(decoder: Decoder): MediaAttachmentPlaybackEndedData {
          q.h(var1, "decoder");
          val var13: SerialDescriptor = this.getDescriptor();
          val var14: c = var1.b(var13);
+         var var2: Float;
          var var3: Float;
          var var4: Float;
-         val var5: Float;
          var var6: Int;
          var var9: Boolean;
+         var var10: Any;
+         var var11: java.lang.String;
          val var17: java.lang.String;
-         var var21: Any;
-         var var23: java.lang.String;
          if (var14.p()) {
-            val var15: MessageId = var14.y(var13, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var15: MessageId = var14.y(var13, 0, com.discord.primitives.MessageId..serializer.INSTANCE, null) as MessageId;
             val var16: java.lang.String;
             if (var15 != null) {
                var16 = var15.unbox-impl();
@@ -249,23 +251,22 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
 
             var4 = var14.u(var13, 1);
             var3 = var14.u(var13, 2);
-            val var12: UserId = var14.y(var13, 3, UserId.$serializer.INSTANCE, null) as UserId;
-            val var2: Float = var14.u(var13, 4);
+            var10 = var14.y(var13, 3, com.discord.primitives.UserId..serializer.INSTANCE, null) as UserId;
+            var2 = var14.u(var13, 4);
             var9 = var14.C(var13, 5);
-            var17 = var14.m(var13, 6);
+            val var12: java.lang.String = var14.m(var13, 6);
+            var11 = var16;
+            var17 = var12;
             var6 = 127;
-            var23 = var16;
-            var21 = var12;
-            var5 = var2;
          } else {
             var4 = 0.0F;
             var3 = 0.0F;
-            var var19: Float = 0.0F;
+            var2 = 0.0F;
             var var7: Boolean = true;
             var9 = false;
             var6 = 0;
-            var23 = null;
-            var21 = null;
+            var11 = null;
+            var10 = null;
             var var18: Any = null;
 
             while (var7) {
@@ -275,24 +276,24 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                      var7 = false;
                      break;
                   case 0:
-                     val var24: MessageId;
-                     if (var23 != null) {
-                        var24 = MessageId.box-impl(var23);
+                     val var22: MessageId;
+                     if (var11 != null) {
+                        var22 = MessageId.box-impl(var11);
                      } else {
-                        var24 = null;
+                        var22 = null;
                      }
 
-                     val var25: MessageId = var14.y(var13, 0, MessageId.$serializer.INSTANCE, var24) as MessageId;
-                     if (var25 != null) {
-                        var23 = var25.unbox-impl();
+                     val var23: MessageId = var14.y(var13, 0, com.discord.primitives.MessageId..serializer.INSTANCE, var22) as MessageId;
+                     if (var23 != null) {
+                        var11 = var23.unbox-impl();
                      } else {
-                        var23 = null;
+                        var11 = null;
                      }
 
                      var6 |= 1;
                      break;
                   case 1:
-                     var19 = var14.u(var13, 1);
+                     var2 = var14.u(var13, 1);
                      var6 |= 2;
                      break;
                   case 2:
@@ -300,7 +301,7 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                      var6 |= 4;
                      break;
                   case 3:
-                     var18 = var14.y(var13, 3, UserId.$serializer.INSTANCE, var18) as UserId;
+                     var18 = var14.y(var13, 3, com.discord.primitives.UserId..serializer.INSTANCE, var18) as UserId;
                      var6 |= 8;
                      break;
                   case 4:
@@ -312,7 +313,7 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                      var6 |= 32;
                      break;
                   case 6:
-                     var21 = var14.m(var13, 6);
+                     var10 = var14.m(var13, 6);
                      var6 |= 64;
                      break;
                   default:
@@ -320,14 +321,14 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                }
             }
 
-            var21 = var18;
-            var17 = (java.lang.String)var21;
-            var5 = var4;
-            var4 = var19;
+            var4 = var2;
+            var17 = (java.lang.String)var10;
+            var2 = var4;
+            var10 = var18;
          }
 
          var14.c(var13);
-         return new MediaAttachmentPlaybackEndedData(var6, var23, var4, var3, (UserId)var21, var5, var9, var17, null, null);
+         return new MediaAttachmentPlaybackEndedData(var6, var11, var4, var3, (UserId)var10, var2, var9, var17, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaAttachmentPlaybackEndedData) {

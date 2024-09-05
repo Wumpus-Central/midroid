@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.structurabletext
 
-import fn.g
-import fn.e.i
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import pn.g
+import pn.e.i
 
 internal object PrimitiveStructurableTextSerializer : KSerializer {
    public open val descriptor: SerialDescriptor = g.a("PrimitiveStructurableText", i.a)

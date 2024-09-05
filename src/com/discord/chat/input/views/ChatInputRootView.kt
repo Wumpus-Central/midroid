@@ -32,6 +32,8 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
+import dn.g
+import gn.u
 import java.util.ArrayList
 import java.util.LinkedHashSet
 import java.util.UUID
@@ -41,8 +43,6 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
-import tm.g
-import wm.u
 
 public class ChatInputRootView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : RelativeLayout, KeyboardEvent {
    private final val binding: ChatInputRootViewBinding
@@ -237,17 +237,17 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             }
 
             public void afterTextChanged(Editable var1) {
-               val var2: java.lang.String = java.lang.String.valueOf(var1);
-               val var3: ChatInputRootView = this.this$0;
-               val var4: java.lang.String = UUID.randomUUID().toString();
-               q.g(var4, "toString(...)");
-               ChatInputRootView.access$setLastEditId$p(var3, var4);
+               val var3: java.lang.String = java.lang.String.valueOf(var1);
+               val var4: ChatInputRootView = this.this$0;
+               val var2: java.lang.String = UUID.randomUUID().toString();
+               q.g(var2, "toString(...)");
+               ChatInputRootView.access$setLastEditId$p(var4, var2);
                ChatInputRootView.access$getCurrentTextFlow$p(this.this$0)
                   .setValue(
                      new ChatInputRootView.CurrentTextAndSelection(
                         ChatInputRootView.access$getEditText$p(this.this$0).getSelectionStart(),
                         ChatInputRootView.access$getEditText$p(this.this$0).getSelectionEnd(),
-                        var2,
+                        var3,
                         ChatInputRootView.access$getLastEditId$p(this.this$0)
                      )
                   );
@@ -408,17 +408,16 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    }
 
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
-      val var4: java.lang.Iterable = var1;
-      val var6: ArrayList = new ArrayList(i.u(var1, 10));
+      val var4: ArrayList = new ArrayList(i.u(var1, 10));
 
-      for (ChatInputNode var5 : var4) {
-         var6.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var6 : var1) {
+         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var18 : var6) {
-         val var19: Editable = this.editText.getEditableText();
-         q.g(var19, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var19, var18);
+      for (ChatInputNode var7 : var4) {
+         val var17: Editable = this.editText.getEditableText();
+         q.g(var17, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var17, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -497,10 +496,11 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1520,7 +1520,6 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
@@ -2691,15 +2690,15 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var2: Int = this.selectionStart;
-         val var1: Int = this.selectionEnd;
+         val var1: Int = this.selectionStart;
+         val var2: Int = this.selectionEnd;
          val var3: java.lang.String = this.text;
          val var4: java.lang.String = this.editId;
          val var5: StringBuilder = new StringBuilder();
          var5.append("CurrentTextAndSelection(selectionStart=");
-         var5.append(var2);
-         var5.append(", selectionEnd=");
          var5.append(var1);
+         var5.append(", selectionEnd=");
+         var5.append(var2);
          var5.append(", text=");
          var5.append(var3);
          var5.append(", editId=");

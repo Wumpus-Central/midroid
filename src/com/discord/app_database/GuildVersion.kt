@@ -1,11 +1,5 @@
 package com.discord.app_database
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.x0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.x0
+import qn.g0.a
 
 @f
 public data class GuildVersion(id: String, version: Long) {
@@ -60,15 +60,15 @@ public data class GuildVersion(id: String, version: Long) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("GuildVersion(id=");
-      var4.append(var3);
-      var4.append(", version=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("GuildVersion(id=");
+      var3.append(var4);
+      var3.append(", version=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -83,8 +83,8 @@ public data class GuildVersion(id: String, version: Long) {
          val var0: GuildVersion.$serializer = new GuildVersion.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.app_database.GuildVersion", var0, 2);
-         var1.l("id", false);
-         var1.l("version", false);
+         var1.c("id", false);
+         var1.c("version", false);
          descriptor = var1;
       }
 

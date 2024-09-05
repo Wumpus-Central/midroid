@@ -3,11 +3,6 @@ package com.discord.chat.input.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactEvent {
@@ -71,16 +71,16 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
    }
 
    public override fun toString(): String {
-      val var1: Int = this.start;
-      val var3: Int = this.end;
-      val var2: Int = this.target;
+      val var2: Int = this.start;
+      val var1: Int = this.end;
+      val var3: Int = this.target;
       val var4: StringBuilder = new StringBuilder();
       var4.append("OnFocusEvent(start=");
-      var4.append(var1);
-      var4.append(", end=");
-      var4.append(var3);
-      var4.append(", target=");
       var4.append(var2);
+      var4.append(", end=");
+      var4.append(var1);
+      var4.append(", target=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
@@ -97,9 +97,9 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
          val var0: OnFocusEvent.$serializer = new OnFocusEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.input.events.OnFocusEvent", var0, 3);
-         var1.l("start", false);
-         var1.l("end", false);
-         var1.l("target", true);
+         var1.c("start", false);
+         var1.c("end", false);
+         var1.c("target", true);
          descriptor = var1;
       }
 
@@ -111,24 +111,26 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
-         var var3: Int;
-         var var4: Int;
          var var5: Int;
          val var6: Int;
+         var var11: Int;
+         var var12: Int;
          if (var9.p()) {
-            var5 = var9.i(var8, 0);
-            var4 = var9.i(var8, 1);
+            var11 = var9.i(var8, 0);
+            var12 = var9.i(var8, 1);
             val var2: Int = var9.i(var8, 2);
-            var3 = 7;
-            var6 = var2;
+            var5 = 7;
+            var6 = var11;
+            var11 = var12;
+            var12 = var2;
          } else {
-            var var13: Boolean = true;
+            var var14: Boolean = true;
             var5 = 0;
-            var4 = 0;
-            var3 = 0;
+            var12 = 0;
+            var11 = 0;
             var var10: Int = 0;
 
-            while (var13) {
+            while (var14) {
                val var7: Int = var9.o(var8);
                if (var7 != -1) {
                   if (var7 != 0) {
@@ -137,10 +139,10 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
                            throw new n(var7);
                         }
 
-                        var4 = var9.i(var8, 2);
+                        var12 = var9.i(var8, 2);
                         var10 |= 4;
                      } else {
-                        var3 = var9.i(var8, 1);
+                        var11 = var9.i(var8, 1);
                         var10 |= 2;
                      }
                   } else {
@@ -148,17 +150,16 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
                      var10 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var14 = false;
                }
             }
 
-            var6 = var4;
-            var4 = var3;
-            var3 = var10;
+            var6 = var5;
+            var5 = var10;
          }
 
          var9.c(var8);
-         return new OnFocusEvent(var3, var5, var4, var6, null);
+         return new OnFocusEvent(var5, var6, var11, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnFocusEvent) {

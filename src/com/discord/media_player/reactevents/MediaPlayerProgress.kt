@@ -3,11 +3,6 @@ package com.discord.media_player.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.y
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.y
+import qn.g0.a
 
 @f
 public data class MediaPlayerProgress(id: Double, time: Double, duration: Double) : ReactEvent {
@@ -97,9 +97,9 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
          val var0: MediaPlayerProgress.$serializer = new MediaPlayerProgress.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.media_player.reactevents.MediaPlayerProgress", var0, 3);
-         var1.l("id", false);
-         var1.l("time", false);
-         var1.l("duration", false);
+         var1.c("id", false);
+         var1.c("time", false);
+         var1.c("duration", false);
          descriptor = var1;
       }
 

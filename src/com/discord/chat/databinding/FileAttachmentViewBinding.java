@@ -13,7 +13,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.AttachmentUploadOverlayView;
 import com.discord.chat.presentation.message.view.SpoilerView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import v2.a;
+import f3.a;
 
 public final class FileAttachmentViewBinding implements ViewBinding {
    public final ConstraintLayout fileActionGroup;
@@ -56,36 +56,36 @@ public final class FileAttachmentViewBinding implements ViewBinding {
 
    public static FileAttachmentViewBinding bind(View var0) {
       int var1 = R.id.file_action_group;
-      ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
-      if (var9 != null) {
+      ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.file_attachment_description;
-         TextView var7 = (TextView)a.a(var0, var1);
-         if (var7 != null) {
+         TextView var8 = (TextView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.file_attachment_download;
-            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-            if (var4 != null) {
+            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.file_attachment_download_icon_barrier;
-               Barrier var6 = (Barrier)a.a(var0, var1);
-               if (var6 != null) {
+               Barrier var7 = (Barrier)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.file_attachment_download_progress_bar;
-                  ProgressBar var2 = (ProgressBar)a.a(var0, var1);
-                  if (var2 != null) {
+                  ProgressBar var5 = (ProgressBar)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.file_attachment_icon;
-                     SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var8 != null) {
+                     SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.file_attachment_name;
-                        TextView var10 = (TextView)a.a(var0, var1);
-                        if (var10 != null) {
+                        TextView var11 = (TextView)a.a(var0, var1);
+                        if (var11 != null) {
                            var1 = R.id.spoiler;
-                           SpoilerView var11 = (SpoilerView)a.a(var0, var1);
-                           if (var11 != null) {
+                           SpoilerView var9 = (SpoilerView)a.a(var0, var1);
+                           if (var9 != null) {
                               var1 = R.id.upload_overlay;
-                              AttachmentUploadOverlayView var3 = (AttachmentUploadOverlayView)a.a(var0, var1);
-                              if (var3 != null) {
+                              AttachmentUploadOverlayView var4 = (AttachmentUploadOverlayView)a.a(var0, var1);
+                              if (var4 != null) {
                                  var1 = R.id.upload_overlay_background;
-                                 LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-                                 if (var5 != null) {
-                                    return new FileAttachmentViewBinding(var0, var9, var7, var4, var6, var2, var8, var10, var11, var3, var5);
+                                 LinearLayout var10 = (LinearLayout)a.a(var0, var1);
+                                 if (var10 != null) {
+                                    return new FileAttachmentViewBinding(var0, var3, var8, var2, var7, var5, var6, var11, var9, var4, var10);
                                  }
                               }
                            }

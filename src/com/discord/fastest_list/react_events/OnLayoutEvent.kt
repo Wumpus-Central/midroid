@@ -3,11 +3,6 @@ package com.discord.fastest_list.react_events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.f0
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,7 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import qn.f0
+import qn.g0
+import qn.g0.a
+import vj.w
 
 @f
 internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Float) : ReactEvent {
@@ -88,19 +88,19 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
    }
 
    public override fun toString(): String {
-      val var2: Float = this.x;
+      val var4: Float = this.x;
       val var1: Float = this.y;
-      val var3: Float = this.width;
-      val var4: Float = this.height;
+      val var2: Float = this.width;
+      val var3: Float = this.height;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnLayoutEvent(x=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", y=");
       var5.append(var1);
       var5.append(", width=");
-      var5.append(var3);
+      var5.append(var2);
       var5.append(", height=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -117,10 +117,10 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          val var0: OnLayoutEvent.$serializer = new OnLayoutEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.fastest_list.react_events.OnLayoutEvent", var0, 4);
-         var1.l("x", false);
-         var1.l("y", false);
-         var1.l("width", false);
-         var1.l("height", false);
+         var1.c("x", false);
+         var1.c("y", false);
+         var1.c("width", false);
+         var1.c("height", false);
          descriptor = var1;
       }
 
@@ -180,8 +180,8 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                }
             }
 
-            var4 = var2;
             var2 = var4;
+            var4 = var2;
          }
 
          var11.c(var10);

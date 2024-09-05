@@ -19,17 +19,16 @@ public class GGSansBoldSpan(context: Context) : StyleSpan {
    }
 
    private fun apply(paint: Paint, fallback: () -> Unit) {
-      val var3: Companion = DiscordFont.Companion;
-      val var4: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
-      val var5: DiscordFont;
-      if (var4 != null) {
-         var5 = var3.findByStyle(DiscordFont.PrimaryBold.getWeight(), var4.getItalic(), var4.getMonospace());
+      val var4: Companion = DiscordFont.Companion;
+      var var3: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
+      if (var3 != null) {
+         var3 = var4.findByStyle(DiscordFont.PrimaryBold.getWeight(), var3.getItalic(), var3.getMonospace());
       } else {
-         var5 = null;
+         var3 = null;
       }
 
-      if (var5 != null) {
-         var1.setTypeface(var5.typeface(this.context));
+      if (var3 != null) {
+         var1.setTypeface(var3.typeface(this.context));
       } else {
          var2.invoke();
       }

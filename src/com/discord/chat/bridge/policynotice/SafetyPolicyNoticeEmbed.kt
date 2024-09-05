@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.policynotice
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -120,25 +120,25 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.classificationId;
-      val var1: java.lang.String = this.titleText;
-      val var3: java.lang.String = this.titleIcon;
-      val var4: java.lang.String = this.subtitleText;
-      val var6: java.lang.String = this.descriptionText;
-      val var7: java.lang.String = this.ctaText;
+      val var6: java.lang.String = this.classificationId;
+      val var4: java.lang.String = this.titleText;
+      val var5: java.lang.String = this.titleIcon;
+      val var1: java.lang.String = this.subtitleText;
+      val var7: java.lang.String = this.descriptionText;
+      val var3: java.lang.String = this.ctaText;
       val var2: StringBuilder = new StringBuilder();
       var2.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var2.append(var5);
-      var2.append(", titleText=");
-      var2.append(var1);
-      var2.append(", titleIcon=");
-      var2.append(var3);
-      var2.append(", subtitleText=");
-      var2.append(var4);
-      var2.append(", descriptionText=");
       var2.append(var6);
-      var2.append(", ctaText=");
+      var2.append(", titleText=");
+      var2.append(var4);
+      var2.append(", titleIcon=");
+      var2.append(var5);
+      var2.append(", subtitleText=");
+      var2.append(var1);
+      var2.append(", descriptionText=");
       var2.append(var7);
+      var2.append(", ctaText=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -157,12 +157,12 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.bridge.policynotice.SafetyPolicyNoticeEmbed", var0, 6
          );
-         var1.l("classificationId", false);
-         var1.l("titleText", false);
-         var1.l("titleIcon", false);
-         var1.l("subtitleText", false);
-         var1.l("descriptionText", false);
-         var1.l("ctaText", false);
+         var1.c("classificationId", false);
+         var1.c("titleText", false);
+         var1.c("titleIcon", false);
+         var1.c("subtitleText", false);
+         var1.c("descriptionText", false);
+         var1.c("ctaText", false);
          descriptor = var1;
       }
 
@@ -183,8 +183,8 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          val var14: java.lang.String;
          if (var13.p()) {
             var9 = var13.m(var12, 0);
-            var7 = var13.m(var12, 1);
-            var8 = var13.m(var12, 2);
+            var8 = var13.m(var12, 1);
+            var7 = var13.m(var12, 2);
             var5 = var13.m(var12, 3);
             var6 = var13.m(var12, 4);
             var14 = var13.m(var12, 5);
@@ -234,14 +234,14 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                }
             }
 
-            var8 = var5;
             var14 = var8;
             var5 = var7;
-            var7 = var15;
+            var7 = var5;
+            var8 = var15;
          }
 
          var13.c(var12);
-         return new SafetyPolicyNoticeEmbed(var2, var9, var7, var8, var5, var6, var14, null);
+         return new SafetyPolicyNoticeEmbed(var2, var9, var8, var7, var5, var6, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {

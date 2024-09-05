@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.roleicons
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.n0
 
 @f
 public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null, name: String, size: Int, alt: String) {
@@ -104,24 +104,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.source;
+      val var6: java.lang.String = this.source;
       val var2: java.lang.String = this.unicodeEmoji;
-      val var6: java.lang.String = this.name;
+      val var3: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var5: java.lang.String = this.alt;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("RoleIcon(source=");
-      var4.append(var3);
-      var4.append(", unicodeEmoji=");
-      var4.append(var2);
-      var4.append(", name=");
-      var4.append(var6);
-      var4.append(", size=");
-      var4.append(var1);
-      var4.append(", alt=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.alt;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("RoleIcon(source=");
+      var5.append(var6);
+      var5.append(", unicodeEmoji=");
+      var5.append(var2);
+      var5.append(", name=");
+      var5.append(var3);
+      var5.append(", size=");
+      var5.append(var1);
+      var5.append(", alt=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -136,11 +136,11 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
          val var0: RoleIcon.$serializer = new RoleIcon.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.roleicons.RoleIcon", var0, 5);
-         var1.l("source", true);
-         var1.l("unicodeEmoji", true);
-         var1.l("name", false);
-         var1.l("size", false);
-         var1.l("alt", false);
+         var1.c("source", true);
+         var1.c("unicodeEmoji", true);
+         var1.c("name", false);
+         var1.c("size", false);
+         var1.c("alt", false);
          descriptor = var1;
       }
 
@@ -155,26 +155,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
          val var11: c = var1.b(var10);
          var var2: Int;
          var var3: Int;
-         var var7: java.lang.String;
+         var var6: java.lang.String;
          var var8: java.lang.String;
+         val var9: java.lang.String;
          var var13: java.lang.String;
-         var var17: java.lang.String;
          if (var11.p()) {
             val var12: b2 = b2.a;
             var8 = var11.n(var10, 0, b2.a, null) as java.lang.String;
-            var17 = var11.n(var10, 1, var12, null) as java.lang.String;
-            val var9: java.lang.String = var11.m(var10, 2);
+            var6 = var11.n(var10, 1, var12, null) as java.lang.String;
+            var9 = var11.m(var10, 2);
             var2 = var11.i(var10, 3);
             var13 = var11.m(var10, 4);
             var3 = 31;
-            var7 = var17;
-            var17 = var9;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var8 = null;
-            var7 = null;
-            var17 = null;
+            var var7: java.lang.String = null;
+            var6 = null;
             var13 = null;
             var2 = 0;
 
@@ -196,7 +194,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                               var2 |= 8;
                            }
                         } else {
-                           var17 = var11.m(var10, 2);
+                           var6 = var11.m(var10, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -213,11 +211,13 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
             }
 
             var2 = var3;
+            var9 = var6;
+            var6 = var7;
             var3 = var2;
          }
 
          var11.c(var10);
-         return new RoleIcon(var3, var8, var7, var17, var2, var13, null);
+         return new RoleIcon(var3, var8, var6, var9, var2, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleIcon) {
@@ -230,7 +230,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

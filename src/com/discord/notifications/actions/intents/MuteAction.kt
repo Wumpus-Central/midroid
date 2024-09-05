@@ -34,14 +34,14 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId) : 
    public override fun onNotificationAction(context: Context, intent: Intent) {
       q.h(var1, "context");
       q.h(var2, "intent");
-      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
+      val var5: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
       if (this.guildId != null) {
-         var3.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
+         var4.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
       }
 
-      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MuteAction", 0L, false, var3, true, 12, null);
+      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
+      com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "MuteAction", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {

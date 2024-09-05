@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 public data class TitleOnClick(action: String, targetChannelId: String, targetMessageId: String) {
@@ -71,16 +71,16 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.action;
-      val var1: java.lang.String = this.targetChannelId;
-      val var3: java.lang.String = this.targetMessageId;
+      val var3: java.lang.String = this.action;
+      val var2: java.lang.String = this.targetChannelId;
+      val var1: java.lang.String = this.targetMessageId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TitleOnClick(action=");
-      var4.append(var2);
-      var4.append(", targetChannelId=");
-      var4.append(var1);
-      var4.append(", targetMessageId=");
       var4.append(var3);
+      var4.append(", targetChannelId=");
+      var4.append(var2);
+      var4.append(", targetMessageId=");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }
@@ -97,9 +97,9 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
          val var0: TitleOnClick.$serializer = new TitleOnClick.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.contentnode.TitleOnClick", var0, 3);
-         var1.l("action", false);
-         var1.l("targetChannelId", false);
-         var1.l("targetMessageId", false);
+         var1.c("action", false);
+         var1.c("targetChannelId", false);
+         var1.c("targetMessageId", false);
          descriptor = var1;
       }
 
@@ -112,19 +112,17 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
+         var var5: java.lang.String;
          var var6: java.lang.String;
          val var10: java.lang.String;
-         var var12: java.lang.String;
          if (var9.p()) {
-            var12 = var9.m(var8, 0);
-            val var7: java.lang.String = var9.m(var8, 1);
+            var6 = var9.m(var8, 0);
+            var5 = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
             var2 = 7;
-            var6 = var12;
-            var12 = var7;
          } else {
             var6 = null;
-            var12 = null;
+            var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -138,7 +136,7 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
                            throw new n(var4);
                         }
 
-                        var12 = var9.m(var8, 2);
+                        var5 = var9.m(var8, 2);
                         var2 |= 4;
                      } else {
                         var11 = var9.m(var8, 1);
@@ -153,12 +151,12 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
                }
             }
 
-            var12 = var11;
-            var10 = var12;
+            var10 = var5;
+            var5 = var11;
          }
 
          var9.c(var8);
-         return new TitleOnClick(var2, var6, var12, var10, null);
+         return new TitleOnClick(var2, var6, var5, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TitleOnClick) {

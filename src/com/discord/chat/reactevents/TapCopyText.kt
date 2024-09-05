@@ -3,10 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,7 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
+import vj.w
 
 @f
 internal data class TapCopyText(text: CharSequence) : ReactEvent {
@@ -75,7 +75,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
          val var0: TapCopyText.$serializer = new TapCopyText.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapCopyText", var0, 1);
-         var1.l("text", false);
+         var1.c("text", false);
          descriptor = var1;
       }
 

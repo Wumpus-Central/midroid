@@ -8,7 +8,7 @@ import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import v2.a;
+import f3.a;
 
 public final class VoiceInviteEmbedBinding implements ViewBinding {
    public final TextView body;
@@ -27,18 +27,18 @@ public final class VoiceInviteEmbedBinding implements ViewBinding {
 
    public static VoiceInviteEmbedBinding bind(View var0) {
       int var1 = R.id.body;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var2 = (TextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.card;
-         CardView var5 = (CardView)a.a(var0, var1);
-         if (var5 != null) {
+         CardView var3 = (CardView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.join_cta;
-            DCDButton var2 = (DCDButton)a.a(var0, var1);
-            if (var2 != null) {
+            DCDButton var4 = (DCDButton)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.title;
-               TextView var4 = (TextView)a.a(var0, var1);
-               if (var4 != null) {
-                  return new VoiceInviteEmbedBinding(var0, var3, var5, var2, var4);
+               TextView var5 = (TextView)a.a(var0, var1);
+               if (var5 != null) {
+                  return new VoiceInviteEmbedBinding(var0, var2, var3, var4, var5);
                }
             }
          }

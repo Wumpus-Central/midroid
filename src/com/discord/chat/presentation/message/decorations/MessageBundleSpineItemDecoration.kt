@@ -12,7 +12,7 @@ import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.misc.utilities.measure.NativeViewMeasuringWrapper
 import com.discord.misc.utilities.size.SizeUtilsKt
 import kotlin.jvm.internal.q
-import mj.o
+import wj.o
 
 public class MessageBundleSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    public final var showThreadSpine: Boolean

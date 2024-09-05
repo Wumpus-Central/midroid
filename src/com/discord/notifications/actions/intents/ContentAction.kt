@@ -81,15 +81,15 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
-      val var3: java.util.Map = this.data;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ContentAction(tag=");
-      var1.append(var2);
-      var1.append(", data=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.tag;
+      val var2: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContentAction(tag=");
+      var3.append(var1);
+      var3.append(", data=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -98,9 +98,9 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());
 
-      for (Entry var4 : var3.entrySet()) {
-         var1.writeString(var4.getKey() as java.lang.String);
-         var1.writeString(var4.getValue() as java.lang.String);
+      for (Entry var5 : var3.entrySet()) {
+         var1.writeString(var5.getKey() as java.lang.String);
+         var1.writeString(var5.getValue() as java.lang.String);
       }
    }
 

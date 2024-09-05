@@ -3,12 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, port: Int, seq: Int, timeout: Int) : ReactEvent {
@@ -92,22 +92,22 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
    }
 
    public override fun toString(): String {
-      val var2: Int = this.connectionId;
+      val var4: Int = this.connectionId;
       val var5: java.lang.String = this.server;
       val var1: Int = this.port;
-      val var3: Int = this.seq;
-      val var4: Int = this.timeout;
+      val var2: Int = this.seq;
+      val var3: Int = this.timeout;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PingTimeoutCallbackEvent(connectionId=");
-      var6.append(var2);
+      var6.append(var4);
       var6.append(", server=");
       var6.append(var5);
       var6.append(", port=");
       var6.append(var1);
       var6.append(", seq=");
-      var6.append(var3);
+      var6.append(var2);
       var6.append(", timeout=");
-      var6.append(var4);
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }
@@ -126,11 +126,11 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media.engine.video.events.PingTimeoutCallbackEvent", var0, 5
          );
-         var1.l("connectionId", false);
-         var1.l("server", false);
-         var1.l("port", false);
-         var1.l("seq", false);
-         var1.l("timeout", false);
+         var1.c("connectionId", false);
+         var1.c("server", false);
+         var1.c("port", false);
+         var1.c("seq", false);
+         var1.c("timeout", false);
          descriptor = var1;
       }
 
@@ -151,11 +151,11 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
          if (var10.p()) {
             var6 = var10.i(var9, 0);
             var11 = var10.m(var9, 1);
-            var5 = var10.i(var9, 2);
-            var3 = var10.i(var9, 3);
-            val var2: Int = var10.i(var9, 4);
+            var4 = var10.i(var9, 2);
+            val var2: Int = var10.i(var9, 3);
+            var3 = var10.i(var9, 4);
             var7 = 31;
-            var4 = var2;
+            var5 = var2;
          } else {
             var11 = null;
             var var15: Boolean = true;
@@ -199,13 +199,13 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
                }
             }
 
-            var3 = var5;
-            var5 = var3;
+            var4 = var3;
+            var3 = var4;
             var7 = var12;
          }
 
          var10.c(var9);
-         return new PingTimeoutCallbackEvent(var7, var6, var11, var5, var3, var4, null);
+         return new PingTimeoutCallbackEvent(var7, var6, var11, var4, var5, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PingTimeoutCallbackEvent) {

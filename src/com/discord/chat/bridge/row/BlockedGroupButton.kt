@@ -1,9 +1,5 @@
 package com.discord.chat.bridge.row
 
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,6 +8,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
 
 @f
 public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
@@ -47,12 +47,12 @@ public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
    }
 
    public override fun toString(): String {
-      val var2: BlockedGroupButtonAction = this.action;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("BlockedGroupButton(action=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: BlockedGroupButtonAction = this.action;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BlockedGroupButton(action=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -67,7 +67,7 @@ public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
          val var0: BlockedGroupButton.$serializer = new BlockedGroupButton.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.row.BlockedGroupButton", var0, 1);
-         var1.l("action", false);
+         var1.c("action", false);
          descriptor = var1;
       }
 

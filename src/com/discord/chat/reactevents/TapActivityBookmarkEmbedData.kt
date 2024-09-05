@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class TapActivityBookmarkEmbedData(applicationId: String, channelId: String) : ReactEvent {
@@ -68,13 +68,13 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.applicationId;
-      val var3: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.applicationId;
+      val var1: java.lang.String = this.channelId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapActivityBookmarkEmbedData(applicationId=");
-      var2.append(var1);
-      var2.append(", channelId=");
       var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -91,8 +91,8 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
          val var0: TapActivityBookmarkEmbedData.$serializer = new TapActivityBookmarkEmbedData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapActivityBookmarkEmbedData", var0, 2);
-         var1.l("applicationId", false);
-         var1.l("channelId", false);
+         var1.c("applicationId", false);
+         var1.c("channelId", false);
          descriptor = var1;
       }
 

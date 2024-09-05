@@ -163,35 +163,35 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var10: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var8: java.util.List = this.attachments;
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var9: java.util.List = this.attachments;
       val var1: Int = this.constrainedWidth;
       val var4: Boolean = this.isForwardedContent;
-      val var3: Boolean = this.isShowingInlineForward;
+      val var5: Boolean = this.isShowingInlineForward;
       val var6: MessageState = this.messageState;
-      val var5: Boolean = this.shouldAutoPlayGif;
+      val var3: Boolean = this.shouldAutoPlayGif;
       val var2: Boolean = this.useOldForwardIcon;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("MediaMosaicAttachmentMessageAccessory(messageId=");
-      var9.append(var10);
-      var9.append(", channelId=");
-      var9.append(var7);
-      var9.append(", attachments=");
-      var9.append(var8);
-      var9.append(", constrainedWidth=");
-      var9.append(var1);
-      var9.append(", isForwardedContent=");
-      var9.append(var4);
-      var9.append(", isShowingInlineForward=");
-      var9.append(var3);
-      var9.append(", messageState=");
-      var9.append(var6);
-      var9.append(", shouldAutoPlayGif=");
-      var9.append(var5);
-      var9.append(", useOldForwardIcon=");
-      var9.append(var2);
-      var9.append(")");
-      return var9.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("MediaMosaicAttachmentMessageAccessory(messageId=");
+      var10.append(var7);
+      var10.append(", channelId=");
+      var10.append(var8);
+      var10.append(", attachments=");
+      var10.append(var9);
+      var10.append(", constrainedWidth=");
+      var10.append(var1);
+      var10.append(", isForwardedContent=");
+      var10.append(var4);
+      var10.append(", isShowingInlineForward=");
+      var10.append(var5);
+      var10.append(", messageState=");
+      var10.append(var6);
+      var10.append(", shouldAutoPlayGif=");
+      var10.append(var3);
+      var10.append(", useOldForwardIcon=");
+      var10.append(var2);
+      var10.append(")");
+      return var10.toString();
    }
 }

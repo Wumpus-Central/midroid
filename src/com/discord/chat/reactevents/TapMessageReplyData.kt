@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class TapMessageReplyData(channelId: String, originId: String) : ReactEvent {
@@ -69,14 +69,14 @@ internal data class TapMessageReplyData(channelId: String, originId: String) : R
 
    public override fun toString(): String {
       val var3: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.originId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapMessageReplyData(channelId=");
-      var2.append(var3);
-      var2.append(", originId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.originId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapMessageReplyData(channelId=");
+      var1.append(var3);
+      var1.append(", originId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -91,8 +91,8 @@ internal data class TapMessageReplyData(channelId: String, originId: String) : R
          val var0: TapMessageReplyData.$serializer = new TapMessageReplyData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapMessageReplyData", var0, 2);
-         var1.l("channelId", false);
-         var1.l("originId", false);
+         var1.c("channelId", false);
+         var1.c("originId", false);
          descriptor = var1;
       }
 

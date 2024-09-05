@@ -3,12 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.n0
 
 @f
 internal data class LongPressMessageEvent(messageId: String,
@@ -109,10 +109,10 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.messageId.hashCode();
+      val var4: Int = this.messageId.hashCode();
       val var5: Int = this.channelId.hashCode();
-      val var4: Int = Integer.hashCode(this.mediaIndex);
-      val var3: Int = this.mediaType.hashCode();
+      val var3: Int = Integer.hashCode(this.mediaIndex);
+      val var6: Int = this.mediaType.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.componentId == null) {
@@ -125,7 +125,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var6 * 31 + var5) * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((((var4 * 31 + var5) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var2;
    }
 
    fun serialize(): WritableMap {
@@ -133,27 +133,27 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
+      val var6: java.lang.String = this.messageId;
+      val var7: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var7: java.lang.String = this.mediaType;
-      val var4: java.lang.String = this.componentId;
-      val var6: Int = this.componentMediaIndex;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("LongPressMessageEvent(messageId=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", mediaIndex=");
-      var5.append(var1);
-      var5.append(", mediaType=");
-      var5.append(var7);
-      var5.append(", componentId=");
-      var5.append(var4);
-      var5.append(", componentMediaIndex=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.mediaType;
+      val var2: java.lang.String = this.componentId;
+      val var3: Int = this.componentMediaIndex;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LongPressMessageEvent(messageId=");
+      var4.append(var6);
+      var4.append(", channelId=");
+      var4.append(var7);
+      var4.append(", mediaIndex=");
+      var4.append(var1);
+      var4.append(", mediaType=");
+      var4.append(var5);
+      var4.append(", componentId=");
+      var4.append(var2);
+      var4.append(", componentMediaIndex=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -168,12 +168,12 @@ internal data class LongPressMessageEvent(messageId: String,
          val var0: LongPressMessageEvent.$serializer = new LongPressMessageEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.LongPressMessageEvent", var0, 6);
-         var1.l("messageId", false);
-         var1.l("channelId", false);
-         var1.l("mediaIndex", false);
-         var1.l("mediaType", false);
-         var1.l("componentId", false);
-         var1.l("componentMediaIndex", false);
+         var1.c("messageId", false);
+         var1.c("channelId", false);
+         var1.c("mediaIndex", false);
+         var1.c("mediaType", false);
+         var1.c("componentId", false);
+         var1.c("componentMediaIndex", false);
          descriptor = var1;
       }
 
@@ -186,71 +186,75 @@ internal data class LongPressMessageEvent(messageId: String,
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.b(var11);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
+         var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         var var9: java.lang.String;
+         val var10: java.lang.String;
          var var13: Any;
-         var var14: java.lang.String;
          if (var12.p()) {
-            var14 = var12.m(var11, 0);
+            var7 = var12.m(var11, 0);
             var8 = var12.m(var11, 1);
-            var3 = var12.i(var11, 2);
-            var7 = var12.m(var11, 3);
-            val var10: java.lang.String = var12.n(var11, 4, b2.a, null) as java.lang.String;
+            val var2: Int = var12.i(var11, 2);
+            var6 = var12.m(var11, 3);
+            var10 = var12.n(var11, 4, b2.a, null) as java.lang.String;
             var13 = var12.n(var11, 5, n0.a, null) as Int;
-            var2 = 63;
-            var9 = var14;
-            var14 = var10;
+            var4 = 63;
+            var3 = var2;
          } else {
-            var var4: Boolean = true;
+            var var15: Boolean = true;
             var3 = 0;
-            var9 = null;
+            var var9: java.lang.String = null;
             var8 = null;
             var7 = null;
-            var14 = null;
+            var6 = null;
             var13 = null;
-            var2 = 0;
+            var var14: Int = 0;
 
-            while (var4) {
+            while (var15) {
                val var5: Int = var12.o(var11);
                switch (var5) {
                   case -1:
-                     var4 = false;
+                     var15 = false;
                      break;
                   case 0:
                      var9 = var12.m(var11, 0);
-                     var2 |= 1;
+                     var14 |= 1;
                      break;
                   case 1:
                      var8 = var12.m(var11, 1);
-                     var2 |= 2;
+                     var14 |= 2;
                      break;
                   case 2:
                      var3 = var12.i(var11, 2);
-                     var2 |= 4;
+                     var14 |= 4;
                      break;
                   case 3:
                      var7 = var12.m(var11, 3);
-                     var2 |= 8;
+                     var14 |= 8;
                      break;
                   case 4:
-                     var14 = var12.n(var11, 4, b2.a, var14) as java.lang.String;
-                     var2 |= 16;
+                     var6 = var12.n(var11, 4, b2.a, var6) as java.lang.String;
+                     var14 |= 16;
                      break;
                   case 5:
                      var13 = var12.n(var11, 5, n0.a, var13) as Int;
-                     var2 |= 32;
+                     var14 |= 32;
                      break;
                   default:
                      throw new n(var5);
                }
             }
+
+            var10 = var6;
+            var6 = var7;
+            var7 = var9;
+            var4 = var14;
          }
 
          var12.c(var11);
-         return new LongPressMessageEvent(var2, var9, var8, var3, var7, var14, (Integer)var13, null);
+         return new LongPressMessageEvent(var4, var7, var8, var3, var6, var10, (Integer)var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressMessageEvent) {
@@ -263,7 +267,7 @@ internal data class LongPressMessageEvent(messageId: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

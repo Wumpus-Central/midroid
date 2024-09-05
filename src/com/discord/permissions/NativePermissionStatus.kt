@@ -1,10 +1,10 @@
 package com.discord.permissions
 
+import ck.a
 import com.facebook.react.bridge.ReadableNativeMap
 import java.util.Locale
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import sj.a
 
 public enum class NativePermissionStatus {
    AUTHORIZED,

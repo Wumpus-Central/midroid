@@ -1,6 +1,6 @@
 package com.discord.security_key;
 
-import cd.g;
+import md.g;
 
 // $VF: synthetic class
 public final class d implements g {

@@ -1,12 +1,6 @@
 package com.discord.notifications.api
 
 import com.discord.primitives.UserId
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +10,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.o1
 
 @f
 public data class DirectReplyUser(id: UserId, username: String? = ..., discriminator: String? = ..., avatar: String? = ...) : DirectReplyUser(
@@ -124,21 +124,21 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = UserId.toString-impl(this.id);
+      val var2: java.lang.String = UserId.toString-impl(this.id);
       val var3: java.lang.String = this.username;
       val var4: java.lang.String = this.discriminator;
-      val var2: java.lang.String = this.avatar;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("DirectReplyUser(id=");
-      var5.append(var1);
-      var5.append(", username=");
-      var5.append(var3);
-      var5.append(", discriminator=");
-      var5.append(var4);
-      var5.append(", avatar=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.avatar;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("DirectReplyUser(id=");
+      var1.append(var2);
+      var1.append(", username=");
+      var1.append(var3);
+      var1.append(", discriminator=");
+      var1.append(var4);
+      var1.append(", avatar=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -153,16 +153,16 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
          val var0: DirectReplyUser.$serializer = new DirectReplyUser.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.notifications.api.DirectReplyUser", var0, 4);
-         var1.l("id", false);
-         var1.l("username", true);
-         var1.l("discriminator", true);
-         var1.l("avatar", true);
+         var1.c("id", false);
+         var1.c("username", true);
+         var1.c("discriminator", true);
+         var1.c("avatar", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: b2 = b2.a;
-         return new KSerializer[]{UserId.$serializer.INSTANCE, a.u(b2.a), a.u(var2), a.u(var2)};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{com.discord.primitives.UserId..serializer.INSTANCE, a.u(b2.a), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): DirectReplyUser {
@@ -176,7 +176,7 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
          var var7: java.lang.String;
          var var12: java.lang.String;
          if (var5) {
-            var8 = var10.y(var9, 0, UserId.$serializer.INSTANCE, null) as UserId;
+            var8 = var10.y(var9, 0, com.discord.primitives.UserId..serializer.INSTANCE, null) as UserId;
             val var11: b2 = b2.a;
             var7 = var10.n(var9, 1, b2.a, null) as java.lang.String;
             var6 = var10.n(var9, 2, var11, null) as java.lang.String;
@@ -210,7 +210,7 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.y(var9, 0, UserId.$serializer.INSTANCE, var8) as UserId;
+                     var8 = var10.y(var9, 0, com.discord.primitives.UserId..serializer.INSTANCE, var8) as UserId;
                      var2 |= 1;
                   }
                } else {
@@ -233,7 +233,7 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

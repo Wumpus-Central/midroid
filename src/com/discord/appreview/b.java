@@ -1,6 +1,6 @@
 package com.discord.appreview;
 
-import cd.e;
+import md.e;
 
 // $VF: synthetic class
 public final class b implements e {

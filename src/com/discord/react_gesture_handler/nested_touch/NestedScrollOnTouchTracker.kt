@@ -8,11 +8,11 @@ import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
+import dn.g
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
-import mj.o
-import tm.g
+import wj.o
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -81,11 +81,11 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   if (var32 != null) {
                      var var7: Int = (int)var2.getX() - var19.getTotalPaddingLeft() + var19.getScrollX();
                      val var30: Int = var19.getLayout().getLineForVertical((int)var2.getY() - var19.getTotalPaddingTop() + var19.getScrollY());
-                     val var6: Float = var19.getLayout().getLineRight(var30);
-                     val var5: Float = var19.getLayout().getLineLeft(var30);
-                     val var4: Float = var7;
-                     if (!(var7 > var6) && (var7 < 0 || !(var7 < var5))) {
-                        var7 = var19.getLayout().getOffsetForHorizontal(var30, var4);
+                     val var5: Float = var19.getLayout().getLineRight(var30);
+                     val var4: Float = var19.getLayout().getLineLeft(var30);
+                     val var6: Float = var7;
+                     if (!(var7 > var5) && (var7 < 0 || !(var7 < var4))) {
+                        var7 = var19.getLayout().getOffsetForHorizontal(var30, var6);
                         var14 = var32.getSpans(var7, var7, NestedClickableSpan.class);
                         q.g(var14, "getSpans(...)");
                         break label157;
@@ -111,7 +111,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                      var15 = var34;
                   } else {
                      var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var34).getTouchPriority();
-                     val var20: o = new IntRange(1, var28).o();
+                     val var20: o = new IntRange(1, var28).n();
 
                      while (true) {
                         var15 = var34;
@@ -194,12 +194,12 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:100)
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)

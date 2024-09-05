@@ -1,9 +1,5 @@
 package com.discord.app_database
 
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import java.util.Arrays
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -13,6 +9,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
 
 @f
 public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVersions: Any) {
@@ -61,15 +61,15 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = Arrays.toString((Object[])this.guildVersions);
+      val var3: java.lang.String = Arrays.toString((Object[])this.guildVersions);
       val var1: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("DatabaseVersions(guildVersions=");
-      var3.append(var2);
-      var3.append(", nonGuildVersions=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("DatabaseVersions(guildVersions=");
+      var2.append(var3);
+      var2.append(", nonGuildVersions=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -84,8 +84,8 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
          val var0: DatabaseVersions.$serializer = new DatabaseVersions.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.app_database.DatabaseVersions", var0, 2);
-         var1.l("guildVersions", false);
-         var1.l("nonGuildVersions", false);
+         var1.c("guildVersions", false);
+         var1.c("nonGuildVersions", false);
          descriptor = var1;
       }
 

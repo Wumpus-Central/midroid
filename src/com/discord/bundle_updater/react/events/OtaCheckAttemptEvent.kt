@@ -6,10 +6,6 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -19,7 +15,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
+import vj.w
 
 @f
 internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent {
@@ -55,7 +55,7 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
    }
 
    public open fun serialize(): WritableNativeMap {
-      val var2: java.lang.Iterable = this.metrics;
+      val var2: java.util.List = this.metrics;
       val var1: ArrayList = new ArrayList(i.u(this.metrics, 10));
       val var3: java.util.Iterator = var2.iterator();
 
@@ -67,12 +67,12 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.metrics;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OtaCheckAttemptEvent(metrics=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.metrics;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OtaCheckAttemptEvent(metrics=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -89,7 +89,7 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.bundle_updater.react.events.OtaCheckAttemptEvent", var0, 1
          );
-         var1.l("metrics", false);
+         var1.c("metrics", false);
          descriptor = var1;
       }
 

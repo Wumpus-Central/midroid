@@ -66,8 +66,8 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.items.hashCode();
-      val var3: Int = this.action.hashCode();
+      val var3: Int = this.items.hashCode();
+      val var2: Int = this.action.hashCode();
       val var1: Int;
       if (this.listOperations == null) {
          var1 = 0;
@@ -75,24 +75,24 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
          var1 = this.listOperations.hashCode();
       }
 
-      return ((var2 * 31 + var3) * 31 + var1) * 31 + Integer.hashCode(this.changesetUpdateId);
+      return ((var3 * 31 + var2) * 31 + var1) * 31 + Integer.hashCode(this.changesetUpdateId);
    }
 
    public override fun toString(): String {
-      val var5: java.util.List = this.items;
-      val var3: ChatListAction = this.action;
-      val var2: java.util.List = this.listOperations;
+      val var3: java.util.List = this.items;
+      val var2: ChatListAction = this.action;
+      val var4: java.util.List = this.listOperations;
       val var1: Int = this.changesetUpdateId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChatListUpdate(items=");
-      var4.append(var5);
-      var4.append(", action=");
-      var4.append(var3);
-      var4.append(", listOperations=");
-      var4.append(var2);
-      var4.append(", changesetUpdateId=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ChatListUpdate(items=");
+      var5.append(var3);
+      var5.append(", action=");
+      var5.append(var2);
+      var5.append(", listOperations=");
+      var5.append(var4);
+      var5.append(", changesetUpdateId=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 }

@@ -62,17 +62,17 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
       kotlin.jvm.internal.q.h(var5, "messageId");
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
-         val var10: TextView = this.binding.altRemixTag;
+         val var11: TextView = this.binding.altRemixTag;
          var var9: Int;
          if (var2 != null) {
             var9 = var2;
          } else {
-            val var11: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var11, "getContext(...)");
-            var9 = ColorUtilsKt.getColorCompat(var11, color.white);
+            val var10: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var10, "getContext(...)");
+            var9 = ColorUtilsKt.getColorCompat(var10, color.white);
          }
 
-         var10.setTextColor(var9);
+         var11.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
          kotlin.jvm.internal.q.g(this.binding.remixIcon, "remixIcon");
          if (var2 != null) {

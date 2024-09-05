@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 public data class WebhookNameOnClick(action: String, messageReference: MessageReference? = null) {
@@ -67,15 +67,15 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.action;
+      val var2: java.lang.String = this.action;
       val var1: MessageReference = this.messageReference;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("WebhookNameOnClick(action=");
-      var2.append(var3);
-      var2.append(", messageReference=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("WebhookNameOnClick(action=");
+      var3.append(var2);
+      var3.append(", messageReference=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -90,8 +90,8 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
          val var0: WebhookNameOnClick.$serializer = new WebhookNameOnClick.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.contentnode.WebhookNameOnClick", var0, 2);
-         var1.l("action", false);
-         var1.l("messageReference", true);
+         var1.c("action", false);
+         var1.c("messageReference", true);
          descriptor = var1;
       }
 
@@ -150,7 +150,7 @@ public data class WebhookNameOnClick(action: String, messageReference: MessageRe
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

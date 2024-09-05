@@ -7,7 +7,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
    private final val entry: Entry
@@ -21,7 +21,7 @@ internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
    }
 
    public open fun serialize(): WritableMap {
-      val var3: Pair = w.a("section", this.entry.getSection-sZRFyWU());
+      val var2: Pair = w.a("section", this.entry.getSection-sZRFyWU());
       var var1: Int = 0;
       if (this.entry is FastestListSections.Entry.SectionItem) {
          var1 = (this.entry as FastestListSections.Entry.SectionItem).getItem-JXkbwXs();
@@ -29,7 +29,7 @@ internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
 
       return NativeMapExtensionsKt.nativeMapOf(
          new Pair[]{
-            var3,
+            var2,
             w.a("item", var1),
             w.a("isSectionHeader", this.entry is FastestListSections.Entry.SectionHeader),
             w.a("isSectionFooter", this.entry is FastestListSections.Entry.SectionFooter),

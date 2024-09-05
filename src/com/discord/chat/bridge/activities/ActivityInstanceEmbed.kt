@@ -2,14 +2,6 @@ package com.discord.chat.bridge.activities
 
 import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.h
-import gn.n0
-import gn.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +11,14 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.h
+import qn.n0
+import qn.o1
 
 @f
 public data class ActivityInstanceEmbed(applicationId: ApplicationId,
@@ -219,36 +219,36 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var10: java.lang.String = this.instanceId;
-      val var5: java.lang.String = this.statusText;
-      val var8: java.util.List = this.participantAvatarUris;
-      val var3: Boolean = this.buttonDisabled;
-      val var4: java.lang.String = this.buttonLabelText;
+      val var9: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var10: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.instanceId;
+      val var7: java.lang.String = this.statusText;
+      val var6: java.util.List = this.participantAvatarUris;
+      val var2: Boolean = this.buttonDisabled;
+      val var8: java.lang.String = this.buttonLabelText;
       val var1: Int = this.buttonBackgroundColor;
-      val var2: Boolean = this.submitting;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ActivityInstanceEmbed(applicationId=");
-      var9.append(var6);
-      var9.append(", channelId=");
-      var9.append(var7);
-      var9.append(", instanceId=");
-      var9.append(var10);
-      var9.append(", statusText=");
-      var9.append(var5);
-      var9.append(", participantAvatarUris=");
-      var9.append(var8);
-      var9.append(", buttonDisabled=");
-      var9.append(var3);
-      var9.append(", buttonLabelText=");
-      var9.append(var4);
-      var9.append(", buttonBackgroundColor=");
-      var9.append(var1);
-      var9.append(", submitting=");
-      var9.append(var2);
-      var9.append(")");
-      return var9.toString();
+      val var3: Boolean = this.submitting;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ActivityInstanceEmbed(applicationId=");
+      var4.append(var9);
+      var4.append(", channelId=");
+      var4.append(var10);
+      var4.append(", instanceId=");
+      var4.append(var5);
+      var4.append(", statusText=");
+      var4.append(var7);
+      var4.append(", participantAvatarUris=");
+      var4.append(var6);
+      var4.append(", buttonDisabled=");
+      var4.append(var2);
+      var4.append(", buttonLabelText=");
+      var4.append(var8);
+      var4.append(", buttonBackgroundColor=");
+      var4.append(var1);
+      var4.append(", submitting=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -263,22 +263,32 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          val var0: ActivityInstanceEmbed.$serializer = new ActivityInstanceEmbed.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.activities.ActivityInstanceEmbed", var0, 9);
-         var1.l("applicationId", false);
-         var1.l("channelId", false);
-         var1.l("instanceId", false);
-         var1.l("statusText", true);
-         var1.l("participantAvatarUris", true);
-         var1.l("buttonDisabled", false);
-         var1.l("buttonLabelText", false);
-         var1.l("buttonBackgroundColor", false);
-         var1.l("submitting", true);
+         var1.c("applicationId", false);
+         var1.c("channelId", false);
+         var1.c("instanceId", false);
+         var1.c("statusText", true);
+         var1.c("participantAvatarUris", true);
+         var1.c("buttonDisabled", false);
+         var1.c("buttonLabelText", false);
+         var1.c("buttonBackgroundColor", false);
+         var1.c("submitting", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var5: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
-         val var3: b2 = b2.a;
-         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var5[4]), h.a, var3, n0.a, h.a};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{
+            com.discord.primitives.ApplicationId..serializer.INSTANCE,
+            com.discord.primitives.ChannelId..serializer.INSTANCE,
+            b2.a,
+            a.u(b2.a),
+            a.u(var5[4]),
+            h.a,
+            var1,
+            n0.a,
+            h.a
+         };
       }
 
       public open fun deserialize(decoder: Decoder): ActivityInstanceEmbed {
@@ -300,8 +310,8 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          var var16: java.util.List;
          val var17: Any;
          if (var11) {
-            var17 = var19.y(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
-            var14 = var19.y(var18, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var14 = var19.y(var18, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, null) as ApplicationId;
+            var17 = var19.y(var18, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null) as ChannelId;
             var15 = var19.m(var18, 2);
             var13 = var19.n(var18, 3, b2.a, null) as java.lang.String;
             val var21: java.util.List = var19.n(var18, 4, var20[4], null) as java.util.List;
@@ -332,12 +342,12 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                         var6 = false;
                         break;
                      case 0:
-                        var22 = var19.y(var18, 0, ApplicationId.$serializer.INSTANCE, var22) as ApplicationId;
+                        var22 = var19.y(var18, 0, com.discord.primitives.ApplicationId..serializer.INSTANCE, var22) as ApplicationId;
                         var2 |= 1;
                         var3 = 7;
                         break;
                      case 1:
-                        var14 = var19.y(var18, 1, ChannelId.$serializer.INSTANCE, var14) as ChannelId;
+                        var14 = var19.y(var18, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var14) as ChannelId;
                         var2 |= 2;
                         var3 = 7;
                         var8 = 6;
@@ -386,12 +396,13 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
             var2 = var7;
             var13 = var15;
             var15 = var13;
-            var17 = var22;
+            var17 = var14;
+            var14 = var22;
          }
 
          var19.c(var18);
          return new ActivityInstanceEmbed(
-            var3, (ApplicationId)var17, (ChannelId)var14, var15, var13, var16, (boolean)var5, var12, var2, (boolean)var4, null, null
+            var3, (ApplicationId)var14, (ChannelId)var17, var15, var13, var16, (boolean)var5, var12, var2, (boolean)var4, null, null
          );
       }
 
@@ -405,7 +416,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

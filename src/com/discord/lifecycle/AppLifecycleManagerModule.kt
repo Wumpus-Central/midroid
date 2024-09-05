@@ -7,7 +7,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule, LifecycleEventListener {
    private final val reactEvents: ReactEvents
@@ -24,10 +24,10 @@ public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : 
    }
 
    public open fun onHostDestroy() {
-      val var1: ReactEvents = this.reactEvents;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.emitModuleEvent(var2, new OnHostDestroyEvent());
+      val var2: ReactEvents = this.reactEvents;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.emitModuleEvent(var1, new OnHostDestroyEvent());
    }
 
    public open fun onHostPause() {

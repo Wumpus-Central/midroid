@@ -3,12 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeaking: Int) : ReactEvent {
@@ -75,18 +75,18 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public override fun toString(): String {
-      val var2: Int = this.connectionId;
-      val var3: java.lang.String = this.userId;
-      val var1: Int = this.isSpeaking;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UserSpeakingEvent(connectionId=");
-      var4.append(var2);
-      var4.append(", userId=");
-      var4.append(var3);
-      var4.append(", isSpeaking=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: Int = this.connectionId;
+      val var4: java.lang.String = this.userId;
+      val var2: Int = this.isSpeaking;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserSpeakingEvent(connectionId=");
+      var3.append(var1);
+      var3.append(", userId=");
+      var3.append(var4);
+      var3.append(", isSpeaking=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -101,9 +101,9 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          val var0: UserSpeakingEvent.$serializer = new UserSpeakingEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.media.engine.video.events.UserSpeakingEvent", var0, 3);
-         var1.l("connectionId", false);
-         var1.l("userId", false);
-         var1.l("isSpeaking", false);
+         var1.c("connectionId", false);
+         var1.c("userId", false);
+         var1.c("isSpeaking", false);
          descriptor = var1;
       }
 
@@ -122,8 +122,8 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          if (var8.p()) {
             var4 = var8.i(var7, 0);
             var9 = var8.m(var7, 1);
-            var2 = var8.i(var7, 2);
-            var3 = 7;
+            var3 = var8.i(var7, 2);
+            var2 = 7;
          } else {
             var9 = null;
             var var5: Boolean = true;
@@ -154,13 +154,10 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                   var5 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var8.c(var7);
-         return new UserSpeakingEvent(var3, var4, var9, var2, null);
+         return new UserSpeakingEvent(var2, var4, var9, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

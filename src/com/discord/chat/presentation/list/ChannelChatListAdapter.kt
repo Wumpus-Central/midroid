@@ -21,7 +21,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
-import lj.p
+import vj.p
 
 public class ChannelChatListAdapter(doLayout: () -> Unit,
       enableAnimations: () -> Unit,
@@ -56,11 +56,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var4: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var4);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var5);
+         throw new IllegalStateException(var4.toString().toString());
       } else {
          access$getUpdateQueue$p(this).add(var1);
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
@@ -106,10 +106,9 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
       var var9: java.util.List = var6;
       if (var3) {
-         val var15: java.util.Collection = var6;
          val var10: PortalViewChatListItem = this.portalChatListItem;
          q.e(this.portalChatListItem);
-         var9 = i.z0(var15, var10);
+         var9 = i.z0(var6, var10);
       }
 
       this.setChatListItems$chat_release(var9);
@@ -206,7 +205,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             var8 = i.W(this.getChatListItems$chat_release(), 1);
          }
       } else {
-         val var13: java.util.Collection = this.getChatListItems$chat_release();
+         val var13: java.util.List = this.getChatListItems$chat_release();
          val var9: PortalViewChatListItem = var1.getPortalChatListItem();
          q.e(var9);
          var8 = i.z0(var13, var9);
@@ -258,18 +257,18 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
          access$setProcessNextUpdateJob$p(
             this,
-            tm.g.d(
+            dn.g.d(
                kotlinx.coroutines.g.b(),
                null,
                null,
                new Function2(this, null)// $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.StackOverflowError
-      //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-      //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-      //   at java.base/java.util.HashMap.get(HashMap.java:564)
-      //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+      //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+      //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1425,7 +1424,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = sj.a.a(var0);
+         $ENTRIES = ck.a.a(var0);
       }
 
       @JvmStatic

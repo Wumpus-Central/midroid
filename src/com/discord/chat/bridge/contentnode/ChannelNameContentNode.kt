@@ -1,11 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.ChannelType
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +9,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 public data class ChannelNameContentNode(channelType: ChannelType? = null, iconType: String, icon: String? = null, content: List<ContentNode>) : ContentNode {
@@ -96,19 +96,19 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var1: ChannelType = this.channelType;
-      val var5: java.lang.String = this.iconType;
-      val var2: java.lang.String = this.icon;
-      val var4: java.util.List = this.content;
+      val var5: ChannelType = this.channelType;
+      val var4: java.lang.String = this.iconType;
+      val var1: java.lang.String = this.icon;
+      val var2: java.util.List = this.content;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ChannelNameContentNode(channelType=");
-      var3.append(var1);
-      var3.append(", iconType=");
       var3.append(var5);
-      var3.append(", icon=");
-      var3.append(var2);
-      var3.append(", content=");
+      var3.append(", iconType=");
       var3.append(var4);
+      var3.append(", icon=");
+      var3.append(var1);
+      var3.append(", content=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -125,10 +125,10 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
          val var0: ChannelNameContentNode.$serializer = new ChannelNameContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("channel", var0, 4);
-         var1.l("channelType", true);
-         var1.l("iconType", false);
-         var1.l("icon", true);
-         var1.l("content", false);
+         var1.c("channelType", true);
+         var1.c("iconType", false);
+         var1.c("icon", true);
+         var1.c("content", false);
          descriptor = var1;
       }
 
@@ -206,7 +206,7 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

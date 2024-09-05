@@ -11,7 +11,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.polls.PollMediaView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import v2.a;
+import f3.a;
 
 public final class PollImageOnlyAnswerViewBinding implements ViewBinding {
    public final SimpleDraweeView avatar;
@@ -38,27 +38,27 @@ public final class PollImageOnlyAnswerViewBinding implements ViewBinding {
 
    public static PollImageOnlyAnswerViewBinding bind(View var0) {
       int var1 = R.id.avatar;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.avatar_placeholder;
-         Space var3 = (Space)a.a(var0, var1);
-         if (var3 != null) {
+         Space var4 = (Space)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.image;
-            PollMediaView var6 = (PollMediaView)a.a(var0, var1);
-            if (var6 != null) {
+            PollMediaView var3 = (PollMediaView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.info_bar;
-               Flow var4 = (Flow)a.a(var0, var1);
-               if (var4 != null) {
+               Flow var8 = (Flow)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.selected_icon;
-                  SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var7 != null) {
+                  SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var8 = (TextView)a.a(var0, var1);
-                     if (var8 != null) {
+                     TextView var2 = (TextView)a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var5 = (TextView)a.a(var0, var1);
-                        if (var5 != null) {
-                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var2, var3, var6, var4, var7, var8, var5);
+                        TextView var7 = (TextView)a.a(var0, var1);
+                        if (var7 != null) {
+                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var5, var4, var3, var8, var6, var2, var7);
                         }
                      }
                   }

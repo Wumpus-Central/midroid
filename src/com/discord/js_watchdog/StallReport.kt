@@ -3,12 +3,6 @@ package com.discord.js_watchdog
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.n0
 
 @f
 public data class StallReport(stallTime: Int, sessionId: String, trace: String?) : ReactEvent {
@@ -67,8 +67,8 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.stallTime);
-      val var3: Int = this.sessionId.hashCode();
+      val var3: Int = Integer.hashCode(this.stallTime);
+      val var2: Int = this.sessionId.hashCode();
       val var1: Int;
       if (this.trace == null) {
          var1 = 0;
@@ -76,7 +76,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var1 = this.trace.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    fun serialize(): WritableMap {
@@ -85,15 +85,15 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var2: java.lang.String = this.sessionId;
-      val var4: java.lang.String = this.trace;
+      val var4: java.lang.String = this.sessionId;
+      val var2: java.lang.String = this.trace;
       val var3: StringBuilder = new StringBuilder();
       var3.append("StallReport(stallTime=");
       var3.append(var1);
       var3.append(", sessionId=");
-      var3.append(var2);
-      var3.append(", trace=");
       var3.append(var4);
+      var3.append(", trace=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -110,9 +110,9 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          val var0: StallReport.$serializer = new StallReport.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.js_watchdog.StallReport", var0, 3);
-         var1.l("stallTime", false);
-         var1.l("sessionId", false);
-         var1.l("trace", false);
+         var1.c("stallTime", false);
+         var1.c("sessionId", false);
+         var1.c("trace", false);
          descriptor = var1;
       }
 
@@ -179,7 +179,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

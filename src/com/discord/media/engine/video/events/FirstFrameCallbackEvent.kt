@@ -3,13 +3,6 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.x0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,6 +11,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.x0
+import qn.g0.a
 
 @f
 internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String) : ReactEvent {
@@ -117,10 +117,10 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media.engine.video.events.FirstFrameCallbackEvent", var0, 4
          );
-         var1.l("connectionId", false);
-         var1.l("userId", false);
-         var1.l("ssrc", false);
-         var1.l("streamId", false);
+         var1.c("connectionId", false);
+         var1.c("userId", false);
+         var1.c("ssrc", false);
+         var1.c("streamId", false);
          descriptor = var1;
       }
 
@@ -132,27 +132,28 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.b(var10);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: Long;
          var var8: java.lang.String;
          val var9: java.lang.String;
          if (var11.p()) {
-            var3 = var11.i(var10, 0);
+            val var2: Int = var11.i(var10, 0);
             var9 = var11.m(var10, 1);
             var6 = var11.f(var10, 2);
             val var12: java.lang.String = var11.m(var10, 3);
-            var2 = 15;
+            var3 = 15;
+            var4 = var2;
             var8 = var12;
          } else {
             var var13: java.lang.String = null;
-            var var4: Boolean = true;
+            var var16: Boolean = true;
             var6 = 0L;
             var8 = null;
             var3 = 0;
-            var2 = 0;
+            var var14: Int = 0;
 
-            while (var4) {
+            while (var16) {
                val var5: Int = var11.o(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -163,29 +164,31 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                            }
 
                            var8 = var11.m(var10, 3);
-                           var2 |= 8;
+                           var14 |= 8;
                         } else {
                            var6 = var11.f(var10, 2);
-                           var2 |= 4;
+                           var14 |= 4;
                         }
                      } else {
                         var13 = var11.m(var10, 1);
-                        var2 |= 2;
+                        var14 |= 2;
                      }
                   } else {
                      var3 = var11.i(var10, 0);
-                     var2 |= 1;
+                     var14 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var16 = false;
                }
             }
 
             var9 = var13;
+            var4 = var3;
+            var3 = var14;
          }
 
          var11.c(var10);
-         return new FirstFrameCallbackEvent(var2, var3, var9, var6, var8, null);
+         return new FirstFrameCallbackEvent(var3, var4, var9, var6, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {

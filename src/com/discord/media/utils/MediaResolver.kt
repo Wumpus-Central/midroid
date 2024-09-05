@@ -6,6 +6,9 @@ import android.content.Context
 import android.graphics.Bitmap.CompressFormat
 import android.net.Uri
 import com.discord.crash_reporting.CrashReporting
+import dj.e
+import dn.g
+import dn.j0
 import id.zelory.compressor.constraint.Compression
 import java.io.File
 import kotlin.coroutines.Continuation
@@ -13,12 +16,9 @@ import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import lj.s
-import lj.w
-import mj.r
-import ti.e
-import tm.g
-import tm.j0
+import vj.s
+import vj.w
+import wj.r
 
 public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
    private final val context: Context
@@ -57,11 +57,11 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1084,7 +1084,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
    ,
          var1
       );
-      return if (var2 === rj.b.f()) var2 else Unit.a;
+      return if (var2 === bk.b.f()) var2 else Unit.a;
    }
 
    private suspend fun copyToFile(uri: Uri, targetFile: File? = ...): Uri {
@@ -1093,11 +1093,11 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
          new Function2(var2, this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2179,7 +2179,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 4b: aload 9
       // 4d: invokevirtual android/os/ParcelFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 50: aload 10
-      // 52: invokestatic xn/b.a (Ljava/io/FileDescriptor;Ljava/io/File;)Z
+      // 52: invokestatic ho/b.a (Ljava/io/FileDescriptor;Ljava/io/File;)Z
       // 55: istore 6
       // 57: iload 6
       // 59: ifeq 7a
@@ -2286,7 +2286,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       var var19: Any;
       label57: {
          var19 = ((<unrepresentable>)var14).result;
-         val var9: Any = rj.b.f();
+         val var9: Any = bk.b.f();
          if (((<unrepresentable>)var14).label != 0) {
             if (((<unrepresentable>)var14).label == 1) {
                var1 = ((<unrepresentable>)var14).L$1 as Uri;
@@ -2322,9 +2322,9 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
             }
 
             if (var17) {
-               var19 = si.a.a;
-               val var11: Context = this.context;
-               val var23: Function1 = new Function1(var2, var18, this, var1) {
+               var19 = cj.a.a;
+               val var23: Context = this.context;
+               val var11: Function1 = new Function1(var2, var18, this, var1) {
                   final int $compressionQuality;
                   final Uri $inputUri;
                   final boolean $shouldResize;
@@ -2341,7 +2341,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                   public final void invoke(Compression var1) {
                      q.h(var1, "$this$compress");
                      var1.a(new QualityAndResolutionConstraint(this.$compressionQuality, this.$shouldResize));
-                     ti.g.a(var1, CompressFormat.JPEG);
+                     dj.g.a(var1, CompressFormat.JPEG);
                      e.a(
                         var1,
                         ContentResolverUtils.createTempFile$default(
@@ -2353,7 +2353,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                ((<unrepresentable>)var14).L$0 = this;
                ((<unrepresentable>)var14).L$1 = var1;
                ((<unrepresentable>)var14).label = 1;
-               var19 = si.a.b((si.a)var19, var11, var1, null, var23, (Continuation)var14, 4, null);
+               var19 = cj.a.b((cj.a)var19, var23, var1, null, var11, (Continuation)var14, 4, null);
                if (var19 === var9) {
                   return var9;
                }
@@ -2425,7 +2425,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 03f: aload 11
       // 041: getfield com/discord/media/utils/MediaResolver$handleVideo$1.result Ljava/lang/Object;
       // 044: astore 4
-      // 046: invokestatic rj/b.f ()Ljava/lang/Object;
+      // 046: invokestatic bk/b.f ()Ljava/lang/Object;
       // 049: astore 13
       // 04b: aload 11
       // 04d: getfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
@@ -2442,7 +2442,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 065: bipush 3
       // 066: if_icmpne 071
       // 069: aload 4
-      // 06b: invokestatic lj/s.b (Ljava/lang/Object;)V
+      // 06b: invokestatic vj/s.b (Ljava/lang/Object;)V
       // 06e: goto 320
       // 071: new java/lang/IllegalStateException
       // 074: dup
@@ -2450,7 +2450,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 078: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
       // 07b: athrow
       // 07c: aload 4
-      // 07e: invokestatic lj/s.b (Ljava/lang/Object;)V
+      // 07e: invokestatic vj/s.b (Ljava/lang/Object;)V
       // 081: goto 2f5
       // 084: aload 11
       // 086: getfield com/discord/media/utils/MediaResolver$handleVideo$1.L$4 Ljava/lang/Object;
@@ -2473,7 +2473,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 0b0: checkcast com/discord/media/utils/MediaResolver
       // 0b3: astore 1
       // 0b4: aload 4
-      // 0b6: invokestatic lj/s.b (Ljava/lang/Object;)V
+      // 0b6: invokestatic vj/s.b (Ljava/lang/Object;)V
       // 0b9: aload 4
       // 0bb: astore 12
       // 0bd: goto 205
@@ -2490,7 +2490,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 0d1: astore 1
       // 0d2: goto 261
       // 0d5: aload 4
-      // 0d7: invokestatic lj/s.b (Ljava/lang/Object;)V
+      // 0d7: invokestatic vj/s.b (Ljava/lang/Object;)V
       // 0da: getstatic com/discord/media/utils/ContentResolverUtils.INSTANCE Lcom/discord/media/utils/ContentResolverUtils;
       // 0dd: aload 0
       // 0de: invokespecial com/discord/media/utils/MediaResolver.getResolver ()Landroid/content/ContentResolver;
@@ -2505,7 +2505,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 0ef: aload 4
       // 0f1: ldc "fromFile(this)"
       // 0f3: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0f6: getstatic lj/r.k Llj/r$a;
+      // 0f6: getstatic vj/r.k Lvj/r$a;
       // 0f9: astore 7
       // 0fb: new com/discord/media/utils/DiscordVideoMediaSource
       // 0fe: astore 7
@@ -2517,47 +2517,47 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 10a: aload 2
       // 10b: invokespecial com/discord/media/utils/DiscordVideoMediaSource.<init> (Landroid/content/Context;Landroid/net/Uri;Landroid/net/Uri;Lcom/discord/media/utils/VideoCompressionQuality;)V
       // 10e: aload 7
-      // 110: invokestatic lj/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 110: invokestatic vj/r.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 113: astore 2
       // 114: goto 125
       // 117: astore 2
-      // 118: getstatic lj/r.k Llj/r$a;
+      // 118: getstatic vj/r.k Lvj/r$a;
       // 11b: astore 7
       // 11d: aload 2
-      // 11e: invokestatic lj/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
-      // 121: invokestatic lj/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 11e: invokestatic vj/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
+      // 121: invokestatic vj/r.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 124: astore 2
       // 125: aload 2
-      // 126: invokestatic lj/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
-      // 129: astore 9
-      // 12b: aload 9
+      // 126: invokestatic vj/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
+      // 129: astore 8
+      // 12b: aload 8
       // 12d: ifnull 172
-      // 130: aload 9
+      // 130: aload 8
       // 132: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
-      // 135: astore 7
+      // 135: astore 9
       // 137: new java/lang/StringBuilder
       // 13a: dup
       // 13b: invokespecial java/lang/StringBuilder.<init> ()V
-      // 13e: astore 8
-      // 140: aload 8
+      // 13e: astore 7
+      // 140: aload 7
       // 142: ldc_w "["
       // 145: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 148: pop
-      // 149: aload 8
-      // 14b: aload 9
+      // 149: aload 7
+      // 14b: aload 8
       // 14d: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 150: pop
-      // 151: aload 8
+      // 151: aload 7
       // 153: ldc_w "] Error creating source: "
       // 156: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 159: pop
-      // 15a: aload 8
-      // 15c: aload 7
+      // 15a: aload 7
+      // 15c: aload 9
       // 15e: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 161: pop
       // 162: aload 0
       // 163: ldc_w "Media source error"
-      // 166: aload 8
+      // 166: aload 7
       // 168: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 16b: aload 6
       // 16d: aload 4
@@ -2565,7 +2565,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 172: aload 2
       // 173: astore 7
       // 175: aload 2
-      // 176: invokestatic lj/r.g (Ljava/lang/Object;)Z
+      // 176: invokestatic vj/r.g (Ljava/lang/Object;)Z
       // 179: ifeq 17f
       // 17c: aconst_null
       // 17d: astore 7
@@ -2592,10 +2592,10 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 1a4: aload 0
       // 1a5: aload 1
       // 1a6: invokespecial com/discord/media/utils/MediaResolver.getRequestId (Landroid/net/Uri;)Ljava/lang/String;
-      // 1a9: astore 7
+      // 1a9: astore 8
       // 1ab: aload 0
       // 1ac: getfield com/discord/media/utils/MediaResolver.context Landroid/content/Context;
-      // 1af: astore 8
+      // 1af: astore 7
       // 1b1: new com/discord/media/utils/MediaResolver$handleVideo$2$compressedUri$1
       // 1b4: astore 1
       // 1b5: aload 1
@@ -2621,8 +2621,8 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 1df: bipush 1
       // 1e0: putfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
       // 1e3: aload 2
-      // 1e4: aload 7
-      // 1e6: aload 8
+      // 1e4: aload 8
+      // 1e6: aload 7
       // 1e8: aload 10
       // 1ea: aload 1
       // 1eb: aload 11
@@ -2662,7 +2662,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 229: aload 6
       // 22b: aload 1
       // 22c: aload 10
-      // 22e: invokevirtual kh/a.getSize ()J
+      // 22e: invokevirtual uh/a.getSize ()J
       // 231: invokespecial com/discord/media/utils/MediaResolver.createMP4FastStartUri (Landroid/net/Uri;Landroid/net/Uri;J)Landroid/net/Uri;
       // 234: astore 2
       // 235: aload 2
@@ -2690,14 +2690,14 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 25a: aload 4
       // 25c: astore 9
       // 25e: goto 248
-      // 261: getstatic lj/r.k Llj/r$a;
+      // 261: getstatic vj/r.k Lvj/r$a;
       // 264: astore 7
       // 266: aload 6
-      // 268: invokestatic lj/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
-      // 26b: invokestatic lj/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 268: invokestatic vj/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
+      // 26b: invokestatic vj/r.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 26e: astore 6
       // 270: aload 6
-      // 272: invokestatic lj/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
+      // 272: invokestatic vj/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
       // 275: astore 7
       // 277: aload 7
       // 279: ifnonnull 282
@@ -2709,22 +2709,22 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 287: ifne 300
       // 28a: aload 7
       // 28c: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
-      // 28f: astore 6
+      // 28f: astore 7
       // 291: new java/lang/StringBuilder
       // 294: dup
       // 295: invokespecial java/lang/StringBuilder.<init> ()V
-      // 298: astore 7
-      // 29a: aload 7
+      // 298: astore 6
+      // 29a: aload 6
       // 29c: ldc_w "Error compressing/converting video: "
       // 29f: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 2a2: pop
-      // 2a3: aload 7
-      // 2a5: aload 6
+      // 2a3: aload 6
+      // 2a5: aload 7
       // 2a7: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 2aa: pop
       // 2ab: aload 2
       // 2ac: ldc_w "Media conversion error"
-      // 2af: aload 7
+      // 2af: aload 6
       // 2b1: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 2b4: aload 1
       // 2b5: aload 4
@@ -2830,11 +2830,11 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
          new Function2(this, var1, var3, var5, var2, var4, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)

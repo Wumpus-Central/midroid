@@ -8,8 +8,8 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.drawable.ScalingUtils
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
+import g6.c
 import kotlin.jvm.internal.q
-import w5.c
 
 internal class PNGStickerView(context: Context) : SimpleDraweeView {
    private final val placeholder: ShapeDrawable

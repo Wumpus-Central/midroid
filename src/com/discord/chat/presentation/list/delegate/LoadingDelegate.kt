@@ -10,7 +10,7 @@ import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import lj.p
+import vj.p
 
 public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<LoadingChatListItem, ChatLoadingView> {
    init {

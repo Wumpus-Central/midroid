@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.botuikit
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component {
@@ -87,8 +87,8 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
          val var0: UnknownComponent.$serializer = new UnknownComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("0", var0, 2);
-         var1.l("type", true);
-         var1.l("id", true);
+         var1.c("type", true);
+         var1.c("id", true);
          descriptor = var1;
       }
 

@@ -3,8 +3,8 @@ package com.discord.app_ready
 import com.discord.codegen.NativeApplicationReadyManagerSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import k4.a
 import kotlin.jvm.internal.q
+import u4.a
 
 public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyManagerSpec {
    init {

@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class TapSummaryJumpData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -79,17 +79,17 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
 
    public override fun toString(): String {
       val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.summaryId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapSummaryJumpData(channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var2);
-      var4.append(", summaryId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.summaryId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapSummaryJumpData(channelId=");
+      var2.append(var1);
+      var2.append(", messageId=");
+      var2.append(var3);
+      var2.append(", summaryId=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -104,9 +104,9 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
          val var0: TapSummaryJumpData.$serializer = new TapSummaryJumpData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapSummaryJumpData", var0, 3);
-         var1.l("channelId", false);
-         var1.l("messageId", false);
-         var1.l("summaryId", false);
+         var1.c("channelId", false);
+         var1.c("messageId", false);
+         var1.c("summaryId", false);
          descriptor = var1;
       }
 
@@ -120,15 +120,15 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
          val var9: c = var1.b(var8);
          var var2: Int;
          var var5: java.lang.String;
-         val var7: java.lang.String;
+         var var6: java.lang.String;
          val var10: java.lang.String;
          if (var9.p()) {
-            var5 = var9.m(var8, 0);
-            var7 = var9.m(var8, 1);
+            var6 = var9.m(var8, 0);
+            var5 = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
             var2 = 7;
          } else {
-            var var6: java.lang.String = null;
+            var6 = null;
             var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
@@ -158,13 +158,12 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
                }
             }
 
-            var7 = var11;
             var10 = var5;
-            var5 = var6;
+            var5 = var11;
          }
 
          var9.c(var8);
-         return new TapSummaryJumpData(var2, var5, var7, var10, null);
+         return new TapSummaryJumpData(var2, var6, var5, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapSummaryJumpData) {

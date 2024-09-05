@@ -66,17 +66,17 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var1: View = this.view;
-      val var3: Pair = this.measuredDimensions;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PortalViewChatListItem(id=");
-      var2.append(var4);
-      var2.append(", view=");
-      var2.append(var1);
-      var2.append(", measuredDimensions=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.id;
+      val var3: View = this.view;
+      val var1: Pair = this.measuredDimensions;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PortalViewChatListItem(id=");
+      var4.append(var2);
+      var4.append(", view=");
+      var4.append(var3);
+      var4.append(", measuredDimensions=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

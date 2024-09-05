@@ -5,7 +5,7 @@ import com.facebook.react.bridge.WritableNativeMap
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
-import mj.r
+import wj.r
 
 public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, builds: Map<String, BuildOverrideCookieBuild>) {
    public final val builds: Map<String, BuildOverrideCookieBuild>

@@ -15,7 +15,7 @@ import com.otaliastudios.zoom.ZoomEngine
 import com.otaliastudios.zoom.ZoomEngine.c
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import lj.w
+import vj.w
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
 public class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {

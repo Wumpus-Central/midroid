@@ -1,12 +1,5 @@
 package com.discord.push_notification_monitor
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.h
-import gn.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +8,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.h
+import qn.x0
 
 @f
 public data class PushNotificationMeta(receivedTimestamp: Long,
@@ -114,10 +114,10 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = java.lang.Long.hashCode(this.receivedTimestamp);
+      val var4: Int = java.lang.Long.hashCode(this.receivedTimestamp);
       val var5: Int = java.lang.Boolean.hashCode(this.silent);
       val var6: Int = this.type.hashCode();
-      val var4: Int = this.title.hashCode();
+      val var7: Int = this.title.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -137,34 +137,34 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var3 = this.messageId.hashCode();
       }
 
-      return (((((var7 * 31 + var5) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((((var4 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: Long = this.receivedTimestamp;
-      val var3: Boolean = this.silent;
-      val var9: java.lang.String = this.type;
-      val var5: java.lang.String = this.title;
+      val var2: Long = this.receivedTimestamp;
+      val var1: Boolean = this.silent;
+      val var5: java.lang.String = this.type;
+      val var9: java.lang.String = this.title;
       val var6: java.lang.String = this.content;
       val var8: java.lang.String = this.channelId;
-      val var7: java.lang.String = this.messageId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PushNotificationMeta(receivedTimestamp=");
-      var4.append(var1);
-      var4.append(", silent=");
-      var4.append(var3);
-      var4.append(", type=");
-      var4.append(var9);
-      var4.append(", title=");
-      var4.append(var5);
-      var4.append(", content=");
-      var4.append(var6);
-      var4.append(", channelId=");
-      var4.append(var8);
-      var4.append(", messageId=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.messageId;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("PushNotificationMeta(receivedTimestamp=");
+      var7.append(var2);
+      var7.append(", silent=");
+      var7.append(var1);
+      var7.append(", type=");
+      var7.append(var5);
+      var7.append(", title=");
+      var7.append(var9);
+      var7.append(", content=");
+      var7.append(var6);
+      var7.append(", channelId=");
+      var7.append(var8);
+      var7.append(", messageId=");
+      var7.append(var4);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : g0 {
@@ -179,19 +179,19 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          val var0: PushNotificationMeta.$serializer = new PushNotificationMeta.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.push_notification_monitor.PushNotificationMeta", var0, 7);
-         var1.l("receivedTimestamp", false);
-         var1.l("silent", false);
-         var1.l("type", false);
-         var1.l("title", false);
-         var1.l("content", false);
-         var1.l("channelId", true);
-         var1.l("messageId", true);
+         var1.c("receivedTimestamp", false);
+         var1.c("silent", false);
+         var1.c("type", false);
+         var1.c("title", false);
+         var1.c("content", false);
+         var1.c("channelId", true);
+         var1.c("messageId", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{x0.a, h.a, b2.a, b2.a, a.u(b2.a), a.u(var1), a.u(var1)};
+         val var3: b2 = b2.a;
+         return new KSerializer[]{x0.a, h.a, b2.a, b2.a, a.u(b2.a), a.u(var3), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): PushNotificationMeta {
@@ -281,7 +281,7 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

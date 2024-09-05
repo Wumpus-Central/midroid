@@ -3,11 +3,6 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class TapSummaryData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -80,16 +80,16 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
    public override fun toString(): String {
       val var4: java.lang.String = this.channelId;
       val var1: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.summaryId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapSummaryData(channelId=");
-      var3.append(var4);
-      var3.append(", messageId=");
-      var3.append(var1);
-      var3.append(", summaryId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.summaryId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapSummaryData(channelId=");
+      var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var1);
+      var2.append(", summaryId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -104,9 +104,9 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
          val var0: TapSummaryData.$serializer = new TapSummaryData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapSummaryData", var0, 3);
-         var1.l("channelId", false);
-         var1.l("messageId", false);
-         var1.l("summaryId", false);
+         var1.c("channelId", false);
+         var1.c("messageId", false);
+         var1.c("summaryId", false);
          descriptor = var1;
       }
 
@@ -119,17 +119,19 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.b(var8);
          var var2: Int;
-         var var5: java.lang.String;
          var var6: java.lang.String;
          val var10: java.lang.String;
+         var var12: java.lang.String;
          if (var9.p()) {
-            var6 = var9.m(var8, 0);
-            var5 = var9.m(var8, 1);
+            var12 = var9.m(var8, 0);
+            val var7: java.lang.String = var9.m(var8, 1);
             var10 = var9.m(var8, 2);
             var2 = 7;
+            var6 = var12;
+            var12 = var7;
          } else {
             var6 = null;
-            var5 = null;
+            var12 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -143,7 +145,7 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
                            throw new n(var4);
                         }
 
-                        var5 = var9.m(var8, 2);
+                        var12 = var9.m(var8, 2);
                         var2 |= 4;
                      } else {
                         var11 = var9.m(var8, 1);
@@ -158,12 +160,12 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
                }
             }
 
-            var5 = var11;
-            var10 = var5;
+            var10 = var12;
+            var12 = var11;
          }
 
          var9.c(var8);
-         return new TapSummaryData(var2, var6, var5, var10, null);
+         return new TapSummaryData(var2, var6, var12, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapSummaryData) {

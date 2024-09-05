@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import v2.a;
+import f3.a;
 
 public final class FlaggedMessageActionBarViewBinding implements ViewBinding {
    public final DCDButton actionsButton;
@@ -27,12 +27,12 @@ public final class FlaggedMessageActionBarViewBinding implements ViewBinding {
       DCDButton var4 = (DCDButton)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.feedback_button;
-         DCDButton var3 = (DCDButton)a.a(var0, var1);
-         if (var3 != null) {
+         DCDButton var2 = (DCDButton)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.separator_dot;
-            ImageView var2 = (ImageView)a.a(var0, var1);
-            if (var2 != null) {
-               return new FlaggedMessageActionBarViewBinding(var0, var4, var3, var2);
+            ImageView var3 = (ImageView)a.a(var0, var1);
+            if (var3 != null) {
+               return new FlaggedMessageActionBarViewBinding(var0, var4, var2, var3);
             }
          }
       }

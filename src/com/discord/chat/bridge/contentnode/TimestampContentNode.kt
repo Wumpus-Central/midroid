@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.x0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.x0
+import qn.g0.a
 
 @f
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
@@ -71,17 +71,17 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var4: java.lang.String = this.full;
-      val var5: java.lang.String = this.formatted;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TimestampContentNode(timestamp=");
-      var3.append(var1);
-      var3.append(", full=");
-      var3.append(var4);
-      var3.append(", formatted=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.full;
+      val var4: java.lang.String = this.formatted;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TimestampContentNode(timestamp=");
+      var5.append(var1);
+      var5.append(", full=");
+      var5.append(var3);
+      var5.append(", formatted=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -96,9 +96,9 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
          val var0: TimestampContentNode.$serializer = new TimestampContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("timestamp", var0, 3);
-         var1.l("timestamp", false);
-         var1.l("full", false);
-         var1.l("formatted", false);
+         var1.c("timestamp", false);
+         var1.c("full", false);
+         var1.c("formatted", false);
          descriptor = var1;
       }
 

@@ -20,10 +20,10 @@ public class FontModule(reactContext: ReactApplicationContext) : ReactContextBas
    public fun getFontScale(callback: Callback) {
       q.h(var1, "callback");
       val var2: FontManager = FontManager.INSTANCE;
-      var1.invoke(new Object[]{FontManager.INSTANCE.getFontScale(this.reactContext), var2.getIsClassicChatFontScaleEnabled(this.reactContext)});
+      var1.invoke(FontManager.INSTANCE.getFontScale(this.reactContext), var2.getIsClassicChatFontScaleEnabled(this.reactContext));
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "FontModule";
    }
 

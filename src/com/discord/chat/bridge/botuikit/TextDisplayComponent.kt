@@ -2,12 +2,6 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.n0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +10,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.n0
+import qn.g0.a
 
 @f
 public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component {
@@ -74,16 +74,16 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var3: StructurableText = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TextDisplayComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: StructurableText = this.content;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TextDisplayComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(", content=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -98,9 +98,9 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          val var0: TextDisplayComponent.$serializer = new TextDisplayComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("10", var0, 3);
-         var1.l("type", false);
-         var1.l("id", false);
-         var1.l("content", false);
+         var1.c("type", false);
+         var1.c("id", false);
+         var1.c("content", false);
          descriptor = var1;
       }
 

@@ -1,9 +1,5 @@
 package com.discord.chat.bridge.row
 
-import dn.f
-import dn.n
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,6 +8,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.g0.a
 
 @f
 public data class LoadingAction(type: LoadingActionType) {
@@ -67,7 +67,7 @@ public data class LoadingAction(type: LoadingActionType) {
          val var0: LoadingAction.$serializer = new LoadingAction.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.row.LoadingAction", var0, 1);
-         var1.l("type", false);
+         var1.c("type", false);
          descriptor = var1;
       }
 

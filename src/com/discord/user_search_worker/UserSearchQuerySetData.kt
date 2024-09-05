@@ -1,10 +1,5 @@
 package com.discord.user_search_worker
 
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,6 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuerySetPayload) : UserSearchData {
@@ -84,8 +84,8 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
          val var0: UserSearchQuerySetData.$serializer = new UserSearchQuerySetData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.user_search_worker.UserSearchQuerySetData", var0, 2);
-         var1.l("uuid", false);
-         var1.l("payload", false);
+         var1.c("uuid", false);
+         var1.c("payload", false);
          descriptor = var1;
       }
 

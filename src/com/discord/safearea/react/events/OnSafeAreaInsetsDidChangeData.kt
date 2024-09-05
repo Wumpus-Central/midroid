@@ -2,11 +2,6 @@ package com.discord.safearea.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.f0
-import gn.g0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,6 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.f0
+import qn.g0
+import qn.g0.a
 
 @f
 internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, left: Float, right: Float, imeInsetsBottom: Float) : ReactEvent {
@@ -98,21 +98,21 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
 
    public override fun toString(): String {
       val var4: Float = this.top;
-      val var2: Float = this.bottom;
-      val var3: Float = this.left;
+      val var3: Float = this.bottom;
+      val var5: Float = this.left;
       val var1: Float = this.right;
-      val var5: Float = this.imeInsetsBottom;
+      val var2: Float = this.imeInsetsBottom;
       val var6: StringBuilder = new StringBuilder();
       var6.append("OnSafeAreaInsetsDidChangeData(top=");
       var6.append(var4);
       var6.append(", bottom=");
-      var6.append(var2);
-      var6.append(", left=");
       var6.append(var3);
+      var6.append(", left=");
+      var6.append(var5);
       var6.append(", right=");
       var6.append(var1);
       var6.append(", imeInsetsBottom=");
-      var6.append(var5);
+      var6.append(var2);
       var6.append(")");
       return var6.toString();
    }
@@ -131,11 +131,11 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.safearea.react.events.OnSafeAreaInsetsDidChangeData", var0, 5
          );
-         var1.l("top", false);
-         var1.l("bottom", false);
-         var1.l("left", false);
-         var1.l("right", false);
-         var1.l("imeInsetsBottom", false);
+         var1.c("top", false);
+         var1.c("bottom", false);
+         var1.c("left", false);
+         var1.c("right", false);
+         var1.c("imeInsetsBottom", false);
          descriptor = var1;
       }
 

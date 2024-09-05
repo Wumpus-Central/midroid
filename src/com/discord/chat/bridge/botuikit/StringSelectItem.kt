@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.botuikit
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.h
 
 @f
 public data class StringSelectItem(label: String,
@@ -119,24 +119,24 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.label;
-      val var1: java.lang.String = this.value;
-      val var3: ComponentEmoji = this.emoji;
-      val var6: java.lang.String = this.description;
-      val var4: java.lang.Boolean = this.default;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("StringSelectItem(label=");
-      var5.append(var2);
-      var5.append(", value=");
-      var5.append(var1);
-      var5.append(", emoji=");
-      var5.append(var3);
-      var5.append(", description=");
-      var5.append(var6);
-      var5.append(", default=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.label;
+      val var4: java.lang.String = this.value;
+      val var6: ComponentEmoji = this.emoji;
+      val var1: java.lang.String = this.description;
+      val var3: java.lang.Boolean = this.default;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("StringSelectItem(label=");
+      var2.append(var5);
+      var2.append(", value=");
+      var2.append(var4);
+      var2.append(", emoji=");
+      var2.append(var6);
+      var2.append(", description=");
+      var2.append(var1);
+      var2.append(", default=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -151,11 +151,11 @@ public data class StringSelectItem(label: String,
          val var0: StringSelectItem.$serializer = new StringSelectItem.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.botuikit.StringSelectItem", var0, 5);
-         var1.l("label", false);
-         var1.l("value", false);
-         var1.l("emoji", true);
-         var1.l("description", true);
-         var1.l("default", true);
+         var1.c("label", false);
+         var1.c("value", false);
+         var1.c("emoji", true);
+         var1.c("description", true);
+         var1.c("default", true);
          descriptor = var1;
       }
 
@@ -245,7 +245,7 @@ public data class StringSelectItem(label: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

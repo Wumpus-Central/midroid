@@ -35,8 +35,8 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import lj.l
-import lj.o
+import vj.l
+import vj.o
 
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -62,7 +62,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      this.draweeControllerBuilder = w5.c.g();
+      this.draweeControllerBuilder = g6.c.g();
       this.binding$delegate = l.b(o.l, new Function0(this) {
          final ContentInventoryComponentView this$0;
 
@@ -157,7 +157,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       if (var5 == null) {
          this.getBinding().getRoot().setVisibility(8);
       } else {
-         val var20: java.lang.Iterable = var5.getGradientColors();
+         val var20: java.util.List = var5.getGradientColors();
          val var10: ArrayList = new ArrayList(kotlin.collections.i.u(var20, 10));
          val var21: java.util.Iterator = var20.iterator();
 
@@ -165,12 +165,12 @@ public class ContentInventoryComponentView  public constructor(context: Context,
             var10.add(ContentInventoryEntryComponentKt.toColorInt(var21.next() as GradientColor));
          }
 
-         val var11: IntArray = kotlin.collections.i.P0(var10);
-         val var22: ContentInventoryComponentView = this.getBinding().getRoot();
-         var22.setVisibility(0);
-         q.e(var22);
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var22, var11, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         var22.setOnClickListener(new c(var5, var4));
+         val var22: IntArray = kotlin.collections.i.P0(var10);
+         val var11: ContentInventoryComponentView = this.getBinding().getRoot();
+         var11.setVisibility(0);
+         q.e(var11);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var11, var22, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         var11.setOnClickListener(new c(var5, var4));
          val var12: TextView = this.getBinding().contentInventoryComponentUsername;
          var12.setText(var5.getUserActionDescription());
          var12.setOnClickListener(new d(var5, var4));

@@ -62,7 +62,7 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = lj.l.a(new Function0(this) {
+      this.shadowView$delegate = vj.l.a(new Function0(this) {
          final MessageContentView this$0;
 
          {
@@ -84,13 +84,13 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
       kotlin.jvm.internal.q.g(var6, "getSpans(...)");
-      val var7: QuoteSpan = kotlin.collections.c.F(var6) as QuoteSpan;
+      val var8: QuoteSpan = kotlin.collections.c.F(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(" (");
-      var8.append(var2);
-      var8.append(")");
-      var1.append(var8.toString());
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(" (");
+      var7.append(var2);
+      var7.append(")");
+      var1.append(var7.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -100,8 +100,8 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var7 != null) {
-         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
+      if (var8 != null) {
+         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
       }
    }
 
@@ -113,9 +113,9 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var9: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
+      val var8: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
       var var7: Int = var2.getNumberOfLines();
-      val var8: Boolean = var2.getExpandable();
+      val var9: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6, false);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -125,15 +125,15 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var9) {
-         if (var9) {
+      if (var3 > var7 || var8) {
+         if (var8) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var8) {
+         if (var9) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();

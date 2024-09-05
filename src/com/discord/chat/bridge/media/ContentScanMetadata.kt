@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.media
 
-import dn.f
-import dn.n
-import gn.g0
-import gn.n0
-import gn.x0
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.n0
+import qn.x0
+import qn.g0.a
 
 @f
 public data class ContentScanMetadata(version: Int, contentFlags: Long) {
@@ -81,8 +81,8 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
          val var0: ContentScanMetadata.$serializer = new ContentScanMetadata.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.media.ContentScanMetadata", var0, 2);
-         var1.l("version", false);
-         var1.l("contentFlags", false);
+         var1.c("version", false);
+         var1.c("contentFlags", false);
          descriptor = var1;
       }
 
@@ -100,15 +100,15 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
          if (var9.p()) {
             val var2: Int = var9.i(var8, 0);
             var6 = var9.f(var8, 1);
-            var4 = 3;
-            var3 = var2;
+            var3 = 3;
+            var4 = var2;
          } else {
             var6 = 0L;
-            var var11: Boolean = true;
+            var var12: Boolean = true;
             var3 = 0;
             var var10: Int = 0;
 
-            while (var11) {
+            while (var12) {
                val var5: Int = var9.o(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -123,15 +123,16 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
                      var10 |= 1;
                   }
                } else {
-                  var11 = false;
+                  var12 = false;
                }
             }
 
-            var4 = var10;
+            var4 = var3;
+            var3 = var10;
          }
 
          var9.c(var8);
-         return new ContentScanMetadata(var4, var3, var6, null);
+         return new ContentScanMetadata(var3, var4, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentScanMetadata) {

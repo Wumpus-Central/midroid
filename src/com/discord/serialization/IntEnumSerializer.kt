@@ -1,7 +1,6 @@
 package com.discord.serialization
 
-import fn.g
-import fn.e.f
+import hk.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -9,7 +8,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import xj.a
+import pn.g
+import pn.e.f
 
 public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, default: Any? = ...) : KSerializer {
    private final val choices: Array<Any>
@@ -71,12 +71,12 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             throw new IllegalStateException(var11.toString().toString());
          }
       } else {
-         val var4: java.lang.String = this.serialName;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var3);
-         var6.append(" is not a valid serial value of ");
-         var6.append(var4);
-         throw new IllegalStateException(var6.toString().toString());
+         val var6: java.lang.String = this.serialName;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append(var3);
+         var4.append(" is not a valid serial value of ");
+         var4.append(var6);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 

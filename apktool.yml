@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 247202
-  versionName: 247.2 - Alpha
+  versionCode: 247203
+  versionName: 247.3 - Alpha
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -121,6 +121,7 @@ doNotCompress:
 - META-INF/androidx.sqlite_sqlite.version
 - META-INF/androidx.startup_startup-runtime.version
 - META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
+- META-INF/androidx.tracing_tracing-ktx.version
 - META-INF/androidx.tracing_tracing.version
 - META-INF/androidx.transition_transition.version
 - META-INF/androidx.vectordrawable_vectordrawable-animated.version
@@ -136,9 +137,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/kk.a
-- META-INF/services/tm.x
-- META-INF/services/ym.w
+- META-INF/services/dn.x
+- META-INF/services/in.w
+- META-INF/services/uk.a
 - png
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

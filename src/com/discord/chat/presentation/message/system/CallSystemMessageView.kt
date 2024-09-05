@@ -21,10 +21,10 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import dn.g
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import tm.g
 
 public class CallSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout {
    private final val binding: CallSystemMessageViewBinding
@@ -43,17 +43,17 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       this.greenIconColor = ColorUtilsKt.getColorCompat(this, color.green_360);
       this.redIconColor = ColorUtilsKt.getColorCompat(this, color.red_400);
       this.grayIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var3: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var5: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var5, "inflate(...)");
+      this.binding = var5;
       AddSystemMessageCardStyleKt.addSystemMessageCardStyle(this);
-      val var5: TextView = var3.message;
-      q.e(var3.message);
-      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      var5.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var4: TextView = var3.info;
-      q.e(var3.info);
+      val var3: TextView = var5.message;
+      q.e(var5.message);
+      SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+      var3.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var4: TextView = var5.info;
+      q.e(var5.info);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
@@ -86,12 +86,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var2);
       this.binding.message.setText(var1.getTitle());
-      val var19: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var8: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("Binding ");
-      var8.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var19, var8.toString(), null, 2, null);
+      val var18: StringBuilder = new StringBuilder();
+      var18.append("Binding ");
+      var18.append(var13);
+      AttachedViewCoroutineScope.cancelAllWork$default(var8, var18.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var6)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);
@@ -1134,20 +1134,20 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
          this.binding.info.setText(var1.getDescription());
       }
 
-      val var18: OverlappingCirclesView = this.binding.participants;
+      val var17: OverlappingCirclesView = this.binding.participants;
       val var15: java.util.List = var1.getAvatarURLs();
       var var9: java.util.List = var15;
       if (var15 == null) {
          var9 = i.j();
       }
 
-      val var10: ArrayList = new ArrayList(i.u(var9, 10));
-      val var17: java.util.Iterator = var9.iterator();
+      val var16: ArrayList = new ArrayList(i.u(var9, 10));
+      val var10: java.util.Iterator = var9.iterator();
 
-      while (var17.hasNext()) {
-         var10.add(new OverlappingItem(var17.next() as java.lang.String));
+      while (var10.hasNext()) {
+         var16.add(new OverlappingItem(var10.next() as java.lang.String));
       }
 
-      var18.setItems(var10);
+      var17.setItems(var16);
    }
 }

@@ -3,11 +3,6 @@ package com.discord.emoji_picker.react_events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import dn.f
-import dn.n
-import gn.g0
-import gn.h
-import gn.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,6 +11,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import qn.g0
+import qn.h
+import qn.g0.a
 
 @f
 internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
@@ -73,7 +73,7 @@ internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
          val var0: OnShowNitroUpsell.$serializer = new OnShowNitroUpsell.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.emoji_picker.react_events.OnShowNitroUpsell", var0, 1);
-         var1.l("showNitroUpsell", false);
+         var1.c("showNitroUpsell", false);
          descriptor = var1;
       }
 

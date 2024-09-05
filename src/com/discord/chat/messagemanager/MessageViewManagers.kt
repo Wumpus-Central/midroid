@@ -44,7 +44,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import lj.w
+import vj.w
 
 public object MessageViewManagers {
    private final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
@@ -297,12 +297,12 @@ public object MessageViewManagers {
             val var10: MessageBase = var4.getMessage();
             q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
             val var6: Message = var10 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var7: MessageFrame = var4.getMessageFrame();
-            val var11: Context = var1.getContext();
-            q.g(var11, "getContext(...)");
+            val var11: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var5: MessageFrame = var4.getMessageFrame();
+            val var7: Context = var1.getContext();
+            q.g(var7, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var6, var5, var7, MessageViewManagers.access$getEventHandler(var3, var4, var11), null, null, false, var4.isHighlight(), false, 368, null
+               var1, var6, var11, var5, MessageViewManagers.access$getEventHandler(var3, var4, var7), null, null, false, var4.isHighlight(), false, 368, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -345,10 +345,10 @@ public object MessageViewManagers {
             val var4: MessageBase = var7.getMessage();
             q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
             val var5: Message = var4 as Message;
-            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var8: Context = var1.getContext();
-            q.g(var8, "getContext(...)");
-            var1.setMessage(var5, var6, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Context = var1.getContext();
+            q.g(var6, "getContext(...)");
+            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
          }
       }
 

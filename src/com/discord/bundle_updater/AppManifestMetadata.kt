@@ -2,11 +2,6 @@ package com.discord.bundle_updater
 
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import dn.f
-import dn.n
-import gn.b2
-import gn.g0
-import gn.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,7 +9,12 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lj.w
+import nn.f
+import nn.n
+import qn.b2
+import qn.g0
+import qn.h
+import vj.w
 
 @f
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
@@ -98,21 +98,21 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.build;
-      val var4: java.lang.String = this.releaseName;
-      val var3: java.lang.String = this.commit;
+      val var5: java.lang.String = this.build;
+      val var3: java.lang.String = this.releaseName;
+      val var4: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("AppManifestMetadata(build=");
-      var5.append(var2);
-      var5.append(", releaseName=");
-      var5.append(var4);
-      var5.append(", commit=");
-      var5.append(var3);
-      var5.append(", confirmUpdate=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AppManifestMetadata(build=");
+      var2.append(var5);
+      var2.append(", releaseName=");
+      var2.append(var3);
+      var2.append(", commit=");
+      var2.append(var4);
+      var2.append(", confirmUpdate=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -127,16 +127,16 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
          val var0: AppManifestMetadata.$serializer = new AppManifestMetadata.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.bundle_updater.AppManifestMetadata", var0, 4);
-         var1.l("build", false);
-         var1.l("release_name", true);
-         var1.l("commit", false);
-         var1.l("confirm_update", true);
+         var1.c("build", false);
+         var1.c("release_name", true);
+         var1.c("commit", false);
+         var1.c("confirm_update", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: b2 = b2.a;
-         return new KSerializer[]{b2.a, en.a.u(b2.a), var1, h.a};
+         return new KSerializer[]{b2.a, on.a.u(b2.a), var1, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): AppManifestMetadata {
@@ -145,22 +145,20 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
          val var10: kotlinx.serialization.encoding.c = var1.b(var9);
          var var2: Int;
          var var5: Boolean;
-         var var7: java.lang.String;
+         var var6: java.lang.String;
+         val var8: java.lang.String;
          var var11: java.lang.String;
-         var var12: java.lang.String;
          if (var10.p()) {
-            var12 = var10.m(var9, 0);
-            val var8: java.lang.String = var10.n(var9, 1, b2.a, null) as java.lang.String;
+            var6 = var10.m(var9, 0);
+            var8 = var10.n(var9, 1, b2.a, null) as java.lang.String;
             var11 = var10.m(var9, 2);
             var5 = var10.C(var9, 3);
             var2 = 15;
-            var7 = var12;
-            var12 = var8;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var7 = null;
-            var12 = null;
+            var var7: java.lang.String = null;
+            var6 = null;
             var11 = null;
             var2 = 0;
 
@@ -181,7 +179,7 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
                            var2 |= 4;
                         }
                      } else {
-                        var12 = var10.n(var9, 1, b2.a, var12) as java.lang.String;
+                        var6 = var10.n(var9, 1, b2.a, var6) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
@@ -192,10 +190,13 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
                   var3 = false;
                }
             }
+
+            var8 = var6;
+            var6 = var7;
          }
 
          var10.c(var9);
-         return new AppManifestMetadata(var2, var7, var12, var11, var5, null);
+         return new AppManifestMetadata(var2, var6, var8, var11, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifestMetadata) {
@@ -208,7 +209,7 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

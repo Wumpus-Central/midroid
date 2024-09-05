@@ -124,12 +124,12 @@ public object Kotlin {
                   val var5: java.lang.String = var1.group(1);
                   val var4: java.lang.String = var1.group(2);
                   val var8: java.lang.String = var1.group(3);
-                  val var7: java.lang.String = var1.group(4);
-                  val var6: ParseSpec.Companion = ParseSpec.Companion;
+                  val var6: java.lang.String = var1.group(4);
+                  val var7: ParseSpec.Companion = ParseSpec.Companion;
                   q.e(var5);
                   q.e(var8);
-                  q.e(var7);
-                  return (ParseSpec<RC, S>)var6.createTerminal(new Kotlin.FunctionNode<>(var5, var4, var8, var7, this.$codeStyleProviders), var3);
+                  q.e(var6);
+                  return (ParseSpec<RC, S>)var7.createTerminal(new Kotlin.FunctionNode<>(var5, var4, var8, var6, this.$codeStyleProviders), var3);
                }
             };
          }

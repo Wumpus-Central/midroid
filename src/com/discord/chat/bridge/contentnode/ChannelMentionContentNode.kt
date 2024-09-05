@@ -1,10 +1,5 @@
 package com.discord.chat.bridge.contentnode
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -14,6 +9,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
 
 @f
 public data class ChannelMentionContentNode(channelId: String,
@@ -34,7 +34,7 @@ public data class ChannelMentionContentNode(channelId: String,
    @JvmStatic
    fun {
       val var0: ContentNodeSerializer = ContentNodeSerializer.INSTANCE;
-      $childSerializers = new KSerializer[]{null, null, null, null, new gn.f(ContentNodeSerializer.INSTANCE), new gn.f(var0)};
+      $childSerializers = new KSerializer[]{null, null, null, null, new qn.f(ContentNodeSerializer.INSTANCE), new qn.f(var0)};
    }
 
    init {
@@ -146,25 +146,25 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.guildId;
-      val var7: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.originalLink;
-      val var3: java.util.List = this.inContent;
-      val var1: java.util.List = this.content;
+      val var7: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.originalLink;
+      val var2: java.util.List = this.inContent;
+      val var5: java.util.List = this.content;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ChannelMentionContentNode(channelId=");
-      var6.append(var2);
-      var6.append(", guildId=");
-      var6.append(var4);
-      var6.append(", messageId=");
       var6.append(var7);
-      var6.append(", originalLink=");
-      var6.append(var5);
-      var6.append(", inContent=");
-      var6.append(var3);
-      var6.append(", content=");
+      var6.append(", guildId=");
       var6.append(var1);
+      var6.append(", messageId=");
+      var6.append(var3);
+      var6.append(", originalLink=");
+      var6.append(var4);
+      var6.append(", inContent=");
+      var6.append(var2);
+      var6.append(", content=");
+      var6.append(var5);
       var6.append(")");
       return var6.toString();
    }
@@ -181,19 +181,19 @@ public data class ChannelMentionContentNode(channelId: String,
          val var0: ChannelMentionContentNode.$serializer = new ChannelMentionContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("channelMention", var0, 6);
-         var1.l("channelId", false);
-         var1.l("guildId", true);
-         var1.l("messageId", true);
-         var1.l("originalLink", true);
-         var1.l("inContent", true);
-         var1.l("content", false);
+         var1.c("channelId", false);
+         var1.c("guildId", true);
+         var1.c("messageId", true);
+         var1.c("originalLink", true);
+         var1.c("inContent", true);
+         var1.c("content", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = ChannelMentionContentNode.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
-         return new KSerializer[]{b2.a, a.u(b2.a), a.u(var1), a.u(var1), a.u(var2[4]), a.u(var2[5])};
+         val var1: Array<KSerializer> = ChannelMentionContentNode.access$get$childSerializers$cp();
+         val var2: b2 = b2.a;
+         return new KSerializer[]{b2.a, a.u(b2.a), a.u(var2), a.u(var2), a.u(var1[4]), a.u(var1[5])};
       }
 
       public open fun deserialize(decoder: Decoder): ChannelMentionContentNode {
@@ -279,7 +279,7 @@ public data class ChannelMentionContentNode(channelId: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

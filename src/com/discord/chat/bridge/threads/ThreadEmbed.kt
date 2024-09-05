@@ -1,11 +1,5 @@
 package com.discord.chat.bridge.threads
 
-import dn.f
-import dn.n
-import en.a
-import gn.b2
-import gn.g0
-import gn.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -15,6 +9,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nn.f
+import nn.n
+import on.a
+import qn.b2
+import qn.g0
+import qn.h
 
 @f
 public data class ThreadEmbed(title: String,
@@ -104,8 +104,8 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.title.hashCode();
-      val var5: Int = this.messageCountLabel.hashCode();
+      val var5: Int = this.title.hashCode();
+      val var6: Int = this.messageCountLabel.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.messagePreviewString == null) {
@@ -132,31 +132,31 @@ public data class ThreadEmbed(title: String,
          var4 = this.referencedMessage.hashCode();
       }
 
-      return ((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.title;
-      val var3: java.lang.String = this.messageCountLabel;
-      val var4: java.lang.String = this.messagePreviewString;
-      val var6: java.lang.Boolean = this.archived;
-      val var2: java.lang.String = this.archivedIconUrl;
-      val var7: ThreadEmbedMessage = this.referencedMessage;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ThreadEmbed(title=");
-      var5.append(var1);
-      var5.append(", messageCountLabel=");
-      var5.append(var3);
-      var5.append(", messagePreviewString=");
-      var5.append(var4);
-      var5.append(", archived=");
-      var5.append(var6);
-      var5.append(", archivedIconUrl=");
-      var5.append(var2);
-      var5.append(", referencedMessage=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.title;
+      val var5: java.lang.String = this.messageCountLabel;
+      val var7: java.lang.String = this.messagePreviewString;
+      val var1: java.lang.Boolean = this.archived;
+      val var4: java.lang.String = this.archivedIconUrl;
+      val var6: ThreadEmbedMessage = this.referencedMessage;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThreadEmbed(title=");
+      var2.append(var3);
+      var2.append(", messageCountLabel=");
+      var2.append(var5);
+      var2.append(", messagePreviewString=");
+      var2.append(var7);
+      var2.append(", archived=");
+      var2.append(var1);
+      var2.append(", archivedIconUrl=");
+      var2.append(var4);
+      var2.append(", referencedMessage=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -171,12 +171,12 @@ public data class ThreadEmbed(title: String,
          val var0: ThreadEmbed.$serializer = new ThreadEmbed.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.threads.ThreadEmbed", var0, 6);
-         var1.l("title", false);
-         var1.l("messageCountLabel", false);
-         var1.l("messagePreviewString", true);
-         var1.l("archived", true);
-         var1.l("archivedIconUrl", true);
-         var1.l("referencedMessage", true);
+         var1.c("title", false);
+         var1.c("messageCountLabel", false);
+         var1.c("messagePreviewString", true);
+         var1.c("archived", true);
+         var1.c("archivedIconUrl", true);
+         var1.c("referencedMessage", true);
          descriptor = var1;
       }
 
@@ -192,27 +192,27 @@ public data class ThreadEmbed(title: String,
          val var5: Boolean = var13.p();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         var var7: Any;
+         var var6: Any;
+         var var7: java.lang.String;
          var var9: java.lang.String;
          var var15: Any;
-         var var16: java.lang.String;
+         var var18: java.lang.String;
          if (var5) {
-            var16 = var13.m(var12, 0);
+            var18 = var13.m(var12, 0);
             var9 = var13.m(var12, 1);
             var15 = b2.a;
             val var11: java.lang.String = var13.n(var12, 2, b2.a, null) as java.lang.String;
-            var7 = var13.n(var12, 3, h.a, null) as java.lang.Boolean;
-            var6 = var13.n(var12, 4, (DeserializationStrategy)var15, null) as java.lang.String;
+            var6 = var13.n(var12, 3, h.a, null) as java.lang.Boolean;
+            var7 = var13.n(var12, 4, (DeserializationStrategy)var15, null) as java.lang.String;
             var15 = var13.n(var12, 5, ThreadEmbedMessage.$serializer.INSTANCE, null) as ThreadEmbedMessage;
             var2 = 63;
-            var10 = var16;
-            var16 = var11;
+            var10 = var18;
+            var18 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
-            var16 = null;
+            var18 = null;
             var7 = null;
             var6 = null;
             var15 = null;
@@ -232,7 +232,7 @@ public data class ThreadEmbed(title: String,
                      var2 |= 2;
                      break;
                   case 2:
-                     var16 = var13.n(var12, 2, b2.a, var16) as java.lang.String;
+                     var18 = var13.n(var12, 2, b2.a, var18) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
@@ -251,10 +251,13 @@ public data class ThreadEmbed(title: String,
                      throw new n(var4);
                }
             }
+
+            var7 = (java.lang.String)var6;
+            var6 = var7;
          }
 
          var13.c(var12);
-         return new ThreadEmbed(var2, var10, var9, var16, (java.lang.Boolean)var7, var6, (ThreadEmbedMessage)var15, null);
+         return new ThreadEmbed(var2, var10, var9, var18, (java.lang.Boolean)var6, var7, (ThreadEmbedMessage)var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ThreadEmbed) {
@@ -267,7 +270,7 @@ public data class ThreadEmbed(title: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return gn.g0.a.a(this);
+         return qn.g0.a.a(this);
       }
    }
 

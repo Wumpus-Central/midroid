@@ -86,15 +86,15 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
       var6.setOnClickListener(new x(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
       kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextDismiss);
-      val var9: StructurableText = var2.getContent();
-      val var11: Context = var10.getContext();
+      val var11: StructurableText = var2.getContent();
+      val var9: Context = var10.getContext();
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var7, "getFontMetrics(...)");
       val var5: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var12: TextPaint = var10.getPaint();
-      kotlin.jvm.internal.q.e(var11);
+      kotlin.jvm.internal.q.e(var9);
       kotlin.jvm.internal.q.e(var12);
-      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var9, var11, var1, false, false, false, false, var12, new Function1(var3, var1) {
+      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var11, var9, var1, false, false, false, false, var12, new Function1(var3, var1) {
          final java.lang.String $messageId;
          final Function2 $onLinkClicked;
 

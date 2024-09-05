@@ -14,8 +14,8 @@ import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
 import java.util.Comparator
 import kotlin.jvm.internal.q
-import lj.w
-import oj.a
+import vj.w
+import yj.a
 
 internal object ServiceNotification {
    private const val FOREGROUND_NOTIFICATION_CHANNEL: String = "mediaConnections"
@@ -43,19 +43,19 @@ internal object ServiceNotification {
          var7 = null;
       }
 
-      val var8: NotificationCompat.Builder = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      val var5: NotificationCompat.Builder = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var9 : var2.getAuxiliaryActions()) {
-         var8.a(
+      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
+         var5.a(
             0,
-            var9.getTitle(),
+            var8.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var9.getTag(), var9.getTaskName(), var9.getData()), var1, 0, false, 2, null
+               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
             )
          );
       }
 
-      val var6: Notification = var8.A(e.a(w.a("permissionType", var2.getType().ordinal()))).g();
+      val var6: Notification = var5.A(e.a(w.a("permissionType", var2.getType().ordinal()))).g();
       q.g(var6, "build(...)");
       return var6;
    }
