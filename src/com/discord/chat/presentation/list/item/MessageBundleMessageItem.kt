@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class MessageBundleMessageItem(messageItem: MessageItem) : MessageBundleItem {
    public final val messageItem: MessageItem
 
    init {
-      r.h(var1, "messageItem");
+      q.h(var1, "messageItem");
       super(MessageId.toString-impl(var1.getMessage().getId-3Eiw7ao()), null);
       this.messageItem = var1;
    }
@@ -17,7 +17,7 @@ public data class MessageBundleMessageItem(messageItem: MessageItem) : MessageBu
    }
 
    public fun copy(messageItem: MessageItem = var0.messageItem): MessageBundleMessageItem {
-      r.h(var1, "messageItem");
+      q.h(var1, "messageItem");
       return new MessageBundleMessageItem(var1);
    }
 
@@ -27,7 +27,7 @@ public data class MessageBundleMessageItem(messageItem: MessageItem) : MessageBu
       } else if (var1 !is MessageBundleMessageItem) {
          return false;
       } else {
-         return r.c(this.messageItem, (var1 as MessageBundleMessageItem).messageItem);
+         return q.c(this.messageItem, (var1 as MessageBundleMessageItem).messageItem);
       }
    }
 

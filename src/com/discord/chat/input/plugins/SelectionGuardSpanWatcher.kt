@@ -4,12 +4,12 @@ import android.text.Selection
 import android.text.SpanWatcher
 import android.text.Spannable
 import com.discord.chat.input.spans.DCDNoSelectionSpan
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class SelectionGuardSpanWatcher : SpanWatcher {
    private fun checkSelections(text: Spannable, selectionStart: Int?, selectionEnd: Int?) {
       if (var2 != null || var3 != null) {
-         val var4: Int;
+         var var4: Int;
          if (var2 != null) {
             var4 = var2;
          } else if (var3 != null) {
@@ -18,7 +18,7 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
             var4 = 0;
          }
 
-         val var5: Int;
+         var var5: Int;
          if (var3 != null) {
             var5 = var3;
          } else if (var2 != null) {
@@ -28,70 +28,63 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
          }
 
          val var13: Array<Any> = var1.getSpans(var4, var5, DCDNoSelectionSpan.class);
-         r.g(var13, "getSpans(start, end, T::class.java)");
-         val var23: Array<DCDNoSelectionSpan> = var13 as Array<DCDNoSelectionSpan>;
-         var var15: Boolean;
-         if ((var13 as Array<DCDNoSelectionSpan>).length == 0) {
-            var15 = 1;
-         } else {
-            var15 = 0;
-         }
-
-         if (!var15) {
+         q.g(var13, "getSpans(start, end, T::class.java)");
+         val var22: Array<DCDNoSelectionSpan> = var13 as Array<DCDNoSelectionSpan>;
+         if ((var13 as Array<DCDNoSelectionSpan>).length != 0) {
             if (var2 != null) {
-               var15 = var2;
+               var4 = var2;
             } else if (var3 != null) {
-               var15 = var3;
+               var4 = var3;
             } else {
-               var15 = 0;
+               var4 = 0;
             }
 
-            val var12: Int = var23.length;
+            val var12: Int = var22.length;
             var var7: Int = 0;
-            var var20: Boolean = false;
-            var var6: Int = var15;
+            var var6: Boolean = false;
+            var5 = var4;
 
             while (var7 < var12) {
-               val var10: Int = var1.getSpanEnd(var23[var7]);
-               val var11: Int = var1.getSpanStart(var23[var7]);
-               var var8: Int = var6;
-               var var17: Int = var20;
-               if (var6 > var11) {
-                  var8 = var6;
-                  var17 = var20;
-                  if (var6 < var10) {
-                     var17 = var10;
-                     if (var10 - var6 > var6 - var11) {
-                        var17 = var11;
+               val var10: Int = var1.getSpanEnd(var22[var7]);
+               val var11: Int = var1.getSpanStart(var22[var7]);
+               var var8: Int = var5;
+               var var16: Int = var6;
+               if (var5 > var11) {
+                  var8 = var5;
+                  var16 = var6;
+                  if (var5 < var10) {
+                     var16 = var10;
+                     if (var10 - var5 > var5 - var11) {
+                        var16 = var11;
                      }
 
-                     var8 = var17;
-                     var17 = 1;
+                     var8 = var16;
+                     var16 = 1;
                   }
                }
 
                var7++;
-               var6 = var8;
-               var20 = (boolean)var17;
+               var5 = var8;
+               var6 = (boolean)var16;
             }
 
-            val var19: Boolean;
-            if (var2 != null && var2 != var6) {
-               var19 = true;
+            val var18: Boolean;
+            if (var2 != null && var2 != var5) {
+               var18 = true;
             } else {
-               var19 = false;
+               var18 = false;
             }
 
-            var var22: Boolean = false;
+            var var21: Boolean = false;
             if (var3 != null) {
-               var22 = false;
-               if (var3 != var6) {
-                  var22 = true;
+               var21 = false;
+               if (var3 != var5) {
+                  var21 = true;
                }
             }
 
-            if (var20 && (var22 || var19)) {
-               Selection.setSelection(var1, var6);
+            if (var6 && (var21 || var18)) {
+               Selection.setSelection(var1, var5);
             }
          }
       }
@@ -107,9 +100,9 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
    public open fun onSpanChanged(text: Spannable?, what: Any?, ostart: Int, oend: Int, nstart: Int, nend: Int) {
       if (var1 != null) {
-         if (r.c(var2, Selection.SELECTION_START)) {
+         if (q.c(var2, Selection.SELECTION_START)) {
             this.checkSelections(var1, var5, null);
-         } else if (r.c(var2, Selection.SELECTION_END)) {
+         } else if (q.c(var2, Selection.SELECTION_END)) {
             this.checkSelections(var1, null, var5);
          }
       }

@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.list.item
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class SeparatorChatListItem(color: Int, text: String) : ChatListItem {
    public final val color: Int
    public final val text: String
 
    init {
-      r.h(var2, "text");
+      q.h(var2, "text");
       val var3: StringBuilder = new StringBuilder();
       var3.append("separator: ");
       var3.append(var2);
@@ -25,7 +25,7 @@ public data class SeparatorChatListItem(color: Int, text: String) : ChatListItem
    }
 
    public fun copy(color: Int = var0.color, text: String = var0.text): SeparatorChatListItem {
-      r.h(var2, "text");
+      q.h(var2, "text");
       return new SeparatorChatListItem(var1, var2);
    }
 
@@ -39,7 +39,7 @@ public data class SeparatorChatListItem(color: Int, text: String) : ChatListItem
          if (this.color != var1.color) {
             return false;
          } else {
-            return r.c(this.text, var1.text);
+            return q.c(this.text, var1.text);
          }
       }
    }

@@ -2,7 +2,7 @@ package com.discord.client_info
 
 import android.content.Context
 import com.facebook.react.modules.network.OkHttpClientProvider
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import okhttp3.Dispatcher
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -19,14 +19,14 @@ internal object ClientUserAgent {
 
    @JvmStatic
    fun `init$lambda$0`(var0: Context, var1: java.lang.String): OkHttpClient {
-      r.h(var0, "$context");
-      r.h(var1, "$userAgent");
-      return OkHttpClientProvider.createClientBuilder(var0).g(INSTANCE.createDispatcher()).a(new ClientUserAgent.DiscordUserAgentInterceptor(var1)).c();
+      q.h(var0, "$context");
+      q.h(var1, "$userAgent");
+      return OkHttpClientProvider.createClientBuilder(var0).h(INSTANCE.createDispatcher()).a(new ClientUserAgent.DiscordUserAgentInterceptor(var1)).c();
    }
 
    public fun init(context: Context, userAgent: String) {
-      r.h(var1, "context");
-      r.h(var2, "userAgent");
+      q.h(var1, "context");
+      q.h(var2, "userAgent");
       OkHttpClientProvider.setOkHttpClientFactory(new a(var1, var2));
    }
 
@@ -34,14 +34,14 @@ internal object ClientUserAgent {
       private final val userAgent: String
 
       init {
-         r.h(var1, "userAgent");
+         q.h(var1, "userAgent");
          super();
          this.userAgent = var1;
       }
 
       public open fun intercept(chain: Chain): Response {
-         r.h(var1, "chain");
-         return var1.a(var1.p().i().i("User-Agent").a("User-Agent", this.userAgent).b());
+         q.h(var1, "chain");
+         return var1.a(var1.v().i().i("User-Agent").a("User-Agent", this.userAgent).b());
       }
    }
 }

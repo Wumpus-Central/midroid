@@ -1,12 +1,12 @@
 package com.discord.chat.presentation.list.item
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class MessageBundleViewMoreItem(viewMoreText: String) : MessageBundleItem {
    public final val viewMoreText: String
 
    init {
-      r.h(var1, "viewMoreText");
+      q.h(var1, "viewMoreText");
       super("view more", null);
       this.viewMoreText = var1;
    }
@@ -16,7 +16,7 @@ public data class MessageBundleViewMoreItem(viewMoreText: String) : MessageBundl
    }
 
    public fun copy(viewMoreText: String = var0.viewMoreText): MessageBundleViewMoreItem {
-      r.h(var1, "viewMoreText");
+      q.h(var1, "viewMoreText");
       return new MessageBundleViewMoreItem(var1);
    }
 
@@ -26,7 +26,7 @@ public data class MessageBundleViewMoreItem(viewMoreText: String) : MessageBundl
       } else if (var1 !is MessageBundleViewMoreItem) {
          return false;
       } else {
-         return r.c(this.viewMoreText, (var1 as MessageBundleViewMoreItem).viewMoreText);
+         return q.c(this.viewMoreText, (var1 as MessageBundleViewMoreItem).viewMoreText);
       }
    }
 
@@ -35,11 +35,11 @@ public data class MessageBundleViewMoreItem(viewMoreText: String) : MessageBundl
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.viewMoreText;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MessageBundleViewMoreItem(viewMoreText=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.viewMoreText;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MessageBundleViewMoreItem(viewMoreText=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -5,11 +5,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableNativeArray
 import java.util.HashMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactContextBaseJavaModule {
    open fun ReactResourceModule(var1: ReactApplicationContext) {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -32,20 +32,20 @@ public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactCo
    }
 
    public fun reactResources(values: ReadableArray): HashMap<String, String> {
-      r.h(var1, "values");
-      val var7: HashMap = new HashMap(var1.size());
-      val var5: Array<java.lang.Enum> = this.keys();
-      val var4: Int = var5.length;
+      q.h(var1, "values");
+      val var6: HashMap = new HashMap(var1.size());
+      val var7: Array<java.lang.Enum> = this.keys();
+      val var4: Int = var7.length;
       var var3: Int = 0;
 
       for (int var2 = 0; var3 < var4; var2++) {
-         val var6: java.lang.String = var5[var3].name();
+         val var5: java.lang.String = var7[var3].name();
          val var8: java.lang.String = var1.getString(var2);
-         r.g(var8, "values.getString(index)");
-         var7.put(var6, var8);
+         q.g(var8, "getString(...)");
+         var6.put(var5, var8);
          var3++;
       }
 
-      return var7;
+      return var6;
    }
 }

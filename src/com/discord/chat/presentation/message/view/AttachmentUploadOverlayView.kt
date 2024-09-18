@@ -10,7 +10,6 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup.LayoutParams
 import android.view.animation.OvershootInterpolator
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
@@ -38,28 +37,28 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    private final var uploadContext: UploadContext?
 
    fun AttachmentUploadOverlayView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       this.transitionInDuration = 250L;
       this.transitionOutDuration = 175L;
       this.transitionDelay = 400L;
       this.animationStartDelay = 1000L;
       val var5: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var5, "inflate(...)");
       this.binding = var5;
       this.onAnimationComplete = <unrepresentable>.INSTANCE;
       val var3: SimpleDraweeView = var5.uploadCancel;
-      kotlin.jvm.internal.r.g(var5.uploadCancel, "it");
+      kotlin.jvm.internal.q.e(var5.uploadCancel);
       ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.Cancel);
       ColorUtilsKt.setTintColor(var3, Color.argb(255, 255, 255, 255));
       I18nUtilsKt.i18nContentDescription$default(var3, I18nMessage.CANCEL, null, 2, null);
       val var4: SimpleDraweeView = var5.uploadComplete;
-      kotlin.jvm.internal.r.g(var5.uploadComplete, "it");
+      kotlin.jvm.internal.q.e(var5.uploadComplete);
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Checkmark);
       ColorUtilsKt.setTintColor(var4, Color.argb(255, 88, 101, 242));
       I18nUtilsKt.i18nContentDescription$default(var4, I18nMessage.UPLOAD_COMPLETE, null, 2, null);
@@ -72,8 +71,8 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun setSquareLayoutParam(view: View, dimension: Int) {
-      val var3: LayoutParams = var1.getLayoutParams();
-      kotlin.jvm.internal.r.g(var3, "view.layoutParams");
+      val var3: android.view.ViewGroup.LayoutParams = var1.getLayoutParams();
+      kotlin.jvm.internal.q.g(var3, "getLayoutParams(...)");
       var3.width = var2;
       var3.height = var2;
       var1.setLayoutParams(var3);
@@ -99,10 +98,10 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
    @JvmStatic
    fun `setUploadCompleteBackgroundVisible$lambda$3$lambda$2`(var0: AttachmentUploadOverlayView, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var0, "this$0");
-      kotlin.jvm.internal.r.h(var1, "it");
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "it");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.binding.uploadCompleteLayout.setAlpha(var3 as java.lang.Float);
    }
 
@@ -135,11 +134,11 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun uploadCompleteCheckmarkFadeInAnim(): AnimatorSet {
-      val var1: AnimatorSet = new AnimatorSet();
-      var1.setDuration(this.transitionInDuration);
-      val var2: ValueAnimator = new ValueAnimator();
-      var2.setFloatValues(new float[]{0.0F, 1.0F});
-      var2.addUpdateListener(new d(this));
+      val var2: AnimatorSet = new AnimatorSet();
+      var2.setDuration(this.transitionInDuration);
+      val var1: ValueAnimator = new ValueAnimator();
+      var1.setFloatValues(new float[]{0.0F, 1.0F});
+      var1.addUpdateListener(new d(this));
       val var5: ValueAnimator = new ValueAnimator();
       var5.setFloatValues(new float[]{0.8F, 0.9F});
       var5.setInterpolator(new OvershootInterpolator(8.0F));
@@ -147,25 +146,25 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       val var4: ValueAnimator = new ValueAnimator();
       var4.setFloatValues(new float[]{1.0F, 0.0F});
       var4.addUpdateListener(new f(this));
-      var1.playTogether(new Animator[]{var2, var5, var4});
-      return var1;
+      var2.playTogether(new Animator[]{var1, var5, var4});
+      return var2;
    }
 
    @JvmStatic
    fun `uploadCompleteCheckmarkFadeInAnim$lambda$10$lambda$5$lambda$4`(var0: AttachmentUploadOverlayView, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var0, "this$0");
-      kotlin.jvm.internal.r.h(var1, "it");
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "it");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.binding.uploadComplete.setAlpha(var3 as java.lang.Float);
    }
 
    @JvmStatic
    fun `uploadCompleteCheckmarkFadeInAnim$lambda$10$lambda$7$lambda$6`(var0: AttachmentUploadOverlayView, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var0, "this$0");
-      kotlin.jvm.internal.r.h(var1, "it");
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "it");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       val var2: Float = var3 as java.lang.Float;
       var0.binding.uploadCompleteBackground.setScaleX(var2);
       var0.binding.uploadCompleteBackground.setScaleY(var2);
@@ -173,10 +172,10 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
    @JvmStatic
    fun `uploadCompleteCheckmarkFadeInAnim$lambda$10$lambda$9$lambda$8`(var0: AttachmentUploadOverlayView, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var0, "this$0");
-      kotlin.jvm.internal.r.h(var1, "it");
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "it");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.binding.uploadProgressLayout.setAlpha(var3 as java.lang.Float);
    }
 
@@ -203,10 +202,10 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
          public void onAnimationEnd(Animator var1) {
             val var2: ConstraintLayout = AttachmentUploadOverlayView.access$getBinding$p(this.this$0).uploadProgressLayout;
-            kotlin.jvm.internal.r.g(var2, "binding.uploadProgressLayout");
+            kotlin.jvm.internal.q.g(var2, "uploadProgressLayout");
             var2.setVisibility(8);
             val var3: ConstraintLayout = AttachmentUploadOverlayView.access$getBinding$p(this.this$0).uploadCompleteLayout;
-            kotlin.jvm.internal.r.g(var3, "binding.uploadCompleteLayout");
+            kotlin.jvm.internal.q.g(var3, "uploadCompleteLayout");
             var3.setVisibility(8);
          }
 
@@ -221,10 +220,10 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
    @JvmStatic
    fun `uploadCompleteCheckmarkFadeOutAnim$lambda$16$lambda$12$lambda$11`(var0: AttachmentUploadOverlayView, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var0, "this$0");
-      kotlin.jvm.internal.r.h(var1, "it");
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "it");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       val var2: Float = var3 as java.lang.Float;
       var0.binding.uploadCompleteLayout.setScaleX(var2);
       var0.binding.uploadCompleteLayout.setScaleY(var2);
@@ -232,25 +231,25 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
    @JvmStatic
    fun `uploadCompleteCheckmarkFadeOutAnim$lambda$16$lambda$14$lambda$13`(var0: AttachmentUploadOverlayView, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var0, "this$0");
-      kotlin.jvm.internal.r.h(var1, "it");
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "it");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.binding.uploadCompleteLayout.setAlpha(var3 as java.lang.Float);
    }
 
    public fun configureCompleteView(backgroundSize: Int? = null, checkmarkButtonSize: Int? = null) {
       val var3: AttachmentUploadOverlayView.CompleteViewConfig = new AttachmentUploadOverlayView.CompleteViewConfig(var1, var2);
-      if (!kotlin.jvm.internal.r.c(this.completeViewConfig, var3)) {
+      if (!kotlin.jvm.internal.q.c(this.completeViewConfig, var3)) {
          if (var1 != null) {
             val var4: MaterialCardView = this.binding.uploadCompleteBackground;
-            kotlin.jvm.internal.r.g(this.binding.uploadCompleteBackground, "binding.uploadCompleteBackground");
+            kotlin.jvm.internal.q.g(this.binding.uploadCompleteBackground, "uploadCompleteBackground");
             this.setSquareLayoutParam(var4, var1);
          }
 
          if (var2 != null) {
             val var5: SimpleDraweeView = this.binding.uploadComplete;
-            kotlin.jvm.internal.r.g(this.binding.uploadComplete, "binding.uploadComplete");
+            kotlin.jvm.internal.q.g(this.binding.uploadComplete, "uploadComplete");
             this.setSquareLayoutParam(var5, var2);
          }
 
@@ -267,10 +266,10 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       trackColor: Int? = null
    ) {
       val var7: AttachmentUploadOverlayView.ProgressViewConfig = new AttachmentUploadOverlayView.ProgressViewConfig(var1, var2, var3, var4, var5, var6);
-      if (!kotlin.jvm.internal.r.c(this.progressViewConfig, var7)) {
+      if (!kotlin.jvm.internal.q.c(this.progressViewConfig, var7)) {
          if (var1 != null) {
             val var8: View = this.binding.uploadProgressBackground;
-            kotlin.jvm.internal.r.g(this.binding.uploadProgressBackground, "binding.uploadProgressBackground");
+            kotlin.jvm.internal.q.g(this.binding.uploadProgressBackground, "uploadProgressBackground");
             this.setSquareLayoutParam(var8, var1);
          }
 
@@ -280,13 +279,13 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
          if (var3 != null) {
             val var9: SimpleDraweeView = this.binding.uploadCancel;
-            kotlin.jvm.internal.r.g(this.binding.uploadCancel, "binding.uploadCancel");
+            kotlin.jvm.internal.q.g(this.binding.uploadCancel, "uploadCancel");
             this.setSquareLayoutParam(var9, var3);
          }
 
          if (var4 != null) {
             val var10: SimpleDraweeView = this.binding.uploadCancel;
-            kotlin.jvm.internal.r.g(this.binding.uploadCancel, "binding.uploadCancel");
+            kotlin.jvm.internal.q.g(this.binding.uploadCancel, "uploadCancel");
             ColorUtilsKt.setTintColor(var10, var4);
             this.binding.uploadProgress.setIndicatorColor(new int[]{var4});
          }
@@ -304,7 +303,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    public fun setOnProgressAnimationComplete(onAnimationComplete: () -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "onAnimationComplete");
+      kotlin.jvm.internal.q.h(var1, "onAnimationComplete");
       this.onAnimationComplete = var1;
    }
 
@@ -316,7 +315,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          var3 = null;
       }
 
-      if (!kotlin.jvm.internal.r.c(this.uploadContext, var3)) {
+      if (!kotlin.jvm.internal.q.c(this.uploadContext, var3)) {
          var3 = null;
          if (var1 != null) {
             var3 = var1.getUploadContext();
@@ -335,12 +334,12 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
       if (var1 != null && var2 xor true) {
          val var8: ConstraintLayout = this.binding.uploadProgressLayout;
-         kotlin.jvm.internal.r.g(this.binding.uploadProgressLayout, "binding.uploadProgressLayout");
+         kotlin.jvm.internal.q.g(this.binding.uploadProgressLayout, "uploadProgressLayout");
          var8.setVisibility(0);
          this.binding.uploadProgress.o(var1.getUploadProgress(), true);
          if (var1.getUploadProgress() >= 100) {
             val var6: ConstraintLayout = this.binding.uploadCompleteLayout;
-            kotlin.jvm.internal.r.g(this.binding.uploadCompleteLayout, "binding.uploadCompleteLayout");
+            kotlin.jvm.internal.q.g(this.binding.uploadCompleteLayout, "uploadCompleteLayout");
             var6.setVisibility(0);
             this.uploadCompleteAnimationSequence().start();
          }
@@ -350,16 +349,16 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    public fun setUploadCancel(uploadItemProps: UploadItemProps?) {
       if (var1 == null) {
          val var4: ConstraintLayout = this.binding.uploadProgressLayout;
-         kotlin.jvm.internal.r.g(this.binding.uploadProgressLayout, "binding.uploadProgressLayout");
+         kotlin.jvm.internal.q.g(this.binding.uploadProgressLayout, "uploadProgressLayout");
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, null, 1, null);
       } else {
          if (this.binding.uploadProgress.getProgress() != 100) {
             val var2: ConstraintLayout = this.binding.uploadProgressLayout;
-            kotlin.jvm.internal.r.g(this.binding.uploadProgressLayout, "binding.uploadProgressLayout");
+            kotlin.jvm.internal.q.g(this.binding.uploadProgressLayout, "uploadProgressLayout");
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var2, false, new b(var1), 1, null);
          } else {
             val var3: ConstraintLayout = this.binding.uploadProgressLayout;
-            kotlin.jvm.internal.r.g(this.binding.uploadProgressLayout, "binding.uploadProgressLayout");
+            kotlin.jvm.internal.q.g(this.binding.uploadProgressLayout, "uploadProgressLayout");
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new c(), 1, null);
          }
       }
@@ -367,20 +366,20 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
    public companion object {
       public fun ConstraintLayout.createAndAttachUploadOverlayView(radiusPx: Int): AttachmentUploadOverlayView {
-         kotlin.jvm.internal.r.h(var1, "<this>");
+         kotlin.jvm.internal.q.h(var1, "<this>");
          val var3: Context = var1.getContext();
-         kotlin.jvm.internal.r.g(var3, "context");
+         kotlin.jvm.internal.q.g(var3, "getContext(...)");
          val var5: AttachmentUploadOverlayView = new AttachmentUploadOverlayView(var3, null, 2, null);
          var5.setId(View.generateViewId());
          ViewClippingUtilsKt.clipToRoundedRectangle(var5, var2);
-         val var4: androidx.constraintlayout.widget.ConstraintLayout.LayoutParams = new androidx.constraintlayout.widget.ConstraintLayout.LayoutParams(-2, -2);
+         val var4: ConstraintLayout.LayoutParams = new ConstraintLayout.LayoutParams(-2, -2);
          var4.setMargins(0, SizeUtilsKt.getDpToPx(2), SizeUtilsKt.getDpToPx(2), 0);
          var5.setLayoutParams(var4);
          var1.addView(var5);
          val var6: ConstraintSet = new ConstraintSet();
          var6.f(var1);
-         var6.h(var5.getId(), 7, 0, 7, 0);
-         var6.h(var5.getId(), 3, 0, 3, 0);
+         var6.g(var5.getId(), 7, 0, 7, 0);
+         var6.g(var5.getId(), 3, 0, 3, 0);
          var6.c(var1);
          return var5;
       }
@@ -414,10 +413,10 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.r.c(this.backgroundSize, var1.backgroundSize)) {
+            if (!kotlin.jvm.internal.q.c(this.backgroundSize, var1.backgroundSize)) {
                return false;
             } else {
-               return kotlin.jvm.internal.r.c(this.checkmarkButtonSize, var1.checkmarkButtonSize);
+               return kotlin.jvm.internal.q.c(this.checkmarkButtonSize, var1.checkmarkButtonSize);
             }
          }
       }
@@ -439,13 +438,13 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var1: Int = this.backgroundSize;
-         val var3: Int = this.checkmarkButtonSize;
+         val var3: Int = this.backgroundSize;
+         val var1: Int = this.checkmarkButtonSize;
          val var2: StringBuilder = new StringBuilder();
          var2.append("CompleteViewConfig(backgroundSize=");
-         var2.append(var1);
-         var2.append(", checkmarkButtonSize=");
          var2.append(var3);
+         var2.append(", checkmarkButtonSize=");
+         var2.append(var1);
          var2.append(")");
          return var2.toString();
       }
@@ -516,18 +515,18 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.r.c(this.backgroundSize, var1.backgroundSize)) {
+            if (!kotlin.jvm.internal.q.c(this.backgroundSize, var1.backgroundSize)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.backgroundDrawable, var1.backgroundDrawable)) {
+            } else if (!kotlin.jvm.internal.q.c(this.backgroundDrawable, var1.backgroundDrawable)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.cancelButtonSize, var1.cancelButtonSize)) {
+            } else if (!kotlin.jvm.internal.q.c(this.cancelButtonSize, var1.cancelButtonSize)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.primaryColor, var1.primaryColor)) {
+            } else if (!kotlin.jvm.internal.q.c(this.primaryColor, var1.primaryColor)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.progressIndicatorSize, var1.progressIndicatorSize)) {
+            } else if (!kotlin.jvm.internal.q.c(this.progressIndicatorSize, var1.progressIndicatorSize)) {
                return false;
             } else {
-               return kotlin.jvm.internal.r.c(this.trackColor, var1.trackColor);
+               return kotlin.jvm.internal.q.c(this.trackColor, var1.trackColor);
             }
          }
       }
@@ -577,15 +576,15 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var1: Int = this.backgroundSize;
+         val var6: Int = this.backgroundSize;
          val var5: Drawable = this.backgroundDrawable;
          val var2: Int = this.cancelButtonSize;
          val var3: Int = this.primaryColor;
          val var4: Int = this.progressIndicatorSize;
-         val var6: Int = this.trackColor;
+         val var1: Int = this.trackColor;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ProgressViewConfig(backgroundSize=");
-         var7.append(var1);
+         var7.append(var6);
          var7.append(", backgroundDrawable=");
          var7.append(var5);
          var7.append(", cancelButtonSize=");
@@ -595,7 +594,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          var7.append(", progressIndicatorSize=");
          var7.append(var4);
          var7.append(", trackColor=");
-         var7.append(var6);
+         var7.append(var1);
          var7.append(")");
          return var7.toString();
       }

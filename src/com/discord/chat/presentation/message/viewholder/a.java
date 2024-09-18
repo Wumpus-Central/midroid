@@ -10,6 +10,6 @@ public final class a implements OnClickListener {
    public final ActivityBookmarkViewHolder k;
 
    public final void onClick(View var1) {
-      ActivityBookmarkViewHolder.a(this.j, this.k, var1);
+      ActivityBookmarkViewHolder.b(this.j, this.k, var1);
    }
 }

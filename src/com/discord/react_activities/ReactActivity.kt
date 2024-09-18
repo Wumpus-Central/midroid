@@ -18,23 +18,23 @@ import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import java.util.concurrent.Future
-import kotlin.jvm.internal.r
-import q6.b
+import kotlin.jvm.internal.q
+import v6.b
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    internal final lateinit var rootView: ReactRootView
 
    @JvmStatic
    fun {
-      r.g(MainActivity::class.java, "forName(\"com.discord.main.MainActivity\")");
-      r.g(ShareActivity::class.java, "forName(\"com.discord.share.ShareActivity\")");
+      q.g(MainActivity::class.java, "forName(...)");
+      q.g(ShareActivity::class.java, "forName(...)");
    }
 
    protected open fun attachBaseContext(newBase: Context) {
-      r.h(var1, "newBase");
+      q.h(var1, "newBase");
       super.attachBaseContext(FontScaleUtilsKt.getFontScaledContext(var1));
       var1 = this.getApplicationContext();
-      r.g(var1, "applicationContext");
+      q.g(var1, "getApplicationContext(...)");
       FontScaleUtilsKt.setFontScaleDeprecated(var1);
    }
 
@@ -53,7 +53,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    }
 
    public open fun onConfigurationChanged(newConfig: Configuration) {
-      r.h(var1, "newConfig");
+      q.h(var1, "newConfig");
       super.onConfigurationChanged(var1);
       b.m.a(this, var1);
    }
@@ -64,7 +64,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
       val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
       val var2: Window = this.getWindow();
-      r.g(var2, "window");
+      q.g(var2, "getWindow(...)");
       var3.initialize(var2);
       CPUPnQManager.INSTANCE.initialize();
       JSWatchdogManager.INSTANCE.initialize(this);
@@ -89,12 +89,12 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
    public open inner class ActivityDelegate(activity: ReactActivity) : ReactActivityDelegate {
       init {
-         r.h(var2, "activity");
+         q.h(var2, "activity");
          this.this$0 = var1;
          super(var2, var1.getNameOfComponent());
          TTILoggingApplication.Companion.trackActivityDelegateInitialized();
          val var3: CrashReporting = CrashReporting.INSTANCE;
-         if (r.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
+         if (q.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
             CrashReporting.addBreadcrumb$default(var3, "Checking for blocking OTA update", null, null, 6, null);
             val var4: Future = BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, null, 2, null);
             if (var4 != null) {
@@ -105,7 +105,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
       protected open fun createRootView(): com.facebook.react.ReactRootView {
          val var1: Context = this.getContext();
-         r.g(var1, "context");
+         q.g(var1, "getContext(...)");
          val var2: ReactRootView = new ReactRootView(var1);
          var2.setIsFabric(DefaultNewArchitectureEntryPoint.getFabricEnabled());
          this.this$0.setRootView$react_activity_release(var2);

@@ -3,8 +3,8 @@ package com.discord.fastest_list.react_events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import eh.w
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -12,10 +12,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.e0
-import xk.f0
+import vk.f
+import vk.n
+import yk.f0
+import yk.g0
+import yk.g0.a
 
 @f
 internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Float) : ReactEvent {
@@ -29,17 +30,6 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
       this.y = var2;
       this.width = var3;
       this.height = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnLayoutEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.r(var2, 0, var0.x);
-      var1.r(var2, 1, var0.y);
-      var1.r(var2, 2, var0.width);
-      var1.r(var2, 3, var0.height);
    }
 
    public operator fun component1(): Float {
@@ -86,36 +76,31 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          + java.lang.Float.hashCode(this.height);
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            w.a(
-               "layout",
-               NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("x", this.x), w.a("y", this.y), w.a("width", this.width), w.a("height", this.height)})
-            )
-         }
+         w.a("layout", NativeMapExtensionsKt.nativeMapOf(w.a("x", this.x), w.a("y", this.y), w.a("width", this.width), w.a("height", this.height)))
       );
    }
 
    public override fun toString(): String {
-      val var4: Float = this.x;
-      val var1: Float = this.y;
-      val var2: Float = this.width;
+      val var2: Float = this.x;
+      val var4: Float = this.y;
+      val var1: Float = this.width;
       val var3: Float = this.height;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnLayoutEvent(x=");
-      var5.append(var4);
-      var5.append(", y=");
-      var5.append(var1);
-      var5.append(", width=");
       var5.append(var2);
+      var5.append(", y=");
+      var5.append(var4);
+      var5.append(", width=");
+      var5.append(var1);
       var5.append(", height=");
       var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
 
-   public object `$serializer` : f0<OnLayoutEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -134,37 +119,35 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{e0.a, e0.a, e0.a, e0.a};
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         return new KSerializer[]{f0.a, f0.a, f0.a, f0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnLayoutEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
+         val var11: c = var1.c(var10);
          var var2: Float;
          var var3: Float;
+         var var4: Float;
          var var5: Float;
          var var7: Int;
-         var var13: Float;
-         if (var11.p()) {
-            var13 = var11.u(var10, 0);
-            val var6: Float = var11.u(var10, 1);
-            var3 = var11.u(var10, 2);
-            var2 = var11.u(var10, 3);
+         if (var11.y()) {
+            var5 = var11.G(var10, 0);
+            var4 = var11.G(var10, 1);
+            var3 = var11.G(var10, 2);
+            var2 = var11.G(var10, 3);
             var7 = 15;
-            var5 = var13;
-            var13 = var6;
          } else {
             var5 = 0.0F;
-            var13 = 0.0F;
+            var4 = 0.0F;
             var3 = 0.0F;
             var2 = 0.0F;
             var var8: Boolean = true;
             var7 = 0;
 
             while (var8) {
-               val var9: Int = var11.o(var10);
+               val var9: Int = var11.x(var10);
                if (var9 != -1) {
                   if (var9 != 0) {
                      if (var9 != 1) {
@@ -173,18 +156,18 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                               throw new n(var9);
                            }
 
-                           var13 = var11.u(var10, 3);
+                           var4 = var11.G(var10, 3);
                            var7 |= 8;
                         } else {
-                           var3 = var11.u(var10, 2);
+                           var3 = var11.G(var10, 2);
                            var7 |= 4;
                         }
                      } else {
-                        var2 = var11.u(var10, 1);
+                        var2 = var11.G(var10, 1);
                         var7 |= 2;
                      }
                   } else {
-                     var5 = var11.u(var10, 0);
+                     var5 = var11.G(var10, 0);
                      var7 |= 1;
                   }
                } else {
@@ -192,25 +175,25 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                }
             }
 
-            var13 = var2;
-            var2 = var13;
+            var4 = var2;
+            var2 = var4;
          }
 
-         var11.c(var10);
-         return new OnLayoutEvent(var7, var5, var13, var3, var2, null);
+         var11.b(var10);
+         return new OnLayoutEvent(var7, var5, var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnLayoutEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         OnLayoutEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         OnLayoutEvent.write$Self$fastest_list_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

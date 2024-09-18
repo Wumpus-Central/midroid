@@ -6,6 +6,6 @@ import com.facebook.react.bridge.WritableNativeMap
 
 internal class OnBroadcastRequestedEvent : ReactEvent {
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
+      return NativeMapExtensionsKt.nativeMapOf();
    }
 }

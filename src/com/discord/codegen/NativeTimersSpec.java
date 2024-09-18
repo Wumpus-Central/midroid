@@ -3,11 +3,10 @@ package com.discord.codegen;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.ReactModuleWithSpec;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import d6.a;
+import k6.a;
 
-public abstract class NativeTimersSpec extends ReactContextBaseJavaModule implements ReactModuleWithSpec, TurboModule {
+public abstract class NativeTimersSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "TimersModule";
 
    public NativeTimersSpec(ReactApplicationContext var1) {

@@ -5,8 +5,8 @@ public data class UploadContext(uploaderId: String, uploadItemId: String) {
    public final val uploaderId: String
 
    init {
-      kotlin.jvm.internal.r.h(var1, "uploaderId");
-      kotlin.jvm.internal.r.h(var2, "uploadItemId");
+      kotlin.jvm.internal.q.h(var1, "uploaderId");
+      kotlin.jvm.internal.q.h(var2, "uploadItemId");
       super();
       this.uploaderId = var1;
       this.uploadItemId = var2;
@@ -21,8 +21,8 @@ public data class UploadContext(uploaderId: String, uploadItemId: String) {
    }
 
    public fun copy(uploaderId: String = var0.uploaderId, uploadItemId: String = var0.uploadItemId): UploadContext {
-      kotlin.jvm.internal.r.h(var1, "uploaderId");
-      kotlin.jvm.internal.r.h(var2, "uploadItemId");
+      kotlin.jvm.internal.q.h(var1, "uploaderId");
+      kotlin.jvm.internal.q.h(var2, "uploadItemId");
       return new UploadContext(var1, var2);
    }
 
@@ -33,10 +33,10 @@ public data class UploadContext(uploaderId: String, uploadItemId: String) {
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.r.c(this.uploaderId, var1.uploaderId)) {
+         if (!kotlin.jvm.internal.q.c(this.uploaderId, var1.uploaderId)) {
             return false;
          } else {
-            return kotlin.jvm.internal.r.c(this.uploadItemId, var1.uploadItemId);
+            return kotlin.jvm.internal.q.c(this.uploadItemId, var1.uploadItemId);
          }
       }
    }
@@ -46,14 +46,14 @@ public data class UploadContext(uploaderId: String, uploadItemId: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uploaderId;
-      val var2: java.lang.String = this.uploadItemId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UploadContext(uploaderId=");
-      var3.append(var1);
-      var3.append(", uploadItemId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.uploaderId;
+      val var3: java.lang.String = this.uploadItemId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("UploadContext(uploaderId=");
+      var1.append(var2);
+      var1.append(", uploadItemId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 }

@@ -9,8 +9,8 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.controller.a
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import kotlin.jvm.internal.r
-import l4.c
+import kotlin.jvm.internal.q
+import o4.c
 
 public class ImageWithThumbhashPlaceholderView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView {
    private final var placeholder: String?
@@ -18,12 +18,12 @@ public class ImageWithThumbhashPlaceholderView  public constructor(context: Cont
    private final var uri: String?
 
    fun ImageWithThumbhashPlaceholderView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
    }
 
@@ -48,14 +48,14 @@ public class ImageWithThumbhashPlaceholderView  public constructor(context: Cont
 
    public fun update() {
       if (this.uri != null) {
-         val var3: a = ((c.g().D(ImageRequestBuilder.s(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
-               .C(
+         val var3: a = ((c.g().F(ImageRequestBuilder.v(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
+               .E(
                   new ThumbhashPlaceholderControllerListener(
                      this, new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondary()), this.placeholder, this.placeholderVersion
                   )
                ) as PipelineDraweeControllerBuilder)
-            .c();
-         r.g(var3, "newDraweeControllerBuild…   )\n            .build()");
+            .d();
+         q.g(var3, "build(...)");
          this.setController(var3);
       }
    }

@@ -36,6 +36,7 @@ public final class MessageComponentsViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

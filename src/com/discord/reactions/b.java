@@ -10,6 +10,6 @@ public final class b implements OnLongClickListener {
    public final ReactionView.Reaction k;
 
    public final boolean onLongClick(View var1) {
-      return BurstReactionViewHolder.b(this.j, this.k, var1);
+      return BurstReactionViewHolder.c(this.j, this.k, var1);
    }
 }

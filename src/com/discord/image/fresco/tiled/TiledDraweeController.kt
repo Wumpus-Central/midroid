@@ -8,17 +8,16 @@ import com.facebook.common.references.CloseableReference
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.interfaces.DraweeHierarchy
-import kk.f
-import kk.m1
-import kk.n0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.v
-import u5.c
+import lk.f
+import lk.j1
+import lk.k0
+import x5.e
 
 public class TiledDraweeController(resources: Resources, url: String, tileMode: TileMode = TileMode.REPEAT) : DraweeController {
    private final val resources: Resources
@@ -26,21 +25,21 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
    private final val tileMode: TileMode
    private final val job: CompletableJob
    private final val scope: CoroutineScope
-   private final var myImageReference: CloseableReference<c>?
+   private final var myImageReference: CloseableReference<e>?
    private final var hierarchy: GenericDraweeHierarchy?
    private final var contentDescription: String?
 
    init {
-      r.h(var1, "resources");
-      r.h(var2, "url");
-      r.h(var3, "tileMode");
+      q.h(var1, "resources");
+      q.h(var2, "url");
+      q.h(var3, "tileMode");
       super();
       this.resources = var1;
       this.url = var2;
       this.tileMode = var3;
-      val var4: CompletableJob = m1.b(null, 1, null);
+      val var4: CompletableJob = j1.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.N0(n0.c().I1()));
+      this.scope = g.a(var4.O(k0.c().X1()));
    }
 
    private fun load() {
@@ -48,13 +47,14 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
          this.scope,
          null,
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null)// $VF: Couldn't be decompiled
+         new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1074,7 +1074,6 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          3,
          null
@@ -1094,36 +1093,22 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
    }
 
    public open fun isSameImageRequest(other: DraweeController?): Boolean {
-      var var3: Boolean = var1 is TiledDraweeController;
-      var var6: java.lang.String = null;
-      val var7: TiledDraweeController;
-      if (var3) {
-         var7 = var1 as TiledDraweeController;
-      } else {
-         var7 = null;
-      }
-
-      if (var7 != null) {
-         var6 = var7.url;
-      }
-
-      val var5: Boolean = r.c(var6, this.url);
-      var3 = false;
-      if (var5) {
-         val var2: Boolean;
-         if (this.myImageReference != null && this.myImageReference.r0()) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         var3 = false;
+      label27: {
+         val var2: Boolean = var1 is TiledDraweeController;
+         var var4: java.lang.String = null;
+         val var5: TiledDraweeController;
          if (var2) {
-            var3 = true;
+            var5 = var1 as TiledDraweeController;
+         } else {
+            var5 = null;
          }
-      }
 
-      return var3;
+         if (var5 != null) {
+            var4 = var5.url;
+         }
+
+         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.d1();
+      }
    }
 
    public open fun onAttach() {
@@ -1132,7 +1117,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
 
    public open fun onDetach() {
       if (this.hierarchy != null) {
-         this.hierarchy.reset();
+         this.hierarchy.a();
       }
 
       if (this.myImageReference != null) {

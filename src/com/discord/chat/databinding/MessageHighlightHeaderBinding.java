@@ -43,6 +43,7 @@ public final class MessageHighlightHeaderBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

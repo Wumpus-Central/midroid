@@ -36,6 +36,7 @@ public final class QrScannerBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

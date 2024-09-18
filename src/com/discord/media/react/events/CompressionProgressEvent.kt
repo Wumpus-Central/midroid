@@ -1,9 +1,8 @@
 package com.discord.media.react.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +10,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.n0
+import yk.g0.a
 
 @f
 internal data class CompressionProgressEvent(uri: String, progress: Int) : ReactEvent {
@@ -24,19 +23,10 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
    public final val uri: String
 
    init {
-      r.h(var1, "uri");
+      q.h(var1, "uri");
       super();
       this.uri = var1;
       this.progress = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: CompressionProgressEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.uri);
-      var1.w(var2, 1, var0.progress);
    }
 
    public operator fun component1(): String {
@@ -48,7 +38,7 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
    }
 
    public fun copy(uri: String = var0.uri, progress: Int = var0.progress): CompressionProgressEvent {
-      r.h(var1, "uri");
+      q.h(var1, "uri");
       return new CompressionProgressEvent(var1, var2);
    }
 
@@ -59,7 +49,7 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.uri, var1.uri)) {
+         if (!q.c(this.uri, var1.uri)) {
             return false;
          } else {
             return this.progress == var1.progress;
@@ -71,23 +61,23 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
       return this.uri.hashCode() * 31 + Integer.hashCode(this.progress);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.uri;
+      val var3: java.lang.String = this.uri;
       val var1: Int = this.progress;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CompressionProgressEvent(uri=");
-      var3.append(var2);
-      var3.append(", progress=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CompressionProgressEvent(uri=");
+      var2.append(var3);
+      var2.append(", progress=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<CompressionProgressEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -105,19 +95,19 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, m0.a};
+         return new KSerializer[]{b2.a, n0.a};
       }
 
       public open fun deserialize(decoder: Decoder): CompressionProgressEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          var var2: Int;
          var var3: Int;
          var var8: java.lang.String;
-         if (var7.p()) {
-            var8 = var7.m(var6, 0);
-            var3 = var7.i(var6, 1);
+         if (var7.y()) {
+            var8 = var7.t(var6, 0);
+            var3 = var7.k(var6, 1);
             var2 = 3;
          } else {
             var var4: Boolean = true;
@@ -126,17 +116,17 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
             var8 = null;
 
             while (var4) {
-               val var5: Int = var7.o(var6);
+               val var5: Int = var7.x(var6);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
                         throw new n(var5);
                      }
 
-                     var3 = var7.i(var6, 1);
+                     var3 = var7.k(var6, 1);
                      var2 |= 2;
                   } else {
-                     var8 = var7.m(var6, 0);
+                     var8 = var7.t(var6, 0);
                      var2 |= 1;
                   }
                } else {
@@ -145,20 +135,20 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new CompressionProgressEvent(var2, var8, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CompressionProgressEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         CompressionProgressEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         CompressionProgressEvent.write$Self$media_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

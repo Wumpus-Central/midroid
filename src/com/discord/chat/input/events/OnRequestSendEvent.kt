@@ -3,7 +3,7 @@ package com.discord.chat.input.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,25 +11,18 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.g0
+import yk.g0.a
 
 @f
 internal class OnRequestSendEvent : ReactEvent {
-   @JvmStatic
-   public fun `write$Self`(self: OnRequestSendEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-   }
-
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
+      return NativeMapExtensionsKt.nativeMapOf();
    }
 
-   public object `$serializer` : f0<OnRequestSendEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -48,32 +41,30 @@ internal class OnRequestSendEvent : ReactEvent {
       }
 
       public open fun deserialize(decoder: Decoder): OnRequestSendEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: c = var1.b(var3);
-         if (!var4.p()) {
-            for (int var2 = 1; var2; var2 = 0) {
-               var2 = var4.o(var3);
-               if (var2 != -1) {
-                  throw new n(var2);
-               }
+         val var4: c = var1.c(var3);
+         if (!var4.y()) {
+            val var2: Int = var4.x(var3);
+            if (var2 != -1) {
+               throw new n(var2);
             }
          }
 
-         var4.c(var3);
+         var4.b(var3);
          return new OnRequestSendEvent(0, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnRequestSendEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         OnRequestSendEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         OnRequestSendEvent.write$Self$chat_input_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

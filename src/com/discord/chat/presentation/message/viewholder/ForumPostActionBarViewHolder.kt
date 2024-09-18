@@ -13,7 +13,7 @@ public class ForumPostActionBarViewHolder(forumPostActionBarView: ForumPostActio
    private final val forumPostActionBarView: ForumPostActionBarView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "forumPostActionBarView");
+      kotlin.jvm.internal.q.h(var1, "forumPostActionBarView");
       super(var1, null);
       this.forumPostActionBarView = var1;
    }
@@ -30,15 +30,15 @@ public class ForumPostActionBarViewHolder(forumPostActionBarView: ForumPostActio
       onTapDismissMediaPostSharePrompt: OnClickListener,
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "forumPostActionBar");
-      kotlin.jvm.internal.r.h(var3, "onTapFollowForumPost");
-      kotlin.jvm.internal.r.h(var4, "onTapShareForumPost");
-      kotlin.jvm.internal.r.h(var5, "onAddReactionClick");
-      kotlin.jvm.internal.r.h(var6, "onTapReactionOverflow");
-      kotlin.jvm.internal.r.h(var7, "onReactionClick");
-      kotlin.jvm.internal.r.h(var8, "onReactionLongPress");
-      kotlin.jvm.internal.r.h(var9, "onTapDismissMediaPostSharePrompt");
-      kotlin.jvm.internal.r.h(var10, "onLinkClicked");
+      kotlin.jvm.internal.q.h(var1, "forumPostActionBar");
+      kotlin.jvm.internal.q.h(var3, "onTapFollowForumPost");
+      kotlin.jvm.internal.q.h(var4, "onTapShareForumPost");
+      kotlin.jvm.internal.q.h(var5, "onAddReactionClick");
+      kotlin.jvm.internal.q.h(var6, "onTapReactionOverflow");
+      kotlin.jvm.internal.q.h(var7, "onReactionClick");
+      kotlin.jvm.internal.q.h(var8, "onReactionLongPress");
+      kotlin.jvm.internal.q.h(var9, "onTapDismissMediaPostSharePrompt");
+      kotlin.jvm.internal.q.h(var10, "onLinkClicked");
       val var11: ForumPostActions = var1.getPostActions();
       this.forumPostActionBarView
          .configure-CgeVRR0(

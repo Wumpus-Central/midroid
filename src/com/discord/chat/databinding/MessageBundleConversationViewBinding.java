@@ -31,21 +31,21 @@ public final class MessageBundleConversationViewBinding implements ViewBinding {
 
    public static MessageBundleConversationViewBinding bind(View var0) {
       int var1 = R.id.barrier;
-      Barrier var6 = (Barrier)a.a(var0, var1);
-      if (var6 != null) {
+      Barrier var2 = (Barrier)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.reactions_view;
-         ReactionsView var3 = (ReactionsView)a.a(var0, var1);
-         if (var3 != null) {
+         ReactionsView var4 = (ReactionsView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.reply_author_avatar;
-            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-            if (var4 != null) {
+            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.reply_author_name;
-               TextView var2 = (TextView)a.a(var0, var1);
-               if (var2 != null) {
+               TextView var6 = (TextView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.reply_text;
                   MessageContentView var5 = (MessageContentView)a.a(var0, var1);
                   if (var5 != null) {
-                     return new MessageBundleConversationViewBinding(var0, var6, var3, var4, var2, var5);
+                     return new MessageBundleConversationViewBinding(var0, var2, var4, var3, var6, var5);
                   }
                }
             }
@@ -64,6 +64,7 @@ public final class MessageBundleConversationViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

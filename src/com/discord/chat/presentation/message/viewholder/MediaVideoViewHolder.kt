@@ -15,7 +15,7 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
    private final val view: MediaVideoView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "view");
+      kotlin.jvm.internal.q.h(var1, "view");
       super(var1, null);
       this.view = var1;
    }
@@ -55,11 +55,11 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
       onMediaPlayFinishedAnalytics: (MediaPlayFinishedAnalytics) -> Unit,
       playerSettings: PlayerSettings
    ) {
-      kotlin.jvm.internal.r.h(var4, "url");
-      kotlin.jvm.internal.r.h(var5, "previewUrl");
-      kotlin.jvm.internal.r.h(var31, "onClicked");
-      kotlin.jvm.internal.r.h(var33, "onMediaPlayFinishedAnalytics");
-      kotlin.jvm.internal.r.h(var34, "playerSettings");
+      kotlin.jvm.internal.q.h(var4, "url");
+      kotlin.jvm.internal.q.h(var5, "previewUrl");
+      kotlin.jvm.internal.q.h(var31, "onClicked");
+      kotlin.jvm.internal.q.h(var33, "onMediaPlayFinishedAnalytics");
+      kotlin.jvm.internal.q.h(var34, "playerSettings");
       this.view
          .setContent-eqgJMyY(
             var1,
@@ -95,10 +95,12 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
       }
 
       this.view.showAltTextButton(var10, var15, var18);
-      if (!var17 && var14) {
-         var10 = true;
-      } else {
+      var10 = false;
+      if (!var17) {
          var10 = false;
+         if (var14) {
+            var10 = true;
+         }
       }
 
       this.view.showDescription(var10, var15);

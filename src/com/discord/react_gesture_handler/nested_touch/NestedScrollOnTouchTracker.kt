@@ -8,13 +8,11 @@ import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import fh.p
-import kk.f
-import kotlin.coroutines.Continuation
+import eh.o
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
+import lk.f
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -32,7 +30,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    private final var spanBeingTouched: NestedClickableSpan?
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       this.onClickListener = var2;
       this.onLongClickListener = var3;
@@ -55,8 +53,8 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    }
 
    internal fun handleTouch(view: View, event: MotionEvent, isSupplementalEvent: Boolean): Boolean {
-      r.h(var1, "view");
-      r.h(var2, "event");
+      q.h(var1, "view");
+      q.h(var2, "event");
       if (!var1.isAttachedToWindow()) {
          return false;
       } else {
@@ -71,26 +69,26 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
          if (var14 as TextView != null) {
             val var16: Array<NestedClickableSpan>;
             if (var2.getAction() == 0) {
-               val var34: java.lang.CharSequence = var19.getText();
-               val var35: Spannable;
-               if (var34 is Spannable) {
-                  var35 = var34 as Spannable;
+               val var31: java.lang.CharSequence = var19.getText();
+               val var32: Spannable;
+               if (var31 is Spannable) {
+                  var32 = var31 as Spannable;
                } else {
-                  var35 = null;
+                  var32 = null;
                }
 
-               label176: {
-                  if (var35 != null) {
+               label157: {
+                  if (var32 != null) {
                      var var7: Int = (int)var2.getX() - var19.getTotalPaddingLeft() + var19.getScrollX();
-                     val var33: Int = var19.getLayout().getLineForVertical((int)var2.getY() - var19.getTotalPaddingTop() + var19.getScrollY());
-                     val var4: Float = var19.getLayout().getLineRight(var33);
-                     val var5: Float = var19.getLayout().getLineLeft(var33);
+                     val var30: Int = var19.getLayout().getLineForVertical((int)var2.getY() - var19.getTotalPaddingTop() + var19.getScrollY());
+                     val var5: Float = var19.getLayout().getLineRight(var30);
+                     val var4: Float = var19.getLayout().getLineLeft(var30);
                      val var6: Float = var7;
-                     if (!(var7 > var4) && (var7 < 0 || !(var7 < var5))) {
-                        var7 = var19.getLayout().getOffsetForHorizontal(var33, var6);
-                        var14 = var35.getSpans(var7, var7, NestedClickableSpan.class);
-                        r.g(var14, "spannableText.getSpans(\n…     T::class.java,\n    )");
-                        break label176;
+                     if (!(var7 > var5) && (var7 < 0 || !(var7 < var4))) {
+                        var7 = var19.getLayout().getOffsetForHorizontal(var30, var6);
+                        var14 = var32.getSpans(var7, var7, NestedClickableSpan.class);
+                        q.g(var14, "getSpans(...)");
+                        break label157;
                      }
                   }
 
@@ -102,72 +100,48 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                var16 = null;
             }
 
-            var var29: Boolean;
-            label135: {
-               if (var16 != null) {
-                  if (var16.length == 0) {
-                     var29 = (boolean)1;
-                  } else {
-                     var29 = (boolean)0;
-                  }
-
-                  if (!var29) {
-                     var29 = 0;
-                     break label135;
-                  }
-               }
-
-               var29 = 1;
-            }
-
-            if (!var29) {
+            if (var16 != null && var16.length != 0) {
+               val var15: Any;
                if (var16.length == 0) {
-                  var29 = (boolean)1;
-               } else {
-                  var29 = (boolean)0;
-               }
-
-               val var15: NestedClickableSpan;
-               if (var29) {
                   var15 = null;
                } else {
-                  var var37: NestedClickableSpan = var16[0];
-                  var29 = b.I(var16);
-                  if (var29 == 0) {
-                     var15 = var37;
+                  var var34: Any = var16[0];
+                  val var28: Int = c.L(var16);
+                  if (var28 == 0) {
+                     var15 = var34;
                   } else {
-                     var var17: NestedClickableSpan.TouchPriority = var37.getTouchPriority();
-                     val var20: p = new IntRange(1, var29).q();
+                     var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var34).getTouchPriority();
+                     val var20: o = new IntRange(1, var28).q();
 
                      while (true) {
-                        var15 = var37;
+                        var15 = var34;
                         if (!var20.hasNext()) {
                            break;
                         }
 
-                        val var18: NestedClickableSpan = var16[var20.nextInt()];
-                        val var38: NestedClickableSpan.TouchPriority = var18.getTouchPriority();
-                        if (var17.compareTo(var38) < 0) {
-                           var37 = var18;
-                           var17 = var38;
+                        val var18: NestedClickableSpan = var16[var20.c()];
+                        val var35: NestedClickableSpan.TouchPriority = var18.getTouchPriority();
+                        if (var17.compareTo(var35) < 0) {
+                           var34 = var18;
+                           var17 = var35;
                         }
                      }
                   }
                }
 
-               r.e(var15);
-               this.spanBeingTouched = var15;
+               q.e(var15);
+               this.spanBeingTouched = (NestedClickableSpan)var15;
                if (var15 != null) {
-                  var15.enableHighlight(var19);
+                  ((NestedClickableSpan)var15).enableHighlight(var19);
                }
             }
          }
 
-         val var32: Int = var2.getAction();
-         if (var32 != 0) {
-            if (var32 != 1) {
-               if (var32 != 2) {
-                  if (var32 != 3) {
+         val var29: Int = var2.getAction();
+         if (var29 != 0) {
+            if (var29 != 1) {
+               if (var29 != 2) {
+                  if (var29 != 3) {
                      return false;
                   } else {
                      this.cleanUp(var1);
@@ -217,13 +191,14 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   CoroutineViewUtilsKt.attachedScope(var1, true),
                   null,
                   null,
-                  new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, null)// $VF: Couldn't be decompiled
+                  new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1243,7 +1218,6 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
                   3,
                   null

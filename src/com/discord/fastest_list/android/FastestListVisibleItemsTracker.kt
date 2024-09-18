@@ -1,6 +1,7 @@
 package com.discord.fastest_list.android
 
-import kotlin.jvm.internal.r
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
 
 internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutManager,
    sections: FastestListSections,
@@ -34,9 +35,9 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
 
    init {
-      r.h(var1, "layoutManager");
-      r.h(var2, "sections");
-      r.h(var3, "onVisibleItemsChanged");
+      q.h(var1, "layoutManager");
+      q.h(var2, "sections");
+      q.h(var3, "onVisibleItemsChanged");
       super();
       this.layoutManager = var1;
       this.sections = var2;
@@ -59,7 +60,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
    private fun isUnchanged(itemEndPosition: Int, itemStartPosition: Int): Boolean {
       val var3: Boolean;
-      if (r.c(this.sectionsId, this.sections.getId()) && var1 == this.positionEndPrev && var2 == this.positionStartPrev) {
+      if (q.c(this.sectionsId, this.sections.getId()) && var1 == this.positionEndPrev && var2 == this.positionStartPrev) {
          var3 = true;
       } else {
          var3 = false;
@@ -69,25 +70,18 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
    }
 
    public fun updateVisibleItemPositions() {
-      var var3: Int = this.layoutManager.findFirstVisibleItemPosition();
+      var var1: Int = this.layoutManager.findFirstVisibleItemPosition();
       var var2: Int = this.layoutManager.findLastVisibleItemPosition();
-      if (var2 != -1 && var3 != -1) {
-         if (this.positionEndPrevRaw == var2 && this.positionStartPrevRaw == var3 && r.c(this.sectionsId, this.sections.getId())) {
+      if (var2 != -1 && var1 != -1) {
+         if (this.positionEndPrevRaw == var2 && this.positionStartPrevRaw == var1 && q.c(this.sectionsId, this.sections.getId())) {
             return;
          }
 
          this.positionEndPrevRaw = var2;
-         this.positionStartPrevRaw = var3;
-         var var1: Boolean;
+         this.positionStartPrevRaw = var1;
          if (this.getLastItemPosition() < 0) {
-            var1 = 1;
-         } else {
-            var1 = 0;
-         }
-
-         if (var1) {
-            if (!this.isUnchanged(var2, var3)) {
-               this.computeVisibleItems(var2, var3);
+            if (!this.isUnchanged(var2, var1)) {
+               this.computeVisibleItems(var2, var1);
             }
 
             return;
@@ -95,9 +89,8 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
          if (this.getScrollingForward()) {
             var2 = Math.min(this.getLastItemPosition(), var2 + this.getItemBuffer());
-            var1 = var3;
          } else {
-            var1 = Math.max(0, var3 - this.getItemBuffer());
+            var1 = Math.max(0, var1 - this.getItemBuffer());
          }
 
          if (this.isUnchanged(var2, var1)) {
@@ -107,7 +100,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
          val var6: Int = this.positionEndPrev - this.positionStartPrev;
          var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
          var var4: Int = var1;
-         var3 = var2;
+         var var3: Int = var2;
          if (var5 > 0) {
             var5 = Math.min(this.getLastItemPosition(), var2 + var5);
             var3 = var6 - (var5 - var1);
@@ -133,17 +126,31 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       NOMINAL(1.0F)
       public final val extraLayoutPercent: Float
       @JvmStatic
-      private FastestListVisibleItemsTracker.RenderAhead[] $VALUES = $values();
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private FastestListVisibleItemsTracker.RenderAhead[] $VALUES;
       @JvmStatic
       public FastestListVisibleItemsTracker.RenderAhead.Companion Companion = new FastestListVisibleItemsTracker.RenderAhead.Companion(null);
+
+      @JvmStatic
+      fun {
+         val var0: Array<FastestListVisibleItemsTracker.RenderAhead> = $values();
+         $VALUES = var0;
+         $ENTRIES = kh.a.a(var0);
+      }
 
       init {
          this.extraLayoutPercent = var3;
       }
 
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
+      }
+
       public companion object {
          public fun create(value: String): com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhead {
-            r.h(var1, "value");
+            q.h(var1, "value");
             val var2: Int = var1.hashCode();
             if (var2 != 3154575) {
                if (var2 != 3194931) {

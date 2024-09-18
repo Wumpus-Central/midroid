@@ -5,7 +5,7 @@ import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public const val TASK_BAR_HEIGHT_DP: Float = 60.0F
 
@@ -24,7 +24,7 @@ public fun Activity?.isTaskBarEnabled(): Boolean {
       }
 
       var var1: Boolean = false;
-      if (r.b(var3, 60.0F)) {
+      if (q.b(var3, 60.0F)) {
          var1 = false;
          if (IsTabletKt.isTablet(var0)) {
             var1 = true;

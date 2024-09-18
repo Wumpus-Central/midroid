@@ -1,66 +1,39 @@
 package com.discord.bundle_updater
 
-import fh.s
-import kotlin.jvm.internal.r
+import eh.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.r0
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.s0
 
 @f
-public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = s.h(), patches: Map<String, String> = s.h()) {
+public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = r.h(), patches: Map<String, String> = r.h()) {
    public final val hashes: Map<String, String>
    public final val metadata: AppManifestMetadata
    public final val patches: Map<String, String>
 
+   @JvmStatic
+   fun {
+      val var0: b2 = b2.a;
+      $childSerializers = new KSerializer[]{null, new s0(b2.a, b2.a), new s0(var0, var0)};
+   }
+
    init {
-      r.h(var1, "metadata");
-      r.h(var2, "hashes");
-      r.h(var3, "patches");
+      q.h(var1, "metadata");
+      q.h(var2, "hashes");
+      q.h(var3, "patches");
       super();
       this.metadata = var1;
       this.hashes = var2;
       this.patches = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: AppManifest, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, AppManifestMetadata.$serializer.INSTANCE, var0.metadata);
-      var var3: Boolean;
-      if (!var1.A(var2, 1) && r.c(var0.hashes, s.h())) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.y(var2, 1, new r0(a2.a, a2.a), var0.hashes);
-      }
-
-      label24: {
-         if (!var1.A(var2, 2)) {
-            var3 = false;
-            if (r.c(var0.patches, s.h())) {
-               break label24;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.y(var2, 2, new r0(a2.a, a2.a), var0.patches);
-      }
    }
 
    public operator fun component1(): AppManifestMetadata {
@@ -76,9 +49,9 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public fun copy(metadata: AppManifestMetadata = var0.metadata, hashes: Map<String, String> = var0.hashes, patches: Map<String, String> = var0.patches): AppManifest {
-      r.h(var1, "metadata");
-      r.h(var2, "hashes");
-      r.h(var3, "patches");
+      q.h(var1, "metadata");
+      q.h(var2, "hashes");
+      q.h(var3, "patches");
       return new AppManifest(var1, var2, var3);
    }
 
@@ -89,12 +62,12 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.metadata, var1.metadata)) {
+         if (!q.c(this.metadata, var1.metadata)) {
             return false;
-         } else if (!r.c(this.hashes, var1.hashes)) {
+         } else if (!q.c(this.hashes, var1.hashes)) {
             return false;
          } else {
-            return r.c(this.patches, var1.patches);
+            return q.c(this.patches, var1.patches);
          }
       }
    }
@@ -104,21 +77,21 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var1: AppManifestMetadata = this.metadata;
-      val var2: java.util.Map = this.hashes;
-      val var3: java.util.Map = this.patches;
+      val var3: AppManifestMetadata = this.metadata;
+      val var1: java.util.Map = this.hashes;
+      val var2: java.util.Map = this.patches;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AppManifest(metadata=");
-      var4.append(var1);
-      var4.append(", hashes=");
-      var4.append(var2);
-      var4.append(", patches=");
       var4.append(var3);
+      var4.append(", hashes=");
+      var4.append(var1);
+      var4.append(", patches=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
 
-   public object `$serializer` : f0<AppManifest> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -137,33 +110,33 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         return new KSerializer[]{AppManifestMetadata.$serializer.INSTANCE, new r0(a2.a, a2.a), new r0(var1, var1)};
+         val var1: Array<KSerializer> = AppManifest.access$get$childSerializers$cp();
+         return new KSerializer[]{AppManifestMetadata.$serializer.INSTANCE, var1[1], var1[2]};
       }
 
       public open fun deserialize(decoder: Decoder): AppManifest {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: kotlinx.serialization.encoding.c = var1.b(var8);
-         val var5: Boolean = var9.p();
-         var var6: Any = null;
+         val var9: kotlinx.serialization.encoding.c = var1.c(var8);
+         val var10: Array<KSerializer> = AppManifest.access$get$childSerializers$cp();
+         val var5: Boolean = var9.y();
+         var var7: AppManifestMetadata = null;
          var var2: Int;
-         var var7: Any;
-         var var12: Any;
+         var var6: java.util.Map;
+         var var11: java.util.Map;
          if (var5) {
-            var6 = var9.y(var8, 0, AppManifestMetadata.$serializer.INSTANCE, null);
-            var12 = a2.a;
-            var7 = var9.y(var8, 1, new r0(a2.a, a2.a), null);
-            var12 = var9.y(var8, 2, new r0((KSerializer)var12, (KSerializer)var12), null);
+            var7 = var9.m(var8, 0, AppManifestMetadata.$serializer.INSTANCE, null) as AppManifestMetadata;
+            var6 = var9.m(var8, 1, var10[1], null) as java.util.Map;
+            var11 = var9.m(var8, 2, var10[2], null) as java.util.Map;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
-            var12 = null;
+            var6 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -171,14 +144,14 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
                            throw new n(var4);
                         }
 
-                        var12 = var9.y(var8, 2, new r0(a2.a, a2.a), var12);
+                        var11 = var9.m(var8, 2, var10[2], var11) as java.util.Map;
                         var2 |= 4;
                      } else {
-                        var7 = var9.y(var8, 1, new r0(a2.a, a2.a), var7);
+                        var6 = var9.m(var8, 1, var10[1], var6) as java.util.Map;
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var9.y(var8, 0, AppManifestMetadata.$serializer.INSTANCE, var6);
+                     var7 = var9.m(var8, 0, AppManifestMetadata.$serializer.INSTANCE, var7) as AppManifestMetadata;
                      var2 |= 1;
                   }
                } else {
@@ -187,21 +160,21 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
             }
          }
 
-         var9.c(var8);
-         return new AppManifest(var2, var6 as AppManifestMetadata, var7 as java.util.Map, var12 as java.util.Map, null);
+         var9.b(var8);
+         return new AppManifest(var2, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifest) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         AppManifest.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         AppManifest.write$Self$bundle_updater_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return yk.g0.a.a(this);
       }
    }
 

@@ -2,7 +2,7 @@ package com.discord.chat.bridge.ephemeral
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -10,11 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.g0.a
 
 @f
 public data class EphemeralIndication(content: StructurableText, helpArticleLink: String, helpButtonAccessibilityLabel: String) {
@@ -23,23 +23,13 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    public final val helpButtonAccessibilityLabel: String
 
    init {
-      r.h(var1, "content");
-      r.h(var2, "helpArticleLink");
-      r.h(var3, "helpButtonAccessibilityLabel");
+      q.h(var1, "content");
+      q.h(var2, "helpArticleLink");
+      q.h(var3, "helpButtonAccessibilityLabel");
       super();
       this.content = var1;
       this.helpArticleLink = var2;
       this.helpButtonAccessibilityLabel = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: EphemeralIndication, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, StructurableTextSerializer.INSTANCE, var0.content);
-      var1.z(var2, 1, var0.helpArticleLink);
-      var1.z(var2, 2, var0.helpButtonAccessibilityLabel);
    }
 
    public operator fun component1(): StructurableText {
@@ -59,9 +49,9 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
       helpArticleLink: String = var0.helpArticleLink,
       helpButtonAccessibilityLabel: String = var0.helpButtonAccessibilityLabel
    ): EphemeralIndication {
-      r.h(var1, "content");
-      r.h(var2, "helpArticleLink");
-      r.h(var3, "helpButtonAccessibilityLabel");
+      q.h(var1, "content");
+      q.h(var2, "helpArticleLink");
+      q.h(var3, "helpButtonAccessibilityLabel");
       return new EphemeralIndication(var1, var2, var3);
    }
 
@@ -72,12 +62,12 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.content, var1.content)) {
+         if (!q.c(this.content, var1.content)) {
             return false;
-         } else if (!r.c(this.helpArticleLink, var1.helpArticleLink)) {
+         } else if (!q.c(this.helpArticleLink, var1.helpArticleLink)) {
             return false;
          } else {
-            return r.c(this.helpButtonAccessibilityLabel, var1.helpButtonAccessibilityLabel);
+            return q.c(this.helpButtonAccessibilityLabel, var1.helpButtonAccessibilityLabel);
          }
       }
    }
@@ -88,20 +78,20 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
 
    public override fun toString(): String {
       val var4: StructurableText = this.content;
-      val var2: java.lang.String = this.helpArticleLink;
+      val var3: java.lang.String = this.helpArticleLink;
       val var1: java.lang.String = this.helpButtonAccessibilityLabel;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EphemeralIndication(content=");
-      var3.append(var4);
-      var3.append(", helpArticleLink=");
-      var3.append(var2);
-      var3.append(", helpButtonAccessibilityLabel=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("EphemeralIndication(content=");
+      var2.append(var4);
+      var2.append(", helpArticleLink=");
+      var2.append(var3);
+      var2.append(", helpButtonAccessibilityLabel=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<EphemeralIndication> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -120,22 +110,22 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{StructurableTextSerializer.INSTANCE, a2.a, a2.a};
+         return new KSerializer[]{StructurableTextSerializer.INSTANCE, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): EphemeralIndication {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
-         val var5: Boolean = var9.p();
-         var var7: Any = null;
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
+         var var7: StructurableText = null;
          var var2: Int;
          var var6: java.lang.String;
          var var10: java.lang.String;
          if (var5) {
-            var7 = var9.y(var8, 0, StructurableTextSerializer.INSTANCE, null);
-            var6 = var9.m(var8, 1);
-            var10 = var9.m(var8, 2);
+            var7 = var9.m(var8, 0, StructurableTextSerializer.INSTANCE, null) as StructurableText;
+            var6 = var9.t(var8, 1);
+            var10 = var9.t(var8, 2);
             var2 = 7;
          } else {
             var var3: Boolean = true;
@@ -144,7 +134,7 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
             var10 = null;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -152,14 +142,14 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
                            throw new n(var4);
                         }
 
-                        var10 = var9.m(var8, 2);
+                        var10 = var9.t(var8, 2);
                         var2 |= 4;
                      } else {
-                        var6 = var9.m(var8, 1);
+                        var6 = var9.t(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.y(var8, 0, StructurableTextSerializer.INSTANCE, var7);
+                     var7 = var9.m(var8, 0, StructurableTextSerializer.INSTANCE, var7) as StructurableText;
                      var2 |= 1;
                   }
                } else {
@@ -168,20 +158,20 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
             }
          }
 
-         var9.c(var8);
-         return new EphemeralIndication(var2, var7 as StructurableText, var6, var10, null);
+         var9.b(var8);
+         return new EphemeralIndication(var2, var7, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EphemeralIndication) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         EphemeralIndication.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         EphemeralIndication.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.discord.chat.R
 import com.discord.chat.databinding.MessageAltRemixTagViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.fonts.DiscordFont
@@ -20,7 +19,7 @@ import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 
@@ -28,24 +27,24 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    private final val binding: MessageAltRemixTagViewBinding
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "attrs");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "attrs");
       super(var1, var2);
-      val var3: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
-      this.binding = var3;
-      val var5: TextView = var3.altRemixTag;
-      kotlin.jvm.internal.r.g(var3.altRemixTag, "binding.altRemixTag");
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      val var4: SimpleDraweeView = var3.remixIcon;
-      kotlin.jvm.internal.r.g(var3.remixIcon, "binding.remixIcon");
+      val var5: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var5, "inflate(...)");
+      this.binding = var5;
+      val var3: TextView = var5.altRemixTag;
+      kotlin.jvm.internal.q.g(var5.altRemixTag, "altRemixTag");
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+      val var4: SimpleDraweeView = var5.remixIcon;
+      kotlin.jvm.internal.q.g(var5.remixIcon, "remixIcon");
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Remix);
    }
 
    @JvmStatic
    fun `configureTagView_e2j04IU$lambda$0`(var0: ChatEventHandler, var1: java.lang.String, var2: Long, var4: java.lang.String, var5: View) {
-      kotlin.jvm.internal.r.h(var0, "$eventHandler");
-      kotlin.jvm.internal.r.h(var1, "$messageId");
+      kotlin.jvm.internal.q.h(var0, "$eventHandler");
+      kotlin.jvm.internal.q.h(var1, "$messageId");
       var0.onTapTag-Eqy5D80(var1, var2, var4);
    }
 
@@ -58,8 +57,8 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
       channelId: ChannelId,
       tagType: String?
    ) {
-      kotlin.jvm.internal.r.h(var4, "eventHandler");
-      kotlin.jvm.internal.r.h(var5, "messageId");
+      kotlin.jvm.internal.q.h(var4, "eventHandler");
+      kotlin.jvm.internal.q.h(var5, "messageId");
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
          val var11: TextView = this.binding.altRemixTag;
@@ -68,38 +67,38 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
             var9 = var2;
          } else {
             val var10: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var10, "context");
-            var9 = ColorUtilsKt.getColorCompat(var10, color.white);
+            kotlin.jvm.internal.q.g(var10, "getContext(...)");
+            var9 = ColorUtilsKt.getColorCompat(var10, R.color.white);
          }
 
          var11.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
-         kotlin.jvm.internal.r.g(this.binding.remixIcon, "binding.remixIcon");
+         kotlin.jvm.internal.q.g(this.binding.remixIcon, "remixIcon");
          if (var2 != null) {
             var9 = var2;
          } else {
             val var17: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var17, "context");
-            var9 = ColorUtilsKt.getColorCompat(var17, color.white);
+            kotlin.jvm.internal.q.g(var17, "getContext(...)");
+            var9 = ColorUtilsKt.getColorCompat(var17, R.color.white);
          }
 
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
-         kotlin.jvm.internal.r.g(this.binding.layout, "binding.layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new j(var4, var5, var6, var8), 1, null);
+         kotlin.jvm.internal.q.g(this.binding.layout, "layout");
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new k(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
-         kotlin.jvm.internal.r.g(this.binding.remixIcon, "binding.remixIcon");
+         kotlin.jvm.internal.q.g(this.binding.remixIcon, "remixIcon");
          var14.setVisibility(0);
          if (var3 != null) {
             val var15: ConstraintLayout = this.binding.layout;
-            kotlin.jvm.internal.r.g(this.binding.layout, "binding.layout");
+            kotlin.jvm.internal.q.g(this.binding.layout, "layout");
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(
                var15, ReactColorToAndroidColorKt.reactColorToAndroidColor(var3), SizeUtilsKt.getDpToPx(3), null, 0, 12, null
             );
          } else {
             val var16: ConstraintLayout = this.binding.layout;
-            kotlin.jvm.internal.r.g(this.binding.layout, "binding.layout");
-            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var16, R.drawable.drawable_message_author_tag_bg);
+            kotlin.jvm.internal.q.g(this.binding.layout, "layout");
+            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var16, com.discord.chat.R.drawable.drawable_message_author_tag_bg);
          }
       }
    }

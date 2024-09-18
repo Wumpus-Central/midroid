@@ -4,14 +4,12 @@ import android.app.Activity
 import android.view.View
 import android.view.Window
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.i3
+import androidx.core.view.d1
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
-import kk.f
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import lk.f
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {
@@ -19,36 +17,37 @@ fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControll
 }
 
 private fun Window.getInsetsController(view: View): WindowInsetsControllerCompat {
-   val var2: WindowInsetsControllerCompat = i3.a(var0, var1);
-   r.g(var2, "getInsetsController(this, view)");
+   val var2: WindowInsetsControllerCompat = d1.a(var0, var1);
+   q.g(var2, "getInsetsController(...)");
    return var2;
 }
 
 public fun Activity.hideKeyboard() {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var1: View = ActivityExtensionsKt.getContentView(var0);
    if (var1 != null) {
       val var2: Window = var0.getWindow();
-      r.g(var2, "window");
+      q.g(var2, "getWindow(...)");
       hideKeyboard(var1, var2);
    }
 }
 
 public fun View.hideKeyboard(window: Window) {
-   r.h(var0, "<this>");
-   r.h(var1, "window");
+   q.h(var0, "<this>");
+   q.h(var1, "window");
    f.d(
       MainImmediateScopeKt.MainImmediateScope(),
       null,
       null,
-      new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null)// $VF: Couldn't be decompiled
+      new Function2(var1, var0, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1067,7 +1066,6 @@ public fun View.hideKeyboard(window: Window) {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
       3,
       null
@@ -1075,23 +1073,23 @@ public fun View.hideKeyboard(window: Window) {
 }
 
 public fun Activity.showKeyboard() {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var1: View = ActivityExtensionsKt.getContentView(var0);
    if (var1 != null) {
       val var2: Window = var0.getWindow();
-      r.g(var2, "window");
+      q.g(var2, "getWindow(...)");
       showKeyboard(var1, var2);
    }
 }
 
 public fun View.showKeyboard(window: Window) {
-   r.h(var0, "<this>");
-   r.h(var1, "window");
+   q.h(var0, "<this>");
+   q.h(var1, "window");
    f.d(
       MainImmediateScopeKt.MainImmediateScope(),
       null,
       null,
-      new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null)// $VF: Couldn't be decompiled
+      new Function2(var1, var0, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
    //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)

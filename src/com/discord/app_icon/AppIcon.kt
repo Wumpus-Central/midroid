@@ -1,5 +1,8 @@
 package com.discord.app_icon
 
+import kh.a
+import kotlin.enums.EnumEntries
+
 public enum class AppIcon(id: String, aliasSuffix: String) {
    ANGRY("AngryIcon", "MainAngry"),
    BEANIE("BeanieIcon", "MainBeanie"),
@@ -40,10 +43,24 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
    private final val aliasSuffix: String
    public final val id: String
    @JvmStatic
-   private AppIcon[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private AppIcon[] $VALUES;
+
+   @JvmStatic
+   fun {
+      val var0: Array<AppIcon> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.id = var3;
       this.aliasSuffix = var4;
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
    }
 }

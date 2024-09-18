@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.ConnectionInfo;
-import com.discord.native.engine.NativeEngine.ConnectToServerCallback;
-import kotlin.jvm.functions.Function2;
+import com.discord.native.engine.NativeConnection;
+import kotlin.jvm.functions.Function4;
 
 // $VF: synthetic class
-public final class d implements ConnectToServerCallback {
-   public final Function2 a;
+public final class d implements NativeConnection.OnPingCallback {
+   public final Function4 a;
 
-   public final void onConnectToServer(ConnectionInfo var1, String var2) {
-      MediaEngine.o(this.a, var1, var2);
+   @Override
+   public final void onPing(int var1, String var2, int var3, int var4) {
+      MediaEngine.y(this.a, var1, var2, var3, var4);
    }
 }

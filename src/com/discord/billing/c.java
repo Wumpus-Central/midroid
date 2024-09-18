@@ -20,6 +20,7 @@ public final class c implements m {
    public final Function0 h;
    public final BooleanRef i;
 
+   @Override
    public final void a(BillingResult var1, List var2) {
       BillingManager.b(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, var1, var2);
    }

@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class ErrorContentNode(throwable: Throwable) : ContentNode {
    public final val throwable: Throwable
 
    init {
-      r.h(var1, "throwable");
+      q.h(var1, "throwable");
       super(null);
       this.throwable = var1;
    }
@@ -16,7 +16,7 @@ public data class ErrorContentNode(throwable: Throwable) : ContentNode {
    }
 
    public fun copy(throwable: Throwable = var0.throwable): ErrorContentNode {
-      r.h(var1, "throwable");
+      q.h(var1, "throwable");
       return new ErrorContentNode(var1);
    }
 
@@ -26,7 +26,7 @@ public data class ErrorContentNode(throwable: Throwable) : ContentNode {
       } else if (var1 !is ErrorContentNode) {
          return false;
       } else {
-         return r.c(this.throwable, (var1 as ErrorContentNode).throwable);
+         return q.c(this.throwable, (var1 as ErrorContentNode).throwable);
       }
    }
 

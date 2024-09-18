@@ -9,8 +9,9 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentContext;
 public final class c implements OnClickListener {
    public final ContentInventoryEntry j;
    public final ComponentContext k;
+   public final String l;
 
    public final void onClick(View var1) {
-      ContentInventoryComponentView.f(this.j, this.k, var1);
+      ContentInventoryComponentViewKt.a(this.j, this.k, this.l, var1);
    }
 }

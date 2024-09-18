@@ -4,7 +4,7 @@ import android.view.View
 import com.discord.portals.utils.ViewRemoveFromParentKt
 import java.lang.ref.WeakReference
 import java.util.HashMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object PortalFromJsContextManager {
    private final val portalContexts: MutableMap<String, WeakReference<PortalFromJsContext>> = new HashMap()
@@ -52,8 +52,8 @@ public object PortalFromJsContextManager {
    }
 
    public fun addContext(portalId: String, portalContext: PortalFromJsContext) {
-      r.h(var1, "portalId");
-      r.h(var2, "portalContext");
+      q.h(var1, "portalId");
+      q.h(var2, "portalContext");
       val var4: java.util.Map = portalContexts;
       val var3: WeakReference = portalContexts.get(var1);
       val var5: PortalFromJsContext;
@@ -63,7 +63,7 @@ public object PortalFromJsContextManager {
          var5 = null;
       }
 
-      if (!r.c(var5, var2)) {
+      if (!q.c(var5, var2)) {
          val var6: java.util.Map = portals;
          this.removeFromContext(portals, var1);
          var4.put(var1, new WeakReference<>(var2));
@@ -72,8 +72,8 @@ public object PortalFromJsContextManager {
    }
 
    internal fun portalDidMount(portalId: String, portalView: View) {
-      r.h(var1, "portalId");
-      r.h(var2, "portalView");
+      q.h(var1, "portalId");
+      q.h(var2, "portalView");
       val var3: java.util.Map = portals;
       this.removeFromContext(portals, var1);
       var3.put(var1, var2);
@@ -81,15 +81,15 @@ public object PortalFromJsContextManager {
    }
 
    internal fun portalDidUnmount(portalId: String) {
-      r.h(var1, "portalId");
+      q.h(var1, "portalId");
       val var2: java.util.Map = portals;
       this.removeFromContext(portals, var1);
       var2.remove(var1);
    }
 
    public fun removeContext(portalId: String, portalContext: PortalFromJsContext) {
-      r.h(var1, "portalId");
-      r.h(var2, "portalContext");
+      q.h(var1, "portalId");
+      q.h(var2, "portalContext");
       val var4: java.util.Map = portalContexts;
       val var3: WeakReference = portalContexts.get(var1);
       val var5: PortalFromJsContext;
@@ -99,7 +99,7 @@ public object PortalFromJsContextManager {
          var5 = null;
       }
 
-      if (r.c(var5, var2)) {
+      if (q.c(var5, var2)) {
          this.removeFromContext(portals, var1);
          var4.remove(var1);
       }

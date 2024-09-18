@@ -3,7 +3,7 @@ package com.discord.react_gesture_handler.nested_touch
 import android.content.Context
 import android.view.MotionEvent
 import android.view.ViewConfiguration
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class OriginTracker(context: Context) {
    public final val context: Context
@@ -12,7 +12,7 @@ internal class OriginTracker(context: Context) {
    private final val scaledTouchSlopPx: Int
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       this.context = var1;
       this.scaledTouchSlopPx = ViewConfiguration.get(var1).getScaledTouchSlop();
@@ -35,20 +35,13 @@ internal class OriginTracker(context: Context) {
    }
 
    public fun hasOriginMoved(isSupplementalEvent: Boolean, event: MotionEvent): Boolean {
-      r.h(var2, "event");
+      q.h(var2, "event");
       if (var1) {
          if (this.originSupplemental == null) {
             this.originSupplemental = new OriginTracker.Origin(var2.getX(), var2.getY());
          }
 
-         val var3: Boolean;
          if (this.originSupplemental != null && this.hasOriginMoved(this.originSupplemental, var2.getX(), var2.getY())) {
-            var3 = true;
-         } else {
-            var3 = false;
-         }
-
-         if (var3) {
             return true;
          }
       } else {
@@ -56,14 +49,7 @@ internal class OriginTracker(context: Context) {
             this.origin = new OriginTracker.Origin(var2.getX(), var2.getY());
          }
 
-         val var5: Boolean;
          if (this.origin != null && this.hasOriginMoved(this.origin, var2.getX(), var2.getY())) {
-            var5 = true;
-         } else {
-            var5 = false;
-         }
-
-         if (var5) {
             return true;
          }
       }
@@ -112,13 +98,13 @@ internal class OriginTracker(context: Context) {
       }
 
       public override fun toString(): String {
-         val var2: Float = this.xOrigin;
-         val var1: Float = this.yOrigin;
+         val var1: Float = this.xOrigin;
+         val var2: Float = this.yOrigin;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Origin(xOrigin=");
-         var3.append(var2);
-         var3.append(", yOrigin=");
          var3.append(var1);
+         var3.append(", yOrigin=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

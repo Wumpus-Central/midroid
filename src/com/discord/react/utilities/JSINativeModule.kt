@@ -1,6 +1,6 @@
 package com.discord.react.utilities
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object JSINativeModule {
    private final var loaded: Boolean?
@@ -24,7 +24,7 @@ public object JSINativeModule {
       }
 
       val var5: java.lang.Boolean = loaded;
-      r.e(loaded);
+      q.e(loaded);
       return var5;
    }
 }

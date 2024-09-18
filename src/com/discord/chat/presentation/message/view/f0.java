@@ -11,6 +11,6 @@ public final class f0 implements OnClickListener {
    public final GiftEmbed k;
 
    public final void onClick(View var1) {
-      GiftView.d(this.j, this.k, var1);
+      GiftView.b(this.j, this.k, var1);
    }
 }

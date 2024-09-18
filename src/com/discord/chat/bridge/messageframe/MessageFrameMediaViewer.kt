@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.messageframe
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,35 +8,27 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.g0
+import yk.g0.a
 
 @f
 public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame {
    public open val type: MessageFrameType
 
    init {
-      r.h(var1, "type");
+      q.h(var1, "type");
       super(null);
       this.type = var1;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: MessageFrameMediaViewer, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, MessageFrameType.Serializer.INSTANCE, var0.getType());
-   }
-
    public operator fun component1(): MessageFrameType {
-      return this.getType();
+      return this.type;
    }
 
-   public fun copy(type: MessageFrameType = var0.getType()): MessageFrameMediaViewer {
-      r.h(var1, "type");
+   public fun copy(type: MessageFrameType = var0.type): MessageFrameMediaViewer {
+      q.h(var1, "type");
       return new MessageFrameMediaViewer(var1);
    }
 
@@ -46,16 +38,16 @@ public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame
       } else if (var1 !is MessageFrameMediaViewer) {
          return false;
       } else {
-         return this.getType() === (var1 as MessageFrameMediaViewer).getType();
+         return this.type === (var1 as MessageFrameMediaViewer).type;
       }
    }
 
    public override fun hashCode(): Int {
-      return this.getType().hashCode();
+      return this.type.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: MessageFrameType = this.getType();
+      val var2: MessageFrameType = this.type;
       val var1: StringBuilder = new StringBuilder();
       var1.append("MessageFrameMediaViewer(type=");
       var1.append(var2);
@@ -63,7 +55,7 @@ public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame
       return var1.toString();
    }
 
-   public object `$serializer` : f0<MessageFrameMediaViewer> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -84,27 +76,27 @@ public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame
       }
 
       public open fun deserialize(decoder: Decoder): MessageFrameMediaViewer {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var8: MessageFrameType;
          if (var5) {
-            var8 = var7.y(var6, 0, MessageFrameType.Serializer.INSTANCE, null);
+            var8 = var7.m(var6, 0, MessageFrameType.Serializer.INSTANCE, null) as MessageFrameType;
          } else {
             var2 = 0;
             var8 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, MessageFrameType.Serializer.INSTANCE, var8);
+                  var8 = var7.m(var6, 0, MessageFrameType.Serializer.INSTANCE, var8) as MessageFrameType;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -112,20 +104,20 @@ public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame
             }
          }
 
-         var7.c(var6);
-         return new MessageFrameMediaViewer(var2, var8 as MessageFrameType, null);
+         var7.b(var6);
+         return new MessageFrameMediaViewer(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageFrameMediaViewer) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         MessageFrameMediaViewer.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         MessageFrameMediaViewer.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

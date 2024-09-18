@@ -50,6 +50,7 @@ public final class MessageTagViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

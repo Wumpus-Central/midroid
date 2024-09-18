@@ -1,6 +1,6 @@
 package com.discord.snowflake
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object SnowflakeUtils {
    private const val DISCORD_EPOCH: Long = 1420070400000L
@@ -15,26 +15,17 @@ public object SnowflakeUtils {
    }
 
    public fun String.toSnowflake(): Long? {
-      r.h(var1, "<this>");
-      val var3: java.lang.Long = f.o(var1);
-      if (var3 != null) {
-         val var2: Boolean;
-         if (var3.longValue() > 1420070400000L) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         if (var2) {
-            return var3;
-         }
+      q.h(var1, "<this>");
+      var var2: java.lang.Long = h.o(var1);
+      if (var2 == null || var2.longValue() <= 1420070400000L) {
+         var2 = null;
       }
 
-      return null;
+      return var2;
    }
 
    public fun toTimestamp(snowflake: SnowflakePrimitive): Long {
-      r.h(var1, "snowflake");
+      q.h(var1, "snowflake");
       return this.toTimestampPart(var1) + 1420070400000L;
    }
 }

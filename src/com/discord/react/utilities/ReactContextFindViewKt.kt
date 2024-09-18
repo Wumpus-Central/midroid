@@ -5,18 +5,18 @@ import android.view.View
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.util.ReactFindViewUtil
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun ReactContext.findView(nativeId: String): View? {
-   r.h(var0, "<this>");
-   r.h(var1, "nativeId");
+   q.h(var0, "<this>");
+   q.h(var1, "nativeId");
    val var2: Activity = var0.getCurrentActivity();
-   val var3: View;
    if (var2 != null) {
-      var3 = ActivityExtensionsKt.getRootView(var2);
-   } else {
-      var3 = null;
+      val var3: View = ActivityExtensionsKt.getRootView(var2);
+      if (var3 != null) {
+         return ReactFindViewUtil.findView(var3, var1);
+      }
    }
 
-   return ReactFindViewUtil.findView(var3, var1);
+   return null;
 }

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.media
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.m0
+import vk.f
+import vk.n
+import wk.a
+import yk.b2
+import yk.g0
+import yk.n0
 
 @f
 public data class UnfurledMediaItem(url: String,
@@ -35,9 +35,9 @@ public data class UnfurledMediaItem(url: String,
    public final val width: Int
 
    init {
-      r.h(var1, "url");
-      r.h(var2, "proxyUrl");
-      r.h(var5, "contentType");
+      q.h(var1, "url");
+      q.h(var2, "proxyUrl");
+      q.h(var5, "contentType");
       super();
       this.url = var1;
       this.proxyUrl = var2;
@@ -47,53 +47,6 @@ public data class UnfurledMediaItem(url: String,
       this.placeholder = var6;
       this.placeholderVersion = var7;
       this.contentScanMetadata = var8;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: UnfurledMediaItem, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.url);
-      var1.z(var2, 1, var0.proxyUrl);
-      var1.w(var2, 2, var0.height);
-      var1.w(var2, 3, var0.width);
-      var1.z(var2, 4, var0.contentType);
-      var var3: Boolean;
-      if (!var1.A(var2, 5) && var0.placeholder == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 5, a2.a, var0.placeholder);
-      }
-
-      if (!var1.A(var2, 6) && var0.placeholderVersion == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 6, m0.a, var0.placeholderVersion);
-      }
-
-      label32: {
-         if (!var1.A(var2, 7)) {
-            var3 = false;
-            if (var0.contentScanMetadata == null) {
-               break label32;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 7, ContentScanMetadata.$serializer.INSTANCE, var0.contentScanMetadata);
-      }
    }
 
    public operator fun component1(): String {
@@ -138,9 +91,9 @@ public data class UnfurledMediaItem(url: String,
       placeholderVersion: Int? = var0.placeholderVersion,
       contentScanMetadata: ContentScanMetadata? = var0.contentScanMetadata
    ): UnfurledMediaItem {
-      r.h(var1, "url");
-      r.h(var2, "proxyUrl");
-      r.h(var5, "contentType");
+      q.h(var1, "url");
+      q.h(var2, "proxyUrl");
+      q.h(var5, "contentType");
       return new UnfurledMediaItem(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -151,32 +104,32 @@ public data class UnfurledMediaItem(url: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.url, var1.url)) {
+         if (!q.c(this.url, var1.url)) {
             return false;
-         } else if (!r.c(this.proxyUrl, var1.proxyUrl)) {
+         } else if (!q.c(this.proxyUrl, var1.proxyUrl)) {
             return false;
          } else if (this.height != var1.height) {
             return false;
          } else if (this.width != var1.width) {
             return false;
-         } else if (!r.c(this.contentType, var1.contentType)) {
+         } else if (!q.c(this.contentType, var1.contentType)) {
             return false;
-         } else if (!r.c(this.placeholder, var1.placeholder)) {
+         } else if (!q.c(this.placeholder, var1.placeholder)) {
             return false;
-         } else if (!r.c(this.placeholderVersion, var1.placeholderVersion)) {
+         } else if (!q.c(this.placeholderVersion, var1.placeholderVersion)) {
             return false;
          } else {
-            return r.c(this.contentScanMetadata, var1.contentScanMetadata);
+            return q.c(this.contentScanMetadata, var1.contentScanMetadata);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = this.url.hashCode();
-      val var6: Int = this.proxyUrl.hashCode();
+      val var7: Int = this.url.hashCode();
+      val var4: Int = this.proxyUrl.hashCode();
       val var5: Int = Integer.hashCode(this.height);
-      val var4: Int = Integer.hashCode(this.width);
-      val var7: Int = this.contentType.hashCode();
+      val var6: Int = Integer.hashCode(this.width);
+      val var8: Int = this.contentType.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -196,40 +149,40 @@ public data class UnfurledMediaItem(url: String,
          var3 = this.contentScanMetadata.hashCode();
       }
 
-      return ((((((var8 * 31 + var6) * 31 + var5) * 31 + var4) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var7 * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var6: java.lang.String = this.proxyUrl;
-      val var2: Int = this.height;
-      val var1: Int = this.width;
-      val var8: java.lang.String = this.contentType;
-      val var9: java.lang.String = this.placeholder;
-      val var3: Int = this.placeholderVersion;
-      val var5: ContentScanMetadata = this.contentScanMetadata;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("UnfurledMediaItem(url=");
-      var7.append(var4);
-      var7.append(", proxyUrl=");
-      var7.append(var6);
-      var7.append(", height=");
-      var7.append(var2);
-      var7.append(", width=");
-      var7.append(var1);
-      var7.append(", contentType=");
-      var7.append(var8);
-      var7.append(", placeholder=");
-      var7.append(var9);
-      var7.append(", placeholderVersion=");
-      var7.append(var3);
-      var7.append(", contentScanMetadata=");
-      var7.append(var5);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.lang.String = this.url;
+      val var8: java.lang.String = this.proxyUrl;
+      val var1: Int = this.height;
+      val var2: Int = this.width;
+      val var5: java.lang.String = this.contentType;
+      val var6: java.lang.String = this.placeholder;
+      val var9: Int = this.placeholderVersion;
+      val var4: ContentScanMetadata = this.contentScanMetadata;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UnfurledMediaItem(url=");
+      var3.append(var7);
+      var3.append(", proxyUrl=");
+      var3.append(var8);
+      var3.append(", height=");
+      var3.append(var1);
+      var3.append(", width=");
+      var3.append(var2);
+      var3.append(", contentType=");
+      var3.append(var5);
+      var3.append(", placeholder=");
+      var3.append(var6);
+      var3.append(", placeholderVersion=");
+      var3.append(var9);
+      var3.append(", contentScanMetadata=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : f0<UnfurledMediaItem> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -253,118 +206,116 @@ public data class UnfurledMediaItem(url: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: m0 = m0.a;
-         return new KSerializer[]{a2.a, a2.a, m0.a, m0.a, a2.a, a.u(a2.a), a.u(var2), a.u(ContentScanMetadata.$serializer.INSTANCE)};
+         val var2: n0 = n0.a;
+         return new KSerializer[]{b2.a, b2.a, n0.a, n0.a, b2.a, a.u(b2.a), a.u(var2), a.u(ContentScanMetadata.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): UnfurledMediaItem {
-         r.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.b(var12);
+         q.h(var1, "decoder");
+         val var14: SerialDescriptor = this.getDescriptor();
+         val var15: c = var1.c(var14);
          var var3: Int;
          var var4: Int;
          val var5: Int;
-         var var7: Any;
          var var8: Any;
          var var9: Any;
          var var10: Any;
          var var11: Any;
-         var var14: Any;
-         if (var13.p()) {
-            var8 = var13.m(var12, 0);
-            var7 = var13.m(var12, 1);
-            var3 = var13.i(var12, 2);
-            val var2: Int = var13.i(var12, 3);
-            var14 = var13.m(var12, 4);
-            var9 = var13.n(var12, 5, a2.a, null);
-            var10 = var13.n(var12, 6, m0.a, null);
-            var11 = var13.n(var12, 7, ContentScanMetadata.$serializer.INSTANCE, null);
-            var5 = 255;
-            var4 = var2;
+         val var12: Int;
+         val var16: ContentScanMetadata;
+         if (var15.y()) {
+            var8 = var15.t(var14, 0);
+            var10 = var15.t(var14, 1);
+            var4 = var15.k(var14, 2);
+            val var2: Int = var15.k(var14, 3);
+            var11 = var15.t(var14, 4);
+            var9 = var15.v(var14, 5, b2.a, null) as java.lang.String;
+            val var7: Int = var15.v(var14, 6, n0.a, null) as Int;
+            var16 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, null) as ContentScanMetadata;
+            var3 = 255;
+            var5 = var2;
+            var12 = var7;
          } else {
-            var var16: Boolean = true;
+            var var21: Boolean = true;
             var4 = 0;
-            var var15: Int = 0;
+            var var18: Int = 0;
             var11 = null;
             var10 = null;
             var8 = null;
-            var7 = null;
-            var14 = null;
+            var var22: Any = null;
+            var var17: Any = null;
             var9 = null;
             var3 = 0;
 
-            while (var16) {
-               val var6: Int = var13.o(var12);
+            while (var21) {
+               val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
-                     var16 = false;
+                     var21 = false;
                      break;
                   case 0:
-                     var8 = var13.m(var12, 0);
-                     var15 |= 1;
+                     var8 = var15.t(var14, 0);
+                     var18 |= 1;
                      break;
                   case 1:
-                     var7 = var13.m(var12, 1);
-                     var15 |= 2;
+                     var22 = var15.t(var14, 1);
+                     var18 |= 2;
                      break;
                   case 2:
-                     var3 = var13.i(var12, 2);
-                     var15 |= 4;
+                     var3 = var15.k(var14, 2);
+                     var18 |= 4;
                      break;
                   case 3:
-                     var4 = var13.i(var12, 3);
-                     var15 |= 8;
+                     var4 = var15.k(var14, 3);
+                     var18 |= 8;
                      break;
                   case 4:
-                     var14 = var13.m(var12, 4);
-                     var15 |= 16;
+                     var17 = var15.t(var14, 4);
+                     var18 |= 16;
                      break;
                   case 5:
-                     var9 = var13.n(var12, 5, a2.a, var9);
-                     var15 |= 32;
+                     var9 = var15.v(var14, 5, b2.a, var9) as java.lang.String;
+                     var18 |= 32;
                      break;
                   case 6:
-                     var10 = var13.n(var12, 6, m0.a, var10);
-                     var15 |= 64;
+                     var10 = var15.v(var14, 6, n0.a, var10) as Int;
+                     var18 |= 64;
                      break;
                   case 7:
-                     var11 = var13.n(var12, 7, ContentScanMetadata.$serializer.INSTANCE, var11);
-                     var15 |= 128;
+                     var11 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, var11) as ContentScanMetadata;
+                     var18 |= 128;
                      break;
                   default:
                      throw new n(var6);
                }
             }
 
-            var5 = var15;
+            var16 = (ContentScanMetadata)var11;
+            var12 = (Integer)var10;
+            var11 = var17;
+            var5 = var4;
+            var4 = var3;
+            var10 = var22;
+            var3 = var18;
          }
 
-         var13.c(var12);
+         var15.b(var14);
          return new UnfurledMediaItem(
-            var5,
-            (java.lang.String)var8,
-            (java.lang.String)var7,
-            var3,
-            var4,
-            (java.lang.String)var14,
-            var9 as java.lang.String,
-            var10 as Int,
-            var11 as ContentScanMetadata,
-            null
+            var3, (java.lang.String)var8, (java.lang.String)var10, var4, var5, (java.lang.String)var11, (java.lang.String)var9, var12, var16, null
          );
       }
 
       public open fun serialize(encoder: Encoder, value: UnfurledMediaItem) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         UnfurledMediaItem.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         UnfurledMediaItem.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return yk.g0.a.a(this);
       }
    }
 

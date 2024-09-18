@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -13,12 +12,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.n1
+import vk.f
+import vk.n
+import wk.a
+import yk.b2
+import yk.g0
+import yk.o1
 
 @f
 public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?) : TapGiftCodeAcceptData(var1, var2), ReactEvent {
@@ -27,7 +26,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
 
    fun TapGiftCodeAcceptData(var1: Int, var2: java.lang.String, var3: java.lang.String, var4: SerializationConstructorMarker) {
       if (3 != (var1 and 3)) {
-         n1.b(var1, 3, TapGiftCodeAcceptData.$serializer.INSTANCE.getDescriptor());
+         o1.b(var1, 3, TapGiftCodeAcceptData.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -36,25 +35,10 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
    }
 
    fun TapGiftCodeAcceptData(var1: java.lang.String, var2: java.lang.String) {
+      q.h(var1, "giftCode");
       super();
       this.giftCode = var1;
       this.messageId = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TapGiftCodeAcceptData, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.giftCode);
-      val var5: MessageId;
-      if (var0.messageId != null) {
-         var5 = MessageId.box-impl(var0.messageId);
-      } else {
-         var5 = null;
-      }
-
-      var1.m(var2, 1, com.discord.primitives.MessageId..serializer.INSTANCE, var5);
    }
 
    public operator fun component1(): String {
@@ -66,7 +50,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
    }
 
    public fun copy(giftCode: String = ..., messageId: MessageId? = ...): TapGiftCodeAcceptData {
-      r.h(var1, "giftCode");
+      q.h(var1, "giftCode");
       return new TapGiftCodeAcceptData(var1, var2, null);
    }
 
@@ -76,19 +60,11 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       } else if (var1 !is TapGiftCodeAcceptData) {
          return false;
       } else {
-         val var3: TapGiftCodeAcceptData = var1 as TapGiftCodeAcceptData;
-         if (!r.c(this.giftCode, (var1 as TapGiftCodeAcceptData).giftCode)) {
+         val var2: TapGiftCodeAcceptData = var1 as TapGiftCodeAcceptData;
+         if (!q.c(this.giftCode, (var1 as TapGiftCodeAcceptData).giftCode)) {
             return false;
          } else {
-            if (this.messageId == null) {
-               if (var3.messageId == null) {
-                  return true;
-               }
-            } else if (var3.messageId != null) {
-               return MessageId.equals-impl0(this.messageId, var3.messageId);
-            }
-
-            return false;
+            return if (this.messageId == null) var2.messageId == null else var2.messageId != null && MessageId.equals-impl0(this.messageId, var2.messageId);
          }
       }
    }
@@ -105,8 +81,8 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       return var2 * 31 + var1;
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -127,7 +103,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       return var3.toString();
    }
 
-   public object `$serializer` : f0<TapGiftCodeAcceptData> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -145,38 +121,58 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a, a.u(com.discord.primitives.MessageId..serializer.INSTANCE)};
+         return new KSerializer[]{b2.a, a.u(MessageId.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): TapGiftCodeAcceptData {
-         r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         q.h(var1, "decoder");
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
+         var var10: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
-         val var11: java.lang.String;
-         if (var10.p()) {
-            var11 = var10.m(var9, 0);
-            var6 = var10.n(var9, 1, com.discord.primitives.MessageId..serializer.INSTANCE, null);
+         val var7: java.lang.String;
+         var var12: java.lang.String;
+         if (var5) {
+            var7 = var9.t(var8, 0);
+            val var6: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var6 != null) {
+               var10 = var6.unbox-impl();
+            }
+
             var2 = 3;
+            var12 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
-            var var12: Any = null;
+            var var11: java.lang.String = null;
+            var12 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var12 = var10.n(var9, 1, com.discord.primitives.MessageId..serializer.INSTANCE, var12);
+                     val var13: MessageId;
+                     if (var12 != null) {
+                        var13 = MessageId.box-impl(var12);
+                     } else {
+                        var13 = null;
+                     }
+
+                     val var14: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, var13) as MessageId;
+                     if (var14 != null) {
+                        var12 = var14.unbox-impl();
+                     } else {
+                        var12 = null;
+                     }
+
                      var2 |= 2;
                   } else {
-                     var6 = var10.m(var9, 0);
+                     var11 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -184,31 +180,24 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
                }
             }
 
-            var6 = var12;
-            var11 = (java.lang.String)var6;
+            var7 = var11;
          }
 
-         var10.c(var9);
-         val var15: MessageId = var6 as MessageId;
-         var6 = null;
-         if (var15 != null) {
-            var6 = var15.unbox-impl();
-         }
-
-         return new TapGiftCodeAcceptData(var2, var11, (java.lang.String)var6, null, null);
+         var9.b(var8);
+         return new TapGiftCodeAcceptData(var2, var7, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapGiftCodeAcceptData) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         TapGiftCodeAcceptData.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         TapGiftCodeAcceptData.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return yk.g0.a.a(this);
       }
    }
 

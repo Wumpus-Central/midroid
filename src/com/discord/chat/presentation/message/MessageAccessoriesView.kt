@@ -7,11 +7,10 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import androidx.core.view.a3
+import androidx.core.view.v0
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.R
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.TransitionResilientLinearLayoutManager
@@ -58,14 +57,14 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    fun MessageAccessoriesView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var6: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
+      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -74,15 +73,16 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var6;
-      val var4: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var4;
-      val var5: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var5;
-      val var3: DefaultItemAnimator = new DefaultItemAnimator() {
-         public boolean canReuseUpdatedViewHolder(ViewHolder var1, java.util.List<Object> var2) {
-            kotlin.jvm.internal.r.h(var1, "viewHolder");
-            kotlin.jvm.internal.r.h(var2, "payloads");
+      this.accessoriesAdapter = var4;
+      val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var5;
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var3;
+      val var6: DefaultItemAnimator = new DefaultItemAnimator() {
+         @Override
+         public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
+            kotlin.jvm.internal.q.h(var1, "viewHolder");
+            kotlin.jvm.internal.q.h(var2, "payloads");
             val var3: Boolean;
             if (super.canReuseUpdatedViewHolder(var1, var2) && var1 !is MessageContentViewHolder) {
                var3 = true;
@@ -93,9 +93,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var3.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var3;
-      this.forwardBarPaint$delegate = eh.l.b(<unrepresentable>.INSTANCE);
+      var6.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var6;
+      this.forwardBarPaint$delegate = dh.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -108,26 +108,28 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var5);
-      this.setAdapter(var6);
-      var6.setMessageContentViewLifecycleListener(var4);
+      this.setLayoutManager(var3);
+      this.setAdapter(var4);
+      var4.setMessageContentViewLifecycleListener(var5);
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : hk.j.H(a3.a(this))) {
-         val var2: View = var3.c() as View;
+      for (Pair var3 : ik.j.H(v0.a(this))) {
+         val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ReactionsView || var4 is ThreadEmbedView) {
-            return var2.getBottom();
+            return var1.getBottom();
          }
       }
 
       return this.getHeight();
    }
 
-   public fun clear() {
+   public fun clear(removeViewsImmediately: Boolean = false) {
       this.accessoriesAdapter.clear();
-      this.removeAllViewsInLayout();
+      if (var1) {
+         this.removeAllViewsInLayout();
+      }
    }
 
    public open fun endViewTransition(view: View?) {
@@ -135,22 +137,22 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.transitionResilientLinearLayoutManager.disableRecycling(false);
    }
 
-   public open fun onDraw(c: Canvas) {
-      kotlin.jvm.internal.r.h(var1, "c");
+   public override fun onDraw(c: Canvas) {
+      kotlin.jvm.internal.q.h(var1, "c");
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, (float)FORWARD_BAR_WIDTH + var2, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, (float)FORWARD_BAR_WIDTH + var3, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
 
    @SuppressLint(["ClickableViewAccessibility"])
-   public open fun onTouchEvent(e: MotionEvent?): Boolean {
+   public override fun onTouchEvent(e: MotionEvent?): Boolean {
       super.onTouchEvent(var1);
       return false;
    }
@@ -164,9 +166,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       messageComponentProvider: ComponentProvider?,
       drawForward: Boolean
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageId");
-      kotlin.jvm.internal.r.h(var5, "items");
-      kotlin.jvm.internal.r.h(var6, "eventHandler");
+      kotlin.jvm.internal.q.h(var1, "messageId");
+      kotlin.jvm.internal.q.h(var5, "items");
+      kotlin.jvm.internal.q.h(var6, "eventHandler");
       val var10: <unrepresentable>;
       if (ChatView.Companion.getAreChatAnimationsEnabled()) {
          var10 = this.defaultItemAnimator;
@@ -208,11 +210,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    public fun setOnCurrentContentViewChanged(onViewChanged: (MessageContentView) -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "onViewChanged");
+      kotlin.jvm.internal.q.h(var1, "onViewChanged");
       this.contentViewTracker.setOnViewChanged(var1);
    }
 
-   public open fun setRecycledViewPool(pool: RecycledViewPool?) {
+   public override fun setRecycledViewPool(pool: RecycledViewPool?) {
       super.setRecycledViewPool(var1);
       this.accessoriesAdapter.setNestedAccessoriesRecycledViewPool(var1);
    }
@@ -267,7 +269,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       private final var currentContentView: MessageContentView?
 
       public override fun onAttachedToWindow(messageContentView: MessageContentView) {
-         kotlin.jvm.internal.r.h(var1, "messageContentView");
+         kotlin.jvm.internal.q.h(var1, "messageContentView");
          this.currentContentView = var1;
          this.onViewChanged.invoke(var1);
       }
@@ -277,7 +279,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       }
 
       public fun setOnViewChanged(onViewChanged: (MessageContentView) -> Unit) {
-         kotlin.jvm.internal.r.h(var1, "onViewChanged");
+         kotlin.jvm.internal.q.h(var1, "onViewChanged");
          this.onViewChanged = var1;
          if (this.currentContentView != null) {
             var1.invoke(this.currentContentView);

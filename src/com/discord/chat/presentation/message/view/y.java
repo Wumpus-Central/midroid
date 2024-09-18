@@ -11,6 +11,6 @@ public final class y implements OnClickListener {
    public final String l;
 
    public final void onClick(View var1) {
-      FileAttachmentView.b(this.j, this.k, this.l, var1);
+      FileAttachmentView.g(this.j, this.k, this.l, var1);
    }
 }

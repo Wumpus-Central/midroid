@@ -1,134 +1,113 @@
 package com.discord.billing.react.events.serialization
 
 import com.android.billingclient.api.ProductDetails
-import com.android.billingclient.api.ProductDetails.PricingPhase
-import com.android.billingclient.api.ProductDetails.a
-import com.android.billingclient.api.ProductDetails.c
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
-import eh.w
+import dh.w
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
-   r.h(var0, "<this>");
-   val var8: ArrayList = new ArrayList(h.t(var0, 10));
-   val var9: java.util.Iterator = var0.iterator();
+   q.h(var0, "<this>");
+   val var6: ArrayList = new ArrayList(i.u(var0, 10));
+   val var8: java.util.Iterator = var0.iterator();
 
-   val var10: ProductDetails;
+   val var9: ProductDetails;
    while (true) {
-      if (!var9.hasNext()) {
-         return NativeArrayExtensionsKt.toNativeArray(var8);
+      if (!var8.hasNext()) {
+         return NativeArrayExtensionsKt.toNativeArray(var6);
       }
 
-      var var2: Long;
-      var var11: ArrayList;
-      var var23: java.lang.String;
-      var var27: java.lang.String;
-      label60: {
-         var10 = var9.next() as ProductDetails;
-         var11 = new ArrayList();
-         val var4: Boolean = r.c(var10.e(), "inapp");
-         var23 = null;
-         if (var4) {
-            val var13: a = var10.c();
-            if (var13 == null) {
-               var23 = var10.d();
-               val var15: StringBuilder = new StringBuilder();
-               var15.append("Could not find oneTimePurchaseOfferDetails for product: ");
-               var15.append(var23);
-               throw new AssertionError(var15.toString());
-            }
-
-            r.g(var13, "productDetails.oneTimePu…oductDetails.productId}\")");
-            var2 = var13.b();
-            var27 = var13.a();
-            var23 = var13.c();
-            var14 = null;
-         } else {
-            if (!r.c(var10.e(), "subs")) {
-               var2 = 0L;
-               var27 = null;
-               var14 = null;
-               var23 = null;
-               break label60;
-            }
-
-            val var28: java.util.List = var10.f();
-            if (var28 == null) {
-               break;
-            }
-
-            val var26: java.util.Iterator = var28.iterator();
-
-            val var1: Boolean;
-            do {
-               var16 = var23;
-               if (!var26.hasNext()) {
-                  break;
-               }
-
-               var16 = var26.next();
-               if ((var16 as c).b() == null) {
-                  var1 = true;
-               } else {
-                  var1 = false;
-               }
-            } while (!var1);
-
-            val var17: c = var16 as c;
-            if (var16 as c == null) {
-               break;
-            }
-
-            val var22: PricingPhase = var17.e().a().get(0) as PricingPhase;
-            if (var22 == null) {
-               var23 = var10.d();
-               val var18: StringBuilder = new StringBuilder();
-               var18.append("Could not find pricingPhase for product: ");
-               var18.append(var23);
-               throw new AssertionError(var18.toString());
-            }
-
-            var2 = var22.d();
-            var27 = var22.c();
-            var14 = var22.b();
-            var23 = var22.e();
-            val var29: java.util.Iterator = var28.iterator();
-
-            while (var29.hasNext()) {
-               val var12: java.lang.String = (var29.next() as c).b();
-               if (var12 != null) {
-                  var11.add(var12);
-               }
-            }
+      var9 = var8.next() as ProductDetails;
+      val var7: ArrayList = new ArrayList();
+      val var3: Boolean = q.c(var9.e(), "inapp");
+      var var5: java.lang.String = null;
+      var var4: StringBuilder = null;
+      val var1: Long;
+      val var13: java.lang.String;
+      if (var3) {
+         val var12: ProductDetails.a = var9.c();
+         if (var12 == null) {
+            val var14: java.lang.String = var9.d();
+            var4 = new StringBuilder();
+            var4.append("Could not find oneTimePurchaseOfferDetails for product: ");
+            var4.append(var14);
+            throw new AssertionError(var4.toString());
          }
 
-         var27 = var23;
-         var23 = var27;
+         q.e(var12);
+         var1 = var12.b();
+         var5 = var12.a();
+         var4 = var12.c();
+         var13 = null;
+      } else if (q.c(var9.e(), "subs")) {
+         val var10: java.util.List = var9.f();
+         if (var10 == null) {
+            break;
+         }
+
+         val var24: java.util.Iterator = var10.iterator();
+
+         do {
+            var15 = var4;
+            if (!var24.hasNext()) {
+               break;
+            }
+
+            var15 = var24.next();
+         } while (((ProductDetails.c)var15).b() != null);
+
+         val var16: ProductDetails.c = var15 as ProductDetails.c;
+         if (var15 as ProductDetails.c == null) {
+            break;
+         }
+
+         val var21: ProductDetails.PricingPhase = var16.e().a().get(0) as ProductDetails.PricingPhase;
+         if (var21 == null) {
+            val var17: java.lang.String = var9.d();
+            var4 = new StringBuilder();
+            var4.append("Could not find pricingPhase for product: ");
+            var4.append(var17);
+            throw new AssertionError(var4.toString());
+         }
+
+         var1 = var21.d();
+         var5 = var21.c();
+         var13 = var21.b();
+         var4 = var21.e();
+         val var11: java.util.Iterator = var10.iterator();
+
+         while (var11.hasNext()) {
+            val var25: java.lang.String = (var11.next() as ProductDetails.c).b();
+            if (var25 != null) {
+               var7.add(var25);
+            }
+         }
+      } else {
+         var1 = 0L;
+         var4 = null;
+         var13 = null;
       }
 
-      var8.add(
+      var6.add(
          NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               w.a("identifier", var10.d()),
-               w.a("title", var10.g()),
-               w.a("description", var10.a()),
-               w.a("priceString", var23),
-               w.a("currencyCode", var27),
-               w.a("price", (int)(var2 / (long)10000)),
-               w.a("type", var10.e()),
-               w.a("offerIds", NativeArrayExtensionsKt.toNativeArray(var11)),
-               w.a("billingPeriod", var14)
-            }
+            w.a("identifier", var9.d()),
+            w.a("title", var9.g()),
+            w.a("description", var9.a()),
+            w.a("priceString", var5),
+            w.a("currencyCode", var4),
+            w.a("price", (int)(var1 / (long)10000)),
+            w.a("type", var9.e()),
+            w.a("offerIds", NativeArrayExtensionsKt.toNativeArray(var7)),
+            w.a("billingPeriod", var13)
          )
       );
    }
 
-   val var25: java.lang.String = var10.d();
-   val var19: StringBuilder = new StringBuilder();
-   var19.append("Could not find subscriptionOfferDetails for product: ");
-   var19.append(var25);
-   throw new AssertionError(var19.toString());
+   val var23: java.lang.String = var9.d();
+   val var18: StringBuilder = new StringBuilder();
+   var18.append("Could not find subscriptionOfferDetails for product: ");
+   var18.append(var23);
+   throw new AssertionError(var18.toString());
 }

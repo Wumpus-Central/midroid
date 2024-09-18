@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.attachment
 
+import kh.a
+import kotlin.enums.EnumEntries
+
 public enum class AttachmentType(indexLabel: String) {
    Audio("audioAttachmentIndex"),
    File("fileAttachmentIndex"),
@@ -7,9 +10,23 @@ public enum class AttachmentType(indexLabel: String) {
    Video("videoAttachmentIndex")
    public final val indexLabel: String
    @JvmStatic
-   private AttachmentType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private AttachmentType[] $VALUES;
+
+   @JvmStatic
+   fun {
+      val var0: Array<AttachmentType> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.indexLabel = var3;
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
    }
 }

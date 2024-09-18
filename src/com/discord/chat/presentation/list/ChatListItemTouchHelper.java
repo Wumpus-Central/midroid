@@ -15,20 +15,12 @@ import android.view.ViewConfiguration;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import androidx.core.view.GestureDetectorCompat;
-import androidx.core.view.f1;
+import androidx.core.view.r0;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ChildDrawingOrderCallback;
-import androidx.recyclerview.widget.RecyclerView.ItemAnimator;
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration;
-import androidx.recyclerview.widget.RecyclerView.LayoutManager;
-import androidx.recyclerview.widget.RecyclerView.OnChildAttachStateChangeListener;
-import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener;
-import androidx.recyclerview.widget.RecyclerView.State;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAttachStateChangeListener {
+public class ChatListItemTouchHelper extends RecyclerView.ItemDecoration implements RecyclerView.OnChildAttachStateChangeListener {
    static final int ACTION_MODE_DRAG_MASK = 16711680;
    private static final int ACTION_MODE_IDLE_MASK = 255;
    static final int ACTION_MODE_SWIPE_MASK = 65280;
@@ -53,7 +45,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
    private int mActionState;
    int mActivePointerId;
    ChatListCallback mCallback;
-   private ChildDrawingOrderCallback mChildDrawingOrderCallback;
+   private RecyclerView.ChildDrawingOrderCallback mChildDrawingOrderCallback;
    private List<Integer> mDistances;
    private long mDragScrollStartTimeInMs;
    float mDx;
@@ -63,19 +55,19 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
    float mInitialTouchY;
    private ChatListItemTouchHelper.ItemTouchHelperGestureListener mItemTouchHelperGestureListener;
    private float mMaxSwipeVelocity;
-   private final OnItemTouchListener mOnItemTouchListener;
+   private final RecyclerView.OnItemTouchListener mOnItemTouchListener;
    View mOverdrawChild;
    int mOverdrawChildPosition;
    final List<View> mPendingCleanup = new ArrayList<>();
    List<ChatListItemTouchHelper.RecoverAnimation> mRecoverAnimations;
    RecyclerView mRecyclerView;
    final Runnable mScrollRunnable;
-   ViewHolder mSelected;
+   RecyclerView.ViewHolder mSelected;
    int mSelectedFlags;
    private float mSelectedStartX;
    private float mSelectedStartY;
    private int mSlop;
-   private List<ViewHolder> mSwapTargets;
+   private List<RecyclerView.ViewHolder> mSwapTargets;
    private float mSwipeEscapeVelocity;
    private final float[] mTmpPosition = new float[2];
    private Rect mTmpRect;
@@ -97,28 +89,29 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
          public void run() {
             ChatListItemTouchHelper var1x = this.this$0;
             if (var1x.mSelected != null && var1x.scrollIfNecessary()) {
-               var1x = this.this$0;
-               ViewHolder var2 = var1x.mSelected;
-               if (var2 != null) {
-                  var1x.moveIfNecessary(var2);
+               ChatListItemTouchHelper var2 = this.this$0;
+               RecyclerView.ViewHolder var3 = var2.mSelected;
+               if (var3 != null) {
+                  var2.moveIfNecessary(var3);
                }
 
                var1x = this.this$0;
                var1x.mRecyclerView.removeCallbacks(var1x.mScrollRunnable);
-               f1.i0(this.this$0.mRecyclerView, this);
+               r0.i0(this.this$0.mRecyclerView, this);
             }
          }
       };
       this.mChildDrawingOrderCallback = null;
       this.mOverdrawChild = null;
       this.mOverdrawChildPosition = -1;
-      this.mOnItemTouchListener = new OnItemTouchListener(this) {
+      this.mOnItemTouchListener = new RecyclerView.OnItemTouchListener(this) {
          final ChatListItemTouchHelper this$0;
 
          {
             this.this$0 = var1;
          }
 
+         @Override
          public boolean onInterceptTouchEvent(RecyclerView var1, MotionEvent var2) {
             this.this$0.mGestureDetector.a(var2);
             int var3 = var2.getActionMasked();
@@ -174,12 +167,14 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             return var5;
          }
 
+         @Override
          public void onRequestDisallowInterceptTouchEvent(boolean var1) {
             if (var1) {
                this.this$0.select(null, 0);
             }
          }
 
+         @Override
          public void onTouchEvent(RecyclerView var1, MotionEvent var2) {
             this.this$0.mGestureDetector.a(var2);
             VelocityTracker var6 = this.this$0.mVelocityTracker;
@@ -194,15 +189,15 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
                   this.this$0.checkSelectForSwipe(var5, var2, var4);
                }
 
-               ChatListItemTouchHelper var15 = this.this$0;
-               ViewHolder var7 = var15.mSelected;
-               if (var7 != null) {
+               ChatListItemTouchHelper var7 = this.this$0;
+               RecyclerView.ViewHolder var15 = var7.mSelected;
+               if (var15 != null) {
                   byte var3 = 0;
                   if (var5 != 1) {
                      if (var5 == 2) {
                         if (var4 >= 0) {
-                           var15.updateDxDy(var2, var15.mSelectedFlags, var4);
-                           this.this$0.moveIfNecessary(var7);
+                           var7.updateDxDy(var2, var7.mSelectedFlags, var4);
+                           this.this$0.moveIfNecessary(var15);
                            ChatListItemTouchHelper var10 = this.this$0;
                            var10.mRecyclerView.removeCallbacks(var10.mScrollRunnable);
                            this.this$0.mScrollRunnable.run();
@@ -232,7 +227,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
                         return;
                      }
 
-                     VelocityTracker var11 = var15.mVelocityTracker;
+                     VelocityTracker var11 = var7.mVelocityTracker;
                      if (var11 != null) {
                         var11.clear();
                      }
@@ -251,13 +246,14 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
 
    private void addChildDrawingOrderCallback() {
       if (this.mChildDrawingOrderCallback == null) {
-         this.mChildDrawingOrderCallback = new ChildDrawingOrderCallback(this) {
+         this.mChildDrawingOrderCallback = new RecyclerView.ChildDrawingOrderCallback(this) {
             final ChatListItemTouchHelper this$0;
 
             {
                this.this$0 = var1;
             }
 
+            @Override
             public int onGetChildDrawingOrder(int var1, int var2) {
                ChatListItemTouchHelper var6 = this.this$0;
                View var5 = var6.mOverdrawChild;
@@ -288,10 +284,10 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       this.mRecyclerView.setChildDrawingOrderCallback(this.mChildDrawingOrderCallback);
    }
 
-   private int checkHorizontalSwipe(ViewHolder var1, int var2) {
+   private int checkHorizontalSwipe(RecyclerView.ViewHolder var1, int var2) {
       if ((var2 & 12) != 0) {
          float var3 = this.mDx;
-         byte var6 = 8;
+         byte var6 = 4;
          byte var5;
          if (var3 > 0.0F) {
             var5 = 8;
@@ -304,8 +300,8 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             var7.computeCurrentVelocity(1000, this.mCallback.getSwipeVelocityThreshold(this.mMaxSwipeVelocity));
             float var4 = this.mVelocityTracker.getXVelocity(this.mActivePointerId);
             var3 = this.mVelocityTracker.getYVelocity(this.mActivePointerId);
-            if (!(var4 > 0.0F)) {
-               var6 = 4;
+            if (var4 > 0.0F) {
+               var6 = 8;
             }
 
             var4 = Math.abs(var4);
@@ -314,9 +310,9 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             }
          }
 
-         var3 = this.mRecyclerView.getWidth();
-         float var11 = this.mCallback.getSwipeThreshold(var1);
-         if ((var2 & var5) != 0 && Math.abs(this.mDx) > var3 * var11) {
+         float var11 = this.mRecyclerView.getWidth();
+         var3 = this.mCallback.getSwipeThreshold(var1);
+         if ((var2 & var5) != 0 && Math.abs(this.mDx) > var11 * var3) {
             return var5;
          }
       }
@@ -324,10 +320,10 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       return 0;
    }
 
-   private int checkVerticalSwipe(ViewHolder var1, int var2) {
+   private int checkVerticalSwipe(RecyclerView.ViewHolder var1, int var2) {
       if ((var2 & 3) != 0) {
          float var3 = this.mDy;
-         byte var6 = 2;
+         byte var6 = 1;
          byte var5;
          if (var3 > 0.0F) {
             var5 = 2;
@@ -340,8 +336,8 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             var7.computeCurrentVelocity(1000, this.mCallback.getSwipeVelocityThreshold(this.mMaxSwipeVelocity));
             var3 = this.mVelocityTracker.getXVelocity(this.mActivePointerId);
             float var4 = this.mVelocityTracker.getYVelocity(this.mActivePointerId);
-            if (!(var4 > 0.0F)) {
-               var6 = 1;
+            if (var4 > 0.0F) {
+               var6 = 2;
             }
 
             var4 = Math.abs(var4);
@@ -378,7 +374,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       this.stopGestureDetection();
    }
 
-   private List<ViewHolder> findSwapTargets(ViewHolder var1) {
+   private List<RecyclerView.ViewHolder> findSwapTargets(RecyclerView.ViewHolder var1) {
       List var14 = this.mSwapTargets;
       if (var14 == null) {
          this.mSwapTargets = new ArrayList<>();
@@ -389,34 +385,34 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       }
 
       int var3 = this.mCallback.getBoundingBoxMargin();
-      int var5 = Math.round(this.mSelectedStartX + this.mDx) - var3;
-      int var6 = Math.round(this.mSelectedStartY + this.mDy) - var3;
+      int var6 = Math.round(this.mSelectedStartX + this.mDx) - var3;
+      int var5 = Math.round(this.mSelectedStartY + this.mDy) - var3;
       int var2 = var1.itemView.getWidth();
       var3 *= 2;
-      int var7 = var2 + var5 + var3;
-      int var10 = var1.itemView.getHeight() + var6 + var3;
-      int var8 = (var5 + var7) / 2;
-      int var9 = (var6 + var10) / 2;
-      LayoutManager var22 = this.mRecyclerView.getLayoutManager();
-      int var11 = var22.getChildCount();
+      int var7 = var2 + var6 + var3;
+      int var10 = var1.itemView.getHeight() + var5 + var3;
+      int var11 = (var6 + var7) / 2;
+      int var9 = (var5 + var10) / 2;
+      RecyclerView.LayoutManager var16 = this.mRecyclerView.getLayoutManager();
+      int var8 = var16.getChildCount();
 
-      for (int var17 = 0; var17 < var11; var17++) {
-         View var15 = var22.getChildAt(var17);
-         if (var15 != var1.itemView && var15.getBottom() >= var6 && var15.getTop() <= var10 && var15.getRight() >= var5 && var15.getLeft() <= var7) {
-            ViewHolder var16 = this.mRecyclerView.getChildViewHolder(var15);
-            if (this.mCallback.canDropOver(this.mRecyclerView, this.mSelected, var16)) {
-               int var4 = Math.abs(var8 - (var15.getLeft() + var15.getRight()) / 2);
-               var3 = Math.abs(var9 - (var15.getTop() + var15.getBottom()) / 2);
-               int var12 = var4 * var4 + var3 * var3;
-               int var13 = this.mSwapTargets.size();
+      for (int var17 = 0; var17 < var8; var17++) {
+         View var15 = var16.getChildAt(var17);
+         if (var15 != var1.itemView && var15.getBottom() >= var5 && var15.getTop() <= var10 && var15.getRight() >= var6 && var15.getLeft() <= var7) {
+            RecyclerView.ViewHolder var22 = this.mRecyclerView.getChildViewHolder(var15);
+            if (this.mCallback.canDropOver(this.mRecyclerView, this.mSelected, var22)) {
+               var3 = Math.abs(var11 - (var15.getLeft() + var15.getRight()) / 2);
+               int var4 = Math.abs(var9 - (var15.getTop() + var15.getBottom()) / 2);
+               int var13 = var3 * var3 + var4 * var4;
+               int var12 = this.mSwapTargets.size();
                var4 = 0;
 
-               for (var3 = 0; var4 < var13 && var12 > this.mDistances.get(var4); var4++) {
+               for (var3 = 0; var4 < var12 && var13 > this.mDistances.get(var4); var4++) {
                   var3++;
                }
 
-               this.mSwapTargets.add(var3, var16);
-               this.mDistances.add(var3, var12);
+               this.mSwapTargets.add(var3, var22);
+               this.mDistances.add(var3, var13);
             }
          }
       }
@@ -424,19 +420,19 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       return this.mSwapTargets;
    }
 
-   private ViewHolder findSwipedView(MotionEvent var1) {
-      LayoutManager var7 = this.mRecyclerView.getLayoutManager();
+   private RecyclerView.ViewHolder findSwipedView(MotionEvent var1) {
+      RecyclerView.LayoutManager var7 = this.mRecyclerView.getLayoutManager();
       int var6 = this.mActivePointerId;
       if (var6 == -1) {
          return null;
       } else {
          var6 = var1.findPointerIndex(var6);
-         float var4 = var1.getX(var6);
-         float var5 = this.mInitialTouchX;
-         float var2 = var1.getY(var6);
-         float var3 = this.mInitialTouchY;
-         var4 = Math.abs(var4 - var5);
-         var2 = Math.abs(var2 - var3);
+         float var5 = var1.getX(var6);
+         float var4 = this.mInitialTouchX;
+         float var3 = var1.getY(var6);
+         float var2 = this.mInitialTouchY;
+         var4 = Math.abs(var5 - var4);
+         var2 = Math.abs(var3 - var2);
          var6 = this.mSlop;
          if (var4 < var6 && var2 < var6) {
             return null;
@@ -509,12 +505,12 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       }
    }
 
-   private int swipeIfNecessary(ViewHolder var1) {
+   private int swipeIfNecessary(RecyclerView.ViewHolder var1) {
       if (this.mActionState == 2) {
          return 0;
       } else {
          int var3 = this.mCallback.getMovementFlags(this.mRecyclerView, var1);
-         int var2 = (this.mCallback.convertToAbsoluteDirection(var3, f1.B(this.mRecyclerView)) & 0xFF00) >> 8;
+         int var2 = (this.mCallback.convertToAbsoluteDirection(var3, r0.B(this.mRecyclerView)) & 0xFF00) >> 8;
          if (var2 == 0) {
             return 0;
          } else {
@@ -523,7 +519,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
                var3 = this.checkHorizontalSwipe(var1, var2);
                if (var3 > 0) {
                   if ((var4 & var3) == 0) {
-                     return androidx.recyclerview.widget.e.convertToRelativeDirection(var3, f1.B(this.mRecyclerView));
+                     return androidx.recyclerview.widget.e.convertToRelativeDirection(var3, r0.B(this.mRecyclerView));
                   }
 
                   return var3;
@@ -543,7 +539,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
                if (var3 > 0) {
                   var2 = var3;
                   if ((var4 & var3) == 0) {
-                     var2 = androidx.recyclerview.widget.e.convertToRelativeDirection(var3, f1.B(this.mRecyclerView));
+                     var2 = androidx.recyclerview.widget.e.convertToRelativeDirection(var3, r0.B(this.mRecyclerView));
                   }
 
                   return var2;
@@ -578,7 +574,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             return;
          }
 
-         ViewHolder var8 = this.findSwipedView(var2);
+         RecyclerView.ViewHolder var8 = this.findSwipedView(var2);
          if (var8 == null) {
             return;
          }
@@ -624,7 +620,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       }
    }
 
-   void endRecoverAnimation(ViewHolder var1, boolean var2) {
+   void endRecoverAnimation(RecyclerView.ViewHolder var1, boolean var2) {
       for (int var3 = this.mRecoverAnimations.size() - 1; var3 >= 0; var3--) {
          ChatListItemTouchHelper.RecoverAnimation var4 = this.mRecoverAnimations.get(var3);
          if (var4.mViewHolder == var1) {
@@ -657,28 +653,29 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
    }
 
    View findChildView(MotionEvent var1) {
-      float var2 = var1.getX();
-      float var3 = var1.getY();
-      ViewHolder var6 = this.mSelected;
+      float var3 = var1.getX();
+      float var2 = var1.getY();
+      RecyclerView.ViewHolder var6 = this.mSelected;
       if (var6 != null) {
          View var7 = var6.itemView;
-         if (hitTest(var7, var2, var3, this.mSelectedStartX + this.mDx, this.mSelectedStartY + this.mDy)) {
+         if (hitTest(var7, var3, var2, this.mSelectedStartX + this.mDx, this.mSelectedStartY + this.mDy)) {
             return var7;
          }
       }
 
       for (int var4 = this.mRecoverAnimations.size() - 1; var4 >= 0; var4--) {
-         ChatListItemTouchHelper.RecoverAnimation var5 = this.mRecoverAnimations.get(var4);
-         View var8 = var5.mViewHolder.itemView;
-         if (hitTest(var8, var2, var3, var5.mX, var5.mY)) {
-            return var8;
+         ChatListItemTouchHelper.RecoverAnimation var8 = this.mRecoverAnimations.get(var4);
+         View var5 = var8.mViewHolder.itemView;
+         if (hitTest(var5, var3, var2, var8.mX, var8.mY)) {
+            return var5;
          }
       }
 
-      return this.mRecyclerView.findChildViewUnder(var2, var3);
+      return this.mRecyclerView.findChildViewUnder(var3, var2);
    }
 
-   public void getItemOffsets(Rect var1, View var2, RecyclerView var3, State var4) {
+   @Override
+   public void getItemOffsets(Rect var1, View var2, RecyclerView var3, RecyclerView.State var4) {
       var1.setEmpty();
    }
 
@@ -694,25 +691,25 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       return false;
    }
 
-   void moveIfNecessary(ViewHolder var1) {
+   void moveIfNecessary(RecyclerView.ViewHolder var1) {
       if (!this.mRecyclerView.isLayoutRequested()) {
          if (this.mActionState == 2) {
             float var2 = this.mCallback.getMoveThreshold(var1);
-            int var4 = (int)(this.mSelectedStartX + this.mDx);
-            int var3 = (int)(this.mSelectedStartY + this.mDy);
-            if (!(Math.abs(var3 - var1.itemView.getTop()) < var1.itemView.getHeight() * var2)
-               || !(Math.abs(var4 - var1.itemView.getLeft()) < var1.itemView.getWidth() * var2)) {
+            int var3 = (int)(this.mSelectedStartX + this.mDx);
+            int var6 = (int)(this.mSelectedStartY + this.mDy);
+            if (!(Math.abs(var6 - var1.itemView.getTop()) < var1.itemView.getHeight() * var2)
+               || !(Math.abs(var3 - var1.itemView.getLeft()) < var1.itemView.getWidth() * var2)) {
                List var7 = this.findSwapTargets(var1);
                if (var7.size() != 0) {
-                  ViewHolder var8 = this.mCallback.chooseDropTarget(var1, var7, var4, var3);
+                  RecyclerView.ViewHolder var8 = this.mCallback.chooseDropTarget(var1, var7, var3, var6);
                   if (var8 == null) {
                      this.mSwapTargets.clear();
                      this.mDistances.clear();
                   } else {
-                     int var5 = var8.getAbsoluteAdapterPosition();
-                     int var6 = var1.getAbsoluteAdapterPosition();
+                     int var4 = var8.getAbsoluteAdapterPosition();
+                     int var5 = var1.getAbsoluteAdapterPosition();
                      if (this.mCallback.onMove(this.mRecyclerView, var1, var8)) {
-                        this.mCallback.onMoved(this.mRecyclerView, var1, var6, var8, var5, var4, var3);
+                        this.mCallback.onMoved(this.mRecyclerView, var1, var5, var8, var4, var3, var6);
                      }
                   }
                }
@@ -730,56 +727,60 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       this.mVelocityTracker = VelocityTracker.obtain();
    }
 
+   @Override
    public void onChildViewAttachedToWindow(View var1) {
    }
 
+   @Override
    public void onChildViewDetachedFromWindow(View var1) {
       this.removeChildDrawingOrderCallbackIfNecessary(var1);
-      ViewHolder var3 = this.mRecyclerView.getChildViewHolder(var1);
-      if (var3 != null) {
-         ViewHolder var2 = this.mSelected;
-         if (var2 != null && var3 == var2) {
+      RecyclerView.ViewHolder var2 = this.mRecyclerView.getChildViewHolder(var1);
+      if (var2 != null) {
+         RecyclerView.ViewHolder var3 = this.mSelected;
+         if (var3 != null && var2 == var3) {
             this.select(null, 0);
          } else {
-            this.endRecoverAnimation(var3, false);
-            if (this.mPendingCleanup.remove(var3.itemView)) {
-               this.mCallback.clearView(this.mRecyclerView, var3);
+            this.endRecoverAnimation(var2, false);
+            if (this.mPendingCleanup.remove(var2.itemView)) {
+               this.mCallback.clearView(this.mRecyclerView, var2);
             }
          }
       }
    }
 
-   public void onDraw(Canvas var1, RecyclerView var2, State var3) {
+   @Override
+   public void onDraw(Canvas var1, RecyclerView var2, RecyclerView.State var3) {
       this.mOverdrawChildPosition = -1;
       float var4;
       float var5;
       if (this.mSelected != null) {
          this.getSelectedDxDy(this.mTmpPosition);
          float[] var6 = this.mTmpPosition;
-         var4 = var6[0];
-         var5 = var6[1];
+         var5 = var6[0];
+         var4 = var6[1];
       } else {
-         var4 = 0.0F;
          var5 = 0.0F;
+         var4 = 0.0F;
       }
 
-      this.mCallback.onDraw(var1, var2, this.mSelected, this.mRecoverAnimations, this.mActionState, var4, var5);
+      this.mCallback.onDraw(var1, var2, this.mSelected, this.mRecoverAnimations, this.mActionState, var5, var4);
    }
 
-   public void onDrawOver(Canvas var1, RecyclerView var2, State var3) {
+   @Override
+   public void onDrawOver(Canvas var1, RecyclerView var2, RecyclerView.State var3) {
       float var4;
       float var5;
       if (this.mSelected != null) {
          this.getSelectedDxDy(this.mTmpPosition);
          float[] var6 = this.mTmpPosition;
-         var4 = var6[0];
-         var5 = var6[1];
+         var5 = var6[0];
+         var4 = var6[1];
       } else {
-         var4 = 0.0F;
          var5 = 0.0F;
+         var4 = 0.0F;
       }
 
-      this.mCallback.onDrawOver(var1, var2, this.mSelected, this.mRecoverAnimations, this.mActionState, var4, var5);
+      this.mCallback.onDrawOver(var1, var2, this.mSelected, this.mRecoverAnimations, this.mActionState, var5, var4);
    }
 
    void postDispatchSwipe(ChatListItemTouchHelper.RecoverAnimation var1, int var2) {
@@ -800,7 +801,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             if (var1x != null && var1x.isAttachedToWindow()) {
                ChatListItemTouchHelper.RecoverAnimation var2x = this.val$anim;
                if (!var2x.mOverridden && var2x.mViewHolder.getAbsoluteAdapterPosition() != -1) {
-                  ItemAnimator var3 = this.this$0.mRecyclerView.getItemAnimator();
+                  RecyclerView.ItemAnimator var3 = this.this$0.mRecyclerView.getItemAnimator();
                   if ((var3 == null || !var3.isRunning(null)) && !this.this$0.hasRunningRecoverAnim()) {
                      this.this$0.mCallback.onSwiped(this.val$anim.mViewHolder, this.val$swipeDir);
                   } else {
@@ -834,7 +835,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             var5 = var7 - var5;
          }
 
-         LayoutManager var9 = this.mRecyclerView.getLayoutManager();
+         RecyclerView.LayoutManager var9 = this.mRecyclerView.getLayoutManager();
          if (this.mTmpRect == null) {
             this.mTmpRect = new Rect();
          }
@@ -913,7 +914,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       }
    }
 
-   void select(ViewHolder var1, int var2) {
+   void select(RecyclerView.ViewHolder var1, int var2) {
       if (var1 != this.mSelected || var2 != this.mActionState) {
          this.mDragScrollStartTimeInMs = Long.MIN_VALUE;
          int var9 = this.mActionState;
@@ -928,7 +929,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             this.addChildDrawingOrderCallback();
          }
 
-         ViewHolder var10 = this.mSelected;
+         RecyclerView.ViewHolder var10 = this.mSelected;
          boolean var16;
          if (var10 != null) {
             if (var10.itemView.getParent() == null) {
@@ -948,18 +949,18 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
                float var4;
                float var12;
                if (var8 == 1 || var8 == 2) {
-                  float var14 = Math.signum(this.mDy);
-                  var4 = this.mRecyclerView.getHeight();
+                  var4 = Math.signum(this.mDy);
+                  float var14 = this.mRecyclerView.getHeight();
                   var12 = 0.0F;
-                  var4 = var14 * var4;
+                  var4 *= var14;
                } else if (var8 != 4 && var8 != 8 && var8 != 16 && var8 != 32) {
                   var12 = 0.0F;
                   var4 = 0.0F;
                } else {
-                  float var5 = Math.signum(this.mDx);
-                  var12 = this.mRecyclerView.getWidth();
+                  var12 = Math.signum(this.mDx);
+                  float var5 = this.mRecyclerView.getWidth();
                   var4 = 0.0F;
-                  var12 = var5 * var12;
+                  var12 *= var5;
                }
 
                if (var9 == 2) {
@@ -978,7 +979,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
                   this, var10, var16, var9, var6, var15, var12, var4, var8, var10
                ) {
                   final ChatListItemTouchHelper this$0;
-                  final ViewHolder val$prevSelected;
+                  final RecyclerView.ViewHolder val$prevSelected;
                   final int val$swipeDir;
 
                   {
@@ -1042,7 +1043,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       }
    }
 
-   public void startDrag(ViewHolder var1) {
+   public void startDrag(RecyclerView.ViewHolder var1) {
       if (this.mCallback.hasDragFlag(this.mRecyclerView, var1)) {
          if (var1.itemView.getParent() == this.mRecyclerView) {
             this.obtainVelocityTracker();
@@ -1054,9 +1055,9 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
    }
 
    void updateDxDy(MotionEvent var1, int var2, int var3) {
-      float var4 = var1.getX(var3);
-      float var5 = var1.getY(var3);
-      Pair var6 = this.mCallback.getEffectiveDxDy(var4 - this.mInitialTouchX, var5 - this.mInitialTouchY);
+      float var5 = var1.getX(var3);
+      float var4 = var1.getY(var3);
+      Pair var6 = this.mCallback.getEffectiveDxDy(var5 - this.mInitialTouchX, var4 - this.mInitialTouchY);
       this.mDx = (Float)var6.first;
       this.mDy = (Float)var6.second;
       if ((var2 & 4) == 0) {
@@ -1097,7 +1098,7 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
          if (this.mShouldReactToLongPress) {
             View var6 = this.this$0.findChildView(var1);
             if (var6 != null) {
-               ViewHolder var10 = this.this$0.mRecyclerView.getChildViewHolder(var6);
+               RecyclerView.ViewHolder var10 = this.this$0.mRecyclerView.getChildViewHolder(var6);
                if (var10 != null) {
                   ChatListItemTouchHelper var7 = this.this$0;
                   if (!var7.mCallback.hasDragFlag(var7.mRecyclerView, var10)) {
@@ -1137,11 +1138,11 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
       final float mTargetX;
       final float mTargetY;
       final ValueAnimator mValueAnimator;
-      final ViewHolder mViewHolder;
+      final RecyclerView.ViewHolder mViewHolder;
       float mX;
       float mY;
 
-      RecoverAnimation(ViewHolder var1, int var2, int var3, float var4, float var5, float var6, float var7) {
+      RecoverAnimation(RecyclerView.ViewHolder var1, int var2, int var3, float var4, float var5, float var6, float var7) {
          this.mEnded = false;
          this.mActionState = var3;
          this.mAnimationType = var2;
@@ -1216,12 +1217,12 @@ public class ChatListItemTouchHelper extends ItemDecoration implements OnChildAt
             this.mX = var1 + this.mFraction * (var2 - var1);
          }
 
-         var1 = this.mStartDy;
-         var2 = this.mTargetY;
-         if (var1 == var2) {
+         var2 = this.mStartDy;
+         var1 = this.mTargetY;
+         if (var2 == var1) {
             this.mY = this.mViewHolder.itemView.getTranslationY();
          } else {
-            this.mY = var1 + this.mFraction * (var2 - var1);
+            this.mY = var2 + this.mFraction * (var1 - var2);
          }
       }
    }

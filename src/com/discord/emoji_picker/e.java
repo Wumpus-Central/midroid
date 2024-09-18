@@ -10,6 +10,6 @@ public final class e implements OnLongClickListener {
    public final Function2 k;
 
    public final boolean onLongClick(View var1) {
-      return EmojiPickerViewHolder.Emoji.a(this.j, this.k, var1);
+      return EmojiPickerViewHolder.Emoji.b(this.j, this.k, var1);
    }
 }

@@ -1,13 +1,15 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeConnection.OnSpeakingCallback;
-import kotlin.jvm.functions.Function2;
+import com.discord.native.engine.AudioOutputDeviceDescription;
+import com.discord.native.engine.NativeEngine;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class v implements OnSpeakingCallback {
-   public final Function2 a;
+public final class v implements NativeEngine.GetAudioOutputDevicesCallback {
+   public final Function1 a;
 
-   public final void onSpeaking(String var1, int var2) {
-      MediaEngine.q(this.a, var1, var2);
+   @Override
+   public final void onDevices(AudioOutputDeviceDescription[] var1) {
+      MediaEngine.z(this.a, var1);
    }
 }

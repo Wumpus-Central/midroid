@@ -3,7 +3,7 @@ package com.discord.hosts
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object Hosts {
    public final var API: String
@@ -31,7 +31,7 @@ public object Hosts {
    private fun requireHost(key: String): String {
       var var2: SharedPreferences = prefs;
       if (prefs == null) {
-         r.y("prefs");
+         q.y("prefs");
          var2 = null;
       }
 
@@ -50,21 +50,21 @@ public object Hosts {
    private fun setHost(key: String, value: String) {
       var var3: SharedPreferences = prefs;
       if (prefs == null) {
-         r.y("prefs");
+         q.y("prefs");
          var3 = null;
       }
 
       val var5: Editor = var3.edit();
-      r.g(var5, "editor");
+      q.g(var5, "editor");
       var5.putString(var1, var2);
       var5.apply();
    }
 
    public fun init(context: Context, api: String? = null, cdn: String? = null) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       if (prefs == null) {
          val var4: SharedPreferences = var1.getSharedPreferences("discord_hosts", 0);
-         r.g(var4, "context.getSharedPrefere…s\", Context.MODE_PRIVATE)");
+         q.g(var4, "getSharedPreferences(...)");
          prefs = var4;
       }
 

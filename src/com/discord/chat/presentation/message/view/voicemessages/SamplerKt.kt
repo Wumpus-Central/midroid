@@ -6,17 +6,12 @@ internal final val abs: Byte
       if (var0 == -128) {
          var1 = 127;
       } else {
-         var var2: Boolean = false;
-         if (-127 <= var0) {
-            var2 = false;
-            if (var0 < 1) {
-               var2 = true;
-            }
-         }
-
          var1 = var0;
-         if (var2) {
-            var1 = (byte)(-var0);
+         if (-127 <= var0) {
+            var1 = var0;
+            if (var0 < 1) {
+               var1 = (byte)(-var0);
+            }
          }
       }
 

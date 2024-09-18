@@ -4,13 +4,13 @@ import androidx.core.performance.play.services.PlayServicesDevicePerformance
 import com.discord.codegen.NativeDevicePerformanceManagerSpec
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class DevicePerformanceManagerModule(reactContext: ReactApplicationContext) : NativeDevicePerformanceManagerSpec {
    private final var devicePerformance: PlayServicesDevicePerformance
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.devicePerformance = new PlayServicesDevicePerformance(var1);
    }

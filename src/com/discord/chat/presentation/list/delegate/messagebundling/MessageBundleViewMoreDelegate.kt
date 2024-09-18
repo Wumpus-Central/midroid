@@ -8,13 +8,13 @@ import com.discord.chat.presentation.list.item.MessageBundleItem
 import com.discord.chat.presentation.list.item.MessageBundleViewMoreItem
 import com.discord.chat.presentation.list.messagebundling.MessageBundleViewMoreView
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class MessageBundleViewMoreDelegate(onMeasured: (View, Int, Int) -> Unit) : MessageBundleBaseDelegate {
    public final var onTapViewMoreText: OnClickListener
 
    init {
-      r.h(var1, "onMeasured");
+      q.h(var1, "onMeasured");
       super(var1);
       this.onTapViewMoreText = new b();
    }
@@ -24,19 +24,19 @@ public class MessageBundleViewMoreDelegate(onMeasured: (View, Int, Int) -> Unit)
    }
 
    public open fun createView(context: Context): MessageBundleViewMoreView {
-      r.h(var1, "context");
+      q.h(var1, "context");
       return new MessageBundleViewMoreView(var1, null, 0, 6, null);
    }
 
    protected open fun isForViewType(items: List<MessageBundleItem>, position: Int): Boolean {
-      r.h(var1, "items");
+      q.h(var1, "items");
       return var1.get(var2) is MessageBundleViewMoreItem;
    }
 
    public override fun onBindViewHolder(view: View, item: MessageBundleItem, items: List<MessageBundleItem>, position: Int) {
-      r.h(var1, "view");
-      r.h(var2, "item");
-      r.h(var3, "items");
+      q.h(var1, "view");
+      q.h(var2, "item");
+      q.h(var3, "items");
       if (var1 is TextView) {
          if (var2 is MessageBundleViewMoreItem) {
             val var5: TextView = var1 as TextView;

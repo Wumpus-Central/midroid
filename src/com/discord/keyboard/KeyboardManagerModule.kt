@@ -7,12 +7,12 @@ import com.discord.codegen.NativeKeyboardManagerSpec
 import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
-import l3.a
+import kotlin.jvm.internal.q
+import n3.a
 
 public class KeyboardManagerModule(reactContext: ReactApplicationContext) : NativeKeyboardManagerSpec {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -21,7 +21,7 @@ public class KeyboardManagerModule(reactContext: ReactApplicationContext) : Nati
       KeyboardManager.INSTANCE.onKeyboardChanged$keyboard_release(var0);
    }
 
-   public open fun clearCurrentFocusAndDismissKeyboard() {
+   public override fun clearCurrentFocusAndDismissKeyboard() {
       val var1: Window = ViewUtilsKt.getWindow(this.getReactApplicationContext());
       if (var1 != null) {
          val var2: View = var1.getCurrentFocus();
@@ -33,18 +33,18 @@ public class KeyboardManagerModule(reactContext: ReactApplicationContext) : Nati
       this.dismissGlobalKeyboard();
    }
 
-   public open fun dismissGlobalKeyboard() {
+   public override fun dismissGlobalKeyboard() {
       val var1: Activity = this.getCurrentActivity();
       if (var1 != null) {
          KeyboardExtensionsKt.hideKeyboard(var1);
       }
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNKeyboardManager";
    }
 
-   public open fun onKeyboardChanged(opened: Boolean) {
+   public override fun onKeyboardChanged(opened: Boolean) {
       this.getReactApplicationContext().runOnUiQueueThread(new a(var1));
    }
 

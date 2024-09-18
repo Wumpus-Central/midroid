@@ -14,9 +14,9 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import eh.w
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 
 public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val listener: <unrepresentable>
@@ -24,10 +24,10 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("photoLibraryChanged", h0.b(PhotoLibraryChangedEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("photoLibraryChanged", g0.b(PhotoLibraryChangedEvent.class)));
       this.listener = new ContentObserver(this, new Handler(Looper.getMainLooper())) {
          final PhotoLibraryHelperModule this$0;
 
@@ -59,32 +59,27 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
-      if (r.c(var1, "photoLibraryChanged")) {
+      q.h(var1, "type");
+      if (q.c(var1, "photoLibraryChanged")) {
          this.register();
       }
    }
 
    @ReactMethod
    public fun doesAttachmentExist(uri: String, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var2, "promise");
-      val var5: Cursor = this.reactContext.getContentResolver().query(Uri.parse(var1), new java.lang.String[]{"_id"}, null, null, null, null);
-      var var4: Boolean = false;
-      val var3: Int;
-      if (var5 != null) {
-         var3 = var5.getCount();
+      q.h(var1, "uri");
+      q.h(var2, "promise");
+      val var4: Cursor = this.reactContext.getContentResolver().query(Uri.parse(var1), new java.lang.String[]{"_id"}, null, null, null, null);
+      val var3: Boolean;
+      if (var4 != null && var4.getCount() > 0) {
+         var3 = true;
       } else {
-         var3 = 0;
+         var3 = false;
       }
 
-      if (var3 > 0) {
-         var4 = true;
-      }
-
-      var2.resolve(var4);
-      if (var5 != null) {
-         var5.close();
+      var2.resolve(var3);
+      if (var4 != null) {
+         var4.close();
       }
    }
 
@@ -94,16 +89,16 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun registerEventListener(type: String) {
-      r.h(var1, "type");
-      if (r.c(var1, "photoLibraryChanged")) {
+      q.h(var1, "type");
+      if (q.c(var1, "photoLibraryChanged")) {
          this.register();
       }
    }
 
    @ReactMethod
    public fun removeEventListener(type: String) {
-      r.h(var1, "type");
-      if (r.c(var1, "photoLibraryChanged")) {
+      q.h(var1, "type");
+      if (q.c(var1, "photoLibraryChanged")) {
          this.unregister();
       }
    }

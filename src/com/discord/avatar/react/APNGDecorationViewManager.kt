@@ -7,14 +7,14 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerDelegate
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerInterface
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "APNGDecorationView")
 internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, APNGDecorationViewManagerInterface<DecorationView> {
    private final val delegate: APNGDecorationViewManagerDelegate<DecorationView, APNGDecorationViewManager> = new APNGDecorationViewManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): DecorationView {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       val var2: DecorationView = new DecorationView(var1, null, 0, 6, null);
       var2.inflateApngView(false);
       return var2;
@@ -29,13 +29,13 @@ internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, AP
    }
 
    public open fun onDropViewInstance(view: DecorationView) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       var1.recycle();
    }
 
    @ReactProp(name = "url")
    public open fun setUrl(view: DecorationView, value: String?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          var1.asDecoration(var2, null, null, true);
       }

@@ -1,13 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeEngine.GetCodecCapabilitiesCallback;
+import com.discord.native.engine.NativeConnection;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class y implements GetCodecCapabilitiesCallback {
+public final class y implements NativeConnection.GetEncryptionModesCallback {
    public final Function1 a;
 
-   public final void onCodecCapabilities(String var1) {
-      MediaEngine.b(this.a, var1);
+   @Override
+   public final void onEncryptionModes(String[] var1) {
+      MediaEngine.n(this.a, var1);
    }
 }

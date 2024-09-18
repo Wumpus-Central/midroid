@@ -1,24 +1,24 @@
 package com.discord.chat.bridge.structurabletext
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import wk.g
-import wk.e.i
+import xk.g
+import xk.e.i
 
-internal object PrimitiveStructurableTextSerializer : KSerializer<PrimitiveStructurableText> {
+internal object PrimitiveStructurableTextSerializer : KSerializer {
    public open val descriptor: SerialDescriptor = g.a("PrimitiveStructurableText", i.a)
 
    public open fun deserialize(decoder: Decoder): PrimitiveStructurableText {
-      r.h(var1, "decoder");
-      return new PrimitiveStructurableText(var1.z());
+      q.h(var1, "decoder");
+      return new PrimitiveStructurableText(var1.n());
    }
 
    public open fun serialize(encoder: Encoder, value: PrimitiveStructurableText) {
-      r.h(var1, "encoder");
-      r.h(var2, "value");
+      q.h(var1, "encoder");
+      q.h(var2, "value");
       throw new UnsupportedOperationException();
    }
 }

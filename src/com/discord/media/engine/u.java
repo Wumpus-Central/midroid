@@ -1,13 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeConnection.SecureFramesTransitionReadyCallback;
-import kotlin.jvm.functions.Function0;
+import com.discord.native.engine.NativeEngine;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class u implements SecureFramesTransitionReadyCallback {
-   public final Function0 a;
+public final class u implements NativeEngine.GetSupportedVideoCodecsCallback {
+   public final Function1 a;
 
-   public final void onTransitionReady() {
-      MediaEngine.k(this.a);
+   @Override
+   public final void onSupportedVideoCodecs(String[] var1) {
+      MediaEngine.e(this.a, var1);
    }
 }

@@ -4,13 +4,15 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import eh.w
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.q
 
 public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakData(var1), ReactEvent {
    public final val messageId: MessageId
 
    fun TapInviteToSpeakData(var1: java.lang.String) {
+      q.h(var1, "messageId");
+      super();
       this.messageId = var1;
    }
 
@@ -19,7 +21,7 @@ public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakD
    }
 
    public fun copy(messageId: MessageId = ...): TapInviteToSpeakData {
-      r.h(var1, "messageId");
+      q.h(var1, "messageId");
       return new TapInviteToSpeakData(var1, null);
    }
 
@@ -37,8 +39,8 @@ public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakD
       return MessageId.hashCode-impl(this.messageId);
    }
 
-   public open fun serialize(): WritableMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("messageId", MessageId.toString-impl(this.messageId))});
+   public override fun serialize(): WritableMap {
+      return NativeMapExtensionsKt.nativeMapOf(w.a("messageId", MessageId.toString-impl(this.messageId)));
    }
 
    public override fun toString(): String {

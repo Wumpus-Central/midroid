@@ -16,11 +16,11 @@ import com.discord.chat.presentation.message.view.UploadItemProps
 import com.discord.chat.presentation.message.viewholder.MediaImageViewHolder
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : MediaImageViewHolder {
    init {
-      r.h(var1, "view");
+      q.h(var1, "view");
       super(var1);
    }
 
@@ -33,25 +33,25 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       onTapSpoiler: () -> Unit,
       shouldAutoPlayGif: Boolean
    ) {
-      r.h(var1, "eventHandler");
-      r.h(var2, "imageAttachmentMessageAccessory");
-      r.h(var4, "onClicked");
-      r.h(var6, "onTapSpoiler");
+      q.h(var1, "eventHandler");
+      q.h(var2, "imageAttachmentMessageAccessory");
+      q.h(var4, "onClicked");
+      q.h(var6, "onTapSpoiler");
       val var17: Attachment = var2.getAttachment();
-      val var16: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
+      val var15: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2) {
-            r.h(var1, "p0");
-            r.h(var2, "p1");
+            q.h(var1, "p0");
+            q.h(var2, "p1");
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var15: java.lang.String = var17.getUrl();
-      val var9: Int = var17.getWidth();
-      val var10: Int = var17.getHeight();
+      val var16: java.lang.String = var17.getUrl();
+      val var10: Int = var17.getWidth();
+      val var9: Int = var17.getHeight();
       val var18: java.lang.String = var17.getPlaceholder();
       val var19: Int = var17.getPlaceholderVersion();
       val var8: Int = var2.getRadiusPx();
@@ -88,9 +88,9 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       super.bind(
-         var15,
-         var9,
+         var16,
          var10,
+         var9,
          var18,
          var19,
          var13,
@@ -101,13 +101,13 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var17.getDescription(),
          var17.getHint(),
          var2.getUseNewAltTextButton(),
-         new Function1<java.lang.String, Unit>(var1) {
+         new Function1(var1) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
             }
 
             public final void invoke(java.lang.String var1) {
-               r.h(var1, "p0");
+               q.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapShowAltText(var1);
             }
          },
@@ -116,7 +116,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var3 xor true,
          var4,
          var5,
-         var16,
+         var15,
          var17.getRole(),
          var7,
          var17.getFilename()
@@ -134,25 +134,25 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       onAltTextButtonClicked: (String) -> Unit,
       shouldAutoPlayGif: Boolean
    ) {
-      r.h(var1, "containerId");
-      r.h(var2, "componentId");
-      r.h(var3, "mediaGalleryItem");
-      r.h(var5, "onClicked");
-      r.h(var7, "onTapSpoiler");
-      r.h(var8, "onAltTextButtonClicked");
+      q.h(var1, "containerId");
+      q.h(var2, "componentId");
+      q.h(var3, "mediaGalleryItem");
+      q.h(var5, "onClicked");
+      q.h(var7, "onTapSpoiler");
+      q.h(var8, "onAltTextButtonClicked");
       val var16: UnfurledMediaItem = var3.getMedia();
-      val var14: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("MediaGalleryDisplayComponent(");
-      var15.append(var2);
-      var15.append(").item[image]");
-      val var18: SpoilerAttributes = var14.forGenericMedia(var3, var1, var15.toString(), var3.getMedia().getProxyUrl());
-      val var21: java.lang.String = var16.getProxyUrl();
-      val var12: Int = var16.getWidth();
-      val var10: Int = var16.getHeight();
-      val var20: java.lang.String = var16.getPlaceholder();
+      val var15: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("MediaGalleryDisplayComponent(");
+      var14.append(var2);
+      var14.append(").item[image]");
+      val var18: SpoilerAttributes = var15.forGenericMedia(var3, var1, var14.toString(), var3.getMedia().getProxyUrl());
+      val var20: java.lang.String = var16.getProxyUrl();
+      val var11: Int = var16.getWidth();
+      val var12: Int = var16.getHeight();
+      val var21: java.lang.String = var16.getPlaceholder();
       val var22: Int = var16.getPlaceholderVersion();
-      val var11: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
+      val var10: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
       val var17: MediaContainingViewResizer.ResizeMode;
       if (var4) {
          var17 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -169,10 +169,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       super.bind(
-         var21,
-         var12,
-         var10,
          var20,
+         var11,
+         var12,
+         var21,
          var22,
          var13,
          var19,
@@ -183,7 +183,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var3.getDescriptionHint(),
          var3.getShowDescription(),
          var8,
-         var11,
+         var10,
          var17,
          var4 xor true,
          var5,

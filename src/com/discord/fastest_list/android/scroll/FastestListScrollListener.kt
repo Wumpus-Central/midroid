@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.fastest_list.android.FastestListLayoutManager
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker
 import com.discord.recycler_view.scroll.DebouncedScrollListener
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class FastestListScrollListener(keyboardDismissOnDrag: Boolean,
       onScrollEventThrottle: Long,
@@ -22,10 +22,10 @@ internal class FastestListScrollListener(keyboardDismissOnDrag: Boolean,
    private final var keyboardDismissOnDragDispatched: Boolean
 
    init {
-      r.h(var4, "onScrolled");
-      r.h(var5, "onDragStateChanged");
-      r.h(var6, "layoutManager");
-      r.h(var7, "visibleItemsTracker");
+      q.h(var4, "onScrolled");
+      q.h(var5, "onDragStateChanged");
+      q.h(var6, "layoutManager");
+      q.h(var7, "visibleItemsTracker");
       super(var2, var4, null, var5, 4, null);
       this.keyboardDismissOnDrag = var1;
       this.layoutManager = var6;
@@ -34,22 +34,22 @@ internal class FastestListScrollListener(keyboardDismissOnDrag: Boolean,
 
    private fun View.dismissKeyboard() {
       val var2: Any = var1.getContext().getSystemService("input_method");
-      r.f(var2, "null cannot be cast to non-null type android.view.inputmethod.InputMethodManager");
+      q.f(var2, "null cannot be cast to non-null type android.view.inputmethod.InputMethodManager");
       (var2 as InputMethodManager).hideSoftInputFromWindow(var1.getWindowToken(), 0);
    }
 
    private fun getIsScrollingForward(dx: Int, dy: Int): Boolean {
       val var4: Boolean = this.layoutManager.getHorizontal();
-      var var3: Boolean = true;
-      if (if (var4) var1 <= 0 else var2 <= 0) {
-         var3 = false;
+      var var3: Boolean = false;
+      if (if (var4) var1 > 0 else var2 > 0) {
+         var3 = true;
       }
 
       return var3;
    }
 
-   public open fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-      r.h(var1, "recyclerView");
+   public override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+      q.h(var1, "recyclerView");
       super.onScrollStateChanged(var1, var2);
       val var3: Boolean;
       if (var2 == 0) {
@@ -63,25 +63,10 @@ internal class FastestListScrollListener(keyboardDismissOnDrag: Boolean,
       }
    }
 
-   public open fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-      r.h(var1, "recyclerView");
-      var var4: Boolean;
-      if (this.layoutManager.getHorizontal() && var2 == 0) {
-         var4 = true;
-      } else {
-         var4 = false;
-      }
-
-      if (!var4) {
-         var4 = false;
-         if (!this.layoutManager.getHorizontal()) {
-            var4 = false;
-            if (var3 == 0) {
-               var4 = true;
-            }
-         }
-
-         if (!var4) {
+   public override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+      q.h(var1, "recyclerView");
+      if (!this.layoutManager.getHorizontal() || var2 != 0) {
+         if (this.layoutManager.getHorizontal() || var3 != 0) {
             super.onScrolled(var1, var2, var3);
             this.layoutManager.setScrollingForward(this.getIsScrollingForward(var2, var3));
             this.visibleItemsTracker.updateVisibleItemPositions();

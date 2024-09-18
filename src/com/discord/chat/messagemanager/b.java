@@ -10,6 +10,6 @@ public final class b implements OnLongClickListener {
    public final MessageBundleView k;
 
    public final boolean onLongClick(View var1) {
-      return MessageViewManagers.MessageBundleViewManager.a(this.j, this.k, var1);
+      return MessageViewManagers.MessageBundleViewManager.b(this.j, this.k, var1);
    }
 }

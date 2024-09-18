@@ -11,8 +11,8 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
    private final val guildInviteView: GuildInviteView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "guildInviteView");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
+      kotlin.jvm.internal.q.h(var1, "guildInviteView");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
       super(var1, null);
       this.guildInviteView = var1;
       this.eventHandler = var2;
@@ -20,59 +20,41 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
 
    @JvmStatic
    fun `bind$lambda$1$lambda$0`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
-      kotlin.jvm.internal.r.h(var0, "this$0");
-      kotlin.jvm.internal.r.h(var1, "$inviteAccessory");
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "$inviteAccessory");
       var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
    }
 
    public fun bind(inviteAccessory: GuildInviteMessageAccessory) {
-      kotlin.jvm.internal.r.h(var1, "inviteAccessory");
-      val var5: GuildInviteEmbedImpl = var1.getInvite();
-      val var6: GuildInviteView = this.guildInviteView;
-      var var4: java.lang.String = var5.getSubtitle();
-      var var2: Boolean;
-      if (var4 != null && !kotlin.text.f.x(var4)) {
-         var2 = false;
+      kotlin.jvm.internal.q.h(var1, "inviteAccessory");
+      val var4: GuildInviteEmbedImpl = var1.getInvite();
+      val var3: GuildInviteView = this.guildInviteView;
+      var var2: java.lang.String = var4.getSubtitle();
+      if (var2 != null && !kotlin.text.h.x(var2)) {
+         var2 = var4.getSubtitle();
       } else {
-         var2 = true;
-      }
-
-      if (!var2) {
-         var4 = var5.getSubtitle();
-      } else {
-         label22: {
-            var4 = var5.getChannelIcon();
-            if (var4 != null) {
-               var2 = false;
-               if (!kotlin.text.f.x(var4)) {
-                  break label22;
-               }
-            }
-
-            var2 = true;
-         }
-
-         if (!var2) {
-            var4 = var5.getChannelName();
+         var2 = var4.getChannelIcon();
+         if (var2 != null && !kotlin.text.h.x(var2)) {
+            var2 = var4.getChannelName();
          } else {
-            var4 = null;
+            var2 = null;
          }
       }
 
-      var6.setInviteSplash(var5.getInviteSplash());
-      var6.setHeaderText(var5.getHeaderText());
-      var6.setHeaderColor(var5.getHeaderColor());
-      var6.setTitleText(var5.getTitleText());
-      var6.setTitleColor(var5.getTitleColor());
-      var6.setPresence(var5.getOnlineText(), var5.getMemberText());
-      var6.setGuildImage(var5.getThumbnailUrl(), var5.getThumbnailText(), var5.getThumbnailBackgroundColor());
-      var6.setSubtitle(var4);
-      var6.setSubtitleColor(var5.getSubtitleColor());
-      var6.setSubtitleIcon(var5.getChannelIcon());
-      var6.setOnButtonClickListener(new o(this, var1));
-      var6.setButtonText(var5.getAcceptLabelText());
-      var6.setButtonTextColor(var5.getAcceptLabelColor());
-      var6.setButtonBackgroundColor(var5.getAcceptLabelBackgroundColor());
-      var6.setBackgroundRectangleColor(var5.getBackgroundColor());
+      var3.setInviteSplash(var4.getInviteSplash());
+      var3.setHeaderText(var4.getHeaderText());
+      var3.setHeaderColor(var4.getHeaderColor());
+      var3.setTitleText(var4.getTitleText());
+      var3.setTitleColor(var4.getTitleColor());
+      var3.setPresence(var4.getOnlineText(), var4.getMemberText());
+      var3.setGuildImage(var4.getThumbnailUrl(), var4.getThumbnailText(), var4.getThumbnailBackgroundColor());
+      var3.setSubtitle(var2);
+      var3.setSubtitleColor(var4.getSubtitleColor());
+      var3.setSubtitleIcon(var4.getChannelIcon());
+      var3.setOnButtonClickListener(new p(this, var1));
+      var3.setButtonText(var4.getAcceptLabelText());
+      var3.setButtonTextColor(var4.getAcceptLabelColor());
+      var3.setButtonBackgroundColor(var4.getAcceptLabelBackgroundColor());
+      var3.setBackgroundRectangleColor(var4.getBackgroundColor());
    }
 }

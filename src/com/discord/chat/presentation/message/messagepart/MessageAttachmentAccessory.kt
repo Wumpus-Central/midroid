@@ -6,19 +6,23 @@ import com.discord.chat.presentation.message.view.UploadItemProps
 import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public sealed class MessageAttachmentAccessory protected constructor(messageId: MessageId,
-   attachment: Attachment,
-   attachmentIndex: Int,
-   attachmentsOpacity: Float?
-) : MessageAccessory(var1, MessageAttachmentAccessory.Companion.access$createAccessoryDescription(Companion, var2, var3), false, 4) {
+      attachment: Attachment,
+      attachmentIndex: Int,
+      attachmentsOpacity: Float?
+   )
+   : MessageAccessory {
    public open val messageId: MessageId
    public open val attachment: Attachment
    public open val attachmentIndex: Int
    public open val attachmentsOpacity: Float?
 
    init {
+      q.h(var1, "messageId");
+      q.h(var2, "attachment");
+      super(var1, MessageAttachmentAccessory.Companion.access$createAccessoryDescription(Companion, var2, var3), false, 4, null);
       this.messageId = var1;
       this.attachment = var2;
       this.attachmentIndex = var3;
@@ -26,15 +30,15 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
    }
 
    public fun getUploadItemProps(onCancelUploadItem: (String, String) -> Unit): UploadItemProps? {
-      r.h(var1, "onCancelUploadItem");
-      val var4: java.lang.String = this.getAttachment().getUploaderId();
-      val var5: java.lang.String = this.getAttachment().getUploaderItemId();
+      q.h(var1, "onCancelUploadItem");
+      val var5: java.lang.String = this.getAttachment().getUploaderId();
+      val var4: java.lang.String = this.getAttachment().getUploaderItemId();
       val var2: Int = this.getAttachment().getProgress();
       val var3: java.lang.Float = this.getAttachmentsOpacity();
-      if (var4 != null && var5 != null && var2 != null && var3 != null) {
-         val var6: UploadContext = new UploadContext(var4, var5);
-         return new UploadItemProps(var2, var6, var3, new Function0<Unit>(var1, var6) {
-            final Function2<java.lang.String, java.lang.String, Unit> $onCancelUploadItem;
+      if (var5 != null && var4 != null && var2 != null && var3 != null) {
+         val var6: UploadContext = new UploadContext(var5, var4);
+         return new UploadItemProps(var2, var6, var3, new Function0(var1, var6) {
+            final Function2 $onCancelUploadItem;
             final UploadContext $uploadContext;
 
             {

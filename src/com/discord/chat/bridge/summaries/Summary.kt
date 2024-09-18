@@ -3,8 +3,7 @@ package com.discord.chat.bridge.summaries
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -13,13 +12,13 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.n1
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.n0
+import yk.o1
+import yk.g0.a
 
 @f
 public data class Summary(id: String,
@@ -53,7 +52,7 @@ public data class Summary(id: String,
       var10: SerializationConstructorMarker
    ) {
       if (255 != (var1 and 255)) {
-         n1.b(var1, 255, Summary.$serializer.INSTANCE.getDescriptor());
+         o1.b(var1, 255, Summary.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -77,6 +76,12 @@ public data class Summary(id: String,
       var7: Int,
       var8: Long
    ) {
+      q.h(var1, "id");
+      q.h(var2, "topic");
+      q.h(var3, "summShort");
+      q.h(var4, "people");
+      q.h(var5, "startId");
+      q.h(var6, "endId");
       super();
       this.id = var1;
       this.topic = var2;
@@ -86,22 +91,6 @@ public data class Summary(id: String,
       this.endId = var6;
       this.count = var7;
       this.channelId = var8;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: Summary, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.id);
-      var1.z(var2, 1, var0.topic);
-      var1.z(var2, 2, var0.summShort);
-      var1.y(var2, 3, new xk.f(com.discord.primitives.UserId..serializer.INSTANCE), var0.people);
-      val var3: com.discord.primitives.MessageId..serializer = com.discord.primitives.MessageId..serializer.INSTANCE;
-      var1.y(var2, 4, com.discord.primitives.MessageId..serializer.INSTANCE, MessageId.box-impl(var0.startId));
-      var1.y(var2, 5, var3, MessageId.box-impl(var0.endId));
-      var1.w(var2, 6, var0.count);
-      var1.y(var2, 7, com.discord.primitives.ChannelId..serializer.INSTANCE, ChannelId.box-impl(var0.channelId));
    }
 
    public operator fun component1(): String {
@@ -146,12 +135,12 @@ public data class Summary(id: String,
       count: Int = ...,
       channelId: ChannelId = ...
    ): Summary {
-      r.h(var1, "id");
-      r.h(var2, "topic");
-      r.h(var3, "summShort");
-      r.h(var4, "people");
-      r.h(var5, "startId");
-      r.h(var6, "endId");
+      q.h(var1, "id");
+      q.h(var2, "topic");
+      q.h(var3, "summShort");
+      q.h(var4, "people");
+      q.h(var5, "startId");
+      q.h(var6, "endId");
       return new Summary(var1, var2, var3, var4, var5, var6, var7, var8, null);
    }
 
@@ -162,13 +151,13 @@ public data class Summary(id: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!q.c(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.topic, var1.topic)) {
+         } else if (!q.c(this.topic, var1.topic)) {
             return false;
-         } else if (!r.c(this.summShort, var1.summShort)) {
+         } else if (!q.c(this.summShort, var1.summShort)) {
             return false;
-         } else if (!r.c(this.people, var1.people)) {
+         } else if (!q.c(this.people, var1.people)) {
             return false;
          } else if (!MessageId.equals-impl0(this.startId, var1.startId)) {
             return false;
@@ -201,35 +190,35 @@ public data class Summary(id: String,
 
    public override fun toString(): String {
       val var6: java.lang.String = this.id;
-      val var2: java.lang.String = this.topic;
-      val var3: java.lang.String = this.summShort;
-      val var5: java.util.List = this.people;
-      val var8: java.lang.String = MessageId.toString-impl(this.startId);
-      val var4: java.lang.String = MessageId.toString-impl(this.endId);
+      val var7: java.lang.String = this.topic;
+      val var2: java.lang.String = this.summShort;
+      val var8: java.util.List = this.people;
+      val var3: java.lang.String = MessageId.toString-impl(this.startId);
+      val var9: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("Summary(id=");
-      var9.append(var6);
-      var9.append(", topic=");
-      var9.append(var2);
-      var9.append(", summShort=");
-      var9.append(var3);
-      var9.append(", people=");
-      var9.append(var5);
-      var9.append(", startId=");
-      var9.append(var8);
-      var9.append(", endId=");
-      var9.append(var4);
-      var9.append(", count=");
-      var9.append(var1);
-      var9.append(", channelId=");
-      var9.append(var7);
-      var9.append(")");
-      return var9.toString();
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Summary(id=");
+      var4.append(var6);
+      var4.append(", topic=");
+      var4.append(var7);
+      var4.append(", summShort=");
+      var4.append(var2);
+      var4.append(", people=");
+      var4.append(var8);
+      var4.append(", startId=");
+      var4.append(var3);
+      var4.append(", endId=");
+      var4.append(var9);
+      var4.append(", count=");
+      var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : f0<Summary> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -254,91 +243,131 @@ public data class Summary(id: String,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{
-            a2.a,
-            a2.a,
-            a2.a,
-            new xk.f(com.discord.primitives.UserId..serializer.INSTANCE),
-            com.discord.primitives.MessageId..serializer.INSTANCE,
-            com.discord.primitives.MessageId..serializer.INSTANCE,
-            m0.a,
-            com.discord.primitives.ChannelId..serializer.INSTANCE
+            b2.a,
+            b2.a,
+            b2.a,
+            Summary.access$get$childSerializers$cp()[3],
+            MessageId.$serializer.INSTANCE,
+            MessageId.$serializer.INSTANCE,
+            n0.a,
+            ChannelId.$serializer.INSTANCE
          };
       }
 
       public open fun deserialize(decoder: Decoder): Summary {
-         r.h(var1, "decoder");
-         val var15: SerialDescriptor = this.getDescriptor();
-         val var16: c = var1.b(var15);
-         val var7: Boolean = var16.p();
-         var var4: Byte = 7;
-         var var2: Int = 0;
-         var var13: Any = null;
+         q.h(var1, "decoder");
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.c(var17);
+         val var14: Array<KSerializer> = Summary.access$get$childSerializers$cp();
+         val var7: Boolean = var18.y();
+         var var4: Int = 7;
          var var3: Int;
-         var var8: Any;
-         var var10: java.lang.String;
-         var var11: Any;
-         var var14: Any;
-         var var17: Any;
-         var var20: Any;
+         var var9: Any;
+         var var10: java.util.List;
+         var var11: java.lang.String;
+         var var12: java.lang.String;
+         var var13: java.lang.String;
+         val var20: java.lang.String;
+         var var25: java.lang.String;
          if (var7) {
-            var10 = var16.m(var15, 0);
-            var17 = var16.m(var15, 1);
-            var8 = var16.m(var15, 2);
-            var14 = var16.y(var15, 3, new xk.f(com.discord.primitives.UserId..serializer.INSTANCE), null);
-            var20 = com.discord.primitives.MessageId..serializer.INSTANCE;
-            var13 = var16.y(var15, 4, com.discord.primitives.MessageId..serializer.INSTANCE, null);
-            var11 = (MessageId)var16.y(var15, 5, (DeserializationStrategy)var20, null);
-            var3 = var16.i(var15, 6);
-            var20 = var16.y(var15, 7, com.discord.primitives.ChannelId..serializer.INSTANCE, null);
-            var2 = 255;
+            var13 = var18.t(var17, 0);
+            var12 = var18.t(var17, 1);
+            var11 = var18.t(var17, 2);
+            var10 = var18.m(var17, 3, var14[3], null) as java.util.List;
+            val var8: MessageId.$serializer = MessageId.$serializer.INSTANCE;
+            val var19: MessageId = var18.m(var17, 4, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var19 != null) {
+               var20 = var19.unbox-impl();
+            } else {
+               var20 = null;
+            }
+
+            val var24: MessageId = var18.m(var17, 5, var8, null) as MessageId;
+            if (var24 != null) {
+               var25 = var24.unbox-impl();
+            } else {
+               var25 = null;
+            }
+
+            val var2: Int = var18.k(var17, 6);
+            var9 = var18.m(var17, 7, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var4 = 255;
+            var3 = var2;
          } else {
             var var5: Boolean = true;
             var3 = 0;
             var10 = null;
-            var var12: Any = null;
+            var13 = null;
+            var12 = null;
             var11 = null;
-            var8 = null;
-            var17 = null;
-            var20 = null;
+            var9 = null;
+            var25 = null;
+            var var21: java.lang.String = null;
+            var var22: Int = 0;
 
             while (var5) {
-               label47: {
-                  val var6: Int = var16.o(var15);
+               label63: {
+                  val var6: Int = var18.x(var17);
                   switch (var6) {
                      case -1:
                         var5 = false;
-                        continue;
+                        break;
                      case 0:
-                        var10 = var16.m(var15, 0);
-                        var2 |= 1;
+                        var13 = var18.t(var17, 0);
+                        var22 |= 1;
                         break;
                      case 1:
-                        var20 = var16.m(var15, 1);
-                        var2 |= 2;
-                        break;
+                        var21 = var18.t(var17, 1);
+                        var22 |= 2;
+                        break label63;
                      case 2:
-                        var17 = var16.m(var15, 2);
-                        var2 |= 4;
-                        break label47;
+                        var25 = var18.t(var17, 2);
+                        var22 |= 4;
+                        break label63;
                      case 3:
-                        var8 = var16.y(var15, 3, new xk.f(com.discord.primitives.UserId..serializer.INSTANCE), var8);
-                        var2 |= 8;
-                        break label47;
+                        var10 = var18.m(var17, 3, var14[3], var10) as java.util.List;
+                        var22 |= 8;
+                        break label63;
                      case 4:
-                        var13 = var16.y(var15, 4, com.discord.primitives.MessageId..serializer.INSTANCE, var13);
-                        var2 |= 16;
-                        continue;
+                        if (var9 != null) {
+                           var9 = MessageId.box-impl((java.lang.String)var9);
+                        } else {
+                           var9 = null;
+                        }
+
+                        var9 = var18.m(var17, 4, MessageId.$serializer.INSTANCE, var9) as MessageId;
+                        if (var9 != null) {
+                           var9 = var9.unbox-impl();
+                        } else {
+                           var9 = null;
+                        }
+
+                        var22 |= 16;
+                        break label63;
                      case 5:
-                        var11 = (MessageId)var16.y(var15, 5, com.discord.primitives.MessageId..serializer.INSTANCE, var11);
-                        var2 |= 32;
-                        continue;
+                        val var31: MessageId;
+                        if (var11 != null) {
+                           var31 = MessageId.box-impl(var11);
+                        } else {
+                           var31 = null;
+                        }
+
+                        val var32: MessageId = var18.m(var17, 5, MessageId.$serializer.INSTANCE, var31) as MessageId;
+                        if (var32 != null) {
+                           var11 = var32.unbox-impl();
+                        } else {
+                           var11 = null;
+                        }
+
+                        var22 |= 32;
+                        break label63;
                      case 6:
-                        var3 = var16.i(var15, 6);
-                        var2 |= 64;
+                        var3 = var18.k(var17, 6);
+                        var22 |= 64;
                         continue;
                      case 7:
-                        var12 = var16.y(var15, var4, com.discord.primitives.ChannelId..serializer.INSTANCE, var12);
-                        var2 |= 128;
+                        var12 = var18.m(var17, var4, ChannelId.$serializer.INSTANCE, var12) as ChannelId;
+                        var22 |= 128;
                         continue;
                      default:
                         throw new n(var6);
@@ -351,45 +380,28 @@ public data class Summary(id: String,
                var4 = 7;
             }
 
-            var14 = var8;
-            var8 = var17;
-            var17 = var20;
-            var20 = var12;
+            var11 = var25;
+            var12 = var21;
+            var9 = var12;
+            var25 = var11;
+            var20 = (java.lang.String)var9;
+            var4 = var22;
          }
 
-         var16.c(var15);
-         var14 = var14 as java.util.List;
-         val var24: MessageId = var13 as MessageId;
-         val var25: java.lang.String;
-         if (var13 as MessageId != null) {
-            var25 = var24.unbox-impl();
-         } else {
-            var25 = null;
-         }
-
-         var11 = var11;
-         val var23: java.lang.String;
-         if (var11 != null) {
-            var23 = var11.unbox-impl();
-         } else {
-            var23 = null;
-         }
-
-         return new Summary(
-            var2, var10, (java.lang.String)var17, (java.lang.String)var8, (java.util.List)var14, var25, var23, var3, var20 as ChannelId, null, null
-         );
+         var18.b(var17);
+         return new Summary(var4, var13, var12, var11, var10, var20, var25, var3, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Summary) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         Summary.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         Summary.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.embed
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,28 +8,20 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.g0.a
 
 @f
 public data class EmbedProvider(name: String) {
    public final val name: String
 
    init {
-      r.h(var1, "name");
+      q.h(var1, "name");
       super();
       this.name = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: EmbedProvider, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.name);
    }
 
    public operator fun component1(): String {
@@ -37,7 +29,7 @@ public data class EmbedProvider(name: String) {
    }
 
    public fun copy(name: String = var0.name): EmbedProvider {
-      r.h(var1, "name");
+      q.h(var1, "name");
       return new EmbedProvider(var1);
    }
 
@@ -47,7 +39,7 @@ public data class EmbedProvider(name: String) {
       } else if (var1 !is EmbedProvider) {
          return false;
       } else {
-         return r.c(this.name, (var1 as EmbedProvider).name);
+         return q.c(this.name, (var1 as EmbedProvider).name);
       }
    }
 
@@ -64,7 +56,7 @@ public data class EmbedProvider(name: String) {
       return var1.toString();
    }
 
-   public object `$serializer` : f0<EmbedProvider> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -81,31 +73,31 @@ public data class EmbedProvider(name: String) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a};
+         return new KSerializer[]{b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedProvider {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var8: java.lang.String;
          if (var5) {
-            var8 = var7.m(var6, 0);
+            var8 = var7.t(var6, 0);
          } else {
             var2 = 0;
             var8 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.m(var6, 0);
+                  var8 = var7.t(var6, 0);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -113,20 +105,20 @@ public data class EmbedProvider(name: String) {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new EmbedProvider(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EmbedProvider) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         EmbedProvider.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         EmbedProvider.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -24,11 +24,11 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
-import eh.l
+import dh.l
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function6
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class PollMediaView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val childViews: MutableList<View>
@@ -49,22 +49,22 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
 
 
    fun PollMediaView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = t4.a.d(var1, var2);
+      this.hierarchyBuilder = v4.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
-      r.g(R.styleable.PollMediaView, "PollMediaView");
+      q.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = l.b(new Function0<SimpleDraweeView>(var1, this) {
+      this.draweeView$delegate = l.b(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 
@@ -75,15 +75,15 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeView invoke() {
-            val var2: SimpleDraweeView = new SimpleDraweeView(this.$context);
-            val var1: PollMediaView = this.this$0;
-            var2.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
-            PollMediaView.access$getChildViews$p(var1).add(var2);
-            var1.addView(var2, new LayoutParams(-1, -1, 17));
-            return var2;
+            val var1: SimpleDraweeView = new SimpleDraweeView(this.$context);
+            val var2: PollMediaView = this.this$0;
+            var1.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
+            PollMediaView.access$getChildViews$p(var2).add(var1);
+            var2.addView(var1, new LayoutParams(-1, -1, 17));
+            return var1;
          }
       });
-      this.textView$delegate = l.b(new Function0<SimpleDraweeSpanTextView>(var1, this) {
+      this.textView$delegate = l.b(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 
@@ -126,14 +126,14 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
 
    @JvmStatic
    fun `setMedia$lambda$1`(var0: Function0, var1: View) {
-      r.h(var0, "$onTapAnswer");
+      q.h(var0, "$onTapAnswer");
       var0.invoke();
    }
 
    @JvmStatic
    fun `setMedia$lambda$2`(var0: PollMediaView, var1: Function6, var2: Attachment, var3: View): Boolean {
-      r.h(var0, "this$0");
-      r.h(var1, "$onLongPressImage");
+      q.h(var0, "this$0");
+      q.h(var1, "$onLongPressImage");
       val var4: Point = ViewLocationUtilsKt.getLocationInWindow(var0);
       var1.invoke(var2.getId(), var0.getWidth(), var0.getHeight(), var4.x, var4.y, ViewResizeMode.Cover);
       return true;
@@ -141,16 +141,16 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
 
    @JvmStatic
    fun `setMedia$lambda$3`(var0: Function0, var1: View) {
-      r.h(var0, "$onTapAnswer");
+      q.h(var0, "$onTapAnswer");
       var0.invoke();
    }
 
    public fun setMedia(accessory: PollAnswerAccessory, onTapAnswer: () -> Unit, onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit) {
       var var14: PollMedia;
       label40: {
-         r.h(var1, "accessory");
-         r.h(var2, "onTapAnswer");
-         r.h(var3, "onLongPressImage");
+         q.h(var1, "accessory");
+         q.h(var2, "onTapAnswer");
+         q.h(var3, "onLongPressImage");
          if (this.lastMedia != null) {
             val var13: PollAnswer = this.lastMedia.getAnswer();
             if (var13 != null) {
@@ -162,7 +162,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          var14 = null;
       }
 
-      if (!r.c(var14, var1.getAnswer().getPollMedia())) {
+      if (!q.c(var14, var1.getAnswer().getPollMedia())) {
          this.lastMedia = var1;
          val var15: Attachment = PollAnswerAccessoryKt.getFirstImage(var1.getAttachments());
          this.setOnClickListener(null);
@@ -180,7 +180,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             val var16: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
             val var9: RenderableEmoji = var16.renderable();
             val var10: Context = this.getContext();
-            r.g(var10, "context");
+            q.g(var10, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
             if (var1.getShouldAnimateEmoji() && var16.getAnimated()) {

@@ -34,58 +34,49 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
          var10 = null;
       }
 
-      if (!this.ignoreUpdate && var10 != null) {
-         var var5: Boolean;
-         if (var3 - var4 > 0) {
-            var5 = 1;
-         } else {
-            var5 = 0;
+      if (!this.ignoreUpdate && var10 != null && var3 - var4 > 0) {
+         var4 = var4 + var2;
+         val var18: Int = var2 + var3;
+         val var9: Array<Any> = var10.getSpans(var4, var2 + var3, DCDDeleteOnBackspaceSpan.class);
+         var2 = 0;
+         var var14: Any = var9;
+         if (var9 == null) {
+            var14 = new DCDDeleteOnBackspaceSpan[0];
          }
 
-         if (var5) {
-            var4 = var4 + var2;
-            var5 = var2 + var3;
-            val var9: Array<Any> = var10.getSpans(var4, var2 + var3, DCDDeleteOnBackspaceSpan.class);
-            var var14: Any = var9;
-            if (var9 == null) {
-               var14 = new DCDDeleteOnBackspaceSpan[0];
-            }
+         val var13: Array<DCDDeleteOnBackspaceSpan> = var14 as Array<DCDDeleteOnBackspaceSpan>;
+         val var5: Int = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
+         var var11: Int = null;
 
-            val var13: Array<DCDDeleteOnBackspaceSpan> = var14 as Array<DCDDeleteOnBackspaceSpan>;
-            var3 = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
-            var2 = 0;
-            var var11: Int = null;
-
-            while (var2 < var3) {
-               val var7: Int = var10.getSpanStart(var13[var2]);
-               val var6: Int = var10.getSpanEnd(var13[var2]);
-               if (var12 == null) {
+         while (var2 < var5) {
+            val var7: Int = var10.getSpanStart(var13[var2]);
+            val var6: Int = var10.getSpanEnd(var13[var2]);
+            if (var12 == null) {
+               var14 = var7;
+            } else {
+               var14 = var12;
+               if (var12 > var7) {
                   var14 = var7;
-               } else {
-                  var14 = var12;
-                  if (var12 > var7) {
-                     var14 = var7;
-                  }
                }
-
-               var var21: Int;
-               if (var11 == null) {
-                  var21 = var6;
-               } else {
-                  var21 = var11;
-                  if (var11 < var6) {
-                     var21 = var6;
-                  }
-               }
-
-               var2++;
-               var12 = (Integer)var14;
-               var11 = var21;
             }
 
-            if (var12 != null && var11 != null) {
-               this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var5) - (var5 - var4));
+            var var20: Int;
+            if (var11 == null) {
+               var20 = var6;
+            } else {
+               var20 = var11;
+               if (var11 < var6) {
+                  var20 = var6;
+               }
             }
+
+            var2++;
+            var12 = (Integer)var14;
+            var11 = var20;
+         }
+
+         if (var12 != null && var11 != null) {
+            this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var18) - (var18 - var4));
          }
       }
    }

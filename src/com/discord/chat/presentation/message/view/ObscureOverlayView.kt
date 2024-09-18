@@ -27,26 +27,26 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
    private final val binding: ObscureOverlayViewBinding
 
    fun ObscureOverlayView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var3: ObscureOverlayViewBinding = ObscureOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
       val var5: BlurView = var3.blurView;
-      kotlin.jvm.internal.r.g(var3.blurView, "binding.blurView");
+      kotlin.jvm.internal.q.g(var3.blurView, "blurView");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new n0(), 1, null);
       val var6: SimpleDraweeView = var3.mediaWarningIcon;
-      kotlin.jvm.internal.r.g(var3.mediaWarningIcon, "it");
+      kotlin.jvm.internal.q.e(var3.mediaWarningIcon);
       ReactAssetUtilsKt.setReactAsset(var6, ReactAsset.MediaChannelNSFW);
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getWhite());
-      (var6.getHierarchy() as GenericDraweeHierarchy).w(0);
+      (var6.getHierarchy() as GenericDraweeHierarchy).x(0);
       val var4: TextView = var3.descriptionLabel;
-      kotlin.jvm.internal.r.g(var3.descriptionLabel, "binding.descriptionLabel");
+      kotlin.jvm.internal.q.g(var3.descriptionLabel, "descriptionLabel");
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
    }
 
@@ -56,7 +56,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
 
    private fun handleRevealedState(isOverlayVisible: Boolean) {
       val var4: BlurView = this.binding.blurView;
-      kotlin.jvm.internal.r.g(this.binding.blurView, "binding.blurView");
+      kotlin.jvm.internal.q.g(this.binding.blurView, "blurView");
       var var2: Byte;
       if (var1) {
          var2 = 0;
@@ -74,14 +74,14 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
    }
 
    public fun configure(header: String, parent: ViewGroup, isOverlayVisible: Boolean, onReveal: () -> Unit, onHide: () -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "header");
-      kotlin.jvm.internal.r.h(var2, "parent");
-      kotlin.jvm.internal.r.h(var4, "onReveal");
-      kotlin.jvm.internal.r.h(var5, "onHide");
+      kotlin.jvm.internal.q.h(var1, "header");
+      kotlin.jvm.internal.q.h(var2, "parent");
+      kotlin.jvm.internal.q.h(var4, "onReveal");
+      kotlin.jvm.internal.q.h(var5, "onHide");
       this.handleRevealedState(var3);
-      this.binding.blurView.setupWith(var2).g(24.0F).a(Color.argb(80, 0, 0, 0)).d(var2.getBackground()).c(true);
-      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new Function0<Unit>(var5, this) {
-         final Function0<Unit> $onHide;
+      this.binding.blurView.setupWith(var2).g(24.0F).b(Color.argb(80, 0, 0, 0)).c(var2.getBackground()).a(true);
+      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new Function0(var5, this) {
+         final Function0 $onHide;
          final ObscureOverlayView this$0;
 
          {
@@ -101,13 +101,13 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
 
    public override fun getOverlayView(): View {
       val var1: BlurView = this.binding.blurView;
-      kotlin.jvm.internal.r.g(this.binding.blurView, "binding.blurView");
+      kotlin.jvm.internal.q.g(this.binding.blurView, "blurView");
       return var1;
    }
 
    public fun handleObscureAwaitingScan(isAwaitingScan: Boolean) {
       val var3: ConstraintLayout = this.binding.overlayLayout;
-      kotlin.jvm.internal.r.g(this.binding.overlayLayout, "binding.overlayLayout");
+      kotlin.jvm.internal.q.g(this.binding.overlayLayout, "overlayLayout");
       val var2: Byte;
       if (var1 xor true) {
          var2 = 0;
@@ -120,13 +120,13 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
 
    public fun makeHideButtonHidden() {
       val var1: IconButtonView = this.binding.hideButton;
-      kotlin.jvm.internal.r.g(this.binding.hideButton, "binding.hideButton");
+      kotlin.jvm.internal.q.g(this.binding.hideButton, "hideButton");
       var1.setVisibility(8);
    }
 
    public fun setLabelVisible(isVisible: Boolean) {
       val var3: TextView = this.binding.descriptionLabel;
-      kotlin.jvm.internal.r.g(this.binding.descriptionLabel, "binding.descriptionLabel");
+      kotlin.jvm.internal.q.g(this.binding.descriptionLabel, "descriptionLabel");
       val var2: Byte;
       if (var1) {
          var2 = 0;

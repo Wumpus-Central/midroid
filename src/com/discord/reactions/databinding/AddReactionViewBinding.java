@@ -22,12 +22,12 @@ public final class AddReactionViewBinding implements ViewBinding {
 
    public static AddReactionViewBinding bind(View var0) {
       int var1 = R.id.add_reaction_image;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.add_reaction_text;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new AddReactionViewBinding(var0, var3, var2);
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
+            return new AddReactionViewBinding(var0, var2, var3);
          }
       }
 
@@ -43,6 +43,7 @@ public final class AddReactionViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

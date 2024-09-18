@@ -1,9 +1,8 @@
 package com.discord.external_pip.react_events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,24 +10,18 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
+import vk.f
+import vk.n
+import yk.g0
+import yk.g0.a
 
 @f
 internal class OnPipModeWillChangeEvent : ReactEvent {
-   @JvmStatic
-   public fun `write$Self`(self: OnPipModeWillChangeEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
-   }
-
-   public object `$serializer` : f0<OnPipModeWillChangeEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -42,38 +35,36 @@ internal class OnPipModeWillChangeEvent : ReactEvent {
          descriptor = new PluginGeneratedSerialDescriptor("com.discord.external_pip.react_events.OnPipModeWillChangeEvent", var0, 0);
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[0];
       }
 
       public open fun deserialize(decoder: Decoder): OnPipModeWillChangeEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: c = var1.b(var3);
-         if (!var4.p()) {
-            for (int var2 = 1; var2; var2 = 0) {
-               var2 = var4.o(var3);
-               if (var2 != -1) {
-                  throw new n(var2);
-               }
+         val var4: c = var1.c(var3);
+         if (!var4.y()) {
+            val var2: Int = var4.x(var3);
+            if (var2 != -1) {
+               throw new n(var2);
             }
          }
 
-         var4.c(var3);
+         var4.b(var3);
          return new OnPipModeWillChangeEvent(0, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnPipModeWillChangeEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         OnPipModeWillChangeEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         OnPipModeWillChangeEvent.write$Self$external_pip_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

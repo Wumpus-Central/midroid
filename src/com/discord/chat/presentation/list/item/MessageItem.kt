@@ -5,7 +5,7 @@ import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.messageframe.MessageFrame
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class MessageItem(message: Message,
       messageFrame: MessageFrame? = null,
@@ -29,8 +29,8 @@ public data class MessageItem(message: Message,
    public final val renderContentOnly: Boolean
 
    init {
-      r.h(var1, "message");
-      r.h(var3, "messageContext");
+      q.h(var1, "message");
+      q.h(var3, "messageContext");
       super(MessageId.toString-impl(var1.getId-3Eiw7ao()), null);
       this.message = var1;
       this.messageFrame = var2;
@@ -84,8 +84,8 @@ public data class MessageItem(message: Message,
       reactTag: Int? = var0.reactTag,
       renderContentOnly: Boolean = var0.renderContentOnly
    ): MessageItem {
-      r.h(var1, "message");
-      r.h(var3, "messageContext");
+      q.h(var1, "message");
+      q.h(var3, "messageContext");
       return new MessageItem(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -96,19 +96,19 @@ public data class MessageItem(message: Message,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.message, var1.message)) {
+         if (!q.c(this.message, var1.message)) {
             return false;
-         } else if (!r.c(this.messageFrame, var1.messageFrame)) {
+         } else if (!q.c(this.messageFrame, var1.messageFrame)) {
             return false;
-         } else if (!r.c(this.messageContext, var1.messageContext)) {
+         } else if (!q.c(this.messageContext, var1.messageContext)) {
             return false;
          } else if (this.allowChildGestures != var1.allowChildGestures) {
             return false;
          } else if (this.isHighlight != var1.isHighlight) {
             return false;
-         } else if (!r.c(this.backgroundHighlight, var1.backgroundHighlight)) {
+         } else if (!q.c(this.backgroundHighlight, var1.backgroundHighlight)) {
             return false;
-         } else if (!r.c(this.reactTag, var1.reactTag)) {
+         } else if (!q.c(this.reactTag, var1.reactTag)) {
             return false;
          } else {
             return this.renderContentOnly == var1.renderContentOnly;
@@ -117,8 +117,8 @@ public data class MessageItem(message: Message,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = this.message.hashCode();
-      var var5: Int = 0;
+      val var4: Int = this.message.hashCode();
+      var var3: Int = 0;
       val var1: Int;
       if (this.messageFrame == null) {
          var1 = 0;
@@ -126,63 +126,50 @@ public data class MessageItem(message: Message,
          var1 = this.messageFrame.hashCode();
       }
 
-      val var9: Int = this.messageContext.hashCode();
-      var var6: Byte = 1;
-      var var2: Byte = this.allowChildGestures;
-      if (this.allowChildGestures != 0) {
-         var2 = 1;
-      }
-
-      var var11: Byte = this.isHighlight;
-      if (this.isHighlight != 0) {
-         var11 = 1;
-      }
-
-      val var12: Int;
+      val var5: Int = this.messageContext.hashCode();
+      val var6: Int = java.lang.Boolean.hashCode(this.allowChildGestures);
+      val var7: Int = java.lang.Boolean.hashCode(this.isHighlight);
+      val var2: Int;
       if (this.backgroundHighlight == null) {
-         var12 = 0;
+         var2 = 0;
       } else {
-         var12 = this.backgroundHighlight.hashCode();
+         var2 = this.backgroundHighlight.hashCode();
       }
 
       if (this.reactTag != null) {
-         var5 = this.reactTag.hashCode();
+         var3 = this.reactTag.hashCode();
       }
 
-      if (this.renderContentOnly == 0) {
-         var6 = this.renderContentOnly;
-      }
-
-      return ((((((var8 * 31 + var1) * 31 + var9) * 31 + var2) * 31 + var11) * 31 + var12) * 31 + var5) * 31 + var6;
+      return ((((((var4 * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.renderContentOnly);
    }
 
    public override fun toString(): String {
-      val var9: Message = this.message;
-      val var7: MessageFrame = this.messageFrame;
-      val var8: MessageContext = this.messageContext;
-      val var3: Boolean = this.allowChildGestures;
-      val var1: Boolean = this.isHighlight;
-      val var4: BackgroundHighlight = this.backgroundHighlight;
-      val var6: Int = this.reactTag;
-      val var2: Boolean = this.renderContentOnly;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MessageItem(message=");
-      var5.append(var9);
-      var5.append(", messageFrame=");
-      var5.append(var7);
-      var5.append(", messageContext=");
-      var5.append(var8);
-      var5.append(", allowChildGestures=");
-      var5.append(var3);
-      var5.append(", isHighlight=");
-      var5.append(var1);
-      var5.append(", backgroundHighlight=");
-      var5.append(var4);
-      var5.append(", reactTag=");
-      var5.append(var6);
-      var5.append(", renderContentOnly=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: Message = this.message;
+      val var6: MessageFrame = this.messageFrame;
+      val var7: MessageContext = this.messageContext;
+      val var1: Boolean = this.allowChildGestures;
+      val var2: Boolean = this.isHighlight;
+      val var8: BackgroundHighlight = this.backgroundHighlight;
+      val var9: Int = this.reactTag;
+      val var3: Boolean = this.renderContentOnly;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MessageItem(message=");
+      var4.append(var5);
+      var4.append(", messageFrame=");
+      var4.append(var6);
+      var4.append(", messageContext=");
+      var4.append(var7);
+      var4.append(", allowChildGestures=");
+      var4.append(var1);
+      var4.append(", isHighlight=");
+      var4.append(var2);
+      var4.append(", backgroundHighlight=");
+      var4.append(var8);
+      var4.append(", reactTag=");
+      var4.append(var9);
+      var4.append(", renderContentOnly=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

@@ -2,7 +2,7 @@ package com.discord.image.animated_image.animated_image_utils
 
 import com.discord.misc.utilities.queue.WorkerQueue
 import com.discord.misc.utilities.threading.ThreadUtilsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
    handlePause: () -> Unit,
@@ -19,11 +19,11 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
    private final var animatedImageLoaded: Boolean
 
    init {
-      r.h(var1, "handlePlay");
-      r.h(var2, "handlePause");
-      r.h(var3, "handleSetPlaceholder");
-      r.h(var4, "handleConfigIsValid");
-      r.h(var5, "handleFetchAnimatedImage");
+      q.h(var1, "handlePlay");
+      q.h(var2, "handlePause");
+      q.h(var3, "handleSetPlaceholder");
+      q.h(var4, "handleConfigIsValid");
+      q.h(var5, "handleFetchAnimatedImage");
       super();
       this.handlePlay = var1;
       this.handlePause = var2;
@@ -95,7 +95,7 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
          var2.append(var1);
          throw new IllegalStateException(var2.toString().toString());
       } else {
-         if (r.c(access$getAnimatedImageConfig$p(this), var1) && access$getAnimatedImageLoaded$p(this)) {
+         if (q.c(access$getAnimatedImageConfig$p(this), var1) && access$getAnimatedImageLoaded$p(this)) {
             access$updateWorker(this, false);
          } else {
             access$setAnimatedImageConfig$p(this, var1);

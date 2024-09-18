@@ -1,5 +1,6 @@
 package com.discord.fastest_list.react
 
+import com.discord.fastest_list.android.placeholder.FastestListPlaceholderAlignment
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape.Type
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape.Type.Companion
@@ -7,47 +8,47 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.react.bridge.ReadableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 private const val PLACEHOLDER_TYPE_FEED_ITEM: Int = 2
 private const val PLACEHOLDER_TYPE_NONE: Int = 0
 private const val PLACEHOLDER_TYPE_SHAPE: Int = 1
 
 private operator fun Companion.invoke(key: String, value: ReadableMap): Type {
-   r.h(var0, "<this>");
-   var1 = NativeMapExtensionsKt.getNonNullString(var2, var1, "circle");
-   val var3: FastestListPlaceholderType.Shape.Type;
-   if (r.c(var1, "circle")) {
-      var3 = FastestListPlaceholderType.Shape.Type.CIRCLE;
+   q.h(var0, "<this>");
+   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var2, var1, "circle");
+   val var4: FastestListPlaceholderType.Shape.Type;
+   if (q.c(var3, "circle")) {
+      var4 = FastestListPlaceholderType.Shape.Type.CIRCLE;
    } else {
-      if (!r.c(var1, "rect")) {
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Unknown placeholder shape type ");
-         var4.append(var1);
-         throw new IllegalArgumentException(var4.toString());
+      if (!q.c(var3, "rect")) {
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Unknown placeholder shape type ");
+         var5.append(var3);
+         throw new IllegalArgumentException(var5.toString());
       }
 
-      var3 = FastestListPlaceholderType.Shape.Type.RECT;
+      var4 = FastestListPlaceholderType.Shape.Type.RECT;
    }
 
-   return var3;
+   return var4;
 }
 
 internal operator fun com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Companion.invoke(value: ReadableMap): FastestListPlaceholderType {
-   r.h(var0, "<this>");
-   r.h(var1, "value");
+   q.h(var0, "<this>");
+   q.h(var1, "value");
    var var15: Int = var1.getInt("placeholderType");
-   val var20: Any;
+   val var22: Any;
    if (var15 != 0) {
       if (var15 != 1) {
          if (var15 != 2) {
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Unknown placeholder type ");
-            var21.append(var15);
-            throw new IllegalArgumentException(var21.toString());
+            val var23: StringBuilder = new StringBuilder();
+            var23.append("Unknown placeholder type ");
+            var23.append(var15);
+            throw new IllegalArgumentException(var23.toString());
          }
 
-         var20 = new FastestListPlaceholderType.FeedItem(
+         var22 = new FastestListPlaceholderType.FeedItem(
             ColorUtilsKt.rgbaToArgb(var1.getString("placeholderFeedBackgroundColorRgba")),
             SizeUtilsKt.getDpToPx(var1.getInt("borderRadius")),
             SizeUtilsKt.getDpToPx(var1.getInt("borderTopLeftRadius")),
@@ -69,20 +70,13 @@ internal operator fun com.discord.fastest_list.android.placeholder.FastestListPl
          );
       } else {
          val var27: Float = SizeUtilsKt.getDpToPx(var1.getInt("borderRadius"));
-         val var31: Int = ColorUtilsKt.rgbaToArgb(NativeMapExtensionsKt.getNonNullString(var1, "placeholderShapeColorRgba"));
-         var15 = var1.getInt("placeholderShapeCount");
-         val var19: FastestListPlaceholderType.Shape.Type = invoke(FastestListPlaceholderType.Shape.Type.Companion, "placeholderShape", var1);
+         var15 = ColorUtilsKt.rgbaToArgb(NativeMapExtensionsKt.getNonNullString(var1, "placeholderShapeColorRgba"));
+         val var32: Int = var1.getInt("placeholderShapeCount");
+         val var29: Float = SizeUtilsKt.getDpToPx(var1.getInt("placeholderShapeGap"));
+         val var20: FastestListPlaceholderType.Shape.Type = invoke(FastestListPlaceholderType.Shape.Type.Companion, "placeholderShape", var1);
          val var26: Float = SizeUtilsKt.getDpToPx(var1.getInt("placeholderShapePaddingHorizontal"));
          val var28: Float = SizeUtilsKt.getDpToPx(var1.getInt("placeholderShapePaddingVertical"));
-         val var22: Int = NativeMapExtensionsKt.getNullableInt$default(var1, "width", null, 2, null);
-         val var23: java.lang.Float;
-         if (var22 != null) {
-            var23 = (float)SizeUtilsKt.getDpToPx(var22);
-         } else {
-            var23 = null;
-         }
-
-         val var24: Int = NativeMapExtensionsKt.getNullableInt$default(var1, "height", null, 2, null);
+         val var24: Int = NativeMapExtensionsKt.getNullableInt$default(var1, "width", null, 2, null);
          val var25: java.lang.Float;
          if (var24 != null) {
             var25 = (float)SizeUtilsKt.getDpToPx(var24);
@@ -90,11 +84,31 @@ internal operator fun com.discord.fastest_list.android.placeholder.FastestListPl
             var25 = null;
          }
 
-         var20 = new FastestListPlaceholderType.Shape(var27, var31, var15, var26, var28, var23, var25, var19);
+         val var19: Int = NativeMapExtensionsKt.getNullableInt$default(var1, "height", null, 2, null);
+         val var33: java.lang.Float;
+         if (var19 != null) {
+            var33 = (float)SizeUtilsKt.getDpToPx(var19);
+         } else {
+            var33 = null;
+         }
+
+         var22 = new FastestListPlaceholderType.Shape(
+            var27,
+            var15,
+            var32,
+            var29,
+            var26,
+            var28,
+            var25,
+            var33,
+            var20,
+            FastestListPlaceholderAlignment.Vertical.Companion.parse(NativeMapExtensionsKt.getNonNullString(var1, "verticalAlignment")),
+            FastestListPlaceholderAlignment.Horizontal.Companion.parse(NativeMapExtensionsKt.getNonNullString(var1, "horizontalAlignment"))
+         );
       }
    } else {
-      var20 = FastestListPlaceholderType.None.INSTANCE;
+      var22 = FastestListPlaceholderType.None.INSTANCE;
    }
 
-   return (FastestListPlaceholderType)var20;
+   return (FastestListPlaceholderType)var22;
 }

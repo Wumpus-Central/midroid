@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.AudioInputDeviceDescription;
-import com.discord.native.engine.NativeEngine.GetAudioInputDevicesCallback;
+import com.discord.native.engine.NativeConnection;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class k implements GetAudioInputDevicesCallback {
+public final class k implements NativeConnection.MLSKeyPackageCallback {
    public final Function1 a;
 
-   public final void onDevices(AudioInputDeviceDescription[] var1) {
-      MediaEngine.v(this.a, var1);
+   @Override
+   public final void onMLSKeyPackage(String var1) {
+      MediaEngine.q(this.a, var1);
    }
 }

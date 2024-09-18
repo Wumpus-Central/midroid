@@ -43,6 +43,7 @@ public final class SpoilerViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -4,17 +4,27 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class ChatListLinearLayout  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout, ChatListChildView {
+   public open var currentKey: Any?
+      internal final set
+
+   public open var lastKey: Any?
+      internal final set
+
    open fun ChatListLinearLayout(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
+   }
+
+   override fun bindKey(var1: Any) {
+      ChatListChildView.DefaultImpls.bindKey(this, var1);
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

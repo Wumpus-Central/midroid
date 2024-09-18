@@ -42,6 +42,7 @@ public final class EmbedFieldViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

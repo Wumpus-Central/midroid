@@ -3,8 +3,9 @@ package com.discord.device.utils
 import android.content.Context
 import android.provider.Settings.Global
 import android.provider.Settings.SettingNotFoundException
-import eh.p
-import kotlin.jvm.internal.r
+import dh.p
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
 
 public object DeviceReducedMotion {
    private final var motionPreference: com.discord.device.utils.DeviceReducedMotion.MotionPreference = DeviceReducedMotion.MotionPreference.AUTO
@@ -47,7 +48,7 @@ public object DeviceReducedMotion {
    }
 
    public fun Context.isReducedMotionEnabled(): Boolean {
-      r.h(var1, "<this>");
+      q.h(var1, "<this>");
       val var2: Int = DeviceReducedMotion.WhenMappings.$EnumSwitchMapping$0[motionPreference.ordinal()];
       var var3: Boolean = true;
       if (var2 != 1) {
@@ -66,7 +67,7 @@ public object DeviceReducedMotion {
    }
 
    internal fun setMotionPreference(motionPreference: String) {
-      r.h(var1, "motionPreference");
+      q.h(var1, "motionPreference");
       motionPreference = this.createMotionPreference(var1);
    }
 
@@ -74,6 +75,20 @@ public object DeviceReducedMotion {
       AUTO,
       NO_PREFERENCE,
       REDUCE      @JvmStatic
-      private DeviceReducedMotion.MotionPreference[] $VALUES = $values();
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private DeviceReducedMotion.MotionPreference[] $VALUES;
+
+      @JvmStatic
+      fun {
+         val var0: Array<DeviceReducedMotion.MotionPreference> = $values();
+         $VALUES = var0;
+         $ENTRIES = kh.a.a(var0);
+      }
+
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
+      }
    }
 }

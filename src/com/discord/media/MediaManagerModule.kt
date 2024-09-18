@@ -11,17 +11,16 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
-import eh.w
-import fh.s
+import dh.w
+import eh.r
 import java.util.concurrent.CancellationException
-import kk.f
-import kk.n0
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
+import lk.f
+import lk.k0
 
 public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val mediaResolver: MediaResolver
@@ -29,11 +28,11 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    private final val scope: CoroutineScope
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("compression-progress", h0.b(CompressionProgressEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("compression-progress", g0.b(CompressionProgressEvent.class)));
       this.scope = g.b();
-      this.mediaResolver = new MediaResolver(var1, new Function2<Uri, Integer, Unit>(this) {
+      this.mediaResolver = new MediaResolver(var1, new Function2(this) {
          final MediaManagerModule this$0;
 
          {
@@ -42,12 +41,12 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          }
 
          public final void invoke(Uri var1, int var2) {
-            r.h(var1, "uri");
+            q.h(var1, "uri");
             val var3: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
             val var4: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
-            r.g(var4, "reactApplicationContext");
+            q.g(var4, "access$getReactApplicationContext(...)");
             val var5: java.lang.String = var1.toString();
-            r.g(var5, "uri.toString()");
+            q.g(var5, "toString(...)");
             var3.emitModuleEvent(var4, new CompressionProgressEvent(var5, var2));
          }
       });
@@ -55,70 +54,71 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      q.h(var1, "type");
    }
 
    @ReactMethod
    public fun cancelResolveToMediaFilePath(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       val var5: MediaResolver = this.mediaResolver;
       val var4: Uri = Uri.parse(var1);
-      r.g(var4, "parse(uri)");
+      q.g(var4, "parse(...)");
       var5.cancel(var4);
       var3.resolve(null);
    }
 
    @ReactMethod
    public fun convertBase64ToGIF(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       throw new IllegalStateException("Unused on Android".toString());
    }
 
    @ReactMethod
    public fun convertBase64ToJPEG(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       throw new IllegalStateException("Unused on Android".toString());
    }
 
    @ReactMethod
    public fun convertToCompatibleMOV(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       throw new IllegalStateException("Unused on Android".toString());
    }
 
    @ReactMethod
    public fun convertToJPEG(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       throw new IllegalStateException("Unused on Android".toString());
    }
 
    @ReactMethod
    public fun convertToVideoFilePath(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       throw new IllegalStateException("Unused on Android".toString());
    }
 
    @ReactMethod
    public fun downloadMediaAsset(uri: String, mediaType: Int, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       f.d(
          this.scope,
-         n0.b(),
+         k0.b(),
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var1, var3, null)// $VF: Couldn't be decompiled
+         new Function2(this, var1, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1138,7 +1138,6 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -1146,7 +1145,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    }
 
    public open fun getConstants(): Map<String, List<String>> {
-      return s.e(w.a("supportedExtensions", h.l(new java.lang.String[]{"mp4", "mov", "png", "jpg", "jpeg", "gif", "webp"})));
+      return r.e(w.a("supportedExtensions", i.m(new java.lang.String[]{"mp4", "mov", "png", "jpg", "jpeg", "gif", "webp"})));
    }
 
    public open fun getName(): String {
@@ -1155,19 +1154,19 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getVideoMetadata(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       f.d(
          this.scope,
          null,
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, Uri.parse(var1), var3, null)// $VF: Couldn't be decompiled
+         new Function2(this, Uri.parse(var1), var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
+   //   at java.base/java.util.HashMap.put(HashMap.java:618)
+   //   at java.base/java.util.HashSet.add(HashSet.java:229)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2196,7 +2195,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    public open fun invalidate() {
       super.invalidate();
-      g.d(this.scope, new CancellationException("Module destroyed"));
+      g.c(this.scope, new CancellationException("Module destroyed"));
    }
 
    @ReactMethod
@@ -2205,8 +2204,8 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun resolveToMediaFilePath(uri: String, options: ReadableMap?, promise: Promise) {
-      r.h(var1, "uri");
-      r.h(var3, "promise");
+      q.h(var1, "uri");
+      q.h(var3, "promise");
       val var8: Uri = Uri.parse(var1);
       val var4: Int = (int)(NativeMapExtensionsKt.getDouble(var2, "compressionQuality", 1.0) * 100);
       val var7: java.lang.String;
@@ -2220,7 +2219,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          this.scope,
          null,
          null,
-         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(
+         new Function2(
             this,
             var8,
             var4,
@@ -2233,8 +2232,8 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          )// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)

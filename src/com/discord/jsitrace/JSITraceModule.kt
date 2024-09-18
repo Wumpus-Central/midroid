@@ -5,12 +5,12 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "JSITrace")
 public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -23,29 +23,35 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun install(): Boolean {
-      val var1: Boolean = false;
+      if (!this.isEnabled()) {
+         return false;
+      } else {
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var5, "getReactApplicationContext(...)");
+         val var8: java.lang.Long = ReactContextExtensionsKt.jsiId(var5);
+         var var7: Boolean = false;
+         if (var8 != null) {
+            val var1: Long = var8;
 
-      try {
-         if (!this.isEnabled()) {
-            return var1;
+            try {
+               System.loadLibrary("jsitrace");
+               this.nativeInstall(var1);
+            } catch (var6: Exception) {
+               return false;
+            }
+
+            var7 = true;
          }
 
-         System.loadLibrary("jsitrace");
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var3, "reactApplicationContext");
-         this.nativeInstall(ReactContextExtensionsKt.jsiId(var3));
-      } catch (var4: Exception) {
-         return false;
+         return var7;
       }
-
-      return true;
    }
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun isEnabled(): Boolean {
       val var1: JSITraceCache = JSITraceCache.INSTANCE;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
+      q.g(var2, "getReactApplicationContext(...)");
       return var1.isEnabled(var2);
    }
 
@@ -53,7 +59,7 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
    public fun setEnabled(enabled: Boolean) {
       val var2: JSITraceCache = JSITraceCache.INSTANCE;
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      q.g(var3, "getReactApplicationContext(...)");
       var2.setEnabled(var3, var1);
    }
 

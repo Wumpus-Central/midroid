@@ -21,12 +21,12 @@ public final class ErrorMessageViewBinding implements ViewBinding {
 
    public static ErrorMessageViewBinding bind(View var0) {
       int var1 = R.id.error_label;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var2 = (TextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.header;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new ErrorMessageViewBinding(var0, var3, var2);
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
+            return new ErrorMessageViewBinding(var0, var2, var3);
          }
       }
 
@@ -42,6 +42,7 @@ public final class ErrorMessageViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

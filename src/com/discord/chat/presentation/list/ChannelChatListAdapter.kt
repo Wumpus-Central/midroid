@@ -13,15 +13,14 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.root.ChatView
 import com.discord.logging.Log
 import com.discord.misc.utilities.threading.ThreadUtilsKt
-import eh.p
+import dh.p
 import java.util.LinkedList
 import java.util.Queue
 import java.util.UUID
-import kotlin.coroutines.Continuation
+import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
 
 public class ChannelChatListAdapter(doLayout: () -> Unit,
@@ -42,11 +41,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
    private final var updateCount: Int
 
    init {
-      r.h(var1, "doLayout");
-      r.h(var2, "enableAnimations");
-      r.h(var3, "disableAnimations");
-      r.h(var4, "eventHandlerProvider");
-      r.h(var5, "messageComponentProvider");
+      q.h(var1, "doLayout");
+      q.h(var2, "enableAnimations");
+      q.h(var3, "disableAnimations");
+      q.h(var4, "eventHandlerProvider");
+      q.h(var5, "messageComponentProvider");
       super(var4, var5);
       this.doLayout = var1;
       this.enableAnimations = var2;
@@ -57,20 +56,20 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var5: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var5);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Expected to be on android main thread. Current: ");
+         var5.append(var4);
+         throw new IllegalStateException(var5.toString().toString());
       } else {
          access$getUpdateQueue$p(this).add(var1);
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
             access$processNextUpdate(this);
          } else if (access$getUpdateQueue$p(this).isEmpty() xor true && !access$isProcessingUpdate$p(this)) {
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = access$getLOGGING_TAG$cp();
-            r.g(var3, "LOGGING_TAG");
-            Log.w$default(var2, var3, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = access$getLOGGING_TAG$cp();
+            q.g(var2, "access$getLOGGING_TAG$cp(...)");
+            Log.w$default(var3, var2, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
          }
       }
    }
@@ -78,18 +77,18 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun processChatListItemUpdate(update: ChatListItemUpdate) {
       var var2: Boolean;
-      var var7: java.util.List;
-      label76: {
-         var7 = var1.getItems();
-         var var6: Any = this.items;
+      var var6: java.util.List;
+      label71: {
+         var6 = var1.getItems();
+         var var5: Any = this.items;
          if (this.items != null) {
-            r.g(this.items, "items");
-            if ((var6 as java.util.Collection).isEmpty() xor true) {
-               var6 = this.items;
-               r.g(this.items, "items");
-               if (h.m0(var6 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
+            q.g(this.items, "items");
+            if ((var5 as java.util.Collection).isEmpty() xor true) {
+               var5 = this.items;
+               q.g(this.items, "items");
+               if (i.p0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
                   var2 = true;
-                  break label76;
+                  break label71;
                }
             }
          }
@@ -97,31 +96,24 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          var2 = false;
       }
 
-      val var4: Boolean;
-      if (var2 && h.o0(var7) !is LoadingChatListItem) {
-         var4 = true;
-      } else {
-         var4 = false;
-      }
-
-      var var10: java.util.List = var7;
-      if (var4) {
-         val var11: PortalViewChatListItem = this.portalChatListItem;
-         r.e(this.portalChatListItem);
-         var10 = h.w0(var7, var11);
-      }
-
-      this.setChatListItems$chat_release(var10);
-      super.setItems(this.getChatListItems$chat_release());
       var var3: Boolean = false;
       if (var2) {
          var3 = false;
-         if (!var4) {
+         if (i.r0(var6) !is LoadingChatListItem) {
             var3 = true;
          }
       }
 
+      var var9: java.util.List = var6;
       if (var3) {
+         val var10: PortalViewChatListItem = this.portalChatListItem;
+         q.e(this.portalChatListItem);
+         var9 = i.z0(var6, var10);
+      }
+
+      this.setChatListItems$chat_release(var9);
+      super.setItems(this.getChatListItems$chat_release());
+      if (var2 && !var3) {
          ChatListAdapterUpdateLog.INSTANCE.addPortalRemovalFromChatListItemUpdate();
          this.disableAnimations.invoke();
          this.notifyDataSetChanged();
@@ -133,19 +125,19 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             this.disableAnimations.invoke();
          }
 
-         for (ListOperation var12 : var1.getListOperations()) {
-            if (var12 is ListOperation.Change) {
-               this.notifyItemChanged((var12 as ListOperation.Change).getIndex());
-            } else if (var12 is ListOperation.Insert) {
-               this.notifyItemInserted((var12 as ListOperation.Insert).getIndex());
-            } else if (var12 is ListOperation.Remove) {
-               this.notifyItemRemoved((var12 as ListOperation.Remove).getIndex());
-            } else if (var12 is ListOperation.ChangeRange) {
-               this.notifyItemRangeChanged((var12 as ListOperation.ChangeRange).getFirst(), (var12 as ListOperation.ChangeRange).getCount());
-            } else if (var12 is ListOperation.InsertRange) {
-               this.notifyItemRangeInserted((var12 as ListOperation.InsertRange).getFirst(), (var12 as ListOperation.InsertRange).getCount());
-            } else if (var12 is ListOperation.RemoveRange) {
-               this.notifyItemRangeRemoved((var12 as ListOperation.RemoveRange).getFirst(), (var12 as ListOperation.RemoveRange).getCount());
+         for (ListOperation var11 : var1.getListOperations()) {
+            if (var11 is ListOperation.Change) {
+               this.notifyItemChanged((var11 as ListOperation.Change).getIndex());
+            } else if (var11 is ListOperation.Insert) {
+               this.notifyItemInserted((var11 as ListOperation.Insert).getIndex());
+            } else if (var11 is ListOperation.Remove) {
+               this.notifyItemRemoved((var11 as ListOperation.Remove).getIndex());
+            } else if (var11 is ListOperation.ChangeRange) {
+               this.notifyItemRangeChanged((var11 as ListOperation.ChangeRange).getFirst(), (var11 as ListOperation.ChangeRange).getCount());
+            } else if (var11 is ListOperation.InsertRange) {
+               this.notifyItemRangeInserted((var11 as ListOperation.InsertRange).getFirst(), (var11 as ListOperation.InsertRange).getCount());
+            } else if (var11 is ListOperation.RemoveRange) {
+               this.notifyItemRangeRemoved((var11 as ListOperation.RemoveRange).getFirst(), (var11 as ListOperation.RemoveRange).getCount());
             }
          }
       } else {
@@ -158,21 +150,21 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (ThreadUtilsKt.isOnMainThread()) {
          if (access$getUpdateQueue$p(this).isEmpty() xor true) {
             val var3: Any = access$getUpdateQueue$p(this).remove();
-            r.g(var3, "updateQueue.remove()");
+            q.g(var3, "remove(...)");
             access$processUpdate(this, var3 as ChannelChatListAdapterUpdate);
          }
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 
    private fun processPortalViewUpdate(update: PortalViewUpdate) {
       this.disableAnimations.invoke();
-      val var3: Boolean = h.o0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
+      val var3: Boolean = i.r0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
       var var2: Boolean;
       if (var1.getPortalChatListItem() != null) {
          var2 = 1;
@@ -203,20 +195,20 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
                throw new p();
             }
 
-            val var5: java.util.List = h.P0(this.getChatListItems$chat_release());
-            var2 = h.k(this.getChatListItems$chat_release());
+            val var5: java.util.List = i.S0(this.getChatListItems$chat_release());
+            var2 = i.l(this.getChatListItems$chat_release());
             val var7: PortalViewChatListItem = var1.getPortalChatListItem();
-            r.e(var7);
+            q.e(var7);
             var5.set(var2, var7);
             var8 = var5;
          } else {
-            var8 = h.T(this.getChatListItems$chat_release(), 1);
+            var8 = i.W(this.getChatListItems$chat_release(), 1);
          }
       } else {
          val var13: java.util.List = this.getChatListItems$chat_release();
          val var9: PortalViewChatListItem = var1.getPortalChatListItem();
-         r.e(var9);
-         var8 = h.w0(var13, var9);
+         q.e(var9);
+         var8 = i.z0(var13, var9);
       }
 
       this.setChatListItems$chat_release(var8);
@@ -225,13 +217,13 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 == 3) {
-               this.notifyItemChanged(h.k(this.getChatListItems$chat_release()));
+               this.notifyItemChanged(i.l(this.getChatListItems$chat_release()));
             }
          } else {
-            this.notifyItemRemoved(h.k(this.getChatListItems$chat_release()) + 1);
+            this.notifyItemRemoved(i.l(this.getChatListItems$chat_release()) + 1);
          }
       } else {
-         this.notifyItemInserted(h.k(this.getChatListItems$chat_release()));
+         this.notifyItemInserted(i.l(this.getChatListItems$chat_release()));
       }
    }
 
@@ -265,18 +257,18 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
          access$setProcessNextUpdateJob$p(
             this,
-            kk.f.d(
+            lk.f.d(
                kotlinx.coroutines.g.b(),
                null,
                null,
-               new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null)// $VF: Couldn't be decompiled
+               new Function2(this, null)// $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.StackOverflowError
-      //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-      //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
-      //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+      //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1302,34 +1294,33 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             )
          );
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var4);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 
    private fun shouldAnimateOperations(operations: List<ListOperation>): Boolean {
-      val var6: Boolean;
-      if (var1.size() == 1) {
-         var6 = true;
-      } else {
-         var6 = false;
-      }
+      val var2: Int = var1.size();
+      var var3: Boolean = true;
+      if (var2 == 1) {
+         val var5: ListOperation = i.d0(var1) as ListOperation;
+         if (var5 !is ListOperation.Change) {
+            if (var5 !is ListOperation.ChangeRange) {
+               return true;
+            }
 
-      if (var6) {
-         val var5: ListOperation = h.a0(var1) as ListOperation;
-         if (var5 is ListOperation.Change) {
-            return false;
+            if ((var5 as ListOperation.ChangeRange).getCount() > 2) {
+               return true;
+            }
          }
 
-         if (var5 is ListOperation.ChangeRange && (var5 as ListOperation.ChangeRange).getCount() <= 2) {
-            return false;
-         }
+         var3 = false;
       }
 
-      return true;
+      return var3;
    }
 
    private fun syncFirstMessageItemPosition() {
@@ -1373,16 +1364,16 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
    public open fun setItems(items: List<ChatListItem>) {
-      r.h(var1, "items");
+      q.h(var1, "items");
       setItems$default(this, var1, null, <unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE, null, 16, null);
    }
 
@@ -1393,9 +1384,9 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       postCommit: () -> Unit,
       chatListAction: ChatListAction? = null
    ) {
-      r.h(var1, "items");
-      r.h(var3, "preCommit");
-      r.h(var4, "postCommit");
+      q.h(var1, "items");
+      q.h(var3, "preCommit");
+      q.h(var4, "postCommit");
       val var6: Int = this.updateCount + 1;
       this.updateCount++;
       this.enqueueUpdate(new ChatListItemUpdate(var1, var2, var5, var6, var3, var4));
@@ -1405,7 +1396,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       val var5: PortalViewChatListItem;
       if (var1 != null) {
          val var4: java.lang.String = UUID.randomUUID().toString();
-         r.g(var4, "randomUUID().toString()");
+         q.g(var4, "toString(...)");
          var5 = new PortalViewChatListItem(var4, var1, var2);
       } else {
          var5 = null;
@@ -1425,6 +1416,20 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       ADD,
       CHANGE,
       REMOVE      @JvmStatic
-      private ChannelChatListAdapter.PortalViewUpdateType[] $VALUES = $values();
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private ChannelChatListAdapter.PortalViewUpdateType[] $VALUES;
+
+      @JvmStatic
+      fun {
+         val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
+         $VALUES = var0;
+         $ENTRIES = kh.a.a(var0);
+      }
+
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
+      }
    }
 }

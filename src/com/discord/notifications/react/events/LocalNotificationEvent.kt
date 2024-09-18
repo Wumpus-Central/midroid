@@ -3,7 +3,7 @@ package com.discord.notifications.react.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,29 +11,19 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.r0
+import vk.f
+import vk.n
+import yk.g0
+import yk.g0.a
 
 @f
 internal data class LocalNotificationEvent(locationNotification: Map<String, String?>) : ReactEvent {
    public final val locationNotification: Map<String, String?>
 
    init {
-      r.h(var1, "locationNotification");
+      q.h(var1, "locationNotification");
       super();
       this.locationNotification = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LocalNotificationEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, new r0(a2.a, a.u(a2.a)), var0.locationNotification);
    }
 
    public operator fun component1(): Map<String, String?> {
@@ -41,7 +31,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
    }
 
    public fun copy(locationNotification: Map<String, String?> = var0.locationNotification): LocalNotificationEvent {
-      r.h(var1, "locationNotification");
+      q.h(var1, "locationNotification");
       return new LocalNotificationEvent(var1);
    }
 
@@ -51,7 +41,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
       } else if (var1 !is LocalNotificationEvent) {
          return false;
       } else {
-         return r.c(this.locationNotification, (var1 as LocalNotificationEvent).locationNotification);
+         return q.c(this.locationNotification, (var1 as LocalNotificationEvent).locationNotification);
       }
    }
 
@@ -64,15 +54,15 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
    }
 
    public override fun toString(): String {
-      val var2: java.util.Map = this.locationNotification;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LocalNotificationEvent(locationNotification=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.Map = this.locationNotification;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LocalNotificationEvent(locationNotification=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<LocalNotificationEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -91,31 +81,32 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{new r0(a2.a, a.u(a2.a))};
+         return new KSerializer[]{LocalNotificationEvent.access$get$childSerializers$cp()[0]};
       }
 
       public open fun deserialize(decoder: Decoder): LocalNotificationEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var8: Array<KSerializer> = LocalNotificationEvent.access$get$childSerializers$cp();
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var10: Any;
+         var var9: java.util.Map;
          if (var5) {
-            var10 = var7.y(var6, 0, new r0(a2.a, a.u(a2.a)), null);
+            var9 = var7.m(var6, 0, var8[0], null) as java.util.Map;
          } else {
             var2 = 0;
-            var10 = null;
+            var9 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var10 = var7.y(var6, 0, new r0(a2.a, a.u(a2.a)), var10);
+                  var9 = var7.m(var6, 0, var8[0], var9) as java.util.Map;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -123,21 +114,21 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
             }
          }
 
-         var7.c(var6);
-         return new LocalNotificationEvent(var2, var10 as java.util.Map, null);
+         var7.b(var6);
+         return new LocalNotificationEvent(var2, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LocalNotificationEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         LocalNotificationEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         LocalNotificationEvent.write$Self$notification_react_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

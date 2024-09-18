@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list.item
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class DeserializationErrorChatListItem(id: String, json: String, causeMessage: String) : ChatListItem {
    public final val causeMessage: String
@@ -8,9 +8,9 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
    public final val json: String
 
    init {
-      r.h(var1, "id");
-      r.h(var2, "json");
-      r.h(var3, "causeMessage");
+      q.h(var1, "id");
+      q.h(var2, "json");
+      q.h(var3, "causeMessage");
       super(var1, null);
       this.id = var1;
       this.json = var2;
@@ -18,7 +18,7 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
    }
 
    public operator fun component1(): String {
-      return this.getId();
+      return this.id;
    }
 
    public operator fun component2(): String {
@@ -29,10 +29,10 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
       return this.causeMessage;
    }
 
-   public fun copy(id: String = var0.getId(), json: String = var0.json, causeMessage: String = var0.causeMessage): DeserializationErrorChatListItem {
-      r.h(var1, "id");
-      r.h(var2, "json");
-      r.h(var3, "causeMessage");
+   public fun copy(id: String = var0.id, json: String = var0.json, causeMessage: String = var0.causeMessage): DeserializationErrorChatListItem {
+      q.h(var1, "id");
+      q.h(var2, "json");
+      q.h(var3, "causeMessage");
       return new DeserializationErrorChatListItem(var1, var2, var3);
    }
 
@@ -43,31 +43,31 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.getId(), var1.getId())) {
+         if (!q.c(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.json, var1.json)) {
+         } else if (!q.c(this.json, var1.json)) {
             return false;
          } else {
-            return r.c(this.causeMessage, var1.causeMessage);
+            return q.c(this.causeMessage, var1.causeMessage);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return (this.getId().hashCode() * 31 + this.json.hashCode()) * 31 + this.causeMessage.hashCode();
+      return (this.id.hashCode() * 31 + this.json.hashCode()) * 31 + this.causeMessage.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.getId();
-      val var4: java.lang.String = this.json;
-      val var1: java.lang.String = this.causeMessage;
+      val var4: java.lang.String = this.id;
+      val var1: java.lang.String = this.json;
+      val var2: java.lang.String = this.causeMessage;
       val var3: StringBuilder = new StringBuilder();
       var3.append("DeserializationErrorChatListItem(id=");
-      var3.append(var2);
-      var3.append(", json=");
       var3.append(var4);
-      var3.append(", causeMessage=");
+      var3.append(", json=");
       var3.append(var1);
+      var3.append(", causeMessage=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

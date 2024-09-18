@@ -22,12 +22,12 @@ public final class RoleDotViewBinding implements ViewBinding {
 
    public static RoleDotViewBinding bind(View var0) {
       int var1 = R.id.role_dot_view_background;
-      FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-      if (var3 != null) {
+      FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.role_dot_view_dot;
-         ImageView var2 = (ImageView)a.a(var0, var1);
-         if (var2 != null) {
-            return new RoleDotViewBinding(var0, var3, var2);
+         ImageView var3 = (ImageView)a.a(var0, var1);
+         if (var3 != null) {
+            return new RoleDotViewBinding(var0, var2, var3);
          }
       }
 
@@ -43,6 +43,7 @@ public final class RoleDotViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

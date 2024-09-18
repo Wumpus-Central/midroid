@@ -2,18 +2,18 @@ package com.discord.bundle_updater
 
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import fh.s
+import eh.r
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, builds: Map<String, BuildOverrideCookieBuild>) {
    public final val builds: Map<String, BuildOverrideCookieBuild>
    public final val meta: BuildOverrideCookieMeta
 
    init {
-      r.h(var1, "meta");
-      r.h(var2, "builds");
+      q.h(var1, "meta");
+      q.h(var2, "builds");
       super();
       this.meta = var1;
       this.builds = var2;
@@ -28,8 +28,8 @@ public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, bui
    }
 
    public fun copy(meta: BuildOverrideCookieMeta = var0.meta, builds: Map<String, BuildOverrideCookieBuild> = var0.builds): BuildOverrideCookieContents {
-      r.h(var1, "meta");
-      r.h(var2, "builds");
+      q.h(var1, "meta");
+      q.h(var2, "builds");
       return new BuildOverrideCookieContents(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, bui
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.meta, var1.meta)) {
+         if (!q.c(this.meta, var1.meta)) {
             return false;
          } else {
-            return r.c(this.builds, var1.builds);
+            return q.c(this.builds, var1.builds);
          }
       }
    }
@@ -54,10 +54,10 @@ public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, bui
 
    public fun toNativeMap(): WritableNativeMap {
       val var2: java.util.Map = this.builds;
-      val var1: LinkedHashMap = new LinkedHashMap(s.d(this.builds.size()));
+      val var1: LinkedHashMap = new LinkedHashMap(r.d(this.builds.size()));
 
-      for (Entry var3 : var2.entrySet()) {
-         var1.put(var3.getKey(), (var3.getValue() as BuildOverrideCookieBuild).toNativeMap());
+      for (Entry var5 : var2.entrySet()) {
+         var1.put(var5.getKey(), (var5.getValue() as BuildOverrideCookieBuild).toNativeMap());
       }
 
       val var4: WritableNativeMap = NativeMapExtensionsKt.toNativeMap(var1);
@@ -67,13 +67,13 @@ public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, bui
 
    public override fun toString(): String {
       val var2: BuildOverrideCookieMeta = this.meta;
-      val var1: java.util.Map = this.builds;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("BuildOverrideCookieContents(meta=");
-      var3.append(var2);
-      var3.append(", builds=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.Map = this.builds;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BuildOverrideCookieContents(meta=");
+      var1.append(var2);
+      var1.append(", builds=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 }

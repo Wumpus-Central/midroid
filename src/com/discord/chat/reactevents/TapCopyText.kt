@@ -3,38 +3,28 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import java.lang.annotation.Annotation
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.c
-import uk.f
-import uk.n
-import xk.f0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.g0
+import yk.g0.a
 
 @f
 internal data class TapCopyText(text: CharSequence) : ReactEvent {
    public final val text: CharSequence
 
    init {
-      r.h(var1, "text");
+      q.h(var1, "text");
       super();
       this.text = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TapCopyText, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.y(var2, 0, new c(h0.b(java.lang.CharSequence.class), new Annotation[0]), var0.text);
    }
 
    public operator fun component1(): CharSequence {
@@ -42,7 +32,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
    }
 
    public fun copy(text: CharSequence = var0.text): TapCopyText {
-      r.h(var1, "text");
+      q.h(var1, "text");
       return new TapCopyText(var1);
    }
 
@@ -52,7 +42,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
       } else if (var1 !is TapCopyText) {
          return false;
       } else {
-         return r.c(this.text, (var1 as TapCopyText).text);
+         return q.c(this.text, (var1 as TapCopyText).text);
       }
    }
 
@@ -61,19 +51,19 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("text", this.text.toString())});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("text", this.text.toString()));
    }
 
    public override fun toString(): String {
-      val var1: java.lang.CharSequence = this.text;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapCopyText(text=");
-      var2.append((Object)var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.CharSequence = this.text;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapCopyText(text=");
+      var1.append((Object)var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : f0<TapCopyText> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -90,31 +80,32 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{new c(h0.b(java.lang.CharSequence.class), new Annotation[0])};
+         return new KSerializer[]{TapCopyText.access$get$childSerializers$cp()[0]};
       }
 
       public open fun deserialize(decoder: Decoder): TapCopyText {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: kotlinx.serialization.encoding.c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var8: Array<KSerializer> = TapCopyText.access$get$childSerializers$cp();
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
-         var var8: Any;
+         var var9: java.lang.CharSequence;
          if (var5) {
-            var8 = var7.y(var6, 0, new c(h0.b(java.lang.CharSequence.class), new Annotation[0]), null);
+            var9 = var7.m(var6, 0, var8[0], null) as java.lang.CharSequence;
          } else {
             var2 = 0;
-            var8 = null;
+            var9 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, new c(h0.b(java.lang.CharSequence.class), new Annotation[0]), var8);
+                  var9 = var7.m(var6, 0, var8[0], var9) as java.lang.CharSequence;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -122,20 +113,20 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
             }
          }
 
-         var7.c(var6);
-         return new TapCopyText(var2, var8 as java.lang.CharSequence, null);
+         var7.b(var6);
+         return new TapCopyText(var2, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapCopyText) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         TapCopyText.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         TapCopyText.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

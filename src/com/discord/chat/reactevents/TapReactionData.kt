@@ -3,18 +3,21 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
+import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.q
 
 internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ...) : TapReactionData(var1, var2, var3), ReactEvent {
    public final val isBurst: Boolean?
    public final val messageId: MessageId
    public final val reaction: Reaction?
 
-   fun TapReactionData(var1: java.lang.String, var2: Reaction, var3: java.lang.Boolean) {
+   fun TapReactionData(var1: java.lang.String, var2: ReactionView.Reaction, var3: java.lang.Boolean) {
+      q.h(var1, "messageId");
+      super();
       this.messageId = var1;
       this.reaction = var2;
       this.isBurst = var3;
@@ -33,7 +36,7 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    }
 
    public fun copy(messageId: MessageId = ..., reaction: Reaction? = ..., isBurst: Boolean? = ...): TapReactionData {
-      r.h(var1, "messageId");
+      q.h(var1, "messageId");
       return new TapReactionData(var1, var2, var3, null);
    }
 
@@ -46,10 +49,10 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.reaction, var1.reaction)) {
+         } else if (!q.c(this.reaction, var1.reaction)) {
             return false;
          } else {
-            return r.c(this.isBurst, var1.isBurst);
+            return q.c(this.isBurst, var1.isBurst);
          }
       }
    }
@@ -71,18 +74,13 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
       return (var3 * 31 + var1) * 31 + var2;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var4: WritableNativeMap;
       if (this.reaction != null) {
          var4 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               w.a(
-                  "emoji",
-                  NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("name", this.reaction.getEmoji().getName()), w.a("id", this.reaction.getEmoji().getId())})
-               ),
-               w.a("me", this.reaction.isMe()),
-               w.a("me_burst", this.reaction.isMeBurst())
-            }
+            w.a("emoji", NativeMapExtensionsKt.nativeMapOf(w.a("name", this.reaction.getEmoji().getName()), w.a("id", this.reaction.getEmoji().getId()))),
+            w.a("me", this.reaction.isMe()),
+            w.a("me_burst", this.reaction.isMeBurst())
          );
       } else {
          var4 = null;
@@ -97,21 +95,21 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
          var6 = this.isBurst;
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{var2, var3, w.a("isBurst", var6)});
+      return NativeMapExtensionsKt.nativeMapOf(var2, var3, w.a("isBurst", var6));
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: Reaction = this.reaction;
-      val var3: java.lang.Boolean = this.isBurst;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapReactionData(messageId=");
-      var2.append(var4);
-      var2.append(", reaction=");
-      var2.append(var1);
-      var2.append(", isBurst=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: ReactionView.Reaction = this.reaction;
+      val var1: java.lang.Boolean = this.isBurst;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapReactionData(messageId=");
+      var3.append(var2);
+      var3.append(", reaction=");
+      var3.append(var4);
+      var3.append(", isBurst=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

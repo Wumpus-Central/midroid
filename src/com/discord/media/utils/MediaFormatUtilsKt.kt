@@ -1,12 +1,13 @@
 package com.discord.media.utils
 
 import android.media.MediaFormat
-import eh.s
-import kotlin.jvm.internal.r
+import dh.r
+import dh.s
+import kotlin.jvm.internal.q
 
 public final val codecType: String?
    public final get() {
-      r.h(var0, "<this>");
+      q.h(var0, "<this>");
       val var1: java.lang.String = getMimeType(var0);
       if (var1 != null) {
          switch (var1.hashCode()) {
@@ -64,20 +65,20 @@ public final val codecType: String?
 
 public final val mimeType: String?
    public final get() {
-      r.h(var0, "<this>");
+      q.h(var0, "<this>");
 
       label16:
       try {
-         val var1: eh.r.a = eh.r.k;
-         var5 = eh.r.b(var0.getString("mime"));
+         val var1: dh.r.a = r.k;
+         var5 = r.b(var0.getString("mime"));
       } catch (var2: java.lang.Throwable) {
-         val var4: eh.r.a = eh.r.k;
-         var5 = eh.r.b(s.a(var2));
+         val var4: dh.r.a = r.k;
+         var5 = r.b(s.a(var2));
          break label16;
       }
 
       var var6: Any = var5;
-      if (eh.r.g(var5)) {
+      if (r.g(var5)) {
          var6 = null;
       }
 
@@ -86,6 +87,6 @@ public final val mimeType: String?
 
 
 public fun MediaFormat.isHevcVideo(): Boolean {
-   r.h(var0, "<this>");
-   return r.c(getMimeType(var0), "video/hevc");
+   q.h(var0, "<this>");
+   return q.c(getMimeType(var0), "video/hevc");
 }

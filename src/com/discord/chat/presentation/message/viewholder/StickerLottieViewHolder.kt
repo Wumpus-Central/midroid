@@ -11,31 +11,31 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
    private final val stickerView: StickerView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "stickerView");
+      kotlin.jvm.internal.q.h(var1, "stickerView");
       super(var1);
       this.stickerView = var1;
    }
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function1, var1: Sticker, var2: View) {
-      kotlin.jvm.internal.r.h(var0, "$onStickerClicked");
-      kotlin.jvm.internal.r.h(var1, "$sticker");
+      kotlin.jvm.internal.q.h(var0, "$onStickerClicked");
+      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function1, var1: Sticker, var2: View): Boolean {
-      kotlin.jvm.internal.r.h(var0, "$onStickerLongClicked");
-      kotlin.jvm.internal.r.h(var1, "$sticker");
+      kotlin.jvm.internal.q.h(var0, "$onStickerLongClicked");
+      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
       return true;
    }
 
    public override fun bind(sticker: Sticker, onStickerClicked: (Sticker) -> Unit, onStickerLongClicked: (Sticker) -> Unit, widthDp: Int, heightDp: Int) {
-      kotlin.jvm.internal.r.h(var1, "sticker");
-      kotlin.jvm.internal.r.h(var2, "onStickerClicked");
-      kotlin.jvm.internal.r.h(var3, "onStickerLongClicked");
-      if (!kotlin.jvm.internal.r.c(var1, this.sticker)) {
+      kotlin.jvm.internal.q.h(var1, "sticker");
+      kotlin.jvm.internal.q.h(var2, "onStickerClicked");
+      kotlin.jvm.internal.q.h(var3, "onStickerLongClicked");
+      if (!kotlin.jvm.internal.q.c(var1, this.sticker)) {
          this.sticker = var1;
          val var7: StickerView = this.stickerView;
          val var8: java.lang.String = var1.getUrl();
@@ -47,8 +47,8 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
          }
 
          var7.asLottie(var8, var4, var5, var6, var1.getAsset(), var1.getRenderMode());
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new u(var2, var1), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new v(var3, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new v(var2, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new w(var3, var1), 1, null);
       }
    }
 }

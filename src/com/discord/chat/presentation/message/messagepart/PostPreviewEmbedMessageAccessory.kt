@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.postpreviewembed.PostPreviewEmbed
 import com.discord.chat.bridge.spoiler.SpoilerAttributes
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    postPreviewEmbed: PostPreviewEmbed,
@@ -16,6 +16,8 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    public final val spoilerAttributes: SpoilerAttributes?
 
    fun PostPreviewEmbedMessageAccessory(var1: java.lang.String, var2: PostPreviewEmbed, var3: Int, var4: SpoilerAttributes) {
+      q.h(var1, "messageId");
+      q.h(var2, "postPreviewEmbed");
       val var5: StringBuilder = new StringBuilder();
       var5.append("post preview embed ");
       var5.append(var3);
@@ -27,7 +29,7 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    }
 
    public operator fun component1(): MessageId {
-      return this.getMessageId-3Eiw7ao();
+      return this.messageId;
    }
 
    public operator fun component2(): PostPreviewEmbed {
@@ -43,8 +45,8 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    }
 
    public fun copy(messageId: MessageId = ..., postPreviewEmbed: PostPreviewEmbed = ..., index: Int = ..., spoilerAttributes: SpoilerAttributes? = ...): PostPreviewEmbedMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "postPreviewEmbed");
+      q.h(var1, "messageId");
+      q.h(var2, "postPreviewEmbed");
       return new PostPreviewEmbedMessageAccessory(var1, var2, var3, var4, null);
    }
 
@@ -55,22 +57,22 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
          return false;
       } else {
          var1 = var1;
-         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.postPreviewEmbed, var1.postPreviewEmbed)) {
+         } else if (!q.c(this.postPreviewEmbed, var1.postPreviewEmbed)) {
             return false;
          } else if (this.index != var1.index) {
             return false;
          } else {
-            return r.c(this.spoilerAttributes, var1.spoilerAttributes);
+            return q.c(this.spoilerAttributes, var1.spoilerAttributes);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = MessageId.hashCode-impl(this.getMessageId-3Eiw7ao());
-      val var3: Int = this.postPreviewEmbed.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var4: Int = this.postPreviewEmbed.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
       val var1: Int;
       if (this.spoilerAttributes == null) {
          var1 = 0;
@@ -78,24 +80,24 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
          var1 = this.spoilerAttributes.hashCode();
       }
 
-      return ((var2 * 31 + var3) * 31 + var4) * 31 + var1;
+      return ((var2 * 31 + var4) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var5: PostPreviewEmbed = this.postPreviewEmbed;
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: PostPreviewEmbed = this.postPreviewEmbed;
       val var1: Int = this.index;
       val var3: SpoilerAttributes = this.spoilerAttributes;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PostPreviewEmbedMessageAccessory(messageId=");
-      var2.append(var4);
-      var2.append(", postPreviewEmbed=");
-      var2.append(var5);
-      var2.append(", index=");
-      var2.append(var1);
-      var2.append(", spoilerAttributes=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PostPreviewEmbedMessageAccessory(messageId=");
+      var5.append(var2);
+      var5.append(", postPreviewEmbed=");
+      var5.append(var4);
+      var5.append(", index=");
+      var5.append(var1);
+      var5.append(", spoilerAttributes=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 }

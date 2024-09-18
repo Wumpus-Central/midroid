@@ -19,8 +19,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
@@ -32,65 +32,63 @@ public class SurveyIndicationView  public constructor(context: Context, attrs: A
    private final var binding: SurveyActionViewBinding
 
    fun SurveyIndicationView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun SurveyIndicationView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
       val var6: SurveyActionViewBinding = SurveyActionViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var6, "inflate(...)");
       this.binding = var6;
-      var6.surveyCard.setCardBackgroundColor(ColorUtilsKt.getThemeColor(var1, color.white_500, color.primary_800));
+      var6.surveyCard.setCardBackgroundColor(ColorUtilsKt.getThemeColor(var1, R.color.white_500, R.color.primary_800));
       val var4: SimpleDraweeView = this.binding.chatListFeedbackIcon;
-      kotlin.jvm.internal.r.g(this.binding.chatListFeedbackIcon, "binding.chatListFeedbackIcon");
+      kotlin.jvm.internal.q.g(this.binding.chatListFeedbackIcon, "chatListFeedbackIcon");
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());
       val var5: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextFeedback;
-      kotlin.jvm.internal.r.g(this.binding.chatListAdapterItemTextFeedback, "_init_$lambda$0");
+      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextFeedback);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
    public fun setSurveyIndication(messageId: MessageId, surveyIndication: SurveyIndication, onLinkClicked: (MessageId, LinkContentNode) -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "messageId");
-      kotlin.jvm.internal.r.h(var2, "surveyIndication");
-      kotlin.jvm.internal.r.h(var3, "onLinkClicked");
+      kotlin.jvm.internal.q.h(var1, "messageId");
+      kotlin.jvm.internal.q.h(var2, "surveyIndication");
+      kotlin.jvm.internal.q.h(var3, "onLinkClicked");
       val var5: SimpleDraweeView = this.binding.chatListFeedbackIcon;
-      kotlin.jvm.internal.r.g(this.binding.chatListFeedbackIcon, "binding.chatListFeedbackIcon");
+      kotlin.jvm.internal.q.g(this.binding.chatListFeedbackIcon, "chatListFeedbackIcon");
       ReactAssetUtilsKt.setReactImageUrl(var5, var2.getFeedbackIconUrl());
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextFeedback;
-      kotlin.jvm.internal.r.g(this.binding.chatListAdapterItemTextFeedback, "setSurveyIndication_u7_MRrM$lambda$2");
-      val var6: StructurableText = var2.getContent();
-      val var9: Context = var10.getContext();
+      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextFeedback);
+      val var9: StructurableText = var2.getContent();
+      val var6: Context = var10.getContext();
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
-      kotlin.jvm.internal.r.g(var7, "paint.fontMetrics");
+      kotlin.jvm.internal.q.g(var7, "getFontMetrics(...)");
       val var4: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var11: TextPaint = this.binding.chatListAdapterItemTextFeedback.getPaint();
-      kotlin.jvm.internal.r.g(var9, "context");
-      kotlin.jvm.internal.r.g(var11, "paint");
-      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var6, var9, var1, false, false, false, false, var11, new Function1<LinkContentNode, Unit>(var3, var1) {
-            final java.lang.String $messageId;
-            final Function2<MessageId, LinkContentNode, Unit> $onLinkClicked;
+      kotlin.jvm.internal.q.e(var6);
+      kotlin.jvm.internal.q.e(var11);
+      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var9, var6, var1, false, false, false, false, var11, new Function1(var3, var1) {
+         final java.lang.String $messageId;
+         final Function2 $onLinkClicked;
 
-            {
-               super(1);
-               this.$onLinkClicked = var1;
-               this.$messageId = var2;
-            }
+         {
+            super(1);
+            this.$onLinkClicked = var1;
+            this.$messageId = var2;
+         }
 
-            public final void invoke(LinkContentNode var1) {
-               kotlin.jvm.internal.r.h(var1, "node");
-               this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
-            }
-         }, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var4, null, 12582656, null
-      );
+         public final void invoke(LinkContentNode var1) {
+            kotlin.jvm.internal.q.h(var1, "node");
+            this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
+         }
+      }, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var4, null, 12582656, null);
       SpannableExtensionsKt.coverWithSpan(var8, new BackgroundSpanDrawer(var10));
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var10, var8);
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var10, false, 1, null);

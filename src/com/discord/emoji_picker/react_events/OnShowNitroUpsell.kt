@@ -1,9 +1,8 @@
 package com.discord.emoji_picker.react_events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,10 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.h
+import vk.f
+import vk.n
+import yk.g0
+import yk.h
+import yk.g0.a
 
 @f
 internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
@@ -23,14 +23,6 @@ internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
    init {
       super();
       this.showNitroUpsell = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnShowNitroUpsell, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.x(var2, 0, var0.showNitroUpsell);
    }
 
    public operator fun component1(): Boolean {
@@ -52,16 +44,11 @@ internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
    }
 
    public override fun hashCode(): Int {
-      var var1: Byte = this.showNitroUpsell;
-      if (this.showNitroUpsell != 0) {
-         var1 = 1;
-      }
-
-      return var1;
+      return java.lang.Boolean.hashCode(this.showNitroUpsell);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -73,7 +60,7 @@ internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<OnShowNitroUpsell> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -89,31 +76,31 @@ internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
          descriptor = var1;
       }
 
-      public override fun childSerializers(): Array<KSerializer<*>> {
+      public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{h.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnShowNitroUpsell {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         var var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         var var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          if (var5) {
-            var5 = var7.C(var6, 0);
+            var5 = var7.s(var6, 0);
          } else {
             var5 = false;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var5 = var7.C(var6, 0);
+                  var5 = var7.s(var6, 0);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -121,21 +108,21 @@ internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new OnShowNitroUpsell(var2, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnShowNitroUpsell) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         OnShowNitroUpsell.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         OnShowNitroUpsell.write$Self$emoji_picker_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      override fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return a.a(this);
       }
    }
 

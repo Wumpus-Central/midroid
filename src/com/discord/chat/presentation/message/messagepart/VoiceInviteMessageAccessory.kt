@@ -2,20 +2,22 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.voiceinviteembed.VoiceInviteEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: VoiceInviteEmbed) : VoiceInviteMessageAccessory(var1, var2) {
    public final val embed: VoiceInviteEmbed
    public open val messageId: MessageId
 
    fun VoiceInviteMessageAccessory(var1: java.lang.String, var2: VoiceInviteEmbed) {
+      q.h(var1, "messageId");
+      q.h(var2, "embed");
       super(var1, "safety policy notice embed", false, 4, null);
       this.messageId = var1;
       this.embed = var2;
    }
 
    public operator fun component1(): MessageId {
-      return this.getMessageId-3Eiw7ao();
+      return this.messageId;
    }
 
    public operator fun component2(): VoiceInviteEmbed {
@@ -23,8 +25,8 @@ public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: Voice
    }
 
    public fun copy(messageId: MessageId = ..., embed: VoiceInviteEmbed = ...): VoiceInviteMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "embed");
+      q.h(var1, "messageId");
+      q.h(var2, "embed");
       return new VoiceInviteMessageAccessory(var1, var2, null);
    }
 
@@ -35,27 +37,27 @@ public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: Voice
          return false;
       } else {
          var1 = var1;
-         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.embed, var1.embed);
+            return q.c(this.embed, var1.embed);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return MessageId.hashCode-impl(this.getMessageId-3Eiw7ao()) * 31 + this.embed.hashCode();
+      return MessageId.hashCode-impl(this.messageId) * 31 + this.embed.hashCode();
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: VoiceInviteEmbed = this.embed;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("VoiceInviteMessageAccessory(messageId=");
-      var3.append(var1);
-      var3.append(", embed=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("VoiceInviteMessageAccessory(messageId=");
+      var1.append(var3);
+      var1.append(", embed=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

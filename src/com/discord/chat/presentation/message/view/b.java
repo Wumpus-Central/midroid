@@ -8,6 +8,6 @@ public final class b implements OnClickListener {
    public final UploadItemProps j;
 
    public final void onClick(View var1) {
-      AttachmentUploadOverlayView.h(this.j, var1);
+      AttachmentUploadOverlayView.m(this.j, var1);
    }
 }

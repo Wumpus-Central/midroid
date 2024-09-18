@@ -27,7 +27,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
    private final val onLongClick: OnLongClickListener?
 
    init {
-      kotlin.jvm.internal.r.h(var1, "message");
+      kotlin.jvm.internal.q.h(var1, "message");
       super();
       this.message = var1;
       this.contentView = var2;
@@ -37,28 +37,26 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
 
    private fun getReferencedMessageLabel(context: Context, referencedMessage: ReferencedMessage?): CharSequence? {
       return if (var2 is LoadedReferencedMessage)
-         I18nUtilsKt.i18nFormat(
-            var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new Function1<RenderContext, Unit>((var2 as LoadedReferencedMessage).getMessage().getUsername()) {
-               final java.lang.String $username;
+         I18nUtilsKt.i18nFormat(var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new Function1((var2 as LoadedReferencedMessage).getMessage().getUsername()) {
+            final java.lang.String $username;
 
-               {
-                  super(1);
-                  this.$username = var1;
-               }
-
-               public final void invoke(RenderContext var1) {
-                  kotlin.jvm.internal.r.h(var1, "$this$i18nFormat");
-                  var1.getArgs().put("username", this.$username);
-               }
+            {
+               super(1);
+               this.$username = var1;
             }
-         )
+
+            public final void invoke(RenderContext var1) {
+               kotlin.jvm.internal.q.h(var1, "$this$i18nFormat");
+               var1.getArgs().put("username", this.$username);
+            }
+         })
          else
          null;
    }
 
-   public open fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-      kotlin.jvm.internal.r.h(var1, "host");
-      kotlin.jvm.internal.r.h(var2, "info");
+   public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+      kotlin.jvm.internal.q.h(var1, "host");
+      kotlin.jvm.internal.q.h(var2, "info");
       super.onInitializeAccessibilityNodeInfo(var1, var2);
       val var15: java.lang.CharSequence;
       if (this.contentView != null) {
@@ -74,7 +72,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
 
       val var16: SpannableStringBuilder = new SpannableStringBuilder(var8);
       var8 = var16.getSpans(0, var16.length(), SpoilerSpan.class);
-      kotlin.jvm.internal.r.g(var8, "augmentedText.getSpans(0… SpoilerSpan::class.java)");
+      kotlin.jvm.internal.q.g(var8, "getSpans(...)");
       val var18: Array<SpoilerSpan> = var8 as Array<SpoilerSpan>;
       var var4: Int = (var8 as Array<SpoilerSpan>).length;
 
@@ -84,13 +82,13 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
             val var5: Int = var16.getSpanStart(var9);
             val var6: Int = var16.getSpanEnd(var9);
             val var23: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var23, "host.context");
+            kotlin.jvm.internal.q.g(var23, "getContext(...)");
             var16.replace(var5, var6, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
          }
       }
 
       var8 = var16.getSpans(0, var16.length(), EmojiAccessibilitySpan.class);
-      kotlin.jvm.internal.r.g(var8, "augmentedText.getSpans(0…sibilitySpan::class.java)");
+      kotlin.jvm.internal.q.g(var8, "getSpans(...)");
       val var24: Array<EmojiAccessibilitySpan> = var8 as Array<EmojiAccessibilitySpan>;
       var4 = (var8 as Array<EmojiAccessibilitySpan>).length;
 
@@ -108,14 +106,14 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
       }
 
       val var10: Context = var1.getContext();
-      kotlin.jvm.internal.r.g(var10, "host.context");
+      kotlin.jvm.internal.q.g(var10, "getContext(...)");
       val var11: java.lang.CharSequence = this.getReferencedMessageLabel(var10, this.message.getReferencedMessage());
       if (var11 != null) {
          var8.add(var11);
       }
 
       if (var8.isEmpty() xor true) {
-         val var12: java.lang.String = kotlin.collections.h.k0(var8, ", ", null, null, 0, null, null, 62, null);
+         val var12: java.lang.String = kotlin.collections.i.n0(var8, ", ", null, null, 0, null, null, 62, null);
          val var22: StringBuilder = new StringBuilder();
          var22.append(var12);
          var22.append(", ");
@@ -123,12 +121,12 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
       }
 
       var2.T0(var16);
-      var2.i0(androidx.core.view.accessibility.AccessibilityNodeInfoCompat.a.i);
+      var2.i0(AccessibilityNodeInfoCompat.a.i);
       var2.F0(15);
    }
 
-   public open fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {
-      kotlin.jvm.internal.r.h(var1, "host");
+   public override fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {
+      kotlin.jvm.internal.q.h(var1, "host");
       if (var2 != 16) {
          if (var2 == 32 && this.onLongClick != null) {
             this.onLongClick.onLongClick(var1);

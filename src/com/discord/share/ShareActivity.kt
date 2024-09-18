@@ -6,11 +6,11 @@ import android.net.Uri
 import android.os.Bundle
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ShareActivity : ReactActivity {
-   public open fun getActivityDelegate(): ActivityDelegate {
-      return new ActivityDelegate(this) {
+   public override fun getActivityDelegate(): ActivityDelegate {
+      return new ReactActivity.ActivityDelegate(this) {
          private ShareProps shareProps;
          final ShareActivity this$0;
 
@@ -22,7 +22,7 @@ public class ShareActivity : ReactActivity {
          protected Bundle getLaunchOptions() {
             var var1: ShareProps = this.shareProps;
             if (this.shareProps == null) {
-               r.y("shareProps");
+               q.y("shareProps");
                var1 = null;
             }
 
@@ -31,15 +31,15 @@ public class ShareActivity : ReactActivity {
 
          protected void onCreate(Bundle var1) {
             val var3: ShareProps.Companion = ShareProps.Companion;
-            val var4: Intent = this.this$0.getIntent();
-            r.g(var4, "intent");
-            val var2: Context = this.getContext();
-            r.g(var2, "context");
-            val var7: ShareProps = var3.createShareProps(var4, var2);
+            val var2: Intent = this.this$0.getIntent();
+            q.g(var2, "getIntent(...)");
+            val var4: Context = this.getContext();
+            q.g(var4, "getContext(...)");
+            val var7: ShareProps = var3.createShareProps(var2, var4);
             this.shareProps = var7;
             var var5: ShareProps = var7;
             if (var7 == null) {
-               r.y("shareProps");
+               q.y("shareProps");
                var5 = null;
             }
 
@@ -55,7 +55,7 @@ public class ShareActivity : ReactActivity {
       };
    }
 
-   public open fun getNameOfComponent(): String {
+   public override fun getNameOfComponent(): String {
       return "Share";
    }
 }

@@ -12,37 +12,30 @@ public class FileAttachmentViewHolder(view: FileAttachmentView, eventHandler: Ch
    private final val eventHandler: ChatEventHandler
 
    init {
-      kotlin.jvm.internal.r.h(var1, "view");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
+      kotlin.jvm.internal.q.h(var1, "view");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
       super(var1, null);
       this.view = var1;
       this.eventHandler = var2;
    }
 
    public fun bind(fileAttachmentItem: FileAttachmentMessageAccessory, onClick: (String, String) -> Unit, spoilerConfig: SpoilerConfig?) {
-      kotlin.jvm.internal.r.h(var1, "fileAttachmentItem");
-      kotlin.jvm.internal.r.h(var2, "onClick");
+      kotlin.jvm.internal.q.h(var1, "fileAttachmentItem");
+      kotlin.jvm.internal.q.h(var2, "onClick");
       val var4: Attachment = var1.getAttachment();
       this.view
          .setContent(
-            var4.getFilename(),
-            var4.getSize(),
-            var4.getUrl(),
-            var2,
-            var4.isSpoiler(),
-            var3,
-            var1.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(this.eventHandler) {
+            var4.getFilename(), var4.getSize(), var4.getUrl(), var2, var4.isSpoiler(), var3, var1.getUploadItemProps(new Function2(this.eventHandler) {
                {
                   super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
                }
 
                public final void invoke(java.lang.String var1, java.lang.String var2) {
-                  kotlin.jvm.internal.r.h(var1, "p0");
-                  kotlin.jvm.internal.r.h(var2, "p1");
+                  kotlin.jvm.internal.q.h(var1, "p0");
+                  kotlin.jvm.internal.q.h(var2, "p1");
                   (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
                }
-            }),
-            var4.getBackgroundColor()
+            }), var4.getBackgroundColor()
          );
    }
 }

@@ -9,6 +9,6 @@ public final class b implements AnimatorUpdateListener {
    public final View a;
 
    public final void onAnimationUpdate(ValueAnimator var1) {
-      ChatListHighlightItemAtPositionKt.a(this.a, var1);
+      ChatListHighlightItemAtPositionKt.b(this.a, var1);
    }
 }

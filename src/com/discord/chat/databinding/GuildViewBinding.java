@@ -22,12 +22,12 @@ public final class GuildViewBinding implements ViewBinding {
 
    public static GuildViewBinding bind(View var0) {
       int var1 = R.id.guild_avatar;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.guild_text;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new GuildViewBinding(var0, var2, var3);
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new GuildViewBinding(var0, var3, var2);
          }
       }
 
@@ -43,6 +43,7 @@ public final class GuildViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

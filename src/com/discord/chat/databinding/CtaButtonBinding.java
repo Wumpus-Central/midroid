@@ -36,6 +36,7 @@ public final class CtaButtonBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

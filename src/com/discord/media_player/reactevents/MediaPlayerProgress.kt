@@ -1,9 +1,8 @@
 package com.discord.media_player.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,11 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.x
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.g0
+import yk.y
+import yk.g0.a
 
 @f
 public data class MediaPlayerProgress(id: Double, time: Double, duration: Double) : ReactEvent {
@@ -27,16 +26,6 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
       this.id = var1;
       this.time = var3;
       this.duration = var5;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: MediaPlayerProgress, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.D(var2, 0, var0.id);
-      var1.D(var2, 1, var0.time);
-      var1.D(var2, 2, var0.duration);
    }
 
    public operator fun component1(): Double {
@@ -76,8 +65,8 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
       return (java.lang.Double.hashCode(this.id) * 31 + java.lang.Double.hashCode(this.time)) * 31 + java.lang.Double.hashCode(this.duration);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -95,7 +84,7 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
       return var7.toString();
    }
 
-   public object `$serializer` : f0<MediaPlayerProgress> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -114,21 +103,21 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{x.a, x.a, x.a};
+         return new KSerializer[]{y.a, y.a, y.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerProgress {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var13: SerialDescriptor = this.getDescriptor();
-         val var14: c = var1.b(var13);
+         val var14: c = var1.c(var13);
          var var2: Double;
          var var4: Double;
          var var6: Double;
          var var10: Int;
-         if (var14.p()) {
-            var4 = var14.F(var13, 0);
-            var6 = var14.F(var13, 1);
-            var2 = var14.F(var13, 2);
+         if (var14.y()) {
+            var4 = var14.A(var13, 0);
+            var6 = var14.A(var13, 1);
+            var2 = var14.A(var13, 2);
             var10 = 7;
          } else {
             var6 = 0.0;
@@ -138,7 +127,7 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
             var2 = 0.0;
 
             while (var11) {
-               val var12: Int = var14.o(var13);
+               val var12: Int = var14.x(var13);
                if (var12 != -1) {
                   if (var12 != 0) {
                      if (var12 != 1) {
@@ -146,14 +135,14 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
                            throw new n(var12);
                         }
 
-                        var6 = var14.F(var13, 2);
+                        var6 = var14.A(var13, 2);
                         var10 |= 4;
                      } else {
-                        var2 = var14.F(var13, 1);
+                        var2 = var14.A(var13, 1);
                         var10 |= 2;
                      }
                   } else {
-                     var4 = var14.F(var13, 0);
+                     var4 = var14.A(var13, 0);
                      var10 |= 1;
                   }
                } else {
@@ -165,20 +154,20 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
             var6 = var2;
          }
 
-         var14.c(var13);
+         var14.b(var13);
          return new MediaPlayerProgress(var10, var4, var6, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerProgress) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         MediaPlayerProgress.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         MediaPlayerProgress.write$Self$media_player_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

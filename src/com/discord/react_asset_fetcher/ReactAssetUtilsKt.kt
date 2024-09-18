@@ -8,21 +8,20 @@ import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.google.android.material.button.MaterialButton
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import lk.f
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
-   r.h(var0, "<this>");
-   r.h(var1, "assetUrl");
+   q.h(var0, "<this>");
+   q.h(var1, "assetUrl");
    val var2: java.lang.String = new ImageSource(var0, var1).getUri().toString();
-   r.g(var2, "ImageSource(this, assetUrl).uri.toString()");
+   q.g(var2, "toString(...)");
    return var2;
 }
 
 public fun Context.inflateUrl(url: String?): String? {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    if (var1 == null) {
       var1 = null;
    } else if (!URLUtil.isNetworkUrl(var1)) {
@@ -33,50 +32,43 @@ public fun Context.inflateUrl(url: String?): String? {
 }
 
 public fun SimpleDraweeView.setOptionalReactImageUrl(url: String?) {
-   r.h(var0, "<this>");
-   val var2: Boolean;
-   if (var1 != null && !f.x(var1)) {
-      var2 = false;
-   } else {
-      var2 = true;
-   }
-
-   if (var2) {
-      var0.setVisibility(8);
-      var0.setImageURI(null);
-   } else {
+   q.h(var0, "<this>");
+   if (var1 != null && !h.x(var1)) {
       var0.setVisibility(0);
       setReactImageUrl(var0, var1);
+   } else {
+      var0.setVisibility(8);
+      var0.setImageURI(null);
    }
 }
 
 public fun SimpleDraweeView.setReactAsset(asset: ReactAsset) {
-   r.h(var0, "<this>");
-   r.h(var1, "asset");
+   q.h(var0, "<this>");
+   q.h(var1, "asset");
    val var2: Context = var0.getContext();
-   r.g(var2, "context");
+   q.g(var2, "getContext(...)");
    setReactImageUrl(var0, var1.getUri(var2));
 }
 
 public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
-   r.h(var0, "<this>");
-   r.h(var1, "assetUrl");
+   q.h(var0, "<this>");
+   q.h(var1, "assetUrl");
    var0.setIconSize(var2);
    val var3: ShapeDrawable = new ShapeDrawable(new RectShape());
    var3.getPaint().setColor(0);
    var0.setIcon(var3);
-   kk.f.d(
+   f.d(
       CoroutineViewUtilsKt.getAttachedScope(var0),
       null,
       null,
-      new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var0, var1, null)// $VF: Couldn't be decompiled
+      new Function2(var0, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1103,9 +1095,9 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
 }
 
 public fun SimpleDraweeView.setReactImageUrl(assetUrl: String) {
-   r.h(var0, "<this>");
-   r.h(var1, "assetUrl");
+   q.h(var0, "<this>");
+   q.h(var1, "assetUrl");
    val var2: Context = var0.getContext();
-   r.g(var2, "context");
+   q.g(var2, "getContext(...)");
    var0.setImageURI(getReactImageUrl(var2, var1));
 }

@@ -10,14 +10,14 @@ public class FlaggedMessageEmbedViewHolder(embeddedMessageView: FlaggedMessageEm
    private final val eventHandler: ChatEventHandler?
 
    init {
-      kotlin.jvm.internal.r.h(var1, "embeddedMessageView");
+      kotlin.jvm.internal.q.h(var1, "embeddedMessageView");
       super(var1, null);
       this.embeddedMessageView = var1;
       this.eventHandler = var2;
    }
 
    public fun bind(messageEmbedAccessory: FlaggedMessageEmbedAccessory) {
-      kotlin.jvm.internal.r.h(var1, "messageEmbedAccessory");
+      kotlin.jvm.internal.q.h(var1, "messageEmbedAccessory");
       val var3: FlaggedMessageEmbedView = this.embeddedMessageView;
       val var4: Message = var1.getMessage();
       var var5: Any = this.eventHandler;

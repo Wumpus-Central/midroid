@@ -6,7 +6,7 @@ public class ForwardHeaderViewHolder(headerView: ForwardHeaderView) : MessagePar
    private final val headerView: ForwardHeaderView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "headerView");
+      kotlin.jvm.internal.q.h(var1, "headerView");
       super(var1, null);
       this.headerView = var1;
    }

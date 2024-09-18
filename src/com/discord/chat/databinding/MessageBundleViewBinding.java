@@ -43,6 +43,7 @@ public final class MessageBundleViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

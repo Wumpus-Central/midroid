@@ -3,15 +3,15 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
-import eh.p
-import kotlin.jvm.internal.r
+import dh.p
+import kotlin.jvm.internal.q
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
    public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem {
       public final val chatListItemUpdate: ChatListItemUpdate
 
       init {
-         r.h(var1, "chatListItemUpdate");
+         q.h(var1, "chatListItemUpdate");
          super(null);
          this.chatListItemUpdate = var1;
       }
@@ -19,20 +19,20 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public override fun toString(): String {
          var var13: java.lang.String;
          label37: {
-            val var5: java.util.List = this.chatListItemUpdate.getListOperations();
-            if (var5 != null) {
-               val var4: java.util.Iterator = var5.iterator();
+            val var4: java.util.List = this.chatListItemUpdate.getListOperations();
+            if (var4 != null) {
+               val var5: java.util.Iterator = var4.iterator();
                var var1: Int = 0;
 
                var var2: java.lang.String;
-               for (var2 = ""; var4.hasNext(); var1++) {
-                  var13 = (java.lang.String)var4.next();
+               for (var2 = ""; var5.hasNext(); var1++) {
+                  var13 = (java.lang.String)var5.next();
                   if (var1 < 0) {
-                     h.s();
+                     i.t();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
-                  if (var1 != var5.size() - 1) {
+                  if (var1 != var4.size() - 1) {
                      var13 = "-";
                   } else {
                      var13 = "";
@@ -103,7 +103,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public final val updateType: PortalViewUpdateType
 
       init {
-         r.h(var1, "updateType");
+         q.h(var1, "updateType");
          super(null);
          this.updateType = var1;
       }

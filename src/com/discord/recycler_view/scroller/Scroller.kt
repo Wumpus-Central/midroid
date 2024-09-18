@@ -4,19 +4,18 @@ import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.discord.recycler_view.utils.LayoutManagerUtilsKt
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class Scroller(recyclerView: RecyclerView) {
    private final var currentSearch: Runnable?
 
    private final val layoutManager: LinearLayoutManager
       private final get() {
-         val var1: LayoutManager = this.recyclerView.getLayoutManager();
-         r.f(var1, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+         val var1: RecyclerView.LayoutManager = this.recyclerView.getLayoutManager();
+         q.f(var1, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
          return var1 as LinearLayoutManager;
       }
 
@@ -24,7 +23,7 @@ public class Scroller(recyclerView: RecyclerView) {
    private final val recyclerView: RecyclerView
 
    init {
-      r.h(var1, "recyclerView");
+      q.h(var1, "recyclerView");
       super();
       this.recyclerView = var1;
       var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this) {
@@ -35,11 +34,11 @@ public class Scroller(recyclerView: RecyclerView) {
          }
 
          public void onViewAttachedToWindow(View var1) {
-            r.h(var1, "v");
+            q.h(var1, "v");
          }
 
          public void onViewDetachedFromWindow(View var1) {
-            r.h(var1, "v");
+            q.h(var1, "v");
             this.this$0.cancel();
          }
       });
@@ -80,11 +79,11 @@ public class Scroller(recyclerView: RecyclerView) {
 
    @JvmStatic
    fun `search$lambda$0`(var0: Scroller, var1: Int, var2: Scroller.TargetAlignment, var3: Function0, var4: Function0, var5: Function0) {
-      r.h(var0, "this$0");
-      r.h(var2, "$targetAlignment");
-      r.h(var3, "$onStart");
-      r.h(var4, "$onComplete");
-      r.h(var5, "$onScrollProgress");
+      q.h(var0, "this$0");
+      q.h(var2, "$targetAlignment");
+      q.h(var3, "$onStart");
+      q.h(var4, "$onComplete");
+      q.h(var5, "$onScrollProgress");
       var0.search(var1, var2, var3, var4, var5);
    }
 
@@ -103,16 +102,16 @@ public class Scroller(recyclerView: RecyclerView) {
       onComplete: () -> Unit = <unrepresentable>.INSTANCE,
       onScrollProgress: () -> Unit = <unrepresentable>.INSTANCE
    ) {
-      r.h(var2, "targetAlignment");
-      r.h(var4, "onStart");
-      r.h(var5, "onComplete");
-      r.h(var6, "onScrollProgress");
+      q.h(var2, "targetAlignment");
+      q.h(var4, "onStart");
+      q.h(var5, "onComplete");
+      q.h(var6, "onScrollProgress");
       this.cancel();
       var4.invoke();
       if (var3) {
-         RecyclerViewExtensionsKt.scrollToPositionAnimated(this.recyclerView, var1, var2, new Function0<Unit>(var6, var5) {
-            final Function0<Unit> $onComplete;
-            final Function0<Unit> $onScrollProgress;
+         RecyclerViewExtensionsKt.scrollToPositionAnimated(this.recyclerView, var1, var2, new Function0(var6, var5) {
+            final Function0 $onComplete;
+            final Function0 $onScrollProgress;
 
             {
                super(0);

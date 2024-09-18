@@ -8,7 +8,7 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
 
    init {
       this.maxCharacterCount = var1;
-      this.output = new ArrayDeque<>();
+      this.output = new ArrayDeque();
       this.sync = new Object();
    }
 
@@ -21,14 +21,14 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1054)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:555)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 1
       // 01: ldc "line"
-      // 03: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 03: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 06: aload 0
       // 07: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.sync Ljava/lang/Object;
       // 0a: astore 2
@@ -52,15 +52,15 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // 26: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.outputLength I
       // 29: aload 0
       // 2a: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.maxCharacterCount I
-      // 2d: if_icmple 54
+      // 2d: if_icmple 58
       // 30: aload 0
       // 31: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.output Lkotlin/collections/ArrayDeque;
-      // 34: invokevirtual kotlin/collections/ArrayDeque.D ()Ljava/lang/Object;
+      // 34: invokevirtual kotlin/collections/ArrayDeque.F ()Ljava/lang/Object;
       // 37: checkcast java/lang/String
       // 3a: astore 1
       // 3b: aload 1
       // 3c: ifnonnull 42
-      // 3f: goto 54
+      // 3f: goto 58
       // 42: aload 0
       // 43: aload 0
       // 44: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.outputLength I
@@ -71,16 +71,17 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // 4d: isub
       // 4e: putfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.outputLength I
       // 51: goto 25
-      // 54: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 57: astore 1
-      // 58: aload 2
-      // 59: monitorexit
-      // 5a: return
+      // 54: astore 1
+      // 55: goto 5f
+      // 58: getstatic kotlin/Unit.a Lkotlin/Unit;
       // 5b: astore 1
       // 5c: aload 2
       // 5d: monitorexit
-      // 5e: aload 1
-      // 5f: athrow
+      // 5e: return
+      // 5f: aload 2
+      // 60: monitorexit
+      // 61: aload 1
+      // 62: athrow
    }
 
    public fun appendString(sb: StringBuilder) {
@@ -92,14 +93,14 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1054)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:555)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 1
       // 01: ldc "sb"
-      // 03: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 03: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 06: aload 0
       // 07: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.sync Ljava/lang/Object;
       // 0a: astore 2
@@ -111,7 +112,7 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // 14: astore 3
       // 15: aload 3
       // 16: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 1b: ifeq 42
+      // 1b: ifeq 46
       // 1e: aload 1
       // 1f: aload 3
       // 20: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
@@ -119,25 +120,26 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // 28: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 2b: pop
       // 2c: aload 1
-      // 2d: ldc "append(value)"
-      // 2f: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 2d: ldc "append(...)"
+      // 2f: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 32: aload 1
       // 33: bipush 10
       // 35: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
       // 38: pop
       // 39: aload 1
-      // 3a: ldc "append('\\n')"
-      // 3c: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 3a: ldc "append(...)"
+      // 3c: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 3f: goto 15
-      // 42: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 45: astore 1
-      // 46: aload 2
-      // 47: monitorexit
-      // 48: return
+      // 42: astore 1
+      // 43: goto 4d
+      // 46: getstatic kotlin/Unit.a Lkotlin/Unit;
       // 49: astore 1
       // 4a: aload 2
       // 4b: monitorexit
-      // 4c: aload 1
-      // 4d: athrow
+      // 4c: return
+      // 4d: aload 2
+      // 4e: monitorexit
+      // 4f: aload 1
+      // 50: athrow
    }
 }

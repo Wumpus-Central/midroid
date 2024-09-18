@@ -10,6 +10,6 @@ public final class g0 implements OnClickListener {
    public final String k;
 
    public final void onClick(View var1) {
-      GuildInviteDisabledView.b(this.j, this.k, var1);
+      GuildInviteDisabledView.g(this.j, this.k, var1);
    }
 }

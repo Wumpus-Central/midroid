@@ -4,7 +4,7 @@ import com.discord.mobile_voice_overlay.MobileVoiceOverlayAssets
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayData
 import com.discord.mobile_voice_overlay.views.OverlayView
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayViewProvider<Any>) -> Any) {
    private final lateinit var assets: MobileVoiceOverlayAssets
@@ -13,7 +13,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    private final var view: Any?
 
    init {
-      r.h(var1, "initializer");
+      q.h(var1, "initializer");
       super();
       this.initializer = var1;
    }
@@ -25,7 +25,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
          val var3: OverlayView = this.initializer.invoke(this) as OverlayView;
          var var4: MobileVoiceOverlayAssets = this.assets;
          if (this.assets == null) {
-            r.y("assets");
+            q.y("assets");
             var4 = null;
          }
 
@@ -63,9 +63,9 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    }
 
    public fun setAssets(assets: MobileVoiceOverlayAssets) {
-      r.h(var1, "assets");
+      q.h(var1, "assets");
       this.assets = var1;
-      this.withViewOptional(new Function1<T, Unit>(var1) {
+      this.withViewOptional(new Function1(var1) {
          final MobileVoiceOverlayAssets $assets;
 
          {
@@ -74,16 +74,16 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
          }
 
          public final void invoke(T var1) {
-            r.h(var1, "view");
+            q.h(var1, "view");
             var1.setAssets(this.$assets);
          }
       });
    }
 
    public fun setData(data: MobileVoiceOverlayData) {
-      r.h(var1, "data");
+      q.h(var1, "data");
       this.data = var1;
-      this.withViewOptional(new Function1<T, Unit>(var1) {
+      this.withViewOptional(new Function1(var1) {
          final MobileVoiceOverlayData $data;
 
          {
@@ -92,7 +92,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
          }
 
          public final void invoke(T var1) {
-            r.h(var1, "view");
+            q.h(var1, "view");
             var1.setData(this.$data);
          }
       });
@@ -103,7 +103,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    }
 
    public fun withView(operation: (Any) -> Unit) {
-      r.h(var1, "operation");
+      q.h(var1, "operation");
       var1.invoke(this.ensureView());
    }
 }

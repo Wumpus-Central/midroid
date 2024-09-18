@@ -4,12 +4,12 @@ import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.botuikit.ContentInventoryEntry
+import com.discord.chat.bridge.botuikit.ContentInventoryEntryClickable
 import com.discord.chat.bridge.botuikit.ContentInventoryEntryComponent
 import com.discord.chat.bridge.botuikit.ContentInventoryEntryComponentKt
 import com.discord.chat.bridge.botuikit.GradientColor
@@ -24,18 +24,17 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
-import com.discord.primitives.UserId
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
-import eh.l
-import eh.o
+import dh.l
+import dh.o
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
@@ -50,20 +49,20 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    private final val draweeControllerBuilder: PipelineDraweeControllerBuilder
 
    fun ContentInventoryComponentView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ContentInventoryComponentView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2, var3);
-      this.draweeControllerBuilder = l4.c.g();
-      this.binding$delegate = l.a(o.l, new Function0<MessageComponentContentInventoryViewBinding>(this) {
+      this.draweeControllerBuilder = o4.c.g();
+      this.binding$delegate = l.a(o.l, new Function0(this) {
          final ContentInventoryComponentView this$0;
 
          {
@@ -72,76 +71,26 @@ public class ContentInventoryComponentView  public constructor(context: Context,
          }
 
          public final MessageComponentContentInventoryViewBinding invoke() {
-            val var2: MessageComponentContentInventoryViewBinding = MessageComponentContentInventoryViewBinding.bind(this.this$0);
-            var var4: TextView = var2.contentInventoryComponentUsername;
-            r.g(var2.contentInventoryComponentUsername, "invoke$lambda$3$lambda$0");
-            val var3: DiscordFont = DiscordFont.PrimarySemibold;
-            DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
+            val var1: MessageComponentContentInventoryViewBinding = MessageComponentContentInventoryViewBinding.bind(this.this$0);
+            var var3: TextView = var1.contentInventoryComponentUsername;
+            q.e(var1.contentInventoryComponentUsername);
+            val var2: DiscordFont = DiscordFont.PrimarySemibold;
+            DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+            SetTextSizeSpKt.setTextSizeSp(var3, 14.0F);
+            var3.setTextColor(ColorUtilsKt.getColorCompat(var3, R.color.primary_160));
+            var3 = var1.contentInventoryComponentTitle;
+            q.e(var1.contentInventoryComponentTitle);
+            DiscordFontUtilsKt.setDiscordFont(var3, var2);
+            SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
+            var3.setTextColor(ColorUtilsKt.getColorCompat(var3, R.color.primary_160));
+            val var4: TextView = var1.contentInventoryComponentSubtitle;
+            q.e(var1.contentInventoryComponentSubtitle);
+            DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
             SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
-            val var1: Int = color.primary_160;
-            var4.setTextColor(ColorUtilsKt.getColorCompat(var4, color.primary_160));
-            var4 = var2.contentInventoryComponentTitle;
-            r.g(var2.contentInventoryComponentTitle, "invoke$lambda$3$lambda$1");
-            DiscordFontUtilsKt.setDiscordFont(var4, var3);
-            SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
-            var4.setTextColor(ColorUtilsKt.getColorCompat(var4, var1));
-            val var5: TextView = var2.contentInventoryComponentSubtitle;
-            r.g(var2.contentInventoryComponentSubtitle, "invoke$lambda$3$lambda$2");
-            DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryNormal);
-            SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
-            var5.setTextColor(ColorUtilsKt.getColorCompat(var5, color.primary_200));
-            return var2;
+            var4.setTextColor(ColorUtilsKt.getColorCompat(var4, R.color.primary_200));
+            return var1;
          }
       });
-   }
-
-   @JvmStatic
-   fun `configure$lambda$13$lambda$11`(var0: ComponentContext, var1: ContentInventoryEntryComponent, var2: View) {
-      r.h(var0, "$componentContext");
-      r.h(var1, "$component");
-      var0.getUserEventHandlers().getOnTapAvatar().invoke(UserId.box-impl(var1.getContentInventoryEntry().getAuthorId-re6GcUE()));
-   }
-
-   @JvmStatic
-   fun `configure$lambda$13$lambda$12`(var0: ContentInventoryEntry, var1: ComponentContext, var2: View) {
-      r.h(var1, "$componentContext");
-      var0.onTap(var1.getContentInventoryEventHandlers(), "avatar");
-   }
-
-   @JvmStatic
-   fun `configure$lambda$15$lambda$14`(var0: ContentInventoryEntry, var1: ComponentContext, var2: View) {
-      r.h(var1, "$componentContext");
-      var0.onTap(var1.getContentInventoryEventHandlers(), "media");
-   }
-
-   @JvmStatic
-   fun `configure$lambda$17$lambda$16`(var0: ContentInventoryEntry, var1: ComponentContext, var2: View) {
-      r.h(var1, "$componentContext");
-      var0.onTap(var1.getContentInventoryEventHandlers(), "platform");
-   }
-
-   @JvmStatic
-   fun `configure$lambda$3$lambda$2`(var0: ContentInventoryEntry, var1: ComponentContext, var2: View) {
-      r.h(var1, "$componentContext");
-      var0.onTap(var1.getContentInventoryEventHandlers(), "container");
-   }
-
-   @JvmStatic
-   fun `configure$lambda$5$lambda$4`(var0: ContentInventoryEntry, var1: ComponentContext, var2: View) {
-      r.h(var1, "$componentContext");
-      var0.onTap(var1.getContentInventoryEventHandlers(), "username");
-   }
-
-   @JvmStatic
-   fun `configure$lambda$7$lambda$6`(var0: ContentInventoryEntry, var1: ComponentContext, var2: View) {
-      r.h(var1, "$componentContext");
-      var0.onTap(var1.getContentInventoryEventHandlers(), "title");
-   }
-
-   @JvmStatic
-   fun `configure$lambda$9$lambda$8`(var0: ContentInventoryEntry, var1: ComponentContext, var2: View) {
-      r.h(var1, "$componentContext");
-      var0.onTap(var1.getContentInventoryEventHandlers(), "subtitle");
    }
 
    public open fun configure(
@@ -150,86 +99,114 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       componentActionListener: ComponentActionListener,
       componentContext: ComponentContext
    ) {
-      r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentActionListener");
-      r.h(var4, "componentContext");
-      val var5: ContentInventoryEntry = var1.getContentInventoryEntry();
-      if (var5 == null) {
+      q.h(var1, "component");
+      q.h(var2, "componentProvider");
+      q.h(var3, "componentActionListener");
+      q.h(var4, "componentContext");
+      val var29: ContentInventoryEntry = var1.getContentInventoryEntry();
+      if (var29 == null) {
          this.getBinding().getRoot().setVisibility(8);
       } else {
-         val var20: java.util.List = var5.getGradientColors();
-         val var10: ArrayList = new ArrayList(kotlin.collections.h.t(var20, 10));
-         val var21: java.util.Iterator = var20.iterator();
+         val var23: java.util.List = var29.getGradientColors();
+         val var7: ArrayList = new ArrayList(i.u(var23, 10));
+         val var24: java.util.Iterator = var23.iterator();
 
-         while (var21.hasNext()) {
-            var10.add(ContentInventoryEntryComponentKt.toColorInt(var21.next() as GradientColor));
+         while (var24.hasNext()) {
+            var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var22: IntArray = kotlin.collections.h.M0(var10);
-         val var11: ContentInventoryComponentView = this.getBinding().getRoot();
-         var11.setVisibility(0);
-         r.g(var11, "configure$lambda$3");
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var11, var22, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         var11.setOnClickListener(new c(var5, var4));
-         val var12: TextView = this.getBinding().contentInventoryComponentUsername;
-         var12.setText(var5.getUserActionDescription());
-         var12.setOnClickListener(new d(var5, var4));
-         val var13: TextView = this.getBinding().contentInventoryComponentTitle;
-         var13.setText(var5.getTitle());
-         var13.setOnClickListener(new e(var5, var4));
-         val var6: TextView = this.getBinding().contentInventoryComponentSubtitle;
-         r.g(var6, "configure$lambda$9");
-         val var14: Subtitle = var5.getSubtitle();
-         val var15: java.lang.String;
-         if (var14 != null) {
-            var15 = var14.getText();
+         val var25: IntArray = i.P0(var7);
+         val var8: ContentInventoryComponentView = this.getBinding().getRoot();
+         var8.setVisibility(0);
+         q.e(var8);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var8, var25, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         ContentInventoryComponentViewKt.access$applyClickable(var8, var4, var29, var29.getClickable(), "container");
+         val var9: TextView = this.getBinding().contentInventoryComponentUsername;
+         var9.setText(var29.getUserActionDescription());
+         q.e(var9);
+         ContentInventoryComponentViewKt.access$applyClickable(var9, var4, var29, var29.getUserClickable(), "username");
+         val var10: TextView = this.getBinding().contentInventoryComponentTitle;
+         var10.setText(var29.getTitle());
+         q.e(var10);
+         ContentInventoryComponentViewKt.access$applyClickable(var10, var4, var29, var29.getTitleClickable(), "title");
+         val var5: TextView = this.getBinding().contentInventoryComponentSubtitle;
+         q.e(var5);
+         val var11: Subtitle = var29.getSubtitle();
+         val var12: java.lang.String;
+         if (var11 != null) {
+            var12 = var11.getText();
          } else {
-            var15 = null;
+            var12 = null;
          }
 
-         ViewUtilsKt.setOptionalText(var6, var15);
-         var6.setOnClickListener(new f(var5, var4));
-         val var24: SimpleDraweeView = this.getBinding().contentInventoryComponentBadgeIcon;
-         r.g(var24, "configure$lambda$10");
-         val var7: Subtitle = var5.getSubtitle();
-         var var16: java.lang.String = null;
-         if (var7 != null) {
-            var16 = var7.getBadgeUrl();
+         ViewUtilsKt.setOptionalText(var5, var12);
+         val var13: Subtitle = var29.getSubtitle();
+         val var14: java.lang.String;
+         if (var13 != null) {
+            var14 = var13.getAriaDescription();
+         } else {
+            var14 = null;
          }
 
-         ReactAssetUtilsKt.setOptionalReactImageUrl(var24, var16);
-         val var17: SimpleDraweeView = this.getBinding().contentInventoryComponentAvatarImage;
-         var17.setOnClickListener(new g(var4, var1));
-         var17.setImageURI(var5.getAvatarUrl());
-         var17.setOnClickListener(new h(var5, var4));
-         val var8: SimpleDraweeView = this.getBinding().contentInventoryComponentMediaImage;
-         val var18: PipelineDraweeControllerBuilder = this.draweeControllerBuilder;
-         r.g(var8, "this");
-         val var19: com.facebook.drawee.controller.a = ((var18.C(ContentInventoryComponentViewKt.getContentControllerListener(var8)) as PipelineDraweeControllerBuilder)
-               .O(var5.getImageUrl())
-               .F(var8.getController()) as PipelineDraweeControllerBuilder)
-            .c();
-         r.g(var19, "draweeControllerBuilder\n…                 .build()");
-         var8.setController(var19);
-         var8.setOnClickListener(new i(var5, var4));
-         val var9: SimpleDraweeView = this.getBinding().contentInventoryComponentPlatformIcon;
-         r.g(var9, "configure$lambda$17");
-         ReactAssetUtilsKt.setOptionalReactImageUrl(var9, var5.getPlatformIconUrl());
-         var9.setOnClickListener(new j(var5, var4));
+         var5.setContentDescription(var14);
+         val var15: Subtitle = var29.getSubtitle();
+         val var16: ContentInventoryEntryClickable;
+         if (var15 != null) {
+            var16 = var15.getClickable();
+         } else {
+            var16 = null;
+         }
+
+         ContentInventoryComponentViewKt.access$applyClickable(var5, var4, var29, var16, "subtitle");
+         val var30: SimpleDraweeView = this.getBinding().contentInventoryComponentBadgeIcon;
+         q.e(var30);
+         val var17: Subtitle = var29.getSubtitle();
+         val var18: java.lang.String;
+         if (var17 != null) {
+            var18 = var17.getBadgeUrl();
+         } else {
+            var18 = null;
+         }
+
+         ReactAssetUtilsKt.setOptionalReactImageUrl(var30, var18);
+         val var6: Subtitle = var29.getSubtitle();
+         var var19: ContentInventoryEntryClickable = null;
+         if (var6 != null) {
+            var19 = var6.getClickable();
+         }
+
+         ContentInventoryComponentViewKt.access$applyClickable(var30, var4, var29, var19, "subtitle");
+         val var20: SimpleDraweeView = this.getBinding().contentInventoryComponentAvatarImage;
+         var20.setImageURI(var29.getAvatarUrl());
+         q.e(var20);
+         ContentInventoryComponentViewKt.access$applyClickable(var20, var4, var29, var29.getUserClickable(), "avatar");
+         val var21: SimpleDraweeView = this.getBinding().contentInventoryComponentMediaImage;
+         val var27: PipelineDraweeControllerBuilder = this.draweeControllerBuilder;
+         q.e(var21);
+         val var28: com.facebook.drawee.controller.a = ((var27.E(ContentInventoryComponentViewKt.getContentControllerListener(var21)) as PipelineDraweeControllerBuilder)
+               .Q(var29.getImageUrl())
+               .H(var21.getController()) as PipelineDraweeControllerBuilder)
+            .d();
+         q.g(var28, "build(...)");
+         var21.setController(var28);
+         ContentInventoryComponentViewKt.access$applyClickable(var21, var4, var29, var29.getImageClickable(), "media");
+         val var22: SimpleDraweeView = this.getBinding().contentInventoryComponentPlatformIcon;
+         q.e(var22);
+         ReactAssetUtilsKt.setOptionalReactImageUrl(var22, var29.getPlatformIconUrl());
+         ContentInventoryComponentViewKt.access$applyClickable(var22, var4, var29, var29.getPlatformClickable(), "platform");
       }
    }
 
    public override fun getComponentType(): KClass<ContentInventoryEntryComponent> {
-      return h0.b(ContentInventoryEntryComponent.class);
+      return g0.b(ContentInventoryEntryComponent.class);
    }
 
    public companion object {
       public fun inflateComponent(context: Context, root: ViewGroup): ContentInventoryComponentView {
-         r.h(var1, "context");
-         r.h(var2, "root");
+         q.h(var1, "context");
+         q.h(var2, "root");
          val var3: ContentInventoryComponentView = MessageComponentContentInventoryViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
-         r.g(var3, "inflate(\n               …false,\n            ).root");
+         q.g(var3, "getRoot(...)");
          return var3;
       }
    }

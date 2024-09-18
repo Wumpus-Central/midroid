@@ -20,9 +20,9 @@ public class SpoilerViewManager {
       showSpoiler: Boolean,
       radiusPx: Int
    ) {
-      kotlin.jvm.internal.r.h(var2, "parentView");
-      kotlin.jvm.internal.r.h(var3, "containerView");
-      kotlin.jvm.internal.r.h(var4, "viewToHide");
+      kotlin.jvm.internal.q.h(var2, "parentView");
+      kotlin.jvm.internal.q.h(var3, "containerView");
+      kotlin.jvm.internal.q.h(var4, "viewToHide");
       if (var1 != null || this.spoilerView != null) {
          if (this.spoilerView == null) {
             this.spoilerView = SpoilerView.Companion.createAndAttachSpoilerView(var3, var9);

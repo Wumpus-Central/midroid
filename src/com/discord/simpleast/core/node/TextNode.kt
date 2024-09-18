@@ -1,19 +1,19 @@
 package com.discord.simpleast.core.node
 
 import android.text.SpannableStringBuilder
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public open class TextNode<R>(content: String) : Node<R> {
    public final val content: String
 
    init {
-      r.h(var1, "content");
+      q.h(var1, "content");
       super(null, 1, null);
       this.content = var1;
    }
 
    public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-      r.h(var1, "builder");
+      q.h(var1, "builder");
       var1.append(this.content);
    }
 

@@ -6,7 +6,6 @@ import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManag
 import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress
 import com.discord.media_player.MediaPlayer
 import com.discord.media_player.MediaPlayer.Event
-import kotlin.jvm.internal.r
 
 public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessory? = null, attached: Boolean = false) {
    public final val accessory: AudioAttachmentMessageAccessory?
@@ -62,7 +61,7 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.accessory, var1.accessory)) {
+         if (!kotlin.jvm.internal.q.c(this.accessory, var1.accessory)) {
             return false;
          } else {
             return this.attached == var1.attached;
@@ -90,33 +89,18 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
          var1 = this.accessory.hashCode();
       }
 
-      var var2: Byte = this.attached;
-      if (this.attached != 0) {
-         var2 = 1;
-      }
-
-      return var1 * 31 + var2;
+      return var1 * 31 + java.lang.Boolean.hashCode(this.attached);
    }
 
    internal fun isPlaying(wasPlayingBeforeBeingPaused: Boolean): Boolean {
-      var var3: Boolean = true;
       if (!var1) {
-         val var5: MediaPlayer = this.getPlayer$chat_release();
-         val var2: Boolean;
-         if (var5 != null && (var5.shouldPlay() || var5.isPlaying()) && !var5.hasError()) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         if (var2) {
-            var3 = true;
-         } else {
-            var3 = false;
+         val var2: MediaPlayer = this.getPlayer$chat_release();
+         if (var2 == null || !var2.shouldPlay() && !var2.isPlaying() || var2.hasError()) {
+            return false;
          }
       }
 
-      return var3;
+      return true;
    }
 
    internal fun pause() {
@@ -124,7 +108,7 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
    }
 
    internal fun play() {
-      AudioPlayerManager.INSTANCE.play(this.audioSource);
+      AudioPlayerManager.INSTANCE.playOrReset(this.audioSource);
    }
 
    internal fun releasePlayer() {

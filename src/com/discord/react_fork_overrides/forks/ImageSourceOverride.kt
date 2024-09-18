@@ -1,18 +1,15 @@
 package com.discord.react_fork_overrides.forks
 
 import android.net.Uri
-import com.airbnb.android.react.lottie.h
 import com.facebook.react.views.imagehelper.ImageSource
 import java.io.File
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
-import oh.j
 
 internal object ImageSourceOverride {
    @JvmStatic
    fun `override$lambda$0`(var0: java.lang.String): java.lang.String {
       val var1: ImageSourceOverride = INSTANCE;
-      r.g(var0, "mSource");
+      kotlin.jvm.internal.q.e(var0);
       return var1.resolvedOTAAssetOrDefaultToDrawable(var0);
    }
 
@@ -26,16 +23,16 @@ internal object ImageSourceOverride {
             return var1;
          } else {
             val var4: File = new File(var3);
-            return if (var4.exists()) var1 else j.k(var4);
+            return if (var4.exists()) var1 else oh.j.k(var4);
          }
       }
    }
 
    public fun override() {
-      ImageSource.mSourceOverride = new d();
-      h.r
+      ImageSource.mSourceOverride = new q();
+      com.airbnb.android.react.lottie.h.r
          .a(
-            new Function1<java.lang.String, java.lang.String>(this) {
+            new Function1(this) {
                {
                   super(
                      1,
@@ -48,7 +45,7 @@ internal object ImageSourceOverride {
                }
 
                public final java.lang.String invoke(java.lang.String var1) {
-                  r.h(var1, "p0");
+                  kotlin.jvm.internal.q.h(var1, "p0");
                   return ImageSourceOverride.access$resolvedOTAAssetOrDefaultToDrawable(super.receiver as ImageSourceOverride, var1);
                }
             }

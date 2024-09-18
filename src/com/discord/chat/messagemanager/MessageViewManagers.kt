@@ -39,16 +39,15 @@ import com.facebook.react.viewmanagers.DCDMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDMessageViewManagerInterface
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerInterface
-import eh.w
+import dh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.l
 
 public object MessageViewManagers {
-   private final val json: Json = l.b(null, <unrepresentable>.INSTANCE, 1, null)
+   private final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
    private final val reactEvents: ReactEvents
 
    @JvmStatic
@@ -62,14 +61,14 @@ public object MessageViewManagers {
       val var2: Json = json;
       json.a();
       val var3: Any = var2.b(Row.Companion.serializer(), var1);
-      r.f(var3, "null cannot be cast to non-null type com.discord.chat.bridge.row.MessageRow");
+      q.f(var3, "null cannot be cast to non-null type com.discord.chat.bridge.row.MessageRow");
       return var3 as MessageRow;
    }
 
    private fun MessageRow.getEventHandler(context: Context): ChatEventHandler {
       val var3: Any;
       if (var1.getReactTag() != null) {
-         var3 = new ChatViewEventHandler(var2, reactEvents, new Function0<Integer>(var1) {
+         var3 = new ChatViewEventHandler(var2, reactEvents, new Function0(var1) {
             final MessageRow $this_getEventHandler;
 
             {
@@ -96,7 +95,7 @@ public object MessageViewManagers {
       > = new DCDGuildMultilineSystemMessageViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): Nothing {
-         r.h(var1, "reactContext");
+         q.h(var1, "reactContext");
          throw new UnsupportedOperationException("multiline system messages are not supported.");
       }
 
@@ -113,7 +112,7 @@ public object MessageViewManagers {
 
       @ReactProp(name = "row")
       public open fun setRow(view: MessageView, value: String?) {
-         r.h(var1, "view");
+         q.h(var1, "view");
          throw new UnsupportedOperationException("multiline system messages are not supported.");
       }
 
@@ -132,13 +131,11 @@ public object MessageViewManagers {
       private final val messageRowViewPool: RecycledViewPool
       private final val reactEvents: ReactEvents =
          new ReactEvents(
-            new Pair[]{
-               w.a("onTapItem", h0.b(OnTapMessageBundleItemData.class)),
-               w.a("onLongPressItem", h0.b(OnLongPressMessageBundleItemData.class)),
-               w.a("onTruncateMessage", h0.b(OnTruncateMessageData.class)),
-               w.a("onTapReplyItem", h0.b(OnTapReplyItemData.class)),
-               w.a("onTapViewMoreText", h0.b(OnTapViewMoreTextData.class))
-            }
+            w.a("onTapItem", g0.b(OnTapMessageBundleItemData.class)),
+            w.a("onLongPressItem", g0.b(OnLongPressMessageBundleItemData.class)),
+            w.a("onTruncateMessage", g0.b(OnTruncateMessageData.class)),
+            w.a("onTapReplyItem", g0.b(OnTapReplyItemData.class)),
+            w.a("onTapViewMoreText", g0.b(OnTapViewMoreTextData.class))
          )
 
       private fun emitOnLongPressItem(view: View): Boolean {
@@ -164,31 +161,31 @@ public object MessageViewManagers {
 
       @JvmStatic
       fun `setData$lambda$6$lambda$3`(var0: MessageViewManagers.MessageBundleViewManager, var1: MessageBundleView, var2: View) {
-         r.h(var0, "this$0");
-         r.h(var1, "$view");
+         q.h(var0, "this$0");
+         q.h(var1, "$view");
          var0.emitOnTapItem(var1);
       }
 
       @JvmStatic
       fun `setData$lambda$6$lambda$4`(var0: MessageViewManagers.MessageBundleViewManager, var1: MessageBundleView, var2: View): Boolean {
-         r.h(var0, "this$0");
-         r.h(var1, "$view");
+         q.h(var0, "this$0");
+         q.h(var1, "$view");
          return var0.emitOnLongPressItem(var1);
       }
 
       @JvmStatic
       fun `setData$lambda$6$lambda$5`(var0: MessageViewManagers.MessageBundleViewManager, var1: MessageBundleView, var2: View) {
-         r.h(var0, "this$0");
-         r.h(var1, "$view");
+         q.h(var0, "this$0");
+         q.h(var1, "$view");
          var0.emitOnTapViewMoreText(var1);
       }
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): MessageBundleView {
-         r.h(var1, "reactContext");
+         q.h(var1, "reactContext");
          val var2: MessageBundleView = new MessageBundleView(var1, null, 0, 6, null);
          var2.setMessageRowViewPool(this.messageRowViewPool);
          var2.setMessageAccessoriesViewPool(this.messageAccessoriesViewPool);
-         var2.setOnTruncateMessage(new Function1<MessageId, Unit>(this, var2) {
+         var2.setOnTruncateMessage(new Function1(this, var2) {
             final MessageBundleView $view;
             final MessageViewManagers.MessageBundleViewManager this$0;
 
@@ -199,7 +196,7 @@ public object MessageViewManagers {
             }
 
             public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
-               r.h(var1, "messageId");
+               q.h(var1, "messageId");
                MessageViewManagers.MessageBundleViewManager.access$emitOnTruncateMessage-Ayv7vGE(this.this$0, this.$view, var1);
             }
          });
@@ -223,7 +220,7 @@ public object MessageViewManagers {
 
       @ReactProp(name = "data")
       public open fun setData(view: MessageBundleView, value: String?) {
-         r.h(var1, "view");
+         q.h(var1, "view");
          if (var2 != null) {
             val var3: Json = MessageViewManagers.access$getJson$p();
             var3.a();
@@ -231,7 +228,7 @@ public object MessageViewManagers {
                var3.b(MessageBundleView.MessageBundle.Companion.serializer(), var2) as MessageBundleView.MessageBundle,
                new a(this, var1),
                new b(this, var1),
-               new Function1<MessageId, Unit>(this, var1) {
+               new Function1(this, var1) {
                   final MessageBundleView $view;
                   final MessageViewManagers.MessageBundleViewManager this$0;
 
@@ -242,7 +239,7 @@ public object MessageViewManagers {
                   }
 
                   public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
-                     r.h(var1, "messageId");
+                     q.h(var1, "messageId");
                      MessageViewManagers.MessageBundleViewManager.access$emitOnTapReply-Ayv7vGE(this.this$0, this.$view, var1);
                   }
                },
@@ -262,7 +259,7 @@ public object MessageViewManagers {
          new DCDMessageViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): DecoratedMessageView {
-         r.h(var1, "reactContext");
+         q.h(var1, "reactContext");
          return new DecoratedMessageView(var1, null, 2, null);
       }
 
@@ -279,7 +276,7 @@ public object MessageViewManagers {
 
       @ReactProp(name = "row")
       public open fun setRow(view: DecoratedMessageView, value: String?) {
-         r.h(var1, "view");
+         q.h(var1, "view");
          if (var2 != null) {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var4: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
@@ -296,14 +293,14 @@ public object MessageViewManagers {
             }
 
             val var10: MessageBase = var4.getMessage();
-            r.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
+            q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
             val var7: Message = var10 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var11: MessageFrame = var4.getMessageFrame();
-            val var6: Context = var1.getContext();
-            r.g(var6, "view.context");
+            val var11: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var6: MessageFrame = var4.getMessageFrame();
+            val var5: Context = var1.getContext();
+            q.g(var5, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var7, var5, var11, MessageViewManagers.access$getEventHandler(var3, var4, var6), null, null, false, var4.isHighlight(), false, 368, null
+               var1, var7, var11, var6, MessageViewManagers.access$getEventHandler(var3, var4, var5), null, null, false, var4.isHighlight(), false, 368, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -322,7 +319,7 @@ public object MessageViewManagers {
       > = new DCDSystemMessageViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): SystemMessageWrapperView {
-         r.h(var1, "reactContext");
+         q.h(var1, "reactContext");
          return new SystemMessageWrapperView(var1, null, 2, null);
       }
 
@@ -339,16 +336,16 @@ public object MessageViewManagers {
 
       @ReactProp(name = "row")
       public open fun setRow(view: SystemMessageWrapperView, value: String?) {
-         r.h(var1, "view");
+         q.h(var1, "view");
          if (var2 != null) {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
-            r.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
+            q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
             val var8: Message = var4 as Message;
             val var6: MessageContext = MessageContextKt.getMessageContext(var7);
             val var5: Context = var1.getContext();
-            r.g(var5, "view.context");
+            q.g(var5, "getContext(...)");
             var1.setMessage(var8, var6, MessageViewManagers.access$getEventHandler(var3, var7, var5));
          }
       }

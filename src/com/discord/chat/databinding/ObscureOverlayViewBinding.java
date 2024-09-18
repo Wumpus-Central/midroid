@@ -38,27 +38,27 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
 
    public static ObscureOverlayViewBinding bind(View var0) {
       int var1 = R.id.blur_view;
-      BlurView var3 = (BlurView)a.a(var0, var1);
-      if (var3 != null) {
+      BlurView var2 = (BlurView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.description_label;
          TextView var7 = (TextView)a.a(var0, var1);
          if (var7 != null) {
             var1 = R.id.hide_button;
-            IconButtonView var2 = (IconButtonView)a.a(var0, var1);
-            if (var2 != null) {
+            IconButtonView var4 = (IconButtonView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.media_warning_icon;
-               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-               if (var8 != null) {
+               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.overlay_centered_container;
-                  LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-                  if (var5 != null) {
+                  LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.overlay_layout;
-                     ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-                     if (var4 != null) {
+                     ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
+                     if (var3 != null) {
                         var1 = R.id.reveal_button;
                         IconButtonView var6 = (IconButtonView)a.a(var0, var1);
                         if (var6 != null) {
-                           return new ObscureOverlayViewBinding(var0, var3, var7, var2, var8, var5, var4, var6);
+                           return new ObscureOverlayViewBinding(var0, var2, var7, var4, var5, var8, var3, var6);
                         }
                      }
                   }
@@ -79,6 +79,7 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

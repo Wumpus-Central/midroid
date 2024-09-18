@@ -7,15 +7,15 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import eh.p
-import eh.w
-import kotlin.jvm.internal.r
+import dh.p
+import dh.w
+import kotlin.jvm.internal.q
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
 
    init {
-      r.h(var1, "emoji");
+      q.h(var1, "emoji");
       super();
       this.emoji = var1;
    }
@@ -25,7 +25,7 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    }
 
    public fun copy(emoji: EmojiContentNode = var0.emoji): TapEmojiData {
-      r.h(var1, "emoji");
+      q.h(var1, "emoji");
       return new TapEmojiData(var1);
    }
 
@@ -35,7 +35,7 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       } else if (var1 !is TapEmojiData) {
          return false;
       } else {
-         return r.c(this.emoji, (var1 as TapEmojiData).emoji);
+         return q.c(this.emoji, (var1 as TapEmojiData).emoji);
       }
    }
 
@@ -43,13 +43,11 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       return this.emoji.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var2: WritableNativeMap;
       if (this.emoji is UnicodeEmojiContentNode) {
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               w.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), w.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
-            }
+            w.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), w.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
          );
       } else {
          if (this.emoji !is CustomEmojiContentNode) {
@@ -57,15 +55,13 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
          }
 
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               w.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
-               w.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
-               w.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
-            }
+            w.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
+            w.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
+            w.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
          );
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("node", var2)});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("node", var2));
    }
 
    public override fun toString(): String {

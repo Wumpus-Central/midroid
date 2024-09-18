@@ -11,22 +11,22 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerDelegate
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
-import eh.w
+import dh.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "StickerPickerRowView")
 internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowView>, StickerPickerRowViewManagerInterface<StickerPickerRowView> {
    private final val delegate: StickerPickerRowViewManagerDelegate<StickerPickerRowView, StickerPickerRowViewManager> =
       new StickerPickerRowViewManagerDelegate(this)
       private final val reactEvents: ReactEvents =
-      new ReactEvents(new Pair[]{w.a("onPressSticker", h0.b(OnPressStickerEvent.class)), w.a("onLongPressSticker", h0.b(OnLongPressStickerEvent.class))})
+      new ReactEvents(w.a("onPressSticker", g0.b(OnPressStickerEvent.class)), w.a("onLongPressSticker", g0.b(OnLongPressStickerEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): StickerPickerRowView {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       val var2: StickerPickerRowView = new StickerPickerRowView(var1);
-      var2.setOnPressSticker(new Function1<java.lang.String, Unit>(this, var1, var2) {
+      var2.setOnPressSticker(new Function1(this, var1, var2) {
          final ThemedReactContext $reactContext;
          final StickerPickerRowView $view;
          final StickerPickerRowViewManager this$0;
@@ -39,11 +39,11 @@ internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowV
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "stickerId");
+            q.h(var1, "stickerId");
             StickerPickerRowViewManager.access$getReactEvents$p(this.this$0).emitEvent(this.$reactContext, this.$view, new OnPressStickerEvent(var1));
          }
       });
-      var2.setOnLongPressSticker(new Function1<java.lang.String, Unit>(this, var1, var2) {
+      var2.setOnLongPressSticker(new Function1(this, var1, var2) {
          final ThemedReactContext $reactContext;
          final StickerPickerRowView $view;
          final StickerPickerRowViewManager this$0;
@@ -56,7 +56,7 @@ internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowV
          }
 
          public final void invoke(java.lang.String var1) {
-            r.h(var1, "stickerId");
+            q.h(var1, "stickerId");
             StickerPickerRowViewManager.access$getReactEvents$p(this.this$0).emitEvent(this.$reactContext, this.$view, new OnLongPressStickerEvent(var1));
          }
       });
@@ -76,14 +76,14 @@ internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowV
    }
 
    public open fun onDropViewInstance(view: StickerPickerRowView) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       super.onDropViewInstance(var1);
       var1.clean();
    }
 
    @ReactProp(name = "rowData")
    public open fun setRowData(view: StickerPickerRowView, value: ReadableMap?) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       if (var2 != null) {
          var1.setRowData(StickerPickerRowDataSerializationUtilsKt.deserializeStickerPickerRowData(var2));
       }

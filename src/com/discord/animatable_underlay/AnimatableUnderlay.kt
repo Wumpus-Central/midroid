@@ -13,8 +13,10 @@ import com.discord.react_activities.ReactRootView
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
+import kh.a
+import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    public final var clipDirectionX: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX
@@ -42,7 +44,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    private final var width: Float
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1);
       this.clipDirectionX = AnimatableUnderlay.ClipDirectionX.CENTERED;
       this.clipDirectionY = AnimatableUnderlay.ClipDirectionY.CENTERED;
@@ -68,10 +70,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
          if (var5 != 2) {
             if (var5 == 3) {
                val var15: RectF = this.pathRect;
-               val var4: Float = this.height;
-               val var2: Float = this.shapeHeight;
+               val var2: Float = this.height;
+               val var4: Float = this.shapeHeight;
                this.pathRect.top = (this.height - this.shapeHeight) / 2;
-               var15.bottom = var4 - (var4 - var2) / 2;
+               var15.bottom = var2 - (var2 - var4) / 2;
             }
          } else {
             val var16: RectF = this.pathRect;
@@ -90,10 +92,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
          if (var5 != 2) {
             if (var5 == 3) {
                val var19: RectF = this.pathRect;
-               val var13: Float = this.width;
-               val var9: Float = this.shapeWidth;
+               val var9: Float = this.width;
+               val var12: Float = this.shapeWidth;
                this.pathRect.left = (this.width - this.shapeWidth) / 2;
-               var19.right = var13 - (var13 - var9) / 2;
+               var19.right = var9 - (var9 - var12) / 2;
             }
          } else {
             val var20: RectF = this.pathRect;
@@ -115,7 +117,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    }
 
    protected open fun dispatchDraw(canvas: Canvas) {
-      r.h(var1, "canvas");
+      q.h(var1, "canvas");
       this.drawCustomShape(var1);
       var1.clipPath(this.path);
       super.dispatchDraw(var1);
@@ -126,7 +128,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       ReactRootView.Companion
          .setOnInterceptTouchEvent(
             this,
-            new Function1<MotionEvent, Unit>(this) {
+            new Function1(this) {
                final AnimatableUnderlay this$0;
 
                {
@@ -135,43 +137,31 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
                }
 
                public final void invoke(MotionEvent var1) {
-                  r.h(var1, "e");
+                  q.h(var1, "e");
                   val var2: Int = var1.getAction();
                   if (var2 != 0) {
                      if (var2 == 1 || var2 == 3) {
                         ReactViewGroupExtensionsKt.setPointerEventsInternal(this.this$0, PointerEvents.AUTO);
                      }
                   } else {
-                     var var5: Boolean;
+                     var var4: Boolean;
                      if (var1.getX() >= this.this$0.getX() && var1.getX() <= this.this$0.getX() + AnimatableUnderlay.access$getWidth$p(this.this$0)) {
-                        var5 = true;
+                        var4 = true;
                      } else {
-                        var5 = false;
+                        var4 = false;
                      }
 
-                     var var3: Boolean;
-                     if (var1.getY() >= this.this$0.getY() && var1.getY() <= this.this$0.getY() + AnimatableUnderlay.access$getHeight$p(this.this$0)) {
-                        var3 = true;
-                     } else {
-                        var3 = false;
-                     }
-
-                     if (var3 && var5) {
+                     if (var1.getY() >= this.this$0.getY() && var1.getY() <= this.this$0.getY() + AnimatableUnderlay.access$getHeight$p(this.this$0) && var4) {
                         if (var1.getX() >= this.this$0.getX()
                            && var1.getX() <= this.this$0.getX() + (AnimatableUnderlay.access$getWidth$p(this.this$0) - this.this$0.getShapeWidth())) {
-                           var5 = true;
+                           var4 = true;
                         } else {
-                           var5 = false;
+                           var4 = false;
                         }
 
                         if (var1.getY() >= this.this$0.getY()
-                           && var1.getY() <= this.this$0.getY() + (AnimatableUnderlay.access$getHeight$p(this.this$0) - this.this$0.getShapeHeight())) {
-                           var3 = true;
-                        } else {
-                           var3 = false;
-                        }
-
-                        if (var3 || var5) {
+                              && var1.getY() <= this.this$0.getY() + (AnimatableUnderlay.access$getHeight$p(this.this$0) - this.this$0.getShapeHeight())
+                           || var4) {
                            ReactViewGroupExtensionsKt.setPointerEventsInternal(this.this$0, PointerEvents.NONE);
                         }
                      }
@@ -196,9 +186,23 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       CENTERED,
       FROM_LEFT,
       FROM_RIGHT      @JvmStatic
-      private AnimatableUnderlay.ClipDirectionX[] $VALUES = $values();
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private AnimatableUnderlay.ClipDirectionX[] $VALUES;
       @JvmStatic
       public AnimatableUnderlay.ClipDirectionX.Companion Companion = new AnimatableUnderlay.ClipDirectionX.Companion(null);
+
+      @JvmStatic
+      fun {
+         val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
+         $VALUES = var0;
+         $ENTRIES = a.a(var0);
+      }
+
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
+      }
 
       public companion object {
          public fun parse(clipDirectionX: String?): com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX {
@@ -229,9 +233,23 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       CENTERED,
       FROM_BOTTOM,
       FROM_TOP      @JvmStatic
-      private AnimatableUnderlay.ClipDirectionY[] $VALUES = $values();
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private AnimatableUnderlay.ClipDirectionY[] $VALUES;
       @JvmStatic
       public AnimatableUnderlay.ClipDirectionY.Companion Companion = new AnimatableUnderlay.ClipDirectionY.Companion(null);
+
+      @JvmStatic
+      fun {
+         val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
+         $VALUES = var0;
+         $ENTRIES = a.a(var0);
+      }
+
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
+      }
 
       public companion object {
          public fun parse(clipDirectionY: String?): com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionY {

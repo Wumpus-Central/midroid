@@ -1,7 +1,7 @@
 package com.discord.keyboard
 
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object KeyboardManager {
    private final val keyboardListeners: MutableList<KeyboardEvent> = new ArrayList()
@@ -11,7 +11,7 @@ public object KeyboardManager {
          synchronized (this){} // $VF: monitorenter 
 
          try {
-            r.h(var1, "listener");
+            q.h(var1, "listener");
             keyboardListeners.add(var1);
          } catch (var2: java.lang.Throwable) {
             // $VF: monitorexit
@@ -30,9 +30,9 @@ public object KeyboardManager {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1047)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.insertSemaphore(FinallyProcessor.java:340)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:100)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.insertSemaphore(FinallyProcessor.java:350)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:99)
       //
       // Bytecode:
       // 00: aload 0
@@ -42,21 +42,22 @@ public object KeyboardManager {
       // 0a: astore 2
       // 0b: aload 2
       // 0c: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 11: ifeq 26
+      // 11: ifeq 2a
       // 14: aload 2
       // 15: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 1a: checkcast com/discord/keyboard/KeyboardEvent
       // 1d: iload 1
       // 1e: invokeinterface com/discord/keyboard/KeyboardEvent.onKeyboardStateChanged (Z)V 2
       // 23: goto 0b
-      // 26: aload 0
-      // 27: monitorexit
-      // 28: return
-      // 29: astore 2
+      // 26: astore 2
+      // 27: goto 2d
       // 2a: aload 0
       // 2b: monitorexit
-      // 2c: aload 2
-      // 2d: athrow
+      // 2c: return
+      // 2d: aload 0
+      // 2e: monitorexit
+      // 2f: aload 2
+      // 30: athrow
    }
 
    public fun removeKeyboardListener(listener: KeyboardEvent) {
@@ -64,7 +65,7 @@ public object KeyboardManager {
          synchronized (this){} // $VF: monitorenter 
 
          try {
-            r.h(var1, "listener");
+            q.h(var1, "listener");
             keyboardListeners.remove(var1);
          } catch (var2: java.lang.Throwable) {
             // $VF: monitorexit

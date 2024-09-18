@@ -4,15 +4,15 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.q
 
 public data class TapSeparatorData(type: String, context: String? = null) : ReactEvent {
    public final val context: String?
    public final val type: String
 
    init {
-      r.h(var1, "type");
+      q.h(var1, "type");
       super();
       this.type = var1;
       this.context = var2;
@@ -27,7 +27,7 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
    }
 
    public fun copy(type: String = var0.type, context: String? = var0.context): TapSeparatorData {
-      r.h(var1, "type");
+      q.h(var1, "type");
       return new TapSeparatorData(var1, var2);
    }
 
@@ -38,10 +38,10 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.type, var1.type)) {
+         if (!q.c(this.type, var1.type)) {
             return false;
          } else {
-            return r.c(this.context, var1.context);
+            return q.c(this.context, var1.context);
          }
       }
    }
@@ -58,8 +58,8 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
       return var2 * 31 + var1;
    }
 
-   public open fun serialize(): WritableMap {
-      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("type", this.type)});
+   public override fun serialize(): WritableMap {
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(w.a("type", this.type));
       if (this.context != null) {
          var1.putString("context", this.context);
       }
@@ -68,14 +68,14 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.type;
-      val var1: java.lang.String = this.context;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapSeparatorData(type=");
-      var3.append(var2);
-      var3.append(", context=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.type;
+      val var3: java.lang.String = this.context;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapSeparatorData(type=");
+      var2.append(var1);
+      var2.append(", context=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 }

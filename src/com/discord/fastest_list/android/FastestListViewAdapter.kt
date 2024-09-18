@@ -1,7 +1,7 @@
 package com.discord.fastest_list.android
 
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.recyclerview.widget.RecyclerView
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderConfig
 import com.discord.fastest_list.android.view_holder.FastestListViewHolder
@@ -10,24 +10,24 @@ import com.discord.fastest_list.android.view_holder.FastestListViewHolderListFoo
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderListHeader
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderSectionFooter
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderSectionHeader
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
       placeholderConfig: FastestListPlaceholderConfig,
       sections: FastestListSections,
       onUnexpectedItemSize: (Entry, Int) -> Unit
    )
-   : Adapter<FastestListViewHolder> {
+   : RecyclerView.Adapter {
    private final val layoutManager: FastestListLayoutManager
    private final var placeholderConfig: FastestListPlaceholderConfig
    private final val sections: FastestListSections
    private final val onUnexpectedItemSize: (Entry, Int) -> Unit
 
    init {
-      r.h(var1, "layoutManager");
-      r.h(var2, "placeholderConfig");
-      r.h(var3, "sections");
-      r.h(var4, "onUnexpectedItemSize");
+      q.h(var1, "layoutManager");
+      q.h(var2, "placeholderConfig");
+      q.h(var3, "sections");
+      q.h(var4, "onUnexpectedItemSize");
       super();
       this.layoutManager = var1;
       this.placeholderConfig = var2;
@@ -36,25 +36,25 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
       this.setHasStableIds(true);
    }
 
-   public open fun getItemCount(): Int {
+   public override fun getItemCount(): Int {
       return this.sections.getItemCount();
    }
 
-   public open fun getItemId(position: Int): Long {
+   public override fun getItemId(position: Int): Long {
       return var1;
    }
 
-   public open fun getItemViewType(position: Int): Int {
+   public override fun getItemViewType(position: Int): Int {
       return this.sections.getItemViewType(var1);
    }
 
    public open fun onBindViewHolder(holder: FastestListViewHolder, position: Int) {
-      r.h(var1, "holder");
+      q.h(var1, "holder");
       var1.onBindViewHolder(this.sections.getItem(var2), this.layoutManager.getHorizontal(), this.placeholderConfig);
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FastestListViewHolder {
-      r.h(var1, "parent");
+      q.h(var1, "parent");
       val var3: Any;
       if (var2 != 0) {
          if (var2 != 1) {
@@ -85,14 +85,14 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
    }
 
    public open fun onViewRecycled(holder: FastestListViewHolder) {
-      r.h(var1, "holder");
+      q.h(var1, "holder");
       super.onViewRecycled(var1);
       var1.onViewRecycled();
    }
 
    public fun setPlaceholderConfig(placeholderConfig: FastestListPlaceholderConfig): Boolean {
-      r.h(var1, "placeholderConfig");
-      if (!r.c(this.placeholderConfig, var1)) {
+      q.h(var1, "placeholderConfig");
+      if (!q.c(this.placeholderConfig, var1)) {
          this.placeholderConfig = var1;
          return true;
       } else {
@@ -141,13 +141,13 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
       }
 
       public override fun toString(): String {
-         val var2: Int = this.position;
-         val var1: Int = this.count;
+         val var1: Int = this.position;
+         val var2: Int = this.count;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DataChanged(position=");
-         var3.append(var2);
-         var3.append(", count=");
          var3.append(var1);
+         var3.append(", count=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

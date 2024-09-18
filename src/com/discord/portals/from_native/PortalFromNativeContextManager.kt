@@ -6,10 +6,10 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.portals.utils.ViewRemoveFromParentKt
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import nk.u
+import ok.u
 
 public object PortalFromNativeContextManager {
    private final var _portalContextIdsFlow: MutableStateFlow<com.discord.portals.from_native.PortalFromNativeContextManager.Event?>
@@ -31,11 +31,11 @@ public object PortalFromNativeContextManager {
       onViewRemovedFromPortal: (View) -> Unit = <unrepresentable>.INSTANCE,
       returnViewToParent: (View) -> Unit
    ) {
-      r.h(var3, "view");
-      r.h(var4, "removeViewFromParent");
-      r.h(var5, "onViewAddedToPortal");
-      r.h(var6, "onViewRemovedFromPortal");
-      r.h(var7, "returnViewToParent");
+      q.h(var3, "view");
+      q.h(var4, "removeViewFromParent");
+      q.h(var5, "onViewAddedToPortal");
+      q.h(var6, "onViewRemovedFromPortal");
+      q.h(var7, "returnViewToParent");
       if (portalContextMap.get(var1) == null) {
          portalContextMap.put(var1, new PortalFromNativeContext(new WeakReference<>(var3), var4, var5, var6, var7));
       }
@@ -65,16 +65,16 @@ public object PortalFromNativeContextManager {
    }
 
    public fun registerView(portal: Double, portalView: FrameLayout) {
-      r.h(var3, "portalView");
-      val var5: PortalFromNativeContext = portalContextMap.get(var1);
-      if (var5 != null) {
-         val var4: View = var5.getView().get();
-         if (var4 != null) {
-            r.g(var4, "context.view.get() ?: return@let");
-            var5.getRemoveViewFromParent().invoke(var4);
-            var3.addView(var4);
+      q.h(var3, "portalView");
+      val var4: PortalFromNativeContext = portalContextMap.get(var1);
+      if (var4 != null) {
+         val var5: View = var4.getView().get();
+         if (var5 != null) {
+            q.e(var5);
+            var4.getRemoveViewFromParent().invoke(var5);
+            var3.addView(var5);
             ViewMeasureExtensionsKt.measureAndLayout(var3);
-            var5.getOnViewAddedToPortal().invoke(var4);
+            var4.getOnViewAddedToPortal().invoke(var5);
             _portalContextIdsFlow.setValue(PortalFromNativeContextManager.Event.PortalRegistered.INSTANCE);
          }
       }
@@ -89,7 +89,7 @@ public object PortalFromNativeContextManager {
             return;
          }
 
-         r.g(var4, "context.view.get() ?: return");
+         q.e(var4);
          ViewRemoveFromParentKt.removeFromParent(var4);
          var3.getOnViewRemovedFromPortal().invoke(var4);
          var3.getReturnViewToParent().invoke(var4);

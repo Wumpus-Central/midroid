@@ -3,11 +3,13 @@ package com.discord.chrome_custom_tabs
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo
-import android.content.pm.PackageManager.ResolveInfoFlags
 import android.net.Uri
 import android.os.Build.VERSION
+import c2.d1
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import k3.a
+import k3.b
+import kotlin.jvm.internal.q
 
 internal object CustomTabsPackages {
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"
@@ -19,20 +21,20 @@ internal object CustomTabsPackages {
       var var2: Intent = this.getDefaultViewIntentHandler();
       val var5: java.util.List;
       if (VERSION.SDK_INT >= 33) {
-         var5 = var1.getPackageManager().queryIntentActivities(var2, ResolveInfoFlags.of((long)0));
+         var5 = a.a(var1.getPackageManager(), var2, d1.a((long)0));
       } else {
          var5 = var1.getPackageManager().queryIntentActivities(var2, 0);
       }
 
-      r.g(var5, "if (Build.VERSION.SDK_IN…solveInfoFlags)\n        }");
+      q.e(var5);
       val var3: ArrayList = new ArrayList();
 
       for (ResolveInfo var6 : var5) {
          var2 = new Intent().setAction("android.support.customtabs.action.CustomTabsService").setPackage(var6.activityInfo.packageName);
-         r.g(var2, "Intent()\n               …activityInfo.packageName)");
+         q.g(var2, "setPackage(...)");
          val var8: ResolveInfo;
          if (VERSION.SDK_INT >= 33) {
-            var8 = var1.getPackageManager().resolveService(var2, ResolveInfoFlags.of((long)0));
+            var8 = b.a(var1.getPackageManager(), var2, d1.a((long)0));
          } else {
             var8 = var1.getPackageManager().resolveService(var2, 0);
          }
@@ -58,12 +60,12 @@ internal object CustomTabsPackages {
          .setAction("android.intent.action.VIEW")
          .addCategory("android.intent.category.BROWSABLE")
          .setData(Uri.fromParts("http", "", null));
-      r.g(var1, "Intent()\n            .se…mParts(\"http\", \"\", null))");
+      q.g(var1, "setData(...)");
       return var1;
    }
 
    public fun Context.getCustomTabsDefaultPackage(): String? {
-      r.h(var1, "<this>");
+      q.h(var1, "<this>");
       val var5: java.util.List = this.getCustomTabsPackages(var1);
       var var4: java.util.Iterator = var5.iterator();
 
@@ -77,7 +79,7 @@ internal object CustomTabsPackages {
          }
 
          var6 = var4.next();
-      } while (!r.c((java.lang.String)var6, "com.android.chrome"));
+      } while (!q.c((java.lang.String)var6, "com.android.chrome"));
 
       val var12: java.lang.String = var6 as java.lang.String;
       var var7: java.lang.String = var6 as java.lang.String;
@@ -91,7 +93,7 @@ internal object CustomTabsPackages {
             }
 
             var8 = var4.next();
-         } while (!r.c((java.lang.String)var8, "com.chrome.beta"));
+         } while (!q.c((java.lang.String)var8, "com.chrome.beta"));
 
          val var14: java.lang.String = var8 as java.lang.String;
          var7 = var8 as java.lang.String;
@@ -105,7 +107,7 @@ internal object CustomTabsPackages {
                }
 
                var9 = var4.next();
-            } while (!r.c((java.lang.String)var9, "com.chrome.dev"));
+            } while (!q.c((java.lang.String)var9, "com.chrome.dev"));
 
             val var16: java.lang.String = var9 as java.lang.String;
             var7 = var9 as java.lang.String;
@@ -119,12 +121,12 @@ internal object CustomTabsPackages {
                   }
 
                   var10 = var4.next();
-               } while (!r.c((java.lang.String)var10, "com.google.android.apps.chrome"));
+               } while (!q.c((java.lang.String)var10, "com.google.android.apps.chrome"));
 
                var3 = var10 as java.lang.String;
                var7 = var10 as java.lang.String;
                if (var3 == null) {
-                  var7 = h.c0(var5) as java.lang.String;
+                  var7 = i.f0(var5) as java.lang.String;
                }
             }
          }

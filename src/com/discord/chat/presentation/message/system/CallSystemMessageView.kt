@@ -17,16 +17,14 @@ import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.overlapping_circles.OverlappingItem
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
-import kk.f
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineScope
+import kotlin.jvm.internal.q
+import lk.f
 
 public class CallSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout {
    private final val binding: CallSystemMessageViewBinding
@@ -35,40 +33,40 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
    private final val redIconColor: Int
 
    fun CallSystemMessageView(var1: Context) {
-      r.h(var1, "context");
+      q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super(var1, var2);
-      this.greenIconColor = ColorUtilsKt.getColorCompat(this, color.green_360);
-      this.redIconColor = ColorUtilsKt.getColorCompat(this, color.red_400);
+      this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
+      this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
       this.grayIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
       val var5: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var5, "inflate(LayoutInflater.from(context), this)");
+      q.g(var5, "inflate(...)");
       this.binding = var5;
       AddSystemMessageCardStyleKt.addSystemMessageCardStyle(this);
       val var3: TextView = var5.message;
-      r.g(var5.message, "_init_$lambda$0");
+      q.e(var5.message);
       SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
       var3.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       val var4: TextView = var5.info;
-      r.g(var5.info, "_init_$lambda$1");
+      q.e(var5.info);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
    public fun setMessage(message: Message) {
-      r.h(var1, "message");
+      q.h(var1, "message");
       val var7: SimpleDraweeView = this.binding.icon;
-      r.g(this.binding.icon, "binding.icon");
+      q.g(this.binding.icon, "icon");
       val var5: java.lang.Boolean = var1.getMissed();
       val var6: java.lang.Boolean = java.lang.Boolean.TRUE;
       val var11: ReactAsset;
-      if (r.c(var5, java.lang.Boolean.TRUE)) {
+      if (q.c(var5, java.lang.Boolean.TRUE)) {
          var11 = ReactAsset.CallDisconnect;
       } else {
          var11 = ReactAsset.CallConnect;
@@ -76,11 +74,11 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ReactAssetUtilsKt.setReactAsset(var7, var11);
       val var12: SimpleDraweeView = this.binding.icon;
-      r.g(this.binding.icon, "binding.icon");
+      q.g(this.binding.icon, "icon");
       val var2: Int;
-      if (r.c(var1.isCallActive(), var6)) {
+      if (q.c(var1.isCallActive(), var6)) {
          var2 = this.greenIconColor;
-      } else if (r.c(var1.getMissed(), var6)) {
+      } else if (q.c(var1.getMissed(), var6)) {
          var2 = this.redIconColor;
       } else {
          var2 = this.grayIconColor;
@@ -89,25 +87,25 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       ColorUtilsKt.setTintColor(var12, var2);
       this.binding.message.setText(var1.getTitle());
       val var18: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var8: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("Binding ");
-      var13.append(var8);
-      AttachedViewCoroutineScope.cancelAllWork$default(var18, var13.toString(), null, 2, null);
-      if (r.c(var1.isCallActive(), var6)) {
+      val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("Binding ");
+      var8.append(var13);
+      AttachedViewCoroutineScope.cancelAllWork$default(var18, var8.toString(), null, 2, null);
+      if (q.c(var1.isCallActive(), var6)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
-         r.e(var14);
+         q.e(var14);
          f.d(
             CoroutineViewUtilsKt.getAttachedScope(this),
             null,
             null,
-            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, var14, var1, null)// $VF: Couldn't be decompiled
+            new Function2(this, var14, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1140,10 +1138,10 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       val var15: java.util.List = var1.getAvatarURLs();
       var var9: java.util.List = var15;
       if (var15 == null) {
-         var9 = h.i();
+         var9 = i.j();
       }
 
-      val var16: ArrayList = new ArrayList(h.t(var9, 10));
+      val var16: ArrayList = new ArrayList(i.u(var9, 10));
       val var10: java.util.Iterator = var9.iterator();
 
       while (var10.hasNext()) {

@@ -2,9 +2,9 @@ package com.discord.emoji_picker
 
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData.NativeSection
 import com.discord.misc.utilities.collections.StubbedList
-import eh.p
+import dh.p
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, offsetId: Long) : StubbedList<EmojiPickerItem> {
    private final val listHeaderIndices: List<Int>
@@ -19,7 +19,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
 
 
    init {
-      r.h(var1, "nativeSection");
+      q.h(var1, "nativeSection");
       super();
       this.nativeSection = var1;
       this.offsetId = var2;
@@ -33,10 +33,10 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
       this.listSize = var4;
       val var6: java.util.List = this.nativeSection;
       var var9: Int = 0;
-      var4 = h.t(var6, 9);
+      var4 = i.u(var6, 9);
       val var10: Any;
       if (var4 == 0) {
-         var10 = h.d(var9);
+         var10 = i.e(var9);
       } else {
          val var5: ArrayList = new ArrayList(var4 + 1);
          var5.add(var9);
@@ -49,7 +49,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
          var10 = var5;
       }
 
-      this.listHeaderIndices = h.T((java.util.List)var10, 1);
+      this.listHeaderIndices = i.W((java.util.List)var10, 1);
    }
 
    public open operator fun get(index: Int): EmojiPickerItem {

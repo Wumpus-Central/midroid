@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.w0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.x0
+import yk.g0.a
 
 @f
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
@@ -22,22 +22,12 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
    public final val timestamp: Long
 
    init {
-      r.h(var3, "full");
-      r.h(var4, "formatted");
+      q.h(var3, "full");
+      q.h(var4, "formatted");
       super(null);
       this.timestamp = var1;
       this.full = var3;
       this.formatted = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: TimestampContentNode, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.E(var2, 0, var0.timestamp);
-      var1.z(var2, 1, var0.full);
-      var1.z(var2, 2, var0.formatted);
    }
 
    public operator fun component1(): Long {
@@ -53,8 +43,8 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
    }
 
    public fun copy(timestamp: Long = var0.timestamp, full: String = var0.full, formatted: String = var0.formatted): TimestampContentNode {
-      r.h(var3, "full");
-      r.h(var4, "formatted");
+      q.h(var3, "full");
+      q.h(var4, "formatted");
       return new TimestampContentNode(var1, var3, var4);
    }
 
@@ -67,10 +57,10 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
          var1 = var1;
          if (this.timestamp != var1.timestamp) {
             return false;
-         } else if (!r.c(this.full, var1.full)) {
+         } else if (!q.c(this.full, var1.full)) {
             return false;
          } else {
-            return r.c(this.formatted, var1.formatted);
+            return q.c(this.formatted, var1.formatted);
          }
       }
    }
@@ -81,20 +71,20 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var4: java.lang.String = this.full;
+      val var3: java.lang.String = this.full;
       val var5: java.lang.String = this.formatted;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TimestampContentNode(timestamp=");
-      var3.append(var1);
-      var3.append(", full=");
-      var3.append(var4);
-      var3.append(", formatted=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TimestampContentNode(timestamp=");
+      var4.append(var1);
+      var4.append(", full=");
+      var4.append(var3);
+      var4.append(", formatted=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : f0<TimestampContentNode> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -113,21 +103,21 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{w0.a, a2.a, a2.a};
+         return new KSerializer[]{x0.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): TimestampContentNode {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var5: Long;
          var var7: java.lang.String;
          var var10: java.lang.String;
-         if (var9.p()) {
-            var5 = var9.f(var8, 0);
-            var7 = var9.m(var8, 1);
-            var10 = var9.m(var8, 2);
+         if (var9.y()) {
+            var5 = var9.h(var8, 0);
+            var7 = var9.t(var8, 1);
+            var10 = var9.t(var8, 2);
             var2 = 7;
          } else {
             var7 = null;
@@ -137,7 +127,7 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -145,14 +135,14 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
                            throw new n(var4);
                         }
 
-                        var10 = var9.m(var8, 2);
+                        var10 = var9.t(var8, 2);
                         var2 |= 4;
                      } else {
-                        var7 = var9.m(var8, 1);
+                        var7 = var9.t(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var5 = var9.f(var8, 0);
+                     var5 = var9.h(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -161,20 +151,20 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
             }
          }
 
-         var9.c(var8);
+         var9.b(var8);
          return new TimestampContentNode(var2, var5, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TimestampContentNode) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         TimestampContentNode.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         TimestampContentNode.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

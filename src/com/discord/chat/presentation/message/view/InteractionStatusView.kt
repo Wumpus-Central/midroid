@@ -27,27 +27,27 @@ public class InteractionStatusView  public constructor(context: Context, attrs: 
    private final var binding: InteractionStatusViewBinding
 
    fun InteractionStatusView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       val var3: InteractionStatusViewBinding = InteractionStatusViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(LayoutInflater.from(context), this)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
       val var4: SimpleDraweeView = var3.viewInteractionStatusDangerIcon;
-      kotlin.jvm.internal.r.g(var3.viewInteractionStatusDangerIcon, "_init_$lambda$0");
+      kotlin.jvm.internal.q.e(var3.viewInteractionStatusDangerIcon);
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Warning);
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextDanger());
    }
 
    public fun setInteractionStatus(messageId: MessageId, interactionStatus: InteractionStatus) {
-      kotlin.jvm.internal.r.h(var1, "messageId");
-      kotlin.jvm.internal.r.h(var2, "interactionStatus");
+      kotlin.jvm.internal.q.h(var1, "messageId");
+      kotlin.jvm.internal.q.h(var2, "interactionStatus");
       val var7: ProgressDots = this.binding.viewInteractionStatusLoadingDots;
-      kotlin.jvm.internal.r.g(this.binding.viewInteractionStatusLoadingDots, "binding.viewInteractionStatusLoadingDots");
+      kotlin.jvm.internal.q.g(this.binding.viewInteractionStatusLoadingDots, "viewInteractionStatusLoadingDots");
       var var4: Byte;
       if (var2.isLoading()) {
          var4 = 0;
@@ -57,27 +57,26 @@ public class InteractionStatusView  public constructor(context: Context, attrs: 
 
       var7.setVisibility(var4);
       val var14: SimpleDraweeView = this.binding.viewInteractionStatusDangerIcon;
-      kotlin.jvm.internal.r.g(this.binding.viewInteractionStatusDangerIcon, "binding.viewInteractionStatusDangerIcon");
+      kotlin.jvm.internal.q.g(this.binding.viewInteractionStatusDangerIcon, "viewInteractionStatusDangerIcon");
+      var4 = (byte)8;
       if (var2.isFailed()) {
          var4 = (byte)0;
-      } else {
-         var4 = (byte)8;
       }
 
       var14.setVisibility(var4);
       val var15: TextView = this.binding.viewInteractionStatusLabelMessage;
-      kotlin.jvm.internal.r.g(this.binding.viewInteractionStatusLabelMessage, "setInteractionStatus_ntcYbpo$lambda$2");
-      val var9: StructurableText = var2.getText();
-      val var8: Context = var15.getContext();
+      kotlin.jvm.internal.q.e(this.binding.viewInteractionStatusLabelMessage);
+      val var8: StructurableText = var2.getText();
+      val var9: Context = var15.getContext();
       val var10: FontMetrics = var15.getPaint().getFontMetrics();
-      kotlin.jvm.internal.r.g(var10, "paint.fontMetrics");
+      kotlin.jvm.internal.q.g(var10, "getFontMetrics(...)");
       val var3: Float = TextUtilsKt.getBaselineHeightPx(var10);
       val var16: TextPaint = var15.getPaint();
-      kotlin.jvm.internal.r.g(var8, "context");
-      kotlin.jvm.internal.r.g(var16, "paint");
+      kotlin.jvm.internal.q.e(var9);
+      kotlin.jvm.internal.q.e(var16);
       val var11: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var9,
          var8,
+         var9,
          var1,
          false,
          false,

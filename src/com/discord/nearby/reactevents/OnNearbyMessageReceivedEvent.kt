@@ -1,9 +1,8 @@
 package com.discord.nearby.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,28 +10,20 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.g0.a
 
 @f
 public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
    public final val body: String
 
    init {
-      r.h(var1, "body");
+      q.h(var1, "body");
       super();
       this.body = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnNearbyMessageReceivedEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.z(var2, 0, var0.body);
    }
 
    public operator fun component1(): String {
@@ -40,7 +31,7 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
    }
 
    public fun copy(body: String = var0.body): OnNearbyMessageReceivedEvent {
-      r.h(var1, "body");
+      q.h(var1, "body");
       return new OnNearbyMessageReceivedEvent(var1);
    }
 
@@ -50,7 +41,7 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
       } else if (var1 !is OnNearbyMessageReceivedEvent) {
          return false;
       } else {
-         return r.c(this.body, (var1 as OnNearbyMessageReceivedEvent).body);
+         return q.c(this.body, (var1 as OnNearbyMessageReceivedEvent).body);
       }
    }
 
@@ -58,8 +49,8 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
       return this.body.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -71,7 +62,7 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
       return var1.toString();
    }
 
-   public object `$serializer` : f0<OnNearbyMessageReceivedEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -88,31 +79,31 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a2.a};
+         return new KSerializer[]{b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnNearbyMessageReceivedEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var8: java.lang.String;
          if (var5) {
-            var8 = var7.m(var6, 0);
+            var8 = var7.t(var6, 0);
          } else {
             var2 = 0;
             var8 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.m(var6, 0);
+                  var8 = var7.t(var6, 0);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -120,20 +111,20 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new OnNearbyMessageReceivedEvent(var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnNearbyMessageReceivedEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         OnNearbyMessageReceivedEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         OnNearbyMessageReceivedEvent.write$Self$nearby_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

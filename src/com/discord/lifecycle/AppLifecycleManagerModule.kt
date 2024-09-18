@@ -1,22 +1,42 @@
 package com.discord.lifecycle
 
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.ProcessLifecycleOwner
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
+import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
-import eh.w
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 
-public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule, LifecycleEventListener {
+public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule, LifecycleEventListener, DefaultLifecycleObserver {
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("onHostDestroy", h0.b(OnHostDestroyEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("onHostDestroy", g0.b(OnHostDestroyEvent.class)));
       var1.addLifecycleEventListener(this);
+      if (ThreadUtilsKt.isOnMainThread()) {
+         ProcessLifecycleOwner.h().getLifecycle().a(this);
+      } else {
+         ThreadUtilsKt.getUiHandler().post(new Runnable(this) {
+            final AppLifecycleManagerModule this$0;
+
+            {
+               this.this$0 = var1;
+            }
+
+            @Override
+            public final void run() {
+               ProcessLifecycleOwner.h().getLifecycle().a(this.this$0);
+            }
+         });
+      }
    }
 
    public open fun getName(): String {
@@ -24,15 +44,32 @@ public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : 
    }
 
    public open fun onHostDestroy() {
-      val var1: ReactEvents = this.reactEvents;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "reactApplicationContext");
-      var1.emitModuleEvent(var2, new OnHostDestroyEvent());
+      val var2: ReactEvents = this.reactEvents;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.emitModuleEvent(var1, new OnHostDestroyEvent());
    }
 
    public open fun onHostPause() {
    }
 
    public open fun onHostResume() {
+   }
+
+   public override fun onStart(owner: LifecycleOwner) {
+      q.h(var1, "owner");
+      DefaultLifecycleObserver.super.onStart(var1);
+      isForegrounded = true;
+   }
+
+   public override fun onStop(owner: LifecycleOwner) {
+      q.h(var1, "owner");
+      DefaultLifecycleObserver.super.onStop(var1);
+      isForegrounded = false;
+   }
+
+   public companion object {
+      public final var isForegrounded: Boolean
+         private set
    }
 }

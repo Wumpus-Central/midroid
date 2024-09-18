@@ -4,49 +4,41 @@ import android.net.Uri
 import com.facebook.drawee.controller.AbstractDraweeControllerBuilder
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
-import com.facebook.drawee.view.c
-import e4.f
-import kotlin.jvm.internal.r
+import g4.f
+import kotlin.jvm.internal.q
 
 public fun SimpleDraweeView.setOptionalImageUrl(imageUrl: String?, autoPlayAnimations: Boolean? = null, controllerListener: ControllerListener<in Any>? = null) {
-   var var5: Byte;
-   var var7: Boolean;
-   var var8: Uri;
-   label29: {
-      r.h(var0, "<this>");
-      var8 = f.o(var1);
-      var5 = 0;
-      if (var8 != null) {
-         val var9: java.lang.String = var8.getLastPathSegment();
-         if (var9 != null && kotlin.text.f.s(var9, ".gif", true)) {
-            var7 = true;
-            break label29;
+   var var4: Byte;
+   var var5: Boolean;
+   var var6: Uri;
+   label26: {
+      q.h(var0, "<this>");
+      var6 = f.o(var1);
+      var4 = 0;
+      if (var6 != null) {
+         val var7: java.lang.String = var6.getLastPathSegment();
+         if (var7 != null) {
+            var5 = true;
+            if (h.s(var7, ".gif", true)) {
+               break label26;
+            }
          }
       }
 
-      var7 = false;
+      var5 = false;
    }
 
-   val var10: AbstractDraweeControllerBuilder = c.a(var0);
+   val var8: AbstractDraweeControllerBuilder = var0.getControllerBuilder();
    if (var2 != null) {
-      var7 = var2;
+      var5 = var2;
    }
 
-   var0.setController(var10.z(var7).C(var3).a(var8).b(var0.getController()).build());
-   var var4: Boolean = true;
-   if (var1 != null) {
-      if (kotlin.text.f.x(var1)) {
-         var4 = true;
-      } else {
-         var4 = false;
-      }
+   var0.setController(var8.B(var5).E(var3).b(var6).c(var0.getController()).a());
+   if (var1 == null || h.x(var1)) {
+      var4 = 8;
    }
 
-   if (var4) {
-      var5 = 8;
-   }
-
-   var0.setVisibility(var5);
+   var0.setVisibility(var4);
 }
 
 @JvmSynthetic

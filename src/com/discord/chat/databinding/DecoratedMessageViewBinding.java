@@ -36,6 +36,7 @@ public final class DecoratedMessageViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -7,13 +7,13 @@ usesFramework:
   tag: null
 sdkInfo:
   minSdkVersion: 24
-  targetSdkVersion: 33
+  targetSdkVersion: 34
 packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 245015
-  versionName: 245.15 - Stable
+  versionCode: 247020
+  versionName: 247.20 - Stable
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -23,22 +23,18 @@ unknownFiles:
   asset-delivery.properties: 8
   billing-ktx.properties: 8
   billing.properties: 8
+  client_analytics.proto: 8
   core-common.properties: 8
   firebase-annotations.properties: 8
-  firebase-common.properties: 8
-  firebase-components.properties: 8
-  firebase-datatransport.properties: 8
   firebase-encoders-json.properties: 8
   firebase-encoders-proto.properties: 8
   firebase-encoders.properties: 8
   firebase-iid-interop.properties: 8
-  firebase-installations-interop.properties: 8
-  firebase-installations.properties: 8
   firebase-measurement-connector.properties: 8
-  firebase-messaging.properties: 8
-  google-http-client.properties: 0
   googleid.properties: 8
   kotlin-tooling-metadata.json: 8
+  messaging_event.proto: 8
+  messaging_event_extension.proto: 8
   play-services-ads-identifier.properties: 8
   play-services-analytics-impl.properties: 8
   play-services-analytics.properties: 8
@@ -56,15 +52,9 @@ unknownFiles:
   play-services-tasks.properties: 8
   review-ktx.properties: 8
   review.properties: 8
-  transport-api.properties: 8
-  transport-backend-cct.properties: 8
-  transport-runtime.properties: 8
   stamp-cert-sha256: 8
-  com/google/api/client/googleapis/google-api-client.properties: 0
-  com/google/api/client/googleapis/google.jks: 8
   okhttp3/internal/publicsuffix/NOTICE: 8
   okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
-  org/apache/http/version.properties: 8
 doNotCompress:
 - resources.arsc
 - META-INF/androidx.activity_activity.version
@@ -98,6 +88,7 @@ doNotCompress:
 - META-INF/androidx.fragment_fragment.version
 - META-INF/androidx.interpolator_interpolator.version
 - META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.lifecycle_lifecycle-extensions.version
 - META-INF/androidx.lifecycle_lifecycle-livedata-core.version
 - META-INF/androidx.lifecycle_lifecycle-livedata.version
 - META-INF/androidx.lifecycle_lifecycle-process.version
@@ -132,11 +123,11 @@ doNotCompress:
 - META-INF/com.google.android.material_material.version
 - META-INF/kotlinx_coroutines_android.version
 - META-INF/kotlinx_coroutines_core.version
+- META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
 - META-INF/services/ci.a
-- META-INF/services/k6.a
-- META-INF/services/kk.a0
-- META-INF/services/pk.v
+- META-INF/services/lk.z
+- META-INF/services/qk.v
 - png
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

@@ -1,11 +1,10 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-// $VF: synthetic class
-public final class g implements Runnable {
-   public final boolean j;
+import android.media.AudioManager.OnAudioFocusChangeListener;
 
-   @Override
-   public final void run() {
-      AudioPlayerManagerModule.b(this.j);
+// $VF: synthetic class
+public final class g implements OnAudioFocusChangeListener {
+   public final void onAudioFocusChange(int var1) {
+      AudioPlayerManager.a(var1);
    }
 }

@@ -3,19 +3,16 @@ package com.discord
 import com.discord.app_database.AppDatabaseModule
 import com.discord.bridge.DCDReactNativeHost
 import com.discord.bundle_updater.BundleUpdater
-import com.discord.bundle_updater.BundleUpdater.OtaBundle
 import com.discord.cache.CacheModule
 import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager
 import com.discord.client_info.ClientInfo
 import com.discord.crash_reporting.CrashReporting
 import com.discord.crash_reporting.PerformanceTracing
-import com.discord.flipper.FlipperUtils
 import com.discord.media_player.CacheDataSourceFactory
 import com.discord.play_delivery.PlayAssetDelivery
 import com.discord.react.FontManager
 import com.discord.react_fork_overrides.ReactForkOverrides
 import com.discord.resource_usage.DeviceResourceUsageRecorder
-import com.discord.resource_usage.DeviceResourceUsageRecorder.Companion
 import com.discord.sticker.sticker_types.RLottieUtils
 import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
@@ -23,32 +20,32 @@ import com.discord.tti_manager.TTIMetrics
 import com.discord.tti_manager.react.ReactMarkerListener
 import com.discord.utils.OkHttpDNSSelector
 import com.discord.utils.SoLoaderUtils
-import com.discord.utils.OkHttpDNSSelector.IPvMode
 import com.facebook.react.ReactApplication
+import com.facebook.react.ReactNativeHost
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import com.facebook.react.modules.i18nmanager.I18nUtil
 import com.facebook.react.modules.network.NetworkingModule
 import com.facebook.react.modules.websocket.WebSocketModule
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.Interceptor.Chain
 import okhttp3.OkHttpClient.Builder
 
 public class MainApplication : TTILoggingApplication, ReactApplication {
-   private final val host: DCDReactNativeHost = new DCDReactNativeHost(this)
+   public open val reactNativeHost: ReactNativeHost = new DCDReactNativeHost(this)
 
    @JvmStatic
    fun `initialize$lambda$0`(var0: Builder) {
       var0.b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
-         final Companion $receiver$inlined;
+         final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
             this.$receiver$inlined = var1;
          }
 
          public final Response intercept(Chain var1) {
-            r.h(var1, "chain");
+            q.h(var1, "chain");
             return this.$receiver$inlined.clientXHRInterceptor(var1);
          }
       });
@@ -56,14 +53,10 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
 
    @JvmStatic
    fun `initialize$lambda$1`(var0: Builder) {
-      var0.h(new OkHttpDNSSelector(IPvMode.IPV4_FIRST));
+      var0.i(new OkHttpDNSSelector(OkHttpDNSSelector.IPvMode.IPV4_FIRST));
    }
 
-   public open fun getReactNativeHost(): DCDReactNativeHost {
-      return this.host;
-   }
-
-   public open fun initialize() {
+   public override fun initialize() {
       var var3: TTIMetrics;
       var var5: java.lang.String;
       label11: {
@@ -76,14 +69,14 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          TTIMetrics.record$default(var3, "initializeAppDatabase()", 0L, null, false, 14, null);
          I18nUtil.getInstance().allowRTL(this, false);
          TTIMetrics.record$default(var3, "I18nUtil.allowRtl()", 0L, null, false, 14, null);
-         val var1: com.discord.bundle_updater.BundleUpdater.Companion = BundleUpdater.Companion;
+         val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "245.15", 245015, "google", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "247.20", 247020, "google", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
-         val var4: OtaBundle = var1.instance().getBundle();
+         val var4: BundleUpdater.OtaBundle = var1.instance().getBundle();
          if (var4 != null) {
             val var2: java.lang.String = var4.getReleaseName();
             var5 = var2;
@@ -92,7 +85,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@245.15.0-0+245015";
+         var5 = "discord_android@247.20.0-0+247020";
       }
 
       CrashReporting.INSTANCE.init(this, var5);
@@ -102,17 +95,16 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       TTIMetrics.record$default(var3, "SoLoaderUtils.init()", 0L, null, false, 14, null);
       NetworkingModule.setCustomClientBuilder(new b());
       WebSocketModule.setCustomClientBuilder(new c());
-      FlipperUtils.INSTANCE.init(this);
       RLottieUtils.INSTANCE.init();
       FontManager.INSTANCE.init(this);
       ThemeManager.INSTANCE.init(this);
       ReactForkOverrides.INSTANCE.init();
       AudioPlayerManager.INSTANCE.init(this);
       TTIMetrics.record$default(var3, "AudioPlayerManager.init()", 0L, null, false, 14, null);
-      DefaultNewArchitectureEntryPoint.load$default(false, false, null, 4, null);
+      DefaultNewArchitectureEntryPoint.load(false, false, false);
       PlayAssetDelivery.INSTANCE.initialize(this);
       TTIMetrics.record$default(var3, "DefaultNewArchitectureEntryPoint.load()", 0L, null, false, 14, null);
       TTIMetrics.record$default(var3, "Finish MainApplication.initialize()", 0L, null, false, 14, null);
-      this.host.getReactInstanceManager();
+      this.getReactNativeHost().getReactInstanceManager();
    }
 }

@@ -3,7 +3,7 @@ package com.discord.chat.bridge.gift
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import kotlinx.serialization.json.g
+import zk.g
 
 @JvmSynthetic
 fun `access$hasPrimitive`(var0: JsonObject, var1: java.lang.String): Boolean {
@@ -22,11 +22,11 @@ private fun JsonObject.hasPrimitive(key: String): Boolean {
       val var5: JsonPrimitive = g.p(var4);
       var2 = false;
       if (var5 != null) {
-         val var6: java.lang.String = var5.e();
+         val var6: java.lang.String = var5.a();
          var2 = false;
          if (var6 != null) {
             var2 = false;
-            if (f.x(var6) xor true) {
+            if (h.x(var6) xor true) {
                var2 = true;
             }
          }

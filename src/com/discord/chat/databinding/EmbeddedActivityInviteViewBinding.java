@@ -62,43 +62,43 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
 
    public static EmbeddedActivityInviteViewBinding bind(View var0) {
       int var1 = R.id.barrier_footer;
-      Barrier var10 = (Barrier)a.a(var0, var1);
-      if (var10 != null) {
+      Barrier var7 = (Barrier)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.item_bottom_container;
          ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
          if (var3 != null) {
             var1 = R.id.item_header;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.item_hero;
-               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.item_subtitle;
-                  MessageContentView var4 = (MessageContentView)a.a(var0, var1);
-                  if (var4 != null) {
+                  MessageContentView var12 = (MessageContentView)a.a(var0, var1);
+                  if (var12 != null) {
                      var1 = R.id.item_title;
-                     TextView var9 = (TextView)a.a(var0, var1);
-                     if (var9 != null) {
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.launch_button;
-                        DCDButton var11 = (DCDButton)a.a(var0, var1);
-                        if (var11 != null) {
+                        DCDButton var13 = (DCDButton)a.a(var0, var1);
+                        if (var13 != null) {
                            var1 = R.id.no_participants_text;
-                           TextView var12 = (TextView)a.a(var0, var1);
-                           if (var12 != null) {
+                           TextView var5 = (TextView)a.a(var0, var1);
+                           if (var5 != null) {
                               var1 = R.id.participants;
-                              OverlappingCirclesView var13 = (OverlappingCirclesView)a.a(var0, var1);
-                              if (var13 != null) {
+                              OverlappingCirclesView var11 = (OverlappingCirclesView)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.participants_container;
-                                 FrameLayout var7 = (FrameLayout)a.a(var0, var1);
-                                 if (var7 != null) {
+                                 FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+                                 if (var2 != null) {
                                     var1 = R.id.subtitle_icon;
-                                    SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                                    if (var8 != null) {
+                                    SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+                                    if (var10 != null) {
                                        var1 = R.id.subtitle_top_barrier;
-                                       Barrier var6 = (Barrier)a.a(var0, var1);
-                                       if (var6 != null) {
+                                       Barrier var8 = (Barrier)a.a(var0, var1);
+                                       if (var8 != null) {
                                           return new EmbeddedActivityInviteViewBinding(
-                                             var0, var10, var3, var2, var5, var4, var9, var11, var12, var13, var7, var8, var6
+                                             var0, var7, var3, var4, var9, var12, var6, var13, var5, var11, var2, var10, var8
                                           );
                                        }
                                     }
@@ -125,6 +125,7 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

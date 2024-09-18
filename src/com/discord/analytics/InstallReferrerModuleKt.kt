@@ -1,9 +1,9 @@
 package com.discord.analytics
 
 import com.android.installreferrer.api.InstallReferrerClient
-import eh.r
-import eh.s
-import kh.b
+import dh.r
+import dh.s
+import jh.b
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
@@ -17,10 +17,10 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 }
 
 private suspend fun InstallReferrerClient.await(): Int {
-   val var2: e = new e(b.b(var1), 1);
-   var2.D();
-   val var3: a = new a(var2) {
-      final CancellableContinuation<Integer> $continuation;
+   val var2: e = new e(b.c(var1), 1);
+   var2.C();
+   val var4: a = new a(var2) {
+      final CancellableContinuation $continuation;
 
       {
          this.$continuation = var1;
@@ -28,7 +28,7 @@ private suspend fun InstallReferrerClient.await(): Int {
 
       @Override
       public void onInstallReferrerServiceDisconnected() {
-         if (this.$continuation.b()) {
+         if (this.$continuation.c()) {
             kotlinx.coroutines.CancellableContinuation.a.a(this.$continuation, null, 1, null);
          }
       }
@@ -38,8 +38,8 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(r.b(var1));
       }
    };
-   var2.j(
-      new Function1<java.lang.Throwable, Unit>(var0) {
+   var2.f(
+      new Function1(var0) {
          final InstallReferrerClient $this_await;
 
          {
@@ -53,11 +53,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var2: eh.r.a = r.k;
+               val var2: dh.r.a = r.k;
                var5.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: eh.r.a = r.k;
+               val var6: dh.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,11 +67,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var4: eh.r.a = r.k;
-      var0.d(var3);
+      val var10: dh.r.a = r.k;
+      var0.d(var4);
       var7 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var10: eh.r.a = r.k;
+      val var3: dh.r.a = r.k;
       var7 = r.b(s.a(var5));
       break label20;
    }
@@ -81,8 +81,8 @@ private suspend fun InstallReferrerClient.await(): Int {
       var2.resumeWith(r.b(s.a(var8)));
    }
 
-   val var9: Any = var2.A();
-   if (var9 === b.c()) {
+   val var9: Any = var2.z();
+   if (var9 === b.e()) {
       g.c(var1);
    }
 

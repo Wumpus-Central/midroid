@@ -11,6 +11,6 @@ public final class c implements OnClickListener {
    public final ActivityInviteEmbedMessageAccessory k;
 
    public final void onClick(View var1) {
-      ActivityInviteEmbedViewHolder.a(this.j, this.k, var1);
+      ActivityInviteEmbedViewHolder.b(this.j, this.k, var1);
    }
 }

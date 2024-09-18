@@ -122,50 +122,25 @@ public data class ScrollState(isDragging: Boolean,
    }
 
    public override fun hashCode(): Int {
-      var var8: Byte = 1;
-      var var1: Byte = this.isDragging;
-      if (this.isDragging != 0) {
-         var1 = 1;
-      }
-
-      var var11: Byte = this.isSettling;
-      if (this.isSettling != 0) {
-         var11 = 1;
-      }
-
-      var var12: Byte = this.isNearBottom;
-      if (this.isNearBottom != 0) {
-         var12 = 1;
-      }
-
-      var var13: Byte = this.isAtBottom;
-      if (this.isAtBottom != 0) {
-         var13 = 1;
-      }
-
-      var var14: Byte = this.isNearTop;
-      if (this.isNearTop != 0) {
-         var14 = 1;
-      }
-
-      var var15: Byte = this.isAtTop;
-      if (this.isAtTop != 0) {
-         var15 = 1;
-      }
-
-      val var16: Int;
+      val var2: Int = java.lang.Boolean.hashCode(this.isDragging);
+      val var7: Int = java.lang.Boolean.hashCode(this.isSettling);
+      val var4: Int = java.lang.Boolean.hashCode(this.isNearBottom);
+      val var6: Int = java.lang.Boolean.hashCode(this.isAtBottom);
+      val var5: Int = java.lang.Boolean.hashCode(this.isNearTop);
+      val var3: Int = java.lang.Boolean.hashCode(this.isAtTop);
+      val var1: Int;
       if (this.scrollDirection == null) {
-         var16 = 0;
+         var1 = 0;
       } else {
-         var16 = this.scrollDirection.hashCode();
-      }
-
-      if (this.isFirstMessageVisible == 0) {
-         var8 = this.isFirstMessageVisible;
+         var1 = this.scrollDirection.hashCode();
       }
 
       return (
-               (((((((var1 * 31 + var11) * 31 + var12) * 31 + var13) * 31 + var14) * 31 + var15) * 31 + var16) * 31 + var8) * 31
+               (
+                        ((((((var2 * 31 + var7) * 31 + var4) * 31 + var6) * 31 + var5) * 31 + var3) * 31 + var1) * 31
+                           + java.lang.Boolean.hashCode(this.isFirstMessageVisible)
+                     )
+                     * 31
                   + Integer.hashCode(this.firstVisibleMessageIndex)
             )
             * 31
@@ -173,37 +148,37 @@ public data class ScrollState(isDragging: Boolean,
    }
 
    public override fun toString(): String {
-      val var3: Boolean = this.isDragging;
-      val var4: Boolean = this.isSettling;
+      val var4: Boolean = this.isDragging;
+      val var9: Boolean = this.isSettling;
       val var5: Boolean = this.isNearBottom;
-      val var8: Boolean = this.isAtBottom;
-      val var9: Boolean = this.isNearTop;
-      val var7: Boolean = this.isAtTop;
+      val var7: Boolean = this.isAtBottom;
+      val var8: Boolean = this.isNearTop;
+      val var6: Boolean = this.isAtTop;
       val var10: ScrollDirection = this.scrollDirection;
-      val var6: Boolean = this.isFirstMessageVisible;
-      val var1: Int = this.firstVisibleMessageIndex;
-      val var2: Int = this.lastVisibleMessageIndex;
+      val var3: Boolean = this.isFirstMessageVisible;
+      val var2: Int = this.firstVisibleMessageIndex;
+      val var1: Int = this.lastVisibleMessageIndex;
       val var11: StringBuilder = new StringBuilder();
       var11.append("ScrollState(isDragging=");
-      var11.append(var3);
-      var11.append(", isSettling=");
       var11.append(var4);
+      var11.append(", isSettling=");
+      var11.append(var9);
       var11.append(", isNearBottom=");
       var11.append(var5);
       var11.append(", isAtBottom=");
-      var11.append(var8);
-      var11.append(", isNearTop=");
-      var11.append(var9);
-      var11.append(", isAtTop=");
       var11.append(var7);
+      var11.append(", isNearTop=");
+      var11.append(var8);
+      var11.append(", isAtTop=");
+      var11.append(var6);
       var11.append(", scrollDirection=");
       var11.append(var10);
       var11.append(", isFirstMessageVisible=");
-      var11.append(var6);
+      var11.append(var3);
       var11.append(", firstVisibleMessageIndex=");
-      var11.append(var1);
-      var11.append(", lastVisibleMessageIndex=");
       var11.append(var2);
+      var11.append(", lastVisibleMessageIndex=");
+      var11.append(var1);
       var11.append(")");
       return var11.toString();
    }

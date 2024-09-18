@@ -5,20 +5,20 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.jakewharton.processphoenix.ProcessPhoenix
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class FontModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
    }
 
    @ReactMethod
    public fun getFontScale(callback: Callback) {
-      r.h(var1, "callback");
+      q.h(var1, "callback");
       val var2: FontManager = FontManager.INSTANCE;
       var1.invoke(new Object[]{FontManager.INSTANCE.getFontScale(this.reactContext), var2.getIsClassicChatFontScaleEnabled(this.reactContext)});
    }

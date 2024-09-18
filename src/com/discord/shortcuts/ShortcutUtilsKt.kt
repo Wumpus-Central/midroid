@@ -6,30 +6,30 @@ import android.graphics.Bitmap
 import android.os.Build.VERSION
 import androidx.core.app.Person
 import androidx.core.app.NotificationCompat.Builder
-import androidx.core.content.f
+import androidx.core.content.c
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.b
 import androidx.core.graphics.drawable.IconCompat
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun Builder.addShortcut(context: Context, shortcutInfo: ShortcutInfoCompat): Builder {
-   r.h(var0, "<this>");
-   r.h(var1, "context");
-   r.h(var2, "shortcutInfo");
-   var0.P(var2.g());
-   var0.H(new f(var2.g()));
+   q.h(var0, "<this>");
+   q.h(var1, "context");
+   q.h(var2, "shortcutInfo");
+   var0.Q(var2.g());
+   var0.I(new c(var2.g()));
    b.g(var1, var2);
    return var0;
 }
 
 public fun Context.createShortcut(id: String, label: CharSequence, longLabel: CharSequence, icon: Bitmap?, persons: List<Person>, intent: Intent, rank: Int = 0): ShortcutInfoCompat {
-   r.h(var0, "<this>");
-   r.h(var1, "id");
-   r.h(var2, "label");
-   r.h(var3, "longLabel");
-   r.h(var5, "persons");
-   r.h(var6, "intent");
-   val var10: androidx.core.content.pm.ShortcutInfoCompat.b = new androidx.core.content.pm.ShortcutInfoCompat.b(var0, var1).h(new f(var1)).m(var2).i(var3);
+   q.h(var0, "<this>");
+   q.h(var1, "id");
+   q.h(var2, "label");
+   q.h(var3, "longLabel");
+   q.h(var5, "persons");
+   q.h(var6, "intent");
+   val var10: ShortcutInfoCompat.b = new ShortcutInfoCompat.b(var0, var1).h(new c(var1)).m(var2).i(var3);
    val var8: IconCompat;
    if (var4 != null) {
       var8 = IconCompat.h(var4);
@@ -38,7 +38,7 @@ public fun Context.createShortcut(id: String, label: CharSequence, longLabel: Ch
    }
 
    val var9: ShortcutInfoCompat = var10.e(var8).f(var6).l(var7).j(true).c(getShareCategories()).k(var5.toArray(new Person[0])).a();
-   r.g(var9, "Builder(this, id)\n      …Array())\n        .build()");
+   q.g(var9, "build(...)");
    return var9;
 }
 
@@ -65,9 +65,9 @@ fun `createShortcut$default`(
 private fun getShareCategories(): Set<String> {
    val var0: java.util.Set;
    if (VERSION.SDK_INT < 25) {
-      var0 = u.c("com.discord.intent.category.DIRECT_SHARE_TARGET");
+      var0 = w.c("com.discord.intent.category.DIRECT_SHARE_TARGET");
    } else {
-      var0 = u.i(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
+      var0 = w.i(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
    }
 
    return var0;

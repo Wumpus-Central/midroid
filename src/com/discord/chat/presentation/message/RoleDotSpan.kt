@@ -8,7 +8,7 @@ import android.text.style.DynamicDrawableSpan
 import com.discord.chat.presentation.message.viewholder.RoleDotDrawable
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.FontManager
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 
 public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 20) : DynamicDrawableSpan {
@@ -22,20 +22,20 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
    private final val topPos: Int
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super();
       this.spSize = var3;
       val var4: Float = FontManager.INSTANCE.getFontScale(var1);
       this.scale = var4;
       this.pxSize = (int)(SizeUtilsKt.getSpToPx(var3) * var4);
       this.topPos = SizeUtilsKt.getSpToPx(var3 * -1 / 4);
-      val var5: Int = ColorUtilsKt.getThemeColor(var1, color.black, color.white);
+      val var5: Int = ColorUtilsKt.getThemeColor(var1, R.color.black, R.color.white);
       this.borderColor = var5;
-      val var7: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
-      this.roleDot = var7;
-      val var6: ColorDrawable = new ColorDrawable(var2);
-      this.backgroundDrawable = var6;
-      this.layerDrawable = new LayerDrawable(new Drawable[]{var6, var7});
+      val var6: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
+      this.roleDot = var6;
+      val var7: ColorDrawable = new ColorDrawable(var2);
+      this.backgroundDrawable = var7;
+      this.layerDrawable = new LayerDrawable(new Drawable[]{var7, var6});
    }
 
    public open fun getDrawable(): Drawable {

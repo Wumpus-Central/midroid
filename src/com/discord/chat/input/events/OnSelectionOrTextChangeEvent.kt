@@ -1,9 +1,8 @@
 package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,12 +10,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.n0
+import yk.g0.a
 
 @f
 internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: String, editId: String) : ReactEvent {
@@ -26,24 +25,13 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    public final val text: String
 
    init {
-      r.h(var3, "text");
-      r.h(var4, "editId");
+      q.h(var3, "text");
+      q.h(var4, "editId");
       super();
       this.start = var1;
       this.end = var2;
       this.text = var3;
       this.editId = var4;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnSelectionOrTextChangeEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.start);
-      var1.w(var2, 1, var0.end);
-      var1.z(var2, 2, var0.text);
-      var1.z(var2, 3, var0.editId);
    }
 
    public operator fun component1(): Int {
@@ -63,8 +51,8 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    }
 
    public fun copy(start: Int = var0.start, end: Int = var0.end, text: String = var0.text, editId: String = var0.editId): OnSelectionOrTextChangeEvent {
-      r.h(var3, "text");
-      r.h(var4, "editId");
+      q.h(var3, "text");
+      q.h(var4, "editId");
       return new OnSelectionOrTextChangeEvent(var1, var2, var3, var4);
    }
 
@@ -79,10 +67,10 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
             return false;
          } else if (this.end != var1.end) {
             return false;
-         } else if (!r.c(this.text, var1.text)) {
+         } else if (!q.c(this.text, var1.text)) {
             return false;
          } else {
-            return r.c(this.editId, var1.editId);
+            return q.c(this.editId, var1.editId);
          }
       }
    }
@@ -91,29 +79,29 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       return ((Integer.hashCode(this.start) * 31 + Integer.hashCode(this.end)) * 31 + this.text.hashCode()) * 31 + this.editId.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
       val var2: Int = this.start;
       val var1: Int = this.end;
-      val var5: java.lang.String = this.text;
-      val var3: java.lang.String = this.editId;
+      val var3: java.lang.String = this.text;
+      val var5: java.lang.String = this.editId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("OnSelectionOrTextChangeEvent(start=");
       var4.append(var2);
       var4.append(", end=");
       var4.append(var1);
       var4.append(", text=");
-      var4.append(var5);
-      var4.append(", editId=");
       var4.append(var3);
+      var4.append(", editId=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }
 
-   public object `$serializer` : f0<OnSelectionOrTextChangeEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -133,36 +121,34 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, m0.a, a2.a, a2.a};
+         return new KSerializer[]{n0.a, n0.a, b2.a, b2.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnSelectionOrTextChangeEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         val var10: c = var1.c(var9);
+         var var2: Int;
          var var3: Int;
          var var4: Int;
-         val var5: Int;
          var var7: java.lang.String;
-         val var8: java.lang.String;
-         if (var10.p()) {
-            var4 = var10.i(var9, 0);
-            val var2: Int = var10.i(var9, 1);
-            var7 = var10.m(var9, 2);
-            val var11: java.lang.String = var10.m(var9, 3);
-            var3 = 15;
-            var5 = var2;
-            var8 = var11;
+         val var11: java.lang.String;
+         if (var10.y()) {
+            var4 = var10.k(var9, 0);
+            var3 = var10.k(var9, 1);
+            var7 = var10.t(var9, 2);
+            var11 = var10.t(var9, 3);
+            var2 = 15;
          } else {
             var7 = null;
             var var12: java.lang.String = null;
-            var var15: Boolean = true;
+            var var5: Boolean = true;
             var4 = 0;
             var3 = 0;
-            var var13: Int = 0;
+            var2 = 0;
 
-            while (var15) {
-               val var6: Int = var10.o(var9);
+            while (var5) {
+               val var6: Int = var10.x(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -171,45 +157,43 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
                               throw new n(var6);
                            }
 
-                           var7 = var10.m(var9, 3);
-                           var13 |= 8;
+                           var7 = var10.t(var9, 3);
+                           var2 |= 8;
                         } else {
-                           var12 = var10.m(var9, 2);
-                           var13 |= 4;
+                           var12 = var10.t(var9, 2);
+                           var2 |= 4;
                         }
                      } else {
-                        var3 = var10.i(var9, 1);
-                        var13 |= 2;
+                        var3 = var10.k(var9, 1);
+                        var2 |= 2;
                      }
                   } else {
-                     var4 = var10.i(var9, 0);
-                     var13 |= 1;
+                     var4 = var10.k(var9, 0);
+                     var2 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var5 = false;
                }
             }
 
-            var8 = var7;
             var7 = var12;
-            var5 = var3;
-            var3 = var13;
+            var11 = var7;
          }
 
-         var10.c(var9);
-         return new OnSelectionOrTextChangeEvent(var3, var4, var5, var7, var8, null);
+         var10.b(var9);
+         return new OnSelectionOrTextChangeEvent(var2, var4, var3, var7, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSelectionOrTextChangeEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         OnSelectionOrTextChangeEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         OnSelectionOrTextChangeEvent.write$Self$chat_input_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -12,7 +12,7 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
    private final val view: MediaImageView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "view");
+      kotlin.jvm.internal.q.h(var1, "view");
       super(var1, null);
       this.view = var1;
    }
@@ -42,8 +42,8 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       shouldAutoPlayGif: Boolean,
       filename: String?
    ) {
-      kotlin.jvm.internal.r.h(var1, "url");
-      kotlin.jvm.internal.r.h(var16, "resizeMode");
+      kotlin.jvm.internal.q.h(var1, "url");
+      kotlin.jvm.internal.q.h(var16, "resizeMode");
       this.view.setContent(var1, var2, var3, var16, var4, var5, var6, var7, var15, var20, var8, var9, var17, var22, var23);
       if (var18 != null) {
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.view, false, var18, 1, null);

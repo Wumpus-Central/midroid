@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.a2
-import xk.f0
-import xk.m0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.b2
+import yk.g0
+import yk.n0
+import yk.g0.a
 
 @f
 public data class LHeadingContentNode(level: Int, className: String, content: List<ContentNode>) : ContentNode {
@@ -22,22 +22,12 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
    public final val level: Int
 
    init {
-      r.h(var2, "className");
-      r.h(var3, "content");
+      q.h(var2, "className");
+      q.h(var3, "content");
       super(null);
       this.level = var1;
       this.className = var2;
       this.content = var3;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: LHeadingContentNode, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.w(var2, 0, var0.level);
-      var1.z(var2, 1, var0.className);
-      var1.y(var2, 2, new xk.f(ContentNodeSerializer.INSTANCE), var0.content);
    }
 
    public operator fun component1(): Int {
@@ -53,8 +43,8 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
    }
 
    public fun copy(level: Int = var0.level, className: String = var0.className, content: List<ContentNode> = var0.content): LHeadingContentNode {
-      r.h(var2, "className");
-      r.h(var3, "content");
+      q.h(var2, "className");
+      q.h(var3, "content");
       return new LHeadingContentNode(var1, var2, var3);
    }
 
@@ -67,10 +57,10 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
          var1 = var1;
          if (this.level != var1.level) {
             return false;
-         } else if (!r.c(this.className, var1.className)) {
+         } else if (!q.c(this.className, var1.className)) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return q.c(this.content, var1.content);
          }
       }
    }
@@ -81,20 +71,20 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var2: java.lang.String = this.className;
-      val var4: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LHeadingContentNode(level=");
-      var3.append(var1);
-      var3.append(", className=");
-      var3.append(var2);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.className;
+      val var2: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LHeadingContentNode(level=");
+      var4.append(var1);
+      var4.append(", className=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : f0<LHeadingContentNode> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -113,32 +103,32 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{m0.a, a2.a, new xk.f(ContentNodeSerializer.INSTANCE)};
+         return new KSerializer[]{n0.a, b2.a, LHeadingContentNode.access$get$childSerializers$cp()[2]};
       }
 
       public open fun deserialize(decoder: Decoder): LHeadingContentNode {
-         r.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         q.h(var1, "decoder");
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.c(var7);
+         val var9: Array<KSerializer> = LHeadingContentNode.access$get$childSerializers$cp();
          var var2: Int;
          val var4: Int;
-         var var6: Any;
-         val var7: java.lang.String;
-         if (var9.p()) {
-            var2 = var9.i(var8, 0);
-            val var10: java.lang.String = var9.m(var8, 1);
-            var6 = var9.y(var8, 2, new xk.f(ContentNodeSerializer.INSTANCE), null);
+         var var6: java.lang.String;
+         var var10: java.util.List;
+         if (var8.y()) {
+            var2 = var8.k(var7, 0);
+            var6 = var8.t(var7, 1);
+            var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
             var4 = 7;
-            var7 = var10;
          } else {
-            var var13: Boolean = true;
+            var var12: Boolean = true;
             var var3: Int = 0;
             var6 = null;
-            var var11: Any = null;
+            var10 = null;
             var2 = 0;
 
-            while (var13) {
-               val var5: Int = var9.o(var8);
+            while (var12) {
+               val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -146,41 +136,39 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
                            throw new n(var5);
                         }
 
-                        var11 = var9.y(var8, 2, new xk.f(ContentNodeSerializer.INSTANCE), var11);
+                        var10 = var8.m(var7, 2, var9[2], var10) as java.util.List;
                         var2 |= 4;
                      } else {
-                        var6 = var9.m(var8, 1);
+                        var6 = var8.t(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var9.i(var8, 0);
+                     var3 = var8.k(var7, 0);
                      var2 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var12 = false;
                }
             }
 
             var4 = var2;
-            var7 = (java.lang.String)var6;
             var2 = var3;
-            var6 = var11;
          }
 
-         var9.c(var8);
-         return new LHeadingContentNode(var4, var2, var7, var6 as java.util.List, null);
+         var8.b(var7);
+         return new LHeadingContentNode(var4, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LHeadingContentNode) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         LHeadingContentNode.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         LHeadingContentNode.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

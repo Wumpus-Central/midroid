@@ -7,14 +7,14 @@ import android.os.Bundle
 import androidx.core.os.d
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) : BroadcastReceiver {
    private final val onReceiveCallback: (String) -> Unit
    private final var handled: Boolean
 
    init {
-      r.h(var1, "onReceiveCallback");
+      q.h(var1, "onReceiveCallback");
       super();
       this.onReceiveCallback = var1;
    }
@@ -38,7 +38,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             }
 
             var1 = var8.toString();
-            r.g(var1, "filterTo(StringBuilder(), predicate).toString()");
+            q.g(var1, "toString(...)");
          }
       }
 
@@ -51,53 +51,46 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
    }
 
    private fun Bundle.extractSecurityCode() {
-      val var4: java.lang.String;
+      val var3: java.lang.String;
       if (var1.containsKey("com.google.android.gms.auth.api.phone.EXTRA_SMS_MESSAGE")) {
-         var4 = var1.getString("com.google.android.gms.auth.api.phone.EXTRA_SMS_MESSAGE");
+         var3 = var1.getString("com.google.android.gms.auth.api.phone.EXTRA_SMS_MESSAGE");
       } else {
-         var4 = null;
+         var3 = null;
       }
 
-      var var6: java.lang.String = null;
-      if (var4 != null) {
-         var6 = this.extractCode(var4);
+      var var5: java.lang.String = null;
+      if (var3 != null) {
+         var5 = this.extractCode(var3);
       }
 
-      val var2: Boolean;
-      if (var6 != null && var6.length() != 0) {
-         var2 = false;
-      } else {
-         var2 = true;
-      }
-
-      if (var2) {
-         Log.i$default(Log.INSTANCE, "SmsAuthCodeBroadcastReceiver", "Failed to extract code from SMS.", null, 4, null);
-      } else {
-         val var8: Log = Log.INSTANCE;
+      if (var5 != null && var5.length() != 0) {
+         val var6: Log = Log.INSTANCE;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Successfully extracted code from SMS: ");
-         var7.append(var6);
-         Log.i$default(var8, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
-         this.onReceiveCallback.invoke(var6);
+         var7.append(var5);
+         Log.i$default(var6, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
+         this.onReceiveCallback.invoke(var5);
          this.handled = true;
+      } else {
+         Log.i$default(Log.INSTANCE, "SmsAuthCodeBroadcastReceiver", "Failed to extract code from SMS.", null, 4, null);
       }
    }
 
    public open fun onReceive(context: Context, intent: Intent) {
-      r.h(var1, "context");
-      r.h(var2, "intent");
+      q.h(var1, "context");
+      q.h(var2, "intent");
       if (!this.handled) {
          val var4: Bundle = var2.getExtras();
          val var5: Status;
          if (var4 != null) {
-            var5 = d.b(var4, "com.google.android.gms.auth.api.phone.EXTRA_STATUS", Status.class) as Status;
+            var5 = d.a(var4, "com.google.android.gms.auth.api.phone.EXTRA_STATUS", Status.class) as Status;
          } else {
             var5 = null;
          }
 
          val var7: Int;
          if (var5 != null) {
-            var7 = var5.s();
+            var7 = var5.q();
          } else {
             var7 = null;
          }
@@ -111,7 +104,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             val var9: Log = Log.INSTANCE;
             var var8: Int = null;
             if (var5 != null) {
-               var8 = var5.s();
+               var8 = var5.q();
             }
 
             val var6: StringBuilder = new StringBuilder();

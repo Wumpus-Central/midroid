@@ -8,6 +8,6 @@ public final class c implements Runnable {
 
    @Override
    public final void run() {
-      DeviceSettingsManagerModule.b(this.j, this.k, this.l);
+      DeviceSettingsManagerModule.c(this.j, this.k, this.l);
    }
 }

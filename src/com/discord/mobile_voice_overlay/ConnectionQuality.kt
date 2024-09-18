@@ -1,9 +1,10 @@
 package com.discord.mobile_voice_overlay
 
-import eh.l
-import eh.o
+import dh.l
+import dh.o
+import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import uk.f
+import vk.f
 
 @f
 public enum class ConnectionQuality {
@@ -11,15 +12,29 @@ public enum class ConnectionQuality {
    Bad,
    Fine,
    Unknown   @JvmStatic
-   private ConnectionQuality[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private ConnectionQuality[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public ConnectionQuality.Companion Companion = new ConnectionQuality.Companion(null);
 
+   @JvmStatic
+   fun {
+      val var0: Array<ConnectionQuality> = $values();
+      $VALUES = var0;
+      $ENTRIES = kh.a.a(var0);
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<ConnectionQuality> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<ConnectionQuality>;
+         return this.get$cachedSerializer();
       }
    }
 }

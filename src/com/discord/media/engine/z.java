@@ -1,13 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeConnection.OnVideoCallback;
-import kotlin.jvm.functions.Function4;
+import com.discord.native.engine.NativeConnection;
+import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
-public final class z implements OnVideoCallback {
-   public final Function4 a;
+public final class z implements NativeConnection.MLSCommitTransitionCallback {
+   public final Function3 a;
 
-   public final void onVideo(String var1, long var2, String var4, String var5) {
-      MediaEngine.l(this.a, var1, var2, var4, var5);
+   @Override
+   public final void onMLSProcessedCommit(boolean var1, int var2, String var3) {
+      MediaEngine.j(this.a, var1, var2, var3);
    }
 }

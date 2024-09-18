@@ -6,7 +6,7 @@ import android.content.SharedPreferences.Editor
 import java.util.HashMap
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public abstract val cacheKey: String
@@ -15,14 +15,14 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    private final val cache: SharedPreferences
       private final get() {
          val var2: SharedPreferences = var1.getSharedPreferences(this.getCacheKey(), 0);
-         r.g(var2, "getSharedPreferences(cac…ey, Context.MODE_PRIVATE)");
+         q.g(var2, "getSharedPreferences(...)");
          return var2;
       }
 
 
    public fun get(context: Context, reactResource: Any): String {
-      r.h(var1, "context");
-      r.h(var2, "reactResource");
+      q.h(var1, "context");
+      q.h(var2, "reactResource");
       val var4: java.lang.String = this.reactResources.get(var2.name());
       var var3: java.lang.String = var4;
       if (var4 == null) {
@@ -34,12 +34,12 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
          }
 
          if (var5 == null) {
-            val var6: java.lang.String = var2.name();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unable to access ");
-            var7.append(var6);
-            var7.append(" as it has not yet been provided.");
-            throw new IllegalAccessException(var7.toString());
+            val var7: java.lang.String = var2.name();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unable to access ");
+            var6.append(var7);
+            var6.append(" as it has not yet been provided.");
+            throw new IllegalAccessException(var6.toString());
          }
 
          var3 = var5;
@@ -49,14 +49,14 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    }
 
    public fun set(context: Context, newReactResources: Map<String, String>) {
-      r.h(var1, "context");
-      r.h(var2, "newReactResources");
+      q.h(var1, "context");
+      q.h(var2, "newReactResources");
       val var3: Editor = this.getCache(var1).edit();
-      r.g(var3, "editor");
+      q.g(var3, "editor");
       var3.clear();
 
-      for (Entry var4 : var2.entrySet()) {
-         var3.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var3.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);

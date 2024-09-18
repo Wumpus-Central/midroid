@@ -23,9 +23,9 @@ import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderOpt
 import com.discord.chat.presentation.textutils.LinkStyle
 import com.discord.chat.presentation.textutils.TextUtilsKt
 import com.discord.primitives.MessageId
+import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan.TouchPriority
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
 import com.discord.span.utilities.spannable.BoldSpan
@@ -40,7 +40,7 @@ import kotlin.jvm.functions.Function1
 
 public class MessageContentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : SimpleDraweeSpanTextView,
-   SpacingProviderView {
+   VerticalSpacingItemDecoration.SpacingProviderView {
    private final var bottomSpacingPx: Int?
 
    private final val shadowView: SimpleDraweeSpanTextView
@@ -50,19 +50,19 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
 
 
    fun MessageContentView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun MessageContentView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = eh.l.b(new Function0<SimpleDraweeSpanTextView>(this) {
+      this.shadowView$delegate = dh.l.b(new Function0(this) {
          final MessageContentView this$0;
 
          {
@@ -83,14 +83,14 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
 
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
-      kotlin.jvm.internal.r.g(var6, "spannableStringBuilder.g…an::class.java,\n        )");
-      val var8: QuoteSpan = kotlin.collections.b.E(var6) as QuoteSpan;
+      kotlin.jvm.internal.q.g(var6, "getSpans(...)");
+      val var7: QuoteSpan = kotlin.collections.c.F(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(" (");
-      var7.append(var2);
-      var7.append(")");
-      var1.append(var7.toString());
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(" (");
+      var8.append(var2);
+      var8.append(")");
+      var1.append(var8.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -100,8 +100,8 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var8 != null) {
-         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
+      if (var7 != null) {
+         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
       }
    }
 
@@ -113,9 +113,9 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var8: Boolean = kotlin.jvm.internal.r.c(var2.getForceShow(), java.lang.Boolean.TRUE);
+      val var9: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
       var var7: Int = var2.getNumberOfLines();
-      val var9: Boolean = var2.getExpandable();
+      val var8: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6, false);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -125,31 +125,31 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var8) {
-         if (var8) {
+      if (var3 > var7 || var9) {
+         if (var9) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var9) {
+         if (var8) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();
             var11.append("\n");
             var11.append(var18);
             var4.replace(var7, var4.length(), var11.toString());
-            val var20: TouchPriority = TouchPriority.HIGH;
+            val var20: NestedClickableSpan.TouchPriority = NestedClickableSpan.TouchPriority.HIGH;
             if (var12 != null) {
                var3 = var12;
             } else {
                var3 = ThemeManagerKt.getTheme().getTextLink();
             }
 
-            var4.setSpan(new ClickableSpan(var20, var3, null, null, new Function1<View, Unit>(var5, var1) {
+            var4.setSpan(new ClickableSpan(var20, var3, null, null, new Function1(var5, var1) {
                final java.lang.String $messageId;
-               final Function1<MessageId, Unit> $onTapSeeMore;
+               final Function1 $onTapSeeMore;
 
                {
                   super(1);
@@ -158,7 +158,7 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
                }
 
                public final void invoke(View var1) {
-                  kotlin.jvm.internal.r.h(var1, "it");
+                  kotlin.jvm.internal.q.h(var1, "it");
                   this.$onTapSeeMore.invoke(MessageId.box-impl(this.$messageId));
                }
             }, 12, null), var7, var4.length(), 33);
@@ -175,9 +175,9 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       eventHandlers: MarkdownTextRenderEventHandlers,
       emojiBaselineHeightOverridePx: Float? = null
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageContent");
-      kotlin.jvm.internal.r.h(var2, "options");
-      kotlin.jvm.internal.r.h(var3, "eventHandlers");
+      kotlin.jvm.internal.q.h(var1, "messageContent");
+      kotlin.jvm.internal.q.h(var2, "options");
+      kotlin.jvm.internal.q.h(var3, "eventHandlers");
       setMessageContent-2ZcwkLU$default(
          this,
          var1,
@@ -243,39 +243,39 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       theme: DiscordThemeObject = ...,
       emojiBaselineHeightOverridePx: Float? = ...
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageContent");
-      kotlin.jvm.internal.r.h(var2, "messageId");
-      kotlin.jvm.internal.r.h(var7, "onTapLink");
-      kotlin.jvm.internal.r.h(var8, "onLongTapLink");
-      kotlin.jvm.internal.r.h(var9, "onTapChannel");
-      kotlin.jvm.internal.r.h(var10, "onLongPressChannel");
-      kotlin.jvm.internal.r.h(var11, "onTapAttachmentLink");
-      kotlin.jvm.internal.r.h(var12, "onLongPressAttachmentLink");
-      kotlin.jvm.internal.r.h(var13, "onTapMention");
-      kotlin.jvm.internal.r.h(var14, "onTapCommand");
-      kotlin.jvm.internal.r.h(var15, "onLongPressCommand");
-      kotlin.jvm.internal.r.h(var16, "onTapSpoiler");
-      kotlin.jvm.internal.r.h(var17, "onTapTimestamp");
-      kotlin.jvm.internal.r.h(var18, "onTapEmoji");
-      kotlin.jvm.internal.r.h(var19, "onTapSeeMore");
-      kotlin.jvm.internal.r.h(var20, "linkStyleProvider");
-      kotlin.jvm.internal.r.h(var27, "theme");
-      val var31: Context = this.getContext();
-      val var32: FontMetrics = this.getPaint().getFontMetrics();
-      kotlin.jvm.internal.r.g(var32, "paint.fontMetrics");
-      val var29: Float = TextUtilsKt.getBaselineHeightPx(var32);
-      val var34: TextPaint = this.getPaint();
-      kotlin.jvm.internal.r.g(var31, "context");
-      kotlin.jvm.internal.r.g(var34, "paint");
-      val var33: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+      kotlin.jvm.internal.q.h(var1, "messageContent");
+      kotlin.jvm.internal.q.h(var2, "messageId");
+      kotlin.jvm.internal.q.h(var7, "onTapLink");
+      kotlin.jvm.internal.q.h(var8, "onLongTapLink");
+      kotlin.jvm.internal.q.h(var9, "onTapChannel");
+      kotlin.jvm.internal.q.h(var10, "onLongPressChannel");
+      kotlin.jvm.internal.q.h(var11, "onTapAttachmentLink");
+      kotlin.jvm.internal.q.h(var12, "onLongPressAttachmentLink");
+      kotlin.jvm.internal.q.h(var13, "onTapMention");
+      kotlin.jvm.internal.q.h(var14, "onTapCommand");
+      kotlin.jvm.internal.q.h(var15, "onLongPressCommand");
+      kotlin.jvm.internal.q.h(var16, "onTapSpoiler");
+      kotlin.jvm.internal.q.h(var17, "onTapTimestamp");
+      kotlin.jvm.internal.q.h(var18, "onTapEmoji");
+      kotlin.jvm.internal.q.h(var19, "onTapSeeMore");
+      kotlin.jvm.internal.q.h(var20, "linkStyleProvider");
+      kotlin.jvm.internal.q.h(var27, "theme");
+      val var30: Context = this.getContext();
+      val var31: FontMetrics = this.getPaint().getFontMetrics();
+      kotlin.jvm.internal.q.g(var31, "getFontMetrics(...)");
+      val var29: Float = TextUtilsKt.getBaselineHeightPx(var31);
+      val var33: TextPaint = this.getPaint();
+      kotlin.jvm.internal.q.e(var30);
+      kotlin.jvm.internal.q.e(var33);
+      val var32: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
          var1,
-         var31,
+         var30,
          var2,
          var3,
          var4,
          var5,
          var6,
-         var34,
+         var33,
          var7,
          var8,
          var9,
@@ -296,23 +296,16 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
          1048576,
          null
       );
-      val var30: Boolean;
-      if (var24 != null && !kotlin.text.f.x(var24)) {
-         var30 = false;
-      } else {
-         var30 = true;
-      }
-
-      if (!var30) {
-         this.appendEditedLabel(var33, var24, var25);
+      if (var24 != null && !kotlin.text.h.x(var24)) {
+         this.appendEditedLabel(var32, var24, var25);
       }
 
       if (var26 != null) {
-         this.truncate-LdU2QRA(var2, var26, var22, var33, var19, var23);
+         this.truncate-LdU2QRA(var2, var26, var22, var32, var19, var23);
       }
 
-      SpannableExtensionsKt.coverWithSpan(var33, new BackgroundSpanDrawer(this));
-      this.setDraweeSpanStringBuilder(var33);
+      SpannableExtensionsKt.coverWithSpan(var32, new BackgroundSpanDrawer(this));
+      this.setDraweeSpanStringBuilder(var32);
       this.bottomSpacingPx = var21;
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener(this, true);
    }
@@ -321,7 +314,7 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       throw new UnsupportedOperationException("MessageContentView uses custom touch handling. click listeners are not supported");
    }
 
-   public open fun spacingPxOverride(): Int? {
+   public override fun spacingPxOverride(): Int? {
       return this.bottomSpacingPx;
    }
 

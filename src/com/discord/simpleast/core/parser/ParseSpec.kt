@@ -1,7 +1,7 @@
 package com.discord.simpleast.core.parser
 
 import com.discord.simpleast.core.node.Node
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ParseSpec<R, S> {
    public final var endIndex: Int
@@ -15,14 +15,14 @@ public class ParseSpec<R, S> {
 
    public final val state: Any
 
-   public constructor(root: Node<Any>, state: Any) : r.h(var1, "root") {
+   public constructor(root: Node<Any>, state: Any) : q.h(var1, "root") {
       super();
       this.root = var1;
       this.state = (S)var2;
       this.isTerminal = true;
    }
 
-   public constructor(root: Node<Any>, state: Any, startIndex: Int, endIndex: Int) : r.h(var1, "root") {
+   public constructor(root: Node<Any>, state: Any, startIndex: Int, endIndex: Int) : q.h(var1, "root") {
       super();
       this.root = var1;
       this.state = (S)var2;
@@ -38,12 +38,12 @@ public class ParseSpec<R, S> {
 
    public companion object {
       public fun <R, S> createNonterminal(node: Node<R>, state: S, startIndex: Int, endIndex: Int): ParseSpec<R, S> {
-         r.h(var1, "node");
+         q.h(var1, "node");
          return new ParseSpec<>(var1, (S)var2, var3, var4);
       }
 
       public fun <R, S> createTerminal(node: Node<R>, state: S): ParseSpec<R, S> {
-         r.h(var1, "node");
+         q.h(var1, "node");
          return new ParseSpec<>(var1, (S)var2);
       }
    }

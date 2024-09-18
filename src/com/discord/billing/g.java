@@ -9,7 +9,8 @@ import t2.m;
 public final class g implements m {
    public final CompletableDeferred a;
 
+   @Override
    public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.c(this.a, var1, var2);
+      <unrepresentable>.b(this.a, var1, var2);
    }
 }

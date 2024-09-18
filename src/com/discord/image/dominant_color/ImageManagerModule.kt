@@ -14,18 +14,18 @@ import com.facebook.react.bridge.ReadableMap
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
    private fun getDominantColors(uri: String?, promise: Promise) {
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
-      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1, null, new Function1<Bitmap, Unit>(var2) {
+      q.g(var3, "getReactApplicationContext(...)");
+      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1, null, new Function1(var2) {
          final Promise $promise;
 
          {
@@ -37,12 +37,12 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
             if (var1 != null) {
                val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
                if (var3 != null) {
-                  val var4: ArrayList = new ArrayList(h.t(var3, 10));
+                  val var4: ArrayList = new ArrayList(i.u(var3, 10));
                   val var5: java.util.Iterator = var3.iterator();
 
                   while (var5.hasNext()) {
                      val var2: Int = (var5.next() as java.lang.Number).intValue();
-                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255}));
+                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
                   }
 
                   this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray(var4));
@@ -58,11 +58,11 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getAvatarBase64(imageSource: ReadableMap, promise: Promise) {
-      r.h(var1, "imageSource");
-      r.h(var2, "promise");
+      q.h(var1, "imageSource");
+      q.h(var2, "promise");
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
-      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1.getString("uri"), null, new Function1<Bitmap, Unit>(var2) {
+      q.g(var3, "getReactApplicationContext(...)");
+      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1.getString("uri"), null, new Function1(var2) {
          final Promise $promise;
 
          {
@@ -84,15 +84,15 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getDominantColors(imageSource: ReadableMap, promise: Promise) {
-      r.h(var1, "imageSource");
-      r.h(var2, "promise");
+      q.h(var1, "imageSource");
+      q.h(var2, "promise");
       this.getDominantColors(var1.getString("uri"), var2);
    }
 
    @ReactMethod
    public fun getDominantColorsLocalAsset(imageSource: ReadableMap, promise: Promise) {
-      r.h(var1, "imageSource");
-      r.h(var2, "promise");
+      q.h(var1, "imageSource");
+      q.h(var2, "promise");
       this.getDominantColors(var1.getString("uri"), var2);
    }
 

@@ -2,7 +2,7 @@ package com.discord.chat.presentation.textutils
 
 import java.util.ArrayList
 import java.util.TreeMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object NumericUtils {
    private final val letters: List<String>
@@ -10,101 +10,81 @@ public object NumericUtils {
 
    @JvmStatic
    fun {
-      val var2: java.util.List = kotlin.text.f.A0("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
-      val var1: ArrayList = new ArrayList();
+      val var1: java.util.List = kotlin.text.h.z0("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
+      val var0: ArrayList = new ArrayList();
 
-      for (Object var3 : var2) {
-         val var0: Boolean;
-         if ((var3 as java.lang.String).length() == 0) {
-            var0 = true;
-         } else {
-            var0 = false;
-         }
-
-         if (!var0) {
-            var1.add(var3);
+      for (Object var2 : var1) {
+         if ((var2 as java.lang.String).length() != 0) {
+            var0.add(var2);
          }
       }
 
-      letters = var1;
-      val var4: TreeMap = new TreeMap();
-      romanNumeralMap = var4;
-      var4.put(1000L, "m");
-      var4.put(900L, "cm");
-      var4.put(500L, "d");
-      var4.put(400L, "cm");
-      var4.put(100L, "c");
-      var4.put(90L, "xc");
-      var4.put(50L, "l");
-      var4.put(40L, "xl");
-      var4.put(10L, "x");
-      var4.put(9L, "ix");
-      var4.put(5L, "v");
-      var4.put(4L, "iv");
-      var4.put(1L, "i");
+      letters = var0;
+      val var3: TreeMap = new TreeMap();
+      romanNumeralMap = var3;
+      var3.put(1000L, "m");
+      var3.put(900L, "cm");
+      var3.put(500L, "d");
+      var3.put(400L, "cm");
+      var3.put(100L, "c");
+      var3.put(90L, "xc");
+      var3.put(50L, "l");
+      var3.put(40L, "xl");
+      var3.put(10L, "x");
+      var3.put(9L, "ix");
+      var3.put(5L, "v");
+      var3.put(4L, "iv");
+      var3.put(1L, "i");
    }
 
    public fun toLetter(number: Long): String {
-      val var3: Boolean;
       if (var1 >= 1L) {
-         var3 = true;
-      } else {
-         var3 = false;
-      }
-
-      if (var3) {
          if (var1 <= 26L) {
             return letters.get((int)var1 - 1);
          } else {
-            val var11: Long = vh.h.d(var1 % (long)26, 1L);
-            val var10: java.lang.String = this.toLetter(var1 / (long)26);
-            val var9: java.lang.String = this.toLetter(var11);
-            val var12: StringBuilder = new StringBuilder();
-            var12.append(var10);
-            var12.append(var9);
-            return var12.toString();
+            val var10: Long = kotlin.ranges.f.d(var1 % (long)26, 1L);
+            val var9: java.lang.String = this.toLetter(var1 / (long)26);
+            val var11: java.lang.String = this.toLetter(var10);
+            val var8: StringBuilder = new StringBuilder();
+            var8.append(var9);
+            var8.append(var11);
+            return var8.toString();
          }
       } else {
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("Number must be at least 1. Provided: ");
-         var8.append(var1);
-         throw new IllegalArgumentException(var8.toString().toString());
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Number must be at least 1. Provided: ");
+         var7.append(var1);
+         throw new IllegalArgumentException(var7.toString().toString());
       }
    }
 
    public fun toRomanNumeral(number: Long): String {
-      val var3: Boolean;
       if (var1 >= 1L) {
-         var3 = true;
-      } else {
-         var3 = false;
-      }
-
-      if (var3) {
-         val var7: TreeMap = romanNumeralMap;
-         var var9: java.lang.String = romanNumeralMap.floorKey(var1);
-         r.e(var9);
-         val var4: Long = (var9 as java.lang.Number).longValue();
-         if (var1 == var4) {
-            var9 = (java.lang.String)var7.get(var1);
-            r.e(var9);
-            r.g(var9, "{\n            romanNumeralMap[number]!!\n        }");
-            var9 = var9;
+         val var8: TreeMap = romanNumeralMap;
+         var var6: Any = romanNumeralMap.floorKey(var1);
+         q.e(var6);
+         val var3: Long = (var6 as java.lang.Number).longValue();
+         val var10: java.lang.String;
+         if (var1 == var3) {
+            val var9: Any = var8.get(var1);
+            q.e(var9);
+            q.e(var9);
+            var10 = var9 as java.lang.String;
          } else {
-            val var13: Any = var7.get(var4);
-            val var8: java.lang.String = this.toRomanNumeral(var1 - var4);
-            val var12: StringBuilder = new StringBuilder();
-            var12.append(var13);
-            var12.append(var8);
-            var9 = var12.toString();
+            val var7: Any = var8.get(var3);
+            var6 = this.toRomanNumeral(var1 - var3);
+            val var11: StringBuilder = new StringBuilder();
+            var11.append(var7);
+            var11.append((java.lang.String)var6);
+            var10 = var11.toString();
          }
 
-         return var9;
+         return var10;
       } else {
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Number must be at least 1. Provided: ");
-         var6.append(var1);
-         throw new IllegalArgumentException(var6.toString().toString());
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Number must be at least 1. Provided: ");
+         var5.append(var1);
+         throw new IllegalArgumentException(var5.toString().toString());
       }
    }
 }

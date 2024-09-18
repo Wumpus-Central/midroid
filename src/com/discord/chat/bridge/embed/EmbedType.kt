@@ -1,9 +1,11 @@
 package com.discord.chat.bridge.embed
 
-import eh.l
-import eh.o
+import dh.l
+import dh.o
+import kh.a
+import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import uk.f
+import vk.f
 
 @f
 public enum class EmbedType {
@@ -22,15 +24,29 @@ public enum class EmbedType {
    Tweet,
    Unknown,
    Video   @JvmStatic
-   private EmbedType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private EmbedType[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public EmbedType.Companion Companion = new EmbedType.Companion(null);
 
+   @JvmStatic
+   fun {
+      val var0: Array<EmbedType> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<EmbedType> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<EmbedType>;
+         return this.get$cachedSerializer();
       }
    }
 }

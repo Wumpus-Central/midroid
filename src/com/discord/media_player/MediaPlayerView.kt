@@ -9,7 +9,7 @@ import com.discord.media_player.databinding.PlayerViewWithSurfaceViewBinding
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.ui.PlayerControlView
 import com.google.android.exoplayer2.ui.PlayerView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class MediaPlayerView(context: Context) {
    public final var isVisible: Boolean
@@ -49,7 +49,7 @@ public class MediaPlayerView(context: Context) {
    public final val playerView: PlayerView
       public final get() {
          val var1: View = this.view;
-         r.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
+         q.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
          return var1 as PlayerView;
       }
 
@@ -58,10 +58,10 @@ public class MediaPlayerView(context: Context) {
       internal set
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       val var2: PlayerView = PlayerViewWithSurfaceViewBinding.inflate(LayoutInflater.from(var1)).getRoot();
-      r.g(var2, "inflate(LayoutInflater.from(context)).root");
+      q.g(var2, "getRoot(...)");
       this.view = var2;
       this.getPlayerView().setResizeMode(3);
       this.getPlayerView().setUseController(false);
@@ -69,36 +69,27 @@ public class MediaPlayerView(context: Context) {
    }
 
    internal fun assignViewToPlayer(player: Player?) {
-      val var3: View = this.getPlayerView().getVideoSurfaceView();
-      if (var3 is SurfaceView) {
+      val var2: View = this.getPlayerView().getVideoSurfaceView();
+      if (var2 is SurfaceView) {
          if (var1 != null) {
-            var1.j(var3 as SurfaceView);
+            var1.v(var2 as SurfaceView);
          }
-      } else if (var3 is TextureView) {
+      } else if (var2 is TextureView) {
          if (var1 != null) {
-            var1.y(var3 as TextureView);
+            var1.Z(var2 as TextureView);
          }
-      } else {
-         val var2: Boolean;
-         if (var3 == null) {
-            var2 = true;
+      } else if (var2 != null) {
+         val var3: java.lang.String;
+         if (var2 != null) {
+            var3 = var2.getClass().getSimpleName();
          } else {
-            var2 = false;
+            var3 = null;
          }
 
-         if (!var2) {
-            val var4: java.lang.String;
-            if (var3 != null) {
-               var4 = var3.getClass().getSimpleName();
-            } else {
-               var4 = null;
-            }
-
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("Unsupported surface view type: ");
-            var5.append(var4);
-            throw new IllegalStateException(var5.toString().toString());
-         }
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Unsupported surface view type: ");
+         var4.append(var3);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
@@ -120,7 +111,7 @@ public class MediaPlayerView(context: Context) {
       private final var playerControlView: PlayerControlView
 
       init {
-         r.h(var1, "context");
+         q.h(var1, "context");
          super();
          this.playerControlView = new PlayerControlView(var1);
       }

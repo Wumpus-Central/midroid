@@ -4,11 +4,11 @@ import c3.a
 import com.discord.codegen.NativeApplicationReadyManagerSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyManagerSpec {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
@@ -19,7 +19,7 @@ public class ApplicationReadyModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public open fun applicationReady(promise: Promise?) {
+   public override fun applicationReady(promise: Promise?) {
       this.getReactApplicationContext().runOnNativeModulesQueueThread(new a(var1));
    }
 

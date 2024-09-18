@@ -4,13 +4,13 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Parcel
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class DeleteAction(tag: String) : NotificationAction {
    public open val tag: String
 
    init {
-      r.h(var1, "tag");
+      q.h(var1, "tag");
       super();
       this.tag = var1;
    }
@@ -36,14 +36,14 @@ public class DeleteAction(tag: String) : NotificationAction {
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      r.h(var1, "out");
+      q.h(var1, "out");
       var1.writeString(this.tag);
    }
 
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<DeleteAction> {
       fun createFromParcel(var1: Parcel): DeleteAction {
-         r.h(var1, "parcel");
+         q.h(var1, "parcel");
          return new DeleteAction(var1.readString());
       }
 

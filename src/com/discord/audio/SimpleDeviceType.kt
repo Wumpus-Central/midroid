@@ -1,5 +1,7 @@
 package com.discord.audio
 
+import kotlin.enums.EnumEntries
+
 public enum class SimpleDeviceType {
    BLUETOOTH_HEADSET,
    DEFAULT,
@@ -7,5 +9,19 @@ public enum class SimpleDeviceType {
    INVALID,
    SPEAKERPHONE,
    WIRED_HEADSET   @JvmStatic
-   private SimpleDeviceType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private SimpleDeviceType[] $VALUES;
+
+   @JvmStatic
+   fun {
+      val var0: Array<SimpleDeviceType> = $values();
+      $VALUES = var0;
+      $ENTRIES = kh.a.a(var0);
+   }
+
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
 }

@@ -12,7 +12,7 @@ import java.util.ArrayList
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object SimpleMarkdownRules {
    public final val PATTERN_BOLD: Pattern = Pattern.compile("^\\*\\*([\\s\\S]+?)\\*\\*(?!\\*)")
@@ -56,8 +56,8 @@ public object SimpleMarkdownRules {
 
    @JvmStatic
    public fun <R, S> createSimpleStyleRule(pattern: Pattern, styleFactory: () -> List<CharacterStyle>): Rule<R, Node<R>, S> {
-      r.h(var0, "pattern");
-      r.h(var1, "styleFactory");
+      q.h(var0, "pattern");
+      q.h(var1, "styleFactory");
       return new Rule<R, Node<R>, S>(var1, var0, var0) {
          final Pattern $pattern;
          final Function0 $styleFactory;
@@ -70,8 +70,8 @@ public object SimpleMarkdownRules {
 
          @Override
          public ParseSpec<R, S> parse(Matcher var1, Parser<R, ? super Node<R>, S> var2, S var3) {
-            r.h(var1, "matcher");
-            r.h(var2, "parser");
+            q.h(var1, "matcher");
+            q.h(var2, "parser");
             return ParseSpec.Companion.createNonterminal(new StyleNode(this.$styleFactory.invoke() as java.util.List), var3, var1.start(1), var1.end(1));
          }
       };
@@ -79,13 +79,13 @@ public object SimpleMarkdownRules {
 
    public fun <R, S> createBoldRule(): Rule<R, Node<R>, S> {
       val var1: Pattern = PATTERN_BOLD;
-      r.g(PATTERN_BOLD, "PATTERN_BOLD");
+      q.g(PATTERN_BOLD, "PATTERN_BOLD");
       return createSimpleStyleRule(var1, <unrepresentable>.INSTANCE);
    }
 
    public fun <R, S> createEscapeRule(): Rule<R, Node<R>, S> {
       val var1: Pattern = PATTERN_ESCAPE;
-      r.g(PATTERN_ESCAPE, "PATTERN_ESCAPE");
+      q.g(PATTERN_ESCAPE, "PATTERN_ESCAPE");
       return new Rule<R, Node<R>, S>(this, var1) {
          final SimpleMarkdownRules this$0;
 
@@ -96,11 +96,11 @@ public object SimpleMarkdownRules {
 
          @Override
          public ParseSpec<R, S> parse(Matcher var1, Parser<R, ? super Node<R>, S> var2, S var3) {
-            r.h(var1, "matcher");
-            r.h(var2, "parser");
+            q.h(var1, "matcher");
+            q.h(var2, "parser");
             val var5: ParseSpec.Companion = ParseSpec.Companion;
             val var4: java.lang.String = var1.group(1);
-            r.e(var4);
+            q.e(var4);
             return var5.createTerminal(new TextNode(var4), var3);
          }
       };
@@ -108,7 +108,7 @@ public object SimpleMarkdownRules {
 
    public fun <R, S> createItalicsRule(): Rule<R, Node<R>, S> {
       val var1: Pattern = PATTERN_ITALICS;
-      r.g(PATTERN_ITALICS, "PATTERN_ITALICS");
+      q.g(PATTERN_ITALICS, "PATTERN_ITALICS");
       return new Rule<R, Node<R>, S>(this, var1) {
          final SimpleMarkdownRules this$0;
 
@@ -119,41 +119,29 @@ public object SimpleMarkdownRules {
 
          @Override
          public ParseSpec<R, S> parse(Matcher var1, Parser<R, ? super Node<R>, S> var2, S var3) {
-            var var5: Int;
-            var var9: Int;
-            label17: {
-               r.h(var1, "matcher");
-               r.h(var2, "parser");
-               val var8: java.lang.String = var1.group(2);
-               if (var8 != null) {
-                  val var4: Boolean;
-                  if (var8.length() > 0) {
-                     var4 = true;
-                  } else {
-                     var4 = false;
-                  }
-
-                  if (var4) {
-                     var9 = var1.start(2);
-                     var5 = var1.end(2);
-                     break label17;
-                  }
-               }
-
-               var9 = var1.start(1);
-               var5 = var1.end(1);
+            q.h(var1, "matcher");
+            q.h(var2, "parser");
+            val var8: java.lang.String = var1.group(2);
+            val var4: Int;
+            val var5: Int;
+            if (var8 != null && var8.length() > 0) {
+               var5 = var1.start(2);
+               var4 = var1.end(2);
+            } else {
+               var5 = var1.start(1);
+               var4 = var1.end(1);
             }
 
             val var6: ArrayList = new ArrayList(1);
             var6.add(new StyleSpan(2));
-            return ParseSpec.Companion.createNonterminal(new StyleNode(var6), var3, var9, var5);
+            return ParseSpec.Companion.createNonterminal(new StyleNode(var6), var3, var5, var4);
          }
       };
    }
 
    public fun <R, S> createNewlineRule(): Rule<R, Node<R>, S> {
       val var1: Pattern = PATTERN_NEWLINE;
-      r.g(PATTERN_NEWLINE, "PATTERN_NEWLINE");
+      q.g(PATTERN_NEWLINE, "PATTERN_NEWLINE");
       return new Rule.BlockRule<R, Node<R>, S>(this, var1) {
          final SimpleMarkdownRules this$0;
 
@@ -164,8 +152,8 @@ public object SimpleMarkdownRules {
 
          @Override
          public ParseSpec<R, S> parse(Matcher var1, Parser<R, ? super Node<R>, S> var2, S var3) {
-            r.h(var1, "matcher");
-            r.h(var2, "parser");
+            q.h(var1, "matcher");
+            q.h(var2, "parser");
             return ParseSpec.Companion.createTerminal(new TextNode("\n"), var3);
          }
       };
@@ -173,13 +161,13 @@ public object SimpleMarkdownRules {
 
    public fun <R, S> createStrikethruRule(): Rule<R, Node<R>, S> {
       val var1: Pattern = PATTERN_STRIKETHRU;
-      r.g(PATTERN_STRIKETHRU, "PATTERN_STRIKETHRU");
+      q.g(PATTERN_STRIKETHRU, "PATTERN_STRIKETHRU");
       return createSimpleStyleRule(var1, <unrepresentable>.INSTANCE);
    }
 
    public fun <R, S> createTextRule(): Rule<R, Node<R>, S> {
       val var1: Pattern = PATTERN_TEXT;
-      r.g(PATTERN_TEXT, "PATTERN_TEXT");
+      q.g(PATTERN_TEXT, "PATTERN_TEXT");
       return new Rule<R, Node<R>, S>(this, var1) {
          final SimpleMarkdownRules this$0;
 
@@ -190,10 +178,10 @@ public object SimpleMarkdownRules {
 
          @Override
          public ParseSpec<R, S> parse(Matcher var1, Parser<R, ? super Node<R>, S> var2, S var3) {
-            r.h(var1, "matcher");
-            r.h(var2, "parser");
+            q.h(var1, "matcher");
+            q.h(var2, "parser");
             val var4: java.lang.String = var1.group();
-            r.g(var4, "matcher.group()");
+            q.g(var4, "matcher.group()");
             return ParseSpec.Companion.createTerminal(new TextNode(var4), var3);
          }
       };
@@ -201,7 +189,7 @@ public object SimpleMarkdownRules {
 
    public fun <R, S> createUnderlineRule(): Rule<R, Node<R>, S> {
       val var1: Pattern = PATTERN_UNDERLINE;
-      r.g(PATTERN_UNDERLINE, "PATTERN_UNDERLINE");
+      q.g(PATTERN_UNDERLINE, "PATTERN_UNDERLINE");
       return createSimpleStyleRule(var1, <unrepresentable>.INSTANCE);
    }
 }

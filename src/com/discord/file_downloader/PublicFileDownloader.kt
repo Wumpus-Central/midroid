@@ -9,13 +9,12 @@ import android.net.Uri
 import android.os.Environment
 import com.discord.file_downloader.utils.FilenameSanitizedKt
 import java.util.LinkedHashMap
-import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.flow.Flow
-import nk.d
+import ok.d
 
 public object PublicFileDownloader {
    private final val onDownloadListeners: MutableMap<Long, () -> Unit> = new LinkedHashMap()
@@ -39,9 +38,9 @@ public object PublicFileDownloader {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1047)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:562)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 2
@@ -59,7 +58,7 @@ public object PublicFileDownloader {
       // 15: astore 2
       // 16: aload 2
       // 17: invokeinterface android/database/Cursor.moveToFirst ()Z 1
-      // 1c: ifeq 49
+      // 1c: ifeq 4e
       // 1f: new java/io/File
       // 22: astore 7
       // 24: aload 7
@@ -74,61 +73,63 @@ public object PublicFileDownloader {
       // 3a: invokespecial com/discord/file_downloader/DownloadState$Completed.<init> (Ljava/io/File;)V
       // 3d: aload 1
       // 3e: aload 5
-      // 40: invokeinterface mk/t.c (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 40: invokeinterface nk/s.j (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
-      // 46: goto 74
-      // 49: new com/discord/file_downloader/DownloadState$Failure
-      // 4c: astore 8
-      // 4e: new java/lang/IllegalStateException
+      // 46: goto 79
+      // 49: astore 5
+      // 4b: goto 8a
+      // 4e: new com/discord/file_downloader/DownloadState$Failure
       // 51: astore 5
-      // 53: new java/io/FileNotFoundException
-      // 56: astore 7
-      // 58: aload 7
-      // 5a: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 5d: aload 5
-      // 5f: aload 7
-      // 61: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 64: aload 8
-      // 66: aload 5
-      // 68: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
-      // 6b: aload 1
-      // 6c: aload 8
-      // 6e: invokeinterface mk/t.c (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 73: pop
-      // 74: aload 1
-      // 75: aconst_null
-      // 76: bipush 1
-      // 77: aconst_null
-      // 78: invokestatic mk/t$a.a (Lmk/t;Ljava/lang/Throwable;ILjava/lang/Object;)Z
-      // 7b: istore 6
-      // 7d: aload 2
-      // 7e: aconst_null
-      // 7f: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 82: iload 6
-      // 84: ireturn
-      // 85: astore 1
-      // 86: aload 1
-      // 87: athrow
-      // 88: astore 5
-      // 8a: aload 2
-      // 8b: aload 1
-      // 8c: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 53: new java/lang/IllegalStateException
+      // 56: astore 8
+      // 58: new java/io/FileNotFoundException
+      // 5b: astore 7
+      // 5d: aload 7
+      // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
+      // 62: aload 8
+      // 64: aload 7
+      // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
+      // 69: aload 5
+      // 6b: aload 8
+      // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
+      // 70: aload 1
+      // 71: aload 5
+      // 73: invokeinterface nk/s.j (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 78: pop
+      // 79: aload 1
+      // 7a: aconst_null
+      // 7b: bipush 1
+      // 7c: aconst_null
+      // 7d: invokestatic nk/s$a.a (Lnk/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
+      // 80: istore 6
+      // 82: aload 2
+      // 83: aconst_null
+      // 84: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 87: iload 6
+      // 89: ireturn
+      // 8a: aload 5
+      // 8c: athrow
+      // 8d: astore 1
+      // 8e: aload 2
       // 8f: aload 5
-      // 91: athrow
+      // 91: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 94: aload 1
+      // 95: athrow
    }
 
    public fun downloadFile(context: Context, url: String, fileName: String, description: String? = null): Flow<DownloadState> {
-      r.h(var1, "context");
-      r.h(var2, "url");
-      r.h(var3, "fileName");
+      q.h(var1, "context");
+      q.h(var2, "url");
+      q.h(var3, "fileName");
       return d.c(
-         new Function2<ProducerScope<? super DownloadState>, Continuation<? super Unit>, Object>(var1, var2, var3, var4, null)// $VF: Couldn't be decompiled
+         new Function2(var1, var2, var3, var4, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1148,14 +1149,13 @@ public object PublicFileDownloader {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    
       );
    }
 
    public class PublicFileDownloadBroadcastReceiver : BroadcastReceiver {
       public open fun onReceive(context: Context, intent: Intent?) {
-         r.h(var1, "context");
+         q.h(var1, "context");
          val var5: java.lang.String;
          if (var2 != null) {
             var5 = var2.getAction();

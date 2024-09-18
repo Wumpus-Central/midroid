@@ -36,6 +36,7 @@ public final class ChatInputRootViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -8,31 +8,31 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import eh.w
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 
 public class DeviceThermalStateManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("DeviceThermalStateDidChange", h0.b(DeviceThermalStateChangedEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("DeviceThermalStateDidChange", g0.b(DeviceThermalStateChangedEvent.class)));
    }
 
    @JvmStatic
    fun `initialize$lambda$0`(var0: DeviceThermalStateManagerModule, var1: Int) {
-      r.h(var0, "this$0");
+      q.h(var0, "this$0");
       val var2: ReactEvents = var0.reactEvents;
       val var3: ReactApplicationContext = var0.getReactApplicationContext();
-      r.g(var3, "reactApplicationContext");
+      q.g(var3, "getReactApplicationContext(...)");
       var2.emitModuleEvent(var3, new DeviceThermalStateChangedEvent(var1));
    }
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
+      q.h(var1, "type");
    }
 
    public open fun getName(): String {
@@ -41,9 +41,9 @@ public class DeviceThermalStateManagerModule(reactContext: ReactApplicationConte
 
    @ReactMethod
    public fun getThermalState(promise: Promise) {
-      r.h(var1, "promise");
+      q.h(var1, "promise");
       var var2: Any = this.getReactApplicationContext().getSystemService("power");
-      r.f(var2, "null cannot be cast to non-null type android.os.PowerManager");
+      q.f(var2, "null cannot be cast to non-null type android.os.PowerManager");
       var2 = var2 as PowerManager;
       if (VERSION.SDK_INT >= 29) {
          var1.resolve(e.a((PowerManager)var2));
@@ -55,7 +55,7 @@ public class DeviceThermalStateManagerModule(reactContext: ReactApplicationConte
    public open fun initialize() {
       super.initialize();
       var var1: Any = this.getReactApplicationContext().getSystemService("power");
-      r.f(var1, "null cannot be cast to non-null type android.os.PowerManager");
+      q.f(var1, "null cannot be cast to non-null type android.os.PowerManager");
       var1 = var1 as PowerManager;
       if (VERSION.SDK_INT >= 29) {
          f.a((PowerManager)var1, new g(this));

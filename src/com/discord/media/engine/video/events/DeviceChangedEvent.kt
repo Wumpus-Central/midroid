@@ -4,8 +4,8 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import eh.w
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.q
 
 internal class DeviceChangedEvent(inputDevices: List<Map<String, Any>>, outputDevices: List<Map<String, Any>>, videoInputDevices: List<Map<String, Any>>) :
    ReactEvent {
@@ -14,9 +14,9 @@ internal class DeviceChangedEvent(inputDevices: List<Map<String, Any>>, outputDe
    private final val videoInputDevices: List<Map<String, Any>>
 
    init {
-      r.h(var1, "inputDevices");
-      r.h(var2, "outputDevices");
-      r.h(var3, "videoInputDevices");
+      q.h(var1, "inputDevices");
+      q.h(var2, "outputDevices");
+      q.h(var3, "videoInputDevices");
       super();
       this.inputDevices = var1;
       this.outputDevices = var2;
@@ -25,11 +25,9 @@ internal class DeviceChangedEvent(inputDevices: List<Map<String, Any>>, outputDe
 
    public open fun serialize(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            w.a("inputDevices", NativeArrayExtensionsKt.toNativeArrayOfMaps(this.inputDevices)),
-            w.a("outputDevices", NativeArrayExtensionsKt.toNativeArrayOfMaps(this.outputDevices)),
-            w.a("videoInputDevices", NativeArrayExtensionsKt.toNativeArrayOfMaps(this.videoInputDevices))
-         }
+         w.a("inputDevices", NativeArrayExtensionsKt.toNativeArrayOfMaps(this.inputDevices)),
+         w.a("outputDevices", NativeArrayExtensionsKt.toNativeArrayOfMaps(this.outputDevices)),
+         w.a("videoInputDevices", NativeArrayExtensionsKt.toNativeArrayOfMaps(this.videoInputDevices))
       );
    }
 }

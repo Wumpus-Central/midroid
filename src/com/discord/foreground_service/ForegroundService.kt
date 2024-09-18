@@ -7,7 +7,7 @@ import android.os.IBinder
 import com.discord.foreground_service.service.ServiceNotification
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.misc.utilities.threading.ThreadUtilsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class ForegroundService : Service {
    public open fun onBind(intent: Intent?): IBinder? {
@@ -28,6 +28,7 @@ internal class ForegroundService : Service {
    }
 
    public companion object {
+      internal const val EXTRA_PERMISSION_TYPE: String
       private const val MINIMUM_SERVICE_LIFETIME: Long
       private final var lastServiceStartTime: Long
 
@@ -37,7 +38,7 @@ internal class ForegroundService : Service {
 
       @JvmStatic
       fun `stop$lambda$0`(var0: Context, var1: Service) {
-         r.h(var0, "$context");
+         q.h(var0, "$context");
          ForegroundService.Companion.stopInternal(var0, var1);
       }
 
@@ -55,8 +56,8 @@ internal class ForegroundService : Service {
       }
 
       public fun start(context: Context, onError: (Exception) -> Unit) {
-         r.h(var1, "context");
-         r.h(var2, "onError");
+         q.h(var1, "context");
+         q.h(var2, "onError");
 
          try {
             ForegroundServiceUtilsKt.startForegroundServiceCompat(var1, this.getServiceIntent(var1));
@@ -67,7 +68,7 @@ internal class ForegroundService : Service {
       }
 
       public fun stop(context: Context, service: Service?) {
-         r.h(var1, "context");
+         q.h(var1, "context");
          val var3: Long = System.currentTimeMillis() - ForegroundService.access$getLastServiceStartTime$cp();
          if (var3 > 3000L) {
             this.stopInternal(var1, var2);

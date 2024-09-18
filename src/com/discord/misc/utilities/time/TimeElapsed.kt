@@ -1,17 +1,17 @@
 package com.discord.misc.utilities.time
 
-import eh.l
+import dh.l
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    public final val duration: String
       public final get() {
          val var1: Any = this.duration$delegate.getValue();
-         r.g(var1, "<get-duration>(...)");
+         q.g(var1, "getValue(...)");
          return var1 as java.lang.String;
       }
 
@@ -30,7 +30,7 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
 
    init {
       this.startTime = var1;
-      this.durationMillis$delegate = l.b(new Function0<java.lang.Long>(this) {
+      this.durationMillis$delegate = l.b(new Function0(this) {
          final TimeElapsed this$0;
 
          {
@@ -42,7 +42,7 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
             return System.currentTimeMillis() - TimeElapsed.access$getStartTime$p(this.this$0);
          }
       });
-      this.duration$delegate = l.b(new Function0<java.lang.String>(this) {
+      this.duration$delegate = l.b(new Function0(this) {
          final TimeElapsed this$0;
 
          {

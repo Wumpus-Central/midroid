@@ -23,5 +23,5 @@ fun `getMediaExtension$default`(var0: Boolean, var1: java.lang.String, var2: Int
 }
 
 private fun isImageHashAnimated(imageHash: String?): Boolean {
-   return var0 == null || f.I(var0, "a_", false, 2, null);
+   return var0 == null || h.H(var0, "a_", false, 2, null);
 }

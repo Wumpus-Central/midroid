@@ -5,30 +5,23 @@ import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ReactStylesDiffMap
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.views.view.ReactViewGroup
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "DCDVisualEffectViewTarget")
 internal class BlurViewTargetManager : InitialPropsViewGroupManager<ReactViewGroup> {
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): ReactViewGroup {
-      r.h(var1, "reactContext");
-      r.h(var2, "initialProps");
-      val var5: java.lang.String = var2.getString("nativeID");
-      val var3: Boolean;
-      if (var5 != null) {
-         var3 = true;
-      } else {
-         var3 = false;
-      }
-
-      if (var3) {
-         val var4: Any;
+      q.h(var1, "reactContext");
+      q.h(var2, "initialProps");
+      val var4: java.lang.String = var2.getString("nativeID");
+      if (var4 != null) {
+         val var3: Any;
          if (BlurViewManager.Companion.isHardwareBlurEnabled$blur_release()) {
-            var4 = new BlurViewTargetHardwareAccelerated(var1, var5);
+            var3 = new BlurViewTargetHardwareAccelerated(var1, var4);
          } else {
-            var4 = new BlurViewTarget(var1, var5);
+            var3 = new BlurViewTarget(var1, var4);
          }
 
-         return (ReactViewGroup)var4;
+         return (ReactViewGroup)var3;
       } else {
          throw new IllegalArgumentException("Failed requirement.".toString());
       }
@@ -39,7 +32,7 @@ internal class BlurViewTargetManager : InitialPropsViewGroupManager<ReactViewGro
    }
 
    public open fun onDropViewInstance(view: ReactViewGroup) {
-      r.h(var1, "view");
+      q.h(var1, "view");
       super.onDropViewInstance(var1);
       if (var1 !is BlurViewAPI.Target) {
          throw new IllegalArgumentException("Failed requirement.".toString());
@@ -47,17 +40,10 @@ internal class BlurViewTargetManager : InitialPropsViewGroupManager<ReactViewGro
    }
 
    public open fun setNativeId(blurViewTarget: ReactViewGroup, nativeId: String?) {
-      r.h(var1, "blurViewTarget");
+      q.h(var1, "blurViewTarget");
       super.setNativeId(var1, var2);
       if (var1 is BlurViewAPI.Target) {
-         val var3: Boolean;
          if (var2 != null) {
-            var3 = true;
-         } else {
-            var3 = false;
-         }
-
-         if (var3) {
             (var1 as BlurViewAPI.Target).setBlurTargetNativeId(var2);
          } else {
             throw new IllegalArgumentException("Failed requirement.".toString());

@@ -4,8 +4,8 @@ import com.discord.chat.reactevents.TapImageData.Layout
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import eh.w
-import kotlin.jvm.internal.r
+import dh.w
+import kotlin.jvm.internal.q
 
 internal data class LongPressPollImageData(channelId: String, messageId: String, attachmentId: String, layout: Layout) : ReactEvent {
    public final val attachmentId: String
@@ -14,10 +14,10 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
    public final val messageId: String
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "layout");
+      q.h(var1, "channelId");
+      q.h(var2, "messageId");
+      q.h(var3, "attachmentId");
+      q.h(var4, "layout");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -47,10 +47,10 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
       attachmentId: String = var0.attachmentId,
       layout: Layout = var0.layout
    ): LongPressPollImageData {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "layout");
+      q.h(var1, "channelId");
+      q.h(var2, "messageId");
+      q.h(var3, "attachmentId");
+      q.h(var4, "layout");
       return new LongPressPollImageData(var1, var2, var3, var4);
    }
 
@@ -61,14 +61,14 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!q.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!r.c(this.messageId, var1.messageId)) {
+         } else if (!q.c(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.attachmentId, var1.attachmentId)) {
+         } else if (!q.c(this.attachmentId, var1.attachmentId)) {
             return false;
          } else {
-            return r.c(this.layout, var1.layout);
+            return q.c(this.layout, var1.layout);
          }
       }
    }
@@ -77,29 +77,27 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
       return ((this.channelId.hashCode() * 31 + this.messageId.hashCode()) * 31 + this.attachmentId.hashCode()) * 31 + this.layout.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("attachmentId", this.attachmentId), w.a("layout", this.layout.serialize())
-         }
+         w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("attachmentId", this.attachmentId), w.a("layout", this.layout.serialize())
       );
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.attachmentId;
-      val var1: TapImageData.Layout = this.layout;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressPollImageData(channelId=");
-      var2.append(var4);
-      var2.append(", messageId=");
-      var2.append(var3);
-      var2.append(", attachmentId=");
-      var2.append(var5);
-      var2.append(", layout=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.attachmentId;
+      val var2: TapImageData.Layout = this.layout;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressPollImageData(channelId=");
+      var3.append(var5);
+      var3.append(", messageId=");
+      var3.append(var1);
+      var3.append(", attachmentId=");
+      var3.append(var4);
+      var3.append(", layout=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

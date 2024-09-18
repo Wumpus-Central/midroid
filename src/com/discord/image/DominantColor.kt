@@ -1,11 +1,11 @@
 package com.discord.image
 
 import android.graphics.Bitmap
-import androidx.core.graphics.f0
+import androidx.core.graphics.c
 import com.discord.image.color_quantizer.ColorCutQuantizer
 import com.discord.image.color_quantizer.Swatch
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object DominantColor {
    private fun getPrimaryColorsForBitmap(bitmap: Bitmap): List<Int> {
@@ -13,7 +13,7 @@ public object DominantColor {
       if (!(var2.isEmpty() xor true)) {
          throw new DominantColor.NoSwatchesFoundException();
       } else {
-         val var3: ArrayList = new ArrayList(h.t(var2, 10));
+         val var3: ArrayList = new ArrayList(i.u(var2, 10));
          val var4: java.util.Iterator = var2.iterator();
 
          while (var4.hasNext()) {
@@ -25,7 +25,7 @@ public object DominantColor {
    }
 
    public fun getRepresentativeColors(bitmap: Bitmap): List<Int>? {
-      r.h(var1, "bitmap");
+      q.h(var1, "bitmap");
 
       var var3: java.util.List;
       try {
@@ -38,7 +38,7 @@ public object DominantColor {
       }
 
       try {
-         var7 = new ArrayList(h.t(var3, 10));
+         var7 = new ArrayList(i.u(var3, 10));
          var8 = var3.iterator();
       } catch (var5: Exception) {
          return null;
@@ -50,7 +50,7 @@ public object DominantColor {
                break;
             }
 
-            var7.add(f0.k((var8.next() as java.lang.Number).intValue(), 255));
+            var7.add(c.k((var8.next() as java.lang.Number).intValue(), 255));
          } catch (var4: Exception) {
             var7 = null;
             break;

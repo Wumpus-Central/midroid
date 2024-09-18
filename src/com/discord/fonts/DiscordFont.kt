@@ -5,7 +5,9 @@ import android.graphics.Typeface
 import com.facebook.react.views.text.ReactFontManager
 import java.util.Map.Entry
 import java.util.concurrent.ConcurrentHashMap
-import kotlin.jvm.internal.r
+import kh.a
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
 
 public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, monospace: Boolean = false) {
    CodeBold("ggmono-Bold, SourceCodePro-Bold", 700, false, true),
@@ -27,9 +29,18 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
    public final val rawName: String
    public final val weight: Int
    @JvmStatic
-   private DiscordFont[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
+   @JvmStatic
+   private DiscordFont[] $VALUES;
    @JvmStatic
    public DiscordFont.Companion Companion = new DiscordFont.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<DiscordFont> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.rawName = var3;
@@ -38,14 +49,19 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       this.monospace = var6;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public fun typeface(context: Context): Typeface {
-      r.h(var1, "context");
+      q.h(var1, "context");
       val var2: ConcurrentHashMap = typefaces;
       val var4: Typeface;
       if (typefaces.get(this) != null) {
          val var3: Any = var2.get(this);
-         r.e(var3);
-         r.g(var3, "{\n            typefaces[this]!!\n        }");
+         q.e(var3);
+         q.e(var3);
          var4 = var3 as Typeface;
       } else {
          var4 = DiscordFont.Companion.access$getFontFromRN(Companion, var1, this);
@@ -60,8 +76,8 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
 
       private fun getFontFromRN(context: Context, font: DiscordFont): Typeface {
          val var4: Typeface = ReactFontManager.getInstance().getTypeface(var2.getRawName(), 0, var1.getAssets());
-         r.g(var4, "getInstance()\n          …e.NORMAL, context.assets)");
-         if (!r.c(var4, Typeface.DEFAULT)) {
+         q.g(var4, "getTypeface(...)");
+         if (!q.c(var4, Typeface.DEFAULT)) {
             return var4;
          } else {
             val var3: StringBuilder = new StringBuilder();
@@ -73,33 +89,19 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       }
 
       public fun findByStyle(weight: Int, italic: Boolean, monospace: Boolean = false): DiscordFont? {
-         val var8: Array<DiscordFont> = DiscordFont.values();
-         val var6: Int = var8.length;
-         var var4: Int = 0;
+         val var5: java.util.Iterator = DiscordFont.getEntries().iterator();
 
-         var var7: DiscordFont;
-         while (true) {
-            if (var4 >= var6) {
-               var7 = null;
+         var var4: Any;
+         do {
+            if (!var5.hasNext()) {
+               var4 = null;
                break;
             }
 
-            var7 = var8[var4];
-            val var5: Boolean;
-            if (var8[var4].getWeight() == var1 && var8[var4].getItalic() == var2 && var8[var4].getMonospace() == var3) {
-               var5 = true;
-            } else {
-               var5 = false;
-            }
+            var4 = var5.next();
+         } while (((DiscordFont)var4).getWeight() != var1 || ((DiscordFont)var4).getItalic() != var2 || ((DiscordFont)var4).getMonospace() != var3);
 
-            if (var5) {
-               break;
-            }
-
-            var4++;
-         }
-
-         return var7;
+         return var4 as DiscordFont;
       }
 
       public fun fromTypeface(typeface: Typeface?): DiscordFont? {
@@ -107,13 +109,13 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
             return null;
          } else {
             val var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
-            r.g(var3, "typefaces.entries");
+            q.g(var3, "<get-entries>(...)");
             val var4: java.util.Iterator = var3.iterator();
 
             while (true) {
                if (var4.hasNext()) {
                   val var7: Any = var4.next();
-                  if (!r.c((var7 as Entry).getValue(), var1)) {
+                  if (!q.c((var7 as Entry).getValue(), var1)) {
                      continue;
                   }
 

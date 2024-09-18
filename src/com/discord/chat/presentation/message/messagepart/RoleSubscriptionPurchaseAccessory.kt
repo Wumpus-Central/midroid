@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.message.messagepart
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    authorUsername: String?,
@@ -16,6 +16,7 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    public open val messageId: MessageId
 
    fun RoleSubscriptionPurchaseAccessory(var1: java.lang.String, var2: java.lang.String, var3: java.lang.String, var4: Int, var5: Boolean) {
+      q.h(var1, "messageId");
       super(var1, "role subscription purchase", false, 4, null);
       this.messageId = var1;
       this.authorUsername = var2;
@@ -25,7 +26,7 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    }
 
    public operator fun component1(): MessageId {
-      return this.getMessageId-3Eiw7ao();
+      return this.messageId;
    }
 
    public operator fun component2(): String? {
@@ -51,7 +52,7 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
       constrainedWidth: Int = ...,
       isForwardedContent: Boolean = ...
    ): RoleSubscriptionPurchaseAccessory {
-      r.h(var1, "messageId");
+      q.h(var1, "messageId");
       return new RoleSubscriptionPurchaseAccessory(var1, var2, var3, var4, var5, null);
    }
 
@@ -62,11 +63,11 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
          return false;
       } else {
          var1 = var1;
-         if (!MessageId.equals-impl0(this.getMessageId-3Eiw7ao(), var1.getMessageId-3Eiw7ao())) {
+         if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.authorUsername, var1.authorUsername)) {
+         } else if (!q.c(this.authorUsername, var1.authorUsername)) {
             return false;
-         } else if (!r.c(this.authorAvatar, var1.authorAvatar)) {
+         } else if (!q.c(this.authorAvatar, var1.authorAvatar)) {
             return false;
          } else if (this.constrainedWidth != var1.constrainedWidth) {
             return false;
@@ -77,7 +78,7 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = MessageId.hashCode-impl(this.getMessageId-3Eiw7ao());
+      val var3: Int = MessageId.hashCode-impl(this.messageId);
       var var2: Int = 0;
       val var1: Int;
       if (this.authorUsername == null) {
@@ -90,33 +91,27 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
          var2 = this.authorAvatar.hashCode();
       }
 
-      val var6: Int = Integer.hashCode(this.constrainedWidth);
-      var var3: Byte = this.isForwardedContent;
-      if (this.isForwardedContent != 0) {
-         var3 = 1;
-      }
-
-      return (((var5 * 31 + var1) * 31 + var2) * 31 + var6) * 31 + var3;
+      return (((var3 * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.constrainedWidth)) * 31 + java.lang.Boolean.hashCode(this.isForwardedContent);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.getMessageId-3Eiw7ao());
-      val var5: java.lang.String = this.authorUsername;
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = this.authorUsername;
       val var3: java.lang.String = this.authorAvatar;
       val var1: Int = this.constrainedWidth;
       val var2: Boolean = this.isForwardedContent;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("RoleSubscriptionPurchaseAccessory(messageId=");
-      var6.append(var4);
-      var6.append(", authorUsername=");
-      var6.append(var5);
-      var6.append(", authorAvatar=");
-      var6.append(var3);
-      var6.append(", constrainedWidth=");
-      var6.append(var1);
-      var6.append(", isForwardedContent=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("RoleSubscriptionPurchaseAccessory(messageId=");
+      var5.append(var6);
+      var5.append(", authorUsername=");
+      var5.append(var4);
+      var5.append(", authorAvatar=");
+      var5.append(var3);
+      var5.append(", constrainedWidth=");
+      var5.append(var1);
+      var5.append(", isForwardedContent=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 }

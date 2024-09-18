@@ -1,9 +1,8 @@
 package com.discord.zoom_layout.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,11 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.e0
-import xk.f0
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.f0
+import yk.g0
+import yk.g0.a
 
 @f
 internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
@@ -23,14 +22,6 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
 
    init {
       this.zoomScale = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: OnZoomChangedEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.r(var2, 0, var0.zoomScale);
    }
 
    public operator fun component1(): Float {
@@ -55,8 +46,8 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       return java.lang.Float.hashCode(this.zoomScale);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -68,7 +59,7 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<OnZoomChangedEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -85,31 +76,31 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{e0.a};
+         return new KSerializer[]{f0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnZoomChangedEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var6: Boolean = var8.p();
+         val var8: c = var1.c(var7);
+         val var6: Boolean = var8.y();
          var var3: Int = 1;
          var var4: Boolean = true;
          var var2: Float;
          if (var6) {
-            var2 = var8.u(var7, 0);
+            var2 = var8.G(var7, 0);
          } else {
             var2 = 0.0F;
             var3 = 0;
 
             while (var4) {
-               val var5: Int = var8.o(var7);
+               val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      throw new n(var5);
                   }
 
-                  var2 = var8.u(var7, 0);
+                  var2 = var8.G(var7, 0);
                   var3 |= 1;
                } else {
                   var4 = false;
@@ -117,20 +108,20 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new OnZoomChangedEvent(var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnZoomChangedEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         OnZoomChangedEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         OnZoomChangedEvent.write$Self$zoom_layout_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -10,6 +10,6 @@ public final class d implements OnClickListener {
    public final Function2 k;
 
    public final void onClick(View var1) {
-      EmojiPickerViewHolder.Emoji.b(this.j, this.k, var1);
+      EmojiPickerViewHolder.Emoji.c(this.j, this.k, var1);
    }
 }

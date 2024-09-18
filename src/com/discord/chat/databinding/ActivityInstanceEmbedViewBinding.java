@@ -28,18 +28,18 @@ public final class ActivityInstanceEmbedViewBinding implements ViewBinding {
 
    public static ActivityInstanceEmbedViewBinding bind(View var0) {
       int var1 = R.id.launch_button;
-      DCDButton var5 = (DCDButton)a.a(var0, var1);
-      if (var5 != null) {
+      DCDButton var2 = (DCDButton)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.participants;
-         OverlappingCirclesView var2 = (OverlappingCirclesView)a.a(var0, var1);
-         if (var2 != null) {
+         OverlappingCirclesView var5 = (OverlappingCirclesView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.status_text;
-            TextView var4 = (TextView)a.a(var0, var1);
-            if (var4 != null) {
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.status_text_barrier;
-               Barrier var3 = (Barrier)a.a(var0, var1);
-               if (var3 != null) {
-                  return new ActivityInstanceEmbedViewBinding(var0, var5, var2, var4, var3);
+               Barrier var4 = (Barrier)a.a(var0, var1);
+               if (var4 != null) {
+                  return new ActivityInstanceEmbedViewBinding(var0, var2, var5, var3, var4);
                }
             }
          }
@@ -57,6 +57,7 @@ public final class ActivityInstanceEmbedViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

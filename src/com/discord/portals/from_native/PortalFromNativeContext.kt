@@ -3,7 +3,7 @@ package com.discord.portals.from_native
 import android.view.View
 import java.lang.ref.WeakReference
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal data class PortalFromNativeContext(view: WeakReference<View>,
    removeViewFromParent: (View) -> Unit,
@@ -18,11 +18,11 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
    public final val view: WeakReference<View>
 
    init {
-      r.h(var1, "view");
-      r.h(var2, "removeViewFromParent");
-      r.h(var3, "onViewAddedToPortal");
-      r.h(var4, "onViewRemovedFromPortal");
-      r.h(var5, "returnViewToParent");
+      q.h(var1, "view");
+      q.h(var2, "removeViewFromParent");
+      q.h(var3, "onViewAddedToPortal");
+      q.h(var4, "onViewRemovedFromPortal");
+      q.h(var5, "returnViewToParent");
       super();
       this.view = var1;
       this.removeViewFromParent = var2;
@@ -58,11 +58,11 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
       onViewRemovedFromPortal: (View) -> Unit = var0.onViewRemovedFromPortal,
       returnViewToParent: (View) -> Unit = var0.returnViewToParent
    ): PortalFromNativeContext {
-      r.h(var1, "view");
-      r.h(var2, "removeViewFromParent");
-      r.h(var3, "onViewAddedToPortal");
-      r.h(var4, "onViewRemovedFromPortal");
-      r.h(var5, "returnViewToParent");
+      q.h(var1, "view");
+      q.h(var2, "removeViewFromParent");
+      q.h(var3, "onViewAddedToPortal");
+      q.h(var4, "onViewRemovedFromPortal");
+      q.h(var5, "returnViewToParent");
       return new PortalFromNativeContext(var1, var2, var3, var4, var5);
    }
 
@@ -73,16 +73,16 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.view, var1.view)) {
+         if (!q.c(this.view, var1.view)) {
             return false;
-         } else if (!r.c(this.removeViewFromParent, var1.removeViewFromParent)) {
+         } else if (!q.c(this.removeViewFromParent, var1.removeViewFromParent)) {
             return false;
-         } else if (!r.c(this.onViewAddedToPortal, var1.onViewAddedToPortal)) {
+         } else if (!q.c(this.onViewAddedToPortal, var1.onViewAddedToPortal)) {
             return false;
-         } else if (!r.c(this.onViewRemovedFromPortal, var1.onViewRemovedFromPortal)) {
+         } else if (!q.c(this.onViewRemovedFromPortal, var1.onViewRemovedFromPortal)) {
             return false;
          } else {
-            return r.c(this.returnViewToParent, var1.returnViewToParent);
+            return q.c(this.returnViewToParent, var1.returnViewToParent);
          }
       }
    }
@@ -97,23 +97,23 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
    }
 
    public override fun toString(): String {
-      val var5: WeakReference = this.view;
-      val var6: Function1 = this.removeViewFromParent;
+      val var2: WeakReference = this.view;
+      val var5: Function1 = this.removeViewFromParent;
       val var3: Function1 = this.onViewAddedToPortal;
-      val var2: Function1 = this.onViewRemovedFromPortal;
-      val var4: Function1 = this.returnViewToParent;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PortalFromNativeContext(view=");
-      var1.append(var5);
-      var1.append(", removeViewFromParent=");
-      var1.append(var6);
-      var1.append(", onViewAddedToPortal=");
-      var1.append(var3);
-      var1.append(", onViewRemovedFromPortal=");
-      var1.append(var2);
-      var1.append(", returnViewToParent=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var1: Function1 = this.onViewRemovedFromPortal;
+      val var6: Function1 = this.returnViewToParent;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PortalFromNativeContext(view=");
+      var4.append(var2);
+      var4.append(", removeViewFromParent=");
+      var4.append(var5);
+      var4.append(", onViewAddedToPortal=");
+      var4.append(var3);
+      var4.append(", onViewRemovedFromPortal=");
+      var4.append(var1);
+      var4.append(", returnViewToParent=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 }

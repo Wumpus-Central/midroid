@@ -4,12 +4,12 @@ import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import eh.w
+import dh.w
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public fun Embed.getMedia(): EmbedUrlProvider? {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    var var2: Any;
    switch (EmbedUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType().ordinal()]) {
       case 1:
@@ -43,18 +43,18 @@ public fun Embed.getMedia(): EmbedUrlProvider? {
 }
 
 public fun Embed.getTag(): String {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var1: java.lang.String = var0.getClass().getSimpleName();
-   val var2: java.lang.String = var0.getType().name();
-   val var3: StringBuilder = new StringBuilder();
-   var3.append(var1);
-   var3.append(": ");
-   var3.append(var2);
-   return var3.toString();
+   val var3: java.lang.String = var0.getType().name();
+   val var2: StringBuilder = new StringBuilder();
+   var2.append(var1);
+   var2.append(": ");
+   var2.append(var3);
+   return var2.toString();
 }
 
 public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    val var1: Int = EmbedUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType().ordinal()];
    val var7: Pair;
    if (var1 != 1) {
@@ -131,7 +131,7 @@ public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
 }
 
 public fun Embed.isInlineMedia(): Boolean {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    if (getMedia(var0) == null && var0.getVideo() == null) {
       return false;
    } else {
@@ -155,12 +155,12 @@ public fun Embed.isInlineMedia(): Boolean {
 }
 
 public fun Embed.toImageMediaSources(channelId: ChannelId, messageId: MessageId): List<MediaSource>? {
-   r.h(var0, "$this$toImageMediaSources");
-   r.h(var3, "messageId");
+   q.h(var0, "$this$toImageMediaSources");
+   q.h(var3, "messageId");
    val var5: java.util.List = var0.getImages();
    val var4: ArrayList;
    if (var5 != null) {
-      var4 = new ArrayList(h.t(var5, 10));
+      var4 = new ArrayList(i.u(var5, 10));
       val var6: java.util.Iterator = var5.iterator();
 
       while (var6.hasNext()) {
@@ -190,8 +190,8 @@ public fun Embed.toImageMediaSources(channelId: ChannelId, messageId: MessageId)
 }
 
 public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shouldAutoPlay: Boolean, portal: Double?): MediaSource? {
-   r.h(var0, "$this$toMediaSource");
-   r.h(var3, "messageId");
+   q.h(var0, "$this$toMediaSource");
+   q.h(var3, "messageId");
    val var6: Int = EmbedUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType().ordinal()];
    val var12: MediaSource;
    if (var6 != 1) {
@@ -201,19 +201,19 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var18: java.lang.String = var17.getEmbedUrl();
-         if (var18 == null) {
+         val var8: java.lang.String = var17.getEmbedUrl();
+         if (var8 == null) {
             return null;
          }
 
-         val var8: java.lang.String = getTag(var0);
+         val var18: java.lang.String = getTag(var0);
          val var19: MediaType = MediaType.IMAGE;
          var12 = new MediaSource(
             null,
-            var18,
+            var8,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var8,
+            var18,
             var19,
             false,
             ChannelId.box-impl(var1),

@@ -11,21 +11,21 @@ public class ActivityInviteEmbedViewHolder(activityInviteEmbedView: ActivityInvi
    private final val activityInviteEmbedView: ActivityInviteEmbedView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "activityInviteEmbedView");
+      kotlin.jvm.internal.q.h(var1, "activityInviteEmbedView");
       super(var1, null);
       this.activityInviteEmbedView = var1;
    }
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function1, var1: ActivityInviteEmbedMessageAccessory, var2: View) {
-      kotlin.jvm.internal.r.h(var0, "$onTapJoinActivity");
-      kotlin.jvm.internal.r.h(var1, "$accessory");
+      kotlin.jvm.internal.q.h(var0, "$onTapJoinActivity");
+      kotlin.jvm.internal.q.h(var1, "$accessory");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()));
    }
 
    public fun bind(accessory: ActivityInviteEmbedMessageAccessory, onTapJoinActivity: (MessageId) -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "accessory");
-      kotlin.jvm.internal.r.h(var2, "onTapJoinActivity");
+      kotlin.jvm.internal.q.h(var1, "accessory");
+      kotlin.jvm.internal.q.h(var2, "onTapJoinActivity");
       val var3: ActivityInviteEmbed = var1.getActivityInviteEmbed();
       this.activityInviteEmbedView
          .setActivityInviteEmbed(

@@ -11,8 +11,8 @@
                 <com.discord.chat.presentation.message.view.AttachmentUploadOverlayView android:id="@id/upload_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" />
             </LinearLayout>
         </FrameLayout>
-        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="2.0dip">
-            <com.discord.chat.presentation.message.view.voicemessages.AudioWaveView android:id="@id/wave" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:layout_marginVertical="4.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/audio_progress_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="2.0dip">
+            <com.discord.chat.presentation.message.view.voicemessages.AudioWaveView android:id="@id/wave" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:layout_marginVertical="4.0dip" />
             <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/audio_details_view" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent">
                 <TextView android:textSize="12.0sp" android:ellipsize="end" android:id="@id/audio_file_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
                 <TextView android:textSize="10.0sp" android:ellipsize="end" android:id="@id/audio_file_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />

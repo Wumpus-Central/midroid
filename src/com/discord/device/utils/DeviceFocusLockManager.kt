@@ -7,25 +7,25 @@ import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.LinkedHashSet
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public object DeviceFocusLockManager {
    private final val focusExcludedViewPreviousImportantForAccessibilityValue: MutableMap<Int, Int> = new LinkedHashMap()
    private final val focusExcludedViews: MutableMap<Int, View> = new LinkedHashMap()
 
    private fun getParallelAncestorViewTrees(targetViews: List<View>): List<View> {
-      val var9: LinkedHashSet = new LinkedHashSet();
-      val var6: LinkedHashSet = new LinkedHashSet();
+      val var7: LinkedHashSet = new LinkedHashSet();
+      val var8: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
-         val var8: ArrayList = new ArrayList();
+         val var6: ArrayList = new ArrayList();
 
          while (var4.getParent() instanceof ViewGroup) {
             val var5: ViewParent = var4.getParent();
-            r.f(var5, "null cannot be cast to non-null type android.view.ViewGroup");
+            q.f(var5, "null cannot be cast to non-null type android.view.ViewGroup");
             val var11: ViewGroup = var5 as ViewGroup;
-            if (var6.contains(var5 as ViewGroup)) {
-               var8.clear();
+            if (var8.contains(var5 as ViewGroup)) {
+               var6.clear();
                break;
             }
 
@@ -34,19 +34,19 @@ public object DeviceFocusLockManager {
             for (int var2 = 0; var2 < var3; var2++) {
                var4 = var11.getChildAt(var2);
                if (!var1.contains(var4)) {
-                  r.g(var4, "child");
-                  var8.add(var4);
+                  q.e(var4);
+                  var6.add(var4);
                }
             }
 
-            var6.add(var11);
+            var8.add(var11);
             var4 = var11;
          }
 
-         var9.addAll(var8);
+         var7.addAll(var6);
       }
 
-      return h.N0(var9);
+      return i.Q0(var7);
    }
 
    public fun disableFocusLock() {
@@ -70,7 +70,7 @@ public object DeviceFocusLockManager {
    }
 
    public fun enableFocusLock(targetViews: List<View>) {
-      r.h(var1, "targetViews");
+      q.h(var1, "targetViews");
       this.disableFocusLock();
 
       for (View var2 : this.getParallelAncestorViewTrees(var1)) {

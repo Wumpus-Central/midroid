@@ -2,11 +2,13 @@ package com.discord.chat.bridge.polls
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import eh.l
-import eh.o
-import kotlin.jvm.internal.h0
+import dh.l
+import dh.o
+import kh.a
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.g0
 import kotlinx.serialization.KSerializer
-import uk.f
+import vk.f
 
 @f(with = PollRadioStyle.Serializer::class)
 public enum class PollRadioStyle(serialNumber: Int) : IntEnum {
@@ -16,21 +18,35 @@ public enum class PollRadioStyle(serialNumber: Int) : IntEnum {
    NONE(0)
    public open val serialNumber: Int
    @JvmStatic
-   private PollRadioStyle[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private PollRadioStyle[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public PollRadioStyle.Companion Companion = new PollRadioStyle.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<PollRadioStyle> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.serialNumber = var3;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun serializer(): KSerializer<PollRadioStyle> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<PollRadioStyle>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object Serializer : IntEnumSerializer(h0.b(PollRadioStyle.class), PollRadioStyle.NONE)
+   public object Serializer : IntEnumSerializer(g0.b(PollRadioStyle.class), PollRadioStyle.NONE)
 }

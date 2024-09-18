@@ -7,7 +7,7 @@ import java.util.ArrayList
 import java.util.Arrays
 import java.util.Comparator
 import java.util.PriorityQueue
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistogram?, maxColors: Int) {
    private final val mColorPopulations: SparseIntArray
@@ -28,12 +28,12 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
    private fun generateAverageColors(vboxes: Collection<com.discord.image.color_quantizer.ColorCutQuantizer.Vbox>): MutableList<Swatch> {
       val var2: ArrayList = new ArrayList(var1.size());
-      val var4: java.util.Iterator = var1.iterator();
+      val var3: java.util.Iterator = var1.iterator();
 
-      while (var4.hasNext()) {
-         val var3: Swatch = (var4.next() as ColorCutQuantizer.Vbox).getAverageColor();
-         if (!ColorCutQuantizer.Companion.access$shouldIgnoreColor(Companion, var3)) {
-            var2.add(var3);
+      while (var3.hasNext()) {
+         val var4: Swatch = (var3.next() as ColorCutQuantizer.Vbox).getAverageColor();
+         if (!ColorCutQuantizer.Companion.access$shouldIgnoreColor(Companion, var4)) {
+            var2.add(var4);
          }
       }
 
@@ -109,22 +109,19 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       private fun isNearRedILine(hslColor: FloatArray): Boolean {
-         val var3: Boolean;
-         if (10.0F <= var1[0] && var1[0] <= 37.0F) {
-            var3 = true;
-         } else {
+         val var2: Float = var1[0];
+         var var3: Boolean = false;
+         if (10.0F <= var2) {
             var3 = false;
-         }
-
-         var var4: Boolean = false;
-         if (var3) {
-            var4 = false;
-            if (var1[1] <= 0.82F) {
-               var4 = true;
+            if (var2 <= 37.0F) {
+               var3 = false;
+               if (var1[1] <= 0.82F) {
+                  var3 = true;
+               }
             }
          }
 
-         return var4;
+         return var3;
       }
 
       private fun isWhite(hslColor: FloatArray): Boolean {
@@ -140,7 +137,7 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       private fun shouldIgnoreColor(color: Swatch): Boolean {
          val var2: FloatArray = var1.getHsl();
-         r.g(var2, "color.hsl");
+         q.g(var2, "getHsl(...)");
          return this.shouldIgnoreColor(var2);
       }
 
@@ -156,11 +153,11 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       public fun fromBitmap(bitmap: Bitmap, maxColors: Int): ColorCutQuantizer {
-         r.h(var1, "bitmap");
-         val var3: Int = var1.getWidth();
-         val var4: Int = var1.getHeight();
-         val var5: IntArray = new int[var3 * var4];
-         var1.getPixels(var5, 0, var3, 0, 0, var3, var4);
+         q.h(var1, "bitmap");
+         val var4: Int = var1.getWidth();
+         val var3: Int = var1.getHeight();
+         val var5: IntArray = new int[var4 * var3];
+         var1.getPixels(var5, 0, var4, 0, 0, var4, var3);
          return new ColorCutQuantizer(new ColorHistogram(var5), var2, null);
       }
    }
@@ -170,35 +167,38 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
          public final get() {
             var var7: Int = this.lowerIndex;
             val var8: Int = this.upperIndex;
-            var var5: Int = 0;
             var var6: Int = 0;
             var var3: Int;
             var var4: Int;
+            var var12: Int;
             if (this.lowerIndex <= this.upperIndex) {
-               var5 = 0;
+               var12 = 0;
                var3 = 0;
                var4 = 0;
 
                while (true) {
-                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
-                  val var9: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var10);
-                  var6 += var9;
-                  var5 += Color.red(var10) * var9;
-                  var3 += Color.green(var10) * var9;
-                  var4 += var9 * Color.blue(var10);
+                  val var9: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
+                  val var10: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var9);
+                  var6 += var10;
+                  var12 += Color.red(var9) * var10;
+                  var3 += Color.green(var9) * var10;
+                  var4 += var10 * Color.blue(var9);
                   if (var7 == var8) {
+                     var12 = var6;
+                     var6 = var12;
                      break;
                   }
 
                   var7++;
                }
             } else {
-               var6 = 0;
                var3 = 0;
                var4 = 0;
+               var6 = 0;
+               var12 = 0;
             }
 
-            return new Swatch(Math.round((float)var5 / (float)var6), Math.round((float)var3 / (float)var6), Math.round((float)var4 / (float)var6), var6);
+            return new Swatch(Math.round((float)var6 / (float)var12), Math.round((float)var3 / (float)var12), Math.round((float)var4 / (float)var12), var12);
          }
 
 
@@ -210,13 +210,13 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val longestColorDimension: Int
          public final get() {
-            val var2: Int = this.maxRed - this.minRed;
-            val var1: Int = this.maxGreen - this.minGreen;
+            val var1: Int = this.maxRed - this.minRed;
+            val var2: Int = this.maxGreen - this.minGreen;
             val var3: Int = this.maxBlue - this.minBlue;
             val var4: Byte;
-            if (var2 >= var1 && var2 >= this.maxBlue - this.minBlue) {
+            if (var1 >= var2 && var1 >= this.maxBlue - this.minBlue) {
                var4 = -3;
-            } else if (var1 >= var2 && var1 >= var3) {
+            } else if (var2 >= var1 && var2 >= var3) {
                var4 = -2;
             } else {
                var4 = -1;

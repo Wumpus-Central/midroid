@@ -1,9 +1,8 @@
 package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -11,11 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.f0
-import xk.h
-import xk.f0.a
+import vk.f
+import vk.n
+import yk.g0
+import yk.h
+import yk.g0.a
 
 @f
 internal data class NoInputCallbackEvent(input: Boolean) : ReactEvent {
@@ -24,14 +23,6 @@ internal data class NoInputCallbackEvent(input: Boolean) : ReactEvent {
    init {
       super();
       this.input = var1;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: NoInputCallbackEvent, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var1.x(var2, 0, var0.input);
    }
 
    public operator fun component1(): Boolean {
@@ -53,16 +44,11 @@ internal data class NoInputCallbackEvent(input: Boolean) : ReactEvent {
    }
 
    public override fun hashCode(): Int {
-      var var1: Byte = this.input;
-      if (this.input != 0) {
-         var1 = 1;
-      }
-
-      return var1;
+      return java.lang.Boolean.hashCode(this.input);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -74,7 +60,7 @@ internal data class NoInputCallbackEvent(input: Boolean) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : f0<NoInputCallbackEvent> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -95,26 +81,26 @@ internal data class NoInputCallbackEvent(input: Boolean) : ReactEvent {
       }
 
       public open fun deserialize(decoder: Decoder): NoInputCallbackEvent {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         var var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         var var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          if (var5) {
-            var5 = var7.C(var6, 0);
+            var5 = var7.s(var6, 0);
          } else {
             var5 = false;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var5 = var7.C(var6, 0);
+                  var5 = var7.s(var6, 0);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -122,20 +108,20 @@ internal data class NoInputCallbackEvent(input: Boolean) : ReactEvent {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new NoInputCallbackEvent(var2, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NoInputCallbackEvent) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         NoInputCallbackEvent.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         NoInputCallbackEvent.write$Self$media_engine_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
+      fun typeParametersSerializers(): Array<KSerializer> {
          return a.a(this);
       }
    }

@@ -12,11 +12,11 @@ import com.discord.chat.input.spans.DCDColorSpan
 import com.discord.chat.input.spans.DCDDeleteOnBackspaceSpan
 import com.discord.chat.input.spans.DCDInputSpan
 import com.discord.chat.input.spans.DCDNoSelectionSpan
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal fun EditText.addEllipsizedHint(hint: CharSequence?, hintTruncateAt: TruncateAt = TruncateAt.END) {
-   r.h(var0, "<this>");
-   r.h(var2, "hintTruncateAt");
+   q.h(var0, "<this>");
+   q.h(var2, "hintTruncateAt");
    if (var0.getMaxLines() != 1) {
       var0.setMaxLines(1);
    }
@@ -35,16 +35,16 @@ fun `addEllipsizedHint$default`(var0: EditText, var1: java.lang.CharSequence, va
 }
 
 internal fun Editable.applyDCDSpan(span: DCDInputSpan, node: ChatInputNode) {
-   r.h(var0, "<this>");
-   r.h(var1, "span");
-   r.h(var2, "node");
+   q.h(var0, "<this>");
+   q.h(var1, "span");
+   q.h(var2, "node");
    if (var2.getLocation() <= var0.length() && var2.getLocation() + var2.getLength() <= var0.length()) {
       var0.setSpan(var1, var2.getLocation(), var2.getLocation() + var2.getLength(), 33);
    }
 }
 
 internal fun EditText.removeEllipsizedHint(maxLines: Int) {
-   r.h(var0, "<this>");
+   q.h(var0, "<this>");
    if (var0.getMaxLines() != var1) {
       var0.setMaxLines(var1);
    }
@@ -54,24 +54,17 @@ internal fun EditText.removeEllipsizedHint(maxLines: Int) {
 }
 
 internal fun Editable.setChatInputNodeStyle(node: ChatInputNode) {
-   r.h(var0, "<this>");
-   r.h(var1, "node");
-   val var3: ChatInputNodeStyle = var1.getStyle();
-   if (var3 != null) {
-      applyDCDSpan(var0, new DCDColorSpan(var3.getColor()), var1);
-      if (var3.getBackgroundStyle() != null) {
-         applyDCDSpan(var0, new DCDBackgroundSpan(var3.getBackgroundStyle()), var1);
+   q.h(var0, "<this>");
+   q.h(var1, "node");
+   val var2: ChatInputNodeStyle = var1.getStyle();
+   if (var2 != null) {
+      applyDCDSpan(var0, new DCDColorSpan(var2.getColor()), var1);
+      if (var2.getBackgroundStyle() != null) {
+         applyDCDSpan(var0, new DCDBackgroundSpan(var2.getBackgroundStyle()), var1);
       }
 
-      val var4: ChatInputNodeFontWeight = var3.getFontWeight();
-      val var2: Int;
-      if (var4 == null) {
-         var2 = -1;
-      } else {
-         var2 = EditTextUtilsKt.WhenMappings.$EnumSwitchMapping$0[var4.ordinal()];
-      }
-
-      if (var2 == 1) {
+      val var3: ChatInputNodeFontWeight = var2.getFontWeight();
+      if (var3 != null && EditTextUtilsKt.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()] == 1) {
          applyDCDSpan(var0, new DCDBoldSpan(), var1);
       }
    }

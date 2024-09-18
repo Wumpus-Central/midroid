@@ -5,19 +5,19 @@ import com.discord.play_delivery.PlayAssetDelivery
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 public class OnDemandResourceModule(reactContext: ReactApplicationContext) : NativeOnDemandResourceSpec {
    init {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       super(var1);
    }
 
-   public open fun fetchOnDemandResource(resourceName: String?, promise: Promise?) {
+   public override fun fetchOnDemandResource(resourceName: String?, promise: Promise?) {
       if (var1 != null) {
          val var3: Function1;
          if (var2 != null) {
-            var3 = new Function1<java.lang.Boolean, Unit>(var2) {
+            var3 = new Function1(var2) {
                final Promise $it;
 
                {
@@ -37,7 +37,7 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public open fun hasOnDemandResource(resourceName: String?): Boolean {
+   public override fun hasOnDemandResource(resourceName: String?): Boolean {
       var var2: Boolean = false;
       if (var1 != null && PlayAssetDelivery.getOrFetchAssetPackLocation$default(PlayAssetDelivery.INSTANCE, var1, null, 2, null) != null) {
          var2 = true;
@@ -46,7 +46,7 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
       return var2;
    }
 
-   public open fun isOnDemandResourcingAvailable(): Boolean {
+   public override fun isOnDemandResourcingAvailable(): Boolean {
       return PlayAssetDelivery.INSTANCE.isAssetDeliveryAvailable();
    }
 

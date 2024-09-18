@@ -2,12 +2,11 @@ package com.discord.codegen;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
-import com.facebook.react.bridge.ReactModuleWithSpec;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import d6.a;
 import java.util.Map;
+import k6.a;
 
-public abstract class NativeDeviceManagerSpec extends ReactContextBaseJavaModule implements ReactModuleWithSpec, TurboModule {
+public abstract class NativeDeviceManagerSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "RTNDeviceManager";
 
    public NativeDeviceManagerSpec(ReactApplicationContext var1) {

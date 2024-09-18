@@ -1,15 +1,17 @@
 package com.discord.chat.bridge.contentnode
 
-import eh.l
-import eh.o
-import kotlin.jvm.internal.r
+import dh.l
+import dh.o
+import kh.a
+import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import uk.f
-import wk.g
-import wk.e.i
+import vk.f
+import xk.g
+import xk.e.i
 
 @f(with = StaticChannelMentionType.Serializer::class)
 public enum class StaticChannelMentionType(id: String) {
@@ -21,19 +23,33 @@ public enum class StaticChannelMentionType(id: String) {
    Unknown("")
    public final val id: String
    @JvmStatic
-   private StaticChannelMentionType[] $VALUES = $values();
+   private EnumEntries $ENTRIES;
    @JvmStatic
-   private Lazy<KSerializer<Object>> $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private StaticChannelMentionType[] $VALUES;
+   @JvmStatic
+   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public StaticChannelMentionType.Companion Companion = new StaticChannelMentionType.Companion(null);
+
+   @JvmStatic
+   fun {
+      val var0: Array<StaticChannelMentionType> = $values();
+      $VALUES = var0;
+      $ENTRIES = a.a(var0);
+   }
 
    init {
       this.id = var3;
    }
 
+   @JvmStatic
+   fun getEntries(): EnumEntries {
+      return $ENTRIES;
+   }
+
    public companion object {
       public fun fromValue(id: String): StaticChannelMentionType {
-         r.h(var1, "id");
+         q.h(var1, "id");
          val var5: Array<StaticChannelMentionType> = StaticChannelMentionType.values();
          val var3: Int = var5.length;
          var var2: Int = 0;
@@ -45,7 +61,7 @@ public enum class StaticChannelMentionType(id: String) {
             }
 
             val var4: StaticChannelMentionType = var5[var2];
-            if (r.c(var5[var2].getId(), var1)) {
+            if (q.c(var5[var2].getId(), var1)) {
                var6 = var4;
                break;
             }
@@ -62,11 +78,11 @@ public enum class StaticChannelMentionType(id: String) {
       }
 
       public fun serializer(): KSerializer<StaticChannelMentionType> {
-         return this.get$cachedSerializer$delegate().getValue() as KSerializer<StaticChannelMentionType>;
+         return this.get$cachedSerializer();
       }
    }
 
-   public object Serializer : KSerializer<StaticChannelMentionType> {
+   public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
             return g.a("StaticChannelMentionType", i.a);
@@ -74,13 +90,13 @@ public enum class StaticChannelMentionType(id: String) {
 
 
       public open fun deserialize(decoder: Decoder): StaticChannelMentionType {
-         r.h(var1, "decoder");
-         return StaticChannelMentionType.Companion.fromValue(var1.z());
+         q.h(var1, "decoder");
+         return StaticChannelMentionType.Companion.fromValue(var1.n());
       }
 
       public open fun serialize(encoder: Encoder, value: StaticChannelMentionType) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          var1.F(var2.getId());
       }
    }

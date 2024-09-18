@@ -1,7 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
-import xk.h
+import vk.f
+import vk.n
+import wk.a
+import yk.b2
+import yk.g0
+import yk.h
 
 @f
 public data class ComponentEmoji(id: String? = null, name: String, src: String? = null, animated: Boolean = false, surrogates: String? = null) {
@@ -25,66 +24,13 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    public final val surrogates: String?
 
    init {
-      r.h(var2, "name");
+      q.h(var2, "name");
       super();
       this.id = var1;
       this.name = var2;
       this.src = var3;
       this.animated = var4;
       this.surrogates = var5;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: ComponentEmoji, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.id == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, a2.a, var0.id);
-      }
-
-      var1.z(var2, 1, var0.name);
-      if (!var1.A(var2, 2) && var0.src == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 2, a2.a, var0.src);
-      }
-
-      if (!var1.A(var2, 3) && !var0.animated) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.x(var2, 3, var0.animated);
-      }
-
-      label40: {
-         if (!var1.A(var2, 4)) {
-            var3 = false;
-            if (var0.surrogates == null) {
-               break label40;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 4, a2.a, var0.surrogates);
-      }
    }
 
    public operator fun component1(): String? {
@@ -114,7 +60,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       animated: Boolean = var0.animated,
       surrogates: String? = var0.surrogates
    ): ComponentEmoji {
-      r.h(var2, "name");
+      q.h(var2, "name");
       return new ComponentEmoji(var1, var2, var3, var4, var5);
    }
 
@@ -125,22 +71,22 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!q.c(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.name, var1.name)) {
+         } else if (!q.c(this.name, var1.name)) {
             return false;
-         } else if (!r.c(this.src, var1.src)) {
+         } else if (!q.c(this.src, var1.src)) {
             return false;
          } else if (this.animated != var1.animated) {
             return false;
          } else {
-            return r.c(this.surrogates, var1.surrogates);
+            return q.c(this.surrogates, var1.surrogates);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      var var4: Int = 0;
+      var var3: Int = 0;
       val var1: Int;
       if (this.id == null) {
          var1 = 0;
@@ -148,7 +94,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          var1 = this.id.hashCode();
       }
 
-      val var6: Int = this.name.hashCode();
+      val var4: Int = this.name.hashCode();
       val var2: Int;
       if (this.src == null) {
          var2 = 0;
@@ -156,40 +102,36 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          var2 = this.src.hashCode();
       }
 
-      var var3: Byte = this.animated;
-      if (this.animated != 0) {
-         var3 = 1;
-      }
-
+      val var5: Int = java.lang.Boolean.hashCode(this.animated);
       if (this.surrogates != null) {
-         var4 = this.surrogates.hashCode();
+         var3 = this.surrogates.hashCode();
       }
 
-      return (((var1 * 31 + var6) * 31 + var2) * 31 + var3) * 31 + var4;
+      return (((var1 * 31 + var4) * 31 + var2) * 31 + var5) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.name;
-      val var4: java.lang.String = this.src;
+      val var5: java.lang.String = this.id;
+      val var6: java.lang.String = this.name;
+      val var3: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var5: java.lang.String = this.surrogates;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ComponentEmoji(id=");
-      var6.append(var2);
-      var6.append(", name=");
-      var6.append(var3);
-      var6.append(", src=");
-      var6.append(var4);
-      var6.append(", animated=");
-      var6.append(var1);
-      var6.append(", surrogates=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var4: java.lang.String = this.surrogates;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ComponentEmoji(id=");
+      var2.append(var5);
+      var2.append(", name=");
+      var2.append(var6);
+      var2.append(", src=");
+      var2.append(var3);
+      var2.append(", animated=");
+      var2.append(var1);
+      var2.append(", surrogates=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : f0<ComponentEmoji> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -210,39 +152,41 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         return new KSerializer[]{a.u(a2.a), var1, a.u(var1), h.a, a.u(var1)};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), h.a, a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): ComponentEmoji {
-         r.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         q.h(var1, "decoder");
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
          var var2: Int;
          var var5: Boolean;
-         var var6: Any;
          var var7: java.lang.String;
-         var var8: Any;
-         var var12: Any;
-         if (var10.p()) {
-            var12 = a2.a;
-            var8 = var10.n(var9, 0, a2.a, null);
-            var7 = var10.m(var9, 1);
-            var6 = var10.n(var9, 2, (DeserializationStrategy)var12, null);
-            var5 = var10.C(var9, 3);
-            var12 = var10.n(var9, 4, (DeserializationStrategy)var12, null);
+         var var8: java.lang.String;
+         var var13: java.lang.String;
+         var var14: java.lang.String;
+         if (var11.y()) {
+            val var6: b2 = b2.a;
+            var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
+            var7 = var11.t(var10, 1);
+            val var12: java.lang.String = var11.v(var10, 2, var6, null) as java.lang.String;
+            var5 = var11.s(var10, 3);
+            val var9: java.lang.String = var11.v(var10, 4, var6, null) as java.lang.String;
             var2 = 31;
+            var14 = var12;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var8 = null;
             var7 = null;
-            var6 = null;
-            var12 = null;
+            var14 = null;
+            var13 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -252,22 +196,22 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
                                  throw new n(var4);
                               }
 
-                              var12 = var10.n(var9, 4, a2.a, var12);
+                              var13 = var11.v(var10, 4, b2.a, var13) as java.lang.String;
                               var2 |= 16;
                            } else {
-                              var5 = var10.C(var9, 3);
+                              var5 = var11.s(var10, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var6 = var10.n(var9, 2, a2.a, var6);
+                           var14 = var11.v(var10, 2, b2.a, var14) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.m(var9, 1);
+                        var7 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.n(var9, 0, a2.a, var8);
+                     var8 = var11.v(var10, 0, b2.a, var8) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -276,21 +220,21 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
             }
          }
 
-         var10.c(var9);
-         return new ComponentEmoji(var2, var8 as java.lang.String, var7, var6 as java.lang.String, var5, var12 as java.lang.String, null);
+         var11.b(var10);
+         return new ComponentEmoji(var2, var8, var7, var14, var5, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ComponentEmoji) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         ComponentEmoji.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         ComponentEmoji.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return yk.g0.a.a(this);
       }
    }
 

@@ -13,7 +13,7 @@ import android.view.View.OnLayoutChangeListener
 import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import androidx.core.os.e
-import androidx.core.view.f1
+import androidx.core.view.r0
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.mobile_voice_overlay.utils.OverlayViewProvider
 import com.discord.mobile_voice_overlay.utils.WindowUtils
@@ -23,16 +23,15 @@ import com.discord.mobile_voice_overlay.views.OverlayMenuBubbleDialog
 import com.discord.mobile_voice_overlay.views.OverlayTrashWrap
 import com.discord.mobile_voice_overlay.views.OverlayVoiceBubble
 import com.discord.mobile_voice_overlay.views.OverlayVoiceSelectorBubbleDialog
-import com.discord.primitives.ChannelId
 import com.discord.react.headless_tasks.api.HeadlessTasks
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.bridge.CatalystInstance
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
-import eh.w
+import dh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 
 internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    private final val context: ReactApplicationContext
@@ -42,233 +41,224 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    private final val voiceBubbleProvider: OverlayViewProvider<OverlayVoiceBubble>
 
    init {
-      r.h(var1, "context");
+      q.h(var1, "context");
       super();
       this.context = var1;
-      this.voiceBubbleProvider = new OverlayViewProvider<>(
-         new Function1<OverlayViewProvider<OverlayVoiceBubble>, OverlayVoiceBubble>(this) {
-            final MobileVoiceOverlay this$0;
+      this.voiceBubbleProvider = new OverlayViewProvider<>(new Function1(this) {
+         final MobileVoiceOverlay this$0;
 
-            {
-               super(1);
-               this.this$0 = var1;
+         {
+            super(1);
+            this.this$0 = var1;
+         }
+
+         private static final void invoke$lambda$2(OverlayVoiceBubble var0, MobileVoiceOverlay var1, View var2) {
+            q.h(var0, "$voiceBubble");
+            q.h(var1, "this$0");
+            val var9: SimpleDraweeView = var0.getImageView$mobile_voice_overlay_release();
+            q.f(var9, "null cannot be cast to non-null type android.view.View");
+            val var10: LayoutParams = var9.getLayoutParams();
+            val var11: MarginLayoutParams;
+            if (var10 is MarginLayoutParams) {
+               var11 = var10 as MarginLayoutParams;
+            } else {
+               var11 = null;
             }
 
-            private static final void invoke$lambda$2(OverlayVoiceBubble var0, MobileVoiceOverlay var1, View var2) {
-               r.h(var0, "$voiceBubble");
-               r.h(var1, "this$0");
-               val var9: SimpleDraweeView = var0.getImageView$mobile_voice_overlay_release();
-               r.f(var9, "null cannot be cast to non-null type android.view.View");
-               val var10: LayoutParams = var9.getLayoutParams();
-               val var11: MarginLayoutParams;
-               if (var10 is MarginLayoutParams) {
-                  var11 = var10 as MarginLayoutParams;
-               } else {
-                  var11 = null;
+            val var3: Int;
+            if (var11 != null) {
+               var3 = var11.leftMargin;
+            } else {
+               var3 = 0;
+            }
+
+            val var12: LayoutParams = var9.getLayoutParams();
+            val var13: MarginLayoutParams;
+            if (var12 is MarginLayoutParams) {
+               var13 = var12 as MarginLayoutParams;
+            } else {
+               var13 = null;
+            }
+
+            val var4: Int;
+            if (var13 != null) {
+               var4 = var13.topMargin;
+            } else {
+               var4 = 0;
+            }
+
+            val var14: LayoutParams = var9.getLayoutParams();
+            val var15: MarginLayoutParams;
+            if (var14 is MarginLayoutParams) {
+               var15 = var14 as MarginLayoutParams;
+            } else {
+               var15 = null;
+            }
+
+            val var5: Int;
+            if (var15 != null) {
+               var5 = var15.rightMargin;
+            } else {
+               var5 = 0;
+            }
+
+            val var18: LayoutParams = var9.getLayoutParams();
+            var var16: MarginLayoutParams = null;
+            if (var18 is MarginLayoutParams) {
+               var16 = var18 as MarginLayoutParams;
+            }
+
+            val var6: Int;
+            if (var16 != null) {
+               var6 = var16.bottomMargin;
+            } else {
+               var6 = 0;
+            }
+
+            MobileVoiceOverlay.access$getMenuDialogProvider$p(var1).withView(new Function1(var0, new Rect(var3, var4, var5, var6)) {
+               final Rect $marginRect;
+               final OverlayVoiceBubble $voiceBubble;
+
+               {
+                  super(1);
+                  this.$voiceBubble = var1;
+                  this.$marginRect = var2x;
                }
 
-               val var3: Int;
-               if (var11 != null) {
-                  var3 = var11.leftMargin;
-               } else {
-                  var3 = 0;
-               }
-
-               val var12: LayoutParams = var9.getLayoutParams();
-               val var13: MarginLayoutParams;
-               if (var12 is MarginLayoutParams) {
-                  var13 = var12 as MarginLayoutParams;
-               } else {
-                  var13 = null;
-               }
-
-               val var4: Int;
-               if (var13 != null) {
-                  var4 = var13.topMargin;
-               } else {
-                  var4 = 0;
-               }
-
-               val var14: LayoutParams = var9.getLayoutParams();
-               val var15: MarginLayoutParams;
-               if (var14 is MarginLayoutParams) {
-                  var15 = var14 as MarginLayoutParams;
-               } else {
-                  var15 = null;
-               }
-
-               val var5: Int;
-               if (var15 != null) {
-                  var5 = var15.rightMargin;
-               } else {
-                  var5 = 0;
-               }
-
-               val var18: LayoutParams = var9.getLayoutParams();
-               var var16: MarginLayoutParams = null;
-               if (var18 is MarginLayoutParams) {
-                  var16 = var18 as MarginLayoutParams;
-               }
-
-               val var6: Int;
-               if (var16 != null) {
-                  var6 = var16.bottomMargin;
-               } else {
-                  var6 = 0;
-               }
-
-               MobileVoiceOverlay.access$getMenuDialogProvider$p(var1)
-                  .withView(new Function1<OverlayMenuBubbleDialog, Unit>(var0, new Rect(var3, var4, var5, var6)) {
-                     final Rect $marginRect;
+               public final void invoke(OverlayMenuBubbleDialog var1) {
+                  q.h(var1, "menuDialog");
+                  val var4x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
+                  val var3x: OverlayVoiceBubble = this.$voiceBubble;
+                  val var2x: Rect = this.$marginRect;
+                  var4x.width = this.$voiceBubble.getWidth() - var2x.left - var2x.right;
+                  var4x.height = var3x.getHeight();
+                  var1.getLinkedAnchorView().requestLayout();
+                  var1.getLinkedAnchorView().setTag("Active Voice Bubble");
+                  var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this.$voiceBubble) {
                      final OverlayVoiceBubble $voiceBubble;
+
+                     {
+                        this.$voiceBubble = var1;
+                     }
+
+                     public void onViewAttachedToWindow(View var1) {
+                        q.h(var1, "v");
+                        val var2x: OverlayVoiceBubble = this.$voiceBubble;
+                        if (r0.U(var1) && !var1.isLayoutRequested()) {
+                           var1 = var1.findViewWithTag("Active Voice Bubble");
+                           q.g(var1, "findViewWithTag(...)");
+                           var2x.anchorOn(var1);
+                        } else {
+                           var1.addOnLayoutChangeListener(new OnLayoutChangeListener(var1, var2x) {
+                              final View $v$inlined;
+                              final OverlayVoiceBubble $voiceBubble$inlined;
+
+                              {
+                                 this.$v$inlined = var1;
+                                 this.$voiceBubble$inlined = var2x;
+                              }
+
+                              public void onLayoutChange(View var1, int var2x, int var3x, int var4x, int var5x, int var6x, int var7, int var8, int var9x) {
+                                 var1.removeOnLayoutChangeListener(this);
+                                 var1 = this.$v$inlined.findViewWithTag("Active Voice Bubble");
+                                 q.g(var1, "findViewWithTag(...)");
+                                 this.$voiceBubble$inlined.anchorOn(var1);
+                              }
+                           });
+                        }
+                     }
+
+                     public void onViewDetachedFromWindow(View var1) {
+                        q.h(var1, "v");
+                        if (r0.T(this.$voiceBubble)) {
+                           this.$voiceBubble.setBubbleTouchable(true);
+                           this.$voiceBubble.anchorOff(true);
+                        }
+                     }
+                  });
+               }
+            });
+            var0.setBubbleTouchable(false);
+         }
+
+         public final OverlayVoiceBubble invoke(OverlayViewProvider<OverlayVoiceBubble> var1) {
+            q.h(var1, "it");
+            val var2: Int = MobileVoiceOverlay.access$getContext$p(this.this$0).getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
+            val var4: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
+            var4.getInsetMargins().set(-var2, var2, -var2, var2);
+            var4.setOnClickListener(new a(var4, this.this$0));
+            var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var4) {
+               final OverlayVoiceBubble $voiceBubble;
+               final MobileVoiceOverlay this$0;
+
+               {
+                  super(1);
+                  this.this$0 = var1;
+                  this.$voiceBubble = var2x;
+               }
+
+               public final void invoke(MotionEvent var1) {
+                  q.h(var1, "event");
+                  MobileVoiceOverlay.access$getTrashWrapProvider$p(this.this$0).withView(new Function1(this.$voiceBubble, var1, this.this$0) {
+                     final MotionEvent $event;
+                     final OverlayVoiceBubble $voiceBubble;
+                     final MobileVoiceOverlay this$0;
 
                      {
                         super(1);
                         this.$voiceBubble = var1;
-                        this.$marginRect = var2x;
+                        this.$event = var2x;
+                        this.this$0 = var3;
                      }
 
-                     public final void invoke(OverlayMenuBubbleDialog var1) {
-                        r.h(var1, "menuDialog");
-                        val var3x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
-                        val var4x: OverlayVoiceBubble = this.$voiceBubble;
-                        val var2x: Rect = this.$marginRect;
-                        var3x.width = this.$voiceBubble.getWidth() - var2x.left - var2x.right;
-                        var3x.height = var4x.getHeight();
-                        var1.getLinkedAnchorView().requestLayout();
-                        var1.getLinkedAnchorView().setTag("Active Voice Bubble");
-                        var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this.$voiceBubble) {
-                           final OverlayVoiceBubble $voiceBubble;
-
-                           {
-                              this.$voiceBubble = var1;
-                           }
-
-                           public void onViewAttachedToWindow(View var1) {
-                              r.h(var1, "v");
-                              val var2x: OverlayVoiceBubble = this.$voiceBubble;
-                              if (f1.U(var1) && !var1.isLayoutRequested()) {
-                                 var1 = var1.findViewWithTag("Active Voice Bubble");
-                                 r.g(var1, "v.findViewWithTag(ANCHOR_TAG)");
-                                 var2x.anchorOn(var1);
-                              } else {
-                                 var1.addOnLayoutChangeListener(new OnLayoutChangeListener(var1, var2x) {
-                                    final View $v$inlined;
-                                    final OverlayVoiceBubble $voiceBubble$inlined;
-
-                                    {
-                                       this.$v$inlined = var1;
-                                       this.$voiceBubble$inlined = var2x;
-                                    }
-
-                                    public void onLayoutChange(View var1, int var2x, int var3x, int var4x, int var5x, int var6x, int var7, int var8, int var9x) {
-                                       var1.removeOnLayoutChangeListener(this);
-                                       var1 = this.$v$inlined.findViewWithTag("Active Voice Bubble");
-                                       r.g(var1, "v.findViewWithTag(ANCHOR_TAG)");
-                                       this.$voiceBubble$inlined.anchorOn(var1);
-                                    }
-                                 });
-                              }
-                           }
-
-                           public void onViewDetachedFromWindow(View var1) {
-                              r.h(var1, "v");
-                              if (f1.T(this.$voiceBubble)) {
-                                 this.$voiceBubble.setBubbleTouchable(true);
-                                 this.$voiceBubble.anchorOff(true);
-                              }
-                           }
-                        });
+                     public final void invoke(OverlayTrashWrap var1) {
+                        q.h(var1, "trashWrap");
+                        if (var1.processMotionEvent(this.$voiceBubble, this.$event)) {
+                           MobileVoiceOverlay.access$onTrashVoiceBubble(this.this$0);
+                        }
                      }
                   });
-               var0.setBubbleTouchable(false);
-            }
+               }
+            });
+            var4.setOnMovingStateChanged(new Function1(this.this$0, var4) {
+               final OverlayVoiceBubble $voiceBubble;
+               final MobileVoiceOverlay this$0;
 
-            public final OverlayVoiceBubble invoke(OverlayViewProvider<OverlayVoiceBubble> var1) {
-               r.h(var1, "it");
-               val var3: Int = MobileVoiceOverlay.access$getContext$p(this.this$0).getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-               val var5: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
-               var5.getInsetMargins().set(-var3, var3, -var3, var3);
-               var5.setOnClickListener(new a(var5, this.this$0));
-               var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(
-                  new Function1<MotionEvent, Unit>(this.this$0, var5) {
+               {
+                  super(1);
+                  this.this$0 = var1;
+                  this.$voiceBubble = var2x;
+               }
+
+               public final void invoke(boolean var1) {
+                  MobileVoiceOverlay.access$getTrashWrapProvider$p(this.this$0).withView(new Function1(var1, this.this$0, this.$voiceBubble) {
+                     final boolean $isMoving;
                      final OverlayVoiceBubble $voiceBubble;
                      final MobileVoiceOverlay this$0;
 
                      {
                         super(1);
-                        this.this$0 = var1;
-                        this.$voiceBubble = var2;
+                        this.$isMoving = var1;
+                        this.this$0 = var2x;
+                        this.$voiceBubble = var3;
                      }
 
-                     public final void invoke(MotionEvent var1) {
-                        r.h(var1, "event");
-                        MobileVoiceOverlay.access$getTrashWrapProvider$p(this.this$0)
-                           .withView(new Function1<OverlayTrashWrap, Unit>(this.$voiceBubble, var1, this.this$0) {
-                              final MotionEvent $event;
-                              final OverlayVoiceBubble $voiceBubble;
-                              final MobileVoiceOverlay this$0;
-
-                              {
-                                 super(1);
-                                 this.$voiceBubble = var1;
-                                 this.$event = var2;
-                                 this.this$0 = var3x;
-                              }
-
-                              public final void invoke(OverlayTrashWrap var1) {
-                                 r.h(var1, "trashWrap");
-                                 if (var1.processMotionEvent(this.$voiceBubble, this.$event)) {
-                                    MobileVoiceOverlay.access$onTrashVoiceBubble(this.this$0);
-                                 }
-                              }
-                           });
+                     public final void invoke(OverlayTrashWrap var1) {
+                        q.h(var1, "trashWrap");
+                        if (this.$isMoving) {
+                           var1.show();
+                        } else {
+                           var1.hide();
+                           MobileVoiceOverlay.access$floatBubbleToHorizontalEdge(this.this$0, this.$voiceBubble);
+                        }
                      }
-                  }
-               );
-               var5.setOnMovingStateChanged(
-                  new Function1<java.lang.Boolean, Unit>(this.this$0, var5) {
-                     final OverlayVoiceBubble $voiceBubble;
-                     final MobileVoiceOverlay this$0;
-
-                     {
-                        super(1);
-                        this.this$0 = var1;
-                        this.$voiceBubble = var2;
-                     }
-
-                     public final void invoke(boolean var1) {
-                        MobileVoiceOverlay.access$getTrashWrapProvider$p(this.this$0)
-                           .withView(new Function1<OverlayTrashWrap, Unit>(var1, this.this$0, this.$voiceBubble) {
-                              final boolean $isMoving;
-                              final OverlayVoiceBubble $voiceBubble;
-                              final MobileVoiceOverlay this$0;
-
-                              {
-                                 super(1);
-                                 this.$isMoving = var1;
-                                 this.this$0 = var2;
-                                 this.$voiceBubble = var3x;
-                              }
-
-                              public final void invoke(OverlayTrashWrap var1) {
-                                 r.h(var1, "trashWrap");
-                                 if (this.$isMoving) {
-                                    var1.show();
-                                 } else {
-                                    var1.hide();
-                                    MobileVoiceOverlay.access$floatBubbleToHorizontalEdge(this.this$0, this.$voiceBubble);
-                                 }
-                              }
-                           });
-                     }
-                  }
-               );
-               return var5;
-            }
+                  });
+               }
+            });
+            return var4;
          }
-      );
-      this.trashWrapProvider = new OverlayViewProvider<>(new Function1<OverlayViewProvider<OverlayTrashWrap>, OverlayTrashWrap>(this) {
+      });
+      this.trashWrapProvider = new OverlayViewProvider<>(new Function1(this) {
          final MobileVoiceOverlay this$0;
 
          {
@@ -277,11 +267,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          }
 
          public final OverlayTrashWrap invoke(OverlayViewProvider<OverlayTrashWrap> var1) {
-            r.h(var1, "it");
+            q.h(var1, "it");
             return new OverlayTrashWrap(MobileVoiceOverlay.access$getContext$p(this.this$0));
          }
       });
-      this.menuDialogProvider = new OverlayViewProvider<>(new Function1<OverlayViewProvider<OverlayMenuBubbleDialog>, OverlayMenuBubbleDialog>(this) {
+      this.menuDialogProvider = new OverlayViewProvider<>(new Function1(this) {
          final MobileVoiceOverlay this$0;
 
          {
@@ -290,11 +280,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          }
 
          public final OverlayMenuBubbleDialog invoke(OverlayViewProvider<OverlayMenuBubbleDialog> var1) {
-            r.h(var1, "it");
-            val var2: OverlayMenuBubbleDialog = new OverlayMenuBubbleDialog(MobileVoiceOverlay.access$getContext$p(this.this$0));
-            val var3: MobileVoiceOverlay = this.this$0;
-            var2.getInsetMargins().top = var2.getResources().getDimensionPixelOffset(R.dimen.vertical_safe_margin);
-            var2.setOnDialogClosed(new Function1<OverlayDialog, Unit>(var3) {
+            q.h(var1, "it");
+            val var3: OverlayMenuBubbleDialog = new OverlayMenuBubbleDialog(MobileVoiceOverlay.access$getContext$p(this.this$0));
+            val var2: MobileVoiceOverlay = this.this$0;
+            var3.getInsetMargins().top = var3.getResources().getDimensionPixelOffset(R.dimen.vertical_safe_margin);
+            var3.setOnDialogClosed(new Function1(var2) {
                final MobileVoiceOverlay this$0;
 
                {
@@ -303,11 +293,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                }
 
                public final void invoke(OverlayDialog var1) {
-                  r.h(var1, "it");
+                  q.h(var1, "it");
                   MobileVoiceOverlay.access$closeMenuDialog(this.this$0);
                }
             });
-            var2.setOnShowSelectorDialog(new Function0<Unit>(var3) {
+            var3.setOnShowSelectorDialog(new Function0(var2) {
                final MobileVoiceOverlay this$0;
 
                {
@@ -319,11 +309,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   MobileVoiceOverlay.access$getSelectorDialogProvider$p(this.this$0).showViewOnOverlay();
                }
             });
-            return var2;
+            return var3;
          }
       });
       this.selectorDialogProvider = new OverlayViewProvider<>(
-         new Function1<OverlayViewProvider<OverlayVoiceSelectorBubbleDialog>, OverlayVoiceSelectorBubbleDialog>(this) {
+         new Function1(this) {
             final MobileVoiceOverlay this$0;
 
             {
@@ -332,10 +322,10 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
             }
 
             public final OverlayVoiceSelectorBubbleDialog invoke(OverlayViewProvider<OverlayVoiceSelectorBubbleDialog> var1) {
-               r.h(var1, "provider");
+               q.h(var1, "provider");
                val var2: OverlayVoiceSelectorBubbleDialog = new OverlayVoiceSelectorBubbleDialog(MobileVoiceOverlay.access$getContext$p(this.this$0));
                val var3: MobileVoiceOverlay = this.this$0;
-               var2.setOnDialogClosed(new Function1<OverlayDialog, Unit>(var1) {
+               var2.setOnDialogClosed(new Function1(var1) {
                   final OverlayViewProvider<OverlayVoiceSelectorBubbleDialog> $provider;
 
                   {
@@ -344,11 +334,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   }
 
                   public final void invoke(OverlayDialog var1) {
-                     r.h(var1, "it");
+                     q.h(var1, "it");
                      this.$provider.removeViewFromOverlay();
                   }
                });
-               var2.setOnTextChanged(new Function1<java.lang.String, Unit>(var3) {
+               var2.setOnTextChanged(new Function1(var3) {
                   final MobileVoiceOverlay this$0;
 
                   {
@@ -357,12 +347,12 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   }
 
                   public final void invoke(java.lang.String var1) {
-                     r.h(var1, "text");
+                     q.h(var1, "text");
                      MobileVoiceOverlay.access$invokeJs(this.this$0, "onChannelQueryUpdate", var1);
                   }
                });
                var2.setOnChannelSelected(
-                  new Function1<ChannelId, Unit>(var2) {
+                  new Function1(var2) {
                      final OverlayVoiceSelectorBubbleDialog $this_apply;
 
                      {
@@ -373,11 +363,9 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                      public final void invoke_R7gqayM/* $VF was: invoke-R7gqayM*/(long var1) {
                         val var4: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
                         val var3x: Context = this.$this_apply.getContext();
-                        r.g(var3x, "context");
+                        q.g(var3x, "getContext(...)");
                         var4.startHeadlessTask(
-                           var3x,
-                           "SelectChannel",
-                           e.a(new Pair[]{w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE)})
+                           var3x, "SelectChannel", e.a(w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE))
                         );
                      }
                   }
@@ -430,7 +418,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    }
 
    private fun onTrashVoiceBubble() {
-      this.voiceBubbleProvider.withView(new Function1<OverlayVoiceBubble, Unit>(this) {
+      this.voiceBubbleProvider.withView(new Function1(this) {
          final MobileVoiceOverlay this$0;
 
          {
@@ -439,13 +427,13 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          }
 
          public final void invoke(OverlayVoiceBubble var1) {
-            r.h(var1, "voiceBubble");
+            q.h(var1, "voiceBubble");
             var1.moveToAnchorPoint();
-            val var2: Animator = AnimatorInflater.loadAnimator(var1.getContext(), R.animator.fade_out);
-            val var3: MobileVoiceOverlay = this.this$0;
-            var2.setTarget(var1);
-            r.g(var2, "invoke$lambda$2");
-            var2.addListener(new AnimatorListener(var3) {
+            val var3: Animator = AnimatorInflater.loadAnimator(var1.getContext(), R.animator.fade_out);
+            val var2: MobileVoiceOverlay = this.this$0;
+            var3.setTarget(var1);
+            q.e(var3);
+            var3.addListener(new AnimatorListener(var2) {
                final MobileVoiceOverlay this$0;
 
                {
@@ -480,7 +468,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                public void onAnimationStart(Animator var1) {
                }
             });
-            var2.start();
+            var3.start();
             OverlayBubbleWrap.animateToCoordinate$default(var1, (int)var1.getX(), (int)var1.getY() + var1.getHeight() / 2, null, 4, null);
          }
       });
@@ -493,52 +481,21 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getVoiceBubbleProvider$p(this).removeViewFromOverlay();
          access$getTrashWrapProvider$p(this).removeViewFromOverlay();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
    internal fun setData(data: MobileVoiceOverlayData) {
-      r.h(var1, "data");
+      q.h(var1, "data");
       if (ThreadUtilsKt.isOnMainThread()) {
          access$getVoiceBubbleProvider$p(this).setData(var1);
          access$getMenuDialogProvider$p(this).setData(var1);
          access$getSelectorDialogProvider$p(this).setData(var1);
          access$getTrashWrapProvider$p(this).setData(var1);
-      } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
-      }
-   }
-
-   internal fun showOverlay(assets: MobileVoiceOverlayAssets) {
-      r.h(var1, "assets");
-      if (ThreadUtilsKt.isOnMainThread()) {
-         access$getSelectorDialogProvider$p(this).setAssets(var1);
-         access$getMenuDialogProvider$p(this).setAssets(var1);
-         access$getVoiceBubbleProvider$p(this).setAssets(var1);
-         access$getTrashWrapProvider$p(this).setAssets(var1);
-         if (!access$isOverlayShowing(this)) {
-            access$getVoiceBubbleProvider$p(this).withView(new Function1<OverlayVoiceBubble, Unit>(this) {
-               final MobileVoiceOverlay this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-               }
-
-               public final void invoke(OverlayVoiceBubble var1) {
-                  r.h(var1, "it");
-                  MobileVoiceOverlay.access$floatBubbleToHorizontalEdge(this.this$0, var1);
-               }
-            });
-         }
       } else {
          val var3: Thread = Thread.currentThread();
          val var2: StringBuilder = new StringBuilder();
@@ -548,17 +505,46 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
       }
    }
 
+   internal fun showOverlay(assets: MobileVoiceOverlayAssets) {
+      q.h(var1, "assets");
+      if (ThreadUtilsKt.isOnMainThread()) {
+         access$getSelectorDialogProvider$p(this).setAssets(var1);
+         access$getMenuDialogProvider$p(this).setAssets(var1);
+         access$getVoiceBubbleProvider$p(this).setAssets(var1);
+         access$getTrashWrapProvider$p(this).setAssets(var1);
+         if (!access$isOverlayShowing(this)) {
+            access$getVoiceBubbleProvider$p(this).withView(new Function1(this) {
+               final MobileVoiceOverlay this$0;
+
+               {
+                  super(1);
+                  this.this$0 = var1;
+               }
+
+               public final void invoke(OverlayVoiceBubble var1) {
+                  q.h(var1, "it");
+                  MobileVoiceOverlay.access$floatBubbleToHorizontalEdge(this.this$0, var1);
+               }
+            });
+         }
+      } else {
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
+      }
+   }
+
    public companion object {
       private const val ANCHOR_TAG: String
       private const val JS_INTERFACE_NAME: String
 
       public fun startHeadlessTask(context: Context, taskName: String, taskParams: Bundle = Bundle.EMPTY) {
-         r.h(var1, "context");
-         r.h(var2, "taskName");
-         r.h(var3, "taskParams");
-         com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(
-            HeadlessTasks.Companion, var1, var2, 0L, false, var3, false, 12, null
-         );
+         q.h(var1, "context");
+         q.h(var2, "taskName");
+         q.h(var3, "taskParams");
+         HeadlessTasks.Companion.startHeadlessTask$default(HeadlessTasks.Companion, var1, var2, 0L, false, var3, false, 12, null);
       }
    }
 }

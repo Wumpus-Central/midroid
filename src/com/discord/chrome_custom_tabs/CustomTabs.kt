@@ -3,7 +3,7 @@ package com.discord.chrome_custom_tabs
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.net.Uri
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.q
 import m.a
 import m.b
 
@@ -19,13 +19,13 @@ public object CustomTabs {
       animHideExitResId: Int? = null,
       onFailure: (Exception) -> Unit
    ) {
-      r.h(var1, "context");
-      r.h(var2, "uri");
-      r.h(var9, "onFailure");
+      q.h(var1, "context");
+      q.h(var2, "uri");
+      q.h(var9, "onFailure");
       if (CustomTabsPackages.INSTANCE.getCustomTabsDefaultPackage(var1) != null) {
-         val var10: a = new m.a.a().b(var4).d(var4).c(var4).a();
-         r.g(var10, "Builder()\n              …\n                .build()");
-         val var13: m.b.a = new m.b.a().b(var10).e(var3);
+         val var10: a = new a.a().b(var4).d(var4).c(var4).a();
+         q.g(var10, "build(...)");
+         val var13: b.a = new b.a().b(var10).e(var3);
          if (var5 != null && var6 != null) {
             var13.f(var1, var5, var6);
          }
@@ -35,7 +35,7 @@ public object CustomTabs {
          }
 
          val var12: b = var13.a();
-         r.g(var12, "Builder()\n              …\n                .build()");
+         q.g(var12, "build(...)");
 
          try {
             var12.a.setData(var2);

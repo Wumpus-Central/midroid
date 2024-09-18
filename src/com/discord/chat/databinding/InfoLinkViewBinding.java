@@ -25,15 +25,15 @@ public final class InfoLinkViewBinding implements ViewBinding {
 
    public static InfoLinkViewBinding bind(View var0) {
       int var1 = R.id.description;
-      TextView var4 = (TextView)a.a(var0, var1);
-      if (var4 != null) {
+      TextView var2 = (TextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.info_link_container;
-            ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
-            if (var2 != null) {
-               return new InfoLinkViewBinding(var0, var4, var3, var2);
+            ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
+            if (var3 != null) {
+               return new InfoLinkViewBinding(var0, var2, var4, var3);
             }
          }
       }
@@ -50,6 +50,7 @@ public final class InfoLinkViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

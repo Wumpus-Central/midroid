@@ -15,11 +15,11 @@ import com.facebook.react.viewmanagers.SafeAreaViewManagerInterface
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.Rect
 import com.th3rdwave.safeareacontext.SafeAreaProvider
-import eh.w
+import dh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.h0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.q
 
 @ReactModule(name = "DCDSafeArea")
 public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeAreaViewManagerInterface<SafeAreaProvider> {
@@ -27,7 +27,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    private final val delegate: SafeAreaViewManagerDelegate<SafeAreaProvider, SafeAreaProviderManager> = new SafeAreaViewManagerDelegate(this)
    private final var dimensions: com.discord.safearea.SafeAreaProviderManager.SafeAreaProviderDimensions?
    private final var imeInsets: Insets?
-   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{w.a("onSafeAreaInsetsDidChange", h0.b(OnSafeAreaInsetsDidChangeData.class))})
+   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onSafeAreaInsetsDidChange", g0.b(OnSafeAreaInsetsDidChangeData.class)))
    private final var safeAreaEdgeInsets: SafeAreaEdgeInsets
 
    @JvmStatic
@@ -38,10 +38,10 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    }
 
    private fun handleInsetsChanged(reactContext: ThemedReactContext, safeAreaEdgeInsets: SafeAreaEdgeInsets, imeInsets: Insets?, view: SafeAreaProvider) {
-      val var8: Float = var2.getTopDp();
-      val var7: Float = var2.getBottomDp();
-      val var6: Float = var2.getLeftDp();
-      val var9: Float = var2.getRightDp();
+      val var7: Float = var2.getTopDp();
+      val var8: Float = var2.getBottomDp();
+      val var9: Float = var2.getLeftDp();
+      val var6: Float = var2.getRightDp();
       val var5: Float;
       if (var3 != null) {
          var5 = SizeUtilsKt.getPxToDp(var3.d);
@@ -49,9 +49,9 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
          var5 = 0.0F;
       }
 
-      val var10: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var8, var7, var6, var9, var5);
+      val var10: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var7, var8, var9, var6, var5);
       val var12: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var4);
-      if (!r.c(this.dimensions, var12)) {
+      if (!q.c(this.dimensions, var12)) {
          this.changeData = DEFAULT_CHANGE_DATA;
          this.dimensions = var12;
       }
@@ -68,10 +68,10 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    }
 
    protected open fun addEventEmitters(reactContext: ThemedReactContext, view: SafeAreaProvider) {
-      r.h(var1, "reactContext");
-      r.h(var2, "view");
+      q.h(var1, "reactContext");
+      q.h(var2, "view");
       var2.setOnInsetsChangeHandler(
-         new Function3<SafeAreaProvider, EdgeInsets, Rect, Unit>(this, var1, var2) {
+         new Function3(this, var1, var2) {
             final ThemedReactContext $reactContext;
             final SafeAreaProvider $view;
             final SafeAreaProviderManager this$0;
@@ -84,9 +84,9 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
             }
 
             public final void invoke(SafeAreaProvider var1, EdgeInsets var2, Rect var3) {
-               r.h(var1, "<anonymous parameter 0>");
-               r.h(var2, "insets");
-               r.h(var3, "<anonymous parameter 2>");
+               q.h(var1, "<anonymous parameter 0>");
+               q.h(var2, "insets");
+               q.h(var3, "<anonymous parameter 2>");
                SafeAreaProviderManager.access$handleInsetsChanged(
                   this.this$0, this.$reactContext, new SafeAreaEdgeInsets(var2), SafeAreaProviderManager.access$getImeInsets$p(this.this$0), this.$view
                );
@@ -95,7 +95,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
       );
       ImmersiveMode.INSTANCE
          .addRootViewInsetUpdateCallback$safe_area_release(
-            new Function1<WindowInsetsCompat, Unit>(this, var1, var2) {
+            new Function1(this, var1, var2) {
                final ThemedReactContext $reactContext;
                final SafeAreaProvider $view;
                final SafeAreaProviderManager this$0;
@@ -108,7 +108,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
                }
 
                public final void invoke(WindowInsetsCompat var1) {
-                  r.h(var1, "insets");
+                  q.h(var1, "insets");
                   SafeAreaProviderManager.access$setImeInsets$p(this.this$0, WindowInsetsCompatExtensionsKt.getImeInsets$default(var1, false, 1, null));
                   SafeAreaProviderManager.access$handleInsetsChanged(
                      this.this$0,
@@ -123,7 +123,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): SafeAreaProvider {
-      r.h(var1, "reactContext");
+      q.h(var1, "reactContext");
       return new SafeAreaProvider(var1);
    }
 
@@ -155,7 +155,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
          this.width = var2;
       }
 
-      public constructor(safeAreaProvider: SafeAreaProvider) : r.h(var1, "safeAreaProvider") {
+      public constructor(safeAreaProvider: SafeAreaProvider) : q.h(var1, "safeAreaProvider") {
          this(var1.getRootView().getHeight(), var1.getRootView().getWidth());
       }
 
@@ -191,13 +191,13 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
       }
 
       public override fun toString(): String {
-         val var1: Int = this.height;
-         val var2: Int = this.width;
+         val var2: Int = this.height;
+         val var1: Int = this.width;
          val var3: StringBuilder = new StringBuilder();
          var3.append("SafeAreaProviderDimensions(height=");
-         var3.append(var1);
-         var3.append(", width=");
          var3.append(var2);
+         var3.append(", width=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

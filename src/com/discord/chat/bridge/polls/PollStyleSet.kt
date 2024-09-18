@@ -3,8 +3,7 @@ package com.discord.chat.bridge.polls
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -12,12 +11,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.e0
-import xk.f0
-import xk.m0
+import vk.f
+import vk.n
+import wk.a
+import yk.f0
+import yk.g0
+import yk.n0
 
 @f
 public data class PollStyleSet(border: Int? = null,
@@ -153,7 +152,6 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    init {
-      super();
       this.border = var1;
       this.borderWidth = var2;
       this.fill = var3;
@@ -198,118 +196,6 @@ public data class PollStyleSet(border: Int? = null,
       return this.radioBackground;
    }
 
-   @JvmStatic
-   public fun `write$Self`(self: PollStyleSet, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.border == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, m0.a, var0.border);
-      }
-
-      if (!var1.A(var2, 1) && var0.borderWidth == 0) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.w(var2, 1, var0.borderWidth);
-      }
-
-      if (!var1.A(var2, 2) && var0.fill == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 2, m0.a, var0.fill);
-      }
-
-      if (!var1.A(var2, 3) && var0.label == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 3, m0.a, var0.label);
-      }
-
-      if (!var1.A(var2, 4) && java.lang.Float.compare(var0.opacity, 1.0F) == 0) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.r(var2, 4, var0.opacity);
-      }
-
-      if (!var1.A(var2, 5) && var0.answerBackground == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 5, m0.a, var0.answerBackground);
-      }
-
-      if (!var1.A(var2, 6) && var0.answerFill == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 6, m0.a, var0.answerFill);
-      }
-
-      if (!var1.A(var2, 7) && var0.radioStyle == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 7, PollRadioStyle.Serializer.INSTANCE, var0.radioStyle);
-      }
-
-      if (!var1.A(var2, 8) && var0.radioBackground == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 8, m0.a, var0.radioBackground);
-      }
-
-      label88: {
-         if (!var1.A(var2, 9)) {
-            var3 = false;
-            if (var0.radioForeground == null) {
-               break label88;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 9, m0.a, var0.radioForeground);
-      }
-   }
-
    public operator fun component5(): Float {
       return this.opacity;
    }
@@ -340,26 +226,26 @@ public data class PollStyleSet(border: Int? = null,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.border, var1.border)) {
+         if (!q.c(this.border, var1.border)) {
             return false;
          } else if (this.borderWidth != var1.borderWidth) {
             return false;
-         } else if (!r.c(this.fill, var1.fill)) {
+         } else if (!q.c(this.fill, var1.fill)) {
             return false;
-         } else if (!r.c(this.label, var1.label)) {
+         } else if (!q.c(this.label, var1.label)) {
             return false;
          } else if (java.lang.Float.compare(this.opacity, var1.opacity) != 0) {
             return false;
-         } else if (!r.c(this.answerBackground, var1.answerBackground)) {
+         } else if (!q.c(this.answerBackground, var1.answerBackground)) {
             return false;
-         } else if (!r.c(this.answerFill, var1.answerFill)) {
+         } else if (!q.c(this.answerFill, var1.answerFill)) {
             return false;
          } else if (this.radioStyle != var1.radioStyle) {
             return false;
-         } else if (!r.c(this.radioBackground, var1.radioBackground)) {
+         } else if (!q.c(this.radioBackground, var1.radioBackground)) {
             return false;
          } else {
-            return r.c(this.radioForeground, var1.radioForeground);
+            return q.c(this.radioForeground, var1.radioForeground);
          }
       }
    }
@@ -425,42 +311,42 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var11: Int = this.border;
+      val var4: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var8: Int = this.fill;
+      val var10: Int = this.fill;
       val var3: Int = this.label;
       val var1: Float = this.opacity;
-      val var9: Int = this.answerBackground;
-      val var10: Int = this.answerFill;
-      val var7: PollRadioStyle = this.radioStyle;
-      val var4: Int = this.radioBackground;
+      val var8: Int = this.answerBackground;
+      val var11: Int = this.answerFill;
+      val var9: PollRadioStyle = this.radioStyle;
+      val var5: Int = this.radioBackground;
       val var6: Int = this.radioForeground;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PollStyleSet(border=");
-      var5.append(var11);
-      var5.append(", borderWidth=");
-      var5.append(var2);
-      var5.append(", fill=");
-      var5.append(var8);
-      var5.append(", label=");
-      var5.append(var3);
-      var5.append(", opacity=");
-      var5.append(var1);
-      var5.append(", answerBackground=");
-      var5.append(var9);
-      var5.append(", answerFill=");
-      var5.append(var10);
-      var5.append(", radioStyle=");
-      var5.append(var7);
-      var5.append(", radioBackground=");
-      var5.append(var4);
-      var5.append(", radioForeground=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("PollStyleSet(border=");
+      var7.append(var4);
+      var7.append(", borderWidth=");
+      var7.append(var2);
+      var7.append(", fill=");
+      var7.append(var10);
+      var7.append(", label=");
+      var7.append(var3);
+      var7.append(", opacity=");
+      var7.append(var1);
+      var7.append(", answerBackground=");
+      var7.append(var8);
+      var7.append(", answerFill=");
+      var7.append(var11);
+      var7.append(", radioStyle=");
+      var7.append(var9);
+      var7.append(", radioBackground=");
+      var7.append(var5);
+      var7.append(", radioForeground=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
-   public object `$serializer` : f0<PollStyleSet> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -486,140 +372,137 @@ public data class PollStyleSet(border: Int? = null,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: m0 = m0.a;
+         val var1: n0 = n0.a;
          return new KSerializer[]{
-            a.u(m0.a), var1, a.u(var1), a.u(var1), e0.a, a.u(var1), a.u(var1), a.u(PollRadioStyle.Serializer.INSTANCE), a.u(var1), a.u(var1)
+            a.u(n0.a), var1, a.u(var1), a.u(var1), f0.a, a.u(var1), a.u(var1), a.u(PollRadioStyle.Serializer.INSTANCE), a.u(var1), a.u(var1)
          };
       }
 
       public open fun deserialize(decoder: Decoder): PollStyleSet {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var19: SerialDescriptor = this.getDescriptor();
-         val var20: c = var1.b(var19);
-         val var8: Boolean = var20.p();
+         val var20: c = var1.c(var19);
+         val var8: Boolean = var20.y();
          var var5: Byte = 9;
          var var2: Float;
          var var3: Int;
          var var4: Int;
-         var var9: Any;
-         var var10: Any;
-         var var11: Any;
-         var var12: Any;
-         var var13: Any;
-         var var14: Any;
-         val var16: Any;
-         var var27: Any;
+         var var11: Int;
+         var var12: Int;
+         var var14: Int;
+         var var15: Int;
+         val var17: Int;
+         val var18: Any;
+         val var22: Int;
+         var var27: Int;
          if (var8) {
-            var27 = m0.a;
-            val var21: Any = var20.n(var19, 0, m0.a, null);
-            var4 = var20.i(var19, 1);
-            var11 = var20.n(var19, 2, (DeserializationStrategy)var27, null);
-            var9 = var20.n(var19, 3, (DeserializationStrategy)var27, null);
-            var2 = var20.u(var19, 4);
-            var14 = var20.n(var19, 5, (DeserializationStrategy)var27, null);
-            var12 = var20.n(var19, 6, (DeserializationStrategy)var27, null);
-            var13 = var20.n(var19, 7, PollRadioStyle.Serializer.INSTANCE, null);
-            var10 = var20.n(var19, 8, (DeserializationStrategy)var27, null);
-            var27 = var20.n(var19, 9, (DeserializationStrategy)var27, null);
+            val var13: n0 = n0.a;
+            var12 = var20.v(var19, 0, n0.a, null) as Int;
+            var4 = var20.k(var19, 1);
+            var17 = var20.v(var19, 2, var13, null) as Int;
+            var15 = var20.v(var19, 3, var13, null) as Int;
+            var2 = var20.G(var19, 4);
+            var11 = var20.v(var19, 5, var13, null) as Int;
+            val var9: Int = var20.v(var19, 6, var13, null) as Int;
+            val var21: PollRadioStyle = var20.v(var19, 7, PollRadioStyle.Serializer.INSTANCE, null) as PollRadioStyle;
+            val var10: Int = var20.v(var19, 8, var13, null) as Int;
+            val var16: Int = var20.v(var19, 9, var13, null) as Int;
             var3 = 1023;
-            var16 = var21;
+            var27 = var9;
+            var18 = var21;
+            var14 = var10;
+            var22 = var16;
          } else {
             var var6: Boolean = true;
             var4 = 0;
-            var27 = null;
+            var15 = null;
             var14 = null;
             var12 = null;
-            var13 = null;
-            var var22: Any = null;
+            var27 = null;
             var11 = null;
-            var10 = null;
-            var9 = null;
+            var var25: Int = null;
+            var var23: Int = null;
+            var var24: Int = null;
             var2 = 0.0F;
             var3 = 0;
 
             while (var6) {
-               label38: {
-                  val var7: Int = var20.o(var19);
-                  switch (var7) {
-                     case -1:
-                        var6 = false;
-                        continue;
-                     case 0:
-                        var10 = var20.n(var19, 0, m0.a, var10);
-                        var3 |= 1;
-                        break;
-                     case 1:
-                        var4 = var20.i(var19, 1);
-                        var3 |= 2;
-                        break;
-                     case 2:
-                        var9 = var20.n(var19, 2, m0.a, var9);
-                        var3 |= 4;
-                        break;
-                     case 3:
-                        var11 = var20.n(var19, 3, m0.a, var11);
-                        var3 |= 8;
-                        break;
-                     case 4:
-                        var2 = var20.u(var19, 4);
-                        var3 |= 16;
-                        break label38;
-                     case 5:
-                        var22 = var20.n(var19, 5, m0.a, var22);
-                        var3 |= 32;
-                        break label38;
-                     case 6:
-                        var12 = var20.n(var19, 6, m0.a, var12);
-                        var3 |= 64;
-                        break label38;
-                     case 7:
-                        var13 = var20.n(var19, 7, PollRadioStyle.Serializer.INSTANCE, var13);
-                        var3 |= 128;
-                        var5 = 9;
-                        continue;
-                     case 8:
-                        var14 = var20.n(var19, 8, m0.a, var14);
-                        var3 |= 256;
-                        continue;
-                     case 9:
-                        var27 = var20.n(var19, var5, m0.a, var27);
-                        var3 |= 512;
-                        continue;
-                     default:
-                        throw new n(var7);
-                  }
-
-                  var5 = 9;
-                  continue;
+               val var7: Int = var20.x(var19);
+               switch (var7) {
+                  case -1:
+                     var6 = false;
+                     continue;
+                  case 0:
+                     var23 = var20.v(var19, 0, n0.a, var23) as Int;
+                     var3 |= 1;
+                     break;
+                  case 1:
+                     var4 = var20.k(var19, 1);
+                     var3 |= 2;
+                     break;
+                  case 2:
+                     var24 = var20.v(var19, 2, n0.a, var24) as Int;
+                     var3 |= 4;
+                     break;
+                  case 3:
+                     var25 = var20.v(var19, 3, n0.a, var25) as Int;
+                     var3 |= 8;
+                     break;
+                  case 4:
+                     var2 = var20.G(var19, 4);
+                     var3 |= 16;
+                     break;
+                  case 5:
+                     var11 = var20.v(var19, 5, n0.a, var11) as Int;
+                     var3 |= 32;
+                     break;
+                  case 6:
+                     var12 = var20.v(var19, 6, n0.a, var12) as Int;
+                     var3 |= 64;
+                     break;
+                  case 7:
+                     var27 = var20.v(var19, 7, PollRadioStyle.Serializer.INSTANCE, var27) as PollRadioStyle;
+                     var3 |= 128;
+                     var5 = 9;
+                     continue;
+                  case 8:
+                     var14 = var20.v(var19, 8, n0.a, var14) as Int;
+                     var3 |= 256;
+                     continue;
+                  case 9:
+                     var15 = var20.v(var19, var5, n0.a, var15) as Int;
+                     var3 |= 512;
+                     continue;
+                  default:
+                     throw new n(var7);
                }
 
                var5 = 9;
             }
 
-            var16 = var10;
-            var11 = var9;
-            var14 = var22;
-            var10 = var14;
-            var9 = var11;
+            var22 = var15;
+            var18 = var27;
+            var27 = var12;
+            var15 = var25;
+            var17 = var24;
+            var12 = var23;
          }
 
-         var20.c(var19);
-         return new PollStyleSet(
-            var3, var16 as Int, var4, var11 as Int, var9 as Int, var2, var14 as Int, var12 as Int, var13 as PollRadioStyle, var10 as Int, var27 as Int, null
-         );
+         var20.b(var19);
+         return new PollStyleSet(var3, var12, var4, var17, var15, var2, var11, var27, (PollRadioStyle)var18, var14, var22, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollStyleSet) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         PollStyleSet.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         PollStyleSet.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return yk.g0.a.a(this);
       }
    }
 

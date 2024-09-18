@@ -1,7 +1,6 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.r
-import kotlinx.serialization.DeserializationStrategy
+import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,11 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.a2
-import xk.f0
+import vk.f
+import vk.n
+import wk.a
+import yk.b2
+import yk.g0
 
 @f
 public data class EmbedField(name: String? = null, value: String? = null) {
@@ -25,41 +24,8 @@ public data class EmbedField(name: String? = null, value: String? = null) {
    }
 
    init {
-      super();
       this.name = var1;
       this.value = var2;
-   }
-
-   @JvmStatic
-   public fun `write$Self`(self: EmbedField, output: CompositeEncoder, serialDesc: SerialDescriptor) {
-      r.h(var0, "self");
-      r.h(var1, "output");
-      r.h(var2, "serialDesc");
-      var var3: Boolean;
-      if (!var1.A(var2, 0) && var0.name == null) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 0, a2.a, var0.name);
-      }
-
-      label24: {
-         if (!var1.A(var2, 1)) {
-            var3 = false;
-            if (var0.value == null) {
-               break label24;
-            }
-         }
-
-         var3 = true;
-      }
-
-      if (var3) {
-         var1.m(var2, 1, a2.a, var0.value);
-      }
    }
 
    public operator fun component1(): String? {
@@ -81,10 +47,10 @@ public data class EmbedField(name: String? = null, value: String? = null) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.name, var1.name)) {
+         if (!q.c(this.name, var1.name)) {
             return false;
          } else {
-            return r.c(this.value, var1.value);
+            return q.c(this.value, var1.value);
          }
       }
    }
@@ -106,18 +72,18 @@ public data class EmbedField(name: String? = null, value: String? = null) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var1: java.lang.String = this.value;
+      val var1: java.lang.String = this.name;
+      val var2: java.lang.String = this.value;
       val var3: StringBuilder = new StringBuilder();
       var3.append("EmbedField(name=");
-      var3.append(var2);
-      var3.append(", value=");
       var3.append(var1);
+      var3.append(", value=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
 
-   public object `$serializer` : f0<EmbedField> {
+   public object `$serializer` : g0 {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -135,21 +101,21 @@ public data class EmbedField(name: String? = null, value: String? = null) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: a2 = a2.a;
-         return new KSerializer[]{a.u(a2.a), a.u(var1)};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{a.u(b2.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedField {
-         r.h(var1, "decoder");
+         q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          var var2: Int;
-         var var5: Any;
-         var var9: Any;
-         if (var7.p()) {
-            var9 = a2.a;
-            var5 = var7.n(var6, 0, a2.a, null);
-            var9 = var7.n(var6, 1, (DeserializationStrategy)var9, null);
+         var var5: java.lang.String;
+         var var9: java.lang.String;
+         if (var7.y()) {
+            val var8: b2 = b2.a;
+            var5 = var7.v(var6, 0, b2.a, null) as java.lang.String;
+            var9 = var7.v(var6, 1, var8, null) as java.lang.String;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -158,17 +124,17 @@ public data class EmbedField(name: String? = null, value: String? = null) {
             var5 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var7.n(var6, 1, a2.a, var9);
+                     var9 = var7.v(var6, 1, b2.a, var9) as java.lang.String;
                      var2 |= 2;
                   } else {
-                     var5 = var7.n(var6, 0, a2.a, var5);
+                     var5 = var7.v(var6, 0, b2.a, var5) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -177,21 +143,21 @@ public data class EmbedField(name: String? = null, value: String? = null) {
             }
          }
 
-         var7.c(var6);
-         return new EmbedField(var2, var5 as java.lang.String, var9 as java.lang.String, null);
+         var7.b(var6);
+         return new EmbedField(var2, var5, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EmbedField) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
+         q.h(var1, "encoder");
+         q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
-         EmbedField.write$Self(var2, var4, var3);
-         var4.c(var3);
+         val var4: CompositeEncoder = var1.c(var3);
+         EmbedField.write$Self$notification_api_release(var2, var4, var3);
+         var4.b(var3);
       }
 
-      fun typeParametersSerializers(): Array<KSerializer<?>> {
-         return xk.f0.a.a(this);
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return yk.g0.a.a(this);
       }
    }
 
