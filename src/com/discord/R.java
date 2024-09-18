@@ -58,7 +58,6 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_arrowlargelefticon;
       public static int design_components_icon_native_redesign_generated_images_arrowlargerighticon;
       public static int design_components_icon_native_redesign_generated_images_arrowsmalldownicon;
-      public static int design_components_icon_native_redesign_generated_images_arrowsmalllefticon;
       public static int design_components_icon_native_redesign_generated_images_arrowsmallupicon;
       public static int design_components_icon_native_redesign_generated_images_arrowsupdownicon;
       public static int design_components_icon_native_redesign_generated_images_aticon;
@@ -83,13 +82,11 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_channellisticon;
       public static int design_components_icon_native_redesign_generated_images_channellistmagnifyingglassicon;
       public static int design_components_icon_native_redesign_generated_images_channelnotificationicon;
-      public static int design_components_icon_native_redesign_generated_images_channelsfollowedicon;
       public static int design_components_icon_native_redesign_generated_images_chatarrowrighticon;
       public static int design_components_icon_native_redesign_generated_images_chatcheckicon;
       public static int design_components_icon_native_redesign_generated_images_chaticon;
       public static int design_components_icon_native_redesign_generated_images_chatmarkunreadicon;
       public static int design_components_icon_native_redesign_generated_images_chatplusicon;
-      public static int design_components_icon_native_redesign_generated_images_chatsmileicon;
       public static int design_components_icon_native_redesign_generated_images_chatwarningicon;
       public static int design_components_icon_native_redesign_generated_images_checkmarklargeboldicon;
       public static int design_components_icon_native_redesign_generated_images_checkmarklargeicon;
@@ -220,7 +217,6 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_playicon;
       public static int design_components_icon_native_redesign_generated_images_playstationneutralicon;
       public static int design_components_icon_native_redesign_generated_images_pluslargeicon;
-      public static int design_components_icon_native_redesign_generated_images_plusmediumicon;
       public static int design_components_icon_native_redesign_generated_images_plussmallicon;
       public static int design_components_icon_native_redesign_generated_images_pollsicon;
       public static int design_components_icon_native_redesign_generated_images_puzzlepieceicon;
@@ -736,6 +732,7 @@ public final class R {
       public static int images_native_icons_ic_loading_emoji_light;
       public static int images_native_icons_ic_lock;
       public static int images_native_icons_ic_lock_short_16px;
+      public static int images_native_icons_ic_locked_24px;
       public static int images_native_icons_ic_mail;
       public static int images_native_icons_ic_megaphone_16px;
       public static int images_native_icons_ic_megaphone_lock_16px;
@@ -830,6 +827,7 @@ public final class R {
       public static int images_native_icons_ic_thread_normal_24px;
       public static int images_native_icons_ic_timer_24px;
       public static int images_native_icons_ic_trash_24px;
+      public static int images_native_icons_ic_trash_filled;
       public static int images_native_icons_ic_undo;
       public static int images_native_icons_ic_unmute_channel_24px;
       public static int images_native_icons_ic_update_profile;

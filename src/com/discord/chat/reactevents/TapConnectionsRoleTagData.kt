@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TapConnectionsRoleTagData(userId: String, guildId: String, channelId: String, roleId: String) : ReactEvent {
@@ -87,19 +87,19 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.userId;
+      val var3: java.lang.String = this.userId;
       val var1: java.lang.String = this.guildId;
       val var5: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.roleId;
+      val var2: java.lang.String = this.roleId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapConnectionsRoleTagData(userId=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(", guildId=");
       var4.append(var1);
       var4.append(", channelId=");
       var4.append(var5);
       var4.append(", roleId=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
@@ -138,8 +138,8 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
          val var11: java.lang.String;
          if (var10.y()) {
             var7 = var10.t(var9, 0);
-            var5 = var10.t(var9, 1);
-            var6 = var10.t(var9, 2);
+            var6 = var10.t(var9, 1);
+            var5 = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
          } else {
@@ -179,13 +179,12 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
                }
             }
 
-            var5 = var12;
+            var6 = var12;
             var11 = var6;
-            var6 = var5;
          }
 
          var10.b(var9);
-         return new TapConnectionsRoleTagData(var2, var7, var5, var6, var11, null);
+         return new TapConnectionsRoleTagData(var2, var7, var6, var5, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapConnectionsRoleTagData) {

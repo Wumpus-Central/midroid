@@ -55,19 +55,19 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       GlUtil.checkNoGLES2Error("glBindFramebuffer");
       GLES20.glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
       GLES20.glClear(16384);
-      val var2: Float = var1.getRotatedWidth();
+      val var3: Float = var1.getRotatedWidth();
       val var4: Float = var1.getRotatedHeight();
-      if (var2 / var4 < (float)this.width / this.height) {
-         val var10: Float = var2 * (this.height / var4);
+      if (var3 / var4 < (float)this.width / this.height) {
+         val var10: Float = var3 * (this.height / var4);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, sh.a.b(((float)this.width - var2 * ((float)this.height / var4)) / 2.0F), 0, sh.a.b(var10), this.height
+               var1, this.rectDrawer, renderMatrix, vh.a.b(((float)this.width - var3 * ((float)this.height / var4)) / 2.0F), 0, vh.a.b(var10), this.height
             );
       } else {
-         val var13: Float = var4 * (this.width / var2);
+         val var11: Float = var4 * (this.width / var3);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, sh.a.b(((float)this.height - var4 * ((float)this.width / var2)) / 2.0F), this.width, sh.a.b(var13)
+               var1, this.rectDrawer, renderMatrix, 0, vh.a.b(((float)this.height - var4 * ((float)this.width / var3)) / 2.0F), this.width, vh.a.b(var11)
             );
       }
 

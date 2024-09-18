@@ -1,16 +1,14 @@
 package com.discord.chat.presentation.message;
 
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.discord.chat.bridge.Message;
-import com.discord.chat.presentation.events.ChatEventHandler;
+import java.util.Comparator;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class r implements OnLongClickListener {
-   public final Message j;
-   public final ChatEventHandler k;
+public final class r implements Comparator {
+   public final Function2 j;
 
-   public final boolean onLongClick(View var1) {
-      return MessageView.e(this.j, this.k, var1);
+   @Override
+   public final int compare(Object var1, Object var2) {
+      return MessageView.f(this.j, var1, var2);
    }
 }

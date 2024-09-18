@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
+import bl.b2
+import bl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -9,11 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class ChannelMentionContentNode(channelId: String,
@@ -34,7 +34,7 @@ public data class ChannelMentionContentNode(channelId: String,
    @JvmStatic
    fun {
       val var0: ContentNodeSerializer = ContentNodeSerializer.INSTANCE;
-      $childSerializers = new KSerializer[]{null, null, null, null, new yk.f(ContentNodeSerializer.INSTANCE), new yk.f(var0)};
+      $childSerializers = new KSerializer[]{null, null, null, null, new bl.f(ContentNodeSerializer.INSTANCE), new bl.f(var0)};
    }
 
    init {
@@ -146,25 +146,25 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
-      val var5: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.originalLink;
-      val var3: java.util.List = this.inContent;
-      val var6: java.util.List = this.content;
+      val var6: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.originalLink;
+      val var4: java.util.List = this.inContent;
+      val var5: java.util.List = this.content;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ChannelMentionContentNode(channelId=");
-      var7.append(var1);
-      var7.append(", guildId=");
-      var7.append(var2);
-      var7.append(", messageId=");
-      var7.append(var5);
-      var7.append(", originalLink=");
-      var7.append(var4);
-      var7.append(", inContent=");
-      var7.append(var3);
-      var7.append(", content=");
       var7.append(var6);
+      var7.append(", guildId=");
+      var7.append(var1);
+      var7.append(", messageId=");
+      var7.append(var2);
+      var7.append(", originalLink=");
+      var7.append(var3);
+      var7.append(", inContent=");
+      var7.append(var4);
+      var7.append(", content=");
+      var7.append(var5);
       var7.append(")");
       return var7.toString();
    }
@@ -283,7 +283,7 @@ public data class ChannelMentionContentNode(channelId: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

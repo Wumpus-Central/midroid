@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.polls
 
+import bl.b2
+import bl.g0
 import com.discord.emoji.RenderableEmoji
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -9,11 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -109,17 +109,17 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
-      val var3: java.lang.String = this.name;
-      val var2: java.lang.String = this.displayName;
+      val var3: java.lang.String = this.id;
+      val var2: java.lang.String = this.name;
+      val var5: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
       val var4: StringBuilder = new StringBuilder();
       var4.append("PollMediaEmoji(id=");
-      var4.append(var5);
-      var4.append(", name=");
       var4.append(var3);
-      var4.append(", displayName=");
+      var4.append(", name=");
       var4.append(var2);
+      var4.append(", displayName=");
+      var4.append(var5);
       var4.append(", animated=");
       var4.append(var1);
       var4.append(")");
@@ -147,7 +147,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), yk.h.a};
+         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), bl.h.a};
       }
 
       public open fun deserialize(decoder: Decoder): PollMediaEmoji {
@@ -218,7 +218,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

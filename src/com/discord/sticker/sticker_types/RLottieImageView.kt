@@ -12,8 +12,8 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import lk.f
-import lk.k0
+import ok.f
+import ok.k0
 
 internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieImageView {
    private final val placeholder: ShapeDrawable
@@ -1252,23 +1252,23 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       public override fun toString(): String {
          val var6: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var2: Int = this.widthDp;
-         val var1: Int = this.heightDp;
+         val var1: Int = this.widthDp;
+         val var3: Int = this.heightDp;
          val var7: java.lang.String = this.asset;
-         val var3: Int = this.renderMode;
+         val var2: Int = this.renderMode;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(url=");
          var5.append(var6);
          var5.append(", animate=");
          var5.append(var4);
          var5.append(", widthDp=");
-         var5.append(var2);
-         var5.append(", heightDp=");
          var5.append(var1);
+         var5.append(", heightDp=");
+         var5.append(var3);
          var5.append(", asset=");
          var5.append(var7);
          var5.append(", renderMode=");
-         var5.append(var3);
+         var5.append(var2);
          var5.append(")");
          return var5.toString();
       }

@@ -14,7 +14,7 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
-import dh.p
+import gh.p
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 

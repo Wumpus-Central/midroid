@@ -28,12 +28,12 @@ public final class InfoLinkViewBinding implements ViewBinding {
       TextView var2 = (TextView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.info_link_container;
-            ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-            if (var3 != null) {
-               return new InfoLinkViewBinding(var0, var2, var4, var3);
+            ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+            if (var4 != null) {
+               return new InfoLinkViewBinding(var0, var2, var3, var4);
             }
          }
       }

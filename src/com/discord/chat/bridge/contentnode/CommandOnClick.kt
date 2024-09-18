@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
+import bl.b2
+import bl.g0
 import com.discord.chat.bridge.MessageType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -13,11 +15,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class CommandOnClick(action: String? = ...,
@@ -131,18 +131,18 @@ public data class CommandOnClick(action: String? = ...,
       } else if (var1 !is CommandOnClick) {
          return false;
       } else {
-         val var2: CommandOnClick = var1 as CommandOnClick;
-         if (!q.c(this.action, (var1 as CommandOnClick).action)) {
+         var1 = var1;
+         if (!q.c(this.action, var1.action)) {
             return false;
-         } else if (!q.c(this.userId, var2.userId)) {
+         } else if (!q.c(this.userId, var1.userId)) {
             return false;
-         } else if (if (this.messageId == null) var2.messageId == null else var2.messageId != null && MessageId.equals-impl0(this.messageId, var2.messageId)) {
-            if (!q.c(this.applicationUserId, var2.applicationUserId)) {
+         } else if (if (this.messageId == null) var1.messageId == null else var1.messageId != null && MessageId.equals-impl0(this.messageId, var1.messageId)) {
+            if (!q.c(this.applicationUserId, var1.applicationUserId)) {
                return false;
-            } else if (this.messageType != var2.messageType) {
+            } else if (this.messageType != var1.messageType) {
                return false;
             } else {
-               return q.c(this.messageChannelId, var2.messageChannelId);
+               return q.c(this.messageChannelId, var1.messageChannelId);
             }
          } else {
             return false;
@@ -195,8 +195,8 @@ public data class CommandOnClick(action: String? = ...,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.action;
-      val var2: UserId = this.userId;
+      val var2: java.lang.String = this.action;
+      val var3: UserId = this.userId;
       val var8: java.lang.String;
       if (this.messageId == null) {
          var8 = "null";
@@ -204,24 +204,24 @@ public data class CommandOnClick(action: String? = ...,
          var8 = MessageId.toString-impl(this.messageId);
       }
 
-      val var7: UserId = this.applicationUserId;
-      val var6: MessageType = this.messageType;
-      val var4: ChannelId = this.messageChannelId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("CommandOnClick(action=");
-      var5.append(var3);
-      var5.append(", userId=");
-      var5.append(var2);
-      var5.append(", messageId=");
-      var5.append(var8);
-      var5.append(", applicationUserId=");
-      var5.append(var7);
-      var5.append(", messageType=");
-      var5.append(var6);
-      var5.append(", messageChannelId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: UserId = this.applicationUserId;
+      val var4: MessageType = this.messageType;
+      val var7: ChannelId = this.messageChannelId;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("CommandOnClick(action=");
+      var6.append(var2);
+      var6.append(", userId=");
+      var6.append(var3);
+      var6.append(", messageId=");
+      var6.append(var8);
+      var6.append(", applicationUserId=");
+      var6.append(var5);
+      var6.append(", messageType=");
+      var6.append(var4);
+      var6.append(", messageChannelId=");
+      var6.append(var7);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -246,13 +246,13 @@ public data class CommandOnClick(action: String? = ...,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: KSerializer = a.u(b2.a);
-         val var1: UserId.$serializer = UserId.$serializer.INSTANCE;
+         val var1: KSerializer = a.u(b2.a);
+         val var2: UserId.$serializer = UserId.$serializer.INSTANCE;
          return new KSerializer[]{
-            var2,
+            var1,
             a.u(UserId.$serializer.INSTANCE),
             a.u(MessageId.$serializer.INSTANCE),
-            a.u(var1),
+            a.u(var2),
             a.u(MessageType.Serializer.INSTANCE),
             a.u(ChannelId.$serializer.INSTANCE)
          };
@@ -263,16 +263,16 @@ public data class CommandOnClick(action: String? = ...,
          val var13: SerialDescriptor = this.getDescriptor();
          val var14: c = var1.c(var13);
          var var2: Int;
-         var var8: Any;
+         var var7: Any;
          var var9: java.lang.String;
-         val var10: Any;
          var var16: Any;
          var var18: ChannelId;
-         var var21: Any;
+         var var24: Any;
+         var var27: Any;
          if (var14.y()) {
-            var9 = var14.v(var13, 0, b2.a, null) as java.lang.String;
+            var24 = var14.v(var13, 0, b2.a, null) as java.lang.String;
             val var5: UserId.$serializer = UserId.$serializer.INSTANCE;
-            var8 = var14.v(var13, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            var27 = var14.v(var13, 1, UserId.$serializer.INSTANCE, null) as UserId;
             var16 = var14.v(var13, 2, MessageId.$serializer.INSTANCE, null) as MessageId;
             if (var16 != null) {
                var16 = var16.unbox-impl();
@@ -280,20 +280,21 @@ public data class CommandOnClick(action: String? = ...,
                var16 = null;
             }
 
-            var21 = var14.v(var13, 3, var5, null) as UserId;
+            var7 = var14.v(var13, 3, var5, null) as UserId;
             val var6: MessageType = var14.v(var13, 4, MessageType.Serializer.INSTANCE, null) as MessageType;
             var18 = var14.v(var13, 5, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 63;
-            var10 = var21;
-            var21 = var6;
+            var9 = (java.lang.String)var24;
+            var24 = var27;
+            var27 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
-            var8 = null;
+            var24 = null;
             var var20: Any = null;
             var18 = null;
-            var21 = null;
+            var7 = null;
             var16 = null;
 
             while (var3) {
@@ -311,17 +312,17 @@ public data class CommandOnClick(action: String? = ...,
                      var2 |= 2;
                      break;
                   case 2:
-                     if (var21 != null) {
-                        var21 = MessageId.box-impl((java.lang.String)var21);
+                     if (var7 != null) {
+                        var7 = MessageId.box-impl((java.lang.String)var7);
                      } else {
-                        var21 = null;
+                        var7 = null;
                      }
 
-                     var21 = var14.v(var13, 2, MessageId.$serializer.INSTANCE, var21) as MessageId;
-                     if (var21 != null) {
-                        var21 = var21.unbox-impl();
+                     var7 = var14.v(var13, 2, MessageId.$serializer.INSTANCE, var7) as MessageId;
+                     if (var7 != null) {
+                        var7 = var7.unbox-impl();
                      } else {
-                        var21 = null;
+                        var7 = null;
                      }
 
                      var2 |= 4;
@@ -335,7 +336,7 @@ public data class CommandOnClick(action: String? = ...,
                      var2 |= 16;
                      break;
                   case 5:
-                     var8 = var14.v(var13, 5, ChannelId.$serializer.INSTANCE, var8) as ChannelId;
+                     var24 = var14.v(var13, 5, ChannelId.$serializer.INSTANCE, var24) as ChannelId;
                      var2 |= 32;
                      break;
                   default:
@@ -343,15 +344,15 @@ public data class CommandOnClick(action: String? = ...,
                }
             }
 
-            var18 = (ChannelId)var8;
-            var21 = var18;
-            var10 = var20;
-            var16 = (MessageId)var21;
-            var8 = var16;
+            var18 = (ChannelId)var24;
+            var27 = var18;
+            var7 = (MessageId)var20;
+            var16 = (MessageId)var7;
+            var24 = var16;
          }
 
          var14.b(var13);
-         return new CommandOnClick(var2, var9, (UserId)var8, var16, (UserId)var10, var21, var18, null, null);
+         return new CommandOnClick(var2, var9, (UserId)var24, var16, var7, (MessageType)var27, var18, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CommandOnClick) {
@@ -364,7 +365,7 @@ public data class CommandOnClick(action: String? = ...,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

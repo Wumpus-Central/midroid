@@ -38,7 +38,6 @@ import com.discord.chat.reactevents.TapDismissMediaPostSharePromptData
 import com.discord.chat.reactevents.TapEmojiData
 import com.discord.chat.reactevents.TapFollowForumPost
 import com.discord.chat.reactevents.TapForwardFooterData
-import com.discord.chat.reactevents.TapGameIconData
 import com.discord.chat.reactevents.TapGiftCodeAcceptData
 import com.discord.chat.reactevents.TapGiftCodeEmbedData
 import com.discord.chat.reactevents.TapImageData
@@ -79,7 +78,7 @@ import com.discord.chat.reactevents.TapWelcomeReplyData
 import com.discord.chat.reactevents.VoiceMessagePlaybackFailedData
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.reactevents.ReactEvents
-import dh.w
+import gh.w
 import kotlin.jvm.internal.g0
 
 internal fun createChatReactEvents(): ReactEvents {
@@ -114,7 +113,6 @@ internal fun createChatReactEvents(): ReactEvents {
       w.a("onTapSummaryJump", g0.b(TapSummaryJumpData.class)),
       w.a("onTapReaction", g0.b(TapReactionData.class)),
       w.a("onTapRoleIcon", g0.b(TapRoleIconData.class)),
-      w.a("onTapGameIcon", g0.b(TapGameIconData.class)),
       w.a("onTapSuppressNotificationsIcon", g0.b(TapSuppressNotificationsIconData.class)),
       w.a("onTapSeeMore", g0.b(TapSeeMoreData.class)),
       w.a("onInitiateReply", g0.b(InitiateReplyData.class)),

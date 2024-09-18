@@ -53,9 +53,9 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       this.sectionsId = this.sections.getId();
       this.positionStartPrev = var2;
       this.positionEndPrev = var1;
-      val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
-      val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
-      this.onVisibleItemsChanged.invoke(this.sectionsId, var4.getSection-sZRFyWU(), var3.getSection-sZRFyWU(), var4.getItem-JXkbwXs(), var3.getItem-JXkbwXs());
+      val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
+      val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
+      this.onVisibleItemsChanged.invoke(this.sectionsId, var3.getSection-sZRFyWU(), var4.getSection-sZRFyWU(), var3.getItem-JXkbwXs(), var4.getItem-JXkbwXs());
    }
 
    private fun isUnchanged(itemEndPosition: Int, itemStartPosition: Int): Boolean {
@@ -99,8 +99,8 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
          val var6: Int = this.positionEndPrev - this.positionStartPrev;
          var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
-         var var4: Int = var1;
-         var var3: Int = var2;
+         var var3: Int = var1;
+         var var4: Int = var2;
          if (var5 > 0) {
             var5 = Math.min(this.getLastItemPosition(), var2 + var5);
             var3 = var6 - (var5 - var1);
@@ -109,14 +109,14 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
                var2 = Math.max(0, var1 - var3);
             }
 
-            var4 = var2;
-            var3 = var5;
+            var3 = var2;
+            var4 = var5;
             if (this.isUnchanged(var5, var2)) {
                return;
             }
          }
 
-         this.computeVisibleItems(var3, var4);
+         this.computeVisibleItems(var4, var3);
       }
    }
 
@@ -136,7 +136,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       fun {
          val var0: Array<FastestListVisibleItemsTracker.RenderAhead> = $values();
          $VALUES = var0;
-         $ENTRIES = kh.a.a(var0);
+         $ENTRIES = nh.a.a(var0);
       }
 
       init {

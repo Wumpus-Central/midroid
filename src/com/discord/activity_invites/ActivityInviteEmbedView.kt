@@ -23,9 +23,9 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
-import dh.l
-import dh.o
 import g4.f
+import gh.l
+import gh.o
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import o4.c
@@ -165,15 +165,15 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       }
 
       var5.setVisibility(var2);
-      val var4: OverlappingCirclesView = this.binding.avatars;
-      val var6: ArrayList = new ArrayList(i.u(var3, 10));
+      val var6: OverlappingCirclesView = this.binding.avatars;
+      val var4: ArrayList = new ArrayList(i.u(var3, 10));
       val var7: java.util.Iterator = var3.iterator();
 
       while (var7.hasNext()) {
-         var6.add(new OverlappingItem(var7.next() as java.lang.String));
+         var4.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var4.setItems(var6);
+      var6.setItems(var4);
    }
 
    private fun setBottomEndLabel(text: CharSequence?, color: Int) {
@@ -220,9 +220,9 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          var7.setLayoutParams(var10);
       }
 
-      val var6: ImageRequestBuilder = ImageRequestBuilder.v(f.o(var1));
+      val var6: ImageRequestBuilder = ImageRequestBuilder.w(f.r(var1));
       if (var3) {
-         var6.F(this.getGrayscalePostprocessor());
+         var6.H(this.getGrayscalePostprocessor());
       }
 
       this.binding.endImage.setController((c.g().F(var6.a()) as PipelineDraweeControllerBuilder).d());
@@ -362,15 +362,15 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
          public override fun toString(): String {
             val var3: java.lang.String = this.uri;
-            val var1: Boolean = this.fullSize;
-            val var2: Boolean = this.grayscale;
+            val var2: Boolean = this.fullSize;
+            val var1: Boolean = this.grayscale;
             val var4: StringBuilder = new StringBuilder();
             var4.append("End(uri=");
             var4.append(var3);
             var4.append(", fullSize=");
-            var4.append(var1);
-            var4.append(", grayscale=");
             var4.append(var2);
+            var4.append(", grayscale=");
+            var4.append(var1);
             var4.append(")");
             return var4.toString();
          }
@@ -411,12 +411,12 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var1: java.lang.String = this.uri;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Start(uri=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: java.lang.String = this.uri;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Start(uri=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

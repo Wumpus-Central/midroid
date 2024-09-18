@@ -1,10 +1,10 @@
 package com.discord.media.utils
 
 import java.io.File
-import kg.c
 import kotlin.jvm.internal.q
+import ng.c
 
-public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : lg.a {
+public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : og.a {
    private final val quality: Int
    private final val shouldResize: Boolean
    private final var isResolved: Boolean

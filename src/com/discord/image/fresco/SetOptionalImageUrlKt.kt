@@ -13,7 +13,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(imageUrl: String?, autoPlayAnima
    var var6: Uri;
    label26: {
       q.h(var0, "<this>");
-      var6 = f.o(var1);
+      var6 = f.r(var1);
       var4 = 0;
       if (var6 != null) {
          val var7: java.lang.String = var6.getLastPathSegment();

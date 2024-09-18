@@ -1,5 +1,9 @@
 package com.discord.media.engine.video.events
 
+import bl.b2
+import bl.g0
+import bl.n0
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.n0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, reason: String) : ReactEvent {
@@ -77,15 +77,15 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var2: java.lang.String = this.source;
-      val var3: java.lang.String = this.reason;
+      val var3: java.lang.String = this.source;
+      val var2: java.lang.String = this.reason;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MlsFailureCallbackEvent(connectionId=");
       var4.append(var1);
       var4.append(", source=");
-      var4.append(var2);
-      var4.append(", reason=");
       var4.append(var3);
+      var4.append(", reason=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
@@ -120,15 +120,15 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          val var9: c = var1.c(var8);
          var var2: Int;
          var var3: Int;
-         val var7: java.lang.String;
+         var var6: java.lang.String;
          val var10: java.lang.String;
          if (var9.y()) {
-            var2 = var9.k(var8, 0);
-            var7 = var9.t(var8, 1);
+            var3 = var9.k(var8, 0);
+            var6 = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
-            var3 = 7;
+            var2 = 7;
          } else {
-            var var6: java.lang.String = null;
+            var6 = null;
             var var11: java.lang.String = null;
             var var4: Boolean = true;
             var3 = 0;
@@ -158,14 +158,12 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
                }
             }
 
-            var7 = var11;
-            var3 = var2;
+            var6 = var11;
             var10 = var6;
-            var2 = var3;
          }
 
          var9.b(var8);
-         return new MlsFailureCallbackEvent(var3, var2, var7, var10, null);
+         return new MlsFailureCallbackEvent(var2, var3, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {

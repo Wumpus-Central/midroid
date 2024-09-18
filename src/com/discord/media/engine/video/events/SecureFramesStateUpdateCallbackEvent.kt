@@ -1,5 +1,9 @@
 package com.discord.media.engine.video.events
 
+import bl.b2
+import bl.g0
+import bl.n0
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.n0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stateUpdateJSON: String) : ReactEvent {
@@ -67,14 +67,14 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var3: java.lang.String = this.stateUpdateJSON;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
-      var2.append(var1);
-      var2.append(", stateUpdateJSON=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.stateUpdateJSON;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
+      var3.append(var1);
+      var3.append(", stateUpdateJSON=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

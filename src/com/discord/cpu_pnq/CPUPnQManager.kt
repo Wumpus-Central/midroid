@@ -1,7 +1,7 @@
 package com.discord.cpu_pnq
 
 import com.discord.misc.utilities.threading.ThreadUtilsKt
-import hh.a
+import kh.a
 
 public object CPUPnQManager {
    private final var backgrounded: Boolean

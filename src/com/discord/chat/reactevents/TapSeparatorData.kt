@@ -4,7 +4,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import dh.w
+import gh.w
 import kotlin.jvm.internal.q
 
 public data class TapSeparatorData(type: String, context: String? = null) : ReactEvent {
@@ -68,14 +68,14 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.type;
+      val var2: java.lang.String = this.type;
       val var3: java.lang.String = this.context;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSeparatorData(type=");
-      var2.append(var1);
-      var2.append(", context=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapSeparatorData(type=");
+      var1.append(var2);
+      var1.append(", context=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 }

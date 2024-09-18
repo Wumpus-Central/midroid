@@ -50,10 +50,10 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
          public final void invoke(ReactEvent var1) {
             q.h(var1, "event");
-            val var3: ReactEvents = this.$reactEvents;
-            val var2: Context = this.$context;
+            val var2: ReactEvents = this.$reactEvents;
+            val var3: Context = this.$context;
             q.f(this.$context, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
-            var3.emitEvent(var2 as ReactContext, (this.$reactTag.invoke() as java.lang.Number).intValue(), var1);
+            var2.emitEvent(var3 as ReactContext, (this.$reactTag.invoke() as java.lang.Number).intValue(), var1);
          }
       };
       this.onMessageLongPressed = new Function6(this) {
@@ -251,8 +251,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       val var9: Function1 = this.emitReactEvent;
       val var6: Boolean = var1.isAtBottom();
-      val var7: Boolean = var1.isDragging();
-      val var8: Boolean = var1.isSettling();
+      val var8: Boolean = var1.isDragging();
+      val var7: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -262,7 +262,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var6, var3, var4, var7, var8, var5, var1.isFirstMessageVisible(), var1.getFirstVisibleMessageIndex(), var1.getLastVisibleMessageIndex(), var2
+            var6, var3, var4, var8, var7, var5, var1.isFirstMessageVisible(), var1.getFirstVisibleMessageIndex(), var1.getLastVisibleMessageIndex(), var2
          )
       );
    }
@@ -391,12 +391,6 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
    public override fun onTapForwardFooter(snapshotIndex: Int, channelId: ChannelId, messageId: MessageId) {
       q.h(var4, "messageId");
       this.emitReactEvent.invoke(new TapForwardFooterData(var1, ChannelId.toString-impl(var2), MessageId.toString-impl(var4)));
-   }
-
-   public override fun onTapGameIcon(gameApplicationId: String, timestamp: String) {
-      q.h(var1, "gameApplicationId");
-      q.h(var2, "timestamp");
-      this.emitReactEvent.invoke(new TapGameIconData(var1, var2));
    }
 
    public override fun onTapGiftCodeAccept(giftCode: String, messageId: MessageId?) {

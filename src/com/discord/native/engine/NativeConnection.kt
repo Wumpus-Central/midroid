@@ -33,13 +33,6 @@ public class NativeConnection {
    public external fun getMLSKeyPackageB64(callback: com.discord.native.engine.NativeConnection.MLSKeyPackageCallback) {
    }
 
-   public external fun getMLSPairwiseFingerprintB64(
-      version: Int,
-      userId: String,
-      callback: com.discord.native.engine.NativeConnection.MLSPairwiseFingerprintCallback
-   ) {
-   }
-
    public external fun getStats(callback: com.discord.native.engine.NativeConnection.GetStatsCallback) {
    }
 
@@ -157,11 +150,6 @@ public class NativeConnection {
 
    public fun interface MLSKeyPackageCallback {
       public abstract fun onMLSKeyPackage(keyPackageB64: String) {
-      }
-   }
-
-   public fun interface MLSPairwiseFingerprintCallback {
-      public abstract fun onMLSPairwiseFingerprint(fingerprintB64: String) {
       }
    }
 

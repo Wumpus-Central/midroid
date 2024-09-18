@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TapFollowForumPost(messageId: String, channelId: String) : ReactEvent {
@@ -68,14 +68,14 @@ public data class TapFollowForumPost(messageId: String, channelId: String) : Rea
 
    public override fun toString(): String {
       val var1: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapFollowForumPost(messageId=");
-      var3.append(var1);
-      var3.append(", channelId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.channelId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapFollowForumPost(messageId=");
+      var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

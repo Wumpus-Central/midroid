@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
+import bl.g0
+import bl.h
+import bl.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.g0
-import yk.h
-import yk.x0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class BulletListContentNode(start: Long? = null, ordered: Boolean = false, items: List<List<ContentNode>>) : ContentNode {
@@ -75,16 +75,16 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.Long = this.start;
+      val var2: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
-      val var2: java.util.List = this.items;
+      val var3: java.util.List = this.items;
       val var4: StringBuilder = new StringBuilder();
       var4.append("BulletListContentNode(start=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", ordered=");
       var4.append(var1);
       var4.append(", items=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
@@ -171,7 +171,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

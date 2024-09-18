@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.media
 
+import bl.g0
+import bl.n0
+import bl.x0
+import bl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.g0
-import yk.n0
-import yk.x0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class ContentScanMetadata(version: Int, contentFlags: Long) {

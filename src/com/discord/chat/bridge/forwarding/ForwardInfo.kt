@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.forwarding
 
+import bl.g0
+import bl.h
+import bl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.g0
-import yk.h
-import yk.n0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo? = null, useOldIcon: Boolean) {
@@ -75,17 +75,17 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
 
    public override fun toString(): String {
       val var1: Int = this.snapshotIndex;
-      val var4: ForwardFooterInfo = this.footerInfo;
+      val var3: ForwardFooterInfo = this.footerInfo;
       val var2: Boolean = this.useOldIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ForwardInfo(snapshotIndex=");
-      var3.append(var1);
-      var3.append(", footerInfo=");
-      var3.append(var4);
-      var3.append(", useOldIcon=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ForwardInfo(snapshotIndex=");
+      var4.append(var1);
+      var4.append(", footerInfo=");
+      var4.append(var3);
+      var4.append(", useOldIcon=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -169,7 +169,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

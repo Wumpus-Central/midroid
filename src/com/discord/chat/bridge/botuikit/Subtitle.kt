@@ -1,7 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
+import bl.b2
+import bl.g0
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,17 +10,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
+import yk.f
+import yk.n
+import zk.a
 
 @f
-public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescription: String? = null, clickable: ContentInventoryEntryClickable? = null) {
-   public final val ariaDescription: String?
+public data class Subtitle(badgeUrl: String? = null, text: String) {
    public final val badgeUrl: String?
-   public final val clickable: ContentInventoryEntryClickable?
    public final val text: String
 
    init {
@@ -27,8 +24,6 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       super();
       this.badgeUrl = var1;
       this.text = var2;
-      this.ariaDescription = var3;
-      this.clickable = var4;
    }
 
    public operator fun component1(): String? {
@@ -39,22 +34,9 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       return this.text;
    }
 
-   public operator fun component3(): String? {
-      return this.ariaDescription;
-   }
-
-   public operator fun component4(): ContentInventoryEntryClickable? {
-      return this.clickable;
-   }
-
-   public fun copy(
-      badgeUrl: String? = var0.badgeUrl,
-      text: String = var0.text,
-      ariaDescription: String? = var0.ariaDescription,
-      clickable: ContentInventoryEntryClickable? = var0.clickable
-   ): Subtitle {
+   public fun copy(badgeUrl: String? = var0.badgeUrl, text: String = var0.text): Subtitle {
       q.h(var2, "text");
-      return new Subtitle(var1, var2, var3, var4);
+      return new Subtitle(var1, var2);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -66,18 +48,13 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
          var1 = var1;
          if (!q.c(this.badgeUrl, var1.badgeUrl)) {
             return false;
-         } else if (!q.c(this.text, var1.text)) {
-            return false;
-         } else if (!q.c(this.ariaDescription, var1.ariaDescription)) {
-            return false;
          } else {
-            return q.c(this.clickable, var1.clickable);
+            return q.c(this.text, var1.text);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      var var3: Int = 0;
       val var1: Int;
       if (this.badgeUrl == null) {
          var1 = 0;
@@ -85,37 +62,19 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
          var1 = this.badgeUrl.hashCode();
       }
 
-      val var4: Int = this.text.hashCode();
-      val var2: Int;
-      if (this.ariaDescription == null) {
-         var2 = 0;
-      } else {
-         var2 = this.ariaDescription.hashCode();
-      }
-
-      if (this.clickable != null) {
-         var3 = this.clickable.hashCode();
-      }
-
-      return ((var1 * 31 + var4) * 31 + var2) * 31 + var3;
+      return var1 * 31 + this.text.hashCode();
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.badgeUrl;
-      val var2: java.lang.String = this.text;
-      val var3: java.lang.String = this.ariaDescription;
-      val var1: ContentInventoryEntryClickable = this.clickable;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Subtitle(badgeUrl=");
-      var4.append(var5);
-      var4.append(", text=");
-      var4.append(var2);
-      var4.append(", ariaDescription=");
-      var4.append(var3);
-      var4.append(", clickable=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.badgeUrl;
+      val var3: java.lang.String = this.text;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Subtitle(badgeUrl=");
+      var1.append(var2);
+      var1.append(", text=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -129,65 +88,46 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       fun {
          val var0: Subtitle.$serializer = new Subtitle.$serializer();
          INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.botuikit.Subtitle", var0, 4);
+         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.botuikit.Subtitle", var0, 2);
          var1.l("badgeUrl", true);
          var1.l("text", false);
-         var1.l("ariaDescription", true);
-         var1.l("clickable", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), a.u(ContentInventoryEntryClickable.$serializer.INSTANCE)};
+         return new KSerializer[]{a.u(b2.a), var1};
       }
 
       public open fun deserialize(decoder: Decoder): Subtitle {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
-         var var8: java.lang.String = null;
+         val var6: SerialDescriptor = this.getDescriptor();
+         val var7: c = var1.c(var6);
          var var2: Int;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var12: Any;
-         if (var5) {
-            var12 = b2.a;
-            var8 = var10.v(var9, 0, b2.a, null) as java.lang.String;
-            var7 = var10.t(var9, 1);
-            var6 = var10.v(var9, 2, (DeserializationStrategy)var12, null) as java.lang.String;
-            var12 = var10.v(var9, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, null) as ContentInventoryEntryClickable;
-            var2 = 15;
+         var var5: java.lang.String;
+         var var8: java.lang.String;
+         if (var7.y()) {
+            var8 = var7.v(var6, 0, b2.a, null) as java.lang.String;
+            var5 = var7.t(var6, 1);
+            var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
-            var6 = null;
-            var12 = null;
+            var8 = null;
+            var5 = null;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              throw new n(var4);
-                           }
-
-                           var12 = var10.v(var9, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, var12) as ContentInventoryEntryClickable;
-                           var2 |= 8;
-                        } else {
-                           var6 = var10.v(var9, 2, b2.a, var6) as java.lang.String;
-                           var2 |= 4;
-                        }
-                     } else {
-                        var7 = var10.t(var9, 1);
-                        var2 |= 2;
+                        throw new n(var4);
                      }
+
+                     var5 = var7.t(var6, 1);
+                     var2 |= 2;
                   } else {
-                     var8 = var10.v(var9, 0, b2.a, var8) as java.lang.String;
+                     var8 = var7.v(var6, 0, b2.a, var8) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -196,8 +136,8 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
             }
          }
 
-         var10.b(var9);
-         return new Subtitle(var2, var8, var7, var6, (ContentInventoryEntryClickable)var12, null);
+         var7.b(var6);
+         return new Subtitle(var2, var8, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Subtitle) {
@@ -210,7 +150,7 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

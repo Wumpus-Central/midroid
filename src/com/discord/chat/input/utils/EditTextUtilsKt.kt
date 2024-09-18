@@ -85,13 +85,13 @@ internal class WhenMappings {
 
    @JvmStatic
    fun {
-      val var1: IntArray = new int[ChatInputNodeFontWeight.values().length];
+      val var0: IntArray = new int[ChatInputNodeFontWeight.values().length];
 
       try {
-         var1[ChatInputNodeFontWeight.Bold.ordinal()] = 1;
+         var0[ChatInputNodeFontWeight.Bold.ordinal()] = 1;
       } catch (var2: NoSuchFieldError) {
       }
 
-      $EnumSwitchMapping$0 = var1;
+      $EnumSwitchMapping$0 = var0;
    }
 }

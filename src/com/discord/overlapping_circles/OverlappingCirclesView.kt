@@ -28,8 +28,8 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
-import dh.l
-import dh.o
+import gh.l
+import gh.o
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
@@ -116,12 +116,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var11.getImageUri())) {
                var18 = var11.getImageUri();
             } else {
-               val var14: Context = this.getContext();
-               q.g(var14, "getContext(...)");
-               val var19: ReactAsset = ReactAsset.DefaultAvatar0;
                val var13: Context = this.getContext();
                q.g(var13, "getContext(...)");
-               var18 = ReactAssetUtilsKt.getReactImageUrl(var14, var19.getUri(var13));
+               val var19: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var14: Context = this.getContext();
+               q.g(var14, "getContext(...)");
+               var18 = ReactAssetUtilsKt.getReactImageUrl(var13, var19.getUri(var14));
             }
 
             val var25: Context = this.getContext();
@@ -131,10 +131,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             val var21: Context = this.getContext();
             val var8: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
             val var6: Int = this.overlapPx;
-            val var7: Int = this.separatorSizePx;
-            val var9: Int = this.getLayoutParams().height;
+            val var9: Int = this.separatorSizePx;
+            val var7: Int = this.getLayoutParams().height;
             q.e(var21);
-            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var8, var10, var6, var7, var9);
+            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var8, var10, var6, var9, var7);
          }
 
          val var26: LayoutParams = new LayoutParams(this.getLayoutParams().height, this.getLayoutParams().height);
@@ -370,7 +370,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          // 1a: aload 1
          // 1b: aload 0
          // 1c: invokespecial com/discord/overlapping_circles/OverlappingCirclesView$PlaceholderItem.getSeparatorClipPath ()Landroid/graphics/Path;
-         // 1f: invokestatic com/discord/chat/presentation/list/d.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
+         // 1f: invokestatic com/discord/chat/presentation/list/c.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
          // 22: pop
          // 23: goto 37
          // 26: astore 4

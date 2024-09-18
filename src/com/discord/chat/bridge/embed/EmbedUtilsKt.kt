@@ -4,7 +4,7 @@ import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import dh.w
+import gh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
@@ -45,12 +45,12 @@ public fun Embed.getMedia(): EmbedUrlProvider? {
 public fun Embed.getTag(): String {
    q.h(var0, "<this>");
    val var1: java.lang.String = var0.getClass().getSimpleName();
-   val var3: java.lang.String = var0.getType().name();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append(var1);
-   var2.append(": ");
-   var2.append(var3);
-   return var2.toString();
+   val var2: java.lang.String = var0.getType().name();
+   val var3: StringBuilder = new StringBuilder();
+   var3.append(var1);
+   var3.append(": ");
+   var3.append(var2);
+   return var3.toString();
 }
 
 public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
@@ -201,19 +201,19 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var8: java.lang.String = var17.getEmbedUrl();
-         if (var8 == null) {
+         val var18: java.lang.String = var17.getEmbedUrl();
+         if (var18 == null) {
             return null;
          }
 
-         val var18: java.lang.String = getTag(var0);
+         val var8: java.lang.String = getTag(var0);
          val var19: MediaType = MediaType.IMAGE;
          var12 = new MediaSource(
             null,
-            var8,
+            var18,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var18,
+            var8,
             var19,
             false,
             ChannelId.box-impl(var1),
@@ -277,8 +277,8 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var27 = null;
       }
 
-      val var31: java.lang.String = getTag(var0);
-      val var32: MediaType = MediaType.GIFV;
+      val var32: java.lang.String = getTag(var0);
+      val var31: MediaType = MediaType.GIFV;
       val var29: EmbedMedia = var0.getVideo();
       val var30: java.lang.String;
       if (var29 != null) {
@@ -295,7 +295,7 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var16 = null;
       }
 
-      var12 = new MediaSource(var23, var27, var30, var16, var31, var32, var4, ChannelId.box-impl(var1), var3, null, var5, 512, null);
+      var12 = new MediaSource(var23, var27, var30, var16, var32, var31, var4, ChannelId.box-impl(var1), var3, null, var5, 512, null);
    }
 
    return var12;

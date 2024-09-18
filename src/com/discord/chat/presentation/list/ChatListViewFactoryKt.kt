@@ -9,7 +9,7 @@ import com.discord.chat.presentation.message.MessageAccessoriesAdapter
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import lk.k0
+import ok.k0
 
 private final val accessoriesToCreate: Map<Int, Int>
 private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int>
@@ -28,7 +28,7 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
    q.h(var0, "recycler");
    q.h(var1, "accessoriesAdapter");
    q.h(var2, "accessoriesViewPool");
-   lk.f.d(
+   ok.f.d(
       CoroutineViewUtilsKt.attachedScope(var0, false),
       k0.a(),
       null,
@@ -1075,7 +1075,7 @@ public fun fillChatList(
    q.h(var1, "chatListAdapter");
    q.h(var2, "delegateViewTypes");
    q.h(var3, "chatListViewPool");
-   lk.f.d(
+   ok.f.d(
       CoroutineViewUtilsKt.attachedScope(var0, false),
       k0.a(),
       null,

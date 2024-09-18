@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TitleOnClick(action: String, targetChannelId: String, targetMessageId: String) {
@@ -71,18 +71,18 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.action;
-      val var2: java.lang.String = this.targetChannelId;
-      val var3: java.lang.String = this.targetMessageId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TitleOnClick(action=");
-      var4.append(var1);
-      var4.append(", targetChannelId=");
-      var4.append(var2);
-      var4.append(", targetMessageId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.action;
+      val var4: java.lang.String = this.targetChannelId;
+      val var2: java.lang.String = this.targetMessageId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TitleOnClick(action=");
+      var1.append(var3);
+      var1.append(", targetChannelId=");
+      var1.append(var4);
+      var1.append(", targetMessageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -151,8 +151,8 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
                }
             }
 
-            var5 = var11;
             var10 = var5;
+            var5 = var11;
          }
 
          var9.b(var8);

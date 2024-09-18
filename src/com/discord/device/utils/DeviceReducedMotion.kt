@@ -3,7 +3,7 @@ package com.discord.device.utils
 import android.content.Context
 import android.provider.Settings.Global
 import android.provider.Settings.SettingNotFoundException
-import dh.p
+import gh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
@@ -83,7 +83,7 @@ public object DeviceReducedMotion {
       fun {
          val var0: Array<DeviceReducedMotion.MotionPreference> = $values();
          $VALUES = var0;
-         $ENTRIES = kh.a.a(var0);
+         $ENTRIES = nh.a.a(var0);
       }
 
       @JvmStatic

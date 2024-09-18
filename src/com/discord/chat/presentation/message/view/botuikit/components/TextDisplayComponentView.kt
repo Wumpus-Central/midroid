@@ -62,16 +62,16 @@ public class TextDisplayComponentView  public constructor(context: Context, attr
       q.g(var6, "getContext(...)");
       SetTextSizeSpKt.setTextSizeSp(var11, (float)MessageUtilsKt.getChatTextSizeSp(var6));
       DiscordFontUtilsKt.setDiscordFont(var11, DiscordFont.PrimaryMedium);
-      val var8: TextPaint = var11.getPaint();
-      q.g(var8, "getPaint(...)");
-      val var7: FontManager = FontManager.INSTANCE;
+      val var7: TextPaint = var11.getPaint();
+      q.g(var7, "getPaint(...)");
+      val var8: FontManager = FontManager.INSTANCE;
       var6 = this.getContext();
       q.g(var6, "getContext(...)");
       var11.setMessageContent(
          var1.getContent(),
          var4.getMarkdownTextRenderOptions(),
          var4.getMarkdownTextRenderEventHandlers(),
-         TextUtilsKt.getBaselineHeightForFontSizePx(var8, var7.getScaledSpToPx(16, var6))
+         TextUtilsKt.getBaselineHeightForFontSizePx(var7, var8.getScaledSpToPx(16, var6))
       );
       var9.getRoot().addView(var11);
    }

@@ -64,14 +64,14 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: ActivityInstanceEmbed = this.activityInstanceEmbed;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: ActivityInstanceEmbed = this.activityInstanceEmbed;
       val var1: Int = this.constrainedWidth;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ActivityInstanceEmbedMessageAccessory(messageId=");
-      var4.append(var2);
-      var4.append(", activityInstanceEmbed=");
       var4.append(var3);
+      var4.append(", activityInstanceEmbed=");
+      var4.append(var2);
       var4.append(", constrainedWidth=");
       var4.append(var1);
       var4.append(")");

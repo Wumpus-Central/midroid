@@ -4,8 +4,8 @@ import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
 import com.discord.logging.Log
-import dh.p
-import eh.r
+import gh.p
+import hh.r
 import io.sentry.IScope
 import io.sentry.d5
 import io.sentry.e
@@ -75,16 +75,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var6.getVersionCode());
       var5.setRelease(var1);
-      val var7: File = var2.getCacheDir();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var7);
-      var8.append("/sentry");
-      var5.setCacheDirPath(var8.toString());
+      val var8: File = var2.getCacheDir();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var8);
+      var7.append("/sentry");
+      var5.setCacheDirPath(var7.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("fe0491f2-fc4b-4630-afb8-2f46bf6b3dd9");
+      var5.setProguardUuid("c273a9ba-e820-48ae-9a6e-dadeabef08a7");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -105,7 +105,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", dh.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", gh.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -193,7 +193,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = kh.a.a(var0);
+         $ENTRIES = nh.a.a(var0);
       }
 
       @JvmStatic

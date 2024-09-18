@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.forums
 
+import bl.b2
+import bl.g0
+import bl.h
+import bl.n0
 import com.discord.chat.bridge.reaction.MessageReaction
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -9,13 +13,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
-import yk.h
-import yk.n0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class ForumPostActions(numDisplayedReactions: Int,
@@ -125,8 +125,8 @@ public data class ForumPostActions(numDisplayedReactions: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.numDisplayedReactions);
-      val var5: Int = java.lang.Boolean.hashCode(this.isFollowing);
+      val var5: Int = Integer.hashCode(this.numDisplayedReactions);
+      val var6: Int = java.lang.Boolean.hashCode(this.isFollowing);
       var var4: Int = 0;
       val var1: Int;
       if (this.followIcon == null) {
@@ -155,37 +155,37 @@ public data class ForumPostActions(numDisplayedReactions: Int,
          var4 = this.sharePrompt.hashCode();
       }
 
-      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var5 * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
-      val var6: java.lang.String = this.followIcon;
+      val var5: java.lang.String = this.followIcon;
       val var9: java.lang.String = this.followLabel;
       val var7: java.lang.String = this.shareIcon;
-      val var3: java.lang.String = this.shareLabel;
-      val var4: MessageReaction = this.defaultReaction;
-      val var5: PostSharePrompt = this.sharePrompt;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ForumPostActions(numDisplayedReactions=");
-      var8.append(var1);
-      var8.append(", isFollowing=");
-      var8.append(var2);
-      var8.append(", followIcon=");
-      var8.append(var6);
-      var8.append(", followLabel=");
-      var8.append(var9);
-      var8.append(", shareIcon=");
-      var8.append(var7);
-      var8.append(", shareLabel=");
-      var8.append(var3);
-      var8.append(", defaultReaction=");
-      var8.append(var4);
-      var8.append(", sharePrompt=");
-      var8.append(var5);
-      var8.append(")");
-      return var8.toString();
+      val var4: java.lang.String = this.shareLabel;
+      val var8: MessageReaction = this.defaultReaction;
+      val var3: PostSharePrompt = this.sharePrompt;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ForumPostActions(numDisplayedReactions=");
+      var6.append(var1);
+      var6.append(", isFollowing=");
+      var6.append(var2);
+      var6.append(", followIcon=");
+      var6.append(var5);
+      var6.append(", followLabel=");
+      var6.append(var9);
+      var6.append(", shareIcon=");
+      var6.append(var7);
+      var6.append(", shareLabel=");
+      var6.append(var4);
+      var6.append(", defaultReaction=");
+      var6.append(var8);
+      var6.append(", sharePrompt=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -212,9 +212,9 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: b2 = b2.a;
+         val var3: b2 = b2.a;
          return new KSerializer[]{
-            n0.a, h.a, a.u(b2.a), var2, a.u(var2), var2, a.u(MessageReaction.$serializer.INSTANCE), a.u(PostSharePrompt.$serializer.INSTANCE)
+            n0.a, h.a, a.u(b2.a), var3, a.u(var3), var3, a.u(MessageReaction.$serializer.INSTANCE), a.u(PostSharePrompt.$serializer.INSTANCE)
          };
       }
 
@@ -224,42 +224,43 @@ public data class ForumPostActions(numDisplayedReactions: Int,
          val var15: c = var1.c(var14);
          var var2: Int;
          var var3: Int;
-         var var4: Int;
-         var var7: Any;
+         val var5: Int;
          var var8: java.lang.String;
          var var9: java.lang.String;
          var var10: java.lang.String;
          val var11: java.lang.String;
-         val var12: PostSharePrompt;
+         val var12: Any;
+         val var21: PostSharePrompt;
          if (var15.y()) {
-            var4 = var15.k(var14, 0);
-            var2 = var15.s(var14, 1);
+            var2 = var15.k(var14, 0);
+            var3 = var15.s(var14, 1);
             val var16: b2 = b2.a;
-            var11 = var15.v(var14, 2, b2.a, null) as java.lang.String;
-            var9 = var15.t(var14, 3);
+            var9 = var15.v(var14, 2, b2.a, null) as java.lang.String;
+            var11 = var15.t(var14, 3);
             var10 = var15.v(var14, 4, var16, null) as java.lang.String;
             var8 = var15.t(var14, 5);
-            var7 = var15.v(var14, 6, MessageReaction.$serializer.INSTANCE, null) as MessageReaction;
+            val var7: MessageReaction = var15.v(var14, 6, MessageReaction.$serializer.INSTANCE, null) as MessageReaction;
             val var17: PostSharePrompt = var15.v(var14, 7, PostSharePrompt.$serializer.INSTANCE, null) as PostSharePrompt;
-            var3 = 255;
-            var12 = var17;
+            var5 = 255;
+            var12 = var7;
+            var21 = var17;
          } else {
-            var var5: Boolean = true;
-            var4 = 0;
+            var var20: Boolean = true;
+            var var4: Int = 0;
             var2 = 0;
-            var var25: PostSharePrompt = null;
+            var var26: PostSharePrompt = null;
             var var18: java.lang.String = null;
             var9 = null;
             var8 = null;
-            var7 = null;
+            var var22: java.lang.String = null;
             var10 = null;
             var3 = 0;
 
-            while (var5) {
+            while (var20) {
                val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
-                     var5 = false;
+                     var20 = false;
                      break;
                   case 0:
                      var4 = var15.k(var14, 0);
@@ -282,7 +283,7 @@ public data class ForumPostActions(numDisplayedReactions: Int,
                      var2 |= 16;
                      break;
                   case 5:
-                     var7 = var15.t(var14, 5);
+                     var22 = var15.t(var14, 5);
                      var2 |= 32;
                      break;
                   case 6:
@@ -290,7 +291,7 @@ public data class ForumPostActions(numDisplayedReactions: Int,
                      var2 |= 64;
                      break;
                   case 7:
-                     var25 = var15.v(var14, 7, PostSharePrompt.$serializer.INSTANCE, var25) as PostSharePrompt;
+                     var26 = var15.v(var14, 7, PostSharePrompt.$serializer.INSTANCE, var26) as PostSharePrompt;
                      var2 |= 128;
                      break;
                   default:
@@ -298,17 +299,18 @@ public data class ForumPostActions(numDisplayedReactions: Int,
                }
             }
 
-            var3 = var2;
-            var8 = (java.lang.String)var7;
-            var12 = var25;
-            var7 = var10;
+            var5 = var2;
+            var8 = var22;
+            var21 = var26;
+            var12 = var10;
             var10 = var8;
-            var11 = var18;
-            var2 = var3;
+            var11 = var9;
+            var9 = var18;
+            var2 = var4;
          }
 
          var15.b(var14);
-         return new ForumPostActions(var3, var4, (boolean)var2, var11, var9, var10, var8, (MessageReaction)var7, var12, null);
+         return new ForumPostActions(var5, var2, (boolean)var3, var9, var11, var10, var8, (MessageReaction)var12, var21, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForumPostActions) {
@@ -321,7 +323,7 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

@@ -53,7 +53,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
       val var2: StringBuilder = new StringBuilder();
       var2.append("An operation is not implemented: ");
       var2.append("Not yet implemented");
-      throw new dh.q(var2.toString());
+      throw new gh.q(var2.toString());
    }
 
    public fun setColor(roleColor: Int) {
@@ -65,6 +65,6 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
       val var2: StringBuilder = new StringBuilder();
       var2.append("An operation is not implemented: ");
       var2.append("Not yet implemented");
-      throw new dh.q(var2.toString());
+      throw new gh.q(var2.toString());
    }
 }

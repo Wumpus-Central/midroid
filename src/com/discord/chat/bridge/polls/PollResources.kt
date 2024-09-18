@@ -1,6 +1,9 @@
 package com.discord.chat.bridge.polls
 
-import eh.r
+import bl.b2
+import bl.g0
+import bl.g0.a
+import hh.r
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -9,11 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = r.h()) {
@@ -85,18 +85,18 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.selectedIcon;
+      val var1: java.lang.String = this.selectedIcon;
       val var2: java.lang.String = this.checkmarkIcon;
-      val var1: java.util.Map = this.styles;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollResources(selectedIcon=");
-      var4.append(var3);
-      var4.append(", checkmarkIcon=");
-      var4.append(var2);
-      var4.append(", styles=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.Map = this.styles;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollResources(selectedIcon=");
+      var3.append(var1);
+      var3.append(", checkmarkIcon=");
+      var3.append(var2);
+      var3.append(", styles=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

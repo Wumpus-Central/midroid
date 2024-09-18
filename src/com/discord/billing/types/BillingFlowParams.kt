@@ -6,8 +6,8 @@ import com.android.billingclient.api.ProductDetails.PricingPhase
 import java.security.MessageDigest
 import java.util.ArrayList
 import java.util.Arrays
-import jk.a
 import kotlin.jvm.internal.q
+import mk.a
 
 internal object BillingFlowParams {
    private fun calculateStandardizedUnits(oldPeriod: String, newPeriod: String): Int {

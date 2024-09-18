@@ -1,5 +1,9 @@
 package com.discord.media_player.reactevents
 
+import bl.g0
+import bl.h
+import bl.y
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.g0
-import yk.h
-import yk.y
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : ReactEvent {

@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
+import bl.f0
+import bl.g0
+import bl.n0
+import bl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.f0
-import yk.g0
-import yk.n0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
@@ -73,17 +73,17 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
    }
 
    public override fun toString(): String {
-      val var3: Int = this.r;
-      val var4: Int = this.g;
-      val var2: Int = this.b;
+      val var4: Int = this.r;
+      val var2: Int = this.g;
+      val var3: Int = this.b;
       val var1: Float = this.a;
       val var5: StringBuilder = new StringBuilder();
       var5.append("GradientColor(r=");
-      var5.append(var3);
-      var5.append(", g=");
       var5.append(var4);
-      var5.append(", b=");
+      var5.append(", g=");
       var5.append(var2);
+      var5.append(", b=");
+      var5.append(var3);
       var5.append(", a=");
       var5.append(var1);
       var5.append(")");
@@ -118,27 +118,25 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Float;
+         var var3: Int;
          var var4: Int;
+         var var5: Int;
          var var6: Int;
-         val var7: Int;
-         var var13: Int;
          if (var10.y()) {
-            var13 = var10.k(var9, 0);
-            var7 = var10.k(var9, 1);
-            val var3: Int = var10.k(var9, 2);
+            var6 = var10.k(var9, 0);
+            var5 = var10.k(var9, 1);
+            var3 = var10.k(var9, 2);
             var2 = var10.G(var9, 3);
             var4 = 15;
-            var6 = var13;
-            var13 = var3;
          } else {
             var2 = 0.0F;
-            var var14: Boolean = true;
+            var var7: Boolean = true;
             var6 = 0;
-            var13 = 0;
+            var5 = 0;
             var4 = 0;
-            var var11: Int = 0;
+            var3 = 0;
 
-            while (var14) {
+            while (var7) {
                val var8: Int = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -149,30 +147,31 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                            }
 
                            var2 = var10.G(var9, 3);
-                           var11 |= 8;
+                           var3 |= 8;
                         } else {
-                           var13 = var10.k(var9, 2);
-                           var11 |= 4;
+                           var5 = var10.k(var9, 2);
+                           var3 |= 4;
                         }
                      } else {
                         var4 = var10.k(var9, 1);
-                        var11 |= 2;
+                        var3 |= 2;
                      }
                   } else {
                      var6 = var10.k(var9, 0);
-                     var11 |= 1;
+                     var3 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var7 = false;
                }
             }
 
-            var7 = var4;
-            var4 = var11;
+            var5 = var4;
+            var4 = var3;
+            var3 = var5;
          }
 
          var10.b(var9);
-         return new GradientColor(var4, var6, var7, var13, var2, null);
+         return new GradientColor(var4, var6, var5, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GradientColor) {
@@ -185,7 +184,7 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

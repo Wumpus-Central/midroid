@@ -38,16 +38,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       var1.resolve(var2);
    }
 
-   private fun requireAppInForeground(promise: Promise, withForegroundApp: (Promise) -> Unit) {
-      if (!AppLifecycleManagerModule.Companion.isForegrounded()) {
-         val var3: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
-         q.g(var3, "toLowerCase(...)");
-         var1.resolve(var3);
-      } else {
-         var2.invoke(var1);
-      }
-   }
-
    public open fun getName(): String {
       return "NativePermissionManager";
    }
@@ -167,28 +157,10 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
    public fun requestForegroundServicePermissionScreenShare(promise: Promise) {
       q.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
-         this.requireAppInForeground(
-            var1,
-            new Function1(this, var1) {
-               final Promise $promise;
-               final NativePermissionManagerModule this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-                  this.$promise = var2;
-               }
-
-               public final void invoke(Promise var1) {
-                  q.h(var1, "it");
-                  NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
-                     .requestPermission(
-                        "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
-                        NativePermissionManagerModule.Companion.access$transformRequestResult(NativePermissionManagerModule.Companion, this.$promise)
-                     );
-               }
-            }
-         );
+         this.getPermissionsModule()
+            .requestPermission(
+               "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
+            );
       } else {
          this.requestForegroundServicePermissionPreU(var1);
       }
@@ -197,49 +169,36 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
    public fun requestForegroundServicePermissionVoiceCall(promise: Promise) {
       q.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
-         this.requireAppInForeground(
-            var1,
-            new Function1(this, var1) {
-               final Promise $promise;
-               final NativePermissionManagerModule this$0;
+         if (!AppLifecycleManagerModule.Companion.isForegrounded()) {
+            val var2: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
+            q.g(var2, "toLowerCase(...)");
+            var1.resolve(var2);
+            return;
+         }
 
-               {
-                  super(1);
-                  this.this$0 = var1;
-                  this.$promise = var2;
-               }
+         this.requestMicrophoneAuthorization(
+            NativePermissionPromise.INSTANCE
+               .generate(
+                  new Function0(this, var1) {
+                     final Promise $promise;
+                     final NativePermissionManagerModule this$0;
 
-               public final void invoke(Promise var1) {
-                  q.h(var1, "it");
-                  this.this$0
-                     .requestMicrophoneAuthorization(
-                        NativePermissionPromise.INSTANCE
-                           .generate(
-                              new Function0(this.this$0, this.$promise) {
-                                 final Promise $promise;
-                                 final NativePermissionManagerModule this$0;
+                     {
+                        super(0);
+                        this.this$0 = var1;
+                        this.$promise = var2;
+                     }
 
-                                 {
-                                    super(0);
-                                    this.this$0 = var1;
-                                    this.$promise = var2;
-                                 }
-
-                                 public final void invoke() {
-                                    NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
-                                       .requestPermission(
-                                          "android.permission.FOREGROUND_SERVICE_MICROPHONE",
-                                          NativePermissionManagerModule.Companion.access$transformRequestResult(
-                                             NativePermissionManagerModule.Companion, this.$promise
-                                          )
-                                       );
-                                 }
-                              },
-                              <unrepresentable>.INSTANCE
-                           )
-                     );
-               }
-            }
+                     public final void invoke() {
+                        NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
+                           .requestPermission(
+                              "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+                              NativePermissionManagerModule.Companion.access$transformRequestResult(NativePermissionManagerModule.Companion, this.$promise)
+                           );
+                     }
+                  },
+                  <unrepresentable>.INSTANCE
+               )
          );
       } else {
          this.requestForegroundServicePermissionPreU(var1);

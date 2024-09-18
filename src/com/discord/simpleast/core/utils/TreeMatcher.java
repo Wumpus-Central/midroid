@@ -90,14 +90,14 @@ public class TreeMatcher {
             StyleNode var6 = (StyleNode)var1;
             StyleNode var8 = (StyleNode)var2;
             List var7 = var6.getStyles();
-            List var9 = var8.getStyles();
-            if (var7.size() != var9.size()) {
+            List var4 = var8.getStyles();
+            if (var7.size() != var4.size()) {
                return false;
             } else {
                for (int var3 = 0; var3 < var7.size(); var3++) {
                   CharacterStyle var5 = (CharacterStyle)var7.get(var3);
-                  CharacterStyle var4 = (CharacterStyle)var9.get(var3);
-                  if (var5.getClass() != var4.getClass()) {
+                  CharacterStyle var9 = (CharacterStyle)var4.get(var3);
+                  if (var5.getClass() != var9.getClass()) {
                      return false;
                   }
                }

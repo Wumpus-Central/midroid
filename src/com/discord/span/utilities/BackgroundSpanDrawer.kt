@@ -84,18 +84,18 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
                );
             } else if (var17 == var11) {
                var2.setColor(var37.getBackgroundColor());
-               val var38: Path = new Path();
-               var38.addRoundRect(
+               val var23: Path = new Path();
+               var23.addRoundRect(
                   (float)var9, (float)var5, (float)var19, (float)var7, new float[]{var13, var13, 0.0F, 0.0F, 0.0F, 0.0F, var13, var13}, Direction.CW
                );
-               var1.drawPath(var38, var2);
+               var1.drawPath(var23, var2);
             } else if (var10 == var11) {
                var2.setColor(var37.getBackgroundColor());
-               val var39: Path = new Path();
-               var39.addRoundRect(
+               val var40: Path = new Path();
+               var40.addRoundRect(
                   (float)var9, (float)var5, (float)var19, (float)var7, new float[]{0.0F, 0.0F, var13, var13, var13, var13, 0.0F, 0.0F}, Direction.CW
                );
-               var1.drawPath(var39, var2);
+               var1.drawPath(var40, var2);
             } else {
                var1.drawRect((float)var9, (float)var5, (float)var19, (float)var7, var2);
             }

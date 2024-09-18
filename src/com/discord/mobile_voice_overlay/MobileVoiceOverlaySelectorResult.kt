@@ -1,5 +1,8 @@
 package com.discord.mobile_voice_overlay
 
+import bl.b2
+import bl.g0
+import bl.o1
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import kotlin.jvm.internal.q
@@ -11,11 +14,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.o1
+import yk.f
+import yk.n
 
 @f
 public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: ChannelId, channelName: String, guildName: String, categoryName: String) : MobileVoiceOverlaySelectorResult(
@@ -112,24 +112,24 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = this.channelName;
-      val var5: java.lang.String = this.guildName;
-      val var6: java.lang.String = this.categoryName;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", channelName=");
-      var4.append(var3);
-      var4.append(", guildName=");
-      var4.append(var5);
-      var4.append(", categoryName=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var6: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = this.channelName;
+      val var4: java.lang.String = this.guildName;
+      val var5: java.lang.String = this.categoryName;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MobileVoiceOverlaySelectorResult(guildId=");
+      var3.append(var6);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(", channelName=");
+      var3.append(var1);
+      var3.append(", guildName=");
+      var3.append(var4);
+      var3.append(", categoryName=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -167,24 +167,24 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
          var var2: Int;
          var var6: java.lang.String;
          var var8: ChannelId;
-         val var13: java.lang.String;
-         var var16: java.lang.String;
+         var var13: java.lang.String;
+         var var14: java.lang.String;
          if (var5) {
             val var7: GuildId = var12.m(var11, 0, GuildId.$serializer.INSTANCE, null) as GuildId;
             var8 = var12.m(var11, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             val var10: java.lang.String = var12.t(var11, 2);
-            var13 = var12.t(var11, 3);
-            var6 = var12.t(var11, 4);
+            var6 = var12.t(var11, 3);
+            var13 = var12.t(var11, 4);
             var2 = 31;
             var9 = var7;
-            var16 = var10;
+            var14 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var16 = null;
+            var14 = null;
             var6 = null;
-            var var14: java.lang.String = null;
+            var13 = null;
 
             while (var3) {
                val var4: Int = var12.x(var11);
@@ -197,14 +197,14 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
                                  throw new n(var4);
                               }
 
-                              var14 = var12.t(var11, 4);
+                              var13 = var12.t(var11, 4);
                               var2 |= 16;
                            } else {
                               var6 = var12.t(var11, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var16 = var12.t(var11, 2);
+                           var14 = var12.t(var11, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -219,13 +219,10 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
                   var3 = false;
                }
             }
-
-            var6 = var14;
-            var13 = var6;
          }
 
          var12.b(var11);
-         return new MobileVoiceOverlaySelectorResult(var2, var9, var8, var16, var13, var6, null, null);
+         return new MobileVoiceOverlaySelectorResult(var2, var9, var8, var14, var6, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MobileVoiceOverlaySelectorResult) {
@@ -238,7 +235,7 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

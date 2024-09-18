@@ -1,5 +1,9 @@
 package com.discord.chat.reactevents
 
+import bl.b2
+import bl.g0
+import bl.o1
+import bl.g0.a
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
@@ -12,12 +16,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.o1
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TapSelectActionComponent(messageId: MessageId, componentId: String) : TapSelectActionComponent(var1, var2), ReactEvent {
@@ -119,7 +119,6 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var11: java.lang.String;
          var var12: java.lang.String;
          if (var5) {
             val var6: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -127,14 +126,12 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
                var10 = var6.unbox-impl();
             }
 
-            val var7: java.lang.String = var9.t(var8, 1);
+            var12 = var9.t(var8, 1);
             var2 = 3;
-            var12 = var10;
-            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var11 = null;
+            var var11: java.lang.String = null;
             var12 = null;
 
             while (var3) {
@@ -148,16 +145,16 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
                      var11 = var9.t(var8, 1);
                      var2 |= 2;
                   } else {
-                     val var13: MessageId;
+                     val var14: MessageId;
                      if (var12 != null) {
-                        var13 = MessageId.box-impl(var12);
+                        var14 = MessageId.box-impl(var12);
                      } else {
-                        var13 = null;
+                        var14 = null;
                      }
 
-                     val var14: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
-                     if (var14 != null) {
-                        var12 = var14.unbox-impl();
+                     val var15: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var14) as MessageId;
+                     if (var15 != null) {
+                        var12 = var15.unbox-impl();
                      } else {
                         var12 = null;
                      }
@@ -168,10 +165,13 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
                   var3 = false;
                }
             }
+
+            var12 = var11;
+            var10 = var12;
          }
 
          var9.b(var8);
-         return new TapSelectActionComponent(var2, var12, var11, null, null);
+         return new TapSelectActionComponent(var2, var10, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapSelectActionComponent) {

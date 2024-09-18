@@ -15,7 +15,7 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
-import dh.p
+import gh.p
 import kotlin.jvm.internal.q
 
 public fun MessageBase.toChatListMessageItem(
@@ -56,8 +56,8 @@ public fun MessageBase.toChatListMessageItem(
 
 public fun MessageRow.toChatListMessageItem(): ChatListItem {
    q.h(var0, "<this>");
-   val var3: MessageBase = var0.getMessage();
-   val var4: MessageFrame = var0.getMessageFrame();
+   val var4: MessageBase = var0.getMessage();
+   val var3: MessageFrame = var0.getMessageFrame();
    val var2: MessageFrame = var0.getMessageFrame();
    val var5: MessageFrameType;
    if (var2 != null) {
@@ -74,8 +74,8 @@ public fun MessageRow.toChatListMessageItem(): ChatListItem {
    }
 
    return toChatListMessageItem(
-      var3,
       var4,
+      var3,
       MessageContextKt.getMessageContext(var0),
       var1,
       var0.isHighlight(),

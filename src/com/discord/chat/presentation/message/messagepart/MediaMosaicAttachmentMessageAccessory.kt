@@ -163,18 +163,18 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
       val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var9: java.util.List = this.attachments;
       val var1: Int = this.constrainedWidth;
-      val var2: Boolean = this.isForwardedContent;
+      val var5: Boolean = this.isForwardedContent;
       val var3: Boolean = this.isShowingInlineForward;
-      val var6: MessageState = this.messageState;
-      val var5: Boolean = this.shouldAutoPlayGif;
+      val var8: MessageState = this.messageState;
+      val var2: Boolean = this.shouldAutoPlayGif;
       val var4: Boolean = this.useOldForwardIcon;
       val var10: StringBuilder = new StringBuilder();
       var10.append("MediaMosaicAttachmentMessageAccessory(messageId=");
-      var10.append(var8);
+      var10.append(var6);
       var10.append(", channelId=");
       var10.append(var7);
       var10.append(", attachments=");
@@ -182,13 +182,13 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
       var10.append(", constrainedWidth=");
       var10.append(var1);
       var10.append(", isForwardedContent=");
-      var10.append(var2);
+      var10.append(var5);
       var10.append(", isShowingInlineForward=");
       var10.append(var3);
       var10.append(", messageState=");
-      var10.append(var6);
+      var10.append(var8);
       var10.append(", shouldAutoPlayGif=");
-      var10.append(var5);
+      var10.append(var2);
       var10.append(", useOldForwardIcon=");
       var10.append(var4);
       var10.append(")");

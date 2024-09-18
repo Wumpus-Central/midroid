@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
+import bl.g0
+import bl.o1
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import kotlin.jvm.internal.q
@@ -11,11 +13,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import vk.f
-import vk.n
-import wk.a
-import yk.g0
-import yk.o1
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...) : MessageReference(var1, var3) {
@@ -82,13 +82,13 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: GuildId = this.guildId;
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: GuildId = this.guildId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MessageReference(channelId=");
-      var2.append(var3);
-      var2.append(", guildId=");
       var2.append(var1);
+      var2.append(", guildId=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -165,7 +165,7 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

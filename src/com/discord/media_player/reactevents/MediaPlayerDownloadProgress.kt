@@ -1,5 +1,8 @@
 package com.discord.media_player.reactevents
 
+import bl.g0
+import bl.y
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.g0
-import yk.y
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Double, progressPercent: Double, totalDurationSeconds: Double) : ReactEvent {
@@ -88,19 +88,19 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
    }
 
    public override fun toString(): String {
-      val var5: Double = this.id;
-      val var7: Double = this.progressSeconds;
-      val var3: Double = this.progressPercent;
-      val var1: Double = this.totalDurationSeconds;
+      val var7: Double = this.id;
+      val var5: Double = this.progressSeconds;
+      val var1: Double = this.progressPercent;
+      val var3: Double = this.totalDurationSeconds;
       val var9: StringBuilder = new StringBuilder();
       var9.append("MediaPlayerDownloadProgress(id=");
-      var9.append(var5);
-      var9.append(", progressSeconds=");
       var9.append(var7);
+      var9.append(", progressSeconds=");
+      var9.append(var5);
       var9.append(", progressPercent=");
-      var9.append(var3);
-      var9.append(", totalDurationSeconds=");
       var9.append(var1);
+      var9.append(", totalDurationSeconds=");
+      var9.append(var3);
       var9.append(")");
       return var9.toString();
    }
@@ -134,24 +134,26 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
          q.h(var1, "decoder");
          val var15: SerialDescriptor = this.getDescriptor();
          val var16: c = var1.c(var15);
-         var var2: Double;
          var var4: Double;
          var var6: Double;
          var var8: Double;
          var var12: Int;
+         var var17: Double;
          if (var16.y()) {
             var4 = var16.A(var15, 0);
-            var6 = var16.A(var15, 1);
-            var2 = var16.A(var15, 2);
-            var8 = var16.A(var15, 3);
+            var8 = var16.A(var15, 1);
+            var17 = var16.A(var15, 2);
+            val var10: Double = var16.A(var15, 3);
             var12 = 15;
+            var6 = var17;
+            var17 = var10;
          } else {
             var8 = 0.0;
             var var13: Boolean = true;
             var12 = 0;
             var6 = 0.0;
             var4 = 0.0;
-            var2 = 0.0;
+            var17 = 0.0;
 
             while (var13) {
                val var14: Int = var16.x(var15);
@@ -170,7 +172,7 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
                            var12 |= 4;
                         }
                      } else {
-                        var2 = var16.A(var15, 1);
+                        var17 = var16.A(var15, 1);
                         var12 |= 2;
                      }
                   } else {
@@ -182,12 +184,12 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
                }
             }
 
-            var2 = var6;
-            var6 = var2;
+            var17 = var8;
+            var8 = var17;
          }
 
          var16.b(var15);
-         return new MediaPlayerDownloadProgress(var12, var4, var6, var2, var8, null);
+         return new MediaPlayerDownloadProgress(var12, var4, var8, var6, var17, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerDownloadProgress) {

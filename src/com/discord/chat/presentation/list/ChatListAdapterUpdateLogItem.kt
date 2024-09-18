@@ -3,7 +3,7 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
-import dh.p
+import gh.p
 import kotlin.jvm.internal.q
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
@@ -77,19 +77,19 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var16.append("Items: ");
          var16.append(var8);
          val var18: java.lang.String = var16.toString();
-         var var19: StringBuilder = new StringBuilder();
+         val var19: StringBuilder = new StringBuilder();
          var19.append("Operations: ");
          var19.append(var13);
-         var13 = var19.toString();
-         var19 = new StringBuilder();
-         var19.append("ChatList - ");
-         var19.append(var10);
-         var19.append(", ");
-         var19.append(var18);
-         var19.append(", ");
-         var19.append(var13);
-         var19.append(", \n");
-         return var19.toString();
+         val var20: java.lang.String = var19.toString();
+         val var14: StringBuilder = new StringBuilder();
+         var14.append("ChatList - ");
+         var14.append(var10);
+         var14.append(", ");
+         var14.append(var18);
+         var14.append(", ");
+         var14.append(var20);
+         var14.append(", \n");
+         return var14.toString();
       }
    }
 

@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.embed
 
+import bl.b2
+import bl.g0
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
 import kotlin.jvm.internal.q
@@ -10,11 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class EmbedField(rawName: String? = null, rawValue: String? = null, name: StructurableText? = null, value: StructurableText? = null) {
@@ -109,21 +109,21 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.rawName;
-      val var5: java.lang.String = this.rawValue;
-      val var1: StructurableText = this.name;
-      val var2: StructurableText = this.value;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EmbedField(rawName=");
-      var3.append(var4);
-      var3.append(", rawValue=");
-      var3.append(var5);
-      var3.append(", name=");
-      var3.append(var1);
-      var3.append(", value=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.rawName;
+      val var2: java.lang.String = this.rawValue;
+      val var3: StructurableText = this.name;
+      val var5: StructurableText = this.value;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("EmbedField(rawName=");
+      var4.append(var1);
+      var4.append(", rawValue=");
+      var4.append(var2);
+      var4.append(", name=");
+      var4.append(var3);
+      var4.append(", value=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -148,9 +148,9 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var2: b2 = b2.a;
          val var1: KSerializer = a.u(b2.a);
-         val var3: KSerializer = a.u(var2);
-         val var4: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
-         return new KSerializer[]{var1, var3, a.u(StructurableTextSerializer.INSTANCE), a.u(var4)};
+         val var4: KSerializer = a.u(var2);
+         val var3: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
+         return new KSerializer[]{var1, var4, a.u(StructurableTextSerializer.INSTANCE), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedField {
@@ -226,7 +226,7 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

@@ -9,7 +9,7 @@ import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import lk.f
+import ok.f
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {

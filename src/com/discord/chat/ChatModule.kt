@@ -22,9 +22,9 @@ import kotlinx.coroutines.g
 import kotlinx.coroutines.v
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
-import lk.f
-import lk.j1
-import lk.s0
+import ok.f
+import ok.j1
+import ok.s0
 
 @ReactModule(name = "DCDChatManager")
 public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -43,7 +43,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
       val var3: CompletableJob = j1.b(null, 1, null);
       val var2: ExecutorService = Executors.newSingleThreadExecutor();
       q.g(var2, "newSingleThreadExecutor(...)");
-      this.moduleScope = g.a(var3.O(s0.b(var2)));
+      this.moduleScope = g.a(var3.P(s0.b(var2)));
       this.listManagers = new LinkedHashMap<>();
       this.previousRowUpdateTag = -1;
       this.rowUpdateLoggers = new LinkedHashMap<>();
@@ -1109,8 +1109,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    // java.lang.StackOverflowError
    //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
    //   at java.base/java.util.HashMap.put(HashMap.java:618)
-   //   at java.base/java.util.HashSet.add(HashSet.java:229)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1746)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2131,6 +2130,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    
       );
    }
@@ -2198,12 +2198,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
 
    public open fun invalidate() {
       super.invalidate();
-      val var3: CoroutineContext = this.moduleScope.getCoroutineContext();
-      val var1: java.lang.String = ChatModule.class.getSimpleName();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var1);
-      var2.append(" invalidate()");
-      v.g(var3, new CancellationException(var2.toString()));
+      val var2: CoroutineContext = this.moduleScope.getCoroutineContext();
+      val var3: java.lang.String = ChatModule.class.getSimpleName();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(var3);
+      var1.append(" invalidate()");
+      v.g(var2, new CancellationException(var1.toString()));
    }
 
    @ReactMethod
@@ -2217,8 +2217,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    // java.lang.StackOverflowError
    //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
    //   at java.base/java.util.HashMap.put(HashMap.java:618)
-   //   at java.base/java.util.HashSet.add(HashSet.java:229)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1746)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -3239,6 +3238,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    
       );
    }

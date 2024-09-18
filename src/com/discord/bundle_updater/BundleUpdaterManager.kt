@@ -22,7 +22,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.WritableNativeMap
 import com.jakewharton.processphoenix.ProcessPhoenix
-import dh.w
+import gh.w
 import java.io.File
 import java.lang.reflect.Field
 import kotlin.jvm.functions.Function0
@@ -222,9 +222,9 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                         if (var8 as ReactApplication != null) {
                            val var10: ReactNativeHost = var9.getReactNativeHost();
                            if (var10 != null) {
-                              val var5: ReactInstanceManager = var10.getReactInstanceManager();
-                              if (var5 != null) {
-                                 val var4: BundleUpdaterManager = this.this$0;
+                              val var4: ReactInstanceManager = var10.getReactInstanceManager();
+                              if (var4 != null) {
+                                 val var5: BundleUpdaterManager = this.this$0;
                                  val var6: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
                                  var var11: java.lang.String = null;
                                  if (var6 != null) {
@@ -235,8 +235,8 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                                     }
                                  }
 
-                                 BundleUpdaterManager.access$setJSBundle(var4, var5, var11);
-                                 var5.recreateReactContextInBackground();
+                                 BundleUpdaterManager.access$setJSBundle(var5, var4, var11);
+                                 var4.recreateReactContextInBackground();
                               }
                            }
                         }

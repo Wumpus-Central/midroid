@@ -1,14 +1,14 @@
 package com.discord.minibsdiff
 
-import ik.j
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
 import java.io.RandomAccessFile
 import java.util.Arrays
-import jk.a
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import lk.j
+import mk.a
 
 public object BSDiff {
    private final val BSDIFF_CONFIG_MAGIC: ByteArray
@@ -29,8 +29,8 @@ public object BSDiff {
       extraInputStream: InputStream,
       newOutputStream: OutputStream
    ) {
-      val var20: ByteArray = new byte[1000000];
       val var21: ByteArray = new byte[1000000];
+      val var20: ByteArray = new byte[1000000];
       if (!Arrays.equals(InputStreamUtilsKt.readNBytesCompat(var3, 8), BSDIFF_CONFIG_MAGIC)) {
          throw new BSDiff.BsPatchError("Bad magic config header for patch file!");
       } else {
@@ -54,22 +54,22 @@ public object BSDiff {
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var2, var20, 0, var8);
-               InputStreamUtilsKt.readNBytesCompat(var4, var21, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var2, var21, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var4, var20, 0, var8);
 
                for (int var7 = 0; var7 < var8; var7++) {
-                  var20[var7] += var21[var7];
+                  var21[var7] += var20[var7];
                }
 
-               var6.write(var20, 0, var8);
+               var6.write(var21, 0, var8);
             }
 
             var19 = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var5, var20, 0, var22);
-               var6.write(var20, 0, var22);
+               InputStreamUtilsKt.readNBytesCompat(var5, var21, 0, var22);
+               var6.write(var21, 0, var22);
             }
 
             var1.seek(var1.getFilePointer() + var15);
@@ -211,23 +211,23 @@ public object BSDiff {
       // 0cd: astore 6
       // 0cf: aload 3
       // 0d0: aconst_null
-      // 0d1: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0d1: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0d4: aload 2
       // 0d5: aconst_null
-      // 0d6: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0d6: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0d9: aload 4
       // 0db: aconst_null
-      // 0dc: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0dc: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0df: aload 1
       // 0e0: aconst_null
-      // 0e1: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0e1: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0e4: aload 5
       // 0e6: aconst_null
-      // 0e7: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0e7: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0ea: return
       // 0eb: astore 2
       // 0ec: goto 12c
-      // 0ef: astore 3
+      // 0ef: astore 2
       // 0f0: goto 122
       // 0f3: astore 3
       // 0f4: goto 117
@@ -239,7 +239,7 @@ public object BSDiff {
       // 100: astore 7
       // 102: aload 3
       // 103: aload 6
-      // 105: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 105: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 108: aload 7
       // 10a: athrow
       // 10b: aload 3
@@ -247,7 +247,7 @@ public object BSDiff {
       // 10d: astore 6
       // 10f: aload 2
       // 110: aload 3
-      // 111: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 111: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 114: aload 6
       // 116: athrow
       // 117: aload 3
@@ -255,23 +255,23 @@ public object BSDiff {
       // 119: astore 2
       // 11a: aload 4
       // 11c: aload 3
-      // 11d: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11d: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 120: aload 2
       // 121: athrow
-      // 122: aload 3
+      // 122: aload 2
       // 123: athrow
-      // 124: astore 2
+      // 124: astore 3
       // 125: aload 1
-      // 126: aload 3
-      // 127: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 12a: aload 2
+      // 126: aload 2
+      // 127: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 12a: aload 3
       // 12b: athrow
       // 12c: aload 2
       // 12d: athrow
       // 12e: astore 1
       // 12f: aload 5
       // 131: aload 2
-      // 132: invokestatic oh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 132: invokestatic rh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 135: aload 1
       // 136: athrow
    }

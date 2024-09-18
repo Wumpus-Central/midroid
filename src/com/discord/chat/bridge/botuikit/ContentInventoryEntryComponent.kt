@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
+import bl.b2
+import bl.g0
+import bl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
-import yk.n0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component {
@@ -117,23 +117,24 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: java.lang.String;
          var var9: ContentInventoryEntry;
          if (var8.y()) {
-            var2 = var8.k(var7, 0);
+            val var2: Int = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null) as ContentInventoryEntry;
             var3 = 7;
+            var4 = var2;
          } else {
-            var var4: Boolean = true;
+            var var12: Boolean = true;
             var3 = 0;
             var6 = null;
             var9 = null;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var4) {
+            while (var12) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -143,26 +144,26 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                         }
 
                         var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, var9) as ContentInventoryEntry;
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var6 = var8.t(var7, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var3 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
 
-            var2 = var3;
-            var3 = var2;
+            var4 = var3;
+            var3 = var10;
          }
 
          var8.b(var7);
-         return new ContentInventoryEntryComponent(var3, var2, var6, var9, null);
+         return new ContentInventoryEntryComponent(var3, var4, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentInventoryEntryComponent) {
@@ -175,7 +176,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

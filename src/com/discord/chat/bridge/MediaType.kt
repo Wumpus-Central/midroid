@@ -1,7 +1,7 @@
 package com.discord.chat.bridge
 
-import kh.a
 import kotlin.enums.EnumEntries
+import nh.a
 
 public enum class MediaType(type: String) {
    Attachment("attachment"),

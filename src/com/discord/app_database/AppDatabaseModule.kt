@@ -1,6 +1,7 @@
 package com.discord.app_database
 
 import android.content.Context
+import bl.w1
 import com.discord.cache.CacheModule
 import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
@@ -8,14 +9,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import dh.w
-import eh.r
+import gh.w
+import hh.r
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
-import yk.w1
 
 @ReactModule(name = "AppDatabase")
 public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -25,10 +25,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, String?> {
-      val var2: CacheModule.Companion = CacheModule.Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      return r.m(new Pair[]{w.a("userId", var2.get(var1).getItem("_databaseUserId"))});
+      val var1: CacheModule.Companion = CacheModule.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      return r.m(new Pair[]{w.a("userId", var1.get(var2).getItem("_databaseUserId"))});
    }
 
    public open fun getName(): String {
@@ -166,7 +166,7 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
       public fun initializeAppDatabase(context: Context) {
          q.h(var1, "context");
          AppDatabaseModule.access$setDataDirectory$cp(var1.getFilesDir().getAbsolutePath());
-         hh.a.b(false, false, null, null, 0, new Function0(var1) {
+         kh.a.b(false, false, null, null, 0, new Function0(var1) {
             final Context $context;
 
             {

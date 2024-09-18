@@ -1,14 +1,14 @@
 package com.discord.analytics
 
 import com.android.installreferrer.api.InstallReferrerClient
-import dh.r
-import dh.s
-import jh.b
+import gh.r
+import gh.s
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
+import mh.b
 import v2.a
 
 @JvmSynthetic
@@ -53,11 +53,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var2: dh.r.a = r.k;
+               val var6: gh.r.a = r.k;
                var5.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: dh.r.a = r.k;
+               val var2: gh.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,11 +67,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var10: dh.r.a = r.k;
+      val var10: gh.r.a = r.k;
       var0.d(var4);
       var7 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var3: dh.r.a = r.k;
+      val var3: gh.r.a = r.k;
       var7 = r.b(s.a(var5));
       break label20;
    }

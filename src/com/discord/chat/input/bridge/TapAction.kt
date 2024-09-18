@@ -1,5 +1,8 @@
 package com.discord.chat.input.bridge
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TapAction(action: String, channelId: String, optionName: String) {
@@ -72,15 +72,15 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
 
    public override fun toString(): String {
       val var3: java.lang.String = this.action;
-      val var1: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.optionName;
+      val var4: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.optionName;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapAction(action=");
       var2.append(var3);
       var2.append(", channelId=");
-      var2.append(var1);
-      var2.append(", optionName=");
       var2.append(var4);
+      var2.append(", optionName=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -113,15 +113,15 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
          val var9: c = var1.c(var8);
          var var2: Int;
          var var5: java.lang.String;
-         var var6: java.lang.String;
+         val var7: java.lang.String;
          val var10: java.lang.String;
          if (var9.y()) {
-            var6 = var9.t(var8, 0);
-            var5 = var9.t(var8, 1);
+            var5 = var9.t(var8, 0);
+            var7 = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
             var2 = 7;
          } else {
-            var6 = null;
+            var var6: java.lang.String = null;
             var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
@@ -151,12 +151,13 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
                }
             }
 
-            var5 = var11;
+            var7 = var11;
             var10 = var5;
+            var5 = var6;
          }
 
          var9.b(var8);
-         return new TapAction(var2, var6, var5, var10, null);
+         return new TapAction(var2, var5, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapAction) {

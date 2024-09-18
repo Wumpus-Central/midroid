@@ -1,13 +1,13 @@
 package com.discord.bundle_updater
 
-import dh.w
-import fm.m
+import gh.w
+import im.m
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import oh.j
 import okio.BufferedSource
+import rh.j
 
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
@@ -55,7 +55,7 @@ public object BundleUpdaterUtils {
 
          var var12: java.lang.String;
          try {
-            val var11: fm.j = fm.j.m.a(m.b());
+            val var11: im.j = im.j.m.a(m.b());
             var10.D1(var11);
             var12 = var11.a().o();
          } catch (var5: java.lang.Throwable) {
@@ -64,11 +64,11 @@ public object BundleUpdaterUtils {
             try {
                throw var2;
             } catch (var4: java.lang.Throwable) {
-               oh.c.a(var10, var5);
+               rh.c.a(var10, var5);
             }
          }
 
-         oh.c.a(var10, null);
+         rh.c.a(var10, null);
          return var12;
       }
    }

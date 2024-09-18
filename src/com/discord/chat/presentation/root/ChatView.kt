@@ -16,7 +16,7 @@ import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.views.view.ReactViewGroup
-import dh.w
+import gh.w
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
 
@@ -167,11 +167,11 @@ public class ChatView(context: Context) : ReactViewGroup {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setEventHandler$p(this, var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.row
 
+import bl.g0
+import bl.n0
+import bl.g0.a
 import com.discord.chat.bridge.ChangeType
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -9,11 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.g0
-import yk.n0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELETE) : Row {
@@ -61,14 +61,14 @@ public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELE
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var3: ChangeType = this.changeType;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DeleteRow(index=");
-      var2.append(var1);
-      var2.append(", changeType=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: ChangeType = this.changeType;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DeleteRow(index=");
+      var3.append(var1);
+      var3.append(", changeType=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

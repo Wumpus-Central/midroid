@@ -55,7 +55,7 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // 2d: if_icmple 58
       // 30: aload 0
       // 31: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.output Lkotlin/collections/ArrayDeque;
-      // 34: invokevirtual kotlin/collections/ArrayDeque.F ()Ljava/lang/Object;
+      // 34: invokevirtual kotlin/collections/ArrayDeque.G ()Ljava/lang/Object;
       // 37: checkcast java/lang/String
       // 3a: astore 1
       // 3b: aload 1

@@ -174,21 +174,21 @@ public class PromiseWrapper(promise: Promise,
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.code;
-         val var4: java.lang.String = this.message;
+         val var2: java.lang.String = this.code;
+         val var3: java.lang.String = this.message;
          val var5: java.lang.Throwable = this.throwable;
          val var1: WritableMap = this.userInfo;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Rejection(code=");
-         var2.append(var3);
-         var2.append(", message=");
-         var2.append(var4);
-         var2.append(", throwable=");
-         var2.append(var5);
-         var2.append(", userInfo=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Rejection(code=");
+         var4.append(var2);
+         var4.append(", message=");
+         var4.append(var3);
+         var4.append(", throwable=");
+         var4.append(var5);
+         var4.append(", userInfo=");
+         var4.append(var1);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

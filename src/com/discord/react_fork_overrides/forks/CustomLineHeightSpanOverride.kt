@@ -30,7 +30,7 @@ internal object CustomLineHeightSpanOverride {
             return;
          }
 
-         val var10: Int = sh.a.b((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
+         val var10: Int = vh.a.b((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
          var1.descent = var10;
          var1.ascent = var10 - var2;
       }

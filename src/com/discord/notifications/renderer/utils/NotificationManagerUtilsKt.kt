@@ -12,9 +12,9 @@ import androidx.core.app.NotificationCompat.MessagingStyle
 import com.discord.notifications.renderer.NotificationBehaviors
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
-import dh.r
-import dh.s
-import dh.r.a
+import gh.r
+import gh.s
+import gh.r.a
 import kotlin.jvm.internal.q
 
 private const val NOTIFICATION_LIGHT_PERIOD: Int = 1500

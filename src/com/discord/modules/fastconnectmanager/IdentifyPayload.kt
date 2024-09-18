@@ -1,19 +1,20 @@
 package com.discord.modules.fastconnectmanager
 
+import cl.g
 import com.discord.app_database.DatabaseVersions
 import com.discord.app_database.GuildVersion
 import com.discord.app_database.NonGuildVersion
 import com.discord.logging.Log
-import dh.s
-import dh.w
-import eh.r
+import gh.s
+import gh.w
+import gh.r.a
+import hh.r
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import zk.g
 
 public object IdentifyPayload {
    private fun JsonObject.put(path: List<String>, value: JsonElement?): JsonObject {
@@ -62,47 +63,49 @@ public object IdentifyPayload {
       q.h(var1, "json");
       q.h(var2, "versions");
 
-      var var17: Any;
+      var var6: Any;
       label38:
       try {
-         var17 = dh.r.k;
-         var17 = dh.r.b(Json.d.g(var1));
+         var6 = gh.r.k;
+         var6 = gh.r.b(Json.d.g(var1));
       } catch (var10: java.lang.Throwable) {
-         var17 = dh.r.k;
-         var17 = dh.r.b(s.a(var10));
+         val var7: a = gh.r.k;
+         var6 = gh.r.b(s.a(var10));
          break label38;
       }
 
-      var var7: Any = var17;
-      if (dh.r.g(var17)) {
-         var7 = null;
+      var var21: Any = var6;
+      if (gh.r.g(var6)) {
+         var21 = null;
       }
 
-      var17 = var7 as JsonElement;
-      if ((var7 as JsonElement) !is JsonObject) {
+      var6 = var21 as JsonElement;
+      if ((var21 as JsonElement) !is JsonObject) {
          Log.w$default(Log.INSTANCE, "IdentifyPayload", "skipping identify mutation: root is not a json object", null, 4, null);
          return var1;
       } else {
-         val var12: JsonObject = var17 as JsonObject;
-         var17 = i.m(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         var7 = var2.getGuildVersions();
-         val var8: LinkedHashMap = new LinkedHashMap(f.c(r.d(((Object[])var7).length), 16));
-         var var5: Int = ((Object[])var7).length;
+         val var12: JsonObject = var6 as JsonObject;
+         var6 = i.m(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         var21 = var2.getGuildVersions();
+         val var8: LinkedHashMap = new LinkedHashMap(f.c(r.d(((Object[])var21).length), 16));
+         var var5: Int = ((Object[])var21).length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = w.a(((GuildVersion)((Object[])var7)[var3]).getId(), g.c(((GuildVersion)((Object[])var7)[var3]).getVersion()));
+            val var24: Pair = w.a(((GuildVersion)((Object[])var21)[var3]).getId(), g.c(((GuildVersion)((Object[])var21)[var3]).getVersion()));
             var8.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put(var12, (java.util.List<java.lang.String>)var17, new JsonObject(var8));
+         var var13: JsonObject = this.put(var12, (java.util.List<java.lang.String>)var6, new JsonObject(var8));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var7 = var14[var15];
-            var17 = INSTANCE;
+            var21 = var14[var15];
+            var6 = INSTANCE;
             var13 = INSTANCE.put(
-               var13, i.m(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var7).getId()}), ((IdentifyPayload)var17).toJson((NonGuildVersion)var7)
+               var13,
+               i.m(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var21).getId()}),
+               ((IdentifyPayload)var6).toJson((NonGuildVersion)var21)
             );
          }
 

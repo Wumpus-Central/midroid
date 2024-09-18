@@ -10,7 +10,7 @@ import com.facebook.react.views.imagehelper.ImageSource
 import com.google.android.material.button.MaterialButton
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import lk.f
+import ok.f
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    q.h(var0, "<this>");

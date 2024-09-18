@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
+import bl.b2
+import bl.g0
+import bl.o1
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
@@ -11,12 +14,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
-import yk.o1
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggingName: String? = ..., author: HandleDeleteMessageAuthor) : HandleDeleteMessage(
@@ -98,8 +98,8 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.id);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.id);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.loggingName == null) {
          var1 = 0;
@@ -107,23 +107,23 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
          var1 = this.loggingName.hashCode();
       }
 
-      return ((var3 * 31 + var2) * 31 + var1) * 31 + this.author.hashCode();
+      return ((var2 * 31 + var3) * 31 + var1) * 31 + this.author.hashCode();
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.id);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.loggingName;
-      val var5: HandleDeleteMessageAuthor = this.author;
+      val var5: java.lang.String = MessageId.toString-impl(this.id);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.loggingName;
+      val var1: HandleDeleteMessageAuthor = this.author;
       val var2: StringBuilder = new StringBuilder();
       var2.append("HandleDeleteMessage(id=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var1);
-      var2.append(", loggingName=");
-      var2.append(var4);
-      var2.append(", author=");
       var2.append(var5);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", loggingName=");
+      var2.append(var3);
+      var2.append(", author=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -169,8 +169,8 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                var12 = null;
             }
 
-            var5 = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var6 = var10.v(var9, 2, b2.a, null) as java.lang.String;
+            var6 = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var5 = var10.v(var9, 2, b2.a, null) as java.lang.String;
             val var8: HandleDeleteMessageAuthor = var10.m(var9, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, null) as HandleDeleteMessageAuthor;
             var7 = var12;
             var13 = var8;
@@ -204,16 +204,16 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                         var2 |= 2;
                      }
                   } else {
-                     val var17: MessageId;
+                     val var16: MessageId;
                      if (var7 != null) {
-                        var17 = MessageId.box-impl(var7);
+                        var16 = MessageId.box-impl(var7);
                      } else {
-                        var17 = null;
+                        var16 = null;
                      }
 
-                     val var18: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var17) as MessageId;
-                     if (var18 != null) {
-                        var7 = var18.unbox-impl();
+                     val var17: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var16) as MessageId;
+                     if (var17 != null) {
+                        var7 = var17.unbox-impl();
                      } else {
                         var7 = null;
                      }
@@ -225,13 +225,12 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                }
             }
 
-            var5 = var14;
+            var6 = var14;
             var13 = (HandleDeleteMessageAuthor)var6;
-            var6 = var5;
          }
 
          var10.b(var9);
-         return new HandleDeleteMessage(var2, var7, (ChannelId)var5, (java.lang.String)var6, var13, null, null);
+         return new HandleDeleteMessage(var2, var7, (ChannelId)var6, (java.lang.String)var5, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: HandleDeleteMessage) {
@@ -244,7 +243,7 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

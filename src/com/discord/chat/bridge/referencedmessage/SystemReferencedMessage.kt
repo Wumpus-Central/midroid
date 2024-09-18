@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.referencedmessage
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class SystemReferencedMessage(content: String) : ReferencedMessage {
@@ -48,12 +48,12 @@ public data class SystemReferencedMessage(content: String) : ReferencedMessage {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SystemReferencedMessage(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SystemReferencedMessage(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

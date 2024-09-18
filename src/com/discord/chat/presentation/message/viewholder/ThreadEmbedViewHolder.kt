@@ -64,9 +64,9 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          var17 = var20.getContent();
          val var24: Context = var14.getContext();
          val var10: java.lang.String = var20.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var20);
-         val var4: Boolean = MessageKt.shouldShowLinkDecorations(var20);
-         val var6: Boolean = var20.getShouldShowRoleDot();
+         val var6: Boolean = MessageKt.shouldAnimateEmoji(var20);
+         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var20);
+         val var4: Boolean = var20.getShouldShowRoleDot();
          val var8: Boolean = var20.getShouldShowRoleOnName();
          val var11: FontMetrics = var14.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
          kotlin.jvm.internal.q.g(var11, "getFontMetrics(...)");
@@ -78,9 +78,9 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
             (StructurableText)var17,
             var24,
             var10,
+            var6,
             var7,
             var4,
-            var6,
             var8,
             var30,
             null,

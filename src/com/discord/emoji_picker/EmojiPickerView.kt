@@ -12,8 +12,8 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
-import dh.l
-import dh.p
+import gh.l
+import gh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -266,11 +266,11 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureRecycledViewPool() {
-      val var1: Int = this.getTypedLayoutManager().getSpanCount() * 20;
-      val var2: Int = this.getTypedLayoutManager().getSpanCount();
-      this.setItemViewCacheSize(var1 / 4);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var1);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var2);
+      val var2: Int = this.getTypedLayoutManager().getSpanCount() * 20;
+      val var1: Int = this.getTypedLayoutManager().getSpanCount();
+      this.setItemViewCacheSize(var2 / 4);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var2);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var1);
       this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal(), 1);
    }
 
@@ -384,10 +384,10 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var2: Context = this.getContext();
-      q.g(var2, "getContext(...)");
-      var3.setUseTier0UpsellContent(var2, var1);
+      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var3: Context = this.getContext();
+      q.g(var3, "getContext(...)");
+      var2.setUseTier0UpsellContent(var3, var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {
@@ -457,15 +457,15 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun toString(): String {
-         val var3: Boolean = this.animateEmoji;
-         val var4: Boolean = this.scrollFastOptimizationEnabled;
+         val var4: Boolean = this.animateEmoji;
+         val var3: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
          val var2: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var3);
-         var5.append(", scrollFastOptimizationEnabled=");
          var5.append(var4);
+         var5.append(", scrollFastOptimizationEnabled=");
+         var5.append(var3);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");

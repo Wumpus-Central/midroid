@@ -30,14 +30,14 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
       kotlin.jvm.internal.q.h(var1, "context");
       kotlin.jvm.internal.q.h(var2, "attrs");
       super(var1, var2);
-      val var5: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
-      this.binding = var5;
-      val var3: TextView = var5.altRemixTag;
-      kotlin.jvm.internal.q.g(var5.altRemixTag, "altRemixTag");
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      val var4: SimpleDraweeView = var5.remixIcon;
-      kotlin.jvm.internal.q.g(var5.remixIcon, "remixIcon");
+      val var3: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      this.binding = var3;
+      val var5: TextView = var3.altRemixTag;
+      kotlin.jvm.internal.q.g(var3.altRemixTag, "altRemixTag");
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      val var4: SimpleDraweeView = var3.remixIcon;
+      kotlin.jvm.internal.q.g(var3.remixIcon, "remixIcon");
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Remix);
    }
 
@@ -85,7 +85,7 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.q.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new k(var4, var5, var6, var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new j(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
          kotlin.jvm.internal.q.g(this.binding.remixIcon, "remixIcon");
          var14.setVisibility(0);

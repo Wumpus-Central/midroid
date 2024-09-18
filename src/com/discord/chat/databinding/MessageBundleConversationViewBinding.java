@@ -31,21 +31,21 @@ public final class MessageBundleConversationViewBinding implements ViewBinding {
 
    public static MessageBundleConversationViewBinding bind(View var0) {
       int var1 = R.id.barrier;
-      Barrier var2 = (Barrier)a.a(var0, var1);
-      if (var2 != null) {
+      Barrier var4 = (Barrier)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.reactions_view;
-         ReactionsView var4 = (ReactionsView)a.a(var0, var1);
-         if (var4 != null) {
+         ReactionsView var6 = (ReactionsView)a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.reply_author_avatar;
-            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-            if (var3 != null) {
+            SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.reply_author_name;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var2 = (TextView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.reply_text;
-                  MessageContentView var5 = (MessageContentView)a.a(var0, var1);
-                  if (var5 != null) {
-                     return new MessageBundleConversationViewBinding(var0, var2, var4, var3, var6, var5);
+                  MessageContentView var3 = (MessageContentView)a.a(var0, var1);
+                  if (var3 != null) {
+                     return new MessageBundleConversationViewBinding(var0, var4, var6, var5, var2, var3);
                   }
                }
             }

@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TapChannelPromptButtonData(messageId: String, channelId: String, buttonType: String) : ReactEvent {
@@ -78,17 +78,17 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
 
    public override fun toString(): String {
       val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.buttonType;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapChannelPromptButtonData(messageId=");
-      var1.append(var2);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", buttonType=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.buttonType;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapChannelPromptButtonData(messageId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", buttonType=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

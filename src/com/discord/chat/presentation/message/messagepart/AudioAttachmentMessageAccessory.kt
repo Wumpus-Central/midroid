@@ -142,32 +142,32 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
       val var8: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var9: java.lang.Float = this.attachmentsOpacity;
+      val var4: java.lang.Float = this.attachmentsOpacity;
       val var6: UserId = this.authorId;
-      val var4: Int = this.color;
+      val var5: Int = this.color;
       val var2: Boolean = this.isVoiceMessage;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("AudioAttachmentMessageAccessory(channelId=");
-      var7.append(var5);
-      var7.append(", messageId=");
-      var7.append(var3);
-      var7.append(", attachment=");
-      var7.append(var8);
-      var7.append(", attachmentIndex=");
-      var7.append(var1);
-      var7.append(", attachmentsOpacity=");
-      var7.append(var9);
-      var7.append(", authorId=");
-      var7.append(var6);
-      var7.append(", color=");
-      var7.append(var4);
-      var7.append(", isVoiceMessage=");
-      var7.append(var2);
-      var7.append(")");
-      return var7.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("AudioAttachmentMessageAccessory(channelId=");
+      var9.append(var3);
+      var9.append(", messageId=");
+      var9.append(var7);
+      var9.append(", attachment=");
+      var9.append(var8);
+      var9.append(", attachmentIndex=");
+      var9.append(var1);
+      var9.append(", attachmentsOpacity=");
+      var9.append(var4);
+      var9.append(", authorId=");
+      var9.append(var6);
+      var9.append(", color=");
+      var9.append(var5);
+      var9.append(", isVoiceMessage=");
+      var9.append(var2);
+      var9.append(")");
+      return var9.toString();
    }
 }

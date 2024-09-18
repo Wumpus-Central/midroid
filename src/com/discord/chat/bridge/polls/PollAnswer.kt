@@ -1,7 +1,10 @@
 package com.discord.chat.bridge.polls
 
+import bl.b2
+import bl.g0
+import bl.h
+import bl.n0
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -9,13 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
-import yk.h
-import yk.n0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class PollAnswer(answerId: String,
@@ -156,10 +155,10 @@ public data class PollAnswer(answerId: String,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = this.answerId.hashCode();
+      val var6: Int = this.answerId.hashCode();
       val var4: Int = this.pollMedia.hashCode();
       val var8: Int = java.lang.Boolean.hashCode(this.didSelfVote);
-      val var6: Int = this.votes.hashCode();
+      val var7: Int = this.votes.hashCode();
       val var5: Int = Integer.hashCode(this.votesPercentage);
       var var3: Int = 0;
       val var1: Int;
@@ -180,40 +179,40 @@ public data class PollAnswer(answerId: String,
          var3 = this.shouldAnimateTransition.hashCode();
       }
 
-      return (((((((var7 * 31 + var4) * 31 + var8) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
+      return (((((((var6 * 31 + var4) * 31 + var8) * 31 + var7) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.answerId;
-      val var10: PollMedia = this.pollMedia;
+      val var5: java.lang.String = this.answerId;
+      val var4: PollMedia = this.pollMedia;
       val var2: Boolean = this.didSelfVote;
-      val var4: java.lang.String = this.votes;
+      val var10: java.lang.String = this.votes;
       val var1: Int = this.votesPercentage;
       val var3: java.lang.Boolean = this.isSelected;
-      val var8: java.lang.Boolean = this.isVictor;
-      val var6: java.lang.Boolean = this.shouldAnimateTransition;
-      val var5: java.lang.String = this.style;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("PollAnswer(answerId=");
-      var7.append(var9);
-      var7.append(", pollMedia=");
-      var7.append(var10);
-      var7.append(", didSelfVote=");
-      var7.append(var2);
-      var7.append(", votes=");
-      var7.append(var4);
-      var7.append(", votesPercentage=");
-      var7.append(var1);
-      var7.append(", isSelected=");
-      var7.append(var3);
-      var7.append(", isVictor=");
-      var7.append(var8);
-      var7.append(", shouldAnimateTransition=");
-      var7.append(var6);
-      var7.append(", style=");
-      var7.append(var5);
-      var7.append(")");
-      return var7.toString();
+      val var6: java.lang.Boolean = this.isVictor;
+      val var9: java.lang.Boolean = this.shouldAnimateTransition;
+      val var7: java.lang.String = this.style;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("PollAnswer(answerId=");
+      var8.append(var5);
+      var8.append(", pollMedia=");
+      var8.append(var4);
+      var8.append(", didSelfVote=");
+      var8.append(var2);
+      var8.append(", votes=");
+      var8.append(var10);
+      var8.append(", votesPercentage=");
+      var8.append(var1);
+      var8.append(", isSelected=");
+      var8.append(var3);
+      var8.append(", isVictor=");
+      var8.append(var6);
+      var8.append(", shouldAnimateTransition=");
+      var8.append(var9);
+      var8.append(", style=");
+      var8.append(var7);
+      var8.append(")");
+      return var8.toString();
    }
 
    public object `$serializer` : g0 {
@@ -241,111 +240,113 @@ public data class PollAnswer(answerId: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         val var2: h = h.a;
-         return new KSerializer[]{b2.a, PollMedia.$serializer.INSTANCE, h.a, b2.a, n0.a, a.u(h.a), a.u(var2), a.u(var2), var1};
+         val var2: b2 = b2.a;
+         val var1: h = h.a;
+         return new KSerializer[]{b2.a, PollMedia.$serializer.INSTANCE, h.a, b2.a, n0.a, a.u(h.a), a.u(var1), a.u(var1), var2};
       }
 
       public open fun deserialize(decoder: Decoder): PollAnswer {
          q.h(var1, "decoder");
-         val var15: SerialDescriptor = this.getDescriptor();
-         val var16: c = var1.c(var15);
-         var var2: Int;
+         val var14: SerialDescriptor = this.getDescriptor();
+         val var15: c = var1.c(var14);
          var var3: Int;
          var var4: Int;
-         var var7: java.lang.Boolean;
+         val var5: Int;
          var var9: Any;
-         var var10: Any;
-         var var11: java.lang.Boolean;
-         var var12: Any;
-         val var13: java.lang.Boolean;
-         var var19: Any;
-         if (var16.y()) {
-            var9 = var16.t(var15, 0);
-            var12 = var16.m(var15, 1, PollMedia.$serializer.INSTANCE, null) as PollMedia;
-            var3 = var16.s(var15, 2);
-            var10 = var16.t(var15, 3);
-            var2 = var16.k(var15, 4);
-            var19 = h.a;
-            var11 = var16.v(var15, 5, h.a, null) as java.lang.Boolean;
-            var7 = var16.v(var15, 6, (DeserializationStrategy)var19, null) as java.lang.Boolean;
-            var19 = var16.v(var15, 7, (DeserializationStrategy)var19, null) as java.lang.Boolean;
-            val var8: java.lang.String = var16.t(var15, 8);
-            var4 = 511;
-            var13 = (java.lang.Boolean)var19;
-            var19 = var8;
+         var var10: java.lang.Boolean;
+         var var11: Any;
+         var var12: java.lang.Boolean;
+         val var13: Any;
+         val var17: java.lang.Boolean;
+         var var23: Any;
+         if (var15.y()) {
+            var9 = var15.t(var14, 0);
+            var11 = var15.m(var14, 1, PollMedia.$serializer.INSTANCE, null) as PollMedia;
+            var4 = var15.s(var14, 2);
+            var13 = var15.t(var14, 3);
+            val var2: Int = var15.k(var14, 4);
+            val var16: h = h.a;
+            var10 = var15.v(var14, 5, h.a, null) as java.lang.Boolean;
+            var23 = var15.v(var14, 6, var16, null) as java.lang.Boolean;
+            var17 = var15.v(var14, 7, var16, null) as java.lang.Boolean;
+            val var8: java.lang.String = var15.t(var14, 8);
+            var3 = 511;
+            var5 = var2;
+            var12 = (java.lang.Boolean)var23;
+            var23 = var8;
          } else {
-            var var5: Boolean = true;
+            var var22: Boolean = true;
             var4 = 0;
-            var2 = 0;
+            var var19: Int = 0;
             var12 = null;
             var11 = null;
             var9 = null;
-            var var24: Any = null;
-            var7 = null;
-            var19 = null;
+            var var25: Any = null;
+            var23 = null;
+            var var18: Any = null;
             var10 = null;
             var3 = 0;
 
-            while (var5) {
-               val var6: Int = var16.x(var15);
+            while (var22) {
+               val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
-                     var5 = false;
+                     var22 = false;
                      break;
                   case 0:
-                     var9 = var16.t(var15, 0);
-                     var2 |= 1;
+                     var9 = var15.t(var14, 0);
+                     var19 |= 1;
                      break;
                   case 1:
-                     var24 = var16.m(var15, 1, PollMedia.$serializer.INSTANCE, var24) as PollMedia;
-                     var2 |= 2;
+                     var25 = var15.m(var14, 1, PollMedia.$serializer.INSTANCE, var25) as PollMedia;
+                     var19 |= 2;
                      break;
                   case 2:
-                     var3 = var16.s(var15, 2);
-                     var2 |= 4;
+                     var3 = var15.s(var14, 2);
+                     var19 |= 4;
                      break;
                   case 3:
-                     var7 = var16.t(var15, 3);
-                     var2 |= 8;
+                     var23 = var15.t(var14, 3);
+                     var19 |= 8;
                      break;
                   case 4:
-                     var4 = var16.k(var15, 4);
-                     var2 |= 16;
+                     var4 = var15.k(var14, 4);
+                     var19 |= 16;
                      break;
                   case 5:
-                     var10 = var16.v(var15, 5, h.a, var10) as java.lang.Boolean;
-                     var2 |= 32;
+                     var10 = var15.v(var14, 5, h.a, var10) as java.lang.Boolean;
+                     var19 |= 32;
                      break;
                   case 6:
-                     var11 = var16.v(var15, 6, h.a, var11) as java.lang.Boolean;
-                     var2 |= 64;
+                     var11 = var15.v(var14, 6, h.a, var11) as java.lang.Boolean;
+                     var19 |= 64;
                      break;
                   case 7:
-                     var12 = var16.v(var15, 7, h.a, var12) as java.lang.Boolean;
-                     var2 |= 128;
+                     var12 = var15.v(var14, 7, h.a, var12) as java.lang.Boolean;
+                     var19 |= 128;
                      break;
                   case 8:
-                     var19 = var16.t(var15, 8);
-                     var2 |= 256;
+                     var18 = var15.t(var14, 8);
+                     var19 |= 256;
                      break;
                   default:
                      throw new n(var6);
                }
             }
 
-            var13 = (java.lang.Boolean)var12;
-            var7 = var11;
-            var11 = (java.lang.Boolean)var10;
-            var2 = var4;
-            var10 = var7;
-            var12 = var24;
-            var4 = var2;
+            var13 = var23;
+            var23 = var18;
+            var17 = var12;
+            var12 = (java.lang.Boolean)var11;
+            var5 = var4;
+            var4 = var3;
+            var11 = var25;
+            var3 = var19;
          }
 
-         var16.b(var15);
+         var15.b(var14);
          return new PollAnswer(
-            var4, (java.lang.String)var9, (PollMedia)var12, (boolean)var3, (java.lang.String)var10, var2, var11, var7, var13, (java.lang.String)var19, null
+            var3, (java.lang.String)var9, (PollMedia)var11, (boolean)var4, (java.lang.String)var13, var5, var10, var12, var17, (java.lang.String)var23, null
          );
       }
 
@@ -359,7 +360,7 @@ public data class PollAnswer(answerId: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

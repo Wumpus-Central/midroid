@@ -51,13 +51,13 @@ public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: Voice
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: VoiceInviteEmbed = this.embed;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("VoiceInviteMessageAccessory(messageId=");
-      var1.append(var3);
-      var1.append(", embed=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: VoiceInviteEmbed = this.embed;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("VoiceInviteMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", embed=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

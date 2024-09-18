@@ -1,9 +1,9 @@
 package com.discord.react_asset_fetcher
 
 import android.content.Context
-import kh.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
+import nh.a
 
 public enum class ReactAsset {
    Activity,
@@ -49,7 +49,6 @@ public enum class ReactAsset {
    Disconnect,
    Download,
    File,
-   GameController,
    Gif,
    Help,
    HideMedia,

@@ -6,7 +6,7 @@ import androidx.core.content.b
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import ph.a
+import sh.a
 
 @JvmSynthetic
 public inline fun <reified T : Parcelable> Intent.getIntentParcelable(parcelableKey: String): T? {

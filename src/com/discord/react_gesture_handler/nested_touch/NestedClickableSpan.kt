@@ -27,7 +27,7 @@ public interface NestedClickableSpan {
       fun {
          val var0: Array<NestedClickableSpan.TouchPriority> = $values();
          $VALUES = var0;
-         $ENTRIES = kh.a.a(var0);
+         $ENTRIES = nh.a.a(var0);
       }
 
       @JvmStatic

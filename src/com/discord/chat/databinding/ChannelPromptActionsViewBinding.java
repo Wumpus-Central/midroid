@@ -31,12 +31,12 @@ public final class ChannelPromptActionsViewBinding implements ViewBinding {
          DCDButton var2 = (DCDButton)a.a(var0, var1);
          if (var2 != null) {
             var1 = R.id.gaming_stats_button;
-            DCDButton var3 = (DCDButton)a.a(var0, var1);
-            if (var3 != null) {
+            DCDButton var4 = (DCDButton)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.gif_button;
-               DCDButton var4 = (DCDButton)a.a(var0, var1);
-               if (var4 != null) {
-                  return new ChannelPromptActionsViewBinding(var0, var5, var2, var3, var4);
+               DCDButton var3 = (DCDButton)a.a(var0, var1);
+               if (var3 != null) {
+                  return new ChannelPromptActionsViewBinding(var0, var5, var2, var4, var3);
                }
             }
          }

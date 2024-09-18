@@ -1,14 +1,14 @@
 package com.discord.chat.bridge.structurabletext
 
+import al.g
+import al.e.i
+import bl.f
 import com.discord.chat.bridge.contentnode.ContentNode
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import xk.g
-import xk.e.i
-import yk.f
 
 internal object AnnotatedStructurableTextSerializer : KSerializer {
    public open val descriptor: SerialDescriptor = g.a("AnnotatedStructurableText", i.a)

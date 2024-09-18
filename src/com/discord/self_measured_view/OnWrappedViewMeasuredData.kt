@@ -1,5 +1,7 @@
 package com.discord.self_measured_view
 
+import bl.g0
+import bl.n0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -9,10 +11,8 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.g0
-import yk.n0
+import yk.f
+import yk.n
 
 @f
 internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredViewHeight: Int) : ReactEvent {
@@ -143,7 +143,7 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

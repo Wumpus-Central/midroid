@@ -15,7 +15,7 @@ import com.facebook.react.viewmanagers.SafeAreaViewManagerInterface
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.Rect
 import com.th3rdwave.safeareacontext.SafeAreaProvider
-import dh.w
+import gh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
@@ -39,8 +39,8 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
 
    private fun handleInsetsChanged(reactContext: ThemedReactContext, safeAreaEdgeInsets: SafeAreaEdgeInsets, imeInsets: Insets?, view: SafeAreaProvider) {
       val var7: Float = var2.getTopDp();
-      val var8: Float = var2.getBottomDp();
-      val var9: Float = var2.getLeftDp();
+      val var9: Float = var2.getBottomDp();
+      val var8: Float = var2.getLeftDp();
       val var6: Float = var2.getRightDp();
       val var5: Float;
       if (var3 != null) {
@@ -49,7 +49,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
          var5 = 0.0F;
       }
 
-      val var10: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var7, var8, var9, var6, var5);
+      val var10: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var7, var9, var8, var6, var5);
       val var12: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var4);
       if (!q.c(this.dimensions, var12)) {
          this.changeData = DEFAULT_CHANGE_DATA;
@@ -191,13 +191,13 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
       }
 
       public override fun toString(): String {
-         val var2: Int = this.height;
-         val var1: Int = this.width;
+         val var1: Int = this.height;
+         val var2: Int = this.width;
          val var3: StringBuilder = new StringBuilder();
          var3.append("SafeAreaProviderDimensions(height=");
-         var3.append(var2);
-         var3.append(", width=");
          var3.append(var1);
+         var3.append(", width=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

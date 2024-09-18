@@ -167,9 +167,6 @@ public interface ChatEventHandler {
    public abstract fun onTapForwardFooter(snapshotIndex: Int, channelId: ChannelId, messageId: MessageId) {
    }
 
-   public abstract fun onTapGameIcon(gameApplicationId: String, timestamp: String) {
-   }
-
    public abstract fun onTapGiftCodeAccept(giftCode: String, messageId: MessageId?) {
    }
 
@@ -505,11 +502,6 @@ public interface ChatEventHandler {
 
       public override fun onTapForwardFooter(snapshotIndex: Int, channelId: ChannelId, messageId: MessageId) {
          q.h(var4, "messageId");
-      }
-
-      public override fun onTapGameIcon(gameApplicationId: String, timestamp: String) {
-         q.h(var1, "gameApplicationId");
-         q.h(var2, "timestamp");
       }
 
       public override fun onTapGiftCodeAccept(giftCode: String, messageId: MessageId?) {

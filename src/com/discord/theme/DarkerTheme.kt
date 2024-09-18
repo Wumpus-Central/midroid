@@ -3,7 +3,7 @@ package com.discord.theme
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import dh.l
+import gh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
@@ -2411,7 +2411,7 @@ internal class DarkerTheme(resources: Resources, theme: Theme) : DiscordThemeObj
          }
 
          public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
       this.bgBackdrop$delegate = l.b(new Function0(var1, var2) {

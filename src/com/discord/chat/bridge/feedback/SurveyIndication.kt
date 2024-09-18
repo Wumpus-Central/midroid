@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.feedback
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class SurveyIndication(content: StructurableText, feedbackIconUrl: String) {
@@ -63,15 +63,15 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
    }
 
    public override fun toString(): String {
-      val var1: StructurableText = this.content;
-      val var2: java.lang.String = this.feedbackIconUrl;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SurveyIndication(content=");
-      var3.append(var1);
-      var3.append(", feedbackIconUrl=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: StructurableText = this.content;
+      val var3: java.lang.String = this.feedbackIconUrl;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SurveyIndication(content=");
+      var1.append(var2);
+      var1.append(", feedbackIconUrl=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

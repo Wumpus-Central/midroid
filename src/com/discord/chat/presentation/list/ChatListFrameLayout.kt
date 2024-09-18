@@ -7,12 +7,6 @@ import android.widget.FrameLayout
 import kotlin.jvm.internal.q
 
 public open class ChatListFrameLayout  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout, ChatListChildView {
-   public open var currentKey: Any?
-      internal final set
-
-   public open var lastKey: Any?
-      internal final set
-
    open fun ChatListFrameLayout(var1: Context) {
       q.h(var1, "context");
       this(var1, null, 2, null);
@@ -21,10 +15,6 @@ public open class ChatListFrameLayout  public constructor(context: Context, attr
    init {
       q.h(var1, "context");
       super(var1, var2);
-   }
-
-   override fun bindKey(var1: Any) {
-      ChatListChildView.DefaultImpls.bindKey(this, var1);
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

@@ -25,8 +25,8 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
-import dh.w
-import eh.r
+import gh.w
+import hh.r
 import java.lang.reflect.Field
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function0
@@ -88,10 +88,10 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          }
 
          public final void invoke() {
-            val var2: ChatListView = this.this$0;
-            val var1: DefaultItemAnimator = ChatListView.access$getChangeItemAnimators$p(this.this$0);
-            var1.setSupportsChangeAnimations(false);
-            var2.setItemAnimator(var1);
+            val var1: ChatListView = this.this$0;
+            val var2: DefaultItemAnimator = ChatListView.access$getChangeItemAnimators$p(this.this$0);
+            var2.setSupportsChangeAnimations(false);
+            var1.setItemAnimator(var2);
          }
       };
       this.enableItemAnimations = var5;
@@ -108,7 +108,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          }
       };
       this.disableItemAnimations = var9;
-      val var11: ChannelChatListAdapter = new ChannelChatListAdapter(new Function0(this) {
+      val var10: ChannelChatListAdapter = new ChannelChatListAdapter(new Function0(this) {
          final ChatListView this$0;
 
          {
@@ -149,15 +149,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             return ChatListView.access$getComponentProvider$p(this.this$0);
          }
       });
-      this.chatListAdapter = var11;
+      this.chatListAdapter = var10;
       this.componentProvider = new ComponentProvider(var1);
       this.scroller = new Scroller(this);
-      val var6: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, 6, null);
-      this.linearLayoutManager = var6;
-      val var10: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
+      val var11: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, 6, null);
+      this.linearLayoutManager = var11;
+      val var6: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
          SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(30), false, 8, null
       );
-      this.verticalSpacingItemDecoration = var10;
+      this.verticalSpacingItemDecoration = var6;
       this.scrollStateObserver = new ChatScrollStateObserver(new Function1(this) {
          final ChatListView this$0;
 
@@ -181,12 +181,12 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          }
       });
       this.isFirstLayout = true;
-      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var10);
-      this.setLayoutManager(var6);
-      this.setAdapter(var11);
+      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var6);
+      this.setLayoutManager(var11);
+      this.setAdapter(var10);
       this.addScrollStateListener();
       this.configureRecycledViewPoolSizes();
-      var11.fillAdapter(this);
+      var10.fillAdapter(this);
       this.setItemAnimator(var7);
       new ChatListItemTouchHelper(new SwipeHelper(var1, new Function0(this) {
          final ChatListView this$0;
@@ -225,10 +225,10 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
 
       for (Entry var5 : r.l(new Pair[]{var3, w.a(SystemMessageDelegate.class, var4), w.a(SeparatorDelegate.class, var4)}).entrySet()) {
          val var7: Class = var5.getKey() as Class;
-         val var1: Int = (var5.getValue() as java.lang.Number).intValue();
+         val var2: Int = (var5.getValue() as java.lang.Number).intValue();
          var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
          q.e(var4);
-         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var1);
+         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var2);
       }
    }
 
@@ -243,15 +243,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       } catch (var8: IllegalArgumentException) {
          val var3: Field = RecyclerView.class.getDeclaredField("mState");
          var3.setAccessible(true);
-         val var4: Any = var3.get(this);
-         val var9: CrashReporting = CrashReporting.INSTANCE;
-         val var6: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("About to crash because of ChatList, dumping update log:\n");
-         var5.append(var6);
-         var5.append("\n Recycler State: ");
-         var5.append(var4);
-         CrashReporting.addBreadcrumb$default(var9, var5.toString(), null, null, 6, null);
+         val var6: Any = var3.get(this);
+         val var5: CrashReporting = CrashReporting.INSTANCE;
+         val var4: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("About to crash because of ChatList, dumping update log:\n");
+         var9.append(var4);
+         var9.append("\n Recycler State: ");
+         var9.append(var6);
+         CrashReporting.addBreadcrumb$default(var5, var9.toString(), null, null, 6, null);
          throw var8;
       }
 
@@ -261,15 +261,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          } catch (var7: IllegalArgumentException) {
             val var10: Field = RecyclerView.class.getDeclaredField("mState");
             var10.setAccessible(true);
-            val var12: Any = var10.get(this);
-            val var11: CrashReporting = CrashReporting.INSTANCE;
-            val var14: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("About to crash because of ChatList, dumping update log:\n");
-            var13.append(var14);
-            var13.append("\n Recycler State: ");
-            var13.append(var12);
-            CrashReporting.addBreadcrumb$default(var11, var13.toString(), null, null, 6, null);
+            val var14: Any = var10.get(this);
+            val var13: CrashReporting = CrashReporting.INSTANCE;
+            val var12: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+            val var11: StringBuilder = new StringBuilder();
+            var11.append("About to crash because of ChatList, dumping update log:\n");
+            var11.append(var12);
+            var11.append("\n Recycler State: ");
+            var11.append(var14);
+            CrashReporting.addBreadcrumb$default(var13, var11.toString(), null, null, 6, null);
             throw var7;
          }
       }
@@ -300,17 +300,17 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                }
 
                public final void invoke(boolean var1) {
-                  val var4: BooleanRef = this.$wasAtBottom;
-                  val var5: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
+                  val var5: BooleanRef = this.$wasAtBottom;
+                  val var4: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
                   var var2: Boolean = false;
-                  if (var5 != null) {
+                  if (var4 != null) {
                      var2 = false;
-                     if (var5.isAtBottom()) {
+                     if (var4.isAtBottom()) {
                         var2 = true;
                      }
                   }
 
-                  var4.j = var2;
+                  var5.j = var2;
                   if (this.$update.getAction() is ChatListAction.Clear) {
                      ChatListView.access$getScrollStateObserver$p(this.this$0).stopWatching();
                      if (!var1) {
@@ -419,18 +419,18 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          kotlinx.coroutines.Job.a.a(this.updateSubscriptionJob, null, 1, null);
       }
 
-      this.updateSubscriptionJob = lk.f.d(
+      this.updateSubscriptionJob = ok.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
+   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
+   //   at java.base/java.util.HashMap.get(HashMap.java:564)
+   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)

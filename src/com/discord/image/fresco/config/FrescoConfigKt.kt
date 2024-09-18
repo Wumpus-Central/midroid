@@ -1,10 +1,5 @@
 package com.discord.image.fresco.config
 
-import a6.a0
-import a6.b0
-import a6.c0
-import a6.n
-import a6.a0.b
 import android.content.Context
 import android.net.Uri
 import com.discord.resource_usage.DeviceResourceUsageRecorder
@@ -14,6 +9,11 @@ import com.facebook.imagepipeline.core.ImagePipelineConfig.Builder
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.modules.fresco.FrescoModule
 import com.facebook.react.modules.network.OkHttpClientProvider
+import d6.c0
+import d6.e0
+import d6.f0
+import d6.o
+import d6.c0.a
 import kotlin.jvm.internal.q
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -36,10 +36,10 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
    val var1: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
    val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var3: Builder = var1.S(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .W(var2.newSmallDiskCache(var0))
-      .P(new FrescoBitmapSupplier(var0))
-      .T(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+   val var3: Builder = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Y(var2.newSmallDiskCache(var0))
+      .Q(new FrescoBitmapSupplier(var0))
+      .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
@@ -51,33 +51,33 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             return this.$receiver$inlined.frescoInterceptor(var1);
          }
       }).c()));
-   val var6: b = a0.n();
-   val var5: c0 = n.a();
-   val var4: Builder = var3.U(new b0(var6.n(new c0(var5.b, var5.a * 2, var5.c)).m())).Q(new DefaultCacheKeyFactory() {
+   val var5: a = c0.n();
+   val var6: f0 = o.a();
+   val var4: Builder = var3.W(new e0(var5.n(new f0(var6.b, var6.a * 2, var6.c)).m())).R(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var4: android.net.Uri.Builder = var1.buildUpon();
-            var4.clearQuery();
+            val var5: android.net.Uri.Builder = var1.buildUpon();
+            var5.clearQuery();
 
-            for (java.lang.String var5 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var5)) {
-                  val var2: java.util.Iterator = var1.getQueryParameters(var5).iterator();
+            for (java.lang.String var2 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
+                  val var3: java.util.Iterator = var1.getQueryParameters(var2).iterator();
 
-                  while (var2.hasNext()) {
-                     var4.appendQueryParameter(var5, var2.next() as java.lang.String);
+                  while (var3.hasNext()) {
+                     var5.appendQueryParameter(var2, var3.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var4.build();
+            var1 = var5.build();
             q.g(var1, "build(...)");
             return var1;
          }
       }
-   }).R(true);
+   }).S(true);
    var4.b().c(true);
    return var4.a();
 }

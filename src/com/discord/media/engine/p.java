@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeEngine;
+import com.discord.native.engine.NativeConnection;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class p implements NativeEngine.GetRankedRtcRegionsCallback {
+public final class p implements NativeConnection.GetStatsCallback {
    public final Function1 a;
 
    @Override
-   public final void onRankedRtcRegions(String[] var1) {
-      MediaEngine.u(this.a, var1);
+   public final void onStats(String var1) {
+      MediaEngine.c(this.a, var1);
    }
 }

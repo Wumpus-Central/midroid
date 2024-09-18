@@ -10,16 +10,16 @@ import com.facebook.react.bridge.WritableMap
 import com.facebook.react.modules.websocket.WebSocketModule
 import com.facebook.react.modules.websocket.WebSocketModule.ContentHandler
 import com.github.luben.zstd.ZstdBufferDecompressingStream
-import dh.w
-import eh.r
+import gh.w
+import hh.r
 import java.io.ByteArrayOutputStream
 import java.nio.Buffer
 import java.nio.ByteBuffer
 import java.util.concurrent.ConcurrentHashMap
 import java.util.zip.Inflater
 import java.util.zip.InflaterOutputStream
-import jk.a
 import kotlin.jvm.internal.q
+import mk.a
 import okio.ByteString
 
 public class CompressionManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -65,31 +65,31 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun enableZlibStreamSupport(socketId: Int) {
-      val var4: java.util.Map = this.zlibInflaters;
-      val var5: Int = var1;
-      var var3: WebSocketModule = (WebSocketModule)var4.get(var5);
-      var var2: Any = var3;
+      val var5: java.util.Map = this.zlibInflaters;
+      val var4: Int = var1;
+      var var3: Any = var5.get(var4);
+      var var2: WebSocketModule = (WebSocketModule)var3;
       if (var3 == null) {
          var2 = new Inflater();
-         var4.put(var5, var2);
+         var5.put(var4, var2);
       }
 
-      var2 = var2 as Inflater;
-      var3 = this.getWebSocketModule();
-      if (var3 != null) {
-         var3.setContentHandler(var1, new CompressionManagerModule.ZlibContentHandler((Inflater)var2));
+      var3 = var2 as Inflater;
+      var2 = this.getWebSocketModule();
+      if (var2 != null) {
+         var2.setContentHandler(var1, new CompressionManagerModule.ZlibContentHandler((Inflater)var3));
       }
    }
 
    @ReactMethod
    public fun enableZstdStreamSupport(socketId: Int, dictionaryId: Int) {
-      val var5: java.util.Map = this.zstdInflaters;
-      val var6: Int = var1;
-      var var4: Any = var5.get(var6);
+      val var6: java.util.Map = this.zstdInflaters;
+      val var5: Int = var1;
+      var var4: Any = var6.get(var5);
       var var3: WebSocketModule = (WebSocketModule)var4;
       if (var4 == null) {
          var3 = new CompressionManagerModule.ZstdInflater();
-         var5.put(var6, var3);
+         var6.put(var5, var3);
       }
 
       var4 = var3 as CompressionManagerModule.ZstdInflater;
@@ -134,29 +134,29 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
          val var6: TimeElapsed = new TimeElapsed(0L, 1, null);
          val var4: java.lang.String = new CompressionManagerModule.ZlibContentHandler.ZLibByteStream(var1, this.inflater).toDecodedString();
          if (var6.getDurationMillis() > 100L) {
-            val var5: Log = Log.INSTANCE;
-            val var3: java.lang.String = CompressionManagerModule.access$getLogTag$cp();
-            q.g(var3, "access$getLogTag$cp(...)");
+            val var3: Log = Log.INSTANCE;
+            val var5: java.lang.String = CompressionManagerModule.access$getLogTag$cp();
+            q.g(var5, "access$getLogTag$cp(...)");
             val var9: java.lang.String = var6.getDuration();
             val var7: StringBuilder = new StringBuilder();
             var7.append("Decompressed ZLib message in ");
             var7.append(var9);
-            Log.i$default(var5, var3, var7.toString(), null, 4, null);
+            Log.i$default(var3, var5, var7.toString(), null, 4, null);
          }
 
          var2.putString("type", "text");
          var2.putString("data", var4);
-         var2.putInt("raw_length", var1.z());
-         DeviceResourceUsageRecorder.Companion.setSocketBytesReceived(DeviceResourceUsageRecorder.Companion.getSocketBytesReceived() + (long)var1.z());
+         var2.putInt("raw_length", var1.A());
+         DeviceResourceUsageRecorder.Companion.setSocketBytesReceived(DeviceResourceUsageRecorder.Companion.getSocketBytesReceived() + (long)var1.A());
       }
 
       private class ZLibByteStream(bytes: ByteString, inflater: Inflater) : ByteArrayOutputStream {
          init {
             q.h(var1, "bytes");
             q.h(var2, "inflater");
-            super(var1.z() * 2);
+            super(var1.A() * 2);
             val var3: InflaterOutputStream = new InflaterOutputStream(this, var2, 4096);
-            var1.E(var3);
+            var1.F(var3);
             var3.flush();
          }
 
@@ -194,22 +194,22 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
          q.h(var1, "byteString");
          q.h(var2, "params");
          val var6: TimeElapsed = new TimeElapsed(0L, 1, null);
-         val var5: java.lang.String = this.inflater.decompress(var1);
+         val var4: java.lang.String = this.inflater.decompress(var1);
          if (var6.getDurationMillis() > 100L) {
             val var3: Log = Log.INSTANCE;
-            val var4: java.lang.String = CompressionManagerModule.access$getLogTag$cp();
-            q.g(var4, "access$getLogTag$cp(...)");
-            val var7: java.lang.String = var6.getDuration();
-            val var9: StringBuilder = new StringBuilder();
-            var9.append("Decompressed ZLib message in ");
-            var9.append(var7);
-            Log.i$default(var3, var4, var9.toString(), null, 4, null);
+            val var5: java.lang.String = CompressionManagerModule.access$getLogTag$cp();
+            q.g(var5, "access$getLogTag$cp(...)");
+            val var9: java.lang.String = var6.getDuration();
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Decompressed ZLib message in ");
+            var7.append(var9);
+            Log.i$default(var3, var5, var7.toString(), null, 4, null);
          }
 
          var2.putString("type", "text");
-         var2.putString("data", var5);
-         var2.putInt("raw_length", var1.z());
-         DeviceResourceUsageRecorder.Companion.setSocketBytesReceived(DeviceResourceUsageRecorder.Companion.getSocketBytesReceived() + (long)var1.z());
+         var2.putString("data", var4);
+         var2.putInt("raw_length", var1.A());
+         DeviceResourceUsageRecorder.Companion.setSocketBytesReceived(DeviceResourceUsageRecorder.Companion.getSocketBytesReceived() + (long)var1.A());
       }
    }
 
@@ -218,30 +218,30 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
 
       public fun decompress(byteString: ByteString): String {
          q.h(var1, "byteString");
-         this.nextBuffer = ByteBuffer.wrap(var1.C());
+         this.nextBuffer = ByteBuffer.wrap(var1.D());
          val var6: java.util.List = i.S0(i.j());
-         var var2: Int = Math.max(var1.z() * 2, 1024);
+         var var2: Int = Math.max(var1.A() * 2, 1024);
          var var8: ByteBuffer = ByteBuffer.allocate(var2);
          if (this.read(var8) != 0) {
             throw new UnsupportedOperationException("Error in zstd: still had data when trying to refill buffer");
          } else {
-            var var4: Int = 1;
+            var var3: Int = 1;
 
-            for (int var3 = 0; var4 < 51; var4++) {
+            for (int var4 = 0; var3 < 51; var3++) {
                val var5: Int = this.read(var8);
-               var3 += var5;
+               var4 += var5;
                if (var5 == 0) {
                   if (var6.size() == 1) {
                      val var11: ByteArray = (var6.get(0) as ByteBuffer).array();
                      q.g(var11, "array(...)");
-                     return new java.lang.String(var11, 0, var3, a.b);
+                     return new java.lang.String(var11, 0, var4, a.b);
                   }
 
-                  val var9: ByteBuffer = ByteBuffer.allocate(var3);
+                  val var9: ByteBuffer = ByteBuffer.allocate(var4);
 
-                  for (ByteBuffer var7 : var6) {
-                     ((Buffer)var7).flip();
-                     var9.put(var7);
+                  for (ByteBuffer var12 : var6) {
+                     ((Buffer)var12).flip();
+                     var9.put(var12);
                   }
 
                   val var10: ByteArray = var9.array();

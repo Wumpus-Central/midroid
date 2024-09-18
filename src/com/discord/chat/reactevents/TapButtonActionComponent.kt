@@ -1,5 +1,9 @@
 package com.discord.chat.reactevents
 
+import bl.b2
+import bl.g0
+import bl.o1
+import bl.g0.a
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
@@ -12,12 +16,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.o1
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TapButtonActionComponent(messageId: MessageId, componentId: String) : TapButtonActionComponent(var1, var2), ReactEvent {

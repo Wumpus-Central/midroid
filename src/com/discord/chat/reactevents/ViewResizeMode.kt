@@ -1,7 +1,7 @@
 package com.discord.chat.reactevents
 
-import kh.a
 import kotlin.enums.EnumEntries
+import nh.a
 
 public enum class ViewResizeMode(value: String) {
    Cover("cover"),

@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import lk.f
-import lk.t0
+import ok.f
+import ok.t0
 
 public object JSWatchdogManager {
    private final lateinit var cacheDir: File
@@ -75,11 +75,11 @@ public object JSWatchdogManager {
 
    private fun updateStallTime(sentTimestamp: Long, sessionId: String, enableTrace: Boolean) {
       var1 = System.currentTimeMillis() - var1 - 500;
-      val var6: Log = Log.INSTANCE;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("updateStallTime: ");
-      var5.append(var1);
-      Log.i$default(var6, "JSWatchdogManager", var5.toString(), null, 4, null);
+      val var5: Log = Log.INSTANCE;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("updateStallTime: ");
+      var6.append(var1);
+      Log.i$default(var5, "JSWatchdogManager", var6.toString(), null, 4, null);
       this.saveStallReport((int)var1, var3, var4);
    }
 

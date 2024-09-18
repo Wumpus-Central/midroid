@@ -1,5 +1,8 @@
 package com.discord.app_database
 
+import bl.b2
+import bl.g0
+import bl.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import wk.a
-import yk.b2
-import yk.g0
-import yk.x0
+import yk.f
+import yk.n
+import zk.a
 
 @f
 public data class NonGuildVersion(id: String, version: Long = 0L, versionString: String? = null) {
@@ -115,26 +115,26 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
 
       public open fun deserialize(decoder: Decoder): NonGuildVersion {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
          var var2: Int;
          var var5: Long;
-         var var7: java.lang.String;
-         var var10: java.lang.String;
-         if (var9.y()) {
-            var7 = var9.t(var8, 0);
-            var5 = var9.h(var8, 1);
-            var10 = var9.v(var8, 2, b2.a, null) as java.lang.String;
+         val var8: java.lang.String;
+         val var11: java.lang.String;
+         if (var10.y()) {
+            var11 = var10.t(var9, 0);
+            var5 = var10.h(var9, 1);
+            var8 = var10.v(var9, 2, b2.a, null) as java.lang.String;
             var2 = 7;
          } else {
             var5 = 0L;
             var var3: Boolean = true;
-            var7 = null;
-            var10 = null;
+            var var7: java.lang.String = null;
+            var var12: java.lang.String = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var9.x(var8);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -142,24 +142,27 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
                            throw new n(var4);
                         }
 
-                        var10 = var9.v(var8, 2, b2.a, var10) as java.lang.String;
+                        var12 = var10.v(var9, 2, b2.a, var12) as java.lang.String;
                         var2 |= 4;
                      } else {
-                        var5 = var9.h(var8, 1);
+                        var5 = var10.h(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.t(var8, 0);
+                     var7 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var8 = var12;
+            var11 = var7;
          }
 
-         var9.b(var8);
-         return new NonGuildVersion(var2, var7, var5, var10, null);
+         var10.b(var9);
+         return new NonGuildVersion(var2, var11, var5, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NonGuildVersion) {
@@ -172,7 +175,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return yk.g0.a.a(this);
+         return bl.g0.a.a(this);
       }
    }
 

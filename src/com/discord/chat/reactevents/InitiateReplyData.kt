@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import bl.g0
+import bl.o1
+import bl.g0.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
@@ -13,11 +16,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import vk.f
-import vk.n
-import yk.g0
-import yk.o1
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId) : InitiateReplyData(var1, var2), ReactEvent {
@@ -78,15 +78,15 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("InitiateReplyData(messageId=");
-      var3.append(var2);
-      var3.append(", channelId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("InitiateReplyData(messageId=");
+      var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -127,9 +127,9 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
             }
 
             val var6: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var2 = 3;
             var5 = var10;
             var11 = var6;
+            var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;

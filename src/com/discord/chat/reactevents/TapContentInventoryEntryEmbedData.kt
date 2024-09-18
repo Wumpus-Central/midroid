@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class TapContentInventoryEntryEmbedData(messageId: String, authorId: String, contentId: String, tappedElement: String) : ReactEvent {
@@ -93,20 +93,20 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
 
    public override fun toString(): String {
       val var5: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.authorId;
-      val var4: java.lang.String = this.contentId;
+      val var4: java.lang.String = this.authorId;
+      val var1: java.lang.String = this.contentId;
       val var3: java.lang.String = this.tappedElement;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapContentInventoryEntryEmbedData(messageId=");
-      var1.append(var5);
-      var1.append(", authorId=");
-      var1.append(var2);
-      var1.append(", contentId=");
-      var1.append(var4);
-      var1.append(", tappedElement=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapContentInventoryEntryEmbedData(messageId=");
+      var2.append(var5);
+      var2.append(", authorId=");
+      var2.append(var4);
+      var2.append(", contentId=");
+      var2.append(var1);
+      var2.append(", tappedElement=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -139,20 +139,22 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
-         var var5: java.lang.String;
-         var var6: java.lang.String;
+         var var7: java.lang.String;
          val var8: java.lang.String;
          val var11: java.lang.String;
+         var var13: java.lang.String;
          if (var10.y()) {
-            var5 = var10.t(var9, 0);
-            var6 = var10.t(var9, 1);
-            var8 = var10.t(var9, 2);
+            var13 = var10.t(var9, 0);
+            var8 = var10.t(var9, 1);
+            val var6: java.lang.String = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
+            var7 = var13;
+            var13 = var6;
          } else {
-            var var7: java.lang.String = null;
-            var6 = null;
-            var5 = null;
+            var7 = null;
+            var var14: java.lang.String = null;
+            var13 = null;
             var var12: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -167,10 +169,10 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
                               throw new n(var4);
                            }
 
-                           var6 = var10.t(var9, 3);
+                           var14 = var10.t(var9, 3);
                            var2 |= 8;
                         } else {
-                           var5 = var10.t(var9, 2);
+                           var13 = var10.t(var9, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -186,14 +188,12 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
                }
             }
 
-            var6 = var12;
-            var11 = var6;
-            var8 = var5;
-            var5 = var7;
+            var8 = var12;
+            var11 = var14;
          }
 
          var10.b(var9);
-         return new TapContentInventoryEntryEmbedData(var2, var5, var6, var8, var11, null);
+         return new TapContentInventoryEntryEmbedData(var2, var7, var8, var13, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapContentInventoryEntryEmbedData) {

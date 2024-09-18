@@ -19,7 +19,7 @@ import com.facebook.react.module.annotations.ReactModule
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.PlayerView
-import dh.w
+import gh.w
 import java.util.LinkedHashMap
 import java.util.UUID
 import java.util.concurrent.ExecutorService
@@ -36,9 +36,9 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import lk.j1
-import lk.s0
-import ok.u
+import ok.j1
+import ok.s0
+import rk.u
 
 @ReactModule(name = "MediaPlayerManager")
 public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -57,7 +57,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
       val var2: CompletableJob = j1.b(null, 1, null);
       val var3: ExecutorService = Executors.newSingleThreadExecutor();
       q.g(var3, "newSingleThreadExecutor(...)");
-      this.scope = g.a(var2.O(s0.b(var3)));
+      this.scope = g.a(var2.P(s0.b(var3)));
       val var4: MutableStateFlow = u.a(null);
       this._pausePlayerFlow = var4;
       this.pausePlayerFlow = var4;
@@ -95,13 +95,13 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          val var11: java.lang.Double = var1.getPortal();
          if (var11 != null) {
             val var6: Double = var11.doubleValue();
-            val var14: ReactEvents = this.reactEvents;
-            val var12: ReactApplicationContext = this.reactContext;
+            val var12: ReactEvents = this.reactEvents;
+            val var14: ReactApplicationContext = this.reactContext;
             val var15: kotlin.time.Duration.a = Duration.k;
-            val var17: kk.b = kk.b.m;
-            var2 = kotlin.time.b.t(var2, kk.b.m);
-            val var16: kk.b = kk.b.n;
-            var14.emitModuleEvent(var12, new MediaPlayerProgress(var6, Duration.J(var2, kk.b.n), Duration.J(kotlin.time.b.t(var4, var17), var16)));
+            val var16: nk.b = nk.b.m;
+            var2 = kotlin.time.b.t(var2, nk.b.m);
+            val var17: nk.b = nk.b.n;
+            var12.emitModuleEvent(var14, new MediaPlayerProgress(var6, Duration.J(var2, nk.b.n), Duration.J(kotlin.time.b.t(var4, var16), var17)));
          }
       }
    }
@@ -158,7 +158,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          public final void invoke(SimpleExoPlayer var1) {
             q.h(var1, "player");
             val var2: kotlin.time.Duration.a = Duration.k;
-            var1.m0(Duration.t(kotlin.time.b.r(this.$seekToSec, kk.b.n)));
+            var1.m0(Duration.u(kotlin.time.b.r(this.$seekToSec, nk.b.n)));
          }
       });
    }
@@ -250,7 +250,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
       q.e(var4);
       var3.put(
          var4,
-         lk.f.d(
+         ok.f.d(
             this.scope,
             null,
             null,
@@ -1300,7 +1300,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun subscribeToPlaybackEvents() {
-      lk.f.d(
+      ok.f.d(
          this.scope,
          null,
          null,
@@ -2335,7 +2335,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          3,
          null
       );
-      lk.f.d(
+      ok.f.d(
          this.scope,
          null,
          null,
@@ -3370,7 +3370,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          3,
          null
       );
-      lk.f.d(
+      ok.f.d(
          this.scope,
          null,
          null,

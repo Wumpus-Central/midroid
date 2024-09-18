@@ -19,7 +19,7 @@ import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import java.util.concurrent.Future
 import kotlin.jvm.internal.q
-import v6.b
+import y6.b
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    internal final lateinit var rootView: ReactRootView

@@ -4,7 +4,7 @@ import com.discord.chat.reactevents.TapImageData.Layout
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dh.w
+import gh.w
 import kotlin.jvm.internal.q
 
 internal data class LongPressPollImageData(channelId: String, messageId: String, attachmentId: String, layout: Layout) : ReactEvent {
@@ -84,20 +84,20 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.attachmentId;
-      val var2: TapImageData.Layout = this.layout;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LongPressPollImageData(channelId=");
-      var3.append(var5);
-      var3.append(", messageId=");
-      var3.append(var1);
-      var3.append(", attachmentId=");
-      var3.append(var4);
-      var3.append(", layout=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.attachmentId;
+      val var1: TapImageData.Layout = this.layout;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressPollImageData(channelId=");
+      var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var5);
+      var2.append(", attachmentId=");
+      var2.append(var3);
+      var2.append(", layout=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

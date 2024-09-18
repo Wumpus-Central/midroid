@@ -20,32 +20,32 @@ public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactCo
    }
 
    public fun keysArray(): WritableNativeArray {
-      val var4: WritableNativeArray = new WritableNativeArray();
-      val var3: Array<java.lang.Enum> = this.keys();
-      val var2: Int = var3.length;
+      val var3: WritableNativeArray = new WritableNativeArray();
+      val var4: Array<java.lang.Enum> = this.keys();
+      val var2: Int = var4.length;
 
       for (int var1 = 0; var1 < var2; var1++) {
-         var4.pushString(var3[var1].name());
+         var3.pushString(var4[var1].name());
       }
 
-      return var4;
+      return var3;
    }
 
    public fun reactResources(values: ReadableArray): HashMap<String, String> {
       q.h(var1, "values");
-      val var6: HashMap = new HashMap(var1.size());
+      val var8: HashMap = new HashMap(var1.size());
       val var7: Array<java.lang.Enum> = this.keys();
       val var4: Int = var7.length;
       var var3: Int = 0;
 
       for (int var2 = 0; var3 < var4; var2++) {
          val var5: java.lang.String = var7[var3].name();
-         val var8: java.lang.String = var1.getString(var2);
-         q.g(var8, "getString(...)");
-         var6.put(var5, var8);
+         val var6: java.lang.String = var1.getString(var2);
+         q.g(var6, "getString(...)");
+         var8.put(var5, var6);
          var3++;
       }
 
-      return var6;
+      return var8;
    }
 }

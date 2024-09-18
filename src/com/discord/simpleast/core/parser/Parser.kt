@@ -2,7 +2,7 @@ package com.discord.simpleast.core.parser
 
 import android.util.Log
 import com.discord.simpleast.core.node.Node
-import dh.w
+import gh.w
 import java.util.ArrayList
 import java.util.Stack
 import java.util.regex.Matcher
@@ -82,20 +82,20 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
             break;
          }
 
-         val var11: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
+         val var12: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
          val var4: Int = var10.getStartIndex();
-         val var12: java.util.Iterator = var3.iterator();
+         val var11: java.util.Iterator = var3.iterator();
 
          while (true) {
-            if (var12.hasNext()) {
-               val var13: Rule = var12.next() as Rule;
-               val var18: Matcher = var13.match(var11, var6, var10.getState());
-               if (var18 == null) {
-                  this.logMiss(var13, var11);
+            if (var11.hasNext()) {
+               val var18: Rule = var11.next() as Rule;
+               val var13: Matcher = var18.match(var12, var6, var10.getState());
+               if (var13 == null) {
+                  this.logMiss(var18, var12);
                   var2 = null;
                } else {
-                  this.logMatch(var13, var11);
-                  var2 = w.a(var13, var18);
+                  this.logMatch(var18, var12);
+                  var2 = w.a(var18, var13);
                }
 
                if (var2 == null) {

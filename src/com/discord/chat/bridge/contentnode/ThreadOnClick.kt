@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
+import bl.b2
+import bl.g0
+import bl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import vk.f
-import vk.n
-import yk.b2
-import yk.g0
-import yk.g0.a
+import yk.f
+import yk.n
 
 @f
 public data class ThreadOnClick(action: String, threadId: String) {
@@ -61,15 +61,15 @@ public data class ThreadOnClick(action: String, threadId: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.action;
+      val var1: java.lang.String = this.action;
       val var3: java.lang.String = this.threadId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ThreadOnClick(action=");
-      var1.append(var2);
-      var1.append(", threadId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThreadOnClick(action=");
+      var2.append(var1);
+      var2.append(", threadId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

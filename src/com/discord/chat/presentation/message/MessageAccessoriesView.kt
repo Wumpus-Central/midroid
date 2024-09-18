@@ -64,7 +64,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -73,12 +73,12 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var4;
+      this.accessoriesAdapter = var3;
       val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
       this.contentViewTracker = var5;
-      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var3;
-      val var6: DefaultItemAnimator = new DefaultItemAnimator() {
+      val var6: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var6;
+      val var4: DefaultItemAnimator = new DefaultItemAnimator() {
          @Override
          public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.q.h(var1, "viewHolder");
@@ -93,9 +93,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var6.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var6;
-      this.forwardBarPaint$delegate = dh.l.b(<unrepresentable>.INSTANCE);
+      var4.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var4;
+      this.forwardBarPaint$delegate = gh.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -108,28 +108,26 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var3);
-      this.setAdapter(var4);
-      var4.setMessageContentViewLifecycleListener(var5);
+      this.setLayoutManager(var6);
+      this.setAdapter(var3);
+      var3.setMessageContentViewLifecycleListener(var5);
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : ik.j.H(v0.a(this))) {
-         val var1: View = var3.c() as View;
+      for (Pair var3 : lk.j.H(v0.a(this))) {
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ReactionsView || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
       return this.getHeight();
    }
 
-   public fun clear(removeViewsImmediately: Boolean = false) {
+   public fun clear() {
       this.accessoriesAdapter.clear();
-      if (var1) {
-         this.removeAllViewsInLayout();
-      }
+      this.removeAllViewsInLayout();
    }
 
    public open fun endViewTransition(view: View?) {
@@ -142,11 +140,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var2: Float = leftMarginPx;
          val var3: Float = leftMarginPx;
+         val var2: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var2, 0.0F, (float)FORWARD_BAR_WIDTH + var3, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var3, 0.0F, (float)FORWARD_BAR_WIDTH + var2, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }

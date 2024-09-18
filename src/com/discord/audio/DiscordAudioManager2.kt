@@ -31,7 +31,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
       this.audioDeviceCallback = this.setupAudioDeviceCallback();
       val var3: Array<AudioDeviceInfo> = var2.getDevices(2);
       q.e(var3);
-      this.audioDevices = kotlin.collections.c.L0(var3);
+      this.audioDevices = kotlin.collections.c.M0(var3);
    }
 
    private fun emitEffectiveDevice() {
@@ -203,10 +203,10 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
       val var3: java.util.Set = this.audioDevices;
       val var2: ArrayList = new ArrayList();
 
-      for (Object var4 : var3) {
-         val var1: Int = (var4 as AudioDeviceInfo).getType();
+      for (var3 : var3) {
+         val var1: Int = (var3 as AudioDeviceInfo).getType();
          if (var1 != 8 && var1 != 18 && var1 != 24 && var1 != 27 && var1 != 30) {
-            var2.add(var4);
+            var2.add(var3);
          }
       }
 
@@ -270,31 +270,31 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          }
 
          val var13: AudioDeviceInfo = this.preferredAudioDevice;
-         var var6: java.util.Iterator = this.audioDevices.iterator();
+         val var5: java.util.Iterator = this.audioDevices.iterator();
 
          var var9: Any;
          do {
-            if (!var6.hasNext()) {
+            if (!var5.hasNext()) {
                var9 = null;
                break;
             }
 
-            var9 = var6.next();
+            var9 = var5.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.BLUETOOTH_HEADSET
          );
 
          val var14: AudioDeviceInfo = var9 as AudioDeviceInfo;
-         var6 = this.audioDevices.iterator();
+         val var15: java.util.Iterator = this.audioDevices.iterator();
 
          do {
-            if (!var6.hasNext()) {
+            if (!var15.hasNext()) {
                var9 = null;
                break;
             }
 
-            var9 = var6.next();
+            var9 = var15.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.WIRED_HEADSET
