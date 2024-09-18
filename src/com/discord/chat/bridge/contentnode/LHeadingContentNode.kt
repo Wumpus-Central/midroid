@@ -1,5 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.n0
-import qn.g0.a
 
 @f
 public data class LHeadingContentNode(level: Int, className: String, content: List<ContentNode>) : ContentNode {
@@ -71,17 +71,17 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var2: java.lang.String = this.className;
-      val var4: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LHeadingContentNode(level=");
-      var3.append(var1);
-      var3.append(", className=");
-      var3.append(var2);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.className;
+      val var2: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LHeadingContentNode(level=");
+      var4.append(var1);
+      var4.append(", className=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -96,9 +96,9 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
          val var0: LHeadingContentNode.$serializer = new LHeadingContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("lheading", var0, 3);
-         var1.c("level", false);
-         var1.c("className", false);
-         var1.c("content", false);
+         var1.l("level", false);
+         var1.l("className", false);
+         var1.l("content", false);
          descriptor = var1;
       }
 
@@ -109,16 +109,16 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
       public open fun deserialize(decoder: Decoder): LHeadingContentNode {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: c = var1.c(var7);
          val var9: Array<KSerializer> = LHeadingContentNode.access$get$childSerializers$cp();
          var var2: Int;
          var var3: Int;
          var var6: java.lang.String;
          var var10: java.util.List;
-         if (var8.p()) {
-            var2 = var8.i(var7, 0);
-            var6 = var8.m(var7, 1);
-            var10 = var8.y(var7, 2, var9[2], null) as java.util.List;
+         if (var8.y()) {
+            var2 = var8.k(var7, 0);
+            var6 = var8.t(var7, 1);
+            var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
             var3 = 7;
          } else {
             var var4: Boolean = true;
@@ -128,7 +128,7 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var8.o(var7);
+               val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -136,14 +136,14 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
                            throw new n(var5);
                         }
 
-                        var10 = var8.y(var7, 2, var9[2], var10) as java.util.List;
+                        var10 = var8.m(var7, 2, var9[2], var10) as java.util.List;
                         var2 |= 4;
                      } else {
-                        var6 = var8.m(var7, 1);
+                        var6 = var8.t(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var8.i(var7, 0);
+                     var3 = var8.k(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -155,7 +155,7 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
             var3 = var2;
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new LHeadingContentNode(var3, var2, var6, var10, null);
       }
 
@@ -163,9 +163,9 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          LHeadingContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

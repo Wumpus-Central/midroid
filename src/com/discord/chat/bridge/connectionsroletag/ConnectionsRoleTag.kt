@@ -1,5 +1,11 @@
 package com.discord.chat.bridge.connectionsroletag
 
+import cl.f
+import cl.n
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.n0
-import qn.g0.a
 
 @f
 public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: Int, iconColor: Int) {
@@ -78,21 +78,21 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var3: java.lang.String = this.name;
-      val var2: Int = this.backgroundColor;
-      val var1: Int = this.iconColor;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ConnectionsRoleTag(id=");
-      var4.append(var5);
-      var4.append(", name=");
-      var4.append(var3);
-      var4.append(", backgroundColor=");
-      var4.append(var2);
-      var4.append(", iconColor=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: Int = this.backgroundColor;
+      val var2: Int = this.iconColor;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ConnectionsRoleTag(id=");
+      var5.append(var4);
+      var5.append(", name=");
+      var5.append(var3);
+      var5.append(", backgroundColor=");
+      var5.append(var1);
+      var5.append(", iconColor=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -109,10 +109,10 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.bridge.connectionsroletag.ConnectionsRoleTag", var0, 4
          );
-         var1.c("id", false);
-         var1.c("name", false);
-         var1.c("backgroundColor", false);
-         var1.c("iconColor", false);
+         var1.l("id", false);
+         var1.l("name", false);
+         var1.l("backgroundColor", false);
+         var1.l("iconColor", false);
          descriptor = var1;
       }
 
@@ -123,28 +123,28 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
       public open fun deserialize(decoder: Decoder): ConnectionsRoleTag {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var3: Int;
-         val var5: Int;
+         var var4: Int;
          var var7: java.lang.String;
          var var10: java.lang.String;
-         if (var9.p()) {
-            var7 = var9.m(var8, 0);
-            var10 = var9.m(var8, 1);
-            var3 = var9.i(var8, 2);
-            var2 = var9.i(var8, 3);
-            var5 = 15;
+         if (var9.y()) {
+            var7 = var9.t(var8, 0);
+            var10 = var9.t(var8, 1);
+            var4 = var9.k(var8, 2);
+            var2 = var9.k(var8, 3);
+            var3 = 15;
          } else {
             var7 = null;
             var10 = null;
-            var var12: Boolean = true;
-            var var4: Int = 0;
+            var var5: Boolean = true;
+            var4 = 0;
             var3 = 0;
             var2 = 0;
 
-            while (var12) {
-               val var6: Int = var9.o(var8);
+            while (var5) {
+               val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -153,40 +153,41 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
                               throw new n(var6);
                            }
 
-                           var4 = var9.i(var8, 3);
+                           var4 = var9.k(var8, 3);
                            var2 |= 8;
                         } else {
-                           var3 = var9.i(var8, 2);
+                           var3 = var9.k(var8, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var10 = var9.m(var8, 1);
+                        var10 = var9.t(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.m(var8, 0);
+                     var7 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var5 = false;
                }
             }
 
-            var5 = var2;
+            var4 = var3;
+            var3 = var2;
             var2 = var4;
          }
 
-         var9.c(var8);
-         return new ConnectionsRoleTag(var5, var7, var10, var3, var2, null);
+         var9.b(var8);
+         return new ConnectionsRoleTag(var3, var7, var10, var4, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ConnectionsRoleTag) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ConnectionsRoleTag.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

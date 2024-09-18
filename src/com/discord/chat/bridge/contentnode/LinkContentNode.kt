@@ -1,5 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import qn.h
 
 @f
 public data class LinkContentNode(content: List<ContentNode>, target: String, context: LinkContext? = null) : ContentNode {
@@ -30,7 +30,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
       this.content = var1;
       this.target = var2;
       this.context = var3;
-      val var6: ContentNode = i.f0(var1) as ContentNode;
+      val var6: ContentNode = i.g0(var1) as ContentNode;
       var var7: java.lang.String = var2;
       if (var6 != null) {
          val var8: ContentNode;
@@ -136,24 +136,24 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          val var0: LinkContentNode.$serializer = new LinkContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("link", var0, 5);
-         var1.c("content", false);
-         var1.c("target", false);
-         var1.c("context", true);
-         var1.c("textContent", true);
-         var1.c("isUrl", true);
+         var1.l("content", false);
+         var1.l("target", false);
+         var1.l("context", true);
+         var1.l("textContent", true);
+         var1.l("isUrl", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
-         val var1: b2 = b2.a;
-         return new KSerializer[]{var2, b2.a, a.u(LinkContext.$serializer.INSTANCE), var1, h.a};
+         val var1: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
+         val var2: b2 = b2.a;
+         return new KSerializer[]{var1, b2.a, a.u(LinkContext.$serializer.INSTANCE), var2, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): LinkContentNode {
          q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
+         val var10: c = var1.c(var9);
          val var11: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
          var var2: Int;
          var var5: Boolean;
@@ -161,12 +161,12 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          var var7: java.lang.String;
          var var8: java.util.List;
          var var12: java.lang.String;
-         if (var10.p()) {
-            var8 = var10.y(var9, 0, var11[0], null) as java.util.List;
-            var7 = var10.m(var9, 1);
-            var6 = var10.n(var9, 2, LinkContext.$serializer.INSTANCE, null) as LinkContext;
-            var12 = var10.m(var9, 3);
-            var5 = var10.C(var9, 4);
+         if (var10.y()) {
+            var8 = var10.m(var9, 0, var11[0], null) as java.util.List;
+            var7 = var10.t(var9, 1);
+            var6 = var10.v(var9, 2, LinkContext.$serializer.INSTANCE, null) as LinkContext;
+            var12 = var10.t(var9, 3);
+            var5 = var10.s(var9, 4);
             var2 = 31;
          } else {
             var var3: Boolean = true;
@@ -178,7 +178,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -188,22 +188,22 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
                                  throw new n(var4);
                               }
 
-                              var5 = var10.C(var9, 4);
+                              var5 = var10.s(var9, 4);
                               var2 |= 16;
                            } else {
-                              var12 = var10.m(var9, 3);
+                              var12 = var10.t(var9, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var6 = var10.n(var9, 2, LinkContext.$serializer.INSTANCE, var6) as LinkContext;
+                           var6 = var10.v(var9, 2, LinkContext.$serializer.INSTANCE, var6) as LinkContext;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.m(var9, 1);
+                        var7 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.y(var9, 0, var11[0], var8) as java.util.List;
+                     var8 = var10.m(var9, 0, var11[0], var8) as java.util.List;
                      var2 |= 1;
                   }
                } else {
@@ -212,7 +212,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
             }
          }
 
-         var10.c(var9);
+         var10.b(var9);
          return new LinkContentNode(var2, var8, var7, (LinkContext)var6, var12, var5, null);
       }
 
@@ -220,13 +220,13 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          LinkContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

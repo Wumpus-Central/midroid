@@ -18,18 +18,17 @@ import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.overlapping_circles.OverlappingItem
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
-import g6.c
 import java.util.ArrayList
+import kh.l
+import kh.o
 import kotlin.jvm.internal.q
-import vj.l
-import vj.o
-import y5.f
+import o4.f
+import w4.c
 
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ActivityInviteEmbedViewBinding
@@ -56,7 +55,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       val var5: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var5, "inflate(...)");
       this.binding = var5;
-      this.grayscalePostprocessor$delegate = l.b(o.l, <unrepresentable>.INSTANCE);
+      this.grayscalePostprocessor$delegate = l.a(o.l, <unrepresentable>.INSTANCE);
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var6: SimpleDraweeView = var5.startImage;
@@ -81,7 +80,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       var5.subtext.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
       q.e(var9);
       DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimaryMedium);
-      var5.button.setBackgroundColor(ColorUtilsKt.getColorCompat(this, color.green_360));
+      var5.button.setBackgroundColor(ColorUtilsKt.getColorCompat(this, com.discord.theme.R.color.green_360));
       var5.bgGradient.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundSecondary()));
    }
 
@@ -153,7 +152,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
    private fun setAvatars(avatars: List<String?>?) {
       var var3: java.util.List = var1;
       if (var1 == null) {
-         var3 = i.j();
+         var3 = i.k();
       }
 
       val var5: OverlappingCirclesView = this.binding.avatars;
@@ -167,7 +166,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
       var5.setVisibility(var2);
       val var4: OverlappingCirclesView = this.binding.avatars;
-      val var6: ArrayList = new ArrayList(i.u(var3, 10));
+      val var6: ArrayList = new ArrayList(i.v(var3, 10));
       val var7: java.util.Iterator = var3.iterator();
 
       while (var7.hasNext()) {
@@ -221,9 +220,9 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          var7.setLayoutParams(var10);
       }
 
-      val var6: ImageRequestBuilder = ImageRequestBuilder.w(f.r(var1));
+      val var6: ImageRequestBuilder = ImageRequestBuilder.v(f.o(var1));
       if (var3) {
-         var6.H(this.getGrayscalePostprocessor());
+         var6.F(this.getGrayscalePostprocessor());
       }
 
       this.binding.endImage.setController((c.g().F(var6.a()) as PipelineDraweeControllerBuilder).d());
@@ -362,18 +361,18 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var3: java.lang.String = this.uri;
+            val var4: java.lang.String = this.uri;
             val var1: Boolean = this.fullSize;
             val var2: Boolean = this.grayscale;
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("End(uri=");
-            var4.append(var3);
-            var4.append(", fullSize=");
-            var4.append(var1);
-            var4.append(", grayscale=");
-            var4.append(var2);
-            var4.append(")");
-            return var4.toString();
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("End(uri=");
+            var3.append(var4);
+            var3.append(", fullSize=");
+            var3.append(var1);
+            var3.append(", grayscale=");
+            var3.append(var2);
+            var3.append(")");
+            return var3.toString();
          }
       }
 
@@ -412,12 +411,12 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var1: java.lang.String = this.uri;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Start(uri=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: java.lang.String = this.uri;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Start(uri=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

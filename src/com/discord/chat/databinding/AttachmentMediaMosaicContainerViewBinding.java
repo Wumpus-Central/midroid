@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.InlineForwardButtonView;
-import f3.a;
+import n1.a;
 
 public final class AttachmentMediaMosaicContainerViewBinding implements ViewBinding {
    public final InlineForwardButtonView forward;

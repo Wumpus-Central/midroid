@@ -108,7 +108,7 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
    }
 
    internal fun play() {
-      AudioPlayerManager.INSTANCE.play(this.audioSource);
+      AudioPlayerManager.INSTANCE.playOrReset(this.audioSource);
    }
 
    internal fun releasePlayer() {

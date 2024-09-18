@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
 import com.discord.primitives.ChannelId
+import fl.b2
+import fl.g0
+import fl.o1
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,12 +16,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.o1
-import qn.g0.a
 
 @f
 public data class CommandMentionContentNode(channelId: ChannelId, commandId: String, commandName: String, commandKey: String, content: List<ContentNode>) : CommandMentionContentNode(
@@ -117,24 +117,24 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.commandId;
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = this.commandId;
       val var6: java.lang.String = this.commandName;
-      val var2: java.lang.String = this.commandKey;
-      val var5: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CommandMentionContentNode(channelId=");
-      var3.append(var1);
-      var3.append(", commandId=");
-      var3.append(var4);
-      var3.append(", commandName=");
-      var3.append(var6);
-      var3.append(", commandKey=");
-      var3.append(var2);
-      var3.append(", content=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.commandKey;
+      val var1: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CommandMentionContentNode(channelId=");
+      var4.append(var5);
+      var4.append(", commandId=");
+      var4.append(var2);
+      var4.append(", commandName=");
+      var4.append(var6);
+      var4.append(", commandKey=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -149,48 +149,47 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
          val var0: CommandMentionContentNode.$serializer = new CommandMentionContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("commandMention", var0, 5);
-         var1.c("channelId", false);
-         var1.c("commandId", false);
-         var1.c("commandName", false);
-         var1.c("commandKey", false);
-         var1.c("content", false);
+         var1.l("channelId", false);
+         var1.l("commandId", false);
+         var1.l("commandName", false);
+         var1.l("commandKey", false);
+         var1.l("content", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{
-            com.discord.primitives.ChannelId..serializer.INSTANCE, b2.a, b2.a, b2.a, CommandMentionContentNode.access$get$childSerializers$cp()[4]
-         };
+         return new KSerializer[]{ChannelId.$serializer.INSTANCE, b2.a, b2.a, b2.a, CommandMentionContentNode.access$get$childSerializers$cp()[4]};
       }
 
       public open fun deserialize(decoder: Decoder): CommandMentionContentNode {
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.b(var11);
-         var var10: Array<KSerializer> = CommandMentionContentNode.access$get$childSerializers$cp();
-         val var5: Boolean = var12.p();
+         val var12: c = var1.c(var11);
+         val var10: Array<KSerializer> = CommandMentionContentNode.access$get$childSerializers$cp();
+         val var5: Boolean = var12.y();
          var var9: ChannelId = null;
          var var2: Int;
-         var var6: java.lang.String;
+         var var6: Any;
+         var var7: java.lang.String;
          var var8: java.lang.String;
          val var13: java.lang.String;
          if (var5) {
-            var9 = var12.y(var11, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, null) as ChannelId;
-            var8 = var12.m(var11, 1);
-            var6 = var12.m(var11, 2);
-            var13 = var12.m(var11, 3);
-            var10 = var12.y(var11, 4, var10[4], null) as java.util.List;
+            var9 = var12.m(var11, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var8 = var12.t(var11, 1);
+            var7 = var12.t(var11, 2);
+            var13 = var12.t(var11, 3);
+            var6 = var12.m(var11, 4, var10[4], null) as java.util.List;
             var2 = 31;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var var7: java.lang.String = null;
+            var7 = null;
             var6 = null;
             var var14: Any = null;
 
             while (var3) {
-               val var4: Int = var12.o(var11);
+               val var4: Int = var12.x(var11);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -200,22 +199,22 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
                                  throw new n(var4);
                               }
 
-                              var14 = var12.y(var11, 4, var10[4], var14) as java.util.List;
+                              var14 = var12.m(var11, 4, var10[4], var14) as java.util.List;
                               var2 |= 16;
                            } else {
-                              var6 = var12.m(var11, 3);
+                              var6 = var12.t(var11, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var12.m(var11, 2);
+                           var7 = var12.t(var11, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var12.m(var11, 1);
+                        var8 = var12.t(var11, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var12.y(var11, 0, com.discord.primitives.ChannelId..serializer.INSTANCE, var9) as ChannelId;
+                     var9 = var12.m(var11, 0, ChannelId.$serializer.INSTANCE, var9) as ChannelId;
                      var2 |= 1;
                   }
                } else {
@@ -223,22 +222,21 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
                }
             }
 
-            var10 = (KSerializer[])var14;
-            var13 = var6;
-            var6 = var7;
+            var6 = var14;
+            var13 = (java.lang.String)var6;
          }
 
-         var12.c(var11);
-         return new CommandMentionContentNode(var2, var9, var8, var6, var13, var10, null, null);
+         var12.b(var11);
+         return new CommandMentionContentNode(var2, var9, var8, var7, var13, (java.util.List)var6, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CommandMentionContentNode) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          CommandMentionContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

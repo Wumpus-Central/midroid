@@ -6,7 +6,6 @@ import android.view.View
 import android.view.View.OnClickListener
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemAnimator
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.reactions.ReactionView.Reaction
@@ -34,10 +33,10 @@ public class ReactionsView  public constructor(context: Context, attrs: Attribut
       val var3: Int = SizeUtilsKt.getDpToPx(4);
       this.addItemDecoration(new HorizontalSpacingItemDecoration(var3));
       this.addItemDecoration(new VerticalSpacingItemDecoration(var3, 0, var3, false, 10, null));
-      val var7: ItemAnimator = this.getItemAnimator();
+      val var7: RecyclerView.ItemAnimator = this.getItemAnimator();
       var var5: DefaultItemAnimator = null;
       if (var7 != null) {
-         var var6: ItemAnimator = var7;
+         var var6: RecyclerView.ItemAnimator = var7;
          if (var7 !is DefaultItemAnimator) {
             var6 = null;
          }

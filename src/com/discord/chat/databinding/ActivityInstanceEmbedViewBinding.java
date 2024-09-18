@@ -9,7 +9,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
 import com.discord.overlapping_circles.OverlappingCirclesView;
-import f3.a;
+import n1.a;
 
 public final class ActivityInstanceEmbedViewBinding implements ViewBinding {
    public final DCDButton launchButton;
@@ -28,18 +28,18 @@ public final class ActivityInstanceEmbedViewBinding implements ViewBinding {
 
    public static ActivityInstanceEmbedViewBinding bind(View var0) {
       int var1 = R.id.launch_button;
-      DCDButton var5 = (DCDButton)a.a(var0, var1);
-      if (var5 != null) {
+      DCDButton var3 = (DCDButton)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.participants;
-         OverlappingCirclesView var3 = (OverlappingCirclesView)a.a(var0, var1);
-         if (var3 != null) {
+         OverlappingCirclesView var4 = (OverlappingCirclesView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.status_text;
-            TextView var4 = (TextView)a.a(var0, var1);
-            if (var4 != null) {
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.status_text_barrier;
-               Barrier var2 = (Barrier)a.a(var0, var1);
-               if (var2 != null) {
-                  return new ActivityInstanceEmbedViewBinding(var0, var5, var3, var4, var2);
+               Barrier var5 = (Barrier)a.a(var0, var1);
+               if (var5 != null) {
+                  return new ActivityInstanceEmbedViewBinding(var0, var3, var4, var2, var5);
                }
             }
          }

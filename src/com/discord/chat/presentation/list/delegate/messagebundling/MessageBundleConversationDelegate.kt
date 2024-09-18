@@ -42,12 +42,12 @@ public class MessageBundleConversationDelegate(onMeasured: (View, Int, Int) -> U
       q.h(var3, "items");
       if (var1 is MessageBundleConversationView) {
          if (var2 is MessageBundleConversationItem) {
-            val var5: MessageBundleConversationView = var1 as MessageBundleConversationView;
-            val var8: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
-            val var9: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
-            val var7: Context = var5.getContext();
-            q.g(var7, "getContext(...)");
-            var5.configure(var8, MessageBundleDelegateUtilsKt.getEventHandler(var9, var7));
+            val var8: MessageBundleConversationView = var1 as MessageBundleConversationView;
+            val var5: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
+            val var7: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
+            val var9: Context = var8.getContext();
+            q.g(var9, "getContext(...)");
+            var8.configure(var5, MessageBundleDelegateUtilsKt.getEventHandler(var7, var9));
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var1, false, new a(this, var2), 1, null);
          }
       }

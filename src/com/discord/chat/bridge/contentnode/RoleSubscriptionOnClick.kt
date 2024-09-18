@@ -1,5 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
 
 @f
 public data class RoleSubscriptionOnClick(action: String, guildId: String, messageId: String?, channelId: String?, roleSubscriptionListingId: String?) {
@@ -112,24 +112,24 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.action;
-      val var6: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.roleSubscriptionListingId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("RoleSubscriptionOnClick(action=");
-      var5.append(var4);
-      var5.append(", guildId=");
-      var5.append(var6);
-      var5.append(", messageId=");
-      var5.append(var1);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", roleSubscriptionListingId=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.action;
+      val var3: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.roleSubscriptionListingId;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("RoleSubscriptionOnClick(action=");
+      var6.append(var1);
+      var6.append(", guildId=");
+      var6.append(var3);
+      var6.append(", messageId=");
+      var6.append(var2);
+      var6.append(", channelId=");
+      var6.append(var5);
+      var6.append(", roleSubscriptionListingId=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -144,11 +144,11 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
          val var0: RoleSubscriptionOnClick.$serializer = new RoleSubscriptionOnClick.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.contentnode.RoleSubscriptionOnClick", var0, 5);
-         var1.c("action", false);
-         var1.c("guildId", false);
-         var1.c("messageId", false);
-         var1.c("channelId", false);
-         var1.c("roleSubscriptionListingId", false);
+         var1.l("action", false);
+         var1.l("guildId", false);
+         var1.l("messageId", false);
+         var1.l("channelId", false);
+         var1.l("roleSubscriptionListingId", false);
          descriptor = var1;
       }
 
@@ -160,32 +160,34 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
       public open fun deserialize(decoder: Decoder): RoleSubscriptionOnClick {
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.b(var11);
-         val var5: Boolean = var12.p();
+         val var12: c = var1.c(var11);
+         val var5: Boolean = var12.y();
          var var9: java.lang.String = null;
          var var2: Int;
-         var var7: java.lang.String;
          var var8: java.lang.String;
          val var13: java.lang.String;
          var var15: java.lang.String;
+         var var17: java.lang.String;
          if (var5) {
-            var9 = var12.m(var11, 0);
-            var8 = var12.m(var11, 1);
+            var17 = var12.t(var11, 0);
+            var8 = var12.t(var11, 1);
             val var6: b2 = b2.a;
-            var7 = var12.n(var11, 2, b2.a, null) as java.lang.String;
-            var13 = var12.n(var11, 3, var6, null) as java.lang.String;
-            var15 = var12.n(var11, 4, var6, null) as java.lang.String;
+            val var10: java.lang.String = var12.v(var11, 2, b2.a, null) as java.lang.String;
+            var13 = var12.v(var11, 3, var6, null) as java.lang.String;
+            var15 = var12.v(var11, 4, var6, null) as java.lang.String;
             var2 = 31;
+            var9 = var17;
+            var17 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var7 = null;
+            var17 = null;
             var15 = null;
             var var14: java.lang.String = null;
 
             while (var3) {
-               val var4: Int = var12.o(var11);
+               val var4: Int = var12.x(var11);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -195,22 +197,22 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
                                  throw new n(var4);
                               }
 
-                              var14 = var12.n(var11, 4, b2.a, var14) as java.lang.String;
+                              var14 = var12.v(var11, 4, b2.a, var14) as java.lang.String;
                               var2 |= 16;
                            } else {
-                              var15 = var12.n(var11, 3, b2.a, var15) as java.lang.String;
+                              var15 = var12.v(var11, 3, b2.a, var15) as java.lang.String;
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var12.n(var11, 2, b2.a, var7) as java.lang.String;
+                           var17 = var12.v(var11, 2, b2.a, var17) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var12.m(var11, 1);
+                        var8 = var12.t(var11, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var12.m(var11, 0);
+                     var9 = var12.t(var11, 0);
                      var2 |= 1;
                   }
                } else {
@@ -222,21 +224,21 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
             var13 = var15;
          }
 
-         var12.c(var11);
-         return new RoleSubscriptionOnClick(var2, var9, var8, var7, var13, var15, null);
+         var12.b(var11);
+         return new RoleSubscriptionOnClick(var2, var9, var8, var17, var13, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleSubscriptionOnClick) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          RoleSubscriptionOnClick.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

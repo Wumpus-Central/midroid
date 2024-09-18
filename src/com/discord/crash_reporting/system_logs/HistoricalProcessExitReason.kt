@@ -4,12 +4,12 @@ import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
+import e2.e
+import e2.f
+import e2.g
+import kh.w
 import kotlin.jvm.internal.q
-import o3.e
-import o3.f
-import o3.g
-import vj.w
-import wj.r
+import lh.r
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -60,7 +60,7 @@ internal object HistoricalProcessExitReason {
          } else {
             var5 = e.a((ActivityManager)var5, null, 0, 1);
             q.g(var5, "getHistoricalProcessExitReasons(...)");
-            val var4: ApplicationExitInfo = f.a(i.f0((java.util.List)var5));
+            val var4: ApplicationExitInfo = f.a(i.g0((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {

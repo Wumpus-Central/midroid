@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
 import kotlin.jvm.internal.q
-import wj.o
+import lh.o
 
 @ReactModule(name = "ClipView")
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {

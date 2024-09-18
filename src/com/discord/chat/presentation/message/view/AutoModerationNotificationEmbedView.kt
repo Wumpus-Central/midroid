@@ -21,13 +21,15 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.react.FontManager
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 
-public class AutoModerationNotificationEmbedView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout, SpacingProviderView {
+public class AutoModerationNotificationEmbedView  public constructor(context: Context, attrs: AttributeSet? = null)
+   : ConstraintLayout,
+   VerticalSpacingItemDecoration.SpacingProviderView {
    private final var allowChildGestures: Boolean
    private final val binding: AutoModerationNotificationEmbedViewBinding
 
@@ -221,15 +223,15 @@ public class AutoModerationNotificationEmbedView  public constructor(context: Co
          }
       }
 
-      val var33: java.lang.String = var1.getActionsIconURL();
-      val var12: java.lang.String = var1.getActionsText();
-      val var8: DCDButton = this.binding.actionsButton;
-      if (var33 != null) {
-         this.binding.actionsButton.setIcon(var33, SizeUtilsKt.getDpToPx(16));
+      val var12: java.lang.String = var1.getActionsIconURL();
+      val var8: java.lang.String = var1.getActionsText();
+      val var33: DCDButton = this.binding.actionsButton;
+      if (var12 != null) {
+         this.binding.actionsButton.setIcon(var12, SizeUtilsKt.getDpToPx(16));
       }
 
-      this.binding.actionsButton.setText(var12);
-      var8.setOnClickButtonListener(var2);
+      this.binding.actionsButton.setText(var8);
+      var33.setOnClickButtonListener(var2);
       val var10: java.lang.String = var1.getFeedbackText();
       val var9: DCDButton = this.binding.feedbackButton;
       this.binding.feedbackButton.setText(var10);
@@ -241,7 +243,7 @@ public class AutoModerationNotificationEmbedView  public constructor(context: Co
       return this.allowChildGestures xor true;
    }
 
-   public open fun spacingPxOverride(): Int {
+   public override fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(4);
    }
 }

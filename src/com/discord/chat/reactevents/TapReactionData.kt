@@ -3,18 +3,19 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
+import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import kh.w
 import kotlin.jvm.internal.q
-import vj.w
 
 internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ...) : TapReactionData(var1, var2, var3), ReactEvent {
    public final val isBurst: Boolean?
    public final val messageId: MessageId
    public final val reaction: Reaction?
 
-   fun TapReactionData(var1: java.lang.String, var2: Reaction, var3: java.lang.Boolean) {
+   fun TapReactionData(var1: java.lang.String, var2: ReactionView.Reaction, var3: java.lang.Boolean) {
       q.h(var1, "messageId");
       super();
       this.messageId = var1;
@@ -73,18 +74,13 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
       return (var3 * 31 + var1) * 31 + var2;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var4: WritableNativeMap;
       if (this.reaction != null) {
          var4 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               w.a(
-                  "emoji",
-                  NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("name", this.reaction.getEmoji().getName()), w.a("id", this.reaction.getEmoji().getId())})
-               ),
-               w.a("me", this.reaction.isMe()),
-               w.a("me_burst", this.reaction.isMeBurst())
-            }
+            w.a("emoji", NativeMapExtensionsKt.nativeMapOf(w.a("name", this.reaction.getEmoji().getName()), w.a("id", this.reaction.getEmoji().getId()))),
+            w.a("me", this.reaction.isMe()),
+            w.a("me_burst", this.reaction.isMeBurst())
          );
       } else {
          var4 = null;
@@ -99,21 +95,21 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
          var6 = this.isBurst;
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{var2, var3, w.a("isBurst", var6)});
+      return NativeMapExtensionsKt.nativeMapOf(var2, var3, w.a("isBurst", var6));
    }
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Reaction = this.reaction;
+      val var2: ReactionView.Reaction = this.reaction;
       val var1: java.lang.Boolean = this.isBurst;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapReactionData(messageId=");
-      var2.append(var3);
-      var2.append(", reaction=");
-      var2.append(var4);
-      var2.append(", isBurst=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapReactionData(messageId=");
+      var4.append(var3);
+      var4.append(", reaction=");
+      var4.append(var2);
+      var4.append(", isBurst=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

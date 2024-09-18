@@ -1,15 +1,15 @@
 package com.discord.browser_manager
 
-import an.j
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import com.discord.chrome_custom_tabs.CustomTabs
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import pk.j
 
 internal object BrowserManager {
    private fun openUrlExternally(context: Context, uri: Uri, onFailure: (Exception) -> Unit, forceExternal: Boolean = true) {
@@ -25,7 +25,7 @@ internal object BrowserManager {
          try {
             val var11: java.util.List = var1.getPackageManager().queryIntentActivities(var10, 0);
             q.g(var11, "queryIntentActivities(...)");
-            var10.setPackage(j.s(j.p(j.z(i.S(var11), <unrepresentable>.INSTANCE), new Function1(var1) {
+            var10.setPackage(j.s(j.p(j.z(i.T(var11), <unrepresentable>.INSTANCE), new Function1(var1) {
                final Context $context;
 
                {
@@ -53,7 +53,7 @@ internal object BrowserManager {
 
    private fun openUrlWithCustomTabs(context: Context, uri: Uri, onFailure: (Exception) -> Unit) {
       CustomTabs.openUrlWithCustomTabs$default(
-         CustomTabs.INSTANCE, var1, var2, false, ColorUtilsKt.getThemeColor(var1, color.white, color.primary_600), null, null, null, null, var3, 244, null
+         CustomTabs.INSTANCE, var1, var2, false, ColorUtilsKt.getThemeColor(var1, R.color.white, R.color.primary_600), null, null, null, null, var3, 244, null
       );
    }
 
@@ -77,9 +77,9 @@ internal object BrowserManager {
       q.h(var3, "onFailure");
 
       try {
-         val var5: Uri = Uri.parse(var2);
-         q.e(var5);
-         this.openUrlWithCustomTabs(var1, var5, new Function1(var1, var2, var3) {
+         val var4: Uri = Uri.parse(var2);
+         q.e(var4);
+         this.openUrlWithCustomTabs(var1, var4, new Function1(var1, var2, var3) {
             final Context $context;
             final Function1 $onFailure;
             final java.lang.String $url;

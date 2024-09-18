@@ -39,12 +39,12 @@ import com.facebook.react.viewmanagers.DCDMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDMessageViewManagerInterface
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerInterface
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import vj.w
 
 public object MessageViewManagers {
    private final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
@@ -131,13 +131,11 @@ public object MessageViewManagers {
       private final val messageRowViewPool: RecycledViewPool
       private final val reactEvents: ReactEvents =
          new ReactEvents(
-            new Pair[]{
-               w.a("onTapItem", g0.b(OnTapMessageBundleItemData.class)),
-               w.a("onLongPressItem", g0.b(OnLongPressMessageBundleItemData.class)),
-               w.a("onTruncateMessage", g0.b(OnTruncateMessageData.class)),
-               w.a("onTapReplyItem", g0.b(OnTapReplyItemData.class)),
-               w.a("onTapViewMoreText", g0.b(OnTapViewMoreTextData.class))
-            }
+            w.a("onTapItem", g0.b(OnTapMessageBundleItemData.class)),
+            w.a("onLongPressItem", g0.b(OnLongPressMessageBundleItemData.class)),
+            w.a("onTruncateMessage", g0.b(OnTruncateMessageData.class)),
+            w.a("onTapReplyItem", g0.b(OnTapReplyItemData.class)),
+            w.a("onTapViewMoreText", g0.b(OnTapViewMoreTextData.class))
          )
 
       private fun emitOnLongPressItem(view: View): Boolean {
@@ -296,13 +294,13 @@ public object MessageViewManagers {
 
             val var10: MessageBase = var4.getMessage();
             q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var10 as Message;
+            val var7: Message = var10 as Message;
             val var11: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var5: MessageFrame = var4.getMessageFrame();
-            val var7: Context = var1.getContext();
-            q.g(var7, "getContext(...)");
+            val var6: MessageFrame = var4.getMessageFrame();
+            val var5: Context = var1.getContext();
+            q.g(var5, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var6, var11, var5, MessageViewManagers.access$getEventHandler(var3, var4, var7), null, null, false, var4.isHighlight(), false, 368, null
+               var1, var7, var11, var6, MessageViewManagers.access$getEventHandler(var3, var4, var5), null, null, false, var4.isHighlight(), false, 368, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -344,11 +342,11 @@ public object MessageViewManagers {
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
             q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var5: Message = var4 as Message;
+            val var6: Message = var4 as Message;
             val var8: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var6: Context = var1.getContext();
-            q.g(var6, "getContext(...)");
-            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
+            val var5: Context = var1.getContext();
+            q.g(var5, "getContext(...)");
+            var1.setMessage(var6, var8, MessageViewManagers.access$getEventHandler(var3, var7, var5));
          }
       }
 

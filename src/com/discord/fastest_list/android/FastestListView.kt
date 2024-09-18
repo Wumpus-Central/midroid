@@ -16,9 +16,9 @@ import com.discord.fastest_list.android.scroll.FastestListScrollListener
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
+import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.scroller.Scroller
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -166,11 +166,11 @@ internal class FastestListView(context: Context,
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
-   private fun onItemDataChanged(positions: List<DataChanged> = i.j()) {
+   private fun onItemDataChanged(positions: List<DataChanged> = i.k()) {
       if (var1.isEmpty() xor true) {
-         for (FastestListViewAdapter.DataChanged var5 : var1) {
-            val var2: Int = var5.component1();
-            val var3: Int = var5.component2();
+         for (FastestListViewAdapter.DataChanged var4 : var1) {
+            val var2: Int = var4.component1();
+            val var3: Int = var4.component2();
             if (var3 == 1) {
                this.typedAdapter.notifyItemChanged(var2);
             } else {
@@ -198,8 +198,8 @@ internal class FastestListView(context: Context,
       }
    }
 
-   private fun scrollTo(position: Int, animated: Boolean) {
-      Scroller.scrollToPosition$default(this.scroller, var1, new Top(0), var2, null, null, null, 56, null);
+   private fun scrollTo(position: Int, animated: Boolean, paddingStart: Int) {
+      Scroller.scrollToPosition$default(this.scroller, var1, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
       ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 
@@ -224,16 +224,16 @@ internal class FastestListView(context: Context,
       ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 
-   public fun scrollTo(section: Int, item: Int, animated: Boolean) {
-      val var4: Int = this.sections
+   public fun scrollTo(section: Int, item: Int, animated: Boolean, paddingStart: Int) {
+      val var5: Int = this.sections
          .getItemPosition-jEcWkE0(FastestListSections.Section.constructor-impl(var1), FastestListSections.Item.constructor-impl(var2));
-      if (var4 != null) {
-         this.scrollTo(var4, var3);
+      if (var5 != null) {
+         this.scrollTo(var5, var3, var4);
       }
    }
 
    public fun scrollToTop(animated: Boolean) {
-      this.scrollTo(0, var1);
+      this.scrollTo(0, var1, 0);
    }
 
    public fun setHorizontal(horizontal: Boolean) {

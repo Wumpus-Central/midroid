@@ -1,8 +1,13 @@
 package com.discord.media_player.reactevents
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import fl.g0
+import fl.h
+import fl.y
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,12 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.h
-import qn.y
-import qn.g0.a
 
 @f
 public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : ReactEvent {
@@ -59,8 +58,8 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
       return java.lang.Double.hashCode(this.id) * 31 + java.lang.Boolean.hashCode(this.isMuted);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -89,8 +88,8 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media_player.reactevents.MediaPlayerMuteStateChanged", var0, 2
          );
-         var1.c("id", false);
-         var1.c("isMuted", false);
+         var1.l("id", false);
+         var1.l("isMuted", false);
          descriptor = var1;
       }
 
@@ -101,13 +100,13 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
       public open fun deserialize(decoder: Decoder): MediaPlayerMuteStateChanged {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var9: c = var1.c(var8);
          var var2: Double;
          var var4: Int;
          var var7: Boolean;
-         if (var9.p()) {
-            var2 = var9.F(var8, 0);
-            var7 = var9.C(var8, 1);
+         if (var9.y()) {
+            var2 = var9.A(var8, 0);
+            var7 = var9.s(var8, 1);
             var4 = 3;
          } else {
             var var5: Boolean = true;
@@ -116,17 +115,17 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
             var4 = 0;
 
             while (var5) {
-               val var6: Int = var9.o(var8);
+               val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
                         throw new n(var6);
                      }
 
-                     var7 = var9.C(var8, 1);
+                     var7 = var9.s(var8, 1);
                      var4 |= 2;
                   } else {
-                     var2 = var9.F(var8, 0);
+                     var2 = var9.A(var8, 0);
                      var4 |= 1;
                   }
                } else {
@@ -135,7 +134,7 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
             }
          }
 
-         var9.c(var8);
+         var9.b(var8);
          return new MediaPlayerMuteStateChanged(var4, var2, var7, null);
       }
 
@@ -143,9 +142,9 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          MediaPlayerMuteStateChanged.write$Self$media_player_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

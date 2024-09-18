@@ -16,12 +16,12 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import java.util.LinkedList
 import java.util.Queue
 import java.util.UUID
+import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
-import vj.p
 
 public class ChannelChatListAdapter(doLayout: () -> Unit,
       enableAnimations: () -> Unit,
@@ -56,11 +56,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var5: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var5);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Expected to be on android main thread. Current: ");
+         var5.append(var4);
+         throw new IllegalStateException(var5.toString().toString());
       } else {
          access$getUpdateQueue$p(this).add(var1);
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
@@ -86,7 +86,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             if ((var5 as java.util.Collection).isEmpty() xor true) {
                var5 = this.items;
                q.g(this.items, "items");
-               if (i.p0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
+               if (i.q0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
                   var2 = true;
                   break label71;
                }
@@ -99,7 +99,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       var var3: Boolean = false;
       if (var2) {
          var3 = false;
-         if (i.r0(var6) !is LoadingChatListItem) {
+         if (i.s0(var6) !is LoadingChatListItem) {
             var3 = true;
          }
       }
@@ -108,7 +108,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var3) {
          val var10: PortalViewChatListItem = this.portalChatListItem;
          q.e(this.portalChatListItem);
-         var9 = i.z0(var6, var10);
+         var9 = i.A0(var6, var10);
       }
 
       this.setChatListItems$chat_release(var9);
@@ -164,7 +164,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
    private fun processPortalViewUpdate(update: PortalViewUpdate) {
       this.disableAnimations.invoke();
-      val var3: Boolean = i.r0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
+      val var3: Boolean = i.s0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
       var var2: Boolean;
       if (var1.getPortalChatListItem() != null) {
          var2 = 1;
@@ -195,20 +195,20 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
                throw new p();
             }
 
-            val var5: java.util.List = i.S0(this.getChatListItems$chat_release());
-            var2 = i.l(this.getChatListItems$chat_release());
+            val var5: java.util.List = i.T0(this.getChatListItems$chat_release());
+            var2 = i.m(this.getChatListItems$chat_release());
             val var7: PortalViewChatListItem = var1.getPortalChatListItem();
             q.e(var7);
             var5.set(var2, var7);
             var8 = var5;
          } else {
-            var8 = i.W(this.getChatListItems$chat_release(), 1);
+            var8 = i.X(this.getChatListItems$chat_release(), 1);
          }
       } else {
          val var13: java.util.List = this.getChatListItems$chat_release();
          val var9: PortalViewChatListItem = var1.getPortalChatListItem();
          q.e(var9);
-         var8 = i.z0(var13, var9);
+         var8 = i.A0(var13, var9);
       }
 
       this.setChatListItems$chat_release(var8);
@@ -217,13 +217,13 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 == 3) {
-               this.notifyItemChanged(i.l(this.getChatListItems$chat_release()));
+               this.notifyItemChanged(i.m(this.getChatListItems$chat_release()));
             }
          } else {
-            this.notifyItemRemoved(i.l(this.getChatListItems$chat_release()) + 1);
+            this.notifyItemRemoved(i.m(this.getChatListItems$chat_release()) + 1);
          }
       } else {
-         this.notifyItemInserted(i.l(this.getChatListItems$chat_release()));
+         this.notifyItemInserted(i.m(this.getChatListItems$chat_release()));
       }
    }
 
@@ -257,18 +257,18 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
          access$setProcessNextUpdateJob$p(
             this,
-            dn.g.d(
+            sk.f.d(
                kotlinx.coroutines.g.b(),
                null,
                null,
                new Function2(this, null)// $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.StackOverflowError
-      //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-      //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-      //   at java.base/java.util.HashMap.get(HashMap.java:564)
-      //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+      //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+      //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1294,11 +1294,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             )
          );
       } else {
-         val var4: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var4);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var3);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
@@ -1306,7 +1306,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       val var2: Int = var1.size();
       var var3: Boolean = true;
       if (var2 == 1) {
-         val var5: ListOperation = i.d0(var1) as ListOperation;
+         val var5: ListOperation = i.e0(var1) as ListOperation;
          if (var5 !is ListOperation.Change) {
             if (var5 !is ListOperation.ChangeRange) {
                return true;
@@ -1424,7 +1424,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = ck.a.a(var0);
+         $ENTRIES = rh.a.a(var0);
       }
 
       @JvmStatic

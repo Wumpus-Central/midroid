@@ -3,10 +3,10 @@ package com.discord.notifications.fcm.utils
 import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
-import h5.a
-import h5.b
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import x3.a
+import x3.b
 
 internal object FCMTokenHelper {
    @JvmStatic

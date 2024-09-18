@@ -10,11 +10,11 @@ import kotlin.jvm.internal.q
 public class BlurViewPackage : ReactPackage {
    public open fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
       q.h(var1, "reactContext");
-      return kotlin.collections.i.j();
+      return kotlin.collections.i.k();
    }
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
       q.h(var1, "reactContext");
-      return kotlin.collections.i.p(new InitialPropsViewGroupManager[]{new BlurViewManager(), new BlurViewTargetManager()});
+      return kotlin.collections.i.q(new InitialPropsViewGroupManager[]{new BlurViewManager(), new BlurViewTargetManager()});
    }
 }

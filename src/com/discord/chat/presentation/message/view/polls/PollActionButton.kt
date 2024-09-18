@@ -16,12 +16,12 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
+import kh.p
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
-import vj.p
 
 public class PollActionButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: PollActionButtonBinding
@@ -127,7 +127,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   DCDButton.setBackgroundRectangle$default(
                      var21, ThemeManagerKt.getTheme().getRedesignButtonPrimaryBackground(), SizeUtilsKt.getDpToPx(20), null, 0, 12, null
                   );
-                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, color.white));
+                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, R.color.white));
                   var21.setText(var1.getLabel());
                   var21.setOnClickButtonListener(new c(var1, var5, var2, var4));
                   q.e(var21);

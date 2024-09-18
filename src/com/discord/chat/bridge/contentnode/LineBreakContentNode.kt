@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,10 +12,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.g0.a
 
 @f
 public class LineBreakContentNode : ContentNode() {
@@ -36,15 +36,15 @@ public class LineBreakContentNode : ContentNode() {
       public open fun deserialize(decoder: Decoder): LineBreakContentNode {
          q.h(var1, "decoder");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: c = var1.b(var3);
-         if (!var4.p()) {
-            val var2: Int = var4.o(var3);
+         val var4: c = var1.c(var3);
+         if (!var4.y()) {
+            val var2: Int = var4.x(var3);
             if (var2 != -1) {
                throw new n(var2);
             }
          }
 
-         var4.c(var3);
+         var4.b(var3);
          return new LineBreakContentNode(0, null);
       }
 
@@ -52,9 +52,9 @@ public class LineBreakContentNode : ContentNode() {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          LineBreakContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

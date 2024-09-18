@@ -197,6 +197,8 @@ public final class R {
       public static int footer_text;
       public static int forum_post_action_bar_wrap;
       public static int forward;
+      public static int game_controller_icon;
+      public static int game_icon;
       public static int gaming_stats_button;
       public static int gif_button;
       public static int gif_indicator;
@@ -485,6 +487,7 @@ public final class R {
       public static int forum_post_action_bar_view;
       public static int forward_breadcrumb_view;
       public static int forward_header_view;
+      public static int game_icon_view;
       public static int gift_view;
       public static int guild_event_invite_view;
       public static int guild_invite_disabled_view;
@@ -548,7 +551,7 @@ public final class R {
    }
 
    public static final class styleable {
-      public static int[] PollMediaView = new int[]{2130968999};
+      public static int[] PollMediaView = new int[]{2130969004};
       public static int PollMediaView_emojiSize;
 
       private styleable() {

@@ -73,7 +73,7 @@ public class DeserializationErrorView  public constructor(context: Context, attr
    fun `configure$lambda$0`(var0: DeserializationErrorView, var1: java.lang.String, var2: View) {
       q.h(var0, "this$0");
       q.h(var1, "$json");
-      val var3: Any = a.j(var0.getContext(), ClipboardManager.class);
+      val var3: Any = a.i(var0.getContext(), ClipboardManager.class);
       q.e(var3);
       (var3 as ClipboardManager).setPrimaryClip(ClipData.newPlainText("Error JSON", var1));
       Toast.makeText(var0.getContext(), "Copied error json to clipboard", 0).show();
@@ -86,6 +86,6 @@ public class DeserializationErrorView  public constructor(context: Context, attr
       this.binding.exception.setText(var2);
       val var3: Button = this.binding.copyButton;
       q.g(this.binding.copyButton, "copyButton");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new w4.a(this, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new m3.a(this, var1), 1, null);
    }
 }

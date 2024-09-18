@@ -1,7 +1,7 @@
 package com.discord.billing.types
 
-import ck.a
 import kotlin.enums.EnumEntries
+import rh.a
 
 internal enum class ProductType(rawProductType: String) {
    IAP("inapp"),

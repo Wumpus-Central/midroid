@@ -29,8 +29,8 @@ import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
+import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionsView
-import com.discord.reactions.ReactionView.Reaction
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
 import com.discord.theme.ThemeManagerKt
@@ -116,27 +116,27 @@ public class MessageBundleConversationView  public constructor(context: Context,
       if (var11.getContent() != null) {
          val var19: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var13: StructurableText = var11.getContent();
-         val var10: Context = this.getContext();
-         val var14: java.lang.String = var11.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var11);
-         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+         val var10: StructurableText = var11.getContent();
+         val var14: Context = this.getContext();
+         val var13: java.lang.String = var11.getId-3Eiw7ao();
+         val var9: Boolean = MessageKt.shouldAnimateEmoji(var11);
+         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var11);
          val var6: Boolean = var11.getShouldShowRoleDot();
-         val var9: Boolean = var11.getShouldShowRoleOnName();
+         val var8: Boolean = var11.getShouldShowRoleOnName();
          val var15: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          q.g(var15, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var15);
          val var35: TextPaint = this.binding.replyText.getPaint();
-         q.e(var10);
+         q.e(var14);
          q.e(var35);
-         val var26: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-            var13,
+         val var31: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
             var10,
             var14,
-            var7,
-            var8,
-            var6,
+            var13,
             var9,
+            var7,
+            var6,
+            var8,
             var35,
             null,
             null,
@@ -158,17 +158,17 @@ public class MessageBundleConversationView  public constructor(context: Context,
             11534208,
             null
          );
-         val var31: MessageContentView = this.binding.replyText;
+         val var26: MessageContentView = this.binding.replyText;
          q.g(this.binding.replyText, "replyText");
-         SpannableExtensionsKt.coverWithSpan(var26, new BackgroundSpanDrawer(var31));
-         var20 = ReplyUtilsKt.createReplyContent(var19, var26);
+         SpannableExtensionsKt.coverWithSpan(var31, new BackgroundSpanDrawer(var26));
+         var20 = ReplyUtilsKt.createReplyContent(var19, var31);
       } else {
-         val var27: TextView = this.binding.replyAuthorName;
+         val var21: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var21: Context = this.getContext();
-         q.g(var21, "getContext(...)");
+         val var27: Context = this.getContext();
+         q.g(var27, "getContext(...)");
          var20 = ReplyUtilsKt.createSystemReplyContent(
-            var27, I18nUtilsKt.i18nFormat$default(var21, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
+            var21, I18nUtilsKt.i18nFormat$default(var27, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
          );
       }
 
@@ -194,7 +194,7 @@ public class MessageBundleConversationView  public constructor(context: Context,
       val var30: java.util.List = var11.getReactions();
       var var23: java.util.List = var30;
       if (var30 == null) {
-         var23 = i.j();
+         var23 = i.k();
       }
 
       ReactionsView.setReactions$default(
@@ -219,7 +219,7 @@ public class MessageBundleConversationView  public constructor(context: Context,
                this.$message = var2;
             }
 
-            public final void invoke(Reaction var1) {
+            public final void invoke(ReactionView.Reaction var1) {
                q.h(var1, "it");
                ChatEventHandler.DefaultImpls.onTapReaction-u7_MRrM$default(this.$eventHandler, this.$message.getId-3Eiw7ao(), var1, null, 4, null);
             }

@@ -5,8 +5,7 @@ import com.discord.chat.presentation.events.CreateChatReactEventsKt
 import com.discord.chat.reactevents.ChatViewEventHandler
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.reactevents.ReactEvents
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Anywhere
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
+import com.discord.recycler_view.scroller.Scroller
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ThemedReactContext
@@ -24,10 +23,10 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
       q.h(var1, "reactContext");
-      val var3: ChatView = new ChatView(var1);
-      val var2: Context = var3.getContext();
-      q.g(var2, "getContext(...)");
-      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new Function0(var3) {
+      val var2: ChatView = new ChatView(var1);
+      val var3: Context = var2.getContext();
+      q.g(var3, "getContext(...)");
+      var2.setEventHandler(new ChatViewEventHandler(var3, this.reactEvents, new Function0(var2) {
          final ChatView $chatView;
 
          {
@@ -39,7 +38,7 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
             return this.$chatView.getId();
          }
       }));
-      return var3;
+      return var2;
    }
 
    protected open fun getDelegate(): DCDChatManagerDelegate<ChatView, ChatViewManager> {
@@ -85,17 +84,17 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
 
    public open fun scrollIntoView(view: ChatView, index: Int, animated: Boolean) {
       q.h(var1, "view");
-      var1.scrollTo(var2, Anywhere.INSTANCE, var3, false);
+      var1.scrollTo(var2, Scroller.TargetAlignment.Anywhere.INSTANCE, var3, false);
    }
 
    public open fun scrollTo(view: ChatView, index: Int, animated: Boolean) {
       q.h(var1, "view");
-      var1.scrollTo(var2, new Top(SizeUtilsKt.getDpToPx(4)), var3, false);
+      var1.scrollTo(var2, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(4)), var3, false);
    }
 
    public open fun scrollToBottom(view: ChatView, animated: Boolean) {
       q.h(var1, "view");
-      var1.scrollTo(0, Anywhere.INSTANCE, var2, false);
+      var1.scrollTo(0, Scroller.TargetAlignment.Anywhere.INSTANCE, var2, false);
    }
 
    @ReactProp(name = "adjustContentOffsetWithBounds")
@@ -111,12 +110,6 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    @ReactProp(name = "animateEmoji")
    public open fun setAnimateEmoji(view: ChatView, value: Boolean) {
       q.h(var1, "view");
-   }
-
-   @ReactProp(name = "animatedCustomKeyboardHeight")
-   public open fun setAnimatedCustomKeyboardHeight(view: ChatView, value: Float) {
-      q.h(var1, "view");
-      var1.setAnimatedCustomKeyboardHeight(var2);
    }
 
    @ReactProp(name = "HACK_fixModalInteraction")

@@ -15,7 +15,7 @@ private class ResultAdapter(onChannelSelected: (ChannelId) -> Unit) : RecyclerVi
       q.h(var1, "onChannelSelected");
       super();
       this.onChannelSelected = var1;
-      this.results = i.j();
+      this.results = i.k();
    }
 
    public override fun getItemCount(): Int {

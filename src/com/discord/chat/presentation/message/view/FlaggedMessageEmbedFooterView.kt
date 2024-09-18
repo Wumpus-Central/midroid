@@ -27,24 +27,24 @@ public class FlaggedMessageEmbedFooterView  public constructor(context: Context,
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var6: FlaggedMessageEmbedFooterViewBinding = FlaggedMessageEmbedFooterViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var6, "inflate(...)");
-      this.binding = var6;
-      val var4: ImageView = var6.separatorDot;
-      var6.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
-      kotlin.jvm.internal.q.e(var4);
-      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(4));
-      val var3: TextView = var6.flaggedMessageKeyword;
-      kotlin.jvm.internal.q.e(var6.flaggedMessageKeyword);
-      val var5: DiscordFont = DiscordFont.PrimaryMedium;
+      val var4: FlaggedMessageEmbedFooterViewBinding = FlaggedMessageEmbedFooterViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      this.binding = var4;
+      val var6: ImageView = var4.separatorDot;
+      var4.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
+      kotlin.jvm.internal.q.e(var6);
+      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(4));
+      val var3: TextView = var4.flaggedMessageKeyword;
+      kotlin.jvm.internal.q.e(var4.flaggedMessageKeyword);
+      val var7: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var3, 12.0F, 15.0F);
       var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      val var7: TextView = var6.flaggedMessageRuleName;
-      kotlin.jvm.internal.q.e(var6.flaggedMessageRuleName);
-      DiscordFontUtilsKt.setDiscordFont(var7, var5);
-      SetTextSizeSpKt.setTextSizeSp(var7, 12.0F, 15.0F);
-      var7.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      val var5: TextView = var4.flaggedMessageRuleName;
+      kotlin.jvm.internal.q.e(var4.flaggedMessageRuleName);
+      DiscordFontUtilsKt.setDiscordFont(var5, var7);
+      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F, 15.0F);
+      var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
    public fun setAutomodContext(autoModerationContext: AutoModerationContext) {

@@ -5,7 +5,7 @@ import android.widget.Button
 import com.discord.chat.bridge.botuikit.ButtonComponent
 import com.discord.chat.bridge.botuikit.ButtonStyle
 import com.discord.misc.utilities.view.ButtonBackgroundUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.internal.q
 
@@ -63,27 +63,29 @@ private fun ButtonComponent.hasIcon(): Boolean {
 
 private fun Button.setBrandColor() {
    ButtonBackgroundUtilsKt.setBackgroundColors(
-      var0, ColorUtilsKt.getColorCompat(var0, color.brand_500), ColorUtilsKt.getColorCompat(var0, color.brand_new_500_alpha_20)
+      var0, ColorUtilsKt.getColorCompat(var0, R.color.brand_500), ColorUtilsKt.getColorCompat(var0, R.color.brand_new_500_alpha_20)
    );
 }
 
 private fun Button.setDangerColor() {
    ButtonBackgroundUtilsKt.setBackgroundColors(
-      var0, ColorUtilsKt.getColorCompat(var0, color.red_400), ColorUtilsKt.getColorCompat(var0, color.status_red_500_alpha_20)
+      var0, ColorUtilsKt.getColorCompat(var0, R.color.red_400), ColorUtilsKt.getColorCompat(var0, R.color.status_red_500_alpha_20)
    );
 }
 
 private fun Button.setSecondaryColor() {
    var var2: Context = var0.getContext();
    q.g(var2, "getContext(...)");
-   val var1: Int = ColorUtilsKt.getThemeColor(var2, color.primary_400, color.primary_500);
+   val var1: Int = ColorUtilsKt.getThemeColor(var2, R.color.primary_400, R.color.primary_500);
    var2 = var0.getContext();
    q.g(var2, "getContext(...)");
-   ButtonBackgroundUtilsKt.setBackgroundColors(var0, var1, ColorUtilsKt.getThemeColor(var2, color.primary_light_500_alpha_20, color.primary_dark_500_alpha_20));
+   ButtonBackgroundUtilsKt.setBackgroundColors(
+      var0, var1, ColorUtilsKt.getThemeColor(var2, R.color.primary_light_500_alpha_20, R.color.primary_dark_500_alpha_20)
+   );
 }
 
 private fun Button.setSuccessColor() {
    ButtonBackgroundUtilsKt.setBackgroundColors(
-      var0, ColorUtilsKt.getColorCompat(var0, color.green_360), ColorUtilsKt.getColorCompat(var0, color.status_green_500_alpha_20)
+      var0, ColorUtilsKt.getColorCompat(var0, R.color.green_360), ColorUtilsKt.getColorCompat(var0, R.color.status_green_500_alpha_20)
    );
 }

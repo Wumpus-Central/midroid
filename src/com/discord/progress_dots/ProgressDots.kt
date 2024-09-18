@@ -69,7 +69,7 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
    }
 
    private fun stop() {
-      val var2: java.util.Iterator = i.m(new ProgressDot[]{this.binding.viewProgressDots1, this.binding.viewProgressDots2, this.binding.viewProgressDots3})
+      val var2: java.util.Iterator = i.n(new ProgressDot[]{this.binding.viewProgressDots1, this.binding.viewProgressDots2, this.binding.viewProgressDots3})
          .iterator();
 
       while (var2.hasNext()) {

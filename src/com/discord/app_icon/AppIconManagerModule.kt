@@ -6,8 +6,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import java.util.ArrayList
+import kh.w
 import kotlin.jvm.internal.q
-import vj.w
 
 public class AppIconManagerModule(reactContext: ReactApplicationContext) : NativeAppIconManagerSpec {
    init {
@@ -17,15 +17,15 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
 
    public override fun getAvailableIcons(promise: Promise) {
       q.h(var1, "promise");
-      val var4: Array<AppIcon> = AppIconUtil.INSTANCE.getAvailableIcons();
-      val var5: ArrayList = new ArrayList(var4.length);
-      val var3: Int = var4.length;
+      val var5: Array<AppIcon> = AppIconUtil.INSTANCE.getAvailableIcons();
+      val var4: ArrayList = new ArrayList(var5.length);
+      val var3: Int = var5.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         var5.add(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var4[var2].getId())}));
+         var4.add(NativeMapExtensionsKt.nativeMapOf(w.a("id", var5[var2].getId())));
       }
 
-      var1.resolve(NativeArrayExtensionsKt.toNativeArray(var5));
+      var1.resolve(NativeArrayExtensionsKt.toNativeArray(var4));
    }
 
    public override fun getCurrentIcon(promise: Promise) {
@@ -33,7 +33,7 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
       val var2: AppIconUtil = AppIconUtil.INSTANCE;
       val var3: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var3, "getReactApplicationContext(...)");
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", var2.getCurrentAppIcon(var3).getId())}));
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(w.a("id", var2.getCurrentAppIcon(var3).getId())));
    }
 
    public override fun setIcon(id: String, promise: Promise) {

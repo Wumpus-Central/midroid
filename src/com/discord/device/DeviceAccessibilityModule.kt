@@ -16,7 +16,7 @@ import com.facebook.react.bridge.ReadableArray
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import wj.o
+import lh.o
 
 public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -33,9 +33,9 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
    fun `enableFocusLock$lambda$4`(var0: ReadableArray, var1: DeviceAccessibilityModule) {
       q.h(var0, "$nativeIds");
       q.h(var1, "this$0");
-      val var4: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
+      val var3: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
       val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var0);
-      val var3: ArrayList = new ArrayList();
+      val var4: ArrayList = new ArrayList();
       val var8: java.util.Iterator = var5.iterator();
 
       while (var8.hasNext()) {
@@ -46,11 +46,11 @@ public class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : 
          q.g(var7, "getString(...)");
          val var9: View = ReactContextFindViewKt.findView(var6, var7);
          if (var9 != null) {
-            var3.add(var9);
+            var4.add(var9);
          }
       }
 
-      var4.enableFocusLock(var3);
+      var3.enableFocusLock(var4);
    }
 
    @ReactMethod

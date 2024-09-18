@@ -67,7 +67,7 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
 
    public open fun onDropViewInstance(view: Any) {
       q.h(var1, "view");
-      super.onDropViewInstance((T)var1);
+      super.onDropViewInstance(var1);
       this.consumedInitialProps.remove(var1.getId());
    }
 

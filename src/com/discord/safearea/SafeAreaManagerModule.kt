@@ -5,9 +5,9 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import kh.w
 import kotlin.jvm.internal.q
-import vj.w
-import wj.r
+import lh.r
 
 public class SafeAreaManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -15,12 +15,12 @@ public class SafeAreaManagerModule(reactContext: ReactApplicationContext) : Reac
       super(var1);
    }
 
-   public override fun getConstants(): MutableMap<String, Any> {
+   public open fun getConstants(): MutableMap<String, Any> {
       val var1: SafeAreaEdgeInsets = SafeAreaEdgeInsets.Companion.fromRootView(this.getCurrentActivity());
       return r.m(new Pair[]{w.a("top", var1.getTopDp()), w.a("bottom", var1.getBottomDp()), w.a("left", var1.getLeftDp()), w.a("right", var1.getRightDp())});
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDSafeAreaManager";
    }
 

@@ -31,8 +31,8 @@ import com.discord.reactions.ReactionsView
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.ReactionView.ReactionsTheme
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function1
@@ -89,7 +89,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       var5 = var6.sharePromptCopyLinkButton;
       var6.sharePromptCopyLinkButton.setCornerRadius(SizeUtilsKt.getDpToPx(20));
       var5.setTextSizeSp(14.0F);
-      var5.setBackgroundColor(var1.getColor(color.brand_500));
+      var5.setBackgroundColor(var1.getColor(R.color.brand_500));
       var5.setTextColor(ThemeManagerKt.getTheme().getWhite());
       var5.setDiscordFont(var10);
       var5.setIconPadding(8);
@@ -224,13 +224,13 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.q.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var36: java.util.List = kotlin.collections.i.J0(var8, --var2);
+         val var36: java.util.List = kotlin.collections.i.K0(var8, --var2);
          val var23: ReactionsView = this.binding.reactionsView;
          kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
          var23.setVisibility(0);
          this.setReactions(MessageId.toString-impl(var1), var36, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var37: DCDButton = this.binding.otherReactionsCount;
+         val var34: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.q.e(this.binding.otherReactionsCount);
          var var25: Boolean;
          if (var22 != 0) {
@@ -245,11 +245,11 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var37.setVisibility(var25);
-         if (var37.getVisibility() == 0) {
-            val var34: Context = var37.getContext();
-            kotlin.jvm.internal.q.g(var34, "getContext(...)");
-            var37.setText(I18nUtilsKt.i18nFormat(var34, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
+         var34.setVisibility(var25);
+         if (var34.getVisibility() == 0) {
+            val var37: Context = var34.getContext();
+            kotlin.jvm.internal.q.g(var37, "getContext(...)");
+            var34.setText(I18nUtilsKt.i18nFormat(var37, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
                final int $otherReactionsCount;
 
                {
@@ -262,8 +262,8 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
                   var1.getArgs().put("count", java.lang.String.valueOf(this.$otherReactionsCount));
                }
             }));
-            RippleUtilsKt.addRipple$default(var37, true, 0, 2, null);
-            var37.setOnClickButtonListener(var18);
+            RippleUtilsKt.addRipple$default(var34, true, 0, 2, null);
+            var34.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;

@@ -1,7 +1,7 @@
 package com.discord.emoji_picker.react.deserialization
 
-import ck.a
 import kotlin.enums.EnumEntries
+import rh.a
 
 internal enum class EmojiPickerItemTypes(unsupported: String = Companion, noop: Boolean = false) {
    EMOJI_ROW("Unsupported; don't send full emoji rows to native.", false, 2, null),
@@ -41,7 +41,7 @@ internal enum class EmojiPickerItemTypes(unsupported: String = Companion, noop: 
    public companion object {
       public fun create(value: Int): EmojiPickerItemTypes {
          val var2: Array<EmojiPickerItemTypes> = EmojiPickerItemTypes.values();
-         if (var1 >= 0 && var1 <= c.M(var2)) {
+         if (var1 >= 0 && var1 <= c.L(var2)) {
             return var2[var1];
          } else {
             val var3: StringBuilder = new StringBuilder();

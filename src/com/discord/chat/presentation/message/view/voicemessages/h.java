@@ -6,6 +6,6 @@ public final class h implements Runnable {
 
    @Override
    public final void run() {
-      AudioPlayerManagerModule.b(this.j);
+      AudioPlayerManagerModule.c(this.j);
    }
 }

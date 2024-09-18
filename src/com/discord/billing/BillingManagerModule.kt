@@ -14,12 +14,12 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
 import java.util.ArrayList
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
@@ -31,12 +31,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         new Pair[]{
-            w.a("billing-manager-connection-state-updated", g0.b(BillingManagerConnectionStateUpdated.class)),
-            w.a("billing-manager-purchase-updated", g0.b(BillingManagerPurchaseUpdated.class)),
-            w.a("billing-manager-downgrade-command", g0.b(BillingManagerDowngradeCommand.class)),
-            w.a("billing-manager-purchase-state-updated", g0.b(BillingManagerPurchaseStateUpdated.class))
-         }
+         w.a("billing-manager-connection-state-updated", g0.b(BillingManagerConnectionStateUpdated.class)),
+         w.a("billing-manager-purchase-updated", g0.b(BillingManagerPurchaseUpdated.class)),
+         w.a("billing-manager-downgrade-command", g0.b(BillingManagerDowngradeCommand.class)),
+         w.a("billing-manager-purchase-state-updated", g0.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new Function1(this) {
          final BillingManagerModule this$0;
@@ -97,13 +95,13 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       q.g(var5, "toArrayList(...)");
       val var7: ArrayList = new ArrayList();
 
-      for (var5 : var5) {
-         if (var5 is java.lang.String) {
-            var7.add(var5);
+      for (Object var6 : var5) {
+         if (var6 is java.lang.String) {
+            var7.add(var6);
          }
       }
 
-      val var10: Function1 = new Function1(var4) {
+      val var9: Function1 = new Function1(var4) {
          final Promise $promise;
 
          {
@@ -116,9 +114,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       };
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var9, "getReactApplicationContext(...)");
-      var1.getSkus(var7, var3, var4, var10, var9);
+      val var10: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var10, "getReactApplicationContext(...)");
+      var1.getSkus(var7, var3, var4, var9, var10);
    }
 
    @ReactMethod

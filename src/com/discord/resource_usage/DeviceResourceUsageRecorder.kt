@@ -7,13 +7,13 @@ import android.telephony.TelephonyManager
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
+import dm.e
+import kh.w
 import kotlin.jvm.internal.q
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
 import okio.BufferedSource
-import oo.e
-import vj.w
 
 public class DeviceResourceUsageRecorder {
    @JvmStatic
@@ -46,13 +46,13 @@ public class DeviceResourceUsageRecorder {
       private final val xhr: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
 
       private fun requestStatsInterceptor(chain: Chain, stats: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats): Response {
-         val var4: Response = var1.a(var1.q());
+         val var4: Response = var1.a(var1.v());
          val var3: ResponseBody = var4.a();
          var2.setNumRequests(var2.getNumRequests() + 1);
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
-            var5.n(java.lang.Long.MAX_VALUE);
-            var2.setBytesReceived(var2.getBytesReceived() + var5.d().size());
+            var5.r(java.lang.Long.MAX_VALUE);
+            var2.setBytesReceived(var2.getBytesReceived() + var5.j().W1());
          }
 
          return var4;

@@ -95,7 +95,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       var5.setVisibility(var2);
       val var6: OverlappingCirclesView = this.binding.participants;
-      val var10: ArrayList = new ArrayList(kotlin.collections.i.u(var1, 10));
+      val var10: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
       val var7: java.util.Iterator = var1.iterator();
 
       while (var7.hasNext()) {

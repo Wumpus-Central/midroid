@@ -10,15 +10,15 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerRowViewManagerInterface
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 @ReactModule(name = "EmojiPickerRowView")
 internal class EmojiPickerRowViewManager : SimpleViewManager<EmojiPickerRowView>, EmojiPickerRowViewManagerInterface<EmojiPickerRowView> {
    private final val reactEvents: ReactEvents =
-      new ReactEvents(new Pair[]{w.a("onPressEmoji", g0.b(OnPressEmojiEvent.class)), w.a("onLongPressEmoji", g0.b(OnLongPressEmojiEvent.class))})
+      new ReactEvents(w.a("onPressEmoji", g0.b(OnPressEmojiEvent.class)), w.a("onLongPressEmoji", g0.b(OnLongPressEmojiEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): EmojiPickerRowView {
       q.h(var1, "reactContext");

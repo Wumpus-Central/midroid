@@ -10,6 +10,6 @@ public final class c implements OnClickListener {
    public final MessageBundleView k;
 
    public final void onClick(View var1) {
-      MessageViewManagers.MessageBundleViewManager.c(this.j, this.k, var1);
+      MessageViewManagers.MessageBundleViewManager.d(this.j, this.k, var1);
    }
 }

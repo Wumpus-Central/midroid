@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
 import com.discord.primitives.ChannelId
+import fl.b2
+import fl.g0
+import fl.o1
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,12 +16,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.o1
-import qn.g0.a
 
 @f
 public data class PinsOnClick(action: String, messageChannelId: ChannelId) : PinsOnClick(var1, var2) {
@@ -72,15 +72,15 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.action;
-      val var2: java.lang.String = ChannelId.toString-impl(this.messageChannelId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PinsOnClick(action=");
-      var3.append(var1);
-      var3.append(", messageChannelId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.action;
+      val var3: java.lang.String = ChannelId.toString-impl(this.messageChannelId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PinsOnClick(action=");
+      var1.append(var2);
+      var1.append(", messageChannelId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -95,26 +95,26 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
          val var0: PinsOnClick.$serializer = new PinsOnClick.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.contentnode.PinsOnClick", var0, 2);
-         var1.c("action", false);
-         var1.c("messageChannelId", false);
+         var1.l("action", false);
+         var1.l("messageChannelId", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, com.discord.primitives.ChannelId..serializer.INSTANCE};
+         return new KSerializer[]{b2.a, ChannelId.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): PinsOnClick {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var5: Boolean = var8.p();
+         val var8: c = var1.c(var7);
+         val var5: Boolean = var8.y();
          var var6: java.lang.String = null;
          var var2: Int;
          var var9: ChannelId;
          if (var5) {
-            var6 = var8.m(var7, 0);
-            var9 = var8.y(var7, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, null) as ChannelId;
+            var6 = var8.t(var7, 0);
+            var9 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -122,17 +122,17 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
             var9 = null;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var8.y(var7, 1, com.discord.primitives.ChannelId..serializer.INSTANCE, var9) as ChannelId;
+                     var9 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, var9) as ChannelId;
                      var2 |= 2;
                   } else {
-                     var6 = var8.m(var7, 0);
+                     var6 = var8.t(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -141,7 +141,7 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new PinsOnClick(var2, var6, var9, null, null);
       }
 
@@ -149,9 +149,9 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          PinsOnClick.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

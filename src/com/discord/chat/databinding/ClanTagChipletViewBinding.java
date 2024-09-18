@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import f3.a;
+import n1.a;
 
 public final class ClanTagChipletViewBinding implements ViewBinding {
    public final SimpleDraweeView badge;

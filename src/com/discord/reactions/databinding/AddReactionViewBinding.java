@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import f3.a;
+import n1.a;
 
 public final class AddReactionViewBinding implements ViewBinding {
    public final SimpleDraweeView addReactionImage;
@@ -22,12 +22,12 @@ public final class AddReactionViewBinding implements ViewBinding {
 
    public static AddReactionViewBinding bind(View var0) {
       int var1 = R.id.add_reaction_image;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.add_reaction_text;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new AddReactionViewBinding(var0, var2, var3);
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new AddReactionViewBinding(var0, var3, var2);
          }
       }
 
@@ -43,6 +43,7 @@ public final class AddReactionViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -17,9 +17,9 @@ import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
+import d7.b
 import java.util.concurrent.Future
 import kotlin.jvm.internal.q
-import q8.b
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    internal final lateinit var rootView: ReactRootView
@@ -45,27 +45,27 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    public abstract fun getActivityDelegate(): com.discord.react_activities.ReactActivity.ActivityDelegate {
    }
 
-   protected override fun getMainComponentName(): String {
+   protected fun getMainComponentName(): String {
       return this.getNameOfComponent();
    }
 
    public abstract fun getNameOfComponent(): String {
    }
 
-   public override fun onConfigurationChanged(newConfig: Configuration) {
+   public open fun onConfigurationChanged(newConfig: Configuration) {
       q.h(var1, "newConfig");
       super.onConfigurationChanged(var1);
       b.m.a(this, var1);
    }
 
-   protected override fun onCreate(savedInstanceState: Bundle?) {
+   protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var3: Window = this.getWindow();
-      q.g(var3, "getWindow(...)");
-      var2.initialize(var3);
+      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      q.g(var2, "getWindow(...)");
+      var3.initialize(var2);
       CPUPnQManager.INSTANCE.initialize();
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
@@ -73,14 +73,14 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       var4.updateWindowBackground(this, true);
    }
 
-   protected override fun onPause() {
+   protected open fun onPause() {
       super.onPause();
       JankStatsAggregator.INSTANCE.disableTracking();
       JSWatchdogManager.INSTANCE.disable();
       CPUPnQManager.INSTANCE.onPause();
    }
 
-   protected override fun onResume() {
+   protected open fun onResume() {
       super.onResume();
       JankStatsAggregator.INSTANCE.enableTracking();
       JSWatchdogManager.INSTANCE.enable();
@@ -103,7 +103,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
       }
 
-      protected override fun createRootView(): com.facebook.react.ReactRootView {
+      protected open fun createRootView(): com.facebook.react.ReactRootView {
          val var1: Context = this.getContext();
          q.g(var1, "getContext(...)");
          val var2: ReactRootView = new ReactRootView(var1);
@@ -112,11 +112,11 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          return var2;
       }
 
-      protected override fun createRootView(initialProps: Bundle?): com.facebook.react.ReactRootView {
+      protected open fun createRootView(initialProps: Bundle?): com.facebook.react.ReactRootView {
          return this.createRootView();
       }
 
-      protected override fun isFabricEnabled(): Boolean {
+      protected open fun isFabricEnabled(): Boolean {
          return DefaultNewArchitectureEntryPoint.getFabricEnabled();
       }
    }

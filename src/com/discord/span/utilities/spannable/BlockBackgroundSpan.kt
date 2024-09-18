@@ -53,14 +53,14 @@ public class BlockBackgroundSpan(fillColor: Int, strokeColor: Int, strokeWidth: 
       q.h(var2, "paint");
       q.h(var8, "text");
       if (var8 is Spanned) {
-         val var13: Spanned = var8 as Spanned;
+         val var16: Spanned = var8 as Spanned;
          if ((var8 as Spanned).getSpanStart(this) == var9) {
-            val var16: RectF = this.rect;
+            val var13: RectF = this.rect;
             this.rect.left = (float)var3 + this.insetStart;
-            var16.top = (float)var5 + this.insetTop;
+            var13.top = (float)var5 + this.insetTop;
          }
 
-         if (var13.getSpanEnd(this) == var10) {
+         if (var16.getSpanEnd(this) == var10) {
             val var14: RectF = this.rect;
             this.rect.right = var4;
             var14.bottom = (float)var7 - this.insetBottom;

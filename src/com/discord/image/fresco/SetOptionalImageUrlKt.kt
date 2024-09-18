@@ -5,7 +5,7 @@ import com.facebook.drawee.controller.AbstractDraweeControllerBuilder
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
-import y5.f
+import o4.f
 
 public fun SimpleDraweeView.setOptionalImageUrl(imageUrl: String?, autoPlayAnimations: Boolean? = null, controllerListener: ControllerListener<in Any>? = null) {
    var var4: Byte;
@@ -13,7 +13,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(imageUrl: String?, autoPlayAnima
    var var6: Uri;
    label26: {
       q.h(var0, "<this>");
-      var6 = f.r(var1);
+      var6 = f.o(var1);
       var4 = 0;
       if (var6 != null) {
          val var7: java.lang.String = var6.getLastPathSegment();

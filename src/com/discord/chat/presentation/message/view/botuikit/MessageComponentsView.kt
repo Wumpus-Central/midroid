@@ -40,13 +40,13 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
       q.h(var2, "components");
       q.h(var3, "componentContext");
       q.h(var4, "actionListener");
-      val var8: ArrayList = new ArrayList(i.u(var2, 10));
+      val var8: ArrayList = new ArrayList(i.v(var2, 10));
       val var9: java.util.Iterator = var2.iterator();
 
       for (int var5 = 0; var9.hasNext(); var5++) {
          var var13: ComponentView = (ComponentView)var9.next();
          if (var5 < 0) {
-            i.t();
+            i.u();
          }
 
          val var10: Component = var13 as Component;
@@ -89,6 +89,6 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
 
       val var12: FlexboxLayout = this.binding.itemComponentsRoot;
       q.g(this.binding.itemComponentsRoot, "itemComponentsRoot");
-      MessageComponentsViewKt.replaceViews(var12, i.a0(var8));
+      MessageComponentsViewKt.replaceViews(var12, i.b0(var8));
    }
 }

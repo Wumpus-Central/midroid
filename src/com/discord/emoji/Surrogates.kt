@@ -32,12 +32,12 @@ public inline class Surrogates {
 
    @JvmStatic
    public fun toAssetUrl(): String {
-      var0 = toCodePoints-impl(var0);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("asset:///emoji-");
-      var1.append(var0);
-      var1.append(".png");
-      return var1.toString();
+      val var1: java.lang.String = toCodePoints-impl(var0);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("asset:///emoji-");
+      var2.append(var1);
+      var2.append(".png");
+      return var2.toString();
    }
 
    @JvmStatic
@@ -73,7 +73,7 @@ public inline class Surrogates {
    public fun withoutDiversity(): String {
       val var1: CharArray = Character.toChars(var0.codePointAt(0));
       q.g(var1, "toChars(...)");
-      return c.e0(var1, "", null, null, 0, null, null, 62, null);
+      return c.d0(var1, "", null, null, 0, null, null, 62, null);
    }
 
    override fun equals(var1: Any): Boolean {

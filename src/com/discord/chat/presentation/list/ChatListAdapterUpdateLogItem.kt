@@ -3,8 +3,8 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
+import kh.p
 import kotlin.jvm.internal.q
-import vj.p
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
    public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem {
@@ -28,7 +28,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
                for (var2 = ""; var4.hasNext(); var1++) {
                   var13 = (java.lang.String)var4.next();
                   if (var1 < 0) {
-                     i.t();
+                     i.u();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
@@ -77,19 +77,19 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var16.append("Items: ");
          var16.append(var8);
          val var18: java.lang.String = var16.toString();
-         val var19: StringBuilder = new StringBuilder();
+         var var19: StringBuilder = new StringBuilder();
          var19.append("Operations: ");
          var19.append(var13);
-         val var20: java.lang.String = var19.toString();
-         val var14: StringBuilder = new StringBuilder();
-         var14.append("ChatList - ");
-         var14.append(var10);
-         var14.append(", ");
-         var14.append(var18);
-         var14.append(", ");
-         var14.append(var20);
-         var14.append(", \n");
-         return var14.toString();
+         var13 = var19.toString();
+         var19 = new StringBuilder();
+         var19.append("ChatList - ");
+         var19.append(var10);
+         var19.append(", ");
+         var19.append(var18);
+         var19.append(", ");
+         var19.append(var13);
+         var19.append(", \n");
+         return var19.toString();
       }
    }
 

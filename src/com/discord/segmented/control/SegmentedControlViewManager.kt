@@ -15,11 +15,11 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
 import java.util.ArrayList
+import kh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
-import wj.o
+import lh.o
 
 @ReactModule(name = "DCDSegmentedControl")
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {
@@ -54,11 +54,11 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       return this.delegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDSegmentedControl";
    }
 

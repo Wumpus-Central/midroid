@@ -1,7 +1,13 @@
 package com.discord.segmented.control.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,12 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.n0
-import qn.g0.a
 
 @f
 internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) : ReactEvent {
@@ -89,8 +89,8 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
          val var0: ValueChangeEvent.$serializer = new ValueChangeEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.segmented.control.events.ValueChangeEvent", var0, 2);
-         var1.c("value", false);
-         var1.c("selectedSegmentIndex", false);
+         var1.l("value", false);
+         var1.l("selectedSegmentIndex", false);
          descriptor = var1;
       }
 
@@ -101,13 +101,13 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
       public open fun deserialize(decoder: Decoder): ValueChangeEvent {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          var var2: Int;
          var var3: Int;
          var var8: java.lang.String;
-         if (var7.p()) {
-            var8 = var7.m(var6, 0);
-            var3 = var7.i(var6, 1);
+         if (var7.y()) {
+            var8 = var7.t(var6, 0);
+            var3 = var7.k(var6, 1);
             var2 = 3;
          } else {
             var var4: Boolean = true;
@@ -116,17 +116,17 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
             var8 = null;
 
             while (var4) {
-               val var5: Int = var7.o(var6);
+               val var5: Int = var7.x(var6);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
                         throw new n(var5);
                      }
 
-                     var3 = var7.i(var6, 1);
+                     var3 = var7.k(var6, 1);
                      var2 |= 2;
                   } else {
-                     var8 = var7.m(var6, 0);
+                     var8 = var7.t(var6, 0);
                      var2 |= 1;
                   }
                } else {
@@ -135,7 +135,7 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new ValueChangeEvent(var2, var8, var3, null);
       }
 
@@ -143,9 +143,9 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ValueChangeEvent.write$Self$segmented_control_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

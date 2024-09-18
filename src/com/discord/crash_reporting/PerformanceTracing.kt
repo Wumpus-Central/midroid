@@ -75,12 +75,12 @@ public class PerformanceTracing : MarkerListener {
       val var4: java.lang.String;
       if (var1.getTag() != null && !q.c(var1.getName(), "CREATE_REACT_CONTEXT")) {
          val var2: java.lang.String = var1.getName();
-         val var3: java.lang.String = var1.getTag();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var2);
-         var5.append(" ");
-         var5.append(var3);
-         var4 = var5.toString();
+         val var5: java.lang.String = var1.getTag();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" ");
+         var3.append(var5);
+         var4 = var3.toString();
       } else {
          var4 = var1.getName();
       }
@@ -95,7 +95,7 @@ public class PerformanceTracing : MarkerListener {
       } else if (this.wildcardEventNames.contains(var1.getName())) {
          val var3: java.lang.String = this.startupRootEventsTree.get(var1.getName());
          var2 = var3;
-         if (i.T(this.wildcardEventNames, var3)) {
+         if (i.U(this.wildcardEventNames, var3)) {
             val var4: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
             val var6: StringBuilder = new StringBuilder();
             var6.append(var3);
@@ -127,7 +127,7 @@ public class PerformanceTracing : MarkerListener {
    private fun stopTransaction(transaction: TraceTransaction) {
       val var2: x0 = this.ongoingTransactions.get(var1);
       if (var2 != null) {
-         var2.d();
+         var2.j();
       }
 
       this.ongoingTransactions.remove(var1);
@@ -159,9 +159,9 @@ public class PerformanceTracing : MarkerListener {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1054)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:555)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 000: aload 0
@@ -202,7 +202,7 @@ public class PerformanceTracing : MarkerListener {
       // 048: aload 2
       // 049: ifnull 059
       // 04c: aload 2
-      // 04d: invokeinterface io/sentry/ISpan.d ()V 1
+      // 04d: invokeinterface io/sentry/ISpan.j ()V 1
       // 052: goto 059
       // 055: astore 1
       // 056: goto 1fd
@@ -223,7 +223,7 @@ public class PerformanceTracing : MarkerListener {
       // 079: aload 2
       // 07a: ifnull 083
       // 07d: aload 2
-      // 07e: invokeinterface io/sentry/ISpan.d ()V 1
+      // 07e: invokeinterface io/sentry/ISpan.j ()V 1
       // 083: aload 1
       // 084: invokevirtual com/discord/crash_reporting/PerformanceTracing$TransactionMarker.getName ()Ljava/lang/String;
       // 087: ldc "PROCESS_PACKAGE_MODULE"
@@ -273,7 +273,7 @@ public class PerformanceTracing : MarkerListener {
       // 0e2: ifnull 117
       // 0e5: aload 2
       // 0e6: aload 4
-      // 0e8: invokeinterface io/sentry/ISpan.g (Ljava/lang/String;)Lio/sentry/ISpan; 2
+      // 0e8: invokeinterface io/sentry/ISpan.n (Ljava/lang/String;)Lio/sentry/ISpan; 2
       // 0ed: astore 3
       // 0ee: aload 3
       // 0ef: ifnonnull 0f5
@@ -302,7 +302,7 @@ public class PerformanceTracing : MarkerListener {
       // 120: return
       // 121: aload 3
       // 122: aload 4
-      // 124: invokeinterface io/sentry/ISpan.g (Ljava/lang/String;)Lio/sentry/ISpan; 2
+      // 124: invokeinterface io/sentry/ISpan.n (Ljava/lang/String;)Lio/sentry/ISpan; 2
       // 129: astore 2
       // 12a: aload 2
       // 12b: ldc_w "startChild(...)"
@@ -378,7 +378,7 @@ public class PerformanceTracing : MarkerListener {
       // 1c0: aload 2
       // 1c1: ifnull 1fa
       // 1c4: aload 2
-      // 1c5: invokeinterface io/sentry/ISpan.d ()V 1
+      // 1c5: invokeinterface io/sentry/ISpan.j ()V 1
       // 1ca: aload 0
       // 1cb: getfield com/discord/crash_reporting/PerformanceTracing.ongoingSpans Ljava/util/Map;
       // 1ce: aload 4
@@ -419,9 +419,9 @@ public class PerformanceTracing : MarkerListener {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1054)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:555)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 0
@@ -493,7 +493,7 @@ public class PerformanceTracing : MarkerListener {
       fun {
          val var0: Array<PerformanceTracing.MarkerEnd> = $values();
          $VALUES = var0;
-         $ENTRIES = ck.a.a(var0);
+         $ENTRIES = rh.a.a(var0);
       }
 
       @JvmStatic
@@ -564,18 +564,18 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.name;
-         val var3: java.lang.String = this.tag;
+         val var3: java.lang.String = this.name;
+         val var1: java.lang.String = this.tag;
          val var4: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("TransactionMarker(name=");
-         var1.append(var2);
-         var1.append(", tag=");
-         var1.append(var3);
-         var1.append(", markerEnd=");
-         var1.append(var4);
-         var1.append(")");
-         return var1.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("TransactionMarker(name=");
+         var2.append(var3);
+         var2.append(", tag=");
+         var2.append(var1);
+         var2.append(", markerEnd=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

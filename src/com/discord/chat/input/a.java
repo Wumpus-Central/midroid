@@ -10,6 +10,6 @@ public final class a implements Runnable {
 
    @Override
    public final void run() {
-      ChatInputManagerModule.a(this.j, this.k, this.l);
+      ChatInputManagerModule.b(this.j, this.k, this.l);
    }
 }

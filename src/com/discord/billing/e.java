@@ -1,8 +1,8 @@
 package com.discord.billing;
 
+import b3.j;
 import com.android.billingclient.api.BillingResult;
 import java.util.List;
-import l4.j;
 
 // $VF: synthetic class
 public final class e implements j {

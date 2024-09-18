@@ -30,9 +30,9 @@ import com.facebook.drawee.drawable.ScalingUtils.ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
+import kh.l
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import vj.l
 
 internal sealed class EmojiPickerViewHolder protected constructor(view: View) : RecyclerView.ViewHolder(var1) {
    public class Category(context: Context) : EmojiPickerViewHolder {
@@ -123,7 +123,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          q.h(var2, "onPressEmoji");
          q.h(var3, "onLongPressEmoji");
          super(new SimpleDraweeView(var1), null);
-         this.placeholder$delegate = l.a(<unrepresentable>.INSTANCE);
+         this.placeholder$delegate = l.b(<unrepresentable>.INSTANCE);
          val var4: View = this.itemView;
          q.f(this.itemView, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
          val var5: SimpleDraweeView = var4 as SimpleDraweeView;
@@ -211,10 +211,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiItem = var1;
          this.emojiSize = var3;
          this.emojiMargin = var4;
-         val var8: SimpleDraweeView = this.emojiView;
-         val var7: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
-         var7.setMargins(var4, var4, var4, var4);
-         var8.setLayoutParams(var7);
+         val var7: SimpleDraweeView = this.emojiView;
+         val var8: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
+         var8.setMargins(var4, var4, var4, var4);
+         var7.setLayoutParams(var8);
          this.emojiView.setContentDescription(var1.getName());
          val var11: GenericDraweeHierarchy = this.emojiView.getHierarchy() as GenericDraweeHierarchy;
          val var10: Drawable;
@@ -273,7 +273,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : k6.a {
+      private class EmojiLoadListener(animating: Boolean) : a5.a {
          private final var animating: Boolean
 
          init {
@@ -303,10 +303,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
 
       public fun onBindViewHolder(emojiSize: Int, emojiMargin: Int) {
-         val var4: View = this.itemView;
-         val var3: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
-         var3.setMargins(var2, var2, var2, var2);
-         var4.setLayoutParams(var3);
+         val var3: View = this.itemView;
+         val var4: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
+         var4.setMargins(var2, var2, var2, var2);
+         var3.setLayoutParams(var4);
       }
    }
 

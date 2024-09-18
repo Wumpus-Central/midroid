@@ -1,5 +1,10 @@
 package com.discord.chatreplay
 
+import cl.f
+import cl.n
+import fl.b2
+import fl.g0
+import fl.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.x0
 
 @f
 public data class Replay(filename: String, lastModified: Long) {
@@ -82,8 +82,8 @@ public data class Replay(filename: String, lastModified: Long) {
          val var0: Replay.$serializer = new Replay.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chatreplay.Replay", var0, 2);
-         var1.c("filename", false);
-         var1.c("lastModified", false);
+         var1.l("filename", false);
+         var1.l("lastModified", false);
          descriptor = var1;
       }
 
@@ -94,13 +94,13 @@ public data class Replay(filename: String, lastModified: Long) {
       public open fun deserialize(decoder: Decoder): Replay {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: c = var1.c(var7);
          var var2: Int;
          var var5: Long;
          var var9: java.lang.String;
-         if (var8.p()) {
-            var9 = var8.m(var7, 0);
-            var5 = var8.f(var7, 1);
+         if (var8.y()) {
+            var9 = var8.t(var7, 0);
+            var5 = var8.h(var7, 1);
             var2 = 3;
          } else {
             var9 = null;
@@ -109,17 +109,17 @@ public data class Replay(filename: String, lastModified: Long) {
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var5 = var8.f(var7, 1);
+                     var5 = var8.h(var7, 1);
                      var2 |= 2;
                   } else {
-                     var9 = var8.m(var7, 0);
+                     var9 = var8.t(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -128,7 +128,7 @@ public data class Replay(filename: String, lastModified: Long) {
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new Replay(var2, var9, var5, null);
       }
 
@@ -136,13 +136,13 @@ public data class Replay(filename: String, lastModified: Long) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          Replay.write$Self$chat_replay_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

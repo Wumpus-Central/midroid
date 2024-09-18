@@ -1,7 +1,13 @@
 package com.discord.zoom_layout.reactevents
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import fl.f0
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,11 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.f0
-import qn.g0
-import qn.g0.a
 
 @f
 internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
@@ -46,8 +47,8 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       return java.lang.Float.hashCode(this.zoomScale);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -71,7 +72,7 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
          val var0: OnZoomChangedEvent.$serializer = new OnZoomChangedEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.zoom_layout.reactevents.OnZoomChangedEvent", var0, 1);
-         var1.c("zoomScale", false);
+         var1.l("zoomScale", false);
          descriptor = var1;
       }
 
@@ -82,25 +83,25 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       public open fun deserialize(decoder: Decoder): OnZoomChangedEvent {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var6: Boolean = var8.p();
+         val var8: c = var1.c(var7);
+         val var6: Boolean = var8.y();
          var var3: Int = 1;
          var var4: Boolean = true;
          var var2: Float;
          if (var6) {
-            var2 = var8.u(var7, 0);
+            var2 = var8.G(var7, 0);
          } else {
             var2 = 0.0F;
             var3 = 0;
 
             while (var4) {
-               val var5: Int = var8.o(var7);
+               val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      throw new n(var5);
                   }
 
-                  var2 = var8.u(var7, 0);
+                  var2 = var8.G(var7, 0);
                   var3 |= 1;
                } else {
                   var4 = false;
@@ -108,7 +109,7 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new OnZoomChangedEvent(var3, var2, null);
       }
 
@@ -116,9 +117,9 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          OnZoomChangedEvent.write$Self$zoom_layout_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

@@ -10,10 +10,10 @@ import com.discord.notifications.api.NotificationData
 import com.discord.notifications.renderer.utils.NotificationManagerUtilsKt
 import com.discord.notifications.renderer.utils.SilenceCallWorker
 import com.discord.primitives.ChannelId
-import dn.g
+import kh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import vj.w
+import sk.f
 
 public class NotificationRenderer {
    private fun runWorkers(context: Context, notification: NotificationData) {
@@ -45,15 +45,15 @@ public class NotificationRenderer {
       q.h(var1, "context");
       q.h(var2, "notification");
       q.h(var4, "notificationDataMap");
-      g.f(
+      f.f(
          null,
          new Function2(var2, var1, var7, var4, var5, this, var3, var6, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
-   //   at java.base/java.util.HashMap.put(HashMap.java:618)
-   //   at java.base/java.util.HashSet.add(HashSet.java:229)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1083,16 +1083,15 @@ public class NotificationRenderer {
    public fun displayLocal(context: Context, notification: Map<String, Any>) {
       q.h(var1, "context");
       q.h(var2, "notification");
-      g.f(
+      f.f(
          null,
          new Function2(var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2112,6 +2111,7 @@ public class NotificationRenderer {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          1,
          null
@@ -2124,20 +2124,20 @@ public class NotificationRenderer {
       val var3: java.util.Iterator = var2.getAckChannelIds().iterator();
 
       while (var3.hasNext()) {
-         var var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
+         val var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
          val var4: StringBuilder = new StringBuilder();
          var4.append("MESSAGE_CREATE");
          var4.append(var5);
-         var5 = var4.toString();
-         val var6: NotificationChannels = NotificationChannels.INSTANCE;
+         val var6: java.lang.String = var4.toString();
+         val var7: NotificationChannels = NotificationChannels.INSTANCE;
          if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
-               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var5)
+               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var6)
             )
             .i()
             .getBoolean("ignoreAck", false)) {
-            this.clear(var1, var5);
+            this.clear(var1, var6);
          } else {
-            this.markNotificationAsDirectReply(var1, var5, var6.getNotificationChannelId(var2, var1), false);
+            this.markNotificationAsDirectReply(var1, var6, var7.getNotificationChannelId(var2, var1), false);
          }
       }
    }

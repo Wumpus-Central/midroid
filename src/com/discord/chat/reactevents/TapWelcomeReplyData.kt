@@ -4,8 +4,8 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kh.w
 import kotlin.jvm.internal.q
-import vj.w
 
 public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : TapWelcomeReplyData(var1, var3), ReactEvent {
    public final val messageId: MessageId
@@ -50,9 +50,9 @@ public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : T
       return java.lang.Long.hashCode(this.stickerId) * 31 + MessageId.hashCode-impl(this.messageId);
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{w.a("messageId", MessageId.toString-impl(this.messageId)), w.a("stickerId", java.lang.String.valueOf(this.stickerId))}
+         w.a("messageId", MessageId.toString-impl(this.messageId)), w.a("stickerId", java.lang.String.valueOf(this.stickerId))
       );
    }
 

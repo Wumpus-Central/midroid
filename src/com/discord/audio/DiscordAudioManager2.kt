@@ -31,7 +31,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
       this.audioDeviceCallback = this.setupAudioDeviceCallback();
       val var3: Array<AudioDeviceInfo> = var2.getDevices(2);
       q.e(var3);
-      this.audioDevices = kotlin.collections.c.O0(var3);
+      this.audioDevices = kotlin.collections.c.L0(var3);
    }
 
    private fun emitEffectiveDevice() {
@@ -78,17 +78,17 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
             if (var1 != null && var1.length != 0) {
                val var5: DiscordAudioManager2 = this.this$0;
                var var7: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var6: ArrayList = new ArrayList();
+               val var8: ArrayList = new ArrayList();
                var var4: Int = var1.length;
 
                for (int var2 = 0; var2 < var4; var2++) {
-                  val var8: AudioDeviceInfo = var1[var2];
+                  val var6: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var6.add(var8);
+                     var8.add(var6);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var5, w.l(var7, var6));
+               DiscordAudioManager2.access$setAudioDevices$p(var5, w.l(var7, var8));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new Function1(this.this$0) {
                   final DiscordAudioManager2 this$0;
 
@@ -99,7 +99,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
                   public final void invoke(DiscordAudioManagerListener var1) {
                      q.h(var1, "listener");
-                     var1.onAudioDevicesUpdated(i.Q0(this.this$0.getAudioDevices()));
+                     var1.onAudioDevicesUpdated(i.R0(this.this$0.getAudioDevices()));
                   }
                });
                if (DiscordAudioManager2.access$getPreferredAudioDevice$p(this.this$0) == null) {
@@ -126,6 +126,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
                   var4 = var1.length;
                   var11 = 0;
 
+                  var var17: AudioDeviceInfo;
                   while (true) {
                      var17 = var7;
                      if (var11 >= var4) {
@@ -161,19 +162,19 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
          public void onAudioDevicesRemoved(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var7: DiscordAudioManager2 = this.this$0;
+               val var4: DiscordAudioManager2 = this.this$0;
                val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
                val var5: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
                for (int var2 = 0; var2 < var3; var2++) {
-                  val var4: AudioDeviceInfo = var1[var2];
+                  val var7: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var5.add(var4);
+                     var5.add(var7);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var7, w.j(var6, i.U0(var5)));
+               DiscordAudioManager2.access$setAudioDevices$p(var4, w.j(var6, i.V0(var5)));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new Function1(this.this$0) {
                   final DiscordAudioManager2 this$0;
 
@@ -184,7 +185,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
                   public final void invoke(DiscordAudioManagerListener var1) {
                      q.h(var1, "listener");
-                     var1.onAudioDevicesUpdated(i.Q0(this.this$0.getAudioDevices()));
+                     var1.onAudioDevicesUpdated(i.R0(this.this$0.getAudioDevices()));
                   }
                });
                DiscordAudioManager2.access$emitEffectiveDevice(this.this$0);
@@ -209,13 +210,13 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          }
       }
 
-      val var7: ArrayList = new ArrayList(i.u(var2, 10));
+      val var7: ArrayList = new ArrayList(i.v(var2, 10));
 
-      for (AudioDeviceInfo var8 : var2) {
-         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var8));
+      for (AudioDeviceInfo var5 : var2) {
+         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var5));
       }
 
-      return i.T0(var7);
+      return i.U0(var7);
    }
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {

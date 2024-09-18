@@ -22,9 +22,9 @@ public class DebugPrintableCollection {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1054)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:555)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 0
@@ -77,20 +77,20 @@ public class DebugPrintableCollection {
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
       // 58: astore 14
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 5d: astore 13
+      // 5d: astore 12
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 12
-      // 64: aload 12
+      // 62: astore 13
+      // 64: aload 13
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 6a: aload 13
+      // 6a: aload 12
       // 6c: aload 2
-      // 6d: aload 12
+      // 6d: aload 13
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
       // 72: aload 14
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 79: aload 13
+      // 79: aload 12
       // 7b: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 80: pop
       // 81: aload 0
@@ -122,16 +122,16 @@ public class DebugPrintableCollection {
    }
 
    private fun removeDeadReferencesLocked() {
-      val var5: ArrayList = new ArrayList();
+      val var4: ArrayList = new ArrayList();
 
-      for (Entry var4 : this.collection.entrySet()) {
-         val var1: Long = (var4.getKey() as java.lang.Number).longValue();
-         if ((var4.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
-            var5.add(var1);
+      for (Entry var3 : this.collection.entrySet()) {
+         val var1: Long = (var3.getKey() as java.lang.Number).longValue();
+         if ((var3.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
+            var4.add(var1);
          }
       }
 
-      val var7: java.util.Iterator = var5.iterator();
+      val var7: java.util.Iterator = var4.iterator();
 
       while (var7.hasNext()) {
          this.collection.remove((var7.next() as java.lang.Number).longValue());
@@ -144,7 +144,7 @@ public class DebugPrintableCollection {
       // java.lang.RuntimeException: parsing failure!
       //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:211)
       //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.createStatement(DomHelper.java:27)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:156)
+      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:157)
       //
       // Bytecode:
       // 000: aload 1
@@ -187,22 +187,22 @@ public class DebugPrintableCollection {
       // 057: aload 7
       // 059: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 05e: checkcast com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 061: astore 7
-      // 063: aload 7
+      // 061: astore 8
+      // 063: aload 8
       // 065: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getReference ()Ljava/lang/ref/WeakReference;
       // 068: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
       // 06b: checkcast com/discord/crash_reporting/system_logs/DebugPrintable
-      // 06e: astore 8
-      // 070: aload 8
+      // 06e: astore 7
+      // 070: aload 7
       // 072: ifnonnull 078
       // 075: goto 035
-      // 078: aload 8
+      // 078: aload 7
       // 07a: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
       // 07d: aload 2
       // 07e: lload 3
       // 07f: invokevirtual java/lang/StringBuilder.append (J)Ljava/lang/StringBuilder;
       // 082: pop
-      // 083: aload 7
+      // 083: aload 8
       // 085: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
       // 088: ifnull 0a3
       // 08b: aload 2
@@ -210,7 +210,7 @@ public class DebugPrintableCollection {
       // 08e: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
       // 091: pop
       // 092: aload 2
-      // 093: aload 7
+      // 093: aload 8
       // 095: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
       // 098: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 09b: pop
@@ -231,25 +231,25 @@ public class DebugPrintableCollection {
       // 0b7: aload 2
       // 0b8: ldc "append(...)"
       // 0ba: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0bd: aload 8
+      // 0bd: aload 7
       // 0bf: aload 6
       // 0c1: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c6: goto 0f0
-      // 0c9: astore 8
+      // 0c9: astore 7
       // 0cb: new java/lang/StringBuilder
-      // 0ce: astore 7
-      // 0d0: aload 7
+      // 0ce: astore 8
+      // 0d0: aload 8
       // 0d2: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0d5: aload 7
+      // 0d5: aload 8
       // 0d7: ldc_w "Exception: "
       // 0da: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0dd: pop
-      // 0de: aload 7
-      // 0e0: aload 8
+      // 0de: aload 8
+      // 0e0: aload 7
       // 0e2: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 0e5: pop
       // 0e6: aload 2
-      // 0e7: aload 7
+      // 0e7: aload 8
       // 0e9: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0ec: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0ef: pop

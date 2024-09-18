@@ -37,12 +37,12 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
             if (var1 != null) {
                val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
                if (var3 != null) {
-                  val var4: ArrayList = new ArrayList(i.u(var3, 10));
+                  val var4: ArrayList = new ArrayList(i.v(var3, 10));
                   val var5: java.util.Iterator = var3.iterator();
 
                   while (var5.hasNext()) {
                      val var2: Int = (var5.next() as java.lang.Number).intValue();
-                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255}));
+                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
                   }
 
                   this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray(var4));

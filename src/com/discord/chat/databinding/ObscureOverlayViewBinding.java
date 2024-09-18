@@ -11,7 +11,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.IconButtonView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import eightbitlab.com.blurview.BlurView;
-import f3.a;
+import n1.a;
 
 public final class ObscureOverlayViewBinding implements ViewBinding {
    public final BlurView blurView;
@@ -38,27 +38,27 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
 
    public static ObscureOverlayViewBinding bind(View var0) {
       int var1 = R.id.blur_view;
-      BlurView var2 = (BlurView)a.a(var0, var1);
-      if (var2 != null) {
+      BlurView var3 = (BlurView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.description_label;
-         TextView var8 = (TextView)a.a(var0, var1);
-         if (var8 != null) {
+         TextView var5 = (TextView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.hide_button;
-            IconButtonView var4 = (IconButtonView)a.a(var0, var1);
-            if (var4 != null) {
+            IconButtonView var6 = (IconButtonView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.media_warning_icon;
-               SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-               if (var3 != null) {
+               SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.overlay_centered_container;
-                  LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-                  if (var7 != null) {
+                  LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.overlay_layout;
-                     ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
-                     if (var5 != null) {
+                     ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.reveal_button;
-                        IconButtonView var6 = (IconButtonView)a.a(var0, var1);
-                        if (var6 != null) {
-                           return new ObscureOverlayViewBinding(var0, var2, var8, var4, var3, var7, var5, var6);
+                        IconButtonView var8 = (IconButtonView)a.a(var0, var1);
+                        if (var8 != null) {
+                           return new ObscureOverlayViewBinding(var0, var3, var5, var6, var2, var4, var7, var8);
                         }
                      }
                   }

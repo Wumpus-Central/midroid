@@ -5,8 +5,8 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kh.w
 import kotlin.jvm.internal.q
-import vj.w
 
 public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapStickerData(var1, var2), ReactEvent {
    public final val messageId: MessageId
@@ -53,27 +53,22 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
       return this.sticker.hashCode() * 31 + MessageId.hashCode-impl(this.messageId);
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            w.a("messageId", this.messageId),
-            w.a(
-               "sticker",
-               NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", java.lang.String.valueOf(this.sticker.getId())), w.a("name", this.sticker.getName())})
-            )
-         }
+         w.a("messageId", this.messageId),
+         w.a("sticker", NativeMapExtensionsKt.nativeMapOf(w.a("id", java.lang.String.valueOf(this.sticker.getId())), w.a("name", this.sticker.getName())))
       );
    }
 
    public override fun toString(): String {
-      val var1: Sticker = this.sticker;
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapStickerData(sticker=");
-      var3.append(var1);
-      var3.append(", messageId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: Sticker = this.sticker;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapStickerData(sticker=");
+      var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 }

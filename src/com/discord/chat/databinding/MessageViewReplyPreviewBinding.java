@@ -13,7 +13,7 @@ import com.discord.chat.presentation.message.MessageTagView;
 import com.discord.chat.presentation.message.RoleDotView;
 import com.discord.chat.presentation.message.view.MessageContentView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import f3.a;
+import n1.a;
 
 public final class MessageViewReplyPreviewBinding implements ViewBinding {
    public final SimpleDraweeView replyAuthorAvatar;
@@ -59,39 +59,39 @@ public final class MessageViewReplyPreviewBinding implements ViewBinding {
 
    public static MessageViewReplyPreviewBinding bind(View var0) {
       int var1 = R.id.reply_author_avatar;
-      SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-      if (var9 != null) {
+      SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+      if (var12 != null) {
          var1 = R.id.reply_author_name;
-         TextView var11 = (TextView)a.a(var0, var1);
-         if (var11 != null) {
+         TextView var4 = (TextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.reply_icon;
-            SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-            if (var8 != null) {
+            SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.reply_leading_icon;
-               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.reply_leading_views;
-                  LinearLayout var12 = (LinearLayout)a.a(var0, var1);
-                  if (var12 != null) {
+                  LinearLayout var9 = (LinearLayout)a.a(var0, var1);
+                  if (var9 != null) {
                      var1 = R.id.reply_message_tag_view;
-                     MessageTagView var6 = (MessageTagView)a.a(var0, var1);
-                     if (var6 != null) {
+                     MessageTagView var2 = (MessageTagView)a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.reply_role_dot;
-                        RoleDotView var4 = (RoleDotView)a.a(var0, var1);
-                        if (var4 != null) {
+                        RoleDotView var5 = (RoleDotView)a.a(var0, var1);
+                        if (var5 != null) {
                            var1 = R.id.reply_spline;
-                           ChannelSpineView var2 = (ChannelSpineView)a.a(var0, var1);
-                           if (var2 != null) {
+                           ChannelSpineView var6 = (ChannelSpineView)a.a(var0, var1);
+                           if (var6 != null) {
                               var1 = R.id.reply_text;
-                              MessageContentView var3 = (MessageContentView)a.a(var0, var1);
-                              if (var3 != null) {
+                              MessageContentView var10 = (MessageContentView)a.a(var0, var1);
+                              if (var10 != null) {
                                  var1 = R.id.reply_trailing_icon;
-                                 SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-                                 if (var10 != null) {
+                                 SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                                 if (var3 != null) {
                                     var1 = R.id.tag_chiplet;
-                                    ClanTagChipletView var7 = (ClanTagChipletView)a.a(var0, var1);
-                                    if (var7 != null) {
-                                       return new MessageViewReplyPreviewBinding(var0, var9, var11, var8, var5, var12, var6, var4, var2, var3, var10, var7);
+                                    ClanTagChipletView var11 = (ClanTagChipletView)a.a(var0, var1);
+                                    if (var11 != null) {
+                                       return new MessageViewReplyPreviewBinding(var0, var12, var4, var7, var8, var9, var2, var5, var6, var10, var3, var11);
                                     }
                                  }
                               }

@@ -1,5 +1,11 @@
 package com.discord.chat.bridge.voiceinviteembed
 
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import qn.h
 
 @f
 public data class VoiceInviteEmbed(guildId: String,
@@ -129,11 +129,11 @@ public data class VoiceInviteEmbed(guildId: String,
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.guildId.hashCode();
-      val var5: Int = this.channelId.hashCode();
+      val var5: Int = this.guildId.hashCode();
+      val var6: Int = this.channelId.hashCode();
       val var4: Int = this.titleText.hashCode();
-      val var3: Int = this.bodyText.hashCode();
-      val var6: Int = this.joinText.hashCode();
+      val var2: Int = this.bodyText.hashCode();
+      val var3: Int = this.joinText.hashCode();
       val var1: Int;
       if (this.joinIcon == null) {
          var1 = 0;
@@ -141,38 +141,38 @@ public data class VoiceInviteEmbed(guildId: String,
          var1 = this.joinIcon.hashCode();
       }
 
-      return ((((((var2 * 31 + var5) * 31 + var4) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.joinDisabled)) * 31
+      return ((((((var5 * 31 + var6) * 31 + var4) * 31 + var2) * 31 + var3) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.joinDisabled)) * 31
          + java.lang.Boolean.hashCode(this.isInactive);
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.titleText;
-      val var9: java.lang.String = this.bodyText;
-      val var6: java.lang.String = this.joinText;
-      val var5: java.lang.String = this.joinIcon;
-      val var1: Boolean = this.joinDisabled;
-      val var2: Boolean = this.isInactive;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("VoiceInviteEmbed(guildId=");
-      var8.append(var7);
-      var8.append(", channelId=");
-      var8.append(var4);
-      var8.append(", titleText=");
-      var8.append(var3);
-      var8.append(", bodyText=");
-      var8.append(var9);
-      var8.append(", joinText=");
-      var8.append(var6);
-      var8.append(", joinIcon=");
-      var8.append(var5);
-      var8.append(", joinDisabled=");
-      var8.append(var1);
-      var8.append(", isInactive=");
-      var8.append(var2);
-      var8.append(")");
-      return var8.toString();
+      val var5: java.lang.String = this.guildId;
+      val var9: java.lang.String = this.channelId;
+      val var7: java.lang.String = this.titleText;
+      val var4: java.lang.String = this.bodyText;
+      val var3: java.lang.String = this.joinText;
+      val var8: java.lang.String = this.joinIcon;
+      val var2: Boolean = this.joinDisabled;
+      val var1: Boolean = this.isInactive;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("VoiceInviteEmbed(guildId=");
+      var6.append(var5);
+      var6.append(", channelId=");
+      var6.append(var9);
+      var6.append(", titleText=");
+      var6.append(var7);
+      var6.append(", bodyText=");
+      var6.append(var4);
+      var6.append(", joinText=");
+      var6.append(var3);
+      var6.append(", joinIcon=");
+      var6.append(var8);
+      var6.append(", joinDisabled=");
+      var6.append(var2);
+      var6.append(", isInactive=");
+      var6.append(var1);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -187,14 +187,14 @@ public data class VoiceInviteEmbed(guildId: String,
          val var0: VoiceInviteEmbed.$serializer = new VoiceInviteEmbed.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.voiceinviteembed.VoiceInviteEmbed", var0, 8);
-         var1.c("guildId", false);
-         var1.c("channelId", false);
-         var1.c("titleText", false);
-         var1.c("bodyText", false);
-         var1.c("joinText", false);
-         var1.c("joinIcon", false);
-         var1.c("joinDisabled", false);
-         var1.c("isInactive", false);
+         var1.l("guildId", false);
+         var1.l("channelId", false);
+         var1.l("titleText", false);
+         var1.l("bodyText", false);
+         var1.l("joinText", false);
+         var1.l("joinIcon", false);
+         var1.l("joinDisabled", false);
+         var1.l("isInactive", false);
          descriptor = var1;
       }
 
@@ -205,7 +205,7 @@ public data class VoiceInviteEmbed(guildId: String,
       public open fun deserialize(decoder: Decoder): VoiceInviteEmbed {
          q.h(var1, "decoder");
          val var13: SerialDescriptor = this.getDescriptor();
-         val var14: c = var1.b(var13);
+         val var14: c = var1.c(var13);
          var var2: Int;
          var var3: Int;
          var var6: Boolean;
@@ -215,16 +215,16 @@ public data class VoiceInviteEmbed(guildId: String,
          var var10: java.lang.String;
          var var11: java.lang.String;
          val var15: java.lang.String;
-         if (var14.p()) {
-            var10 = var14.m(var13, 0);
-            var9 = var14.m(var13, 1);
-            var11 = var14.m(var13, 2);
-            var8 = var14.m(var13, 3);
-            var7 = var14.m(var13, 4);
-            var15 = var14.n(var13, 5, b2.a, null) as java.lang.String;
-            var2 = var14.C(var13, 6);
-            var6 = var14.C(var13, 7);
-            var3 = 255;
+         if (var14.y()) {
+            var10 = var14.t(var13, 0);
+            var9 = var14.t(var13, 1);
+            var11 = var14.t(var13, 2);
+            var7 = var14.t(var13, 3);
+            var8 = var14.t(var13, 4);
+            var15 = var14.v(var13, 5, b2.a, null) as java.lang.String;
+            var3 = var14.s(var13, 6);
+            var6 = var14.s(var13, 7);
+            var2 = 255;
          } else {
             var var4: Boolean = true;
             var6 = false;
@@ -238,41 +238,41 @@ public data class VoiceInviteEmbed(guildId: String,
             var3 = 0;
 
             while (var4) {
-               val var5: Int = var14.o(var13);
+               val var5: Int = var14.x(var13);
                switch (var5) {
                   case -1:
                      var4 = false;
                      break;
                   case 0:
-                     var10 = var14.m(var13, 0);
+                     var10 = var14.t(var13, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var14.m(var13, 1);
+                     var9 = var14.t(var13, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var14.m(var13, 2);
+                     var8 = var14.t(var13, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var14.m(var13, 3);
+                     var7 = var14.t(var13, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var16 = var14.m(var13, 4);
+                     var16 = var14.t(var13, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var11 = var14.n(var13, 5, b2.a, var11) as java.lang.String;
+                     var11 = var14.v(var13, 5, b2.a, var11) as java.lang.String;
                      var2 |= 32;
                      break;
                   case 6:
-                     var3 = var14.C(var13, 6);
+                     var3 = var14.s(var13, 6);
                      var2 |= 64;
                      break;
                   case 7:
-                     var6 = var14.C(var13, 7);
+                     var6 = var14.s(var13, 7);
                      var2 |= 128;
                      break;
                   default:
@@ -280,29 +280,26 @@ public data class VoiceInviteEmbed(guildId: String,
                }
             }
 
-            var3 = var2;
             var11 = var8;
-            var8 = var7;
-            var7 = var16;
-            var2 = var3;
+            var8 = var16;
             var15 = var11;
          }
 
-         var14.c(var13);
-         return new VoiceInviteEmbed(var3, var10, var9, var11, var8, var7, var15, (boolean)var2, var6, null);
+         var14.b(var13);
+         return new VoiceInviteEmbed(var2, var10, var9, var11, var7, var8, var15, (boolean)var3, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceInviteEmbed) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          VoiceInviteEmbed.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

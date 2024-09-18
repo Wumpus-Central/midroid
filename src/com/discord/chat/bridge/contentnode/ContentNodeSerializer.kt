@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
+import el.g
+import el.e.i
+import gl.e
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -7,9 +10,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import pn.g
-import pn.e.i
-import rn.e
 
 public object ContentNodeSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
@@ -26,7 +26,7 @@ public object ContentNodeSerializer : KSerializer {
             throw new IllegalArgumentException("Failed requirement.".toString());
          }
 
-         val var2: JsonElement = (var1 as e).g();
+         val var2: JsonElement = (var1 as e).i();
          if (var2 is JsonPrimitive) {
             var4 = new TextContentNode((var2 as JsonPrimitive).a());
          } else {

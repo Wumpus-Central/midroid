@@ -1,6 +1,5 @@
 package com.discord.device.utils
 
-import ck.a
 import kotlin.enums.EnumEntries
 
 private enum class NavigationType(value: Int) {
@@ -17,7 +16,7 @@ private enum class NavigationType(value: Int) {
    fun {
       val var0: Array<NavigationType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = rh.a.a(var0);
    }
 
    init {

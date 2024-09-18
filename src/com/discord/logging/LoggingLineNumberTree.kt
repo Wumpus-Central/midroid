@@ -8,7 +8,7 @@ import timber.log.a.c
 
 internal class LoggingLineNumberTree : c {
    private final val ignoreClasses: List<String> =
-      i.m(
+      i.n(
          new java.lang.String[]{
             a.class.getName(), b.class.getName(), c.class.getName(), timber.log.a.a.class.getName(), LoggingLineNumberTree.class.getName(), Log.class.getName()
          }

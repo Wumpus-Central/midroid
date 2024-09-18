@@ -1,23 +1,23 @@
 package com.discord.notifications.api
 
+import dl.a
 import kotlin.jvm.internal.c
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import on.a
 
 public object CanReplySerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return a.w(c.a).getDescriptor();
+         return a.A(c.a).getDescriptor();
       }
 
 
    public open fun deserialize(decoder: Decoder): Boolean {
       q.h(var1, "decoder");
-      return q.c(var1.z(), "can_reply");
+      return q.c(var1.n(), "can_reply");
    }
 
    public open fun serialize(encoder: Encoder, value: Boolean) {

@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 247204
-  versionName: 247.4 - Alpha
+  versionCode: 249203
+  versionName: 249.3 - Alpha
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -21,11 +21,9 @@ unknownFiles:
   DebugProbesKt.bin: 8
   asset-delivery-ktx.properties: 8
   asset-delivery.properties: 8
-  barcode-scanning-common.properties: 8
   billing-ktx.properties: 8
   billing.properties: 8
   client_analytics.proto: 8
-  common.properties: 8
   core-common.properties: 8
   firebase-annotations.properties: 8
   firebase-encoders-json.properties: 8
@@ -34,7 +32,6 @@ unknownFiles:
   firebase-iid-interop.properties: 8
   firebase-measurement-connector.properties: 8
   googleid.properties: 8
-  image.properties: 8
   kotlin-tooling-metadata.json: 8
   messaging_event.proto: 8
   messaging_event_extension.proto: 8
@@ -49,15 +46,12 @@ unknownFiles:
   play-services-cloud-messaging.properties: 8
   play-services-deviceperformance.properties: 8
   play-services-fido.properties: 8
-  play-services-mlkit-barcode-scanning.properties: 8
   play-services-nearby.properties: 8
   play-services-stats.properties: 8
   play-services-tagmanager-v4-impl.properties: 8
   play-services-tasks.properties: 8
   review-ktx.properties: 8
   review.properties: 8
-  vision-common.properties: 8
-  vision-interfaces.properties: 8
   stamp-cert-sha256: 8
   okhttp3/internal/publicsuffix/NOTICE: 8
   okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
@@ -70,12 +64,6 @@ doNotCompress:
 - META-INF/androidx.arch.core_core-runtime.version
 - META-INF/androidx.autofill_autofill.version
 - META-INF/androidx.browser_browser.version
-- META-INF/androidx.camera_camera-camera2.version
-- META-INF/androidx.camera_camera-core.version
-- META-INF/androidx.camera_camera-extensions.version
-- META-INF/androidx.camera_camera-lifecycle.version
-- META-INF/androidx.camera_camera-video.version
-- META-INF/androidx.camera_camera-view.version
 - META-INF/androidx.cardview_cardview.version
 - META-INF/androidx.coordinatorlayout_coordinatorlayout.version
 - META-INF/androidx.core_core-ktx.version
@@ -100,6 +88,7 @@ doNotCompress:
 - META-INF/androidx.fragment_fragment.version
 - META-INF/androidx.interpolator_interpolator.version
 - META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.lifecycle_lifecycle-extensions.version
 - META-INF/androidx.lifecycle_lifecycle-livedata-core.version
 - META-INF/androidx.lifecycle_lifecycle-livedata.version
 - META-INF/androidx.lifecycle_lifecycle-process.version
@@ -121,7 +110,6 @@ doNotCompress:
 - META-INF/androidx.sqlite_sqlite.version
 - META-INF/androidx.startup_startup-runtime.version
 - META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
-- META-INF/androidx.tracing_tracing-ktx.version
 - META-INF/androidx.tracing_tracing.version
 - META-INF/androidx.transition_transition.version
 - META-INF/androidx.vectordrawable_vectordrawable-animated.version
@@ -130,6 +118,8 @@ doNotCompress:
 - META-INF/androidx.viewpager2_viewpager2.version
 - META-INF/androidx.viewpager_viewpager.version
 - META-INF/androidx.webkit_webkit.version
+- META-INF/androidx.window.extensions.core_core.version
+- META-INF/androidx.window_window.version
 - META-INF/androidx.work_work-runtime-ktx.version
 - META-INF/androidx.work_work-runtime.version
 - META-INF/com.google.android.material_material.version
@@ -137,9 +127,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/dn.x
-- META-INF/services/in.w
-- META-INF/services/uk.a
+- META-INF/services/ji.a
+- META-INF/services/sk.z
+- META-INF/services/xk.v
 - png
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

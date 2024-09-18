@@ -108,6 +108,6 @@ public class UploadProgressView  public constructor(context: Context, attrs: Att
       this.binding.progressBar.animate().setInterpolator(this.interpolator).setDuration(var10).scaleX(var9).start();
       val var15: SimpleDraweeView = this.binding.progressCancel;
       q.g(this.binding.progressCancel, "progressCancel");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new b5.a(var8), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new r3.a(var8), 1, null);
    }
 }

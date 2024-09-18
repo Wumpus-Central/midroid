@@ -1,9 +1,14 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import fl.b2
+import fl.g0
+import fl.o1
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,12 +18,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.o1
-import qn.g0.a
 
 @f
 public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: String, threadId: String, messageId: MessageId) : TapPostPreviewEmbedData(
@@ -103,26 +102,26 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
       return ((this.guildId.hashCode() * 31 + this.parentChannelId.hashCode()) * 31 + this.threadId.hashCode()) * 31 + MessageId.hashCode-impl(this.messageId);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var5: java.lang.String = this.parentChannelId;
-      val var2: java.lang.String = this.threadId;
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapPostPreviewEmbedData(guildId=");
-      var1.append(var3);
-      var1.append(", parentChannelId=");
-      var1.append(var5);
-      var1.append(", threadId=");
-      var1.append(var2);
-      var1.append(", messageId=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.parentChannelId;
+      val var3: java.lang.String = this.threadId;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapPostPreviewEmbedData(guildId=");
+      var2.append(var1);
+      var2.append(", parentChannelId=");
+      var2.append(var4);
+      var2.append(", threadId=");
+      var2.append(var3);
+      var2.append(", messageId=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -137,47 +136,50 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
          val var0: TapPostPreviewEmbedData.$serializer = new TapPostPreviewEmbedData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapPostPreviewEmbedData", var0, 4);
-         var1.c("guildId", false);
-         var1.c("parentChannelId", false);
-         var1.c("threadId", false);
-         var1.c("messageId", false);
+         var1.l("guildId", false);
+         var1.l("parentChannelId", false);
+         var1.l("threadId", false);
+         var1.l("messageId", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a, com.discord.primitives.MessageId..serializer.INSTANCE};
+         return new KSerializer[]{b2.a, b2.a, b2.a, MessageId.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): TapPostPreviewEmbedData {
          q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
-         val var5: Boolean = var11.p();
+         val var11: c = var1.c(var10);
+         val var5: Boolean = var11.y();
          var var12: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
          var var7: java.lang.String;
-         var var8: java.lang.String;
+         var var13: java.lang.String;
+         var var14: java.lang.String;
          if (var5) {
-            var7 = var11.m(var10, 0);
-            var8 = var11.m(var10, 1);
-            var6 = var11.m(var10, 2);
-            val var9: MessageId = var11.y(var10, 3, com.discord.primitives.MessageId..serializer.INSTANCE, null) as MessageId;
-            if (var9 != null) {
-               var12 = var9.unbox-impl();
+            var7 = var11.t(var10, 0);
+            val var9: java.lang.String = var11.t(var10, 1);
+            var6 = var11.t(var10, 2);
+            val var8: MessageId = var11.m(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var8 != null) {
+               var12 = var8.unbox-impl();
             }
 
             var2 = 15;
+            var14 = var12;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var6 = null;
-            var var13: java.lang.String = null;
-            var8 = null;
+            var13 = null;
+            var14 = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -187,52 +189,49 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
                            }
 
                            val var15: MessageId;
-                           if (var8 != null) {
-                              var15 = MessageId.box-impl(var8);
+                           if (var14 != null) {
+                              var15 = MessageId.box-impl(var14);
                            } else {
                               var15 = null;
                            }
 
-                           val var16: MessageId = var11.y(var10, 3, com.discord.primitives.MessageId..serializer.INSTANCE, var15) as MessageId;
+                           val var16: MessageId = var11.m(var10, 3, MessageId.$serializer.INSTANCE, var15) as MessageId;
                            if (var16 != null) {
-                              var8 = var16.unbox-impl();
+                              var14 = var16.unbox-impl();
                            } else {
-                              var8 = null;
+                              var14 = null;
                            }
 
                            var2 |= 8;
                         } else {
-                           var6 = var11.m(var10, 2);
+                           var6 = var11.t(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var13 = var11.m(var10, 1);
+                        var13 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var11.m(var10, 0);
+                     var7 = var11.t(var10, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var12 = var8;
-            var8 = var13;
          }
 
-         var11.c(var10);
-         return new TapPostPreviewEmbedData(var2, var7, var8, var6, var12, null, null);
+         var11.b(var10);
+         return new TapPostPreviewEmbedData(var2, var7, var13, var6, var14, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapPostPreviewEmbedData) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          TapPostPreviewEmbedData.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

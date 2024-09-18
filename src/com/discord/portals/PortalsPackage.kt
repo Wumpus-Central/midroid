@@ -12,11 +12,11 @@ import kotlin.jvm.internal.q
 public class PortalsPackage : ReactPackage {
    public open fun createNativeModules(reactContext: ReactApplicationContext): MutableList<NativeModule> {
       q.h(var1, "reactContext");
-      return i.p(new NativeModule[]{new PortalFromNativeModule(var1)});
+      return i.q(new NativeModule[]{new PortalFromNativeModule(var1)});
    }
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return i.p(new ViewManager[]{new PortalFromNativeModule.ViewManager(), new PortalFromJsViewManager()});
+      return i.q(new ViewManager[]{new PortalFromNativeModule.ViewManager(), new PortalFromJsViewManager()});
    }
 }

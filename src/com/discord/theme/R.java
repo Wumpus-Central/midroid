@@ -328,13 +328,6 @@ public final class R {
       public static int deprecated_text_input_border_darker;
       public static int deprecated_text_input_border_light;
       public static int deprecated_text_input_border_midnight;
-      public static int discord_8th_bday_blue;
-      public static int discord_8th_bday_dark_blue;
-      public static int discord_8th_bday_green;
-      public static int discord_8th_bday_light_blue;
-      public static int discord_8th_bday_pink;
-      public static int discord_8th_bday_purple;
-      public static int discord_8th_bday_yellow;
       public static int display_banner_overflow_background_dark;
       public static int display_banner_overflow_background_darker;
       public static int display_banner_overflow_background_light;

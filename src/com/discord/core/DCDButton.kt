@@ -17,9 +17,9 @@ import com.discord.progress_dots.ProgressDots
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.google.android.material.button.MaterialButton
-import fe.k
-import fe.k.b
 import kotlin.jvm.internal.q
+import mc.k
+import mc.k.b
 
 public class DCDButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DcdButtonBinding

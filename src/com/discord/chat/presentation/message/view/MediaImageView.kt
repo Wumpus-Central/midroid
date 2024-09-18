@@ -44,20 +44,20 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var3: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      this.binding = var4;
       this.spoiler = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
       this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      (var3.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var4: TextView = var3.imageAltText;
-      var3.imageAltText.setImportantForAccessibility(4);
-      kotlin.jvm.internal.q.e(var4);
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
-      var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      var3.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+      (var4.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var3: TextView = var4.imageAltText;
+      var4.imageAltText.setImportantForAccessibility(4);
+      kotlin.jvm.internal.q.e(var3);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
+      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
+      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
    }
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?) {
@@ -166,13 +166,13 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          }
 
          var34.x(var16);
-         val var36: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.q.g(this.binding.image, "image");
-         val var35: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var21: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
+         val var35: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var36: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var36, var1, var35, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var21, var5, var6)
+            var21, var1, var35, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var36, var5, var6)
          );
       }
 
@@ -207,9 +207,9 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var24, var9);
       val var28: SpoilerViewManager = this.spoiler;
-      val var30: ConstraintLayout = this.binding.container;
+      val var25: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var25: SimpleDraweeView = this.binding.image;
+      val var30: SimpleDraweeView = this.binding.image;
       kotlin.jvm.internal.q.g(this.binding.image, "image");
       if (var11 && !var13) {
          var13 = true;
@@ -223,7 +223,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          var7 = true;
       }
 
-      var28.configureSpoiler(var8, this, var30, var25, this.binding.imageBlurBg, var13, var12, var7, var9);
+      var28.configureSpoiler(var8, this, var25, var30, this.binding.imageBlurBg, var13, var12, var7, var9);
       val var26: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var29: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");

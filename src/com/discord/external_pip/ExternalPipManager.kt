@@ -4,9 +4,9 @@ import android.app.Activity
 import android.app.PictureInPictureParams.Builder
 import android.os.Build.VERSION
 import android.util.Rational
+import kh.r
+import kh.s
 import kotlin.jvm.internal.q
-import vj.r
-import vj.s
 
 internal class ExternalPipManager {
    private final var enabled: Boolean
@@ -42,7 +42,7 @@ internal class ExternalPipManager {
                q.g(var4, "setAspectRatio(...)");
                var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var4, false)));
             } catch (var8: Exception) {
-               val var10: vj.r.a = r.k;
+               val var10: kh.r.a = r.k;
                var3.invoke(r.a(r.b(s.a(var8))));
                return;
             }
@@ -52,25 +52,25 @@ internal class ExternalPipManager {
 
          try {
             if (q.c(var11, java.lang.Boolean.TRUE)) {
-               val var16: vj.r.a = r.k;
+               val var16: kh.r.a = r.k;
                var3.invoke(r.a(r.b(Unit.a)));
                return;
             }
          } catch (var7: Exception) {
-            val var12: vj.r.a = r.k;
+            val var12: kh.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var7))));
             return;
          }
 
          try {
-            val var14: vj.r.a = r.k;
+            val var14: kh.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var6: Exception) {
-            val var13: vj.r.a = r.k;
+            val var13: kh.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var6))));
          }
       } else {
-         val var9: vj.r.a = r.k;
+         val var9: kh.r.a = r.k;
          var3.invoke(r.a(r.b(s.a(new Exception("Disabled or unsupported.")))));
       }
    }

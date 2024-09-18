@@ -8,12 +8,12 @@ import com.discord.image.animated_image.animated_image_utils.AnimatedImageStateM
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.rlottie.RLottieDrawable
 import com.discord.theme.ThemeManagerKt
-import dn.g
-import dn.j0
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import sk.f
+import sk.k0
 
 internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieImageView {
    private final val placeholder: ShapeDrawable
@@ -26,7 +26,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       var2.setShape(new OvalShape());
       var2.getPaint().setColor(ThemeManagerKt.getTheme().getBackgroundAccent());
       this.placeholder = var2;
-      this.rLottieStateManager = new AnimatedImageStateManager(new Function0(this) {
+      this.rLottieStateManager = new AnimatedImageStateManager<>(new Function0(this) {
          final RLottieImageView this$0;
 
          {
@@ -88,19 +88,18 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    }
 
    private fun fetchSticker(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      g.d(
+      f.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
-         j0.b(),
+         k0.b(),
          null,
          new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1119,6 +1118,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -1250,27 +1250,27 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var7: java.lang.String = this.url;
+         val var6: java.lang.String = this.url;
          val var4: Boolean = this.animate;
          val var3: Int = this.widthDp;
          val var1: Int = this.heightDp;
          val var5: java.lang.String = this.asset;
          val var2: Int = this.renderMode;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Config(url=");
-         var6.append(var7);
-         var6.append(", animate=");
-         var6.append(var4);
-         var6.append(", widthDp=");
-         var6.append(var3);
-         var6.append(", heightDp=");
-         var6.append(var1);
-         var6.append(", asset=");
-         var6.append(var5);
-         var6.append(", renderMode=");
-         var6.append(var2);
-         var6.append(")");
-         return var6.toString();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Config(url=");
+         var7.append(var6);
+         var7.append(", animate=");
+         var7.append(var4);
+         var7.append(", widthDp=");
+         var7.append(var3);
+         var7.append(", heightDp=");
+         var7.append(var1);
+         var7.append(", asset=");
+         var7.append(var5);
+         var7.append(", renderMode=");
+         var7.append(var2);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

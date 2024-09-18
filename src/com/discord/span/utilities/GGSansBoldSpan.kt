@@ -5,7 +5,6 @@ import android.graphics.Paint
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import com.discord.fonts.DiscordFont.Companion
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
@@ -19,16 +18,17 @@ public class GGSansBoldSpan(context: Context) : StyleSpan {
    }
 
    private fun apply(paint: Paint, fallback: () -> Unit) {
-      val var4: Companion = DiscordFont.Companion;
-      var var3: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
-      if (var3 != null) {
-         var3 = var4.findByStyle(DiscordFont.PrimaryBold.getWeight(), var3.getItalic(), var3.getMonospace());
+      val var3: DiscordFont.Companion = DiscordFont.Companion;
+      val var4: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
+      val var5: DiscordFont;
+      if (var4 != null) {
+         var5 = var3.findByStyle(DiscordFont.PrimaryBold.getWeight(), var4.getItalic(), var4.getMonospace());
       } else {
-         var3 = null;
+         var5 = null;
       }
 
-      if (var3 != null) {
-         var1.setTypeface(var3.typeface(this.context));
+      if (var5 != null) {
+         var1.setTypeface(var5.typeface(this.context));
       } else {
          var2.invoke();
       }

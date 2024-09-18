@@ -6,6 +6,7 @@ import com.discord.chat.bridge.reaction.MessageReaction
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.chat.presentation.root.ChatView
 import com.discord.primitives.MessageId
+import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionsView
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.theme.DiscordTheme
@@ -54,7 +55,7 @@ public class ReactionsViewHolder(reactionsView: ReactionsView, recyclerViewPool:
             this.$onReactionClick = var1;
          }
 
-         public final void invoke(Reaction var1) {
+         public final void invoke(ReactionView.Reaction var1) {
             kotlin.jvm.internal.q.h(var1, "reaction");
             this.$onReactionClick.invoke(var1);
          }
@@ -66,7 +67,7 @@ public class ReactionsViewHolder(reactionsView: ReactionsView, recyclerViewPool:
             this.$onReactionLongPress = var1;
          }
 
-         public final void invoke(Reaction var1) {
+         public final void invoke(ReactionView.Reaction var1) {
             kotlin.jvm.internal.q.h(var1, "reaction");
             this.$onReactionLongPress.invoke(var1);
          }

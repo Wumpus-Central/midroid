@@ -1,8 +1,14 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import dl.a
+import fl.b2
+import fl.g0
+import kh.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,12 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import vj.w
 
 @f
 internal data class LongPressChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null, originalLink: String? = null) :
@@ -111,37 +111,33 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
       return ((var1 * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            w.a(
-               "data",
-               NativeMapExtensionsKt.nativeMapOf(
-                  new Pair[]{
-                     w.a("guildId", this.guildId), w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("originalLink", this.originalLink)
-                  }
-               )
+         w.a(
+            "data",
+            NativeMapExtensionsKt.nativeMapOf(
+               w.a("guildId", this.guildId), w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("originalLink", this.originalLink)
             )
-         }
+         )
       );
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.channelId;
       val var2: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.originalLink;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LongPressChannelData(guildId=");
-      var1.append(var5);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", messageId=");
-      var1.append(var2);
-      var1.append(", originalLink=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = this.originalLink;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("LongPressChannelData(guildId=");
+      var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var1);
+      var5.append(", messageId=");
+      var5.append(var2);
+      var5.append(", originalLink=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -156,10 +152,10 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
          val var0: LongPressChannelData.$serializer = new LongPressChannelData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.LongPressChannelData", var0, 4);
-         var1.c("guildId", true);
-         var1.c("channelId", true);
-         var1.c("messageId", true);
-         var1.c("originalLink", true);
+         var1.l("guildId", true);
+         var1.l("channelId", true);
+         var1.l("messageId", true);
+         var1.l("originalLink", true);
          descriptor = var1;
       }
 
@@ -171,8 +167,8 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
       public open fun deserialize(decoder: Decoder): LongPressChannelData {
          q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
-         val var5: Boolean = var11.p();
+         val var11: c = var1.c(var10);
+         val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
          var var7: java.lang.String;
@@ -180,10 +176,10 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
          var var14: java.lang.String;
          if (var5) {
             val var6: b2 = b2.a;
-            var8 = var11.n(var10, 0, b2.a, null) as java.lang.String;
-            var7 = var11.n(var10, 1, var6, null) as java.lang.String;
-            val var12: java.lang.String = var11.n(var10, 2, var6, null) as java.lang.String;
-            val var9: java.lang.String = var11.n(var10, 3, var6, null) as java.lang.String;
+            var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
+            var7 = var11.v(var10, 1, var6, null) as java.lang.String;
+            val var12: java.lang.String = var11.v(var10, 2, var6, null) as java.lang.String;
+            val var9: java.lang.String = var11.v(var10, 3, var6, null) as java.lang.String;
             var2 = 15;
             var14 = var12;
             var13 = var9;
@@ -195,7 +191,7 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
             var13 = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -204,18 +200,18 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
                               throw new n(var4);
                            }
 
-                           var13 = var11.n(var10, 3, b2.a, var13) as java.lang.String;
+                           var13 = var11.v(var10, 3, b2.a, var13) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var14 = var11.n(var10, 2, b2.a, var14) as java.lang.String;
+                           var14 = var11.v(var10, 2, b2.a, var14) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.n(var10, 1, b2.a, var7) as java.lang.String;
+                        var7 = var11.v(var10, 1, b2.a, var7) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.n(var10, 0, b2.a, var8) as java.lang.String;
+                     var8 = var11.v(var10, 0, b2.a, var8) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -224,7 +220,7 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
             }
          }
 
-         var11.c(var10);
+         var11.b(var10);
          return new LongPressChannelData(var2, var8, var7, var14, var13, null);
       }
 
@@ -232,13 +228,13 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          LongPressChannelData.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

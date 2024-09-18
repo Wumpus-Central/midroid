@@ -7,13 +7,13 @@ import com.facebook.react.uimanager.ViewManager
 import kotlin.jvm.internal.q
 
 public class ThumbhashPackage : ReactPackage {
-   public override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
+   public open fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
       q.h(var1, "reactContext");
-      return i.j();
+      return i.k();
    }
 
-   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
+   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
       q.h(var1, "reactContext");
-      return i.p(new ImageWithThumbhashPlaceholderViewManager[]{new ImageWithThumbhashPlaceholderViewManager()});
+      return i.q(new ImageWithThumbhashPlaceholderViewManager[]{new ImageWithThumbhashPlaceholderViewManager()});
    }
 }

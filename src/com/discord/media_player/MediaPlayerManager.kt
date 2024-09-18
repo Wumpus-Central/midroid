@@ -3,15 +3,12 @@ package com.discord.media_player
 import android.content.Context
 import com.discord.media_player.MediaPlayer.Event
 import com.discord.media_player.MediaPlayer.PlayerSettings
-import dn.i1
-import dn.j0
-import dn.r0
-import gn.u
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import java.util.concurrent.ArrayBlockingQueue
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import kh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CompletableJob
@@ -19,7 +16,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.MutableStateFlow
-import vj.w
+import sk.f
+import sk.j1
+import sk.k0
+import sk.s0
+import vk.u
 
 public object MediaPlayerManager {
    private const val MAX_PLAYER_SIZE: Int = 10
@@ -35,19 +36,18 @@ public object MediaPlayerManager {
 
    @JvmStatic
    fun {
-      val var0: CompletableJob = i1.b(null, 1, null);
-      val var1: ExecutorService = Executors.newSingleThreadExecutor();
-      q.g(var1, "newSingleThreadExecutor(...)");
-      val var2: CoroutineScope = g.a(var0.e1(r0.c(var1)));
+      val var1: CompletableJob = j1.b(null, 1, null);
+      val var0: ExecutorService = Executors.newSingleThreadExecutor();
+      q.g(var0, "newSingleThreadExecutor(...)");
+      val var2: CoroutineScope = g.a(var1.P(s0.b(var0)));
       scope = var2;
-      dn.g.d(
+      f.d(
          var2,
          null,
          null,
          new Function2(null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
@@ -1071,6 +1071,7 @@ public object MediaPlayerManager {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
@@ -1078,18 +1079,17 @@ public object MediaPlayerManager {
    }
 
    private fun startProgressMonitor(playerRef: WeakReference<MediaPlayer>): Job {
-      return dn.g.d(
+      return f.d(
          scope,
-         j0.c(),
+         k0.c(),
          null,
          new Function2(var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2109,6 +2109,7 @@ public object MediaPlayerManager {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -2124,9 +2125,9 @@ public object MediaPlayerManager {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1054)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:555)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 0
@@ -2218,18 +2219,17 @@ public object MediaPlayerManager {
    internal fun mediaPlayerEventHandler(event: Event, mediaPlayer: MediaPlayer): Job {
       q.h(var1, "event");
       q.h(var2, "mediaPlayer");
-      return dn.g.d(
+      return f.d(
          scope,
          null,
          null,
          new Function2(var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -3249,6 +3249,7 @@ public object MediaPlayerManager {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
@@ -3256,18 +3257,17 @@ public object MediaPlayerManager {
    }
 
    public fun pauseActivePlayer(): Job {
-      return dn.g.d(
+      return f.d(
          scope,
-         j0.c(),
+         k0.c(),
          null,
          new Function2(null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -4287,6 +4287,7 @@ public object MediaPlayerManager {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -4294,18 +4295,17 @@ public object MediaPlayerManager {
    }
 
    public fun playActivePlayer(): Job {
-      return dn.g.d(
+      return f.d(
          scope,
-         j0.c(),
+         k0.c(),
          null,
          new Function2(null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -5325,6 +5325,7 @@ public object MediaPlayerManager {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -5340,9 +5341,9 @@ public object MediaPlayerManager {
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1054)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:555)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 0
@@ -5437,15 +5438,15 @@ public object MediaPlayerManager {
 
       public override fun toString(): String {
          val var6: MediaSource = this.source;
-         val var3: Long = this.timeMs;
-         val var1: Long = this.durationMs;
+         val var1: Long = this.timeMs;
+         val var3: Long = this.durationMs;
          val var5: StringBuilder = new StringBuilder();
          var5.append("PlaybackProgress(source=");
          var5.append(var6);
          var5.append(", timeMs=");
-         var5.append(var3);
-         var5.append(", durationMs=");
          var5.append(var1);
+         var5.append(", durationMs=");
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

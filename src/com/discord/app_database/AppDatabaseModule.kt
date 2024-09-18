@@ -8,14 +8,14 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
+import fl.w1
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
-import qn.w1
-import vj.w
-import wj.r
+import lh.r
 
 @ReactModule(name = "AppDatabase")
 public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -25,10 +25,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, String?> {
-      val var1: CacheModule.Companion = CacheModule.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      return r.m(new Pair[]{w.a("userId", var1.get(var2).getItem("_databaseUserId"))});
+      val var2: CacheModule.Companion = CacheModule.Companion;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      return r.m(new Pair[]{w.a("userId", var2.get(var1).getItem("_databaseUserId"))});
    }
 
    public open fun getName(): String {
@@ -38,10 +38,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    @ReactMethod
    public fun setUserId(userId: String?) {
       if (var1 != null) {
-         val var2: CacheModule.Companion = CacheModule.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         var2.get(var3).setItem("_databaseUserId", var1);
+         val var3: CacheModule.Companion = CacheModule.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var3.get(var2).setItem("_databaseUserId", var1);
       } else {
          val var5: CacheModule.Companion = CacheModule.Companion;
          val var4: ReactApplicationContext = this.getReactApplicationContext();
@@ -69,11 +69,11 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
          if (var4 != null && !q.c(var4, "")) {
             val var5: java.lang.String = this.databaseName(var4);
             DiscordMobileApi.openAsync(var5);
-            val var2: Log = Log.INSTANCE;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("speculatively opening ");
-            var3.append(var5);
-            Log.i$default(var2, "AppDatabase", var3.toString(), null, 4, null);
+            val var3: Log = Log.INSTANCE;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("speculatively opening ");
+            var2.append(var5);
+            Log.i$default(var3, "AppDatabase", var2.toString(), null, 4, null);
          } else {
             Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
          }
@@ -99,17 +99,17 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
                var1 = this.databaseName(var1);
                val var22: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
                val var7: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "non_guild_versions");
-               var1 = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
-               val var6: a = Json.d;
+               val var6: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
+               val var15: a = Json.d;
                q.e(var22);
-               var6.a();
-               var23 = var6.b(new w1(g0.b(GuildVersion.class), GuildVersion.Companion.serializer()), var22) as Array<GuildVersion>;
+               var15.a();
+               var23 = var15.b(new w1(g0.b(GuildVersion.class), GuildVersion.Companion.serializer()), var22) as Array<GuildVersion>;
                q.e(var7);
-               var6.a();
-               var26 = var6.b(new w1(g0.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
-               q.e(var1);
-               var6.a();
-               var16 = var6.b(new w1(g0.b(CacheVersion.class), CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
+               var15.a();
+               var26 = var15.b(new w1(g0.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
+               q.e(var6);
+               var15.a();
+               var16 = var15.b(new w1(g0.b(CacheVersion.class), CacheVersion.Companion.serializer()), var6) as Array<CacheVersion>;
                var4 = var16.length;
             } catch (var11: Exception) {
                val var12: Log = Log.INSTANCE;
@@ -166,7 +166,7 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
       public fun initializeAppDatabase(context: Context) {
          q.h(var1, "context");
          AppDatabaseModule.access$setDataDirectory$cp(var1.getFilesDir().getAbsolutePath());
-         zj.a.b(false, false, null, null, 0, new Function0(var1) {
+         oh.a.b(false, false, null, null, 0, new Function0(var1) {
             final Context $context;
 
             {

@@ -10,12 +10,12 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.NotificationCompat.Builder
 import androidx.core.app.NotificationCompat.MessagingStyle
 import com.discord.notifications.renderer.NotificationBehaviors
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
+import kh.r
+import kh.s
+import kh.r.a
 import kotlin.jvm.internal.q
-import vj.r
-import vj.s
-import vj.r.a
 
 private const val NOTIFICATION_LIGHT_PERIOD: Int = 1500
 
@@ -156,7 +156,7 @@ internal fun Builder.setLegacyNotificationBehaviors(context: Context, behaviors:
       }
 
       if (var2.getLightsEnabled()) {
-         var0.G(ColorUtilsKt.getColorCompat(var1, color.brand_500), 1500, 1500);
+         var0.G(ColorUtilsKt.getColorCompat(var1, R.color.brand_500), 1500, 1500);
       }
 
       if (var2.getSoundsEnabled() && var3 != null) {

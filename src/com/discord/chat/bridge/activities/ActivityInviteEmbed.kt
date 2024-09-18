@@ -1,5 +1,12 @@
 package com.discord.chat.bridge.activities
 
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,13 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import qn.h
-import qn.n0
 
 @f
 public data class ActivityInviteEmbed(coverImage: String? = null,
@@ -154,9 +154,9 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
          var1 = this.coverImage.hashCode();
       }
 
-      val var6: Int = java.lang.Boolean.hashCode(this.isListening);
-      val var7: Int = this.headerText.hashCode();
-      val var5: Int = this.partyStatus.hashCode();
+      val var7: Int = java.lang.Boolean.hashCode(this.isListening);
+      val var5: Int = this.headerText.hashCode();
+      val var6: Int = this.partyStatus.hashCode();
       val var2: Int;
       if (this.avatarsToRender == null) {
          var2 = 0;
@@ -177,7 +177,7 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       }
 
       return (
-               (((((((var1 * 31 + var6) * 31 + var7) * 31 + var5) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4) * 31
+               (((((((var1 * 31 + var7) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4) * 31
                   + java.lang.Boolean.hashCode(this.joinable)
             )
             * 31
@@ -185,39 +185,39 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.coverImage;
-      val var3: Boolean = this.isListening;
-      val var7: java.lang.String = this.headerText;
-      val var6: java.lang.String = this.partyStatus;
-      val var11: java.util.List = this.avatarsToRender;
+      val var4: java.lang.String = this.coverImage;
+      val var2: Boolean = this.isListening;
+      val var10: java.lang.String = this.headerText;
+      val var5: java.lang.String = this.partyStatus;
+      val var8: java.util.List = this.avatarsToRender;
       val var1: Int = this.maxPartySize;
-      val var9: java.lang.String = this.name;
-      val var8: java.lang.String = this.subtext;
-      val var2: Boolean = this.joinable;
-      val var4: java.lang.String = this.ctaText;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("ActivityInviteEmbed(coverImage=");
-      var10.append(var5);
-      var10.append(", isListening=");
-      var10.append(var3);
-      var10.append(", headerText=");
-      var10.append(var7);
-      var10.append(", partyStatus=");
-      var10.append(var6);
-      var10.append(", avatarsToRender=");
-      var10.append(var11);
-      var10.append(", maxPartySize=");
-      var10.append(var1);
-      var10.append(", name=");
-      var10.append(var9);
-      var10.append(", subtext=");
-      var10.append(var8);
-      var10.append(", joinable=");
-      var10.append(var2);
-      var10.append(", ctaText=");
-      var10.append(var4);
-      var10.append(")");
-      return var10.toString();
+      val var6: java.lang.String = this.name;
+      val var7: java.lang.String = this.subtext;
+      val var3: Boolean = this.joinable;
+      val var11: java.lang.String = this.ctaText;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("ActivityInviteEmbed(coverImage=");
+      var9.append(var4);
+      var9.append(", isListening=");
+      var9.append(var2);
+      var9.append(", headerText=");
+      var9.append(var10);
+      var9.append(", partyStatus=");
+      var9.append(var5);
+      var9.append(", avatarsToRender=");
+      var9.append(var8);
+      var9.append(", maxPartySize=");
+      var9.append(var1);
+      var9.append(", name=");
+      var9.append(var6);
+      var9.append(", subtext=");
+      var9.append(var7);
+      var9.append(", joinable=");
+      var9.append(var3);
+      var9.append(", ctaText=");
+      var9.append(var11);
+      var9.append(")");
+      return var9.toString();
    }
 
    public object `$serializer` : g0 {
@@ -232,33 +232,33 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
          val var0: ActivityInviteEmbed.$serializer = new ActivityInviteEmbed.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.activities.ActivityInviteEmbed", var0, 10);
-         var1.c("coverImage", true);
-         var1.c("isListening", false);
-         var1.c("headerText", false);
-         var1.c("partyStatus", false);
-         var1.c("avatarsToRender", true);
-         var1.c("maxPartySize", false);
-         var1.c("name", true);
-         var1.c("subtext", true);
-         var1.c("joinable", false);
-         var1.c("ctaText", false);
+         var1.l("coverImage", true);
+         var1.l("isListening", false);
+         var1.l("headerText", false);
+         var1.l("partyStatus", false);
+         var1.l("avatarsToRender", true);
+         var1.l("maxPartySize", false);
+         var1.l("name", true);
+         var1.l("subtext", true);
+         var1.l("joinable", false);
+         var1.l("ctaText", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
+         val var4: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
+         val var2: b2 = b2.a;
          val var3: KSerializer = a.u(b2.a);
-         val var4: h = h.a;
-         return new KSerializer[]{var3, h.a, var1, var1, a.u(var2[4]), n0.a, a.u(var1), a.u(var1), var4, var1};
+         val var1: h = h.a;
+         return new KSerializer[]{var3, h.a, var2, var2, a.u(var4[4]), n0.a, a.u(var2), a.u(var2), var1, var2};
       }
 
       public open fun deserialize(decoder: Decoder): ActivityInviteEmbed {
          q.h(var1, "decoder");
          val var17: SerialDescriptor = this.getDescriptor();
-         val var18: c = var1.b(var17);
-         val var16: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
-         var var8: Boolean = var18.p();
+         val var18: c = var1.c(var17);
+         val var15: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
+         var var8: Boolean = var18.y();
          var var5: Int = 9;
          var var3: Int;
          var var4: Int;
@@ -266,85 +266,85 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
          var var12: Any;
          var var13: java.lang.String;
          var var14: java.lang.String;
-         val var15: java.lang.String;
-         val var20: java.lang.String;
+         val var16: java.lang.String;
+         var var20: java.lang.String;
          val var31: java.lang.String;
          if (var8) {
             val var19: b2 = b2.a;
-            var13 = var18.n(var17, 0, b2.a, null) as java.lang.String;
-            var3 = var18.C(var17, 1);
-            var14 = var18.m(var17, 2);
-            var15 = var18.m(var17, 3);
-            val var10: java.util.List = var18.n(var17, 4, var16[4], null) as java.util.List;
-            val var2: Int = var18.i(var17, 5);
-            val var11: java.lang.String = var18.n(var17, 6, var19, null) as java.lang.String;
-            var20 = var18.n(var17, 7, var19, null) as java.lang.String;
-            var8 = var18.C(var17, 8);
-            var9 = var18.m(var17, 9);
-            var4 = 1023;
+            var13 = var18.v(var17, 0, b2.a, null) as java.lang.String;
+            var4 = var18.s(var17, 1);
+            var14 = var18.t(var17, 2);
+            var16 = var18.t(var17, 3);
+            val var10: java.util.List = var18.v(var17, 4, var15[4], null) as java.util.List;
+            val var2: Int = var18.k(var17, 5);
+            val var11: java.lang.String = var18.v(var17, 6, var19, null) as java.lang.String;
+            var9 = var18.v(var17, 7, var19, null) as java.lang.String;
+            var8 = var18.s(var17, 8);
+            var20 = var18.t(var17, 9);
+            var3 = 1023;
             var12 = var10;
             var5 = var2;
             var31 = var11;
          } else {
             var var6: Boolean = true;
             var8 = false;
-            var var22: Int = 0;
+            var var21: Int = 0;
             var3 = 0;
             var14 = null;
             var12 = null;
             var13 = null;
             var var27: java.lang.String = null;
             var9 = null;
-            var var21: java.lang.String = null;
+            var20 = null;
             var var28: Any = null;
             var4 = 0;
 
             while (var6) {
-               val var7: Int = var18.o(var17);
+               val var7: Int = var18.x(var17);
                switch (var7) {
                   case -1:
                      var6 = false;
                      continue;
                   case 0:
-                     var13 = var18.n(var17, 0, b2.a, var13) as java.lang.String;
-                     var22 |= 1;
+                     var13 = var18.v(var17, 0, b2.a, var13) as java.lang.String;
+                     var21 |= 1;
                      var5 = 9;
                      continue;
                   case 1:
-                     var3 = var18.C(var17, 1);
-                     var22 |= 2;
+                     var3 = var18.s(var17, 1);
+                     var21 |= 2;
                      break;
                   case 2:
-                     var27 = var18.m(var17, 2);
-                     var22 |= 4;
+                     var27 = var18.t(var17, 2);
+                     var21 |= 4;
                      break;
                   case 3:
-                     var9 = var18.m(var17, 3);
-                     var22 |= 8;
+                     var9 = var18.t(var17, 3);
+                     var21 |= 8;
                      continue;
                   case 4:
-                     var28 = var18.n(var17, 4, var16[4], var28) as java.util.List;
-                     var22 |= 16;
+                     var28 = var18.v(var17, 4, var15[4], var28) as java.util.List;
+                     var21 |= 16;
                      continue;
                   case 5:
-                     var4 = var18.i(var17, 5);
-                     var22 |= 32;
+                     var4 = var18.k(var17, 5);
+                     var21 |= 32;
                      continue;
                   case 6:
-                     var12 = var18.n(var17, 6, b2.a, var12) as java.lang.String;
-                     var22 |= 64;
+                     var12 = var18.v(var17, 6, b2.a, var12) as java.lang.String;
+                     var21 |= 64;
                      continue;
                   case 7:
-                     var14 = var18.n(var17, 7, b2.a, var14) as java.lang.String;
-                     var22 |= 128;
+                     var14 = var18.v(var17, 7, b2.a, var14) as java.lang.String;
+                     var21 |= 128;
                      continue;
                   case 8:
-                     var8 = var18.C(var17, 8);
-                     var22 |= 256;
+                     var8 = var18.s(var17, 8);
+                     var21 |= 256;
                      continue;
                   case 9:
-                     var21 = var18.m(var17, var5);
-                     var22 |= 512;
+                     var20 = var18.t(var17, var5);
+                     var21 |= 512;
                      continue;
                   default:
                      throw new n(var7);
@@ -353,31 +353,31 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
                var5 = 9;
             }
 
-            var15 = var9;
-            var9 = var21;
-            var20 = var14;
+            var16 = var9;
+            var9 = var14;
             var31 = (java.lang.String)var12;
             var5 = var4;
             var12 = var28;
             var14 = var27;
-            var4 = var22;
+            var4 = var3;
+            var3 = var21;
          }
 
-         var18.c(var17);
-         return new ActivityInviteEmbed(var4, var13, (boolean)var3, var14, var15, (java.util.List)var12, var5, var31, var20, var8, var9, null);
+         var18.b(var17);
+         return new ActivityInviteEmbed(var3, var13, (boolean)var4, var14, var16, (java.util.List)var12, var5, var31, var9, var8, var20, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActivityInviteEmbed) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ActivityInviteEmbed.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

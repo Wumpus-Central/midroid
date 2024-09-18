@@ -80,6 +80,7 @@
     <item type="id" name="alt_text_container" />
     <item type="id" name="alt_text_label" />
     <item type="id" name="ampm" />
+    <item type="id" name="androidx_window_activity_scope" />
     <item type="id" name="answers" />
     <item type="id" name="arrow" />
     <item type="id" name="audio_details_view" />
@@ -289,6 +290,8 @@
     <item type="id" name="fps_text" />
     <item type="id" name="fragment_container_view_tag" />
     <item type="id" name="fullscreen_header" />
+    <item type="id" name="game_controller_icon" />
+    <item type="id" name="game_icon" />
     <item type="id" name="gaming_stats_button" />
     <item type="id" name="ghost_view" />
     <item type="id" name="ghost_view_holder" />

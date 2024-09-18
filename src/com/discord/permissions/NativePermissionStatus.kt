@@ -1,6 +1,5 @@
 package com.discord.permissions
 
-import ck.a
 import com.facebook.react.bridge.ReadableNativeMap
 import java.util.Locale
 import kotlin.enums.EnumEntries
@@ -27,7 +26,7 @@ public enum class NativePermissionStatus {
    fun {
       val var0: Array<NativePermissionStatus> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = rh.a.a(var0);
    }
 
    @JvmStatic

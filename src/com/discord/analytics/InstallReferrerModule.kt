@@ -5,10 +5,11 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import dn.g
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
+import kotlinx.coroutines.g
+import sk.f
 
 public class InstallReferrerModule(context: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -19,25 +20,24 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
    @ReactMethod
    public fun get(promise: Promise) {
       q.h(var1, "promise");
-      val var3: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
-      val var4: ObjectRef = new ObjectRef();
-      var4.j = var3.getString("referrer", null);
-      val var2: Int = var3.getInt("attempts", 0);
-      if (var4.j != null) {
-         var1.resolve(var4.j);
+      val var4: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
+      val var3: ObjectRef = new ObjectRef();
+      var3.j = var4.getString("referrer", null);
+      val var2: Int = var4.getInt("attempts", 0);
+      if (var3.j != null) {
+         var1.resolve(var3.j);
       } else if (var2 < 10) {
-         g.d(
-            kotlinx.coroutines.g.b(),
+         f.d(
+            g.b(),
             null,
             null,
-            new Function2(new ObjectRef(), this, var4, var3, var1, var2, null)// $VF: Couldn't be decompiled
+            new Function2(new ObjectRef(), this, var3, var4, var1, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1057,6 +1057,7 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
             3,
             null

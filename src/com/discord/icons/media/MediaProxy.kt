@@ -72,7 +72,7 @@ internal object MediaProxy {
          if (var17 != null) {
             var1 = var17;
          } else {
-            var1 = (c.h0(MEDIA_PROXY_SIZES) as java.lang.Number).intValue();
+            var1 = (c.g0(MEDIA_PROXY_SIZES) as java.lang.Number).intValue();
          }
 
          return var1;

@@ -39,7 +39,9 @@
     <attr name="actionProviderClass" format="string" />
     <attr name="actionTextColorAlpha" format="float" />
     <attr name="actionViewClass" format="string" />
+    <attr name="activityAction" format="string" />
     <attr name="activityChooserViewStyle" format="reference" />
+    <attr name="activityName" format="string" />
     <attr name="actualImageResource" format="reference" />
     <attr name="actualImageScaleType">
         <enum name="none" value="-1" />
@@ -101,9 +103,11 @@
         <flag name="FUNCTION" value="0x00000008" />
     </attr>
     <attr name="altSrc" format="reference" />
+    <attr name="alwaysExpand" format="boolean" />
     <attr name="animateMenuItems" format="boolean" />
     <attr name="animateNavigationIcon" format="boolean" />
     <attr name="animate_relativeTo" format="reference" />
+    <attr name="animationBackgroundColor" format="color" />
     <attr name="animationDuration" format="integer" />
     <attr name="animationMode">
         <enum name="slide" value="0" />
@@ -366,6 +370,7 @@
     <attr name="circleCrop" format="boolean" />
     <attr name="circleRadius" format="dimension" />
     <attr name="circularProgressIndicatorStyle" format="reference" />
+    <attr name="clearTop" format="boolean" />
     <attr name="clickAction">
         <flag name="toggle" value="0x00000011" />
         <flag name="transitionToEnd" value="0x00000001" />
@@ -757,6 +762,20 @@
     <attr name="fastScrollHorizontalTrackDrawable" format="reference" />
     <attr name="fastScrollVerticalThumbDrawable" format="reference" />
     <attr name="fastScrollVerticalTrackDrawable" format="reference" />
+    <attr name="finishPrimaryWithPlaceholder">
+        <enum name="always" value="1" />
+        <enum name="adjacent" value="2" />
+    </attr>
+    <attr name="finishPrimaryWithSecondary">
+        <enum name="never" value="0" />
+        <enum name="always" value="1" />
+        <enum name="adjacent" value="2" />
+    </attr>
+    <attr name="finishSecondaryWithPrimary">
+        <enum name="never" value="0" />
+        <enum name="always" value="1" />
+        <enum name="adjacent" value="2" />
+    </attr>
     <attr name="firstBaselineToTopHeight" format="dimension" />
     <attr name="flashButtonColor" format="color" />
     <attr name="flashButtonOffIcon" format="reference" />
@@ -950,10 +969,6 @@
         <enum name="adjust_height" value="2" />
     </attr>
     <attr name="imageButtonStyle" format="reference" />
-    <attr name="implementationMode">
-        <enum name="performance" value="0" />
-        <enum name="compatible" value="1" />
-    </attr>
     <attr name="indeterminateAnimationType">
         <enum name="contiguous" value="0" />
         <enum name="disjoint" value="1" />
@@ -1575,6 +1590,7 @@
     <attr name="pivotAnchor" format="reference">
         <enum name="parent" value="0" />
     </attr>
+    <attr name="placeholderActivityName" format="string" />
     <attr name="placeholderImage" format="reference" />
     <attr name="placeholderImageScaleType">
         <enum name="none" value="-1" />
@@ -1609,6 +1625,7 @@
     <attr name="preserveIconSpacing" format="boolean" />
     <attr name="pressedStateOverlayImage" format="reference" />
     <attr name="pressedTranslationZ" format="dimension" />
+    <attr name="primaryActivityName" format="string" />
     <attr name="progressBarAutoRotateInterval" format="integer" />
     <attr name="progressBarImage" format="reference" />
     <attr name="progressBarImageScaleType">
@@ -1683,14 +1700,6 @@
     <attr name="roundingBorderPadding" format="dimension" />
     <attr name="roundingBorderWidth" format="dimension" />
     <attr name="saturation" format="float" />
-    <attr name="scaleType">
-        <enum name="fillStart" value="0" />
-        <enum name="fillCenter" value="1" />
-        <enum name="fillEnd" value="2" />
-        <enum name="fitStart" value="3" />
-        <enum name="fitCenter" value="4" />
-        <enum name="fitEnd" value="5" />
-    </attr>
     <attr name="scopeUris" format="reference|string" />
     <attr name="scrimAnimationDuration" format="integer" />
     <attr name="scrimBackground" format="reference|color" />
@@ -1705,6 +1714,8 @@
     <attr name="searchIcon" format="reference" />
     <attr name="searchPrefixText" format="string" />
     <attr name="searchViewStyle" format="reference" />
+    <attr name="secondaryActivityAction" format="string" />
+    <attr name="secondaryActivityName" format="string" />
     <attr name="seekBarStyle" format="reference" />
     <attr name="selectableItemBackground" format="reference" />
     <attr name="selectableItemBackgroundBorderless" format="reference" />
@@ -1801,6 +1812,25 @@
     <attr name="spinBars" format="boolean" />
     <attr name="spinnerDropDownItemStyle" format="reference" />
     <attr name="spinnerStyle" format="reference" />
+    <attr name="splitLayoutDirection">
+        <enum name="locale" value="0" />
+        <enum name="ltr" value="1" />
+        <enum name="rtl" value="2" />
+        <enum name="topToBottom" value="3" />
+        <enum name="bottomToTop" value="4" />
+    </attr>
+    <attr name="splitMaxAspectRatioInLandscape" format="float">
+        <enum name="alwaysAllow" value="0" />
+        <enum name="alwaysDisallow" value="-1" />
+    </attr>
+    <attr name="splitMaxAspectRatioInPortrait" format="float">
+        <enum name="alwaysAllow" value="0" />
+        <enum name="alwaysDisallow" value="-1" />
+    </attr>
+    <attr name="splitMinHeightDp" format="integer" />
+    <attr name="splitMinSmallestWidthDp" format="integer" />
+    <attr name="splitMinWidthDp" format="integer" />
+    <attr name="splitRatio" format="float" />
     <attr name="splitTrack" format="boolean" />
     <attr name="srcCompat" format="reference" />
     <attr name="stackFromEnd" format="boolean" />
@@ -1838,6 +1868,7 @@
     <attr name="statusBarBackground" format="reference|color" />
     <attr name="statusBarForeground" format="color" />
     <attr name="statusBarScrim" format="color" />
+    <attr name="stickyPlaceholder" format="boolean" />
     <attr name="strokeColor" format="color" />
     <attr name="strokeWidth" format="dimension" />
     <attr name="subMenuArrow" format="reference" />
@@ -1920,6 +1951,7 @@
     <attr name="tabTextAppearance" format="reference" />
     <attr name="tabTextColor" format="color" />
     <attr name="tabUnboundedRipple" format="boolean" />
+    <attr name="tag" format="string" />
     <attr name="targetId" format="reference" />
     <attr name="telltales_tailColor" format="color" />
     <attr name="telltales_tailScale" format="float" />

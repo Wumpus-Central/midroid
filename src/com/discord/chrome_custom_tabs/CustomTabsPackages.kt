@@ -5,11 +5,11 @@ import android.content.Intent
 import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.os.Build.VERSION
-import c5.a
-import c5.b
 import java.util.ArrayList
+import k2.d1
 import kotlin.jvm.internal.q
-import u3.d1
+import s3.a
+import s3.b
 
 internal object CustomTabsPackages {
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"
@@ -126,7 +126,7 @@ internal object CustomTabsPackages {
                var3 = var10 as java.lang.String;
                var7 = var10 as java.lang.String;
                if (var3 == null) {
-                  var7 = i.f0(var5) as java.lang.String;
+                  var7 = i.g0(var5) as java.lang.String;
                }
             }
          }

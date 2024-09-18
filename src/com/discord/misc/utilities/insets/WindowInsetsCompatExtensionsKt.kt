@@ -9,7 +9,7 @@ import kotlin.jvm.internal.q
 
 public fun WindowInsetsCompat.getDisplayCutoutInsets(ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
-   return getInsets(var0, WindowInsetsCompat.m.a(), var1);
+   return getInsets(var0, WindowInsetsCompat.m.b(), var1);
 }
 
 @JvmSynthetic
@@ -23,7 +23,7 @@ fun `getDisplayCutoutInsets$default`(var0: WindowInsetsCompat, var1: Boolean, va
 
 public fun WindowInsetsCompat.getImeInsets(ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
-   return getInsets(var0, WindowInsetsCompat.m.b(), var1);
+   return getInsets(var0, WindowInsetsCompat.m.c(), var1);
 }
 
 @JvmSynthetic
@@ -58,7 +58,7 @@ fun `getInsets$default`(var0: WindowInsetsCompat, var1: Int, var2: Boolean, var3
 
 public fun WindowInsetsCompat.getNavigationBarsInsets(ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
-   return getInsets(var0, WindowInsetsCompat.m.e(), var1);
+   return getInsets(var0, WindowInsetsCompat.m.f(), var1);
 }
 
 @JvmSynthetic
@@ -72,7 +72,7 @@ fun `getNavigationBarsInsets$default`(var0: WindowInsetsCompat, var1: Boolean, v
 
 public fun WindowInsetsCompat.getSystemBarInsets(ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
-   return getInsets(var0, WindowInsetsCompat.m.g(), var1);
+   return getInsets(var0, WindowInsetsCompat.m.h(), var1);
 }
 
 @JvmSynthetic

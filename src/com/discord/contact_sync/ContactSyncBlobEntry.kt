@@ -1,5 +1,11 @@
 package com.discord.contact_sync
 
+import cl.f
+import cl.n
+import fl.b2
+import fl.g0
+import fl.h
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.h
-import qn.g0.a
 
 @f
 public data class ContactSyncBlobEntry(phone: String,
@@ -122,27 +122,27 @@ public data class ContactSyncBlobEntry(phone: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.phone;
-      val var5: java.lang.String = this.unencryptedName;
+      val var5: java.lang.String = this.phone;
+      val var7: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var4: java.lang.String = this.deviceContactId;
+      val var2: java.lang.String = this.deviceContactId;
       val var3: java.lang.String = this.givenName;
-      val var6: java.lang.String = this.familyName;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ContactSyncBlobEntry(phone=");
-      var7.append(var2);
-      var7.append(", unencryptedName=");
-      var7.append(var5);
-      var7.append(", hasImageData=");
-      var7.append(var1);
-      var7.append(", deviceContactId=");
-      var7.append(var4);
-      var7.append(", givenName=");
-      var7.append(var3);
-      var7.append(", familyName=");
-      var7.append(var6);
-      var7.append(")");
-      return var7.toString();
+      val var4: java.lang.String = this.familyName;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ContactSyncBlobEntry(phone=");
+      var6.append(var5);
+      var6.append(", unencryptedName=");
+      var6.append(var7);
+      var6.append(", hasImageData=");
+      var6.append(var1);
+      var6.append(", deviceContactId=");
+      var6.append(var2);
+      var6.append(", givenName=");
+      var6.append(var3);
+      var6.append(", familyName=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -157,12 +157,12 @@ public data class ContactSyncBlobEntry(phone: String,
          val var0: ContactSyncBlobEntry.$serializer = new ContactSyncBlobEntry.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.contact_sync.ContactSyncBlobEntry", var0, 6);
-         var1.c("phone", false);
-         var1.c("unencryptedName", false);
-         var1.c("hasImageData", false);
-         var1.c("deviceContactId", false);
-         var1.c("givenName", false);
-         var1.c("familyName", false);
+         var1.l("phone", false);
+         var1.l("unencryptedName", false);
+         var1.l("hasImageData", false);
+         var1.l("deviceContactId", false);
+         var1.l("givenName", false);
+         var1.l("familyName", false);
          descriptor = var1;
       }
 
@@ -173,26 +173,27 @@ public data class ContactSyncBlobEntry(phone: String,
       public open fun deserialize(decoder: Decoder): ContactSyncBlobEntry {
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.b(var11);
+         val var12: c = var1.c(var11);
          var var2: Int;
          var var5: Boolean;
          var var6: java.lang.String;
-         var var7: java.lang.String;
          var var8: java.lang.String;
          var var9: java.lang.String;
+         val var10: java.lang.String;
          val var13: java.lang.String;
-         if (var12.p()) {
-            var9 = var12.m(var11, 0);
-            var7 = var12.m(var11, 1);
-            var5 = var12.C(var11, 2);
-            var8 = var12.m(var11, 3);
-            var6 = var12.m(var11, 4);
-            var13 = var12.m(var11, 5);
+         if (var12.y()) {
+            var9 = var12.t(var11, 0);
+            var10 = var12.t(var11, 1);
+            var5 = var12.s(var11, 2);
+            var6 = var12.t(var11, 3);
+            val var7: java.lang.String = var12.t(var11, 4);
+            var13 = var12.t(var11, 5);
             var2 = 63;
+            var8 = var7;
          } else {
             var9 = null;
             var8 = null;
-            var7 = null;
+            var var16: java.lang.String = null;
             var6 = null;
             var var14: java.lang.String = null;
             var var3: Boolean = true;
@@ -200,33 +201,33 @@ public data class ContactSyncBlobEntry(phone: String,
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var12.o(var11);
+               val var4: Int = var12.x(var11);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var9 = var12.m(var11, 0);
+                     var9 = var12.t(var11, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var14 = var12.m(var11, 1);
+                     var14 = var12.t(var11, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var5 = var12.C(var11, 2);
+                     var5 = var12.s(var11, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var12.m(var11, 3);
+                     var16 = var12.t(var11, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var12.m(var11, 4);
+                     var6 = var12.t(var11, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var8 = var12.m(var11, 5);
+                     var8 = var12.t(var11, 5);
                      var2 |= 32;
                      break;
                   default:
@@ -234,22 +235,23 @@ public data class ContactSyncBlobEntry(phone: String,
                }
             }
 
+            var10 = var14;
             var13 = var8;
-            var8 = var7;
-            var7 = var14;
+            var8 = var6;
+            var6 = var16;
          }
 
-         var12.c(var11);
-         return new ContactSyncBlobEntry(var2, var9, var7, var5, var8, var6, var13, null);
+         var12.b(var11);
+         return new ContactSyncBlobEntry(var2, var9, var10, var5, var6, var8, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContactSyncBlobEntry) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ContactSyncBlobEntry.write$Self$contact_sync_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

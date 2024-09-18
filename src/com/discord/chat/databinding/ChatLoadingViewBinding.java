@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import f3.a;
+import n1.a;
 
 public final class ChatLoadingViewBinding implements ViewBinding {
    public final Button button;
@@ -22,12 +22,12 @@ public final class ChatLoadingViewBinding implements ViewBinding {
 
    public static ChatLoadingViewBinding bind(View var0) {
       int var1 = R.id.button;
-      Button var3 = (Button)a.a(var0, var1);
-      if (var3 != null) {
+      Button var2 = (Button)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.progress_spinner;
-         ProgressBar var2 = (ProgressBar)a.a(var0, var1);
-         if (var2 != null) {
-            return new ChatLoadingViewBinding(var0, var3, var2);
+         ProgressBar var3 = (ProgressBar)a.a(var0, var1);
+         if (var3 != null) {
+            return new ChatLoadingViewBinding(var0, var2, var3);
          }
       }
 

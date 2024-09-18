@@ -7,10 +7,10 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.PassthroughTouchViewManagerDelegate
 import com.facebook.react.viewmanagers.PassthroughTouchViewManagerInterface
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 @ReactModule(name = "PassthroughTouchView")
 internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchViewGroup>, PassthroughTouchViewManagerInterface<PassthroughTouchViewGroup> {
@@ -44,11 +44,11 @@ internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchVi
       return this.mDelegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "PassthroughTouchView";
    }
 

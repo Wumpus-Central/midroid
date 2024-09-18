@@ -393,6 +393,12 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       this.emitReactEvent.invoke(new TapForwardFooterData(var1, ChannelId.toString-impl(var2), MessageId.toString-impl(var4)));
    }
 
+   public override fun onTapGameIcon(gameApplicationId: String, timestamp: String) {
+      q.h(var1, "gameApplicationId");
+      q.h(var2, "timestamp");
+      this.emitReactEvent.invoke(new TapGameIconData(var1, var2));
+   }
+
    public override fun onTapGiftCodeAccept(giftCode: String, messageId: MessageId?) {
       q.h(var1, "giftCode");
       this.emitReactEvent.invoke(new TapGiftCodeAcceptData(var1, var2, null));

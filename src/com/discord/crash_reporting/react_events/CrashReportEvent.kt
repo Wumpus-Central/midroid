@@ -1,5 +1,6 @@
 package com.discord.crash_reporting.react_events
 
+import ai.c
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogUtils
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason
@@ -9,9 +10,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import kh.w
 import kotlin.jvm.internal.q
-import lk.c
-import vj.w
 
 internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, tombstone: Tombstone?) : ReactEvent {
    private final val crashedLastRun: Boolean?
@@ -80,7 +80,7 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
       return (var1 * 31 + var2) * 31 + var3;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var1: WritableNativeMap = new WritableNativeMap();
       if (this.crashedLastRun != null) {
          var1.putBoolean("didCrash", this.crashedLastRun);
@@ -92,34 +92,34 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
          var1.putString("exitDescription", var4.getReason());
       }
 
-      val var5: SystemLogUtils.Tombstone = this.tombstone;
+      val var3: SystemLogUtils.Tombstone = this.tombstone;
       if (this.tombstone != null) {
          var1.putString("tombstoneGroupHash", this.tombstone.getGroupHash());
-         val var3: java.lang.String = var5.getCause();
-         if (var3 != null) {
-            var1.putString("tombstoneCause", var3);
+         val var5: java.lang.String = var3.getCause();
+         if (var5 != null) {
+            var1.putString("tombstoneCause", var5);
          }
 
-         if (f.n(new IntRange(0, 1000), c.j) == 0 && !h.x(var5.getText())) {
-            var1.putString("tombstone", h.c1(var5.getText(), 6291456));
+         if (f.n(new IntRange(0, 1000), c.j) == 0 && !h.x(var3.getText())) {
+            var1.putString("tombstone", h.c1(var3.getText(), 6291456));
          }
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("reports", NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var1}))});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("reports", NativeArrayExtensionsKt.nativeArrayOf(var1)));
    }
 
    public override fun toString(): String {
       val var1: java.lang.Boolean = this.crashedLastRun;
-      val var4: HistoricalProcessExitReason.Reason = this.reason;
+      val var2: HistoricalProcessExitReason.Reason = this.reason;
       val var3: SystemLogUtils.Tombstone = this.tombstone;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CrashReportEvent(crashedLastRun=");
-      var2.append(var1);
-      var2.append(", reason=");
-      var2.append(var4);
-      var2.append(", tombstone=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CrashReportEvent(crashedLastRun=");
+      var4.append(var1);
+      var4.append(", reason=");
+      var4.append(var2);
+      var4.append(", tombstone=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

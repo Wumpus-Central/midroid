@@ -7,8 +7,8 @@ import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import lh.o
 import org.json.JSONArray
-import wj.o
 
 public inline fun ReadableArray.forEach(action: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -34,7 +34,7 @@ public inline fun <T> ReadableArray.map(transform: (Int) -> Any): List<Any> {
    q.h(var0, "<this>");
    q.h(var1, "transform");
    val var2: IntRange = sizeRange(var0);
-   val var3: ArrayList = new ArrayList(i.u(var2, 10));
+   val var3: ArrayList = new ArrayList(i.v(var2, 10));
    val var4: java.util.Iterator = var2.iterator();
 
    while (var4.hasNext()) {
@@ -48,7 +48,7 @@ public inline fun <T> ReadableArray.map(transform: (Int, ReadableArray) -> Any):
    q.h(var0, "<this>");
    q.h(var1, "transform");
    val var3: IntRange = sizeRange(var0);
-   val var2: ArrayList = new ArrayList(i.u(var3, 10));
+   val var2: ArrayList = new ArrayList(i.v(var3, 10));
    val var4: java.util.Iterator = var3.iterator();
 
    while (var4.hasNext()) {
@@ -129,7 +129,7 @@ public fun ReadableArray.sizeRange(): IntRange {
 public fun ReadableArray.toBooleanList(): List<Boolean> {
    q.h(var0, "<this>");
    val var2: IntRange = sizeRange(var0);
-   val var1: ArrayList = new ArrayList(i.u(var2, 10));
+   val var1: ArrayList = new ArrayList(i.v(var2, 10));
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
@@ -142,7 +142,7 @@ public fun ReadableArray.toBooleanList(): List<Boolean> {
 public fun ReadableArray.toDoubleList(): List<Double> {
    q.h(var0, "<this>");
    val var2: IntRange = sizeRange(var0);
-   val var1: ArrayList = new ArrayList(i.u(var2, 10));
+   val var1: ArrayList = new ArrayList(i.v(var2, 10));
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
@@ -155,7 +155,7 @@ public fun ReadableArray.toDoubleList(): List<Double> {
 public fun ReadableArray.toIntList(): List<Int> {
    q.h(var0, "<this>");
    val var2: IntRange = sizeRange(var0);
-   val var1: ArrayList = new ArrayList(i.u(var2, 10));
+   val var1: ArrayList = new ArrayList(i.v(var2, 10));
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
@@ -245,7 +245,7 @@ public fun <T> Array<Any>.toNativeArray(): ReadableNativeArray {
 
 public fun <V> Collection<Map<String, Any>>.toNativeArrayOfMaps(): ReadableNativeArray {
    q.h(var0, "<this>");
-   val var1: ArrayList = new ArrayList(i.u(var0, 10));
+   val var1: ArrayList = new ArrayList(i.v(var0, 10));
    val var2: java.util.Iterator = var0.iterator();
 
    while (var2.hasNext()) {
@@ -258,7 +258,7 @@ public fun <V> Collection<Map<String, Any>>.toNativeArrayOfMaps(): ReadableNativ
 public fun ReadableArray.toStringList(): List<String> {
    q.h(var0, "<this>");
    val var2: IntRange = sizeRange(var0);
-   val var1: ArrayList = new ArrayList(i.u(var2, 10));
+   val var1: ArrayList = new ArrayList(i.v(var2, 10));
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {

@@ -15,27 +15,29 @@ import java.net.ConnectException
 import java.net.SocketException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
+import java.security.cert.CertPathValidatorException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
+import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
-import vj.p
-import wj.r
+import lh.r
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
    private const val TAG_BUILD_NUMBER: String = "buildNumber"
    public final val ignoreNetworkExceptionList: List<KClass<out Throwable>> =
-      i.m(
+      i.n(
          new KClass[]{
             g0.b(UnknownHostException.class),
             g0.b(SocketTimeoutException.class),
             g0.b(SocketException.class),
             g0.b(ConnectException.class),
-            g0.b(SSLException.class)
+            g0.b(SSLException.class),
+            g0.b(CertPathValidatorException.class)
          }
       )
 
@@ -48,7 +50,7 @@ public object CrashReporting {
       q.h(var1, "$message");
       q.h(var2, "$errorLevel");
       q.h(var3, "SentryScope");
-      var3.h(i.e(var0));
+      var3.q(i.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
       val var5: d5;
       if (var4 != 1) {
@@ -84,7 +86,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("fe5d2fb0-86e3-44cc-9060-ce78551e3f77");
+      var5.setProguardUuid("dfaf4dde-d0c6-42fd-b0e3-c4bf5f041a12");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -105,7 +107,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", vj.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", kh.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -193,7 +195,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = ck.a.a(var0);
+         $ENTRIES = rh.a.a(var0);
       }
 
       @JvmStatic

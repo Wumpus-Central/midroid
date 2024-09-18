@@ -7,6 +7,12 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.jvm.internal.q
 
 public open class ChatListConstraintLayout  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout, ChatListChildView {
+   public open var currentKey: Any?
+      internal final set
+
+   public open var lastKey: Any?
+      internal final set
+
    open fun ChatListConstraintLayout(var1: Context) {
       q.h(var1, "context");
       this(var1, null, 2, null);
@@ -15,6 +21,10 @@ public open class ChatListConstraintLayout  public constructor(context: Context,
    init {
       q.h(var1, "context");
       super(var1, var2);
+   }
+
+   override fun bindKey(var1: Any) {
+      ChatListChildView.DefaultImpls.bindKey(this, var1);
    }
 
    protected override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

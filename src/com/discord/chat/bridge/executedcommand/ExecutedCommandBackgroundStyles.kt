@@ -1,5 +1,11 @@
 package com.discord.chat.bridge.executedcommand
 
+import cl.f
+import cl.n
+import dl.a
+import fl.g0
+import fl.h
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.g0
-import qn.h
-import qn.n0
 
 @f
 public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
@@ -88,18 +88,18 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var1: Int = this.color;
-      val var4: Int = this.borderRadius;
-      val var2: java.lang.Boolean = this.spaceAround;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ExecutedCommandBackgroundStyles(color=");
-      var3.append(var1);
-      var3.append(", borderRadius=");
-      var3.append(var4);
-      var3.append(", spaceAround=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: Int = this.color;
+      val var2: Int = this.borderRadius;
+      val var4: java.lang.Boolean = this.spaceAround;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ExecutedCommandBackgroundStyles(color=");
+      var1.append(var3);
+      var1.append(", borderRadius=");
+      var1.append(var2);
+      var1.append(", spaceAround=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -116,9 +116,9 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.bridge.executedcommand.ExecutedCommandBackgroundStyles", var0, 3
          );
-         var1.c("color", true);
-         var1.c("borderRadius", true);
-         var1.c("spaceAround", true);
+         var1.l("color", true);
+         var1.l("borderRadius", true);
+         var1.l("spaceAround", true);
          descriptor = var1;
       }
 
@@ -130,17 +130,17 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
       public open fun deserialize(decoder: Decoder): ExecutedCommandBackgroundStyles {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
-         val var5: Boolean = var9.p();
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
          var var7: Int = null;
          var var2: Int;
          var var6: Int;
          var var11: java.lang.Boolean;
          if (var5) {
             val var10: n0 = n0.a;
-            var7 = var9.n(var8, 0, n0.a, null) as Int;
-            var6 = var9.n(var8, 1, var10, null) as Int;
-            var11 = var9.n(var8, 2, h.a, null) as java.lang.Boolean;
+            var7 = var9.v(var8, 0, n0.a, null) as Int;
+            var6 = var9.v(var8, 1, var10, null) as Int;
+            var11 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
             var2 = 7;
          } else {
             var var3: Boolean = true;
@@ -149,7 +149,7 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
             var11 = null;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -157,14 +157,14 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
                            throw new n(var4);
                         }
 
-                        var11 = var9.n(var8, 2, h.a, var11) as java.lang.Boolean;
+                        var11 = var9.v(var8, 2, h.a, var11) as java.lang.Boolean;
                         var2 |= 4;
                      } else {
-                        var6 = var9.n(var8, 1, n0.a, var6) as Int;
+                        var6 = var9.v(var8, 1, n0.a, var6) as Int;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.n(var8, 0, n0.a, var7) as Int;
+                     var7 = var9.v(var8, 0, n0.a, var7) as Int;
                      var2 |= 1;
                   }
                } else {
@@ -173,7 +173,7 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
             }
          }
 
-         var9.c(var8);
+         var9.b(var8);
          return new ExecutedCommandBackgroundStyles(var2, var7, var6, var11, null);
       }
 
@@ -181,13 +181,13 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ExecutedCommandBackgroundStyles.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

@@ -39,7 +39,7 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
 import kotlin.jvm.internal.g0
-import wj.r
+import lh.r
 
 @ReactModule(name = "VoiceEngine")
 public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -59,21 +59,19 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
       this.mediaEngine = new MediaEngine(var1, null, 2, null);
       Debug.INSTANCE.logDebugLoggingConfig();
       this.reactEvents = new ReactEvents(
-         new Pair[]{
-            vj.w.a("no-input-callback", g0.b(NoInputCallbackEvent.class)),
-            vj.w.a("on-voice", g0.b(OnVoiceEvent.class)),
-            vj.w.a("device-changed", g0.b(DeviceChangedEvent.class)),
-            vj.w.a("on-broadcast-requested", g0.b(OnBroadcastRequestedEvent.class)),
-            vj.w.a("on-broadcast-thumbnail", g0.b(OnBroadcastThumbnailEvent.class)),
-            vj.w.a("user-speaking", g0.b(UserSpeakingEvent.class)),
-            vj.w.a("ping-callback", g0.b(PingCallbackEvent.class)),
-            vj.w.a("ping-timeout-callback", g0.b(PingTimeoutCallbackEvent.class)),
-            vj.w.a("on-video-callback", g0.b(OnVideoCallbackEvent.class)),
-            vj.w.a("active-sinks-change", g0.b(ActiveSinksChangeEvent.class)),
-            vj.w.a("on-first-frame-callback", g0.b(FirstFrameCallbackEvent.class)),
-            vj.w.a("mls-failure-callback", g0.b(MlsFailureCallbackEvent.class)),
-            vj.w.a("secure-frames-state-update-callback", g0.b(SecureFramesStateUpdateCallbackEvent.class))
-         }
+         kh.w.a("no-input-callback", g0.b(NoInputCallbackEvent.class)),
+         kh.w.a("on-voice", g0.b(OnVoiceEvent.class)),
+         kh.w.a("device-changed", g0.b(DeviceChangedEvent.class)),
+         kh.w.a("on-broadcast-requested", g0.b(OnBroadcastRequestedEvent.class)),
+         kh.w.a("on-broadcast-thumbnail", g0.b(OnBroadcastThumbnailEvent.class)),
+         kh.w.a("user-speaking", g0.b(UserSpeakingEvent.class)),
+         kh.w.a("ping-callback", g0.b(PingCallbackEvent.class)),
+         kh.w.a("ping-timeout-callback", g0.b(PingTimeoutCallbackEvent.class)),
+         kh.w.a("on-video-callback", g0.b(OnVideoCallbackEvent.class)),
+         kh.w.a("active-sinks-change", g0.b(ActiveSinksChangeEvent.class)),
+         kh.w.a("on-first-frame-callback", g0.b(FirstFrameCallbackEvent.class)),
+         kh.w.a("mls-failure-callback", g0.b(MlsFailureCallbackEvent.class)),
+         kh.w.a("secure-frames-state-update-callback", g0.b(SecureFramesStateUpdateCallbackEvent.class))
       );
       this.activityEventListener = new ActivityEventListener(this) {
          final MediaEngineModule this$0;
@@ -270,7 +268,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
          public final void invoke(java.lang.String[] var1) {
             kotlin.jvm.internal.q.h(var1, "modes");
-            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(var1)});
+            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray((java.lang.String[])var1)});
          }
       });
    }
@@ -306,6 +304,25 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
          public final void invoke(java.lang.String var1) {
             kotlin.jvm.internal.q.h(var1, "keyPackageB64");
+            this.$callback.invoke(new Object[]{var1});
+         }
+      });
+   }
+
+   @ReactMethod
+   public fun connectionInstanceGetMLSPairwiseFingerprintB64(connectionId: Int, version: Int, userId: String, callback: Callback): Unit? {
+      kotlin.jvm.internal.q.h(var3, "userId");
+      kotlin.jvm.internal.q.h(var4, "callback");
+      return this.mediaEngine.connectionInstanceGetMLSPairwiseFingerprintB64$media_engine_release(var1, var2, var3, new Function1(var4) {
+         final Callback $callback;
+
+         {
+            super(1);
+            this.$callback = var1;
+         }
+
+         public final void invoke(java.lang.String var1) {
+            kotlin.jvm.internal.q.h(var1, "fingerprint");
             this.$callback.invoke(new Object[]{var1});
          }
       });
@@ -538,12 +555,12 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
             kotlin.jvm.internal.q.h(var1, "errorMessage");
             kotlin.jvm.internal.q.h(var2, "connectionInfo");
             this.$callback.invoke(new Object[]{var1, NativeMapExtensionsKt.toNativeMap(var2)});
-            val var5: Intent = MediaEngineModule.access$getStreamPermissions$p(this.this$0);
-            if (var5 != null) {
-               val var4: MediaEngineModule = this.this$0;
+            val var4: Intent = MediaEngineModule.access$getStreamPermissions$p(this.this$0);
+            if (var4 != null) {
+               val var5: MediaEngineModule = this.this$0;
                val var3: Int = this.$connectionId;
-               this.this$0.getMediaEngine().connectionInstanceStartBroadcast$media_engine_release(var3, var5);
-               MediaEngineModule.access$setStreamPermissions$p(var4, null);
+               this.this$0.getMediaEngine().connectionInstanceStartBroadcast$media_engine_release(var3, var4);
+               MediaEngineModule.access$setStreamPermissions$p(var5, null);
             }
          }
       });
@@ -631,22 +648,22 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
    public open fun getConstants(): MutableMap<String, Any?> {
       return r.m(
          new Pair[]{
-            vj.w.a("DegradationPreference", r.l(new Pair[]{vj.w.a("MAINTAIN_RESOLUTION", 0), vj.w.a("MAINTAIN_FRAMERATE", 1), vj.w.a("BALANCED", 2)})),
-            vj.w.a(
+            kh.w.a("DegradationPreference", r.l(new Pair[]{kh.w.a("MAINTAIN_RESOLUTION", 0), kh.w.a("MAINTAIN_FRAMERATE", 1), kh.w.a("BALANCED", 2)})),
+            kh.w.a(
                "AVAudioSessionMode",
                r.l(
                   new Pair[]{
-                     vj.w.a("VOICE", "AVAudioSessionModeVoiceChat"),
-                     vj.w.a("VIDEO", "AVAudioSessionModeVideoChat"),
-                     vj.w.a("LISTEN", "AVAudioSessionModeSpokenAudio"),
-                     vj.w.a("DEFAULT", "AVAudioSessionModeDefault")
+                     kh.w.a("VOICE", "AVAudioSessionModeVoiceChat"),
+                     kh.w.a("VIDEO", "AVAudioSessionModeVideoChat"),
+                     kh.w.a("LISTEN", "AVAudioSessionModeSpokenAudio"),
+                     kh.w.a("DEFAULT", "AVAudioSessionModeDefault")
                   }
                )
             ),
-            vj.w.a("SupportedSecureFramesProtocolVersion", 114),
-            vj.w.a(
+            kh.w.a("SupportedSecureFramesProtocolVersion", 114),
+            kh.w.a(
                "supportedFeatures",
-               kotlin.collections.i.m(
+               kotlin.collections.i.n(
                   new java.lang.String[]{
                      "voice_sound_stop_loop",
                      "voice_relative_sounds",
@@ -676,7 +693,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                      "fixed_keyframe_interval",
                      "clips",
                      "first_frame_callback",
-                     "remote_user_multi_stream"
+                     "remote_user_multi_stream",
+                     "mls_pairwise_fingerprints"
                   }
                )
             )
@@ -757,7 +775,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
          public final void invoke(java.lang.String[] var1) {
             kotlin.jvm.internal.q.h(var1, "codecs");
-            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(var1)});
+            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray((java.lang.String[])var1)});
          }
       });
    }
@@ -865,7 +883,7 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
          public final void invoke(java.lang.String[] var1) {
             kotlin.jvm.internal.q.h(var1, "regions");
-            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(var1)});
+            this.$callback.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray((java.lang.String[])var1)});
          }
       });
    }
@@ -925,11 +943,11 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       if (var2 != 1) {
          if (var2 != 2) {
-            val var6: ReadableType = var1.getType();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unexpected deviceIndex type: ");
-            var7.append(var6);
-            throw new IllegalArgumentException(var7.toString());
+            val var7: ReadableType = var1.getType();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unexpected deviceIndex type: ");
+            var6.append(var7);
+            throw new IllegalArgumentException(var6.toString());
          }
 
          val var5: java.lang.String = var1.asString();
@@ -1121,11 +1139,11 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
          if (var4 != 1) {
             if (var4 != 2) {
-               val var8: ReadableType = var1.getType();
-               val var7: StringBuilder = new StringBuilder();
-               var7.append("Unexpected deviceIndex type: ");
-               var7.append(var8);
-               throw new IllegalArgumentException(var7.toString());
+               val var7: ReadableType = var1.getType();
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("Unexpected deviceIndex type: ");
+               var8.append(var7);
+               throw new IllegalArgumentException(var8.toString());
             }
 
             val var6: java.lang.String = var1.asString();

@@ -21,7 +21,7 @@ internal class BlockingGestureViewManager : ViewGroupManager<BlockingGestureView
       return this.mDelegate;
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "BlockingGestureView";
    }
 

@@ -33,7 +33,7 @@ public fun chatListAdapterConfigurator(
    q.h(var3, "messageAccessoriesRecycledViewPool");
    val var4: HashMap = new HashMap();
 
-   for (BaseChatListItemDelegate var5 : i.m(
+   for (BaseChatListItemDelegate var5 : i.n(
       new BaseChatListItemDelegate[]{
          new RegularMessageDelegate(var1, var2, var3),
          new SystemMessageDelegate(var1, var3),

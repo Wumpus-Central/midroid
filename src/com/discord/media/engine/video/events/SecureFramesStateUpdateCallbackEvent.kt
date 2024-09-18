@@ -1,8 +1,13 @@
 package com.discord.media.engine.video.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,12 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.n0
-import qn.g0.a
 
 @f
 internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stateUpdateJSON: String) : ReactEvent {
@@ -62,20 +61,20 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
       return Integer.hashCode(this.connectionId) * 31 + this.stateUpdateJSON.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var2: java.lang.String = this.stateUpdateJSON;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
-      var3.append(var1);
-      var3.append(", stateUpdateJSON=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.stateUpdateJSON;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
+      var2.append(var1);
+      var2.append(", stateUpdateJSON=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -92,8 +91,8 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media.engine.video.events.SecureFramesStateUpdateCallbackEvent", var0, 2
          );
-         var1.c("connectionId", false);
-         var1.c("stateUpdateJSON", false);
+         var1.l("connectionId", false);
+         var1.l("stateUpdateJSON", false);
          descriptor = var1;
       }
 
@@ -104,13 +103,13 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
       public open fun deserialize(decoder: Decoder): SecureFramesStateUpdateCallbackEvent {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          var var2: Int;
          var var3: Int;
          var var8: java.lang.String;
-         if (var7.p()) {
-            var3 = var7.i(var6, 0);
-            var8 = var7.m(var6, 1);
+         if (var7.y()) {
+            var3 = var7.k(var6, 0);
+            var8 = var7.t(var6, 1);
             var2 = 3;
          } else {
             var var4: Boolean = true;
@@ -119,17 +118,17 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
             var8 = null;
 
             while (var4) {
-               val var5: Int = var7.o(var6);
+               val var5: Int = var7.x(var6);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
                         throw new n(var5);
                      }
 
-                     var8 = var7.m(var6, 1);
+                     var8 = var7.t(var6, 1);
                      var2 |= 2;
                   } else {
-                     var3 = var7.i(var6, 0);
+                     var3 = var7.k(var6, 0);
                      var2 |= 1;
                   }
                } else {
@@ -138,7 +137,7 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new SecureFramesStateUpdateCallbackEvent(var2, var3, var8, null);
       }
 
@@ -146,9 +145,9 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          SecureFramesStateUpdateCallbackEvent.write$Self$media_engine_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

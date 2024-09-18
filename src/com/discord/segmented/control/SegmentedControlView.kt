@@ -160,8 +160,8 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
       this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
       this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.labels$delegate = this.updateViewOnChange(i.j(), true);
-      this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(i.j(), true);
+      this.labels$delegate = this.updateViewOnChange(i.k(), true);
+      this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(i.k(), true);
    }
 
    private fun animateSelection(animate: Boolean) {
@@ -199,6 +199,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
                this.this$0 = var2;
             }
 
+            @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
                q.h(var1, "host");
                q.h(var2, "info");
@@ -230,15 +231,15 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
       if (this.segmentWidth != var1) {
          this.segmentWidth = var1;
-         val var3: CardView = this.binding.selectedSegmentBg;
+         val var4: CardView = this.binding.selectedSegmentBg;
          q.g(this.binding.selectedSegmentBg, "selectedSegmentBg");
-         val var4: android.view.ViewGroup.LayoutParams = var3.getLayoutParams();
-         if (var4 == null) {
+         val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
+         if (var3 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var4.width = var1;
-         var3.setLayoutParams(var4);
+         var3.width = var1;
+         var4.setLayoutParams(var3);
          ViewMeasureExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }
@@ -257,7 +258,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       for (int var2 = 0; var3.hasNext(); var2++) {
          var var4: TextView = (TextView)var3.next();
          if (var2 < 0) {
-            i.t();
+            i.u();
          }
 
          val var5: java.lang.String = var4 as java.lang.String;

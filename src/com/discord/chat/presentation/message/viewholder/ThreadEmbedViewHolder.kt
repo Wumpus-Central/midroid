@@ -61,9 +61,9 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
          var17 = new DraweeSpanStringBuilder((java.lang.CharSequence)var17);
       } else if (var20.getContent() != null) {
-         var17 = var20.getContent();
+         val var10: StructurableText = var20.getContent();
          val var24: Context = var14.getContext();
-         val var10: java.lang.String = var20.getId-3Eiw7ao();
+         var17 = var20.getId-3Eiw7ao();
          val var4: Boolean = MessageKt.shouldAnimateEmoji(var20);
          val var6: Boolean = MessageKt.shouldShowLinkDecorations(var20);
          val var8: Boolean = var20.getShouldShowRoleDot();
@@ -75,9 +75,9 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          kotlin.jvm.internal.q.e(var24);
          kotlin.jvm.internal.q.e(var30);
          var17 = TextUtilsKt.toSpannable$default(
-            (StructurableText)var17,
-            var24,
             var10,
+            var24,
+            (java.lang.String)var17,
             var4,
             var6,
             var8,

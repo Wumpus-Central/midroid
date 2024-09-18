@@ -1,17 +1,16 @@
 package com.discord.chat.presentation.message;
 
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.bridge.executedcommand.ExecutedCommand;
+import android.view.View.OnLongClickListener;
+import com.discord.chat.bridge.Message;
 import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
-public final class v implements OnClickListener {
-   public final ChatEventHandler j;
-   public final String k;
-   public final ExecutedCommand l;
+public final class v implements OnLongClickListener {
+   public final Message j;
+   public final ChatEventHandler k;
 
-   public final void onClick(View var1) {
-      MessageViewReplyPreview.h(this.j, this.k, this.l, var1);
+   public final boolean onLongClick(View var1) {
+      return MessageView.g(this.j, this.k, var1);
    }
 }

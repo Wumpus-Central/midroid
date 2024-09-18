@@ -10,7 +10,7 @@ import com.discord.core.DCDButton
 import com.discord.fonts.DiscordFont
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import com.discord.theme.R.color
+import com.discord.theme.R
 import kotlin.jvm.functions.Function3
 
 public class CtaButtonView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
@@ -78,7 +78,7 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
       if (var6 != null) {
          var9 = var6;
       } else {
-         var9 = this.getContext().getColor(color.brand_500);
+         var9 = this.getContext().getColor(R.color.brand_500);
       }
 
       var11.setBackgroundColor(var9);

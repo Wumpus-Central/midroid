@@ -2,6 +2,7 @@ package com.discord.permissions
 
 import android.os.Build.VERSION
 import androidx.core.app.NotificationManagerCompat
+import com.discord.lifecycle.AppLifecycleManagerModule
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.PromiseWrapper
 import com.facebook.react.bridge.NativeModule
@@ -12,6 +13,7 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.modules.permissions.PermissionsModule
 import java.util.Locale
+import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -34,6 +36,16 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       val var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
       q.g(var2, "toLowerCase(...)");
       var1.resolve(var2);
+   }
+
+   private fun requireAppInForeground(promise: Promise, withForegroundApp: (Promise) -> Unit) {
+      if (!AppLifecycleManagerModule.Companion.isForegrounded()) {
+         val var3: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
+         q.g(var3, "toLowerCase(...)");
+         var1.resolve(var3);
+      } else {
+         var2.invoke(var1);
+      }
    }
 
    public open fun getName(): String {
@@ -152,28 +164,53 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       }
    }
 
-   public fun requestForegroundServicePermissionScreenShare(promise: Promise) {
-      q.h(var1, "promise");
-      if (VERSION.SDK_INT >= 34) {
-         this.getPermissionsModule()
-            .requestPermission(
-               "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
-            );
-      } else {
-         this.requestForegroundServicePermissionPreU(var1);
-      }
-   }
-
    public fun requestForegroundServicePermissionVoiceCall(promise: Promise) {
       q.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
-         this.getPermissionsModule()
-            .requestMultiplePermissions(
-               NativeArrayExtensionsKt.toNativeArray(
-                  i.m(new java.lang.String[]{"android.permission.RECORD_AUDIO", "android.permission.FOREGROUND_SERVICE_MICROPHONE"})
-               ),
-               NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
-            );
+         this.requireAppInForeground(
+            var1,
+            new Function1(this, var1) {
+               final Promise $promise;
+               final NativePermissionManagerModule this$0;
+
+               {
+                  super(1);
+                  this.this$0 = var1;
+                  this.$promise = var2;
+               }
+
+               public final void invoke(Promise var1) {
+                  q.h(var1, "it");
+                  this.this$0
+                     .requestMicrophoneAuthorization(
+                        NativePermissionPromise.INSTANCE
+                           .generate(
+                              new Function0(this.this$0, this.$promise) {
+                                 final Promise $promise;
+                                 final NativePermissionManagerModule this$0;
+
+                                 {
+                                    super(0);
+                                    this.this$0 = var1;
+                                    this.$promise = var2;
+                                 }
+
+                                 public final void invoke() {
+                                    NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
+                                       .requestPermission(
+                                          "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+                                          NativePermissionManagerModule.Companion.access$transformRequestResult(
+                                             NativePermissionManagerModule.Companion, this.$promise
+                                          )
+                                       );
+                                 }
+                              },
+                              <unrepresentable>.INSTANCE
+                           )
+                     );
+               }
+            }
+         );
       } else {
          this.requestForegroundServicePermissionPreU(var1);
       }
@@ -213,7 +250,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
          this.getPermissionsModule()
             .requestMultiplePermissions(
                NativeArrayExtensionsKt.toNativeArray(
-                  i.m(
+                  i.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES",
                         "android.permission.READ_MEDIA_VIDEO",
@@ -228,7 +265,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
          this.getPermissionsModule()
             .requestMultiplePermissions(
                NativeArrayExtensionsKt.toNativeArray(
-                  i.m(
+                  i.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VIDEO", "android.permission.READ_MEDIA_AUDIO"
                      }

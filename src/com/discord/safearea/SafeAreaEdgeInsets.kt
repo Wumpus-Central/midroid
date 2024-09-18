@@ -80,15 +80,15 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
    }
 
    public override fun toString(): String {
-      val var3: Float = this.topDp;
-      val var4: Float = this.rightDp;
+      val var4: Float = this.topDp;
+      val var3: Float = this.rightDp;
       val var2: Float = this.bottomDp;
       val var1: Float = this.leftDp;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SafeAreaEdgeInsets(topDp=");
-      var5.append(var3);
-      var5.append(", rightDp=");
       var5.append(var4);
+      var5.append(", rightDp=");
+      var5.append(var3);
       var5.append(", bottomDp=");
       var5.append(var2);
       var5.append(", leftDp=");

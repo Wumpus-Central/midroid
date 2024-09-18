@@ -21,15 +21,15 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMan
       }
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNThemeManager";
    }
 
-   public open fun updateSaturation(saturationFactor: Double) {
+   public override fun updateSaturation(saturationFactor: Double) {
       ThemeManager.INSTANCE.setSaturationFactor(var1);
    }
 
-   public open fun updateTheme(theme: String?) {
+   public override fun updateTheme(theme: String?) {
       label32:
       if (var1 != null) {
          label36: {

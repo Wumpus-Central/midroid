@@ -1,8 +1,12 @@
 package com.discord.media.engine.video.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,11 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.n0
-import qn.g0.a
 
 @f
 internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
@@ -58,8 +57,8 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
       return Integer.hashCode(this.width) * 31 + Integer.hashCode(this.height);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -86,8 +85,8 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
          val var0: OnSizeEvent.$serializer = new OnSizeEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.media.engine.video.events.OnSizeEvent", var0, 2);
-         var1.c("width", false);
-         var1.c("height", false);
+         var1.l("width", false);
+         var1.l("height", false);
          descriptor = var1;
       }
 
@@ -98,14 +97,14 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
       public open fun deserialize(decoder: Decoder): OnSizeEvent {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: c = var1.c(var7);
          var var2: Int;
          var var3: Int;
          var var4: Int;
-         if (var8.p()) {
-            var3 = var8.i(var7, 0);
-            var4 = var8.i(var7, 1);
-            var2 = 3;
+         if (var8.y()) {
+            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 1);
+            var4 = 3;
          } else {
             var var5: Boolean = true;
             var3 = 0;
@@ -113,36 +112,39 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
             var2 = 0;
 
             while (var5) {
-               val var6: Int = var8.o(var7);
+               val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
                         throw new n(var6);
                      }
 
-                     var4 = var8.i(var7, 1);
+                     var4 = var8.k(var7, 1);
                      var2 |= 2;
                   } else {
-                     var3 = var8.i(var7, 0);
+                     var3 = var8.k(var7, 0);
                      var2 |= 1;
                   }
                } else {
                   var5 = false;
                }
             }
+
+            var4 = var2;
+            var2 = var4;
          }
 
-         var8.c(var7);
-         return new OnSizeEvent(var2, var3, var4, null);
+         var8.b(var7);
+         return new OnSizeEvent(var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSizeEvent) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          OnSizeEvent.write$Self$media_engine_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

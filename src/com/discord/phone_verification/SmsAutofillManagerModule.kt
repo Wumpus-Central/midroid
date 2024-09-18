@@ -5,10 +5,10 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactEvents: ReactEvents
@@ -17,7 +17,7 @@ public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : R
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("verificationCodeReceived", g0.b(VerificationCodeReceivedEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("verificationCodeReceived", g0.b(VerificationCodeReceivedEvent.class)));
       this.smsAutofillManager = new SmsAutofillManager(var1, new Function1(this, var1) {
          final ReactApplicationContext $reactContext;
          final SmsAutofillManagerModule this$0;

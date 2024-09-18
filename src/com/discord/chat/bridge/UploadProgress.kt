@@ -1,5 +1,12 @@
 package com.discord.chat.bridge
 
+import cl.f
+import cl.n
+import fl.b2
+import fl.f0
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,13 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.f0
-import qn.g0
-import qn.n0
-import qn.g0.a
 
 @f
 public data class UploadProgress(headerText: String,
@@ -193,40 +193,40 @@ public data class UploadProgress(headerText: String,
    }
 
    public override fun toString(): String {
-      val var12: java.lang.String = this.headerText;
-      val var7: Int = this.headerColor;
-      val var5: Int = this.backgroundColor;
+      val var9: java.lang.String = this.headerText;
+      val var5: Int = this.headerColor;
+      val var6: Int = this.backgroundColor;
       val var1: Float = this.progress;
-      val var9: java.lang.String = this.fileId;
+      val var12: java.lang.String = this.fileId;
       val var10: java.lang.String = this.fileType;
-      val var8: Int = this.progressTrackColor;
-      val var3: Int = this.progressStartColor;
-      val var4: Int = this.progressEndColor;
-      val var6: Int = this.iconTintColor;
-      val var2: Int = this.closeTintColor;
+      val var4: Int = this.progressTrackColor;
+      val var8: Int = this.progressStartColor;
+      val var2: Int = this.progressEndColor;
+      val var7: Int = this.iconTintColor;
+      val var3: Int = this.closeTintColor;
       val var11: StringBuilder = new StringBuilder();
       var11.append("UploadProgress(headerText=");
-      var11.append(var12);
+      var11.append(var9);
       var11.append(", headerColor=");
-      var11.append(var7);
-      var11.append(", backgroundColor=");
       var11.append(var5);
+      var11.append(", backgroundColor=");
+      var11.append(var6);
       var11.append(", progress=");
       var11.append(var1);
       var11.append(", fileId=");
-      var11.append(var9);
+      var11.append(var12);
       var11.append(", fileType=");
       var11.append(var10);
       var11.append(", progressTrackColor=");
-      var11.append(var8);
-      var11.append(", progressStartColor=");
-      var11.append(var3);
-      var11.append(", progressEndColor=");
       var11.append(var4);
-      var11.append(", iconTintColor=");
-      var11.append(var6);
-      var11.append(", closeTintColor=");
+      var11.append(", progressStartColor=");
+      var11.append(var8);
+      var11.append(", progressEndColor=");
       var11.append(var2);
+      var11.append(", iconTintColor=");
+      var11.append(var7);
+      var11.append(", closeTintColor=");
+      var11.append(var3);
       var11.append(")");
       return var11.toString();
    }
@@ -243,17 +243,17 @@ public data class UploadProgress(headerText: String,
          val var0: UploadProgress.$serializer = new UploadProgress.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.UploadProgress", var0, 11);
-         var1.c("headerText", false);
-         var1.c("headerColor", false);
-         var1.c("backgroundColor", false);
-         var1.c("progress", false);
-         var1.c("fileId", false);
-         var1.c("fileType", false);
-         var1.c("progressTrackColor", false);
-         var1.c("progressStartColor", false);
-         var1.c("progressEndColor", false);
-         var1.c("iconTintColor", false);
-         var1.c("closeTintColor", false);
+         var1.l("headerText", false);
+         var1.l("headerColor", false);
+         var1.l("backgroundColor", false);
+         var1.l("progress", false);
+         var1.l("fileId", false);
+         var1.l("fileType", false);
+         var1.l("progressTrackColor", false);
+         var1.l("progressStartColor", false);
+         var1.l("progressEndColor", false);
+         var1.l("iconTintColor", false);
+         var1.l("closeTintColor", false);
          descriptor = var1;
       }
 
@@ -264,98 +264,100 @@ public data class UploadProgress(headerText: String,
       public open fun deserialize(decoder: Decoder): UploadProgress {
          q.h(var1, "decoder");
          val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.b(var18);
-         val var14: Boolean = var19.p();
+         val var19: c = var1.c(var18);
+         val var14: Boolean = var19.y();
          var var3: Int = 0;
          var var2: Float;
          var var4: Int;
-         var var5: Int;
          var var6: Int;
          var var7: Int;
+         var var8: Int;
          var var9: Int;
          var var10: Int;
          val var11: Int;
-         var var12: Int;
-         var var15: java.lang.String;
-         val var17: java.lang.String;
+         var var16: java.lang.String;
          val var20: java.lang.String;
+         var var24: Int;
+         var var35: java.lang.String;
          if (var14) {
-            var15 = var19.m(var18, 0);
-            var9 = var19.i(var18, 1);
-            var12 = var19.i(var18, 2);
-            var2 = var19.u(var18, 3);
-            var17 = var19.m(var18, 4);
-            var20 = var19.m(var18, 5);
-            var6 = var19.i(var18, 6);
-            var5 = var19.i(var18, 7);
-            val var8: Int = var19.i(var18, 8);
-            var4 = var19.i(var18, 9);
-            var3 = var19.i(var18, 10);
-            var7 = 2047;
-            var10 = var8;
-            var11 = var3;
+            var35 = var19.t(var18, 0);
+            var11 = var19.k(var18, 1);
+            var10 = var19.k(var18, 2);
+            var2 = var19.G(var18, 3);
+            val var17: java.lang.String = var19.t(var18, 4);
+            var20 = var19.t(var18, 5);
+            var9 = var19.k(var18, 6);
+            var24 = var19.k(var18, 7);
+            var8 = var19.k(var18, 8);
+            var4 = var19.k(var18, 9);
+            var3 = var19.k(var18, 10);
+            var6 = 2047;
+            var16 = var35;
+            var35 = var17;
+            var7 = var24;
+            var24 = var3;
          } else {
-            var var16: java.lang.String = null;
-            var15 = null;
+            var16 = null;
+            var35 = null;
             var var21: java.lang.String = null;
-            var var30: Boolean = true;
+            var var33: Boolean = true;
             var9 = 0;
-            var var27: Int = 0;
+            var8 = 0;
             var7 = 0;
             var6 = 0;
-            var5 = 0;
+            var24 = 0;
             var4 = 0;
             var2 = 0.0F;
             var10 = 0;
 
-            while (var30) {
-               var12 = var19.o(var18);
+            while (var33) {
+               val var12: Int = var19.x(var18);
                switch (var12) {
                   case -1:
-                     var30 = false;
+                     var33 = false;
                      break;
                   case 0:
-                     var16 = var19.m(var18, 0);
+                     var16 = var19.t(var18, 0);
                      var3 |= 1;
                      break;
                   case 1:
-                     var4 = var19.i(var18, 1);
+                     var4 = var19.k(var18, 1);
                      var3 |= 2;
                      break;
                   case 2:
-                     var5 = var19.i(var18, 2);
+                     var24 = var19.k(var18, 2);
                      var3 |= 4;
                      break;
                   case 3:
-                     var2 = var19.u(var18, 3);
+                     var2 = var19.G(var18, 3);
                      var3 |= 8;
                      break;
                   case 4:
-                     var21 = var19.m(var18, 4);
+                     var21 = var19.t(var18, 4);
                      var3 |= 16;
                      break;
                   case 5:
-                     var15 = var19.m(var18, 5);
+                     var35 = var19.t(var18, 5);
                      var3 |= 32;
                      break;
                   case 6:
-                     var7 = var19.i(var18, 6);
+                     var7 = var19.k(var18, 6);
                      var3 |= 64;
                      break;
                   case 7:
-                     var27 = var19.i(var18, 7);
+                     var8 = var19.k(var18, 7);
                      var3 |= 128;
                      break;
                   case 8:
-                     var6 = var19.i(var18, 8);
+                     var6 = var19.k(var18, 8);
                      var3 |= 256;
                      break;
                   case 9:
-                     var9 = var19.i(var18, 9);
+                     var9 = var19.k(var18, 9);
                      var3 |= 512;
                      break;
                   case 10:
-                     var10 = var19.i(var18, 10);
+                     var10 = var19.k(var18, 10);
                      var3 |= 1024;
                      break;
                   default:
@@ -363,30 +365,29 @@ public data class UploadProgress(headerText: String,
                }
             }
 
-            var17 = var21;
-            var12 = var5;
-            var9 = var4;
-            var11 = var10;
+            var9 = var7;
+            var8 = var6;
+            var35 = var21;
+            var11 = var4;
+            var24 = var10;
             var4 = var9;
-            var10 = var6;
-            var5 = var27;
-            var6 = var7;
-            var20 = var15;
-            var15 = var16;
-            var7 = var3;
+            var7 = var8;
+            var20 = var35;
+            var10 = var24;
+            var6 = var3;
          }
 
-         var19.c(var18);
-         return new UploadProgress(var7, var15, var9, var12, var2, var17, var20, var6, var5, var10, var4, var11, null);
+         var19.b(var18);
+         return new UploadProgress(var6, var16, var11, var10, var2, var35, var20, var9, var7, var8, var4, var24, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgress) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          UploadProgress.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

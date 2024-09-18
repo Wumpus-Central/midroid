@@ -7,11 +7,11 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.DCDQRScannerManagerDelegate
 import com.facebook.react.viewmanagers.DCDQRScannerManagerInterface
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 @ReactModule(name = "DCDQRScanner")
 public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerManagerInterface<QRScanner> {
@@ -57,11 +57,11 @@ public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerMan
       return this.delegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDQRScanner";
    }
 

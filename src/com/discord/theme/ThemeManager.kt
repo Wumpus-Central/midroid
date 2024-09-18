@@ -9,8 +9,8 @@ import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
+import kh.p
 import kotlin.jvm.internal.q
-import vj.p
 
 public object ThemeManager {
    private final lateinit var resourceTheme: Theme
@@ -52,10 +52,10 @@ public object ThemeManager {
                   var9 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
                   q.y("resourceTheme");
-                  var3 = null;
+               } else {
+                  var3 = resourceTheme;
                }
 
                var8 = new DarkerTheme(var9, var3);
@@ -67,10 +67,10 @@ public object ThemeManager {
                var10 = null;
             }
 
+            var3 = resourceTheme;
             if (resourceTheme == null) {
                q.y("resourceTheme");
-            } else {
-               var3 = resourceTheme;
+               var3 = null;
             }
 
             var8 = new LightTheme(var10, var3);

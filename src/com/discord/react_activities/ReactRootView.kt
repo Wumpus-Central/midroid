@@ -24,7 +24,7 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
       this.onInterceptTouchEventListeners = new WeakHashMap<>();
    }
 
-   protected override fun dispatchDraw(canvas: Canvas) {
+   protected open fun dispatchDraw(canvas: Canvas) {
       q.h(var1, "canvas");
       super.dispatchDraw(var1);
       if (VERSION.SDK_INT >= 29) {
@@ -32,14 +32,14 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
       }
    }
 
-   public override fun onInterceptTouchEvent(e: MotionEvent): Boolean {
+   public open fun onInterceptTouchEvent(e: MotionEvent): Boolean {
       q.h(var1, "e");
-      val var2: java.util.Iterator = this.onInterceptTouchEventListeners.entrySet().iterator();
+      val var3: java.util.Iterator = this.onInterceptTouchEventListeners.entrySet().iterator();
 
-      while (var2.hasNext()) {
-         val var3: Function1 = (var2.next() as Entry).getValue() as Function1;
-         if (var3 != null) {
-            var3.invoke(var1);
+      while (var3.hasNext()) {
+         val var2: Function1 = (var3.next() as Entry).getValue() as Function1;
+         if (var2 != null) {
+            var2.invoke(var1);
          }
       }
 

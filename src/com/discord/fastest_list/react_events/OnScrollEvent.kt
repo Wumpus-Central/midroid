@@ -5,8 +5,8 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kh.w
 import kotlin.jvm.internal.q
-import vj.w
 
 internal open class OnScrollEvent private constructor(x: Float, y: Float, width: Float, height: Float, contentWidth: Float, contentHeight: Float) : ReactEvent {
    private final val contentHeight: Float
@@ -36,15 +36,13 @@ internal open class OnScrollEvent private constructor(x: Float, y: Float, width:
       );
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var1: Int = 0;
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            w.a("contentInset", NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("left", var1), w.a("top", var1), w.a("bottom", var1), w.a("right", var1)})),
-            w.a("contentOffset", NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("x", this.x), w.a("y", this.y)})),
-            w.a("contentSize", NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("width", this.contentWidth), w.a("height", this.contentHeight)})),
-            w.a("layoutMeasurement", NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("width", this.width), w.a("height", this.height)}))
-         }
+         w.a("contentInset", NativeMapExtensionsKt.nativeMapOf(w.a("left", var1), w.a("top", var1), w.a("bottom", var1), w.a("right", var1))),
+         w.a("contentOffset", NativeMapExtensionsKt.nativeMapOf(w.a("x", this.x), w.a("y", this.y))),
+         w.a("contentSize", NativeMapExtensionsKt.nativeMapOf(w.a("width", this.contentWidth), w.a("height", this.contentHeight))),
+         w.a("layoutMeasurement", NativeMapExtensionsKt.nativeMapOf(w.a("width", this.width), w.a("height", this.height)))
       );
    }
 }

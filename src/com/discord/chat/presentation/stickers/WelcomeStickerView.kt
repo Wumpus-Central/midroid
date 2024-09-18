@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.stickers
 
-import a5.a
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -19,11 +18,12 @@ import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import q3.a
 
 public class WelcomeStickerView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final val binding: WelcomeStickerViewBinding
@@ -45,7 +45,7 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
       this.setPadding(SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(8), SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(8));
       val var4: TextView = var3.welcomeReplyText;
       q.e(var3.welcomeReplyText);
-      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, color.white));
+      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, R.color.white));
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundAccent(), SizeUtilsKt.getDpToPx(4), null, 0, 12, null);

@@ -1,5 +1,10 @@
 package com.discord.notifications.api
 
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
 
 @f
 public data class EmbedField(name: String? = null, value: String? = null) {
@@ -72,13 +72,13 @@ public data class EmbedField(name: String? = null, value: String? = null) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
-      val var2: java.lang.String = this.value;
+      val var2: java.lang.String = this.name;
+      val var1: java.lang.String = this.value;
       val var3: StringBuilder = new StringBuilder();
       var3.append("EmbedField(name=");
-      var3.append(var1);
-      var3.append(", value=");
       var3.append(var2);
+      var3.append(", value=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }
@@ -95,8 +95,8 @@ public data class EmbedField(name: String? = null, value: String? = null) {
          val var0: EmbedField.$serializer = new EmbedField.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.notifications.api.EmbedField", var0, 2);
-         var1.c("name", true);
-         var1.c("value", true);
+         var1.l("name", true);
+         var1.l("value", true);
          descriptor = var1;
       }
 
@@ -108,14 +108,14 @@ public data class EmbedField(name: String? = null, value: String? = null) {
       public open fun deserialize(decoder: Decoder): EmbedField {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          var var2: Int;
          var var5: java.lang.String;
          var var9: java.lang.String;
-         if (var7.p()) {
+         if (var7.y()) {
             val var8: b2 = b2.a;
-            var5 = var7.n(var6, 0, b2.a, null) as java.lang.String;
-            var9 = var7.n(var6, 1, var8, null) as java.lang.String;
+            var5 = var7.v(var6, 0, b2.a, null) as java.lang.String;
+            var9 = var7.v(var6, 1, var8, null) as java.lang.String;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -124,17 +124,17 @@ public data class EmbedField(name: String? = null, value: String? = null) {
             var5 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var7.n(var6, 1, b2.a, var9) as java.lang.String;
+                     var9 = var7.v(var6, 1, b2.a, var9) as java.lang.String;
                      var2 |= 2;
                   } else {
-                     var5 = var7.n(var6, 0, b2.a, var5) as java.lang.String;
+                     var5 = var7.v(var6, 0, b2.a, var5) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -143,7 +143,7 @@ public data class EmbedField(name: String? = null, value: String? = null) {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new EmbedField(var2, var5, var9, null);
       }
 
@@ -151,13 +151,13 @@ public data class EmbedField(name: String? = null, value: String? = null) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          EmbedField.write$Self$notification_api_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

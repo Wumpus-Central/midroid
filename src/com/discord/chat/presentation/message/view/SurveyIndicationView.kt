@@ -19,8 +19,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
@@ -47,7 +47,7 @@ public class SurveyIndicationView  public constructor(context: Context, attrs: A
       val var6: SurveyActionViewBinding = SurveyActionViewBinding.inflate(LayoutInflater.from(var1), this);
       kotlin.jvm.internal.q.g(var6, "inflate(...)");
       this.binding = var6;
-      var6.surveyCard.setCardBackgroundColor(ColorUtilsKt.getThemeColor(var1, color.white_500, color.primary_800));
+      var6.surveyCard.setCardBackgroundColor(ColorUtilsKt.getThemeColor(var1, R.color.white_500, R.color.primary_800));
       val var4: SimpleDraweeView = this.binding.chatListFeedbackIcon;
       kotlin.jvm.internal.q.g(this.binding.chatListFeedbackIcon, "chatListFeedbackIcon");
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());

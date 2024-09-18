@@ -8,7 +8,6 @@ import android.graphics.Path
 import android.graphics.RectF
 import android.graphics.Path.Direction
 import android.view.MotionEvent
-import ck.a
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_activities.ReactRootView
 import com.facebook.react.uimanager.PointerEvents
@@ -17,6 +16,7 @@ import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import rh.a
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    public final var clipDirectionX: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX
@@ -70,10 +70,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
          if (var5 != 2) {
             if (var5 == 3) {
                val var15: RectF = this.pathRect;
-               val var2: Float = this.height;
-               val var3: Float = this.shapeHeight;
+               val var4: Float = this.height;
+               val var2: Float = this.shapeHeight;
                this.pathRect.top = (this.height - this.shapeHeight) / 2;
-               var15.bottom = var2 - (var2 - var3) / 2;
+               var15.bottom = var4 - (var4 - var2) / 2;
             }
          } else {
             val var16: RectF = this.pathRect;

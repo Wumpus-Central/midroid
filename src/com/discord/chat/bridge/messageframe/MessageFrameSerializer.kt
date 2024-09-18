@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.messageframe
 
+import gl.d
+import gl.g
 import java.util.ArrayList
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
@@ -9,8 +11,6 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import rn.d
-import rn.g
 
 public object MessageFrameSerializer : d(g0.b(MessageFrame.class)) {
    private final val knownTypes: List<Int>
@@ -18,15 +18,15 @@ public object MessageFrameSerializer : d(g0.b(MessageFrame.class)) {
 
    @JvmStatic
    fun {
-      val var2: Array<MessageFrameType> = MessageFrameType.values();
-      val var3: ArrayList = new ArrayList(var2.length);
-      val var1: Int = var2.length;
+      val var3: Array<MessageFrameType> = MessageFrameType.values();
+      val var2: ArrayList = new ArrayList(var3.length);
+      val var1: Int = var3.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var3.add(var2[var0].getSerialNumber());
+         var2.add(var3[var0].getSerialNumber());
       }
 
-      knownTypes = var3;
+      knownTypes = var2;
       messageFrameClassSerializer = new SealedClassSerializer(
          "MessageFrame",
          g0.b(MessageFrame.class),
@@ -53,7 +53,7 @@ public object MessageFrameSerializer : d(g0.b(MessageFrame.class)) {
       }
 
       val var6: Any;
-      if (i.T(var2, var5)) {
+      if (i.U(var2, var5)) {
          var6 = messageFrameClassSerializer;
       } else {
          var6 = UnknownMessageFrame.Companion.serializer();

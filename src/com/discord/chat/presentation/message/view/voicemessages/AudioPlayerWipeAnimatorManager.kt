@@ -11,13 +11,12 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Build.VERSION
 import android.view.View
-import com.discord.chat.R
 import com.discord.chat.databinding.AudioPlayerViewBinding
 import com.discord.misc.utilities.drawable.GetDrawableCompatKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -69,9 +68,9 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
       kotlin.jvm.internal.q.h(var1, "context");
       kotlin.jvm.internal.q.h(var2, "binding");
       super();
-      this.brand500 = var1.getColor(color.brand_500);
+      this.brand500 = var1.getColor(R.color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = vj.l.a(new Function0(var1) {
+      this.buttonContainerDefaultDrawable$delegate = kh.l.b(new Function0(var1) {
          final Context $context;
 
          {
@@ -83,16 +82,16 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             val var2: Context = this.$context;
             val var1: Int;
             if (ThemeManager.INSTANCE.isThemeLight()) {
-               var1 = R.drawable.drawable_audio_play_button_gradient_light;
+               var1 = com.discord.chat.R.drawable.drawable_audio_play_button_gradient_light;
             } else {
-               var1 = R.drawable.drawable_audio_play_button_gradient_dark;
+               var1 = com.discord.chat.R.drawable.drawable_audio_play_button_gradient_dark;
             }
 
             return GetDrawableCompatKt.getDrawableCompat(var2, var1);
          }
       });
-      this.buttonContainerActiveDrawable$delegate = vj.l.a(<unrepresentable>.INSTANCE);
-      this.scaleAnimator$delegate = vj.l.a(
+      this.buttonContainerActiveDrawable$delegate = kh.l.b(<unrepresentable>.INSTANCE);
+      this.scaleAnimator$delegate = kh.l.b(
          new Function0(var2, this) {
             final AudioPlayerViewBinding $binding;
             final AudioPlayerWipeAnimatorManager this$0;
@@ -148,7 +147,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             }
          }
       );
-      this.textColorAnimator$delegate = vj.l.a(new Function0(var2) {
+      this.textColorAnimator$delegate = kh.l.b(new Function0(var2) {
          final AudioPlayerViewBinding $binding;
 
          {
@@ -171,7 +170,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             return var1;
          }
       });
-      this.buttonIconColorAnimator$delegate = vj.l.a(new Function0(var2) {
+      this.buttonIconColorAnimator$delegate = kh.l.b(new Function0(var2) {
          final AudioPlayerViewBinding $binding;
 
          {
@@ -195,7 +194,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             return var1;
          }
       });
-      this.progressColorAnimator$delegate = vj.l.a(new Function0(var2) {
+      this.progressColorAnimator$delegate = kh.l.b(new Function0(var2) {
          final AudioPlayerViewBinding $binding;
 
          {

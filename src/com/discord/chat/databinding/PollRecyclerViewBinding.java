@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.polls.PollActionButton;
-import f3.a;
+import n1.a;
 
 public final class PollRecyclerViewBinding implements ViewBinding {
    public final RecyclerView answers;
@@ -33,24 +33,24 @@ public final class PollRecyclerViewBinding implements ViewBinding {
 
    public static PollRecyclerViewBinding bind(View var0) {
       int var1 = R.id.answers;
-      RecyclerView var2 = (RecyclerView)a.a(var0, var1);
-      if (var2 != null) {
+      RecyclerView var5 = (RecyclerView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.primary_action;
-         PollActionButton var7 = (PollActionButton)a.a(var0, var1);
-         if (var7 != null) {
+         PollActionButton var2 = (PollActionButton)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.prompt_text;
-            TextView var3 = (TextView)a.a(var0, var1);
-            if (var3 != null) {
+            TextView var6 = (TextView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.question_text;
-               TextView var5 = (TextView)a.a(var0, var1);
-               if (var5 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.secondary_action_button;
-                  PollActionButton var6 = (PollActionButton)a.a(var0, var1);
-                  if (var6 != null) {
+                  PollActionButton var7 = (PollActionButton)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.tertiary_action_button;
                      PollActionButton var4 = (PollActionButton)a.a(var0, var1);
                      if (var4 != null) {
-                        return new PollRecyclerViewBinding(var0, var2, var7, var3, var5, var6, var4);
+                        return new PollRecyclerViewBinding(var0, var5, var2, var6, var3, var7, var4);
                      }
                   }
                }

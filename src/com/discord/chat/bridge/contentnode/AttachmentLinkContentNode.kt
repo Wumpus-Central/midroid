@@ -1,5 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
 
 @f
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
@@ -65,8 +65,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.attachmentUrl.hashCode();
-      val var2: Int = this.attachmentName.hashCode();
+      val var2: Int = this.attachmentUrl.hashCode();
+      val var3: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -74,20 +74,20 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var3: java.lang.String = this.attachmentUrl;
-      val var4: java.lang.String = this.attachmentName;
-      val var1: java.util.List = this.content;
+      val var1: java.lang.String = this.attachmentName;
+      val var4: java.util.List = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("AttachmentLinkContentNode(attachmentUrl=");
       var2.append(var3);
       var2.append(", attachmentName=");
-      var2.append(var4);
-      var2.append(", content=");
       var2.append(var1);
+      var2.append(", content=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }
@@ -104,9 +104,9 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          val var0: AttachmentLinkContentNode.$serializer = new AttachmentLinkContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("attachmentLink", var0, 3);
-         var1.c("attachmentUrl", false);
-         var1.c("attachmentName", false);
-         var1.c("content", false);
+         var1.l("attachmentUrl", false);
+         var1.l("attachmentName", false);
+         var1.l("content", false);
          descriptor = var1;
       }
 
@@ -116,27 +116,27 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
 
       public open fun deserialize(decoder: Decoder): AttachmentLinkContentNode {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.b(var9);
-         val var8: Array<KSerializer> = AttachmentLinkContentNode.access$get$childSerializers$cp();
-         val var5: Boolean = var10.p();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var10: Array<KSerializer> = AttachmentLinkContentNode.access$get$childSerializers$cp();
+         val var5: Boolean = var9.y();
          var var7: java.lang.String = null;
          var var2: Int;
-         val var11: java.lang.String;
-         val var13: java.util.List;
+         var var6: java.lang.String;
+         var var11: java.util.List;
          if (var5) {
-            var7 = var10.m(var9, 0);
-            var11 = var10.m(var9, 1);
-            var13 = var10.n(var9, 2, var8[2], null) as java.util.List;
+            var7 = var9.t(var8, 0);
+            var6 = var9.t(var8, 1);
+            var11 = var9.v(var8, 2, var10[2], null) as java.util.List;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var6: java.lang.String = null;
-            var var12: java.util.List = null;
+            var6 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var10.o(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -144,40 +144,37 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
                            throw new n(var4);
                         }
 
-                        var12 = var10.n(var9, 2, var8[2], var12) as java.util.List;
+                        var11 = var9.v(var8, 2, var10[2], var11) as java.util.List;
                         var2 |= 4;
                      } else {
-                        var6 = var10.m(var9, 1);
+                        var6 = var9.t(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.m(var9, 0);
+                     var7 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var13 = var12;
-            var11 = var6;
          }
 
-         var10.c(var9);
-         return new AttachmentLinkContentNode(var2, var7, var11, var13, null);
+         var9.b(var8);
+         return new AttachmentLinkContentNode(var2, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AttachmentLinkContentNode) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          AttachmentLinkContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

@@ -6,6 +6,6 @@ public final class a implements Runnable {
 
    @Override
    public final void run() {
-      ThemeModule.a(this.j);
+      ThemeModule.b(this.j);
    }
 }

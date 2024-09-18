@@ -7,10 +7,10 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -22,7 +22,7 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("screenshotTaken", g0.b(ScreenshotTakenEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("screenshotTaken", g0.b(ScreenshotTakenEvent.class)));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final ScreenshotHelperModule this$0;
 

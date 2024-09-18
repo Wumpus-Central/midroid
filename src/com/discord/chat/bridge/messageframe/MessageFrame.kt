@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.messageframe
 
+import cl.f
 import kotlinx.serialization.KSerializer
-import nn.f
 
 @f(with = MessageFrameSerializer::class)
 public sealed class MessageFrame protected constructor() {

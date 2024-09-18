@@ -8,9 +8,9 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
+import kh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterSpec {
    private final lateinit var audioManager: DiscordAudioManagerInterface
@@ -44,7 +44,7 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
             q.h(var1, "audioDevices");
          }
       };
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("audio-route-changed", g0.b(AudioRouteEmitterAudioRouteChanged.class))});
+      this.reactEvents = new ReactEvents(w.a("audio-route-changed", g0.b(AudioRouteEmitterAudioRouteChanged.class)));
    }
 
    @ReactMethod
@@ -62,10 +62,8 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          var1.resolve(
             NativeMapExtensionsKt.nativeMapOf(
-               new Pair[]{
-                  w.a("routeType", AudioRouteEmitterModule.Companion.access$toRouteTypeString(Companion, var2.getEffectiveAudioDevice())),
-                  w.a("multipleRoutesAvailable", java.lang.Boolean.FALSE)
-               }
+               w.a("routeType", AudioRouteEmitterModule.Companion.access$toRouteTypeString(Companion, var2.getEffectiveAudioDevice())),
+               w.a("multipleRoutesAvailable", java.lang.Boolean.FALSE)
             )
          );
       }
@@ -83,10 +81,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          q.g(var2, "getReactApplicationContext(...)");
          this.audioManager = var1.getInstance(var2);
       } else {
-         val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         this.audioManager = var5.getInstance(var3);
+         val var3: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var5, "getReactApplicationContext(...)");
+         this.audioManager = var3.getInstance(var5);
       }
 
       var var4: DiscordAudioManagerInterface = this.audioManager;

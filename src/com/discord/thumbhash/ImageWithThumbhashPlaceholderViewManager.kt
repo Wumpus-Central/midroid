@@ -16,7 +16,7 @@ public class ImageWithThumbhashPlaceholderViewManager
       return new ImageWithThumbhashPlaceholderView(var1, null, 2, null);
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDImageWithThumbhashPlaceholderView";
    }
 

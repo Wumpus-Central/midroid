@@ -59,7 +59,7 @@ public object PushNotificationMonitor {
       q.h(var1, "context");
       q.h(var2, "loggedInUserId");
       q.h(var3, "pushNotification");
-      val var4: java.util.List = i.S0(this.getPushLog(var1, var2).getPushNotifications());
+      val var4: java.util.List = i.T0(this.getPushLog(var1, var2).getPushNotifications());
       var4.add(var3);
       if (var4.size() == 100) {
          var4.remove(0);

@@ -5,12 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import androidx.lifecycle.Lifecycle
 import com.discord.external_pip.ExternalPipModule
 import com.discord.foreground_service.ForegroundServiceManager
 import com.discord.notifications.client.NotificationClient
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
+import com.discord.window.WindowFoldingFeatureDetector
 import com.facebook.react.bridge.ReactContext
 import kotlin.jvm.internal.q
 
@@ -20,8 +22,8 @@ public class MainActivity : ReactActivity {
       return this.getReactInstanceManager().getCurrentReactContext();
    }
 
-   public open fun getActivityDelegate(): ActivityDelegate {
-      return new ActivityDelegate(this) {
+   public override fun getActivityDelegate(): ActivityDelegate {
+      return new ReactActivity.ActivityDelegate(this) {
          final MainActivity this$0;
 
          {
@@ -43,9 +45,14 @@ public class MainActivity : ReactActivity {
 
          protected void onCreate(Bundle var1) {
             super.onCreate(var1);
-            val var2: Intent = this.this$0.getIntent();
-            q.g(var2, "getIntent(...)");
-            this.parseIntent(var2);
+            val var4: Intent = this.this$0.getIntent();
+            q.g(var4, "getIntent(...)");
+            this.parseIntent(var4);
+            val var3: WindowFoldingFeatureDetector = WindowFoldingFeatureDetector.INSTANCE;
+            val var2: MainActivity = this.this$0;
+            val var5: Lifecycle = this.this$0.getLifecycle();
+            q.g(var5, "getLifecycle(...)");
+            var3.configure(var2, var5, this.this$0);
          }
 
          public boolean onNewIntent(Intent var1) {
@@ -56,7 +63,7 @@ public class MainActivity : ReactActivity {
       };
    }
 
-   public open fun getNameOfComponent(): String {
+   public override fun getNameOfComponent(): String {
       return "Discord";
    }
 

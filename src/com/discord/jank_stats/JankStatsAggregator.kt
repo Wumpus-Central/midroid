@@ -6,8 +6,8 @@ import androidx.metrics.performance.JankStats
 import androidx.metrics.performance.JankStats.OnFrameListener
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
-import e5.a
 import kotlin.jvm.internal.q
+import u3.a
 
 public object JankStatsAggregator {
    private final var jankStats: JankStats?
@@ -94,11 +94,11 @@ public object JankStatsAggregator {
       val var2: JankStats = jankStats;
       q.e(jankStats);
       var2.c(var1);
-      val var3: Log = Log.INSTANCE;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Jank heuristic multiplier set to ");
-      var4.append(var1);
-      var4.append(".");
-      Log.i$default(var3, "JankStatsAggregator", var4.toString(), null, 4, null);
+      val var4: Log = Log.INSTANCE;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Jank heuristic multiplier set to ");
+      var3.append(var1);
+      var3.append(".");
+      Log.i$default(var4, "JankStatsAggregator", var3.toString(), null, 4, null);
    }
 }

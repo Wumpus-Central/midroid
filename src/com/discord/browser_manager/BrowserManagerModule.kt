@@ -6,18 +6,18 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import vj.w
-import wj.r
+import lh.r
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val cacheModule: CacheModule
       private final get() {
-         val var2: CacheModule.Companion = CacheModule.Companion;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var1, "getReactApplicationContext(...)");
-         return var2.get(var1);
+         val var1: CacheModule.Companion = CacheModule.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         return var1.get(var2);
       }
 
 

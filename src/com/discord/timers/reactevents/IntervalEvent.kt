@@ -1,7 +1,13 @@
 package com.discord.timers.reactevents
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,11 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.n0
-import qn.g0.a
 
 @f
 internal data class IntervalEvent(id: Int) : ReactEvent {
@@ -46,8 +47,8 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
       return Integer.hashCode(this.id);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -71,7 +72,7 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          val var0: IntervalEvent.$serializer = new IntervalEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.timers.reactevents.IntervalEvent", var0, 1);
-         var1.c("id", false);
+         var1.l("id", false);
          descriptor = var1;
       }
 
@@ -82,43 +83,43 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
       public open fun deserialize(decoder: Decoder): IntervalEvent {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var6: Boolean = var8.p();
-         var var2: Int = 1;
+         val var8: c = var1.c(var7);
+         val var6: Boolean = var8.y();
+         var var3: Int = 1;
          var var4: Boolean = true;
-         var var3: Int;
+         var var2: Int;
          if (var6) {
-            var3 = var8.i(var7, 0);
+            var2 = var8.k(var7, 0);
          } else {
-            var3 = 0;
             var2 = 0;
+            var3 = 0;
 
             while (var4) {
-               val var5: Int = var8.o(var7);
+               val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      throw new n(var5);
                   }
 
-                  var3 = var8.i(var7, 0);
-                  var2 |= 1;
+                  var2 = var8.k(var7, 0);
+                  var3 |= 1;
                } else {
                   var4 = false;
                }
             }
          }
 
-         var8.c(var7);
-         return new IntervalEvent(var2, var3, null);
+         var8.b(var7);
+         return new IntervalEvent(var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: IntervalEvent) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          IntervalEvent.write$Self$react_timers_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

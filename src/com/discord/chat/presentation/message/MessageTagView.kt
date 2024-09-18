@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.discord.chat.R
 import com.discord.chat.databinding.MessageTagViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.fonts.DiscordFont
@@ -20,7 +19,7 @@ import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 
@@ -82,13 +81,13 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          } else {
             val var28: Context = this.getContext();
             kotlin.jvm.internal.q.g(var28, "getContext(...)");
-            var12 = ColorUtilsKt.getColorCompat(var28, color.white);
+            var12 = ColorUtilsKt.getColorCompat(var28, R.color.white);
          }
 
          var14.setTextColor(var12);
          val var15: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.q.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new k(var6, var7, var8, var10), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new l(var6, var7, var8, var10), 1, null);
          val var16: SimpleDraweeView = this.binding.verifiedBotIcon;
          kotlin.jvm.internal.q.g(this.binding.verifiedBotIcon, "verifiedBotIcon");
          var var29: Byte = 8;
@@ -106,7 +105,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          } else {
             val var18: ConstraintLayout = this.binding.layout;
             kotlin.jvm.internal.q.g(this.binding.layout, "layout");
-            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var18, R.drawable.drawable_message_author_tag_bg);
+            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var18, com.discord.chat.R.drawable.drawable_message_author_tag_bg);
          }
 
          if (var11 != null) {
@@ -124,20 +123,20 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          ColorUtilsKt.setTintColor(var21, -1);
       } else if (var5 != null) {
          this.binding.tag.setText(var5);
-         val var22: TextView = this.binding.tag;
-         val var26: Context = this.getContext();
-         kotlin.jvm.internal.q.g(var26, "getContext(...)");
-         var22.setTextColor(ColorUtilsKt.getColorCompat(var26, color.brand_560));
-         val var27: ConstraintLayout = this.binding.layout;
+         val var26: TextView = this.binding.tag;
+         val var22: Context = this.getContext();
+         kotlin.jvm.internal.q.g(var22, "getContext(...)");
+         var26.setTextColor(ColorUtilsKt.getColorCompat(var22, R.color.brand_560));
+         val var23: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.q.g(this.binding.layout, "layout");
-         val var23: Context = this.getContext();
-         kotlin.jvm.internal.q.g(var23, "getContext(...)");
+         val var27: Context = this.getContext();
+         kotlin.jvm.internal.q.g(var27, "getContext(...)");
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-            var27, ColorUtilsKt.getThemeColor(var23, color.brand_200, color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
+            var23, ColorUtilsKt.getThemeColor(var27, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
          );
          val var24: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.q.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new l(var6), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new m(var6), 1, null);
          val var25: SimpleDraweeView = this.binding.verifiedBotIcon;
          kotlin.jvm.internal.q.g(this.binding.verifiedBotIcon, "verifiedBotIcon");
          var25.setVisibility(8);

@@ -13,7 +13,6 @@ import com.discord.play_delivery.PlayAssetDelivery
 import com.discord.react.FontManager
 import com.discord.react_fork_overrides.ReactForkOverrides
 import com.discord.resource_usage.DeviceResourceUsageRecorder
-import com.discord.resource_usage.DeviceResourceUsageRecorder.Companion
 import com.discord.sticker.sticker_types.RLottieUtils
 import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
@@ -40,7 +39,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    @JvmStatic
    fun `initialize$lambda$0`(var0: Builder) {
       var0.b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
-         final Companion $receiver$inlined;
+         final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
             this.$receiver$inlined = var1;
@@ -74,7 +73,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "247.4", 247204, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "249.3", 249203, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -87,7 +86,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@247.4.0-2+247204";
+         var5 = "discord_android@249.3.0-2+249203";
       }
 
       CrashReporting.INSTANCE.init(this, var5);

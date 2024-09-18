@@ -8,11 +8,11 @@ import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import dn.g
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
-import wj.o
+import lh.o
+import sk.f
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -81,10 +81,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   if (var32 != null) {
                      var var7: Int = (int)var2.getX() - var19.getTotalPaddingLeft() + var19.getScrollX();
                      val var30: Int = var19.getLayout().getLineForVertical((int)var2.getY() - var19.getTotalPaddingTop() + var19.getScrollY());
-                     val var5: Float = var19.getLayout().getLineRight(var30);
-                     val var4: Float = var19.getLayout().getLineLeft(var30);
+                     val var4: Float = var19.getLayout().getLineRight(var30);
+                     val var5: Float = var19.getLayout().getLineLeft(var30);
                      val var6: Float = var7;
-                     if (!(var7 > var5) && (var7 < 0 || !(var7 < var4))) {
+                     if (!(var7 > var4) && (var7 < 0 || !(var7 < var5))) {
                         var7 = var19.getLayout().getOffsetForHorizontal(var30, var6);
                         var14 = var32.getSpans(var7, var7, NestedClickableSpan.class);
                         q.g(var14, "getSpans(...)");
@@ -106,12 +106,12 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   var15 = null;
                } else {
                   var var34: Any = var16[0];
-                  val var28: Int = c.M(var16);
+                  val var28: Int = c.L(var16);
                   if (var28 == 0) {
                      var15 = var34;
                   } else {
                      var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var34).getTouchPriority();
-                     val var20: o = new IntRange(1, var28).n();
+                     val var20: o = new IntRange(1, var28).p();
 
                      while (true) {
                         var15 = var34;
@@ -187,17 +187,16 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   kotlinx.coroutines.Job.a.a(this.job, null, 1, null);
                }
 
-               this.job = g.d(
+               this.job = f.d(
                   CoroutineViewUtilsKt.attachedScope(var1, true),
                   null,
                   null,
                   new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
-   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1459)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1218,6 +1217,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
                   3,
                   null

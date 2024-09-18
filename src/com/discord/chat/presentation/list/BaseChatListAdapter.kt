@@ -23,7 +23,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
       super();
       val var4: AccessoriesViewPool = new AccessoriesViewPool();
       this.messageAccessoriesRecycledViewPool = var4;
-      this.chatListItems = i.j();
+      this.chatListItems = i.k();
       val var3: AdapterDelegatesManager = this.delegatesManager;
       q.g(this.delegatesManager, "delegatesManager");
       this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var3, var1, var2, var4);
@@ -40,7 +40,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public override fun getChatListItem(position: Int): ChatListItem? {
-      return i.g0(this.chatListItems, var1) as ChatListItem;
+      return i.h0(this.chatListItems, var1) as ChatListItem;
    }
 
    public override fun getChatListItems(): List<ChatListItem> {

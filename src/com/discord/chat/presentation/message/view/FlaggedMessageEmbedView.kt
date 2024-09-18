@@ -25,12 +25,14 @@ import com.discord.react.FontManager
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 
-public class FlaggedMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout, SpacingProviderView {
+public class FlaggedMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null)
+   : ConstraintLayout,
+   VerticalSpacingItemDecoration.SpacingProviderView {
    private final var allowChildGestures: Boolean
    private final val binding: FlaggedMessageEmbedViewBinding
 
@@ -293,7 +295,7 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       this.configureMessageContent(var1);
    }
 
-   public open fun spacingPxOverride(): Int {
+   public override fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(4);
    }
 }

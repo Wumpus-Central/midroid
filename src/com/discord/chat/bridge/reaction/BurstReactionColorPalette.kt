@@ -1,6 +1,12 @@
 package com.discord.chat.bridge.reaction
 
-import com.discord.reactions.BurstReactionView.BurstColorPalette
+import cl.f
+import cl.n
+import com.discord.reactions.BurstReactionView
+import dl.a
+import fl.b2
+import fl.f0
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -9,15 +15,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.f0
-import qn.g0
 
 @f
-public data class BurstReactionColorPalette(backgroundColor: String?, accentColor: String?, highlightColor: String?, opacity: Float) : BurstColorPalette {
+public data class BurstReactionColorPalette(backgroundColor: String?, accentColor: String?, highlightColor: String?, opacity: Float) :
+   BurstReactionView.BurstColorPalette {
    public open val accentColor: String?
    public open val backgroundColor: String?
    public open val highlightColor: String?
@@ -99,21 +100,21 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.backgroundColor;
-      val var3: java.lang.String = this.accentColor;
-      val var2: java.lang.String = this.highlightColor;
+      val var3: java.lang.String = this.backgroundColor;
+      val var5: java.lang.String = this.accentColor;
+      val var4: java.lang.String = this.highlightColor;
       val var1: Float = this.opacity;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("BurstReactionColorPalette(backgroundColor=");
-      var4.append(var5);
-      var4.append(", accentColor=");
-      var4.append(var3);
-      var4.append(", highlightColor=");
-      var4.append(var2);
-      var4.append(", opacity=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BurstReactionColorPalette(backgroundColor=");
+      var2.append(var3);
+      var2.append(", accentColor=");
+      var2.append(var5);
+      var2.append(", highlightColor=");
+      var2.append(var4);
+      var2.append(", opacity=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -128,10 +129,10 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
          val var0: BurstReactionColorPalette.$serializer = new BurstReactionColorPalette.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.reaction.BurstReactionColorPalette", var0, 4);
-         var1.c("backgroundColor", false);
-         var1.c("accentColor", false);
-         var1.c("highlightColor", false);
-         var1.c("opacity", false);
+         var1.l("backgroundColor", false);
+         var1.l("accentColor", false);
+         var1.l("highlightColor", false);
+         var1.l("opacity", false);
          descriptor = var1;
       }
 
@@ -143,18 +144,18 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
       public open fun deserialize(decoder: Decoder): BurstReactionColorPalette {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var9: c = var1.c(var8);
          var var2: Float;
          var var3: Int;
          var var6: java.lang.String;
          var var7: java.lang.String;
          var var11: java.lang.String;
-         if (var9.p()) {
+         if (var9.y()) {
             val var10: b2 = b2.a;
-            var7 = var9.n(var8, 0, b2.a, null) as java.lang.String;
-            var6 = var9.n(var8, 1, var10, null) as java.lang.String;
-            var11 = var9.n(var8, 2, var10, null) as java.lang.String;
-            var2 = var9.u(var8, 3);
+            var7 = var9.v(var8, 0, b2.a, null) as java.lang.String;
+            var6 = var9.v(var8, 1, var10, null) as java.lang.String;
+            var11 = var9.v(var8, 2, var10, null) as java.lang.String;
+            var2 = var9.G(var8, 3);
             var3 = 15;
          } else {
             var2 = 0.0F;
@@ -165,7 +166,7 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
             var3 = 0;
 
             while (var4) {
-               val var5: Int = var9.o(var8);
+               val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -174,18 +175,18 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
                               throw new n(var5);
                            }
 
-                           var2 = var9.u(var8, 3);
+                           var2 = var9.G(var8, 3);
                            var3 |= 8;
                         } else {
-                           var11 = var9.n(var8, 2, b2.a, var11) as java.lang.String;
+                           var11 = var9.v(var8, 2, b2.a, var11) as java.lang.String;
                            var3 |= 4;
                         }
                      } else {
-                        var6 = var9.n(var8, 1, b2.a, var6) as java.lang.String;
+                        var6 = var9.v(var8, 1, b2.a, var6) as java.lang.String;
                         var3 |= 2;
                      }
                   } else {
-                     var7 = var9.n(var8, 0, b2.a, var7) as java.lang.String;
+                     var7 = var9.v(var8, 0, b2.a, var7) as java.lang.String;
                      var3 |= 1;
                   }
                } else {
@@ -194,7 +195,7 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
             }
          }
 
-         var9.c(var8);
+         var9.b(var8);
          return new BurstReactionColorPalette(var3, var7, var6, var11, var2, null);
       }
 
@@ -202,13 +203,13 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          BurstReactionColorPalette.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

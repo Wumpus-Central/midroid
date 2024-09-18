@@ -12,7 +12,7 @@ internal class BlockingGestureViewGroup(context: Context) : ReactViewGroup {
       super(var1);
    }
 
-   public override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
+   public open fun onInterceptTouchEvent(event: MotionEvent): Boolean {
       q.h(var1, "event");
       if (var1.getAction() == 0) {
          GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this).requestDisallowInterceptTouchEvent(true);

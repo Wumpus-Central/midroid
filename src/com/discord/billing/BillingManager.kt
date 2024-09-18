@@ -2,7 +2,7 @@ package com.discord.billing
 
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.m
+import androidx.lifecycle.n
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingResult
 import com.android.billingclient.api.ProductDetails
@@ -15,8 +15,6 @@ import com.discord.billing.types.SkuType
 import com.discord.misc.utilities.backoff.ExponentialBackoff
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import dn.j0
-import dn.s0
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function0
@@ -26,6 +24,8 @@ import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
+import sk.k0
+import sk.t0
 
 internal class BillingManager(isProdBuild: Boolean,
    onConnectionUpdated: (Int) -> Unit,
@@ -59,7 +59,7 @@ internal class BillingManager(isProdBuild: Boolean,
       this.prodPackageName = "com.discord";
       this.devPackageName = "com.discord.debug.billingtesting";
       this.allowedPackageNames = w.i(new java.lang.String[]{"com.discord", "com.discord.debug.billingtesting"});
-      this.billingClientStateListener = new l4.d(this) {
+      this.billingClientStateListener = new b3.d(this) {
          final BillingManager this$0;
 
          {
@@ -93,7 +93,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
          }
       };
-      this.backoff = new ExponentialBackoff(s0.j, 1000L, 300000L, 10);
+      this.backoff = new ExponentialBackoff(t0.j, 1000L, 300000L, 10);
    }
 
    @JvmStatic
@@ -122,10 +122,10 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       if (var5 != null) {
-         var3 = m.a(var5);
+         var3 = n.a(var5);
       }
 
-      return (CoroutineScope)(var3 ?: s0.j);
+      return (CoroutineScope)(var3 ?: t0.j);
    }
 
    private fun getProductsWithRetry(
@@ -139,18 +139,18 @@ internal class BillingManager(isProdBuild: Boolean,
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
          val var6: CoroutineScope = this.getCoroutineScope(var5);
-         dn.g.d(
+         sk.f.d(
             var6,
-            j0.a(),
+            k0.a(),
             null,
             new Function2(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1188,18 +1188,17 @@ internal class BillingManager(isProdBuild: Boolean,
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
          val var7: CoroutineScope = this.getCoroutineScope(var5);
-         dn.g.d(
+         sk.f.d(
             var7,
-            j0.a(),
+            k0.a(),
             null,
             new Function2(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getCurrentContext(DecompilerContext.java:67)
+   //   at org.jetbrains.java.decompiler.main.DecompilerContext.getClassProcessor(DecompilerContext.java:141)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2219,6 +2218,7 @@ internal class BillingManager(isProdBuild: Boolean,
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
             2,
             null
@@ -2305,7 +2305,7 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       var10.h(
-         QueryProductDetailsParams.INSTANCE.create(var3, i.o(new java.lang.String[]{var2, var5})),
+         QueryProductDetailsParams.INSTANCE.create(var3, i.p(new java.lang.String[]{var2, var5})),
          new a(this, var9, var2, var5, var6, var4, var7, var1, var8, var12)
       );
    }
@@ -2327,7 +2327,7 @@ internal class BillingManager(isProdBuild: Boolean,
          var9 = null;
       }
 
-      var9.l(SkuDetailsParams.INSTANCE.create(var3, i.o(new java.lang.String[]{var2, var5})), new c(this, var8, var2, var5, var6, var4, var1, var7, var11));
+      var9.l(SkuDetailsParams.INSTANCE.create(var3, i.p(new java.lang.String[]{var2, var5})), new c(this, var8, var2, var5, var6, var4, var1, var7, var11));
    }
 
    private fun reconnect() {
@@ -3373,14 +3373,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: ArrayList = var1.k();
          q.g(var2, "getSkus(...)");
 
-         for (java.lang.String var7 : var2) {
-            val var3: Function3 = this.onPurchaseUpdated;
-            val var5: java.lang.String = var1.i();
-            q.g(var5, "getPurchaseToken(...)");
-            val var4: java.lang.String = var1.e();
-            q.g(var4, "getPackageName(...)");
-            q.e(var7);
-            var3.invoke(var5, var4, var7);
+         for (java.lang.String var4 : var2) {
+            val var5: Function3 = this.onPurchaseUpdated;
+            val var7: java.lang.String = var1.i();
+            q.g(var7, "getPurchaseToken(...)");
+            val var6: java.lang.String = var1.e();
+            q.g(var6, "getPackageName(...)");
+            q.e(var4);
+            var5.invoke(var7, var6, var4);
          }
       }
    }
@@ -3407,7 +3407,7 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var3.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var5: l4.e = l4.e.b().b(var1).a();
+         val var5: b3.e = b3.e.b().b(var1).a();
          q.g(var5, "build(...)");
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
@@ -3462,14 +3462,14 @@ internal class BillingManager(isProdBuild: Boolean,
             var5 = null;
          }
 
-         var5.j("inapp", new d(this));
+         var5.k("inapp", new d(this));
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
             q.y("billingClient");
             var6 = null;
          }
 
-         var6.j("subs", new d(this));
+         var6.k("subs", new d(this));
          var1.invoke();
       }
    }
@@ -3570,7 +3570,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = ck.a.a(var0);
+         $ENTRIES = rh.a.a(var0);
       }
 
       init {
@@ -3596,7 +3596,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.DowngradeCommand> = $values();
          $VALUES = var0;
-         $ENTRIES = ck.a.a(var0);
+         $ENTRIES = rh.a.a(var0);
       }
 
       init {
@@ -3661,13 +3661,13 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var2: BillingResult = this.billingResult;
-         val var3: java.util.List = this.productDetails;
+         val var3: BillingResult = this.billingResult;
+         val var2: java.util.List = this.productDetails;
          val var1: StringBuilder = new StringBuilder();
          var1.append("ProductDetailsResponse(billingResult=");
-         var1.append(var2);
-         var1.append(", productDetails=");
          var1.append(var3);
+         var1.append(", productDetails=");
+         var1.append(var2);
          var1.append(")");
          return var1.toString();
       }
@@ -3725,15 +3725,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var1: BillingResult = this.billingResult;
-         val var2: java.util.List = this.skuDetails;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("SkuDetailsResponse(billingResult=");
-         var3.append(var1);
-         var3.append(", skuDetails=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var2: BillingResult = this.billingResult;
+         val var3: java.util.List = this.skuDetails;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("SkuDetailsResponse(billingResult=");
+         var1.append(var2);
+         var1.append(", skuDetails=");
+         var1.append(var3);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

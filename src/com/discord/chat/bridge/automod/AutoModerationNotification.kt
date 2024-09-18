@@ -1,5 +1,12 @@
 package com.discord.chat.bridge.automod
 
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,13 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import qn.h
-import qn.n0
 
 @f
 public data class AutoModerationNotification(header: String,
@@ -174,9 +174,9 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = this.header.hashCode();
+      val var9: Int = this.header.hashCode();
       val var11: Int = Integer.hashCode(this.headerColor);
-      val var9: Int = this.headerIconURL.hashCode();
+      val var10: Int = this.headerIconURL.hashCode();
       val var12: Int = Integer.hashCode(this.headerIconColor);
       var var8: Int = 0;
       val var1: Int;
@@ -235,7 +235,7 @@ public data class AutoModerationNotification(header: String,
 
       return (
                (
-                        (((((((((var10 * 31 + var11) * 31 + var9) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
+                        (((((((((var9 * 31 + var11) * 31 + var10) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
                               * 31
                            + var6
                      )
@@ -248,47 +248,47 @@ public data class AutoModerationNotification(header: String,
 
    public override fun toString(): String {
       val var7: java.lang.String = this.header;
-      val var2: Int = this.headerColor;
-      val var13: java.lang.String = this.headerIconURL;
-      val var1: Int = this.headerIconColor;
-      val var8: java.lang.String = this.subtitleLeft;
-      val var10: java.lang.String = this.subtitleRight;
-      val var9: java.lang.String = this.body;
+      val var1: Int = this.headerColor;
+      val var12: java.lang.String = this.headerIconURL;
+      val var2: Int = this.headerIconColor;
+      val var14: java.lang.String = this.subtitleLeft;
+      val var9: java.lang.String = this.subtitleRight;
+      val var13: java.lang.String = this.body;
       val var3: Boolean = this.shouldShowActions;
-      val var4: java.lang.String = this.enabledByUsername;
-      val var14: java.lang.String = this.enabledByAvatarURL;
-      val var5: Int = this.enabledByColor;
-      val var12: java.lang.String = this.severity;
-      val var11: java.lang.String = this.startTime;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("AutoModerationNotification(header=");
-      var6.append(var7);
-      var6.append(", headerColor=");
-      var6.append(var2);
-      var6.append(", headerIconURL=");
-      var6.append(var13);
-      var6.append(", headerIconColor=");
-      var6.append(var1);
-      var6.append(", subtitleLeft=");
-      var6.append(var8);
-      var6.append(", subtitleRight=");
-      var6.append(var10);
-      var6.append(", body=");
-      var6.append(var9);
-      var6.append(", shouldShowActions=");
-      var6.append(var3);
-      var6.append(", enabledByUsername=");
-      var6.append(var4);
-      var6.append(", enabledByAvatarURL=");
-      var6.append(var14);
-      var6.append(", enabledByColor=");
-      var6.append(var5);
-      var6.append(", severity=");
-      var6.append(var12);
-      var6.append(", startTime=");
-      var6.append(var11);
-      var6.append(")");
-      return var6.toString();
+      val var6: java.lang.String = this.enabledByUsername;
+      val var4: java.lang.String = this.enabledByAvatarURL;
+      val var8: Int = this.enabledByColor;
+      val var11: java.lang.String = this.severity;
+      val var10: java.lang.String = this.startTime;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("AutoModerationNotification(header=");
+      var5.append(var7);
+      var5.append(", headerColor=");
+      var5.append(var1);
+      var5.append(", headerIconURL=");
+      var5.append(var12);
+      var5.append(", headerIconColor=");
+      var5.append(var2);
+      var5.append(", subtitleLeft=");
+      var5.append(var14);
+      var5.append(", subtitleRight=");
+      var5.append(var9);
+      var5.append(", body=");
+      var5.append(var13);
+      var5.append(", shouldShowActions=");
+      var5.append(var3);
+      var5.append(", enabledByUsername=");
+      var5.append(var6);
+      var5.append(", enabledByAvatarURL=");
+      var5.append(var4);
+      var5.append(", enabledByColor=");
+      var5.append(var8);
+      var5.append(", severity=");
+      var5.append(var11);
+      var5.append(", startTime=");
+      var5.append(var10);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -303,19 +303,19 @@ public data class AutoModerationNotification(header: String,
          val var0: AutoModerationNotification.$serializer = new AutoModerationNotification.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.automod.AutoModerationNotification", var0, 13);
-         var1.c("header", false);
-         var1.c("headerColor", false);
-         var1.c("headerIconURL", false);
-         var1.c("headerIconColor", false);
-         var1.c("subtitleLeft", true);
-         var1.c("subtitleRight", true);
-         var1.c("body", true);
-         var1.c("shouldShowActions", false);
-         var1.c("enabledByUsername", true);
-         var1.c("enabledByAvatarURL", true);
-         var1.c("enabledByColor", true);
-         var1.c("severity", true);
-         var1.c("startTime", true);
+         var1.l("header", false);
+         var1.l("headerColor", false);
+         var1.l("headerIconURL", false);
+         var1.l("headerIconColor", false);
+         var1.l("subtitleLeft", true);
+         var1.l("subtitleRight", true);
+         var1.l("body", true);
+         var1.l("shouldShowActions", false);
+         var1.l("enabledByUsername", true);
+         var1.l("enabledByAvatarURL", true);
+         var1.l("enabledByColor", true);
+         var1.l("severity", true);
+         var1.l("startTime", true);
          descriptor = var1;
       }
 
@@ -328,49 +328,50 @@ public data class AutoModerationNotification(header: String,
       public open fun deserialize(decoder: Decoder): AutoModerationNotification {
          q.h(var1, "decoder");
          val var22: SerialDescriptor = this.getDescriptor();
-         val var23: c = var1.b(var22);
-         var var9: Boolean = var23.p();
+         val var23: c = var1.c(var22);
+         var var9: Boolean = var23.y();
          var var5: Int = 10;
          var var3: Int;
          var var4: Int;
          var var10: Any;
-         var var12: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
          var var16: java.lang.String;
          var var17: java.lang.String;
          var var18: java.lang.String;
+         val var19: java.lang.String;
          val var24: java.lang.String;
-         var var34: java.lang.String;
-         var var37: java.lang.String;
+         var var35: java.lang.String;
+         var var39: java.lang.String;
          if (var9) {
-            var13 = var23.m(var22, 0);
-            var3 = var23.i(var22, 1);
-            var12 = var23.m(var22, 2);
-            val var2: Int = var23.i(var22, 3);
+            var13 = var23.t(var22, 0);
+            var4 = var23.k(var22, 1);
+            var19 = var23.t(var22, 2);
+            val var2: Int = var23.k(var22, 3);
             val var15: b2 = b2.a;
-            var16 = var23.n(var22, 4, b2.a, null) as java.lang.String;
-            var14 = var23.n(var22, 5, var15, null) as java.lang.String;
-            var18 = var23.n(var22, 6, var15, null) as java.lang.String;
-            var9 = var23.C(var22, 7);
-            var17 = var23.n(var22, 8, var15, null) as java.lang.String;
-            var34 = var23.n(var22, 9, var15, null) as java.lang.String;
-            var10 = var23.n(var22, 10, n0.a, null) as Int;
-            var24 = var23.n(var22, 11, var15, null) as java.lang.String;
-            val var19: java.lang.String = var23.n(var22, 12, var15, null) as java.lang.String;
-            var4 = 8191;
+            var16 = var23.v(var22, 4, b2.a, null) as java.lang.String;
+            var17 = var23.v(var22, 5, var15, null) as java.lang.String;
+            val var12: java.lang.String = var23.v(var22, 6, var15, null) as java.lang.String;
+            var9 = var23.s(var22, 7);
+            var14 = var23.v(var22, 8, var15, null) as java.lang.String;
+            var35 = var23.v(var22, 9, var15, null) as java.lang.String;
+            var10 = var23.v(var22, 10, n0.a, null) as Int;
+            var24 = var23.v(var22, 11, var15, null) as java.lang.String;
+            val var20: java.lang.String = var23.v(var22, 12, var15, null) as java.lang.String;
+            var3 = 8191;
             var5 = var2;
-            var37 = var34;
-            var34 = var19;
+            var39 = var12;
+            var18 = var35;
+            var35 = var20;
          } else {
             var13 = null;
-            var12 = null;
+            var var37: java.lang.String = null;
             var17 = null;
             var16 = null;
             var14 = null;
             var18 = null;
-            var37 = null;
-            var34 = null;
+            var39 = null;
+            var35 = null;
             var var7: Boolean = true;
             var9 = false;
             var4 = 0;
@@ -382,61 +383,61 @@ public data class AutoModerationNotification(header: String,
             while (var7) {
                label39: {
                   label38: {
-                     val var8: Int = var23.o(var22);
+                     val var8: Int = var23.x(var22);
                      switch (var8) {
                         case -1:
                            var7 = false;
                            break label39;
                         case 0:
-                           var13 = var23.m(var22, 0);
+                           var13 = var23.t(var22, 0);
                            var26 |= 1;
                            break;
                         case 1:
-                           var3 = var23.i(var22, 1);
+                           var3 = var23.k(var22, 1);
                            var26 |= 2;
                            break;
                         case 2:
-                           var12 = var23.m(var22, 2);
+                           var37 = var23.t(var22, 2);
                            var26 |= 4;
                            break;
                         case 3:
-                           var4 = var23.i(var22, 3);
+                           var4 = var23.k(var22, 3);
                            var26 |= 8;
                            break;
                         case 4:
-                           var25 = var23.n(var22, 4, b2.a, var25) as java.lang.String;
+                           var25 = var23.v(var22, 4, b2.a, var25) as java.lang.String;
                            var26 |= 16;
                            break;
                         case 5:
-                           var10 = var23.n(var22, 5, b2.a, var10) as java.lang.String;
+                           var10 = var23.v(var22, 5, b2.a, var10) as java.lang.String;
                            var26 |= 32;
                            break;
                         case 6:
-                           var34 = var23.n(var22, 6, b2.a, var34) as java.lang.String;
+                           var35 = var23.v(var22, 6, b2.a, var35) as java.lang.String;
                            var26 |= 64;
                            break;
                         case 7:
-                           var9 = var23.C(var22, 7);
+                           var9 = var23.s(var22, 7);
                            var26 |= 128;
                            break label38;
                         case 8:
-                           var18 = var23.n(var22, 8, b2.a, var18) as java.lang.String;
+                           var18 = var23.v(var22, 8, b2.a, var18) as java.lang.String;
                            var26 |= 256;
                            break label38;
                         case 9:
-                           var37 = var23.n(var22, 9, b2.a, var37) as java.lang.String;
+                           var39 = var23.v(var22, 9, b2.a, var39) as java.lang.String;
                            var26 |= 512;
                            break label39;
                         case 10:
-                           var14 = var23.n(var22, var5, n0.a, var14) as Int;
+                           var14 = var23.v(var22, var5, n0.a, var14) as Int;
                            var26 |= 1024;
                            continue;
                         case 11:
-                           var16 = var23.n(var22, 11, b2.a, var16) as java.lang.String;
+                           var16 = var23.v(var22, 11, b2.a, var16) as java.lang.String;
                            var26 |= 2048;
                            continue;
                         case 12:
-                           var17 = var23.n(var22, 12, b2.a, var17) as java.lang.String;
+                           var17 = var23.v(var22, 12, b2.a, var17) as java.lang.String;
                            var26 |= 4096;
                            continue;
                         default:
@@ -454,32 +455,35 @@ public data class AutoModerationNotification(header: String,
                var5 = 10;
             }
 
-            var17 = var18;
-            var18 = var34;
-            var14 = (java.lang.String)var10;
-            var16 = var25;
-            var34 = var17;
+            var14 = var18;
+            var18 = var39;
+            var39 = var35;
+            var35 = var17;
             var24 = var16;
             var10 = var14;
+            var17 = (java.lang.String)var10;
+            var16 = var25;
             var5 = var4;
-            var4 = var26;
+            var19 = var37;
+            var4 = var3;
+            var3 = var26;
          }
 
-         var23.c(var22);
-         return new AutoModerationNotification(var4, var13, var3, var12, var5, var16, var14, var18, var9, var17, var37, (Integer)var10, var24, var34, null);
+         var23.b(var22);
+         return new AutoModerationNotification(var3, var13, var4, var19, var5, var16, var17, var39, var9, var14, var18, (Integer)var10, var24, var35, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AutoModerationNotification) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          AutoModerationNotification.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

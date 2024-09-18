@@ -1,7 +1,6 @@
 package com.discord.recycler_view.scroll
 
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
@@ -11,7 +10,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       onScrollStateChanged: ((RecyclerView, Int) -> Unit)? = null,
       onDragStateChanged: ((Boolean) -> Unit)? = null
    )
-   : OnScrollListener {
+   : RecyclerView.OnScrollListener {
    private final val onScrolled: ((RecyclerView, Int, Int) -> Unit)?
    private final val onScrollStateChanged: ((RecyclerView, Int) -> Unit)?
    private final val onDragStateChanged: ((Boolean) -> Unit)?
@@ -64,7 +63,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       this.scrollEvents.cancel();
    }
 
-   public open fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+   public override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
       q.h(var1, "recyclerView");
       super.onScrollStateChanged(var1, var2);
       if (this.onScrollStateChanged != null) {
@@ -74,7 +73,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       this.checkDragState(var2);
    }
 
-   public open fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+   public override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
       q.h(var1, "recyclerView");
       super.onScrolled(var1, var2, var3);
       if (this.lastScrollEvent == null) {
@@ -169,18 +168,18 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       }
 
       public override fun toString(): String {
-         val var3: RecyclerView = this.recyclerView;
+         val var4: RecyclerView = this.recyclerView;
          val var1: Int = this.dx;
          val var2: Int = this.dy;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("ScrollEvent(recyclerView=");
-         var4.append(var3);
-         var4.append(", dx=");
-         var4.append(var1);
-         var4.append(", dy=");
-         var4.append(var2);
-         var4.append(")");
-         return var4.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ScrollEvent(recyclerView=");
+         var3.append(var4);
+         var3.append(", dx=");
+         var3.append(var1);
+         var3.append(", dy=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

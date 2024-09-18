@@ -1,9 +1,11 @@
 package com.discord.chat.presentation.list.delegate
 
 import android.content.Context
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.ChatListAdapter
 import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
@@ -44,7 +46,7 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
       val var9: ChatListAdapter = var5 as ChatListAdapter;
       val var3: Int = var2.getHolder().getBindingAdapterPosition();
       var var4: Boolean = true;
-      val var7: ChatListItem = i.g0(var9.getChatListItems(), var3 - 1) as ChatListItem;
+      val var7: ChatListItem = i.h0(var9.getChatListItems(), var3 - 1) as ChatListItem;
       val var8: Boolean;
       if (var1.getMessage().getTimestamp() == null) {
          var8 = true;
@@ -114,5 +116,13 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
       q.h(var1, "item");
       return var1 is MessageItem;
+   }
+
+   protected open fun onViewRecycled(holder: ViewHolder) {
+      q.h(var1, "holder");
+      val var2: View = var1.itemView;
+      q.f(var1.itemView, "null cannot be cast to non-null type com.discord.chat.presentation.message.MessageView");
+      (var2 as MessageView).onRecycledHint();
+      super.onViewRecycled(var1);
    }
 }

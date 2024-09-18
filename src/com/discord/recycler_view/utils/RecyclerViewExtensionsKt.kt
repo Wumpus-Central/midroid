@@ -3,8 +3,6 @@ package com.discord.recycler_view.utils
 import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.recycler_view.scroller.SmoothScroller
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import kotlin.jvm.internal.q
@@ -18,7 +16,7 @@ internal fun RecyclerView.scrollToPositionAnimated(position: Int, targetAlignmen
    q.h(var0, "<this>");
    q.h(var2, "targetAlignment");
    q.h(var3, "onComplete");
-   val var4: LayoutManager = var0.getLayoutManager();
+   val var4: RecyclerView.LayoutManager = var0.getLayoutManager();
    q.e(var4);
    val var5: Context = var0.getContext();
    q.g(var5, "getContext(...)");
@@ -27,18 +25,18 @@ internal fun RecyclerView.scrollToPositionAnimated(position: Int, targetAlignmen
 
 internal fun RecyclerView.scrollToPositionWithOffset(position: Int, offset: Int) {
    q.h(var0, "<this>");
-   val var3: LayoutManager = var0.getLayoutManager();
+   val var3: RecyclerView.LayoutManager = var0.getLayoutManager();
    q.f(var3, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
    (var3 as LinearLayoutManager).scrollToPositionWithOffset(var1, var2);
 }
 
 internal fun RecyclerView.scrollToTop(position: Int, offset: Int) {
    q.h(var0, "<this>");
-   val var4: LayoutManager = var0.getLayoutManager();
+   val var4: RecyclerView.LayoutManager = var0.getLayoutManager();
    q.f(var4, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
    if ((var4 as LinearLayoutManager).getReverseLayout()) {
       var var3: Int;
-      val var5: ViewHolder = var0.findViewHolderForAdapterPosition(var1);
+      val var5: RecyclerView.ViewHolder = var0.findViewHolderForAdapterPosition(var1);
       label17:
       if (var5 != null && var5.itemView != null) {
          var3 = var5.itemView.getHeight();

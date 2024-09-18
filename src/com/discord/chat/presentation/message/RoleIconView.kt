@@ -76,7 +76,7 @@ public class RoleIconView(context: Context, attrs: AttributeSet) : FrameLayout {
             RenderableEmojiKt.renderEmoji$default((RenderableEmoji)var8, var5, SizeUtilsKt.getSpToPx(var1.getSize()), true, 0, null, 48, null)
          );
          kotlin.jvm.internal.q.e(var6);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new x(var2, var1, (RenderableEmoji)var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new y(var2, var1, (RenderableEmoji)var8), 1, null);
       }
    }
 }

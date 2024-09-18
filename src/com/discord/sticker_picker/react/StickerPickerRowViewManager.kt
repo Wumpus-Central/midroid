@@ -11,10 +11,10 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerDelegate
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 @ReactModule(name = "StickerPickerRowView")
 internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowView>, StickerPickerRowViewManagerInterface<StickerPickerRowView> {
@@ -67,11 +67,11 @@ internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowV
       return this.delegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "StickerPickerRowView";
    }
 

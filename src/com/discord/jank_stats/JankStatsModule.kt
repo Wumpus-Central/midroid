@@ -4,8 +4,8 @@ import com.discord.codegen.NativeJankStatsSpec
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
+import kh.w
 import kotlin.jvm.internal.q
-import vj.w
 
 public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJankStatsSpec {
    init {
@@ -15,7 +15,7 @@ public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJank
 
    public override fun requestReport(): WritableMap {
       val var1: JankReport = JankStatsAggregator.issueJankReport$default(JankStatsAggregator.INSTANCE, null, 1, null);
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("totalFrameCount", var1.getNumFrames()), w.a("jankFrameCount", var1.getNumJankFrames())});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("totalFrameCount", var1.getNumFrames()), w.a("jankFrameCount", var1.getNumJankFrames()));
    }
 
    public override fun setJankHeuristicMultiplier(jankHeuristicMultiplier: Double) {

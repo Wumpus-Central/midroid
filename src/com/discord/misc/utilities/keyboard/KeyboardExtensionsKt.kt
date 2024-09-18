@@ -7,9 +7,9 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.d1
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
-import dn.g
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import sk.f
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {
@@ -35,7 +35,7 @@ public fun Activity.hideKeyboard() {
 public fun View.hideKeyboard(window: Window) {
    q.h(var0, "<this>");
    q.h(var1, "window");
-   g.d(
+   f.d(
       MainImmediateScopeKt.MainImmediateScope(),
       null,
       null,
@@ -1085,7 +1085,7 @@ public fun Activity.showKeyboard() {
 public fun View.showKeyboard(window: Window) {
    q.h(var0, "<this>");
    q.h(var1, "window");
-   g.d(
+   f.d(
       MainImmediateScopeKt.MainImmediateScope(),
       null,
       null,

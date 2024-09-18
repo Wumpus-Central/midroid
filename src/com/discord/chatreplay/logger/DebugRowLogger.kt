@@ -1,7 +1,5 @@
 package com.discord.chatreplay.logger
 
-import bn.a
-import gk.c
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -12,6 +10,8 @@ import java.nio.file.Path
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
+import qk.a
+import vh.c
 
 public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    private final val jsonFile: File
@@ -21,21 +21,21 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    init {
       q.h(var1, "logsFolderPath");
       super();
-      var var3: java.lang.String = var1.toString();
-      var var4: StringBuilder = new StringBuilder();
+      val var3: java.lang.String = var1.toString();
+      val var4: StringBuilder = new StringBuilder();
       var4.append(var2);
       var4.append(".replay");
       new File(var3, var4.toString()).delete();
-      var3 = var1.toString();
-      var4 = new StringBuilder();
-      var4.append(var2);
-      var4.append(".json");
-      new File(var3, var4.toString()).delete();
-      var3 = var1.toString();
-      var4 = new StringBuilder();
-      var4.append(var2);
-      var4.append(".replay");
-      this.replayFile = new File(var3, var4.toString());
+      val var9: java.lang.String = var1.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var2);
+      var6.append(".json");
+      new File(var9, var6.toString()).delete();
+      val var10: java.lang.String = var1.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var2);
+      var7.append(".replay");
+      this.replayFile = new File(var10, var7.toString());
       val var5: java.lang.String = var1.toString();
       val var8: StringBuilder = new StringBuilder();
       var8.append(var2);
@@ -88,12 +88,12 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       label18: {
          val var2: BooleanRef = new BooleanRef();
          val var1: FileOutputStream = new FileOutputStream(this.jsonFile);
-         val var3: Charset = a.b;
+         val var4: Charset = a.b;
          val var12: OutputStreamWriter = new OutputStreamWriter(var1, a.b);
 
          try {
             var12.write("[\n");
-            gk.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var3), new Function1(var2, var12) {
+            vh.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new Function1(var2, var12) {
                final BooleanRef $existingLine;
                final OutputStreamWriter $writer;
 
@@ -116,10 +116,10 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {
-            val var14: java.lang.Throwable = var7;
+            val var3: java.lang.Throwable = var7;
 
             try {
-               throw var14;
+               throw var3;
             } catch (var6: java.lang.Throwable) {
                c.a(var12, var7);
             }

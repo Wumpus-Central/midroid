@@ -1,5 +1,9 @@
 package com.discord.notifications.api
 
+import cl.f
+import cl.n
+import dl.a
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,10 +12,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.g0
 
 @f
 public data class Embed(fields: List<EmbedField>? = null) {
@@ -55,12 +55,12 @@ public data class Embed(fields: List<EmbedField>? = null) {
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.fields;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Embed(fields=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.fields;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Embed(fields=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -75,7 +75,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
          val var0: Embed.$serializer = new Embed.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.notifications.api.Embed", var0, 1);
-         var1.c("fields", true);
+         var1.l("fields", true);
          descriptor = var1;
       }
 
@@ -86,26 +86,26 @@ public data class Embed(fields: List<EmbedField>? = null) {
       public open fun deserialize(decoder: Decoder): Embed {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = Embed.access$get$childSerializers$cp();
-         val var5: Boolean = var7.p();
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var9: java.util.List;
          if (var5) {
-            var9 = var7.n(var6, 0, var8[0], null) as java.util.List;
+            var9 = var7.v(var6, 0, var8[0], null) as java.util.List;
          } else {
             var2 = 0;
             var9 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var9 = var7.n(var6, 0, var8[0], var9) as java.util.List;
+                  var9 = var7.v(var6, 0, var8[0], var9) as java.util.List;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -113,7 +113,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new Embed(var2, var9, null);
       }
 
@@ -121,13 +121,13 @@ public data class Embed(fields: List<EmbedField>? = null) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          Embed.write$Self$notification_api_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

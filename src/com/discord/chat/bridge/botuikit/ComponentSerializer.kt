@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
+import gl.d
+import gl.g
 import java.util.ArrayList
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
@@ -9,8 +11,6 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import rn.d
-import rn.g
 
 public object ComponentSerializer : d(g0.b(Component.class)) {
    private final val knownTypes: List<Int>
@@ -79,7 +79,7 @@ public object ComponentSerializer : d(g0.b(Component.class)) {
       }
 
       val var6: Any;
-      if (i.T(var2, var5)) {
+      if (i.U(var2, var5)) {
          var6 = componentClassSerializer;
       } else {
          var6 = UnknownComponent.Companion.serializer();

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import f3.a;
+import n1.a;
 
 public final class EmbedFieldViewBinding implements ViewBinding {
    public final SimpleDraweeSpanTextView name;
@@ -21,12 +21,12 @@ public final class EmbedFieldViewBinding implements ViewBinding {
 
    public static EmbedFieldViewBinding bind(View var0) {
       int var1 = R.id.name;
-      SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.value;
-         SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new EmbedFieldViewBinding(var0, var2, var3);
+         SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new EmbedFieldViewBinding(var0, var3, var2);
          }
       }
 
