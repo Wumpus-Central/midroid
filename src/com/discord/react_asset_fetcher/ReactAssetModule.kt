@@ -6,6 +6,7 @@ import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
+import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
 public class ReactAssetModule(reactContext: ReactApplicationContext) : ReactResourceModule<ReactAsset> {
@@ -26,18 +27,18 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : ReactReso
       return var1;
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "ReactAssetModule";
    }
 
-   public open fun keys(): Array<ReactAsset> {
-      return ReactAsset.values();
+   public open fun keys(): EnumEntries<ReactAsset> {
+      return ReactAsset.getEntries();
    }
 
    @ReactMethod
    public fun keysRequest(callback: Callback) {
       q.h(var1, "callback");
-      var1.invoke(this.keysArray());
+      var1.invoke(new Object[]{this.keysArray()});
    }
 
    @ReactMethod

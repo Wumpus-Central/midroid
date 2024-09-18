@@ -1,15 +1,15 @@
 package com.discord.image.fresco.postprocessors
 
-import ck.a
+import ch.p
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
 import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostprocessor
 import com.facebook.imagepipeline.request.BasePostprocessor
 import java.util.ArrayList
+import jh.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import vj.p
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -60,7 +60,7 @@ public sealed interface PostProcessor {
       }
 
       public constructor(vararg postprocessors: PostProcessor) : q.h(var1, "postprocessors") {
-         this(c.B0(var1));
+         this(c.y0(var1));
       }
 
       public operator fun component1(): List<PostProcessor> {
@@ -91,12 +91,12 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var2: java.util.List = this.postprocessors;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Composite(postprocessors=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.util.List = this.postprocessors;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Composite(postprocessors=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
@@ -198,21 +198,21 @@ public sealed interface PostProcessor {
 
       public override fun toString(): String {
          val var6: PostProcessor.Gradient.Direction = this.direction;
-         val var4: Int = this.startColor;
-         val var3: Int = this.endColor;
-         val var2: Float = this.startPosition;
-         val var1: Float = this.endPosition;
+         val var3: Int = this.startColor;
+         val var4: Int = this.endColor;
+         val var1: Float = this.startPosition;
+         val var2: Float = this.endPosition;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Gradient(direction=");
          var5.append(var6);
          var5.append(", startColor=");
-         var5.append(var4);
-         var5.append(", endColor=");
          var5.append(var3);
+         var5.append(", endColor=");
+         var5.append(var4);
          var5.append(", startPosition=");
-         var5.append(var2);
-         var5.append(", endPosition=");
          var5.append(var1);
+         var5.append(", endPosition=");
+         var5.append(var2);
          var5.append(")");
          return var5.toString();
       }

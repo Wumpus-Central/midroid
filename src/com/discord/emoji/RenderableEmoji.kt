@@ -96,18 +96,18 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: Long = this.emojiId;
-         val var1: Boolean = this.isAnimated;
-         val var4: java.lang.String = this.alt;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("CustomWithEmojiId(emojiId=");
-         var5.append(var2);
-         var5.append(", isAnimated=");
-         var5.append(var1);
-         var5.append(", alt=");
-         var5.append(var4);
-         var5.append(")");
-         return var5.toString();
+         val var1: Long = this.emojiId;
+         val var3: Boolean = this.isAnimated;
+         val var5: java.lang.String = this.alt;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("CustomWithEmojiId(emojiId=");
+         var4.append(var1);
+         var4.append(", isAnimated=");
+         var4.append(var3);
+         var4.append(", alt=");
+         var4.append(var5);
+         var4.append(")");
+         return var4.toString();
       }
    }
 
@@ -165,13 +165,13 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.url;
-         val var1: java.lang.String = this.alt;
+         val var1: java.lang.String = this.url;
+         val var2: java.lang.String = this.alt;
          val var3: StringBuilder = new StringBuilder();
          var3.append("CustomWithUrl(url=");
-         var3.append(var2);
-         var3.append(", alt=");
          var3.append(var1);
+         var3.append(", alt=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

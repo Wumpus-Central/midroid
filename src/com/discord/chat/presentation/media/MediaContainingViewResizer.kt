@@ -2,7 +2,7 @@ package com.discord.chat.presentation.media
 
 import android.view.View
 import android.view.ViewGroup.LayoutParams
-import ck.a
+import jh.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 

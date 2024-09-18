@@ -1,8 +1,11 @@
 package com.discord.media_player.reactevents
 
+import bl.a
+import ch.w
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import dh.r
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,13 +14,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.j
-import nn.n
-import qn.g0
-import un.a
-import vj.w
-import wj.r
+import uk.f
+import uk.j
+import uk.n
+import xk.g0
 
 @f
 public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSource?) : ReactEvent {
@@ -57,22 +57,20 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
       return var1;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return if (this.source == null)
          NativeMapExtensionsKt.toNativeMap(r.h())
          else
-         NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{w.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source)))}
-         );
+         NativeMapExtensionsKt.nativeMapOf(w.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.d(MediaPlayerPlaybackSource.class), this.source))));
    }
 
    public override fun toString(): String {
-      val var2: MediaPlayerPlaybackSource = this.source;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MediaPlayerPlaybackSourceChanged(source=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: MediaPlayerPlaybackSource = this.source;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaPlayerPlaybackSourceChanged(source=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -89,36 +87,36 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.media_player.reactevents.MediaPlayerPlaybackSourceChanged", var0, 1
          );
-         var1.c("source", false);
+         var1.l("source", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{on.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE)};
+         return new KSerializer[]{vk.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackSourceChanged {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var8: MediaPlayerPlaybackSource;
          if (var5) {
-            var8 = var7.n(var6, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
+            var8 = var7.v(var6, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
          } else {
             var2 = 0;
             var8 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.n(var6, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var8) as MediaPlayerPlaybackSource;
+                  var8 = var7.v(var6, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var8) as MediaPlayerPlaybackSource;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -126,7 +124,7 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new MediaPlayerPlaybackSourceChanged(var2, var8, null);
       }
 
@@ -134,13 +132,13 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          MediaPlayerPlaybackSourceChanged.write$Self$media_player_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

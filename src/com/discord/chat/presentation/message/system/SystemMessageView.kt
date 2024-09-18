@@ -7,7 +7,7 @@ import android.view.View
 import android.view.View.OnLongClickListener
 import androidx.core.view.r0
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import com.discord.chat.R
+import ch.w
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.MessageType
@@ -44,15 +44,14 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
-import vj.w
 
 public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout, SpineParentMessage {
    private final var accessories: ArrayList<MessageAccessory>
@@ -81,10 +80,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       q.h(var1, "context");
       super(var1, var2);
       this.normalIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
-      this.greenIconColor = ColorUtilsKt.getColorCompat(this, color.green_360);
-      this.redIconColor = ColorUtilsKt.getColorCompat(this, color.red_400);
-      this.warnIconColor = ColorUtilsKt.getColorCompat(this, color.yellow_300);
-      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, color.guild_boosting_pink);
+      this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
+      this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
+      this.warnIconColor = ColorUtilsKt.getColorCompat(this, R.color.yellow_300);
+      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, R.color.guild_boosting_pink);
       val var3: SystemMessageViewBinding = SystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var3, "inflate(...)");
       this.binding = var3;
@@ -104,17 +103,17 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       val var13: StructurableText = var1.getContent();
       if (var13 != null) {
-         val var19: ArrayList = this.accessories;
-         val var12: java.lang.String = var1.getId-3Eiw7ao();
-         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var9: Boolean = var1.getShouldShowRoleDot();
-         val var10: Boolean = var1.getShouldShowRoleOnName();
+         val var12: ArrayList = this.accessories;
+         val var19: java.lang.String = var1.getId-3Eiw7ao();
+         val var7: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var10: Boolean = var1.getShouldShowRoleDot();
+         val var8: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
             var4 = 0;
          } else {
-            var4 = this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
+            var4 = this.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_accessories_vertical_spacing);
          }
 
          var var14: Int = var1.getLinkColor();
@@ -133,14 +132,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var6 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var19.add(
+         var12.add(
             new MessageContentAccessory(
-               var12,
+               var19,
                var13,
-               var8,
                var7,
                var9,
                var10,
+               var8,
                var4,
                var5,
                var6,
@@ -167,12 +166,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var11 = var1.getTotalMonthsSubscribed();
       if (var11 != null && var11.intValue() <= 1) {
-         val var27: ArrayList = this.accessories;
-         val var22: java.lang.String = var1.getId-3Eiw7ao();
-         val var30: java.lang.String = var1.getUsername();
-         val var32: Context = this.binding.getRoot().getContext();
-         q.g(var32, "getContext(...)");
-         var27.add(new RoleSubscriptionPurchaseAccessory(var22, var30, MessageKt.avatarUrl(var1, var32), var3, false, null));
+         val var32: ArrayList = this.accessories;
+         val var30: java.lang.String = var1.getId-3Eiw7ao();
+         val var27: java.lang.String = var1.getUsername();
+         val var22: Context = this.binding.getRoot().getContext();
+         q.g(var22, "getContext(...)");
+         var32.add(new RoleSubscriptionPurchaseAccessory(var30, var27, MessageKt.avatarUrl(var1, var22), var3, false, null));
       }
 
       val var23: Sticker = var1.getSticker();

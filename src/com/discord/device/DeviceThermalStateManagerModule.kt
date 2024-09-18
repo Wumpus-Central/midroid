@@ -2,6 +2,7 @@ package com.discord.device
 
 import android.os.PowerManager
 import android.os.Build.VERSION
+import ch.w
 import com.discord.device.events.DeviceThermalStateChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
@@ -10,7 +11,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class DeviceThermalStateManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactEvents: ReactEvents
@@ -18,7 +18,7 @@ public class DeviceThermalStateManagerModule(reactContext: ReactApplicationConte
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("DeviceThermalStateDidChange", g0.b(DeviceThermalStateChangedEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("DeviceThermalStateDidChange", g0.b(DeviceThermalStateChangedEvent.class)));
    }
 
    @JvmStatic

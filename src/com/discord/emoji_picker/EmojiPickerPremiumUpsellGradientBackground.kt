@@ -10,7 +10,6 @@ import androidx.core.view.v0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.discord.theme.R.color
 import kotlin.jvm.internal.q
 
 public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTier0UpsellContent: Boolean) : RecyclerView.ItemDecoration {
@@ -178,12 +177,15 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       private fun Context.getColors(useTier0UpsellContent: Boolean): IntArray {
          val var3: IntArray;
          if (var2) {
-            var3 = new int[]{var1.getColor(color.premium_tier_0_purple_for_gradients), var1.getColor(color.premium_tier_0_blue_for_gradients)};
+            var3 = new int[]{
+               var1.getColor(com.discord.theme.R.color.premium_tier_0_purple_for_gradients),
+               var1.getColor(com.discord.theme.R.color.premium_tier_0_blue_for_gradients)
+            };
          } else {
             var3 = new int[]{
-               var1.getColor(color.premium_tier_2_purple_for_gradients),
-               var1.getColor(color.premium_tier_2_purple_for_gradients_2),
-               var1.getColor(color.premium_tier_2_pink_for_gradients)
+               var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients),
+               var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients_2),
+               var1.getColor(com.discord.theme.R.color.premium_tier_2_pink_for_gradients)
             };
          }
 

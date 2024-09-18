@@ -11,8 +11,8 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function0
 
@@ -33,7 +33,7 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
       val var3: TextView = var4.label;
       kotlin.jvm.internal.q.e(var4.label);
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryBold);
-      var3.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.primary_800));
+      var3.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_800));
       ViewClippingUtilsKt.clipToCircle(var3);
       var4.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
    }

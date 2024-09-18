@@ -16,11 +16,11 @@ internal class DispatchedEvent(surfaceId: Int, viewId: Int, eventName: String, p
       this.payload = var4;
    }
 
-   protected override fun getEventData(): WritableMap {
+   protected open fun getEventData(): WritableMap {
       return this.payload.serialize();
    }
 
-   public override fun getEventName(): String {
+   public open fun getEventName(): String {
       return this.eventName;
    }
 }

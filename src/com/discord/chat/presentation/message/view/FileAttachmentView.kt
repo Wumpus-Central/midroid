@@ -24,8 +24,10 @@ import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
+import com.discord.react_strings.I18nMessage
+import com.discord.react_strings.I18nUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function0
@@ -44,38 +46,39 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var5: FileAttachmentViewBinding = FileAttachmentViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
-      this.binding = var5;
-      val var7: SimpleDraweeView = var5.fileAttachmentDownload;
-      kotlin.jvm.internal.q.g(var5.fileAttachmentDownload, "fileAttachmentDownload");
-      ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.Download);
-      val var8: SimpleDraweeView = var5.fileAttachmentDownload;
-      kotlin.jvm.internal.q.g(var5.fileAttachmentDownload, "fileAttachmentDownload");
-      ColorUtilsKt.setTintColor(var8, ThemeManagerKt.getTheme().getTextMuted());
-      val var9: SimpleDraweeView = var5.fileAttachmentIcon;
-      kotlin.jvm.internal.q.g(var5.fileAttachmentIcon, "fileAttachmentIcon");
-      ReactAssetUtilsKt.setReactAsset(var9, ReactAsset.File);
-      val var10: SimpleDraweeView = var5.fileAttachmentIcon;
-      kotlin.jvm.internal.q.g(var5.fileAttachmentIcon, "fileAttachmentIcon");
-      ColorUtilsKt.setTintColor(var10, ThemeManagerKt.getTheme().getTextMuted());
-      var5.fileAttachmentName.setTextColor(ThemeManagerKt.getTheme().getTextLink());
-      var var4: TextView = var5.fileAttachmentName;
-      kotlin.jvm.internal.q.g(var5.fileAttachmentName, "fileAttachmentName");
-      val var11: DiscordFont = DiscordFont.PrimaryMedium;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryMedium);
-      var5.fileAttachmentDescription.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      var4 = var5.fileAttachmentDescription;
-      kotlin.jvm.internal.q.g(var5.fileAttachmentDescription, "fileAttachmentDescription");
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      var4 = var5.fileAttachmentDescription;
-      kotlin.jvm.internal.q.g(var5.fileAttachmentDescription, "fileAttachmentDescription");
-      DiscordFontUtilsKt.setDiscordFont(var4, var11);
-      var5.fileAttachmentDownloadProgressBar.setIndeterminateTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getTextMuted()));
-      val var6: View = var5.getRoot();
-      kotlin.jvm.internal.q.g(var6, "getRoot(...)");
+      val var9: FileAttachmentViewBinding = FileAttachmentViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var9, "inflate(...)");
+      this.binding = var9;
+      var var4: SimpleDraweeView = var9.fileAttachmentDownload;
+      kotlin.jvm.internal.q.g(var9.fileAttachmentDownload, "fileAttachmentDownload");
+      ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Download);
+      var4 = var9.fileAttachmentDownload;
+      kotlin.jvm.internal.q.g(var9.fileAttachmentDownload, "fileAttachmentDownload");
+      ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());
+      var9.fileAttachmentDownload.setContentDescription(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.DOWNLOAD, null, 2, null));
+      val var5: SimpleDraweeView = var9.fileAttachmentIcon;
+      kotlin.jvm.internal.q.g(var9.fileAttachmentIcon, "fileAttachmentIcon");
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.File);
+      val var6: SimpleDraweeView = var9.fileAttachmentIcon;
+      kotlin.jvm.internal.q.g(var9.fileAttachmentIcon, "fileAttachmentIcon");
+      ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getTextMuted());
+      var9.fileAttachmentName.setTextColor(ThemeManagerKt.getTheme().getTextLink());
+      val var11: TextView = var9.fileAttachmentName;
+      kotlin.jvm.internal.q.g(var9.fileAttachmentName, "fileAttachmentName");
+      val var7: DiscordFont = DiscordFont.PrimaryMedium;
+      DiscordFontUtilsKt.setDiscordFont(var11, DiscordFont.PrimaryMedium);
+      var9.fileAttachmentDescription.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      val var12: TextView = var9.fileAttachmentDescription;
+      kotlin.jvm.internal.q.g(var9.fileAttachmentDescription, "fileAttachmentDescription");
+      SetTextSizeSpKt.setTextSizeSp(var12, 12.0F);
+      val var13: TextView = var9.fileAttachmentDescription;
+      kotlin.jvm.internal.q.g(var9.fileAttachmentDescription, "fileAttachmentDescription");
+      DiscordFontUtilsKt.setDiscordFont(var13, var7);
+      var9.fileAttachmentDownloadProgressBar.setIndeterminateTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getTextMuted()));
+      val var8: View = var9.getRoot();
+      kotlin.jvm.internal.q.g(var8, "getRoot(...)");
       val var3: Int = SizeUtilsKt.getDpToPx(8);
-      var6.setPadding(var3, var3, var3, var3);
+      var8.setPadding(var3, var3, var3, var3);
    }
 
    @JvmStatic
@@ -92,18 +95,17 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       kotlin.jvm.internal.q.h(var1, "$url");
       kotlin.jvm.internal.q.h(var2, "$attachmentName");
       kotlin.jvm.internal.q.h(var3, "$attachmentDescription");
-      dn.g.d(
+      kk.f.d(
          CoroutineViewUtilsKt.getAttachedScope(var0),
-         dn.j0.b(),
+         kk.k0.b(),
          null,
          new Function2(var0, var1, var2, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1123,6 +1125,7 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -1151,11 +1154,11 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       }
 
       val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var15: java.lang.String = FileAttachmentView.class.getSimpleName();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("Binding ");
-      var13.append(var15);
-      AttachedViewCoroutineScope.cancelAllWork$default(var14, var13.toString(), null, 2, null);
+      val var13: java.lang.String = FileAttachmentView.class.getSimpleName();
+      val var15: StringBuilder = new StringBuilder();
+      var15.append("Binding ");
+      var15.append(var13);
+      AttachedViewCoroutineScope.cancelAllWork$default(var14, var15.toString(), null, 2, null);
       val var29: SimpleDraweeView = this.binding.fileAttachmentDownload;
       kotlin.jvm.internal.q.g(this.binding.fileAttachmentDownload, "fileAttachmentDownload");
       var var11: Byte;
@@ -1184,7 +1187,7 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       val var26: View = this.binding.getRoot();
       kotlin.jvm.internal.q.g(var26, "getRoot(...)");
       ViewBackgroundUtilsKt.setBackgroundRectangle(
-         var26, var11, SizeUtilsKt.getDpToPx(8), ColorUtilsKt.getColorCompat(this, color.primary_dark_700_alpha_60), SizeUtilsKt.getDpToPx(0.25F)
+         var26, var11, SizeUtilsKt.getDpToPx(8), ColorUtilsKt.getColorCompat(this, R.color.primary_dark_700_alpha_60), SizeUtilsKt.getDpToPx(0.25F)
       );
       if (!var10) {
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new y(var4, var3, var1), 1, null);
@@ -1213,16 +1216,16 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       }
 
       var17.setAlpha(var9);
-      val var22: AttachmentUploadOverlayView = this.binding.uploadOverlay;
+      val var18: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       val var12: Int = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var25: ShapeDrawable = new ShapeDrawable();
-      val var23: Paint = var25.getPaint();
-      val var18: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var18, "getContext(...)");
-      var23.setColor(ColorUtilsKt.getColorCompat(var18, 17170445));
+      val var23: ShapeDrawable = new ShapeDrawable();
+      val var25: Paint = var23.getPaint();
+      val var22: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var22, "getContext(...)");
+      var25.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
       var11 = ThemeManagerKt.getTheme().getBackgroundModifierAccent();
-      kotlin.jvm.internal.q.e(var22);
-      AttachmentUploadOverlayView.configureProgressView$default(var22, null, var25, null, var12, null, var11, 21, null);
+      kotlin.jvm.internal.q.e(var18);
+      AttachmentUploadOverlayView.configureProgressView$default(var18, null, var23, null, var12, null, var11, 21, null);
       if (!kotlin.jvm.internal.q.c(this.uploadContext, this.uploadContext)) {
          this.uploadContext = this.uploadContext;
          this.uploadFinished = false;

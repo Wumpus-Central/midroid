@@ -1,6 +1,7 @@
 package com.discord.zoom_layout
 
 import android.graphics.Matrix
+import ch.w
 import com.discord.reactevents.ReactEvents
 import com.discord.zoom_layout.reactevents.OnZoomChangedEvent
 import com.facebook.react.bridge.ReadableArray
@@ -15,7 +16,6 @@ import com.otaliastudios.zoom.ZoomEngine
 import com.otaliastudios.zoom.ZoomEngine.c
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
 public class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
@@ -57,15 +57,15 @@ public class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomL
       return var2;
    }
 
-   protected override fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed>? {
+   protected open fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed>? {
       return this.delegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDZoomLayoutAndroid";
    }
 

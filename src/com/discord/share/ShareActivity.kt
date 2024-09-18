@@ -19,7 +19,6 @@ public class ShareActivity : ReactActivity {
             this.this$0 = var1;
          }
 
-         @Override
          protected Bundle getLaunchOptions() {
             var var1: ShareProps = this.shareProps;
             if (this.shareProps == null) {
@@ -30,14 +29,13 @@ public class ShareActivity : ReactActivity {
             return var1.toBundle();
          }
 
-         @Override
          protected void onCreate(Bundle var1) {
-            val var2: ShareProps.Companion = ShareProps.Companion;
-            val var3: Intent = this.this$0.getIntent();
-            q.g(var3, "getIntent(...)");
-            val var4: Context = this.getContext();
-            q.g(var4, "getContext(...)");
-            val var7: ShareProps = var2.createShareProps(var3, var4);
+            val var4: ShareProps.Companion = ShareProps.Companion;
+            val var2: Intent = this.this$0.getIntent();
+            q.g(var2, "getIntent(...)");
+            val var3: Context = this.getContext();
+            q.g(var3, "getContext(...)");
+            val var7: ShareProps = var4.createShareProps(var2, var3);
             this.shareProps = var7;
             var var5: ShareProps = var7;
             if (var7 == null) {
@@ -48,8 +46,8 @@ public class ShareActivity : ReactActivity {
             val var8: java.util.List = var5.getAttachments();
             val var6: ShareActivity = this.this$0;
 
-            for (ShareProps.Attachment var9 : var8) {
-               var6.grantUriPermission(var6.getPackageName(), Uri.parse(var9.getUri()), 1);
+            for (ShareProps.Attachment var10 : var8) {
+               var6.grantUriPermission(var6.getPackageName(), Uri.parse(var10.getUri()), 1);
             }
 
             super.onCreate(var1);

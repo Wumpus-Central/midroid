@@ -2,7 +2,7 @@ package com.discord.misc.utilities.coroutines
 
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
-import dn.q0
+import kk.r0
 import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
@@ -28,17 +28,17 @@ public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
 
          public void onViewDetachedFromWindow(View var1) {
             q.h(var1, "view");
-            val var3: AttachedViewCoroutineScope = this.this$0;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append(var1);
-            var2.append(" detached from window");
-            AttachedViewCoroutineScope.cancelAllWork$default(var3, var2.toString(), null, 2, null);
+            val var2: AttachedViewCoroutineScope = this.this$0;
+            val var3: StringBuilder = new StringBuilder();
+            var3.append(var1);
+            var3.append(" detached from window");
+            AttachedViewCoroutineScope.cancelAllWork$default(var2, var3.toString(), null, 2, null);
          }
       });
    }
 
    public fun cancelAllWork(message: String, cause: Throwable? = null) {
       q.h(var1, "message");
-      v.g(this.getCoroutineContext(), q0.a(var1, var2));
+      v.g(this.getCoroutineContext(), r0.a(var1, var2));
    }
 }

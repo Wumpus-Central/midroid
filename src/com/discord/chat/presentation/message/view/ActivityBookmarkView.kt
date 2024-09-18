@@ -20,8 +20,8 @@ import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.overlapping_circles.OverlappingItem
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
@@ -67,7 +67,7 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
       DiscordFontUtilsKt.setDiscordFont(var7, var6);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          this,
-         ColorUtilsKt.getColorCompat(var1, ThemeManagerKt.getTheme().getColorRes(color.primary_130, color.primary_630)),
+         ColorUtilsKt.getColorCompat(var1, ThemeManagerKt.getTheme().getColorRes(R.color.primary_130, R.color.primary_630)),
          SizeUtilsKt.getDpToPx(8),
          null,
          0,
@@ -183,11 +183,11 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var2 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
-      var3 = var2 * 9 / 16;
+      var3 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
+      var2 = var3 * 9 / 16;
       val var9: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
       val var5: SimpleDraweeView = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
-      var9.resizeLayoutParams(var5, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
+      var9.resizeLayoutParams(var5, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
    }
 }

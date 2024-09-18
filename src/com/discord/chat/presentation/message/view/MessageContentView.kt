@@ -23,9 +23,9 @@ import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderOpt
 import com.discord.chat.presentation.textutils.LinkStyle
 import com.discord.chat.presentation.textutils.TextUtilsKt
 import com.discord.primitives.MessageId
+import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan.TouchPriority
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
 import com.discord.span.utilities.spannable.BoldSpan
@@ -40,7 +40,7 @@ import kotlin.jvm.functions.Function1
 
 public class MessageContentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : SimpleDraweeSpanTextView,
-   SpacingProviderView {
+   VerticalSpacingItemDecoration.SpacingProviderView {
    private final var bottomSpacingPx: Int?
 
    private final val shadowView: SimpleDraweeSpanTextView
@@ -62,7 +62,7 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = vj.l.a(new Function0(this) {
+      this.shadowView$delegate = ch.l.b(new Function0(this) {
          final MessageContentView this$0;
 
          {
@@ -113,9 +113,9 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var9: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
+      val var8: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
       var var7: Int = var2.getNumberOfLines();
-      val var8: Boolean = var2.getExpandable();
+      val var9: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6, false);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -125,22 +125,22 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var9) {
-         if (var9) {
+      if (var3 > var7 || var8) {
+         if (var8) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var8) {
+         if (var9) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();
             var11.append("\n");
             var11.append(var18);
             var4.replace(var7, var4.length(), var11.toString());
-            val var20: TouchPriority = TouchPriority.HIGH;
+            val var20: NestedClickableSpan.TouchPriority = NestedClickableSpan.TouchPriority.HIGH;
             if (var12 != null) {
                var3 = var12;
             } else {
@@ -314,7 +314,7 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       throw new UnsupportedOperationException("MessageContentView uses custom touch handling. click listeners are not supported");
    }
 
-   public open fun spacingPxOverride(): Int? {
+   public override fun spacingPxOverride(): Int? {
       return this.bottomSpacingPx;
    }
 

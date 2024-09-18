@@ -10,11 +10,11 @@ import android.os.Build.VERSION
 import androidx.core.content.b
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.os.e
+import ch.w
 import com.discord.share.intent.GetFileNameKt
 import com.discord.shortcuts.ShortcutData
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import vj.w
 
 internal data class ShareProps(text: String, attachments: List<com.discord.share.ShareProps.Attachment>, targetChannelId: String?, targetUserId: String?) {
    public final val attachments: List<com.discord.share.ShareProps.Attachment>
@@ -79,8 +79,8 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.text.hashCode();
-      val var3: Int = this.attachments.hashCode();
+      val var3: Int = this.text.hashCode();
+      val var4: Int = this.attachments.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.targetChannelId == null) {
@@ -93,42 +93,38 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          var2 = this.targetUserId.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    public fun toBundle(): Bundle {
-      val var2: Pair = w.a("text", this.text);
+      val var1: Pair = w.a("text", this.text);
       val var3: java.util.List = this.attachments;
-      val var1: ArrayList = new ArrayList(i.u(this.attachments, 10));
+      val var2: ArrayList = new ArrayList(i.u(this.attachments, 10));
       val var4: java.util.Iterator = var3.iterator();
 
       while (var4.hasNext()) {
-         var1.add((var4.next() as ShareProps.Attachment).toBundle());
+         var2.add((var4.next() as ShareProps.Attachment).toBundle());
       }
 
-      return e.a(
-         new Pair[]{
-            var2, w.a("attachments", var1.toArray(new Bundle[0])), w.a("targetChannelId", this.targetChannelId), w.a("targetUserId", this.targetUserId)
-         }
-      );
+      return e.a(var1, w.a("attachments", var2.toArray(new Bundle[0])), w.a("targetChannelId", this.targetChannelId), w.a("targetUserId", this.targetUserId));
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.text;
-      val var4: java.util.List = this.attachments;
-      val var5: java.lang.String = this.targetChannelId;
-      val var1: java.lang.String = this.targetUserId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ShareProps(text=");
-      var2.append(var3);
-      var2.append(", attachments=");
-      var2.append(var4);
-      var2.append(", targetChannelId=");
-      var2.append(var5);
-      var2.append(", targetUserId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.text;
+      val var5: java.util.List = this.attachments;
+      val var2: java.lang.String = this.targetChannelId;
+      val var3: java.lang.String = this.targetUserId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ShareProps(text=");
+      var4.append(var1);
+      var4.append(", attachments=");
+      var4.append(var5);
+      var4.append(", targetChannelId=");
+      var4.append(var2);
+      var4.append(", targetUserId=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -181,8 +177,8 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
       }
 
       public override fun hashCode(): Int {
-         val var3: Int = this.name.hashCode();
-         val var2: Int = this.uri.hashCode();
+         val var2: Int = this.name.hashCode();
+         val var3: Int = this.uri.hashCode();
          val var1: Int;
          if (this.mimeType == null) {
             var1 = 0;
@@ -190,11 +186,11 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
             var1 = this.mimeType.hashCode();
          }
 
-         return (var3 * 31 + var2) * 31 + var1;
+         return (var2 * 31 + var3) * 31 + var1;
       }
 
       public fun toBundle(): Bundle {
-         return e.a(new Pair[]{w.a("name", this.name), w.a("uri", this.uri), w.a("mimeType", this.mimeType)});
+         return e.a(w.a("name", this.name), w.a("uri", this.uri), w.a("mimeType", this.mimeType));
       }
 
       public override fun toString(): String {
@@ -279,13 +275,13 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          val var20: java.util.List = this.getUriExtras(var1);
          val var11: ArrayList = new ArrayList(i.u(var20, 10));
 
-         for (Uri var21 : var20) {
+         for (Uri var8 : var20) {
             val var9: ContentResolver = var2.getContentResolver();
             q.g(var9, "getContentResolver(...)");
-            val var10: java.lang.String = GetFileNameKt.getFileName(var9, var21);
-            val var22: java.lang.String = var21.toString();
-            q.g(var22, "toString(...)");
-            var11.add(new ShareProps.Attachment(var10, var22, var2.getContentResolver().getType(var21)));
+            val var22: java.lang.String = GetFileNameKt.getFileName(var9, var8);
+            val var10: java.lang.String = var8.toString();
+            q.g(var10, "toString(...)");
+            var11.add(new ShareProps.Attachment(var22, var10, var2.getContentResolver().getType(var8)));
          }
 
          return new ShareProps(var14, var11, var4, var5);

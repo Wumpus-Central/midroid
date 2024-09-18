@@ -25,7 +25,7 @@ public fun SpannableStringBuilder.debugSpans(): String {
    q.h(var0, "<this>");
    val var1: Array<Any> = var0.getSpans(0, var0.length(), Object.class);
    q.g(var1, "getSpans(...)");
-   return c.g0(var1, null, null, null, 0, null, <unrepresentable>.INSTANCE, 31, null);
+   return c.f0(var1, null, null, null, 0, null, <unrepresentable>.INSTANCE, 31, null);
 }
 
 public fun SpannableStringBuilder.ensureNewline(span: Any? = null) {

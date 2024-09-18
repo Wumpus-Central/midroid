@@ -5,7 +5,7 @@ import com.discord.image.fresco.listeners.ControllerListener
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
-import dn.g
+import kk.f
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
@@ -26,28 +26,28 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
       this.placeholderVersion = var4;
    }
 
-   public open fun onFailure(id: String?, throwable: Throwable?) {
+   public override fun onFailure(id: String?, throwable: Throwable?) {
       (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);
    }
 
-   public open fun onSubmit(id: String?, callerContext: Any?) {
+   public override fun onSubmit(id: String?, callerContext: Any?) {
       (this.draweeView.getHierarchy() as GenericDraweeHierarchy).A(null);
       if (!Companion.canDisplay(this.placeholder, this.placeholderVersion)) {
          (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);
       } else {
          (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(null);
-         g.d(
+         f.d(
             CoroutineViewUtilsKt.getAttachedScope(this.draweeView),
             null,
             null,
             new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)

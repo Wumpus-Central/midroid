@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import qn.x0
+import uk.f
+import uk.n
+import vk.a
+import xk.b2
+import xk.g0
+import xk.x0
 
 @f
 public data class NonGuildVersion(id: String, version: Long = 0L, versionString: String? = null) {
@@ -77,18 +77,18 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var5: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var4: java.lang.String = this.versionString;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("NonGuildVersion(id=");
-      var5.append(var3);
-      var5.append(", version=");
-      var5.append(var1);
-      var5.append(", versionString=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.versionString;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("NonGuildVersion(id=");
+      var4.append(var5);
+      var4.append(", version=");
+      var4.append(var1);
+      var4.append(", versionString=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -103,9 +103,9 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          val var0: NonGuildVersion.$serializer = new NonGuildVersion.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.app_database.NonGuildVersion", var0, 3);
-         var1.c("id", false);
-         var1.c("version", true);
-         var1.c("versionString", true);
+         var1.l("id", false);
+         var1.l("version", true);
+         var1.l("versionString", true);
          descriptor = var1;
       }
 
@@ -116,15 +116,15 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       public open fun deserialize(decoder: Decoder): NonGuildVersion {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var5: Long;
          var var7: java.lang.String;
          var var10: java.lang.String;
-         if (var9.p()) {
-            var7 = var9.m(var8, 0);
-            var5 = var9.f(var8, 1);
-            var10 = var9.n(var8, 2, b2.a, null) as java.lang.String;
+         if (var9.y()) {
+            var7 = var9.t(var8, 0);
+            var5 = var9.h(var8, 1);
+            var10 = var9.v(var8, 2, b2.a, null) as java.lang.String;
             var2 = 7;
          } else {
             var5 = 0L;
@@ -134,7 +134,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -142,14 +142,14 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
                            throw new n(var4);
                         }
 
-                        var10 = var9.n(var8, 2, b2.a, var10) as java.lang.String;
+                        var10 = var9.v(var8, 2, b2.a, var10) as java.lang.String;
                         var2 |= 4;
                      } else {
-                        var5 = var9.f(var8, 1);
+                        var5 = var9.h(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.m(var8, 0);
+                     var7 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -158,7 +158,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
             }
          }
 
-         var9.c(var8);
+         var9.b(var8);
          return new NonGuildVersion(var2, var7, var5, var10, null);
       }
 
@@ -166,13 +166,13 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          NonGuildVersion.write$Self$app_database_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

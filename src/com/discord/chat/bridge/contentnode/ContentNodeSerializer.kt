@@ -7,9 +7,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import pn.g
-import pn.e.i
-import rn.e
+import wk.g
+import wk.e.i
+import yk.e
 
 public object ContentNodeSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
@@ -26,7 +26,7 @@ public object ContentNodeSerializer : KSerializer {
             throw new IllegalArgumentException("Failed requirement.".toString());
          }
 
-         val var2: JsonElement = (var1 as e).g();
+         val var2: JsonElement = (var1 as e).i();
          if (var2 is JsonPrimitive) {
             var4 = new TextContentNode((var2 as JsonPrimitive).a());
          } else {

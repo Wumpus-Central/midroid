@@ -9,7 +9,6 @@ import android.widget.TextView
 import com.discord.SetTextSizeSpKt
 import com.discord.emoji.RenderableEmoji
 import com.discord.emoji.RenderableEmojiKt
-import com.discord.emoji.RenderableEmoji.CustomWithEmojiId
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.ids.IdUtilsKt
@@ -187,16 +186,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          var3 = false;
       }
 
-      val var4: Int = var1.getCount();
+      val var5: Int = var1.getCount();
       var var11: Boolean = false;
       if (var3) {
          var11 = false;
          label23:
          if (this.currentCount != null) {
-            val var5: Int = var1.getCount();
+            val var4: Int = var1.getCount();
             if (this.currentCount != null) {
                var11 = false;
-               if (var5 == this.currentCount) {
+               if (var4 == this.currentCount) {
                   break label23;
                }
             }
@@ -205,7 +204,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          }
       }
 
-      this.configureCount(var4, var11);
+      this.configureCount(var5, var11);
       this.configureBackground(var1.isMe(), var2);
       this.configureTextColor(var1.isMe(), var2);
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
@@ -281,14 +280,15 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             if (var3 != null) {
                val var7: java.lang.Long = h.o(var3);
                if (var7 != null) {
-                  val var8: CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var7.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
+                  val var8: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion
+                     .customWithEmojiId(var7.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
                   if (var8 != null) {
                      return var8;
                   }
                }
             }
 
-            val var4: com.discord.emoji.RenderableEmoji.Companion = RenderableEmoji.Companion;
+            val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
             var3 = var0.getName();
             var var5: java.lang.String = var3;
             if (var3 == null) {

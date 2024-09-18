@@ -12,7 +12,7 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 
@@ -77,7 +77,7 @@ public class GuildView  public constructor(context: Context, attrs: AttributeSet
             } else {
                val var7: Context = this.getContext();
                kotlin.jvm.internal.q.g(var7, "getContext(...)");
-               var4 = ColorUtilsKt.getColorCompat(var7, color.brand);
+               var4 = ColorUtilsKt.getColorCompat(var7, R.color.brand);
             }
 
             this.setBackgroundColor(var4);

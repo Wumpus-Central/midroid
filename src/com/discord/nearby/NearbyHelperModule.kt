@@ -1,6 +1,7 @@
 package com.discord.nearby
 
 import android.app.Activity
+import ch.w
 import com.discord.nearby.reactevents.OnNearbyErrorEvent
 import com.discord.nearby.reactevents.OnNearbyMessageLostEvent
 import com.discord.nearby.reactevents.OnNearbyMessageReceivedEvent
@@ -11,7 +12,6 @@ import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val manager: NearbyManager
@@ -23,11 +23,9 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         new Pair[]{
-            w.a("nearbyMessageReceived", g0.b(OnNearbyMessageReceivedEvent.class)),
-            w.a("nearbyMessageLost", g0.b(OnNearbyMessageLostEvent.class)),
-            w.a("nearbyError", g0.b(OnNearbyErrorEvent.class))
-         }
+         w.a("nearbyMessageReceived", g0.b(OnNearbyMessageReceivedEvent.class)),
+         w.a("nearbyMessageLost", g0.b(OnNearbyMessageLostEvent.class)),
+         w.a("nearbyError", g0.b(OnNearbyErrorEvent.class))
       );
       this.manager = new NearbyManager(
          new Function1(this) {

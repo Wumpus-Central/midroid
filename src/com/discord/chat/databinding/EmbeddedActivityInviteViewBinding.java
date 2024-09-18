@@ -13,7 +13,7 @@ import com.discord.chat.presentation.message.view.MessageContentView;
 import com.discord.core.DCDButton;
 import com.discord.overlapping_circles.OverlappingCirclesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import f3.a;
+import n1.a;
 
 public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
    public final Barrier barrierFooter;
@@ -62,43 +62,43 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
 
    public static EmbeddedActivityInviteViewBinding bind(View var0) {
       int var1 = R.id.barrier_footer;
-      Barrier var13 = (Barrier)a.a(var0, var1);
-      if (var13 != null) {
+      Barrier var6 = (Barrier)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.item_bottom_container;
-         ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
-         if (var12 != null) {
+         ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
+         if (var9 != null) {
             var1 = R.id.item_header;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var12 = (TextView)a.a(var0, var1);
+            if (var12 != null) {
                var1 = R.id.item_hero;
-               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-               if (var4 != null) {
+               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.item_subtitle;
-                  MessageContentView var8 = (MessageContentView)a.a(var0, var1);
-                  if (var8 != null) {
+                  MessageContentView var11 = (MessageContentView)a.a(var0, var1);
+                  if (var11 != null) {
                      var1 = R.id.item_title;
-                     TextView var6 = (TextView)a.a(var0, var1);
-                     if (var6 != null) {
+                     TextView var10 = (TextView)a.a(var0, var1);
+                     if (var10 != null) {
                         var1 = R.id.launch_button;
-                        DCDButton var9 = (DCDButton)a.a(var0, var1);
-                        if (var9 != null) {
+                        DCDButton var2 = (DCDButton)a.a(var0, var1);
+                        if (var2 != null) {
                            var1 = R.id.no_participants_text;
-                           TextView var11 = (TextView)a.a(var0, var1);
-                           if (var11 != null) {
+                           TextView var7 = (TextView)a.a(var0, var1);
+                           if (var7 != null) {
                               var1 = R.id.participants;
                               OverlappingCirclesView var3 = (OverlappingCirclesView)a.a(var0, var1);
                               if (var3 != null) {
                                  var1 = R.id.participants_container;
-                                 FrameLayout var7 = (FrameLayout)a.a(var0, var1);
-                                 if (var7 != null) {
+                                 FrameLayout var4 = (FrameLayout)a.a(var0, var1);
+                                 if (var4 != null) {
                                     var1 = R.id.subtitle_icon;
-                                    SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-                                    if (var10 != null) {
+                                    SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                                    if (var5 != null) {
                                        var1 = R.id.subtitle_top_barrier;
-                                       Barrier var2 = (Barrier)a.a(var0, var1);
-                                       if (var2 != null) {
+                                       Barrier var13 = (Barrier)a.a(var0, var1);
+                                       if (var13 != null) {
                                           return new EmbeddedActivityInviteViewBinding(
-                                             var0, var13, var12, var5, var4, var8, var6, var9, var11, var3, var7, var10, var2
+                                             var0, var6, var9, var12, var8, var11, var10, var2, var7, var3, var4, var5, var13
                                           );
                                        }
                                     }

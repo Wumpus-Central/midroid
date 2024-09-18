@@ -69,7 +69,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
    public fun bind(item: BlockedGroupChatListItem, eventHandler: ChatEventHandler) {
       q.h(var1, "item");
       q.h(var2, "eventHandler");
-      this.setOnClickListener(new v4.a(var2, var1));
+      this.setOnClickListener(new d3.a(var2, var1));
       val var3: Int;
       if (var1.isRevealed()) {
          var3 = var1.getBackgroundColor();

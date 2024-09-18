@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import ck.a
+import jh.a
 import kotlin.enums.EnumEntries
 
 public enum class ViewResizeMode(value: String) {

@@ -8,10 +8,10 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.InlineClassDescriptor
-import nn.f
-import qn.g0
-import qn.x0
-import qn.g0.a
+import uk.f
+import xk.g0
+import xk.x0
+import xk.g0.a
 
 @f
 public inline class GuildId : SnowflakePrimitive {
@@ -88,7 +88,7 @@ public inline class GuildId : SnowflakePrimitive {
       return hashCode-impl(this.snowflake);
    }
 
-   fun isValid(): Boolean {
+   override fun isValid(): Boolean {
       return isValid-impl(this.snowflake);
    }
 
@@ -113,7 +113,7 @@ public inline class GuildId : SnowflakePrimitive {
          val var0: GuildId.$serializer = new GuildId.$serializer();
          INSTANCE = var0;
          val var1: InlineClassDescriptor = new InlineClassDescriptor("com.discord.primitives.GuildId", var0);
-         var1.c("snowflake", false);
+         var1.l("snowflake", false);
          descriptor = var1;
       }
 
@@ -123,14 +123,14 @@ public inline class GuildId : SnowflakePrimitive {
 
       public open fun deserialize(decoder: Decoder): GuildId {
          q.h(var1, "decoder");
-         return GuildId.constructor-impl(var1.q(this.getDescriptor()).l());
+         return GuildId.constructor-impl(var1.z(this.getDescriptor()).r());
       }
 
       public open fun serialize(encoder: Encoder, value: GuildId) {
          q.h(var1, "encoder");
-         var1 = var1.k(this.getDescriptor());
+         var1 = var1.z(this.getDescriptor());
          if (var1 != null) {
-            var1.l(var2);
+            var1.C(var2);
          }
       }
 

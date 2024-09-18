@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.TextView
+import ch.p
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayAssets
@@ -17,7 +18,6 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
-import vj.p
 
 public class OverlayMenuView : LinearLayout {
    private final lateinit var assets: MobileVoiceOverlayAssets

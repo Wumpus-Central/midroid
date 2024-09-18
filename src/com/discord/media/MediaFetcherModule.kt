@@ -1,5 +1,6 @@
 package com.discord.media
 
+import ch.w
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -10,10 +11,9 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
+import fh.a
 import java.util.Comparator
 import kotlin.jvm.internal.q
-import vj.w
-import yj.a
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -82,11 +82,9 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
       if (var3 == var4) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
-               new Pair[]{
-                  w.a("start_cursor", java.lang.String.valueOf((i.d0(var16) as ContentResolverMedia).getUri())),
-                  w.a("end_cursor", java.lang.String.valueOf((i.p0(var16) as ContentResolverMedia).getUri())),
-                  w.a("has_next_page", java.lang.Boolean.TRUE)
-               }
+               w.a("start_cursor", java.lang.String.valueOf((i.d0(var16) as ContentResolverMedia).getUri())),
+               w.a("end_cursor", java.lang.String.valueOf((i.p0(var16) as ContentResolverMedia).getUri())),
+               w.a("has_next_page", java.lang.Boolean.TRUE)
             );
          } catch (var10: Exception) {
             var2.reject("E_UNABLE_TO_LOAD", var10);
@@ -94,7 +92,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          }
       } else {
          try {
-            var14 = NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("has_next_page", java.lang.Boolean.FALSE)});
+            var14 = NativeMapExtensionsKt.nativeMapOf(w.a("has_next_page", java.lang.Boolean.FALSE));
          } catch (var9: Exception) {
             var2.reject("E_UNABLE_TO_LOAD", var9);
             return;

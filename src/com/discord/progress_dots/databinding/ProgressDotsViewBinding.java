@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.progress_dots.ProgressDot;
 import com.discord.progress_dots.R;
-import f3.a;
+import n1.a;
 
 public final class ProgressDotsViewBinding implements ViewBinding {
    private final View rootView;
@@ -23,15 +23,15 @@ public final class ProgressDotsViewBinding implements ViewBinding {
 
    public static ProgressDotsViewBinding bind(View var0) {
       int var1 = R.id.view_progress_dots_1;
-      ProgressDot var4 = (ProgressDot)a.a(var0, var1);
-      if (var4 != null) {
+      ProgressDot var3 = (ProgressDot)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.view_progress_dots_2;
-         ProgressDot var2 = (ProgressDot)a.a(var0, var1);
-         if (var2 != null) {
+         ProgressDot var4 = (ProgressDot)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.view_progress_dots_3;
-            ProgressDot var3 = (ProgressDot)a.a(var0, var1);
-            if (var3 != null) {
-               return new ProgressDotsViewBinding(var0, var4, var2, var3);
+            ProgressDot var2 = (ProgressDot)a.a(var0, var1);
+            if (var2 != null) {
+               return new ProgressDotsViewBinding(var0, var3, var4, var2);
             }
          }
       }
@@ -48,6 +48,7 @@ public final class ProgressDotsViewBinding implements ViewBinding {
       }
    }
 
+   @Override
    public View getRoot() {
       return this.rootView;
    }

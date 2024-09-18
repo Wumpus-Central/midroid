@@ -5,6 +5,8 @@ import android.content.Context
 import android.view.View
 import androidx.core.view.v0
 import androidx.recyclerview.widget.RecyclerView
+import ch.l
+import ch.p
 import com.discord.emoji_picker.EmojiPickerItem.ItemType
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerScroller.ScrollEvent
@@ -17,8 +19,6 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
-import vj.l
-import vj.p
 
 @SuppressLint(["ViewConstructor"])
 internal class EmojiPickerView(context: Context,
@@ -79,7 +79,7 @@ internal class EmojiPickerView(context: Context,
       q.h(var11, "onShowNitroUpsell");
       q.h(var13, "config");
       super(var1);
-      this.visibilityTracker$delegate = l.a(new Function0(var11, this) {
+      this.visibilityTracker$delegate = l.b(new Function0(var11, this) {
          final Function2 $onShowNitroUpsell;
          final EmojiPickerView this$0;
 
@@ -106,7 +106,7 @@ internal class EmojiPickerView(context: Context,
             });
          }
       });
-      this.scroller$delegate = l.a(
+      this.scroller$delegate = l.b(
          new Function0(this, var13, var10, var6, var7, var8) {
             final EmojiPickerView.Config $config;
             final Function2 $onScroll;
@@ -384,10 +384,10 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var2: Context = this.getContext();
-      q.g(var2, "getContext(...)");
-      var3.setUseTier0UpsellContent(var2, var1);
+      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var3: Context = this.getContext();
+      q.g(var3, "getContext(...)");
+      var2.setUseTier0UpsellContent(var3, var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {
@@ -458,18 +458,18 @@ internal class EmojiPickerView(context: Context,
 
       public override fun toString(): String {
          val var2: Boolean = this.animateEmoji;
-         val var4: Boolean = this.scrollFastOptimizationEnabled;
+         val var3: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var3: Boolean = this.disableAnimationsOnScroll;
+         val var4: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
          var5.append(var2);
          var5.append(", scrollFastOptimizationEnabled=");
-         var5.append(var4);
+         var5.append(var3);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var3);
+         var5.append(var4);
          var5.append(")");
          return var5.toString();
       }

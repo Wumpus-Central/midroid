@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.h
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.b2
+import xk.g0
+import xk.h
+import xk.g0.a
 
 @f
 public data class UnicodeEmojiContentNode(content: String, surrogate: String, jumboable: Boolean = false) : EmojiContentNode {
@@ -96,9 +96,9 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
          val var0: UnicodeEmojiContentNode.$serializer = new UnicodeEmojiContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("emoji", var0, 3);
-         var1.c("content", false);
-         var1.c("surrogate", false);
-         var1.c("jumboable", true);
+         var1.l("content", false);
+         var1.l("surrogate", false);
+         var1.l("jumboable", true);
          descriptor = var1;
       }
 
@@ -109,15 +109,15 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
       public open fun deserialize(decoder: Decoder): UnicodeEmojiContentNode {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: c = var1.c(var7);
          var var2: Int;
          var var5: Boolean;
          var var6: java.lang.String;
          var var9: java.lang.String;
-         if (var8.p()) {
-            var6 = var8.m(var7, 0);
-            var9 = var8.m(var7, 1);
-            var5 = var8.C(var7, 2);
+         if (var8.y()) {
+            var6 = var8.t(var7, 0);
+            var9 = var8.t(var7, 1);
+            var5 = var8.s(var7, 2);
             var2 = 7;
          } else {
             var6 = null;
@@ -127,7 +127,7 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -135,14 +135,14 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
                            throw new n(var4);
                         }
 
-                        var5 = var8.C(var7, 2);
+                        var5 = var8.s(var7, 2);
                         var2 |= 4;
                      } else {
-                        var9 = var8.m(var7, 1);
+                        var9 = var8.t(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var8.m(var7, 0);
+                     var6 = var8.t(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -151,7 +151,7 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new UnicodeEmojiContentNode(var2, var6, var9, var5, null);
       }
 
@@ -159,9 +159,9 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          UnicodeEmojiContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

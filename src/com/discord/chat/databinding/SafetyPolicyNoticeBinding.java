@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import f3.a;
+import n1.a;
 
 public final class SafetyPolicyNoticeBinding implements ViewBinding {
    public final TextView description;
@@ -31,24 +31,24 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
 
    public static SafetyPolicyNoticeBinding bind(View var0) {
       int var1 = R.id.description;
-      TextView var7 = (TextView)a.a(var0, var1);
-      if (var7 != null) {
+      TextView var2 = (TextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.footer;
-         LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-         if (var4 != null) {
+         LinearLayout var5 = (LinearLayout)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.learn_more;
-               TextView var3 = (TextView)a.a(var0, var1);
-               if (var3 != null) {
+               TextView var7 = (TextView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.subtitle_text;
-                  TextView var2 = (TextView)a.a(var0, var1);
-                  if (var2 != null) {
+                  TextView var4 = (TextView)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.title;
                      TextView var6 = (TextView)a.a(var0, var1);
                      if (var6 != null) {
-                        return new SafetyPolicyNoticeBinding(var0, var7, var4, var5, var3, var2, var6);
+                        return new SafetyPolicyNoticeBinding(var0, var2, var5, var3, var7, var4, var6);
                      }
                   }
                }

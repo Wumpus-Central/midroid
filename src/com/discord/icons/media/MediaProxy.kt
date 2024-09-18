@@ -8,20 +8,20 @@ internal object MediaProxy {
    private final val MEDIA_PROXY_SIZES: Array<Int>
 
    private fun getMediaProxySize(size: Int): Int {
-      var var9: Array<Int> = MEDIA_PROXY_SIZES;
-      val var8: ArrayList = new ArrayList();
-      var var3: Int = var9.length;
+      var var8: Array<Int> = MEDIA_PROXY_SIZES;
+      val var7: ArrayList = new ArrayList();
+      var var3: Int = var8.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var7: Int = var9[var2];
-         if (var9[var2].intValue() <= var1) {
-            var8.add(var7);
+         val var9: Int = var8[var2];
+         if (var8[var2].intValue() <= var1) {
+            var7.add(var9);
          }
       }
 
-      val var11: java.util.Iterator = var8.iterator();
+      val var11: java.util.Iterator = var7.iterator();
       val var6: Boolean = var11.hasNext();
-      var9 = null;
+      val var22: Any = null;
       var var17: Any;
       if (!var6) {
          var17 = null;
@@ -29,19 +29,19 @@ internal object MediaProxy {
          var17 = (Integer)var11.next();
          if (var11.hasNext()) {
             var3 = var17.intValue();
-            var var20: Any = var17;
+            var8 = var17;
 
             do {
                val var10: Any = var11.next();
                val var5: Int = (var10 as java.lang.Number).intValue();
-               var17 = (Integer)var20;
+               var17 = var8;
                var var13: Int = var3;
                if (var3 < var5) {
                   var17 = (Integer)var10;
                   var13 = var5;
                }
 
-               var20 = var17;
+               var8 = var17;
                var3 = var13;
             } while (var11.hasNext());
          }
@@ -51,18 +51,18 @@ internal object MediaProxy {
       if (var17 != null && (double)var1 / var17.intValue() <= 1.25) {
          return var17;
       } else {
-         val var21: Array<Int> = MEDIA_PROXY_SIZES;
+         var8 = MEDIA_PROXY_SIZES;
          var3 = MEDIA_PROXY_SIZES.length;
          var var14: Int = 0;
 
          while (true) {
-            var17 = var9;
+            var17 = (Integer)var22;
             if (var14 >= var3) {
                break;
             }
 
-            var17 = var21[var14];
-            if (var21[var14].intValue() >= var1) {
+            var17 = var8[var14];
+            if (var8[var14].intValue() >= var1) {
                break;
             }
 
@@ -72,7 +72,7 @@ internal object MediaProxy {
          if (var17 != null) {
             var1 = var17;
          } else {
-            var1 = (c.h0(MEDIA_PROXY_SIZES) as java.lang.Number).intValue();
+            var1 = (c.g0(MEDIA_PROXY_SIZES) as java.lang.Number).intValue();
          }
 
          return var1;

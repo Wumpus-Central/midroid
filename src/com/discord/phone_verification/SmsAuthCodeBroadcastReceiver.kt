@@ -90,7 +90,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
 
          val var7: Int;
          if (var5 != null) {
-            var7 = var5.n();
+            var7 = var5.p();
          } else {
             var7 = null;
          }
@@ -104,7 +104,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             val var9: Log = Log.INSTANCE;
             var var8: Int = null;
             if (var5 != null) {
-               var8 = var5.n();
+               var8 = var5.p();
             }
 
             val var6: StringBuilder = new StringBuilder();

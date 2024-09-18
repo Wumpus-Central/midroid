@@ -15,8 +15,8 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.overlapping_circles.OverlappingItem
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 
@@ -48,7 +48,7 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          this,
-         ColorUtilsKt.getColorCompat(var1, ThemeManagerKt.getTheme().getColorRes(color.primary_130, color.primary_630)),
+         ColorUtilsKt.getColorCompat(var1, ThemeManagerKt.getTheme().getColorRes(R.color.primary_130, R.color.primary_630)),
          SizeUtilsKt.getDpToPx(8),
          null,
          0,

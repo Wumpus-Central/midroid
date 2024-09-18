@@ -1,15 +1,15 @@
 package com.discord.browser_manager
 
 import android.content.Context
+import ch.w
 import com.discord.cache.CacheModule
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import dh.r
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import vj.w
-import wj.r
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val cacheModule: CacheModule

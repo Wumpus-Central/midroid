@@ -3,7 +3,7 @@ package com.discord.chat.bridge.structurabletext
 import com.discord.chat.bridge.contentnode.ContentNode
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import nn.f
+import uk.f
 
 @f(with = AnnotatedStructurableTextSerializer::class)
 public data class AnnotatedStructurableText(content: List<ContentNode>) : StructurableText {
@@ -41,12 +41,12 @@ public data class AnnotatedStructurableText(content: List<ContentNode>) : Struct
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AnnotatedStructurableText(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AnnotatedStructurableText(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

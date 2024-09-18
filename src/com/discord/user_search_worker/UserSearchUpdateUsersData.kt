@@ -8,10 +8,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.g0
+import xk.g0.a
 
 @f
 internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransformedUser>) : UserSearchData {
@@ -67,7 +67,7 @@ internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransforme
          val var0: UserSearchUpdateUsersData.$serializer = new UserSearchUpdateUsersData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.user_search_worker.UserSearchUpdateUsersData", var0, 1);
-         var1.c("payload", false);
+         var1.l("payload", false);
          descriptor = var1;
       }
 
@@ -78,26 +78,26 @@ internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransforme
       public open fun deserialize(decoder: Decoder): UserSearchUpdateUsersData {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = UserSearchUpdateUsersData.access$get$childSerializers$cp();
-         val var5: Boolean = var7.p();
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var9: java.util.List;
          if (var5) {
-            var9 = var7.y(var6, 0, var8[0], null) as java.util.List;
+            var9 = var7.m(var6, 0, var8[0], null) as java.util.List;
          } else {
             var2 = 0;
             var9 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var9 = var7.y(var6, 0, var8[0], var9) as java.util.List;
+                  var9 = var7.m(var6, 0, var8[0], var9) as java.util.List;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -105,7 +105,7 @@ internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransforme
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new UserSearchUpdateUsersData(var2, var9, null);
       }
 
@@ -113,9 +113,9 @@ internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransforme
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          UserSearchUpdateUsersData.write$Self$user_search_worker_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

@@ -38,11 +38,11 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.f0
-import qn.g0
+import uk.f
+import uk.n
+import xk.b2
+import xk.f0
+import xk.g0
 
 public class MessageBundleView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout {
    private final val binding: MessageBundleViewBinding
@@ -89,14 +89,14 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       val var6: MessageBundleViewBinding = MessageBundleViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var6, "inflate(...)");
       this.binding = var6;
-      val var7: MessageBundleAdapter = new MessageBundleAdapter();
-      this.adapter = var7;
+      val var5: MessageBundleAdapter = new MessageBundleAdapter();
+      this.adapter = var5;
       var3 = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
       this.leftMarginPx = var3;
       val var4: Int = this.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
       this.rightMarginPx = var4;
-      val var5: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var3);
-      this.spineItemDecoration = var5;
+      val var7: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var3);
+      this.spineItemDecoration = var7;
       this.onTruncateMessage = <unrepresentable>.INSTANCE;
       RippleUtilsKt.addRipple$default(this, false, 0, 3, null);
       this.setOrientation(1);
@@ -107,11 +107,11 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          var9,
          var1,
          new VerticalSpacingItemDecoration(SizeUtilsKt.getDpToPx(8), 0, SizeUtilsKt.getDpToPx(8), false, 10, null),
-         var5,
+         var7,
          new MessageBundleHorizontalSpacingDecoration(var3, var4)
       );
       var9.setLayoutManager(new LinearLayoutManager(var1));
-      var9.setAdapter(var7);
+      var9.setAdapter(var5);
       var9.setNestedScrollingEnabled(false);
    }
 
@@ -261,7 +261,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new qn.f(MessageRow.$serializer.INSTANCE), null, new qn.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new xk.f(MessageRow.$serializer.INSTANCE), null, new xk.f(var0), null};
       }
 
       init {
@@ -354,24 +354,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var3: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var2: java.util.List = this.rows;
-         val var5: java.lang.Float = this.truncationThreshold;
-         val var6: java.util.List = this.referenceMessageRows;
-         val var1: java.lang.String = this.viewMoreText;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("MessageBundle(messageFrame=");
-         var4.append(var3);
-         var4.append(", rows=");
-         var4.append(var2);
-         var4.append(", truncationThreshold=");
-         var4.append(var5);
-         var4.append(", referenceMessageRows=");
-         var4.append(var6);
-         var4.append(", viewMoreText=");
-         var4.append(var1);
-         var4.append(")");
-         return var4.toString();
+         val var4: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var6: java.util.List = this.rows;
+         val var1: java.lang.Float = this.truncationThreshold;
+         val var3: java.util.List = this.referenceMessageRows;
+         val var5: java.lang.String = this.viewMoreText;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MessageBundle(messageFrame=");
+         var2.append(var4);
+         var2.append(", rows=");
+         var2.append(var6);
+         var2.append(", truncationThreshold=");
+         var2.append(var1);
+         var2.append(", referenceMessageRows=");
+         var2.append(var3);
+         var2.append(", viewMoreText=");
+         var2.append(var5);
+         var2.append(")");
+         return var2.toString();
       }
 
       public object `$serializer` : g0 {
@@ -388,25 +388,25 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
                "com.discord.chat.presentation.list.messagebundling.MessageBundleView.MessageBundle", var0, 5
             );
-            var1.c("messageFrame", true);
-            var1.c("rows", false);
-            var1.c("truncationThreshold", true);
-            var1.c("referenceMessageRows", true);
-            var1.c("viewMoreText", true);
+            var1.l("messageFrame", true);
+            var1.l("rows", false);
+            var1.l("truncationThreshold", true);
+            var1.l("referenceMessageRows", true);
+            var1.l("viewMoreText", true);
             descriptor = var1;
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
             val var1: Array<KSerializer> = MessageBundleView.MessageBundle.access$get$childSerializers$cp();
-            return new KSerializer[]{on.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], on.a.u(f0.a), var1[3], on.a.u(b2.a)};
+            return new KSerializer[]{vk.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], vk.a.u(f0.a), var1[3], vk.a.u(b2.a)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.list.messagebundling.MessageBundleView.MessageBundle {
             q.h(var1, "decoder");
             val var11: SerialDescriptor = this.getDescriptor();
-            val var12: kotlinx.serialization.encoding.c = var1.b(var11);
+            val var12: kotlinx.serialization.encoding.c = var1.c(var11);
             val var10: Array<KSerializer> = MessageBundleView.MessageBundle.access$get$childSerializers$cp();
-            val var5: Boolean = var12.p();
+            val var5: Boolean = var12.y();
             var var9: MessageFrameFeedHeaderView.MessageBundleHeader = null;
             var var2: Int;
             var var6: Any;
@@ -414,11 +414,11 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             var var8: java.util.List;
             var var13: Any;
             if (var5) {
-               var9 = var12.n(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, null) as MessageFrameFeedHeaderView.MessageBundleHeader;
-               var8 = var12.y(var11, 1, var10[1], null) as java.util.List;
-               var7 = var12.n(var11, 2, f0.a, null) as java.lang.Float;
-               var13 = var12.y(var11, 3, var10[3], null) as java.util.List;
-               var6 = var12.n(var11, 4, b2.a, null) as java.lang.String;
+               var9 = var12.v(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, null) as MessageFrameFeedHeaderView.MessageBundleHeader;
+               var8 = var12.m(var11, 1, var10[1], null) as java.util.List;
+               var7 = var12.v(var11, 2, f0.a, null) as java.lang.Float;
+               var13 = var12.m(var11, 3, var10[3], null) as java.util.List;
+               var6 = var12.v(var11, 4, b2.a, null) as java.lang.String;
                var2 = 31;
             } else {
                var var3: Boolean = true;
@@ -429,7 +429,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var13 = null;
 
                while (var3) {
-                  val var4: Int = var12.o(var11);
+                  val var4: Int = var12.x(var11);
                   if (var4 != -1) {
                      if (var4 != 0) {
                         if (var4 != 1) {
@@ -439,22 +439,22 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                                     throw new n(var4);
                                  }
 
-                                 var13 = var12.n(var11, 4, b2.a, var13) as java.lang.String;
+                                 var13 = var12.v(var11, 4, b2.a, var13) as java.lang.String;
                                  var2 |= 16;
                               } else {
-                                 var6 = var12.y(var11, 3, var10[3], var6) as java.util.List;
+                                 var6 = var12.m(var11, 3, var10[3], var6) as java.util.List;
                                  var2 |= 8;
                               }
                            } else {
-                              var7 = var12.n(var11, 2, f0.a, var7) as java.lang.Float;
+                              var7 = var12.v(var11, 2, f0.a, var7) as java.lang.Float;
                               var2 |= 4;
                            }
                         } else {
-                           var8 = var12.y(var11, 1, var10[1], var8) as java.util.List;
+                           var8 = var12.m(var11, 1, var10[1], var8) as java.util.List;
                            var2 |= 2;
                         }
                      } else {
-                        var9 = var12.n(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, var9) as MessageFrameFeedHeaderView.MessageBundleHeader;
+                        var9 = var12.v(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, var9) as MessageFrameFeedHeaderView.MessageBundleHeader;
                         var2 |= 1;
                      }
                   } else {
@@ -466,7 +466,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var13 = var6;
             }
 
-            var12.c(var11);
+            var12.b(var11);
             return new MessageBundleView.MessageBundle(var2, var9, var8, var7, (java.util.List)var13, (java.lang.String)var6, null);
          }
 
@@ -474,13 +474,13 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             q.h(var1, "encoder");
             q.h(var2, "value");
             val var3: SerialDescriptor = this.getDescriptor();
-            val var4: CompositeEncoder = var1.b(var3);
+            val var4: CompositeEncoder = var1.c(var3);
             MessageBundleView.MessageBundle.write$Self$chat_release(var2, var4, var3);
-            var4.c(var3);
+            var4.b(var3);
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return qn.g0.a.a(this);
+            return xk.g0.a.a(this);
          }
       }
 

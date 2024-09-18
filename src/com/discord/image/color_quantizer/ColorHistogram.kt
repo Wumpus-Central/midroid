@@ -48,22 +48,22 @@ internal class ColorHistogram(pixels: IntArray) {
          if (var1.length < 2) {
             return var1.length;
          } else {
-            var var6: Int = var1[0];
+            var var5: Int = var1[0];
             val var8: Int = var1.length;
             var var2: Int = 1;
             var var4: Int = 1;
 
             while (var2 < var8) {
                val var7: Int = var1[var2];
-               var var5: Int = var6;
+               var var6: Int = var5;
                var var3: Int = var4;
-               if (var7 != var6) {
+               if (var7 != var5) {
                   var3 = var4 + 1;
-                  var5 = var7;
+                  var6 = var7;
                }
 
                var2++;
-               var6 = var5;
+               var5 = var6;
                var4 = var3;
             }
 

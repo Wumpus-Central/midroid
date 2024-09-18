@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.FrameLayout.LayoutParams
+import ch.w
 import com.discord.bundle_updater.react.events.BundleDownloadedEvent
 import com.discord.bundle_updater.react.events.OtaCheckAttemptEvent
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
@@ -28,7 +29,6 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -39,9 +39,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(
-         new Pair[]{w.a("BundleDownloaded", g0.b(BundleDownloadedEvent.class)), w.a("OtaUpdateChecked", g0.b(OtaCheckAttemptEvent.class))}
-      );
+      this.reactEvents = new ReactEvents(w.a("BundleDownloaded", g0.b(BundleDownloadedEvent.class)), w.a("OtaUpdateChecked", g0.b(OtaCheckAttemptEvent.class)));
    }
 
    private fun removeSpinnerView() {
@@ -224,9 +222,9 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                         if (var8 as ReactApplication != null) {
                            val var10: ReactNativeHost = var9.getReactNativeHost();
                            if (var10 != null) {
-                              val var5: ReactInstanceManager = var10.getReactInstanceManager();
-                              if (var5 != null) {
-                                 val var4: BundleUpdaterManager = this.this$0;
+                              val var4: ReactInstanceManager = var10.getReactInstanceManager();
+                              if (var4 != null) {
+                                 val var5: BundleUpdaterManager = this.this$0;
                                  val var6: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
                                  var var11: java.lang.String = null;
                                  if (var6 != null) {
@@ -237,8 +235,8 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                                     }
                                  }
 
-                                 BundleUpdaterManager.access$setJSBundle(var4, var5, var11);
-                                 var5.recreateReactContextInBackground();
+                                 BundleUpdaterManager.access$setJSBundle(var5, var4, var11);
+                                 var4.recreateReactContextInBackground();
                               }
                            }
                         }

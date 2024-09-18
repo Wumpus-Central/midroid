@@ -2,6 +2,7 @@ package com.discord.safearea
 
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
+import ch.w
 import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.reactevents.ReactEvents
@@ -19,7 +20,6 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 @ReactModule(name = "DCDSafeArea")
 public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeAreaViewManagerInterface<SafeAreaProvider> {
@@ -131,11 +131,11 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
       return this.delegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDSafeArea";
    }
 

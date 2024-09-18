@@ -10,14 +10,13 @@ import android.graphics.Paint.Style
 import android.util.AttributeSet
 import android.view.View
 import android.view.View.MeasureSpec
+import ch.p
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import vj.p
 
 public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
    private final val arcRect: RectF
@@ -83,7 +82,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       if (!this.isInEditMode()) {
          var3 = ThemeManagerKt.getTheme().getBackgroundAccent();
       } else {
-         var3 = ColorUtilsKt.getColorCompat(var1, color.primary_500);
+         var3 = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.primary_500);
       }
 
       var4.setColor(var3);
@@ -162,8 +161,8 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
 
    private fun rebuildLayout() {
       val var5: Int = this.numRows;
-      val var1: Float = SizeUtilsKt.getDpToPx(this.rowHeight);
-      if (var5 != 0 && !(var1 <= 1.0E-4F)) {
+      val var2: Float = SizeUtilsKt.getDpToPx(this.rowHeight);
+      if (var5 != 0 && !(var2 <= 1.0E-4F)) {
          var var4: Int = 0;
          var var3: Byte = 1;
          if (var5 <= 1) {
@@ -179,17 +178,17 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
                var6 = ChannelSpineView.SpineDirection.TOP_TO_BOTTOM;
             }
 
-            var7.add(this.createSpinePath(var1, var4, var6));
+            var7.add(this.createSpinePath(var2, var4, var6));
             if (var4 < var5 - 1) {
-               var7.add(this.createSpinePath(var1, var4, ChannelSpineView.SpineDirection.BOTTOM_TO_TOP));
+               var7.add(this.createSpinePath(var2, var4, ChannelSpineView.SpineDirection.BOTTOM_TO_TOP));
             }
          }
 
          if (var3 != 0) {
             val var8: Path = new Path();
-            val var2: Float = this.spinePaint.getStrokeWidth() / 2.0F;
-            var8.moveTo(var2, (float)this.verticalPadding);
-            var8.lineTo(var2, this.yOfRow(var1, var5 - 2) + var1 / 2.0F);
+            val var1: Float = this.spinePaint.getStrokeWidth() / 2.0F;
+            var8.moveTo(var1, (float)this.verticalPadding);
+            var8.lineTo(var1, this.yOfRow(var2, var5 - 2) + var2 / 2.0F);
             var7.add(var8);
          }
 
@@ -274,7 +273,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = ck.a.a(var0);
+         $ENTRIES = jh.a.a(var0);
       }
 
       init {

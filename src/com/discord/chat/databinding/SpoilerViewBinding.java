@@ -7,7 +7,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.ObscureOverlayView;
 import com.discord.chat.presentation.message.view.SpoilerOverlayView;
-import f3.a;
+import n1.a;
 
 public final class SpoilerViewBinding implements ViewBinding {
    public final ObscureOverlayView obscure;
@@ -22,12 +22,12 @@ public final class SpoilerViewBinding implements ViewBinding {
 
    public static SpoilerViewBinding bind(View var0) {
       int var1 = R.id.obscure;
-      ObscureOverlayView var2 = (ObscureOverlayView)a.a(var0, var1);
-      if (var2 != null) {
+      ObscureOverlayView var3 = (ObscureOverlayView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.spoiler;
-         SpoilerOverlayView var3 = (SpoilerOverlayView)a.a(var0, var1);
-         if (var3 != null) {
-            return new SpoilerViewBinding(var0, var2, var3);
+         SpoilerOverlayView var2 = (SpoilerOverlayView)a.a(var0, var1);
+         if (var2 != null) {
+            return new SpoilerViewBinding(var0, var3, var2);
          }
       }
 

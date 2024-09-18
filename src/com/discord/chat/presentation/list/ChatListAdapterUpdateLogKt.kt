@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.list
 
+import ch.p
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
-import vj.p
 
 @JvmSynthetic
 fun `access$label`(var0: ChatListAction): java.lang.String {
@@ -81,13 +81,13 @@ private fun ListOperation.label(): String {
          throw new p();
       }
 
-      val var19: Int = (var0 as ListOperation.ChangeRange).getFirst();
-      val var17: Int = (var0 as ListOperation.ChangeRange).getLast();
+      val var17: Int = (var0 as ListOperation.ChangeRange).getFirst();
+      val var19: Int = (var0 as ListOperation.ChangeRange).getLast();
       val var12: StringBuilder = new StringBuilder();
       var12.append("CRNG(");
-      var12.append(var19);
-      var12.append("-");
       var12.append(var17);
+      var12.append("-");
+      var12.append(var19);
       var12.append(")");
       var4 = var12.toString();
    }

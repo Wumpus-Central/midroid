@@ -1,7 +1,7 @@
 package com.discord.react_strings
 
 import android.content.Context
-import ck.a
+import jh.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
@@ -9,6 +9,7 @@ public enum class I18nMessage {
    CANCEL,
    DECLINE,
    DISMISS,
+   DOWNLOAD,
    FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE,
    FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE,
    FORUM_REACTIONS_OVERFLOW,

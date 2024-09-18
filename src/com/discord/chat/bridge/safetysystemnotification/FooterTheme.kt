@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import ck.a
+import ch.l
+import ch.o
+import jh.a
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nn.f
-import vj.l
-import vj.o
+import uk.f
 
 @f
 public enum class FooterTheme {
@@ -15,7 +15,7 @@ public enum class FooterTheme {
    @JvmStatic
    private FooterTheme[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
+   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public FooterTheme.Companion Companion = new FooterTheme.Companion(null);
 

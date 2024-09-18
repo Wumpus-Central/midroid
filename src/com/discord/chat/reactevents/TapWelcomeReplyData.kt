@@ -1,11 +1,11 @@
 package com.discord.chat.reactevents
 
+import ch.w
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import vj.w
 
 public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : TapWelcomeReplyData(var1, var3), ReactEvent {
    public final val messageId: MessageId
@@ -50,21 +50,21 @@ public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : T
       return java.lang.Long.hashCode(this.stickerId) * 31 + MessageId.hashCode-impl(this.messageId);
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{w.a("messageId", MessageId.toString-impl(this.messageId)), w.a("stickerId", java.lang.String.valueOf(this.stickerId))}
+         w.a("messageId", MessageId.toString-impl(this.messageId)), w.a("stickerId", java.lang.String.valueOf(this.stickerId))
       );
    }
 
    public override fun toString(): String {
       val var1: Long = this.stickerId;
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapWelcomeReplyData(stickerId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapWelcomeReplyData(stickerId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

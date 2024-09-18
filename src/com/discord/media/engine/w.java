@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
 import com.discord.native.engine.NativeConnection;
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class w implements NativeConnection.GetEncryptionModesCallback {
-   public final Function1 a;
+public final class w implements NativeConnection.SecureFramesTransitionReadyCallback {
+   public final Function0 a;
 
    @Override
-   public final void onEncryptionModes(String[] var1) {
-      MediaEngine.m(this.a, var1);
+   public final void onTransitionReady() {
+      MediaEngine.l(this.a);
    }
 }

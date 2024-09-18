@@ -9,7 +9,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.progress_dots.ProgressDots;
 import com.facebook.drawee.view.SimpleDraweeView;
-import f3.a;
+import n1.a;
 
 public final class InteractionStatusViewBinding implements ViewBinding {
    private final View rootView;
@@ -28,18 +28,18 @@ public final class InteractionStatusViewBinding implements ViewBinding {
 
    public static InteractionStatusViewBinding bind(View var0) {
       int var1 = R.id.view_interaction_status_danger_icon;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.view_interaction_status_label_icon;
-         LinearLayout var2 = (LinearLayout)a.a(var0, var1);
-         if (var2 != null) {
+         LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.view_interaction_status_label_message;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.view_interaction_status_loading_dots;
-               ProgressDots var4 = (ProgressDots)a.a(var0, var1);
-               if (var4 != null) {
-                  return new InteractionStatusViewBinding(var0, var3, var2, var5, var4);
+               ProgressDots var2 = (ProgressDots)a.a(var0, var1);
+               if (var2 != null) {
+                  return new InteractionStatusViewBinding(var0, var5, var3, var4, var2);
                }
             }
          }

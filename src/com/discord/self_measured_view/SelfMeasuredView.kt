@@ -3,6 +3,7 @@ package com.discord.self_measured_view
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
+import ch.w
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactContext
@@ -10,12 +11,10 @@ import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.FabricViewStateManager
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.UIManagerModule
+import com.facebook.react.uimanager.FabricViewStateManager.HasFabricViewStateManager
 import kotlin.jvm.internal.q
-import vj.w
 
-public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-   : FrameLayout,
-   FabricViewStateManager.HasFabricViewStateManager {
+public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout, HasFabricViewStateManager {
    private final val fabricEnabled: Boolean
    private final val fabricViewStateManager: FabricViewStateManager
    private final val reactContext: ReactContext
@@ -44,7 +43,7 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
          if (this.fabricEnabled) {
             this.fabricViewStateManager.setState(new a(PixelUtil.toDIPFromPixel((float)var2), PixelUtil.toDIPFromPixel((float)var4)));
          } else {
-            val var7: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class);
+            val var7: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class) as UIManagerModule;
             if (var7 != null) {
                this.reactContext.runOnNativeModulesQueueThread(new b(var7, this));
             }
@@ -70,7 +69,7 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 
-   public override fun getFabricViewStateManager(): FabricViewStateManager {
+   public open fun getFabricViewStateManager(): FabricViewStateManager {
       return this.fabricViewStateManager;
    }
 

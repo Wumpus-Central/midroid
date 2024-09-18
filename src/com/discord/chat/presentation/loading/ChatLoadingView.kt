@@ -70,7 +70,7 @@ public class ChatLoadingView  public constructor(context: Context, attrs: Attrib
       var9.setTextColor(var3);
       val var6: Button = this.binding.button;
       q.g(this.binding.button, "button");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new y4.a(var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new g3.a(var2), 1, null);
    }
 
    public fun showProgress() {

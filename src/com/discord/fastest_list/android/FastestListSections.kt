@@ -1,8 +1,8 @@
 package com.discord.fastest_list.android
 
+import ch.p
+import dh.o
 import kotlin.jvm.internal.q
-import vj.p
-import wj.o
 
 internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.android.FastestListSections.Versioned) {
    private final var sectionEntries: List<com.discord.fastest_list.android.FastestListSections.Entry>
@@ -140,19 +140,19 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
       section: com.discord.fastest_list.android.FastestListSections.Section,
       item: com.discord.fastest_list.android.FastestListSections.Item
    ): Int? {
-      val var4: java.util.Iterator = this.sectionEntries.iterator();
+      val var5: java.util.Iterator = this.sectionEntries.iterator();
       var var3: Int = 0;
 
       while (true) {
-         if (!var4.hasNext()) {
+         if (!var5.hasNext()) {
             var3 = -1;
             break;
          }
 
-         val var5: FastestListSections.Entry = var4.next() as FastestListSections.Entry;
-         if (var5 is FastestListSections.Entry.SectionItem
-            && FastestListSections.Item.equals-impl0((var5 as FastestListSections.Entry.SectionItem).getItem-JXkbwXs(), var2)
-            && FastestListSections.Section.equals-impl0(var5.getSection-sZRFyWU(), var1)) {
+         val var4: FastestListSections.Entry = var5.next() as FastestListSections.Entry;
+         if (var4 is FastestListSections.Entry.SectionItem
+            && FastestListSections.Item.equals-impl0((var4 as FastestListSections.Entry.SectionItem).getItem-JXkbwXs(), var2)
+            && FastestListSections.Section.equals-impl0(var4.getSection-sZRFyWU(), var1)) {
             break;
          }
 
@@ -275,18 +275,18 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.key;
+            val var2: java.lang.String = this.key;
             val var3: java.lang.String = FastestListSections.Section.toString-impl(this.section);
             val var1: Int = this.size;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("ListFooter(key=");
-            var2.append(var4);
-            var2.append(", section=");
-            var2.append(var3);
-            var2.append(", size=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("ListFooter(key=");
+            var4.append(var2);
+            var4.append(", section=");
+            var4.append(var3);
+            var4.append(", size=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
 
          public companion object {
@@ -361,18 +361,18 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
          }
 
          public override fun toString(): String {
-            val var2: java.lang.String = this.key;
-            val var3: java.lang.String = FastestListSections.Section.toString-impl(this.section);
+            val var4: java.lang.String = this.key;
+            val var2: java.lang.String = FastestListSections.Section.toString-impl(this.section);
             val var1: Int = this.size;
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("ListHeader(key=");
-            var4.append(var2);
-            var4.append(", section=");
-            var4.append(var3);
-            var4.append(", size=");
-            var4.append(var1);
-            var4.append(")");
-            return var4.toString();
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("ListHeader(key=");
+            var3.append(var4);
+            var3.append(", section=");
+            var3.append(var2);
+            var3.append(", size=");
+            var3.append(var1);
+            var3.append(")");
+            return var3.toString();
          }
 
          public companion object {
@@ -447,18 +447,18 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.key;
-            val var2: java.lang.String = FastestListSections.Section.toString-impl(this.section);
+            val var2: java.lang.String = this.key;
+            val var3: java.lang.String = FastestListSections.Section.toString-impl(this.section);
             val var1: Int = this.size;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("SectionFooter(key=");
-            var3.append(var4);
-            var3.append(", section=");
-            var3.append(var2);
-            var3.append(", size=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("SectionFooter(key=");
+            var4.append(var2);
+            var4.append(", section=");
+            var4.append(var3);
+            var4.append(", size=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
 
          public companion object {
@@ -537,18 +537,18 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.key;
-            val var3: java.lang.String = FastestListSections.Section.toString-impl(this.section);
+            val var3: java.lang.String = this.key;
+            val var2: java.lang.String = FastestListSections.Section.toString-impl(this.section);
             val var1: Int = this.size;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("SectionHeader(key=");
-            var2.append(var4);
-            var2.append(", section=");
-            var2.append(var3);
-            var2.append(", size=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("SectionHeader(key=");
+            var4.append(var3);
+            var4.append(", section=");
+            var4.append(var2);
+            var4.append(", size=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
 
          public companion object {
@@ -679,8 +679,8 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
             val var5: java.lang.String = FastestListSections.Section.toString-impl(this.section);
             val var4: java.lang.String = FastestListSections.Item.toString-impl(this.item);
             val var1: Int = this.size;
-            val var3: Boolean = this.atFront;
-            val var2: Boolean = this.atRear;
+            val var2: Boolean = this.atFront;
+            val var3: Boolean = this.atRear;
             val var6: StringBuilder = new StringBuilder();
             var6.append("SectionItem(key=");
             var6.append(var7);
@@ -691,9 +691,9 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
             var6.append(", size=");
             var6.append(var1);
             var6.append(", atFront=");
-            var6.append(var3);
-            var6.append(", atRear=");
             var6.append(var2);
+            var6.append(", atRear=");
+            var6.append(var3);
             var6.append(")");
             return var6.toString();
          }
@@ -923,19 +923,19 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.sectionsId;
+         val var4: java.lang.String = this.sectionsId;
          val var2: java.util.List = this.sectionEntries;
          val var1: Int = this.sectionsCumulativeSize;
-         val var4: java.util.List = this.sectionOffsetAtPosition;
+         val var3: java.util.List = this.sectionOffsetAtPosition;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Versioned(sectionsId=");
-         var5.append(var3);
+         var5.append(var4);
          var5.append(", sectionEntries=");
          var5.append(var2);
          var5.append(", sectionsCumulativeSize=");
          var5.append(var1);
          var5.append(", sectionOffsetAtPosition=");
-         var5.append(var4);
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

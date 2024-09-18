@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.IntentFilter
 import androidx.core.content.a
 import kotlin.jvm.internal.q
-import qb.b
+import v9.b
 
 internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> Unit) {
    private final val context: Context
@@ -19,13 +19,13 @@ internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> 
    }
 
    public fun registerReceiver() {
-      a.l(this.context, this.broadcastReceiver, new IntentFilter("com.google.android.gms.auth.api.phone.SMS_RETRIEVED"), 2);
+      a.k(this.context, this.broadcastReceiver, new IntentFilter("com.google.android.gms.auth.api.phone.SMS_RETRIEVED"), 2);
    }
 
    public fun startSmsRetriever() {
-      val var1: b = qb.a.a(this.context);
+      val var1: b = v9.a.a(this.context);
       q.g(var1, "getClient(...)");
-      var1.K();
+      var1.H();
    }
 
    public fun unregisterReceiver() {

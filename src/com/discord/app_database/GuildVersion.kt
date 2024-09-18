@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.x0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.b2
+import xk.g0
+import xk.x0
+import xk.g0.a
 
 @f
 public data class GuildVersion(id: String, version: Long) {
@@ -83,8 +83,8 @@ public data class GuildVersion(id: String, version: Long) {
          val var0: GuildVersion.$serializer = new GuildVersion.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.app_database.GuildVersion", var0, 2);
-         var1.c("id", false);
-         var1.c("version", false);
+         var1.l("id", false);
+         var1.l("version", false);
          descriptor = var1;
       }
 
@@ -95,13 +95,13 @@ public data class GuildVersion(id: String, version: Long) {
       public open fun deserialize(decoder: Decoder): GuildVersion {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: c = var1.c(var7);
          var var2: Int;
          var var5: Long;
          var var9: java.lang.String;
-         if (var8.p()) {
-            var9 = var8.m(var7, 0);
-            var5 = var8.f(var7, 1);
+         if (var8.y()) {
+            var9 = var8.t(var7, 0);
+            var5 = var8.h(var7, 1);
             var2 = 3;
          } else {
             var9 = null;
@@ -110,17 +110,17 @@ public data class GuildVersion(id: String, version: Long) {
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var5 = var8.f(var7, 1);
+                     var5 = var8.h(var7, 1);
                      var2 |= 2;
                   } else {
-                     var9 = var8.m(var7, 0);
+                     var9 = var8.t(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -129,7 +129,7 @@ public data class GuildVersion(id: String, version: Long) {
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new GuildVersion(var2, var9, var5, null);
       }
 
@@ -137,9 +137,9 @@ public data class GuildVersion(id: String, version: Long) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          GuildVersion.write$Self$app_database_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

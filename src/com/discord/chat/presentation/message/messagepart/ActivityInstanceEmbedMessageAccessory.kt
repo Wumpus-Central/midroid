@@ -14,11 +14,11 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    fun ActivityInstanceEmbedMessageAccessory(var1: java.lang.String, var2: ActivityInstanceEmbed, var3: Int) {
       q.h(var1, "messageId");
       q.h(var2, "activityInstanceEmbed");
-      val var5: java.lang.String = var2.getInstanceId();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("activity instance ");
-      var4.append(var5);
-      super(var1, var4.toString(), false, 4, null);
+      val var4: java.lang.String = var2.getInstanceId();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("activity instance ");
+      var5.append(var4);
+      super(var1, var5.toString(), false, 4, null);
       this.messageId = var1;
       this.activityInstanceEmbed = var2;
       this.constrainedWidth = var3;
@@ -64,17 +64,17 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: ActivityInstanceEmbed = this.activityInstanceEmbed;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: ActivityInstanceEmbed = this.activityInstanceEmbed;
       val var1: Int = this.constrainedWidth;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ActivityInstanceEmbedMessageAccessory(messageId=");
-      var4.append(var2);
-      var4.append(", activityInstanceEmbed=");
-      var4.append(var3);
-      var4.append(", constrainedWidth=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActivityInstanceEmbedMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", activityInstanceEmbed=");
+      var2.append(var4);
+      var2.append(", constrainedWidth=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

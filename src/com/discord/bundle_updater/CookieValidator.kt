@@ -1,5 +1,6 @@
 package com.discord.bundle_updater
 
+import dh.r
 import java.net.URLDecoder
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -7,10 +8,9 @@ import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import nn.g
 import okhttp3.Cookie
 import okio.ByteString
-import wj.r
+import uk.g
 
 public object CookieValidator {
    public fun parseBuildOverrideCookie(buildOverrideCookie: Cookie?): BuildOverrideCookieContents? {
@@ -26,7 +26,7 @@ public object CookieValidator {
             q.e(var2);
             val var10: ByteString = var9.a(var2);
             if (var10 != null) {
-               var2 = var10.D();
+               var2 = var10.E();
                if (var2 != null) {
                   try {
                      var11 = Json.d;
@@ -35,14 +35,14 @@ public object CookieValidator {
                      return null;
                   }
 
-                  var var3: JsonElement = rn.g.o(var14).get("$meta") as JsonElement;
+                  val var3: JsonElement = yk.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = rn.g.o(var14);
+                  val var15: JsonObject = yk.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
                   for (Entry var4 : var15.entrySet()) {
@@ -54,11 +54,11 @@ public object CookieValidator {
                   val var17: LinkedHashMap = new LinkedHashMap(r.d(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
-                     var3 = (JsonElement)var5.getKey();
+                     val var20: Any = var5.getKey();
                      val var21: JsonElement = var5.getValue() as JsonElement;
                      val var6: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var3, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
+                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

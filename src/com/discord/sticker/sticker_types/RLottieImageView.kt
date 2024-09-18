@@ -8,8 +8,8 @@ import com.discord.image.animated_image.animated_image_utils.AnimatedImageStateM
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.rlottie.RLottieDrawable
 import com.discord.theme.ThemeManagerKt
-import dn.g
-import dn.j0
+import kk.f
+import kk.k0
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -26,7 +26,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       var2.setShape(new OvalShape());
       var2.getPaint().setColor(ThemeManagerKt.getTheme().getBackgroundAccent());
       this.placeholder = var2;
-      this.rLottieStateManager = new AnimatedImageStateManager(new Function0(this) {
+      this.rLottieStateManager = new AnimatedImageStateManager<>(new Function0(this) {
          final RLottieImageView this$0;
 
          {
@@ -88,18 +88,18 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    }
 
    private fun fetchSticker(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      g.d(
+      f.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
-         j0.b(),
+         k0.b(),
          null,
          new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1250,25 +1250,25 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.url;
+         val var7: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var1: Int = this.widthDp;
+         val var2: Int = this.widthDp;
          val var3: Int = this.heightDp;
-         val var7: java.lang.String = this.asset;
-         val var2: Int = this.renderMode;
+         val var6: java.lang.String = this.asset;
+         val var1: Int = this.renderMode;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(url=");
-         var5.append(var6);
+         var5.append(var7);
          var5.append(", animate=");
          var5.append(var4);
          var5.append(", widthDp=");
-         var5.append(var1);
+         var5.append(var2);
          var5.append(", heightDp=");
          var5.append(var3);
          var5.append(", asset=");
-         var5.append(var7);
+         var5.append(var6);
          var5.append(", renderMode=");
-         var5.append(var2);
+         var5.append(var1);
          var5.append(")");
          return var5.toString();
       }

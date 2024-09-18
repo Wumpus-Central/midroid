@@ -8,13 +8,13 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.h
-import qn.x0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.b2
+import xk.g0
+import xk.h
+import xk.x0
+import xk.g0.a
 
 @f
 public data class CustomEmojiContentNode(id: Long, alt: String, src: String, frozenSrc: String, jumboable: Boolean = false) : EmojiContentNode {
@@ -91,19 +91,19 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var4: java.lang.String = this.alt;
-      val var6: java.lang.String = this.src;
-      val var5: java.lang.String = this.frozenSrc;
+      val var5: java.lang.String = this.alt;
+      val var4: java.lang.String = this.src;
+      val var6: java.lang.String = this.frozenSrc;
       val var1: Boolean = this.jumboable;
       val var7: StringBuilder = new StringBuilder();
       var7.append("CustomEmojiContentNode(id=");
       var7.append(var2);
       var7.append(", alt=");
-      var7.append(var4);
-      var7.append(", src=");
-      var7.append(var6);
-      var7.append(", frozenSrc=");
       var7.append(var5);
+      var7.append(", src=");
+      var7.append(var4);
+      var7.append(", frozenSrc=");
+      var7.append(var6);
       var7.append(", jumboable=");
       var7.append(var1);
       var7.append(")");
@@ -122,11 +122,11 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
          val var0: CustomEmojiContentNode.$serializer = new CustomEmojiContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("customEmoji", var0, 5);
-         var1.c("id", false);
-         var1.c("alt", false);
-         var1.c("src", false);
-         var1.c("frozenSrc", false);
-         var1.c("jumboable", true);
+         var1.l("id", false);
+         var1.l("alt", false);
+         var1.l("src", false);
+         var1.l("frozenSrc", false);
+         var1.l("jumboable", true);
          descriptor = var1;
       }
 
@@ -137,33 +137,31 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
       public open fun deserialize(decoder: Decoder): CustomEmojiContentNode {
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.b(var11);
+         val var12: c = var1.c(var11);
          var var2: Int;
-         var var5: Long;
-         var var7: Boolean;
+         var var5: Boolean;
+         var var6: Long;
+         var var8: java.lang.String;
          var var9: java.lang.String;
          val var13: java.lang.String;
-         var var15: java.lang.String;
-         if (var12.p()) {
-            var5 = var12.f(var11, 0);
-            var15 = var12.m(var11, 1);
-            val var10: java.lang.String = var12.m(var11, 2);
-            var13 = var12.m(var11, 3);
-            var7 = var12.C(var11, 4);
+         if (var12.y()) {
+            var6 = var12.h(var11, 0);
+            var9 = var12.t(var11, 1);
+            var8 = var12.t(var11, 2);
+            var13 = var12.t(var11, 3);
+            var5 = var12.s(var11, 4);
             var2 = 31;
-            var9 = var15;
-            var15 = var10;
          } else {
             var9 = null;
             var var14: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
-            var5 = 0L;
-            var15 = null;
-            var7 = false;
+            var6 = 0L;
+            var8 = null;
+            var5 = false;
 
             while (var3) {
-               val var4: Int = var12.o(var11);
+               val var4: Int = var12.x(var11);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -173,22 +171,22 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
                                  throw new n(var4);
                               }
 
-                              var7 = var12.C(var11, 4);
+                              var5 = var12.s(var11, 4);
                               var2 |= 16;
                            } else {
-                              var15 = var12.m(var11, 3);
+                              var8 = var12.t(var11, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var14 = var12.m(var11, 2);
+                           var14 = var12.t(var11, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var9 = var12.m(var11, 1);
+                        var9 = var12.t(var11, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var5 = var12.f(var11, 0);
+                     var6 = var12.h(var11, 0);
                      var2 |= 1;
                   }
                } else {
@@ -196,21 +194,21 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
                }
             }
 
-            var13 = var15;
-            var15 = var14;
+            var13 = var8;
+            var8 = var14;
          }
 
-         var12.c(var11);
-         return new CustomEmojiContentNode(var2, var5, var9, var15, var13, var7, null);
+         var12.b(var11);
+         return new CustomEmojiContentNode(var2, var6, var9, var8, var13, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CustomEmojiContentNode) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          CustomEmojiContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

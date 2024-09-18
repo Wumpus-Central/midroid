@@ -1,5 +1,6 @@
 package com.discord.bundle_updater.react.events
 
+import ch.w
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.bundle_updater.BundleUpdater.OtaMetric
 import com.discord.react.utilities.NativeArrayExtensionsKt
@@ -15,11 +16,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.g0.a
-import vj.w
+import uk.f
+import uk.n
+import xk.g0
+import xk.g0.a
 
 @f
 internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent {
@@ -63,16 +63,16 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
          var1.add((var3.next() as BundleUpdater.OtaMetric).toNativeMap());
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("metrics", NativeArrayExtensionsKt.toNativeArray(var1))});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("metrics", NativeArrayExtensionsKt.toNativeArray(var1)));
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.metrics;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OtaCheckAttemptEvent(metrics=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.metrics;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OtaCheckAttemptEvent(metrics=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -89,7 +89,7 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.bundle_updater.react.events.OtaCheckAttemptEvent", var0, 1
          );
-         var1.c("metrics", false);
+         var1.l("metrics", false);
          descriptor = var1;
       }
 
@@ -100,26 +100,26 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
       public open fun deserialize(decoder: Decoder): OtaCheckAttemptEvent {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = OtaCheckAttemptEvent.access$get$childSerializers$cp();
-         val var5: Boolean = var7.p();
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var9: java.util.List;
          if (var5) {
-            var9 = var7.y(var6, 0, var8[0], null) as java.util.List;
+            var9 = var7.m(var6, 0, var8[0], null) as java.util.List;
          } else {
             var2 = 0;
             var9 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var9 = var7.y(var6, 0, var8[0], var9) as java.util.List;
+                  var9 = var7.m(var6, 0, var8[0], var9) as java.util.List;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -127,7 +127,7 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new OtaCheckAttemptEvent(var2, var9, null);
       }
 
@@ -135,9 +135,9 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          OtaCheckAttemptEvent.write$Self$bundle_updater_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

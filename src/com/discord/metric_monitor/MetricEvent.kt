@@ -1,5 +1,6 @@
 package com.discord.metric_monitor
 
+import ch.w
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -13,12 +14,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import vj.w
+import uk.f
+import uk.n
+import vk.a
+import xk.b2
+import xk.g0
 
 @f
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -72,7 +72,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
       return var2 * 31 + var1;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var2: Pair = w.a("name", this.name);
       val var3: ReadableNativeArray;
       if (this.tags != null) {
@@ -81,19 +81,19 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
          var3 = null;
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("data", NativeMapExtensionsKt.nativeMapOf(new Pair[]{var2, w.a("tags", var3)}))});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("data", NativeMapExtensionsKt.nativeMapOf(var2, w.a("tags", var3))));
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
-      val var1: java.util.List = this.tags;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MetricEvent(name=");
-      var2.append(var3);
-      var2.append(", tags=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.name;
+      val var3: java.util.List = this.tags;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MetricEvent(name=");
+      var1.append(var2);
+      var1.append(", tags=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -108,8 +108,8 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
          val var0: MetricEvent.$serializer = new MetricEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.metric_monitor.MetricEvent", var0, 2);
-         var1.c("name", false);
-         var1.c("tags", true);
+         var1.l("name", false);
+         var1.l("tags", true);
          descriptor = var1;
       }
 
@@ -120,14 +120,14 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
       public open fun deserialize(decoder: Decoder): MetricEvent {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = MetricEvent.access$get$childSerializers$cp();
          var var2: Int;
          var var5: java.util.List;
          var var9: java.lang.String;
-         if (var7.p()) {
-            var9 = var7.m(var6, 0);
-            var5 = var7.n(var6, 1, var8[1], null) as java.util.List;
+         if (var7.y()) {
+            var9 = var7.t(var6, 0);
+            var5 = var7.v(var6, 1, var8[1], null) as java.util.List;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -136,17 +136,17 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
             var9 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var5 = var7.n(var6, 1, var8[1], var5) as java.util.List;
+                     var5 = var7.v(var6, 1, var8[1], var5) as java.util.List;
                      var2 |= 2;
                   } else {
-                     var9 = var7.m(var6, 0);
+                     var9 = var7.t(var6, 0);
                      var2 |= 1;
                   }
                } else {
@@ -155,7 +155,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new MetricEvent(var2, var9, var5, null);
       }
 
@@ -163,13 +163,13 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          MetricEvent.write$Self$metric_monitor_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

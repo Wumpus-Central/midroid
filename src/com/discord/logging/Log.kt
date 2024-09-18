@@ -22,7 +22,7 @@ public object Log {
    public fun d(tag: KClass<*>, message: String, exception: Throwable? = null) {
       q.h(var1, "tag");
       q.h(var2, "message");
-      val var4: java.lang.String = hk.a.b(var1).getSimpleName();
+      val var4: java.lang.String = oh.a.b(var1).getSimpleName();
       q.g(var4, "getSimpleName(...)");
       this.d(var4, var2, var3);
    }
@@ -38,7 +38,7 @@ public object Log {
    public fun e(tag: KClass<*>, message: String, exception: Throwable? = null) {
       q.h(var1, "tag");
       q.h(var2, "message");
-      val var4: java.lang.String = hk.a.b(var1).getSimpleName();
+      val var4: java.lang.String = oh.a.b(var1).getSimpleName();
       q.g(var4, "getSimpleName(...)");
       this.e(var4, var2, var3);
    }
@@ -54,7 +54,7 @@ public object Log {
    public fun i(tag: KClass<*>, message: String, exception: Throwable? = null) {
       q.h(var1, "tag");
       q.h(var2, "message");
-      val var4: java.lang.String = hk.a.b(var1).getSimpleName();
+      val var4: java.lang.String = oh.a.b(var1).getSimpleName();
       q.g(var4, "getSimpleName(...)");
       this.i(var4, var2, var3);
    }
@@ -70,7 +70,7 @@ public object Log {
    public fun w(tag: KClass<*>, message: String, exception: Throwable? = null) {
       q.h(var1, "tag");
       q.h(var2, "message");
-      val var4: java.lang.String = hk.a.b(var1).getSimpleName();
+      val var4: java.lang.String = oh.a.b(var1).getSimpleName();
       q.g(var4, "getSimpleName(...)");
       this.w(var4, var2, var3);
    }

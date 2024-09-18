@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import f3.a;
+import n1.a;
 
 public final class InviteToSpeakViewBinding implements ViewBinding {
    public final TextView inviteToSpeakText;
@@ -22,12 +22,12 @@ public final class InviteToSpeakViewBinding implements ViewBinding {
 
    public static InviteToSpeakViewBinding bind(View var0) {
       int var1 = R.id.invite_to_speak_text;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var2 = (TextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.move_to_speaker_icon;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
-            return new InviteToSpeakViewBinding(var0, var3, var2);
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
+            return new InviteToSpeakViewBinding(var0, var2, var3);
          }
       }
 

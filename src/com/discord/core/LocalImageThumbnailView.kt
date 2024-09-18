@@ -14,11 +14,11 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import dn.g
-import dn.j0
-import g6.c
+import kk.f
+import kk.k0
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import o4.c
 
 public class LocalImageThumbnailView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final var imageView: ImageView
@@ -54,7 +54,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
 
    private fun SimpleDraweeView.loadDefaultBitmap(uri: Uri) {
       var1.setController(
-         (c.g().F(ImageRequestBuilder.w(var2).L(ResizeOptions.e.a(var1.getWidth(), var1.getHeight())).a()) as PipelineDraweeControllerBuilder).d()
+         (c.g().F(ImageRequestBuilder.v(var2).J(ResizeOptions.e.a(var1.getWidth(), var1.getHeight())).a()) as PipelineDraweeControllerBuilder).d()
       );
    }
 
@@ -77,9 +77,9 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
 
    public fun setLocalImageSource(uri: Uri, widthDp: Int, heightDp: Int) {
       q.h(var1, "uri");
-      g.d(
+      f.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
-         j0.b(),
+         k0.b(),
          null,
          new Function2(var2, var3, this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)

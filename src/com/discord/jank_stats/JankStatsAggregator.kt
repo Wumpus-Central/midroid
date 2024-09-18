@@ -6,8 +6,8 @@ import androidx.metrics.performance.JankStats
 import androidx.metrics.performance.JankStats.OnFrameListener
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
-import e5.a
 import kotlin.jvm.internal.q
+import m3.a
 
 public object JankStatsAggregator {
    private final var jankStats: JankStats?

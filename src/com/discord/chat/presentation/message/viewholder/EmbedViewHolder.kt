@@ -14,19 +14,17 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
 
-public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandler) : MessagePartViewHolder {
+public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
    private final val embedView: EmbedView
-   private final val eventHandler: ChatEventHandler
 
    init {
       kotlin.jvm.internal.q.h(var1, "embedView");
-      kotlin.jvm.internal.q.h(var2, "eventHandler");
       super(var1, null);
       this.embedView = var1;
-      this.eventHandler = var2;
    }
 
    public fun bind(
+      eventHandler: ChatEventHandler,
       accessory: EmbedMessageAccessory,
       maxHeightPx: Int,
       radiusPx: Int,
@@ -36,45 +34,46 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
       onMediaLongClicked: OnLongClickListener?,
       portal: Double
    ) {
-      kotlin.jvm.internal.q.h(var1, "accessory");
-      kotlin.jvm.internal.q.h(var4, "onTapSpoiler");
-      kotlin.jvm.internal.q.h(var6, "onMediaClicked");
-      var var16: java.lang.String = var1.getEmbed().getObscure();
-      var var10: Boolean;
-      if (var16 != null && !kotlin.text.h.x(var16)) {
-         var10 = 0;
+      kotlin.jvm.internal.q.h(var1, "eventHandler");
+      kotlin.jvm.internal.q.h(var2, "accessory");
+      kotlin.jvm.internal.q.h(var5, "onTapSpoiler");
+      kotlin.jvm.internal.q.h(var7, "onMediaClicked");
+      var var17: java.lang.String = var2.getEmbed().getObscure();
+      var var11: Boolean;
+      if (var17 != null && !kotlin.text.h.x(var17)) {
+         var11 = 0;
       } else {
-         var10 = 1;
+         var11 = 1;
       }
 
-      val var15: Boolean = (boolean)(var10 xor true);
+      val var14: Boolean = (boolean)(var11 xor true);
       val var18: EmbedView = this.embedView;
-      val var17: Embed = var1.getEmbed();
-      val var11: Int = var1.getIndex();
-      val var12: Long = var1.getChannelId-o4g7jtM();
-      var16 = var1.getMessageId-3Eiw7ao();
-      var10 = var1.getConstrainedWidth();
-      val var14: Boolean;
-      if (var1.getShouldAutoPlayGifs() && !var15) {
-         var14 = true;
+      val var19: Embed = var2.getEmbed();
+      var11 = var2.getIndex();
+      val var15: Long = var2.getChannelId-o4g7jtM();
+      var17 = var2.getMessageId-3Eiw7ao();
+      val var12: Int = var2.getConstrainedWidth();
+      val var13: Boolean;
+      if (var2.getShouldAutoPlayGifs() && !var14) {
+         var13 = true;
       } else {
-         var14 = false;
+         var13 = false;
       }
 
       var18.setEmbed-UEgMTIk(
-         var17,
+         var19,
          var11,
+         var15,
+         var17,
          var12,
-         var16,
-         var10,
-         var2,
          var3,
-         var14,
-         var1.getShouldAnimateEmoji(),
-         var1.getShouldShowLinkDecorations(),
-         var1.getShouldShowRoleDot(),
-         var1.getShouldShowRoleOnName(),
-         new Function3(this.eventHandler) {
+         var4,
+         var13,
+         var2.getShouldAnimateEmoji(),
+         var2.getShouldShowLinkDecorations(),
+         var2.getShouldShowRoleDot(),
+         var2.getShouldShowRoleOnName(),
+         new Function3(var1) {
             {
                super(
                   3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0
@@ -87,7 +86,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
             }
          },
-         new Function3(this.eventHandler) {
+         new Function3(var1) {
             {
                super(
                   3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0
@@ -100,9 +99,9 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
             }
          },
-         var6,
          var7,
-         new Function2(this.eventHandler) {
+         var8,
+         new Function2(var1) {
             {
                super(
                   2,
@@ -120,7 +119,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
             }
          },
-         new Function1(this.eventHandler) {
+         new Function1(var1) {
             {
                super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
             }
@@ -130,7 +129,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
             }
          },
-         new Function1(this.eventHandler) {
+         new Function1(var1) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapCopyText", "onTapCopyText(Ljava/lang/CharSequence;)V", 0);
             }
@@ -140,8 +139,8 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onTapCopyText(var1);
             }
          },
-         var4,
-         new Function1(this.eventHandler) {
+         var5,
+         new Function1(var1) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
             }
@@ -151,7 +150,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onTapEmoji(var1);
             }
          },
-         new Function3(this.eventHandler) {
+         new Function3(var1) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -161,7 +160,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
             }
          },
-         new Function4(this.eventHandler) {
+         new Function4(var1) {
             {
                super(
                   4,
@@ -178,7 +177,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
             }
          },
-         new Function1(this.eventHandler) {
+         new Function1(var1) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapCommand", "onTapCommand(Lcom/discord/chat/bridge/contentnode/CommandMentionContentNode;)V", 0);
             }
@@ -188,7 +187,7 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onTapCommand(var1);
             }
          },
-         new Function4(this.eventHandler) {
+         new Function4(var1) {
             {
                super(
                   4,
@@ -206,12 +205,12 @@ public class EmbedViewHolder(embedView: EmbedView, eventHandler: ChatEventHandle
                (super.receiver as ChatEventHandler).onTapInlineForward-JjTCmh4(var1, var3, var4, var5);
             }
          },
-         var5,
-         var8,
-         var15,
-         var1.isForwardedContent(),
-         var1.isShowingInlineForward(),
-         var1.getUseOldForwardIcon()
+         var6,
+         var9,
+         var14,
+         var2.isForwardedContent(),
+         var2.isShowingInlineForward(),
+         var2.getUseOldForwardIcon()
       );
    }
 }

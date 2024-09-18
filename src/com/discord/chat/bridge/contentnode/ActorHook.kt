@@ -10,12 +10,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.o1
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.b2
+import xk.g0
+import xk.o1
+import xk.g0.a
 
 @f
 public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, var2) {
@@ -73,14 +73,14 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
 
    public override fun toString(): String {
       val var2: java.lang.String = this.action;
-      val var3: java.lang.String = UserId.toString-impl(this.userId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ActorHook(action=");
-      var1.append(var2);
-      var1.append(", userId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = UserId.toString-impl(this.userId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ActorHook(action=");
+      var3.append(var2);
+      var3.append(", userId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -95,8 +95,8 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
          val var0: ActorHook.$serializer = new ActorHook.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.contentnode.ActorHook", var0, 2);
-         var1.c("action", false);
-         var1.c("userId", false);
+         var1.l("action", false);
+         var1.l("userId", false);
          descriptor = var1;
       }
 
@@ -107,14 +107,14 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
       public open fun deserialize(decoder: Decoder): ActorHook {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var5: Boolean = var8.p();
+         val var8: c = var1.c(var7);
+         val var5: Boolean = var8.y();
          var var6: java.lang.String = null;
          var var2: Int;
          var var9: UserId;
          if (var5) {
-            var6 = var8.m(var7, 0);
-            var9 = var8.y(var7, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            var6 = var8.t(var7, 0);
+            var9 = var8.m(var7, 1, UserId.$serializer.INSTANCE, null) as UserId;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -122,17 +122,17 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
             var9 = null;
 
             while (var3) {
-               val var4: Int = var8.o(var7);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var8.y(var7, 1, UserId.$serializer.INSTANCE, var9) as UserId;
+                     var9 = var8.m(var7, 1, UserId.$serializer.INSTANCE, var9) as UserId;
                      var2 |= 2;
                   } else {
-                     var6 = var8.m(var7, 0);
+                     var6 = var8.t(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -141,7 +141,7 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new ActorHook(var2, var6, var9, null, null);
       }
 
@@ -149,9 +149,9 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ActorHook.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

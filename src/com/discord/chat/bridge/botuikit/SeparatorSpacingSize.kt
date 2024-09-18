@@ -1,14 +1,14 @@
 package com.discord.chat.bridge.botuikit
 
-import ck.a
+import ch.l
+import ch.o
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import jh.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.g0
 import kotlinx.serialization.KSerializer
-import nn.f
-import vj.l
-import vj.o
+import uk.f
 
 @f(with = SeparatorSpacingSize.Serializer::class)
 public enum class SeparatorSpacingSize(serialNumber: Int) : IntEnum {
@@ -21,7 +21,7 @@ public enum class SeparatorSpacingSize(serialNumber: Int) : IntEnum {
    @JvmStatic
    private SeparatorSpacingSize[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
+   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public SeparatorSpacingSize.Companion Companion = new SeparatorSpacingSize.Companion(null);
 

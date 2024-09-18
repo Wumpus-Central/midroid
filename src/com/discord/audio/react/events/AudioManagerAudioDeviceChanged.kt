@@ -1,5 +1,6 @@
 package com.discord.audio.react.events
 
+import ch.w
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -12,11 +13,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.g0.a
-import vj.w
+import uk.f
+import uk.n
+import xk.g0
+import xk.g0.a
 
 @f
 internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) : ReactEvent {
@@ -52,7 +52,7 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("device", this.device.toNativeMap())});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("device", this.device.toNativeMap()));
    }
 
    public override fun toString(): String {
@@ -78,7 +78,7 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.audio.react.events.AudioManagerAudioDeviceChanged", var0, 1
          );
-         var1.c("device", false);
+         var1.l("device", false);
          descriptor = var1;
       }
 
@@ -89,25 +89,25 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
       public open fun deserialize(decoder: Decoder): AudioManagerAudioDeviceChanged {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var8: AndroidAudioDevice;
          if (var5) {
-            var8 = var7.y(var6, 0, AndroidAudioDevice.$serializer.INSTANCE, null) as AndroidAudioDevice;
+            var8 = var7.m(var6, 0, AndroidAudioDevice.$serializer.INSTANCE, null) as AndroidAudioDevice;
          } else {
             var2 = 0;
             var8 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, AndroidAudioDevice.$serializer.INSTANCE, var8) as AndroidAudioDevice;
+                  var8 = var7.m(var6, 0, AndroidAudioDevice.$serializer.INSTANCE, var8) as AndroidAudioDevice;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -115,7 +115,7 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new AudioManagerAudioDeviceChanged(var2, var8, null);
       }
 
@@ -123,9 +123,9 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          AudioManagerAudioDeviceChanged.write$Self$audio_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

@@ -9,10 +9,10 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.n0
+import uk.f
+import uk.n
+import xk.g0
+import xk.n0
 
 @f
 internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredViewHeight: Int) : ReactEvent {
@@ -83,8 +83,8 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
          val var0: OnWrappedViewMeasuredData.$serializer = new OnWrappedViewMeasuredData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.self_measured_view.OnWrappedViewMeasuredData", var0, 2);
-         var1.c("measuredViewWidth", false);
-         var1.c("measuredViewHeight", false);
+         var1.l("measuredViewWidth", false);
+         var1.l("measuredViewHeight", false);
          descriptor = var1;
       }
 
@@ -95,55 +95,58 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
       public open fun deserialize(decoder: Decoder): OnWrappedViewMeasuredData {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: kotlinx.serialization.encoding.c = var1.b(var7);
+         val var8: kotlinx.serialization.encoding.c = var1.c(var7);
          var var2: Int;
          var var3: Int;
-         var var4: Int;
-         if (var8.p()) {
-            var3 = var8.i(var7, 0);
-            var4 = var8.i(var7, 1);
-            var2 = 3;
+         val var5: Int;
+         if (var8.y()) {
+            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 1);
+            var5 = 3;
          } else {
-            var var5: Boolean = true;
+            var var10: Boolean = true;
             var3 = 0;
-            var4 = 0;
+            var var4: Int = 0;
             var2 = 0;
 
-            while (var5) {
-               val var6: Int = var8.o(var7);
+            while (var10) {
+               val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
                         throw new n(var6);
                      }
 
-                     var4 = var8.i(var7, 1);
+                     var4 = var8.k(var7, 1);
                      var2 |= 2;
                   } else {
-                     var3 = var8.i(var7, 0);
+                     var3 = var8.k(var7, 0);
                      var2 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var10 = false;
                }
             }
+
+            var5 = var2;
+            var2 = var4;
          }
 
-         var8.c(var7);
-         return new OnWrappedViewMeasuredData(var2, var3, var4, null);
+         var8.b(var7);
+         return new OnWrappedViewMeasuredData(var5, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnWrappedViewMeasuredData) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          OnWrappedViewMeasuredData.write$Self$self_measured_view_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

@@ -21,11 +21,11 @@ public class StartupFlagsModule(reactContext: ReactApplicationContext) : NativeS
       super(var1);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "RTNStartupFlags";
    }
 
-   public open fun reactProfilingEnabled(): Boolean {
+   public override fun reactProfilingEnabled(): Boolean {
       if (initialReactProfilingEnabledSetting != null) {
          this.setReactProfilingEnabled(initialReactProfilingEnabledSetting);
          initialReactProfilingEnabledSetting = null;
@@ -34,7 +34,7 @@ public class StartupFlagsModule(reactContext: ReactApplicationContext) : NativeS
       return this.getSharedPreferences().getBoolean("reactProfilingEnabled", false);
    }
 
-   public open fun setReactProfilingEnabled(value: Boolean) {
+   public override fun setReactProfilingEnabled(value: Boolean) {
       val var2: Editor = this.getSharedPreferences().edit();
       q.g(var2, "editor");
       var2.putBoolean("reactProfilingEnabled", var1);

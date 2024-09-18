@@ -20,8 +20,8 @@ public class MainActivity : ReactActivity {
       return this.getReactInstanceManager().getCurrentReactContext();
    }
 
-   public open fun getActivityDelegate(): ActivityDelegate {
-      return new ActivityDelegate(this) {
+   public override fun getActivityDelegate(): ActivityDelegate {
+      return new ReactActivity.ActivityDelegate(this) {
          final MainActivity this$0;
 
          {
@@ -30,14 +30,14 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            val var3: Context = this.getContext();
-            q.g(var3, "getContext(...)");
-            var2.handleIntent(var3, var1);
-            val var5: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
-            val var4: Context = this.getContext();
-            q.g(var4, "getContext(...)");
-            var5.handleIntent(var4, var1);
+            val var3: NotificationClient = NotificationClient.Companion.getInstance();
+            val var2: Context = this.getContext();
+            q.g(var2, "getContext(...)");
+            var3.handleIntent(var2, var1);
+            val var4: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
+            val var5: Context = this.getContext();
+            q.g(var5, "getContext(...)");
+            var4.handleIntent(var5, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
          }
 
@@ -56,7 +56,7 @@ public class MainActivity : ReactActivity {
       };
    }
 
-   public open fun getNameOfComponent(): String {
+   public override fun getNameOfComponent(): String {
       return "Discord";
    }
 

@@ -52,10 +52,10 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       kotlin.jvm.internal.q.h(var5, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var6, "eventHandler");
       val var11: Message = var1.getMessage();
-      val var9: java.lang.String = var1.getMessageId-3Eiw7ao();
+      var var9: java.lang.String = var1.getMessageId-3Eiw7ao();
       this.messageId = var9;
-      val var10: java.lang.String = MessageId.toString-impl(var9);
-      val var27: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+      var9 = MessageId.toString-impl(var9);
+      val var10: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
          MessageId.toString-impl(var11.getId-3Eiw7ao()),
          MessageKt.shouldAnimateEmoji(var11),
          MessageKt.shouldShowLinkDecorations(var11),
@@ -265,7 +265,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var10, var27, var28, var24, var22, var25, var7, var8), this);
+         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var9, var10, var28, var24, var22, var25, var7, var8), this);
    }
 
    public override fun onTapButtonActionComponent(componentId: String) {

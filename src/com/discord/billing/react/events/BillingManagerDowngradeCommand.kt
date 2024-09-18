@@ -1,7 +1,6 @@
 package com.discord.billing.react.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -11,11 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.n0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.g0
+import xk.n0
+import xk.g0.a
 
 @f
 internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : ReactEvent {
@@ -47,8 +46,8 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
       return Integer.hashCode(this.downgradeCommand);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -74,7 +73,7 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.billing.react.events.BillingManagerDowngradeCommand", var0, 1
          );
-         var1.c("downgradeCommand", false);
+         var1.l("downgradeCommand", false);
          descriptor = var1;
       }
 
@@ -85,25 +84,25 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
       public open fun deserialize(decoder: Decoder): BillingManagerDowngradeCommand {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
-         val var6: Boolean = var8.p();
+         val var8: c = var1.c(var7);
+         val var6: Boolean = var8.y();
          var var2: Int = 1;
          var var4: Boolean = true;
          var var3: Int;
          if (var6) {
-            var3 = var8.i(var7, 0);
+            var3 = var8.k(var7, 0);
          } else {
             var3 = 0;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var8.o(var7);
+               val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      throw new n(var5);
                   }
 
-                  var3 = var8.i(var7, 0);
+                  var3 = var8.k(var7, 0);
                   var2 |= 1;
                } else {
                   var4 = false;
@@ -111,7 +110,7 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new BillingManagerDowngradeCommand(var2, var3, null);
       }
 
@@ -119,9 +118,9 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          BillingManagerDowngradeCommand.write$Self$billing_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

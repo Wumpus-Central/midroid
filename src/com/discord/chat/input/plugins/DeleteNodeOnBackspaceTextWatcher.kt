@@ -36,7 +36,7 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
 
       if (!this.ignoreUpdate && var10 != null && var3 - var4 > 0) {
          var4 = var4 + var2;
-         val var5: Int = var2 + var3;
+         val var18: Int = var2 + var3;
          val var9: Array<Any> = var10.getSpans(var4, var2 + var3, DCDDeleteOnBackspaceSpan.class);
          var2 = 0;
          var var14: Any = var9;
@@ -45,10 +45,10 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
          }
 
          val var13: Array<DCDDeleteOnBackspaceSpan> = var14 as Array<DCDDeleteOnBackspaceSpan>;
-         var3 = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
+         val var5: Int = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
          var var11: Int = null;
 
-         while (var2 < var3) {
+         while (var2 < var5) {
             val var7: Int = var10.getSpanStart(var13[var2]);
             val var6: Int = var10.getSpanEnd(var13[var2]);
             if (var12 == null) {
@@ -76,7 +76,7 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
          }
 
          if (var12 != null && var11 != null) {
-            this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var5) - (var5 - var4));
+            this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var18) - (var18 - var4));
          }
       }
    }
@@ -125,13 +125,13 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
       }
 
       public override fun toString(): String {
-         val var2: Int = this.start;
-         val var1: Int = this.end;
+         val var1: Int = this.start;
+         val var2: Int = this.end;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DeleteEvent(start=");
-         var3.append(var2);
-         var3.append(", end=");
          var3.append(var1);
+         var3.append(", end=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

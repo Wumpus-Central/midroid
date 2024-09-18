@@ -29,7 +29,7 @@ public fun Context.createShortcut(id: String, label: CharSequence, longLabel: Ch
    q.h(var3, "longLabel");
    q.h(var5, "persons");
    q.h(var6, "intent");
-   val var10: androidx.core.content.pm.ShortcutInfoCompat.b = new androidx.core.content.pm.ShortcutInfoCompat.b(var0, var1).h(new c(var1)).m(var2).i(var3);
+   val var10: ShortcutInfoCompat.b = new ShortcutInfoCompat.b(var0, var1).h(new c(var1)).m(var2).i(var3);
    val var8: IconCompat;
    if (var4 != null) {
       var8 = IconCompat.h(var4);

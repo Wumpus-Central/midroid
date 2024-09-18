@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import qn.n0
+import uk.f
+import uk.n
+import vk.a
+import xk.b2
+import xk.g0
+import xk.n0
 
 @f
 public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component {
@@ -64,8 +64,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.contentInventoryEntry == null) {
          var1 = 0;
@@ -73,7 +73,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = this.contentInventoryEntry.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
@@ -103,9 +103,9 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          val var0: ContentInventoryEntryComponent.$serializer = new ContentInventoryEntryComponent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("16", var0, 3);
-         var1.c("type", false);
-         var1.c("id", false);
-         var1.c("contentInventoryEntry", true);
+         var1.l("type", false);
+         var1.l("id", false);
+         var1.l("contentInventoryEntry", true);
          descriptor = var1;
       }
 
@@ -116,15 +116,15 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
       public open fun deserialize(decoder: Decoder): ContentInventoryEntryComponent {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.b(var7);
+         val var8: c = var1.c(var7);
          var var2: Int;
          var var3: Int;
          var var6: java.lang.String;
          var var9: ContentInventoryEntry;
-         if (var8.p()) {
-            var3 = var8.i(var7, 0);
-            var6 = var8.m(var7, 1);
-            var9 = var8.n(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null) as ContentInventoryEntry;
+         if (var8.y()) {
+            var3 = var8.k(var7, 0);
+            var6 = var8.t(var7, 1);
+            var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null) as ContentInventoryEntry;
             var2 = 7;
          } else {
             var var4: Boolean = true;
@@ -134,7 +134,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var8.o(var7);
+               val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -142,14 +142,14 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                            throw new n(var5);
                         }
 
-                        var9 = var8.n(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, var9) as ContentInventoryEntry;
+                        var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, var9) as ContentInventoryEntry;
                         var2 |= 4;
                      } else {
-                        var6 = var8.m(var7, 1);
+                        var6 = var8.t(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var8.i(var7, 0);
+                     var3 = var8.k(var7, 0);
                      var2 |= 1;
                   }
                } else {
@@ -158,7 +158,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
             }
          }
 
-         var8.c(var7);
+         var8.b(var7);
          return new ContentInventoryEntryComponent(var2, var3, var6, var9, null);
       }
 
@@ -166,13 +166,13 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ContentInventoryEntryComponent.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

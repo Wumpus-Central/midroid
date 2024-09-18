@@ -42,10 +42,9 @@ import com.discord.primitives.UserId
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
@@ -53,7 +52,7 @@ import kotlin.jvm.internal.q
 
 public class AutomodSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null)
    : ChatListConstraintLayout,
-   SpacingProviderView,
+   VerticalSpacingItemDecoration.SpacingProviderView,
    SpineParentMessage {
    private final var accessories: ArrayList<MessageAccessory>
    private final var allowChildGestures: Boolean
@@ -104,8 +103,8 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F, 20.0F);
       var4 = var3.automodMessageChannel;
-      var3.automodMessageChannel.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, color.brand_500, color.brand_600));
-      var4.setTextColor(ColorUtilsKt.getThemeColor(var1, color.white_100, color.white_160));
+      var3.automodMessageChannel.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, com.discord.theme.R.color.brand_500, com.discord.theme.R.color.brand_600));
+      var4.setTextColor(ColorUtilsKt.getThemeColor(var1, com.discord.theme.R.color.white_100, com.discord.theme.R.color.white_160));
       q.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, var6);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F, 15.0F);
@@ -120,10 +119,10 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
    @SuppressLint(["SetTextI18n"])
    private fun configureAuthor(message: Message, automodContext: AutoModerationContext, eventHandler: ChatEventHandler) {
-      val var5: SimpleDraweeView = this.binding.authorAvatar;
-      val var6: Context = this.getContext();
-      q.g(var6, "getContext(...)");
-      var5.setImageURI(MessageKt.avatarUrl(var1, var6));
+      val var6: SimpleDraweeView = this.binding.authorAvatar;
+      val var5: Context = this.getContext();
+      q.g(var5, "getContext(...)");
+      var6.setImageURI(MessageKt.avatarUrl(var1, var5));
       this.binding.authorName.setText(var1.getUsername());
       val var9: MessageTagView = this.binding.messageTagView;
       q.g(this.binding.messageTagView, "messageTagView");
@@ -234,33 +233,33 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          return this.accessories;
       } else {
          val var17: FlaggedMessageEmbed = var8.getMessage();
-         val var12: MessageType = MessageType.DEFAULT;
-         val var11: java.lang.String = var17.getId-3Eiw7ao();
-         val var6: Long = var17.getChannelId-o4g7jtM();
-         val var13: GuildId = var17.getGuildId-qOKuAAo();
-         val var10: UserId = var17.getUserId-wUX8bhU();
-         val var16: java.lang.String = var17.getUsername();
-         val var14: java.lang.String = var17.getAvatarURL();
-         val var15: StructurableText = var17.getContent();
+         val var13: MessageType = MessageType.DEFAULT;
+         val var15: java.lang.String = var17.getId-3Eiw7ao();
+         val var4: Long = var17.getChannelId-o4g7jtM();
+         val var16: GuildId = var17.getGuildId-qOKuAAo();
+         val var11: UserId = var17.getUserId-wUX8bhU();
+         val var14: java.lang.String = var17.getUsername();
+         val var12: java.lang.String = var17.getAvatarURL();
+         val var9: StructurableText = var17.getContent();
          val var3: Int = var17.getUsernameColor();
-         val var9: Int = var17.getRoleColor();
-         val var5: Boolean = var17.getShouldShowRoleDot();
+         val var10: Int = var17.getRoleColor();
+         val var7: Boolean = var17.getShouldShowRoleDot();
          val var21: java.lang.Boolean = var17.getCommunicationDisabled();
-         val var4: Boolean;
+         val var6: Boolean;
          if (var21 != null) {
-            var4 = var21;
+            var6 = var21;
          } else {
-            var4 = false;
+            var6 = false;
          }
 
          val var20: Message = new Message(
-            var12,
-            var11,
-            null,
-            var6,
             var13,
+            var15,
             null,
-            var10,
+            var4,
+            var16,
+            null,
+            var11,
             0L,
             null,
             null,
@@ -269,18 +268,18 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var16,
+            var14,
             var3,
-            var9,
-            var5,
+            var10,
+            var7,
             false,
             null,
-            var14,
+            var12,
             null,
             null,
             null,
             null,
-            var15,
+            var9,
             null,
             null,
             null,
@@ -298,7 +297,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var4,
+            var6,
             null,
             null,
             null,
@@ -344,9 +343,10 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
+            null,
             -69697628,
             -4115,
-            67108351,
+            134217215,
             null
          );
          if (var8.getNotification() != null) {
@@ -410,32 +410,32 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          this.configureAuthor(var1, var8, var3);
          this.configureCommunicationDisabled(q.c(var1.getCommunicationDisabled(), java.lang.Boolean.TRUE));
          this.configureDivider(var2.getShowDivider());
-         val var9: java.lang.String = var1.getThreadStarterMessageHeader();
-         val var14: ThreadStarterMessageHeaderView = this.binding.threadStarterHeader;
+         val var14: java.lang.String = var1.getThreadStarterMessageHeader();
+         val var9: ThreadStarterMessageHeaderView = this.binding.threadStarterHeader;
          if (var1.getReferencedMessage() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var14.configure(var9, var5);
+         var9.configure(var14, var5);
          this.binding.replyPreview.clear();
-         val var15: java.util.List = this.generateMessageAccessories(var1, var2);
-         val var16: MessageAccessoriesView = this.binding.accessoriesView;
+         val var10: java.util.List = this.generateMessageAccessories(var1, var2);
+         val var15: MessageAccessoriesView = this.binding.accessoriesView;
          val var11: java.lang.String = var1.getId-3Eiw7ao();
          val var6: Long = var1.getChannelId-o4g7jtM();
-         val var10: GuildId = var1.getGuildId-qOKuAAo();
+         val var16: GuildId = var1.getGuildId-qOKuAAo();
          if (var1.getForwardInfo() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var16.setAccessories-MNg-vQI(var11, var6, var10, var15, var3, var4, var5);
+         var15.setAccessories-MNg-vQI(var11, var6, var16, var10, var3, var4, var5);
       }
    }
 
-   public open fun spacingPxOverride(): Int {
+   public override fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(8);
    }
 }

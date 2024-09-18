@@ -9,6 +9,6 @@ public final class b implements Runnable {
 
    @Override
    public final void run() {
-      DeviceAccessibilityModule.b(this.j, this.k);
+      DeviceAccessibilityModule.c(this.j, this.k);
    }
 }

@@ -33,14 +33,14 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
          return null;
       } else {
          ReadableMapKeySetIterator var2 = var1.keySetIterator();
-         HashMap var4 = new HashMap();
+         HashMap var3 = new HashMap();
 
          while (var2.hasNextKey()) {
-            String var3 = var2.nextKey();
-            var4.put(var3, var1.getString(var3));
+            String var4 = var2.nextKey();
+            var3.put(var4, var1.getString(var4));
          }
 
-         return var4;
+         return var3;
       }
    }
 
@@ -48,8 +48,8 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
       var1.f = SystemClock.elapsedRealtime();
       Uri var5 = var1.g();
       Map var3;
-      if (var1.b().b0() instanceof ReactNetworkImageRequest) {
-         var3 = this.getHeaders(((ReactNetworkImageRequest)var1.b().b0()).getHeaders());
+      if (var1.b().v() instanceof ReactNetworkImageRequest) {
+         var3 = this.getHeaders(((ReactNetworkImageRequest)var1.b().v()).getHeaders());
       } else {
          var3 = null;
       }
@@ -59,6 +59,6 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
          var4 = Collections.emptyMap();
       }
 
-      this.fetchWithRequest(var1, var2, new Builder().c(new a().e().a()).l(var5.toString()).f(Headers.n(var4)).d().b());
+      this.fetchWithRequest(var1, var2, new Builder().c(new a().e().a()).l(var5.toString()).f(Headers.q(var4)).d().b());
    }
 }

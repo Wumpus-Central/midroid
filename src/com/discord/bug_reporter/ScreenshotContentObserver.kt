@@ -52,9 +52,9 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1047)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:562)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:91)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 000: aload 0
@@ -109,7 +109,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 070: goto 113
       // 073: aload 6
       // 075: aconst_null
-      // 076: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 076: invokestatic nh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 079: aconst_null
       // 07a: areturn
       // 07b: iload 2
@@ -171,7 +171,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 10a: astore 1
       // 10b: aload 6
       // 10d: aconst_null
-      // 10e: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10e: invokestatic nh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 111: aload 1
       // 112: areturn
       // 113: aload 1
@@ -179,12 +179,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 115: astore 5
       // 117: aload 6
       // 119: aload 1
-      // 11a: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11a: invokestatic nh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11d: aload 5
       // 11f: athrow
       // 120: aload 6
       // 122: aconst_null
-      // 123: invokestatic gk/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 123: invokestatic nh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 126: aconst_null
       // 127: areturn
    }
@@ -337,24 +337,24 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       }
 
       public override fun toString(): String {
-         val var3: Long = this.id;
-         val var6: java.lang.String = this.fileName;
-         val var7: java.lang.String = this.relativePath;
-         val var8: Uri = this.uri;
-         val var1: Long = this.dateAdded;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("ScreenshotData(id=");
-         var5.append(var3);
-         var5.append(", fileName=");
-         var5.append(var6);
-         var5.append(", relativePath=");
-         var5.append(var7);
-         var5.append(", uri=");
-         var5.append(var8);
-         var5.append(", dateAdded=");
-         var5.append(var1);
-         var5.append(")");
-         return var5.toString();
+         val var1: Long = this.id;
+         val var8: java.lang.String = this.fileName;
+         val var6: java.lang.String = this.relativePath;
+         val var5: Uri = this.uri;
+         val var3: Long = this.dateAdded;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("ScreenshotData(id=");
+         var7.append(var1);
+         var7.append(", fileName=");
+         var7.append(var8);
+         var7.append(", relativePath=");
+         var7.append(var6);
+         var7.append(", uri=");
+         var7.append(var5);
+         var7.append(", dateAdded=");
+         var7.append(var3);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

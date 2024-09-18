@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.embed
 
+import ch.w
 import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import vj.w
 
 public fun Embed.getMedia(): EmbedUrlProvider? {
    q.h(var0, "<this>");
@@ -201,19 +201,19 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var18: java.lang.String = var17.getEmbedUrl();
-         if (var18 == null) {
+         val var8: java.lang.String = var17.getEmbedUrl();
+         if (var8 == null) {
             return null;
          }
 
-         val var8: java.lang.String = getTag(var0);
+         val var18: java.lang.String = getTag(var0);
          val var19: MediaType = MediaType.IMAGE;
          var12 = new MediaSource(
             null,
-            var18,
+            var8,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var8,
+            var18,
             var19,
             false,
             ChannelId.box-impl(var1),

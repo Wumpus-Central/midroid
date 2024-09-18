@@ -25,7 +25,7 @@ import com.discord.progress_dots.ProgressDots
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -222,7 +222,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
 
       var23.setVisibility(var7);
       DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimaryMedium);
-      var23.setTextColor(ColorUtilsKt.getColorCompat(var23, color.white));
+      var23.setTextColor(ColorUtilsKt.getColorCompat(var23, R.color.white));
       if (!var9) {
          val var24: MaterialButton = var14.button;
          q.g(var14.button, "button");

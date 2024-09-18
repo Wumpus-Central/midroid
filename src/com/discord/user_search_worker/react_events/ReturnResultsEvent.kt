@@ -1,5 +1,6 @@
 package com.discord.user_search_worker.react_events
 
+import ch.w
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -7,7 +8,6 @@ import com.discord.user_search_worker.UserSearchWorkerResult
 import com.facebook.react.bridge.WritableMap
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import vj.w
 
 internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, query: String, uuid: String, type: String) : ReactEvent {
    public final val query: String
@@ -75,14 +75,14 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
    }
 
    public override fun serialize(): WritableMap {
-      val var4: Pair = w.a("uuid", this.uuid);
-      val var3: Pair = w.a("type", this.type);
-      val var2: Pair = w.a("query", this.query);
+      val var1: Pair = w.a("uuid", this.uuid);
+      val var2: Pair = w.a("type", this.type);
+      val var3: Pair = w.a("query", this.query);
       val var5: java.util.List = this.results;
-      val var1: ArrayList = new ArrayList(i.u(this.results, 10));
+      val var4: ArrayList = new ArrayList(i.u(this.results, 10));
 
       for (UserSearchWorkerResult var6 : var5) {
-         var1.add(
+         var4.add(
             NativeMapExtensionsKt.nativeMapOf(
                w.a("id", var6.getId()), w.a("username", var6.getUsername()), w.a("comparator", var6.getComparator()), w.a("score", var6.getScore())
             )
@@ -90,25 +90,25 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
-         var4, var3, w.a("payload", NativeMapExtensionsKt.nativeMapOf(var2, w.a("results", NativeArrayExtensionsKt.toNativeArray(var1))))
+         var1, var2, w.a("payload", NativeMapExtensionsKt.nativeMapOf(var3, w.a("results", NativeArrayExtensionsKt.toNativeArray(var4))))
       );
    }
 
    public override fun toString(): String {
       val var5: java.util.List = this.results;
-      val var4: java.lang.String = this.query;
-      val var2: java.lang.String = this.uuid;
-      val var1: java.lang.String = this.type;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ReturnResultsEvent(results=");
-      var3.append(var5);
-      var3.append(", query=");
-      var3.append(var4);
-      var3.append(", uuid=");
-      var3.append(var2);
-      var3.append(", type=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.query;
+      val var4: java.lang.String = this.uuid;
+      val var2: java.lang.String = this.type;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ReturnResultsEvent(results=");
+      var1.append(var5);
+      var1.append(", query=");
+      var1.append(var3);
+      var1.append(", uuid=");
+      var1.append(var4);
+      var1.append(", type=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

@@ -33,7 +33,7 @@ internal class TTIBroadcastReceiver : BroadcastReceiver {
       public fun register(context: Context, receiver: TTIBroadcastReceiver) {
          q.h(var1, "context");
          q.h(var2, "receiver");
-         a.l(var1, var2, new IntentFilter("com.discord.intent.action.RUN_TTI_TEST_ACTION"), 2);
+         a.k(var1, var2, new IntentFilter("com.discord.intent.action.RUN_TTI_TEST_ACTION"), 2);
       }
 
       public fun unregister(context: Context, receiver: TTIBroadcastReceiver) {

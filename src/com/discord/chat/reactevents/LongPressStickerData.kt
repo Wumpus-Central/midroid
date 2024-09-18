@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import ch.w
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import vj.w
 
 public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) : LongPressStickerData(var1, var2), ReactEvent {
    public final val messageId: MessageId
@@ -53,15 +53,10 @@ public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) :
       return MessageId.hashCode-impl(this.messageId) * 31 + this.sticker.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            w.a("messageId", this.messageId),
-            w.a(
-               "sticker",
-               NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("id", java.lang.String.valueOf(this.sticker.getId())), w.a("name", this.sticker.getName())})
-            )
-         }
+         w.a("messageId", this.messageId),
+         w.a("sticker", NativeMapExtensionsKt.nativeMapOf(w.a("id", java.lang.String.valueOf(this.sticker.getId())), w.a("name", this.sticker.getName())))
       );
    }
 

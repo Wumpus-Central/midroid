@@ -10,12 +10,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.n0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.b2
+import xk.g0
+import xk.n0
+import xk.g0.a
 
 @f
 public data class UploadProgressRow(index: Int, changeType: ChangeType, message: Message, fileId: String) : Row {
@@ -85,18 +85,18 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
       val var1: Int = this.index;
       val var2: ChangeType = this.changeType;
       val var5: Message = this.message;
-      val var3: java.lang.String = this.fileId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UploadProgressRow(index=");
-      var4.append(var1);
-      var4.append(", changeType=");
-      var4.append(var2);
-      var4.append(", message=");
-      var4.append(var5);
-      var4.append(", fileId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.fileId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UploadProgressRow(index=");
+      var3.append(var1);
+      var3.append(", changeType=");
+      var3.append(var2);
+      var3.append(", message=");
+      var3.append(var5);
+      var3.append(", fileId=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -111,10 +111,10 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
          val var0: UploadProgressRow.$serializer = new UploadProgressRow.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("3", var0, 4);
-         var1.c("index", false);
-         var1.c("changeType", false);
-         var1.c("message", false);
-         var1.c("fileId", false);
+         var1.l("index", false);
+         var1.l("changeType", false);
+         var1.l("message", false);
+         var1.l("fileId", false);
          descriptor = var1;
       }
 
@@ -125,18 +125,18 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
       public open fun deserialize(decoder: Decoder): UploadProgressRow {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var3: Int;
          var var6: Message;
          var var7: ChangeType;
          var var10: Any;
-         if (var9.p()) {
-            var3 = var9.i(var8, 0);
-            var7 = var9.y(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
-            var6 = var9.y(var8, 2, Message.$serializer.INSTANCE, null) as Message;
-            var10 = var9.m(var8, 3);
-            var2 = 15;
+         if (var9.y()) {
+            var2 = var9.k(var8, 0);
+            var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
+            var6 = var9.m(var8, 2, Message.$serializer.INSTANCE, null) as Message;
+            var10 = var9.t(var8, 3);
+            var3 = 15;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -146,7 +146,7 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var9.o(var8);
+               val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -155,37 +155,40 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
                               throw new n(var5);
                            }
 
-                           var10 = var9.m(var8, 3);
+                           var10 = var9.t(var8, 3);
                            var2 |= 8;
                         } else {
-                           var6 = var9.y(var8, 2, Message.$serializer.INSTANCE, var6) as Message;
+                           var6 = var9.m(var8, 2, Message.$serializer.INSTANCE, var6) as Message;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var9.y(var8, 1, ChangeType.Serializer.INSTANCE, var7) as ChangeType;
+                        var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, var7) as ChangeType;
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var9.i(var8, 0);
+                     var3 = var9.k(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
-         var9.c(var8);
-         return new UploadProgressRow(var2, var3, var7, var6, (java.lang.String)var10, null);
+         var9.b(var8);
+         return new UploadProgressRow(var3, var2, var7, var6, (java.lang.String)var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgressRow) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          UploadProgressRow.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

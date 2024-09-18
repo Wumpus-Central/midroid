@@ -8,11 +8,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.g0
-import qn.n0
+import uk.f
+import uk.n
+import vk.a
+import xk.g0
+import xk.n0
 
 @f
 public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor: Int? = null) {
@@ -72,15 +72,15 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
-      val var3: Int = this.gutterColor;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BackgroundHighlight(backgroundColor=");
-      var2.append(var1);
-      var2.append(", gutterColor=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: Int = this.backgroundColor;
+      val var1: Int = this.gutterColor;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BackgroundHighlight(backgroundColor=");
+      var3.append(var2);
+      var3.append(", gutterColor=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -95,8 +95,8 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          val var0: BackgroundHighlight.$serializer = new BackgroundHighlight.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.BackgroundHighlight", var0, 2);
-         var1.c("backgroundColor", true);
-         var1.c("gutterColor", true);
+         var1.l("backgroundColor", true);
+         var1.l("gutterColor", true);
          descriptor = var1;
       }
 
@@ -108,14 +108,14 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       public open fun deserialize(decoder: Decoder): BackgroundHighlight {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          var var2: Int;
          var var5: Int;
          var var9: Int;
-         if (var7.p()) {
+         if (var7.y()) {
             val var8: n0 = n0.a;
-            var5 = var7.n(var6, 0, n0.a, null) as Int;
-            var9 = var7.n(var6, 1, var8, null) as Int;
+            var5 = var7.v(var6, 0, n0.a, null) as Int;
+            var9 = var7.v(var6, 1, var8, null) as Int;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -124,17 +124,17 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
             var5 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var7.n(var6, 1, n0.a, var9) as Int;
+                     var9 = var7.v(var6, 1, n0.a, var9) as Int;
                      var2 |= 2;
                   } else {
-                     var5 = var7.n(var6, 0, n0.a, var5) as Int;
+                     var5 = var7.v(var6, 0, n0.a, var5) as Int;
                      var2 |= 1;
                   }
                } else {
@@ -143,7 +143,7 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new BackgroundHighlight(var2, var5, var9, null);
       }
 
@@ -151,13 +151,13 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          BackgroundHighlight.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

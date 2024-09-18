@@ -17,8 +17,8 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 
@@ -71,7 +71,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       var7.itemInviteHubLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
       kotlin.jvm.internal.q.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, var10);
-      var7.itemInviteJoinedButton.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.brand));
+      var7.itemInviteJoinedButton.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.brand));
    }
 
    public fun setBackgroundRectangleColor(color: Int?) {
@@ -81,7 +81,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       } else {
          val var3: Context = this.getContext();
          kotlin.jvm.internal.q.g(var3, "getContext(...)");
-         var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(color.primary_100, color.primary_630));
+         var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(R.color.primary_100, R.color.primary_630));
       }
 
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var2, SizeUtilsKt.getDpToPx(4), null, 0, 12, null);
@@ -200,7 +200,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       var6.setVisibility(var3);
       var6 = this.binding.itemInviteOnlineDot;
       kotlin.jvm.internal.q.g(this.binding.itemInviteOnlineDot, "itemInviteOnlineDot");
-      ViewBackgroundUtilsKt.setBackgroundOval$default(var6, ColorUtilsKt.getColorCompat(this, color.green_360), 0, 2, null);
+      ViewBackgroundUtilsKt.setBackgroundOval$default(var6, ColorUtilsKt.getColorCompat(this, R.color.green_360), 0, 2, null);
       this.binding.itemInviteOnlineText.setText(var1);
       var6 = this.binding.itemInviteTotalMemberDot;
       kotlin.jvm.internal.q.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
@@ -221,7 +221,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
          var6.setVisibility(var8);
          val var14: ImageView = this.binding.itemInviteTotalMemberDot;
          kotlin.jvm.internal.q.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
-         ViewBackgroundUtilsKt.setBackgroundOval$default(var14, ColorUtilsKt.getColorCompat(this, color.primary_500), 0, 2, null);
+         ViewBackgroundUtilsKt.setBackgroundOval$default(var14, ColorUtilsKt.getColorCompat(this, R.color.primary_500), 0, 2, null);
          this.binding.itemInviteTotalMemberText.setText(var2);
          var6 = this.binding.itemInviteMemberContainer;
          kotlin.jvm.internal.q.g(this.binding.itemInviteMemberContainer, "itemInviteMemberContainer");

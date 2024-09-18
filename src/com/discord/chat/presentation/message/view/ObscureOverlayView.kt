@@ -79,7 +79,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       kotlin.jvm.internal.q.h(var4, "onReveal");
       kotlin.jvm.internal.q.h(var5, "onHide");
       this.handleRevealedState(var3);
-      this.binding.blurView.setupWith(var2).g(24.0F).a(Color.argb(80, 0, 0, 0)).d(var2.getBackground()).c(true);
+      this.binding.blurView.setupWith(var2).g(24.0F).b(Color.argb(80, 0, 0, 0)).c(var2.getBackground()).a(true);
       this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new Function0(var5, this) {
          final Function0 $onHide;
          final ObscureOverlayView this$0;

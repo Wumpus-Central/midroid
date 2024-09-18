@@ -1,5 +1,6 @@
 package com.discord.billing
 
+import ch.w
 import com.discord.billing.react.events.BillingManagerConnectionStateUpdated
 import com.discord.billing.react.events.BillingManagerDowngradeCommand
 import com.discord.billing.react.events.BillingManagerPurchaseStateUpdated
@@ -19,7 +20,6 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
@@ -31,12 +31,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         new Pair[]{
-            w.a("billing-manager-connection-state-updated", g0.b(BillingManagerConnectionStateUpdated.class)),
-            w.a("billing-manager-purchase-updated", g0.b(BillingManagerPurchaseUpdated.class)),
-            w.a("billing-manager-downgrade-command", g0.b(BillingManagerDowngradeCommand.class)),
-            w.a("billing-manager-purchase-state-updated", g0.b(BillingManagerPurchaseStateUpdated.class))
-         }
+         w.a("billing-manager-connection-state-updated", g0.b(BillingManagerConnectionStateUpdated.class)),
+         w.a("billing-manager-purchase-updated", g0.b(BillingManagerPurchaseUpdated.class)),
+         w.a("billing-manager-downgrade-command", g0.b(BillingManagerDowngradeCommand.class)),
+         w.a("billing-manager-purchase-state-updated", g0.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new Function1(this) {
          final BillingManagerModule this$0;
@@ -97,9 +95,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       q.g(var5, "toArrayList(...)");
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 

@@ -8,7 +8,6 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.recycler_view.scroll.DebouncedScrollListener
 import com.discord.recycler_view.scroll.DebouncedVelocityTrackingScrollListener
 import com.discord.recycler_view.scroller.Scroller
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -120,6 +119,7 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
             super(300L, var1, null, var2, 4, null);
          }
 
+         @Override
          public void onScrolled(RecyclerView var1, int var2, int var3) {
             q.h(var1, "recyclerView");
             if (var2 != 0 || var3 != 0) {
@@ -242,7 +242,7 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
          }
 
          this.scrollJumpingToPosition = true;
-         Scroller.scrollToPosition$default(this.scroller, var3, new Top(0), var2, new Function0(this) {
+         Scroller.scrollToPosition$default(this.scroller, var3, new Scroller.TargetAlignment.Top(0), var2, new Function0(this) {
             final EmojiPickerScroller this$0;
 
             {
@@ -265,10 +265,10 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
    public fun unbind() {
       this.recyclerView.removeOnLayoutChangeListener(this.scrollViewLayoutChanged);
-      val var1: RecyclerView = this.recyclerView;
-      val var2: <unrepresentable> = this.scrollListenerDebounced;
+      val var2: RecyclerView = this.recyclerView;
+      val var1: <unrepresentable> = this.scrollListenerDebounced;
       this.scrollListenerDebounced.cancel();
-      var1.removeOnScrollListener(var2);
+      var2.removeOnScrollListener(var1);
       this.recyclerView.removeOnScrollListener(this.scrollListenerVelocityTracker);
       this.recyclerView.setOnFlingListener(null);
    }
@@ -378,23 +378,23 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
       }
 
       public override fun toString(): String {
-         val var3: Int = this.x;
-         val var2: Int = this.y;
-         val var6: Int = this.width;
-         val var1: Int = this.height;
-         val var4: Int = this.contentWidth;
+         val var1: Int = this.x;
+         val var3: Int = this.y;
+         val var2: Int = this.width;
+         val var4: Int = this.height;
+         val var6: Int = this.contentWidth;
          val var5: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ScrollEvent(x=");
-         var7.append(var3);
-         var7.append(", y=");
-         var7.append(var2);
-         var7.append(", width=");
-         var7.append(var6);
-         var7.append(", height=");
          var7.append(var1);
-         var7.append(", contentWidth=");
+         var7.append(", y=");
+         var7.append(var3);
+         var7.append(", width=");
+         var7.append(var2);
+         var7.append(", height=");
          var7.append(var4);
+         var7.append(", contentWidth=");
+         var7.append(var6);
          var7.append(", contentHeight=");
          var7.append(var5);
          var7.append(")");

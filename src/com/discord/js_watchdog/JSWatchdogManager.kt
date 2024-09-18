@@ -3,10 +3,10 @@ package com.discord.js_watchdog
 import android.content.Context
 import com.discord.logging.Log
 import com.facebook.react.bridge.Promise
-import dn.g
-import dn.s0
 import java.io.File
 import java.util.TimerTask
+import kk.f
+import kk.t0
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
@@ -131,8 +131,8 @@ public object JSWatchdogManager {
       q.h(var4, "sessionId");
       q.h(var6, "promise");
       this.cancelExistingJobs();
-      pingCoroutineJob = g.d(
-         s0.j,
+      pingCoroutineJob = f.d(
+         t0.j,
          null,
          null,
          new Function2(var1, var2, var6, var4, var5, null)// $VF: Couldn't be decompiled

@@ -1,10 +1,10 @@
 package com.discord.emoji_picker
 
+import ch.p
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData.NativeSection
 import com.discord.misc.utilities.collections.StubbedList
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import vj.p
 
 internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, offsetId: Long) : StubbedList<EmojiPickerItem> {
    private final val listHeaderIndices: List<Int>

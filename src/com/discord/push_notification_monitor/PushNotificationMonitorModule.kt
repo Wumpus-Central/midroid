@@ -19,16 +19,16 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
       this.reactContext = var1;
    }
 
-   public open fun areNotificationsEnabled(promise: Promise) {
+   public override fun areNotificationsEnabled(promise: Promise) {
       q.h(var1, "promise");
       var1.resolve(NotificationManagerCompat.g(this.reactContext).a());
    }
 
-   public open fun clearLogs() {
+   public override fun clearLogs() {
       PushNotificationMonitor.INSTANCE.clearPushLog(this.reactContext);
    }
 
-   public open fun getPushNotificationLogs(userId: String, promise: Promise) {
+   public override fun getPushNotificationLogs(userId: String, promise: Promise) {
       q.h(var1, "userId");
       q.h(var2, "promise");
       val var3: a = Json.d;

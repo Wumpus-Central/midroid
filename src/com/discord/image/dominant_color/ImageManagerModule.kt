@@ -42,7 +42,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
                   while (var5.hasNext()) {
                      val var2: Int = (var5.next() as java.lang.Number).intValue();
-                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255}));
+                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
                   }
 
                   this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray(var4));

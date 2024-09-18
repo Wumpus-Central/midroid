@@ -8,10 +8,10 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.InlineClassDescriptor
-import nn.f
-import qn.b2
-import qn.g0
-import qn.g0.a
+import uk.f
+import xk.b2
+import xk.g0
+import xk.g0.a
 
 @f
 public inline class MessageId : Parcelable {
@@ -91,7 +91,7 @@ public inline class MessageId : Parcelable {
          val var0: MessageId.$serializer = new MessageId.$serializer();
          INSTANCE = var0;
          val var1: InlineClassDescriptor = new InlineClassDescriptor("com.discord.primitives.MessageId", var0);
-         var1.c("value", false);
+         var1.l("value", false);
          descriptor = var1;
       }
 
@@ -101,13 +101,13 @@ public inline class MessageId : Parcelable {
 
       public open fun deserialize(decoder: Decoder): MessageId {
          q.h(var1, "decoder");
-         return MessageId.constructor-impl(var1.q(this.getDescriptor()).z());
+         return MessageId.constructor-impl(var1.z(this.getDescriptor()).n());
       }
 
       public open fun serialize(encoder: Encoder, value: MessageId) {
          q.h(var1, "encoder");
          q.h(var2, "value");
-         var1 = var1.k(this.getDescriptor());
+         var1 = var1.z(this.getDescriptor());
          if (var1 != null) {
             var1.F(var2);
          }

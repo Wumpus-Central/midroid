@@ -11,11 +11,11 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import nn.f
-import nn.n
-import on.a
-import qn.g0
-import qn.o1
+import uk.f
+import uk.n
+import vk.a
+import xk.g0
+import xk.o1
 
 @f
 public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...) : MessageReference(var1, var3) {
@@ -82,15 +82,15 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: GuildId = this.guildId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MessageReference(channelId=");
-      var3.append(var1);
-      var3.append(", guildId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: GuildId = this.guildId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MessageReference(channelId=");
+      var2.append(var3);
+      var2.append(", guildId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -105,8 +105,8 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
          val var0: MessageReference.$serializer = new MessageReference.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.contentnode.MessageReference", var0, 2);
-         var1.c("channel_id", false);
-         var1.c("guild_id", true);
+         var1.l("channel_id", false);
+         var1.l("guild_id", true);
          descriptor = var1;
       }
 
@@ -116,35 +116,33 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
 
       public open fun deserialize(decoder: Decoder): MessageReference {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.b(var8);
-         val var5: Boolean = var9.p();
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.c(var7);
+         val var5: Boolean = var8.y();
          var var6: ChannelId = null;
          var var2: Int;
-         var var11: GuildId;
+         var var9: GuildId;
          if (var5) {
-            val var10: ChannelId = var9.y(var8, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            val var7: GuildId = var9.n(var8, 1, GuildId.$serializer.INSTANCE, null) as GuildId;
+            var6 = var8.m(var7, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var9 = var8.v(var7, 1, GuildId.$serializer.INSTANCE, null) as GuildId;
             var2 = 3;
-            var6 = var10;
-            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var11 = null;
+            var9 = null;
 
             while (var3) {
-               val var4: Int = var9.o(var8);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var11 = var9.n(var8, 1, GuildId.$serializer.INSTANCE, var11) as GuildId;
+                     var9 = var8.v(var7, 1, GuildId.$serializer.INSTANCE, var9) as GuildId;
                      var2 |= 2;
                   } else {
-                     var6 = var9.y(var8, 0, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
+                     var6 = var8.m(var7, 0, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
                      var2 |= 1;
                   }
                } else {
@@ -153,21 +151,21 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
             }
          }
 
-         var9.c(var8);
-         return new MessageReference(var2, var6, var11, null, null);
+         var8.b(var7);
+         return new MessageReference(var2, var6, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageReference) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          MessageReference.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

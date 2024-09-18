@@ -3,7 +3,7 @@ package com.discord.billing;
 import com.android.billingclient.api.BillingResult;
 import java.util.List;
 import kotlinx.coroutines.CompletableDeferred;
-import l4.m;
+import t2.m;
 
 // $VF: synthetic class
 public final class g implements m {

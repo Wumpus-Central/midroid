@@ -3,15 +3,15 @@ package com.discord.image.fresco.config
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
-import g6.c
 import kotlin.jvm.internal.q
+import o4.c
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {
       q.h(var1, "context");
       var1.registerComponentCallbacks(new ComponentCallbacks2() {
          private final void clearMemoryCaches() {
-            c.a().e();
+            c.a().c();
          }
 
          public void onConfigurationChanged(Configuration var1) {

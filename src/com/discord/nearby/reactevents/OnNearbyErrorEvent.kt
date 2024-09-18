@@ -1,7 +1,6 @@
 package com.discord.nearby.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -11,11 +10,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.b2
-import qn.g0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.b2
+import xk.g0
+import xk.g0.a
 
 @f
 public data class OnNearbyErrorEvent(body: String) : ReactEvent {
@@ -50,17 +49,17 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
       return this.body.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.body;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnNearbyErrorEvent(body=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.body;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnNearbyErrorEvent(body=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -75,7 +74,7 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
          val var0: OnNearbyErrorEvent.$serializer = new OnNearbyErrorEvent.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.nearby.reactevents.OnNearbyErrorEvent", var0, 1);
-         var1.c("body", false);
+         var1.l("body", false);
          descriptor = var1;
       }
 
@@ -86,25 +85,25 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
       public open fun deserialize(decoder: Decoder): OnNearbyErrorEvent {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var8: java.lang.String;
          if (var5) {
-            var8 = var7.m(var6, 0);
+            var8 = var7.t(var6, 0);
          } else {
             var2 = 0;
             var8 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.m(var6, 0);
+                  var8 = var7.t(var6, 0);
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -112,7 +111,7 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new OnNearbyErrorEvent(var2, var8, null);
       }
 
@@ -120,9 +119,9 @@ public data class OnNearbyErrorEvent(body: String) : ReactEvent {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          OnNearbyErrorEvent.write$Self$nearby_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

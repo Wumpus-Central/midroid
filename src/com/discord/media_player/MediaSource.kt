@@ -1,9 +1,9 @@
 package com.discord.media_player
 
+import ch.p
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
-import vj.p
 
 public data class MediaSource(sourceUrl: String? = ...,
    previewUrl: String? = ...,
@@ -266,14 +266,14 @@ public data class MediaSource(sourceUrl: String? = ...,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.sourceUrl;
-      val var8: java.lang.String = this.previewUrl;
-      val var7: java.lang.String = this.placeholder;
-      val var9: Int = this.placeholderVersion;
-      val var5: java.lang.String = this.featureTag;
-      val var4: MediaType = this.type;
+      val var7: java.lang.String = this.sourceUrl;
+      val var3: java.lang.String = this.previewUrl;
+      val var5: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
+      val var6: java.lang.String = this.featureTag;
+      val var8: MediaType = this.type;
       val var1: Boolean = this.shouldAutoPlay;
-      val var6: ChannelId = this.channelId;
+      val var9: ChannelId = this.channelId;
       val var13: java.lang.String;
       if (this.messageId == null) {
          var13 = "null";
@@ -282,31 +282,31 @@ public data class MediaSource(sourceUrl: String? = ...,
       }
 
       val var12: Int = this.index;
-      val var10: java.lang.Double = this.portal;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MediaSource(sourceUrl=");
-      var11.append(var3);
-      var11.append(", previewUrl=");
-      var11.append(var8);
-      var11.append(", placeholder=");
-      var11.append(var7);
-      var11.append(", placeholderVersion=");
-      var11.append(var9);
-      var11.append(", featureTag=");
-      var11.append(var5);
-      var11.append(", type=");
-      var11.append(var4);
-      var11.append(", shouldAutoPlay=");
-      var11.append(var1);
-      var11.append(", channelId=");
-      var11.append(var6);
-      var11.append(", messageId=");
-      var11.append(var13);
-      var11.append(", index=");
-      var11.append(var12);
-      var11.append(", portal=");
-      var11.append(var10);
-      var11.append(")");
-      return var11.toString();
+      val var11: java.lang.Double = this.portal;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("MediaSource(sourceUrl=");
+      var10.append(var7);
+      var10.append(", previewUrl=");
+      var10.append(var3);
+      var10.append(", placeholder=");
+      var10.append(var5);
+      var10.append(", placeholderVersion=");
+      var10.append(var4);
+      var10.append(", featureTag=");
+      var10.append(var6);
+      var10.append(", type=");
+      var10.append(var8);
+      var10.append(", shouldAutoPlay=");
+      var10.append(var1);
+      var10.append(", channelId=");
+      var10.append(var9);
+      var10.append(", messageId=");
+      var10.append(var13);
+      var10.append(", index=");
+      var10.append(var12);
+      var10.append(", portal=");
+      var10.append(var11);
+      var10.append(")");
+      return var10.toString();
    }
 }

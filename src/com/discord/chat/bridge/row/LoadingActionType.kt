@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.row
 
-import ck.a
+import ch.l
+import ch.o
+import jh.a
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nn.f
-import vj.l
-import vj.o
+import uk.f
 
 @f
 public enum class LoadingActionType {
@@ -15,7 +15,7 @@ public enum class LoadingActionType {
    @JvmStatic
    private LoadingActionType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
+   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public LoadingActionType.Companion Companion = new LoadingActionType.Companion(null);
 

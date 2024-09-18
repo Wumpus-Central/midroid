@@ -9,10 +9,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.g0
+import xk.g0.a
 
 @f
 public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVersions: Any) {
@@ -84,8 +84,8 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
          val var0: DatabaseVersions.$serializer = new DatabaseVersions.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.app_database.DatabaseVersions", var0, 2);
-         var1.c("guildVersions", false);
-         var1.c("nonGuildVersions", false);
+         var1.l("guildVersions", false);
+         var1.l("nonGuildVersions", false);
          descriptor = var1;
       }
 
@@ -97,14 +97,14 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
       public open fun deserialize(decoder: Decoder): DatabaseVersions {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = DatabaseVersions.access$get$childSerializers$cp();
          var var2: Int;
          var var5: Array<NonGuildVersion>;
          var var9: Array<GuildVersion>;
-         if (var7.p()) {
-            var9 = var7.y(var6, 0, var8[0], null) as Array<GuildVersion>;
-            var5 = var7.y(var6, 1, var8[1], null) as Array<NonGuildVersion>;
+         if (var7.y()) {
+            var9 = var7.m(var6, 0, var8[0], null) as Array<GuildVersion>;
+            var5 = var7.m(var6, 1, var8[1], null) as Array<NonGuildVersion>;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -113,17 +113,17 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
             var9 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var5 = var7.y(var6, 1, var8[1], var5) as Array<NonGuildVersion>;
+                     var5 = var7.m(var6, 1, var8[1], var5) as Array<NonGuildVersion>;
                      var2 |= 2;
                   } else {
-                     var9 = var7.y(var6, 0, var8[0], var9) as Array<GuildVersion>;
+                     var9 = var7.m(var6, 0, var8[0], var9) as Array<GuildVersion>;
                      var2 |= 1;
                   }
                } else {
@@ -132,7 +132,7 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new DatabaseVersions(var2, var9, var5, null);
       }
 
@@ -140,9 +140,9 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          DatabaseVersions.write$Self$app_database_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

@@ -8,10 +8,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import qn.g0
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.g0
+import xk.g0.a
 
 @f
 public data class Poll(question: PollMedia) {
@@ -47,12 +47,12 @@ public data class Poll(question: PollMedia) {
    }
 
    public override fun toString(): String {
-      val var1: PollMedia = this.question;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Poll(question=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: PollMedia = this.question;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Poll(question=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -67,7 +67,7 @@ public data class Poll(question: PollMedia) {
          val var0: Poll.$serializer = new Poll.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.notifications.api.Poll", var0, 1);
-         var1.c("question", false);
+         var1.l("question", false);
          descriptor = var1;
       }
 
@@ -78,25 +78,25 @@ public data class Poll(question: PollMedia) {
       public open fun deserialize(decoder: Decoder): Poll {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var8: PollMedia;
          if (var5) {
-            var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, null) as PollMedia;
+            var8 = var7.m(var6, 0, PollMedia.$serializer.INSTANCE, null) as PollMedia;
          } else {
             var2 = 0;
             var8 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
                   }
 
-                  var8 = var7.y(var6, 0, PollMedia.$serializer.INSTANCE, var8) as PollMedia;
+                  var8 = var7.m(var6, 0, PollMedia.$serializer.INSTANCE, var8) as PollMedia;
                   var2 |= 1;
                } else {
                   var3 = false;
@@ -104,7 +104,7 @@ public data class Poll(question: PollMedia) {
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new Poll(var2, var8, null);
       }
 
@@ -112,9 +112,9 @@ public data class Poll(question: PollMedia) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          Poll.write$Self$notification_api_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

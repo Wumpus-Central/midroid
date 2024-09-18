@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import f3.a;
+import n1.a;
 
 public final class DeserializationErrorViewBinding implements ViewBinding {
    public final TextView causeHeader;
@@ -30,24 +30,24 @@ public final class DeserializationErrorViewBinding implements ViewBinding {
 
    public static DeserializationErrorViewBinding bind(View var0) {
       int var1 = R.id.cause_header;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var5 = (TextView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.copy_button;
          Button var2 = (Button)a.a(var0, var1);
          if (var2 != null) {
             var1 = R.id.exception;
-            TextView var6 = (TextView)a.a(var0, var1);
-            if (var6 != null) {
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.header;
-               TextView var7 = (TextView)a.a(var0, var1);
-               if (var7 != null) {
+               TextView var4 = (TextView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.json;
-                  TextView var4 = (TextView)a.a(var0, var1);
-                  if (var4 != null) {
+                  TextView var6 = (TextView)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.json_header;
-                     TextView var5 = (TextView)a.a(var0, var1);
-                     if (var5 != null) {
-                        return new DeserializationErrorViewBinding(var0, var3, var2, var6, var7, var4, var5);
+                     TextView var7 = (TextView)a.a(var0, var1);
+                     if (var7 != null) {
+                        return new DeserializationErrorViewBinding(var0, var5, var2, var3, var4, var6, var7);
                      }
                   }
                }

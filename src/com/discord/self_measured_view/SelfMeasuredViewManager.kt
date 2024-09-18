@@ -14,7 +14,7 @@ public class SelfMeasuredViewManager : ViewGroupManager<SelfMeasuredView> {
       return new SelfMeasuredView(var1, null, 0, 6, null);
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDSelfMeasuredView";
    }
 

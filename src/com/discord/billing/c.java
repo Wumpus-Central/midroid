@@ -6,7 +6,7 @@ import java.util.List;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Ref.BooleanRef;
-import l4.m;
+import t2.m;
 
 // $VF: synthetic class
 public final class c implements m {

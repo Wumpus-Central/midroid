@@ -1,5 +1,6 @@
 package com.discord.fastest_list.react
 
+import ch.w
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListView
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker
@@ -29,21 +30,18 @@ import kotlin.jvm.functions.Function5
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {
    private final val delegate: FastestListManagerDelegate<FastestListView, FastestListViewManager> = new FastestListManagerDelegate(this)
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         new Pair[]{
-            w.a("onUnexpectedItemSize", g0.b(OnUnexpectedItemSizeEvent.class)),
-            w.a("onLayout", g0.b(OnLayoutEvent.class)),
-            w.a("onScroll", g0.b(OnScrollEvent.class)),
-            w.a("onScrollBeginDrag", g0.b(OnScrollBeginDragEvent.class)),
-            w.a("onScrollEndDrag", g0.b(OnScrollEndDragEvent.class)),
-            w.a("onVisibleItemsChanged", g0.b(OnVisibleItemsChangedEvent.class))
-         }
+         w.a("onUnexpectedItemSize", g0.b(OnUnexpectedItemSizeEvent.class)),
+         w.a("onLayout", g0.b(OnLayoutEvent.class)),
+         w.a("onScroll", g0.b(OnScrollEvent.class)),
+         w.a("onScrollBeginDrag", g0.b(OnScrollBeginDragEvent.class)),
+         w.a("onScrollEndDrag", g0.b(OnScrollEndDragEvent.class)),
+         w.a("onVisibleItemsChanged", g0.b(OnVisibleItemsChangedEvent.class))
       )
 
    public open fun createShadowNodeInstance(): LayoutShadowNode {
@@ -187,9 +185,9 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       FastestListShadowNode.Companion.dropShadowNode(var1);
    }
 
-   public open fun scrollToLocation(view: FastestListView, section: Int, item: Int, animated: Boolean) {
+   public open fun scrollToLocation(view: FastestListView, section: Int, item: Int, animated: Boolean, paddingStart: Int) {
       q.h(var1, "view");
-      var1.scrollTo(var2, var3, var4);
+      var1.scrollTo(var2, var3, var4, var5);
    }
 
    public open fun scrollToTop(view: FastestListView, animated: Boolean) {

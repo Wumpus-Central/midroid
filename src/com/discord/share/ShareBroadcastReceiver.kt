@@ -10,13 +10,13 @@ import android.content.IntentSender
 import android.os.Parcelable
 import androidx.core.content.a
 import androidx.core.content.b
+import ch.w
 import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : BroadcastReceiver {
    private final val reactApplicationContext: ReactApplicationContext
@@ -70,7 +70,7 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       public fun register(context: Context, receiver: ShareBroadcastReceiver) {
          q.h(var1, "context");
          q.h(var2, "receiver");
-         a.l(var1, var2, new IntentFilter("share_sheet_click"), 4);
+         a.k(var1, var2, new IntentFilter("share_sheet_click"), 4);
       }
 
       public fun unregister(context: Context, receiver: ShareBroadcastReceiver) {

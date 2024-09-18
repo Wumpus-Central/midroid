@@ -7,7 +7,7 @@ import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.b
-import pk.c
+import wh.c
 
 public object SerializerUtils {
    public fun findErroringFields(jsonString: String, deserializerClass: KClass<*>): com.discord.serialization.SerializerUtils.SerializerError {
@@ -19,14 +19,14 @@ public object SerializerUtils {
       } else {
          val var6: LinkedHashMap = new LinkedHashMap();
 
-         for (KProperty1 var7 : c.a(var2)) {
-            val var4: JsonElement = (var3 as JsonObject).get(var7.getName()) as JsonElement;
-            if (var4 == null) {
-               if (!var7.getReturnType().k()) {
-                  var6.put(var7.getName(), "null");
+         for (KProperty1 var4 : c.a(var2)) {
+            val var5: JsonElement = (var3 as JsonObject).get(var4.getName()) as JsonElement;
+            if (var5 == null) {
+               if (!var4.getReturnType().l()) {
+                  var6.put(var4.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var7, var4)) {
-               var6.put(var7.getName(), var4.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var4, var5)) {
+               var6.put(var4.getName(), var5.toString());
             }
          }
 

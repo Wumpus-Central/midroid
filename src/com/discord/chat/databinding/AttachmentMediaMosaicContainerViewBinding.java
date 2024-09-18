@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.InlineForwardButtonView;
-import f3.a;
+import n1.a;
 
 public final class AttachmentMediaMosaicContainerViewBinding implements ViewBinding {
    public final InlineForwardButtonView forward;
@@ -22,12 +22,12 @@ public final class AttachmentMediaMosaicContainerViewBinding implements ViewBind
 
    public static AttachmentMediaMosaicContainerViewBinding bind(View var0) {
       int var1 = R.id.forward;
-      InlineForwardButtonView var2 = (InlineForwardButtonView)a.a(var0, var1);
-      if (var2 != null) {
+      InlineForwardButtonView var3 = (InlineForwardButtonView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.mosaic;
-         RecyclerView var3 = (RecyclerView)a.a(var0, var1);
-         if (var3 != null) {
-            return new AttachmentMediaMosaicContainerViewBinding(var0, var2, var3);
+         RecyclerView var2 = (RecyclerView)a.a(var0, var1);
+         if (var2 != null) {
+            return new AttachmentMediaMosaicContainerViewBinding(var0, var3, var2);
          }
       }
 

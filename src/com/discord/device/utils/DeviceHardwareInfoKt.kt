@@ -9,8 +9,6 @@ import java.util.Locale
 import java.util.Scanner
 import kotlin.jvm.internal.l0
 import kotlin.jvm.internal.q
-import s.b
-import x0.a
 
 internal fun getNumCpuCores(): Int {
    return Runtime.getRuntime().availableProcessors();
@@ -41,13 +39,13 @@ internal fun getSocFromProcCpuInfo(): String {
 internal fun maxCpuFreq(): String {
    val var3: Int = getNumCpuCores();
    var var2: Int = 0;
-   var var4: Long = 0L;
+   var var6: Long = 0L;
 
    while (true) {
       var var10: java.lang.String = "";
       if (var2 >= var3) {
-         if (var4 > 0L) {
-            val var0: Double = var4 / 1000000.0;
+         if (var6 > 0L) {
+            val var0: Double = var6 / 1000000.0;
             val var15: l0 = l0.a;
             var10 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
             q.g(var10, "format(...)");
@@ -69,13 +67,13 @@ internal fun maxCpuFreq(): String {
          return "";
       }
 
-      var var6: Long = var4;
-      if (var8 > var4) {
-         var6 = var8;
+      var var4: Long = var6;
+      if (var8 > var6) {
+         var4 = var8;
       }
 
       var2++;
-      var4 = var6;
+      var6 = var4;
    }
 }
 
@@ -121,23 +119,23 @@ internal fun ramSize(): String {
 
 internal fun socName(): String {
    if (VERSION.SDK_INT >= 31) {
-      var var0: java.lang.String = b.a();
+      var var0: java.lang.String = a.a();
       q.g(var0, "SOC_MANUFACTURER");
       if (var0.length() == 0) {
-         var0 = a.a();
+         var0 = b.a();
          q.g(var0, "SOC_MODEL");
          if (var0.length() == 0) {
             return getSocFromProcCpuInfo();
          }
       }
 
-      val var2: java.lang.String = b.a();
-      val var1: java.lang.String = a.a();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var2);
-      var4.append("_");
-      var4.append(var1);
-      return var4.toString();
+      var0 = a.a();
+      val var1: java.lang.String = b.a();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var0);
+      var2.append("_");
+      var2.append(var1);
+      return var2.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

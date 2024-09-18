@@ -1,6 +1,7 @@
 package com.discord.bug_reporter
 
 import android.content.ContentResolver
+import ch.w
 import com.discord.bug_reporter.react.events.ScreenshotTakenEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
@@ -10,7 +11,6 @@ import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -22,7 +22,7 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("screenshotTaken", g0.b(ScreenshotTakenEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("screenshotTaken", g0.b(ScreenshotTakenEvent.class)));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final ScreenshotHelperModule this$0;
 

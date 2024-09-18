@@ -1,5 +1,7 @@
 package com.discord.chat.reactevents
 
+import ch.p
+import ch.w
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode
@@ -8,8 +10,6 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import vj.p
-import vj.w
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
@@ -43,13 +43,11 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       return this.emoji.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var2: WritableNativeMap;
       if (this.emoji is UnicodeEmojiContentNode) {
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               w.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), w.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
-            }
+            w.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), w.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
          );
       } else {
          if (this.emoji !is CustomEmojiContentNode) {
@@ -57,15 +55,13 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
          }
 
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               w.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
-               w.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
-               w.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
-            }
+            w.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
+            w.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
+            w.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
          );
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{w.a("node", var2)});
+      return NativeMapExtensionsKt.nativeMapOf(w.a("node", var2));
    }
 
    public override fun toString(): String {

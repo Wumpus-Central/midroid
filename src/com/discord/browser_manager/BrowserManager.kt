@@ -1,13 +1,13 @@
 package com.discord.browser_manager
 
-import an.j
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import com.discord.chrome_custom_tabs.CustomTabs
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
+import hk.j
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -53,7 +53,7 @@ internal object BrowserManager {
 
    private fun openUrlWithCustomTabs(context: Context, uri: Uri, onFailure: (Exception) -> Unit) {
       CustomTabs.openUrlWithCustomTabs$default(
-         CustomTabs.INSTANCE, var1, var2, false, ColorUtilsKt.getThemeColor(var1, color.white, color.primary_600), null, null, null, null, var3, 244, null
+         CustomTabs.INSTANCE, var1, var2, false, ColorUtilsKt.getThemeColor(var1, R.color.white, R.color.primary_600), null, null, null, null, var3, 244, null
       );
    }
 

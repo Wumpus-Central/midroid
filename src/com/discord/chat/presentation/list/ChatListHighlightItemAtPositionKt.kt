@@ -6,8 +6,8 @@ import android.animation.Animator.AnimatorListener
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -49,7 +49,7 @@ private fun View.animateBackgroundColor(delay: Long, startColor: Int, endColor: 
 
 fun `animateBackgroundColor$anim`(var0: Long, var2: View, var3: Int, var4: Int, var5: Function1) {
    val var6: ValueAnimator = ValueAnimator.ofArgb(new int[]{var3, var4});
-   var6.addUpdateListener(new a(var2));
+   var6.addUpdateListener(new b(var2));
    q.e(var6);
    var6.addListener(new AnimatorListener(var5) {
       final Function1 $onEnd;
@@ -99,7 +99,7 @@ private fun View.animateHighlightBackgroundColor(delay: Long, startColor: Int, f
 
 fun `animateHighlightBackgroundColor$anim$4`(var0: Long, var2: View, var3: Int, var4: Int, var5: Int) {
    val var6: ValueAnimator = ValueAnimator.ofArgb(new int[]{var3, var4, var4, var5});
-   var6.addUpdateListener(new b(var2));
+   var6.addUpdateListener(new c(var2));
    var6.setStartDelay(var0 + (long)100);
    var6.setDuration(1000L);
    var6.start();
@@ -133,7 +133,7 @@ internal fun RecyclerView.chatListEmphasizeHighlightItemAtPosition(position: Int
             var8,
             var2,
             var1,
-            ColorUtilsKt.getColorCompat(var6, ThemeManagerKt.getTheme().getColorRes(color.brand_new_360_alpha_20, color.brand_new_360_alpha_25)),
+            ColorUtilsKt.getColorCompat(var6, ThemeManagerKt.getTheme().getColorRes(R.color.brand_new_360_alpha_20, R.color.brand_new_360_alpha_25)),
             ThemeManagerKt.getTheme().getBackgroundMessageHighlight()
          );
       }

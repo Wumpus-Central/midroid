@@ -7,14 +7,12 @@ import android.view.Window
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.r0
-import androidx.core.view.WindowInsetsCompat.b
-import androidx.core.view.WindowInsetsCompat.m
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
-import i5.a
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import q3.a
 
 public object ImmersiveMode {
    private final var rootViewInsetUpdateCallbacks: MutableList<(WindowInsetsCompat) -> Unit> = new ArrayList()
@@ -50,8 +48,8 @@ public object ImmersiveMode {
          (var4.next() as Function1).invoke(var3);
       }
 
-      val var5: WindowInsetsCompat = new b(var3)
-         .b(m.g(), Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
+      val var5: WindowInsetsCompat = new WindowInsetsCompat.b(var3)
+         .b(WindowInsetsCompat.m.g(), Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
       r0.c0(var1, var5);
       return var5;

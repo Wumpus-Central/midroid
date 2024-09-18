@@ -6,9 +6,9 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import nn.f
-import rn.d
-import rn.g
+import uk.f
+import yk.d
+import yk.g
 
 @f(with = UserSearchData.Serializer::class)
 internal sealed class UserSearchData protected constructor() {

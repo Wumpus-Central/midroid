@@ -5,15 +5,15 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.sticker_picker.StickerPickerRow
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
+import dh.o
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import wj.o
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    q.h(var0, "data");
-   val var3: Int = var0.getInt("rowContentWidth");
-   val var1: Int = var0.getInt("rowContentPaddingVertical");
-   val var2: Int = var0.getInt("itemSize");
+   val var1: Int = var0.getInt("rowContentWidth");
+   val var2: Int = var0.getInt("rowContentPaddingVertical");
+   val var3: Int = var0.getInt("itemSize");
    val var6: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var12: IntRange = NativeArrayExtensionsKt.sizeRange(var6);
    val var5: ArrayList = new ArrayList(i.u(var12, 10));
@@ -66,5 +66,5 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       var5.add(var15);
    }
 
-   return new StickerPickerRow(var3, var1, var2, var5);
+   return new StickerPickerRow(var1, var2, var3, var5);
 }

@@ -19,8 +19,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
@@ -47,7 +47,7 @@ public class SurveyIndicationView  public constructor(context: Context, attrs: A
       val var6: SurveyActionViewBinding = SurveyActionViewBinding.inflate(LayoutInflater.from(var1), this);
       kotlin.jvm.internal.q.g(var6, "inflate(...)");
       this.binding = var6;
-      var6.surveyCard.setCardBackgroundColor(ColorUtilsKt.getThemeColor(var1, color.white_500, color.primary_800));
+      var6.surveyCard.setCardBackgroundColor(ColorUtilsKt.getThemeColor(var1, R.color.white_500, R.color.primary_800));
       val var4: SimpleDraweeView = this.binding.chatListFeedbackIcon;
       kotlin.jvm.internal.q.g(this.binding.chatListFeedbackIcon, "chatListFeedbackIcon");
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());
@@ -66,15 +66,15 @@ public class SurveyIndicationView  public constructor(context: Context, attrs: A
       ReactAssetUtilsKt.setReactImageUrl(var5, var2.getFeedbackIconUrl());
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextFeedback;
       kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextFeedback);
-      val var9: StructurableText = var2.getContent();
-      val var6: Context = var10.getContext();
+      val var6: StructurableText = var2.getContent();
+      val var9: Context = var10.getContext();
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var7, "getFontMetrics(...)");
       val var4: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var11: TextPaint = this.binding.chatListAdapterItemTextFeedback.getPaint();
-      kotlin.jvm.internal.q.e(var6);
+      kotlin.jvm.internal.q.e(var9);
       kotlin.jvm.internal.q.e(var11);
-      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var9, var6, var1, false, false, false, false, var11, new Function1(var3, var1) {
+      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var6, var9, var1, false, false, false, false, var11, new Function1(var3, var1) {
          final java.lang.String $messageId;
          final Function2 $onLinkClicked;
 

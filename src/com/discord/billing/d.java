@@ -2,7 +2,7 @@ package com.discord.billing;
 
 import com.android.billingclient.api.BillingResult;
 import java.util.List;
-import l4.i;
+import t2.i;
 
 // $VF: synthetic class
 public final class d implements i {

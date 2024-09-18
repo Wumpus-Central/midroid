@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.FrameLayout.LayoutParams
 import android.widget.ImageView.ScaleType
+import ch.l
 import com.discord.chat.R
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.bridge.polls.PollAnswer
@@ -28,7 +29,6 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
-import vj.l
 
 public class PollMediaView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val childViews: MutableList<View>
@@ -57,14 +57,14 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = n6.a.d(var1, var2);
+      this.hierarchyBuilder = v4.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       q.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = l.a(new Function0(var1, this) {
+      this.draweeView$delegate = l.b(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 
@@ -75,15 +75,15 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeView invoke() {
-            val var1: SimpleDraweeView = new SimpleDraweeView(this.$context);
-            val var2: PollMediaView = this.this$0;
-            var1.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
-            PollMediaView.access$getChildViews$p(var2).add(var1);
-            var2.addView(var1, new LayoutParams(-1, -1, 17));
-            return var1;
+            val var2: SimpleDraweeView = new SimpleDraweeView(this.$context);
+            val var1: PollMediaView = this.this$0;
+            var2.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
+            PollMediaView.access$getChildViews$p(var1).add(var2);
+            var1.addView(var2, new LayoutParams(-1, -1, 17));
+            return var2;
          }
       });
-      this.textView$delegate = l.a(new Function0(var1, this) {
+      this.textView$delegate = l.b(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 
@@ -177,19 +177,19 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var4 = 1;
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
-            val var10: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var16: RenderableEmoji = var10.renderable();
-            val var9: Context = this.getContext();
-            q.g(var9, "getContext(...)");
+            val var9: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
+            val var16: RenderableEmoji = var9.renderable();
+            val var10: Context = this.getContext();
+            q.g(var10, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
-            if (var1.getShouldAnimateEmoji() && var10.getAnimated()) {
+            if (var1.getShouldAnimateEmoji() && var9.getAnimated()) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var9, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var10, var4, var7, 0, null, 48, null));
             this.setOnClickListener(new h(var2));
             var4 = 1;
          } else {

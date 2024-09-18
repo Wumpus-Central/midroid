@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
+import ch.p
 import com.discord.chat.bridge.botuikit.SeparatorDisplayComponent
 import com.discord.chat.databinding.MessageComponentSeparatorDisplayViewBinding
 import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
@@ -19,7 +20,6 @@ import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import vj.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,

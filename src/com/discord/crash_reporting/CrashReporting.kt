@@ -2,8 +2,10 @@ package com.discord.crash_reporting
 
 import android.content.Context
 import android.os.Build
+import ch.p
 import com.discord.client_info.ClientInfo
 import com.discord.logging.Log
+import dh.r
 import io.sentry.IScope
 import io.sentry.d5
 import io.sentry.e
@@ -15,6 +17,7 @@ import java.net.ConnectException
 import java.net.SocketException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
+import java.security.cert.CertPathValidatorException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
 import kotlin.enums.EnumEntries
@@ -22,8 +25,6 @@ import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
-import vj.p
-import wj.r
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
@@ -35,7 +36,8 @@ public object CrashReporting {
             g0.b(SocketTimeoutException.class),
             g0.b(SocketException.class),
             g0.b(ConnectException.class),
-            g0.b(SSLException.class)
+            g0.b(SSLException.class),
+            g0.b(CertPathValidatorException.class)
          }
       )
 
@@ -48,7 +50,7 @@ public object CrashReporting {
       q.h(var1, "$message");
       q.h(var2, "$errorLevel");
       q.h(var3, "SentryScope");
-      var3.h(i.e(var0));
+      var3.q(i.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
       val var5: d5;
       if (var4 != 1) {
@@ -75,16 +77,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var6.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(var8);
-      var7.append("/sentry");
-      var5.setCacheDirPath(var7.toString());
+      val var7: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var7);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("59e51a8e-743f-441e-9f10-e40c0762cd3d");
+      var5.setProguardUuid("1603b1f5-6d6d-43f5-b4d5-1854a2b51281");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -105,7 +107,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", vj.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", ch.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -193,7 +195,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = ck.a.a(var0);
+         $ENTRIES = jh.a.a(var0);
       }
 
       @JvmStatic

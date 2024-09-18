@@ -2,7 +2,6 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -13,11 +12,11 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import nn.f
-import nn.n
-import qn.g0
-import qn.o1
-import qn.g0.a
+import uk.f
+import uk.n
+import xk.g0
+import xk.o1
+import xk.g0.a
 
 @f
 internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityData(var1), ReactEvent {
@@ -61,8 +60,8 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
       return MessageId.hashCode-impl(this.messageId);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -86,7 +85,7 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
          val var0: TapJoinActivityData.$serializer = new TapJoinActivityData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapJoinActivityData", var0, 1);
-         var1.c("messageId", false);
+         var1.l("messageId", false);
          descriptor = var1;
       }
 
@@ -97,13 +96,13 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
       public open fun deserialize(decoder: Decoder): TapJoinActivityData {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
-         val var5: Boolean = var7.p();
+         val var7: c = var1.c(var6);
+         val var5: Boolean = var7.y();
          var var2: Int = 1;
          var var3: Boolean = true;
          var var10: java.lang.String;
          if (var5) {
-            val var9: MessageId = var7.y(var6, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var9: MessageId = var7.m(var6, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             if (var9 != null) {
                var10 = var9.unbox-impl();
             } else {
@@ -114,7 +113,7 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
             var10 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      throw new n(var4);
@@ -127,7 +126,7 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
                      var11 = null;
                   }
 
-                  val var12: MessageId = var7.y(var6, 0, MessageId.$serializer.INSTANCE, var11) as MessageId;
+                  val var12: MessageId = var7.m(var6, 0, MessageId.$serializer.INSTANCE, var11) as MessageId;
                   if (var12 != null) {
                      var10 = var12.unbox-impl();
                   } else {
@@ -141,7 +140,7 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new TapJoinActivityData(var2, var10, null, null);
       }
 
@@ -149,9 +148,9 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          TapJoinActivityData.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {

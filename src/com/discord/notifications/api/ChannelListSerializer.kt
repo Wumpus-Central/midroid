@@ -7,7 +7,7 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import on.a
+import vk.a
 
 public object ChannelListSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
@@ -18,7 +18,7 @@ public object ChannelListSerializer : KSerializer {
 
    public open fun deserialize(decoder: Decoder): List<ChannelId> {
       q.h(var1, "decoder");
-      val var4: java.util.List = h.z0(var1.z(), new java.lang.String[]{","}, false, 0, 6, null);
+      val var4: java.util.List = h.z0(var1.n(), new java.lang.String[]{","}, false, 0, 6, null);
       val var2: ArrayList = new ArrayList();
       val var3: java.util.Iterator = var4.iterator();
 

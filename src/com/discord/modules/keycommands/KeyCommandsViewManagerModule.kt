@@ -1,5 +1,6 @@
 package com.discord.modules.keycommands
 
+import ch.w
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.module.annotations.ReactModule
@@ -8,9 +9,8 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerDelegate
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerInterface
 import com.facebook.react.views.view.ReactViewGroup
+import dh.r
 import kotlin.jvm.internal.q
-import vj.w
-import wj.r
 
 public class KeyCommandsViewManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {

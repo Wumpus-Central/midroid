@@ -8,12 +8,12 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
-import qn.n0
+import uk.f
+import uk.n
+import vk.a
+import xk.b2
+import xk.g0
+import xk.n0
 
 @f
 public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null, name: String, size: Int, alt: String) {
@@ -104,24 +104,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.source;
+      val var4: java.lang.String = this.source;
       val var2: java.lang.String = this.unicodeEmoji;
       val var3: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var4: java.lang.String = this.alt;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("RoleIcon(source=");
-      var5.append(var6);
-      var5.append(", unicodeEmoji=");
-      var5.append(var2);
-      var5.append(", name=");
-      var5.append(var3);
-      var5.append(", size=");
-      var5.append(var1);
-      var5.append(", alt=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.alt;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("RoleIcon(source=");
+      var6.append(var4);
+      var6.append(", unicodeEmoji=");
+      var6.append(var2);
+      var6.append(", name=");
+      var6.append(var3);
+      var6.append(", size=");
+      var6.append(var1);
+      var6.append(", alt=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -136,11 +136,11 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
          val var0: RoleIcon.$serializer = new RoleIcon.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.roleicons.RoleIcon", var0, 5);
-         var1.c("source", true);
-         var1.c("unicodeEmoji", true);
-         var1.c("name", false);
-         var1.c("size", false);
-         var1.c("alt", false);
+         var1.l("source", true);
+         var1.l("unicodeEmoji", true);
+         var1.l("name", false);
+         var1.l("size", false);
+         var1.l("alt", false);
          descriptor = var1;
       }
 
@@ -152,33 +152,35 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
       public open fun deserialize(decoder: Decoder): RoleIcon {
          q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
-         var var2: Int;
+         val var11: c = var1.c(var10);
          var var3: Int;
-         var var6: java.lang.String;
+         val var4: Int;
          var var8: java.lang.String;
          val var9: java.lang.String;
          var var13: java.lang.String;
-         if (var11.p()) {
+         var var17: java.lang.String;
+         if (var11.y()) {
             val var12: b2 = b2.a;
-            var8 = var11.n(var10, 0, b2.a, null) as java.lang.String;
-            var6 = var11.n(var10, 1, var12, null) as java.lang.String;
-            val var7: java.lang.String = var11.m(var10, 2);
-            var2 = var11.i(var10, 3);
-            var13 = var11.m(var10, 4);
+            var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
+            var17 = var11.v(var10, 1, var12, null) as java.lang.String;
+            val var7: java.lang.String = var11.t(var10, 2);
+            val var2: Int = var11.k(var10, 3);
+            var13 = var11.t(var10, 4);
             var3 = 31;
-            var9 = var7;
+            var9 = var17;
+            var17 = var7;
+            var4 = var2;
          } else {
-            var var4: Boolean = true;
+            var var16: Boolean = true;
             var3 = 0;
             var8 = null;
             var var18: java.lang.String = null;
-            var6 = null;
+            var17 = null;
             var13 = null;
-            var2 = 0;
+            var var14: Int = 0;
 
-            while (var4) {
-               val var5: Int = var11.o(var10);
+            while (var16) {
+               val var5: Int = var11.x(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -188,50 +190,49 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                                  throw new n(var5);
                               }
 
-                              var13 = var11.m(var10, 4);
-                              var2 |= 16;
+                              var13 = var11.t(var10, 4);
+                              var14 |= 16;
                            } else {
-                              var3 = var11.i(var10, 3);
-                              var2 |= 8;
+                              var3 = var11.k(var10, 3);
+                              var14 |= 8;
                            }
                         } else {
-                           var6 = var11.m(var10, 2);
-                           var2 |= 4;
+                           var17 = var11.t(var10, 2);
+                           var14 |= 4;
                         }
                      } else {
-                        var18 = var11.n(var10, 1, b2.a, var18) as java.lang.String;
-                        var2 |= 2;
+                        var18 = var11.v(var10, 1, b2.a, var18) as java.lang.String;
+                        var14 |= 2;
                      }
                   } else {
-                     var8 = var11.n(var10, 0, b2.a, var8) as java.lang.String;
-                     var2 |= 1;
+                     var8 = var11.v(var10, 0, b2.a, var8) as java.lang.String;
+                     var14 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var16 = false;
                }
             }
 
-            var3 = var2;
-            var2 = var3;
-            var9 = var6;
-            var6 = var18;
+            var4 = var3;
+            var9 = var18;
+            var3 = var14;
          }
 
-         var11.c(var10);
-         return new RoleIcon(var3, var8, var6, var9, var2, var13, null);
+         var11.b(var10);
+         return new RoleIcon(var3, var8, var9, var17, var4, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleIcon) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          RoleIcon.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

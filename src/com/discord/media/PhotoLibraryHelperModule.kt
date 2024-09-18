@@ -8,6 +8,7 @@ import android.os.Looper
 import android.os.Build.VERSION
 import android.provider.MediaStore.Files
 import android.provider.MediaStore.Images.Media
+import ch.w
 import com.discord.media.react.events.PhotoLibraryChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
@@ -16,7 +17,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import vj.w
 
 public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val listener: <unrepresentable>
@@ -27,7 +27,7 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("photoLibraryChanged", g0.b(PhotoLibraryChangedEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("photoLibraryChanged", g0.b(PhotoLibraryChangedEvent.class)));
       this.listener = new ContentObserver(this, new Handler(Looper.getMainLooper())) {
          final PhotoLibraryHelperModule this$0;
 

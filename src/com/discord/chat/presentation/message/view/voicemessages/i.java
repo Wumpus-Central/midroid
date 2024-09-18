@@ -4,6 +4,6 @@ package com.discord.chat.presentation.message.view.voicemessages;
 public final class i implements Runnable {
    @Override
    public final void run() {
-      AudioPlayerManagerModule.a();
+      AudioPlayerManagerModule.b();
    }
 }

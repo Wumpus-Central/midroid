@@ -11,10 +11,10 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.g0
+import uk.f
+import uk.n
+import vk.a
+import xk.g0
 
 @f
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage {
@@ -69,15 +69,15 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
-      val var3: StructurableText = this.systemContent;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LoadedReferencedMessage(message=");
-      var1.append(var2);
-      var1.append(", systemContent=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: Message = this.message;
+      val var2: StructurableText = this.systemContent;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LoadedReferencedMessage(message=");
+      var3.append(var1);
+      var3.append(", systemContent=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -94,8 +94,8 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
             "com.discord.chat.bridge.referencedmessage.LoadedReferencedMessage", var0, 2
          );
-         var1.c("message", false);
-         var1.c("systemContent", true);
+         var1.l("message", false);
+         var1.l("systemContent", true);
          descriptor = var1;
       }
 
@@ -106,13 +106,13 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
       public open fun deserialize(decoder: Decoder): LoadedReferencedMessage {
          q.h(var1, "decoder");
          val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.b(var6);
+         val var7: c = var1.c(var6);
          var var2: Int;
          var var5: StructurableText;
          var var8: Message;
-         if (var7.p()) {
-            var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, null) as Message;
-            var5 = var7.n(var6, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
+         if (var7.y()) {
+            var8 = var7.m(var6, 0, Message.$serializer.INSTANCE, null) as Message;
+            var5 = var7.v(var6, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -121,17 +121,17 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
             var5 = null;
 
             while (var3) {
-               val var4: Int = var7.o(var6);
+               val var4: Int = var7.x(var6);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var5 = var7.n(var6, 1, StructurableTextSerializer.INSTANCE, var5) as StructurableText;
+                     var5 = var7.v(var6, 1, StructurableTextSerializer.INSTANCE, var5) as StructurableText;
                      var2 |= 2;
                   } else {
-                     var8 = var7.y(var6, 0, Message.$serializer.INSTANCE, var8) as Message;
+                     var8 = var7.m(var6, 0, Message.$serializer.INSTANCE, var8) as Message;
                      var2 |= 1;
                   }
                } else {
@@ -140,7 +140,7 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
             }
          }
 
-         var7.c(var6);
+         var7.b(var6);
          return new LoadedReferencedMessage(var2, var8, var5, null);
       }
 
@@ -148,13 +148,13 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          LoadedReferencedMessage.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

@@ -4,12 +4,12 @@ import android.view.View
 import android.widget.FrameLayout
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.portals.utils.ViewRemoveFromParentKt
-import gn.u
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import nk.u
 
 public object PortalFromNativeContextManager {
    private final var _portalContextIdsFlow: MutableStateFlow<com.discord.portals.from_native.PortalFromNativeContextManager.Event?>

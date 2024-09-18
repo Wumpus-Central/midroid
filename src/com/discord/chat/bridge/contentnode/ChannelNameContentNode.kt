@@ -9,11 +9,11 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nn.f
-import nn.n
-import on.a
-import qn.b2
-import qn.g0
+import uk.f
+import uk.n
+import vk.a
+import xk.b2
+import xk.g0
 
 @f
 public data class ChannelNameContentNode(channelType: ChannelType? = null, iconType: String, icon: String? = null, content: List<ContentNode>) : ContentNode {
@@ -96,19 +96,19 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var3: ChannelType = this.channelType;
-      val var1: java.lang.String = this.iconType;
+      val var1: ChannelType = this.channelType;
+      val var2: java.lang.String = this.iconType;
       val var5: java.lang.String = this.icon;
-      val var2: java.util.List = this.content;
+      val var3: java.util.List = this.content;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ChannelNameContentNode(channelType=");
-      var4.append(var3);
-      var4.append(", iconType=");
       var4.append(var1);
+      var4.append(", iconType=");
+      var4.append(var2);
       var4.append(", icon=");
       var4.append(var5);
       var4.append(", content=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
@@ -125,10 +125,10 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
          val var0: ChannelNameContentNode.$serializer = new ChannelNameContentNode.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("channel", var0, 4);
-         var1.c("channelType", true);
-         var1.c("iconType", false);
-         var1.c("icon", true);
-         var1.c("content", false);
+         var1.l("channelType", true);
+         var1.l("iconType", false);
+         var1.l("icon", true);
+         var1.l("content", false);
          descriptor = var1;
       }
 
@@ -139,29 +139,31 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
       public open fun deserialize(decoder: Decoder): ChannelNameContentNode {
          q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.b(var10);
+         val var11: c = var1.c(var10);
          val var9: Array<KSerializer> = ChannelNameContentNode.access$get$childSerializers$cp();
-         val var5: Boolean = var11.p();
+         val var5: Boolean = var11.y();
          var var8: ChannelType = null;
          var var2: Int;
-         var var6: Any;
+         var var6: java.lang.String;
          var var7: java.lang.String;
-         val var12: java.lang.String;
+         var var13: Any;
          if (var5) {
-            var8 = var11.n(var10, 0, ChannelType.Serializer.INSTANCE, null) as ChannelType;
-            var7 = var11.m(var10, 1);
-            var12 = var11.n(var10, 2, b2.a, null) as java.lang.String;
-            var6 = var11.y(var10, 3, var9[3], null) as java.util.List;
+            var8 = var11.v(var10, 0, ChannelType.Serializer.INSTANCE, null) as ChannelType;
+            var7 = var11.t(var10, 1);
+            var13 = var11.v(var10, 2, b2.a, null) as java.lang.String;
+            val var14: java.util.List = var11.m(var10, 3, var9[3], null) as java.util.List;
             var2 = 15;
+            var6 = (java.lang.String)var13;
+            var13 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var6 = null;
-            var var13: Any = null;
+            var13 = null;
 
             while (var3) {
-               val var4: Int = var11.o(var10);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -170,44 +172,41 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
                               throw new n(var4);
                            }
 
-                           var13 = var11.y(var10, 3, var9[3], var13) as java.util.List;
+                           var13 = var11.m(var10, 3, var9[3], var13) as java.util.List;
                            var2 |= 8;
                         } else {
-                           var6 = var11.n(var10, 2, b2.a, var6) as java.lang.String;
+                           var6 = var11.v(var10, 2, b2.a, var6) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.m(var10, 1);
+                        var7 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.n(var10, 0, ChannelType.Serializer.INSTANCE, var8) as ChannelType;
+                     var8 = var11.v(var10, 0, ChannelType.Serializer.INSTANCE, var8) as ChannelType;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = var13;
-            var12 = (java.lang.String)var6;
          }
 
-         var11.c(var10);
-         return new ChannelNameContentNode(var2, var8, var7, var12, (java.util.List)var6, null);
+         var11.b(var10);
+         return new ChannelNameContentNode(var2, var8, var7, var6, (java.util.List)var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChannelNameContentNode) {
          q.h(var1, "encoder");
          q.h(var2, "value");
          val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.b(var3);
+         val var4: CompositeEncoder = var1.c(var3);
          ChannelNameContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.c(var3);
+         var4.b(var3);
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return qn.g0.a.a(this);
+         return xk.g0.a.a(this);
       }
    }
 

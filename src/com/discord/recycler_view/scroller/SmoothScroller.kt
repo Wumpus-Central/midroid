@@ -5,9 +5,9 @@ import android.view.View
 import androidx.recyclerview.widget.i
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.SmoothScroller.Action
+import ch.p
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import kotlin.jvm.internal.q
-import vj.p
 
 internal class SmoothScroller(context: Context, targetPosition: Int, targetAlignment: TargetAlignment, onStopScroll: (() -> Unit)?) : i {
    private final val targetAlignment: TargetAlignment
@@ -23,7 +23,7 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
       this.setTargetPosition(var2);
    }
 
-   public open fun calculateDtToFit(viewStart: Int, viewEnd: Int, boxStart: Int, boxEnd: Int, snapPreference: Int): Int {
+   public override fun calculateDtToFit(viewStart: Int, viewEnd: Int, boxStart: Int, boxEnd: Int, snapPreference: Int): Int {
       if (this.targetAlignment is Scroller.TargetAlignment.Center) {
          var1 = var3 + (var4 - var3) / 2 - (var1 + (var2 - var1) / 2);
       } else if (this.targetAlignment is Scroller.TargetAlignment.Top) {
@@ -39,7 +39,7 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
       return var1;
    }
 
-   protected open fun onChildAttachedToWindow(child: View) {
+   protected override fun onChildAttachedToWindow(child: View) {
       q.h(var1, "child");
       super.onChildAttachedToWindow(var1);
       if (this.targetView == null && this.getChildPosition(var1) == this.getTargetPosition()) {
@@ -47,7 +47,7 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
       }
    }
 
-   protected open fun onSeekTargetStep(dx: Int, dy: Int, state: State, action: Action) {
+   protected override fun onSeekTargetStep(dx: Int, dy: Int, state: State, action: Action) {
       q.h(var3, "state");
       q.h(var4, "action");
       if (this.targetView != null) {
@@ -57,7 +57,7 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
       }
    }
 
-   protected open fun onStop() {
+   protected override fun onStop() {
       super.onStop();
       if (this.onStopScroll != null) {
          this.onStopScroll.invoke();
