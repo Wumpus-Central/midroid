@@ -320,9 +320,9 @@ public data class AutoModerationNotification(header: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: b2 = b2.a;
-         val var1: n0 = n0.a;
-         return new KSerializer[]{b2.a, n0.a, b2.a, n0.a, a.u(b2.a), a.u(var2), a.u(var2), h.a, a.u(var2), a.u(var2), a.u(var1), a.u(var2), a.u(var2)};
+         val var1: b2 = b2.a;
+         val var2: n0 = n0.a;
+         return new KSerializer[]{b2.a, n0.a, b2.a, n0.a, a.u(b2.a), a.u(var1), a.u(var1), h.a, a.u(var1), a.u(var1), a.u(var2), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): AutoModerationNotification {
@@ -333,53 +333,52 @@ public data class AutoModerationNotification(header: String,
          var var5: Int = 10;
          var var3: Int;
          var var4: Int;
-         var var10: java.lang.String;
+         var var12: java.lang.String;
          var var13: java.lang.String;
+         var var14: java.lang.String;
          var var15: java.lang.String;
          var var16: java.lang.String;
          var var17: java.lang.String;
-         var var18: java.lang.String;
-         val var19: java.lang.String;
-         val var25: java.lang.String;
-         var var35: Any;
-         var var38: java.lang.String;
+         val var24: java.lang.String;
+         var var32: java.lang.String;
+         var var34: Any;
+         var var40: java.lang.String;
          if (var9) {
             var13 = var23.t(var22, 0);
-            var5 = var23.k(var22, 1);
-            var15 = var23.t(var22, 2);
+            var3 = var23.k(var22, 1);
+            var12 = var23.t(var22, 2);
             val var2: Int = var23.k(var22, 3);
-            val var14: b2 = b2.a;
-            var16 = var23.v(var22, 4, b2.a, null) as java.lang.String;
-            var18 = var23.v(var22, 5, var14, null) as java.lang.String;
-            val var12: java.lang.String = var23.v(var22, 6, var14, null) as java.lang.String;
+            val var18: b2 = b2.a;
+            var15 = var23.v(var22, 4, b2.a, null) as java.lang.String;
+            var17 = var23.v(var22, 5, var18, null) as java.lang.String;
+            var16 = var23.v(var22, 6, var18, null) as java.lang.String;
             var9 = var23.s(var22, 7);
-            var17 = var23.v(var22, 8, var14, null) as java.lang.String;
-            var35 = var23.v(var22, 9, var14, null) as java.lang.String;
-            val var24: Int = var23.v(var22, 10, n0.a, null) as Int;
-            var10 = var23.v(var22, 11, var14, null) as java.lang.String;
-            val var20: java.lang.String = var23.v(var22, 12, var14, null) as java.lang.String;
-            var3 = 8191;
+            var14 = var23.v(var22, 8, var18, null) as java.lang.String;
+            var34 = var23.v(var22, 9, var18, null) as java.lang.String;
+            val var10: Int = var23.v(var22, 10, n0.a, null) as Int;
+            var24 = var23.v(var22, 11, var18, null) as java.lang.String;
+            val var19: java.lang.String = var23.v(var22, 12, var18, null) as java.lang.String;
+            var5 = 8191;
             var4 = var2;
-            var19 = var12;
-            var38 = (java.lang.String)var35;
-            var35 = var24;
-            var25 = var20;
+            var40 = (java.lang.String)var34;
+            var34 = var10;
+            var32 = var19;
          } else {
             var13 = null;
-            var var37: java.lang.String = null;
+            var12 = null;
             var17 = null;
             var16 = null;
-            var38 = null;
-            var18 = null;
+            var14 = null;
+            var40 = null;
             var15 = null;
-            var35 = null;
+            var34 = null;
             var var7: Boolean = true;
             var9 = false;
             var4 = 0;
             var3 = 0;
-            var10 = null;
-            var var27: Int = 0;
-            var var26: java.lang.String = null;
+            var32 = null;
+            var var26: Int = 0;
+            var var25: java.lang.String = null;
 
             while (var7) {
                label39: {
@@ -391,55 +390,55 @@ public data class AutoModerationNotification(header: String,
                            break label39;
                         case 0:
                            var13 = var23.t(var22, 0);
-                           var27 |= 1;
+                           var26 |= 1;
                            break;
                         case 1:
                            var3 = var23.k(var22, 1);
-                           var27 |= 2;
+                           var26 |= 2;
                            break;
                         case 2:
-                           var37 = var23.t(var22, 2);
-                           var27 |= 4;
+                           var12 = var23.t(var22, 2);
+                           var26 |= 4;
                            break;
                         case 3:
                            var4 = var23.k(var22, 3);
-                           var27 |= 8;
+                           var26 |= 8;
                            break;
                         case 4:
-                           var26 = var23.v(var22, 4, b2.a, var26) as java.lang.String;
-                           var27 |= 16;
+                           var25 = var23.v(var22, 4, b2.a, var25) as java.lang.String;
+                           var26 |= 16;
                            break;
                         case 5:
-                           var10 = var23.v(var22, 5, b2.a, var10) as java.lang.String;
-                           var27 |= 32;
+                           var32 = var23.v(var22, 5, b2.a, var32) as java.lang.String;
+                           var26 |= 32;
                            break;
                         case 6:
-                           var35 = var23.v(var22, 6, b2.a, var35) as java.lang.String;
-                           var27 |= 64;
+                           var34 = var23.v(var22, 6, b2.a, var34) as java.lang.String;
+                           var26 |= 64;
                            break;
                         case 7:
                            var9 = var23.s(var22, 7);
-                           var27 |= 128;
+                           var26 |= 128;
                            break label38;
                         case 8:
-                           var18 = var23.v(var22, 8, b2.a, var18) as java.lang.String;
-                           var27 |= 256;
+                           var40 = var23.v(var22, 8, b2.a, var40) as java.lang.String;
+                           var26 |= 256;
                            break label38;
                         case 9:
                            var15 = var23.v(var22, 9, b2.a, var15) as java.lang.String;
-                           var27 |= 512;
+                           var26 |= 512;
                            break label39;
                         case 10:
-                           var38 = var23.v(var22, var5, n0.a, var38) as Int;
-                           var27 |= 1024;
+                           var14 = var23.v(var22, var5, n0.a, var14) as Int;
+                           var26 |= 1024;
                            continue;
                         case 11:
                            var16 = var23.v(var22, 11, b2.a, var16) as java.lang.String;
-                           var27 |= 2048;
+                           var26 |= 2048;
                            continue;
                         case 12:
                            var17 = var23.v(var22, 12, b2.a, var17) as java.lang.String;
-                           var27 |= 4096;
+                           var26 |= 4096;
                            continue;
                         default:
                            throw new n(var8);
@@ -456,21 +455,19 @@ public data class AutoModerationNotification(header: String,
                var5 = 10;
             }
 
-            var17 = var18;
-            var18 = var10;
-            var25 = var17;
-            var10 = var16;
-            var35 = var38;
-            var38 = var15;
-            var19 = (java.lang.String)var35;
-            var16 = var26;
-            var15 = var37;
-            var5 = var3;
-            var3 = var27;
+            var14 = var40;
+            var40 = var15;
+            var16 = (java.lang.String)var34;
+            var15 = var25;
+            var32 = var17;
+            var24 = var16;
+            var34 = var14;
+            var17 = var32;
+            var5 = var26;
          }
 
          var23.b(var22);
-         return new AutoModerationNotification(var3, var13, var5, var15, var4, var16, var18, var19, var9, var17, var38, (Integer)var35, var10, var25, null);
+         return new AutoModerationNotification(var5, var13, var3, var12, var4, var15, var17, var16, var9, var14, var40, (Integer)var34, var24, var32, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AutoModerationNotification) {

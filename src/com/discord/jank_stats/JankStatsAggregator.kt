@@ -65,14 +65,14 @@ public object JankStatsAggregator {
 
    public fun issueJankReport(reason: String = ""): JankReport {
       q.h(var1, "reason");
-      val var5: Int = numFrames;
-      val var4: Int = numJankFrames;
+      val var4: Int = numFrames;
+      val var5: Int = numJankFrames;
       numFrames = 0;
       numJankFrames = 0;
       val var7: Log = Log.INSTANCE;
       val var2: Double;
-      if (var5 > 0) {
-         var2 = (double)var4 / var5 * 100.0;
+      if (var4 > 0) {
+         var2 = (double)var5 / var4 * 100.0;
       } else {
          var2 = 0.0;
       }
@@ -81,13 +81,13 @@ public object JankStatsAggregator {
       var6.append("*** Jank Report (");
       var6.append(var1);
       var6.append("), totalFrames = ");
-      var6.append(var5);
-      var6.append(", jankFrames = ");
       var6.append(var4);
+      var6.append(", jankFrames = ");
+      var6.append(var5);
       var6.append(", jank % = ");
       var6.append(var2);
       Log.i$default(var7, "JankStatsAggregator", var6.toString(), null, 4, null);
-      return new JankReport(var5, var4);
+      return new JankReport(var4, var5);
    }
 
    public fun setJankHeuristicMultiplier(jankHeuristicMultiplier: Float) {

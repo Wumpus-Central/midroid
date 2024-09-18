@@ -19,26 +19,6 @@
       "value": " for special content."
     }
   ],
-  "rdfRys": [
-    {
-      "type": 0,
-      "value": "We have a "
-    },
-    {
-      "type": 8,
-      "value": "code",
-      "children": [
-        {
-          "type": 0,
-          "value": "const static codeSpan = 2;"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " here."
-    }
-  ],
   "rmps8/": [
     {
       "type": 0,
@@ -46,7 +26,7 @@
     },
     {
       "type": 8,
-      "value": "link",
+      "value": "$link",
       "children": [
         {
           "type": 0,
@@ -54,7 +34,7 @@
         },
         {
           "type": 1,
-          "value": "_"
+          "value": "$_"
         },
         {
           "type": 0,
@@ -67,6 +47,32 @@
       "value": ", with the url defined in the string."
     }
   ],
+  "rdfRys": [
+    {
+      "type": 0,
+      "value": "We have a "
+    },
+    {
+      "type": 8,
+      "value": "$code",
+      "children": [
+        {
+          "type": 0,
+          "value": "const static codeSpan = 2;"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " here."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
+    }
+  ],
   "HMvECw": [
     {
       "type": 0,
@@ -74,7 +80,7 @@
     },
     {
       "type": 8,
-      "value": "b",
+      "value": "$b",
       "children": [
         {
           "type": 0,
@@ -87,12 +93,6 @@
       "value": " replaced the global i18n system."
     }
   ],
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
   "uczI4u": [
     {
       "type": 0,
@@ -100,7 +100,7 @@
     },
     {
       "type": 8,
-      "value": "link",
+      "value": "$link",
       "children": [
         {
           "type": 1,

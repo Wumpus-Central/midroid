@@ -78,21 +78,21 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.name;
-      val var2: Int = this.backgroundColor;
-      val var1: Int = this.iconColor;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ConnectionsRoleTag(id=");
-      var5.append(var3);
-      var5.append(", name=");
-      var5.append(var4);
-      var5.append(", backgroundColor=");
-      var5.append(var2);
-      var5.append(", iconColor=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.id;
+      val var5: java.lang.String = this.name;
+      val var1: Int = this.backgroundColor;
+      val var2: Int = this.iconColor;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ConnectionsRoleTag(id=");
+      var3.append(var4);
+      var3.append(", name=");
+      var3.append(var5);
+      var3.append(", backgroundColor=");
+      var3.append(var1);
+      var3.append(", iconColor=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -122,30 +122,32 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
 
       public open fun deserialize(decoder: Decoder): ConnectionsRoleTag {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
          var var3: Int;
          var var4: Int;
          val var5: Int;
-         var var7: java.lang.String;
-         var var10: java.lang.String;
-         if (var9.y()) {
-            var7 = var9.t(var8, 0);
-            var10 = var9.t(var8, 1);
-            var4 = var9.k(var8, 2);
-            val var2: Int = var9.k(var8, 3);
+         val var8: java.lang.String;
+         var var12: java.lang.String;
+         if (var10.y()) {
+            val var11: java.lang.String = var10.t(var9, 0);
+            val var7: java.lang.String = var10.t(var9, 1);
+            var4 = var10.k(var9, 2);
+            val var2: Int = var10.k(var9, 3);
             var3 = 15;
+            var8 = var11;
+            var12 = var7;
             var5 = var2;
          } else {
-            var7 = null;
-            var10 = null;
-            var var14: Boolean = true;
+            var var17: java.lang.String = null;
+            var12 = null;
+            var var16: Boolean = true;
             var4 = 0;
             var3 = 0;
-            var var11: Int = 0;
+            var var13: Int = 0;
 
-            while (var14) {
-               val var6: Int = var9.x(var8);
+            while (var16) {
+               val var6: Int = var10.x(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -154,32 +156,33 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
                               throw new n(var6);
                            }
 
-                           var4 = var9.k(var8, 3);
-                           var11 |= 8;
+                           var4 = var10.k(var9, 3);
+                           var13 |= 8;
                         } else {
-                           var3 = var9.k(var8, 2);
-                           var11 |= 4;
+                           var3 = var10.k(var9, 2);
+                           var13 |= 4;
                         }
                      } else {
-                        var10 = var9.t(var8, 1);
-                        var11 |= 2;
+                        var12 = var10.t(var9, 1);
+                        var13 |= 2;
                      }
                   } else {
-                     var7 = var9.t(var8, 0);
-                     var11 |= 1;
+                     var17 = var10.t(var9, 0);
+                     var13 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var16 = false;
                }
             }
 
             var5 = var4;
             var4 = var3;
-            var3 = var11;
+            var8 = var17;
+            var3 = var13;
          }
 
-         var9.b(var8);
-         return new ConnectionsRoleTag(var3, var7, var10, var4, var5, null);
+         var10.b(var9);
+         return new ConnectionsRoleTag(var3, var8, var12, var4, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ConnectionsRoleTag) {

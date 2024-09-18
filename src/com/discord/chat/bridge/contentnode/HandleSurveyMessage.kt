@@ -96,17 +96,17 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.id);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.String = this.loggingName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("HandleSurveyMessage(id=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(", loggingName=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = this.loggingName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("HandleSurveyMessage(id=");
+      var4.append(var3);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", loggingName=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -197,8 +197,8 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
                }
             }
 
-            var14 = var13;
             var12 = (java.lang.String)var14;
+            var14 = var13;
          }
 
          var9.b(var8);

@@ -71,15 +71,15 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var5: java.lang.String = this.full;
-      val var3: java.lang.String = this.formatted;
+      val var3: java.lang.String = this.full;
+      val var5: java.lang.String = this.formatted;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TimestampContentNode(timestamp=");
       var4.append(var1);
       var4.append(", full=");
-      var4.append(var5);
-      var4.append(", formatted=");
       var4.append(var3);
+      var4.append(", formatted=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

@@ -36,15 +36,15 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
    public open fun dispatchTouchEvent(ev: MotionEvent): Boolean {
       q.h(var1, "ev");
-      val var3: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
+      val var4: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
 
-      while (var3.hasNext()) {
-         val var5: Entry = var3.next() as Entry;
-         val var4: Function1 = var5.getKey() as Function1;
+      while (var4.hasNext()) {
+         val var5: Entry = var4.next() as Entry;
+         val var3: Function1 = var5.getKey() as Function1;
          if (var5.getValue() as java.lang.Boolean) {
-            var4.invoke(var1);
+            var3.invoke(var1);
          } else {
-            var3.remove();
+            var4.remove();
          }
       }
 
@@ -60,12 +60,12 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      val var1: ThemeManager = ThemeManager.INSTANCE;
+      val var2: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
       if (q.c(DiscordGestureHandlerEnabledRootView.Companion.access$getNullable(Companion, this), this)) {
-         val var2: Context = this.getContext();
-         q.g(var2, "getContext(...)");
-         var1.updateWindowBackground(var2, false);
+         val var1: Context = this.getContext();
+         q.g(var1, "getContext(...)");
+         var2.updateWindowBackground(var1, false);
       }
    }
 

@@ -2411,7 +2411,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
          }
 
          public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
       this.bgBackdrop$delegate = l.b(new Function0(var1, var2) {

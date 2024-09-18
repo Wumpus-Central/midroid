@@ -33,24 +33,24 @@ public final class PollRecyclerViewBinding implements ViewBinding {
 
    public static PollRecyclerViewBinding bind(View var0) {
       int var1 = R.id.answers;
-      RecyclerView var6 = (RecyclerView)a.a(var0, var1);
-      if (var6 != null) {
+      RecyclerView var4 = (RecyclerView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.primary_action;
-         PollActionButton var4 = (PollActionButton)a.a(var0, var1);
-         if (var4 != null) {
+         PollActionButton var7 = (PollActionButton)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.prompt_text;
-            TextView var7 = (TextView)a.a(var0, var1);
-            if (var7 != null) {
+            TextView var5 = (TextView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.question_text;
                TextView var3 = (TextView)a.a(var0, var1);
                if (var3 != null) {
                   var1 = R.id.secondary_action_button;
-                  PollActionButton var5 = (PollActionButton)a.a(var0, var1);
-                  if (var5 != null) {
+                  PollActionButton var6 = (PollActionButton)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.tertiary_action_button;
                      PollActionButton var2 = (PollActionButton)a.a(var0, var1);
                      if (var2 != null) {
-                        return new PollRecyclerViewBinding(var0, var6, var4, var7, var3, var5, var2);
+                        return new PollRecyclerViewBinding(var0, var4, var7, var5, var3, var6, var2);
                      }
                   }
                }

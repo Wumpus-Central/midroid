@@ -54,12 +54,12 @@ public object PlayAssetDelivery {
                   }
                }
 
-               val var6: Log = Log.INSTANCE;
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Download of ");
-               var10.append(var11);
-               var10.append(" Asset failed");
-               Log.i$default(var6, "PlayAssetDelivery", var10.toString(), null, 4, null);
+               val var10: Log = Log.INSTANCE;
+               val var6: StringBuilder = new StringBuilder();
+               var6.append("Download of ");
+               var6.append(var11);
+               var6.append(" Asset failed");
+               Log.i$default(var10, "PlayAssetDelivery", var6.toString(), null, 4, null);
                var9 = java.lang.Boolean.FALSE;
             }
          }
@@ -110,26 +110,26 @@ public object PlayAssetDelivery {
       // 031: aconst_null
       // 032: astore 3
       // 033: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 036: astore 7
+      // 036: astore 5
       // 038: new java/lang/StringBuilder
       // 03b: dup
       // 03c: invokespecial java/lang/StringBuilder.<init> ()V
-      // 03f: astore 5
-      // 041: aload 5
+      // 03f: astore 7
+      // 041: aload 7
       // 043: ldc "Fetching "
       // 045: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 048: pop
-      // 049: aload 5
+      // 049: aload 7
       // 04b: aload 1
       // 04c: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 04f: pop
-      // 050: aload 5
+      // 050: aload 7
       // 052: ldc " Asset"
       // 054: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 057: pop
-      // 058: aload 7
+      // 058: aload 5
       // 05a: ldc "PlayAssetDelivery"
-      // 05c: aload 5
+      // 05c: aload 7
       // 05e: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 061: aconst_null
       // 062: bipush 4
@@ -250,36 +250,36 @@ public object PlayAssetDelivery {
       // 07: aload 1
       // 08: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 0d: checkcast java/util/List
-      // 10: astore 4
-      // 12: aload 4
-      // 14: ifnull 4d
-      // 17: aload 4
-      // 19: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
-      // 1e: astore 1
-      // 1f: aload 1
-      // 20: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 25: ifeq 42
-      // 28: aload 1
+      // 10: astore 1
+      // 11: aload 1
+      // 12: ifnull 4c
+      // 15: aload 1
+      // 16: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
+      // 1b: astore 4
+      // 1d: aload 4
+      // 1f: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 24: ifeq 42
+      // 27: aload 4
       // 29: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 2e: checkcast kotlin/jvm/functions/Function1
       // 31: iload 2
       // 32: invokestatic java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;
       // 35: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 3a: pop
-      // 3b: goto 1f
+      // 3b: goto 1d
       // 3e: astore 1
-      // 3f: goto 50
-      // 42: aload 4
-      // 44: invokeinterface java/util/List.clear ()V 1
-      // 49: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 4c: astore 1
-      // 4d: aload 3
-      // 4e: monitorexit
-      // 4f: return
-      // 50: aload 3
-      // 51: monitorexit
-      // 52: aload 1
-      // 53: athrow
+      // 3f: goto 4f
+      // 42: aload 1
+      // 43: invokeinterface java/util/List.clear ()V 1
+      // 48: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 4b: astore 1
+      // 4c: aload 3
+      // 4d: monitorexit
+      // 4e: return
+      // 4f: aload 3
+      // 50: monitorexit
+      // 51: aload 1
+      // 52: athrow
    }
 
    public fun getOrFetchAssetPackLocation(assetPackName: String, successCallback: ((Boolean) -> Unit)? = null): String? {

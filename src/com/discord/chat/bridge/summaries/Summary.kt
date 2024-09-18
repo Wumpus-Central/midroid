@@ -189,33 +189,33 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
-      val var3: java.lang.String = this.topic;
-      val var4: java.lang.String = this.summShort;
-      val var9: java.util.List = this.people;
-      val var8: java.lang.String = MessageId.toString-impl(this.startId);
-      val var7: java.lang.String = MessageId.toString-impl(this.endId);
+      val var6: java.lang.String = this.id;
+      val var7: java.lang.String = this.topic;
+      val var2: java.lang.String = this.summShort;
+      val var8: java.util.List = this.people;
+      val var3: java.lang.String = MessageId.toString-impl(this.startId);
+      val var9: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Summary(id=");
-      var2.append(var5);
-      var2.append(", topic=");
-      var2.append(var3);
-      var2.append(", summShort=");
-      var2.append(var4);
-      var2.append(", people=");
-      var2.append(var9);
-      var2.append(", startId=");
-      var2.append(var8);
-      var2.append(", endId=");
-      var2.append(var7);
-      var2.append(", count=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Summary(id=");
+      var4.append(var6);
+      var4.append(", topic=");
+      var4.append(var7);
+      var4.append(", summShort=");
+      var4.append(var2);
+      var4.append(", people=");
+      var4.append(var8);
+      var4.append(", startId=");
+      var4.append(var3);
+      var4.append(", endId=");
+      var4.append(var9);
+      var4.append(", count=");
+      var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -258,7 +258,7 @@ public data class Summary(id: String,
          q.h(var1, "decoder");
          val var17: SerialDescriptor = this.getDescriptor();
          val var18: c = var1.c(var17);
-         val var14: Array<KSerializer> = Summary.access$get$childSerializers$cp();
+         val var15: Array<KSerializer> = Summary.access$get$childSerializers$cp();
          val var7: Boolean = var18.y();
          var var4: Byte = 7;
          var var2: Int;
@@ -268,30 +268,33 @@ public data class Summary(id: String,
          var var11: java.lang.String;
          var var12: java.lang.String;
          var var13: java.lang.String;
-         val var20: java.lang.String;
-         var var23: java.lang.String;
+         val var21: java.lang.String;
+         var var24: java.lang.String;
          if (var7) {
             var13 = var18.t(var17, 0);
-            var11 = var18.t(var17, 1);
-            var12 = var18.t(var17, 2);
-            var10 = var18.m(var17, 3, var14[3], null) as java.util.List;
+            var12 = var18.t(var17, 1);
+            val var14: java.lang.String = var18.t(var17, 2);
+            var10 = var18.m(var17, 3, var15[3], null) as java.util.List;
             val var8: MessageId.$serializer = MessageId.$serializer.INSTANCE;
             val var19: MessageId = var18.m(var17, 4, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var20: java.lang.String;
             if (var19 != null) {
                var20 = var19.unbox-impl();
             } else {
                var20 = null;
             }
 
-            val var22: MessageId = var18.m(var17, 5, var8, null) as MessageId;
-            if (var22 != null) {
-               var23 = var22.unbox-impl();
+            val var23: MessageId = var18.m(var17, 5, var8, null) as MessageId;
+            if (var23 != null) {
+               var24 = var23.unbox-impl();
             } else {
-               var23 = null;
+               var24 = null;
             }
 
             var3 = var18.k(var17, 6);
             var9 = var18.m(var17, 7, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var11 = var20;
+            var21 = var14;
             var2 = 255;
          } else {
             var var5: Boolean = true;
@@ -301,8 +304,8 @@ public data class Summary(id: String,
             var12 = null;
             var11 = null;
             var9 = null;
-            var23 = null;
-            var var21: java.lang.String = null;
+            var24 = null;
+            var var22: java.lang.String = null;
             var2 = 0;
 
             while (var5) {
@@ -317,15 +320,15 @@ public data class Summary(id: String,
                         var2 |= 1;
                         break;
                      case 1:
-                        var21 = var18.t(var17, 1);
+                        var22 = var18.t(var17, 1);
                         var2 |= 2;
                         break label63;
                      case 2:
-                        var23 = var18.t(var17, 2);
+                        var24 = var18.t(var17, 2);
                         var2 |= 4;
                         break label63;
                      case 3:
-                        var10 = var18.m(var17, 3, var14[3], var10) as java.util.List;
+                        var10 = var18.m(var17, 3, var15[3], var10) as java.util.List;
                         var2 |= 8;
                         break label63;
                      case 4:
@@ -345,16 +348,16 @@ public data class Summary(id: String,
                         var2 |= 16;
                         break label63;
                      case 5:
-                        val var29: MessageId;
+                        val var30: MessageId;
                         if (var11 != null) {
-                           var29 = MessageId.box-impl(var11);
+                           var30 = MessageId.box-impl(var11);
                         } else {
-                           var29 = null;
+                           var30 = null;
                         }
 
-                        val var30: MessageId = var18.m(var17, 5, MessageId.$serializer.INSTANCE, var29) as MessageId;
-                        if (var30 != null) {
-                           var11 = var30.unbox-impl();
+                        val var31: MessageId = var18.m(var17, 5, MessageId.$serializer.INSTANCE, var30) as MessageId;
+                        if (var31 != null) {
+                           var11 = var31.unbox-impl();
                         } else {
                            var11 = null;
                         }
@@ -380,15 +383,15 @@ public data class Summary(id: String,
                var4 = 7;
             }
 
-            var12 = var23;
-            var11 = var21;
+            var11 = (java.lang.String)var9;
             var9 = var12;
-            var23 = var11;
-            var20 = (java.lang.String)var9;
+            var24 = var11;
+            var21 = var24;
+            var12 = var22;
          }
 
          var18.b(var17);
-         return new Summary(var2, var13, var11, var12, var10, var20, var23, var3, var9, null, null);
+         return new Summary(var2, var13, var12, var21, var10, var11, var24, var3, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Summary) {

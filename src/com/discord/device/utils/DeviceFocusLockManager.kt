@@ -15,17 +15,17 @@ public object DeviceFocusLockManager {
 
    private fun getParallelAncestorViewTrees(targetViews: List<View>): List<View> {
       val var7: LinkedHashSet = new LinkedHashSet();
-      val var6: LinkedHashSet = new LinkedHashSet();
+      val var8: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
-         val var9: ArrayList = new ArrayList();
+         val var6: ArrayList = new ArrayList();
 
          while (var4.getParent() instanceof ViewGroup) {
             val var5: ViewParent = var4.getParent();
             q.f(var5, "null cannot be cast to non-null type android.view.ViewGroup");
             val var11: ViewGroup = var5 as ViewGroup;
-            if (var6.contains(var5 as ViewGroup)) {
-               var9.clear();
+            if (var8.contains(var5 as ViewGroup)) {
+               var6.clear();
                break;
             }
 
@@ -35,15 +35,15 @@ public object DeviceFocusLockManager {
                var4 = var11.getChildAt(var2);
                if (!var1.contains(var4)) {
                   q.e(var4);
-                  var9.add(var4);
+                  var6.add(var4);
                }
             }
 
-            var6.add(var11);
+            var8.add(var11);
             var4 = var11;
          }
 
-         var7.addAll(var9);
+         var7.addAll(var6);
       }
 
       return i.Q0(var7);
@@ -53,16 +53,16 @@ public object DeviceFocusLockManager {
       val var4: java.util.Iterator = focusExcludedViews.entrySet().iterator();
 
       while (var4.hasNext()) {
-         val var2: View = (var4.next() as Entry).getValue() as View;
-         val var3: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var2.getId());
+         val var3: View = (var4.next() as Entry).getValue() as View;
+         val var2: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var3.getId());
          val var1: Int;
-         if (var3 != null) {
-            var1 = var3;
+         if (var2 != null) {
+            var1 = var2;
          } else {
             var1 = 0;
          }
 
-         var2.setImportantForAccessibility(var1);
+         var3.setImportantForAccessibility(var1);
       }
 
       focusExcludedViews.clear();

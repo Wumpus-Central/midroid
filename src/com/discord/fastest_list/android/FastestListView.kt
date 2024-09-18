@@ -167,9 +167,9 @@ internal class FastestListView(context: Context,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = i.j()) {
       if (var1.isEmpty() xor true) {
-         for (FastestListViewAdapter.DataChanged var4 : var1) {
-            val var3: Int = var4.component1();
-            val var2: Int = var4.component2();
+         for (FastestListViewAdapter.DataChanged var5 : var1) {
+            val var3: Int = var5.component1();
+            val var2: Int = var5.component2();
             if (var2 == 1) {
                this.typedAdapter.notifyItemChanged(var3);
             } else {

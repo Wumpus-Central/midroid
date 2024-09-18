@@ -310,6 +310,25 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    @ReactMethod
+   public fun connectionInstanceGetMLSPairwiseFingerprintB64(connectionId: Int, version: Int, userId: String, callback: Callback): Unit? {
+      kotlin.jvm.internal.q.h(var3, "userId");
+      kotlin.jvm.internal.q.h(var4, "callback");
+      return this.mediaEngine.connectionInstanceGetMLSPairwiseFingerprintB64$media_engine_release(var1, var2, var3, new Function1(var4) {
+         final Callback $callback;
+
+         {
+            super(1);
+            this.$callback = var1;
+         }
+
+         public final void invoke(java.lang.String var1) {
+            kotlin.jvm.internal.q.h(var1, "fingerprint");
+            this.$callback.invoke(new Object[]{var1});
+         }
+      });
+   }
+
+   @ReactMethod
    public fun connectionInstanceGetStats(connectionId: Int, callback: Callback): Unit? {
       kotlin.jvm.internal.q.h(var2, "callback");
       return this.mediaEngine.connectionInstanceGetStats$media_engine_release(var1, new Function1(var2) {
@@ -674,7 +693,8 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
                      "fixed_keyframe_interval",
                      "clips",
                      "first_frame_callback",
-                     "remote_user_multi_stream"
+                     "remote_user_multi_stream",
+                     "mls_pairwise_fingerprints"
                   }
                )
             )
@@ -923,11 +943,11 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       if (var2 != 1) {
          if (var2 != 2) {
-            val var6: ReadableType = var1.getType();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unexpected deviceIndex type: ");
-            var7.append(var6);
-            throw new IllegalArgumentException(var7.toString());
+            val var7: ReadableType = var1.getType();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unexpected deviceIndex type: ");
+            var6.append(var7);
+            throw new IllegalArgumentException(var6.toString());
          }
 
          val var5: java.lang.String = var1.asString();
@@ -962,11 +982,11 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       if (var2 != 1) {
          if (var2 != 2) {
-            val var6: ReadableType = var1.getType();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unexpected deviceIndex type: ");
-            var7.append(var6);
-            throw new IllegalArgumentException(var7.toString());
+            val var7: ReadableType = var1.getType();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unexpected deviceIndex type: ");
+            var6.append(var7);
+            throw new IllegalArgumentException(var6.toString());
          }
 
          val var5: java.lang.String = var1.asString();
@@ -1007,11 +1027,11 @@ public class MediaEngineModule(reactContext: ReactApplicationContext) : ReactCon
 
       if (var2 != 1) {
          if (var2 != 2) {
-            val var7: ReadableType = var1.getType();
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("Unexpected deviceIndex type: ");
-            var6.append(var7);
-            throw new IllegalArgumentException(var6.toString());
+            val var6: ReadableType = var1.getType();
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Unexpected deviceIndex type: ");
+            var7.append(var6);
+            throw new IllegalArgumentException(var7.toString());
          }
 
          val var5: java.lang.String = var1.asString();

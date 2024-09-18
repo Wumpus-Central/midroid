@@ -70,10 +70,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
          if (var5 != 2) {
             if (var5 == 3) {
                val var15: RectF = this.pathRect;
-               val var2: Float = this.height;
+               val var4: Float = this.height;
                val var3: Float = this.shapeHeight;
                this.pathRect.top = (this.height - this.shapeHeight) / 2;
-               var15.bottom = var2 - (var2 - var3) / 2;
+               var15.bottom = var4 - (var4 - var3) / 2;
             }
          } else {
             val var16: RectF = this.pathRect;
@@ -92,10 +92,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
          if (var5 != 2) {
             if (var5 == 3) {
                val var19: RectF = this.pathRect;
-               val var9: Float = this.width;
-               val var13: Float = this.shapeWidth;
+               val var13: Float = this.width;
+               val var12: Float = this.shapeWidth;
                this.pathRect.left = (this.width - this.shapeWidth) / 2;
-               var19.right = var9 - (var9 - var13) / 2;
+               var19.right = var13 - (var13 - var12) / 2;
             }
          } else {
             val var20: RectF = this.pathRect;

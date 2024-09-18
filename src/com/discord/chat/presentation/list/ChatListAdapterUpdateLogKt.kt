@@ -60,13 +60,13 @@ private fun ListOperation.label(): String {
       var7.append(")");
       var4 = var7.toString();
    } else if (var0 is ListOperation.RemoveRange) {
-      val var18: Int = (var0 as ListOperation.RemoveRange).getFirst();
-      val var15: Int = (var0 as ListOperation.RemoveRange).getLast();
+      val var15: Int = (var0 as ListOperation.RemoveRange).getFirst();
+      val var18: Int = (var0 as ListOperation.RemoveRange).getLast();
       val var9: StringBuilder = new StringBuilder();
       var9.append("RRNG(");
-      var9.append(var18);
-      var9.append("-");
       var9.append(var15);
+      var9.append("-");
+      var9.append(var18);
       var9.append(")");
       var4 = var9.toString();
    } else if (var0 is ListOperation.Change) {

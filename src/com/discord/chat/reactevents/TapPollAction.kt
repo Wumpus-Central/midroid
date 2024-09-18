@@ -77,16 +77,16 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.type;
+      val var4: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.type;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapPollAction(channelId=");
-      var2.append(var3);
-      var2.append(", messageId=");
-      var2.append(var1);
-      var2.append(", type=");
       var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var3);
+      var2.append(", type=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -119,15 +119,15 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
          val var9: c = var1.c(var8);
          var var2: Int;
          var var5: java.lang.String;
-         var var6: java.lang.String;
+         val var7: java.lang.String;
          val var10: java.lang.String;
          if (var9.y()) {
-            var6 = var9.t(var8, 0);
-            var5 = var9.t(var8, 1);
+            var5 = var9.t(var8, 0);
+            var7 = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
             var2 = 7;
          } else {
-            var6 = null;
+            var var6: java.lang.String = null;
             var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
@@ -157,12 +157,13 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
                }
             }
 
-            var5 = var11;
+            var7 = var11;
             var10 = var5;
+            var5 = var6;
          }
 
          var9.b(var8);
-         return new TapPollAction(var2, var6, var5, var10, null);
+         return new TapPollAction(var2, var5, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapPollAction) {

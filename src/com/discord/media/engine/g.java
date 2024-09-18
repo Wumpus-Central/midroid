@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeConnection;
-import kotlin.jvm.functions.Function4;
+import com.discord.native.engine.NativeEngine;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class g implements NativeConnection.OnPingTimeoutCallback {
-   public final Function4 a;
+public final class g implements NativeEngine.StartLocalAudioRecordingCallback {
+   public final Function1 a;
 
    @Override
-   public final void onPingTimeout(String var1, int var2, int var3, int var4) {
-      MediaEngine.r(this.a, var1, var2, var3, var4);
+   public final void onStartLocalAudioRecording(boolean var1) {
+      MediaEngine.x(this.a, var1);
    }
 }

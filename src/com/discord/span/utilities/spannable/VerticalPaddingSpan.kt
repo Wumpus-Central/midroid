@@ -38,18 +38,18 @@ public class VerticalPaddingSpan(top: Int, bottom: Int) : LineHeightSpan {
 
          val var7: Spanned = var1 as Spanned;
          if ((var1 as Spanned).getSpanStart(this) == var2) {
-            var2 = this.top;
+            var4 = this.top;
             var6.top = var6.top - this.top;
-            var6.ascent -= var2;
+            var6.ascent -= var4;
          } else {
             var6.top = this.origTop;
             var6.ascent = this.origAscent;
          }
 
          if (var7.getSpanEnd(this) == var3) {
-            var2 = this.bottom;
+            var3 = this.bottom;
             var6.bottom = var6.bottom + this.bottom;
-            var6.descent += var2;
+            var6.descent += var3;
          } else {
             var6.bottom = this.origBottom;
             var6.descent = this.origDescent;

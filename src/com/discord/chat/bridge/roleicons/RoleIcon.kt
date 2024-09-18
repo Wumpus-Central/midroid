@@ -104,18 +104,18 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.source;
-      val var4: java.lang.String = this.unicodeEmoji;
-      val var2: java.lang.String = this.name;
+      val var4: java.lang.String = this.source;
+      val var2: java.lang.String = this.unicodeEmoji;
+      val var3: java.lang.String = this.name;
       val var1: Int = this.size;
       val var5: java.lang.String = this.alt;
       val var6: StringBuilder = new StringBuilder();
       var6.append("RoleIcon(source=");
-      var6.append(var3);
-      var6.append(", unicodeEmoji=");
       var6.append(var4);
-      var6.append(", name=");
+      var6.append(", unicodeEmoji=");
       var6.append(var2);
+      var6.append(", name=");
+      var6.append(var3);
       var6.append(", size=");
       var6.append(var1);
       var6.append(", alt=");
@@ -163,17 +163,16 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
             val var12: b2 = b2.a;
             var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
             var6 = var11.v(var10, 1, var12, null) as java.lang.String;
-            val var7: java.lang.String = var11.t(var10, 2);
+            var9 = var11.t(var10, 2);
             val var2: Int = var11.k(var10, 3);
             var13 = var11.t(var10, 4);
             var3 = 31;
-            var9 = var7;
             var4 = var2;
          } else {
             var var16: Boolean = true;
             var3 = 0;
             var8 = null;
-            var var18: java.lang.String = null;
+            var var7: java.lang.String = null;
             var6 = null;
             var13 = null;
             var var14: Int = 0;
@@ -200,7 +199,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                            var14 |= 4;
                         }
                      } else {
-                        var18 = var11.v(var10, 1, b2.a, var18) as java.lang.String;
+                        var7 = var11.v(var10, 1, b2.a, var7) as java.lang.String;
                         var14 |= 2;
                      }
                   } else {
@@ -214,7 +213,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
 
             var4 = var3;
             var9 = var6;
-            var6 = var18;
+            var6 = var7;
             var3 = var14;
          }
 

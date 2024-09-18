@@ -125,16 +125,16 @@ public object SimpleMarkdownRules {
             val var4: Int;
             val var5: Int;
             if (var8 != null && var8.length() > 0) {
-               var5 = var1.start(2);
-               var4 = var1.end(2);
+               var4 = var1.start(2);
+               var5 = var1.end(2);
             } else {
-               var5 = var1.start(1);
-               var4 = var1.end(1);
+               var4 = var1.start(1);
+               var5 = var1.end(1);
             }
 
             val var6: ArrayList = new ArrayList(1);
             var6.add(new StyleSpan(2));
-            return ParseSpec.Companion.createNonterminal(new StyleNode(var6), var3, var5, var4);
+            return ParseSpec.Companion.createNonterminal(new StyleNode(var6), var3, var4, var5);
          }
       };
    }

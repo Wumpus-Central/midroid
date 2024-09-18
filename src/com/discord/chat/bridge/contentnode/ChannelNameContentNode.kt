@@ -96,21 +96,21 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var2: ChannelType = this.channelType;
+      val var4: ChannelType = this.channelType;
       val var1: java.lang.String = this.iconType;
-      val var3: java.lang.String = this.icon;
-      val var5: java.util.List = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChannelNameContentNode(channelType=");
-      var4.append(var2);
-      var4.append(", iconType=");
-      var4.append(var1);
-      var4.append(", icon=");
-      var4.append(var3);
-      var4.append(", content=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.String = this.icon;
+      val var3: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ChannelNameContentNode(channelType=");
+      var2.append(var4);
+      var2.append(", iconType=");
+      var2.append(var1);
+      var2.append(", icon=");
+      var2.append(var5);
+      var2.append(", content=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -144,23 +144,21 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
          val var5: Boolean = var11.y();
          var var8: ChannelType = null;
          var var2: Int;
-         var var6: java.lang.String;
+         var var6: Any;
          var var7: java.lang.String;
-         var var13: Any;
+         val var12: java.lang.String;
          if (var5) {
             var8 = var11.v(var10, 0, ChannelType.Serializer.INSTANCE, null) as ChannelType;
             var7 = var11.t(var10, 1);
-            var13 = var11.v(var10, 2, b2.a, null) as java.lang.String;
-            val var14: java.util.List = var11.m(var10, 3, var9[3], null) as java.util.List;
+            var12 = var11.v(var10, 2, b2.a, null) as java.lang.String;
+            var6 = var11.m(var10, 3, var9[3], null) as java.util.List;
             var2 = 15;
-            var6 = (java.lang.String)var13;
-            var13 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var6 = null;
-            var13 = null;
+            var var13: Any = null;
 
             while (var3) {
                val var4: Int = var11.x(var10);
@@ -190,10 +188,13 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
                   var3 = false;
                }
             }
+
+            var6 = var13;
+            var12 = (java.lang.String)var6;
          }
 
          var11.b(var10);
-         return new ChannelNameContentNode(var2, var8, var7, var6, (java.util.List)var13, null);
+         return new ChannelNameContentNode(var2, var8, var7, var12, (java.util.List)var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChannelNameContentNode) {

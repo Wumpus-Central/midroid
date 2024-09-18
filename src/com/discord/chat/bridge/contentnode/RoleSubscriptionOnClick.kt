@@ -87,8 +87,8 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.action.hashCode();
-      val var4: Int = this.guildId.hashCode();
+      val var4: Int = this.action.hashCode();
+      val var5: Int = this.guildId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.messageId == null) {
@@ -108,28 +108,28 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
          var3 = this.roleSubscriptionListingId.hashCode();
       }
 
-      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var4: java.lang.String = this.action;
       val var2: java.lang.String = this.guildId;
-      val var6: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.roleSubscriptionListingId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("RoleSubscriptionOnClick(action=");
-      var1.append(var4);
-      var1.append(", guildId=");
-      var1.append(var2);
-      var1.append(", messageId=");
-      var1.append(var6);
-      var1.append(", channelId=");
-      var1.append(var5);
-      var1.append(", roleSubscriptionListingId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var5: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.channelId;
+      val var6: java.lang.String = this.roleSubscriptionListingId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("RoleSubscriptionOnClick(action=");
+      var3.append(var4);
+      var3.append(", guildId=");
+      var3.append(var2);
+      var3.append(", messageId=");
+      var3.append(var5);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(", roleSubscriptionListingId=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

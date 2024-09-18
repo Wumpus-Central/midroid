@@ -116,12 +116,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var11.getImageUri())) {
                var18 = var11.getImageUri();
             } else {
-               val var13: Context = this.getContext();
-               q.g(var13, "getContext(...)");
-               val var19: ReactAsset = ReactAsset.DefaultAvatar0;
                val var14: Context = this.getContext();
                q.g(var14, "getContext(...)");
-               var18 = ReactAssetUtilsKt.getReactImageUrl(var13, var19.getUri(var14));
+               val var13: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var19: Context = this.getContext();
+               q.g(var19, "getContext(...)");
+               var18 = ReactAssetUtilsKt.getReactImageUrl(var14, var13.getUri(var19));
             }
 
             val var25: Context = this.getContext();
@@ -129,12 +129,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             var11 = new OverlappingCirclesView.OverlappingClippedItem(var25, var18, var10, this.overlapPx, this.separatorSizePx, this.imageLoadingColorDrawable);
          } else {
             val var21: Context = this.getContext();
-            val var8: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
-            val var6: Int = this.overlapPx;
-            val var9: Int = this.separatorSizePx;
+            val var9: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
+            val var8: Int = this.overlapPx;
+            val var6: Int = this.separatorSizePx;
             val var7: Int = this.getLayoutParams().height;
             q.e(var21);
-            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var8, var10, var6, var9, var7);
+            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var9, var10, var8, var6, var7);
          }
 
          val var26: LayoutParams = new LayoutParams(this.getLayoutParams().height, this.getLayoutParams().height);
@@ -370,7 +370,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          // 1a: aload 1
          // 1b: aload 0
          // 1c: invokespecial com/discord/overlapping_circles/OverlappingCirclesView$PlaceholderItem.getSeparatorClipPath ()Landroid/graphics/Path;
-         // 1f: invokestatic com/discord/chat/presentation/list/c.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
+         // 1f: invokestatic com/discord/chat/presentation/list/d.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
          // 22: pop
          // 23: goto 37
          // 26: astore 4

@@ -113,27 +113,27 @@ internal data class ServiceNotificationConfiguration(title: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.title;
-      val var1: java.lang.String = this.content;
-      val var4: ServiceNotificationConfiguration.Priority = this.priority;
-      val var5: ServiceNotificationConfiguration.Action = this.contentAction;
-      val var2: java.util.List = this.auxiliaryActions;
-      val var6: ServiceNotificationConfiguration.Type = this.type;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ServiceNotificationConfiguration(title=");
-      var7.append(var3);
-      var7.append(", content=");
-      var7.append(var1);
-      var7.append(", priority=");
-      var7.append(var4);
-      var7.append(", contentAction=");
-      var7.append(var5);
-      var7.append(", auxiliaryActions=");
-      var7.append(var2);
-      var7.append(", type=");
-      var7.append(var6);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.lang.String = this.title;
+      val var5: java.lang.String = this.content;
+      val var2: ServiceNotificationConfiguration.Priority = this.priority;
+      val var1: ServiceNotificationConfiguration.Action = this.contentAction;
+      val var3: java.util.List = this.auxiliaryActions;
+      val var4: ServiceNotificationConfiguration.Type = this.type;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ServiceNotificationConfiguration(title=");
+      var6.append(var7);
+      var6.append(", content=");
+      var6.append(var5);
+      var6.append(", priority=");
+      var6.append(var2);
+      var6.append(", contentAction=");
+      var6.append(var1);
+      var6.append(", auxiliaryActions=");
+      var6.append(var3);
+      var6.append(", type=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public data class Action(tag: String, taskName: String, title: String?, data: Map<String, String>) {
@@ -212,18 +212,18 @@ internal data class ServiceNotificationConfiguration(title: String,
          val var3: java.lang.String = this.tag;
          val var1: java.lang.String = this.taskName;
          val var5: java.lang.String = this.title;
-         val var2: java.util.Map = this.data;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Action(tag=");
-         var4.append(var3);
-         var4.append(", taskName=");
-         var4.append(var1);
-         var4.append(", title=");
-         var4.append(var5);
-         var4.append(", data=");
-         var4.append(var2);
-         var4.append(")");
-         return var4.toString();
+         val var4: java.util.Map = this.data;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Action(tag=");
+         var2.append(var3);
+         var2.append(", taskName=");
+         var2.append(var1);
+         var2.append(", title=");
+         var2.append(var5);
+         var2.append(", data=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
    }
 

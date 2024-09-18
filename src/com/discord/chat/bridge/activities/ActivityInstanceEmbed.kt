@@ -277,8 +277,8 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var5: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
-         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var5[4]), h.a, var1, n0.a, h.a};
+         val var2: b2 = b2.a;
+         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var5[4]), h.a, var2, n0.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): ActivityInstanceEmbed {
@@ -287,37 +287,37 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          val var19: c = var1.c(var18);
          val var20: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
          val var11: Boolean = var19.y();
-         var var3: Int = 7;
+         var var3: Byte = 7;
          var var8: Byte = 6;
          var var9: Byte = 5;
          var var2: Int;
-         var var4: Byte;
+         val var4: Int;
          var var5: Byte;
          var var12: java.lang.String;
          var var13: java.lang.String;
          var var14: Any;
-         val var15: java.util.List;
-         var var16: Any;
-         val var17: java.lang.String;
+         var var15: java.lang.String;
+         var var16: java.util.List;
+         val var17: Any;
          if (var11) {
-            var16 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
+            var17 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
             var14 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var13 = var19.t(var18, 2);
-            var17 = var19.v(var18, 3, b2.a, null) as java.lang.String;
+            var15 = var19.v(var18, 3, b2.a, null) as java.lang.String;
             val var21: java.util.List = var19.v(var18, 4, var20[4], null) as java.util.List;
             var5 = var19.s(var18, 5);
             var12 = var19.t(var18, 6);
             var2 = var19.k(var18, 7);
-            var4 = var19.s(var18, 8);
-            var3 = 511;
-            var15 = var21;
+            var3 = var19.s(var18, 8);
+            var4 = 511;
+            var16 = var21;
          } else {
             var var6: Boolean = true;
             var var7: Int = 0;
-            var4 = 0;
+            var var25: Byte = 0;
             var2 = 0;
             var16 = null;
-            var var25: java.lang.String = null;
+            var15 = null;
             var var22: Any = null;
             var13 = null;
             var12 = null;
@@ -347,7 +347,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                         var2 |= 4;
                         break label40;
                      case 3:
-                        var25 = var19.v(var18, 3, b2.a, var25) as java.lang.String;
+                        var15 = var19.v(var18, 3, b2.a, var15) as java.lang.String;
                         var2 |= 8;
                         break label40;
                      case 4:
@@ -367,7 +367,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                         var2 |= 128;
                         continue;
                      case 8:
-                        var4 = var19.s(var18, 8);
+                        var25 = var19.s(var18, 8);
                         var2 |= 256;
                         continue;
                      default:
@@ -382,16 +382,15 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                var3 = 7;
             }
 
-            var17 = var25;
-            var3 = var2;
+            var3 = var25;
+            var4 = var2;
             var2 = var7;
-            var15 = (java.util.List)var16;
-            var16 = var22;
+            var17 = var22;
          }
 
          var19.b(var18);
          return new ActivityInstanceEmbed(
-            var3, (ApplicationId)var16, (ChannelId)var14, var13, var17, var15, (boolean)var5, var12, var2, (boolean)var4, null, null
+            var4, (ApplicationId)var17, (ChannelId)var14, var13, var15, var16, (boolean)var5, var12, var2, (boolean)var3, null, null
          );
       }
 

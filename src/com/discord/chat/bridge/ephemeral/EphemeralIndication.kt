@@ -77,16 +77,16 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    }
 
    public override fun toString(): String {
-      val var3: StructurableText = this.content;
-      val var1: java.lang.String = this.helpArticleLink;
-      val var4: java.lang.String = this.helpButtonAccessibilityLabel;
+      val var4: StructurableText = this.content;
+      val var3: java.lang.String = this.helpArticleLink;
+      val var1: java.lang.String = this.helpButtonAccessibilityLabel;
       val var2: StringBuilder = new StringBuilder();
       var2.append("EphemeralIndication(content=");
-      var2.append(var3);
-      var2.append(", helpArticleLink=");
-      var2.append(var1);
-      var2.append(", helpButtonAccessibilityLabel=");
       var2.append(var4);
+      var2.append(", helpArticleLink=");
+      var2.append(var3);
+      var2.append(", helpButtonAccessibilityLabel=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -120,18 +120,19 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
          val var5: Boolean = var10.y();
          var var7: StructurableText = null;
          var var2: Int;
-         val var6: StructurableText;
-         val var8: java.lang.String;
          var var11: java.lang.String;
+         var var12: java.lang.String;
          if (var5) {
-            var6 = var10.m(var9, 0, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var8 = var10.t(var9, 1);
+            val var6: StructurableText = var10.m(var9, 0, StructurableTextSerializer.INSTANCE, null) as StructurableText;
+            val var8: java.lang.String = var10.t(var9, 1);
             var11 = var10.t(var9, 2);
             var2 = 7;
+            var7 = var6;
+            var12 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var12: java.lang.String = null;
+            var12 = null;
             var11 = null;
 
             while (var3) {
@@ -157,13 +158,10 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
                   var3 = false;
                }
             }
-
-            var8 = var12;
-            var6 = var7;
          }
 
          var10.b(var9);
-         return new EphemeralIndication(var2, var6, var8, var11, null);
+         return new EphemeralIndication(var2, var7, var12, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EphemeralIndication) {

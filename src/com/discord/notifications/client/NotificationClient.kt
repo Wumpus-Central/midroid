@@ -79,9 +79,9 @@ public class NotificationClient {
    }
 
    private fun showNotification(context: Context, notificationData: NotificationData, notificationDataMap: Map<String, String>, makeOrUpdateShortcut: Boolean) {
-      val var12: CrashReporting = CrashReporting.INSTANCE;
+      val var9: CrashReporting = CrashReporting.INSTANCE;
       val var11: Pair = w.a("type", var2.getType());
-      val var9: Pair = w.a("channelId", java.lang.String.valueOf(var2.getChannelId-qMVnFVQ()));
+      var var12: Pair = w.a("channelId", java.lang.String.valueOf(var2.getChannelId-qMVnFVQ()));
       var var8: java.lang.String = var2.getMessageId-N_6c4I0();
       var var10: java.lang.String = "null";
       if (var8 == null) {
@@ -91,7 +91,7 @@ public class NotificationClient {
       }
 
       CrashReporting.addBreadcrumb$default(
-         var12, "Kotlin NotificationClient received Notification.", r.l(new Pair[]{var11, var9, w.a("messageId", var8)}), null, 4, null
+         var9, "Kotlin NotificationClient received Notification.", r.l(new Pair[]{var11, var12, w.a("messageId", var8)}), null, 4, null
       );
       if (this.cache.isAuthed(var1)) {
          val var82: SilentNotificationManager = SilentNotificationManager.Companion.get(var1);
@@ -143,14 +143,14 @@ public class NotificationClient {
 
                if (var8 != null) {
                   var var6: Long;
-                  var var13: PushNotificationMonitor;
+                  var var13: java.lang.String;
                   var var14: java.lang.String;
-                  var var15: java.lang.String;
+                  var var15: PushNotificationMonitor;
                   try {
-                     var13 = PushNotificationMonitor.INSTANCE;
-                     var15 = var2.getType();
+                     var15 = PushNotificationMonitor.INSTANCE;
+                     var14 = var2.getType();
                      var6 = System.currentTimeMillis();
-                     var14 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
+                     var13 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
                      var74 = NotificationDataUtilsKt.getContent(var2, var1, true);
                   } catch (var30: Exception) {
                      val var37: Log = Log.INSTANCE;
@@ -201,7 +201,7 @@ public class NotificationClient {
                   }
 
                   try {
-                     var13.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var15, var14, var75, var16, var10));
+                     var15.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var14, var13, var75, var16, var10));
                   } catch (var26: Exception) {
                      val var41: Log = Log.INSTANCE;
                      val var57: java.lang.String = NotificationClient.class.getSimpleName();
@@ -265,11 +265,11 @@ public class NotificationClient {
 
                   if (var76 != null && var78 != null) {
                      try {
-                        val var67: Any = var3.get("receiving_user_id");
-                        val var83: StringBuilder = new StringBuilder();
-                        var83.append("@account.");
-                        var83.append(var67);
-                        var68 = var83.toString();
+                        var12 = (Pair)var3.get("receiving_user_id");
+                        val var67: StringBuilder = new StringBuilder();
+                        var67.append("@account.");
+                        var67.append(var12);
+                        var68 = var67.toString();
                         var84 = var2.getGuildId-qOKuAAo();
                      } catch (var21: Exception) {
                         val var46: Log = Log.INSTANCE;
@@ -424,27 +424,27 @@ public class NotificationClient {
    public fun onDirectReplySuccess(context: Context, data: String) {
       q.h(var1, "context");
       q.h(var2, "data");
-      val var3: NotificationData = DirectReplyMessage.Companion.toNotificationData(var2);
-      val var4: Pair = w.a("type", var3.getType());
-      val var5: Pair = w.a("channel_id", java.lang.String.valueOf(var3.getChannelId-qMVnFVQ()));
-      var2 = var3.getMessageId-N_6c4I0();
+      val var4: NotificationData = DirectReplyMessage.Companion.toNotificationData(var2);
+      val var5: Pair = w.a("type", var4.getType());
+      val var3: Pair = w.a("channel_id", java.lang.String.valueOf(var4.getChannelId-qMVnFVQ()));
+      var2 = var4.getMessageId-N_6c4I0();
       if (var2 == null) {
          var2 = "null";
       } else {
          var2 = MessageId.toString-impl(var2);
       }
 
-      this.showNotification(var1, var3, r.l(new Pair[]{var4, var5, w.a("message_id", var2)}), false);
+      this.showNotification(var1, var4, r.l(new Pair[]{var5, var3, w.a("message_id", var2)}), false);
    }
 
    public fun onNotificationReceived(context: Context, data: Map<String, String>) {
       q.h(var1, "context");
       q.h(var2, "data");
-      val var5: fl.a.a = fl.a.b;
-      val var6: KSerializer = NotificationData.Companion.serializer();
+      val var3: fl.a.a = fl.a.b;
+      val var5: KSerializer = NotificationData.Companion.serializer();
       val var4: java.util.Map = r.x(var2);
       var4.put("time_received", java.lang.String.valueOf(System.currentTimeMillis()));
-      this.showNotification(var1, var5.d(var6, var4) as NotificationData, var2, true);
+      this.showNotification(var1, var3.d(var5, var4) as NotificationData, var2, true);
    }
 
    public fun setCurrentUser(context: Context, username: String?, userId: String?) {

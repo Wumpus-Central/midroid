@@ -61,17 +61,17 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.index;
       val var3: GiftEmbed = this.gift;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("GiftMessageAccessory(messageId=");
-      var2.append(var4);
-      var2.append(", index=");
-      var2.append(var1);
-      var2.append(", gift=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("GiftMessageAccessory(messageId=");
+      var4.append(var2);
+      var4.append(", index=");
+      var4.append(var1);
+      var4.append(", gift=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

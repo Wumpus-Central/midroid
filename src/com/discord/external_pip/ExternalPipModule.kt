@@ -58,10 +58,10 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var1: ReactEvents = this.reactEvents;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
+         val var2: ReactEvents = this.reactEvents;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
       }
    }
 

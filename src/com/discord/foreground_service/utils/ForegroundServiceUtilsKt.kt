@@ -13,18 +13,18 @@ import l3.b
 internal fun Service.startForegroundCompat(notificationId: Int, notification: Notification) {
    q.h(var0, "<this>");
    q.h(var2, "notification");
-   val var5: Int = VERSION.SDK_INT;
+   val var4: Int = VERSION.SDK_INT;
    if (VERSION.SDK_INT >= 29) {
       var var3: Short;
-      val var4: Int = var2.extras.getInt("permissionType", -1);
+      val var5: Int = var2.extras.getInt("permissionType", -1);
       var3 = 1;
       label20:
-      if (var4 != 0) {
-         if (var4 != 1) {
-            if (var4 != 2) {
+      if (var5 != 0) {
+         if (var5 != 1) {
+            if (var5 != 2) {
                throw new IllegalStateException("Unknown service type".toString());
             }
-         } else if (var5 >= 30) {
+         } else if (var4 >= 30) {
             var3 = 128;
             break label20;
          }

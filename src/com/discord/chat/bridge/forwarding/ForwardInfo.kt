@@ -75,17 +75,17 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
 
    public override fun toString(): String {
       val var1: Int = this.snapshotIndex;
-      val var3: ForwardFooterInfo = this.footerInfo;
+      val var4: ForwardFooterInfo = this.footerInfo;
       val var2: Boolean = this.useOldIcon;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ForwardInfo(snapshotIndex=");
-      var4.append(var1);
-      var4.append(", footerInfo=");
-      var4.append(var3);
-      var4.append(", useOldIcon=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForwardInfo(snapshotIndex=");
+      var3.append(var1);
+      var3.append(", footerInfo=");
+      var3.append(var4);
+      var3.append(", useOldIcon=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

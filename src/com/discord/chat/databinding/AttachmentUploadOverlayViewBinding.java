@@ -43,27 +43,27 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
 
    public static AttachmentUploadOverlayViewBinding bind(View var0) {
       int var1 = R.id.upload_cancel;
-      SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-      if (var8 != null) {
+      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.upload_complete;
-         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.upload_complete_background;
-            MaterialCardView var4 = (MaterialCardView)a.a(var0, var1);
-            if (var4 != null) {
+            MaterialCardView var7 = (MaterialCardView)a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.upload_complete_layout;
                ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
                if (var2 != null) {
                   var1 = R.id.upload_progress;
-                  CircularProgressIndicator var7 = (CircularProgressIndicator)a.a(var0, var1);
-                  if (var7 != null) {
+                  CircularProgressIndicator var4 = (CircularProgressIndicator)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.upload_progress_background;
                      View var3 = a.a(var0, var1);
                      if (var3 != null) {
                         var1 = R.id.upload_progress_layout;
-                        ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
-                        if (var6 != null) {
-                           return new AttachmentUploadOverlayViewBinding(var0, var8, var5, var4, var2, var7, var3, var6);
+                        ConstraintLayout var8 = (ConstraintLayout)a.a(var0, var1);
+                        if (var8 != null) {
+                           return new AttachmentUploadOverlayViewBinding(var0, var5, var6, var7, var2, var4, var3, var8);
                         }
                      }
                   }

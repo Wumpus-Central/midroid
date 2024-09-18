@@ -49,6 +49,7 @@ public enum class ReactAsset {
    Disconnect,
    Download,
    File,
+   GameController,
    Gif,
    Help,
    HideMedia,

@@ -29,13 +29,13 @@ public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding
       TextView var2 = (TextView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.channel_name;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
-            ConstraintLayout var4 = (ConstraintLayout)var0;
+         TextView var5 = (TextView)a.a(var0, var1);
+         if (var5 != null) {
+            ConstraintLayout var3 = (ConstraintLayout)var0;
             var1 = R.id.guild_name;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
-               return new OverlayVoiceChannelSearchResultBinding(var4, var2, var3, var4, var5);
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
+               return new OverlayVoiceChannelSearchResultBinding(var3, var2, var5, var3, var4);
             }
          }
       }

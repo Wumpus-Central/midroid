@@ -71,32 +71,33 @@ public class AndroidAudioDevice {
 
       public open fun deserialize(decoder: Decoder): AndroidAudioDevice {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: kotlinx.serialization.encoding.c = var1.c(var8);
-         val var10: Array<KSerializer> = AndroidAudioDevice.access$get$childSerializers$cp();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: kotlinx.serialization.encoding.c = var1.c(var9);
+         val var8: Array<KSerializer> = AndroidAudioDevice.access$get$childSerializers$cp();
+         var var3: Int;
          var var4: Int;
-         val var5: Int;
-         var var7: SimpleDeviceType;
-         var var11: java.lang.String;
+         val var11: SimpleDeviceType;
          var var13: Int;
-         if (var9.y()) {
-            var13 = var9.k(var8, 0);
-            var7 = var9.m(var8, 1, var10[1], null) as SimpleDeviceType;
-            val var2: Int = var9.k(var8, 2);
-            var11 = var9.t(var8, 3);
-            var4 = 15;
-            var5 = var13;
-            var13 = var2;
+         val var19: java.lang.String;
+         if (var10.y()) {
+            var13 = var10.k(var9, 0);
+            var11 = var10.m(var9, 1, var8[1], null) as SimpleDeviceType;
+            val var5: Int = var10.k(var9, 2);
+            val var7: java.lang.String = var10.t(var9, 3);
+            var3 = 15;
+            var4 = var13;
+            var13 = var5;
+            var19 = var7;
          } else {
-            var var15: Boolean = true;
+            var var16: Boolean = true;
             var4 = 0;
-            var var12: Int = 0;
-            var7 = null;
-            var11 = null;
             var13 = 0;
+            var var18: SimpleDeviceType = null;
+            var var12: java.lang.String = null;
+            var3 = 0;
 
-            while (var15) {
-               val var6: Int = var9.x(var8);
+            while (var16) {
+               val var6: Int = var10.x(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -105,31 +106,33 @@ public class AndroidAudioDevice {
                               throw new n(var6);
                            }
 
-                           var11 = var9.t(var8, 3);
-                           var12 |= 8;
+                           var12 = var10.t(var9, 3);
+                           var13 |= 8;
                         } else {
-                           var13 = var9.k(var8, 2);
-                           var12 |= 4;
+                           var3 = var10.k(var9, 2);
+                           var13 |= 4;
                         }
                      } else {
-                        var7 = var9.m(var8, 1, var10[1], var7) as SimpleDeviceType;
-                        var12 |= 2;
+                        var18 = var10.m(var9, 1, var8[1], var18) as SimpleDeviceType;
+                        var13 |= 2;
                      }
                   } else {
-                     var4 = var9.k(var8, 0);
-                     var12 |= 1;
+                     var4 = var10.k(var9, 0);
+                     var13 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var16 = false;
                }
             }
 
-            var5 = var4;
-            var4 = var12;
+            var3 = var13;
+            var19 = var12;
+            var13 = var3;
+            var11 = var18;
          }
 
-         var9.b(var8);
-         return new AndroidAudioDevice(var4, var5, var7, var13, var11, null);
+         var10.b(var9);
+         return new AndroidAudioDevice(var3, var4, var11, var13, var19, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AndroidAudioDevice) {

@@ -72,15 +72,15 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.action;
-      val var1: java.lang.String = ChannelId.toString-impl(this.messageChannelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PinsOnClick(action=");
-      var2.append(var3);
-      var2.append(", messageChannelId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.action;
+      val var2: java.lang.String = ChannelId.toString-impl(this.messageChannelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PinsOnClick(action=");
+      var3.append(var1);
+      var3.append(", messageChannelId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -106,43 +106,48 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
 
       public open fun deserialize(decoder: Decoder): PinsOnClick {
          q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         val var5: Boolean = var8.y();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
          var var6: java.lang.String = null;
          var var2: Int;
-         var var9: ChannelId;
+         val var7: java.lang.String;
+         var var11: ChannelId;
          if (var5) {
-            var6 = var8.t(var7, 0);
-            var9 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var10: java.lang.String = var9.t(var8, 0);
+            val var12: ChannelId = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
+            var7 = var10;
+            var11 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var9 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var8.x(var7);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, var9) as ChannelId;
+                     var11 = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, var11) as ChannelId;
                      var2 |= 2;
                   } else {
-                     var6 = var8.t(var7, 0);
+                     var6 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var7 = var6;
          }
 
-         var8.b(var7);
-         return new PinsOnClick(var2, var6, var9, null, null);
+         var9.b(var8);
+         return new PinsOnClick(var2, var7, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PinsOnClick) {

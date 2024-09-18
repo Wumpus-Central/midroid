@@ -97,12 +97,12 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
       val var2: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var2, "getReactApplicationContext(...)");
       val var5: Pair = w.a("clientState", var1.get(var2).getItem("_clientStateKey"));
-      var var3: ReactApplicationContext = this.getReactApplicationContext();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var3, "getReactApplicationContext(...)");
-      val var4: Pair = w.a("userId", var1.get(var3).getItem("_userIdKey"));
-      var3 = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      return r.m(new Pair[]{var5, var4, w.a("token", CacheModule.getToken$default(var1.get(var3), false, 1, null))});
+      val var6: Pair = w.a("userId", var1.get(var3).getItem("_userIdKey"));
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var4, "getReactApplicationContext(...)");
+      return r.m(new Pair[]{var5, var6, w.a("token", CacheModule.getToken$default(var1.get(var4), false, 1, null))});
    }
 
    public open fun getName(): String {

@@ -116,13 +116,13 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
          }
 
          public override fun toString(): String {
-            val var1: Float = this.x;
-            val var2: Float = this.y;
+            val var2: Float = this.x;
+            val var1: Float = this.y;
             val var3: StringBuilder = new StringBuilder();
             var3.append("Point(x=");
-            var3.append(var1);
-            var3.append(", y=");
             var3.append(var2);
+            var3.append(", y=");
+            var3.append(var1);
             var3.append(")");
             return var3.toString();
          }

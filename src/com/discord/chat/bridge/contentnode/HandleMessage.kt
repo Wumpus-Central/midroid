@@ -79,15 +79,15 @@ public data class HandleMessage(action: String, message: HandleSurveyMessage, no
 
    public override fun toString(): String {
       val var4: java.lang.String = this.action;
-      val var2: HandleSurveyMessage = this.message;
-      val var1: java.lang.String = this.notificationType;
+      val var1: HandleSurveyMessage = this.message;
+      val var2: java.lang.String = this.notificationType;
       val var3: StringBuilder = new StringBuilder();
       var3.append("HandleMessage(action=");
       var3.append(var4);
       var3.append(", message=");
-      var3.append(var2);
-      var3.append(", notificationType=");
       var3.append(var1);
+      var3.append(", notificationType=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

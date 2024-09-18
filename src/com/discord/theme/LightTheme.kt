@@ -2411,7 +2411,7 @@ internal class LightTheme(resources: Resources, theme: Theme) : DiscordThemeObje
          }
 
          public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
       this.bgBackdrop$delegate = l.b(new Function0(var1, var2) {
@@ -4651,7 +4651,7 @@ internal class LightTheme(resources: Resources, theme: Theme) : DiscordThemeObje
          }
 
          public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
       this.menuItemDangerActiveBg$delegate = l.b(new Function0(var1, var2) {

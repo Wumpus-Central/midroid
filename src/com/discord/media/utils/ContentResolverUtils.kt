@@ -133,11 +133,11 @@ internal object ContentResolverUtils {
          var14.append(var15);
          var10 = var1.query(var2, var3, var6, null, var14.toString(), null);
       } else {
-         val var11: Builder = var2.buildUpon();
-         val var16: StringBuilder = new StringBuilder();
-         var16.append("limit=");
-         var16.append(var4);
-         val var12: Builder = var11.encodedQuery(var16.toString());
+         val var16: Builder = var2.buildUpon();
+         val var11: StringBuilder = new StringBuilder();
+         var11.append("limit=");
+         var11.append(var4);
+         val var12: Builder = var16.encodedQuery(var11.toString());
          if (var7 != null) {
             var12.appendQueryParameter("offset", java.lang.String.valueOf(var7.intValue()));
          }

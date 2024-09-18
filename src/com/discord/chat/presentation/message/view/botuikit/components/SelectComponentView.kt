@@ -136,7 +136,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       for (int var3 = 0; var9.hasNext(); var3++) {
          var var6: TextView = (TextView)var9.next();
          if (var3 < 0) {
-            kotlin.collections.i.t();
+            i.t();
          }
 
          val var5: SelectItem = var6 as SelectItem;
@@ -194,7 +194,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
             q.g(var28.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
             var18.setVisibility(8);
             var28.selectComponentSelectionText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-            val var36: SelectItem = kotlin.collections.i.f0(var35) as SelectItem;
+            val var36: SelectItem = i.f0(var35) as SelectItem;
             if (var36 != null) {
                var28.selectComponentSelectionText.setText(var36.getLabel());
                val var19: ComponentEmoji;
@@ -215,20 +215,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label68: {
                      if (var36 is SearchableSelectItem) {
-                        val var13: SearchableSelectItem = var36 as SearchableSelectItem;
+                        val var38: SearchableSelectItem = var36 as SearchableSelectItem;
                         if ((var36 as SearchableSelectItem).getIconSrc() != null) {
-                           val var38: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
+                           val var21: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var14: java.lang.String = var13.getIconSrc();
-                           val var21: Int = var13.getIconColor();
+                           val var13: java.lang.String = var38.getIconSrc();
+                           val var14: Int = var38.getIconColor();
                            val var30: Boolean;
-                           if (var13.getType() === SelectOptionType.USER) {
+                           if (var38.getType() === SelectOptionType.USER) {
                               var30 = true;
                            } else {
                               var30 = false;
                            }
 
-                           this.setImage(var38, var14, var21, var30);
+                           this.setImage(var21, var13, var14, var30);
                            val var22: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var22.setVisibility(0);
@@ -306,7 +306,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       var26.setAlpha(var5);
       val var27: SelectComponentView = var28.getRoot();
       q.g(var27, "getRoot(...)");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var27, false, new k(var3, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var27, false, new d(var3, var1), 1, null);
       val var15: SelectComponentView = var28.getRoot();
       var var31: Boolean = false;
       if (!var7) {
