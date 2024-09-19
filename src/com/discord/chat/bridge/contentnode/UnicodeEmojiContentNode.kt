@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
+import al.b2
+import al.g0
+import al.h
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.h
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class UnicodeEmojiContentNode(content: String, surrogate: String, jumboable: Boolean = false) : EmojiContentNode {
@@ -70,18 +70,18 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var3: java.lang.String = this.surrogate;
+      val var3: java.lang.String = this.content;
+      val var4: java.lang.String = this.surrogate;
       val var1: Boolean = this.jumboable;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UnicodeEmojiContentNode(content=");
-      var4.append(var2);
-      var4.append(", surrogate=");
-      var4.append(var3);
-      var4.append(", jumboable=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UnicodeEmojiContentNode(content=");
+      var2.append(var3);
+      var2.append(", surrogate=");
+      var2.append(var4);
+      var2.append(", jumboable=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

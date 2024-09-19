@@ -9,8 +9,8 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
-import dh.o
-import dh.r
+import gh.o
+import gh.r
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 

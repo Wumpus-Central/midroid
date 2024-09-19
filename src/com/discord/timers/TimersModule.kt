@@ -1,12 +1,12 @@
 package com.discord.timers
 
-import ch.w
 import com.discord.codegen.NativeTimersSpec
 import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
+import fh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
@@ -55,10 +55,10 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
          }
 
          public final void invoke() {
-            val var2: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
-            val var1: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
-            q.g(var1, "access$getReactApplicationContext(...)");
-            var2.emitModuleEvent(var1, new IntervalEvent((int)this.$id));
+            val var1: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
+            val var2: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
+            q.g(var2, "access$getReactApplicationContext(...)");
+            var1.emitModuleEvent(var2, new IntervalEvent((int)this.$id));
          }
       });
    }
@@ -75,10 +75,10 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
          }
 
          public final void invoke() {
-            val var1: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
-            val var2: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
-            q.g(var2, "access$getReactApplicationContext(...)");
-            var1.emitModuleEvent(var2, new TimerEvent((int)this.$id));
+            val var2: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
+            val var1: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
+            q.g(var1, "access$getReactApplicationContext(...)");
+            var2.emitModuleEvent(var1, new TimerEvent((int)this.$id));
          }
       });
    }

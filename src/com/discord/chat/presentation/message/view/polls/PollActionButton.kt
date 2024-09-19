@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
-import ch.p
 import com.discord.chat.bridge.polls.PollAction
 import com.discord.chat.bridge.polls.PollActionPresentation
 import com.discord.chat.databinding.PollActionButtonBinding
@@ -20,6 +19,7 @@ import com.discord.primitives.MessageId
 import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
+import fh.p
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 

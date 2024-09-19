@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.roleicons
 
+import al.b2
+import al.g0
+import al.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.n0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null, name: String, size: Int, alt: String) {
@@ -158,28 +158,28 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
          var var8: java.lang.String;
          val var9: java.lang.String;
          var var13: java.lang.String;
-         var var17: java.lang.String;
+         var var16: java.lang.String;
          if (var11.y()) {
             val var12: b2 = b2.a;
             var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
-            var17 = var11.v(var10, 1, var12, null) as java.lang.String;
+            var16 = var11.v(var10, 1, var12, null) as java.lang.String;
             val var7: java.lang.String = var11.t(var10, 2);
             val var2: Int = var11.k(var10, 3);
             var13 = var11.t(var10, 4);
-            var3 = 31;
-            var9 = var17;
-            var17 = var7;
-            var4 = var2;
+            var4 = 31;
+            var9 = var16;
+            var16 = var7;
+            var3 = var2;
          } else {
-            var var16: Boolean = true;
+            var var15: Boolean = true;
             var3 = 0;
             var8 = null;
-            var var18: java.lang.String = null;
-            var17 = null;
+            var var17: java.lang.String = null;
+            var16 = null;
             var13 = null;
             var var14: Int = 0;
 
-            while (var16) {
+            while (var15) {
                val var5: Int = var11.x(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -197,11 +197,11 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                               var14 |= 8;
                            }
                         } else {
-                           var17 = var11.t(var10, 2);
+                           var16 = var11.t(var10, 2);
                            var14 |= 4;
                         }
                      } else {
-                        var18 = var11.v(var10, 1, b2.a, var18) as java.lang.String;
+                        var17 = var11.v(var10, 1, b2.a, var17) as java.lang.String;
                         var14 |= 2;
                      }
                   } else {
@@ -209,17 +209,16 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                      var14 |= 1;
                   }
                } else {
-                  var16 = false;
+                  var15 = false;
                }
             }
 
-            var4 = var3;
-            var9 = var18;
-            var3 = var14;
+            var9 = var17;
+            var4 = var14;
          }
 
          var11.b(var10);
-         return new RoleIcon(var3, var8, var9, var17, var4, var13, null);
+         return new RoleIcon(var4, var8, var9, var16, var3, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleIcon) {
@@ -232,7 +231,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

@@ -2,7 +2,7 @@ package com.discord.chat.bridge.structurabletext
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import uk.f
+import xk.f
 
 @f(with = PrimitiveStructurableTextSerializer::class)
 public data class PrimitiveStructurableText(content: String) : StructurableText {

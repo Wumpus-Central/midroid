@@ -1,7 +1,7 @@
 package com.discord.app_database
 
+import al.w1
 import android.content.Context
-import ch.w
 import com.discord.cache.CacheModule
 import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
@@ -9,13 +9,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import dh.r
+import fh.w
+import gh.r
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
-import xk.w1
 
 @ReactModule(name = "AppDatabase")
 public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -38,10 +38,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    @ReactMethod
    public fun setUserId(userId: String?) {
       if (var1 != null) {
-         val var3: CacheModule.Companion = CacheModule.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var3.get(var2).setItem("_databaseUserId", var1);
+         val var2: CacheModule.Companion = CacheModule.Companion;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var2.get(var3).setItem("_databaseUserId", var1);
       } else {
          val var4: CacheModule.Companion = CacheModule.Companion;
          val var5: ReactApplicationContext = this.getReactApplicationContext();
@@ -166,7 +166,7 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
       public fun initializeAppDatabase(context: Context) {
          q.h(var1, "context");
          AppDatabaseModule.access$setDataDirectory$cp(var1.getFilesDir().getAbsolutePath());
-         gh.a.b(false, false, null, null, 0, new Function0(var1) {
+         jh.a.b(false, false, null, null, 0, new Function0(var1) {
             final Context $context;
 
             {

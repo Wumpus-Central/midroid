@@ -1,5 +1,9 @@
 package com.discord.chat.reactevents
 
+import al.g0
+import al.h
+import al.n0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.g0
-import xk.h
-import xk.n0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
@@ -183,37 +183,37 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun toString(): String {
-      val var6: Boolean = this.isAtBottom;
-      val var8: Boolean = this.isNearBottom;
-      val var7: Boolean = this.isNearTop;
-      val var4: Boolean = this.dragging;
-      val var9: Boolean = this.decelerating;
-      val var5: Boolean = this.shouldShowJumpToPresent;
-      val var10: Boolean = this.isFirstMessageVisible;
+      val var5: Boolean = this.isAtBottom;
+      val var6: Boolean = this.isNearBottom;
+      val var4: Boolean = this.isNearTop;
+      val var10: Boolean = this.dragging;
+      val var7: Boolean = this.decelerating;
+      val var8: Boolean = this.shouldShowJumpToPresent;
+      val var9: Boolean = this.isFirstMessageVisible;
       val var3: Int = this.firstVisibleMessageIndex;
-      val var1: Int = this.lastVisibleMessageIndex;
-      val var2: Int = this.changesetUpdateId;
+      val var2: Int = this.lastVisibleMessageIndex;
+      val var1: Int = this.changesetUpdateId;
       val var11: StringBuilder = new StringBuilder();
       var11.append("ChatScrollPositionEvent(isAtBottom=");
-      var11.append(var6);
-      var11.append(", isNearBottom=");
-      var11.append(var8);
-      var11.append(", isNearTop=");
-      var11.append(var7);
-      var11.append(", dragging=");
-      var11.append(var4);
-      var11.append(", decelerating=");
-      var11.append(var9);
-      var11.append(", shouldShowJumpToPresent=");
       var11.append(var5);
-      var11.append(", isFirstMessageVisible=");
+      var11.append(", isNearBottom=");
+      var11.append(var6);
+      var11.append(", isNearTop=");
+      var11.append(var4);
+      var11.append(", dragging=");
       var11.append(var10);
+      var11.append(", decelerating=");
+      var11.append(var7);
+      var11.append(", shouldShowJumpToPresent=");
+      var11.append(var8);
+      var11.append(", isFirstMessageVisible=");
+      var11.append(var9);
       var11.append(", firstVisibleMessageIndex=");
       var11.append(var3);
       var11.append(", lastVisibleMessageIndex=");
-      var11.append(var1);
-      var11.append(", changesetUpdateId=");
       var11.append(var2);
+      var11.append(", changesetUpdateId=");
+      var11.append(var1);
       var11.append(")");
       return var11.toString();
    }
@@ -265,8 +265,8 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var var20: Int;
          if (var16) {
             var16 = var18.s(var17, 0);
-            var9 = var18.s(var17, 1);
-            var7 = var18.s(var17, 2);
+            var7 = var18.s(var17, 1);
+            var8 = var18.s(var17, 2);
             var11 = var18.s(var17, 3);
             var10 = var18.s(var17, 4);
             var6 = var18.s(var17, 5);
@@ -274,11 +274,11 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
             var20 = var18.k(var17, 7);
             var5 = var18.k(var17, 8);
             var2 = var18.k(var17, 9);
-            var12 = 1023;
-            var8 = var20;
+            var9 = 1023;
+            var12 = var20;
             var20 = var2;
          } else {
-            var var32: Boolean = true;
+            var var30: Boolean = true;
             var16 = false;
             var11 = 0;
             var10 = 0;
@@ -290,11 +290,11 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
             var4 = 0;
             var20 = 0;
 
-            while (var32) {
+            while (var30) {
                val var13: Int = var18.x(var17);
                switch (var13) {
                   case -1:
-                     var32 = false;
+                     var30 = false;
                      break;
                   case 0:
                      var16 = var18.s(var17, 0);
@@ -343,19 +343,19 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
 
             var20 = var11;
             var5 = var6;
-            var8 = var10;
+            var12 = var10;
             var4 = var9;
             var6 = var8;
             var10 = var5;
             var11 = var7;
-            var7 = var4;
-            var9 = var20;
-            var12 = var2;
+            var8 = var4;
+            var7 = var20;
+            var9 = var2;
          }
 
          var18.b(var17);
          return new ChatScrollPositionEvent(
-            var12, var16, (boolean)var9, (boolean)var7, (boolean)var11, (boolean)var10, (boolean)var6, (boolean)var4, var8, var5, var20, null
+            var9, var16, (boolean)var7, (boolean)var8, (boolean)var11, (boolean)var10, (boolean)var6, (boolean)var4, var12, var5, var20, null
          );
       }
 

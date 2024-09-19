@@ -1,8 +1,8 @@
 package com.discord.media.utils
 
 import android.media.MediaFormat
-import ch.r
-import ch.s
+import fh.r
+import fh.s
 import kotlin.jvm.internal.q
 
 public final val codecType: String?
@@ -69,10 +69,10 @@ public final val mimeType: String?
 
       label16:
       try {
-         val var5: ch.r.a = r.k;
+         val var5: fh.r.a = r.k;
          var4 = r.b(var0.getString("mime"));
       } catch (var2: java.lang.Throwable) {
-         val var1: ch.r.a = r.k;
+         val var1: fh.r.a = r.k;
          var4 = r.b(s.a(var2));
          break label16;
       }

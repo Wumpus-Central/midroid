@@ -7,7 +7,6 @@ import android.view.View
 import android.view.View.OnLongClickListener
 import androidx.core.view.r0
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import ch.w
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.MessageType
@@ -48,6 +47,7 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import fh.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function6
@@ -101,14 +101,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      val var13: StructurableText = var1.getContent();
-      if (var13 != null) {
-         val var12: ArrayList = this.accessories;
-         val var19: java.lang.String = var1.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var10: Boolean = var1.getShouldShowRoleDot();
-         val var8: Boolean = var1.getShouldShowRoleOnName();
+      var var12: StructurableText = var1.getContent();
+      if (var12 != null) {
+         val var19: ArrayList = this.accessories;
+         val var13: java.lang.String = var1.getId-3Eiw7ao();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var9: Boolean = var1.getShouldShowRoleDot();
+         val var7: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
             var4 = 0;
@@ -132,14 +132,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var6 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var12.add(
+         var19.add(
             new MessageContentAccessory(
-               var19,
                var13,
-               var7,
-               var9,
-               var10,
+               var12,
                var8,
+               var10,
+               var9,
+               var7,
                var4,
                var5,
                var6,
@@ -189,7 +189,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var25: java.util.Iterator = var24.iterator();
 
             for (int var18 = 0; var25.hasNext(); var18++) {
-               val var28: Any = var25.next();
+               var12 = (StructurableText)var25.next();
                if (var18 < 0) {
                   i.t();
                }
@@ -202,7 +202,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var28 as Embed,
+                        var12 as Embed,
                         false,
                         false,
                         false,

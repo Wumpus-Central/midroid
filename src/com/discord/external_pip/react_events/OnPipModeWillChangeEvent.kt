@@ -1,5 +1,7 @@
 package com.discord.external_pip.react_events
 
+import al.g0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,10 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.g0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 internal class OnPipModeWillChangeEvent : ReactEvent {

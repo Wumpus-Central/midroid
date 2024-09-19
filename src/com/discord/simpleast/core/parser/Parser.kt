@@ -1,8 +1,8 @@
 package com.discord.simpleast.core.parser
 
 import android.util.Log
-import ch.w
 import com.discord.simpleast.core.node.Node
+import fh.w
 import java.util.ArrayList
 import java.util.Stack
 import java.util.regex.Matcher
@@ -83,19 +83,19 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
          }
 
          val var11: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
-         val var4: Int = var10.getStartIndex();
+         val var5: Int = var10.getStartIndex();
          val var12: java.util.Iterator = var3.iterator();
 
          while (true) {
             if (var12.hasNext()) {
-               val var13: Rule = var12.next() as Rule;
-               val var18: Matcher = var13.match(var11, var6, var10.getState());
-               if (var18 == null) {
-                  this.logMiss(var13, var11);
+               val var18: Rule = var12.next() as Rule;
+               val var13: Matcher = var18.match(var11, var6, var10.getState());
+               if (var13 == null) {
+                  this.logMiss(var18, var11);
                   var2 = null;
                } else {
-                  this.logMatch(var13, var11);
-                  var2 = w.a(var13, var18);
+                  this.logMatch(var18, var11);
+                  var2 = w.a(var18, var13);
                }
 
                if (var2 == null) {
@@ -111,17 +111,17 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
             val var21: Rule = var2.a() as Rule;
             val var20: Matcher = var2.b() as Matcher;
-            val var5: Int = var20.end() + var4;
-            val var22: ParseSpec = var21.parse(var20, this, (S)var10.getState());
-            val var23: Node = var10.getRoot();
-            var23.addChild(var22.getRoot());
-            if (var5 != var10.getEndIndex()) {
-               var8.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var5, var10.getEndIndex()));
+            val var4: Int = var20.end() + var5;
+            val var23: ParseSpec = var21.parse(var20, this, (S)var10.getState());
+            val var22: Node = var10.getRoot();
+            var22.addChild(var23.getRoot());
+            if (var4 != var10.getEndIndex()) {
+               var8.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var4, var10.getEndIndex()));
             }
 
-            if (!var22.isTerminal()) {
-               var22.applyOffset(var4);
-               var8.push(var22);
+            if (!var23.isTerminal()) {
+               var23.applyOffset(var5);
+               var8.push(var23);
             }
 
             try {

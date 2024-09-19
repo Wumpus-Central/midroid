@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.reaction
 
+import al.b2
+import al.g0
+import al.h
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.q
@@ -11,12 +14,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.h
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) :
@@ -129,16 +129,16 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
-      val var1: java.lang.String = this.src;
+      val var1: java.lang.String = this.name;
+      val var3: java.lang.String = this.src;
       val var4: java.lang.String = this.displayName;
       val var5: java.lang.String = this.id;
       val var6: java.lang.Boolean = this.animated;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MessageReactionEmoji(name=");
-      var2.append(var3);
-      var2.append(", src=");
       var2.append(var1);
+      var2.append(", src=");
+      var2.append(var3);
       var2.append(", displayName=");
       var2.append(var4);
       var2.append(", id=");
@@ -250,7 +250,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

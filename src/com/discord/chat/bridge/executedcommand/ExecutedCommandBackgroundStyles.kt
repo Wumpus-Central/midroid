@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.executedcommand
 
+import al.g0
+import al.h
+import al.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.g0
-import xk.h
-import xk.n0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
@@ -129,27 +129,27 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
 
       public open fun deserialize(decoder: Decoder): ExecutedCommandBackgroundStyles {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
          var var7: Int = null;
          var var2: Int;
-         val var6: java.lang.Boolean;
-         val var12: Int;
+         var var6: Int;
+         var var11: java.lang.Boolean;
          if (var5) {
-            val var11: n0 = n0.a;
-            var7 = var10.v(var9, 0, n0.a, null) as Int;
-            var12 = var10.v(var9, 1, var11, null) as Int;
-            var6 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
+            val var10: n0 = n0.a;
+            var7 = var9.v(var8, 0, n0.a, null) as Int;
+            var6 = var9.v(var8, 1, var10, null) as Int;
+            var11 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var14: Int = null;
-            var var13: java.lang.Boolean = null;
+            var6 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -157,27 +157,24 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
                            throw new n(var4);
                         }
 
-                        var13 = var10.v(var9, 2, h.a, var13) as java.lang.Boolean;
+                        var11 = var9.v(var8, 2, h.a, var11) as java.lang.Boolean;
                         var2 |= 4;
                      } else {
-                        var14 = var10.v(var9, 1, n0.a, var14) as Int;
+                        var6 = var9.v(var8, 1, n0.a, var6) as Int;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.v(var9, 0, n0.a, var7) as Int;
+                     var7 = var9.v(var8, 0, n0.a, var7) as Int;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = var13;
-            var12 = var14;
          }
 
-         var10.b(var9);
-         return new ExecutedCommandBackgroundStyles(var2, var7, var12, var6, null);
+         var9.b(var8);
+         return new ExecutedCommandBackgroundStyles(var2, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ExecutedCommandBackgroundStyles) {
@@ -190,7 +187,7 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

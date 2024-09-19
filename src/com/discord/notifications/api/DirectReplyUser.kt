@@ -1,5 +1,8 @@
 package com.discord.notifications.api
 
+import al.b2
+import al.g0
+import al.o1
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -10,12 +13,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.o1
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class DirectReplyUser(id: UserId, username: String? = ..., discriminator: String? = ..., avatar: String? = ...) : DirectReplyUser(
@@ -172,23 +172,22 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
          val var5: Boolean = var11.y();
          var var8: UserId = null;
          var var2: Int;
-         var var7: java.lang.String;
-         val var9: UserId;
+         val var9: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
          if (var5) {
             val var6: UserId = var11.m(var10, 0, UserId.$serializer.INSTANCE, null) as UserId;
             val var12: b2 = b2.a;
-            var7 = var11.v(var10, 1, b2.a, null) as java.lang.String;
-            val var15: java.lang.String = var11.v(var10, 2, var12, null) as java.lang.String;
+            var9 = var11.v(var10, 1, b2.a, null) as java.lang.String;
+            val var7: java.lang.String = var11.v(var10, 2, var12, null) as java.lang.String;
             var13 = var11.v(var10, 3, var12, null) as java.lang.String;
             var2 = 15;
-            var9 = var6;
-            var14 = var15;
+            var8 = var6;
+            var14 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
+            var var15: java.lang.String = null;
             var14 = null;
             var13 = null;
 
@@ -209,7 +208,7 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.v(var10, 1, b2.a, var7) as java.lang.String;
+                        var15 = var11.v(var10, 1, b2.a, var15) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
@@ -221,11 +220,11 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
                }
             }
 
-            var9 = var8;
+            var9 = var15;
          }
 
          var11.b(var10);
-         return new DirectReplyUser(var2, var9, var7, var14, var13, null, null);
+         return new DirectReplyUser(var2, var8, var9, var14, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: DirectReplyUser) {
@@ -238,7 +237,7 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

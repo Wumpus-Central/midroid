@@ -1,11 +1,11 @@
 package com.discord.chat.input.bridge
 
-import ch.l
-import ch.o
-import jh.a
+import fh.l
+import fh.o
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import uk.f
+import mh.a
+import xk.f
 
 @f
 public enum class ChatInputNodeFontWeight {

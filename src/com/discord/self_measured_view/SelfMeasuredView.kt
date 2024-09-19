@@ -3,7 +3,6 @@ package com.discord.self_measured_view
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
-import ch.w
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactContext
@@ -12,6 +11,7 @@ import com.facebook.react.uimanager.FabricViewStateManager
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.FabricViewStateManager.HasFabricViewStateManager
+import fh.w
 import kotlin.jvm.internal.q
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout, HasFabricViewStateManager {

@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.row
 
+import al.g0
+import al.h
+import al.n0
+import al.g0.a
 import com.discord.chat.bridge.ChangeType
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -9,12 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.g0
-import xk.h
-import xk.n0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row {
@@ -80,16 +80,16 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var3: ChangeType = this.changeType;
-      val var4: LoadMoreButton = this.button;
+      val var4: ChangeType = this.changeType;
+      val var3: LoadMoreButton = this.button;
       val var2: Boolean = this.isLoading;
       val var5: StringBuilder = new StringBuilder();
       var5.append("LoadingRow(index=");
       var5.append(var1);
       var5.append(", changeType=");
-      var5.append(var3);
-      var5.append(", button=");
       var5.append(var4);
+      var5.append(", button=");
+      var5.append(var3);
       var5.append(", isLoading=");
       var5.append(var2);
       var5.append(")");

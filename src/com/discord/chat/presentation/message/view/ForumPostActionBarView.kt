@@ -159,16 +159,16 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
          kotlin.jvm.internal.q.e(this.binding.sharePromptSubtitle);
-         val var14: StructurableText = var2.getSubtitle();
-         val var10: Context = var13.getContext();
+         val var10: StructurableText = var2.getSubtitle();
+         val var14: Context = var13.getContext();
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
          kotlin.jvm.internal.q.g(var15, "getFontMetrics(...)");
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
          val var16: TextPaint = var13.getPaint();
-         kotlin.jvm.internal.q.e(var10);
+         kotlin.jvm.internal.q.e(var14);
          kotlin.jvm.internal.q.e(var16);
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
-            var13, TextUtilsKt.toSpannable$default(var14, var10, var1, false, false, false, false, var16, new Function1(var6, var1) {
+            var13, TextUtilsKt.toSpannable$default(var10, var14, var1, false, false, false, false, var16, new Function1(var6, var1) {
                final java.lang.String $messageId;
                final Function2 $onLinkClicked;
 
@@ -224,13 +224,13 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.q.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var23: java.util.List = kotlin.collections.i.J0(var8, --var2);
-         val var36: ReactionsView = this.binding.reactionsView;
+         val var36: java.util.List = kotlin.collections.i.J0(var8, --var2);
+         val var23: ReactionsView = this.binding.reactionsView;
          kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
-         var36.setVisibility(0);
-         this.setReactions(MessageId.toString-impl(var1), var23, var12, var13, var14, var15);
+         var23.setVisibility(0);
+         this.setReactions(MessageId.toString-impl(var1), var36, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var37: DCDButton = this.binding.otherReactionsCount;
+         val var34: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.q.e(this.binding.otherReactionsCount);
          var var25: Boolean;
          if (var22 != 0) {
@@ -245,11 +245,11 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var37.setVisibility(var25);
-         if (var37.getVisibility() == 0) {
-            val var34: Context = var37.getContext();
-            kotlin.jvm.internal.q.g(var34, "getContext(...)");
-            var37.setText(I18nUtilsKt.i18nFormat(var34, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
+         var34.setVisibility(var25);
+         if (var34.getVisibility() == 0) {
+            val var37: Context = var34.getContext();
+            kotlin.jvm.internal.q.g(var37, "getContext(...)");
+            var34.setText(I18nUtilsKt.i18nFormat(var37, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
                final int $otherReactionsCount;
 
                {
@@ -262,8 +262,8 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
                   var1.getArgs().put("count", java.lang.String.valueOf(this.$otherReactionsCount));
                }
             }));
-            RippleUtilsKt.addRipple$default(var37, true, 0, 2, null);
-            var37.setOnClickButtonListener(var18);
+            RippleUtilsKt.addRipple$default(var34, true, 0, 2, null);
+            var34.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;

@@ -1,5 +1,8 @@
 package com.discord.emoji_picker.react_events
 
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.g0
-import xk.n0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
@@ -86,14 +86,14 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var6: Boolean = var8.y();
-         var var2: Int = 1;
+         var var3: Int = 1;
          var var4: Boolean = true;
-         var var3: Int;
+         var var2: Int;
          if (var6) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
          } else {
-            var3 = 0;
             var2 = 0;
+            var3 = 0;
 
             while (var4) {
                val var5: Int = var8.x(var7);
@@ -102,8 +102,8 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
                      throw new n(var5);
                   }
 
-                  var3 = var8.k(var7, 0);
-                  var2 |= 1;
+                  var2 = var8.k(var7, 0);
+                  var3 |= 1;
                } else {
                   var4 = false;
                }
@@ -111,7 +111,7 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
          }
 
          var8.b(var7);
-         return new OnStickyHeaderRenderEvent(var2, var3, null);
+         return new OnStickyHeaderRenderEvent(var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnStickyHeaderRenderEvent) {

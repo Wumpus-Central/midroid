@@ -1,5 +1,7 @@
 package com.discord.chat.reactevents
 
+import al.b2
+import al.g0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 internal data class TapMentionData(userId: String?, channelId: String, roleName: String?, parsedUserId: String?) : ReactEvent {
@@ -106,21 +106,21 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.userId;
-      val var3: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleName;
+      val var3: java.lang.String = this.userId;
+      val var5: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.roleName;
       val var4: java.lang.String = this.parsedUserId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapMentionData(userId=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", roleName=");
-      var5.append(var1);
-      var5.append(", parsedUserId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapMentionData(userId=");
+      var1.append(var3);
+      var1.append(", channelId=");
+      var1.append(var5);
+      var1.append(", roleName=");
+      var1.append(var2);
+      var1.append(", parsedUserId=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -217,7 +217,7 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

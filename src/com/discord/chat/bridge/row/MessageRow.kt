@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.row
 
+import al.b2
+import al.g0
+import al.h
+import al.n0
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.MessageBase
@@ -18,13 +22,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.h
-import xk.n0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class MessageRow(index: Int,
@@ -262,8 +262,8 @@ public data class MessageRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var16: Int = Integer.hashCode(this.index);
-      val var15: Int = this.changeType.hashCode();
+      val var15: Int = Integer.hashCode(this.index);
+      val var16: Int = this.changeType.hashCode();
       var var14: Int = 0;
       val var1: Int;
       if (this.jumped == null) {
@@ -382,9 +382,9 @@ public data class MessageRow(index: Int,
                                                                                                                                              (
                                                                                                                                                       (
                                                                                                                                                                (
-                                                                                                                                                                        var16
+                                                                                                                                                                        var15
                                                                                                                                                                               * 31
-                                                                                                                                                                           + var15
+                                                                                                                                                                           + var16
                                                                                                                                                                      )
                                                                                                                                                                      * 31
                                                                                                                                                                   + var1
@@ -443,68 +443,68 @@ public data class MessageRow(index: Int,
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var12: ChangeType = this.changeType;
-      val var16: java.lang.Boolean = this.jumped;
-      val var14: java.lang.Boolean = this.highlightJumpedOnceOnly;
-      val var4: MessageBase = this.message;
-      val var21: java.lang.Boolean = this.scrollTo;
-      val var15: java.lang.Boolean = this.animated;
-      val var18: java.lang.Boolean = this.canAddNewReactions;
-      val var9: java.lang.String = this.addReactionLabel;
+      val var19: ChangeType = this.changeType;
+      val var10: java.lang.Boolean = this.jumped;
+      val var8: java.lang.Boolean = this.highlightJumpedOnceOnly;
+      val var11: MessageBase = this.message;
+      val var7: java.lang.Boolean = this.scrollTo;
+      val var16: java.lang.Boolean = this.animated;
+      val var20: java.lang.Boolean = this.canAddNewReactions;
+      val var17: java.lang.String = this.addReactionLabel;
       val var5: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var7: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
-      val var20: ReactionsTheme = this.reactionsTheme;
-      val var2: Boolean = this.isHighlight;
-      val var3: Boolean = this.renderContentOnly;
-      val var17: MessageFrame = this.messageFrame;
-      val var8: Int = this.reactTag;
-      val var19: Truncation = this.truncation;
-      val var13: BackgroundHighlight = this.backgroundHighlight;
-      val var6: SwipeActionsType = this.swipeActions;
-      val var10: MessageContextType = this.contextType;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MessageRow(index=");
-      var11.append(var1);
-      var11.append(", changeType=");
-      var11.append(var12);
-      var11.append(", jumped=");
-      var11.append(var16);
-      var11.append(", highlightJumpedOnceOnly=");
-      var11.append(var14);
-      var11.append(", message=");
-      var11.append(var4);
-      var11.append(", scrollTo=");
-      var11.append(var21);
-      var11.append(", animated=");
-      var11.append(var15);
-      var11.append(", canAddNewReactions=");
-      var11.append(var18);
-      var11.append(", addReactionLabel=");
-      var11.append(var9);
-      var11.append(", addNewReactionAccessibilityLabel=");
-      var11.append(var5);
-      var11.append(", addNewBurstReactionAccessibilityLabel=");
-      var11.append(var7);
-      var11.append(", reactionsTheme=");
-      var11.append(var20);
-      var11.append(", isHighlight=");
-      var11.append(var2);
-      var11.append(", renderContentOnly=");
-      var11.append(var3);
-      var11.append(", messageFrame=");
-      var11.append(var17);
-      var11.append(", reactTag=");
-      var11.append(var8);
-      var11.append(", truncation=");
-      var11.append(var19);
-      var11.append(", backgroundHighlight=");
-      var11.append(var13);
-      var11.append(", swipeActions=");
-      var11.append(var6);
-      var11.append(", contextType=");
-      var11.append(var10);
-      var11.append(")");
-      return var11.toString();
+      val var9: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
+      val var12: ReactionsTheme = this.reactionsTheme;
+      val var3: Boolean = this.isHighlight;
+      val var2: Boolean = this.renderContentOnly;
+      val var4: MessageFrame = this.messageFrame;
+      val var18: Int = this.reactTag;
+      val var13: Truncation = this.truncation;
+      val var6: BackgroundHighlight = this.backgroundHighlight;
+      val var14: SwipeActionsType = this.swipeActions;
+      val var15: MessageContextType = this.contextType;
+      val var21: StringBuilder = new StringBuilder();
+      var21.append("MessageRow(index=");
+      var21.append(var1);
+      var21.append(", changeType=");
+      var21.append(var19);
+      var21.append(", jumped=");
+      var21.append(var10);
+      var21.append(", highlightJumpedOnceOnly=");
+      var21.append(var8);
+      var21.append(", message=");
+      var21.append(var11);
+      var21.append(", scrollTo=");
+      var21.append(var7);
+      var21.append(", animated=");
+      var21.append(var16);
+      var21.append(", canAddNewReactions=");
+      var21.append(var20);
+      var21.append(", addReactionLabel=");
+      var21.append(var17);
+      var21.append(", addNewReactionAccessibilityLabel=");
+      var21.append(var5);
+      var21.append(", addNewBurstReactionAccessibilityLabel=");
+      var21.append(var9);
+      var21.append(", reactionsTheme=");
+      var21.append(var12);
+      var21.append(", isHighlight=");
+      var21.append(var3);
+      var21.append(", renderContentOnly=");
+      var21.append(var2);
+      var21.append(", messageFrame=");
+      var21.append(var4);
+      var21.append(", reactTag=");
+      var21.append(var18);
+      var21.append(", truncation=");
+      var21.append(var13);
+      var21.append(", backgroundHighlight=");
+      var21.append(var6);
+      var21.append(", swipeActions=");
+      var21.append(var14);
+      var21.append(", contextType=");
+      var21.append(var15);
+      var21.append(")");
+      return var21.toString();
    }
 
    public object `$serializer` : g0 {
@@ -543,38 +543,38 @@ public data class MessageRow(index: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var5: Array<KSerializer> = MessageRow.access$get$childSerializers$cp();
-         val var3: n0 = n0.a;
-         val var8: ChangeType.Serializer = ChangeType.Serializer.INSTANCE;
-         val var4: h = h.a;
-         val var6: KSerializer = a.u(h.a);
-         val var10: KSerializer = a.u(var4);
-         val var9: MessageSerializer = MessageSerializer.INSTANCE;
-         val var1: KSerializer = a.u(var4);
-         val var7: KSerializer = a.u(var4);
-         val var2: KSerializer = a.u(var4);
-         val var11: b2 = b2.a;
+         val var3: Array<KSerializer> = MessageRow.access$get$childSerializers$cp();
+         val var8: n0 = n0.a;
+         val var7: ChangeType.Serializer = ChangeType.Serializer.INSTANCE;
+         val var10: h = h.a;
+         val var4: KSerializer = a.u(h.a);
+         val var9: KSerializer = a.u(var10);
+         val var5: MessageSerializer = MessageSerializer.INSTANCE;
+         val var2: KSerializer = a.u(var10);
+         val var1: KSerializer = a.u(var10);
+         val var11: KSerializer = a.u(var10);
+         val var6: b2 = b2.a;
          return new KSerializer[]{
-            var3,
             var8,
-            var6,
-            var10,
-            var9,
-            var1,
             var7,
+            var4,
+            var9,
+            var5,
             var2,
+            var1,
+            var11,
             a.u(b2.a),
-            a.u(var11),
-            a.u(var11),
+            a.u(var6),
+            a.u(var6),
             a.u(ReactionsTheme.$serializer.INSTANCE),
-            var4,
-            var4,
+            var10,
+            var10,
             a.u(MessageFrameSerializer.INSTANCE),
-            a.u(var3),
+            a.u(var8),
             a.u(Truncation.$serializer.INSTANCE),
             a.u(BackgroundHighlight.$serializer.INSTANCE),
             SwipeActionsType.Serializer.INSTANCE,
-            a.u(var5[19])
+            a.u(var3[19])
          };
       }
 
@@ -584,84 +584,85 @@ public data class MessageRow(index: Int,
          val var28: c = var1.c(var27);
          var var23: Array<KSerializer> = MessageRow.access$get$childSerializers$cp();
          var var3: Int;
-         var var4: Byte;
          var var5: Byte;
          val var6: Int;
-         var var11: java.lang.String;
+         var var9: Any;
+         var var10: Any;
          var var12: java.lang.String;
+         var var13: MessageBase;
          var var14: Any;
-         var var15: Any;
-         var var16: Any;
-         var var17: java.lang.String;
+         var var17: Any;
          var var18: Any;
          var var19: Any;
          var var20: Any;
          var var21: Any;
-         var var24: MessageBase;
+         var var22: java.lang.String;
          val var25: Any;
          var var31: Any;
-         var var36: Any;
-         var var38: Any;
-         var var40: Any;
+         var var34: Byte;
+         var var39: Any;
+         var var42: Any;
+         var var48: java.lang.String;
          if (var28.y()) {
-            var6 = var28.k(var27, 0);
+            var3 = var28.k(var27, 0);
             var18 = var28.m(var27, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
             var31 = h.a;
             var19 = var28.v(var27, 2, h.a, null) as java.lang.Boolean;
             var20 = var28.v(var27, 3, (DeserializationStrategy)var31, null) as java.lang.Boolean;
-            var24 = var28.m(var27, 4, MessageSerializer.INSTANCE, null) as MessageBase;
+            var13 = var28.m(var27, 4, MessageSerializer.INSTANCE, null) as MessageBase;
             var21 = var28.v(var27, 5, (DeserializationStrategy)var31, null) as java.lang.Boolean;
-            var15 = var28.v(var27, 6, (DeserializationStrategy)var31, null) as java.lang.Boolean;
+            var17 = var28.v(var27, 6, (DeserializationStrategy)var31, null) as java.lang.Boolean;
             var14 = var28.v(var27, 7, (DeserializationStrategy)var31, null) as java.lang.Boolean;
             var31 = b2.a;
-            var36 = var28.v(var27, 8, b2.a, null) as java.lang.String;
-            var12 = var28.v(var27, 9, (DeserializationStrategy)var31, null) as java.lang.String;
-            var11 = var28.v(var27, 10, (DeserializationStrategy)var31, null) as java.lang.String;
-            var16 = var28.v(var27, 11, ReactionsTheme.$serializer.INSTANCE, null) as ReactionsTheme;
-            var4 = var28.s(var27, 12);
+            var39 = var28.v(var27, 8, b2.a, null) as java.lang.String;
+            var42 = var28.v(var27, 9, (DeserializationStrategy)var31, null) as java.lang.String;
+            var12 = var28.v(var27, 10, (DeserializationStrategy)var31, null) as java.lang.String;
+            var25 = var28.v(var27, 11, ReactionsTheme.$serializer.INSTANCE, null) as ReactionsTheme;
+            var34 = var28.s(var27, 12);
             val var2: Byte = var28.s(var27, 13);
-            var25 = var28.v(var27, 14, MessageFrameSerializer.INSTANCE, null) as MessageFrame;
-            val var13: Int = var28.v(var27, 15, n0.a, null) as Int;
-            var40 = var28.v(var27, 16, Truncation.$serializer.INSTANCE, null) as Truncation;
-            var38 = var28.v(var27, 17, BackgroundHighlight.$serializer.INSTANCE, null) as BackgroundHighlight;
+            val var16: MessageFrame = var28.v(var27, 14, MessageFrameSerializer.INSTANCE, null) as MessageFrame;
+            val var15: Int = var28.v(var27, 15, n0.a, null) as Int;
+            var10 = var28.v(var27, 16, Truncation.$serializer.INSTANCE, null) as Truncation;
+            var9 = var28.v(var27, 17, BackgroundHighlight.$serializer.INSTANCE, null) as BackgroundHighlight;
             var31 = var28.m(var27, 18, SwipeActionsType.Serializer.INSTANCE, null) as SwipeActionsType;
-            val var22: MessageContextType = var28.v(var27, 19, var23[19], null) as MessageContextType;
-            var3 = 1048575;
-            var17 = (java.lang.String)var36;
-            var5 = var2;
-            var36 = var13;
-            var23 = (KSerializer[])var40;
-            var40 = var38;
-            var38 = var22;
+            val var24: MessageContextType = var28.v(var27, 19, var23[19], null) as MessageContextType;
+            var6 = 1048575;
+            var48 = (java.lang.String)var39;
+            var22 = (java.lang.String)var42;
+            var5 = var34;
+            var34 = var2;
+            var39 = var16;
+            var42 = var15;
+            var23 = var24;
          } else {
-            var var35: Boolean = true;
-            var24 = null;
-            var var47: java.lang.String = null;
+            var var37: Boolean = true;
+            var var53: MessageBase = null;
+            var22 = null;
             var21 = null;
             var20 = null;
             var19 = null;
             var17 = null;
-            var15 = null;
+            var var47: java.lang.String = null;
             var14 = null;
-            var var44: Any = null;
-            var16 = null;
-            var38 = null;
-            var40 = null;
-            var36 = null;
+            var13 = null;
+            var48 = null;
+            var9 = null;
+            var39 = null;
+            var10 = null;
             var31 = null;
             var12 = null;
-            var11 = null;
+            var42 = null;
             var var33: Int = 0;
             var5 = 0;
-            var4 = 0;
+            var34 = 0;
             var3 = 0;
             var18 = null;
 
-            while (var35) {
+            while (var37) {
                val var7: Int = var28.x(var27);
                switch (var7) {
                   case -1:
-                     var35 = false;
+                     var37 = false;
                      break;
                   case 0:
                      var3 = var28.k(var27, 0);
@@ -680,7 +681,7 @@ public data class MessageRow(index: Int,
                      var33 |= 8;
                      break;
                   case 4:
-                     var24 = var28.m(var27, 4, MessageSerializer.INSTANCE, var24) as MessageBase;
+                     var53 = var28.m(var27, 4, MessageSerializer.INSTANCE, var53) as MessageBase;
                      var33 |= 16;
                      break;
                   case 5:
@@ -688,7 +689,7 @@ public data class MessageRow(index: Int,
                      var33 |= 32;
                      break;
                   case 6:
-                     var44 = var28.v(var27, 6, h.a, var44) as java.lang.Boolean;
+                     var13 = var28.v(var27, 6, h.a, var13) as java.lang.Boolean;
                      var33 |= 64;
                      break;
                   case 7:
@@ -696,11 +697,11 @@ public data class MessageRow(index: Int,
                      var33 |= 128;
                      break;
                   case 8:
-                     var15 = var28.v(var27, 8, b2.a, var15) as java.lang.String;
+                     var47 = var28.v(var27, 8, b2.a, var47) as java.lang.String;
                      var33 |= 256;
                      break;
                   case 9:
-                     var47 = var28.v(var27, 9, b2.a, var47) as java.lang.String;
+                     var22 = var28.v(var27, 9, b2.a, var22) as java.lang.String;
                      var33 |= 512;
                      break;
                   case 10:
@@ -708,11 +709,11 @@ public data class MessageRow(index: Int,
                      var33 |= 1024;
                      break;
                   case 11:
-                     var16 = var28.v(var27, 11, ReactionsTheme.$serializer.INSTANCE, var16) as ReactionsTheme;
+                     var48 = var28.v(var27, 11, ReactionsTheme.$serializer.INSTANCE, var48) as ReactionsTheme;
                      var33 |= 2048;
                      break;
                   case 12:
-                     var4 = var28.s(var27, 12);
+                     var34 = var28.s(var27, 12);
                      var33 |= 4096;
                      break;
                   case 13:
@@ -720,15 +721,15 @@ public data class MessageRow(index: Int,
                      var33 |= 8192;
                      break;
                   case 14:
-                     var38 = var28.v(var27, 14, MessageFrameSerializer.INSTANCE, var38) as MessageFrame;
+                     var9 = var28.v(var27, 14, MessageFrameSerializer.INSTANCE, var9) as MessageFrame;
                      var33 |= 16384;
                      break;
                   case 15:
-                     var40 = var28.v(var27, 15, n0.a, var40) as Int;
+                     var39 = var28.v(var27, 15, n0.a, var39) as Int;
                      var33 |= 32768;
                      break;
                   case 16:
-                     var36 = var28.v(var27, 16, Truncation.$serializer.INSTANCE, var36) as Truncation;
+                     var10 = var28.v(var27, 16, Truncation.$serializer.INSTANCE, var10) as Truncation;
                      var33 |= 65536;
                      break;
                   case 17:
@@ -740,7 +741,7 @@ public data class MessageRow(index: Int,
                      var33 |= 262144;
                      break;
                   case 19:
-                     var11 = var28.v(var27, 19, var23[19], var11) as MessageContextType;
+                     var42 = var28.v(var27, 19, var23[19], var42) as MessageContextType;
                      var33 |= 524288;
                      break;
                   default:
@@ -748,43 +749,44 @@ public data class MessageRow(index: Int,
                }
             }
 
-            var36 = var40;
-            var25 = var38;
-            var38 = var11;
+            var5 = var34;
+            var23 = (KSerializer[])var42;
             var31 = var12;
-            var40 = var31;
-            var23 = (KSerializer[])var36;
-            var11 = var17;
-            var12 = var47;
-            var17 = (java.lang.String)var15;
-            var15 = var44;
-            var6 = var3;
-            var3 = var33;
+            var9 = var31;
+            var42 = var39;
+            var39 = var9;
+            var34 = var5;
+            var25 = var48;
+            var12 = (java.lang.String)var17;
+            var48 = var47;
+            var17 = var13;
+            var13 = var53;
+            var6 = var33;
          }
 
          var28.b(var27);
          return new MessageRow(
-            var3,
             var6,
+            var3,
             (ChangeType)var18,
             (java.lang.Boolean)var19,
             (java.lang.Boolean)var20,
-            var24,
+            var13,
             (java.lang.Boolean)var21,
-            (java.lang.Boolean)var15,
+            (java.lang.Boolean)var17,
             (java.lang.Boolean)var14,
-            var17,
+            var48,
+            var22,
             var12,
-            var11,
-            (ReactionsTheme)var16,
-            (boolean)var4,
+            (ReactionsTheme)var25,
             (boolean)var5,
-            (MessageFrame)var25,
-            (Integer)var36,
-            var23,
-            (BackgroundHighlight)var40,
+            (boolean)var34,
+            (MessageFrame)var39,
+            (Integer)var42,
+            (Truncation)var10,
+            (BackgroundHighlight)var9,
             (SwipeActionsType)var31,
-            (MessageContextType)var38,
+            var23,
             null
          );
       }
@@ -799,7 +801,7 @@ public data class MessageRow(index: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

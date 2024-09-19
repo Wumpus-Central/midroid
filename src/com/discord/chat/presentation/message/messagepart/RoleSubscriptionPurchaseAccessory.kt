@@ -95,23 +95,23 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.authorUsername;
-      val var6: java.lang.String = this.authorAvatar;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var5: java.lang.String = this.authorUsername;
+      val var3: java.lang.String = this.authorAvatar;
       val var1: Int = this.constrainedWidth;
       val var2: Boolean = this.isForwardedContent;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("RoleSubscriptionPurchaseAccessory(messageId=");
-      var4.append(var5);
-      var4.append(", authorUsername=");
-      var4.append(var3);
-      var4.append(", authorAvatar=");
-      var4.append(var6);
-      var4.append(", constrainedWidth=");
-      var4.append(var1);
-      var4.append(", isForwardedContent=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("RoleSubscriptionPurchaseAccessory(messageId=");
+      var6.append(var4);
+      var6.append(", authorUsername=");
+      var6.append(var5);
+      var6.append(", authorAvatar=");
+      var6.append(var3);
+      var6.append(", constrainedWidth=");
+      var6.append(var1);
+      var6.append(", isForwardedContent=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 }

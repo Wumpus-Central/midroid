@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import al.b2
+import al.g0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class TapPollAnswer(channelId: String, messageId: String, answerId: String) : ReactEvent {
@@ -77,18 +77,18 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.answerId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapPollAnswer(channelId=");
-      var2.append(var1);
-      var2.append(", messageId=");
-      var2.append(var4);
-      var2.append(", answerId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.answerId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapPollAnswer(channelId=");
+      var4.append(var2);
+      var4.append(", messageId=");
+      var4.append(var3);
+      var4.append(", answerId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

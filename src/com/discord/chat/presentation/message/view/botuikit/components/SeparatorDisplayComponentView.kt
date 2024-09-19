@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
-import ch.p
 import com.discord.chat.bridge.botuikit.SeparatorDisplayComponent
 import com.discord.chat.databinding.MessageComponentSeparatorDisplayViewBinding
 import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
@@ -17,6 +16,7 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
+import fh.p
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass

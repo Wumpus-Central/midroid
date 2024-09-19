@@ -37,12 +37,12 @@ public sealed class DownloadState protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: File = this.file;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Completed(file=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: File = this.file;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Completed(file=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
@@ -79,12 +79,12 @@ public sealed class DownloadState protected constructor() {
       }
 
       public override fun toString(): String {
-         val var1: Exception = this.exception;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Failure(exception=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: Exception = this.exception;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Failure(exception=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 

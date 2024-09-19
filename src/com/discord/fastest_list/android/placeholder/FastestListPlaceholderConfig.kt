@@ -1,8 +1,8 @@
 package com.discord.fastest_list.android.placeholder
 
-import ch.p
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListSections.Entry
+import fh.p
 import kotlin.jvm.internal.q
 
 internal data class FastestListPlaceholderConfig(listFooter: FastestListPlaceholderType,

@@ -4,9 +4,9 @@ import android.app.ActivityManager
 import android.content.Context
 import com.facebook.imagepipeline.cache.MemoryCacheParams
 import kotlin.jvm.internal.q
-import q5.t
+import t5.o
 
-internal class FrescoBitmapSupplier(context: Context) : t {
+internal class FrescoBitmapSupplier(context: Context) : o {
    init {
       q.h(var1, "context");
       val var2: Any = var1.getSystemService("activity");

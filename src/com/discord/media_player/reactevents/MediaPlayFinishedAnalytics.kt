@@ -1,5 +1,10 @@
 package com.discord.media_player.reactevents
 
+import al.b2
+import al.f0
+import al.g0
+import al.n0
+import al.x0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,14 +15,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.f0
-import xk.g0
-import xk.n0
-import xk.x0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
@@ -164,10 +164,10 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = java.lang.Long.hashCode(this.playWallTimeMs);
-      val var3: Int = java.lang.Long.hashCode(this.stallMs);
-      val var6: Int = Integer.hashCode(this.stallCount);
-      val var5: Int = Integer.hashCode(this.seekCount);
+      val var3: Int = java.lang.Long.hashCode(this.playWallTimeMs);
+      val var5: Int = java.lang.Long.hashCode(this.stallMs);
+      val var7: Int = Integer.hashCode(this.stallCount);
+      val var6: Int = Integer.hashCode(this.seekCount);
       val var4: Int = java.lang.Long.hashCode(this.firstPlayWaitingMs);
       var var2: Int = 0;
       val var1: Int;
@@ -185,7 +185,7 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       return (
                (
                         (
-                                 (((((((var7 * 31 + var3) * 31 + var6) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var8) * 31 + var2) * 31
+                                 (((((((var3 * 31 + var5) * 31 + var7) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var8) * 31 + var2) * 31
                                     + Integer.hashCode(this.fatalErrorCount)
                               )
                               * 31
@@ -203,27 +203,27 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
    }
 
    public override fun toString(): String {
-      val var8: Long = this.playWallTimeMs;
-      val var14: Long = this.stallMs;
-      val var5: Int = this.stallCount;
-      val var3: Int = this.seekCount;
+      val var14: Long = this.playWallTimeMs;
+      val var6: Long = this.stallMs;
+      val var4: Int = this.stallCount;
+      val var5: Int = this.seekCount;
       val var10: Long = this.firstPlayWaitingMs;
       val var16: java.lang.String = this.mediaSource;
       val var1: Float = this.fileDurationSec;
       val var18: java.lang.String = this.mimeType;
-      val var2: Int = this.fatalErrorCount;
-      val var4: Int = this.nonFatalErrorCount;
-      val var12: Long = this.totalDroppedFrames;
-      val var6: Long = this.totalBandwidthBytes;
+      val var3: Int = this.fatalErrorCount;
+      val var2: Int = this.nonFatalErrorCount;
+      val var8: Long = this.totalDroppedFrames;
+      val var12: Long = this.totalBandwidthBytes;
       val var17: StringBuilder = new StringBuilder();
       var17.append("MediaPlayFinishedAnalytics(playWallTimeMs=");
-      var17.append(var8);
-      var17.append(", stallMs=");
       var17.append(var14);
+      var17.append(", stallMs=");
+      var17.append(var6);
       var17.append(", stallCount=");
-      var17.append(var5);
+      var17.append(var4);
       var17.append(", seekCount=");
-      var17.append(var3);
+      var17.append(var5);
       var17.append(", firstPlayWaitingMs=");
       var17.append(var10);
       var17.append(", mediaSource=");
@@ -233,13 +233,13 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       var17.append(", mimeType=");
       var17.append(var18);
       var17.append(", fatalErrorCount=");
-      var17.append(var2);
+      var17.append(var3);
       var17.append(", nonFatalErrorCount=");
-      var17.append(var4);
+      var17.append(var2);
       var17.append(", totalDroppedFrames=");
-      var17.append(var12);
+      var17.append(var8);
       var17.append(", totalBandwidthBytes=");
-      var17.append(var6);
+      var17.append(var12);
       var17.append(")");
       return var17.toString();
    }
@@ -274,10 +274,10 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: x0 = x0.a;
-         val var1: n0 = n0.a;
+         val var1: x0 = x0.a;
+         val var3: n0 = n0.a;
          val var2: b2 = b2.a;
-         return new KSerializer[]{x0.a, x0.a, n0.a, n0.a, x0.a, a.u(b2.a), f0.a, a.u(var2), var1, var1, var3, var3};
+         return new KSerializer[]{x0.a, x0.a, n0.a, n0.a, x0.a, a.u(b2.a), f0.a, a.u(var2), var3, var3, var1, var1};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayFinishedAnalytics {
@@ -300,27 +300,27 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
          var var24: java.lang.String;
          val var25: java.lang.String;
          if (var23) {
-            var13 = var27.h(var26, 0);
-            var15 = var27.h(var26, 1);
+            var21 = var27.h(var26, 0);
+            var13 = var27.h(var26, 1);
             var8 = var27.k(var26, 2);
-            var7 = var27.k(var26, 3);
+            var6 = var27.k(var26, 3);
             val var11: Long = var27.h(var26, 4);
             val var28: b2 = b2.a;
-            var24 = var27.v(var26, 5, b2.a, null) as java.lang.String;
+            var25 = var27.v(var26, 5, b2.a, null) as java.lang.String;
             var2 = var27.G(var26, 6);
             val var29: java.lang.String = var27.v(var26, 7, var28, null) as java.lang.String;
             var4 = var27.k(var26, 8);
             val var3: Int = var27.k(var26, 9);
             var17 = var27.h(var26, 10);
             var19 = var27.h(var26, 11);
-            var5 = 4095;
-            var21 = var11;
-            var25 = var29;
-            var6 = var3;
+            var7 = 4095;
+            var15 = var11;
+            var24 = var29;
+            var5 = var3;
          } else {
             var15 = 0L;
             var13 = 0L;
-            var var36: Long = 0L;
+            var var39: Long = 0L;
             var19 = 0L;
             var17 = 0L;
             var var34: Boolean = true;
@@ -340,7 +340,7 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
                      var34 = false;
                      break;
                   case 0:
-                     var36 = var27.h(var26, 0);
+                     var39 = var27.h(var26, 0);
                      var31 |= 1;
                      break;
                   case 1:
@@ -395,21 +395,18 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
                var9 = 10;
             }
 
-            var6 = var7;
-            var7 = var4;
             var19 = var17;
             var17 = var19;
+            var5 = var7;
             var4 = var5;
-            var25 = var24;
-            var24 = var30;
-            var21 = var15;
-            var15 = var13;
-            var13 = var36;
-            var5 = var31;
+            var25 = var30;
+            var6 = var4;
+            var21 = var39;
+            var7 = var31;
          }
 
          var27.b(var26);
-         return new MediaPlayFinishedAnalytics(var5, var13, var15, var8, var7, var21, var24, var2, var25, var4, var6, var17, var19, null);
+         return new MediaPlayFinishedAnalytics(var7, var21, var13, var8, var6, var15, var25, var2, var24, var4, var5, var17, var19, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayFinishedAnalytics) {
@@ -422,7 +419,7 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

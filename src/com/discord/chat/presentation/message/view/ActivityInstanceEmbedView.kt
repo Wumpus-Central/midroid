@@ -96,7 +96,7 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
    public fun setParticipantAvatarUris(avatarUris: List<String>) {
       kotlin.jvm.internal.q.h(var1, "avatarUris");
       val var3: Boolean = var1.isEmpty();
-      val var4: OverlappingCirclesView = this.binding.participants;
+      var var4: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       val var2: Byte;
       if (var3 xor true) {
@@ -106,15 +106,15 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
       }
 
       var4.setVisibility(var2);
-      val var5: OverlappingCirclesView = this.binding.participants;
-      val var7: ArrayList = new ArrayList(kotlin.collections.i.u(var1, 10));
+      var4 = this.binding.participants;
+      val var5: ArrayList = new ArrayList(kotlin.collections.i.u(var1, 10));
       val var6: java.util.Iterator = var1.iterator();
 
       while (var6.hasNext()) {
-         var7.add(new OverlappingItem(var6.next() as java.lang.String));
+         var5.add(new OverlappingItem(var6.next() as java.lang.String));
       }
 
-      var5.setItems(var7);
+      var4.setItems(var5);
    }
 
    public fun setStatusText(text: String?) {

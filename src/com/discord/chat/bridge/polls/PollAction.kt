@@ -1,5 +1,8 @@
 package com.discord.chat.bridge.polls
 
+import al.b2
+import al.g0
+import al.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -9,12 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.h
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class PollAction(label: String,
@@ -189,38 +189,41 @@ public data class PollAction(label: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
-         val var2: b2 = b2.a;
-         return new KSerializer[]{b2.a, var1[1], h.a, a.u(b2.a), a.u(var2), a.u(var2)};
+         val var2: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
+         val var1: b2 = b2.a;
+         return new KSerializer[]{b2.a, var2[1], h.a, a.u(b2.a), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): PollAction {
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.c(var11);
-         var var10: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
+         val var10: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
          var var2: Int;
          var var5: Boolean;
-         var var6: PollActionPresentation;
          var var7: Any;
+         var var8: PollActionPresentation;
          var var9: java.lang.String;
          var var14: Any;
+         var var15: Any;
          if (var12.y()) {
             var9 = var12.t(var11, 0);
-            var6 = var12.m(var11, 1, var10[1], null) as PollActionPresentation;
+            var15 = var12.m(var11, 1, var10[1], null) as PollActionPresentation;
             var5 = var12.s(var11, 2);
             var14 = b2.a;
             var7 = var12.v(var11, 3, b2.a, null) as java.lang.String;
-            var10 = var12.v(var11, 4, (DeserializationStrategy)var14, null) as java.lang.String;
+            val var16: java.lang.String = var12.v(var11, 4, (DeserializationStrategy)var14, null) as java.lang.String;
             var14 = var12.v(var11, 5, (DeserializationStrategy)var14, null) as java.lang.String;
             var2 = 63;
+            var8 = (PollActionPresentation)var15;
+            var15 = var16;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var9 = null;
-            var var8: PollActionPresentation = null;
+            var8 = null;
             var7 = null;
-            var6 = null;
+            var15 = null;
             var14 = null;
             var2 = 0;
 
@@ -247,7 +250,7 @@ public data class PollAction(label: String,
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var12.v(var11, 4, b2.a, var6) as java.lang.String;
+                     var15 = var12.v(var11, 4, b2.a, var15) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
@@ -258,13 +261,10 @@ public data class PollAction(label: String,
                      throw new n(var4);
                }
             }
-
-            var10 = var6;
-            var6 = var8;
          }
 
          var12.b(var11);
-         return new PollAction(var2, var9, var6, var5, (java.lang.String)var7, var10, (java.lang.String)var14, null);
+         return new PollAction(var2, var9, var8, var5, (java.lang.String)var7, (java.lang.String)var15, (java.lang.String)var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollAction) {
@@ -277,7 +277,7 @@ public data class PollAction(label: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

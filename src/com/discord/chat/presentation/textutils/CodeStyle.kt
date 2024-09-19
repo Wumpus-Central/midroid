@@ -5,8 +5,6 @@ import android.text.style.AbsoluteSizeSpan
 import android.text.style.ForegroundColorSpan
 import android.text.style.RelativeSizeSpan
 import android.text.style.LeadingMarginSpan.Standard
-import ch.r
-import ch.s
 import com.discord.chat.bridge.contentnode.CodeBlockContentNode
 import com.discord.fonts.DiscordFont
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -22,6 +20,8 @@ import com.discord.span.utilities.spannable.BlockBackgroundSpan
 import com.discord.span.utilities.spannable.VerticalPaddingSpan
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
+import fh.r
+import fh.s
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 
@@ -77,10 +77,10 @@ public object CodeStyle {
 
       label16:
       try {
-         val var11: ch.r.a = r.k;
+         val var11: fh.r.a = r.k;
          var8 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var10: ch.r.a = r.k;
+         val var10: fh.r.a = r.k;
          var8 = r.b(s.a(var4));
          break label16;
       }

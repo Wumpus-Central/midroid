@@ -1,9 +1,6 @@
 package com.discord.icons
 
 import android.content.Context
-import ch.r
-import ch.s
-import ch.r.a
 import com.discord.hosts.Hosts
 import com.discord.icons.media.MediaExtensionKt
 import com.discord.icons.media.MediaProxy
@@ -14,6 +11,9 @@ import com.discord.primitives.UserId
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.snowflake.SnowflakeUtils
+import fh.r
+import fh.s
+import fh.r.a
 import kotlin.jvm.internal.q
 
 public object IconUrlUtils {

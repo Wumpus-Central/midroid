@@ -1,6 +1,5 @@
 package com.discord.sticker_picker.react
 
-import ch.w
 import com.discord.reactevents.ReactEvents
 import com.discord.sticker_picker.StickerPickerRowView
 import com.discord.sticker_picker.react_events.OnLongPressStickerEvent
@@ -12,6 +11,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerDelegate
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
+import fh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q

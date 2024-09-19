@@ -1,6 +1,5 @@
 package com.discord.bridge
 
-import ch.w
 import com.facebook.react.ReactPackage
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -10,7 +9,8 @@ import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
-import dh.r
+import fh.w
+import gh.r
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q

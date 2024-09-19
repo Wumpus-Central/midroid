@@ -1,11 +1,11 @@
 package com.discord.chat.reactevents
 
-import ch.w
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fh.w
 import kotlin.jvm.internal.q
 
 public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) : LongPressStickerData(var1, var2), ReactEvent {
@@ -61,14 +61,14 @@ public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) :
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Sticker = this.sticker;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressStickerData(messageId=");
-      var2.append(var1);
-      var2.append(", sticker=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Sticker = this.sticker;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressStickerData(messageId=");
+      var3.append(var2);
+      var3.append(", sticker=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

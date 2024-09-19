@@ -13,7 +13,7 @@ public enum class ScrollDirection {
    fun {
       val var0: Array<ScrollDirection> = $values();
       $VALUES = var0;
-      $ENTRIES = jh.a.a(var0);
+      $ENTRIES = mh.a.a(var0);
    }
 
    @JvmStatic

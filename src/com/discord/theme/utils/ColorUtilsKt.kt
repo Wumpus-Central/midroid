@@ -15,34 +15,34 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
 import kotlin.text.MatchResult.b
-import rh.a
+import uh.a
 
 private final val hsv: FloatArray = new float[3]
 private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(\\d+),\\s*(\\d+(?:\\.\\d*)?|\\.\\d+)\\)")
 
 private fun applySaturationFactor(color: Int): Int {
-   var var4: Float = ThemeManager.INSTANCE.getSaturationFactor();
-   if (var4 != 1.0F) {
+   var var5: Float = ThemeManager.INSTANCE.getSaturationFactor();
+   if (var5 != 1.0F) {
       val var7: FloatArray = hsv;
       Color.colorToHSV(var0, hsv);
       var var1: Float = var7[1];
       val var2: Float = var7[2];
       val var6: Float = var7[2] * var1;
       val var3: Float = 2;
-      val var5: Float = var2 - var6 / 2;
+      val var4: Float = var2 - var6 / 2;
       if (var2 - var6 / 2 != 0.0F && var2 - var6 / 2 != 1.0F) {
-         var1 = var6 / (1 - Math.abs(2.0F * var5 - 1.0F));
+         var1 = var6 / (1 - Math.abs(2.0F * var4 - 1.0F));
       }
 
-      var4 = var1 * var4 * Math.min(1.0F, 1.0F - var5) + var5;
-      if (var4 == 0.0F) {
+      var5 = var1 * var5 * Math.min(1.0F, 1.0F - var4) + var4;
+      if (var5 == 0.0F) {
          var1 = 0.0F;
       } else {
-         var1 = var3 * (1.0F - var5 / var4);
+         var1 = var3 * (1.0F - var4 / var5);
       }
 
       var7[1] = var1;
-      var7[2] = var4;
+      var7[2] = var5;
       var0 = Color.HSVToColor(var7);
    }
 

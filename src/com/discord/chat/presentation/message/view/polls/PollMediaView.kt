@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.FrameLayout.LayoutParams
 import android.widget.ImageView.ScaleType
-import ch.l
 import com.discord.chat.R
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.bridge.polls.PollAnswer
@@ -25,6 +24,7 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
+import fh.l
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function6
@@ -75,12 +75,12 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeView invoke() {
-            val var2: SimpleDraweeView = new SimpleDraweeView(this.$context);
-            val var1: PollMediaView = this.this$0;
-            var2.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
-            PollMediaView.access$getChildViews$p(var1).add(var2);
-            var1.addView(var2, new LayoutParams(-1, -1, 17));
-            return var2;
+            val var1: SimpleDraweeView = new SimpleDraweeView(this.$context);
+            val var2: PollMediaView = this.this$0;
+            var1.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
+            PollMediaView.access$getChildViews$p(var2).add(var1);
+            var2.addView(var1, new LayoutParams(-1, -1, 17));
+            return var1;
          }
       });
       this.textView$delegate = l.b(new Function0(var1, this) {

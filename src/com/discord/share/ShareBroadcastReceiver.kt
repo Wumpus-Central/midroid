@@ -10,11 +10,11 @@ import android.content.IntentSender
 import android.os.Parcelable
 import androidx.core.content.a
 import androidx.core.content.b
-import ch.w
 import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
+import fh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 

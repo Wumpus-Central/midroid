@@ -1,10 +1,10 @@
 package com.discord.billing.react.events.serialization
 
-import ch.w
 import com.android.billingclient.api.ProductDetails
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
+import fh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 

@@ -1,5 +1,9 @@
 package com.discord.notifications.api
 
+import al.g0
+import al.o1
+import al.g0.a
+import bl.q
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import kotlinx.serialization.KSerializer
@@ -11,12 +15,8 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
 import kotlinx.serialization.json.JsonObject
-import uk.f
-import uk.n
-import xk.g0
-import xk.o1
-import xk.g0.a
-import yk.q
+import xk.f
+import xk.n
 
 @f
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -31,7 +31,7 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    @JvmStatic
    fun {
       val var0: q = q.a;
-      $childSerializers = new KSerializer[]{new xk.f(q.a), new xk.f(var0), null, null, null};
+      $childSerializers = new KSerializer[]{new al.f(q.a), new al.f(var0), null, null, null};
    }
 
    fun KvMessageEntry(
@@ -133,23 +133,23 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
 
    public override fun toString(): String {
       val var1: java.util.List = this.members;
-      val var5: java.util.List = this.users;
-      val var2: JsonObject = this.message;
-      val var6: java.lang.String = MessageId.toString-impl(this.id);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("KvMessageEntry(members=");
-      var4.append(var1);
-      var4.append(", users=");
-      var4.append(var5);
-      var4.append(", message=");
-      var4.append(var2);
-      var4.append(", id=");
-      var4.append(var6);
-      var4.append(", channelId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.List = this.users;
+      val var3: JsonObject = this.message;
+      val var2: java.lang.String = MessageId.toString-impl(this.id);
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("KvMessageEntry(members=");
+      var5.append(var1);
+      var5.append(", users=");
+      var5.append(var4);
+      var5.append(", message=");
+      var5.append(var3);
+      var5.append(", id=");
+      var5.append(var2);
+      var5.append(", channelId=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {

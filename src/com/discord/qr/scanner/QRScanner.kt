@@ -39,20 +39,20 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
       val var4: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var4, "inflate(...)");
       this.binding = var4;
-      val var5: CodeScanner = new CodeScanner(var1, var4.qrScanner);
-      this.codeScanner = var5;
+      val var6: CodeScanner = new CodeScanner(var1, var4.qrScanner);
+      this.codeScanner = var6;
       this.runnable = new a(this);
       this.onCodeFound = <unrepresentable>.INSTANCE;
       this.onCodeNotFound = <unrepresentable>.INSTANCE;
       var4.getRoot().setBackgroundColor(-16777216);
-      val var6: CodeScannerView = var4.qrScanner;
+      val var5: CodeScannerView = var4.qrScanner;
       q.g(var4.qrScanner, "qrScanner");
-      var6.setVisibility(0);
+      var5.setVisibility(0);
       var4.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
-      var5.a0(-1);
-      var5.f0(CodeScanner.K);
-      var5.b0(this);
-      var5.c0(this);
+      var6.a0(-1);
+      var6.f0(CodeScanner.K);
+      var6.b0(this);
+      var6.c0(this);
    }
 
    @JvmStatic

@@ -4,8 +4,8 @@ import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import ch.w
-import dh.r
+import fh.w
+import gh.r
 import kotlin.jvm.internal.q
 import w1.e
 import w1.f

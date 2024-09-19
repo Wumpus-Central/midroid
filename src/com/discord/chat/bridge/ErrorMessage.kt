@@ -1,5 +1,9 @@
 package com.discord.chat.bridge
 
+import al.b2
+import al.g0
+import al.o1
+import al.g0.a
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.o1
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {
@@ -75,14 +75,14 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
 
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.id);
-      val var3: java.lang.String = this.stackTrace;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ErrorMessage(id=");
-      var2.append(var1);
-      var2.append(", stackTrace=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.stackTrace;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ErrorMessage(id=");
+      var3.append(var1);
+      var3.append(", stackTrace=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -113,20 +113,20 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         val var7: java.lang.String;
+         var var12: java.lang.String;
          if (var5) {
             val var6: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             if (var6 != null) {
                var10 = var6.unbox-impl();
             }
 
-            var7 = var9.t(var8, 1);
+            var12 = var9.t(var8, 1);
             var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var var11: java.lang.String = null;
-            var var12: java.lang.String = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var9.x(var8);
@@ -139,16 +139,16 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                      var11 = var9.t(var8, 1);
                      var2 |= 2;
                   } else {
-                     val var13: MessageId;
+                     val var14: MessageId;
                      if (var12 != null) {
-                        var13 = MessageId.box-impl(var12);
+                        var14 = MessageId.box-impl(var12);
                      } else {
-                        var13 = null;
+                        var14 = null;
                      }
 
-                     val var14: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
-                     if (var14 != null) {
-                        var12 = var14.unbox-impl();
+                     val var15: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var14) as MessageId;
+                     if (var15 != null) {
+                        var12 = var15.unbox-impl();
                      } else {
                         var12 = null;
                      }
@@ -160,12 +160,12 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                }
             }
 
-            var7 = var11;
             var10 = var12;
+            var12 = var11;
          }
 
          var9.b(var8);
-         return new ErrorMessage(var2, var10, var7, null, null);
+         return new ErrorMessage(var2, var10, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ErrorMessage) {

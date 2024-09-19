@@ -5,8 +5,6 @@ import android.content.Context
 import android.view.View
 import androidx.core.view.v0
 import androidx.recyclerview.widget.RecyclerView
-import ch.l
-import ch.p
 import com.discord.emoji_picker.EmojiPickerItem.ItemType
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerScroller.ScrollEvent
@@ -14,6 +12,8 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
+import fh.l
+import fh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2

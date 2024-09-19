@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.forwarding
 
+import al.b2
+import al.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +10,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ForwardFooterInfo(timestampLabel: String, originLabel: String, accessibilityLabel: String, originIconUrl: String? = null) {
@@ -136,31 +136,31 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
 
       public open fun deserialize(decoder: Decoder): ForwardFooterInfo {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
+         val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         val var9: java.lang.String;
-         val var10: java.lang.String;
+         var var7: java.lang.String;
+         var var12: java.lang.String;
          var var13: java.lang.String;
          if (var5) {
-            var6 = var12.t(var11, 0);
-            var9 = var12.t(var11, 1);
-            val var7: java.lang.String = var12.t(var11, 2);
-            var13 = var12.v(var11, 3, b2.a, null) as java.lang.String;
+            var13 = var11.t(var10, 0);
+            var7 = var11.t(var10, 1);
+            val var9: java.lang.String = var11.t(var10, 2);
+            var12 = var11.v(var10, 3, b2.a, null) as java.lang.String;
             var2 = 15;
-            var10 = var7;
+            var8 = var13;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var15: java.lang.String = null;
-            var6 = null;
+            var7 = null;
             var13 = null;
+            var12 = null;
 
             while (var3) {
-               val var4: Int = var12.x(var11);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -169,32 +169,28 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                               throw new n(var4);
                            }
 
-                           var13 = var12.v(var11, 3, b2.a, var13) as java.lang.String;
+                           var12 = var11.v(var10, 3, b2.a, var12) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var6 = var12.t(var11, 2);
+                           var13 = var11.t(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var15 = var12.t(var11, 1);
+                        var7 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var12.t(var11, 0);
+                     var8 = var11.t(var10, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var10 = var6;
-            var9 = var15;
-            var6 = var8;
          }
 
-         var12.b(var11);
-         return new ForwardFooterInfo(var2, var6, var9, var10, var13, null);
+         var11.b(var10);
+         return new ForwardFooterInfo(var2, var8, var7, var13, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardFooterInfo) {
@@ -207,7 +203,7 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

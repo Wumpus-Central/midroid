@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
+import al.b2
+import al.g0
 import com.discord.chat.bridge.MessageType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -13,11 +15,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class CommandOnClick(action: String? = ...,
@@ -246,13 +246,13 @@ public data class CommandOnClick(action: String? = ...,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: KSerializer = a.u(b2.a);
-         val var1: UserId.$serializer = UserId.$serializer.INSTANCE;
+         val var1: KSerializer = a.u(b2.a);
+         val var2: UserId.$serializer = UserId.$serializer.INSTANCE;
          return new KSerializer[]{
-            var2,
+            var1,
             a.u(UserId.$serializer.INSTANCE),
             a.u(MessageId.$serializer.INSTANCE),
-            a.u(var1),
+            a.u(var2),
             a.u(MessageType.Serializer.INSTANCE),
             a.u(ChannelId.$serializer.INSTANCE)
          };
@@ -363,7 +363,7 @@ public data class CommandOnClick(action: String? = ...,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

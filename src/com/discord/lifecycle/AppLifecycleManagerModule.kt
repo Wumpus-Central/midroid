@@ -3,13 +3,13 @@ package com.discord.lifecycle
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
-import ch.w
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
+import fh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 

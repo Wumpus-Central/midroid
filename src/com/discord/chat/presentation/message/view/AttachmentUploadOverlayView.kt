@@ -139,14 +139,14 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       val var2: ValueAnimator = new ValueAnimator();
       var2.setFloatValues(new float[]{0.0F, 1.0F});
       var2.addUpdateListener(new d(this));
-      val var4: ValueAnimator = new ValueAnimator();
-      var4.setFloatValues(new float[]{0.8F, 0.9F});
-      var4.setInterpolator(new OvershootInterpolator(8.0F));
-      var4.addUpdateListener(new e(this));
       val var5: ValueAnimator = new ValueAnimator();
-      var5.setFloatValues(new float[]{1.0F, 0.0F});
-      var5.addUpdateListener(new f(this));
-      var1.playTogether(new Animator[]{var2, var4, var5});
+      var5.setFloatValues(new float[]{0.8F, 0.9F});
+      var5.setInterpolator(new OvershootInterpolator(8.0F));
+      var5.addUpdateListener(new e(this));
+      val var4: ValueAnimator = new ValueAnimator();
+      var4.setFloatValues(new float[]{1.0F, 0.0F});
+      var4.addUpdateListener(new f(this));
+      var1.playTogether(new Animator[]{var2, var5, var4});
       return var1;
    }
 
@@ -180,17 +180,17 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun uploadCompleteCheckmarkFadeOutAnim(): AnimatorSet {
-      val var2: AnimatorSet = new AnimatorSet();
-      var2.setDuration(this.transitionOutDuration);
-      var2.setStartDelay(this.transitionDelay);
-      val var1: ValueAnimator = new ValueAnimator();
-      var1.setFloatValues(new float[]{0.9F, 0.8F});
-      var1.addUpdateListener(new h(this));
+      val var1: AnimatorSet = new AnimatorSet();
+      var1.setDuration(this.transitionOutDuration);
+      var1.setStartDelay(this.transitionDelay);
+      val var2: ValueAnimator = new ValueAnimator();
+      var2.setFloatValues(new float[]{0.9F, 0.8F});
+      var2.addUpdateListener(new h(this));
       val var4: ValueAnimator = new ValueAnimator();
       var4.setFloatValues(new float[]{1.0F, 0.0F});
       var4.addUpdateListener(new i(this));
-      var2.playTogether(new Animator[]{var1, var4});
-      var2.addListener(new AnimatorListener(this) {
+      var1.playTogether(new Animator[]{var2, var4});
+      var1.addListener(new AnimatorListener(this) {
          final AttachmentUploadOverlayView this$0;
 
          {
@@ -215,7 +215,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          public void onAnimationStart(Animator var1) {
          }
       });
-      return var2;
+      return var1;
    }
 
    @JvmStatic

@@ -34,12 +34,12 @@ public final class ActivityInstanceEmbedViewBinding implements ViewBinding {
          OverlappingCirclesView var4 = (OverlappingCirclesView)a.a(var0, var1);
          if (var4 != null) {
             var1 = R.id.status_text;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.status_text_barrier;
-               Barrier var2 = (Barrier)a.a(var0, var1);
-               if (var2 != null) {
-                  return new ActivityInstanceEmbedViewBinding(var0, var3, var4, var5, var2);
+               Barrier var5 = (Barrier)a.a(var0, var1);
+               if (var5 != null) {
+                  return new ActivityInstanceEmbedViewBinding(var0, var3, var4, var2, var5);
                }
             }
          }

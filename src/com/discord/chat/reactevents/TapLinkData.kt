@@ -1,6 +1,5 @@
 package com.discord.chat.reactevents
 
-import ch.w
 import com.discord.chat.bridge.MessageType
 import com.discord.chat.bridge.contentnode.ActorHook
 import com.discord.chat.bridge.contentnode.CommandOnClick
@@ -24,6 +23,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import fh.w
 import kotlin.jvm.internal.q
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: String? = ..., content: String = ..., context: LinkContext? = ...) : TapLinkData(
@@ -54,7 +54,7 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
    private fun LinkContext.toMap(): WritableNativeMap {
       val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
-      var var3: java.lang.String = this.target;
+      val var3: java.lang.String = this.target;
       if (this.target != null) {
          switch (this.target.hashCode()) {
             case -1732468237:
@@ -240,12 +240,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          }
       }
 
-      val var20: Log = Log.INSTANCE;
-      var3 = this.target;
+      val var26: Log = Log.INSTANCE;
+      val var20: java.lang.String = this.target;
       val var4: StringBuilder = new StringBuilder();
       var4.append("Missing target type in context: ");
-      var4.append(var3);
-      Log.e$default(var20, "TapLink", var4.toString(), null, 4, null);
+      var4.append(var20);
+      Log.e$default(var26, "TapLink", var4.toString(), null, 4, null);
       return var2;
    }
 
@@ -280,16 +280,19 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       } else if (var1 !is TapLinkData) {
          return false;
       } else {
-         var1 = var1;
-         if (if (this.messageId == null) var1.messageId == null else var1.messageId != null && MessageId.equals-impl0(this.messageId, var1.messageId)) {
-            if (!q.c(this.title, var1.title)) {
+         val var2: TapLinkData = var1 as TapLinkData;
+         if (if (this.messageId == null)
+            (var1 as TapLinkData).messageId == null
+            else
+            (var1 as TapLinkData).messageId != null && MessageId.equals-impl0(this.messageId, (var1 as TapLinkData).messageId)) {
+            if (!q.c(this.title, var2.title)) {
                return false;
-            } else if (!q.c(this.target, var1.target)) {
+            } else if (!q.c(this.target, var2.target)) {
                return false;
-            } else if (!q.c(this.content, var1.content)) {
+            } else if (!q.c(this.content, var2.content)) {
                return false;
             } else {
-               return q.c(this.context, var1.context);
+               return q.c(this.context, var2.context);
             }
          } else {
             return false;
@@ -363,22 +366,22 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var7 = MessageId.toString-impl(this.messageId);
       }
 
-      val var5: java.lang.String = this.title;
+      val var6: java.lang.String = this.title;
       val var4: java.lang.String = this.target;
-      val var6: java.lang.String = this.content;
-      val var3: LinkContext = this.context;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapLinkData(messageId=");
-      var2.append(var7);
-      var2.append(", title=");
-      var2.append(var5);
-      var2.append(", target=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var6);
-      var2.append(", context=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.content;
+      val var2: LinkContext = this.context;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapLinkData(messageId=");
+      var5.append(var7);
+      var5.append(", title=");
+      var5.append(var6);
+      var5.append(", target=");
+      var5.append(var4);
+      var5.append(", content=");
+      var5.append(var3);
+      var5.append(", context=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 }

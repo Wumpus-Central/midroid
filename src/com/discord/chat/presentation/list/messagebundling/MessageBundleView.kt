@@ -1,5 +1,8 @@
 package com.discord.chat.presentation.list.messagebundling
 
+import al.b2
+import al.f0
+import al.g0
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -38,11 +41,8 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.f0
-import xk.g0
+import xk.f
+import xk.n
 
 public class MessageBundleView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout {
    private final val binding: MessageBundleViewBinding
@@ -261,7 +261,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new xk.f(MessageRow.$serializer.INSTANCE), null, new xk.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new al.f(MessageRow.$serializer.INSTANCE), null, new al.f(var0), null};
       }
 
       init {
@@ -398,7 +398,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
 
          public open fun childSerializers(): Array<KSerializer<*>> {
             val var1: Array<KSerializer> = MessageBundleView.MessageBundle.access$get$childSerializers$cp();
-            return new KSerializer[]{vk.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], vk.a.u(f0.a), var1[3], vk.a.u(b2.a)};
+            return new KSerializer[]{yk.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], yk.a.u(f0.a), var1[3], yk.a.u(b2.a)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.list.messagebundling.MessageBundleView.MessageBundle {
@@ -480,7 +480,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return xk.g0.a.a(this);
+            return al.g0.a.a(this);
          }
       }
 

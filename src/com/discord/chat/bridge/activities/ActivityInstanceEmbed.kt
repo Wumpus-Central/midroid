@@ -1,5 +1,10 @@
 package com.discord.chat.bridge.activities
 
+import al.b2
+import al.g0
+import al.h
+import al.n0
+import al.o1
 import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
 import kotlin.jvm.internal.q
@@ -11,14 +16,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.h
-import xk.n0
-import xk.o1
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ActivityInstanceEmbed(applicationId: ApplicationId,
@@ -277,98 +277,101 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var5: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
-         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var5[4]), h.a, var1, n0.a, h.a};
+         val var2: b2 = b2.a;
+         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var5[4]), h.a, var2, n0.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): ActivityInstanceEmbed {
          q.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.c(var18);
-         val var20: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
-         val var11: Boolean = var19.y();
+         val var19: SerialDescriptor = this.getDescriptor();
+         val var20: c = var1.c(var19);
+         val var18: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
+         val var11: Boolean = var20.y();
          var var3: Int = 7;
          var var8: Byte = 6;
          var var9: Byte = 5;
-         var var2: Int;
-         var var4: Byte;
          var var5: Byte;
+         var var7: Int;
          var var12: java.lang.String;
          var var13: java.lang.String;
-         var var14: Any;
          var var15: java.lang.String;
-         var var16: java.util.List;
+         var var16: Any;
          val var17: Any;
+         var var23: Byte;
+         val var29: java.util.List;
          if (var11) {
-            var17 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
-            var14 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var13 = var19.t(var18, 2);
-            var15 = var19.v(var18, 3, b2.a, null) as java.lang.String;
-            val var21: java.util.List = var19.v(var18, 4, var20[4], null) as java.util.List;
-            var5 = var19.s(var18, 5);
-            var12 = var19.t(var18, 6);
-            var2 = var19.k(var18, 7);
-            var4 = var19.s(var18, 8);
+            var17 = var20.m(var19, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
+            var16 = var20.m(var19, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var13 = var20.t(var19, 2);
+            val var14: java.lang.String = var20.v(var19, 3, b2.a, null) as java.lang.String;
+            val var21: java.util.List = var20.v(var19, 4, var18[4], null) as java.util.List;
+            var5 = var20.s(var19, 5);
+            var12 = var20.t(var19, 6);
+            var23 = var20.k(var19, 7);
+            val var4: Byte = var20.s(var19, 8);
             var3 = 511;
-            var16 = var21;
+            var15 = var14;
+            var29 = var21;
+            var7 = var23;
+            var23 = var4;
          } else {
             var var6: Boolean = true;
-            var var7: Int = 0;
-            var4 = 0;
-            var2 = 0;
+            var7 = 0;
+            var var26: Byte = 0;
+            var23 = 0;
             var16 = null;
             var15 = null;
             var var22: Any = null;
             var13 = null;
             var12 = null;
-            var14 = null;
+            var var27: Any = null;
             var5 = 0;
 
             while (var6) {
                label40: {
-                  val var10: Int = var19.x(var18);
+                  val var10: Int = var20.x(var19);
                   switch (var10) {
                      case -1:
                         var6 = false;
                         break;
                      case 0:
-                        var22 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, var22) as ApplicationId;
-                        var2 |= 1;
+                        var22 = var20.m(var19, 0, ApplicationId.$serializer.INSTANCE, var22) as ApplicationId;
+                        var23 |= 1;
                         var3 = 7;
                         break;
                      case 1:
-                        var14 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, var14) as ChannelId;
-                        var2 |= 2;
+                        var27 = var20.m(var19, 1, ChannelId.$serializer.INSTANCE, var27) as ChannelId;
+                        var23 |= 2;
                         var3 = 7;
                         var8 = 6;
                         continue;
                      case 2:
-                        var13 = var19.t(var18, 2);
-                        var2 |= 4;
+                        var13 = var20.t(var19, 2);
+                        var23 |= 4;
                         break label40;
                      case 3:
-                        var15 = var19.v(var18, 3, b2.a, var15) as java.lang.String;
-                        var2 |= 8;
+                        var15 = var20.v(var19, 3, b2.a, var15) as java.lang.String;
+                        var23 |= 8;
                         break label40;
                      case 4:
-                        var16 = var19.v(var18, 4, var20[4], var16) as java.util.List;
-                        var2 |= 16;
+                        var16 = var20.v(var19, 4, var18[4], var16) as java.util.List;
+                        var23 |= 16;
                         continue;
                      case 5:
-                        var5 = var19.s(var18, var9);
-                        var2 |= 32;
+                        var5 = var20.s(var19, var9);
+                        var23 |= 32;
                         continue;
                      case 6:
-                        var12 = var19.t(var18, var8);
-                        var2 |= 64;
+                        var12 = var20.t(var19, var8);
+                        var23 |= 64;
                         continue;
                      case 7:
-                        var7 = var19.k(var18, var3);
-                        var2 |= 128;
+                        var7 = var20.k(var19, var3);
+                        var23 |= 128;
                         continue;
                      case 8:
-                        var4 = var19.s(var18, 8);
-                        var2 |= 256;
+                        var26 = var20.s(var19, 8);
+                        var23 |= 256;
                         continue;
                      default:
                         throw new n(var10);
@@ -382,14 +385,16 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                var3 = 7;
             }
 
-            var3 = var2;
-            var2 = var7;
+            var3 = var23;
+            var23 = var26;
+            var29 = (java.util.List)var16;
+            var16 = var27;
             var17 = var22;
          }
 
-         var19.b(var18);
+         var20.b(var19);
          return new ActivityInstanceEmbed(
-            var3, (ApplicationId)var17, (ChannelId)var14, var13, var15, var16, (boolean)var5, var12, var2, (boolean)var4, null, null
+            var3, (ApplicationId)var17, (ChannelId)var16, var13, var15, var29, (boolean)var5, var12, var7, (boolean)var23, null, null
          );
       }
 
@@ -403,7 +408,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

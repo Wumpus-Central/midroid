@@ -1,5 +1,9 @@
 package com.discord.media.engine.video.events
 
+import al.b2
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.n0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: String, port: Int, seq: Int) : ReactEvent {
@@ -91,24 +91,24 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
    }
 
    public override fun toString(): String {
-      val var3: Int = this.connectionId;
-      val var2: Int = this.ping;
-      val var6: java.lang.String = this.server;
-      val var4: Int = this.port;
-      val var1: Int = this.seq;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PingCallbackEvent(connectionId=");
-      var5.append(var3);
-      var5.append(", ping=");
-      var5.append(var2);
-      var5.append(", server=");
-      var5.append(var6);
-      var5.append(", port=");
-      var5.append(var4);
-      var5.append(", seq=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var1: Int = this.connectionId;
+      val var4: Int = this.ping;
+      val var5: java.lang.String = this.server;
+      val var2: Int = this.port;
+      val var3: Int = this.seq;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("PingCallbackEvent(connectionId=");
+      var6.append(var1);
+      var6.append(", ping=");
+      var6.append(var4);
+      var6.append(", server=");
+      var6.append(var5);
+      var6.append(", port=");
+      var6.append(var2);
+      var6.append(", seq=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -139,29 +139,29 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
          q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
-         var var2: Int;
          var var3: Int;
-         var var4: Int;
+         var var5: Int;
          var var6: Int;
+         val var7: Int;
          var var11: java.lang.String;
-         var var15: Int;
+         var var14: Int;
          if (var10.y()) {
-            var15 = var10.k(var9, 0);
-            val var7: Int = var10.k(var9, 1);
+            var14 = var10.k(var9, 0);
+            var7 = var10.k(var9, 1);
             var11 = var10.t(var9, 2);
-            var2 = var10.k(var9, 3);
+            val var2: Int = var10.k(var9, 3);
             var3 = var10.k(var9, 4);
-            var4 = 31;
-            var6 = var15;
-            var15 = var7;
+            var5 = 31;
+            var6 = var14;
+            var14 = var2;
          } else {
             var11 = null;
             var var17: Boolean = true;
             var6 = 0;
-            var15 = 0;
-            var4 = 0;
+            var5 = 0;
+            var14 = 0;
             var3 = 0;
-            var2 = 0;
+            var var12: Int = 0;
 
             while (var17) {
                val var8: Int = var10.x(var9);
@@ -174,37 +174,37 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
                                  throw new n(var8);
                               }
 
-                              var4 = var10.k(var9, 4);
-                              var2 |= 16;
+                              var14 = var10.k(var9, 4);
+                              var12 |= 16;
                            } else {
-                              var15 = var10.k(var9, 3);
-                              var2 |= 8;
+                              var5 = var10.k(var9, 3);
+                              var12 |= 8;
                            }
                         } else {
                            var11 = var10.t(var9, 2);
-                           var2 |= 4;
+                           var12 |= 4;
                         }
                      } else {
                         var3 = var10.k(var9, 1);
-                        var2 |= 2;
+                        var12 |= 2;
                      }
                   } else {
                      var6 = var10.k(var9, 0);
-                     var2 |= 1;
+                     var12 |= 1;
                   }
                } else {
                   var17 = false;
                }
             }
 
-            var4 = var2;
-            var3 = var4;
-            var2 = var15;
-            var15 = var3;
+            var7 = var3;
+            var3 = var14;
+            var14 = var5;
+            var5 = var12;
          }
 
          var10.b(var9);
-         return new PingCallbackEvent(var4, var6, var15, var11, var2, var3, null);
+         return new PingCallbackEvent(var5, var6, var7, var11, var14, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PingCallbackEvent) {

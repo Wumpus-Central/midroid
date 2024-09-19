@@ -1,15 +1,15 @@
 package com.discord.client_info
 
 import android.content.Context
-import ch.l
+import fh.l
 import java.util.Locale
 import kotlin.jvm.internal.q
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "1603b1f5-6d6d-43f5-b4d5-1854a2b51281"
+   public const val PROGUARD_UUID: String = "6707d493-cf73-42b7-b2ea-867ae894bf8c"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@248.11.0-1+248111"
+   public const val SENTRY_RELEASE: String = "discord_android@248.12.0-1+248112"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String

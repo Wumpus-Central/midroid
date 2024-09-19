@@ -57,11 +57,11 @@ public final class SafetySystemNotificationBinding implements ViewBinding {
             SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
             if (var8 != null) {
                var1 = R.id.primary_cta;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.secondary_cta;
-                  TextView var3 = (TextView)a.a(var0, var1);
-                  if (var3 != null) {
+                  TextView var6 = (TextView)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.separator;
                      TextView var4 = (TextView)a.a(var0, var1);
                      if (var4 != null) {
@@ -69,12 +69,12 @@ public final class SafetySystemNotificationBinding implements ViewBinding {
                         TextView var9 = (TextView)a.a(var0, var1);
                         if (var9 != null) {
                            var1 = R.id.title;
-                           TextView var5 = (TextView)a.a(var0, var1);
-                           if (var5 != null) {
+                           TextView var7 = (TextView)a.a(var0, var1);
+                           if (var7 != null) {
                               var1 = R.id.title_container;
-                              LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-                              if (var7 != null) {
-                                 return new SafetySystemNotificationBinding(var0, var2, var10, var8, var6, var3, var4, var9, var5, var7);
+                              LinearLayout var5 = (LinearLayout)a.a(var0, var1);
+                              if (var5 != null) {
+                                 return new SafetySystemNotificationBinding(var0, var2, var10, var8, var3, var6, var4, var9, var7, var5);
                               }
                            }
                         }

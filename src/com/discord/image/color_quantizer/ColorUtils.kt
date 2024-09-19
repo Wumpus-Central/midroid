@@ -16,35 +16,35 @@ internal object ColorUtils {
       var var7: Int;
       switch ((int)var1 / 60) {
          case 0:
-            var5 = rh.a.b((var8 + var4) * 255.0F);
-            var6 = rh.a.b((var9 + var4) * 255.0F);
-            var7 = rh.a.b(var4 * 255.0F);
+            var5 = uh.a.b((var8 + var4) * 255.0F);
+            var6 = uh.a.b((var9 + var4) * 255.0F);
+            var7 = uh.a.b(var4 * 255.0F);
             break;
          case 1:
-            var5 = rh.a.b((var9 + var4) * 255.0F);
-            var6 = rh.a.b((var8 + var4) * 255.0F);
-            var7 = rh.a.b(var4 * 255.0F);
+            var5 = uh.a.b((var9 + var4) * 255.0F);
+            var6 = uh.a.b((var8 + var4) * 255.0F);
+            var7 = uh.a.b(var4 * 255.0F);
             break;
          case 2:
-            var5 = rh.a.b(var4 * 255.0F);
-            var6 = rh.a.b((var8 + var4) * 255.0F);
-            var7 = rh.a.b((var9 + var4) * 255.0F);
+            var5 = uh.a.b(var4 * 255.0F);
+            var6 = uh.a.b((var8 + var4) * 255.0F);
+            var7 = uh.a.b((var9 + var4) * 255.0F);
             break;
          case 3:
-            var5 = rh.a.b(var4 * 255.0F);
-            var6 = rh.a.b((var9 + var4) * 255.0F);
-            var7 = rh.a.b((var8 + var4) * 255.0F);
+            var5 = uh.a.b(var4 * 255.0F);
+            var6 = uh.a.b((var9 + var4) * 255.0F);
+            var7 = uh.a.b((var8 + var4) * 255.0F);
             break;
          case 4:
-            var5 = rh.a.b((var9 + var4) * 255.0F);
-            var6 = rh.a.b(var4 * 255.0F);
-            var7 = rh.a.b((var8 + var4) * 255.0F);
+            var5 = uh.a.b((var9 + var4) * 255.0F);
+            var6 = uh.a.b(var4 * 255.0F);
+            var7 = uh.a.b((var8 + var4) * 255.0F);
             break;
          case 5:
          case 6:
-            var5 = rh.a.b((var8 + var4) * 255.0F);
-            var6 = rh.a.b(var4 * 255.0F);
-            var7 = rh.a.b((var9 + var4) * 255.0F);
+            var5 = uh.a.b((var8 + var4) * 255.0F);
+            var6 = uh.a.b(var4 * 255.0F);
+            var7 = uh.a.b((var9 + var4) * 255.0F);
             break;
          default:
             var7 = 0;

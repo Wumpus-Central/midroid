@@ -1,5 +1,8 @@
 package com.discord.span.utilities.common
 
+import al.g0
+import al.n0
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.g0
-import xk.n0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
@@ -56,13 +56,13 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
-      val var2: Int = this.cornerRadius;
+      val var2: Int = this.backgroundColor;
+      val var1: Int = this.cornerRadius;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BackgroundStyle(backgroundColor=");
-      var3.append(var1);
-      var3.append(", cornerRadius=");
       var3.append(var2);
+      var3.append(", cornerRadius=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

@@ -1,6 +1,6 @@
 package com.discord.misc.utilities.time
 
-import ch.l
+import fh.l
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

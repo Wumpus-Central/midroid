@@ -1,10 +1,10 @@
 package com.discord.jank_stats
 
-import ch.w
 import com.discord.codegen.NativeJankStatsSpec
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
+import fh.w
 import kotlin.jvm.internal.q
 
 public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJankStatsSpec {

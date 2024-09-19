@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.row
 
+import al.b2
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
 import kotlin.jvm.internal.q
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.n0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class UploadProgressRow(index: Int, changeType: ChangeType, message: Message, fileId: String) : Row {
@@ -83,20 +83,20 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var2: ChangeType = this.changeType;
-      val var5: Message = this.message;
-      val var4: java.lang.String = this.fileId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UploadProgressRow(index=");
-      var3.append(var1);
-      var3.append(", changeType=");
-      var3.append(var2);
-      var3.append(", message=");
-      var3.append(var5);
-      var3.append(", fileId=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: ChangeType = this.changeType;
+      val var4: Message = this.message;
+      val var2: java.lang.String = this.fileId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("UploadProgressRow(index=");
+      var5.append(var1);
+      var5.append(", changeType=");
+      var5.append(var3);
+      var5.append(", message=");
+      var5.append(var4);
+      var5.append(", fileId=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -127,7 +127,7 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          var var2: Int;
-         var var3: Int;
+         val var4: Int;
          var var6: Message;
          var var7: ChangeType;
          var var10: Any;
@@ -136,16 +136,16 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
             var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
             var6 = var9.m(var8, 2, Message.$serializer.INSTANCE, null) as Message;
             var10 = var9.t(var8, 3);
-            var3 = 15;
+            var4 = 15;
          } else {
-            var var4: Boolean = true;
-            var3 = 0;
+            var var12: Boolean = true;
+            var var3: Int = 0;
             var7 = null;
             var6 = null;
             var10 = null;
             var2 = 0;
 
-            while (var4) {
+            while (var12) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -170,16 +170,16 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
                      var2 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
 
+            var4 = var2;
             var2 = var3;
-            var3 = var2;
          }
 
          var9.b(var8);
-         return new UploadProgressRow(var3, var2, var7, var6, (java.lang.String)var10, null);
+         return new UploadProgressRow(var4, var2, var7, var6, (java.lang.String)var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgressRow) {

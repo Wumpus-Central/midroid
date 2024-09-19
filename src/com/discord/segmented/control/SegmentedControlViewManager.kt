@@ -2,7 +2,6 @@ package com.discord.segmented.control
 
 import android.annotation.SuppressLint
 import android.graphics.Color
-import ch.w
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.reactevents.ReactEvents
@@ -15,7 +14,8 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
-import dh.o
+import fh.w
+import gh.o
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0

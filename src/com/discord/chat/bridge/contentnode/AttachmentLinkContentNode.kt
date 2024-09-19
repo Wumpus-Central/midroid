@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
+import al.b2
+import al.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,11 +10,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
@@ -78,16 +78,16 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
-      val var4: java.util.List = this.content;
+      val var4: java.lang.String = this.attachmentUrl;
+      val var3: java.lang.String = this.attachmentName;
+      val var1: java.util.List = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("AttachmentLinkContentNode(attachmentUrl=");
-      var2.append(var3);
-      var2.append(", attachmentName=");
-      var2.append(var1);
-      var2.append(", content=");
       var2.append(var4);
+      var2.append(", attachmentName=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -116,27 +116,27 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
 
       public open fun deserialize(decoder: Decoder): AttachmentLinkContentNode {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var8: Array<KSerializer> = AttachmentLinkContentNode.access$get$childSerializers$cp();
-         val var5: Boolean = var10.y();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var10: Array<KSerializer> = AttachmentLinkContentNode.access$get$childSerializers$cp();
+         val var5: Boolean = var9.y();
          var var7: java.lang.String = null;
          var var2: Int;
-         val var6: java.util.List;
-         val var11: java.lang.String;
+         var var6: java.lang.String;
+         var var11: java.util.List;
          if (var5) {
-            var7 = var10.t(var9, 0);
-            var11 = var10.t(var9, 1);
-            var6 = var10.v(var9, 2, var8[2], null) as java.util.List;
+            var7 = var9.t(var8, 0);
+            var6 = var9.t(var8, 1);
+            var11 = var9.v(var8, 2, var10[2], null) as java.util.List;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var13: java.lang.String = null;
-            var var12: java.util.List = null;
+            var6 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -144,27 +144,24 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
                            throw new n(var4);
                         }
 
-                        var12 = var10.v(var9, 2, var8[2], var12) as java.util.List;
+                        var11 = var9.v(var8, 2, var10[2], var11) as java.util.List;
                         var2 |= 4;
                      } else {
-                        var13 = var10.t(var9, 1);
+                        var6 = var9.t(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.t(var9, 0);
+                     var7 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = var12;
-            var11 = var13;
          }
 
-         var10.b(var9);
-         return new AttachmentLinkContentNode(var2, var7, var11, var6, null);
+         var9.b(var8);
+         return new AttachmentLinkContentNode(var2, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AttachmentLinkContentNode) {
@@ -177,7 +174,7 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

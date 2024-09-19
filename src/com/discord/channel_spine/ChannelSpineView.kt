@@ -10,10 +10,10 @@ import android.graphics.Paint.Style
 import android.util.AttributeSet
 import android.view.View
 import android.view.View.MeasureSpec
-import ch.p
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
+import fh.p
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
@@ -273,7 +273,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = jh.a.a(var0);
+         $ENTRIES = mh.a.a(var0);
       }
 
       init {

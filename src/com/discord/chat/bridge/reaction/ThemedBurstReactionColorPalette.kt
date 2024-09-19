@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.reaction
 
+import al.g0
+import al.g0.a
 import com.discord.reactions.BurstReactionView
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -9,10 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.g0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) :
@@ -62,13 +62,13 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
    }
 
    public override fun toString(): String {
-      val var3: BurstReactionColorPalette = this.light;
-      val var1: BurstReactionColorPalette = this.dark;
+      val var1: BurstReactionColorPalette = this.light;
+      val var3: BurstReactionColorPalette = this.dark;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ThemedBurstReactionColorPalette(light=");
-      var2.append(var3);
-      var2.append(", dark=");
       var2.append(var1);
+      var2.append(", dark=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

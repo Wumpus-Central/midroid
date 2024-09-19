@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import al.b2
+import al.g0
+import al.o1
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
@@ -13,12 +16,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.o1
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType: String?) : TapTagData(var1, var2, var4), ReactEvent {
@@ -80,8 +80,8 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.tagType == null) {
          var1 = 0;
@@ -89,7 +89,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          var1 = this.tagType.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -97,14 +97,14 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var4: java.lang.String = this.tagType;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapTagData(messageId=");
-      var3.append(var2);
-      var3.append(", channelId=");
       var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
       var3.append(", tagType=");
       var3.append(var4);
       var3.append(")");
@@ -138,9 +138,9 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          var var2: Int;
+         var var5: java.lang.String;
+         val var7: Any;
          val var12: java.lang.String;
-         var var14: Any;
-         var var16: java.lang.String;
          if (var9.y()) {
             val var10: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var11: java.lang.String;
@@ -150,16 +150,16 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
                var11 = null;
             }
 
-            val var7: ChannelId = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var12 = var9.v(var8, 2, b2.a, null) as java.lang.String;
+            var7 = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var6: java.lang.String = var9.v(var8, 2, b2.a, null) as java.lang.String;
+            var5 = var11;
+            var12 = var6;
             var2 = 7;
-            var16 = var11;
-            var14 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var16 = null;
-            var14 = null;
+            var var15: java.lang.String = null;
+            var5 = null;
             var var13: Any = null;
 
             while (var3) {
@@ -171,25 +171,25 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
                            throw new n(var4);
                         }
 
-                        var14 = var9.v(var8, 2, b2.a, var14) as java.lang.String;
+                        var5 = var9.v(var8, 2, b2.a, var5) as java.lang.String;
                         var2 |= 4;
                      } else {
                         var13 = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, var13) as ChannelId;
                         var2 |= 2;
                      }
                   } else {
-                     val var17: MessageId;
-                     if (var16 != null) {
-                        var17 = MessageId.box-impl(var16);
-                     } else {
-                        var17 = null;
-                     }
-
-                     val var18: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var17) as MessageId;
-                     if (var18 != null) {
-                        var16 = var18.unbox-impl();
+                     val var16: MessageId;
+                     if (var15 != null) {
+                        var16 = MessageId.box-impl(var15);
                      } else {
                         var16 = null;
+                     }
+
+                     val var17: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var16) as MessageId;
+                     if (var17 != null) {
+                        var15 = var17.unbox-impl();
+                     } else {
+                        var15 = null;
                      }
 
                      var2 |= 1;
@@ -199,12 +199,13 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
                }
             }
 
-            var12 = (java.lang.String)var14;
-            var14 = var13;
+            var7 = var13;
+            var12 = var5;
+            var5 = var15;
          }
 
          var9.b(var8);
-         return new TapTagData(var2, var16, (ChannelId)var14, var12, null, null);
+         return new TapTagData(var2, var5, (ChannelId)var7, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapTagData) {
@@ -217,7 +218,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

@@ -2,7 +2,6 @@ package com.discord.chat.presentation.textutils
 
 import android.graphics.drawable.ColorDrawable
 import android.view.View
-import ch.p
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode
@@ -15,6 +14,7 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
+import fh.p
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 

@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.list
 
-import ch.p
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
+import fh.p
 
 @JvmSynthetic
 fun `access$label`(var0: ChatListAction): java.lang.String {

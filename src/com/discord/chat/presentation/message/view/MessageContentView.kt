@@ -62,7 +62,7 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = ch.l.b(new Function0(this) {
+      this.shadowView$delegate = fh.l.b(new Function0(this) {
          final MessageContentView this$0;
 
          {

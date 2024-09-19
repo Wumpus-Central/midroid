@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
+import al.b2
+import al.g0
+import al.o1
+import al.g0.a
 import com.discord.primitives.ChannelId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.o1
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class PinsOnClick(action: String, messageChannelId: ChannelId) : PinsOnClick(var1, var2) {
@@ -115,9 +115,8 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
          val var10: java.lang.String;
          if (var5) {
             var10 = var9.t(var8, 0);
-            val var12: ChannelId = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var7 = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
-            var7 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;

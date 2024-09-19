@@ -3,8 +3,6 @@ package com.discord.crash_reporting.system_logs
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
-import hk.j
-import ik.d
 import java.io.BufferedReader
 import java.io.File
 import java.security.MessageDigest
@@ -12,9 +10,11 @@ import java.util.HashSet
 import java.util.LinkedList
 import java.util.NoSuchElementException
 import java.util.concurrent.TimeUnit
+import kk.j
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import lk.d
 
 internal object SystemLogUtils {
    private const val DEFAULT_TAG: String = "Discord"
@@ -51,7 +51,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         gh.a.b(
+         jh.a.b(
             false,
             false,
             null,
@@ -149,7 +149,7 @@ internal object SystemLogUtils {
                   // 078: astore 4
                   // 07a: aload 5
                   // 07c: astore 3
-                  // 07d: getstatic ik/a.b Ljava/nio/charset/Charset;
+                  // 07d: getstatic lk/a.b Ljava/nio/charset/Charset;
                   // 080: astore 9
                   // 082: aload 5
                   // 084: astore 4
@@ -182,7 +182,7 @@ internal object SystemLogUtils {
                   // 0bb: goto 0dc
                   // 0be: astore 3
                   // 0bf: goto 1e1
-                  // 0c2: astore 5
+                  // 0c2: astore 6
                   // 0c4: goto 108
                   // 0c7: aload 5
                   // 0c9: astore 4
@@ -218,7 +218,7 @@ internal object SystemLogUtils {
                   // 105: goto 1d2
                   // 108: aload 3
                   // 109: astore 4
-                  // 10b: aload 5
+                  // 10b: aload 6
                   // 10d: invokevirtual java/lang/Throwable.printStackTrace ()V
                   // 110: aload 3
                   // 111: astore 4
@@ -229,7 +229,7 @@ internal object SystemLogUtils {
                   // 11b: astore 4
                   // 11d: aload 0
                   // 11e: getfield com/discord/crash_reporting/system_logs/SystemLogUtils$fetch$1.$output Ljava/util/LinkedList;
-                  // 121: astore 6
+                  // 121: astore 5
                   // 123: aload 3
                   // 124: astore 4
                   // 126: new java/lang/StringBuilder
@@ -247,7 +247,7 @@ internal object SystemLogUtils {
                   // 13e: aload 3
                   // 13f: astore 4
                   // 141: aload 7
-                  // 143: aload 5
+                  // 143: aload 6
                   // 145: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 148: pop
                   // 149: aload 3
@@ -258,62 +258,62 @@ internal object SystemLogUtils {
                   // 153: pop
                   // 154: aload 3
                   // 155: astore 4
-                  // 157: aload 6
+                  // 157: aload 5
                   // 159: aload 7
                   // 15b: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 15e: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 161: pop
                   // 162: aload 3
                   // 163: astore 4
-                  // 165: aload 5
+                  // 165: aload 6
                   // 167: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-                  // 16a: astore 8
+                  // 16a: astore 5
                   // 16c: aload 3
                   // 16d: astore 4
-                  // 16f: aload 8
+                  // 16f: aload 5
                   // 171: ldc "getStackTrace(...)"
                   // 173: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
                   // 176: aload 3
                   // 177: astore 4
                   // 179: aload 0
                   // 17a: getfield com/discord/crash_reporting/system_logs/SystemLogUtils$fetch$1.$output Ljava/util/LinkedList;
-                  // 17d: astore 7
+                  // 17d: astore 6
                   // 17f: aload 3
                   // 180: astore 4
-                  // 182: aload 8
+                  // 182: aload 5
                   // 184: arraylength
                   // 185: istore 2
                   // 186: iload 1
                   // 187: iload 2
                   // 188: if_icmpge 1cb
-                  // 18b: aload 8
+                  // 18b: aload 5
                   // 18d: iload 1
                   // 18e: aaload
-                  // 18f: astore 5
+                  // 18f: astore 7
                   // 191: aload 3
                   // 192: astore 4
                   // 194: new java/lang/StringBuilder
-                  // 197: astore 6
+                  // 197: astore 8
                   // 199: aload 3
                   // 19a: astore 4
-                  // 19c: aload 6
+                  // 19c: aload 8
                   // 19e: invokespecial java/lang/StringBuilder.<init> ()V
                   // 1a1: aload 3
                   // 1a2: astore 4
-                  // 1a4: aload 6
+                  // 1a4: aload 8
                   // 1a6: ldc "    "
                   // 1a8: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 1ab: pop
                   // 1ac: aload 3
                   // 1ad: astore 4
-                  // 1af: aload 6
-                  // 1b1: aload 5
+                  // 1af: aload 8
+                  // 1b1: aload 7
                   // 1b3: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 1b6: pop
                   // 1b7: aload 3
                   // 1b8: astore 4
-                  // 1ba: aload 7
-                  // 1bc: aload 6
+                  // 1ba: aload 6
+                  // 1bc: aload 8
                   // 1be: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 1c1: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 1c4: pop
@@ -445,7 +445,7 @@ internal object SystemLogUtils {
 
    private fun hashString(input: String): String {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
-      val var3: ByteArray = var1.getBytes(ik.a.b);
+      val var3: ByteArray = var1.getBytes(lk.a.b);
       q.g(var3, "getBytes(...)");
       val var4: ByteArray = var2.digest(var3);
       q.e(var4);

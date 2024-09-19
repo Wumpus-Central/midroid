@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import ch.l
 import com.discord.codegen.NativeMobileVoiceOverlaySpec
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.mobile_voice_overlay.utils.WindowUtils
@@ -13,6 +12,7 @@ import com.facebook.react.bridge.ActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
+import fh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
@@ -63,11 +63,11 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
             public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
                if (var2 == 234780) {
                   MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
-                  val var7: Promise = this.$promise;
+                  val var6: Promise = this.$promise;
                   val var5: WindowUtils = WindowUtils.INSTANCE;
-                  val var6: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
-                  q.g(var6, "access$getReactApplicationContext(...)");
-                  var7.resolve(var5.canDrawOverlay(var6));
+                  val var7: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
+                  q.g(var7, "access$getReactApplicationContext(...)");
+                  var6.resolve(var5.canDrawOverlay(var7));
                }
             }
 

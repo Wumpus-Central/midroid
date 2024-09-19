@@ -1,7 +1,7 @@
 package com.discord.image.fresco.postprocessors.processors
 
 import android.graphics.Bitmap
-import c6.a
+import f6.a
 import kotlin.jvm.internal.q
 
 internal class SafeRoundAsCirclePostprocessor : a {

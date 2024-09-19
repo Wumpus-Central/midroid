@@ -11,8 +11,6 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import ch.l
-import ch.p
 import com.discord.chat.bridge.botuikit.ActionComponentState
 import com.discord.chat.bridge.botuikit.ComponentEmoji
 import com.discord.chat.bridge.botuikit.SearchableSelectItem
@@ -49,6 +47,8 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.textview.MaterialTextView
+import fh.l
+import fh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
@@ -90,9 +90,9 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var6: DraweeSpanStringBuilder = new DraweeSpanStringBuilder();
       val var5: Int = SizeUtilsKt.getDpToPx(20);
       var6.append('\u200b');
-      val var8: ImageRequestBuilder = ImageRequestBuilder.v(Uri.parse(var2)).J(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null)).E(RequestLevel.k);
+      val var8: ImageRequestBuilder = ImageRequestBuilder.w(Uri.parse(var2)).L(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null)).G(RequestLevel.k);
       if (var4) {
-         var8.F(this.getPostProcessor());
+         var8.H(this.getPostProcessor());
       }
 
       val var9: com.facebook.drawee.controller.a = (o4.c.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
@@ -215,20 +215,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label68: {
                      if (var36 is SearchableSelectItem) {
-                        val var20: SearchableSelectItem = var36 as SearchableSelectItem;
+                        val var14: SearchableSelectItem = var36 as SearchableSelectItem;
                         if ((var36 as SearchableSelectItem).getIconSrc() != null) {
-                           val var38: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
+                           val var13: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var13: java.lang.String = var20.getIconSrc();
-                           val var14: Int = var20.getIconColor();
+                           val var38: java.lang.String = var14.getIconSrc();
+                           val var21: Int = var14.getIconColor();
                            val var30: Boolean;
-                           if (var20.getType() === SelectOptionType.USER) {
+                           if (var14.getType() === SelectOptionType.USER) {
                               var30 = true;
                            } else {
                               var30 = false;
                            }
 
-                           this.setImage(var38, var13, var14, var30);
+                           this.setImage(var13, var38, var21, var30);
                            val var22: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var22.setVisibility(0);
@@ -236,9 +236,9 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                         }
                      }
 
-                     val var21: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
+                     val var20: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                      q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                     var21.setVisibility(8);
+                     var20.setVisibility(8);
                   }
                }
             }

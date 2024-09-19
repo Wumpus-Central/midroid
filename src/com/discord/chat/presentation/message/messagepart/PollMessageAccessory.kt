@@ -155,8 +155,8 @@ public data class PollMessageAccessory(channelId: ChannelId,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = ChannelId.hashCode-impl(this.channelId);
-      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var3: Int = MessageId.hashCode-impl(this.messageId);
       val var1: Int;
       if (this.myAvatarUrl == null) {
          var1 = 0;
@@ -164,31 +164,31 @@ public data class PollMessageAccessory(channelId: ChannelId,
          var1 = this.myAvatarUrl.hashCode();
       }
 
-      return ((((var3 * 31 + var2) * 31 + var1) * 31 + this.data.hashCode()) * 31 + this.answers.hashCode()) * 31 + this.containerStyleSet.hashCode();
+      return ((((var2 * 31 + var3) * 31 + var1) * 31 + this.data.hashCode()) * 31 + this.answers.hashCode()) * 31 + this.containerStyleSet.hashCode();
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = this.myAvatarUrl;
-      val var5: PollData = this.data;
-      val var2: java.util.List = this.answers;
-      val var7: IPollStyleSet = this.containerStyleSet;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMessageAccessory(channelId=");
-      var4.append(var3);
-      var4.append(", messageId=");
-      var4.append(var6);
-      var4.append(", myAvatarUrl=");
-      var4.append(var1);
-      var4.append(", data=");
-      var4.append(var5);
-      var4.append(", answers=");
-      var4.append(var2);
-      var4.append(", containerStyleSet=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = this.myAvatarUrl;
+      val var6: PollData = this.data;
+      val var7: java.util.List = this.answers;
+      val var4: IPollStyleSet = this.containerStyleSet;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollMessageAccessory(channelId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var5);
+      var3.append(", myAvatarUrl=");
+      var3.append(var2);
+      var3.append(", data=");
+      var3.append(var6);
+      var3.append(", answers=");
+      var3.append(var7);
+      var3.append(", containerStyleSet=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

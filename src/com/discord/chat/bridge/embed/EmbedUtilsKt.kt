@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.embed
 
-import ch.w
 import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
+import fh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 

@@ -1,5 +1,6 @@
 package com.discord.chatreplay
 
+import al.f
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -7,13 +8,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.content.FileProvider
-import dh.o
+import gh.o
 import java.io.File
 import java.nio.file.Path
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import xk.f
 
 public class ReplayProviderActivity : Activity {
    private fun getReplayFile(replayName: String): File {

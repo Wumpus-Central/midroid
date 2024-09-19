@@ -86,7 +86,7 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       };
       val var3: Array<AudioDeviceInfo> = var2.getDevices(2);
       q.e(var3);
-      this.audioDevices = kotlin.collections.c.y0(var3);
+      this.audioDevices = kotlin.collections.c.z0(var3);
    }
 
    private fun emitEffectiveDevice() {
@@ -162,8 +162,8 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
 
       val var10: ArrayList = new ArrayList(i.u(var2, 10));
 
-      for (AudioDeviceInfo var11 : var2) {
-         var10.add(AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var11.getType(), SimpleDeviceType.INVALID));
+      for (AudioDeviceInfo var7 : var2) {
+         var10.add(AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var7.getType(), SimpleDeviceType.INVALID));
       }
 
       val var8: java.util.Set = i.T0(var10);
@@ -350,7 +350,7 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
       val var1: SimpleDeviceType = this.getActiveAudioDevice();
-      val var3: SimpleDeviceType = this.desiredDeviceType;
+      val var2: SimpleDeviceType = this.desiredDeviceType;
       if (this.desiredDeviceType === SimpleDeviceType.DEFAULT) {
          return AndroidAudioDevice.Companion.fromSimpleDeviceType(var1);
       } else {
@@ -397,15 +397,15 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
    public override fun setCommunicationModeOn(on: Boolean) {
       this.communicationModeOn = var1;
       this.scoRetryAttempts = 0;
-      val var2: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("setCommunicationModeOn: ");
-      var3.append(var1);
-      Log.i$default(var2, "DiscordAudioManager", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("setCommunicationModeOn: ");
+      var2.append(var1);
+      Log.i$default(var3, "DiscordAudioManager", var2.toString(), null, 4, null);
       if (var1) {
          val var4: Array<AudioDeviceInfo> = this.androidAudioManager.getDevices(2);
          q.e(var4);
-         this.audioDevices = kotlin.collections.c.y0(var4);
+         this.audioDevices = kotlin.collections.c.z0(var4);
          this.androidAudioManager.registerAudioDeviceCallback(this.audioDeviceCallback, null);
          this.androidAudioManager.setMode(3);
          this.registerAudioManagerReceivers();

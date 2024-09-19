@@ -1,8 +1,8 @@
 package com.discord.emoji_picker
 
-import ch.l
-import ch.p
 import com.discord.misc.utilities.ids.IdUtilsKt
+import fh.l
+import fh.p
 import java.util.LinkedHashMap
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q

@@ -2,14 +2,14 @@ package com.discord.device
 
 import android.os.Build
 import android.os.Build.VERSION
-import ch.w
 import com.discord.codegen.NativeDeviceManagerSpec
 import com.discord.device.utils.DeviceHardwareInfoKt
 import com.discord.device.utils.IsGestureNavigationEnabledKt
 import com.discord.device.utils.IsTabletKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.annotations.ReactModule
-import dh.r
+import fh.w
+import gh.r
 import kotlin.jvm.internal.q
 
 @ReactModule(name = "RTNDeviceManager")

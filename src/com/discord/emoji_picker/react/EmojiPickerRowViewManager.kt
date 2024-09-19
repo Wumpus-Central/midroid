@@ -1,6 +1,5 @@
 package com.discord.emoji_picker.react
 
-import ch.w
 import com.discord.emoji_picker.EmojiPickerRowView
 import com.discord.emoji_picker.react_events.OnLongPressEmojiEvent
 import com.discord.emoji_picker.react_events.OnPressEmojiEvent
@@ -11,6 +10,7 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerRowViewManagerInterface
+import fh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q

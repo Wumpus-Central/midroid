@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
+import al.g0
+import al.o1
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import kotlin.jvm.internal.q
@@ -11,11 +13,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import uk.f
-import uk.n
-import vk.a
-import xk.g0
-import xk.o1
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...) : MessageReference(var1, var3) {
@@ -165,7 +165,7 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

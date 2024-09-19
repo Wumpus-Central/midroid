@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import al.b2
+import al.g0
+import al.n0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,12 +13,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import vk.a
-import xk.b2
-import xk.g0
-import xk.n0
+import xk.f
+import xk.n
+import yk.a
 
 @f
 internal data class LongPressMessageEvent(messageId: String,
@@ -108,8 +108,8 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.messageId.hashCode();
-      val var6: Int = this.channelId.hashCode();
+      val var6: Int = this.messageId.hashCode();
+      val var5: Int = this.channelId.hashCode();
       val var3: Int = Integer.hashCode(this.mediaIndex);
       val var4: Int = this.mediaType.hashCode();
       var var2: Int = 0;
@@ -124,7 +124,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var5 * 31 + var6) * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((((var6 * 31 + var5) * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -132,27 +132,27 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var6: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var4: java.lang.String = this.mediaType;
-      val var2: java.lang.String = this.componentId;
+      val var5: java.lang.String = this.mediaType;
+      val var3: java.lang.String = this.componentId;
       val var7: Int = this.componentMediaIndex;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("LongPressMessageEvent(messageId=");
-      var6.append(var3);
-      var6.append(", channelId=");
-      var6.append(var5);
-      var6.append(", mediaIndex=");
-      var6.append(var1);
-      var6.append(", mediaType=");
-      var6.append(var4);
-      var6.append(", componentId=");
-      var6.append(var2);
-      var6.append(", componentMediaIndex=");
-      var6.append(var7);
-      var6.append(")");
-      return var6.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressMessageEvent(messageId=");
+      var2.append(var4);
+      var2.append(", channelId=");
+      var2.append(var6);
+      var2.append(", mediaIndex=");
+      var2.append(var1);
+      var2.append(", mediaType=");
+      var2.append(var5);
+      var2.append(", componentId=");
+      var2.append(var3);
+      var2.append(", componentMediaIndex=");
+      var2.append(var7);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -187,28 +187,28 @@ internal data class LongPressMessageEvent(messageId: String,
          val var12: c = var1.c(var11);
          var var2: Int;
          var var3: Int;
-         var var6: java.lang.String;
+         var var7: java.lang.String;
          var var8: java.lang.String;
-         val var10: java.lang.String;
+         var var9: java.lang.String;
          var var13: Any;
-         var var15: java.lang.String;
+         var var14: java.lang.String;
          if (var12.y()) {
-            var15 = var12.t(var11, 0);
+            var9 = var12.t(var11, 0);
             var8 = var12.t(var11, 1);
             var3 = var12.k(var11, 2);
-            var6 = var12.t(var11, 3);
-            val var9: java.lang.String = var12.v(var11, 4, b2.a, null) as java.lang.String;
+            var14 = var12.t(var11, 3);
+            val var10: java.lang.String = var12.v(var11, 4, b2.a, null) as java.lang.String;
             var13 = var12.v(var11, 5, n0.a, null) as Int;
             var2 = 63;
-            var10 = var15;
-            var15 = var9;
+            var7 = var14;
+            var14 = var10;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var var17: java.lang.String = null;
+            var9 = null;
             var8 = null;
-            var15 = null;
-            var6 = null;
+            var7 = null;
+            var14 = null;
             var13 = null;
             var2 = 0;
 
@@ -219,7 +219,7 @@ internal data class LongPressMessageEvent(messageId: String,
                      var4 = false;
                      break;
                   case 0:
-                     var17 = var12.t(var11, 0);
+                     var9 = var12.t(var11, 0);
                      var2 |= 1;
                      break;
                   case 1:
@@ -231,11 +231,11 @@ internal data class LongPressMessageEvent(messageId: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var15 = var12.t(var11, 3);
+                     var7 = var12.t(var11, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var12.v(var11, 4, b2.a, var6) as java.lang.String;
+                     var14 = var12.v(var11, 4, b2.a, var14) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
@@ -246,14 +246,10 @@ internal data class LongPressMessageEvent(messageId: String,
                      throw new n(var5);
                }
             }
-
-            var15 = var6;
-            var6 = var15;
-            var10 = var17;
          }
 
          var12.b(var11);
-         return new LongPressMessageEvent(var2, var10, var8, var3, var6, var15, (Integer)var13, null);
+         return new LongPressMessageEvent(var2, var9, var8, var3, var7, var14, (Integer)var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressMessageEvent) {
@@ -266,7 +262,7 @@ internal data class LongPressMessageEvent(messageId: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return xk.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

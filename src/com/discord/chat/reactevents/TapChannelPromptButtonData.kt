@@ -1,5 +1,8 @@
 package com.discord.chat.reactevents
 
+import al.b2
+import al.g0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -10,11 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class TapChannelPromptButtonData(messageId: String, channelId: String, buttonType: String) : ReactEvent {
@@ -77,18 +77,18 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.buttonType;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapChannelPromptButtonData(messageId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var3);
-      var4.append(", buttonType=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.buttonType;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapChannelPromptButtonData(messageId=");
+      var3.append(var4);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(", buttonType=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -119,15 +119,15 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
          val var9: c = var1.c(var8);
          var var2: Int;
          var var5: java.lang.String;
-         var var6: java.lang.String;
+         val var7: java.lang.String;
          val var10: java.lang.String;
          if (var9.y()) {
-            var6 = var9.t(var8, 0);
-            var5 = var9.t(var8, 1);
+            var5 = var9.t(var8, 0);
+            var7 = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
             var2 = 7;
          } else {
-            var6 = null;
+            var var6: java.lang.String = null;
             var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
@@ -157,12 +157,13 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
                }
             }
 
+            var7 = var11;
             var10 = var5;
-            var5 = var11;
+            var5 = var6;
          }
 
          var9.b(var8);
-         return new TapChannelPromptButtonData(var2, var6, var5, var10, null);
+         return new TapChannelPromptButtonData(var2, var5, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapChannelPromptButtonData) {

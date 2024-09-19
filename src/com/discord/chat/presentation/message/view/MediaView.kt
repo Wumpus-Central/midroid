@@ -626,7 +626,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      kk.f.d(
+      nk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -1661,7 +1661,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      kk.f.d(
+      nk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,

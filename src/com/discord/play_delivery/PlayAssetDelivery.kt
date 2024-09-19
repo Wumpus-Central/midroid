@@ -12,7 +12,7 @@ import kotlin.jvm.internal.q
 
 public object PlayAssetDelivery {
    private const val TAG: String = "PlayAssetDelivery"
-   private final lateinit var assetPackManagerWeakRef: WeakReference<hc.a>
+   private final lateinit var assetPackManagerWeakRef: WeakReference<kc.a>
    private final var assetDeliveryAvailable: Boolean = true
    private final val pendingCallbacks: MutableMap<String, MutableList<(Boolean) -> Unit>> = new LinkedHashMap()
    private final val assetPackLocations: MutableMap<String, AssetPackLocation> = new LinkedHashMap()
@@ -27,7 +27,7 @@ public object PlayAssetDelivery {
          var1 = null;
       }
 
-      val var7: hc.a = var1.get() as hc.a;
+      val var7: kc.a = var1.get() as kc.a;
       if (var7 != null) {
          val var11: java.lang.String = var0.g();
          q.g(var11, "name()");
@@ -38,12 +38,12 @@ public object PlayAssetDelivery {
                assetPackLocations.put(var11, var4);
             }
 
-            val var5: Log = Log.INSTANCE;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append("Download of ");
-            var8.append(var11);
-            var8.append(" Asset complete");
-            Log.i$default(var5, "PlayAssetDelivery", var8.toString(), null, 4, null);
+            val var8: Log = Log.INSTANCE;
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("Download of ");
+            var5.append(var11);
+            var5.append(" Asset complete");
+            Log.i$default(var8, "PlayAssetDelivery", var5.toString(), null, 4, null);
             var9 = java.lang.Boolean.TRUE;
          } else {
             label26: {
@@ -54,12 +54,12 @@ public object PlayAssetDelivery {
                   }
                }
 
-               val var6: Log = Log.INSTANCE;
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Download of ");
-               var10.append(var11);
-               var10.append(" Asset failed");
-               Log.i$default(var6, "PlayAssetDelivery", var10.toString(), null, 4, null);
+               val var10: Log = Log.INSTANCE;
+               val var6: StringBuilder = new StringBuilder();
+               var6.append("Download of ");
+               var6.append(var11);
+               var6.append(" Asset failed");
+               Log.i$default(var10, "PlayAssetDelivery", var6.toString(), null, 4, null);
                var9 = java.lang.Boolean.FALSE;
             }
          }
@@ -98,13 +98,13 @@ public object PlayAssetDelivery {
       // 016: astore 3
       // 017: aload 3
       // 018: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
-      // 01b: checkcast hc/a
+      // 01b: checkcast kc/a
       // 01e: astore 6
       // 020: aload 6
       // 022: ifnull 031
       // 025: aload 6
       // 027: aload 1
-      // 028: invokeinterface hc/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
+      // 028: invokeinterface kc/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
       // 02d: astore 3
       // 02e: goto 033
       // 031: aconst_null
@@ -191,12 +191,12 @@ public object PlayAssetDelivery {
       // 0d4: aload 6
       // 0d6: aload 1
       // 0d7: invokestatic kotlin/collections/i.e (Ljava/lang/Object;)Ljava/util/List;
-      // 0da: invokeinterface hc/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
+      // 0da: invokeinterface kc/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
       // 0df: new com/discord/play_delivery/b
       // 0e2: dup
       // 0e3: aload 1
       // 0e4: invokespecial com/discord/play_delivery/b.<init> (Ljava/lang/String;)V
-      // 0e7: invokevirtual com/google/android/gms/tasks/Task.d (Llb/d;)Lcom/google/android/gms/tasks/Task;
+      // 0e7: invokevirtual com/google/android/gms/tasks/Task.d (Lob/d;)Lcom/google/android/gms/tasks/Task;
       // 0ea: pop
       // 0eb: aload 4
       // 0ed: astore 1
@@ -299,12 +299,12 @@ public object PlayAssetDelivery {
          var5 = null;
          if (var3.c() == 0) {
             if (var3.b() == null) {
-               val var6: Log = Log.INSTANCE;
-               val var7: StringBuilder = new StringBuilder();
-               var7.append("Asset ");
-               var7.append(var1);
-               var7.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
-               Log.w$default(var6, "PlayAssetDelivery", var7.toString(), null, 4, null);
+               val var7: Log = Log.INSTANCE;
+               val var6: StringBuilder = new StringBuilder();
+               var6.append("Asset ");
+               var6.append(var1);
+               var6.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
+               Log.w$default(var7, "PlayAssetDelivery", var6.toString(), null, 4, null);
                var5 = null;
             } else {
                var5 = var3.b();
@@ -317,7 +317,7 @@ public object PlayAssetDelivery {
 
    public fun initialize(applicationContext: Context) {
       q.h(var1, "applicationContext");
-      val var2: hc.a = com.google.android.play.core.assetpacks.b.a(var1);
+      val var2: kc.a = com.google.android.play.core.assetpacks.b.a(var1);
       q.g(var2, "getInstance(...)");
       var2.a(assetPackStateUpdateListener);
       assetPackManagerWeakRef = new WeakReference<>(var2);

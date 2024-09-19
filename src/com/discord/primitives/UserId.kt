@@ -1,5 +1,8 @@
 package com.discord.primitives
 
+import al.g0
+import al.x0
+import al.g0.a
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
 import kotlin.jvm.internal.q
@@ -8,10 +11,7 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.InlineClassDescriptor
-import uk.f
-import xk.g0
-import xk.x0
-import xk.g0.a
+import xk.f
 
 @f
 public inline class UserId : SnowflakePrimitive {

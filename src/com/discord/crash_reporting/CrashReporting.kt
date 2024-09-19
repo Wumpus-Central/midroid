@@ -2,10 +2,10 @@ package com.discord.crash_reporting
 
 import android.content.Context
 import android.os.Build
-import ch.p
 import com.discord.client_info.ClientInfo
 import com.discord.logging.Log
-import dh.r
+import fh.p
+import gh.r
 import io.sentry.IScope
 import io.sentry.d5
 import io.sentry.e
@@ -86,7 +86,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("1603b1f5-6d6d-43f5-b4d5-1854a2b51281");
+      var5.setProguardUuid("6707d493-cf73-42b7-b2ea-867ae894bf8c");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -107,7 +107,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", ch.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", fh.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -195,7 +195,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = jh.a.a(var0);
+         $ENTRIES = mh.a.a(var0);
       }
 
       @JvmStatic

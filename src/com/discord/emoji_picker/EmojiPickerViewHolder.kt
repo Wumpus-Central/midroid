@@ -11,7 +11,6 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutParams
-import ch.l
 import com.discord.SetTextSizeSpKt
 import com.discord.emoji_picker.databinding.PremiumInlineRoadblockFooterBinding
 import com.discord.emoji_picker.databinding.PremiumInlineRoadblockHeaderBinding
@@ -31,6 +30,7 @@ import com.facebook.drawee.drawable.ScalingUtils.ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
+import fh.l
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
@@ -211,10 +211,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiItem = var1;
          this.emojiSize = var3;
          this.emojiMargin = var4;
-         val var7: SimpleDraweeView = this.emojiView;
-         val var8: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
-         var8.setMargins(var4, var4, var4, var4);
-         var7.setLayoutParams(var8);
+         val var8: SimpleDraweeView = this.emojiView;
+         val var7: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
+         var7.setMargins(var4, var4, var4, var4);
+         var8.setLayoutParams(var7);
          this.emojiView.setContentDescription(var1.getName());
          val var11: GenericDraweeHierarchy = this.emojiView.getHierarchy() as GenericDraweeHierarchy;
          val var10: Drawable;
@@ -303,10 +303,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
 
       public fun onBindViewHolder(emojiSize: Int, emojiMargin: Int) {
-         val var3: View = this.itemView;
-         val var4: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
-         var4.setMargins(var2, var2, var2, var2);
-         var3.setLayoutParams(var4);
+         val var4: View = this.itemView;
+         val var3: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
+         var3.setMargins(var2, var2, var2, var2);
+         var4.setLayoutParams(var3);
       }
    }
 

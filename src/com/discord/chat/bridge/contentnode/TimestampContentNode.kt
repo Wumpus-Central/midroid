@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
+import al.b2
+import al.g0
+import al.x0
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -8,12 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.x0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
@@ -71,17 +71,17 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var3: java.lang.String = this.full;
+      val var4: java.lang.String = this.full;
       val var5: java.lang.String = this.formatted;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TimestampContentNode(timestamp=");
-      var4.append(var1);
-      var4.append(", full=");
-      var4.append(var3);
-      var4.append(", formatted=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TimestampContentNode(timestamp=");
+      var3.append(var1);
+      var3.append(", full=");
+      var3.append(var4);
+      var3.append(", formatted=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

@@ -14,7 +14,7 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.flow.Flow
-import nk.d
+import qk.d
 
 public object PublicFileDownloader {
    private final val onDownloadListeners: MutableMap<Long, () -> Unit> = new LinkedHashMap()
@@ -73,7 +73,7 @@ public object PublicFileDownloader {
       // 3a: invokespecial com/discord/file_downloader/DownloadState$Completed.<init> (Ljava/io/File;)V
       // 3d: aload 1
       // 3e: aload 5
-      // 40: invokeinterface mk/s.l (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 40: invokeinterface pk/s.h (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
       // 46: goto 79
       // 49: astore 5
@@ -94,17 +94,17 @@ public object PublicFileDownloader {
       // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 70: aload 1
       // 71: aload 8
-      // 73: invokeinterface mk/s.l (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 73: invokeinterface pk/s.h (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 78: pop
       // 79: aload 1
       // 7a: aconst_null
       // 7b: bipush 1
       // 7c: aconst_null
-      // 7d: invokestatic mk/s$a.a (Lmk/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
+      // 7d: invokestatic pk/s$a.a (Lpk/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
       // 80: istore 6
       // 82: aload 2
       // 83: aconst_null
-      // 84: invokestatic nh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 84: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 87: iload 6
       // 89: ireturn
       // 8a: aload 5
@@ -112,7 +112,7 @@ public object PublicFileDownloader {
       // 8d: astore 1
       // 8e: aload 2
       // 8f: aload 5
-      // 91: invokestatic nh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 91: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 94: aload 1
       // 95: athrow
    }
@@ -125,11 +125,11 @@ public object PublicFileDownloader {
          new Function2(var1, var2, var3, var4, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
+   //   at java.base/java.util.HashMap.put(HashMap.java:618)
+   //   at java.base/java.util.HashSet.add(HashSet.java:229)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)

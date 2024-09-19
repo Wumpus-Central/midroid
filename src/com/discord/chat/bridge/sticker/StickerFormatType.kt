@@ -1,17 +1,17 @@
 package com.discord.chat.bridge.sticker
 
-import ch.l
-import ch.o
+import fh.l
+import fh.o
 import java.util.NoSuchElementException
-import jh.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import uk.f
-import wk.g
+import mh.a
+import xk.f
+import zk.g
 
 @f(with = StickerFormatType.StickerFormatTypeSerializer::class)
 public enum class StickerFormatType(intType: Int) {
@@ -54,19 +54,19 @@ public enum class StickerFormatType(intType: Int) {
    public object StickerFormatTypeSerializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return g.a("StickerFormatType", wk.e.f.a);
+            return g.a("StickerFormatType", zk.e.f.a);
          }
 
 
       public open fun deserialize(decoder: Decoder): StickerFormatType {
          q.h(var1, "decoder");
-         val var4: Int = var1.j();
+         val var3: Int = var1.j();
          val var5: Array<StickerFormatType> = StickerFormatType.values();
-         val var3: Int = var5.length;
+         val var4: Int = var5.length;
 
-         for (int var2 = 0; var2 < var3; var2++) {
+         for (int var2 = 0; var2 < var4; var2++) {
             val var6: StickerFormatType = var5[var2];
-            if (var5[var2].getIntType() == var4) {
+            if (var5[var2].getIntType() == var3) {
                return var6;
             }
          }

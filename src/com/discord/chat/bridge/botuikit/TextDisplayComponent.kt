@@ -1,5 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
+import al.b2
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
 import kotlin.jvm.internal.q
@@ -10,12 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import uk.f
-import uk.n
-import xk.b2
-import xk.g0
-import xk.n0
-import xk.g0.a
+import xk.f
+import xk.n
 
 @f
 public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component {
@@ -73,15 +73,15 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var2: StructurableText = this.content;
+      val var2: java.lang.String = this.id;
+      val var3: StructurableText = this.content;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TextDisplayComponent(type=");
       var4.append(var1);
       var4.append(", id=");
-      var4.append(var3);
-      var4.append(", content=");
       var4.append(var2);
+      var4.append(", content=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
