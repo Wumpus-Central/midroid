@@ -31,7 +31,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
       this.audioDeviceCallback = this.setupAudioDeviceCallback();
       val var3: Array<AudioDeviceInfo> = var2.getDevices(2);
       q.e(var3);
-      this.audioDevices = kotlin.collections.c.L0(var3);
+      this.audioDevices = kotlin.collections.c.M0(var3);
    }
 
    private fun emitEffectiveDevice() {

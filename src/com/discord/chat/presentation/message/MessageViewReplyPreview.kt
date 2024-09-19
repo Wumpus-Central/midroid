@@ -158,23 +158,23 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    private fun configureLeadingIcon(message: Message) {
-      var var2: Boolean;
+      val var3: Boolean;
       if (var1.getForwardInfo() != null) {
-         var2 = 1;
+         var3 = true;
       } else {
-         var2 = 0;
+         var3 = false;
       }
 
-      var var3: Boolean = true;
+      var var2: Byte = 1;
       if (!var1.isPollResult()) {
-         if (var2) {
-            var3 = true;
+         if (var3) {
+            var2 = 1;
          } else {
-            var3 = false;
+            var2 = 0;
          }
       }
 
-      if (var3) {
+      if (var2) {
          val var10: SimpleDraweeView = this.binding.replyLeadingIcon;
          kotlin.jvm.internal.q.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
          val var7: ReactAsset;
@@ -191,7 +191,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
 
       val var8: SimpleDraweeView = this.binding.replyLeadingIcon;
       kotlin.jvm.internal.q.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
-      if (var3) {
+      if (var2) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -476,26 +476,26 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var60: MessageContentView = this.binding.replyText;
             val var67: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var14: StructurableText = var10.getSystemContent();
-            val var13: Context = this.getContext();
-            val var37: java.lang.String = var15.getId-3Eiw7ao();
-            val var33: Boolean = MessageKt.shouldAnimateEmoji(var15);
-            val var9: Boolean = MessageKt.shouldShowLinkDecorations(var15);
-            var2 = var15.getShouldShowRoleDot();
+            val var37: StructurableText = var10.getSystemContent();
+            val var14: Context = this.getContext();
+            val var13: java.lang.String = var15.getId-3Eiw7ao();
+            val var9: Boolean = MessageKt.shouldAnimateEmoji(var15);
+            var2 = MessageKt.shouldShowLinkDecorations(var15);
+            val var33: Boolean = var15.getShouldShowRoleDot();
             val var8: Boolean = var15.getShouldShowRoleOnName();
             val var16: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var16, "getFontMetrics(...)");
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var16);
             val var17: TextPaint = this.binding.replyText.getPaint();
-            kotlin.jvm.internal.q.e(var13);
+            kotlin.jvm.internal.q.e(var14);
             kotlin.jvm.internal.q.e(var17);
             val var18: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+               var37,
                var14,
                var13,
-               var37,
-               var33,
                var9,
                var2,
+               var33,
                var8,
                var17,
                null,
@@ -527,26 +527,26 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var62: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
             val var71: StructurableText = var15.getContent();
-            val var68: Context = this.getContext();
-            val var72: java.lang.String = var15.getId-3Eiw7ao();
-            val var34: Boolean = MessageKt.shouldAnimateEmoji(var15);
-            val var35: Boolean = MessageKt.shouldShowLinkDecorations(var15);
+            val var72: Context = this.getContext();
+            val var68: java.lang.String = var15.getId-3Eiw7ao();
+            val var35: Boolean = MessageKt.shouldAnimateEmoji(var15);
+            var2 = MessageKt.shouldShowLinkDecorations(var15);
             val var36: Boolean = var15.getShouldShowRoleDot();
-            var2 = var15.getShouldShowRoleOnName();
+            val var34: Boolean = var15.getShouldShowRoleOnName();
             val var19: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var19, "getFontMetrics(...)");
             val var28: Float = TextUtilsKt.getBaselineHeightPx(var19);
             val var20: TextPaint = this.binding.replyText.getPaint();
-            kotlin.jvm.internal.q.e(var68);
+            kotlin.jvm.internal.q.e(var72);
             kotlin.jvm.internal.q.e(var20);
             val var21: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
                var71,
-               var68,
                var72,
-               var34,
+               var68,
                var35,
-               var36,
                var2,
+               var36,
+               var34,
                var20,
                null,
                null,
@@ -617,8 +617,8 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       if (this.binding.replyText.isLaidOut() && this.binding.replyText.getWidth() > 0) {
          this.binding.replyText.measure(MeasureSpec.makeMeasureSpec(this.binding.replyText.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
          this.binding.replyText.getLineBounds(0, this.replyTextLineBounds);
-         val var32: Int = this.replyTextLineBounds.bottom;
-         val var31: Int = this.replyTextLineBounds.top;
+         val var31: Int = this.replyTextLineBounds.bottom;
+         val var32: Int = this.replyTextLineBounds.top;
          val var25: LinearLayout = this.binding.replyLeadingViews;
          kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
          val var49: android.view.ViewGroup.LayoutParams = var25.getLayoutParams();
@@ -626,7 +626,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var49.height = var32 - var31;
+         var49.height = var31 - var32;
          var25.setLayoutParams(var49);
       }
 

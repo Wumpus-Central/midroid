@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.forwarding
 
-import cl.f
-import cl.n
-import dl.a
-import fl.g0
-import fl.h
-import fl.n0
+import fl.f
+import fl.n
+import gl.a
+import il.g0
+import il.h
+import il.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -114,23 +114,24 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
-         var var2: Int;
          var var3: Int;
          var var4: Int;
+         val var5: Int;
          var var9: ForwardFooterInfo;
          if (var8.y()) {
             var4 = var8.k(var7, 0);
             var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, null) as ForwardFooterInfo;
-            var2 = var8.s(var7, 2);
+            val var2: Byte = var8.s(var7, 2);
             var3 = 7;
+            var5 = var2;
          } else {
-            var var5: Boolean = true;
+            var var12: Boolean = true;
             var4 = 0;
-            var2 = 0;
+            var var10: Int = 0;
             var9 = null;
             var3 = 0;
 
-            while (var5) {
+            while (var12) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -140,26 +141,26 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                         }
 
                         var3 = var8.s(var7, 2);
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, var9) as ForwardFooterInfo;
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var4 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var12 = false;
                }
             }
 
-            var3 = var2;
-            var2 = var3;
+            var5 = var3;
+            var3 = var10;
          }
 
          var8.b(var7);
-         return new ForwardInfo(var3, var4, var9, (boolean)var2, null);
+         return new ForwardInfo(var3, var4, var9, (boolean)var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardInfo) {
@@ -172,7 +173,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

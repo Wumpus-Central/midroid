@@ -111,10 +111,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
       val var4: ChatEventHandler = this.eventHandler;
       if (this.eventHandler != null) {
          if (var1 is MosaicItemMessageAttachmentImageViewHolder) {
-            var var5: MosaicItemMessageAttachmentImageViewHolder = this.items.get(var2);
+            var var5: Any = this.items.get(var2);
             q.f(var5, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory");
-            val var6: ImageAttachmentMessageAccessory = var5 as ImageAttachmentMessageAccessory;
-            var5 = var1 as MosaicItemMessageAttachmentImageViewHolder;
+            var5 = var5 as ImageAttachmentMessageAccessory;
+            val var6: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
             val var3: Boolean;
             if (this.getItemCount() == 1) {
                var3 = true;
@@ -122,20 +122,28 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            var5.bindAttachment(var4, var6, var3, new a(this, var6, var1), new b(this, var6), new Function0(this, var6) {
-               final ImageAttachmentMessageAccessory $accessory;
-               final AttachmentMediaMosaicAdapter this$0;
+            var6.bindAttachment(
+               var4,
+               (ImageAttachmentMessageAccessory)var5,
+               var3,
+               new a(this, (ImageAttachmentMessageAccessory)var5, var1),
+               new b(this, (ImageAttachmentMessageAccessory)var5),
+               new Function0(this, (ImageAttachmentMessageAccessory)var5) {
+                  final ImageAttachmentMessageAccessory $accessory;
+                  final AttachmentMediaMosaicAdapter this$0;
 
-               {
-                  super(0);
-                  this.this$0 = var1;
-                  this.$accessory = var2;
-               }
+                  {
+                     super(0);
+                     this.this$0 = var1;
+                     this.$accessory = var2;
+                  }
 
-               public final void invoke() {
-                  AttachmentMediaMosaicAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
-               }
-            }, this.shouldAutoPlayGifs);
+                  public final void invoke() {
+                     AttachmentMediaMosaicAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
+                  }
+               },
+               this.shouldAutoPlayGifs
+            );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
                val var7: Class = var1.getClass();

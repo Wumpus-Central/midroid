@@ -484,10 +484,6 @@ public final class R {
       public static int images_native_empties_empty_channel_no_text_channels_dark;
       public static int images_native_empties_empty_channel_no_text_channels_light;
       public static int images_native_empties_empty_dms_activities;
-      public static int images_native_empties_empty_expanded_friend_list_dark;
-      public static int images_native_empties_empty_expanded_friend_list_light;
-      public static int images_native_empties_empty_friends;
-      public static int images_native_empties_empty_friends_cta;
       public static int images_native_empties_empty_instant_invite_friends;
       public static int images_native_empties_empty_mentions;
       public static int images_native_empties_empty_quest_home;
@@ -665,7 +661,6 @@ public final class R {
       public static int images_native_icons_ic_community_guild_badge_dark_24px;
       public static int images_native_icons_ic_community_guild_badge_light_24px;
       public static int images_native_icons_ic_community_guild_badge_premium_24px;
-      public static int images_native_icons_ic_compose_24px;
       public static int images_native_icons_ic_content_warning_32px;
       public static int images_native_icons_ic_controller_24px;
       public static int images_native_icons_ic_crop;
@@ -716,7 +711,6 @@ public final class R {
       public static int images_native_icons_ic_guild_voice_24px;
       public static int images_native_icons_ic_hammer_and_chisel_24px;
       public static int images_native_icons_ic_header_members_24px;
-      public static int images_native_icons_ic_header_members_add_24px;
       public static int images_native_icons_ic_headset_24px;
       public static int images_native_icons_ic_headset_deafened_24px;
       public static int images_native_icons_ic_headset_deafened_dark_24px;

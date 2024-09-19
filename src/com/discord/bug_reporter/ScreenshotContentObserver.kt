@@ -109,7 +109,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 071: goto 114
       // 074: aload 6
       // 076: aconst_null
-      // 077: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 077: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 07a: aconst_null
       // 07b: areturn
       // 07c: iload 2
@@ -171,7 +171,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 10b: astore 1
       // 10c: aload 6
       // 10e: aconst_null
-      // 10f: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10f: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 112: aload 1
       // 113: areturn
       // 114: aload 5
@@ -179,12 +179,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 117: astore 1
       // 118: aload 6
       // 11a: aload 5
-      // 11c: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11c: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11f: aload 1
       // 120: athrow
       // 121: aload 6
       // 123: aconst_null
-      // 124: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 124: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 127: aconst_null
       // 128: areturn
    }

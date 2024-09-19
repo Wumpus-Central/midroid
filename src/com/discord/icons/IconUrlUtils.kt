@@ -11,10 +11,10 @@ import com.discord.primitives.UserId
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.snowflake.SnowflakeUtils
-import kh.r
-import kh.s
-import kh.r.a
 import kotlin.jvm.internal.q
+import nh.r
+import nh.s
+import nh.r.a
 
 public object IconUrlUtils {
    public fun getApplicationIcon(applicationId: ApplicationId?, imageId: String?, size: Int = ...): String {

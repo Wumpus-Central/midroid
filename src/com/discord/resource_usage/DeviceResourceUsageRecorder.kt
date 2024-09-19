@@ -7,9 +7,9 @@ import android.telephony.TelephonyManager
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
-import dm.e
-import kh.w
+import gm.e
 import kotlin.jvm.internal.q
+import nh.w
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
@@ -52,7 +52,7 @@ public class DeviceResourceUsageRecorder {
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
             var5.r(java.lang.Long.MAX_VALUE);
-            var2.setBytesReceived(var2.getBytesReceived() + var5.j().W1());
+            var2.setBytesReceived(var2.getBytesReceived() + var5.j().Y1());
          }
 
          return var4;

@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import dl.a
-import fl.b2
-import fl.g0
-import fl.o1
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -215,7 +215,7 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

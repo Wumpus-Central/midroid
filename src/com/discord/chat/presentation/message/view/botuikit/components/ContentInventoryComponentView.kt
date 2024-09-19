@@ -30,12 +30,12 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
-import kh.l
-import kh.o
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import nh.l
+import nh.o
 
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -62,7 +62,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       q.h(var1, "context");
       super(var1, var2, var3);
       this.draweeControllerBuilder = w4.c.g();
-      this.binding$delegate = l.a(o.l, new Function0(this) {
+      this.binding$delegate = l.b(o.l, new Function0(this) {
          final ContentInventoryComponentView this$0;
 
          {

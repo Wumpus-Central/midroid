@@ -8,9 +8,9 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerDelegate
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerInterface
 import com.facebook.react.views.view.ReactViewGroup
-import kh.w
 import kotlin.jvm.internal.q
-import lh.r
+import nh.w
+import oh.r
 
 public class KeyCommandsViewManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {

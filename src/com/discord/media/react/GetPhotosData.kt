@@ -5,8 +5,8 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.ArrayList
-import kh.w
 import kotlin.jvm.internal.q
+import nh.w
 
 internal class GetPhotosData(edges: List<ContentResolverMedia>) {
    private final val edges: List<ContentResolverMedia>

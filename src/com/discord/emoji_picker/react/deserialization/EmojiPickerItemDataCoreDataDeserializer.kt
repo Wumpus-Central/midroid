@@ -16,7 +16,7 @@ import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import java.util.HashSet
 import kotlin.jvm.internal.q
-import lh.o
+import oh.o
 
 internal object EmojiPickerItemDataCoreDataDeserializer {
    private fun deserializeRowSize(data: ReadableMap): Int {

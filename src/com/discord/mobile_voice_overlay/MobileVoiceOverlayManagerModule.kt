@@ -12,10 +12,10 @@ import com.facebook.react.bridge.ActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
-import kh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
+import nh.l
 
 public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationContext) : NativeMobileVoiceOverlaySpec {
    private final val mobileVoiceOverlay: MobileVoiceOverlay
@@ -27,7 +27,7 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.mobileVoiceOverlay$delegate = l.b(new Function0(this) {
+      this.mobileVoiceOverlay$delegate = l.a(new Function0(this) {
          final MobileVoiceOverlayManagerModule this$0;
 
          {
@@ -63,11 +63,11 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
             public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
                if (var2 == 234780) {
                   MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
-                  val var7: Promise = this.$promise;
-                  val var6: WindowUtils = WindowUtils.INSTANCE;
-                  val var5: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
-                  q.g(var5, "access$getReactApplicationContext(...)");
-                  var7.resolve(var6.canDrawOverlay(var5));
+                  val var6: Promise = this.$promise;
+                  val var5: WindowUtils = WindowUtils.INSTANCE;
+                  val var7: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
+                  q.g(var7, "access$getReactApplicationContext(...)");
+                  var6.resolve(var5.canDrawOverlay(var7));
                }
             }
 

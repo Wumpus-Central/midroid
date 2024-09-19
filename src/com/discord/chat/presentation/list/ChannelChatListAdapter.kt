@@ -16,12 +16,12 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import java.util.LinkedList
 import java.util.Queue
 import java.util.UUID
-import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
+import nh.p
 
 public class ChannelChatListAdapter(doLayout: () -> Unit,
       enableAnimations: () -> Unit,
@@ -66,10 +66,10 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
             access$processNextUpdate(this);
          } else if (access$getUpdateQueue$p(this).isEmpty() xor true && !access$isProcessingUpdate$p(this)) {
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = access$getLOGGING_TAG$cp();
-            q.g(var2, "access$getLOGGING_TAG$cp(...)");
-            Log.w$default(var3, var2, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+            val var2: Log = Log.INSTANCE;
+            val var3: java.lang.String = access$getLOGGING_TAG$cp();
+            q.g(var3, "access$getLOGGING_TAG$cp(...)");
+            Log.w$default(var2, var3, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
          }
       }
    }
@@ -154,11 +154,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             access$processUpdate(this, var3 as ChannelChatListAdapterUpdate);
          }
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 
@@ -257,18 +257,18 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
          access$setProcessNextUpdateJob$p(
             this,
-            sk.f.d(
+            vk.f.d(
                kotlinx.coroutines.g.b(),
                null,
                null,
                new Function2(this, null)// $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.StackOverflowError
-      //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-      //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1294,11 +1294,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             )
          );
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var4);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 
@@ -1364,11 +1364,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -1424,7 +1424,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = rh.a.a(var0);
+         $ENTRIES = uh.a.a(var0);
       }
 
       @JvmStatic

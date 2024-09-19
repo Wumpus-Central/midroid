@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import cl.g
+import fl.g
 import java.net.URLDecoder
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -8,7 +8,7 @@ import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import lh.r
+import oh.r
 import okhttp3.Cookie
 import okio.ByteString
 
@@ -35,14 +35,14 @@ public object CookieValidator {
                      return null;
                   }
 
-                  val var3: JsonElement = gl.g.o(var14).get("$meta") as JsonElement;
+                  val var3: JsonElement = jl.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = gl.g.o(var14);
+                  val var15: JsonObject = jl.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
                   for (Entry var16 : var15.entrySet()) {

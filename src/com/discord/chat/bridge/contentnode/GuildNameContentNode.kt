@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -80,18 +80,18 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.content;
-      val var1: java.lang.String = this.icon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("GuildNameContentNode(guildId=");
-      var3.append(var4);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(", icon=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.content;
+      val var2: java.lang.String = this.icon;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("GuildNameContentNode(guildId=");
+      var4.append(var1);
+      var4.append(", content=");
+      var4.append(var3);
+      var4.append(", icon=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -124,19 +124,21 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
          val var5: Boolean = var10.y();
          var var7: java.lang.String = null;
          var var2: Int;
-         val var8: java.lang.String;
-         val var11: java.lang.String;
+         var var12: java.lang.String;
+         var var13: java.lang.String;
          if (var5) {
             val var6: b2 = b2.a;
             var7 = var10.v(var9, 0, b2.a, null) as java.lang.String;
-            var11 = var10.t(var9, 1);
-            var8 = var10.v(var9, 2, var6, null) as java.lang.String;
+            val var11: java.lang.String = var10.t(var9, 1);
+            val var8: java.lang.String = var10.v(var9, 2, var6, null) as java.lang.String;
             var2 = 7;
+            var13 = var11;
+            var12 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var13: java.lang.String = null;
-            var var12: java.lang.String = null;
+            var13 = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var10.x(var9);
@@ -161,13 +163,10 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
                   var3 = false;
                }
             }
-
-            var8 = var12;
-            var11 = var13;
          }
 
          var10.b(var9);
-         return new GuildNameContentNode(var2, var7, var11, var8, null);
+         return new GuildNameContentNode(var2, var7, var13, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GuildNameContentNode) {
@@ -180,7 +179,7 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

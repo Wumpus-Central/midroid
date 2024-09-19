@@ -1,12 +1,12 @@
 package com.discord.notifications.react.events
 
-import cl.f
-import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fl.g0
-import fl.g0.a
+import fl.f
+import fl.n
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -54,12 +54,12 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
    }
 
    public override fun toString(): String {
-      val var1: java.util.Map = this.locationNotification;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LocalNotificationEvent(locationNotification=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.Map = this.locationNotification;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LocalNotificationEvent(locationNotification=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

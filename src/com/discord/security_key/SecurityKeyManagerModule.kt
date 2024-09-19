@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import sk.f
+import vk.f
 
 public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val activityEventListener: <unrepresentable>
@@ -43,10 +43,10 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
          }
       });
-      val var2: CredentialManager.a = CredentialManager.a;
-      var1 = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      this.credentialManager = var2.a(var1);
+      val var3: CredentialManager.a = CredentialManager.a;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      this.credentialManager = var3.a(var2);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 
@@ -104,9 +104,9 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             new Function2(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
@@ -1185,9 +1185,9 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             new Function2(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)

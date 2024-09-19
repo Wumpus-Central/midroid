@@ -1,10 +1,10 @@
 package com.discord.chat.bridge
 
-import cl.f
-import cl.n
-import dl.a
-import fl.g0
-import fl.n0
+import fl.f
+import fl.n
+import gl.a
+import il.g0
+import il.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -157,7 +157,7 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

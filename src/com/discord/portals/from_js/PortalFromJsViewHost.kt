@@ -50,11 +50,11 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
       if (this.childView == null) {
          this.addChildView(var1);
       } else {
-         val var4: java.lang.String = this.getPortalId$portals_release();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Adding more than one child unsupported: ");
-         var5.append(var4);
-         throw new IllegalArgumentException(var5.toString().toString());
+         val var5: java.lang.String = this.getPortalId$portals_release();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Adding more than one child unsupported: ");
+         var4.append(var5);
+         throw new IllegalArgumentException(var4.toString().toString());
       }
    }
 
@@ -67,16 +67,16 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
       if (this.childView != null && var1 == 0) {
          return this.childView;
       } else {
-         val var4: java.lang.String = this.getPortalId$portals_release();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Requesting non-existent child or invalid index: ");
-         var3.append(var1);
-         var3.append(", ");
-         var3.append(var4);
-         var3.append(", ");
-         var3.append(var2);
-         var3.append(".");
-         throw new IllegalArgumentException(var3.toString().toString());
+         val var3: java.lang.String = this.getPortalId$portals_release();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Requesting non-existent child or invalid index: ");
+         var4.append(var1);
+         var4.append(", ");
+         var4.append(var3);
+         var4.append(", ");
+         var4.append(var2);
+         var4.append(".");
+         throw new IllegalArgumentException(var4.toString().toString());
       }
    }
 

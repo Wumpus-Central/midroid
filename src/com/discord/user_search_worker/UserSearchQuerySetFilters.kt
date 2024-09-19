@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -89,15 +89,15 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
 
    public override fun toString(): String {
       val var1: java.lang.String = this.guild;
-      val var4: java.lang.Boolean = this.friends;
-      val var2: java.lang.Boolean = this.strict;
+      val var2: java.lang.Boolean = this.friends;
+      val var4: java.lang.Boolean = this.strict;
       val var3: StringBuilder = new StringBuilder();
       var3.append("UserSearchQuerySetFilters(guild=");
       var3.append(var1);
       var3.append(", friends=");
-      var3.append(var4);
-      var3.append(", strict=");
       var3.append(var2);
+      var3.append(", strict=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }
@@ -188,7 +188,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

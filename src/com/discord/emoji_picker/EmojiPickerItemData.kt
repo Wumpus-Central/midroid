@@ -2,10 +2,10 @@ package com.discord.emoji_picker
 
 import com.discord.misc.utilities.ids.IdUtilsKt
 import java.util.LinkedHashMap
-import kh.l
-import kh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
+import nh.l
+import nh.p
 
 internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData) {
    private final var coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData
@@ -191,7 +191,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
          this.trailing = var6;
          this.nativeSectionsEmojis = var7;
          this.nativeSectionsEmojisUnicode = var8;
-         this.categoryIndices$delegate = l.b(new Function0(this) {
+         this.categoryIndices$delegate = l.a(new Function0(this) {
             final EmojiPickerItemData.CoreData this$0;
 
             {
@@ -202,13 +202,13 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
             public final java.util.Map<java.lang.Long, Integer> invoke() {
                val var2: LinkedHashMap = new LinkedHashMap();
                val var3: EmojiPickerItemData.CoreData = this.this$0;
-               val var4: java.util.Iterator = this.this$0.getLeading().iterator();
+               val var5: java.util.Iterator = this.this$0.getLeading().iterator();
                var var1: Int = 0;
 
-               while (var4.hasNext()) {
-                  val var5: EmojiPickerItem = var4.next() as EmojiPickerItem;
-                  if (var5 is EmojiPickerItem.Category) {
-                     var2.put(IdUtilsKt.convertToId((var5 as EmojiPickerItem.Category).getTitle()), var1);
+               while (var5.hasNext()) {
+                  val var4: EmojiPickerItem = var5.next() as EmojiPickerItem;
+                  if (var4 is EmojiPickerItem.Category) {
+                     var2.put(IdUtilsKt.convertToId((var4 as EmojiPickerItem.Category).getTitle()), var1);
                      var1++;
                   }
                }

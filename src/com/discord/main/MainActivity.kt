@@ -32,14 +32,14 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            var var3: Context = this.getContext();
-            q.g(var3, "getContext(...)");
-            var2.handleIntent(var3, var1);
+            val var3: NotificationClient = NotificationClient.Companion.getInstance();
+            val var2: Context = this.getContext();
+            q.g(var2, "getContext(...)");
+            var3.handleIntent(var2, var1);
             val var4: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
-            var3 = this.getContext();
-            q.g(var3, "getContext(...)");
-            var4.handleIntent(var3, var1);
+            val var5: Context = this.getContext();
+            q.g(var5, "getContext(...)");
+            var4.handleIntent(var5, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
          }
 
@@ -48,11 +48,11 @@ public class MainActivity : ReactActivity {
             val var4: Intent = this.this$0.getIntent();
             q.g(var4, "getIntent(...)");
             this.parseIntent(var4);
-            val var3: WindowFoldingFeatureDetector = WindowFoldingFeatureDetector.INSTANCE;
-            val var2: MainActivity = this.this$0;
-            val var5: Lifecycle = this.this$0.getLifecycle();
-            q.g(var5, "getLifecycle(...)");
-            var3.configure(var2, var5, this.this$0);
+            val var2: WindowFoldingFeatureDetector = WindowFoldingFeatureDetector.INSTANCE;
+            val var5: MainActivity = this.this$0;
+            val var3: Lifecycle = this.this$0.getLifecycle();
+            q.g(var3, "getLifecycle(...)");
+            var2.configure(var5, var3, this.this$0);
          }
 
          public boolean onNewIntent(Intent var1) {

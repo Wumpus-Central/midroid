@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.codedlinks
 
-import gl.d
-import gl.g
+import jl.d
+import jl.g
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy

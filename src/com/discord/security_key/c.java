@@ -1,7 +1,7 @@
 package com.discord.security_key;
 
 import kotlin.jvm.functions.Function1;
-import tb.f;
+import wb.f;
 
 // $VF: synthetic class
 public final class c implements f {

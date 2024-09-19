@@ -46,8 +46,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       val var5: PollRecyclerViewBinding = PollRecyclerViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var5, "inflate(...)");
       this.binding = var5;
-      val var4: RecyclerView = var5.answers;
-      val var7: NoMoveItemAnimator = new NoMoveItemAnimator() {
+      val var7: RecyclerView = var5.answers;
+      val var4: NoMoveItemAnimator = new NoMoveItemAnimator() {
          {
             super(null, null, 3, null);
          }
@@ -61,8 +61,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
             MaybeAnimateElevationToKt.maybeEndAnimation(var2);
          }
       };
-      var7.setSupportsChangeAnimations(false);
-      var4.setItemAnimator(var7);
+      var4.setSupportsChangeAnimations(false);
+      var7.setItemAnimator(var4);
       val var8: View = var5.getRoot();
       q.g(var8, "getRoot(...)");
       var3 = SizeUtilsKt.getDpToPx(16);

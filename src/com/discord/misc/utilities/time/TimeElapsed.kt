@@ -3,9 +3,9 @@ package com.discord.misc.utilities.time
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import kh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
+import nh.l
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    public final val duration: String
@@ -30,7 +30,7 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
 
    init {
       this.startTime = var1;
-      this.durationMillis$delegate = l.b(new Function0(this) {
+      this.durationMillis$delegate = l.a(new Function0(this) {
          final TimeElapsed this$0;
 
          {
@@ -42,7 +42,7 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
             return System.currentTimeMillis() - TimeElapsed.access$getStartTime$p(this.this$0);
          }
       });
-      this.duration$delegate = l.b(new Function0(this) {
+      this.duration$delegate = l.a(new Function0(this) {
          final TimeElapsed this$0;
 
          {

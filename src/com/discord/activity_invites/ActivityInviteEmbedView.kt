@@ -24,9 +24,9 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
 import java.util.ArrayList
-import kh.l
-import kh.o
 import kotlin.jvm.internal.q
+import nh.l
+import nh.o
 import o4.f
 import w4.c
 
@@ -55,7 +55,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       val var5: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var5, "inflate(...)");
       this.binding = var5;
-      this.grayscalePostprocessor$delegate = l.a(o.l, <unrepresentable>.INSTANCE);
+      this.grayscalePostprocessor$delegate = l.b(o.l, <unrepresentable>.INSTANCE);
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var6: SimpleDraweeView = var5.startImage;
@@ -220,9 +220,9 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          var7.setLayoutParams(var10);
       }
 
-      val var6: ImageRequestBuilder = ImageRequestBuilder.v(f.o(var1));
+      val var6: ImageRequestBuilder = ImageRequestBuilder.w(f.r(var1));
       if (var3) {
-         var6.F(this.getGrayscalePostprocessor());
+         var6.H(this.getGrayscalePostprocessor());
       }
 
       this.binding.endImage.setController((c.g().F(var6.a()) as PipelineDraweeControllerBuilder).d());
@@ -361,18 +361,18 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.uri;
-            val var1: Boolean = this.fullSize;
-            val var2: Boolean = this.grayscale;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("End(uri=");
-            var3.append(var4);
-            var3.append(", fullSize=");
-            var3.append(var1);
-            var3.append(", grayscale=");
-            var3.append(var2);
-            var3.append(")");
-            return var3.toString();
+            val var3: java.lang.String = this.uri;
+            val var2: Boolean = this.fullSize;
+            val var1: Boolean = this.grayscale;
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("End(uri=");
+            var4.append(var3);
+            var4.append(", fullSize=");
+            var4.append(var2);
+            var4.append(", grayscale=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
       }
 

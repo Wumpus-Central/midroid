@@ -12,15 +12,15 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import java.util.concurrent.CancellationException
-import kh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import lh.r
-import sk.f
-import sk.k0
+import nh.w
+import oh.r
+import vk.f
+import vk.k0
 
 public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val mediaResolver: MediaResolver
@@ -114,8 +114,6 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          new Function2(this, var1, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -1138,6 +1136,8 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          2,
          null
@@ -1163,8 +1163,6 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          new Function2(this, Uri.parse(var1), var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -2187,6 +2185,8 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
@@ -2234,7 +2234,8 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    // java.lang.StackOverflowError
    //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
    //   at java.base/java.util.HashMap.put(HashMap.java:618)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1746)
+   //   at java.base/java.util.HashSet.add(HashSet.java:229)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -3255,7 +3256,6 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          3,
          null

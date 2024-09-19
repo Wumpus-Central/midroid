@@ -86,7 +86,7 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       };
       val var3: Array<AudioDeviceInfo> = var2.getDevices(2);
       q.e(var3);
-      this.audioDevices = kotlin.collections.c.y0(var3);
+      this.audioDevices = kotlin.collections.c.z0(var3);
    }
 
    private fun emitEffectiveDevice() {
@@ -150,13 +150,13 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       val var3: java.util.List = this.audioDevices;
       val var2: ArrayList = new ArrayList();
 
-      for (var3 : var3) {
-         val var6: AudioDeviceInfo = var3 as AudioDeviceInfo;
-         val var4: java.util.Map = AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping();
+      for (Object var4 : var3) {
+         val var6: AudioDeviceInfo = var4 as AudioDeviceInfo;
+         val var5: java.util.Map = AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping();
          val var1: Int = var6.getType();
          val var12: SimpleDeviceType = SimpleDeviceType.INVALID;
-         if (var4.getOrDefault(var1, var12) != var12) {
-            var2.add(var3);
+         if (var5.getOrDefault(var1, var12) != var12) {
+            var2.add(var4);
          }
       }
 
@@ -349,12 +349,12 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
    }
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
-      val var1: SimpleDeviceType = this.getActiveAudioDevice();
-      val var2: SimpleDeviceType = this.desiredDeviceType;
+      val var2: SimpleDeviceType = this.getActiveAudioDevice();
+      val var1: SimpleDeviceType = this.desiredDeviceType;
       if (this.desiredDeviceType === SimpleDeviceType.DEFAULT) {
-         return AndroidAudioDevice.Companion.fromSimpleDeviceType(var1);
+         return AndroidAudioDevice.Companion.fromSimpleDeviceType(var2);
       } else {
-         return if (var1 === SimpleDeviceType.WIRED_HEADSET && this.desiredDeviceType === SimpleDeviceType.EARPIECE)
+         return if (var2 === SimpleDeviceType.WIRED_HEADSET && this.desiredDeviceType === SimpleDeviceType.EARPIECE)
             AndroidAudioDevice.Companion.fromSimpleDeviceType(SimpleDeviceType.WIRED_HEADSET)
             else
             AndroidAudioDevice.Companion.fromSimpleDeviceType(this.desiredDeviceType);
@@ -405,7 +405,7 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       if (var1) {
          val var4: Array<AudioDeviceInfo> = this.androidAudioManager.getDevices(2);
          q.e(var4);
-         this.audioDevices = kotlin.collections.c.y0(var4);
+         this.audioDevices = kotlin.collections.c.z0(var4);
          this.androidAudioManager.registerAudioDeviceCallback(this.audioDeviceCallback, null);
          this.androidAudioManager.setMode(3);
          this.registerAudioManagerReceivers();

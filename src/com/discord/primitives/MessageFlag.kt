@@ -1,7 +1,7 @@
 package com.discord.primitives
 
 import kotlin.enums.EnumEntries
-import rh.a
+import uh.a
 
 public enum class MessageFlag(value: Long) {
    CROSSPOSTED(1L),

@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.row
 
-import cl.f
-import cl.n
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.n0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -83,20 +83,20 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var3: ChangeType = this.changeType;
-      val var2: Message = this.message;
-      val var4: java.lang.String = this.fileId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UploadProgressRow(index=");
-      var5.append(var1);
-      var5.append(", changeType=");
-      var5.append(var3);
-      var5.append(", message=");
-      var5.append(var2);
-      var5.append(", fileId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: ChangeType = this.changeType;
+      val var4: Message = this.message;
+      val var2: java.lang.String = this.fileId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UploadProgressRow(index=");
+      var3.append(var1);
+      var3.append(", changeType=");
+      var3.append(var5);
+      var3.append(", message=");
+      var3.append(var4);
+      var3.append(", fileId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

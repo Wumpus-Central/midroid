@@ -131,12 +131,12 @@ public object MarkdownRules {
 
          q.g(var4, "headerBody");
 
-         for (Object var12 : var2.parse(var4, var3, this.innerRules)) {
-            if (var12 == null) {
+         for (var4 : var2.parse(var4, var3, this.innerRules)) {
+            if (var4 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            var5.addChild(var12 as Node);
+            var5.addChild(var4 as Node);
          }
 
          label42: {
@@ -234,10 +234,10 @@ public object MarkdownRules {
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
          q.h(var1, "matcher");
          q.h(var2, "parser");
-         val var5: ParseSpec.Companion = ParseSpec.Companion;
-         val var4: java.lang.String = var1.group(1);
-         q.g(var4, "matcher.group(1)");
-         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(2), var1.end(2));
+         val var4: ParseSpec.Companion = ParseSpec.Companion;
+         val var5: java.lang.String = var1.group(1);
+         q.g(var5, "matcher.group(1)");
+         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(2), var1.end(2));
       }
    }
 

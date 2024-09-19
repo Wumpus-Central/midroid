@@ -7,7 +7,7 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import lh.o
+import oh.o
 
 internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    q.h(var0, "data");

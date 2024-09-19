@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
-import fl.n0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.h
+import il.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -75,8 +75,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.messageId.hashCode();
-      val var3: Int = Integer.hashCode(this.index);
+      val var3: Int = this.messageId.hashCode();
+      val var4: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -89,7 +89,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -97,21 +97,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var5: java.lang.Boolean = this.primary;
-      val var4: java.lang.Boolean = this.secondary;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapInviteEvent(messageId=");
-      var3.append(var2);
-      var3.append(", index=");
-      var3.append(var1);
-      var3.append(", primary=");
-      var3.append(var5);
-      var3.append(", secondary=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.Boolean = this.primary;
+      val var2: java.lang.Boolean = this.secondary;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapInviteEvent(messageId=");
+      var5.append(var3);
+      var5.append(", index=");
+      var5.append(var1);
+      var5.append(", primary=");
+      var5.append(var4);
+      var5.append(", secondary=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -140,30 +140,30 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
 
       public open fun deserialize(decoder: Decoder): TapInviteEvent {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
          var var2: Int;
          var var3: Int;
-         var var6: java.lang.Boolean;
-         var var7: java.lang.String;
-         var var11: java.lang.Boolean;
-         if (var9.y()) {
-            var7 = var9.t(var8, 0);
-            var2 = var9.k(var8, 1);
-            val var10: h = h.a;
-            var6 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
-            var11 = var9.v(var8, 3, var10, null) as java.lang.Boolean;
-            var3 = 15;
+         val var6: java.lang.String;
+         val var8: java.lang.Boolean;
+         var var12: java.lang.Boolean;
+         if (var10.y()) {
+            var6 = var10.t(var9, 0);
+            var3 = var10.k(var9, 1);
+            val var11: h = h.a;
+            var8 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
+            var12 = var10.v(var9, 3, var11, null) as java.lang.Boolean;
+            var2 = 15;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var7 = null;
-            var6 = null;
-            var11 = null;
+            var var7: java.lang.String = null;
+            var var13: java.lang.Boolean = null;
+            var12 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var9.x(var8);
+               val var5: Int = var10.x(var9);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -172,18 +172,18 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
                               throw new n(var5);
                            }
 
-                           var11 = var9.v(var8, 3, h.a, var11) as java.lang.Boolean;
+                           var12 = var10.v(var9, 3, h.a, var12) as java.lang.Boolean;
                            var2 |= 8;
                         } else {
-                           var6 = var9.v(var8, 2, h.a, var6) as java.lang.Boolean;
+                           var13 = var10.v(var9, 2, h.a, var13) as java.lang.Boolean;
                            var2 |= 4;
                         }
                      } else {
-                        var3 = var9.k(var8, 1);
+                        var3 = var10.k(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.t(var8, 0);
+                     var7 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
@@ -191,12 +191,12 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
                }
             }
 
-            var3 = var2;
-            var2 = var3;
+            var8 = var13;
+            var6 = var7;
          }
 
-         var9.b(var8);
-         return new TapInviteEvent(var3, var7, var2, var6, var11, null);
+         var10.b(var9);
+         return new TapInviteEvent(var2, var6, var3, var8, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInviteEvent) {
@@ -209,7 +209,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

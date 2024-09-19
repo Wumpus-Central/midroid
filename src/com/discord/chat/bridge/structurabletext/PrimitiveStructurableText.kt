@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.structurabletext
 
-import cl.f
+import fl.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -47,12 +47,12 @@ public data class PrimitiveStructurableText(content: String) : StructurableText 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PrimitiveStructurableText(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PrimitiveStructurableText(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

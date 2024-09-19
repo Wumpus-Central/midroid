@@ -1,12 +1,12 @@
 package com.discord.share.react.events
 
-import cl.f
-import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dl.a
-import fl.b2
-import fl.g0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -158,7 +158,7 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

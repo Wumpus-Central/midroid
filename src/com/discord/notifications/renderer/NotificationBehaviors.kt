@@ -54,14 +54,14 @@ public data class NotificationBehaviors(soundsEnabled: Boolean, vibrationsEnable
    }
 
    public override fun toString(): String {
-      val var2: Boolean = this.soundsEnabled;
-      val var3: Boolean = this.vibrationsEnabled;
+      val var3: Boolean = this.soundsEnabled;
+      val var2: Boolean = this.vibrationsEnabled;
       val var1: Boolean = this.lightsEnabled;
       val var4: StringBuilder = new StringBuilder();
       var4.append("NotificationBehaviors(soundsEnabled=");
-      var4.append(var2);
-      var4.append(", vibrationsEnabled=");
       var4.append(var3);
+      var4.append(", vibrationsEnabled=");
+      var4.append(var2);
       var4.append(", lightsEnabled=");
       var4.append(var1);
       var4.append(")");

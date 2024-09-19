@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.polls
 
-import cl.f
-import cl.n
-import fl.b2
-import fl.g0
-import fl.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,7 +13,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import lh.r
+import oh.r
 
 @f
 public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = r.h()) {

@@ -2,7 +2,7 @@ package com.discord.foreground_service.service
 
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import rh.a
+import uh.a
 
 internal data class ServiceNotificationConfiguration(title: String,
    content: String?,

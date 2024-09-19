@@ -178,9 +178,9 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var40: SpoilerViewManager = this.spoilerViewManager;
       val var39: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var36: ConstraintLayout = this.binding.container;
+      val var33: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var33: MediaView = this.binding.mediaView;
+      val var36: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -194,11 +194,11 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var40.configureSpoiler(var13, var39, var36, var33, null, var11, var15, var12, var10);
-      val var37: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var34: ConstraintLayout = this.binding.container;
+      var40.configureSpoiler(var13, var39, var33, var36, null, var11, var15, var12, var10);
+      val var34: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var37: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      var37.configureAttachmentOverlay(this, var34, var10, var16);
+      var34.configureAttachmentOverlay(this, var37, var10, var16);
    }
 
    public fun setDescription(description: String?, hint: String?) {

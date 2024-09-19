@@ -1,10 +1,10 @@
 package com.discord.chatreplay
 
-import cl.f
-import cl.n
-import fl.b2
-import fl.g0
-import fl.x0
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -142,7 +142,7 @@ public data class Replay(filename: String, lastModified: Long) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

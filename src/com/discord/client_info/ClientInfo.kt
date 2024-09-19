@@ -2,14 +2,14 @@ package com.discord.client_info
 
 import android.content.Context
 import java.util.Locale
-import kh.l
 import kotlin.jvm.internal.q
+import nh.l
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "dfaf4dde-d0c6-42fd-b0e3-c4bf5f041a12"
+   public const val PROGUARD_UUID: String = "03ed60f1-c6a3-43b1-b317-8474b001496a"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@249.3.0-2+249203"
+   public const val SENTRY_RELEASE: String = "discord_android@249.4.0-2+249204"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String
@@ -51,7 +51,7 @@ public object ClientInfo {
       }
 
 
-   public final val isProdBuild: Boolean by l.b(<unrepresentable>.INSTANCE)
+   public final val isProdBuild: Boolean by l.a(<unrepresentable>.INSTANCE)
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }

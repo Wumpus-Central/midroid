@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dl.a
-import fl.b2
-import fl.g0
-import fl.o1
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -131,8 +131,8 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var11: java.lang.String;
          var var12: java.lang.String;
+         val var15: java.lang.String;
          if (var5) {
             var12 = var9.t(var8, 0);
             val var7: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -141,12 +141,12 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
             }
 
             var2 = 3;
-            var11 = var12;
+            var15 = var12;
             var12 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var11 = null;
+            var var11: java.lang.String = null;
             var12 = null;
 
             while (var3) {
@@ -180,10 +180,12 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
                   var3 = false;
                }
             }
+
+            var15 = var11;
          }
 
          var9.b(var8);
-         return new TapGiftCodeAcceptData(var2, var11, var12, null, null);
+         return new TapGiftCodeAcceptData(var2, var15, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapGiftCodeAcceptData) {
@@ -196,7 +198,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

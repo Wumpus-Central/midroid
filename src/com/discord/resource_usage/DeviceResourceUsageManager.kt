@@ -2,8 +2,8 @@ package com.discord.resource_usage
 
 import android.system.Os
 import android.system.OsConstants
-import kh.r
-import kh.s
+import nh.r
+import nh.s
 
 internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
    private final var activeThreadId: Long?
@@ -29,49 +29,49 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
          var0 = r.k;
          var0 = r.b(Os.sysconf(OsConstants._SC_CLK_TCK));
       } catch (var4: java.lang.Throwable) {
-         val var1: kh.r.a = r.k;
+         val var1: nh.r.a = r.k;
          var0 = r.b(s.a(var4));
          break label42;
       }
 
-      var var18: Any = var0;
+      var var17: Any = var0;
       if (r.g(var0)) {
-         var18 = 100L;
+         var17 = 100L;
       }
 
-      SC_CLK_TCK = (var18 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var17 as java.lang.Number).longValue();
 
       label36:
       try {
          var0 = r.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var18 = r.k;
+         var17 = r.k;
          var0 = r.b(s.a(var3));
          break label36;
       }
 
-      var18 = var0;
+      var17 = var0;
       if (r.g(var0)) {
-         var18 = 4096L;
+         var17 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var18 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var17 as java.lang.Number).longValue();
 
       label30:
       try {
          var0 = r.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var0 = r.k;
+         var17 = r.k;
          var0 = r.b(s.a(var2));
          break label30;
       }
 
-      var18 = var0;
+      var17 = var0;
       if (r.g(var0)) {
-         var18 = 1;
+         var17 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var18 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var17 as java.lang.Number).intValue();
    }
 
    fun DeviceResourceUsageManager() {
@@ -237,7 +237,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 1b: aload 3
       // 1c: bipush 4
       // 1d: aconst_null
-      // 1e: invokestatic oh/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+      // 1e: invokestatic rh/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
       // 21: astore 3
       // 22: aload 0
       // 23: aload 3

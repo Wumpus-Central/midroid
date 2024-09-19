@@ -10,6 +10,6 @@ public final class f implements b3.g {
 
    @Override
    public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.a(this.a, var1, var2);
+      <unrepresentable>.b(this.a, var1, var2);
    }
 }

@@ -6,7 +6,7 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.v
-import sk.r0
+import vk.r0
 
 public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
    public open val coroutineContext: CoroutineContext

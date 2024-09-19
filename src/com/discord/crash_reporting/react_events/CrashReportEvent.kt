@@ -1,6 +1,5 @@
 package com.discord.crash_reporting.react_events
 
-import ai.c
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogUtils
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason
@@ -10,8 +9,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kh.w
+import di.c
 import kotlin.jvm.internal.q
+import nh.w
 
 internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, tombstone: Tombstone?) : ReactEvent {
    private final val crashedLastRun: Boolean?
@@ -109,16 +109,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, reason: Reason?, 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.Boolean = this.crashedLastRun;
-      val var2: HistoricalProcessExitReason.Reason = this.reason;
-      val var3: SystemLogUtils.Tombstone = this.tombstone;
+      val var3: java.lang.Boolean = this.crashedLastRun;
+      val var1: HistoricalProcessExitReason.Reason = this.reason;
+      val var2: SystemLogUtils.Tombstone = this.tombstone;
       val var4: StringBuilder = new StringBuilder();
       var4.append("CrashReportEvent(crashedLastRun=");
-      var4.append(var1);
-      var4.append(", reason=");
-      var4.append(var2);
-      var4.append(", tombstone=");
       var4.append(var3);
+      var4.append(", reason=");
+      var4.append(var1);
+      var4.append(", tombstone=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

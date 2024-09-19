@@ -9,12 +9,12 @@ import com.facebook.imagepipeline.core.ImagePipelineConfig.Builder
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.modules.fresco.FrescoModule
 import com.facebook.react.modules.network.OkHttpClientProvider
-import i6.a0
-import i6.b0
-import i6.c0
-import i6.n
-import i6.a0.b
 import kotlin.jvm.internal.q
+import l6.c0
+import l6.e0
+import l6.f0
+import l6.o
+import l6.c0.a
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.Interceptor.Chain
@@ -36,10 +36,10 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
    val var2: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
    val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var5: Builder = var2.S(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .W(var1.newSmallDiskCache(var0))
-      .P(new FrescoBitmapSupplier(var0))
-      .T(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+   val var5: Builder = var2.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Y(var1.newSmallDiskCache(var0))
+      .Q(new FrescoBitmapSupplier(var0))
+      .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
@@ -51,33 +51,33 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             return this.$receiver$inlined.frescoInterceptor(var1);
          }
       }).c()));
-   val var3: b = a0.n();
-   val var6: c0 = n.a();
-   val var4: Builder = var5.U(new b0(var3.n(new c0(var6.b, var6.a * 2, var6.c)).m())).Q(new DefaultCacheKeyFactory() {
+   val var3: a = c0.n();
+   val var6: f0 = o.a();
+   val var4: Builder = var5.W(new e0(var3.n(new f0(var6.b, var6.a * 2, var6.c)).m())).R(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var5: android.net.Uri.Builder = var1.buildUpon();
-            var5.clearQuery();
+            val var4: android.net.Uri.Builder = var1.buildUpon();
+            var4.clearQuery();
 
-            for (java.lang.String var4 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var4)) {
-                  val var2: java.util.Iterator = var1.getQueryParameters(var4).iterator();
+            for (java.lang.String var3 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
+                  val var2: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
                   while (var2.hasNext()) {
-                     var5.appendQueryParameter(var4, var2.next() as java.lang.String);
+                     var4.appendQueryParameter(var3, var2.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var5.build();
+            var1 = var4.build();
             q.g(var1, "build(...)");
             return var1;
          }
       }
-   }).R(true);
+   }).S(true);
    var4.b().c(true);
    return var4.a();
 }

@@ -11,8 +11,8 @@ public fun getPIIFieldNames(kClass: KClass<*>): List<String> {
    val var5: java.util.Collection = var0.p();
    val var1: ArrayList = new ArrayList();
 
-   for (Object var3 : var5) {
-      val var4: java.util.Iterator = (var3 as KCallable).getAnnotations().iterator();
+   for (Object var2 : var5) {
+      val var4: java.util.Iterator = (var2 as KCallable).getAnnotations().iterator();
 
       do {
          if (!var4.hasNext()) {
@@ -24,7 +24,7 @@ public fun getPIIFieldNames(kClass: KClass<*>): List<String> {
       } while (!((Annotation)var6 instanceof PII));
 
       if (var6 as PII != null) {
-         var1.add(var3);
+         var1.add(var2);
       }
    }
 

@@ -7,7 +7,7 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import sk.f
+import vk.f
 
 public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView, background: Drawable, placeholder: String?, placeholderVersion: Int?)
    : ControllerListener {
@@ -43,9 +43,9 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
             new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:136)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)

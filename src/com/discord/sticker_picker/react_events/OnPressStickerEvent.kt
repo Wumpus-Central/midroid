@@ -1,12 +1,12 @@
 package com.discord.sticker_picker.react_events
 
-import cl.f
-import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -54,12 +54,12 @@ internal data class OnPressStickerEvent(stickerId: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.stickerId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnPressStickerEvent(stickerId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.stickerId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnPressStickerEvent(stickerId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

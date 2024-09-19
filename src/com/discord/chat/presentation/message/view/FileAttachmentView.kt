@@ -95,18 +95,18 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       kotlin.jvm.internal.q.h(var1, "$url");
       kotlin.jvm.internal.q.h(var2, "$attachmentName");
       kotlin.jvm.internal.q.h(var3, "$attachmentDescription");
-      sk.f.d(
+      vk.f.d(
          CoroutineViewUtilsKt.getAttachedScope(var0),
-         sk.k0.b(),
+         vk.k0.b(),
          null,
          new Function2(var0, var1, var2, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1153,12 +1153,12 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
          var10 = false;
       }
 
-      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var15: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var14: java.lang.String = FileAttachmentView.class.getSimpleName();
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("Binding ");
-      var15.append(var14);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var15.toString(), null, 2, null);
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("Binding ");
+      var13.append(var14);
+      AttachedViewCoroutineScope.cancelAllWork$default(var15, var13.toString(), null, 2, null);
       val var29: SimpleDraweeView = this.binding.fileAttachmentDownload;
       kotlin.jvm.internal.q.g(this.binding.fileAttachmentDownload, "fileAttachmentDownload");
       var var11: Byte;
@@ -1216,16 +1216,16 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       }
 
       var17.setAlpha(var9);
-      val var23: AttachmentUploadOverlayView = this.binding.uploadOverlay;
-      val var12: Int = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var18: ShapeDrawable = new ShapeDrawable();
-      val var25: Paint = var18.getPaint();
-      val var22: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var22, "getContext(...)");
-      var25.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
-      var11 = ThemeManagerKt.getTheme().getBackgroundModifierAccent();
-      kotlin.jvm.internal.q.e(var23);
-      AttachmentUploadOverlayView.configureProgressView$default(var23, null, var18, null, var12, null, var11, 21, null);
+      val var22: AttachmentUploadOverlayView = this.binding.uploadOverlay;
+      var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
+      val var23: ShapeDrawable = new ShapeDrawable();
+      val var18: Paint = var23.getPaint();
+      val var25: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var25, "getContext(...)");
+      var18.setColor(ColorUtilsKt.getColorCompat(var25, 17170445));
+      val var12: Int = ThemeManagerKt.getTheme().getBackgroundModifierAccent();
+      kotlin.jvm.internal.q.e(var22);
+      AttachmentUploadOverlayView.configureProgressView$default(var22, null, var23, null, var11, null, var12, 21, null);
       if (!kotlin.jvm.internal.q.c(this.uploadContext, this.uploadContext)) {
          this.uploadContext = this.uploadContext;
          this.uploadFinished = false;

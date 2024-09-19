@@ -10,8 +10,6 @@ import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import cl.f
-import cl.n
 import com.discord.chat.R
 import com.discord.chat.bridge.row.MessageRow
 import com.discord.chat.bridge.row.MessageRowKt
@@ -31,9 +29,11 @@ import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
-import fl.b2
-import fl.f0
-import fl.g0
+import fl.f
+import fl.n
+import il.b2
+import il.f0
+import il.g0
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -261,7 +261,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new fl.f(MessageRow.$serializer.INSTANCE), null, new fl.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new il.f(MessageRow.$serializer.INSTANCE), null, new il.f(var0), null};
       }
 
       init {
@@ -398,7 +398,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
 
          public open fun childSerializers(): Array<KSerializer<*>> {
             val var1: Array<KSerializer> = MessageBundleView.MessageBundle.access$get$childSerializers$cp();
-            return new KSerializer[]{dl.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], dl.a.u(f0.a), var1[3], dl.a.u(b2.a)};
+            return new KSerializer[]{gl.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], gl.a.u(f0.a), var1[3], gl.a.u(b2.a)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.list.messagebundling.MessageBundleView.MessageBundle {
@@ -480,7 +480,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return fl.g0.a.a(this);
+            return il.g0.a.a(this);
          }
       }
 

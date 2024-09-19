@@ -1,14 +1,14 @@
 package com.discord.misc.utilities.coroutines
 
-import kh.h
-import kh.s
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
-import qh.b
-import sk.i0
+import nh.h
+import nh.s
+import th.b
+import vk.i0
 
 public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMillis: Long, collector: FlowCollector<T>) {
    label23: {
@@ -92,8 +92,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             }
 
             var var11: Any = ((<unrepresentable>)var13).result;
-            var var16: Any = b.e();
-            val var14: Any;
+            var var15: Any = b.e();
             if (((<unrepresentable>)var13).label != 0) {
                if (((<unrepresentable>)var13).label == 1) {
                   s.b(var11);
@@ -104,10 +103,9 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               var16 = ((<unrepresentable>)var13).L$1;
+               var15 = ((<unrepresentable>)var13).L$1;
                var1 = ((<unrepresentable>)var13).L$0 as <unrepresentable>;
                s.b(var11);
-               var14 = var16;
             } else {
                s.b(var11);
                val var8: Long = System.currentTimeMillis();
@@ -117,8 +115,8 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                   this.$timeLastEmitted.j = var8;
                   var11 = this.$collector;
                   ((<unrepresentable>)var13).label = 1;
-                  if (var11.emit(var1, (Continuation)var13) === var16) {
-                     return var16;
+                  if (var11.emit(var1, (Continuation)var13) === var15) {
+                     return var15;
                   }
 
                   return Unit.a;
@@ -127,15 +125,15 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                ((<unrepresentable>)var13).L$0 = this;
                ((<unrepresentable>)var13).L$1 = var1;
                ((<unrepresentable>)var13).label = 2;
-               if (i0.a(var4 - var6, (Continuation)var13) === var16) {
-                  return var16;
+               if (i0.a(var4 - var6, (Continuation)var13) === var15) {
+                  return var15;
                }
 
-               var14 = var1;
+               var15 = var1;
                var1 = this;
             }
 
-            var1.$this_collectWithLeadingDebounce.b(var14);
+            var1.$this_collectWithLeadingDebounce.a(var15);
             return Unit.a;
          }
       };

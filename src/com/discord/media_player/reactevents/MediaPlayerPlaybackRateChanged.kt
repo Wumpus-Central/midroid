@@ -1,16 +1,14 @@
 package com.discord.media_player.reactevents
 
-import cl.f
-import cl.j
-import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import fl.g0
-import fl.y
-import jl.a
-import kh.w
+import fl.f
+import fl.j
+import fl.n
+import il.g0
+import il.y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +17,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import ml.a
+import nh.w
 
 @f
 public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSource?, rate: Double) : ReactEvent {
@@ -72,7 +72,7 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
    public override fun serialize(): WritableMap {
       val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(w.a("rate", this.rate));
       if (this.source != null) {
-         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.d(MediaPlayerPlaybackSource.class), this.source)));
+         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source)));
       }
 
       return var1;
@@ -110,7 +110,7 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{dl.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), y.a};
+         return new KSerializer[]{gl.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), y.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackRateChanged {
@@ -164,7 +164,7 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

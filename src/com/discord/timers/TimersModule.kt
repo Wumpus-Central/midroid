@@ -6,10 +6,10 @@ import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
-import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
+import nh.w
 
 public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersSpec {
    private final val reactEvents: ReactEvents
@@ -18,32 +18,32 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(w.a("timer", g0.b(TimerEvent.class)), w.a("interval", g0.b(IntervalEvent.class)));
+      this.reactEvents = new ReactEvents(new Pair[]{w.a("timer", g0.b(TimerEvent.class)), w.a("interval", g0.b(IntervalEvent.class))});
       this.timersManager = new TimersManager(var1);
    }
 
    @ReactMethod
-   public override fun addListener(type: String) {
+   public open fun addListener(type: String) {
       q.h(var1, "type");
    }
 
-   public override fun clearInterval(id: Double) {
+   public open fun clearInterval(id: Double) {
       this.timersManager.clearInterval((int)var1);
    }
 
-   public override fun clearTimeout(id: Double) {
+   public open fun clearTimeout(id: Double) {
       this.timersManager.clearTimeout((int)var1);
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "TimersModule";
    }
 
    @ReactMethod
-   public override fun removeListeners(count: Double) {
+   public open fun removeListeners(count: Double) {
    }
 
-   public override fun setInterval(id: Double, timeout: Double) {
+   public open fun setInterval(id: Double, timeout: Double) {
       this.timersManager.setInterval((int)var1, var3, new Function0(this, var1) {
          final double $id;
          final TimersModule this$0;
@@ -55,15 +55,15 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
          }
 
          public final void invoke() {
-            val var2: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
-            val var1: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
-            q.g(var1, "access$getReactApplicationContext(...)");
-            var2.emitModuleEvent(var1, new IntervalEvent((int)this.$id));
+            val var1: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
+            val var2: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
+            q.g(var2, "access$getReactApplicationContext(...)");
+            var1.emitModuleEvent(var2, new IntervalEvent((int)this.$id));
          }
       });
    }
 
-   public override fun setTimeout(id: Double, timeout: Double) {
+   public open fun setTimeout(id: Double, timeout: Double) {
       this.timersManager.setTimeout((int)var1, var3, new Function0(this, var1) {
          final double $id;
          final TimersModule this$0;
@@ -75,10 +75,10 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
          }
 
          public final void invoke() {
-            val var2: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
-            val var1: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
-            q.g(var1, "access$getReactApplicationContext(...)");
-            var2.emitModuleEvent(var1, new TimerEvent((int)this.$id));
+            val var1: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
+            val var2: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
+            q.g(var2, "access$getReactApplicationContext(...)");
+            var1.emitModuleEvent(var2, new TimerEvent((int)this.$id));
          }
       });
    }

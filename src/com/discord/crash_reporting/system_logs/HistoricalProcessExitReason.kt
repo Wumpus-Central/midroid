@@ -7,9 +7,9 @@ import android.os.Build.VERSION
 import e2.e
 import e2.f
 import e2.g
-import kh.w
 import kotlin.jvm.internal.q
-import lh.r
+import nh.w
+import oh.r
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>

@@ -1,14 +1,13 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dl.a
-import fl.b2
-import fl.g0
-import kh.w
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nh.w
 
 @f
 internal data class LongPressChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null, originalLink: String? = null) :
@@ -123,21 +123,21 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.originalLink;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("LongPressChannelData(guildId=");
-      var5.append(var4);
-      var5.append(", channelId=");
-      var5.append(var1);
-      var5.append(", messageId=");
-      var5.append(var2);
-      var5.append(", originalLink=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.originalLink;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LongPressChannelData(guildId=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
+      var1.append(", messageId=");
+      var1.append(var5);
+      var1.append(", originalLink=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -234,7 +234,7 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

@@ -1,11 +1,11 @@
 package com.discord.react_gesture_handler.passthrough_touch.events
 
-import cl.f
-import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.g0
-import fl.g0.a
+import fl.f
+import fl.n
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor

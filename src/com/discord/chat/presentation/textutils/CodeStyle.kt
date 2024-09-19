@@ -21,9 +21,9 @@ import com.discord.span.utilities.spannable.VerticalPaddingSpan
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import java.util.LinkedHashMap
-import kh.r
-import kh.s
 import kotlin.jvm.internal.q
+import nh.r
+import nh.s
 
 public object CodeStyle {
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
@@ -77,10 +77,10 @@ public object CodeStyle {
 
       label16:
       try {
-         val var8: kh.r.a = r.k;
+         val var8: nh.r.a = r.k;
          var7 = r.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var11: kh.r.a = r.k;
+         val var11: nh.r.a = r.k;
          var7 = r.b(s.a(var4));
          break label16;
       }

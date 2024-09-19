@@ -9,40 +9,40 @@ import android.graphics.PorterDuff.Mode
 import android.view.View
 import android.widget.ImageView
 import androidx.core.widget.e
+import ci.a
 import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
 import kotlin.text.MatchResult.b
-import zh.a
 
 private final val hsv: FloatArray = new float[3]
 private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(\\d+),\\s*(\\d+(?:\\.\\d*)?|\\.\\d+)\\)")
 
 private fun applySaturationFactor(color: Int): Int {
-   var var5: Float = ThemeManager.INSTANCE.getSaturationFactor();
-   if (var5 != 1.0F) {
+   var var4: Float = ThemeManager.INSTANCE.getSaturationFactor();
+   if (var4 != 1.0F) {
       val var7: FloatArray = hsv;
       Color.colorToHSV(var0, hsv);
       var var1: Float = var7[1];
       val var2: Float = var7[2];
       val var6: Float = var7[2] * var1;
       val var3: Float = 2;
-      val var4: Float = var2 - var6 / 2;
+      val var5: Float = var2 - var6 / 2;
       if (var2 - var6 / 2 != 0.0F && var2 - var6 / 2 != 1.0F) {
-         var1 = var6 / (1 - Math.abs(2.0F * var4 - 1.0F));
+         var1 = var6 / (1 - Math.abs(2.0F * var5 - 1.0F));
       }
 
-      var5 = var1 * var5 * Math.min(1.0F, 1.0F - var4) + var4;
-      if (var5 == 0.0F) {
+      var4 = var1 * var4 * Math.min(1.0F, 1.0F - var5) + var5;
+      if (var4 == 0.0F) {
          var1 = 0.0F;
       } else {
-         var1 = var3 * (1.0F - var4 / var5);
+         var1 = var3 * (1.0F - var5 / var4);
       }
 
       var7[1] = var1;
-      var7[2] = var5;
+      var7[2] = var4;
       var0 = Color.HSVToColor(var7);
    }
 
@@ -119,12 +119,12 @@ public fun rgbaToArgb(rgbaString: String?): Int {
    if (var0 != null) {
       val var5: MatchResult = rgbaPattern.f(var0);
       if (var5 != null) {
-         val var2: b = var5.a();
+         val var3: b = var5.a();
          var1 = Color.argb(
-            (int)(java.lang.Double.parseDouble(var2.a().b().get(4) as java.lang.String) * (double)255),
-            Integer.parseInt(var2.a().b().get(1) as java.lang.String),
-            Integer.parseInt(var2.a().b().get(2) as java.lang.String),
-            Integer.parseInt(var2.a().b().get(3) as java.lang.String)
+            (int)(java.lang.Double.parseDouble(var3.a().b().get(4) as java.lang.String) * (double)255),
+            Integer.parseInt(var3.a().b().get(1) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(2) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(3) as java.lang.String)
          );
       } else {
          var1 = -16777216;

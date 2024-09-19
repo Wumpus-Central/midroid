@@ -11,8 +11,8 @@ import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
-import lh.o
-import sk.f
+import oh.o
+import vk.f
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -81,10 +81,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   if (var32 != null) {
                      var var7: Int = (int)var2.getX() - var19.getTotalPaddingLeft() + var19.getScrollX();
                      val var30: Int = var19.getLayout().getLineForVertical((int)var2.getY() - var19.getTotalPaddingTop() + var19.getScrollY());
-                     val var4: Float = var19.getLayout().getLineRight(var30);
-                     val var5: Float = var19.getLayout().getLineLeft(var30);
+                     val var5: Float = var19.getLayout().getLineRight(var30);
+                     val var4: Float = var19.getLayout().getLineLeft(var30);
                      val var6: Float = var7;
-                     if (!(var7 > var4) && (var7 < 0 || !(var7 < var5))) {
+                     if (!(var7 > var5) && (var7 < 0 || !(var7 < var4))) {
                         var7 = var19.getLayout().getOffsetForHorizontal(var30, var6);
                         var14 = var32.getSpans(var7, var7, NestedClickableSpan.class);
                         q.g(var14, "getSpans(...)");
@@ -194,9 +194,11 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1459)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1216,8 +1218,6 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
                   3,
                   null

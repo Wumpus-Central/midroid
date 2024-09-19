@@ -12,9 +12,9 @@ import com.jakewharton.processphoenix.ProcessPhoenix
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import sk.f
-import sk.k0
 import t1.c
+import vk.f
+import vk.k0
 
 public object WindowFoldingFeatureDetector {
    private final var foldingFeaturePresent: Boolean

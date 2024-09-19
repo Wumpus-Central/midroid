@@ -39,12 +39,12 @@ import com.facebook.react.viewmanagers.DCDMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDMessageViewManagerInterface
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerInterface
-import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
+import nh.w
 
 public object MessageViewManagers {
    private final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
@@ -294,13 +294,13 @@ public object MessageViewManagers {
 
             val var10: MessageBase = var4.getMessage();
             q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var7: Message = var10 as Message;
+            val var5: Message = var10 as Message;
             val var11: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var6: MessageFrame = var4.getMessageFrame();
-            val var5: Context = var1.getContext();
-            q.g(var5, "getContext(...)");
+            val var7: MessageFrame = var4.getMessageFrame();
+            val var6: Context = var1.getContext();
+            q.g(var6, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var7, var11, var6, MessageViewManagers.access$getEventHandler(var3, var4, var5), null, null, false, var4.isHighlight(), false, 368, null
+               var1, var5, var11, var7, MessageViewManagers.access$getEventHandler(var3, var4, var6), null, null, false, var4.isHighlight(), false, 368, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }

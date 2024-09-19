@@ -5,8 +5,8 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import java.util.ArrayList
-import kh.w
 import kotlin.jvm.internal.q
+import nh.w
 
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
    q.h(var0, "<this>");

@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Map;
-import s6.a;
+import v6.a;
 
 public abstract class NativeFileManagerSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "RTNFileManager";

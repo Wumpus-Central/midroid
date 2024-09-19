@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import fl.b2
-import fl.g0
-import fl.x0
-import fl.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.x0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -71,17 +71,17 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var3: java.lang.String = this.full;
-      val var4: java.lang.String = this.formatted;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TimestampContentNode(timestamp=");
-      var5.append(var1);
-      var5.append(", full=");
-      var5.append(var3);
-      var5.append(", formatted=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.full;
+      val var3: java.lang.String = this.formatted;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TimestampContentNode(timestamp=");
+      var4.append(var1);
+      var4.append(", full=");
+      var4.append(var5);
+      var4.append(", formatted=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

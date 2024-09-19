@@ -2,29 +2,29 @@ package com.discord.js_watchdog
 
 import java.io.File
 import java.io.FileInputStream
-import vh.b
-import vh.c
+import yh.b
+import yh.c
 
 public object HermesSamplingProfilerUtil {
    private fun readFile(file: File): String {
       label18: {
          val var10: FileInputStream = new FileInputStream(var1);
 
-         var var11: ByteArray;
+         var var2: ByteArray;
          try {
-            var11 = b.c(var10);
+            var2 = b.c(var10);
          } catch (var5: java.lang.Throwable) {
-            val var2: java.lang.Throwable = var5;
+            val var3: java.lang.Throwable = var5;
 
             try {
-               throw var2;
+               throw var3;
             } catch (var4: java.lang.Throwable) {
                c.a(var10, var5);
             }
          }
 
          c.a(var10, null);
-         return h.r(var11);
+         return h.r(var2);
       }
    }
 
@@ -74,7 +74,7 @@ public object HermesSamplingProfilerUtil {
       // 03f: aload 4
       // 041: astore 1
       // 042: aload 6
-      // 044: invokestatic gl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 044: invokestatic jl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
       // 047: ldc "samples"
       // 049: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
       // 04c: checkcast kotlinx/serialization/json/JsonElement
@@ -84,7 +84,7 @@ public object HermesSamplingProfilerUtil {
       // 054: aload 4
       // 056: astore 1
       // 057: aload 3
-      // 058: invokestatic gl/g.n (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonArray;
+      // 058: invokestatic jl/g.n (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonArray;
       // 05b: astore 3
       // 05c: goto 072
       // 05f: astore 3
@@ -109,7 +109,7 @@ public object HermesSamplingProfilerUtil {
       // 080: iload 2
       // 081: ifeq 087
       // 084: goto 2af
-      // 087: getstatic kh/r.k Lkh/r$a;
+      // 087: getstatic nh/r.k Lnh/r$a;
       // 08a: astore 1
       // 08b: aload 3
       // 08c: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
@@ -122,7 +122,7 @@ public object HermesSamplingProfilerUtil {
       // 0a4: checkcast kotlinx/serialization/json/JsonElement
       // 0a7: astore 1
       // 0a8: aload 1
-      // 0a9: invokestatic gl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 0a9: invokestatic jl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
       // 0ac: ldc "sf"
       // 0ae: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
       // 0b1: checkcast kotlinx/serialization/json/JsonElement
@@ -130,12 +130,12 @@ public object HermesSamplingProfilerUtil {
       // 0b5: aload 3
       // 0b6: ifnull 0db
       // 0b9: aload 3
-      // 0ba: invokestatic gl/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 0ba: invokestatic jl/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
       // 0bd: astore 3
       // 0be: aload 3
       // 0bf: ifnull 0db
       // 0c2: aload 3
-      // 0c3: invokestatic gl/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
+      // 0c3: invokestatic jl/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
       // 0c6: astore 3
       // 0c7: aload 3
       // 0c8: ifnull 0db
@@ -158,7 +158,7 @@ public object HermesSamplingProfilerUtil {
       // 0e8: aload 3
       // 0e9: ifnull 0f4
       // 0ec: aload 3
-      // 0ed: invokestatic kh/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 0ed: invokestatic nh/r.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 0f0: astore 3
       // 0f1: goto 113
       // 0f4: new java/util/NoSuchElementException
@@ -170,20 +170,20 @@ public object HermesSamplingProfilerUtil {
       // 0ff: athrow
       // 100: aload 4
       // 102: astore 1
-      // 103: getstatic kh/r.k Lkh/r$a;
+      // 103: getstatic nh/r.k Lnh/r$a;
       // 106: astore 3
       // 107: aload 4
       // 109: astore 1
       // 10a: aload 5
-      // 10c: invokestatic kh/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
-      // 10f: invokestatic kh/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 10c: invokestatic nh/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
+      // 10f: invokestatic nh/r.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 112: astore 3
       // 113: aload 4
       // 115: astore 1
       // 116: aload 3
       // 117: astore 5
       // 119: aload 3
-      // 11a: invokestatic kh/r.g (Ljava/lang/Object;)Z
+      // 11a: invokestatic nh/r.g (Ljava/lang/Object;)Z
       // 11d: ifeq 123
       // 120: aconst_null
       // 121: astore 5
@@ -206,8 +206,8 @@ public object HermesSamplingProfilerUtil {
       // 143: aload 4
       // 145: astore 1
       // 146: aload 6
-      // 148: invokestatic gl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
-      // 14b: invokestatic lh/r.x (Ljava/util/Map;)Ljava/util/Map;
+      // 148: invokestatic jl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 14b: invokestatic oh/r.x (Ljava/util/Map;)Ljava/util/Map;
       // 14e: astore 3
       // 14f: aload 4
       // 151: astore 1
@@ -229,7 +229,7 @@ public object HermesSamplingProfilerUtil {
       // 172: aload 4
       // 174: astore 1
       // 175: aload 6
-      // 177: invokestatic gl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 177: invokestatic jl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
       // 17a: ldc "stackFrames"
       // 17c: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
       // 17f: checkcast kotlinx/serialization/json/JsonElement
@@ -239,14 +239,14 @@ public object HermesSamplingProfilerUtil {
       // 189: aload 4
       // 18b: astore 1
       // 18c: aload 6
-      // 18e: invokestatic gl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 18e: invokestatic jl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
       // 191: astore 7
       // 193: aload 7
       // 195: ifnull 26d
       // 198: aload 4
       // 19a: astore 1
       // 19b: aload 5
-      // 19d: invokestatic gl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 19d: invokestatic jl/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
       // 1a0: ldc "sf"
       // 1a2: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
       // 1a5: astore 5
@@ -258,8 +258,8 @@ public object HermesSamplingProfilerUtil {
       // 1b1: astore 1
       // 1b2: aload 5
       // 1b4: checkcast kotlinx/serialization/json/JsonElement
-      // 1b7: invokestatic gl/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 1ba: invokestatic gl/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
+      // 1b7: invokestatic jl/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 1ba: invokestatic jl/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
       // 1bd: astore 6
       // 1bf: aload 6
       // 1c1: ifnull 26d
@@ -281,30 +281,30 @@ public object HermesSamplingProfilerUtil {
       // 1e0: aload 7
       // 1e2: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
       // 1e7: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 1ec: astore 8
+      // 1ec: astore 7
       // 1ee: aload 4
       // 1f0: astore 1
-      // 1f1: aload 8
+      // 1f1: aload 7
       // 1f3: invokeinterface java/util/Iterator.hasNext ()Z 1
       // 1f8: ifeq 24d
       // 1fb: aload 4
       // 1fd: astore 1
-      // 1fe: aload 8
+      // 1fe: aload 7
       // 200: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 205: checkcast java/util/Map$Entry
-      // 208: astore 9
+      // 208: astore 8
       // 20a: aload 4
       // 20c: astore 1
-      // 20d: aload 9
+      // 20d: aload 8
       // 20f: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
       // 214: checkcast java/lang/String
       // 217: invokestatic kotlin/text/h.m (Ljava/lang/String;)Ljava/lang/Integer;
-      // 21a: astore 7
-      // 21c: aload 7
+      // 21a: astore 9
+      // 21c: aload 9
       // 21e: ifnull 1ee
       // 221: aload 4
       // 223: astore 1
-      // 224: aload 7
+      // 224: aload 9
       // 226: invokevirtual java/lang/Number.intValue ()I
       // 229: aload 6
       // 22b: invokevirtual java/lang/Integer.intValue ()I
@@ -312,9 +312,9 @@ public object HermesSamplingProfilerUtil {
       // 231: aload 4
       // 233: astore 1
       // 234: aload 5
-      // 236: aload 9
+      // 236: aload 8
       // 238: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 23d: aload 9
+      // 23d: aload 8
       // 23f: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 244: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 249: pop
@@ -338,7 +338,7 @@ public object HermesSamplingProfilerUtil {
       // 26d: aload 4
       // 26f: astore 1
       // 270: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
-      // 273: astore 6
+      // 273: astore 5
       // 275: aload 4
       // 277: astore 1
       // 278: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
@@ -347,18 +347,18 @@ public object HermesSamplingProfilerUtil {
       // 280: aload 4
       // 282: astore 1
       // 283: new kotlinx/serialization/json/JsonObject
-      // 286: astore 5
+      // 286: astore 6
       // 288: aload 4
       // 28a: astore 1
-      // 28b: aload 5
+      // 28b: aload 6
       // 28d: aload 3
       // 28e: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
       // 291: aload 4
       // 293: astore 1
-      // 294: aload 6
+      // 294: aload 5
       // 296: aload 7
-      // 298: aload 5
-      // 29a: invokevirtual kotlinx/serialization/json/Json.c (Lcl/h;Ljava/lang/Object;)Ljava/lang/String;
+      // 298: aload 6
+      // 29a: invokevirtual kotlinx/serialization/json/Json.c (Lfl/h;Ljava/lang/Object;)Ljava/lang/String;
       // 29d: astore 3
       // 29e: aload 4
       // 2a0: invokevirtual java/io/File.exists ()Z

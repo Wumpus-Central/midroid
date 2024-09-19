@@ -79,7 +79,7 @@ internal class SystemLogCapture {
       // 072: astore 4
       // 074: aload 5
       // 076: astore 3
-      // 077: getstatic qk/a.b Ljava/nio/charset/Charset;
+      // 077: getstatic tk/a.b Ljava/nio/charset/Charset;
       // 07a: astore 8
       // 07c: aload 5
       // 07e: astore 4
@@ -294,7 +294,7 @@ internal class SystemLogCapture {
    }
 
    public fun startThread(): Thread {
-      return oh.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new Function0(this) {
+      return rh.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new Function0(this) {
          final SystemLogCapture this$0;
 
          {

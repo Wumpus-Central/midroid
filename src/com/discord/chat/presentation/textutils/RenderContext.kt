@@ -810,7 +810,7 @@ public data class RenderContext(context: Context,
       fun {
          val var0: Array<RenderContext.SpoilerState> = $values();
          $VALUES = var0;
-         $ENTRIES = rh.a.a(var0);
+         $ENTRIES = uh.a.a(var0);
       }
 
       @JvmStatic

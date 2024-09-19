@@ -15,14 +15,14 @@ import java.security.NoSuchAlgorithmException
 import java.util.ArrayList
 import k2.a0
 import k2.z
-import kh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import nm.f
+import nh.l
+import qm.f
 
 @SuppressLint(["PackageManagerGetSignatures"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
-   public final val appSignatures: MutableList<String> by l.b(new Function0(this) {
+   public final val appSignatures: MutableList<String> by l.a(new Function0(this) {
       final AppSignatureHelper this$0;
 
       {
@@ -130,11 +130,11 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
-            val var8: java.lang.String = var3.toString();
-            val var12: MessageDigest = MessageDigest.getInstance("SHA-256");
-            q.g(var12, "getInstance(...)");
-            var12.update(f.a(var8));
-            val var9: ByteArray = var12.digest();
+            val var12: java.lang.String = var3.toString();
+            val var8: MessageDigest = MessageDigest.getInstance("SHA-256");
+            q.g(var8, "getInstance(...)");
+            var8.update(f.a(var12));
+            val var9: ByteArray = var8.digest();
             q.g(var9, "digest(...)");
             val var10: java.lang.String = Base64.encodeToString(c.j(var9, 0, 9), 3);
             q.g(var10, "encodeToString(...)");

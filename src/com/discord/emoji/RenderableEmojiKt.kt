@@ -91,7 +91,7 @@ private fun renderEmojiInto(
    val var8: Int = var0.length();
    var0.append('\u200b');
    val var10: a = (((c.g().B(var5) as PipelineDraweeControllerBuilder)
-            .F(ImageRequestBuilder.v(Uri.parse(var1)).J(new ResizeOptions(var4, var4, 0.0F, 0.0F, 12, null)).E(RequestLevel.k).a()) as PipelineDraweeControllerBuilder)
+            .F(ImageRequestBuilder.w(Uri.parse(var1)).L(new ResizeOptions(var4, var4, 0.0F, 0.0F, 12, null)).G(RequestLevel.k).a()) as PipelineDraweeControllerBuilder)
          .D(var2) as PipelineDraweeControllerBuilder)
       .d();
    val var11: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var3.getResources()).w(ScaleType.e);

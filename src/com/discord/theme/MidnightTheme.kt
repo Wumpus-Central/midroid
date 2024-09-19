@@ -3,9 +3,9 @@ package com.discord.theme
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import kh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
+import nh.l
 
 internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val actionSheetGradientBg: Int
@@ -1980,7 +1980,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
       q.h(var1, "resources");
       q.h(var2, "theme");
       super(null);
-      this.actionSheetGradientBg$delegate = l.b(new Function0(var1, var2) {
+      this.actionSheetGradientBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -1994,7 +1994,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.activityCardBackground$delegate = l.b(new Function0(var1, var2) {
+      this.activityCardBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2008,7 +2008,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_700, this.$theme);
          }
       });
-      this.activityCardIconOverlay$delegate = l.b(new Function0(var1, var2) {
+      this.activityCardIconOverlay$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2022,7 +2022,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.activity_card_icon_overlay_midnight, this.$theme);
          }
       });
-      this.alertBg$delegate = l.b(new Function0(var1, var2) {
+      this.alertBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2036,7 +2036,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.androidNavigationBarBackground$delegate = l.b(new Function0(var1, var2) {
+      this.androidNavigationBarBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2050,7 +2050,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_24, this.$theme);
          }
       });
-      this.androidNavigationScrimBackground$delegate = l.b(new Function0(var1, var2) {
+      this.androidNavigationScrimBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2064,7 +2064,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.android_navigation_scrim_background_midnight, this.$theme);
          }
       });
-      this.androidRipple$delegate = l.b(new Function0(var1, var2) {
+      this.androidRipple$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2078,7 +2078,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.android_ripple_midnight, this.$theme);
          }
       });
-      this.autocompleteBg$delegate = l.b(new Function0(var1, var2) {
+      this.autocompleteBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2092,7 +2092,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_630, this.$theme);
          }
       });
-      this.backgroundAccent$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundAccent$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2106,7 +2106,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
          }
       });
-      this.backgroundFloating$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundFloating$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2120,7 +2120,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
          }
       });
-      this.backgroundMentioned$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMentioned$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2134,7 +2134,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_mentioned_midnight, this.$theme);
          }
       });
-      this.backgroundMentionedHover$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMentionedHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2148,7 +2148,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_mentioned_hover_midnight, this.$theme);
          }
       });
-      this.backgroundMessageAutomod$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMessageAutomod$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2162,7 +2162,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_message_automod_midnight, this.$theme);
          }
       });
-      this.backgroundMessageAutomodHover$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMessageAutomodHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2176,7 +2176,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_message_automod_hover_midnight, this.$theme);
          }
       });
-      this.backgroundMessageHighlight$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMessageHighlight$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2190,7 +2190,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_message_highlight_midnight, this.$theme);
          }
       });
-      this.backgroundMessageHighlightHover$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMessageHighlightHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2204,7 +2204,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_message_highlight_hover_midnight, this.$theme);
          }
       });
-      this.backgroundMessageHover$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMessageHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2218,7 +2218,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_21, this.$theme);
          }
       });
-      this.backgroundMobilePrimary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMobilePrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2232,7 +2232,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.backgroundMobileSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMobileSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2246,7 +2246,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.backgroundModifierAccent$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundModifierAccent$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2260,7 +2260,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_accent_midnight, this.$theme);
          }
       });
-      this.backgroundModifierAccent2$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundModifierAccent2$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2274,7 +2274,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_accent_2_midnight, this.$theme);
          }
       });
-      this.backgroundModifierActive$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundModifierActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2288,7 +2288,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_active_midnight, this.$theme);
          }
       });
-      this.backgroundModifierHover$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundModifierHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2302,7 +2302,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_hover_midnight, this.$theme);
          }
       });
-      this.backgroundModifierSelected$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundModifierSelected$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2316,7 +2316,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_selected_midnight, this.$theme);
          }
       });
-      this.backgroundNestedFloating$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundNestedFloating$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2330,7 +2330,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.backgroundPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2344,7 +2344,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.backgroundSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2358,7 +2358,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
          }
       });
-      this.backgroundSecondaryAlt$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundSecondaryAlt$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2372,7 +2372,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
          }
       });
-      this.backgroundTertiary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundTertiary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2386,7 +2386,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_19, this.$theme);
          }
       });
-      this.badgeBrandBg$delegate = l.b(new Function0(var1, var2) {
+      this.badgeBrandBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2400,7 +2400,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_260, this.$theme);
          }
       });
-      this.badgeBrandText$delegate = l.b(new Function0(var1, var2) {
+      this.badgeBrandText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2414,7 +2414,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
-      this.bgBackdrop$delegate = l.b(new Function0(var1, var2) {
+      this.bgBackdrop$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2428,7 +2428,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.bg_backdrop_midnight, this.$theme);
          }
       });
-      this.bgBackdropNoOpacity$delegate = l.b(new Function0(var1, var2) {
+      this.bgBackdropNoOpacity$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2442,7 +2442,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_19, this.$theme);
          }
       });
-      this.bgBasePrimary$delegate = l.b(new Function0(var1, var2) {
+      this.bgBasePrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2456,7 +2456,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.bgBaseSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.bgBaseSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2470,7 +2470,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.bgBaseTertiary$delegate = l.b(new Function0(var1, var2) {
+      this.bgBaseTertiary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2484,7 +2484,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.bgBrand$delegate = l.b(new Function0(var1, var2) {
+      this.bgBrand$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2498,7 +2498,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.bgModFaint$delegate = l.b(new Function0(var1, var2) {
+      this.bgModFaint$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2512,7 +2512,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.bg_mod_faint_midnight, this.$theme);
          }
       });
-      this.bgModStrong$delegate = l.b(new Function0(var1, var2) {
+      this.bgModStrong$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2526,7 +2526,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.bg_mod_strong_midnight, this.$theme);
          }
       });
-      this.bgModSubtle$delegate = l.b(new Function0(var1, var2) {
+      this.bgModSubtle$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2540,7 +2540,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.bg_mod_subtle_midnight, this.$theme);
          }
       });
-      this.bgSurfaceOverlay$delegate = l.b(new Function0(var1, var2) {
+      this.bgSurfaceOverlay$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2554,7 +2554,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_19, this.$theme);
          }
       });
-      this.bgSurfaceOverlayTmp$delegate = l.b(new Function0(var1, var2) {
+      this.bgSurfaceOverlayTmp$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2568,7 +2568,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_21, this.$theme);
          }
       });
-      this.bgSurfaceRaised$delegate = l.b(new Function0(var1, var2) {
+      this.bgSurfaceRaised$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2582,7 +2582,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
          }
       });
-      this.black$delegate = l.b(new Function0(var1, var2) {
+      this.black$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2596,7 +2596,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.blurFallback$delegate = l.b(new Function0(var1, var2) {
+      this.blurFallback$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2610,7 +2610,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.blur_fallback_midnight, this.$theme);
          }
       });
-      this.blurFallbackPressed$delegate = l.b(new Function0(var1, var2) {
+      this.blurFallbackPressed$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2624,7 +2624,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.blur_fallback_pressed_midnight, this.$theme);
          }
       });
-      this.borderFaint$delegate = l.b(new Function0(var1, var2) {
+      this.borderFaint$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2638,7 +2638,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.border_faint_midnight, this.$theme);
          }
       });
-      this.borderStrong$delegate = l.b(new Function0(var1, var2) {
+      this.borderStrong$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2652,7 +2652,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.border_strong_midnight, this.$theme);
          }
       });
-      this.borderSubtle$delegate = l.b(new Function0(var1, var2) {
+      this.borderSubtle$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2666,7 +2666,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.border_subtle_midnight, this.$theme);
          }
       });
-      this.bugReporterModalSubmittingBackground$delegate = l.b(new Function0(var1, var2) {
+      this.bugReporterModalSubmittingBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2680,7 +2680,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.bug_reporter_modal_submitting_background_midnight, this.$theme);
          }
       });
-      this.buttonCreatorRevenueBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonCreatorRevenueBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2694,7 +2694,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.teal_430, this.$theme);
          }
       });
-      this.buttonDangerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonDangerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2708,7 +2708,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.buttonDangerBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonDangerBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2722,7 +2722,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_530, this.$theme);
          }
       });
-      this.buttonDangerBackgroundDisabled$delegate = l.b(new Function0(var1, var2) {
+      this.buttonDangerBackgroundDisabled$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2736,7 +2736,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.buttonDangerBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonDangerBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2750,7 +2750,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_500, this.$theme);
          }
       });
-      this.buttonOutlineBrandBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2764,7 +2764,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.button_outline_brand_background_midnight, this.$theme);
          }
       });
-      this.buttonOutlineBrandBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2778,7 +2778,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
-      this.buttonOutlineBrandBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2792,7 +2792,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.buttonOutlineBrandBorder$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2806,7 +2806,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.buttonOutlineBrandBorderActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandBorderActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2820,7 +2820,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
-      this.buttonOutlineBrandBorderHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandBorderHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2834,7 +2834,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.buttonOutlineBrandText$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2848,7 +2848,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlineBrandTextActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandTextActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2862,7 +2862,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlineBrandTextHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineBrandTextHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2876,7 +2876,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlineDangerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2890,7 +2890,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.button_outline_danger_background_midnight, this.$theme);
          }
       });
-      this.buttonOutlineDangerBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2904,7 +2904,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_460, this.$theme);
          }
       });
-      this.buttonOutlineDangerBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2918,7 +2918,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.buttonOutlineDangerBorder$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2932,7 +2932,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
          }
       });
-      this.buttonOutlineDangerBorderActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerBorderActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2946,7 +2946,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.buttonOutlineDangerBorderHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerBorderHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2960,7 +2960,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.buttonOutlineDangerText$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2974,7 +2974,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlineDangerTextActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerTextActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -2988,7 +2988,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlineDangerTextHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlineDangerTextHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3002,7 +3002,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlinePositiveBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3016,7 +3016,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.button_outline_positive_background_midnight, this.$theme);
          }
       });
-      this.buttonOutlinePositiveBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3030,7 +3030,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_530, this.$theme);
          }
       });
-      this.buttonOutlinePositiveBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3044,7 +3044,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_430, this.$theme);
          }
       });
-      this.buttonOutlinePositiveBorder$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3058,7 +3058,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_360, this.$theme);
          }
       });
-      this.buttonOutlinePositiveBorderActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveBorderActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3072,7 +3072,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_530, this.$theme);
          }
       });
-      this.buttonOutlinePositiveBorderHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveBorderHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3086,7 +3086,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_430, this.$theme);
          }
       });
-      this.buttonOutlinePositiveText$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3100,7 +3100,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlinePositiveTextActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveTextActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3114,7 +3114,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlinePositiveTextHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePositiveTextHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3128,7 +3128,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3142,7 +3142,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.button_outline_primary_background_midnight, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3156,7 +3156,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_11, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3170,7 +3170,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryBorder$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3184,7 +3184,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_500, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryBorderActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryBorderActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3198,7 +3198,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_11, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryBorderHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryBorderHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3212,7 +3212,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryText$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3226,7 +3226,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryTextActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryTextActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3240,7 +3240,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonOutlinePrimaryTextHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonOutlinePrimaryTextHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3254,7 +3254,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.buttonPositiveBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonPositiveBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3268,7 +3268,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_430, this.$theme);
          }
       });
-      this.buttonPositiveBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonPositiveBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3282,7 +3282,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_530, this.$theme);
          }
       });
-      this.buttonPositiveBackgroundDisabled$delegate = l.b(new Function0(var1, var2) {
+      this.buttonPositiveBackgroundDisabled$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3296,7 +3296,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_430, this.$theme);
          }
       });
-      this.buttonPositiveBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonPositiveBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3310,7 +3310,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_530, this.$theme);
          }
       });
-      this.buttonSecondaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonSecondaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3324,7 +3324,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
          }
       });
-      this.buttonSecondaryBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.buttonSecondaryBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3338,7 +3338,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_10, this.$theme);
          }
       });
-      this.buttonSecondaryBackgroundDisabled$delegate = l.b(new Function0(var1, var2) {
+      this.buttonSecondaryBackgroundDisabled$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3352,7 +3352,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
          }
       });
-      this.buttonSecondaryBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.buttonSecondaryBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3366,7 +3366,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_11, this.$theme);
          }
       });
-      this.cardGradientBg$delegate = l.b(new Function0(var1, var2) {
+      this.cardGradientBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3380,7 +3380,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.card_gradient_bg_midnight, this.$theme);
          }
       });
-      this.cardGradientPressedBg$delegate = l.b(new Function0(var1, var2) {
+      this.cardGradientPressedBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3394,7 +3394,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.card_gradient_pressed_bg_midnight, this.$theme);
          }
       });
-      this.cardPrimaryBg$delegate = l.b(new Function0(var1, var2) {
+      this.cardPrimaryBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3408,7 +3408,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
          }
       });
-      this.cardPrimaryPressedBg$delegate = l.b(new Function0(var1, var2) {
+      this.cardPrimaryPressedBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3422,7 +3422,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_25, this.$theme);
          }
       });
-      this.cardSecondaryBg$delegate = l.b(new Function0(var1, var2) {
+      this.cardSecondaryBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3436,7 +3436,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_25, this.$theme);
          }
       });
-      this.cardSecondaryPressedBg$delegate = l.b(new Function0(var1, var2) {
+      this.cardSecondaryPressedBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3450,7 +3450,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_26, this.$theme);
          }
       });
-      this.channelIcon$delegate = l.b(new Function0(var1, var2) {
+      this.channelIcon$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3464,7 +3464,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_10, this.$theme);
          }
       });
-      this.channelTextAreaPlaceholder$delegate = l.b(new Function0(var1, var2) {
+      this.channelTextAreaPlaceholder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3478,7 +3478,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_11, this.$theme);
          }
       });
-      this.channelsDefault$delegate = l.b(new Function0(var1, var2) {
+      this.channelsDefault$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3492,7 +3492,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_9, this.$theme);
          }
       });
-      this.channeltextareaBackground$delegate = l.b(new Function0(var1, var2) {
+      this.channeltextareaBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3506,7 +3506,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
          }
       });
-      this.chatBackground$delegate = l.b(new Function0(var1, var2) {
+      this.chatBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3520,7 +3520,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.chatBannerBg$delegate = l.b(new Function0(var1, var2) {
+      this.chatBannerBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3534,7 +3534,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.chatBorder$delegate = l.b(new Function0(var1, var2) {
+      this.chatBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3548,7 +3548,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_20, this.$theme);
          }
       });
-      this.chatInputContainerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.chatInputContainerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3562,7 +3562,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_16, this.$theme);
          }
       });
-      this.chatSwipeToReplyBackground$delegate = l.b(new Function0(var1, var2) {
+      this.chatSwipeToReplyBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3576,7 +3576,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_22, this.$theme);
          }
       });
-      this.chatSwipeToReplyGradientBackground$delegate = l.b(new Function0(var1, var2) {
+      this.chatSwipeToReplyGradientBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3590,7 +3590,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.chat_swipe_to_reply_gradient_background_midnight, this.$theme);
          }
       });
-      this.coachmarkBg$delegate = l.b(new Function0(var1, var2) {
+      this.coachmarkBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3604,7 +3604,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_19, this.$theme);
          }
       });
-      this.contentInventoryMediaSeekbarContainer$delegate = l.b(new Function0(var1, var2) {
+      this.contentInventoryMediaSeekbarContainer$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3618,7 +3618,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.content_inventory_media_seekbar_container_midnight, this.$theme);
          }
       });
-      this.contentInventoryOverlayTextPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.contentInventoryOverlayTextPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3632,7 +3632,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.content_inventory_overlay_text_primary_midnight, this.$theme);
          }
       });
-      this.contentInventoryOverlayTextSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.contentInventoryOverlayTextSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3646,7 +3646,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.content_inventory_overlay_text_secondary_midnight, this.$theme);
          }
       });
-      this.contentInventoryOverlayUiMod$delegate = l.b(new Function0(var1, var2) {
+      this.contentInventoryOverlayUiMod$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3660,7 +3660,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.content_inventory_overlay_ui_mod_midnight, this.$theme);
          }
       });
-      this.contentInventoryOverlayUiModBg$delegate = l.b(new Function0(var1, var2) {
+      this.contentInventoryOverlayUiModBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3674,7 +3674,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.content_inventory_overlay_ui_mod_bg_midnight, this.$theme);
          }
       });
-      this.contextMenuBackdropBackground$delegate = l.b(new Function0(var1, var2) {
+      this.contextMenuBackdropBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3688,7 +3688,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.context_menu_backdrop_background_midnight, this.$theme);
          }
       });
-      this.controlBrandForeground$delegate = l.b(new Function0(var1, var2) {
+      this.controlBrandForeground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3702,7 +3702,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_360, this.$theme);
          }
       });
-      this.controlBrandForegroundNew$delegate = l.b(new Function0(var1, var2) {
+      this.controlBrandForegroundNew$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3716,7 +3716,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_360, this.$theme);
          }
       });
-      this.creatorRevenueIconGradientEnd$delegate = l.b(new Function0(var1, var2) {
+      this.creatorRevenueIconGradientEnd$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3730,7 +3730,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.teal_430, this.$theme);
          }
       });
-      this.creatorRevenueIconGradientStart$delegate = l.b(new Function0(var1, var2) {
+      this.creatorRevenueIconGradientStart$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3744,7 +3744,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.teal_360, this.$theme);
          }
       });
-      this.creatorRevenueInfoBoxBackground$delegate = l.b(new Function0(var1, var2) {
+      this.creatorRevenueInfoBoxBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3758,7 +3758,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.creator_revenue_info_box_background_midnight, this.$theme);
          }
       });
-      this.creatorRevenueInfoBoxBorder$delegate = l.b(new Function0(var1, var2) {
+      this.creatorRevenueInfoBoxBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3772,7 +3772,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.teal_400, this.$theme);
          }
       });
-      this.creatorRevenueLockedChannelIcon$delegate = l.b(new Function0(var1, var2) {
+      this.creatorRevenueLockedChannelIcon$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3786,7 +3786,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.teal_345, this.$theme);
          }
       });
-      this.creatorRevenueProgressBar$delegate = l.b(new Function0(var1, var2) {
+      this.creatorRevenueProgressBar$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3800,7 +3800,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.teal_400, this.$theme);
          }
       });
-      this.deprecatedCardBg$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedCardBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3814,7 +3814,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.deprecated_card_bg_midnight, this.$theme);
          }
       });
-      this.deprecatedCardEditableBg$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedCardEditableBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3828,7 +3828,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.deprecated_card_editable_bg_midnight, this.$theme);
          }
       });
-      this.deprecatedQuickswitcherInputBackground$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedQuickswitcherInputBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3842,7 +3842,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_400, this.$theme);
          }
       });
-      this.deprecatedQuickswitcherInputPlaceholder$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedQuickswitcherInputPlaceholder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3856,7 +3856,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.deprecated_quickswitcher_input_placeholder_midnight, this.$theme);
          }
       });
-      this.deprecatedStoreBg$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedStoreBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3870,7 +3870,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_600, this.$theme);
          }
       });
-      this.deprecatedTextInputBg$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedTextInputBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3884,7 +3884,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_700, this.$theme);
          }
       });
-      this.deprecatedTextInputBorder$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedTextInputBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3898,7 +3898,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.deprecated_text_input_border_midnight, this.$theme);
          }
       });
-      this.deprecatedTextInputBorderDisabled$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedTextInputBorderDisabled$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3912,7 +3912,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_700, this.$theme);
          }
       });
-      this.deprecatedTextInputBorderHover$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedTextInputBorderHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3926,7 +3926,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_900, this.$theme);
          }
       });
-      this.deprecatedTextInputPrefix$delegate = l.b(new Function0(var1, var2) {
+      this.deprecatedTextInputPrefix$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3940,7 +3940,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_200, this.$theme);
          }
       });
-      this.displayBannerOverflowBackground$delegate = l.b(new Function0(var1, var2) {
+      this.displayBannerOverflowBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3954,7 +3954,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.display_banner_overflow_background_midnight, this.$theme);
          }
       });
-      this.dividerStrong$delegate = l.b(new Function0(var1, var2) {
+      this.dividerStrong$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3968,7 +3968,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.divider_strong_midnight, this.$theme);
          }
       });
-      this.dividerSubtle$delegate = l.b(new Function0(var1, var2) {
+      this.dividerSubtle$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3982,7 +3982,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.divider_subtle_midnight, this.$theme);
          }
       });
-      this.embedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.embedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -3996,7 +3996,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
          }
       });
-      this.embedBackgroundAlternate$delegate = l.b(new Function0(var1, var2) {
+      this.embedBackgroundAlternate$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4010,7 +4010,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_600, this.$theme);
          }
       });
-      this.embedTitle$delegate = l.b(new Function0(var1, var2) {
+      this.embedTitle$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4024,7 +4024,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_2, this.$theme);
          }
       });
-      this.expressionPickerBg$delegate = l.b(new Function0(var1, var2) {
+      this.expressionPickerBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4038,7 +4038,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.focusPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.focusPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4052,7 +4052,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.blue_345, this.$theme);
          }
       });
-      this.forumPostExtraMediaCountContainerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.forumPostExtraMediaCountContainerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4066,7 +4066,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.forum_post_extra_media_count_container_background_midnight, this.$theme);
          }
       });
-      this.forumPostTagBackground$delegate = l.b(new Function0(var1, var2) {
+      this.forumPostTagBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4080,7 +4080,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.forum_post_tag_background_midnight, this.$theme);
          }
       });
-      this.guildIconInactiveBg$delegate = l.b(new Function0(var1, var2) {
+      this.guildIconInactiveBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4094,7 +4094,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.guildIconInactiveNestedBg$delegate = l.b(new Function0(var1, var2) {
+      this.guildIconInactiveNestedBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4108,7 +4108,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.guildNotificationsBottomSheetPillBackground$delegate = l.b(new Function0(var1, var2) {
+      this.guildNotificationsBottomSheetPillBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4122,7 +4122,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_700, this.$theme);
          }
       });
-      this.haloPositive$delegate = l.b(new Function0(var1, var2) {
+      this.haloPositive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4136,7 +4136,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.halo_positive_midnight, this.$theme);
          }
       });
-      this.headerMuted$delegate = l.b(new Function0(var1, var2) {
+      this.headerMuted$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4150,7 +4150,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_10, this.$theme);
          }
       });
-      this.headerPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.headerPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4164,7 +4164,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_2, this.$theme);
          }
       });
-      this.headerSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.headerSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4178,7 +4178,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_8, this.$theme);
          }
       });
-      this.homeBackground$delegate = l.b(new Function0(var1, var2) {
+      this.homeBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4192,7 +4192,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_18, this.$theme);
          }
       });
-      this.homeCardRestingBorder$delegate = l.b(new Function0(var1, var2) {
+      this.homeCardRestingBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4206,7 +4206,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.home_card_resting_border_midnight, this.$theme);
          }
       });
-      this.iconMuted$delegate = l.b(new Function0(var1, var2) {
+      this.iconMuted$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4220,7 +4220,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_12, this.$theme);
          }
       });
-      this.iconPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.iconPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4234,7 +4234,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_5, this.$theme);
          }
       });
-      this.iconSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.iconSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4248,7 +4248,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_9, this.$theme);
          }
       });
-      this.iconTransparent$delegate = l.b(new Function0(var1, var2) {
+      this.iconTransparent$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4262,7 +4262,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.icon_transparent_midnight, this.$theme);
          }
       });
-      this.infoBoxBackground$delegate = l.b(new Function0(var1, var2) {
+      this.infoBoxBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4276,7 +4276,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.info_box_background_midnight, this.$theme);
          }
       });
-      this.infoDangerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.infoDangerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4290,7 +4290,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.info_danger_background_midnight, this.$theme);
          }
       });
-      this.infoDangerForeground$delegate = l.b(new Function0(var1, var2) {
+      this.infoDangerForeground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4304,7 +4304,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
          }
       });
-      this.infoDangerText$delegate = l.b(new Function0(var1, var2) {
+      this.infoDangerText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4318,7 +4318,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.infoHelpBackground$delegate = l.b(new Function0(var1, var2) {
+      this.infoHelpBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4332,7 +4332,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.info_help_background_midnight, this.$theme);
          }
       });
-      this.infoHelpForeground$delegate = l.b(new Function0(var1, var2) {
+      this.infoHelpForeground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4346,7 +4346,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.blue_345, this.$theme);
          }
       });
-      this.infoHelpText$delegate = l.b(new Function0(var1, var2) {
+      this.infoHelpText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4360,7 +4360,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.infoPositiveBackground$delegate = l.b(new Function0(var1, var2) {
+      this.infoPositiveBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4374,7 +4374,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.info_positive_background_midnight, this.$theme);
          }
       });
-      this.infoPositiveForeground$delegate = l.b(new Function0(var1, var2) {
+      this.infoPositiveForeground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4388,7 +4388,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_360, this.$theme);
          }
       });
-      this.infoPositiveText$delegate = l.b(new Function0(var1, var2) {
+      this.infoPositiveText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4402,7 +4402,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.infoWarningBackground$delegate = l.b(new Function0(var1, var2) {
+      this.infoWarningBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4416,7 +4416,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.info_warning_background_midnight, this.$theme);
          }
       });
-      this.infoWarningForeground$delegate = l.b(new Function0(var1, var2) {
+      this.infoWarningForeground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4430,7 +4430,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
          }
       });
-      this.infoWarningText$delegate = l.b(new Function0(var1, var2) {
+      this.infoWarningText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4444,7 +4444,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.inputBackground$delegate = l.b(new Function0(var1, var2) {
+      this.inputBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4458,7 +4458,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.input_background_midnight, this.$theme);
          }
       });
-      this.inputFocusedBorder$delegate = l.b(new Function0(var1, var2) {
+      this.inputFocusedBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4472,7 +4472,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.input_focused_border_midnight, this.$theme);
          }
       });
-      this.inputPlaceholderText$delegate = l.b(new Function0(var1, var2) {
+      this.inputPlaceholderText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4486,7 +4486,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_9, this.$theme);
          }
       });
-      this.interactiveActive$delegate = l.b(new Function0(var1, var2) {
+      this.interactiveActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4500,7 +4500,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_3, this.$theme);
          }
       });
-      this.interactiveHover$delegate = l.b(new Function0(var1, var2) {
+      this.interactiveHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4514,7 +4514,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
          }
       });
-      this.interactiveMuted$delegate = l.b(new Function0(var1, var2) {
+      this.interactiveMuted$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4528,7 +4528,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
          }
       });
-      this.interactiveNormal$delegate = l.b(new Function0(var1, var2) {
+      this.interactiveNormal$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4542,7 +4542,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_6, this.$theme);
          }
       });
-      this.legacyAndroidBlurOverlayDefault$delegate = l.b(new Function0(var1, var2) {
+      this.legacyAndroidBlurOverlayDefault$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4556,7 +4556,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.legacy_android_blur_overlay_default_midnight, this.$theme);
          }
       });
-      this.legacyAndroidBlurOverlayUltraThin$delegate = l.b(new Function0(var1, var2) {
+      this.legacyAndroidBlurOverlayUltraThin$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4570,7 +4570,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.legacy_android_blur_overlay_ultra_thin_midnight, this.$theme);
          }
       });
-      this.legacyBlurFallbackDefault$delegate = l.b(new Function0(var1, var2) {
+      this.legacyBlurFallbackDefault$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4584,7 +4584,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.legacy_blur_fallback_default_midnight, this.$theme);
          }
       });
-      this.legacyBlurFallbackUltraThin$delegate = l.b(new Function0(var1, var2) {
+      this.legacyBlurFallbackUltraThin$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4598,7 +4598,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.legacy_blur_fallback_ultra_thin_midnight, this.$theme);
          }
       });
-      this.liveStageTileBorder$delegate = l.b(new Function0(var1, var2) {
+      this.liveStageTileBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4612,7 +4612,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.live_stage_tile_border_midnight, this.$theme);
          }
       });
-      this.logoPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.logoPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4626,7 +4626,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.mentionBackground$delegate = l.b(new Function0(var1, var2) {
+      this.mentionBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4640,7 +4640,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.mention_background_midnight, this.$theme);
          }
       });
-      this.mentionForeground$delegate = l.b(new Function0(var1, var2) {
+      this.mentionForeground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4654,7 +4654,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_230, this.$theme);
          }
       });
-      this.menuItemDangerActiveBg$delegate = l.b(new Function0(var1, var2) {
+      this.menuItemDangerActiveBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4668,7 +4668,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_530, this.$theme);
          }
       });
-      this.menuItemDangerHoverBg$delegate = l.b(new Function0(var1, var2) {
+      this.menuItemDangerHoverBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4682,7 +4682,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.menuItemDefaultActiveBg$delegate = l.b(new Function0(var1, var2) {
+      this.menuItemDefaultActiveBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4696,7 +4696,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
-      this.menuItemDefaultHoverBg$delegate = l.b(new Function0(var1, var2) {
+      this.menuItemDefaultHoverBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4710,7 +4710,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.modalBackground$delegate = l.b(new Function0(var1, var2) {
+      this.modalBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4724,7 +4724,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_16, this.$theme);
          }
       });
-      this.modalFooterBackground$delegate = l.b(new Function0(var1, var2) {
+      this.modalFooterBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4738,7 +4738,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
          }
       });
-      this.navigatorHeaderTint$delegate = l.b(new Function0(var1, var2) {
+      this.navigatorHeaderTint$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4752,7 +4752,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.panelBg$delegate = l.b(new Function0(var1, var2) {
+      this.panelBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4766,7 +4766,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_24, this.$theme);
          }
       });
-      this.pollsNormalFillHover$delegate = l.b(new Function0(var1, var2) {
+      this.pollsNormalFillHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4780,7 +4780,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_600, this.$theme);
          }
       });
-      this.pollsNormalImageBackground$delegate = l.b(new Function0(var1, var2) {
+      this.pollsNormalImageBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4794,7 +4794,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_660, this.$theme);
          }
       });
-      this.pollsVictorFill$delegate = l.b(new Function0(var1, var2) {
+      this.pollsVictorFill$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4808,7 +4808,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.polls_victor_fill_midnight, this.$theme);
          }
       });
-      this.pollsVotedFill$delegate = l.b(new Function0(var1, var2) {
+      this.pollsVotedFill$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4822,7 +4822,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.polls_voted_fill_midnight, this.$theme);
          }
       });
-      this.premiumNitroPinkText$delegate = l.b(new Function0(var1, var2) {
+      this.premiumNitroPinkText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4836,7 +4836,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.premium_nitro_pink_light, this.$theme);
          }
       });
-      this.profileGradientCardBackground$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientCardBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4850,7 +4850,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_card_background_midnight, this.$theme);
          }
       });
-      this.profileGradientMessageInputBorder$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientMessageInputBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4864,7 +4864,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_message_input_border_midnight, this.$theme);
          }
       });
-      this.profileGradientNoteBackground$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientNoteBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4878,7 +4878,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_note_background_midnight, this.$theme);
          }
       });
-      this.profileGradientOverlay$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientOverlay$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4892,7 +4892,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_overlay_midnight, this.$theme);
          }
       });
-      this.profileGradientOverlaySyncedWithUserTheme$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientOverlaySyncedWithUserTheme$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4906,7 +4906,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_overlay_synced_with_user_theme_midnight, this.$theme);
          }
       });
-      this.profileGradientProfileBodyBackgroundHover$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientProfileBodyBackgroundHover$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4920,7 +4920,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_profile_body_background_hover_midnight, this.$theme);
          }
       });
-      this.profileGradientRolePillBackground$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientRolePillBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4934,7 +4934,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_role_pill_background_midnight, this.$theme);
          }
       });
-      this.profileGradientRolePillBorder$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientRolePillBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4948,7 +4948,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_role_pill_border_midnight, this.$theme);
          }
       });
-      this.profileGradientSectionBox$delegate = l.b(new Function0(var1, var2) {
+      this.profileGradientSectionBox$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4962,7 +4962,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.profile_gradient_section_box_midnight, this.$theme);
          }
       });
-      this.redesignActivityCardBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignActivityCardBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4976,7 +4976,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_560, this.$theme);
          }
       });
-      this.redesignActivityCardBackgroundPressed$delegate = l.b(new Function0(var1, var2) {
+      this.redesignActivityCardBackgroundPressed$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -4990,7 +4990,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_630, this.$theme);
          }
       });
-      this.redesignActivityCardBadgeIcon$delegate = l.b(new Function0(var1, var2) {
+      this.redesignActivityCardBadgeIcon$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5004,7 +5004,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_11, this.$theme);
          }
       });
-      this.redesignActivityCardBorder$delegate = l.b(new Function0(var1, var2) {
+      this.redesignActivityCardBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5018,7 +5018,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_activity_card_border_midnight, this.$theme);
          }
       });
-      this.redesignActivityCardOverflowBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignActivityCardOverflowBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5032,7 +5032,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
          }
       });
-      this.redesignButtonActiveBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonActiveBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5046,7 +5046,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_430, this.$theme);
          }
       });
-      this.redesignButtonActivePressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonActivePressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5060,7 +5060,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_460, this.$theme);
          }
       });
-      this.redesignButtonActiveText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonActiveText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5074,7 +5074,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonDangerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonDangerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5088,7 +5088,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.redesignButtonDangerPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonDangerPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5102,7 +5102,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_460, this.$theme);
          }
       });
-      this.redesignButtonDangerText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonDangerText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5116,7 +5116,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonDestructiveBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonDestructiveBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5130,7 +5130,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.redesignButtonDestructivePressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonDestructivePressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5144,7 +5144,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_460, this.$theme);
          }
       });
-      this.redesignButtonDestructiveText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonDestructiveText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5158,7 +5158,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonOverlayAlphaBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonOverlayAlphaBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5172,7 +5172,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_overlay_alpha_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonOverlayAlphaPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonOverlayAlphaPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5186,7 +5186,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_overlay_alpha_pressed_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonOverlayAlphaText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonOverlayAlphaText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5200,7 +5200,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonOverlayBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonOverlayBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5214,7 +5214,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonOverlayPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonOverlayPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5228,7 +5228,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_230, this.$theme);
          }
       });
-      this.redesignButtonOverlayText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonOverlayText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5242,7 +5242,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_860, this.$theme);
          }
       });
-      this.redesignButtonPositiveBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPositiveBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5256,7 +5256,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_430, this.$theme);
          }
       });
-      this.redesignButtonPositivePressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPositivePressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5270,7 +5270,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_460, this.$theme);
          }
       });
-      this.redesignButtonPositiveText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPositiveText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5284,7 +5284,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5298,7 +5298,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_primary_alt_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltBorder$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5312,7 +5312,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_400, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltOnBlurpleBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltOnBlurpleBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5326,7 +5326,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_primary_alt_on_blurple_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltOnBlurpleBorder$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltOnBlurpleBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5340,7 +5340,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltOnBlurplePressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltOnBlurplePressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5354,7 +5354,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_530, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltOnBlurplePressedBorder$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltOnBlurplePressedBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5368,7 +5368,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_360, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltOnBlurpleText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltOnBlurpleText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5382,7 +5382,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5396,7 +5396,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_primary_alt_pressed_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltPressedBorder$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltPressedBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5410,7 +5410,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_primary_alt_pressed_border_midnight, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltPressedText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltPressedText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5424,7 +5424,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_360, this.$theme);
          }
       });
-      this.redesignButtonPrimaryAltText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryAltText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5438,7 +5438,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_400, this.$theme);
          }
       });
-      this.redesignButtonPrimaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5452,7 +5452,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.redesignButtonPrimaryOnBlurplePressedText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryOnBlurplePressedText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5466,7 +5466,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_530, this.$theme);
          }
       });
-      this.redesignButtonPrimaryOverlayBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryOverlayBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5480,7 +5480,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonPrimaryOverlayPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryOverlayPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5494,7 +5494,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
          }
       });
-      this.redesignButtonPrimaryOverlayText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryOverlayText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5508,7 +5508,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_25, this.$theme);
          }
       });
-      this.redesignButtonPrimaryPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5522,7 +5522,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_560, this.$theme);
          }
       });
-      this.redesignButtonPrimaryText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5536,7 +5536,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonSecondaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5550,7 +5550,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
          }
       });
-      this.redesignButtonSecondaryBorder$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5564,7 +5564,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_secondary_border_midnight, this.$theme);
          }
       });
-      this.redesignButtonSecondaryOverlayBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryOverlayBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5578,7 +5578,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_secondary_overlay_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonSecondaryOverlayPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryOverlayPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5592,7 +5592,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_secondary_overlay_pressed_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonSecondaryOverlayText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryOverlayText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5606,7 +5606,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.redesignButtonSecondaryPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5620,7 +5620,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_15, this.$theme);
          }
       });
-      this.redesignButtonSecondaryPressedBorder$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryPressedBorder$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5634,7 +5634,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_secondary_pressed_border_midnight, this.$theme);
          }
       });
-      this.redesignButtonSecondaryText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSecondaryText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5648,7 +5648,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
          }
       });
-      this.redesignButtonSelectedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSelectedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5662,7 +5662,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_selected_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonSelectedPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSelectedPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5676,7 +5676,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_selected_pressed_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonSelectedText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonSelectedText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5690,7 +5690,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.redesignButtonTertiaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonTertiaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5704,7 +5704,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_tertiary_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonTertiaryPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonTertiaryPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5718,7 +5718,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_tertiary_pressed_background_midnight, this.$theme);
          }
       });
-      this.redesignButtonTertiaryPressedText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonTertiaryPressedText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5732,7 +5732,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_6, this.$theme);
          }
       });
-      this.redesignButtonTertiaryText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonTertiaryText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5746,7 +5746,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
          }
       });
-      this.redesignChannelCategoryNameText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignChannelCategoryNameText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5760,7 +5760,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_8, this.$theme);
          }
       });
-      this.redesignChannelMessagePreviewText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignChannelMessagePreviewText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5774,7 +5774,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_10, this.$theme);
          }
       });
-      this.redesignChannelNameMutedText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignChannelNameMutedText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5788,7 +5788,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_10, this.$theme);
          }
       });
-      this.redesignChannelNameText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignChannelNameText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5802,7 +5802,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_2, this.$theme);
          }
       });
-      this.redesignChatInputBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignChatInputBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5816,7 +5816,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_chat_input_background_midnight, this.$theme);
          }
       });
-      this.redesignImageButtonPressedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignImageButtonPressedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5830,7 +5830,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_image_button_pressed_background_midnight, this.$theme);
          }
       });
-      this.redesignInputControlActiveBg$delegate = l.b(new Function0(var1, var2) {
+      this.redesignInputControlActiveBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5844,7 +5844,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
          }
       });
-      this.redesignInputControlSelected$delegate = l.b(new Function0(var1, var2) {
+      this.redesignInputControlSelected$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5858,7 +5858,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.redesignOnlyBackgroundActive$delegate = l.b(new Function0(var1, var2) {
+      this.redesignOnlyBackgroundActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5872,7 +5872,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_530, this.$theme);
          }
       });
-      this.redesignOnlyBackgroundDefault$delegate = l.b(new Function0(var1, var2) {
+      this.redesignOnlyBackgroundDefault$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5886,7 +5886,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_600, this.$theme);
          }
       });
-      this.redesignOnlyBackgroundOverlay$delegate = l.b(new Function0(var1, var2) {
+      this.redesignOnlyBackgroundOverlay$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5900,7 +5900,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_645, this.$theme);
          }
       });
-      this.redesignOnlyBackgroundRaised$delegate = l.b(new Function0(var1, var2) {
+      this.redesignOnlyBackgroundRaised$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5914,7 +5914,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_630, this.$theme);
          }
       });
-      this.redesignOnlyBackgroundSunken$delegate = l.b(new Function0(var1, var2) {
+      this.redesignOnlyBackgroundSunken$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5928,7 +5928,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_660, this.$theme);
          }
       });
-      this.scrollbarAutoScrollbarColorThumb$delegate = l.b(new Function0(var1, var2) {
+      this.scrollbarAutoScrollbarColorThumb$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5942,7 +5942,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_20, this.$theme);
          }
       });
-      this.scrollbarAutoScrollbarColorTrack$delegate = l.b(new Function0(var1, var2) {
+      this.scrollbarAutoScrollbarColorTrack$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5956,7 +5956,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
          }
       });
-      this.scrollbarAutoThumb$delegate = l.b(new Function0(var1, var2) {
+      this.scrollbarAutoThumb$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5970,7 +5970,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_16, this.$theme);
          }
       });
-      this.scrollbarAutoTrack$delegate = l.b(new Function0(var1, var2) {
+      this.scrollbarAutoTrack$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5984,7 +5984,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_25, this.$theme);
          }
       });
-      this.scrollbarThinThumb$delegate = l.b(new Function0(var1, var2) {
+      this.scrollbarThinThumb$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -5998,7 +5998,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_20, this.$theme);
          }
       });
-      this.scrollbarThinTrack$delegate = l.b(new Function0(var1, var2) {
+      this.scrollbarThinTrack$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6012,7 +6012,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.scrollbar_thin_track_midnight, this.$theme);
          }
       });
-      this.spoilerHiddenBackground$delegate = l.b(new Function0(var1, var2) {
+      this.spoilerHiddenBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6026,7 +6026,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_14, this.$theme);
          }
       });
-      this.spoilerRevealedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.spoilerRevealedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6040,7 +6040,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.spoiler_revealed_background_midnight, this.$theme);
          }
       });
-      this.stageCardPillBg$delegate = l.b(new Function0(var1, var2) {
+      this.stageCardPillBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6054,7 +6054,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_25, this.$theme);
          }
       });
-      this.statusDanger$delegate = l.b(new Function0(var1, var2) {
+      this.statusDanger$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6068,7 +6068,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
          }
       });
-      this.statusDangerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.statusDangerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6082,7 +6082,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.statusDangerText$delegate = l.b(new Function0(var1, var2) {
+      this.statusDangerText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6096,7 +6096,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.statusDnd$delegate = l.b(new Function0(var1, var2) {
+      this.statusDnd$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6110,7 +6110,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
          }
       });
-      this.statusIdle$delegate = l.b(new Function0(var1, var2) {
+      this.statusIdle$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6124,7 +6124,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
          }
       });
-      this.statusOffline$delegate = l.b(new Function0(var1, var2) {
+      this.statusOffline$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6138,7 +6138,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_9, this.$theme);
          }
       });
-      this.statusOnline$delegate = l.b(new Function0(var1, var2) {
+      this.statusOnline$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6152,7 +6152,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_360, this.$theme);
          }
       });
-      this.statusPositive$delegate = l.b(new Function0(var1, var2) {
+      this.statusPositive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6166,7 +6166,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_360, this.$theme);
          }
       });
-      this.statusPositiveBackground$delegate = l.b(new Function0(var1, var2) {
+      this.statusPositiveBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6180,7 +6180,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_430, this.$theme);
          }
       });
-      this.statusPositiveText$delegate = l.b(new Function0(var1, var2) {
+      this.statusPositiveText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6194,7 +6194,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.statusSpeaking$delegate = l.b(new Function0(var1, var2) {
+      this.statusSpeaking$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6208,7 +6208,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_360, this.$theme);
          }
       });
-      this.statusWarning$delegate = l.b(new Function0(var1, var2) {
+      this.statusWarning$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6222,7 +6222,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
          }
       });
-      this.statusWarningBackground$delegate = l.b(new Function0(var1, var2) {
+      this.statusWarningBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6236,7 +6236,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
          }
       });
-      this.statusWarningText$delegate = l.b(new Function0(var1, var2) {
+      this.statusWarningText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6250,7 +6250,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.textBrand$delegate = l.b(new Function0(var1, var2) {
+      this.textBrand$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6264,7 +6264,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_400, this.$theme);
          }
       });
-      this.textDanger$delegate = l.b(new Function0(var1, var2) {
+      this.textDanger$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6278,7 +6278,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_345, this.$theme);
          }
       });
-      this.textLink$delegate = l.b(new Function0(var1, var2) {
+      this.textLink$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6292,7 +6292,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.blue_345, this.$theme);
          }
       });
-      this.textLinkLowSaturation$delegate = l.b(new Function0(var1, var2) {
+      this.textLinkLowSaturation$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6306,7 +6306,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.blue_330, this.$theme);
          }
       });
-      this.textLowContrast$delegate = l.b(new Function0(var1, var2) {
+      this.textLowContrast$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6320,7 +6320,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_12, this.$theme);
          }
       });
-      this.textMessagePreviewLowSat$delegate = l.b(new Function0(var1, var2) {
+      this.textMessagePreviewLowSat$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6334,7 +6334,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_9, this.$theme);
          }
       });
-      this.textMuted$delegate = l.b(new Function0(var1, var2) {
+      this.textMuted$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6348,7 +6348,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_10, this.$theme);
          }
       });
-      this.textMutedOnDefault$delegate = l.b(new Function0(var1, var2) {
+      this.textMutedOnDefault$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6362,7 +6362,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_330, this.$theme);
          }
       });
-      this.textNormal$delegate = l.b(new Function0(var1, var2) {
+      this.textNormal$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6376,7 +6376,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
          }
       });
-      this.textPositive$delegate = l.b(new Function0(var1, var2) {
+      this.textPositive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6390,7 +6390,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_330, this.$theme);
          }
       });
-      this.textPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.textPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6404,7 +6404,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
          }
       });
-      this.textSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.textSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6418,7 +6418,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_8, this.$theme);
          }
       });
-      this.textWarning$delegate = l.b(new Function0(var1, var2) {
+      this.textWarning$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6432,7 +6432,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
          }
       });
-      this.textboxMarkdownSyntax$delegate = l.b(new Function0(var1, var2) {
+      this.textboxMarkdownSyntax$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6446,7 +6446,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_9, this.$theme);
          }
       });
-      this.themeLockedBlurFallback$delegate = l.b(new Function0(var1, var2) {
+      this.themeLockedBlurFallback$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6460,7 +6460,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.theme_locked_blur_fallback_midnight, this.$theme);
          }
       });
-      this.threadChannelSpine$delegate = l.b(new Function0(var1, var2) {
+      this.threadChannelSpine$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6474,7 +6474,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
          }
       });
-      this.toastBg$delegate = l.b(new Function0(var1, var2) {
+      this.toastBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6488,7 +6488,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_19, this.$theme);
          }
       });
-      this.typingIndicatorBg$delegate = l.b(new Function0(var1, var2) {
+      this.typingIndicatorBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6502,7 +6502,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
          }
       });
-      this.userProfileHeaderOverflowBackground$delegate = l.b(new Function0(var1, var2) {
+      this.userProfileHeaderOverflowBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6516,7 +6516,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.user_profile_header_overflow_background_midnight, this.$theme);
          }
       });
-      this.voiceVideoVideoTileBackground$delegate = l.b(new Function0(var1, var2) {
+      this.voiceVideoVideoTileBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6530,7 +6530,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.voice_video_video_tile_background_midnight, this.$theme);
          }
       });
-      this.voiceVideoVideoTileBlurFallback$delegate = l.b(new Function0(var1, var2) {
+      this.voiceVideoVideoTileBlurFallback$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6544,7 +6544,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.voice_video_video_tile_blur_fallback_midnight, this.$theme);
          }
       });
-      this.white$delegate = l.b(new Function0(var1, var2) {
+      this.white$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -6558,7 +6558,7 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.youBarBg$delegate = l.b(new Function0(var1, var2) {
+      this.youBarBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 

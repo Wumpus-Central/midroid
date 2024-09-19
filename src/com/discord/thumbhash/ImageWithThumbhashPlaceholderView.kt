@@ -48,7 +48,7 @@ public class ImageWithThumbhashPlaceholderView  public constructor(context: Cont
 
    public fun update() {
       if (this.uri != null) {
-         val var3: a = ((c.g().F(ImageRequestBuilder.v(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
+         val var3: a = ((c.g().F(ImageRequestBuilder.w(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
                .E(
                   new ThumbhashPlaceholderControllerListener(
                      this, new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondary()), this.placeholder, this.placeholderVersion

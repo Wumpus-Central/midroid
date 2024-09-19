@@ -5,9 +5,9 @@ import com.discord.simpleast.core.node.Node
 import java.util.ArrayList
 import java.util.Stack
 import java.util.regex.Matcher
-import kh.w
 import kotlin.jvm.internal.m0
 import kotlin.jvm.internal.q
+import nh.w
 
 public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebugging: Boolean = false) {
    private final val enableDebugging: Boolean

@@ -18,8 +18,8 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import fl.b2
-import fl.g0
+import il.b2
+import il.g0
 import java.util.ArrayList
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -155,7 +155,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @cl.f
+   @fl.f
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -291,71 +291,68 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
-            val var1: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var2: b2 = b2.a;
-            return new KSerializer[]{dl.a.u(b2.a), dl.a.u(var2), dl.a.u(var1[2]), dl.a.u(var2)};
+            val var2: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
+            val var1: b2 = b2.a;
+            return new KSerializer[]{gl.a.u(b2.a), gl.a.u(var1), gl.a.u(var2[2]), gl.a.u(var1)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {
             kotlin.jvm.internal.q.h(var1, "decoder");
-            val var10: SerialDescriptor = this.getDescriptor();
-            val var11: kotlinx.serialization.encoding.c = var1.c(var10);
-            val var9: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var5: Boolean = var11.y();
+            val var9: SerialDescriptor = this.getDescriptor();
+            val var10: kotlinx.serialization.encoding.c = var1.c(var9);
+            val var11: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
+            val var5: Boolean = var10.y();
             var var8: java.lang.String = null;
             var var2: Int;
+            var var6: ArrayList;
             var var7: java.lang.String;
-            val var12: ArrayList;
-            var var14: Any;
+            var var13: Any;
             if (var5) {
-               var14 = b2.a;
-               var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
-               var7 = var11.v(var10, 1, (DeserializationStrategy)var14, null) as java.lang.String;
-               var12 = var11.v(var10, 2, var9[2], null) as ArrayList;
-               var14 = var11.v(var10, 3, (DeserializationStrategy)var14, null) as java.lang.String;
+               var13 = b2.a;
+               var8 = var10.v(var9, 0, b2.a, null) as java.lang.String;
+               var7 = var10.v(var9, 1, (DeserializationStrategy)var13, null) as java.lang.String;
+               var6 = var10.v(var9, 2, var11[2], null) as ArrayList;
+               var13 = var10.v(var9, 3, (DeserializationStrategy)var13, null) as java.lang.String;
                var2 = 15;
             } else {
                var var3: Boolean = true;
                var2 = 0;
                var7 = null;
-               var14 = null;
-               var var13: Any = null;
+               var6 = null;
+               var13 = null;
 
                while (var3) {
-                  val var4: Int = var11.x(var10);
+                  val var4: Int = var10.x(var9);
                   if (var4 != -1) {
                      if (var4 != 0) {
                         if (var4 != 1) {
                            if (var4 != 2) {
                               if (var4 != 3) {
-                                 throw new cl.n(var4);
+                                 throw new fl.n(var4);
                               }
 
-                              var13 = var11.v(var10, 3, b2.a, var13) as java.lang.String;
+                              var13 = var10.v(var9, 3, b2.a, var13) as java.lang.String;
                               var2 |= 8;
                            } else {
-                              var14 = var11.v(var10, 2, var9[2], var14) as ArrayList;
+                              var6 = var10.v(var9, 2, var11[2], var6) as ArrayList;
                               var2 |= 4;
                            }
                         } else {
-                           var7 = var11.v(var10, 1, b2.a, var7) as java.lang.String;
+                           var7 = var10.v(var9, 1, b2.a, var7) as java.lang.String;
                            var2 |= 2;
                         }
                      } else {
-                        var8 = var11.v(var10, 0, b2.a, var8) as java.lang.String;
+                        var8 = var10.v(var9, 0, b2.a, var8) as java.lang.String;
                         var2 |= 1;
                      }
                   } else {
                      var3 = false;
                   }
                }
-
-               var14 = var13;
-               var12 = (ArrayList)var14;
             }
 
-            var11.b(var10);
-            return new MessageFrameFeedHeaderView.MessageBundleHeader(var2, var8, var7, var12, (java.lang.String)var14, null);
+            var10.b(var9);
+            return new MessageFrameFeedHeaderView.MessageBundleHeader(var2, var8, var7, var6, (java.lang.String)var13, null);
          }
 
          public open fun serialize(encoder: Encoder, value: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader) {
@@ -368,7 +365,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return fl.g0.a.a(this);
+            return il.g0.a.a(this);
          }
       }
 

@@ -1,7 +1,7 @@
 package com.discord.appreview;
 
 // $VF: synthetic class
-public final class b implements tb.c {
+public final class b implements wb.c {
    public final AppRatingRequester a;
 
    public final void b() {

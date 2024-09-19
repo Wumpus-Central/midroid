@@ -1,12 +1,11 @@
 package com.discord.bundle_updater
 
-import cl.f
-import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import fl.b2
-import fl.g0
-import kh.w
+import fl.f
+import fl.n
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,6 +13,7 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import nh.w
 
 @f
 public data class BuildOverrideCookieBuild(type: String, id: String) {
@@ -149,7 +149,7 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

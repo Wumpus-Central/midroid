@@ -11,7 +11,7 @@ internal object FrescoMemoryTrimmer {
       q.h(var1, "context");
       var1.registerComponentCallbacks(new ComponentCallbacks2() {
          private final void clearMemoryCaches() {
-            c.a().c();
+            c.a().e();
          }
 
          public void onConfigurationChanged(Configuration var1) {

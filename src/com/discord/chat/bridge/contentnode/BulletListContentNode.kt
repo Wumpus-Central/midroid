@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import dl.a
-import fl.g0
-import fl.h
-import fl.x0
+import fl.f
+import fl.n
+import gl.a
+import il.g0
+import il.h
+import il.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -75,16 +75,16 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.Long = this.start;
+      val var2: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
-      val var2: java.util.List = this.items;
+      val var3: java.util.List = this.items;
       val var4: StringBuilder = new StringBuilder();
       var4.append("BulletListContentNode(start=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", ordered=");
       var4.append(var1);
       var4.append(", items=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }
@@ -171,7 +171,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

@@ -18,13 +18,13 @@ import java.net.UnknownHostException
 import java.security.cert.CertPathValidatorException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
-import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
-import lh.r
+import nh.p
+import oh.r
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
@@ -86,7 +86,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("dfaf4dde-d0c6-42fd-b0e3-c4bf5f041a12");
+      var5.setProguardUuid("03ed60f1-c6a3-43b1-b317-8474b001496a");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -107,7 +107,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", kh.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", nh.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -195,7 +195,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = rh.a.a(var0);
+         $ENTRIES = uh.a.a(var0);
       }
 
       @JvmStatic

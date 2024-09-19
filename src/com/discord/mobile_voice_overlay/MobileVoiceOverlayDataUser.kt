@@ -1,13 +1,13 @@
 package com.discord.mobile_voice_overlay
 
-import cl.f
-import cl.n
 import com.discord.primitives.UserId
-import fl.b2
-import fl.g0
-import fl.h
-import fl.n0
-import fl.o1
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.h
+import il.n0
+import il.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -100,20 +100,20 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
 
    public override fun toString(): String {
       val var5: java.lang.String = UserId.toString-impl(this.userId);
-      val var3: java.lang.String = this.avatar;
+      val var4: java.lang.String = this.avatar;
       val var2: Boolean = this.speaking;
       val var1: Int = this.discriminator;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MobileVoiceOverlayDataUser(userId=");
-      var4.append(var5);
-      var4.append(", avatar=");
-      var4.append(var3);
-      var4.append(", speaking=");
-      var4.append(var2);
-      var4.append(", discriminator=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MobileVoiceOverlayDataUser(userId=");
+      var3.append(var5);
+      var3.append(", avatar=");
+      var3.append(var4);
+      var3.append(", speaking=");
+      var3.append(var2);
+      var3.append(", discriminator=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -136,34 +136,34 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{UserId.$serializer.INSTANCE, dl.a.u(b2.a), h.a, n0.a};
+         return new KSerializer[]{UserId.$serializer.INSTANCE, gl.a.u(b2.a), h.a, n0.a};
       }
 
       public open fun deserialize(decoder: Decoder): MobileVoiceOverlayDataUser {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var3: Int;
-         val var5: Int;
-         val var8: java.lang.String;
-         val var11: UserId;
-         if (var10.y()) {
-            var11 = var10.m(var9, 0, UserId.$serializer.INSTANCE, null) as UserId;
-            var8 = var10.v(var9, 1, b2.a, null) as java.lang.String;
-            var5 = var10.s(var9, 2);
-            var2 = var10.k(var9, 3);
+         var var4: Int;
+         var var7: UserId;
+         var var10: java.lang.String;
+         if (var9.y()) {
+            var7 = var9.m(var8, 0, UserId.$serializer.INSTANCE, null) as UserId;
+            var10 = var9.v(var8, 1, b2.a, null) as java.lang.String;
+            var4 = var9.s(var8, 2);
+            var2 = var9.k(var8, 3);
             var3 = 15;
          } else {
-            var var16: Boolean = true;
-            var var4: Int = 0;
+            var var5: Boolean = true;
+            var4 = 0;
             var2 = 0;
-            var var7: UserId = null;
-            var var12: java.lang.String = null;
+            var7 = null;
+            var10 = null;
             var3 = 0;
 
-            while (var16) {
-               val var6: Int = var10.x(var9);
+            while (var5) {
+               val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -172,34 +172,32 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
                               throw new n(var6);
                            }
 
-                           var4 = var10.k(var9, 3);
+                           var4 = var9.k(var8, 3);
                            var2 |= 8;
                         } else {
-                           var3 = var10.s(var9, 2);
+                           var3 = var9.s(var8, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var12 = var10.v(var9, 1, b2.a, var12) as java.lang.String;
+                        var10 = var9.v(var8, 1, b2.a, var10) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.m(var9, 0, UserId.$serializer.INSTANCE, var7) as UserId;
+                     var7 = var9.m(var8, 0, UserId.$serializer.INSTANCE, var7) as UserId;
                      var2 |= 1;
                   }
                } else {
-                  var16 = false;
+                  var5 = false;
                }
             }
 
             var2 = var4;
-            var5 = var3;
-            var8 = var12;
-            var11 = var7;
+            var4 = var3;
             var3 = var2;
          }
 
-         var10.b(var9);
-         return new MobileVoiceOverlayDataUser(var3, var11, var8, (boolean)var5, var2, null, null);
+         var9.b(var8);
+         return new MobileVoiceOverlayDataUser(var3, var7, var10, (boolean)var4, var2, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MobileVoiceOverlayDataUser) {
@@ -212,7 +210,7 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

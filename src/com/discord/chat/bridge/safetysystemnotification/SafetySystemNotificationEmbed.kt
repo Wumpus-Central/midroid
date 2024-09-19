@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -281,14 +281,14 @@ public data class SafetySystemNotificationEmbed(titleText: String,
 
       public open fun deserialize(decoder: Decoder): SafetySystemNotificationEmbed {
          q.h(var1, "decoder");
-         val var21: SerialDescriptor = this.getDescriptor();
-         val var22: c = var1.c(var21);
+         val var20: SerialDescriptor = this.getDescriptor();
+         val var21: c = var1.c(var20);
          val var17: Array<KSerializer> = SafetySystemNotificationEmbed.access$get$childSerializers$cp();
-         val var6: Boolean = var22.y();
+         val var6: Boolean = var21.y();
          var var4: Byte = 9;
          var var9: java.lang.String = null;
          var var2: Int;
-         var var7: java.lang.String;
+         var var10: java.lang.String;
          var var11: java.lang.String;
          var var12: java.lang.String;
          var var13: java.lang.String;
@@ -296,89 +296,91 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var var15: java.lang.String;
          val var16: java.lang.String;
          val var18: java.lang.String;
-         val var19: java.lang.String;
-         val var24: java.lang.String;
-         val var36: FooterTheme;
+         val var24: FooterTheme;
+         var var26: java.lang.String;
+         val var37: java.lang.String;
          if (var6) {
-            var11 = var22.t(var21, 0);
-            var16 = var22.t(var21, 1);
-            var18 = var22.t(var21, 2);
-            var12 = var22.t(var21, 3);
-            val var23: b2 = b2.a;
-            var13 = var22.v(var21, 4, b2.a, null) as java.lang.String;
-            val var10: java.lang.String = var22.v(var21, 5, var23, null) as java.lang.String;
-            val var8: java.lang.String = var22.v(var21, 6, var23, null) as java.lang.String;
-            var7 = var22.v(var21, 7, var23, null) as java.lang.String;
-            var9 = var22.v(var21, 8, var23, null) as java.lang.String;
-            var24 = var22.v(var21, 9, var23, null) as java.lang.String;
-            var36 = var22.m(var21, 10, var17[10], null) as FooterTheme;
+            var10 = var21.t(var20, 0);
+            var13 = var21.t(var20, 1);
+            var16 = var21.t(var20, 2);
+            var12 = var21.t(var20, 3);
+            val var22: b2 = b2.a;
+            var15 = var21.v(var20, 4, b2.a, null) as java.lang.String;
+            var11 = var21.v(var20, 5, var22, null) as java.lang.String;
+            val var8: java.lang.String = var21.v(var20, 6, var22, null) as java.lang.String;
+            var26 = var21.v(var20, 7, var22, null) as java.lang.String;
+            var9 = var21.v(var20, 8, var22, null) as java.lang.String;
+            val var23: java.lang.String = var21.v(var20, 9, var22, null) as java.lang.String;
+            val var19: FooterTheme = var21.m(var20, 10, var17[10], null) as FooterTheme;
             var2 = 2047;
-            var19 = var10;
             var14 = var8;
-            var15 = var9;
+            var18 = var26;
+            var26 = var9;
+            var37 = var23;
+            var24 = var19;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var35: FooterTheme = null;
+            var var36: FooterTheme = null;
             var15 = null;
             var14 = null;
             var13 = null;
             var12 = null;
             var11 = null;
-            var var29: java.lang.String = null;
-            var var27: java.lang.String = null;
-            var7 = null;
+            var10 = null;
+            var var28: java.lang.String = null;
+            var26 = null;
             var var25: java.lang.String = null;
 
             while (var3) {
-               val var5: Int = var22.x(var21);
+               val var5: Int = var21.x(var20);
                switch (var5) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var9 = var22.t(var21, 0);
+                     var9 = var21.t(var20, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var27 = var22.t(var21, 1);
+                     var28 = var21.t(var20, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var7 = var22.t(var21, 2);
+                     var26 = var21.t(var20, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var25 = var22.t(var21, 3);
+                     var25 = var21.t(var20, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var29 = var22.v(var21, 4, b2.a, var29) as java.lang.String;
+                     var10 = var21.v(var20, 4, b2.a, var10) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
-                     var11 = var22.v(var21, 5, b2.a, var11) as java.lang.String;
+                     var11 = var21.v(var20, 5, b2.a, var11) as java.lang.String;
                      var2 |= 32;
                      break;
                   case 6:
-                     var12 = var22.v(var21, 6, b2.a, var12) as java.lang.String;
+                     var12 = var21.v(var20, 6, b2.a, var12) as java.lang.String;
                      var2 |= 64;
                      break;
                   case 7:
-                     var14 = var22.v(var21, 7, b2.a, var14) as java.lang.String;
+                     var14 = var21.v(var20, 7, b2.a, var14) as java.lang.String;
                      var2 |= 128;
                      var4 = 9;
                      continue;
                   case 8:
-                     var13 = var22.v(var21, 8, b2.a, var13) as java.lang.String;
+                     var13 = var21.v(var20, 8, b2.a, var13) as java.lang.String;
                      var2 |= 256;
                      continue;
                   case 9:
-                     var15 = var22.v(var21, var4, b2.a, var15) as java.lang.String;
+                     var15 = var21.v(var20, var4, b2.a, var15) as java.lang.String;
                      var2 |= 512;
                      continue;
                   case 10:
-                     var35 = var22.m(var21, 10, var17[10], var35) as FooterTheme;
+                     var36 = var21.m(var20, 10, var17[10], var36) as FooterTheme;
                      var2 |= 1024;
                      continue;
                   default:
@@ -388,21 +390,20 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                var4 = 9;
             }
 
-            var18 = var7;
-            var36 = var35;
-            var24 = var15;
-            var15 = var13;
-            var7 = var14;
+            var24 = var36;
+            var37 = var15;
+            var26 = var13;
+            var18 = var14;
             var14 = var12;
-            var19 = var11;
-            var13 = var29;
+            var15 = var10;
             var12 = var25;
-            var16 = var27;
-            var11 = var9;
+            var16 = var26;
+            var13 = var28;
+            var10 = var9;
          }
 
-         var22.b(var21);
-         return new SafetySystemNotificationEmbed(var2, var11, var16, var18, var12, var13, var19, var14, var7, var15, var24, var36, null);
+         var21.b(var20);
+         return new SafetySystemNotificationEmbed(var2, var10, var13, var16, var12, var15, var11, var14, var18, var26, var37, var24, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetySystemNotificationEmbed) {
@@ -415,7 +416,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

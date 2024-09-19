@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.summaries
 
-import cl.f
-import cl.n
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.o1
-import fl.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.n0
+import il.o1
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -273,7 +273,7 @@ public data class Summary(id: String,
          if (var7) {
             var13 = var17.t(var16, 0);
             val var14: java.lang.String = var17.t(var16, 1);
-            var11 = var17.t(var16, 2);
+            var12 = var17.t(var16, 2);
             var10 = var17.m(var16, 3, var15[3], null) as java.util.List;
             val var8: MessageId.$serializer = MessageId.$serializer.INSTANCE;
             val var18: MessageId = var17.m(var16, 4, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -293,7 +293,7 @@ public data class Summary(id: String,
 
             var3 = var17.k(var16, 6);
             var9 = var17.m(var16, 7, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var12 = var19;
+            var11 = var19;
             var2 = 255;
             var20 = var14;
          } else {
@@ -383,14 +383,14 @@ public data class Summary(id: String,
                var4 = 7;
             }
 
-            var11 = var22;
+            var12 = var22;
             var9 = var12;
             var22 = var11;
-            var12 = (java.lang.String)var9;
+            var11 = (java.lang.String)var9;
          }
 
          var17.b(var16);
-         return new Summary(var2, var13, var20, var11, var10, var12, var22, var3, var9, null, null);
+         return new Summary(var2, var13, var20, var12, var10, var11, var22, var3, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Summary) {

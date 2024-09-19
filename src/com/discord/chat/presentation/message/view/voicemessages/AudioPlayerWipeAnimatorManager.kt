@@ -70,7 +70,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
       super();
       this.brand500 = var1.getColor(R.color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = kh.l.b(new Function0(var1) {
+      this.buttonContainerDefaultDrawable$delegate = nh.l.a(new Function0(var1) {
          final Context $context;
 
          {
@@ -90,8 +90,8 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             return GetDrawableCompatKt.getDrawableCompat(var2, var1);
          }
       });
-      this.buttonContainerActiveDrawable$delegate = kh.l.b(<unrepresentable>.INSTANCE);
-      this.scaleAnimator$delegate = kh.l.b(
+      this.buttonContainerActiveDrawable$delegate = nh.l.a(<unrepresentable>.INSTANCE);
+      this.scaleAnimator$delegate = nh.l.a(
          new Function0(var2, this) {
             final AudioPlayerViewBinding $binding;
             final AudioPlayerWipeAnimatorManager this$0;
@@ -147,7 +147,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             }
          }
       );
-      this.textColorAnimator$delegate = kh.l.b(new Function0(var2) {
+      this.textColorAnimator$delegate = nh.l.a(new Function0(var2) {
          final AudioPlayerViewBinding $binding;
 
          {
@@ -170,7 +170,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             return var1;
          }
       });
-      this.buttonIconColorAnimator$delegate = kh.l.b(new Function0(var2) {
+      this.buttonIconColorAnimator$delegate = nh.l.a(new Function0(var2) {
          final AudioPlayerViewBinding $binding;
 
          {
@@ -194,7 +194,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
             return var1;
          }
       });
-      this.progressColorAnimator$delegate = kh.l.b(new Function0(var2) {
+      this.progressColorAnimator$delegate = nh.l.a(new Function0(var2) {
          final AudioPlayerViewBinding $binding;
 
          {

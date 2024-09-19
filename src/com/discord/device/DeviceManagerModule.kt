@@ -8,9 +8,9 @@ import com.discord.device.utils.IsGestureNavigationEnabledKt
 import com.discord.device.utils.IsTabletKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.annotations.ReactModule
-import kh.w
 import kotlin.jvm.internal.q
-import lh.r
+import nh.w
+import oh.r
 
 @ReactModule(name = "RTNDeviceManager")
 public class DeviceManagerModule(reactContext: ReactApplicationContext) : NativeDeviceManagerSpec {

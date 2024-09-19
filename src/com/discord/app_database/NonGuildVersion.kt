@@ -1,11 +1,11 @@
 package com.discord.app_database
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.x0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -172,7 +172,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

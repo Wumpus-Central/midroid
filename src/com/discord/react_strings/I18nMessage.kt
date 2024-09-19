@@ -3,7 +3,7 @@ package com.discord.react_strings
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import rh.a
+import uh.a
 
 public enum class I18nMessage {
    CANCEL,

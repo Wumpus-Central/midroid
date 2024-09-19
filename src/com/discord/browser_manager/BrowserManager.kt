@@ -9,7 +9,7 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import pk.j
+import sk.j
 
 internal object BrowserManager {
    private fun openUrlExternally(context: Context, uri: Uri, onFailure: (Exception) -> Unit, forceExternal: Boolean = true) {

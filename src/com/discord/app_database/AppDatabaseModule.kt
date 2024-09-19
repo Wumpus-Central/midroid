@@ -8,14 +8,14 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import fl.w1
-import kh.w
+import il.w1
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
-import lh.r
+import nh.w
+import oh.r
 
 @ReactModule(name = "AppDatabase")
 public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -25,10 +25,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, String?> {
-      val var2: CacheModule.Companion = CacheModule.Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      return r.m(new Pair[]{w.a("userId", var2.get(var1).getItem("_databaseUserId"))});
+      val var1: CacheModule.Companion = CacheModule.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      return r.m(new Pair[]{w.a("userId", var1.get(var2).getItem("_databaseUserId"))});
    }
 
    public open fun getName(): String {
@@ -38,10 +38,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    @ReactMethod
    public fun setUserId(userId: String?) {
       if (var1 != null) {
-         val var3: CacheModule.Companion = CacheModule.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var3.get(var2).setItem("_databaseUserId", var1);
+         val var2: CacheModule.Companion = CacheModule.Companion;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var2.get(var3).setItem("_databaseUserId", var1);
       } else {
          val var5: CacheModule.Companion = CacheModule.Companion;
          val var4: ReactApplicationContext = this.getReactApplicationContext();
@@ -166,7 +166,7 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
       public fun initializeAppDatabase(context: Context) {
          q.h(var1, "context");
          AppDatabaseModule.access$setDataDirectory$cp(var1.getFilesDir().getAbsolutePath());
-         oh.a.b(false, false, null, null, 0, new Function0(var1) {
+         rh.a.b(false, false, null, null, 0, new Function0(var1) {
             final Context $context;
 
             {

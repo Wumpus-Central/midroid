@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -110,18 +110,18 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: java.lang.String = this.target;
+      val var4: java.util.List = this.content;
+      val var1: java.lang.String = this.target;
       val var3: LinkContext = this.context;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LinkContentNode(content=");
-      var4.append(var1);
-      var4.append(", target=");
-      var4.append(var2);
-      var4.append(", context=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LinkContentNode(content=");
+      var2.append(var4);
+      var2.append(", target=");
+      var2.append(var1);
+      var2.append(", context=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -226,7 +226,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

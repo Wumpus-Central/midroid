@@ -1,13 +1,13 @@
 package com.discord.user_search_worker
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.s0
-import fl.y
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.n0
+import il.s0
+import il.y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -35,7 +35,7 @@ internal data class UserSearchQuerySetPayload(query: String,
    @JvmStatic
    fun {
       val var0: b2 = b2.a;
-      $childSerializers = new KSerializer[]{null, null, new fl.f(b2.a), new fl.f(var0), new s0(var0, y.a), null};
+      $childSerializers = new KSerializer[]{null, null, new il.f(b2.a), new il.f(var0), new s0(var0, y.a), null};
    }
 
    init {
@@ -135,23 +135,23 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.query;
+      val var4: java.lang.String = this.query;
       val var7: UserSearchQuerySetFilters = this.filters;
-      val var3: java.util.List = this.blacklist;
+      val var2: java.util.List = this.blacklist;
       val var6: java.util.List = this.whitelist;
-      val var4: java.util.Map = this.boosters;
+      val var3: java.util.Map = this.boosters;
       val var1: Int = this.limit;
       val var5: StringBuilder = new StringBuilder();
       var5.append("UserSearchQuerySetPayload(query=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", filters=");
       var5.append(var7);
       var5.append(", blacklist=");
-      var5.append(var3);
+      var5.append(var2);
       var5.append(", whitelist=");
       var5.append(var6);
       var5.append(", boosters=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(", limit=");
       var5.append(var1);
       var5.append(")");
@@ -264,7 +264,7 @@ internal data class UserSearchQuerySetPayload(query: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

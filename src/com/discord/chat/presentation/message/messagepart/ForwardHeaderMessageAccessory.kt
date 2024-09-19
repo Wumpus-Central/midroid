@@ -47,14 +47,14 @@ public data class ForwardHeaderMessageAccessory(messageId: MessageId, useOldIcon
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Boolean = this.useOldIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ForwardHeaderMessageAccessory(messageId=");
-      var3.append(var2);
-      var3.append(", useOldIcon=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ForwardHeaderMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", useOldIcon=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

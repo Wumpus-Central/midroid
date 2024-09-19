@@ -1,10 +1,10 @@
 package com.discord.notifications.api
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -72,13 +72,13 @@ public data class EmbedField(name: String? = null, value: String? = null) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var1: java.lang.String = this.value;
+      val var1: java.lang.String = this.name;
+      val var2: java.lang.String = this.value;
       val var3: StringBuilder = new StringBuilder();
       var3.append("EmbedField(name=");
-      var3.append(var2);
-      var3.append(", value=");
       var3.append(var1);
+      var3.append(", value=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -157,7 +157,7 @@ public data class EmbedField(name: String? = null, value: String? = null) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

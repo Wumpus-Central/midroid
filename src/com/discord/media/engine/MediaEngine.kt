@@ -35,9 +35,9 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.webrtc.VideoFrame
 import org.webrtc.voiceengine.WebRtcAudioManager
-import sk.b0
-import sk.k0
-import sk.s1
+import vk.b0
+import vk.k0
+import vk.s1
 
 public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = k0.a()) {
    private final val context: Context
@@ -75,7 +75,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       this.instanceCreationNs = System.nanoTime();
       this.engineConnections = new MediaEngineNativeConnections();
       this.dispatcher = new AsyncInitDispatcher("MediaEngine", 0L, 2, null);
-      this.coroutineScope = kotlinx.coroutines.g.a(var2.P(new b0("MediaEngine")));
+      this.coroutineScope = kotlinx.coroutines.g.a(var2.Q(new b0("MediaEngine")));
    }
 
    @JvmStatic
@@ -224,19 +224,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var4: NativeConnection = this.engineConnections.get(var1);
-      if (var4 == null) {
-         val var5: Log = Log.INSTANCE;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("[");
-         var3.append(var2);
-         var3.append("] no NativeConnection for connectionId=");
-         var3.append(var1);
-         var3.append(", returning null");
-         Log.w$default(var5, "MediaEngine", var3.toString(), null, 4, null);
+      val var5: NativeConnection = this.engineConnections.get(var1);
+      if (var5 == null) {
+         val var3: Log = Log.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("[");
+         var4.append(var2);
+         var4.append("] no NativeConnection for connectionId=");
+         var4.append(var1);
+         var4.append(", returning null");
+         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       }
 
-      return var4;
+      return var5;
    }
 
    @JvmStatic
@@ -2673,7 +2673,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
          label27: {
             val var5: Any = ((<unrepresentable>)var8).result;
-            val var10: Any = qh.b.e();
+            val var10: Any = th.b.e();
             val var6: ByteArray;
             if (((<unrepresentable>)var8).label != 0) {
                if (((<unrepresentable>)var8).label != 1) {
@@ -2682,14 +2682,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   }
 
                   var7 = ((<unrepresentable>)var8).L$0 as java.lang.String;
-                  kh.s.b(var5);
+                  nh.s.b(var5);
                   break label27;
                }
 
                var6 = ((<unrepresentable>)var8).L$0 as ByteArray;
-               kh.s.b(var5);
+               nh.s.b(var5);
             } else {
-               kh.s.b(var5);
+               nh.s.b(var5);
                var6 = this.compressToJpegBytes(var1);
                ((<unrepresentable>)var8).L$0 = var6;
                ((<unrepresentable>)var8).label = 1;
@@ -2759,15 +2759,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var3: ScreenCapturer = this.screenCapturer;
+         val var2: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ScreenCapturerForConnection(screenCapturer=");
-         var2.append(var3);
-         var2.append(", connectionId=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ScreenCapturerForConnection(screenCapturer=");
+         var3.append(var2);
+         var3.append(", connectionId=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

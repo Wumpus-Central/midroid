@@ -8,9 +8,9 @@ import java.util.Comparator
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.g
-import nh.a
-import sk.f
-import sk.k0
+import qh.a
+import vk.f
+import vk.k0
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -1057,11 +1057,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 
 internal fun getRemoteSoundFilename(url: String): String {
    q.h(var0, "url");
-   var0 = Uri.parse(var0).getLastPathSegment();
-   val var1: StringBuilder = new StringBuilder();
-   var1.append(var0);
-   var1.append(".mp3");
-   return var1.toString();
+   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
+   val var2: StringBuilder = new StringBuilder();
+   var2.append(var1);
+   var2.append(".mp3");
+   return var2.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {

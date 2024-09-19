@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
 import com.discord.primitives.ChannelId
-import fl.b2
-import fl.g0
-import fl.o1
-import fl.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.o1
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor

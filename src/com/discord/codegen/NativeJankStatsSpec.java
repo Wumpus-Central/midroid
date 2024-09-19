@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import s6.a;
+import v6.a;
 
 public abstract class NativeJankStatsSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "JankStatsModule";

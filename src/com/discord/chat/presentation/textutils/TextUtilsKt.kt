@@ -85,13 +85,13 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import java.util.ArrayList
-import kh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
 import kotlin.jvm.internal.q
+import nh.p
 
 private const val CHANNEL_PREFIX: String = "#"
 private const val COMMAND_PREFIX: String = "/"
@@ -193,7 +193,7 @@ public fun DraweeSpanStringBuilder.appendImage(
    q.h(var3, "imageUrl");
    val var9: Int = var0.length();
    var0.append('\u200b');
-   val var13: com.facebook.drawee.controller.a = (w4.c.g().F(ImageRequestBuilder.v(Uri.parse(ReactAssetUtilsKt.getReactImageUrl(var1, var3))).a()) as PipelineDraweeControllerBuilder)
+   val var13: com.facebook.drawee.controller.a = (w4.c.g().F(ImageRequestBuilder.w(Uri.parse(ReactAssetUtilsKt.getReactImageUrl(var1, var3))).a()) as PipelineDraweeControllerBuilder)
       .d();
    q.g(var13, "build(...)");
    val var11: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var1.getResources()).w(ScaleType.e);
@@ -824,16 +824,16 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                        q.h(var1, "$this$changeTextSizeSp");
                                        q.h(var2, "updatedRC");
                                        var1 = this.$builder;
-                                       val var6: ForegroundColorSpan = this.$fontColorSpan;
-                                       val var5: ContentNode = this.$contentNode;
+                                       val var5: ForegroundColorSpan = this.$fontColorSpan;
+                                       val var6: ContentNode = this.$contentNode;
                                        val var4: Boolean = this.$isLastContentNode;
                                        val var3: Int = this.$builder.length();
-                                       TextUtilsKt.access$appendToExistingBuilder((var5 as SubtextContentNode).getContent(), var2, var1);
+                                       TextUtilsKt.access$appendToExistingBuilder((var6 as SubtextContentNode).getContent(), var2, var1);
                                        if (!var4) {
                                           SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
                                        }
 
-                                       val var8: Any = new Object[]{var6}[0];
+                                       val var8: Any = new Object[]{var5}[0];
                                        if (var8 != null) {
                                           var1.setSpan(var8, var3, var1.length(), 13107233);
                                        }

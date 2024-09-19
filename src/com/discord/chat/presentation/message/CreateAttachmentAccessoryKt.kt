@@ -41,7 +41,7 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
       if (var6 != 2) {
          if (var6 != 3) {
             if (var6 != 4) {
-               throw new kh.p();
+               throw new nh.p();
             }
 
             val var15: ReactContext;

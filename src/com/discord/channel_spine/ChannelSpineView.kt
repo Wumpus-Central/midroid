@@ -14,9 +14,9 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
-import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
+import nh.p
 
 public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
    private final val arcRect: RectF
@@ -273,7 +273,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = rh.a.a(var0);
+         $ENTRIES = uh.a.a(var0);
       }
 
       init {

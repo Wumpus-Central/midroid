@@ -16,35 +16,35 @@ internal object ColorUtils {
       var var7: Int;
       switch ((int)var1 / 60) {
          case 0:
-            var5 = zh.a.b((var8 + var4) * 255.0F);
-            var6 = zh.a.b((var9 + var4) * 255.0F);
-            var7 = zh.a.b(var4 * 255.0F);
+            var5 = ci.a.b((var8 + var4) * 255.0F);
+            var6 = ci.a.b((var9 + var4) * 255.0F);
+            var7 = ci.a.b(var4 * 255.0F);
             break;
          case 1:
-            var5 = zh.a.b((var9 + var4) * 255.0F);
-            var6 = zh.a.b((var8 + var4) * 255.0F);
-            var7 = zh.a.b(var4 * 255.0F);
+            var5 = ci.a.b((var9 + var4) * 255.0F);
+            var6 = ci.a.b((var8 + var4) * 255.0F);
+            var7 = ci.a.b(var4 * 255.0F);
             break;
          case 2:
-            var5 = zh.a.b(var4 * 255.0F);
-            var6 = zh.a.b((var8 + var4) * 255.0F);
-            var7 = zh.a.b((var9 + var4) * 255.0F);
+            var5 = ci.a.b(var4 * 255.0F);
+            var6 = ci.a.b((var8 + var4) * 255.0F);
+            var7 = ci.a.b((var9 + var4) * 255.0F);
             break;
          case 3:
-            var5 = zh.a.b(var4 * 255.0F);
-            var6 = zh.a.b((var9 + var4) * 255.0F);
-            var7 = zh.a.b((var8 + var4) * 255.0F);
+            var5 = ci.a.b(var4 * 255.0F);
+            var6 = ci.a.b((var9 + var4) * 255.0F);
+            var7 = ci.a.b((var8 + var4) * 255.0F);
             break;
          case 4:
-            var5 = zh.a.b((var9 + var4) * 255.0F);
-            var6 = zh.a.b(var4 * 255.0F);
-            var7 = zh.a.b((var8 + var4) * 255.0F);
+            var5 = ci.a.b((var9 + var4) * 255.0F);
+            var6 = ci.a.b(var4 * 255.0F);
+            var7 = ci.a.b((var8 + var4) * 255.0F);
             break;
          case 5:
          case 6:
-            var5 = zh.a.b((var8 + var4) * 255.0F);
-            var6 = zh.a.b(var4 * 255.0F);
-            var7 = zh.a.b((var9 + var4) * 255.0F);
+            var5 = ci.a.b((var8 + var4) * 255.0F);
+            var6 = ci.a.b(var4 * 255.0F);
+            var7 = ci.a.b((var9 + var4) * 255.0F);
             break;
          default:
             var7 = 0;

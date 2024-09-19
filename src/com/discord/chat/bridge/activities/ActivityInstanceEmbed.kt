@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.activities
 
-import cl.f
-import cl.n
 import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
-import fl.n0
-import fl.o1
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.h
+import il.n0
+import il.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -285,41 +285,42 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          q.h(var1, "decoder");
          val var18: SerialDescriptor = this.getDescriptor();
          val var19: c = var1.c(var18);
-         val var17: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
+         val var20: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
          val var11: Boolean = var19.y();
          var var3: Int = 7;
          var var8: Byte = 6;
          var var9: Byte = 5;
-         var var4: Byte;
          var var5: Byte;
          var var7: Int;
          var var12: java.lang.String;
-         var var13: Any;
+         var var13: java.lang.String;
          var var14: Any;
-         var var15: java.lang.String;
-         val var16: java.lang.String;
-         val var26: java.util.List;
+         var var15: Any;
+         var var16: java.util.List;
+         val var17: java.lang.String;
+         var var23: Byte;
          if (var11) {
-            var13 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
+            var15 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
             var14 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var16 = var19.t(var18, 2);
-            var15 = var19.v(var18, 3, b2.a, null) as java.lang.String;
-            val var20: java.util.List = var19.v(var18, 4, var17[4], null) as java.util.List;
+            var17 = var19.t(var18, 2);
+            var13 = var19.v(var18, 3, b2.a, null) as java.lang.String;
+            val var21: java.util.List = var19.v(var18, 4, var20[4], null) as java.util.List;
             var5 = var19.s(var18, 5);
             var12 = var19.t(var18, 6);
-            val var2: Int = var19.k(var18, 7);
-            var4 = var19.s(var18, 8);
+            var23 = var19.k(var18, 7);
+            val var4: Byte = var19.s(var18, 8);
             var3 = 511;
-            var26 = var20;
-            var7 = var2;
+            var16 = var21;
+            var7 = var23;
+            var23 = var4;
          } else {
             var var6: Boolean = true;
             var7 = 0;
-            var4 = 0;
-            var var22: Int = 0;
-            var var25: java.util.List = null;
+            var var26: Byte = 0;
+            var23 = 0;
+            var16 = null;
             var15 = null;
-            var var21: Any = null;
+            var var22: Any = null;
             var13 = null;
             var12 = null;
             var14 = null;
@@ -333,43 +334,43 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                         var6 = false;
                         break;
                      case 0:
-                        var21 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, var21) as ApplicationId;
-                        var22 |= 1;
+                        var22 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, var22) as ApplicationId;
+                        var23 |= 1;
                         var3 = 7;
                         break;
                      case 1:
                         var14 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, var14) as ChannelId;
-                        var22 |= 2;
+                        var23 |= 2;
                         var3 = 7;
                         var8 = 6;
                         continue;
                      case 2:
                         var13 = var19.t(var18, 2);
-                        var22 |= 4;
+                        var23 |= 4;
                         break label40;
                      case 3:
                         var15 = var19.v(var18, 3, b2.a, var15) as java.lang.String;
-                        var22 |= 8;
+                        var23 |= 8;
                         break label40;
                      case 4:
-                        var25 = var19.v(var18, 4, var17[4], var25) as java.util.List;
-                        var22 |= 16;
+                        var16 = var19.v(var18, 4, var20[4], var16) as java.util.List;
+                        var23 |= 16;
                         continue;
                      case 5:
                         var5 = var19.s(var18, var9);
-                        var22 |= 32;
+                        var23 |= 32;
                         continue;
                      case 6:
                         var12 = var19.t(var18, var8);
-                        var22 |= 64;
+                        var23 |= 64;
                         continue;
                      case 7:
                         var7 = var19.k(var18, var3);
-                        var22 |= 128;
+                        var23 |= 128;
                         continue;
                      case 8:
-                        var4 = var19.s(var18, 8);
-                        var22 |= 256;
+                        var26 = var19.s(var18, 8);
+                        var23 |= 256;
                         continue;
                      default:
                         throw new n(var10);
@@ -383,15 +384,16 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                var3 = 7;
             }
 
-            var26 = var25;
-            var16 = (java.lang.String)var13;
-            var13 = var21;
-            var3 = var22;
+            var3 = var23;
+            var17 = var13;
+            var23 = var26;
+            var13 = (java.lang.String)var15;
+            var15 = var22;
          }
 
          var19.b(var18);
          return new ActivityInstanceEmbed(
-            var3, (ApplicationId)var13, (ChannelId)var14, var16, var15, var26, (boolean)var5, var12, var7, (boolean)var4, null, null
+            var3, (ApplicationId)var15, (ChannelId)var14, var17, var13, var16, (boolean)var5, var12, var7, (boolean)var23, null, null
          );
       }
 
@@ -405,7 +407,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

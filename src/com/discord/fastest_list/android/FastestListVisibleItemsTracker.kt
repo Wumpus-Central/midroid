@@ -136,7 +136,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       fun {
          val var0: Array<FastestListVisibleItemsTracker.RenderAhead> = $values();
          $VALUES = var0;
-         $ENTRIES = rh.a.a(var0);
+         $ENTRIES = uh.a.a(var0);
       }
 
       init {

@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
 import com.discord.chat.bridge.ChannelType
-import dl.a
-import fl.b2
-import fl.g0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -96,19 +96,19 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var4: ChannelType = this.channelType;
-      val var2: java.lang.String = this.iconType;
-      val var1: java.lang.String = this.icon;
-      val var3: java.util.List = this.content;
+      val var1: ChannelType = this.channelType;
+      val var4: java.lang.String = this.iconType;
+      val var3: java.lang.String = this.icon;
+      val var2: java.util.List = this.content;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ChannelNameContentNode(channelType=");
-      var5.append(var4);
-      var5.append(", iconType=");
-      var5.append(var2);
-      var5.append(", icon=");
       var5.append(var1);
-      var5.append(", content=");
+      var5.append(", iconType=");
+      var5.append(var4);
+      var5.append(", icon=");
       var5.append(var3);
+      var5.append(", content=");
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }
@@ -207,7 +207,7 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

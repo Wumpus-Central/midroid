@@ -5,8 +5,8 @@ import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import java.util.ArrayList
-import kh.w
 import kotlin.jvm.internal.q
+import nh.w
 
 public fun Embed.getMedia(): EmbedUrlProvider? {
    q.h(var0, "<this>");

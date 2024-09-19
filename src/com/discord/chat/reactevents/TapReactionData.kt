@@ -7,8 +7,8 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kh.w
 import kotlin.jvm.internal.q
+import nh.w
 
 internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ...) : TapReactionData(var1, var2, var3), ReactEvent {
    public final val isBurst: Boolean?
@@ -99,17 +99,17 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: ReactionView.Reaction = this.reaction;
-      val var1: java.lang.Boolean = this.isBurst;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapReactionData(messageId=");
-      var4.append(var3);
-      var4.append(", reaction=");
-      var4.append(var2);
-      var4.append(", isBurst=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: ReactionView.Reaction = this.reaction;
+      val var2: java.lang.Boolean = this.isBurst;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapReactionData(messageId=");
+      var3.append(var1);
+      var3.append(", reaction=");
+      var3.append(var4);
+      var3.append(", isBurst=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }
