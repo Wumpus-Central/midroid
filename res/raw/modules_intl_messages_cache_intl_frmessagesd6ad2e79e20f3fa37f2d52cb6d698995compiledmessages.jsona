@@ -1,4 +1,10 @@
 {
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system in French!"
+    }
+  ],
   "swfLzc": [
     {
       "type": 0,
@@ -9,12 +15,6 @@
     {
       "type": 0,
       "value": "All of this is managed locally and has not yet replaced the French i18n system."
-    }
-  ],
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system in French!"
     }
   ]
 }

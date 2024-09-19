@@ -43,8 +43,8 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;

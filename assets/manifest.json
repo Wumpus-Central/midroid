@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "build": "248112",
-    "commit": "da61c2a2539dbc27a571eb1aec3a41351cbd19e9",
+    "build": "248113",
+    "commit": "dc7bb1b79abdef32aed1c2a4853f8253962c3c51",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "8089cca4b3748c4d265bfa6d44ae718d",
-    "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
+    "app/src/main/assets/index.android.bundle": "3e9bb2df484c3eea1310321bb5abd886",
+    "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_cs.png": "44a7840b2161275358742595c9257e76",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_da.png": "3590df6f2ae2f7202dab15c0bd3aca9a",
@@ -38,8 +38,8 @@
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_vi.png": "b1309f8892f138383d8b0b6ff8e23463",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_zhcn.png": "b2da62f020089ccee92860e4defafdb4",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_zhtw.png": "4db0790f7a81e49025d7fbfb9aeb182c",
-    "app/src/main/res/drawable-mdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backicon.png": "778ffc9fe8773a878e9c30a6304784de",
-    "app/src/main/res/drawable-mdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backiconmask.png": "5223c8d9b0d08b82a5670fb5f71faf78",
+    "app/src/main/res/drawable-mdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon.png": "778ffc9fe8773a878e9c30a6304784de",
+    "app/src/main/res/drawable-mdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backiconmask.png": "5223c8d9b0d08b82a5670fb5f71faf78",
     "app/src/main/res/drawable-mdpi/images_auth_backgroundsplashdev.jpg": "c2620d71d0c18f7cbdf536c0e7d3a788",
     "app/src/main/res/drawable-mdpi/images_auth_backgroundsplashmobile.png": "1241abd72512c72c105ef9e9870d04e3",
     "app/src/main/res/drawable-mdpi/images_auth_imgauthqrcodeoverlay.png": "2466a8cae3eebcc6d13072f6ff1957c4",
@@ -403,7 +403,7 @@
     "app/src/main/res/drawable-mdpi/modules_voice_panel_native_images_badconnection.png": "f4bc5737891449e5d3c743bb607232b5",
     "app/src/main/res/drawable-mdpi/modules_voice_panel_native_images_maximize.png": "20a17665bb9c709d92ad17734430998c",
     "app/src/main/res/drawable-mdpi/modules_webauthn_native_images_img_credential.png": "5985a032ce7867df6bb6e8414710271c",
-    "app/src/main/res/drawable-xhdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backicon.png": "c79c3606a1cf168006ad3979763c7e0c",
+    "app/src/main/res/drawable-xhdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon.png": "c79c3606a1cf168006ad3979763c7e0c",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_accessibilityicon.png": "f69569529d7c8166190e1747ffabe537",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_activitiesicon.png": "e1b9ef21298b00b2a3952d0d68416548",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_analyticsicon.png": "cd7129322a853b712db2b41015914c1d",
@@ -1772,7 +1772,7 @@
     "app/src/main/res/drawable-xhdpi/modules_voice_panel_native_images_stream.png": "5761c5e5ac9a70ffe4d86617fecc71ce",
     "app/src/main/res/drawable-xhdpi/modules_voice_panel_native_images_video.png": "efbbab9af60f8bcf7aabf84bc0a9dd78",
     "app/src/main/res/drawable-xhdpi/modules_voice_panel_native_images_xbox.png": "03db945049f9f25f8e27a20efa89ef14",
-    "app/src/main/res/drawable-xxhdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backicon.png": "02bc1fa7c0313217bde2d65ccbff40c9",
+    "app/src/main/res/drawable-xxhdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon.png": "02bc1fa7c0313217bde2d65ccbff40c9",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_accessibilityicon.png": "3bd11c22d87bdef687315581b3a6ea73",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_activitiesicon.png": "cdef397cf43d418ececa995721ab7fa4",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_analyticsicon.png": "c072f5e7afe005a1ce8399b7998d9d3f",
@@ -3130,7 +3130,7 @@
     "app/src/main/res/drawable-xxhdpi/modules_voice_panel_native_images_stream.png": "2c66d16ea4fcaa4d3d50ae9982d7aad8",
     "app/src/main/res/drawable-xxhdpi/modules_voice_panel_native_images_video.png": "0a67869eb03533909e1d0199a0fda903",
     "app/src/main/res/drawable-xxhdpi/modules_voice_panel_native_images_xbox.png": "6b5164e859883ef60ddddebd4532684a",
-    "app/src/main/res/drawable-xxxhdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_cvuznl7dj72u2ybrzs4ot4f7o4_node_modules_reactnavigation_elements_src_assets_backicon.png": "35ba0eaec5a4f5ed12ca16fabeae451d",
+    "app/src/main/res/drawable-xxxhdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon.png": "35ba0eaec5a4f5ed12ca16fabeae451d",
     "app/src/main/res/drawable-xxxhdpi/images_native_icons_ic_messages.png": "bbe84f5fc2506cc1c869965947575d78",
     "app/src/main/res/drawable-xxxhdpi/images_native_soundboard_megaphone.png": "518ea19354588c8d1dc49e7b59a82a2e",
     "app/src/main/res/drawable-xxxhdpi/modules_main_tabs_v2_native_channel_header_images_iconsearch.png": "57c75f61a7a5b7acfa5c606e069e4046",
@@ -3261,8 +3261,8 @@
     "app/src/main/res/raw/images_platforms_img_roblox_white.svg": "898dc79e0285b8e9855531eeca36bf84",
     "app/src/main/res/raw/modules_holidays_assets_snowsgiving_loading_dark.webm": "7209f284854b7ea1e5642c91fd2e43d4",
     "app/src/main/res/raw/modules_holidays_assets_snowsgiving_loading_light.webm": "69a0ecf46982cea47de18b3e75dfe8f5",
-    "app/src/main/res/raw/modules_intl_messages_cache_intl_frmessagesd6ad2e79e20f3fa37f2d52cb6d698995compiledmessages.jsona": "3cc68f42997b61fb795d998a3ffe2c69",
+    "app/src/main/res/raw/modules_intl_messages_cache_intl_frmessagesd6ad2e79e20f3fa37f2d52cb6d698995compiledmessages.jsona": "ebe65d9ae76aa63dbbf745188967afce",
     "app/src/main/res/raw/modules_intl_messages_secondtestcompiledmessages.jsona": "91e013f9fc5df854a9e6845bd2c3a3a1",
-    "app/src/main/res/raw/modules_intl_messages_testcompiledmessages.jsona": "a4ae1a8e5d0ab2eab77eff54a9aa5af3"
+    "app/src/main/res/raw/modules_intl_messages_testcompiledmessages.jsona": "e1c1b5d81d425513c06544311c792053"
   }
 }
