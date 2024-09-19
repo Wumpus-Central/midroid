@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Invitasjonen er sendt",
   "INVITE_SENT_EXCLAMATION": "Invitasjonen er sendt!",
   "ERROR": "Feil",
+  "DISABLE_VIDEO": "Slå av video",
+  "ENABLE_VIDEO": "Aktiver video",
   "NO_RESULTS_FOUND": "Fant ingen resultater",
   "APPS": "Apper",
   "COPY_EVENT_LINK": "Kopier eventlenke",

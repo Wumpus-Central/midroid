@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Uitnodiging verzonden",
   "INVITE_SENT_EXCLAMATION": "Uitnodiging verzonden!",
   "ERROR": "Fout",
+  "DISABLE_VIDEO": "Video uitschakelen",
+  "ENABLE_VIDEO": "Video inschakelen",
   "NO_RESULTS_FOUND": "Geen resultaten gevonden",
   "APPS": "Apps",
   "COPY_EVENT_LINK": "Kopieer evenementlink",

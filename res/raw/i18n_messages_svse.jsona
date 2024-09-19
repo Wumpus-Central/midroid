@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Inbjudan skickad",
   "INVITE_SENT_EXCLAMATION": "Inbjudan skickad!",
   "ERROR": "Fel",
+  "DISABLE_VIDEO": "Inaktivera video",
+  "ENABLE_VIDEO": "Aktivera video",
   "NO_RESULTS_FOUND": "Inga resultat hittades",
   "APPS": "Appar",
   "COPY_EVENT_LINK": "Kopiera eventlänk",

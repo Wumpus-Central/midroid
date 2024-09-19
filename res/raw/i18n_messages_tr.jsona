@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Davet Gönderildi",
   "INVITE_SENT_EXCLAMATION": "Davet gönderildi!",
   "ERROR": "Hata",
+  "DISABLE_VIDEO": "Videoyu devre dışı bırak",
+  "ENABLE_VIDEO": "Video'yu Etkinleştir",
   "NO_RESULTS_FOUND": "Sonuç bulunamadı",
   "APPS": "Uygulamalar",
   "COPY_EVENT_LINK": "Etkinlik Bağlantısını Kopyala",

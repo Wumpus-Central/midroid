@@ -2045,6 +2045,8 @@
   "INVITE_SENT": "邀請已發送",
   "INVITE_SENT_EXCLAMATION": "已發送邀請！",
   "ERROR": "錯誤",
+  "DISABLE_VIDEO": "關閉視訊",
+  "ENABLE_VIDEO": "啟用視訊通話",
   "NO_RESULTS_FOUND": "沒有找到結果",
   "APPS": "應用程式",
   "COPY_EVENT_LINK": "複製活動連結",

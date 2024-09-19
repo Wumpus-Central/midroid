@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Đã Gửi Lời Mời",
   "INVITE_SENT_EXCLAMATION": "Đã gửi lời mời!",
   "ERROR": "Lỗi",
+  "DISABLE_VIDEO": "Vô hiệu hóa video",
+  "ENABLE_VIDEO": "Bật Video",
   "NO_RESULTS_FOUND": "Không tìm thấy kết quả nào",
   "APPS": "Ứng dụng",
   "COPY_EVENT_LINK": "Sao Chép Liên Kết Sự kiện",

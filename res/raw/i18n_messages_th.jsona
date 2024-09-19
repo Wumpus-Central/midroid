@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "ส่งคำเชิญแล้ว",
   "INVITE_SENT_EXCLAMATION": "ส่งคำเชิญแล้ว!",
   "ERROR": "ข้อผิดพลาด",
+  "DISABLE_VIDEO": "ปิดการใช้วิดีโอ",
+  "ENABLE_VIDEO": "เปิดใช้งานวิดีโอ",
   "NO_RESULTS_FOUND": "ไม่พบผลลัพธ์",
   "APPS": "แอป",
   "COPY_EVENT_LINK": "คัดลอกลิงก์กิจกรรม",

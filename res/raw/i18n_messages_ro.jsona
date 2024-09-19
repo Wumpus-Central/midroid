@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Invitație trimisă",
   "INVITE_SENT_EXCLAMATION": "Invitație trimisă!",
   "ERROR": "Eroare",
+  "DISABLE_VIDEO": "Dezactivează video",
+  "ENABLE_VIDEO": "Activează video",
   "NO_RESULTS_FOUND": "Nu s-a găsit niciun rezultat",
   "APPS": "Aplicații",
   "COPY_EVENT_LINK": "Copiază linkul evenimentului",

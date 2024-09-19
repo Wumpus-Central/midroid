@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Meghívó elküldve",
   "INVITE_SENT_EXCLAMATION": "Meghívó elküldve!",
   "ERROR": "Hiba",
+  "DISABLE_VIDEO": "Videó kikapcsolása",
+  "ENABLE_VIDEO": "Videó engedélyezése",
   "NO_RESULTS_FOUND": "Nincs eredmény",
   "APPS": "Alkalmazások",
   "COPY_EVENT_LINK": "Esemény hivatkozásának másolása",

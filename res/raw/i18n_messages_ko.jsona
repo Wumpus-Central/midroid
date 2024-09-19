@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "초대장 발송함",
   "INVITE_SENT_EXCLAMATION": "초대 발송 완료!",
   "ERROR": "오류",
+  "DISABLE_VIDEO": "영상 끄기",
+  "ENABLE_VIDEO": "동영상 활성화",
   "NO_RESULTS_FOUND": "검색 결과가 없어요",
   "APPS": "앱",
   "COPY_EVENT_LINK": "이벤트 링크 복사하기",

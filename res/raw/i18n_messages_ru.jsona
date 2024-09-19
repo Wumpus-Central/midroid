@@ -2045,6 +2045,8 @@
   "INVITE_SENT": "Приглашение отправлено",
   "INVITE_SENT_EXCLAMATION": "Приглашение отправлено!",
   "ERROR": "Ошибка",
+  "DISABLE_VIDEO": "Отключить видео",
+  "ENABLE_VIDEO": "Включить видео",
   "NO_RESULTS_FOUND": "Ничего не найдено",
   "APPS": "Приложения",
   "COPY_EVENT_LINK": "Копировать ссылку на событие",

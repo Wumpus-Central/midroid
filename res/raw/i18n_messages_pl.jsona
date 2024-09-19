@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Zaproszenie wysłane",
   "INVITE_SENT_EXCLAMATION": "Zaproszenie wysłane!",
   "ERROR": "Błąd",
+  "DISABLE_VIDEO": "Wyłącz wideo",
+  "ENABLE_VIDEO": "Włącz wideo",
   "NO_RESULTS_FOUND": "Brak wyników",
   "APPS": "Aplikacje",
   "COPY_EVENT_LINK": "Kopiuj link do wydarzenia",

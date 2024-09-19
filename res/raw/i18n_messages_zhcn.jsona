@@ -2045,6 +2045,8 @@
   "INVITE_SENT": "邀请已发送",
   "INVITE_SENT_EXCLAMATION": "邀请已发送！",
   "ERROR": "错误",
+  "DISABLE_VIDEO": "关闭视频",
+  "ENABLE_VIDEO": "开启视频",
   "NO_RESULTS_FOUND": "未找到结果",
   "APPS": "APP",
   "COPY_EVENT_LINK": "复制活动链接",

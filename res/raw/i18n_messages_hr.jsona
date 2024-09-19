@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Pozivnica je poslana",
   "INVITE_SENT_EXCLAMATION": "Pozivnica je poslana!",
   "ERROR": "Greška",
+  "DISABLE_VIDEO": "Onemogući video",
+  "ENABLE_VIDEO": "Omogući video",
   "NO_RESULTS_FOUND": "Nema pronađenih rezultata",
   "APPS": "Aplikacije",
   "COPY_EVENT_LINK": "Kopiraj link za događaj",

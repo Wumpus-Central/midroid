@@ -1,4 +1,48 @@
 {
+  "HMvECw": [
+    {
+      "type": 0,
+      "value": "All of this is managed locally and has "
+    },
+    {
+      "type": 8,
+      "value": "$b",
+      "children": [
+        {
+          "type": 0,
+          "value": "not yet"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " replaced the global i18n system."
+    }
+  ],
+  "uczI4u": [
+    {
+      "type": 0,
+      "value": "This link uses a "
+    },
+    {
+      "type": 8,
+      "value": "$link",
+      "children": [
+        {
+          "type": 1,
+          "value": "linkTarget"
+        },
+        {
+          "type": 0,
+          "value": "variable link"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " provided at runtime."
+    }
+  ],
   "rdfRys": [
     {
       "type": 0,
@@ -17,34 +61,6 @@
     {
       "type": 0,
       "value": " here."
-    }
-  ],
-  "rmps8/": [
-    {
-      "type": 0,
-      "value": "This string has a "
-    },
-    {
-      "type": 8,
-      "value": "$link",
-      "children": [
-        {
-          "type": 0,
-          "value": "https://discord.com"
-        },
-        {
-          "type": 1,
-          "value": "$_"
-        },
-        {
-          "type": 0,
-          "value": "static link"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": ", with the url defined in the string."
     }
   ],
   "XOdbAw": [
@@ -100,54 +116,38 @@
       "pluralType": "cardinal"
     }
   ],
-  "JJ0wpK": [
+  "rmps8/": [
     {
       "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
-  "HMvECw": [
-    {
-      "type": 0,
-      "value": "All of this is managed locally and has "
-    },
-    {
-      "type": 8,
-      "value": "$b",
-      "children": [
-        {
-          "type": 0,
-          "value": "not yet"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " replaced the global i18n system."
-    }
-  ],
-  "uczI4u": [
-    {
-      "type": 0,
-      "value": "This link uses a "
+      "value": "This string has a "
     },
     {
       "type": 8,
       "value": "$link",
       "children": [
         {
+          "type": 0,
+          "value": "https://discord.com"
+        },
+        {
           "type": 1,
-          "value": "linkTarget"
+          "value": "$_"
         },
         {
           "type": 0,
-          "value": "variable link"
+          "value": "static link"
         }
       ]
     },
     {
       "type": 0,
-      "value": " provided at runtime."
+      "value": ", with the url defined in the string."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
     }
   ]
 }

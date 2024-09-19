@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Kutsu lähetetty",
   "INVITE_SENT_EXCLAMATION": "Kutsu lähetetty!",
   "ERROR": "Virhe",
+  "DISABLE_VIDEO": "Poista video käytöstä",
+  "ENABLE_VIDEO": "Ota video käyttöön",
   "NO_RESULTS_FOUND": "Tuloksia ei löytynyt",
   "APPS": "Sovellukset",
   "COPY_EVENT_LINK": "Kopioi tapahtumalinkki",

@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "इनवाइट भेज दिया गया",
   "INVITE_SENT_EXCLAMATION": "इनवाइट भेज दिया गया!",
   "ERROR": "एरर",
+  "DISABLE_VIDEO": "वीडियो डिसेबल करें",
+  "ENABLE_VIDEO": "वीडियो इनेबल करें",
   "NO_RESULTS_FOUND": "कोई रिज़ल्ट नहीं मिले",
   "APPS": "ऐप्स",
   "COPY_EVENT_LINK": "इवेंट लिंक को कॉपी करें",

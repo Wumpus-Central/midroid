@@ -2040,6 +2040,8 @@
   "INVITE_SENT": "Invitación enviada",
   "INVITE_SENT_EXCLAMATION": "¡Invitación enviada!",
   "ERROR": "Error",
+  "DISABLE_VIDEO": "Deshabilitar vídeo",
+  "ENABLE_VIDEO": "Habilitar vídeo",
   "NO_RESULTS_FOUND": "No se ha encontrado ningún resultado",
   "APPS": "Aplicaciones",
   "COPY_EVENT_LINK": "Copiar enlace del evento",

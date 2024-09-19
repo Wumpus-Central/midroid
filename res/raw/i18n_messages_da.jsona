@@ -2042,6 +2042,8 @@
   "INVITE_SENT": "Invitation sendt",
   "INVITE_SENT_EXCLAMATION": "Invitation sendt!",
   "ERROR": "Fejl",
+  "DISABLE_VIDEO": "Deaktiver video",
+  "ENABLE_VIDEO": "Aktivér video",
   "NO_RESULTS_FOUND": "Ingen resultater fundet",
   "APPS": "Apps",
   "COPY_EVENT_LINK": "Kopiér link til event",

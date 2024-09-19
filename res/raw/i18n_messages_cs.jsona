@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Pozvánka odeslána",
   "INVITE_SENT_EXCLAMATION": "Pozvánka odeslána!",
   "ERROR": "Chyba",
+  "DISABLE_VIDEO": "Vypnout video",
+  "ENABLE_VIDEO": "Povolit video",
   "NO_RESULTS_FOUND": "Žádné výsledky",
   "APPS": "Aplikace",
   "COPY_EVENT_LINK": "Kopírovat odkaz události",

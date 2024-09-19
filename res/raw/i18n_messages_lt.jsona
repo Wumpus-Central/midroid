@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Pakvietimas Išsiųstas",
   "INVITE_SENT_EXCLAMATION": "Kvietimas išsiųstas!",
   "ERROR": "Klaida",
+  "DISABLE_VIDEO": "Išjungti vaizdo funkciją",
+  "ENABLE_VIDEO": "Įjungti vaizdo įrašą",
   "NO_RESULTS_FOUND": "Rezultatų nerasta",
   "APPS": "Programėlės",
   "COPY_EVENT_LINK": "Kopijuoti renginio nuorodą",

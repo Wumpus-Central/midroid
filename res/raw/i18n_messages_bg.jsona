@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "Изпратена покана",
   "INVITE_SENT_EXCLAMATION": "Поканата е изпратена!",
   "ERROR": "Грешка",
+  "DISABLE_VIDEO": "Деактивирай видео",
+  "ENABLE_VIDEO": "Активиране на видео",
   "NO_RESULTS_FOUND": "Няма намерени резултати",
   "APPS": "Приложения",
   "COPY_EVENT_LINK": "Копиране на връзка към събитие",

@@ -2043,6 +2043,8 @@
   "INVITE_SENT": "招待を送信しました",
   "INVITE_SENT_EXCLAMATION": "招待を送信しました！",
   "ERROR": "エラー",
+  "DISABLE_VIDEO": "動画の無効化",
+  "ENABLE_VIDEO": "動画を有効にする",
   "NO_RESULTS_FOUND": "一致する結果はありません",
   "APPS": "アプリ",
   "COPY_EVENT_LINK": "イベントリンクをコピー",
