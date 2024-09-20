@@ -28,21 +28,21 @@ internal object MediaProxy {
       } else {
          var17 = (Integer)var11.next();
          if (var11.hasNext()) {
-            var3 = var17.intValue();
+            var var13: Int = var17.intValue();
             var var20: Any = var17;
 
             do {
                val var10: Any = var11.next();
                val var5: Int = (var10 as java.lang.Number).intValue();
                var17 = (Integer)var20;
-               var var13: Int = var3;
-               if (var3 < var5) {
+               var3 = var13;
+               if (var13 < var5) {
                   var17 = (Integer)var10;
-                  var13 = var5;
+                  var3 = var5;
                }
 
                var20 = var17;
-               var3 = var13;
+               var13 = var3;
             } while (var11.hasNext());
          }
       }

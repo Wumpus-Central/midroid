@@ -292,15 +292,15 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       val var25: MessageContentView = this.binding.replyText;
       val var26: LinearLayout = this.binding.replyLeadingViews;
       kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
-      val var11: AnnotatedStructurableText = var2.getContent();
-      val var12: Context = this.getContext();
+      val var12: AnnotatedStructurableText = var2.getContent();
+      val var11: Context = this.getContext();
       val var13: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var13, "getFontMetrics(...)");
       val var8: Float = TextUtilsKt.getBaselineHeightPx(var13);
       val var27: TextPaint = this.binding.replyText.getPaint();
-      kotlin.jvm.internal.q.e(var12);
+      kotlin.jvm.internal.q.e(var11);
       kotlin.jvm.internal.q.e(var27);
-      val var14: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var11, var12, var1, var3, var4, var5, var6, var27, new Function1(var7, var1) {
+      val var14: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var12, var11, var1, var3, var4, var5, var6, var27, new Function1(var7, var1) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -526,27 +526,27 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var40: MessageContentView = this.binding.replyText;
             val var62: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var71: StructurableText = var15.getContent();
-            val var72: Context = this.getContext();
-            val var68: java.lang.String = var15.getId-3Eiw7ao();
-            val var35: Boolean = MessageKt.shouldAnimateEmoji(var15);
+            val var72: StructurableText = var15.getContent();
+            val var68: Context = this.getContext();
+            val var71: java.lang.String = var15.getId-3Eiw7ao();
+            val var34: Boolean = MessageKt.shouldAnimateEmoji(var15);
             var2 = MessageKt.shouldShowLinkDecorations(var15);
-            val var36: Boolean = var15.getShouldShowRoleDot();
-            val var34: Boolean = var15.getShouldShowRoleOnName();
+            val var35: Boolean = var15.getShouldShowRoleDot();
+            val var36: Boolean = var15.getShouldShowRoleOnName();
             val var19: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var19, "getFontMetrics(...)");
             val var28: Float = TextUtilsKt.getBaselineHeightPx(var19);
             val var20: TextPaint = this.binding.replyText.getPaint();
-            kotlin.jvm.internal.q.e(var72);
+            kotlin.jvm.internal.q.e(var68);
             kotlin.jvm.internal.q.e(var20);
             val var21: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var71,
                var72,
                var68,
-               var35,
-               var2,
-               var36,
+               var71,
                var34,
+               var2,
+               var35,
+               var36,
                var20,
                null,
                null,

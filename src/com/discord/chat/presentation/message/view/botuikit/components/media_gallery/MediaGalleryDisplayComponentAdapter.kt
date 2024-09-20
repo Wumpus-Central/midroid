@@ -122,14 +122,14 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
    public open fun onBindViewHolder(holder: MessagePartViewHolder, position: Int) {
       q.h(var1, "holder");
       if (var1 is MosaicItemMessageAttachmentImageViewHolder) {
-         val var8: MediaGalleryItem = this.items.get(var2);
-         val var6: MediaGalleryDisplayComponent = this.component;
+         val var4: MediaGalleryItem = this.items.get(var2);
+         val var5: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var4: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-         val var5: java.lang.String = this.component.getId();
+         val var8: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
+         val var6: java.lang.String = this.component.getId();
          val var7: java.lang.String = this.containerId;
          val var3: Boolean;
          if (this.getItemCount() == 1) {
@@ -138,7 +138,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             var3 = false;
          }
 
-         var4.bindGalleryItem(var5, var7, var8, var3, new a(this, var6, var8, var1), new b(this, var6, var8), new Function0(this, var8) {
+         var8.bindGalleryItem(var6, var7, var4, var3, new a(this, var5, var4, var1), new b(this, var5, var4), new Function0(this, var4) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 
@@ -151,7 +151,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             public final void invoke() {
                MediaGalleryDisplayComponentAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
             }
-         }, new Function1(this, var8) {
+         }, new Function1(this, var4) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 
@@ -181,13 +181,13 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             throw new IllegalStateException(var11.toString().toString());
          }
 
-         val var13: MediaGalleryItem = this.items.get(var2);
-         val var14: MediaGalleryDisplayComponent = this.component;
+         val var12: MediaGalleryItem = this.items.get(var2);
+         val var13: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var12: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+         val var14: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
          val var15: java.lang.String = this.component.getId();
          val var10: java.lang.String = this.containerId;
          val var9: Boolean;
@@ -197,7 +197,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             var9 = false;
          }
 
-         var12.bindGalleryItem(var15, var10, var13, var9, new c(this, var14, var13, var1), new d(this, var14, var13), new Function0(this, var13) {
+         var14.bindGalleryItem(var15, var10, var12, var9, new c(this, var13, var12, var1), new d(this, var13, var12), new Function0(this, var12) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 
@@ -210,7 +210,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             public final void invoke() {
                MediaGalleryDisplayComponentAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
             }
-         }, new Function1(this, var13) {
+         }, new Function1(this, var12) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 

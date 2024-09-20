@@ -78,9 +78,9 @@ public class SamsungConnectActivity : b {
                }
             } else {
                try {
-                  val var6: Bundle = new Bundle();
-                  var6.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
-                  val var3: Boolean = var5.c0(1221, var38, var6);
+                  val var42: Bundle = new Bundle();
+                  var42.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
+                  val var3: Boolean = var5.c0(1221, var38, var42);
                   val var39: StringBuilder = new StringBuilder();
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);

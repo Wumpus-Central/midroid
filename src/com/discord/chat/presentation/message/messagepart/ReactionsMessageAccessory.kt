@@ -139,13 +139,13 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = MessageId.hashCode-impl(this.messageId);
-      val var7: Int = this.reactions.hashCode();
-      val var9: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
-      val var3: Int = java.lang.Boolean.hashCode(this.canAddNewBurstReactions);
-      val var4: Int = this.addReactionLabel.hashCode();
-      val var6: Int = this.addNewReactionAccessibilityLabel.hashCode();
-      val var5: Int = this.addNewBurstReactionAccessibilityLabel.hashCode();
+      val var9: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = this.reactions.hashCode();
+      val var4: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
+      val var5: Int = java.lang.Boolean.hashCode(this.canAddNewBurstReactions);
+      val var6: Int = this.addReactionLabel.hashCode();
+      val var8: Int = this.addNewReactionAccessibilityLabel.hashCode();
+      val var7: Int = this.addNewBurstReactionAccessibilityLabel.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.reactionsTheme == null) {
@@ -158,39 +158,39 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
          var2 = this.theme.hashCode();
       }
 
-      return (((((((var8 * 31 + var7) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2;
+      return (((((((var9 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var8) * 31 + var7) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.util.List = this.reactions;
-      val var2: Boolean = this.canAddNewReactions;
-      val var1: Boolean = this.canAddNewBurstReactions;
+      val var1: Boolean = this.canAddNewReactions;
+      val var2: Boolean = this.canAddNewBurstReactions;
       val var8: java.lang.String = this.addReactionLabel;
-      val var10: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var6: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
-      val var4: ReactionsTheme = this.reactionsTheme;
-      val var7: DiscordTheme = this.theme;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ReactionsMessageAccessory(messageId=");
-      var9.append(var5);
-      var9.append(", reactions=");
-      var9.append(var3);
-      var9.append(", canAddNewReactions=");
-      var9.append(var2);
-      var9.append(", canAddNewBurstReactions=");
-      var9.append(var1);
-      var9.append(", addReactionLabel=");
-      var9.append(var8);
-      var9.append(", addNewReactionAccessibilityLabel=");
-      var9.append(var10);
-      var9.append(", addNewBurstReactionAccessibilityLabel=");
-      var9.append(var6);
-      var9.append(", reactionsTheme=");
-      var9.append(var4);
-      var9.append(", theme=");
-      var9.append(var7);
-      var9.append(")");
-      return var9.toString();
+      val var9: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var4: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
+      val var10: ReactionsTheme = this.reactionsTheme;
+      val var5: DiscordTheme = this.theme;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ReactionsMessageAccessory(messageId=");
+      var6.append(var7);
+      var6.append(", reactions=");
+      var6.append(var3);
+      var6.append(", canAddNewReactions=");
+      var6.append(var1);
+      var6.append(", canAddNewBurstReactions=");
+      var6.append(var2);
+      var6.append(", addReactionLabel=");
+      var6.append(var8);
+      var6.append(", addNewReactionAccessibilityLabel=");
+      var6.append(var9);
+      var6.append(", addNewBurstReactionAccessibilityLabel=");
+      var6.append(var4);
+      var6.append(", reactionsTheme=");
+      var6.append(var10);
+      var6.append(", theme=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 }

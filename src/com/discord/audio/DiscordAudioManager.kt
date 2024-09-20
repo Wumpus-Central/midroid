@@ -349,12 +349,12 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
    }
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
-      val var2: SimpleDeviceType = this.getActiveAudioDevice();
-      val var1: SimpleDeviceType = this.desiredDeviceType;
+      val var1: SimpleDeviceType = this.getActiveAudioDevice();
+      val var2: SimpleDeviceType = this.desiredDeviceType;
       if (this.desiredDeviceType === SimpleDeviceType.DEFAULT) {
-         return AndroidAudioDevice.Companion.fromSimpleDeviceType(var2);
+         return AndroidAudioDevice.Companion.fromSimpleDeviceType(var1);
       } else {
-         return if (var2 === SimpleDeviceType.WIRED_HEADSET && this.desiredDeviceType === SimpleDeviceType.EARPIECE)
+         return if (var1 === SimpleDeviceType.WIRED_HEADSET && this.desiredDeviceType === SimpleDeviceType.EARPIECE)
             AndroidAudioDevice.Companion.fromSimpleDeviceType(SimpleDeviceType.WIRED_HEADSET)
             else
             AndroidAudioDevice.Companion.fromSimpleDeviceType(this.desiredDeviceType);

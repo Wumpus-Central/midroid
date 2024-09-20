@@ -68,49 +68,49 @@ public final class AudioPlayerViewBinding implements ViewBinding {
 
    public static AudioPlayerViewBinding bind(View var0) {
       int var1 = R.id.audio_details_view;
-      LinearLayout var15 = (LinearLayout)a.a(var0, var1);
-      if (var15 != null) {
+      LinearLayout var9 = (LinearLayout)a.a(var0, var1);
+      if (var9 != null) {
          var1 = R.id.audio_file_name;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
+         TextView var7 = (TextView)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.audio_file_size;
             TextView var13 = (TextView)a.a(var0, var1);
             if (var13 != null) {
                var1 = R.id.audio_progress_bar;
-               AudioProgressBar var14 = (AudioProgressBar)a.a(var0, var1);
-               if (var14 != null) {
+               AudioProgressBar var5 = (AudioProgressBar)a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.audio_progress_view;
-                  LinearLayout var10 = (LinearLayout)a.a(var0, var1);
-                  if (var10 != null) {
+                  LinearLayout var14 = (LinearLayout)a.a(var0, var1);
+                  if (var14 != null) {
                      var1 = R.id.button;
-                     SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var3 != null) {
+                     SimpleDraweeView var15 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var15 != null) {
                         var1 = R.id.button_container;
-                        View var12 = a.a(var0, var1);
-                        if (var12 != null) {
+                        View var2 = a.a(var0, var1);
+                        if (var2 != null) {
                            var1 = R.id.player_container;
-                           LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-                           if (var4 != null) {
+                           LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+                           if (var8 != null) {
                               var1 = R.id.progress;
-                              ProgressBar var5 = (ProgressBar)a.a(var0, var1);
-                              if (var5 != null) {
+                              ProgressBar var6 = (ProgressBar)a.a(var0, var1);
+                              if (var6 != null) {
                                  var1 = R.id.text;
-                                 SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                                 if (var6 != null) {
+                                 SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                                 if (var3 != null) {
                                     var1 = R.id.upload_overlay;
-                                    AttachmentUploadOverlayView var8 = (AttachmentUploadOverlayView)a.a(var0, var1);
-                                    if (var8 != null) {
+                                    AttachmentUploadOverlayView var12 = (AttachmentUploadOverlayView)a.a(var0, var1);
+                                    if (var12 != null) {
                                        var1 = R.id.upload_overlay_background;
-                                       LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-                                       if (var7 != null) {
+                                       LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+                                       if (var4 != null) {
                                           var1 = R.id.wave;
-                                          AudioWaveView var9 = (AudioWaveView)a.a(var0, var1);
-                                          if (var9 != null) {
+                                          AudioWaveView var10 = (AudioWaveView)a.a(var0, var1);
+                                          if (var10 != null) {
                                              var1 = R.id.wipe;
                                              View var11 = a.a(var0, var1);
                                              if (var11 != null) {
                                                 return new AudioPlayerViewBinding(
-                                                   var0, var15, var2, var13, var14, var10, var3, var12, var4, var5, var6, var8, var7, var9, var11
+                                                   var0, var9, var7, var13, var5, var14, var15, var2, var8, var6, var3, var12, var4, var10, var11
                                                 );
                                              }
                                           }

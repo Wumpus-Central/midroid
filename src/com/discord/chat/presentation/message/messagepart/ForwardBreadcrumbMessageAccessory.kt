@@ -61,17 +61,17 @@ public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channe
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: ForwardInfo = this.forwardInfo;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ForwardBreadcrumbMessageAccessory(messageId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var3);
-      var4.append(", forwardInfo=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: ForwardInfo = this.forwardInfo;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForwardBreadcrumbMessageAccessory(messageId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(", forwardInfo=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

@@ -86,18 +86,18 @@ internal data class EmojiPickerRow(rowContentWidth: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.rowContentWidth;
-      val var3: Int = this.rowContentPaddingVertical;
-      val var2: Int = this.itemSize;
+      val var3: Int = this.rowContentWidth;
+      val var2: Int = this.rowContentPaddingVertical;
+      val var1: Int = this.itemSize;
       val var5: java.util.List = this.items;
       val var4: Boolean = this.isSectionNitroLocked;
       val var6: StringBuilder = new StringBuilder();
       var6.append("EmojiPickerRow(rowContentWidth=");
-      var6.append(var1);
-      var6.append(", rowContentPaddingVertical=");
       var6.append(var3);
-      var6.append(", itemSize=");
+      var6.append(", rowContentPaddingVertical=");
       var6.append(var2);
+      var6.append(", itemSize=");
+      var6.append(var1);
       var6.append(", items=");
       var6.append(var5);
       var6.append(", isSectionNitroLocked=");

@@ -38,11 +38,11 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
 
    public open fun draw(canvas: Canvas) {
       kotlin.jvm.internal.q.h(var1, "canvas");
-      val var3: Float = 2;
-      val var2: Float = (this.pxSize / 2 + 2) / 2;
+      val var2: Float = 2;
+      val var3: Float = (this.pxSize / 2 + 2) / 2;
       var1.drawCircle(this.pxSize / (float)2, this.pxSize / (float)2, (this.pxSize / (float)2 + (float)2) / (float)2, this.borderColorPaint);
-      var1.drawCircle(this.pxSize / var3, this.pxSize / var3, var2, this.roleColorAlphaPaint);
-      var1.drawCircle(this.pxSize / var3, this.pxSize / var3, var2 - var3, this.roleColorPaint);
+      var1.drawCircle(this.pxSize / var2, this.pxSize / var2, var3, this.roleColorAlphaPaint);
+      var1.drawCircle(this.pxSize / var2, this.pxSize / var2, var3 - var2, this.roleColorPaint);
    }
 
    public open fun getOpacity(): Int {

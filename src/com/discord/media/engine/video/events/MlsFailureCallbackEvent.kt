@@ -77,17 +77,17 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var2: java.lang.String = this.source;
-      val var3: java.lang.String = this.reason;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MlsFailureCallbackEvent(connectionId=");
-      var4.append(var1);
-      var4.append(", source=");
-      var4.append(var2);
-      var4.append(", reason=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.source;
+      val var4: java.lang.String = this.reason;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MlsFailureCallbackEvent(connectionId=");
+      var2.append(var1);
+      var2.append(", source=");
+      var2.append(var3);
+      var2.append(", reason=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -123,10 +123,10 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          var var6: java.lang.String;
          val var7: java.lang.String;
          if (var9.y()) {
-            var3 = var9.k(var8, 0);
+            var2 = var9.k(var8, 0);
             var6 = var9.t(var8, 1);
             val var10: java.lang.String = var9.t(var8, 2);
-            var2 = 7;
+            var3 = 7;
             var7 = var10;
          } else {
             var6 = null;
@@ -161,10 +161,12 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
             var7 = var6;
             var6 = var11;
+            var2 = var3;
+            var3 = var2;
          }
 
          var9.b(var8);
-         return new MlsFailureCallbackEvent(var2, var3, var6, var7, null);
+         return new MlsFailureCallbackEvent(var3, var2, var6, var7, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {

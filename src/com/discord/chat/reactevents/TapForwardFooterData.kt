@@ -102,10 +102,10 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
                }
             }
 
-            var3 = var2;
-            var10 = var6;
             var6 = var11;
+            var10 = var6;
             var2 = var3;
+            var3 = var2;
          }
 
          var9.b(var8);

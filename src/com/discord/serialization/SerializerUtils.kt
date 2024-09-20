@@ -19,14 +19,14 @@ public object SerializerUtils {
       } else {
          val var6: LinkedHashMap = new LinkedHashMap();
 
-         for (KProperty1 var4 : c.a(var2)) {
-            val var7: JsonElement = (var3 as JsonObject).get(var4.getName()) as JsonElement;
-            if (var7 == null) {
-               if (!var4.getReturnType().c()) {
-                  var6.put(var4.getName(), "null");
+         for (KProperty1 var5 : c.a(var2)) {
+            val var4: JsonElement = (var3 as JsonObject).get(var5.getName()) as JsonElement;
+            if (var4 == null) {
+               if (!var5.getReturnType().c()) {
+                  var6.put(var5.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var4, var7)) {
-               var6.put(var4.getName(), var7.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var5, var4)) {
+               var6.put(var5.getName(), var4.toString());
             }
          }
 
@@ -68,12 +68,12 @@ public object SerializerUtils {
          }
 
          public override fun toString(): String {
-            val var2: java.util.Map = this.data;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Data(data=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.util.Map = this.data;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Data(data=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
 

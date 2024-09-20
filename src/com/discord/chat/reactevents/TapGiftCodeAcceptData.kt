@@ -131,22 +131,22 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
+         var var11: java.lang.String;
          var var12: java.lang.String;
-         val var15: java.lang.String;
          if (var5) {
-            var12 = var9.t(var8, 0);
-            val var7: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var7 != null) {
-               var10 = var7.unbox-impl();
+            val var7: java.lang.String = var9.t(var8, 0);
+            val var6: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var6 != null) {
+               var10 = var6.unbox-impl();
             }
 
             var2 = 3;
-            var15 = var12;
             var12 = var10;
+            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var11: java.lang.String = null;
+            var11 = null;
             var12 = null;
 
             while (var3) {
@@ -180,12 +180,10 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
                   var3 = false;
                }
             }
-
-            var15 = var11;
          }
 
          var9.b(var8);
-         return new TapGiftCodeAcceptData(var2, var15, var12, null, null);
+         return new TapGiftCodeAcceptData(var2, var11, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapGiftCodeAcceptData) {

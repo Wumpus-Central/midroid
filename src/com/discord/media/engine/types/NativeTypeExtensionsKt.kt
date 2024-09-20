@@ -12,20 +12,6 @@ import oh.r
 
 internal fun Array<AudioInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
    q.h(var0, "<this>");
-   val var5: ArrayList = new ArrayList(var0.length);
-   val var3: Int = var0.length;
-   var var2: Int = 0;
-
-   for (int var1 = 0; var2 < var3; var1++) {
-      var5.add(r.l(new Pair[]{w.a("name", var0[var2].getName()), w.a("guid", var0[var2].getGuid()), w.a("index", var1)}));
-      var2++;
-   }
-
-   return var5;
-}
-
-internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
-   q.h(var0, "<this>");
    val var4: ArrayList = new ArrayList(var0.length);
    val var3: Int = var0.length;
    var var2: Int = 0;
@@ -36,6 +22,20 @@ internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String
    }
 
    return var4;
+}
+
+internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
+   q.h(var0, "<this>");
+   val var5: ArrayList = new ArrayList(var0.length);
+   val var3: Int = var0.length;
+   var var2: Int = 0;
+
+   for (int var1 = 0; var2 < var3; var1++) {
+      var5.add(r.l(new Pair[]{w.a("name", var0[var2].getName()), w.a("guid", var0[var2].getGuid()), w.a("index", var1)}));
+      var2++;
+   }
+
+   return var5;
 }
 
 internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {

@@ -17,15 +17,15 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
 
    public override fun getAvailableIcons(promise: Promise) {
       q.h(var1, "promise");
-      val var4: Array<AppIcon> = AppIconUtil.INSTANCE.getAvailableIcons();
-      val var5: ArrayList = new ArrayList(var4.length);
-      val var3: Int = var4.length;
+      val var5: Array<AppIcon> = AppIconUtil.INSTANCE.getAvailableIcons();
+      val var4: ArrayList = new ArrayList(var5.length);
+      val var3: Int = var5.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         var5.add(NativeMapExtensionsKt.nativeMapOf(w.a("id", var4[var2].getId())));
+         var4.add(NativeMapExtensionsKt.nativeMapOf(w.a("id", var5[var2].getId())));
       }
 
-      var1.resolve(NativeArrayExtensionsKt.toNativeArray(var5));
+      var1.resolve(NativeArrayExtensionsKt.toNativeArray(var4));
    }
 
    public override fun getCurrentIcon(promise: Promise) {
@@ -41,10 +41,10 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
       q.h(var2, "promise");
 
       try {
-         val var3: AppIconUtil = AppIconUtil.INSTANCE;
-         val var4: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var4, "getReactApplicationContext(...)");
-         var3.setAppIcon(var4, var1);
+         val var4: AppIconUtil = AppIconUtil.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var4.setAppIcon(var3, var1);
          var2.resolve(java.lang.Boolean.TRUE);
       } catch (var5: Exception) {
          var2.reject(var5);

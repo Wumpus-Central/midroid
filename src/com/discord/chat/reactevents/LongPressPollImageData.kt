@@ -85,18 +85,18 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
 
    public override fun toString(): String {
       val var3: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.messageId;
       val var4: java.lang.String = this.attachmentId;
-      val var2: TapImageData.Layout = this.layout;
+      val var1: TapImageData.Layout = this.layout;
       val var5: StringBuilder = new StringBuilder();
       var5.append("LongPressPollImageData(channelId=");
       var5.append(var3);
       var5.append(", messageId=");
-      var5.append(var1);
+      var5.append(var2);
       var5.append(", attachmentId=");
       var5.append(var4);
       var5.append(", layout=");
-      var5.append(var2);
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }

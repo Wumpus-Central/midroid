@@ -309,10 +309,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var7: Uri = var9.c().getItemAt(var4).getUri();
-            q.g(var7, "getUri(...)");
+            val var8: Uri = var9.c().getItemAt(var4).getUri();
+            q.g(var8, "getUri(...)");
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var7);
+               var0.listener.onImageInserted(var8);
             }
          }
 
@@ -342,9 +342,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             for (int var19 = 0; var19 < var20; var19++) {
                val var12: Intent = var16.c().getItemAt(var19).getIntent();
                q.g(var12, "getIntent(...)");
-               val var17: java.lang.String = var12.getStringExtra("data");
-               if (var17 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var17);
+               val var13: java.lang.String = var12.getStringExtra("data");
+               if (var13 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var13);
                }
             }
 
@@ -409,8 +409,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(i.v(var1, 10));
 
-      for (ChatInputNode var6 : var1) {
-         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var5 : var1) {
+         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
       for (ChatInputNode var18 : var4) {

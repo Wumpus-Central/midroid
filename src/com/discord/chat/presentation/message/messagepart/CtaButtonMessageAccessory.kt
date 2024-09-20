@@ -59,17 +59,17 @@ public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: Mes
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: CtaButton = this.ctaButton;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CtaButtonMessageAccessory(channelId=");
-      var4.append(var2);
-      var4.append(", messageId=");
-      var4.append(var3);
-      var4.append(", ctaButton=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: CtaButton = this.ctaButton;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("CtaButtonMessageAccessory(channelId=");
+      var1.append(var3);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(", ctaButton=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 }

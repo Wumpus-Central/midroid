@@ -53,36 +53,36 @@ public final class ActivityInviteEmbedViewBinding implements ViewBinding {
 
    public static ActivityInviteEmbedViewBinding bind(View var0) {
       int var1 = R.id.above_bottom_row_barrier;
-      Barrier var8 = (Barrier)a.a(var0, var1);
-      if (var8 != null) {
+      Barrier var5 = (Barrier)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.avatars;
-         OverlappingCirclesView var7 = (OverlappingCirclesView)a.a(var0, var1);
-         if (var7 != null) {
+         OverlappingCirclesView var10 = (OverlappingCirclesView)a.a(var0, var1);
+         if (var10 != null) {
             var1 = R.id.bg_gradient;
-            View var2 = a.a(var0, var1);
-            if (var2 != null) {
+            View var7 = a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.bottom_end_label;
-               TextView var9 = (TextView)a.a(var0, var1);
-               if (var9 != null) {
+               TextView var2 = (TextView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.button;
-                  DCDButton var4 = (DCDButton)a.a(var0, var1);
-                  if (var4 != null) {
+                  DCDButton var3 = (DCDButton)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.end_image;
-                     SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var10 != null) {
+                     SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.header;
-                        TextView var11 = (TextView)a.a(var0, var1);
-                        if (var11 != null) {
+                        TextView var4 = (TextView)a.a(var0, var1);
+                        if (var4 != null) {
                            var1 = R.id.hero_text;
-                           TextView var3 = (TextView)a.a(var0, var1);
-                           if (var3 != null) {
+                           TextView var6 = (TextView)a.a(var0, var1);
+                           if (var6 != null) {
                               var1 = R.id.start_image;
-                              SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var5 != null) {
+                              SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.subtext;
-                                 TextView var6 = (TextView)a.a(var0, var1);
-                                 if (var6 != null) {
-                                    return new ActivityInviteEmbedViewBinding(var0, var8, var7, var2, var9, var4, var10, var11, var3, var5, var6);
+                                 TextView var9 = (TextView)a.a(var0, var1);
+                                 if (var9 != null) {
+                                    return new ActivityInviteEmbedViewBinding(var0, var5, var10, var7, var2, var3, var8, var4, var6, var11, var9);
                                  }
                               }
                            }

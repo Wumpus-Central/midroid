@@ -13,6 +13,7 @@ import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import nh.s
 import nh.w
+import nh.r.a
 import oh.r
 
 public object IdentifyPayload {
@@ -62,29 +63,29 @@ public object IdentifyPayload {
       q.h(var1, "json");
       q.h(var2, "versions");
 
-      var var17: Any;
+      var var6: Any;
       label38:
       try {
-         var17 = nh.r.k;
-         var17 = nh.r.b(Json.d.g(var1));
+         var6 = nh.r.k;
+         var6 = nh.r.b(Json.d.g(var1));
       } catch (var10: java.lang.Throwable) {
-         var17 = nh.r.k;
-         var17 = nh.r.b(s.a(var10));
+         val var7: a = nh.r.k;
+         var6 = nh.r.b(s.a(var10));
          break label38;
       }
 
-      var var7: Any = var17;
-      if (nh.r.g(var17)) {
-         var7 = null;
+      var var21: Any = var6;
+      if (nh.r.g(var6)) {
+         var21 = null;
       }
 
-      var17 = var7 as JsonElement;
-      if ((var7 as JsonElement) !is JsonObject) {
+      var6 = var21 as JsonElement;
+      if ((var21 as JsonElement) !is JsonObject) {
          Log.w$default(Log.INSTANCE, "IdentifyPayload", "skipping identify mutation: root is not a json object", null, 4, null);
          return var1;
       } else {
-         var17 = var17 as JsonObject;
-         var7 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         var6 = var6 as JsonObject;
+         var21 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
          val var12: Array<GuildVersion> = var2.getGuildVersions();
          val var8: LinkedHashMap = new LinkedHashMap(f.c(r.d(var12.length), 16));
          var var5: Int = var12.length;
@@ -94,17 +95,15 @@ public object IdentifyPayload {
             var8.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put((JsonObject)var17, (java.util.List<java.lang.String>)var7, new JsonObject(var8));
+         var var13: JsonObject = this.put((JsonObject)var6, (java.util.List<java.lang.String>)var21, new JsonObject(var8));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var17 = var14[var15];
-            var7 = INSTANCE;
+            var6 = var14[var15];
+            var21 = INSTANCE;
             var13 = INSTANCE.put(
-               var13,
-               i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var17).getId()}),
-               ((IdentifyPayload)var7).toJson((NonGuildVersion)var17)
+               var13, i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var6).getId()}), ((IdentifyPayload)var21).toJson((NonGuildVersion)var6)
             );
          }
 

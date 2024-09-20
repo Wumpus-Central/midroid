@@ -273,7 +273,7 @@ public data class Summary(id: String,
          if (var7) {
             var13 = var17.t(var16, 0);
             val var14: java.lang.String = var17.t(var16, 1);
-            var12 = var17.t(var16, 2);
+            var11 = var17.t(var16, 2);
             var10 = var17.m(var16, 3, var15[3], null) as java.util.List;
             val var8: MessageId.$serializer = MessageId.$serializer.INSTANCE;
             val var18: MessageId = var17.m(var16, 4, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -293,7 +293,7 @@ public data class Summary(id: String,
 
             var3 = var17.k(var16, 6);
             var9 = var17.m(var16, 7, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var11 = var19;
+            var12 = var19;
             var2 = 255;
             var20 = var14;
          } else {
@@ -383,14 +383,14 @@ public data class Summary(id: String,
                var4 = 7;
             }
 
-            var12 = var22;
+            var11 = var22;
             var9 = var12;
             var22 = var11;
-            var11 = (java.lang.String)var9;
+            var12 = (java.lang.String)var9;
          }
 
          var17.b(var16);
-         return new Summary(var2, var13, var20, var12, var10, var11, var22, var3, var9, null, null);
+         return new Summary(var2, var13, var20, var11, var10, var12, var22, var3, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Summary) {

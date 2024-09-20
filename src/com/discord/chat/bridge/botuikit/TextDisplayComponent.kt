@@ -73,15 +73,15 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var2: StructurableText = this.content;
+      val var2: java.lang.String = this.id;
+      val var4: StructurableText = this.content;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TextDisplayComponent(type=");
       var3.append(var1);
       var3.append(", id=");
-      var3.append(var4);
-      var3.append(", content=");
       var3.append(var2);
+      var3.append(", content=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }
@@ -117,10 +117,10 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          var var6: java.lang.String;
          var var9: StructurableText;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var9 = var8.m(var7, 2, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -151,10 +151,13 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
          var8.b(var7);
-         return new TextDisplayComponent(var2, var3, var6, var9, null);
+         return new TextDisplayComponent(var3, var2, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TextDisplayComponent) {

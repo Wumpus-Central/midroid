@@ -8,6 +8,7 @@ import il.g0
 import il.h
 import il.n0
 import kotlin.jvm.internal.q
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -159,10 +160,10 @@ public data class ChannelSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = Integer.hashCode(this.type);
-      val var4: Int = this.id.hashCode();
-      val var6: Int = this.state.hashCode();
-      val var5: Int = this.customId.hashCode();
+      val var5: Int = Integer.hashCode(this.type);
+      val var7: Int = this.id.hashCode();
+      val var4: Int = this.state.hashCode();
+      val var6: Int = this.customId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -178,54 +179,54 @@ public data class ChannelSelectComponent(type: Int,
          var2 = this.accessibilityLabel.hashCode();
       }
 
-      val var10: Int = Integer.hashCode(this.minValues);
-      val var11: Int = Integer.hashCode(this.maxValues);
-      val var9: Int = java.lang.Boolean.hashCode(this.disabled);
-      val var8: Int = this.selectedOptions.hashCode();
+      val var9: Int = Integer.hashCode(this.minValues);
+      val var10: Int = Integer.hashCode(this.maxValues);
+      val var8: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var11: Int = this.selectedOptions.hashCode();
       if (this.channelTypes != null) {
          var3 = this.channelTypes.hashCode();
       }
 
-      return (((((((((var7 * 31 + var4) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var11) * 31 + var9) * 31 + var8) * 31 + var3;
+      return (((((((((var5 * 31 + var7) * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var8) * 31 + var11) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var3: Int = this.type;
-      val var5: java.lang.String = this.id;
-      val var11: ActionComponentState = this.state;
-      val var12: java.lang.String = this.customId;
-      val var10: java.lang.String = this.placeholder;
-      val var8: java.lang.String = this.accessibilityLabel;
+      val var8: java.lang.String = this.id;
+      val var5: ActionComponentState = this.state;
+      val var10: java.lang.String = this.customId;
+      val var11: java.lang.String = this.placeholder;
+      val var12: java.lang.String = this.accessibilityLabel;
       val var2: Int = this.minValues;
       val var1: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var7: java.util.List = this.selectedOptions;
+      val var6: java.util.List = this.selectedOptions;
       val var9: java.util.List = this.channelTypes;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ChannelSelectComponent(type=");
-      var6.append(var3);
-      var6.append(", id=");
-      var6.append(var5);
-      var6.append(", state=");
-      var6.append(var11);
-      var6.append(", customId=");
-      var6.append(var12);
-      var6.append(", placeholder=");
-      var6.append(var10);
-      var6.append(", accessibilityLabel=");
-      var6.append(var8);
-      var6.append(", minValues=");
-      var6.append(var2);
-      var6.append(", maxValues=");
-      var6.append(var1);
-      var6.append(", disabled=");
-      var6.append(var4);
-      var6.append(", selectedOptions=");
-      var6.append(var7);
-      var6.append(", channelTypes=");
-      var6.append(var9);
-      var6.append(")");
-      return var6.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ChannelSelectComponent(type=");
+      var7.append(var3);
+      var7.append(", id=");
+      var7.append(var8);
+      var7.append(", state=");
+      var7.append(var5);
+      var7.append(", customId=");
+      var7.append(var10);
+      var7.append(", placeholder=");
+      var7.append(var11);
+      var7.append(", accessibilityLabel=");
+      var7.append(var12);
+      var7.append(", minValues=");
+      var7.append(var2);
+      var7.append(", maxValues=");
+      var7.append(var1);
+      var7.append(", disabled=");
+      var7.append(var4);
+      var7.append(", selectedOptions=");
+      var7.append(var6);
+      var7.append(", channelTypes=");
+      var7.append(var9);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : g0 {
@@ -255,10 +256,10 @@ public data class ChannelSelectComponent(type: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = ChannelSelectComponent.access$get$childSerializers$cp();
-         val var1: n0 = n0.a;
-         val var3: b2 = b2.a;
-         return new KSerializer[]{n0.a, b2.a, ActionComponentState.Serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var3), var1, var1, h.a, var2[9], a.u(var2[10])};
+         val var3: Array<KSerializer> = ChannelSelectComponent.access$get$childSerializers$cp();
+         val var2: n0 = n0.a;
+         val var1: b2 = b2.a;
+         return new KSerializer[]{n0.a, b2.a, ActionComponentState.Serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var1), var2, var2, h.a, var3[9], a.u(var3[10])};
       }
 
       public open fun deserialize(decoder: Decoder): ChannelSelectComponent {
@@ -274,65 +275,66 @@ public data class ChannelSelectComponent(type: Int,
          var var5: Int;
          var var6: Int;
          val var7: Int;
-         var var11: java.lang.String;
+         var var12: Any;
          var var13: java.lang.String;
-         var var14: Any;
-         var var15: java.lang.String;
-         var var16: Any;
-         val var23: java.util.List;
-         val var35: java.lang.String;
+         var var16: java.util.List;
+         val var18: java.lang.String;
+         var var23: Any;
+         var var32: java.lang.String;
+         val var34: java.lang.String;
          if (var10) {
             var3 = var20.k(var19, 0);
-            var11 = var20.t(var19, 1);
-            var14 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, null) as ActionComponentState;
-            var15 = var20.t(var19, 3);
-            val var21: b2 = b2.a;
-            val var12: java.lang.String = var20.v(var19, 4, b2.a, null) as java.lang.String;
-            val var22: java.lang.String = var20.v(var19, 5, var21, null) as java.lang.String;
-            var4 = var20.k(var19, 6);
+            var13 = var20.t(var19, 1);
+            var12 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, null) as ActionComponentState;
+            val var11: java.lang.String = var20.t(var19, 3);
+            var23 = b2.a;
+            var32 = var20.v(var19, 4, b2.a, null) as java.lang.String;
+            var23 = var20.v(var19, 5, (DeserializationStrategy)var23, null) as java.lang.String;
+            var5 = var20.k(var19, 6);
             var2 = var20.k(var19, 7);
-            var5 = var20.s(var19, 8);
-            var16 = var20.m(var19, 9, var17[9], null) as java.util.List;
-            val var18: java.util.List = var20.v(var19, 10, var17[10], null) as java.util.List;
-            var6 = 2047;
-            var13 = var12;
-            var35 = var22;
-            var7 = var2;
-            var23 = var18;
+            var6 = var20.s(var19, 8);
+            val var15: java.util.List = var20.m(var19, 9, var17[9], null) as java.util.List;
+            var16 = var20.v(var19, 10, var17[10], null) as java.util.List;
+            var7 = 2047;
+            var18 = var11;
+            var34 = var32;
+            var32 = (java.lang.String)var23;
+            var4 = var2;
+            var23 = var15;
          } else {
-            var var30: Boolean = true;
+            var var28: Boolean = true;
             var3 = 0;
             var5 = 0;
             var4 = 0;
             var16 = null;
-            var14 = null;
-            var15 = null;
+            var32 = null;
+            var var33: Any = null;
             var13 = null;
-            var var31: Any = null;
-            var11 = null;
-            var var24: java.lang.String = null;
+            var12 = null;
+            var var30: java.lang.String = null;
+            var23 = null;
             var6 = 0;
 
-            while (var30) {
+            while (var28) {
                val var9: Int = var20.x(var19);
                switch (var9) {
                   case -1:
-                     var30 = false;
+                     var28 = false;
                      break;
                   case 0:
                      var3 = var20.k(var19, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var11 = var20.t(var19, 1);
+                     var30 = var20.t(var19, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var31 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, var31) as ActionComponentState;
+                     var12 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, var12) as ActionComponentState;
                      var2 |= 4;
                      break;
                   case 3:
-                     var24 = var20.t(var19, 3);
+                     var23 = var20.t(var19, 3);
                      var2 |= 8;
                      break;
                   case 4:
@@ -340,7 +342,7 @@ public data class ChannelSelectComponent(type: Int,
                      var2 |= 16;
                      break;
                   case 5:
-                     var14 = var20.v(var19, 5, b2.a, var14) as java.lang.String;
+                     var32 = var20.v(var19, 5, b2.a, var32) as java.lang.String;
                      var2 |= 32;
                      break;
                   case 6:
@@ -356,7 +358,7 @@ public data class ChannelSelectComponent(type: Int,
                      var2 |= 256;
                      continue;
                   case 9:
-                     var15 = var20.m(var19, 9, var17[9], var15) as java.util.List;
+                     var33 = var20.m(var19, 9, var17[9], var33) as java.util.List;
                      var2 |= 512;
                      continue;
                   case 10:
@@ -370,20 +372,18 @@ public data class ChannelSelectComponent(type: Int,
                var8 = 7;
             }
 
-            var7 = var6;
-            var23 = (java.util.List)var16;
-            var16 = var15;
-            var5 = var4;
-            var4 = var5;
-            var35 = (java.lang.String)var14;
-            var15 = var24;
-            var14 = var31;
-            var6 = var2;
+            var18 = (java.lang.String)var23;
+            var23 = var33;
+            var6 = var4;
+            var4 = var6;
+            var34 = var13;
+            var13 = var30;
+            var7 = var2;
          }
 
          var20.b(var19);
          return new ChannelSelectComponent(
-            var6, var3, var11, (ActionComponentState)var14, var15, var13, var35, var4, var7, (boolean)var5, (java.util.List)var16, var23, null
+            var7, var3, var13, (ActionComponentState)var12, var18, var34, var32, var5, var4, (boolean)var6, (java.util.List)var23, var16, null
          );
       }
 

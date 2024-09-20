@@ -25,14 +25,14 @@ internal object CustomLineHeightSpanOverride {
          var1.ascent = var1.top;
          var1.descent = var2;
       } else {
-         var var9: Int = var1.descent - var1.ascent;
+         val var11: Int = var1.descent - var1.ascent;
          if (var1.descent - var1.ascent <= 0) {
             return;
          }
 
-         var9 = ci.a.b((float)var1.descent * ((float)var2 * 0.75F / (float)var9));
-         var1.descent = var9;
-         var1.ascent = var9 - var2;
+         val var10: Int = ci.a.b((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
+         var1.descent = var10;
+         var1.ascent = var10 - var2;
       }
    }
 

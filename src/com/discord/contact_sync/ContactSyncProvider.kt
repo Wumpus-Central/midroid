@@ -280,7 +280,7 @@ public object ContactSyncProvider {
       // 70: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
       // 73: astore 1
       // 74: goto 7d
-      // 77: astore 1
+      // 77: astore 2
       // 78: goto 87
       // 7b: aconst_null
       // 7c: astore 1
@@ -290,13 +290,13 @@ public object ContactSyncProvider {
       // 82: aload 1
       // 83: astore 2
       // 84: goto 91
-      // 87: aload 1
+      // 87: aload 2
       // 88: athrow
-      // 89: astore 2
+      // 89: astore 1
       // 8a: aload 3
-      // 8b: aload 1
+      // 8b: aload 2
       // 8c: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8f: aload 2
+      // 8f: aload 1
       // 90: athrow
       // 91: aload 2
       // 92: areturn

@@ -280,8 +280,8 @@ public data class CommandOnClick(action: String? = ...,
                var16 = null;
             }
 
-            var7 = var14.v(var13, 3, var5, null) as UserId;
-            var6 = var14.v(var13, 4, MessageType.Serializer.INSTANCE, null) as MessageType;
+            var6 = var14.v(var13, 3, var5, null) as UserId;
+            var7 = var14.v(var13, 4, MessageType.Serializer.INSTANCE, null) as MessageType;
             var18 = var14.v(var13, 5, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 63;
          } else {
@@ -341,15 +341,14 @@ public data class CommandOnClick(action: String? = ...,
                }
             }
 
-            var6 = var18;
-            var18 = (ChannelId)var8;
-            var7 = (MessageId)var6;
-            var16 = (MessageId)var7;
             var8 = var16;
+            var18 = (ChannelId)var8;
+            var7 = var18;
+            var16 = (MessageId)var7;
          }
 
          var14.b(var13);
-         return new CommandOnClick(var2, var9, (UserId)var8, var16, var7, (MessageType)var6, var18, null, null);
+         return new CommandOnClick(var2, var9, (UserId)var8, var16, (UserId)var6, var7, var18, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CommandOnClick) {

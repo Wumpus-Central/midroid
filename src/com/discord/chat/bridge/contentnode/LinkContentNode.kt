@@ -97,8 +97,8 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.content.hashCode();
-      val var3: Int = this.target.hashCode();
+      val var3: Int = this.content.hashCode();
+      val var2: Int = this.target.hashCode();
       val var1: Int;
       if (this.context == null) {
          var1 = 0;
@@ -106,22 +106,22 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          var1 = this.context.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var4: java.util.List = this.content;
-      val var1: java.lang.String = this.target;
-      val var3: LinkContext = this.context;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LinkContentNode(content=");
-      var2.append(var4);
-      var2.append(", target=");
-      var2.append(var1);
-      var2.append(", context=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.util.List = this.content;
+      val var2: java.lang.String = this.target;
+      val var4: LinkContext = this.context;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LinkContentNode(content=");
+      var1.append(var3);
+      var1.append(", target=");
+      var1.append(var2);
+      var1.append(", context=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

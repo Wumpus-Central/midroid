@@ -36,13 +36,13 @@ internal class ReactEventRegistry {
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var2: LinkedHashMap = new LinkedHashMap();
+      val var1: LinkedHashMap = new LinkedHashMap();
 
-      for (java.lang.String var1 : this.events.values()) {
-         var2.put(var1, r.m(new Pair[]{w.a("registrationName", var1)}));
+      for (java.lang.String var2 : this.events.values()) {
+         var1.put(var2, r.m(new Pair[]{w.a("registrationName", var2)}));
       }
 
-      return var2;
+      return var1;
    }
 
    public fun getEventName(event: ReactEvent): String {
@@ -51,11 +51,11 @@ internal class ReactEventRegistry {
       if (var2 != null) {
          return var2;
       } else {
-         val var3: KClass = g0.b(var1.getClass());
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("No event name registered for event: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: KClass = g0.b(var1.getClass());
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("No event name registered for event: ");
+         var3.append(var4);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

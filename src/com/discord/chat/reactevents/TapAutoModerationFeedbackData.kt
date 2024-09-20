@@ -67,13 +67,13 @@ public data class TapAutoModerationFeedbackData(messageId: String, channelId: St
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapAutoModerationFeedbackData(messageId=");
-      var3.append(var2);
-      var3.append(", channelId=");
       var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

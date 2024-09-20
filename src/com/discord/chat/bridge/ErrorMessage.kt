@@ -75,14 +75,14 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var1: java.lang.String = this.stackTrace;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ErrorMessage(id=");
-      var3.append(var2);
-      var3.append(", stackTrace=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.stackTrace;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ErrorMessage(id=");
+      var1.append(var2);
+      var1.append(", stackTrace=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

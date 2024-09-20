@@ -230,9 +230,9 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = BuildOverrideCookieMeta.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
-         return new KSerializer[]{gl.a.u(b2.a), gl.a.u(var1), gl.a.u(var2[2]), gl.a.u(var2[3]), gl.a.u(h.a), gl.a.u(var2[5])};
+         val var1: Array<KSerializer> = BuildOverrideCookieMeta.access$get$childSerializers$cp();
+         val var2: b2 = b2.a;
+         return new KSerializer[]{gl.a.u(b2.a), gl.a.u(var2), gl.a.u(var1[2]), gl.a.u(var1[3]), gl.a.u(h.a), gl.a.u(var1[5])};
       }
 
       public open fun deserialize(decoder: Decoder): BuildOverrideCookieMeta {
@@ -243,30 +243,30 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          val var5: Boolean = var13.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
+         var var6: java.util.List;
+         var var7: Any;
          var var8: java.util.List;
-         var var15: Any;
-         var var18: Any;
-         val var21: java.util.List;
+         var var9: java.lang.String;
+         var var16: Any;
          if (var5) {
-            var15 = b2.a;
+            var16 = b2.a;
             var10 = var13.v(var12, 0, b2.a, null) as java.lang.String;
-            var6 = var13.v(var12, 1, (DeserializationStrategy)var15, null) as java.lang.String;
+            var9 = var13.v(var12, 1, (DeserializationStrategy)var16, null) as java.lang.String;
             var8 = var13.v(var12, 2, var11[2], null) as java.util.List;
-            var18 = var13.v(var12, 3, var11[3], null) as java.util.List;
-            var15 = var13.v(var12, 4, h.a, null) as java.lang.Boolean;
-            val var9: java.util.Map = var13.v(var12, 5, var11[5], null) as java.util.Map;
+            var6 = var13.v(var12, 3, var11[3], null) as java.util.List;
+            var16 = var13.v(var12, 4, h.a, null) as java.lang.Boolean;
+            val var19: java.util.Map = var13.v(var12, 5, var11[5], null) as java.util.Map;
             var2 = 63;
-            var21 = (java.util.List)var18;
-            var18 = var9;
+            var7 = var16;
+            var16 = var19;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var20: java.lang.String = null;
+            var9 = null;
             var8 = null;
-            var18 = null;
+            var7 = null;
             var6 = null;
-            var15 = null;
+            var16 = null;
 
             while (var3) {
                val var4: Int = var13.x(var12);
@@ -279,7 +279,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
                      var2 |= 1;
                      break;
                   case 1:
-                     var20 = var13.v(var12, 1, b2.a, var20) as java.lang.String;
+                     var9 = var13.v(var12, 1, b2.a, var9) as java.lang.String;
                      var2 |= 2;
                      break;
                   case 2:
@@ -287,7 +287,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
                      var2 |= 4;
                      break;
                   case 3:
-                     var18 = var13.v(var12, 3, var11[3], var18) as java.util.List;
+                     var7 = var13.v(var12, 3, var11[3], var7) as java.util.List;
                      var2 |= 8;
                      break;
                   case 4:
@@ -295,7 +295,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
                      var2 |= 16;
                      break;
                   case 5:
-                     var15 = var13.v(var12, 5, var11[5], var15) as java.util.Map;
+                     var16 = var13.v(var12, 5, var11[5], var16) as java.util.Map;
                      var2 |= 32;
                      break;
                   default:
@@ -303,14 +303,12 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
                }
             }
 
-            var21 = (java.util.List)var18;
-            var18 = var15;
-            var15 = var6;
-            var6 = var20;
+            var7 = var6;
+            var6 = (java.util.List)var7;
          }
 
          var13.b(var12);
-         return new BuildOverrideCookieMeta(var2, var10, var6, var8, var21, (java.lang.Boolean)var15, (java.util.Map)var18, null);
+         return new BuildOverrideCookieMeta(var2, var10, var9, var8, var6, (java.lang.Boolean)var7, (java.util.Map)var16, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BuildOverrideCookieMeta) {

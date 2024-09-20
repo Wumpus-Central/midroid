@@ -64,8 +64,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.contentInventoryEntry == null) {
          var1 = 0;
@@ -73,22 +73,22 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = this.contentInventoryEntry.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
       val var3: java.lang.String = this.id;
-      val var2: ContentInventoryEntry = this.contentInventoryEntry;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ContentInventoryEntryComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var3);
-      var4.append(", contentInventoryEntry=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var4: ContentInventoryEntry = this.contentInventoryEntry;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContentInventoryEntryComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var3);
+      var2.append(", contentInventoryEntry=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -125,16 +125,16 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
             val var2: Int = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null) as ContentInventoryEntry;
-            var3 = 7;
-            var4 = var2;
+            var4 = 7;
+            var3 = var2;
          } else {
-            var var12: Boolean = true;
+            var var11: Boolean = true;
             var3 = 0;
             var6 = null;
             var9 = null;
             var var10: Int = 0;
 
-            while (var12) {
+            while (var11) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -154,16 +154,15 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                      var10 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var11 = false;
                }
             }
 
-            var4 = var3;
-            var3 = var10;
+            var4 = var10;
          }
 
          var8.b(var7);
-         return new ContentInventoryEntryComponent(var3, var4, var6, var9, null);
+         return new ContentInventoryEntryComponent(var4, var3, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentInventoryEntryComponent) {

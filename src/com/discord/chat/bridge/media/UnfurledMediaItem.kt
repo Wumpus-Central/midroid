@@ -225,15 +225,15 @@ public data class UnfurledMediaItem(url: String,
          val var16: ContentScanMetadata;
          if (var15.y()) {
             var8 = var15.t(var14, 0);
-            var12 = var15.t(var14, 1);
-            var3 = var15.k(var14, 2);
+            var9 = var15.t(var14, 1);
+            var5 = var15.k(var14, 2);
             val var2: Int = var15.k(var14, 3);
             var10 = var15.t(var14, 4);
-            var9 = var15.v(var14, 5, b2.a, null) as java.lang.String;
+            var12 = var15.v(var14, 5, b2.a, null) as java.lang.String;
             var7 = var15.v(var14, 6, n0.a, null) as Int;
             var16 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, null) as ContentScanMetadata;
-            var4 = 255;
-            var5 = var2;
+            var3 = 255;
+            var4 = var2;
          } else {
             var var20: Boolean = true;
             var4 = 0;
@@ -289,17 +289,18 @@ public data class UnfurledMediaItem(url: String,
                }
             }
 
-            var12 = var7;
             var16 = var11;
             var7 = (Integer)var10;
+            var12 = var9;
             var10 = var17;
-            var5 = var4;
-            var4 = var18;
+            var5 = var3;
+            var9 = var7;
+            var3 = var18;
          }
 
          var15.b(var14);
          return new UnfurledMediaItem(
-            var4, (java.lang.String)var8, (java.lang.String)var12, var3, var5, (java.lang.String)var10, (java.lang.String)var9, var7, var16, null
+            var3, (java.lang.String)var8, (java.lang.String)var9, var5, var4, (java.lang.String)var10, (java.lang.String)var12, var7, var16, null
          );
       }
 

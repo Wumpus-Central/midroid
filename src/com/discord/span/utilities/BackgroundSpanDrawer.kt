@@ -83,11 +83,11 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
                );
             } else if (var10 == var11) {
                var2.setColor(var36.getBackgroundColor());
-               val var23: Path = new Path();
-               var23.addRoundRect(
+               val var37: Path = new Path();
+               var37.addRoundRect(
                   (float)var9, (float)var5, (float)var19, (float)var7, new float[]{var13, var13, 0.0F, 0.0F, 0.0F, 0.0F, var13, var13}, Direction.CW
                );
-               var1.drawPath(var23, var2);
+               var1.drawPath(var37, var2);
             } else if (var17 == var11) {
                var2.setColor(var36.getBackgroundColor());
                val var39: Path = new Path();

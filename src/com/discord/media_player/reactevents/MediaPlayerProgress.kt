@@ -70,16 +70,16 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
    }
 
    public override fun toString(): String {
-      val var1: Double = this.id;
+      val var3: Double = this.id;
       val var5: Double = this.time;
-      val var3: Double = this.duration;
+      val var1: Double = this.duration;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MediaPlayerProgress(id=");
-      var7.append(var1);
+      var7.append(var3);
       var7.append(", time=");
       var7.append(var5);
       var7.append(", duration=");
-      var7.append(var3);
+      var7.append(var1);
       var7.append(")");
       return var7.toString();
    }

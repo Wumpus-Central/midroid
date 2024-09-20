@@ -77,16 +77,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var6.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(var8);
-      var7.append("/sentry");
-      var5.setCacheDirPath(var7.toString());
+      val var7: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var7);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("0c008840-cc22-4e24-beb7-5ab161d30cf1");
+      var5.setProguardUuid("e0078490-56f7-4fde-abc2-f306017bf32c");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }

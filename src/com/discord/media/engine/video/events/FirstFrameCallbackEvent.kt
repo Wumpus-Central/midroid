@@ -86,20 +86,20 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var5: java.lang.String = this.userId;
+      val var6: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
       val var4: java.lang.String = this.streamId;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("FirstFrameCallbackEvent(connectionId=");
-      var6.append(var1);
-      var6.append(", userId=");
-      var6.append(var5);
-      var6.append(", ssrc=");
-      var6.append(var2);
-      var6.append(", streamId=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FirstFrameCallbackEvent(connectionId=");
+      var5.append(var1);
+      var5.append(", userId=");
+      var5.append(var6);
+      var5.append(", ssrc=");
+      var5.append(var2);
+      var5.append(", streamId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -131,27 +131,27 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.c(var10);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Long;
          var var8: java.lang.String;
-         val var12: java.lang.String;
+         val var9: java.lang.String;
          if (var11.y()) {
-            val var2: Int = var11.k(var10, 0);
+            var3 = var11.k(var10, 0);
             var8 = var11.t(var10, 1);
             var6 = var11.h(var10, 2);
-            var12 = var11.t(var10, 3);
-            var3 = 15;
-            var4 = var2;
+            val var12: java.lang.String = var11.t(var10, 3);
+            var2 = 15;
+            var9 = var12;
          } else {
             var var13: java.lang.String = null;
-            var var16: Boolean = true;
+            var var4: Boolean = true;
             var6 = 0L;
             var8 = null;
             var3 = 0;
-            var var14: Int = 0;
+            var2 = 0;
 
-            while (var16) {
+            while (var4) {
                val var5: Int = var11.x(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -162,32 +162,30 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                            }
 
                            var8 = var11.t(var10, 3);
-                           var14 |= 8;
+                           var2 |= 8;
                         } else {
                            var6 = var11.h(var10, 2);
-                           var14 |= 4;
+                           var2 |= 4;
                         }
                      } else {
                         var13 = var11.t(var10, 1);
-                        var14 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var3 = var11.k(var10, 0);
-                     var14 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var16 = false;
+                  var4 = false;
                }
             }
 
-            var12 = var8;
+            var9 = var8;
             var8 = var13;
-            var4 = var3;
-            var3 = var14;
          }
 
          var11.b(var10);
-         return new FirstFrameCallbackEvent(var3, var4, var8, var6, var12, null);
+         return new FirstFrameCallbackEvent(var2, var3, var8, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {

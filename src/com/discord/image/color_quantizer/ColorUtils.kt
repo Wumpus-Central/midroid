@@ -60,19 +60,19 @@ internal object ColorUtils {
       q.h(var3, "hsl");
       var var4: Float = var0 / 255.0F;
       val var10: Float = var1 / 255.0F;
-      val var7: Float = var2 / 255.0F;
-      val var8: Float = Math.max(var4, Math.max(var10, (float)var2 / 255.0F));
+      val var8: Float = var2 / 255.0F;
+      val var7: Float = Math.max(var4, Math.max(var10, (float)var2 / 255.0F));
       val var9: Float = Math.min(var4, Math.min(var10, (float)var2 / 255.0F));
-      var var5: Float = var8 - var9;
-      val var6: Float = (var8 + var9) / 2.0F;
-      if (var8 == var9) {
+      var var5: Float = var7 - var9;
+      val var6: Float = (var7 + var9) / 2.0F;
+      if (var7 == var9) {
          var4 = 0.0F;
          var5 = 0.0F;
       } else {
-         if (var8 == var4) {
-            var4 = (var10 - var7) / var5 % 6.0F;
-         } else if (var8 == var10) {
-            var4 = (var7 - var4) / var5 + 2.0F;
+         if (var7 == var4) {
+            var4 = (var10 - var8) / var5 % 6.0F;
+         } else if (var7 == var10) {
+            var4 = (var8 - var4) / var5 + 2.0F;
          } else {
             var4 = (var4 - var10) / var5 + 4.0F;
          }

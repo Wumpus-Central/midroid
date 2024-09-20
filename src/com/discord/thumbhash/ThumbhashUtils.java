@@ -60,8 +60,8 @@ public final class ThumbhashUtils {
          var48 = 0;
       }
 
-      float var4 = (var15 >> 3 & 63) / 63.0F;
-      float var5 = (var15 >> 9 & 63) / 63.0F;
+      float var5 = (var15 >> 3 & 63) / 63.0F;
+      float var4 = (var15 >> 9 & 63) / 63.0F;
       boolean var13;
       if (var15 >> 15 != 0) {
          var13 = 1;
@@ -110,7 +110,7 @@ public final class ThumbhashUtils {
       ThumbhashUtils.Channel var26 = new ThumbhashUtils.Channel(var20, var16);
       ThumbhashUtils.Channel var25 = new ThumbhashUtils.Channel(3, 3);
       ThumbhashUtils.Channel var27 = new ThumbhashUtils.Channel(3, 3);
-      var13 = var27.decode(var0, var53, var25.decode(var0, var53, var26.decode(var0, var53, 0, var6), var4 * var2), var5 * var2);
+      var13 = var27.decode(var0, var53, var25.decode(var0, var53, var26.decode(var0, var53, 0, var6), var5 * var2), var4 * var2);
       float[] var23 = null;
       ThumbhashUtils.Channel var24;
       if (var48) {

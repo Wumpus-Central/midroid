@@ -30,12 +30,12 @@ public class ShareActivity : ReactActivity {
          }
 
          protected void onCreate(Bundle var1) {
-            val var3: ShareProps.Companion = ShareProps.Companion;
-            val var4: Intent = this.this$0.getIntent();
-            q.g(var4, "getIntent(...)");
-            val var2: Context = this.getContext();
-            q.g(var2, "getContext(...)");
-            val var7: ShareProps = var3.createShareProps(var4, var2);
+            val var2: ShareProps.Companion = ShareProps.Companion;
+            val var3: Intent = this.this$0.getIntent();
+            q.g(var3, "getIntent(...)");
+            val var4: Context = this.getContext();
+            q.g(var4, "getContext(...)");
+            val var7: ShareProps = var2.createShareProps(var3, var4);
             this.shareProps = var7;
             var var5: ShareProps = var7;
             if (var7 == null) {

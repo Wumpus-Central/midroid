@@ -32,12 +32,12 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
       if (var1 == null) {
          return null;
       } else {
-         ReadableMapKeySetIterator var2 = var1.keySetIterator();
+         ReadableMapKeySetIterator var4 = var1.keySetIterator();
          HashMap var3 = new HashMap();
 
-         while (var2.hasNextKey()) {
-            String var4 = var2.nextKey();
-            var3.put(var4, var1.getString(var4));
+         while (var4.hasNextKey()) {
+            String var2 = var4.nextKey();
+            var3.put(var2, var1.getString(var2));
          }
 
          return var3;

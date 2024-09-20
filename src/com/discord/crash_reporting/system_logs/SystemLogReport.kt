@@ -24,15 +24,15 @@ internal object SystemLogReport {
    }
 
    private fun recordBreadcrumb(msg: String, category: String) {
-      val var4: Log = Log.INSTANCE;
-      val var5: java.lang.String = TAG;
+      val var5: Log = Log.INSTANCE;
+      val var3: java.lang.String = TAG;
       q.g(TAG, "TAG");
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Breadcrumb, [");
-      var3.append(var2);
-      var3.append("]: ");
-      var3.append(var1);
-      Log.i$default(var4, var5, var3.toString(), null, 4, null);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Breadcrumb, [");
+      var4.append(var2);
+      var4.append("]: ");
+      var4.append(var1);
+      Log.i$default(var5, var3, var4.toString(), null, 4, null);
    }
 
    internal fun reportLastCrash(context: Context, cb: (Reason?, Tombstone?) -> Unit) {
@@ -53,8 +53,8 @@ internal object SystemLogReport {
             if (var1 != null) {
                val var3: Context = this.$context;
 
-               for (java.lang.String var4 : h.z0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
-                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var4, "Tombstone");
+               for (java.lang.String var5 : h.z0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
+                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var5, "Tombstone");
                }
 
                val var7: SystemLogReport = SystemLogReport.INSTANCE;
@@ -64,13 +64,13 @@ internal object SystemLogReport {
                var2 = false;
             }
 
-            val var6: Function2 = this.$cb;
-            val var8: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
+            val var8: Function2 = this.$cb;
+            val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
             if (!var2) {
                var1 = null;
             }
 
-            var6.invoke(var8, var1);
+            var8.invoke(var6, var1);
          }
       });
    }

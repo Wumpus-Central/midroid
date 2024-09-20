@@ -48,23 +48,23 @@ public class SoundManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun pause(key: Int) {
-      val var4: Log = Log.INSTANCE;
-      val var2: java.lang.String = SoundManager.Companion.getLogTag();
+      val var2: Log = Log.INSTANCE;
+      val var4: java.lang.String = SoundManager.Companion.getLogTag();
       val var3: StringBuilder = new StringBuilder();
       var3.append("Pause ");
       var3.append(var1);
-      Log.i$default(var4, var2, var3.toString(), null, 4, null);
+      Log.i$default(var2, var4, var3.toString(), null, 4, null);
       this.soundManager.pause(var1);
    }
 
    @ReactMethod
    public fun play(key: Int) {
-      val var3: Log = Log.INSTANCE;
-      val var4: java.lang.String = SoundManager.Companion.getLogTag();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Play ");
-      var2.append(var1);
-      Log.i$default(var3, var4, var2.toString(), null, 4, null);
+      val var4: Log = Log.INSTANCE;
+      val var2: java.lang.String = SoundManager.Companion.getLogTag();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Play ");
+      var3.append(var1);
+      Log.i$default(var4, var2, var3.toString(), null, 4, null);
       this.soundManager.play(var1);
    }
 
@@ -165,74 +165,74 @@ public class SoundManagerModule(reactContext: ReactApplicationContext) : ReactCo
    @ReactMethod
    public fun release(key: Int) {
       val var2: Log = Log.INSTANCE;
-      val var4: java.lang.String = SoundManager.Companion.getLogTag();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Release ");
-      var3.append(var1);
-      Log.i$default(var2, var4, var3.toString(), null, 4, null);
+      val var3: java.lang.String = SoundManager.Companion.getLogTag();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Release ");
+      var4.append(var1);
+      Log.i$default(var2, var3, var4.toString(), null, 4, null);
       this.soundManager.release(var1);
    }
 
    @ReactMethod
    public fun setCurrentTime(key: Int, value: Int) {
       val var5: Log = Log.INSTANCE;
-      val var4: java.lang.String = SoundManager.Companion.getLogTag();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Set current time for ");
-      var3.append(var1);
-      var3.append(" with value ");
-      var3.append(var2);
-      Log.i$default(var5, var4, var3.toString(), null, 4, null);
+      val var3: java.lang.String = SoundManager.Companion.getLogTag();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Set current time for ");
+      var4.append(var1);
+      var4.append(" with value ");
+      var4.append(var2);
+      Log.i$default(var5, var3, var4.toString(), null, 4, null);
       this.soundManager.setCurrentTime(var1, var2);
    }
 
    @ReactMethod
    public fun setNumberOfLoops(key: Int, value: Int) {
-      val var4: Log = Log.INSTANCE;
-      val var3: java.lang.String = SoundManager.Companion.getLogTag();
+      val var3: Log = Log.INSTANCE;
+      val var4: java.lang.String = SoundManager.Companion.getLogTag();
       val var5: StringBuilder = new StringBuilder();
       var5.append("Set number of loops for ");
       var5.append(var1);
       var5.append(" with value ");
       var5.append(var2);
-      Log.i$default(var4, var3, var5.toString(), null, 4, null);
+      Log.i$default(var3, var4, var5.toString(), null, 4, null);
       this.soundManager.setNumberOfLoops(var1, var2);
    }
 
    @ReactMethod
    public fun setPan(key: Int, value: Int) {
-      val var3: Log = Log.INSTANCE;
+      val var4: Log = Log.INSTANCE;
       val var5: java.lang.String = SoundManager.Companion.getLogTag();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Set pan for ");
-      var4.append(var1);
-      var4.append(" with value ");
-      var4.append(var2);
-      Log.i$default(var3, var5, var4.toString(), null, 4, null);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Set pan for ");
+      var3.append(var1);
+      var3.append(" with value ");
+      var3.append(var2);
+      Log.i$default(var4, var5, var3.toString(), null, 4, null);
       this.soundManager.setPan(var1, (float)var2);
    }
 
    @ReactMethod
    public fun setVolume(key: Int, value: Float) {
       val var3: Log = Log.INSTANCE;
-      val var5: java.lang.String = SoundManager.Companion.getLogTag();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Set volume for ");
-      var4.append(var1);
-      var4.append(" with value ");
-      var4.append(var2);
-      Log.i$default(var3, var5, var4.toString(), null, 4, null);
+      val var4: java.lang.String = SoundManager.Companion.getLogTag();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Set volume for ");
+      var5.append(var1);
+      var5.append(" with value ");
+      var5.append(var2);
+      Log.i$default(var3, var4, var5.toString(), null, 4, null);
       this.soundManager.setVolume(var1, var2);
    }
 
    @ReactMethod
    public fun stop(key: Int) {
-      val var2: Log = Log.INSTANCE;
-      val var4: java.lang.String = SoundManager.Companion.getLogTag();
+      val var4: Log = Log.INSTANCE;
+      val var2: java.lang.String = SoundManager.Companion.getLogTag();
       val var3: StringBuilder = new StringBuilder();
       var3.append("Stop ");
       var3.append(var1);
-      Log.i$default(var2, var4, var3.toString(), null, 4, null);
+      Log.i$default(var4, var2, var3.toString(), null, 4, null);
       this.soundManager.stop(var1);
    }
 }

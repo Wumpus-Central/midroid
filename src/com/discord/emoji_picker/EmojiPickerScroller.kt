@@ -265,10 +265,10 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
    public fun unbind() {
       this.recyclerView.removeOnLayoutChangeListener(this.scrollViewLayoutChanged);
-      val var2: RecyclerView = this.recyclerView;
-      val var1: <unrepresentable> = this.scrollListenerDebounced;
+      val var1: RecyclerView = this.recyclerView;
+      val var2: <unrepresentable> = this.scrollListenerDebounced;
       this.scrollListenerDebounced.cancel();
-      var2.removeOnScrollListener(var1);
+      var1.removeOnScrollListener(var2);
       this.recyclerView.removeOnScrollListener(this.scrollListenerVelocityTracker);
       this.recyclerView.setOnFlingListener(null);
    }
@@ -378,23 +378,23 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
       }
 
       public override fun toString(): String {
-         val var5: Int = this.x;
-         val var2: Int = this.y;
-         val var1: Int = this.width;
-         val var3: Int = this.height;
-         val var4: Int = this.contentWidth;
+         val var2: Int = this.x;
+         val var1: Int = this.y;
+         val var3: Int = this.width;
+         val var4: Int = this.height;
+         val var5: Int = this.contentWidth;
          val var6: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ScrollEvent(x=");
-         var7.append(var5);
-         var7.append(", y=");
          var7.append(var2);
-         var7.append(", width=");
+         var7.append(", y=");
          var7.append(var1);
-         var7.append(", height=");
+         var7.append(", width=");
          var7.append(var3);
-         var7.append(", contentWidth=");
+         var7.append(", height=");
          var7.append(var4);
+         var7.append(", contentWidth=");
+         var7.append(var5);
          var7.append(", contentHeight=");
          var7.append(var6);
          var7.append(")");

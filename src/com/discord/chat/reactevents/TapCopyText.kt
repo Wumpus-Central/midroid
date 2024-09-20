@@ -55,12 +55,12 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.CharSequence = this.text;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapCopyText(text=");
-      var1.append((Object)var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.CharSequence = this.text;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapCopyText(text=");
+      var2.append((Object)var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

@@ -11,9 +11,9 @@ import oh.o
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    q.h(var0, "data");
-   val var2: Int = var0.getInt("rowContentWidth");
-   val var1: Int = var0.getInt("rowContentPaddingVertical");
-   val var3: Int = var0.getInt("itemSize");
+   val var1: Int = var0.getInt("rowContentWidth");
+   val var3: Int = var0.getInt("rowContentPaddingVertical");
+   val var2: Int = var0.getInt("itemSize");
    val var6: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var12: IntRange = NativeArrayExtensionsKt.sizeRange(var6);
    val var5: ArrayList = new ArrayList(i.v(var12, 10));
@@ -66,5 +66,5 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       var5.add(var15);
    }
 
-   return new StickerPickerRow(var2, var1, var3, var5);
+   return new StickerPickerRow(var1, var3, var2, var5);
 }
