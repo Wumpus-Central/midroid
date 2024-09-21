@@ -183,37 +183,37 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun toString(): String {
-      val var8: Boolean = this.isAtBottom;
-      val var5: Boolean = this.isNearBottom;
-      val var10: Boolean = this.isNearTop;
-      val var9: Boolean = this.dragging;
-      val var7: Boolean = this.decelerating;
-      val var6: Boolean = this.shouldShowJumpToPresent;
-      val var4: Boolean = this.isFirstMessageVisible;
-      val var1: Int = this.firstVisibleMessageIndex;
-      val var2: Int = this.lastVisibleMessageIndex;
-      val var3: Int = this.changesetUpdateId;
+      val var5: Boolean = this.isAtBottom;
+      val var6: Boolean = this.isNearBottom;
+      val var9: Boolean = this.isNearTop;
+      val var7: Boolean = this.dragging;
+      val var4: Boolean = this.decelerating;
+      val var8: Boolean = this.shouldShowJumpToPresent;
+      val var10: Boolean = this.isFirstMessageVisible;
+      val var3: Int = this.firstVisibleMessageIndex;
+      val var1: Int = this.lastVisibleMessageIndex;
+      val var2: Int = this.changesetUpdateId;
       val var11: StringBuilder = new StringBuilder();
       var11.append("ChatScrollPositionEvent(isAtBottom=");
-      var11.append(var8);
-      var11.append(", isNearBottom=");
       var11.append(var5);
-      var11.append(", isNearTop=");
-      var11.append(var10);
-      var11.append(", dragging=");
-      var11.append(var9);
-      var11.append(", decelerating=");
-      var11.append(var7);
-      var11.append(", shouldShowJumpToPresent=");
+      var11.append(", isNearBottom=");
       var11.append(var6);
-      var11.append(", isFirstMessageVisible=");
+      var11.append(", isNearTop=");
+      var11.append(var9);
+      var11.append(", dragging=");
+      var11.append(var7);
+      var11.append(", decelerating=");
       var11.append(var4);
+      var11.append(", shouldShowJumpToPresent=");
+      var11.append(var8);
+      var11.append(", isFirstMessageVisible=");
+      var11.append(var10);
       var11.append(", firstVisibleMessageIndex=");
-      var11.append(var1);
-      var11.append(", lastVisibleMessageIndex=");
-      var11.append(var2);
-      var11.append(", changesetUpdateId=");
       var11.append(var3);
+      var11.append(", lastVisibleMessageIndex=");
+      var11.append(var1);
+      var11.append(", changesetUpdateId=");
+      var11.append(var2);
       var11.append(")");
       return var11.toString();
    }
@@ -265,16 +265,16 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          val var12: Int;
          if (var15) {
             var15 = var17.s(var16, 0);
-            var12 = var17.s(var16, 1);
-            var10 = var17.s(var16, 2);
-            var9 = var17.s(var16, 3);
-            var8 = var17.s(var16, 4);
+            var7 = var17.s(var16, 1);
+            var9 = var17.s(var16, 2);
+            var12 = var17.s(var16, 3);
+            var10 = var17.s(var16, 4);
             var6 = var17.s(var16, 5);
             var4 = var17.s(var16, 6);
             var3 = var17.k(var16, 7);
             var5 = var17.k(var16, 8);
             var2 = var17.k(var16, 9);
-            var7 = 1023;
+            var8 = 1023;
             var11 = var2;
          } else {
             var var27: Boolean = true;
@@ -344,16 +344,16 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
             var3 = var10;
             var4 = var9;
             var6 = var8;
-            var8 = var5;
-            var9 = var7;
-            var10 = var4;
-            var12 = var3;
-            var7 = var2;
+            var10 = var5;
+            var12 = var7;
+            var9 = var4;
+            var7 = var3;
+            var8 = var2;
          }
 
          var17.b(var16);
          return new ChatScrollPositionEvent(
-            var7, var15, (boolean)var12, (boolean)var10, (boolean)var9, (boolean)var8, (boolean)var6, (boolean)var4, var3, var5, var11, null
+            var8, var15, (boolean)var7, (boolean)var9, (boolean)var12, (boolean)var10, (boolean)var6, (boolean)var4, var3, var5, var11, null
          );
       }
 

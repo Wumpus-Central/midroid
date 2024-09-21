@@ -47,26 +47,6 @@
       "value": ", with the url defined in the string."
     }
   ],
-  "HMvECw": [
-    {
-      "type": 0,
-      "value": "All of this is managed locally and has "
-    },
-    {
-      "type": 8,
-      "value": "$b",
-      "children": [
-        {
-          "type": 0,
-          "value": "not yet"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " replaced the global i18n system."
-    }
-  ],
   "uczI4u": [
     {
       "type": 0,
@@ -109,6 +89,26 @@
     {
       "type": 0,
       "value": " for special content."
+    }
+  ],
+  "HMvECw": [
+    {
+      "type": 0,
+      "value": "All of this is managed locally and has "
+    },
+    {
+      "type": 8,
+      "value": "$b",
+      "children": [
+        {
+          "type": 0,
+          "value": "not yet"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " replaced the global i18n system."
     }
   ],
   "Q+eyqq": [

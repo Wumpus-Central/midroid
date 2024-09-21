@@ -62,13 +62,13 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
 
    public override fun toString(): String {
       val var1: Sticker = this.sticker;
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapStickerData(sticker=");
-      var2.append(var1);
-      var2.append(", messageId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapStickerData(sticker=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

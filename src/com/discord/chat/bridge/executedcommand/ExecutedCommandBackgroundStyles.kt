@@ -88,18 +88,18 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var3: Int = this.color;
-      val var2: Int = this.borderRadius;
-      val var4: java.lang.Boolean = this.spaceAround;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ExecutedCommandBackgroundStyles(color=");
-      var1.append(var3);
-      var1.append(", borderRadius=");
-      var1.append(var2);
-      var1.append(", spaceAround=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var2: Int = this.color;
+      val var1: Int = this.borderRadius;
+      val var3: java.lang.Boolean = this.spaceAround;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ExecutedCommandBackgroundStyles(color=");
+      var4.append(var2);
+      var4.append(", borderRadius=");
+      var4.append(var1);
+      var4.append(", spaceAround=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -129,28 +129,27 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
 
       public open fun deserialize(decoder: Decoder): ExecutedCommandBackgroundStyles {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
          var var7: Int = null;
          var var2: Int;
-         val var8: java.lang.Boolean;
-         val var12: Int;
+         var var6: Int;
+         var var11: java.lang.Boolean;
          if (var5) {
-            val var11: n0 = n0.a;
-            var7 = var10.v(var9, 0, n0.a, null) as Int;
-            var12 = var10.v(var9, 1, var11, null) as Int;
-            val var6: java.lang.Boolean = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
+            val var10: n0 = n0.a;
+            var7 = var9.v(var8, 0, n0.a, null) as Int;
+            var6 = var9.v(var8, 1, var10, null) as Int;
+            var11 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
             var2 = 7;
-            var8 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var14: Int = null;
-            var var13: java.lang.Boolean = null;
+            var6 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -158,27 +157,24 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
                            throw new n(var4);
                         }
 
-                        var13 = var10.v(var9, 2, h.a, var13) as java.lang.Boolean;
+                        var11 = var9.v(var8, 2, h.a, var11) as java.lang.Boolean;
                         var2 |= 4;
                      } else {
-                        var14 = var10.v(var9, 1, n0.a, var14) as Int;
+                        var6 = var9.v(var8, 1, n0.a, var6) as Int;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.v(var9, 0, n0.a, var7) as Int;
+                     var7 = var9.v(var8, 0, n0.a, var7) as Int;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var8 = var13;
-            var12 = var14;
          }
 
-         var10.b(var9);
-         return new ExecutedCommandBackgroundStyles(var2, var7, var12, var8, null);
+         var9.b(var8);
+         return new ExecutedCommandBackgroundStyles(var2, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ExecutedCommandBackgroundStyles) {

@@ -246,13 +246,13 @@ public data class CommandOnClick(action: String? = ...,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = a.u(b2.a);
-         val var2: UserId.$serializer = UserId.$serializer.INSTANCE;
+         val var2: KSerializer = a.u(b2.a);
+         val var1: UserId.$serializer = UserId.$serializer.INSTANCE;
          return new KSerializer[]{
-            var1,
+            var2,
             a.u(UserId.$serializer.INSTANCE),
             a.u(MessageId.$serializer.INSTANCE),
-            a.u(var2),
+            a.u(var1),
             a.u(MessageType.Serializer.INSTANCE),
             a.u(ChannelId.$serializer.INSTANCE)
          };
@@ -341,10 +341,10 @@ public data class CommandOnClick(action: String? = ...,
                }
             }
 
-            var8 = var16;
             var18 = (ChannelId)var8;
             var7 = var18;
             var16 = (MessageId)var7;
+            var8 = var16;
          }
 
          var14.b(var13);

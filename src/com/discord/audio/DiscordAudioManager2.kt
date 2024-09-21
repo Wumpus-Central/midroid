@@ -212,8 +212,8 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
       val var7: ArrayList = new ArrayList(i.v(var2, 10));
 
-      for (AudioDeviceInfo var5 : var2) {
-         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var5));
+      for (AudioDeviceInfo var8 : var2) {
+         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var8));
       }
 
       return i.U0(var7);
@@ -270,31 +270,31 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          }
 
          val var13: AudioDeviceInfo = this.preferredAudioDevice;
-         var var6: java.util.Iterator = this.audioDevices.iterator();
+         val var5: java.util.Iterator = this.audioDevices.iterator();
 
          var var9: Any;
          do {
-            if (!var6.hasNext()) {
+            if (!var5.hasNext()) {
                var9 = null;
                break;
             }
 
-            var9 = var6.next();
+            var9 = var5.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.BLUETOOTH_HEADSET
          );
 
          val var14: AudioDeviceInfo = var9 as AudioDeviceInfo;
-         var6 = this.audioDevices.iterator();
+         val var15: java.util.Iterator = this.audioDevices.iterator();
 
          do {
-            if (!var6.hasNext()) {
+            if (!var15.hasNext()) {
                var9 = null;
                break;
             }
 
-            var9 = var6.next();
+            var9 = var15.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.WIRED_HEADSET

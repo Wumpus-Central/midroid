@@ -82,43 +82,43 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    }
 
    private fun modifyExistingRows(updates: List<Row>): com.discord.chat.listmanager.ChatListManager.RowsModificationResult {
-      val var6: java.util.List = this.rows;
+      val var5: java.util.List = this.rows;
       q.e(this.rows);
-      val var5: ListOperationsBuilder = new ListOperationsBuilder();
-      var var7: ArrayList = new ArrayList();
+      val var6: ListOperationsBuilder = new ListOperationsBuilder();
+      val var9: ArrayList = new ArrayList();
 
-      for (Object var8 : var1) {
-         if ((var8 as Row).getChangeType() === ChangeType.INSERT) {
-            var7.add(var8);
+      for (Object var7 : var1) {
+         if ((var7 as Row).getChangeType() === ChangeType.INSERT) {
+            var9.add(var7);
          }
       }
 
-      val var12: java.util.Iterator = var7.iterator();
+      val var12: java.util.Iterator = var9.iterator();
 
       label75:
       while (true) {
          var var4: Boolean;
          for (var4 = false; var12.hasNext(); var4 = true) {
             val var15: Row = var12.next() as Row;
-            this.insert(var6, var15);
-            var5.add(new ListOperation.Insert(var15.getIndex()));
+            this.insert(var5, var15);
+            var6.add(new ListOperation.Insert(var15.getIndex()));
             if (!var4 && var15.getIndex() != 0) {
                continue label75;
             }
          }
 
-         var7 = new ArrayList();
+         val var13: ArrayList = new ArrayList();
 
          for (Object var16 : var1) {
             if ((var16 as Row).getChangeType() === ChangeType.DELETE || (var16 as Row).getChangeType() === ChangeType.UPDATE) {
-               var7.add(var16);
+               var13.add(var16);
             }
          }
 
-         for (Row var11 : i.M(var7)) {
+         for (Row var11 : i.M(var13)) {
             if (var11 is DeleteRow) {
-               var6.remove(var11.getIndex());
-               var5.add(new ListOperation.Remove(var11.getIndex()));
+               var5.remove(var11.getIndex());
+               var6.add(new ListOperation.Remove(var11.getIndex()));
             } else {
                val var2: Boolean;
                if (var11 is LoadingRow
@@ -129,27 +129,27 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                   var2 = false;
                }
 
-               val var14: Row = i.e0(var6) as Row;
+               val var17: Row = i.e0(var5) as Row;
                val var3: Boolean;
-               if (var14 is LoadingRow && (var14 as LoadingRow).isLoading()) {
+               if (var17 is LoadingRow && (var17 as LoadingRow).isLoading()) {
                   var3 = true;
                } else {
                   var3 = false;
                }
 
                if (var2 && var3) {
-                  var6.add(1, var11);
-                  var6.remove(0);
-                  var5.add(new ListOperation.Insert(1));
-                  var5.add(new ListOperation.Remove(0));
+                  var5.add(1, var11);
+                  var5.remove(0);
+                  var6.add(new ListOperation.Insert(1));
+                  var6.add(new ListOperation.Remove(0));
                } else {
-                  var6.set(var11.getIndex(), var11);
-                  var5.add(new ListOperation.Change(var11.getIndex()));
+                  var5.set(var11.getIndex(), var11);
+                  var6.add(new ListOperation.Change(var11.getIndex()));
                }
             }
          }
 
-         return new ChatListManager.RowsModificationResult(var6, var4, var5.build());
+         return new ChatListManager.RowsModificationResult(var5, var4, var6.build());
       }
    }
 
@@ -161,11 +161,12 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1184,7 +1185,6 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
@@ -1207,11 +1207,11 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          }
 
          val var11: BlockedGroupRow = var1 as BlockedGroupRow;
-         val var8: java.lang.String = (var1 as BlockedGroupRow).getText();
-         val var7: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
-         val var4: Int = var11.getColor();
-         val var3: Int = var11.getBackgroundColor();
-         val var2: Int = var11.getBorderColor();
+         val var7: java.lang.String = (var1 as BlockedGroupRow).getText();
+         val var8: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
+         val var2: Int = var11.getColor();
+         val var4: Int = var11.getBackgroundColor();
+         val var3: Int = var11.getBorderColor();
          val var5: Boolean = var11.getRevealed();
          val var6: java.util.List = var11.getContent();
          var var12: java.util.List = var6;
@@ -1239,7 +1239,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var8, var7, var4, var3, var2, var5, i.M(var14));
+         var9 = new BlockedGroupChatListItem(var7, var8, var2, var4, var3, var5, i.M(var14));
       }
 
       return (ChatListItem)var9;
@@ -1292,8 +1292,8 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
 
          val var10: java.util.List = var7.component1();
          val var6: Boolean = var7.component2();
-         val var8: java.util.List = var7.component3();
-         val var9: ArrayList = new ArrayList(i.v(var10, 10));
+         val var9: java.util.List = var7.component3();
+         val var8: ArrayList = new ArrayList(i.v(var10, 10));
          val var18: java.util.Iterator = var10.iterator();
          var var14: MessageRow = null;
 
@@ -1352,7 +1352,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                }
             }
 
-            var9.add(this.toChatListItem((Row)var11));
+            var8.add(this.toChatListItem((Row)var11));
          }
 
          if (var14 == null) {
@@ -1363,7 +1363,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             }
          }
 
-         this.publishUpdate(new ChatListUpdate(var9, var14, var8, var2));
+         this.publishUpdate(new ChatListUpdate(var8, var14, var9, var2));
       }
    }
 
@@ -1432,18 +1432,18 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       }
 
       public override fun toString(): String {
-         val var3: java.util.List = this.rows;
+         val var2: java.util.List = this.rows;
          val var1: Boolean = this.didInsertAtBottom;
-         val var2: java.util.List = this.listOperations;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("RowsModificationResult(rows=");
-         var4.append(var3);
-         var4.append(", didInsertAtBottom=");
-         var4.append(var1);
-         var4.append(", listOperations=");
-         var4.append(var2);
-         var4.append(")");
-         return var4.toString();
+         val var4: java.util.List = this.listOperations;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("RowsModificationResult(rows=");
+         var3.append(var2);
+         var3.append(", didInsertAtBottom=");
+         var3.append(var1);
+         var3.append(", listOperations=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

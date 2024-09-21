@@ -101,16 +101,16 @@ internal object CustomFontFamilyOverride {
       val var7: Int = var1.length;
 
       for (int var4 = 0; var4 < var7; var4++) {
-         val var10: java.lang.String = var1[var4];
-         val var11: Array<java.lang.String> = FILE_EXTENSIONS;
+         val var11: java.lang.String = var1[var4];
+         val var10: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            val var13: java.lang.String = var11[var5];
+            val var13: java.lang.String = var10[var5];
             val var12: StringBuilder = new StringBuilder();
             var12.append("fonts/");
-            var12.append(var10);
+            var12.append(var11);
             var12.append(var13);
             val var28: java.lang.String = var12.toString();
             kotlin.jvm.internal.q.g(var28, "toString(...)");

@@ -5438,15 +5438,15 @@ public object MediaPlayerManager {
 
       public override fun toString(): String {
          val var5: MediaSource = this.source;
-         val var3: Long = this.timeMs;
-         val var1: Long = this.durationMs;
+         val var1: Long = this.timeMs;
+         val var3: Long = this.durationMs;
          val var6: StringBuilder = new StringBuilder();
          var6.append("PlaybackProgress(source=");
          var6.append(var5);
          var6.append(", timeMs=");
-         var6.append(var3);
-         var6.append(", durationMs=");
          var6.append(var1);
+         var6.append(", durationMs=");
+         var6.append(var3);
          var6.append(")");
          return var6.toString();
       }

@@ -1101,13 +1101,13 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    }
 
    public suspend fun <T> performBackoff(networkRequest: (Continuation<T>) -> Any?, shouldRetry: (T, Continuation<Boolean>) -> Any?): T {
-      label53: {
+      label51: {
          if (var3 is <unrepresentable>) {
             val var7: <unrepresentable> = var3 as <unrepresentable>;
             if (((var3 as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
                var7.label = (var3 as <unrepresentable>).label + Integer.MIN_VALUE;
                var12 = var7;
-               break label53;
+               break label51;
             }
          }
 
@@ -1135,8 +1135,8 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
 
       var var16: Any = ((<unrepresentable>)var12).result;
       val var11: Any = b.e();
-      var var8: ExponentialBackoff;
-      var var19: Any;
+      val var8: ExponentialBackoff;
+      var var18: Any;
       if (((<unrepresentable>)var12).label != 0) {
          if (((<unrepresentable>)var12).label != 1) {
             if (((<unrepresentable>)var12).label != 2) {
@@ -1158,10 +1158,9 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
                   ((<unrepresentable>)var12).L$1 = var1;
                   ((<unrepresentable>)var12).L$2 = var2;
                   ((<unrepresentable>)var12).label = 4;
-                  var19 = var1.invoke(var12);
-                  var8 = var8;
-                  var16 = var19;
-                  if (var19 === var11) {
+                  var18 = var1.invoke(var12);
+                  var16 = var18;
+                  if (var18 === var11) {
                      return var11;
                   }
                }
@@ -1172,13 +1171,13 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
                ((<unrepresentable>)var12).L$3 = var16;
                ((<unrepresentable>)var12).label = 2;
                val var10: Any = var2.invoke(var16, var12);
-               var19 = var16;
+               var18 = var16;
                var16 = var10;
                if (var10 === var11) {
                   return var11;
                }
             } else {
-               var19 = ((<unrepresentable>)var12).L$3;
+               var18 = ((<unrepresentable>)var12).L$3;
                var2 = ((<unrepresentable>)var12).L$2 as Function2;
                var1 = ((<unrepresentable>)var12).L$1 as Function1;
                var8 = ((<unrepresentable>)var12).L$0 as ExponentialBackoff;
@@ -1194,10 +1193,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
             ((<unrepresentable>)var12).L$2 = var2;
             ((<unrepresentable>)var12).L$3 = var16;
             ((<unrepresentable>)var12).label = 2;
-            val var21: Any = var2.invoke(var16, var12);
-            var19 = var16;
-            var16 = var21;
-            if (var21 === var11) {
+            val var20: Any = var2.invoke(var16, var12);
+            var18 = var16;
+            var16 = var20;
+            if (var20 === var11) {
                return var11;
             }
          }
@@ -1218,10 +1217,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
          ((<unrepresentable>)var12).L$2 = var2;
          ((<unrepresentable>)var12).L$3 = var16;
          ((<unrepresentable>)var12).label = 2;
-         val var22: Any = var2.invoke(var16, var12);
-         var19 = var16;
-         var16 = var22;
-         if (var22 === var11) {
+         val var21: Any = var2.invoke(var16, var12);
+         var18 = var16;
+         var16 = var21;
+         if (var21 === var11) {
             return var11;
          }
       }
@@ -1254,26 +1253,25 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
          ((<unrepresentable>)var12).L$1 = var1;
          ((<unrepresentable>)var12).L$2 = var2;
          ((<unrepresentable>)var12).label = 4;
-         var19 = var1.invoke(var12);
-         var8 = var8;
-         if (var19 === var11) {
+         var18 = var1.invoke(var12);
+         if (var18 === var11) {
             return var11;
          }
 
          ((<unrepresentable>)var12).L$0 = var8;
          ((<unrepresentable>)var12).L$1 = var1;
          ((<unrepresentable>)var12).L$2 = var2;
-         ((<unrepresentable>)var12).L$3 = var19;
+         ((<unrepresentable>)var12).L$3 = var18;
          ((<unrepresentable>)var12).label = 2;
-         val var23: Any = var2.invoke(var19, var12);
-         var19 = var19;
-         var16 = var23;
-         if (var23 === var11) {
+         val var22: Any = var2.invoke(var18, var12);
+         var18 = var18;
+         var16 = var22;
+         if (var22 === var11) {
             return var11;
          }
       }
 
-      return var19;
+      return var18;
    }
 
    public fun succeed() {

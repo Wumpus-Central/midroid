@@ -75,12 +75,12 @@ public class PerformanceTracing : MarkerListener {
       val var4: java.lang.String;
       if (var1.getTag() != null && !q.c(var1.getName(), "CREATE_REACT_CONTEXT")) {
          val var2: java.lang.String = var1.getName();
-         val var5: java.lang.String = var1.getTag();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var2);
-         var3.append(" ");
-         var3.append(var5);
-         var4 = var3.toString();
+         val var3: java.lang.String = var1.getTag();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var2);
+         var5.append(" ");
+         var5.append(var3);
+         var4 = var5.toString();
       } else {
          var4 = var1.getName();
       }
@@ -96,12 +96,12 @@ public class PerformanceTracing : MarkerListener {
          val var3: java.lang.String = this.startupRootEventsTree.get(var1.getName());
          var2 = var3;
          if (i.U(this.wildcardEventNames, var3)) {
-            val var6: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
-            val var4: StringBuilder = new StringBuilder();
-            var4.append(var3);
-            var4.append(" ");
-            var4.append(var6);
-            var2 = var4.toString();
+            val var4: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var3);
+            var6.append(" ");
+            var6.append(var4);
+            var2 = var6.toString();
          }
 
          return var2;
@@ -564,18 +564,18 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.name;
-         val var3: java.lang.String = this.tag;
-         val var1: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("TransactionMarker(name=");
-         var2.append(var4);
-         var2.append(", tag=");
-         var2.append(var3);
-         var2.append(", markerEnd=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var1: java.lang.String = this.name;
+         val var4: java.lang.String = this.tag;
+         val var2: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TransactionMarker(name=");
+         var3.append(var1);
+         var3.append(", tag=");
+         var3.append(var4);
+         var3.append(", markerEnd=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

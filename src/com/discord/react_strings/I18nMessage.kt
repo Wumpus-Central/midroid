@@ -6,6 +6,7 @@ import kotlin.jvm.internal.q
 import uh.a
 
 public enum class I18nMessage {
+   A11Y_ROLE_BUTTON,
    AUDIO_FILE_A11Y_LABEL,
    AUDIO_FILE_NOT_PLAYING_VALUE,
    AUDIO_FILE_PLAYING_VALUE,

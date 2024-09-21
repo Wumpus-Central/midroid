@@ -186,16 +186,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          var3 = false;
       }
 
-      val var4: Int = var1.getCount();
+      val var5: Int = var1.getCount();
       var var11: Boolean = false;
       if (var3) {
          var11 = false;
          label23:
          if (this.currentCount != null) {
-            val var5: Int = var1.getCount();
+            val var4: Int = var1.getCount();
             if (this.currentCount != null) {
                var11 = false;
-               if (var5 == this.currentCount) {
+               if (var4 == this.currentCount) {
                   break label23;
                }
             }
@@ -204,16 +204,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          }
       }
 
-      this.configureCount(var4, var11);
+      this.configureCount(var5, var11);
       this.configureBackground(var1.isMe(), var2);
       this.configureTextColor(var1.isMe(), var2);
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var10: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
          val var12: RenderableEmoji = var1.getEmoji().renderable();
-         val var10: Context = this.getContext();
-         q.g(var10, "getContext(...)");
-         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var12, var10, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var9: Context = this.getContext();
+         q.g(var9, "getContext(...)");
+         var10.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var12, var9, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

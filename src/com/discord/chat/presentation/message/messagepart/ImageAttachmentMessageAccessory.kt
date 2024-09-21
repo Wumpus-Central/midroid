@@ -136,32 +136,32 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var6: Attachment = this.attachment;
-      val var2: Int = this.attachmentIndex;
-      val var5: java.lang.Float = this.attachmentsOpacity;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var7: Attachment = this.attachment;
+      val var3: Int = this.attachmentIndex;
+      val var8: java.lang.Float = this.attachmentsOpacity;
       val var1: Int = this.constrainedWidth;
-      val var3: Int = this.radiusPx;
+      val var2: Int = this.radiusPx;
       val var9: SpoilerAttributes = this.spoilerAttributes;
       val var4: Boolean = this.useNewAltTextButton;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ImageAttachmentMessageAccessory(messageId=");
-      var8.append(var7);
-      var8.append(", attachment=");
-      var8.append(var6);
-      var8.append(", attachmentIndex=");
-      var8.append(var2);
-      var8.append(", attachmentsOpacity=");
-      var8.append(var5);
-      var8.append(", constrainedWidth=");
-      var8.append(var1);
-      var8.append(", radiusPx=");
-      var8.append(var3);
-      var8.append(", spoilerAttributes=");
-      var8.append(var9);
-      var8.append(", useNewAltTextButton=");
-      var8.append(var4);
-      var8.append(")");
-      return var8.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ImageAttachmentMessageAccessory(messageId=");
+      var6.append(var5);
+      var6.append(", attachment=");
+      var6.append(var7);
+      var6.append(", attachmentIndex=");
+      var6.append(var3);
+      var6.append(", attachmentsOpacity=");
+      var6.append(var8);
+      var6.append(", constrainedWidth=");
+      var6.append(var1);
+      var6.append(", radiusPx=");
+      var6.append(var2);
+      var6.append(", spoilerAttributes=");
+      var6.append(var9);
+      var6.append(", useNewAltTextButton=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 }

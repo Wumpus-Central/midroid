@@ -21,12 +21,12 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
       q.h(var1, "eventHandlerProvider");
       q.h(var2, "messageComponentProvider");
       super();
-      val var3: AccessoriesViewPool = new AccessoriesViewPool();
-      this.messageAccessoriesRecycledViewPool = var3;
+      val var4: AccessoriesViewPool = new AccessoriesViewPool();
+      this.messageAccessoriesRecycledViewPool = var4;
       this.chatListItems = i.k();
-      val var4: AdapterDelegatesManager = this.delegatesManager;
+      val var3: AdapterDelegatesManager = this.delegatesManager;
       q.g(this.delegatesManager, "delegatesManager");
-      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var4, var1, var2, var3);
+      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var3, var1, var2, var4);
       this.setHasStableIds(true);
    }
 

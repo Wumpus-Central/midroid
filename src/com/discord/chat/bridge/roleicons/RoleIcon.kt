@@ -104,24 +104,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.source;
-      val var2: java.lang.String = this.unicodeEmoji;
-      val var6: java.lang.String = this.name;
+      val var6: java.lang.String = this.source;
+      val var5: java.lang.String = this.unicodeEmoji;
+      val var3: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var5: java.lang.String = this.alt;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("RoleIcon(source=");
-      var4.append(var3);
-      var4.append(", unicodeEmoji=");
-      var4.append(var2);
-      var4.append(", name=");
-      var4.append(var6);
-      var4.append(", size=");
-      var4.append(var1);
-      var4.append(", alt=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.alt;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("RoleIcon(source=");
+      var2.append(var6);
+      var2.append(", unicodeEmoji=");
+      var2.append(var5);
+      var2.append(", name=");
+      var2.append(var3);
+      var2.append(", size=");
+      var2.append(var1);
+      var2.append(", alt=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -163,16 +163,15 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
             val var12: b2 = b2.a;
             var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
             var6 = var11.v(var10, 1, var12, null) as java.lang.String;
-            val var7: java.lang.String = var11.t(var10, 2);
-            var2 = var11.k(var10, 3);
+            var9 = var11.t(var10, 2);
+            var3 = var11.k(var10, 3);
             var13 = var11.t(var10, 4);
-            var3 = 31;
-            var9 = var7;
+            var2 = 31;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var8 = null;
-            var var18: java.lang.String = null;
+            var var7: java.lang.String = null;
             var6 = null;
             var13 = null;
             var2 = 0;
@@ -199,7 +198,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                            var2 |= 4;
                         }
                      } else {
-                        var18 = var11.v(var10, 1, b2.a, var18) as java.lang.String;
+                        var7 = var11.v(var10, 1, b2.a, var7) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
@@ -211,14 +210,12 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                }
             }
 
-            var2 = var3;
             var9 = var6;
-            var6 = var18;
-            var3 = var2;
+            var6 = var7;
          }
 
          var11.b(var10);
-         return new RoleIcon(var3, var8, var6, var9, var2, var13, null);
+         return new RoleIcon(var2, var8, var6, var9, var3, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleIcon) {

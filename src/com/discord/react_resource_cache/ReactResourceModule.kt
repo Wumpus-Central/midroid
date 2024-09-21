@@ -41,10 +41,10 @@ public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactCo
             i.u();
          }
 
-         var5 = (var5 as java.lang.Enum).name();
-         val var6: java.lang.String = var1.getString(var2);
-         q.g(var6, "getString(...)");
-         var4.put(var5, var6);
+         val var6: java.lang.String = (var5 as java.lang.Enum).name();
+         var5 = var1.getString(var2);
+         q.g(var5, "getString(...)");
+         var4.put(var6, var5);
       }
 
       return var4;

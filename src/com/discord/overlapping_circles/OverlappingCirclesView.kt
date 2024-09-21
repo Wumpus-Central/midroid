@@ -118,10 +118,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             } else {
                val var13: Context = this.getContext();
                q.g(var13, "getContext(...)");
-               val var14: ReactAsset = ReactAsset.DefaultAvatar0;
-               val var19: Context = this.getContext();
-               q.g(var19, "getContext(...)");
-               var18 = ReactAssetUtilsKt.getReactImageUrl(var13, var14.getUri(var19));
+               val var19: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var14: Context = this.getContext();
+               q.g(var14, "getContext(...)");
+               var18 = ReactAssetUtilsKt.getReactImageUrl(var13, var19.getUri(var14));
             }
 
             val var25: Context = this.getContext();
@@ -130,11 +130,11 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          } else {
             val var21: Context = this.getContext();
             val var6: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
-            val var8: Int = this.overlapPx;
-            val var9: Int = this.separatorSizePx;
+            val var9: Int = this.overlapPx;
+            val var8: Int = this.separatorSizePx;
             val var7: Int = this.getLayoutParams().height;
             q.e(var21);
-            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var6, var10, var8, var9, var7);
+            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var6, var10, var9, var8, var7);
          }
 
          val var26: LayoutParams = new LayoutParams(this.getLayoutParams().height, this.getLayoutParams().height);
@@ -148,12 +148,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       if (var2) {
          val var22: Context = this.getContext();
          q.g(var22, "getContext(...)");
-         val var15: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var23: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var22, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var24: LayoutParams = new LayoutParams(-2, -1);
-         var24.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var15, var24);
+         val var15: LayoutParams = new LayoutParams(-2, -1);
+         var15.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var23, var15);
       }
    }
 

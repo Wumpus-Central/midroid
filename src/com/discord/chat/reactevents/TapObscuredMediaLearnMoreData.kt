@@ -92,21 +92,21 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.attachmentId;
-      val var5: java.lang.String = this.embedId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapObscuredMediaLearnMoreData(messageId=");
-      var3.append(var1);
-      var3.append(", channelId=");
-      var3.append(var2);
-      var3.append(", attachmentId=");
-      var3.append(var4);
-      var3.append(", embedId=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.attachmentId;
+      val var3: java.lang.String = this.embedId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapObscuredMediaLearnMoreData(messageId=");
+      var5.append(var2);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", attachmentId=");
+      var5.append(var1);
+      var5.append(", embedId=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -134,29 +134,29 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
 
       public open fun deserialize(decoder: Decoder): TapObscuredMediaLearnMoreData {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
          var var2: Int;
          var var5: java.lang.String;
          var var6: java.lang.String;
-         var var7: java.lang.String;
-         val var11: java.lang.String;
-         if (var10.y()) {
-            var7 = var10.t(var9, 0);
-            var6 = var10.t(var9, 1);
-            var5 = var10.t(var9, 2);
-            var11 = var10.t(var9, 3);
+         val var8: java.lang.String;
+         val var12: java.lang.String;
+         if (var11.y()) {
+            var5 = var11.t(var10, 0);
+            var6 = var11.t(var10, 1);
+            var8 = var11.t(var10, 2);
+            var12 = var11.t(var10, 3);
             var2 = 15;
          } else {
-            var7 = null;
+            var var7: java.lang.String = null;
             var6 = null;
             var5 = null;
-            var var12: java.lang.String = null;
+            var var13: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -165,18 +165,18 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
                               throw new n(var4);
                            }
 
-                           var6 = var10.t(var9, 3);
+                           var6 = var11.t(var10, 3);
                            var2 |= 8;
                         } else {
-                           var5 = var10.t(var9, 2);
+                           var5 = var11.t(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var12 = var10.t(var9, 1);
+                        var13 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.t(var9, 0);
+                     var7 = var11.t(var10, 0);
                      var2 |= 1;
                   }
                } else {
@@ -184,12 +184,14 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
                }
             }
 
-            var11 = var6;
-            var6 = var12;
+            var12 = var6;
+            var8 = var5;
+            var6 = var13;
+            var5 = var7;
          }
 
-         var10.b(var9);
-         return new TapObscuredMediaLearnMoreData(var2, var7, var6, var5, var11, null);
+         var11.b(var10);
+         return new TapObscuredMediaLearnMoreData(var2, var5, var6, var8, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapObscuredMediaLearnMoreData) {

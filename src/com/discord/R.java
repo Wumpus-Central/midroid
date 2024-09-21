@@ -1636,6 +1636,8 @@ public final class R {
    public static final class raw {
       public static int _discord_common_js_packages_tokens_typography_generated_notosans_notosans700bold;
       public static int design_components_lottieicon_native_generated_lotties_camera;
+      public static int design_components_lottieicon_native_generated_lotties_halloweenaction;
+      public static int design_components_lottieicon_native_generated_lotties_halloweenidle;
       public static int design_components_lottieicon_native_generated_lotties_messagerequest;
       public static int design_components_lottieicon_native_generated_lotties_messagestab;
       public static int design_components_lottieicon_native_generated_lotties_microphone;

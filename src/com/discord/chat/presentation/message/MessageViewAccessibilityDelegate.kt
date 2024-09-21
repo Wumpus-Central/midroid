@@ -79,11 +79,11 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
       for (int var3 = 0; var3 < var4; var3++) {
          val var9: SpoilerSpan = var18[var3];
          if (!var18[var3].isRevealed()) {
-            val var6: Int = var16.getSpanStart(var9);
-            val var5: Int = var16.getSpanEnd(var9);
+            val var5: Int = var16.getSpanStart(var9);
+            val var6: Int = var16.getSpanEnd(var9);
             val var23: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var23, "getContext(...)");
-            var16.replace(var6, var5, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+            var16.replace(var5, var6, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
          }
       }
 
@@ -113,11 +113,11 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
       }
 
       if (var8.isEmpty() xor true) {
-         val var12: java.lang.String = kotlin.collections.i.o0(var8, ", ", null, null, 0, null, null, 62, null);
-         val var22: StringBuilder = new StringBuilder();
-         var22.append(var12);
-         var22.append(", ");
-         var16.replace(0, 0, var22.toString());
+         val var22: java.lang.String = kotlin.collections.i.o0(var8, ", ", null, null, 0, null, null, 62, null);
+         val var12: StringBuilder = new StringBuilder();
+         var12.append(var22);
+         var12.append(", ");
+         var16.replace(0, 0, var12.toString());
       }
 
       var2.T0(var16);

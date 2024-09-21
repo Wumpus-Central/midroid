@@ -141,17 +141,17 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
             )
          );
       } else if (var1 is SamsungConnectActivity.Result.Failure) {
-         val var5: SamsungConnectActivity.Result.Failure = var1 as SamsungConnectActivity.Result.Failure;
+         val var6: SamsungConnectActivity.Result.Failure = var1 as SamsungConnectActivity.Result.Failure;
          if ((var1 as SamsungConnectActivity.Result.Failure).isRetryAllowed() && (var1 as SamsungConnectActivity.Result.Failure).getAttemptCount() < 2) {
-            val var6: Activity = this.getCurrentActivity();
-            q.e(var6);
-            val var4: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
-            val var9: Activity = this.getCurrentActivity();
-            q.e(var9);
-            var6.startActivityForResult(var4.getIntent(var9, var5.getAttemptCount()), 101);
+            val var4: Activity = this.getCurrentActivity();
+            q.e(var4);
+            val var9: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
+            val var5: Activity = this.getCurrentActivity();
+            q.e(var5);
+            var4.startActivityForResult(var9.getIntent(var5, var6.getAttemptCount()), 101);
          } else {
-            val var2: Int = var5.getAttemptCount();
-            val var3: Boolean = var5.isRetryAllowed();
+            val var2: Int = var6.getAttemptCount();
+            val var3: Boolean = var6.isRetryAllowed();
             val var8: StringBuilder = new StringBuilder();
             var8.append("Attempts: ");
             var8.append(var2);
@@ -253,10 +253,11 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
          new Function2(var2, this, var3, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
-   //   at java.base/java.util.HashMap.put(HashMap.java:618)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1746)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1276,7 +1277,6 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    ,
          3,
          null
@@ -1291,11 +1291,11 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
       label16:
       try {
          val var7: a = r.k;
-         val var10: ReactApplicationContext = this.getReactApplicationContext();
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
          val var8: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
-         val var3: Activity = this.getCurrentActivity();
-         q.e(var3);
-         var6 = r.b(var10.startActivityForResult(SamsungConnectActivity.Companion.getIntent$default(var8, var3, 0, 2, null), 101, Bundle.EMPTY));
+         val var10: Activity = this.getCurrentActivity();
+         q.e(var10);
+         var6 = r.b(var3.startActivityForResult(SamsungConnectActivity.Companion.getIntent$default(var8, var10, 0, 2, null), 101, Bundle.EMPTY));
       } catch (var4: java.lang.Throwable) {
          val var2: a = r.k;
          var6 = r.b(s.a(var4));

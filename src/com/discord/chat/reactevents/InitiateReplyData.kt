@@ -79,14 +79,14 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
 
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InitiateReplyData(messageId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("InitiateReplyData(messageId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -116,7 +116,7 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
          val var8: c = var1.c(var7);
          var var2: Int;
          var var5: java.lang.String;
-         val var6: ChannelId;
+         var var11: ChannelId;
          if (var8.y()) {
             val var9: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var10: java.lang.String;
@@ -126,14 +126,15 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                var10 = null;
             }
 
-            var6 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var2 = 3;
+            val var6: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var5 = var10;
+            var11 = var6;
+            var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var5 = null;
-            var var11: ChannelId = null;
+            var11 = null;
 
             while (var3) {
                val var4: Int = var8.x(var7);
@@ -166,12 +167,10 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                   var3 = false;
                }
             }
-
-            var6 = var11;
          }
 
          var8.b(var7);
-         return new InitiateReplyData(var2, var5, var6, null, null);
+         return new InitiateReplyData(var2, var5, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: InitiateReplyData) {

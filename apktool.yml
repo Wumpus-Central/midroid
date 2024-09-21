@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 249206
-  versionName: 249.6 - Alpha
+  versionCode: 249207
+  versionName: 249.7 - Alpha
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -264,6 +264,8 @@ doNotCompress:
 - webp
 - mp3
 - res/raw/design_components_lottieicon_native_generated_lotties_camera.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_halloweenaction.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_halloweenidle.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_messagerequest.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_messagestab.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_microphone.lottie

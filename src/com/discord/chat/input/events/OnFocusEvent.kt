@@ -70,14 +70,14 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
    }
 
    public override fun toString(): String {
-      val var1: Int = this.start;
-      val var3: Int = this.end;
+      val var3: Int = this.start;
+      val var1: Int = this.end;
       val var2: Int = this.target;
       val var4: StringBuilder = new StringBuilder();
       var4.append("OnFocusEvent(start=");
-      var4.append(var1);
-      var4.append(", end=");
       var4.append(var3);
+      var4.append(", end=");
+      var4.append(var1);
       var4.append(", target=");
       var4.append(var2);
       var4.append(")");
@@ -113,20 +113,20 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
          var var2: Int;
          var var3: Int;
          var var4: Int;
-         val var6: Int;
+         var var5: Int;
          if (var9.y()) {
-            var4 = var9.k(var8, 0);
-            var6 = var9.k(var8, 1);
+            var5 = var9.k(var8, 0);
+            var4 = var9.k(var8, 1);
             var2 = var9.k(var8, 2);
             var3 = 7;
          } else {
-            var var13: Boolean = true;
-            var var5: Int = 0;
+            var var6: Boolean = true;
+            var5 = 0;
             var4 = 0;
             var3 = 0;
             var2 = 0;
 
-            while (var13) {
+            while (var6) {
                val var7: Int = var9.x(var8);
                if (var7 != -1) {
                   if (var7 != 0) {
@@ -146,18 +146,17 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
                      var2 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var6 = false;
                }
             }
 
-            var6 = var3;
             var3 = var2;
             var2 = var4;
-            var4 = var5;
+            var4 = var3;
          }
 
          var9.b(var8);
-         return new OnFocusEvent(var3, var4, var6, var2, null);
+         return new OnFocusEvent(var3, var5, var4, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnFocusEvent) {

@@ -79,10 +79,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          val var6: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
-            var4 = var12.getKey() as java.lang.String;
+            val var9: java.lang.String = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var6.add(var4);
+               var6.add(var9);
                var6.add(var13);
             }
          }
@@ -110,11 +110,11 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var9: java.lang.String = var5.get(0) as java.lang.String;
+                        val var4: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        q.e(var9);
+                        q.e(var4);
                         q.e(var12);
-                        var11.put(var9, var12);
+                        var11.put(var4, var12);
                      }
                   }
                }

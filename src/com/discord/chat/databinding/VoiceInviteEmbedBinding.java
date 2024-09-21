@@ -27,18 +27,18 @@ public final class VoiceInviteEmbedBinding implements ViewBinding {
 
    public static VoiceInviteEmbedBinding bind(View var0) {
       int var1 = R.id.body;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var4 = (TextView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.card;
-         CardView var4 = (CardView)a.a(var0, var1);
-         if (var4 != null) {
+         CardView var5 = (CardView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.join_cta;
-            DCDButton var5 = (DCDButton)a.a(var0, var1);
-            if (var5 != null) {
+            DCDButton var3 = (DCDButton)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.title;
                TextView var2 = (TextView)a.a(var0, var1);
                if (var2 != null) {
-                  return new VoiceInviteEmbedBinding(var0, var3, var4, var5, var2);
+                  return new VoiceInviteEmbedBinding(var0, var4, var5, var3, var2);
                }
             }
          }

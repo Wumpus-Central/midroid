@@ -125,11 +125,11 @@ public data class UnfurledMediaItem(url: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.url.hashCode();
-      val var7: Int = this.proxyUrl.hashCode();
-      val var5: Int = Integer.hashCode(this.height);
-      val var8: Int = Integer.hashCode(this.width);
-      val var6: Int = this.contentType.hashCode();
+      val var6: Int = this.url.hashCode();
+      val var4: Int = this.proxyUrl.hashCode();
+      val var8: Int = Integer.hashCode(this.height);
+      val var7: Int = Integer.hashCode(this.width);
+      val var5: Int = this.contentType.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -149,37 +149,37 @@ public data class UnfurledMediaItem(url: String,
          var3 = this.contentScanMetadata.hashCode();
       }
 
-      return ((((((var4 * 31 + var7) * 31 + var5) * 31 + var8) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var6 * 31 + var4) * 31 + var8) * 31 + var7) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.url;
-      val var5: java.lang.String = this.proxyUrl;
-      val var1: Int = this.height;
-      val var2: Int = this.width;
-      val var9: java.lang.String = this.contentType;
-      val var6: java.lang.String = this.placeholder;
-      val var4: Int = this.placeholderVersion;
-      val var3: ContentScanMetadata = this.contentScanMetadata;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("UnfurledMediaItem(url=");
-      var8.append(var7);
-      var8.append(", proxyUrl=");
-      var8.append(var5);
-      var8.append(", height=");
-      var8.append(var1);
-      var8.append(", width=");
-      var8.append(var2);
-      var8.append(", contentType=");
-      var8.append(var9);
-      var8.append(", placeholder=");
-      var8.append(var6);
-      var8.append(", placeholderVersion=");
-      var8.append(var4);
-      var8.append(", contentScanMetadata=");
-      var8.append(var3);
-      var8.append(")");
-      return var8.toString();
+      val var5: java.lang.String = this.url;
+      val var3: java.lang.String = this.proxyUrl;
+      val var2: Int = this.height;
+      val var1: Int = this.width;
+      val var7: java.lang.String = this.contentType;
+      val var8: java.lang.String = this.placeholder;
+      val var9: Int = this.placeholderVersion;
+      val var4: ContentScanMetadata = this.contentScanMetadata;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("UnfurledMediaItem(url=");
+      var6.append(var5);
+      var6.append(", proxyUrl=");
+      var6.append(var3);
+      var6.append(", height=");
+      var6.append(var2);
+      var6.append(", width=");
+      var6.append(var1);
+      var6.append(", contentType=");
+      var6.append(var7);
+      var6.append(", placeholder=");
+      var6.append(var8);
+      var6.append(", placeholderVersion=");
+      var6.append(var9);
+      var6.append(", contentScanMetadata=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -206,8 +206,8 @@ public data class UnfurledMediaItem(url: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: n0 = n0.a;
-         return new KSerializer[]{b2.a, b2.a, n0.a, n0.a, b2.a, a.u(b2.a), a.u(var1), a.u(ContentScanMetadata.$serializer.INSTANCE)};
+         val var2: n0 = n0.a;
+         return new KSerializer[]{b2.a, b2.a, n0.a, n0.a, b2.a, a.u(b2.a), a.u(var2), a.u(ContentScanMetadata.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): UnfurledMediaItem {
@@ -221,24 +221,24 @@ public data class UnfurledMediaItem(url: String,
          var var8: Any;
          var var9: Any;
          var var10: Any;
-         val var12: Any;
+         var var11: Any;
          val var16: ContentScanMetadata;
          if (var15.y()) {
             var8 = var15.t(var14, 0);
-            var9 = var15.t(var14, 1);
-            var5 = var15.k(var14, 2);
+            var11 = var15.t(var14, 1);
+            var4 = var15.k(var14, 2);
             val var2: Int = var15.k(var14, 3);
-            var10 = var15.t(var14, 4);
-            var12 = var15.v(var14, 5, b2.a, null) as java.lang.String;
+            var9 = var15.t(var14, 4);
+            var10 = var15.v(var14, 5, b2.a, null) as java.lang.String;
             var7 = var15.v(var14, 6, n0.a, null) as Int;
             var16 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, null) as ContentScanMetadata;
             var3 = 255;
-            var4 = var2;
+            var5 = var2;
          } else {
-            var var20: Boolean = true;
+            var var21: Boolean = true;
             var4 = 0;
             var var18: Int = 0;
-            var var11: ContentScanMetadata = null;
+            var11 = null;
             var10 = null;
             var8 = null;
             var7 = null;
@@ -246,11 +246,11 @@ public data class UnfurledMediaItem(url: String,
             var9 = null;
             var3 = 0;
 
-            while (var20) {
+            while (var21) {
                val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
-                     var20 = false;
+                     var21 = false;
                      break;
                   case 0:
                      var8 = var15.t(var14, 0);
@@ -289,18 +289,19 @@ public data class UnfurledMediaItem(url: String,
                }
             }
 
-            var16 = var11;
+            var16 = (ContentScanMetadata)var11;
             var7 = (Integer)var10;
-            var12 = var9;
-            var10 = var17;
-            var5 = var3;
-            var9 = var7;
+            var10 = var9;
+            var9 = var17;
+            var5 = var4;
+            var4 = var3;
+            var11 = var7;
             var3 = var18;
          }
 
          var15.b(var14);
          return new UnfurledMediaItem(
-            var3, (java.lang.String)var8, (java.lang.String)var9, var5, var4, (java.lang.String)var10, (java.lang.String)var12, var7, var16, null
+            var3, (java.lang.String)var8, (java.lang.String)var11, var4, var5, (java.lang.String)var9, (java.lang.String)var10, var7, var16, null
          );
       }
 

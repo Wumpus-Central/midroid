@@ -70,18 +70,18 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
+      val var4: java.lang.String = this.content;
       val var3: java.lang.String = this.surrogate;
       val var1: Boolean = this.jumboable;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UnicodeEmojiContentNode(content=");
-      var4.append(var2);
-      var4.append(", surrogate=");
-      var4.append(var3);
-      var4.append(", jumboable=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UnicodeEmojiContentNode(content=");
+      var2.append(var4);
+      var2.append(", surrogate=");
+      var2.append(var3);
+      var2.append(", jumboable=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -112,17 +112,17 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
          val var9: c = var1.c(var8);
          var var2: Int;
          var var5: Boolean;
-         var var6: java.lang.String;
+         val var7: java.lang.String;
          var var11: java.lang.String;
          if (var9.y()) {
             val var10: java.lang.String = var9.t(var8, 0);
-            val var7: java.lang.String = var9.t(var8, 1);
+            val var6: java.lang.String = var9.t(var8, 1);
             var5 = var9.s(var8, 2);
             var2 = 7;
-            var6 = var10;
-            var11 = var7;
+            var7 = var10;
+            var11 = var6;
          } else {
-            var6 = null;
+            var var12: java.lang.String = null;
             var11 = null;
             var var3: Boolean = true;
             var5 = false;
@@ -144,17 +144,19 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var9.t(var8, 0);
+                     var12 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var7 = var12;
          }
 
          var9.b(var8);
-         return new UnicodeEmojiContentNode(var2, var6, var11, var5, null);
+         return new UnicodeEmojiContentNode(var2, var7, var11, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UnicodeEmojiContentNode) {

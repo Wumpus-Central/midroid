@@ -57,8 +57,8 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var2: Float = var1.getWidth();
-      val var4: Float = var1.getHeight();
+      val var3: Float = var1.getWidth();
+      val var2: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -71,7 +71,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var2, var4, var15);
+      var18.drawRect(0.0F, 0.0F, var3, var2, var15);
    }
 
    public companion object {

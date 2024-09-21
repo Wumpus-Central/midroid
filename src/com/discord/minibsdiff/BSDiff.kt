@@ -44,9 +44,9 @@ public object BSDiff {
 
          while (var11 < var9) {
             val var15: Long = InputStreamUtilsKt.readOffset(var3);
-            var13 = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var15 + var13 > var9) {
+            var13 = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var15 + var17 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
@@ -64,7 +64,7 @@ public object BSDiff {
                var6.write(var21, 0, var8);
             }
 
-            var19 = this.chunkRange(var13).iterator();
+            var19 = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -72,8 +72,8 @@ public object BSDiff {
                var6.write(var21, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var17);
-            var11 += var15 + var13;
+            var1.seek(var1.getFilePointer() + var13);
+            var11 += var15 + var17;
          }
 
          var6.close();
@@ -225,55 +225,55 @@ public object BSDiff {
       // 0e6: aconst_null
       // 0e7: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0ea: return
-      // 0eb: astore 1
-      // 0ec: goto 12c
-      // 0ef: astore 3
-      // 0f0: goto 122
-      // 0f3: astore 3
-      // 0f4: goto 117
-      // 0f7: astore 3
-      // 0f8: goto 10b
-      // 0fb: astore 6
-      // 0fd: aload 6
-      // 0ff: athrow
-      // 100: astore 7
-      // 102: aload 3
-      // 103: aload 6
-      // 105: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 108: aload 7
-      // 10a: athrow
-      // 10b: aload 3
-      // 10c: athrow
-      // 10d: astore 6
-      // 10f: aload 2
-      // 110: aload 3
-      // 111: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 114: aload 6
-      // 116: athrow
-      // 117: aload 3
-      // 118: athrow
-      // 119: astore 2
-      // 11a: aload 4
-      // 11c: aload 3
-      // 11d: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 120: aload 2
-      // 121: athrow
-      // 122: aload 3
-      // 123: athrow
-      // 124: astore 2
-      // 125: aload 1
-      // 126: aload 3
-      // 127: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 12a: aload 2
-      // 12b: athrow
-      // 12c: aload 1
-      // 12d: athrow
-      // 12e: astore 2
-      // 12f: aload 5
-      // 131: aload 1
-      // 132: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 135: aload 2
-      // 136: athrow
+      // 0eb: astore 2
+      // 0ec: goto 12d
+      // 0ef: astore 2
+      // 0f0: goto 123
+      // 0f3: astore 2
+      // 0f4: goto 118
+      // 0f7: astore 6
+      // 0f9: goto 10c
+      // 0fc: astore 6
+      // 0fe: aload 6
+      // 100: athrow
+      // 101: astore 7
+      // 103: aload 3
+      // 104: aload 6
+      // 106: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 109: aload 7
+      // 10b: athrow
+      // 10c: aload 6
+      // 10e: athrow
+      // 10f: astore 3
+      // 110: aload 2
+      // 111: aload 6
+      // 113: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 116: aload 3
+      // 117: athrow
+      // 118: aload 2
+      // 119: athrow
+      // 11a: astore 3
+      // 11b: aload 4
+      // 11d: aload 2
+      // 11e: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 121: aload 3
+      // 122: athrow
+      // 123: aload 2
+      // 124: athrow
+      // 125: astore 3
+      // 126: aload 1
+      // 127: aload 2
+      // 128: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 12b: aload 3
+      // 12c: athrow
+      // 12d: aload 2
+      // 12e: athrow
+      // 12f: astore 1
+      // 130: aload 5
+      // 132: aload 2
+      // 133: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 136: aload 1
+      // 137: athrow
    }
 
    public class BsPatchError(message: String) : Exception {

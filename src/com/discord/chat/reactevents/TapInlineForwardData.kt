@@ -39,14 +39,14 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
    }
 
    public override fun serialize(): WritableMap {
-      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
          w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("targetKind", this.targetKind)
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
       }
 
-      return var1;
+      return var2;
    }
 
    public object `$serializer` : g0 {

@@ -128,11 +128,11 @@ public data class Sticker(id: Long,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = java.lang.Long.hashCode(this.id);
-      val var3: Int = this.formatType.hashCode();
-      val var7: Int = this.name.hashCode();
-      val var4: Int = this.asset.hashCode();
-      val var5: Int = this.url.hashCode();
+      val var4: Int = java.lang.Long.hashCode(this.id);
+      val var5: Int = this.formatType.hashCode();
+      val var6: Int = this.name.hashCode();
+      val var7: Int = this.asset.hashCode();
+      val var3: Int = this.url.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.width == null) {
@@ -145,37 +145,37 @@ public data class Sticker(id: Long,
          var2 = this.height.hashCode();
       }
 
-      return ((((((var6 * 31 + var3) * 31 + var7) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode);
+      return ((((((var4 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode);
    }
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var10: StickerFormatType = this.formatType;
-      val var5: java.lang.String = this.name;
-      val var6: java.lang.String = this.asset;
-      val var4: java.lang.String = this.url;
-      val var7: Int = this.width;
-      val var8: Int = this.height;
+      val var6: StickerFormatType = this.formatType;
+      val var7: java.lang.String = this.name;
+      val var4: java.lang.String = this.asset;
+      val var8: java.lang.String = this.url;
+      val var9: Int = this.width;
+      val var5: Int = this.height;
       val var1: Int = this.renderMode;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("Sticker(id=");
-      var9.append(var2);
-      var9.append(", formatType=");
-      var9.append(var10);
-      var9.append(", name=");
-      var9.append(var5);
-      var9.append(", asset=");
-      var9.append(var6);
-      var9.append(", url=");
-      var9.append(var4);
-      var9.append(", width=");
-      var9.append(var7);
-      var9.append(", height=");
-      var9.append(var8);
-      var9.append(", renderMode=");
-      var9.append(var1);
-      var9.append(")");
-      return var9.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("Sticker(id=");
+      var10.append(var2);
+      var10.append(", formatType=");
+      var10.append(var6);
+      var10.append(", name=");
+      var10.append(var7);
+      var10.append(", asset=");
+      var10.append(var4);
+      var10.append(", url=");
+      var10.append(var8);
+      var10.append(", width=");
+      var10.append(var9);
+      var10.append(", height=");
+      var10.append(var5);
+      var10.append(", renderMode=");
+      var10.append(var1);
+      var10.append(")");
+      return var10.toString();
    }
 
    public object `$serializer` : g0 {
@@ -202,101 +202,99 @@ public data class Sticker(id: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: n0 = n0.a;
-         return new KSerializer[]{x0.a, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, b2.a, b2.a, b2.a, a.u(n0.a), a.u(var3), var3};
+         val var2: n0 = n0.a;
+         return new KSerializer[]{x0.a, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, b2.a, b2.a, b2.a, a.u(n0.a), a.u(var2), var2};
       }
 
       public open fun deserialize(decoder: Decoder): Sticker {
          q.h(var1, "decoder");
          val var15: SerialDescriptor = this.getDescriptor();
          val var16: c = var1.c(var15);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Long;
          var var8: Any;
+         var var9: java.lang.String;
          var var10: Any;
          var var11: java.lang.String;
          val var12: java.lang.String;
          val var18: Int;
-         var var23: java.lang.String;
          if (var16.y()) {
             var6 = var16.h(var15, 0);
-            val var9: StickerFormatType = var16.m(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, null) as StickerFormatType;
-            val var13: java.lang.String = var16.t(var15, 2);
+            var10 = var16.m(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, null) as StickerFormatType;
+            var9 = var16.t(var15, 2);
             var12 = var16.t(var15, 3);
             var11 = var16.t(var15, 4);
             val var17: n0 = n0.a;
             var8 = var16.v(var15, 5, n0.a, null) as Int;
             var18 = var16.v(var15, 6, var17, null) as Int;
-            val var2: Int = var16.k(var15, 7);
-            var4 = 255;
-            var10 = var9;
-            var23 = var13;
-            var3 = var2;
+            var2 = var16.k(var15, 7);
+            var3 = 255;
          } else {
-            var var21: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
             var var25: Int = null;
             var8 = null;
             var var19: java.lang.String = null;
             var6 = 0L;
             var10 = null;
-            var23 = null;
+            var9 = null;
             var11 = null;
-            var var20: Int = 0;
+            var2 = 0;
 
-            while (var21) {
+            while (var4) {
                val var5: Int = var16.x(var15);
                switch (var5) {
                   case -1:
-                     var21 = false;
+                     var4 = false;
                      break;
                   case 0:
                      var6 = var16.h(var15, 0);
-                     var20 |= 1;
+                     var2 |= 1;
                      break;
                   case 1:
                      var10 = var16.m(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, var10) as StickerFormatType;
-                     var20 |= 2;
+                     var2 |= 2;
                      break;
                   case 2:
-                     var23 = var16.t(var15, 2);
-                     var20 |= 4;
+                     var9 = var16.t(var15, 2);
+                     var2 |= 4;
                      break;
                   case 3:
                      var8 = var16.t(var15, 3);
-                     var20 |= 8;
+                     var2 |= 8;
                      break;
                   case 4:
                      var19 = var16.t(var15, 4);
-                     var20 |= 16;
+                     var2 |= 16;
                      break;
                   case 5:
                      var11 = var16.v(var15, 5, n0.a, var11) as Int;
-                     var20 |= 32;
+                     var2 |= 32;
                      break;
                   case 6:
                      var25 = var16.v(var15, 6, n0.a, var25) as Int;
-                     var20 |= 64;
+                     var2 |= 64;
                      break;
                   case 7:
                      var3 = var16.k(var15, 7);
-                     var20 |= 128;
+                     var2 |= 128;
                      break;
                   default:
                      throw new n(var5);
                }
             }
 
+            var2 = var3;
             var18 = var25;
             var8 = var11;
             var11 = var19;
             var12 = (java.lang.String)var8;
-            var4 = var20;
+            var3 = var2;
          }
 
          var16.b(var15);
-         return new Sticker(var4, var6, (StickerFormatType)var10, var23, var12, var11, (Integer)var8, var18, var3, null);
+         return new Sticker(var3, var6, (StickerFormatType)var10, var9, var12, var11, (Integer)var8, var18, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Sticker) {

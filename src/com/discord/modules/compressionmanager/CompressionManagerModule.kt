@@ -65,13 +65,13 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun enableZlibStreamSupport(socketId: Int) {
-      val var4: java.util.Map = this.zlibInflaters;
-      val var5: Int = var1;
-      var var3: Any = var4.get(var5);
+      val var5: java.util.Map = this.zlibInflaters;
+      val var4: Int = var1;
+      var var3: Any = var5.get(var4);
       var var2: WebSocketModule = (WebSocketModule)var3;
       if (var3 == null) {
          var2 = new Inflater();
-         var4.put(var5, var2);
+         var5.put(var4, var2);
       }
 
       var3 = var2 as Inflater;
@@ -225,19 +225,19 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
          if (this.read(var8) != 0) {
             throw new UnsupportedOperationException("Error in zstd: still had data when trying to refill buffer");
          } else {
-            var var3: Int = 1;
+            var var4: Int = 1;
 
-            for (int var4 = 0; var3 < 51; var3++) {
+            for (int var3 = 0; var4 < 51; var4++) {
                val var5: Int = this.read(var8);
-               var4 += var5;
+               var3 += var5;
                if (var5 == 0) {
                   if (var6.size() == 1) {
                      val var11: ByteArray = (var6.get(0) as ByteBuffer).array();
                      q.g(var11, "array(...)");
-                     return new java.lang.String(var11, 0, var4, a.b);
+                     return new java.lang.String(var11, 0, var3, a.b);
                   }
 
-                  val var9: ByteBuffer = ByteBuffer.allocate(var4);
+                  val var9: ByteBuffer = ByteBuffer.allocate(var3);
 
                   for (ByteBuffer var7 : var6) {
                      ((Buffer)var7).flip();
