@@ -32,12 +32,12 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 5b
+      // 0e: ifnull 5c
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 45
+      // 17: ifnull 46
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
       // 1e: astore 1
@@ -56,25 +56,25 @@ public object ContactSyncProvider {
       // 39: bipush 0
       // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
       // 3d: astore 1
-      // 3e: goto 47
-      // 41: astore 1
-      // 42: goto 4f
-      // 45: aconst_null
-      // 46: astore 1
-      // 47: aload 2
-      // 48: aconst_null
-      // 49: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4c: goto 5b
-      // 4f: aload 1
-      // 50: athrow
-      // 51: astore 4
-      // 53: aload 2
-      // 54: aload 1
-      // 55: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 58: aload 4
-      // 5a: athrow
-      // 5b: aload 1
-      // 5c: areturn
+      // 3e: goto 48
+      // 41: astore 4
+      // 43: goto 50
+      // 46: aconst_null
+      // 47: astore 1
+      // 48: aload 2
+      // 49: aconst_null
+      // 4a: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4d: goto 5c
+      // 50: aload 4
+      // 52: athrow
+      // 53: astore 1
+      // 54: aload 2
+      // 55: aload 4
+      // 57: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 5a: aload 1
+      // 5b: athrow
+      // 5c: aload 1
+      // 5d: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -280,23 +280,23 @@ public object ContactSyncProvider {
       // 70: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
       // 73: astore 1
       // 74: goto 7d
-      // 77: astore 2
+      // 77: astore 1
       // 78: goto 87
       // 7b: aconst_null
       // 7c: astore 1
       // 7d: aload 3
       // 7e: aconst_null
-      // 7f: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7f: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 82: aload 1
       // 83: astore 2
       // 84: goto 91
-      // 87: aload 2
+      // 87: aload 1
       // 88: athrow
-      // 89: astore 1
+      // 89: astore 2
       // 8a: aload 3
-      // 8b: aload 2
-      // 8c: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8f: aload 1
+      // 8b: aload 1
+      // 8c: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8f: aload 2
       // 90: athrow
       // 91: aload 2
       // 92: areturn

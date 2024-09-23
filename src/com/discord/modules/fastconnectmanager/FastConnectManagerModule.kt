@@ -9,12 +9,12 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.modules.websocket.WebSocketModule
-import fh.w
-import gh.r
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
-import o3.a
+import nh.w
+import oh.r
 import okhttp3.WebSocket
+import w3.a
 
 public class FastConnectManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final var identified: Boolean
@@ -81,10 +81,10 @@ public class FastConnectManagerModule(reactContext: ReactApplicationContext) : R
    }
 
    private fun setCacheValue(key: String, value: String?) {
-      val var4: CacheModule.Companion = CacheModule.Companion;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      val var5: CacheModule = var4.get(var3);
+      val var3: CacheModule.Companion = CacheModule.Companion;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var4, "getReactApplicationContext(...)");
+      val var5: CacheModule = var3.get(var4);
       if (var2 == null) {
          var5.removeItem(var1);
       } else {

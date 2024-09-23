@@ -1,11 +1,14 @@
 package com.discord.chat.bridge.embed
 
-import al.b2
-import al.g0
-import al.n0
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -15,9 +18,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 public data class Embed(type: EmbedType,
@@ -686,96 +686,96 @@ public data class Embed(type: EmbedType,
    }
 
    public override fun toString(): String {
-      val var23: EmbedType = this.type;
+      val var3: EmbedType = this.type;
       val var8: java.lang.String = this.id;
-      val var20: EmbedAuthor = this.author;
-      val var30: EmbedProvider = this.provider;
-      val var25: java.lang.String = this.rawTitle;
-      val var26: StructurableText = this.title;
-      val var13: java.util.List = this.fields;
-      val var28: java.lang.String = this.url;
-      val var3: java.lang.String = this.rawDescription;
-      val var21: StructurableText = this.description;
-      val var16: EmbedMedia = this.image;
-      val var12: java.util.List = this.images;
-      val var18: EmbedMedia = this.video;
-      val var24: EmbedThumbnail = this.thumbnail;
-      val var9: java.lang.String = this.numAttachments;
-      val var19: java.lang.String = this.attachmentsSize;
-      val var10: java.lang.String = this.messageSendError;
-      val var4: java.lang.Boolean = this.disableBackgroundColor;
-      val var22: EmbedFooter = this.footer;
-      val var17: java.lang.String = this.spoiler;
-      val var14: java.lang.String = this.obscure;
-      val var7: java.lang.String = this.obscureAwaitingScan;
-      val var5: java.lang.String = this.iconURL;
-      val var29: EmbedFailureState = this.failureState;
-      val var6: Int = this.providerColor;
-      val var27: Int = this.borderLeftColor;
-      val var2: Int = this.headerTextColor;
+      val var23: EmbedAuthor = this.author;
+      val var13: EmbedProvider = this.provider;
+      val var24: java.lang.String = this.rawTitle;
+      val var9: StructurableText = this.title;
+      val var22: java.util.List = this.fields;
+      val var17: java.lang.String = this.url;
+      val var7: java.lang.String = this.rawDescription;
+      val var4: StructurableText = this.description;
+      val var10: EmbedMedia = this.image;
+      val var26: java.util.List = this.images;
+      val var29: EmbedMedia = this.video;
+      val var25: EmbedThumbnail = this.thumbnail;
+      val var6: java.lang.String = this.numAttachments;
+      val var28: java.lang.String = this.attachmentsSize;
+      val var30: java.lang.String = this.messageSendError;
+      val var18: java.lang.Boolean = this.disableBackgroundColor;
+      val var14: EmbedFooter = this.footer;
+      val var27: java.lang.String = this.spoiler;
+      val var12: java.lang.String = this.obscure;
+      val var19: java.lang.String = this.obscureAwaitingScan;
+      val var20: java.lang.String = this.iconURL;
+      val var15: EmbedFailureState = this.failureState;
+      val var2: Int = this.providerColor;
+      val var5: Int = this.borderLeftColor;
+      val var21: Int = this.headerTextColor;
       val var1: Int = this.bodyTextColor;
       val var11: Int = this.backgroundColor;
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("Embed(type=");
-      var15.append(var23);
-      var15.append(", id=");
-      var15.append(var8);
-      var15.append(", author=");
-      var15.append(var20);
-      var15.append(", provider=");
-      var15.append(var30);
-      var15.append(", rawTitle=");
-      var15.append(var25);
-      var15.append(", title=");
-      var15.append(var26);
-      var15.append(", fields=");
-      var15.append(var13);
-      var15.append(", url=");
-      var15.append(var28);
-      var15.append(", rawDescription=");
-      var15.append(var3);
-      var15.append(", description=");
-      var15.append(var21);
-      var15.append(", image=");
-      var15.append(var16);
-      var15.append(", images=");
-      var15.append(var12);
-      var15.append(", video=");
-      var15.append(var18);
-      var15.append(", thumbnail=");
-      var15.append(var24);
-      var15.append(", numAttachments=");
-      var15.append(var9);
-      var15.append(", attachmentsSize=");
-      var15.append(var19);
-      var15.append(", messageSendError=");
-      var15.append(var10);
-      var15.append(", disableBackgroundColor=");
-      var15.append(var4);
-      var15.append(", footer=");
-      var15.append(var22);
-      var15.append(", spoiler=");
-      var15.append(var17);
-      var15.append(", obscure=");
-      var15.append(var14);
-      var15.append(", obscureAwaitingScan=");
-      var15.append(var7);
-      var15.append(", iconURL=");
-      var15.append(var5);
-      var15.append(", failureState=");
-      var15.append(var29);
-      var15.append(", providerColor=");
-      var15.append(var6);
-      var15.append(", borderLeftColor=");
-      var15.append(var27);
-      var15.append(", headerTextColor=");
-      var15.append(var2);
-      var15.append(", bodyTextColor=");
-      var15.append(var1);
-      var15.append(", backgroundColor=");
-      var15.append(var11);
-      var15.append(")");
-      return var15.toString();
+      val var16: StringBuilder = new StringBuilder();
+      var16.append("Embed(type=");
+      var16.append(var3);
+      var16.append(", id=");
+      var16.append(var8);
+      var16.append(", author=");
+      var16.append(var23);
+      var16.append(", provider=");
+      var16.append(var13);
+      var16.append(", rawTitle=");
+      var16.append(var24);
+      var16.append(", title=");
+      var16.append(var9);
+      var16.append(", fields=");
+      var16.append(var22);
+      var16.append(", url=");
+      var16.append(var17);
+      var16.append(", rawDescription=");
+      var16.append(var7);
+      var16.append(", description=");
+      var16.append(var4);
+      var16.append(", image=");
+      var16.append(var10);
+      var16.append(", images=");
+      var16.append(var26);
+      var16.append(", video=");
+      var16.append(var29);
+      var16.append(", thumbnail=");
+      var16.append(var25);
+      var16.append(", numAttachments=");
+      var16.append(var6);
+      var16.append(", attachmentsSize=");
+      var16.append(var28);
+      var16.append(", messageSendError=");
+      var16.append(var30);
+      var16.append(", disableBackgroundColor=");
+      var16.append(var18);
+      var16.append(", footer=");
+      var16.append(var14);
+      var16.append(", spoiler=");
+      var16.append(var27);
+      var16.append(", obscure=");
+      var16.append(var12);
+      var16.append(", obscureAwaitingScan=");
+      var16.append(var19);
+      var16.append(", iconURL=");
+      var16.append(var20);
+      var16.append(", failureState=");
+      var16.append(var15);
+      var16.append(", providerColor=");
+      var16.append(var2);
+      var16.append(", borderLeftColor=");
+      var16.append(var5);
+      var16.append(", headerTextColor=");
+      var16.append(var21);
+      var16.append(", bodyTextColor=");
+      var16.append(var1);
+      var16.append(", backgroundColor=");
+      var16.append(var11);
+      var16.append(")");
+      return var16.toString();
    }
 
    public object `$serializer` : g0 {
@@ -826,66 +826,66 @@ public data class Embed(type: EmbedType,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var13: Array<KSerializer> = Embed.access$get$childSerializers$cp();
-         val var10: KSerializer = var13[0];
-         val var3: b2 = b2.a;
-         val var1: KSerializer = a.u(b2.a);
-         val var8: KSerializer = a.u(EmbedAuthor.$serializer.INSTANCE);
-         val var6: KSerializer = a.u(EmbedProvider.$serializer.INSTANCE);
-         val var9: KSerializer = a.u(var3);
+         val var8: KSerializer = var13[0];
+         val var4: b2 = b2.a;
+         val var2: KSerializer = a.u(b2.a);
+         val var6: KSerializer = a.u(EmbedAuthor.$serializer.INSTANCE);
+         val var5: KSerializer = a.u(EmbedProvider.$serializer.INSTANCE);
+         val var9: KSerializer = a.u(var4);
          val var11: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
          val var7: KSerializer = a.u(StructurableTextSerializer.INSTANCE);
-         val var2: KSerializer = a.u(var13[6]);
-         val var4: KSerializer = a.u(var3);
-         val var5: KSerializer = a.u(var3);
+         val var3: KSerializer = a.u(var13[6]);
+         val var1: KSerializer = a.u(var4);
+         val var10: KSerializer = a.u(var4);
          val var12: KSerializer = a.u(var11);
          val var14: EmbedMedia.$serializer = EmbedMedia.$serializer.INSTANCE;
          val var27: KSerializer = a.u(EmbedMedia.$serializer.INSTANCE);
          val var28: KSerializer = a.u(var13[11]);
-         val var16: KSerializer = a.u(var14);
-         val var22: KSerializer = a.u(EmbedThumbnail.$serializer.INSTANCE);
-         val var29: KSerializer = a.u(var3);
-         val var15: KSerializer = a.u(var3);
-         val var19: KSerializer = a.u(var3);
-         val var17: KSerializer = a.u(al.h.a);
-         val var26: KSerializer = a.u(EmbedFooter.$serializer.INSTANCE);
-         val var18: KSerializer = a.u(var3);
-         val var23: KSerializer = a.u(var3);
-         val var25: KSerializer = a.u(var3);
-         val var21: KSerializer = a.u(var3);
-         val var24: KSerializer = a.u(EmbedFailureState.Serializer.INSTANCE);
-         val var20: n0 = n0.a;
+         val var19: KSerializer = a.u(var14);
+         val var21: KSerializer = a.u(EmbedThumbnail.$serializer.INSTANCE);
+         val var16: KSerializer = a.u(var4);
+         val var29: KSerializer = a.u(var4);
+         val var15: KSerializer = a.u(var4);
+         val var22: KSerializer = a.u(il.h.a);
+         val var20: KSerializer = a.u(EmbedFooter.$serializer.INSTANCE);
+         val var18: KSerializer = a.u(var4);
+         val var23: KSerializer = a.u(var4);
+         val var17: KSerializer = a.u(var4);
+         val var24: KSerializer = a.u(var4);
+         val var25: KSerializer = a.u(EmbedFailureState.Serializer.INSTANCE);
+         val var26: n0 = n0.a;
          return new KSerializer[]{
-            var10,
-            var1,
             var8,
+            var2,
             var6,
+            var5,
             var9,
             var7,
-            var2,
-            var4,
-            var5,
+            var3,
+            var1,
+            var10,
             var12,
             var27,
             var28,
+            var19,
+            var21,
             var16,
-            var22,
             var29,
             var15,
-            var19,
-            var17,
-            var26,
+            var22,
+            var20,
             var18,
             var23,
-            var25,
-            var21,
+            var17,
             var24,
+            var25,
             a.u(n0.a),
-            a.u(var20),
-            a.u(var20),
-            var20,
-            a.u(var20),
-            a.u(var3),
-            a.u(var3)
+            a.u(var26),
+            a.u(var26),
+            var26,
+            a.u(var26),
+            a.u(var4),
+            a.u(var4)
          };
       }
 
@@ -896,16 +896,15 @@ public data class Embed(type: EmbedType,
          val var42: Array<KSerializer> = Embed.access$get$childSerializers$cp();
          var var2: Int;
          var var3: Int;
-         var var17: Any;
-         var var18: Any;
          var var19: Any;
          var var20: Any;
-         var var21: Any;
-         var var22: Any;
+         var var22: Int;
          var var23: Any;
          var var24: Any;
+         var var25: Any;
          var var26: Any;
-         val var27: Int;
+         var var27: Any;
+         var var28: Any;
          var var29: Any;
          var var30: Any;
          var var31: Any;
@@ -913,74 +912,77 @@ public data class Embed(type: EmbedType,
          var var33: Any;
          var var34: Any;
          var var35: Any;
+         val var36: Any;
          val var37: Any;
          val var38: Any;
-         val var39: Any;
-         val var40: Int;
          var var46: Any;
-         var var55: java.lang.String;
-         var var67: Any;
-         var var81: Int;
-         var var84: Any;
+         var var55: Any;
+         var var67: Int;
+         var var71: Int;
+         var var81: java.lang.String;
+         var var89: Any;
          var var93: Any;
-         var var143: Any;
-         var var148: Any;
-         val var194: Int;
+         var var103: Any;
+         var var109: Any;
+         var var147: Any;
+         var var256: Int;
          if (var44.y()) {
             var34 = var44.m(var43, 0, var42[0], null) as EmbedType;
             var46 = b2.a;
             var23 = var44.v(var43, 1, b2.a, null) as java.lang.String;
-            var20 = var44.v(var43, 2, EmbedAuthor.$serializer.INSTANCE, null) as EmbedAuthor;
+            var35 = var44.v(var43, 2, EmbedAuthor.$serializer.INSTANCE, null) as EmbedAuthor;
             var93 = var44.v(var43, 3, EmbedProvider.$serializer.INSTANCE, null) as EmbedProvider;
-            var38 = var44.v(var43, 4, (DeserializationStrategy)var46, null) as java.lang.String;
+            var103 = var44.v(var43, 4, (DeserializationStrategy)var46, null) as java.lang.String;
             val var6: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
             var24 = var44.v(var43, 5, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var19 = var44.v(var43, 6, var42[6], null) as java.util.List;
-            var17 = var44.v(var43, 7, (DeserializationStrategy)var46, null) as java.lang.String;
+            var29 = var44.v(var43, 6, var42[6], null) as java.util.List;
+            var109 = var44.v(var43, 7, (DeserializationStrategy)var46, null) as java.lang.String;
             val var12: java.lang.String = var44.v(var43, 8, (DeserializationStrategy)var46, null) as java.lang.String;
-            var84 = var44.v(var43, 9, var6, null) as StructurableText;
+            var89 = var44.v(var43, 9, var6, null) as StructurableText;
             val var49: EmbedMedia.$serializer = EmbedMedia.$serializer.INSTANCE;
-            var26 = var44.v(var43, 10, EmbedMedia.$serializer.INSTANCE, null) as EmbedMedia;
-            var18 = var44.v(var43, 11, var42[11], null) as java.util.List;
-            var21 = var44.v(var43, 12, var49, null) as EmbedMedia;
-            var148 = var44.v(var43, 13, EmbedThumbnail.$serializer.INSTANCE, null) as EmbedThumbnail;
+            var25 = var44.v(var43, 10, EmbedMedia.$serializer.INSTANCE, null) as EmbedMedia;
+            var19 = var44.v(var43, 11, var42[11], null) as java.util.List;
+            var31 = var44.v(var43, 12, var49, null) as EmbedMedia;
+            var147 = var44.v(var43, 13, EmbedThumbnail.$serializer.INSTANCE, null) as EmbedThumbnail;
             val var10: java.lang.String = var44.v(var43, 14, (DeserializationStrategy)var46, null) as java.lang.String;
-            var143 = var44.v(var43, 15, (DeserializationStrategy)var46, null) as java.lang.String;
-            val var15: java.lang.String = var44.v(var43, 16, (DeserializationStrategy)var46, null) as java.lang.String;
-            val var11: java.lang.Boolean = var44.v(var43, 17, al.h.a, null) as java.lang.Boolean;
+            var27 = var44.v(var43, 15, (DeserializationStrategy)var46, null) as java.lang.String;
+            val var14: java.lang.String = var44.v(var43, 16, (DeserializationStrategy)var46, null) as java.lang.String;
+            val var11: java.lang.Boolean = var44.v(var43, 17, il.h.a, null) as java.lang.Boolean;
             val var9: EmbedFooter = var44.v(var43, 18, EmbedFooter.$serializer.INSTANCE, null) as EmbedFooter;
             var32 = var44.v(var43, 19, (DeserializationStrategy)var46, null) as java.lang.String;
             var55 = var44.v(var43, 20, (DeserializationStrategy)var46, null) as java.lang.String;
-            var67 = var44.v(var43, 21, (DeserializationStrategy)var46, null) as java.lang.String;
-            val var13: java.lang.String = var44.v(var43, 22, (DeserializationStrategy)var46, null) as java.lang.String;
-            val var36: EmbedFailureState = var44.v(var43, 23, EmbedFailureState.Serializer.INSTANCE, null) as EmbedFailureState;
+            val var8: java.lang.String = var44.v(var43, 21, (DeserializationStrategy)var46, null) as java.lang.String;
+            var81 = var44.v(var43, 22, (DeserializationStrategy)var46, null) as java.lang.String;
+            val var40: EmbedFailureState = var44.v(var43, 23, EmbedFailureState.Serializer.INSTANCE, null) as EmbedFailureState;
             val var50: n0 = n0.a;
-            var40 = var44.v(var43, 24, n0.a, null) as Int;
+            var256 = var44.v(var43, 24, n0.a, null) as Int;
             val var41: Int = var44.v(var43, 25, var50, null) as Int;
-            val var295: Int = var44.v(var43, 26, var50, null) as Int;
+            val var301: Int = var44.v(var43, 26, var50, null) as Int;
             var3 = var44.k(var43, 27);
-            var27 = var44.v(var43, 28, var50, null) as Int;
+            var22 = var44.v(var43, 28, var50, null) as Int;
             val var51: java.lang.String = var44.v(var43, 29, (DeserializationStrategy)var46, null) as java.lang.String;
             var46 = var44.v(var43, 30, (DeserializationStrategy)var46, null) as java.lang.String;
             var2 = Integer.MAX_VALUE;
-            var37 = var93;
-            var22 = var12;
-            var33 = var84;
-            var93 = var148;
-            var148 = var10;
-            var84 = var143;
-            var29 = var15;
-            var143 = var11;
-            var30 = var9;
-            var39 = var55;
-            var31 = var67;
-            var35 = var13;
-            var67 = var36;
-            var81 = var41;
-            var194 = var295;
-            var55 = var51;
+            var28 = var93;
+            var93 = var103;
+            var103 = var109;
+            var38 = var12;
+            var20 = var89;
+            var89 = var147;
+            var109 = var10;
+            var26 = var14;
+            var147 = var11;
+            var36 = var9;
+            var33 = var55;
+            var30 = var8;
+            var37 = var81;
+            var55 = var40;
+            var71 = var256;
+            var67 = var41;
+            var256 = var301;
+            var81 = var51;
          } else {
-            var var147: java.lang.String = null;
+            var27 = null;
             var var4: Boolean = true;
             var46 = null;
             var20 = null;
@@ -989,9 +991,9 @@ public data class Embed(type: EmbedType,
             var31 = null;
             var30 = null;
             var29 = null;
-            var148 = null;
+            var28 = null;
             var26 = null;
-            var143 = null;
+            var25 = null;
             var24 = null;
             var34 = null;
             var23 = null;
@@ -1003,16 +1005,16 @@ public data class Embed(type: EmbedType,
             var22 = null;
             var55 = null;
             var93 = null;
-            var84 = null;
-            var var90: Any = null;
-            var21 = null;
+            var var84: Any = null;
+            var89 = null;
+            var147 = null;
             var67 = null;
-            var17 = null;
-            var18 = null;
+            var103 = null;
+            var109 = null;
             var19 = null;
             var2 = 0;
             var3 = 0;
-            var var71: Any = null;
+            var71 = null;
 
             while (var4) {
                label130: {
@@ -1040,78 +1042,78 @@ public data class Embed(type: EmbedType,
                                        var2 |= 4;
                                        break label87;
                                     case 3:
-                                       var81 = (Integer)var84;
-                                       var79 = var90;
-                                       var67 = var19;
+                                       var81 = (java.lang.String)var84;
+                                       var79 = var89;
+                                       var67 = (Integer)var19;
                                        var93 = var75;
-                                       var90 = var44.v(var43, 3, EmbedProvider.$serializer.INSTANCE, var77) as EmbedProvider;
+                                       var89 = var44.v(var43, 3, EmbedProvider.$serializer.INSTANCE, var77) as EmbedProvider;
                                        var2 |= 8;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
-                                       var75 = var17;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
+                                       var75 = var103;
                                        var77 = var67;
                                        var84 = var52;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
                                        var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 4:
-                                       var81 = (Integer)var84;
-                                       var67 = var19;
-                                       var17 = var79;
-                                       val var112: java.lang.String = var44.v(var43, 4, b2.a, var75) as java.lang.String;
+                                       var81 = (java.lang.String)var84;
+                                       var67 = (Integer)var19;
+                                       var103 = var79;
+                                       val var115: java.lang.String = var44.v(var43, 4, b2.a, var75) as java.lang.String;
                                        var2 |= 16;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
-                                       var75 = var17;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
+                                       var75 = var103;
                                        var77 = var67;
-                                       var79 = var90;
+                                       var79 = var89;
                                        var84 = var52;
-                                       var90 = var77;
-                                       var93 = var112;
-                                       var18 = var81;
+                                       var89 = var77;
+                                       var93 = var115;
+                                       var109 = var81;
                                        var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 5:
-                                       var67 = var19;
-                                       var18 = var81;
+                                       var20 = var93;
+                                       var67 = (Integer)var19;
+                                       var109 = var81;
                                        var19 = var44.v(var43, 5, StructurableTextSerializer.INSTANCE, var79) as StructurableText;
                                        var2 |= 32;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
-                                       var75 = var17;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
+                                       var75 = var103;
                                        var77 = var67;
-                                       var79 = var90;
-                                       var81 = (Integer)var84;
+                                       var79 = var89;
+                                       var81 = (java.lang.String)var84;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var19;
+                                       var103 = var19;
                                        var19 = var55;
-                                       var20 = var93;
                                        break label130;
                                     case 6:
-                                       var20 = var93;
-                                       var67 = var19;
-                                       var18 = var44.v(var43, 6, var42[6], var81) as java.util.List;
+                                       var67 = (Integer)var19;
+                                       var109 = var44.v(var43, 6, var42[6], var81) as java.util.List;
                                        var2 |= 64;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
-                                       var75 = var17;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
+                                       var75 = var103;
                                        var77 = var67;
-                                       var79 = var90;
-                                       var81 = (Integer)var84;
+                                       var79 = var89;
+                                       var81 = (java.lang.String)var84;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
+                                       var103 = var79;
                                        var19 = var55;
+                                       var20 = var93;
                                        break label130;
                                     case 7:
                                        var22 = var44.v(var43, 7, b2.a, var22) as java.lang.String;
@@ -1123,63 +1125,63 @@ public data class Embed(type: EmbedType,
                                        var2 |= 256;
                                        break label88;
                                     case 9:
-                                       var67 = var19;
+                                       var67 = (Integer)var19;
                                        var20 = var44.v(var43, 9, StructurableTextSerializer.INSTANCE, var93) as StructurableText;
                                        var2 |= 512;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
-                                       var75 = var17;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
+                                       var75 = var103;
                                        var77 = var67;
-                                       var79 = var90;
-                                       var81 = (Integer)var84;
+                                       var79 = var89;
+                                       var81 = (java.lang.String)var84;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
                                        var19 = var55;
                                        break label130;
                                     case 10:
-                                       var67 = var19;
+                                       var67 = (Integer)var19;
                                        var84 = var44.v(var43, 10, EmbedMedia.$serializer.INSTANCE, var84) as EmbedMedia;
                                        var2 |= 1024;
-                                       var19 = var55;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
-                                       var75 = var17;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
+                                       var75 = var103;
                                        var77 = var67;
-                                       var79 = var90;
-                                       var81 = (Integer)var84;
+                                       var79 = var89;
+                                       var81 = (java.lang.String)var84;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
+                                       var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 11:
-                                       var67 = var19;
-                                       var90 = var44.v(var43, 11, var42[11], var90) as java.util.List;
+                                       var67 = (Integer)var19;
+                                       var89 = var44.v(var43, 11, var42[11], var89) as java.util.List;
                                        var2 |= 2048;
-                                       var19 = var55;
-                                       var81 = (Integer)var84;
+                                       var81 = (java.lang.String)var84;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
-                                       var75 = var17;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
+                                       var75 = var103;
                                        var77 = var67;
-                                       var79 = var90;
+                                       var79 = var89;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
+                                       var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 12:
-                                       var21 = var44.v(var43, 12, EmbedMedia.$serializer.INSTANCE, var21) as EmbedMedia;
+                                       var147 = var44.v(var43, 12, EmbedMedia.$serializer.INSTANCE, var147) as EmbedMedia;
                                        var2 |= 4096;
                                        var35 = var67;
                                        break label132;
@@ -1188,97 +1190,97 @@ public data class Embed(type: EmbedType,
                                        var2 |= 8192;
                                        break label132;
                                     case 14:
-                                       val var290: java.lang.String = var44.v(var43, 14, b2.a, var17) as java.lang.String;
+                                       val var296: java.lang.String = var44.v(var43, 14, b2.a, var103) as java.lang.String;
                                        var2 |= 16384;
-                                       var81 = (Integer)var84;
-                                       var79 = var90;
+                                       var81 = (java.lang.String)var84;
+                                       var79 = var89;
                                        var77 = var67;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var67 = var19;
-                                       var71 = var18;
-                                       var75 = var290;
+                                       var55 = var20;
+                                       var67 = (Integer)var19;
+                                       var71 = (Integer)var109;
+                                       var75 = var296;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
                                        var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 15:
-                                       val var289: java.lang.String = var44.v(var43, 15, b2.a, var18) as java.lang.String;
+                                       val var295: java.lang.String = var44.v(var43, 15, b2.a, var109) as java.lang.String;
                                        var2 |= 32768;
-                                       var81 = (Integer)var84;
-                                       var79 = var90;
+                                       var109 = var81;
+                                       var81 = (java.lang.String)var84;
+                                       var79 = var89;
                                        var77 = var67;
-                                       var75 = var17;
+                                       var75 = var103;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var67 = var19;
-                                       var71 = var289;
+                                       var55 = var20;
+                                       var67 = (Integer)var19;
+                                       var71 = var295;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
                                        var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 16:
-                                       val var288: java.lang.String = var44.v(var43, 16, b2.a, var19) as java.lang.String;
+                                       val var294: java.lang.String = var44.v(var43, 16, b2.a, var19) as java.lang.String;
                                        var2 |= 65536;
-                                       var81 = (Integer)var84;
-                                       var79 = var90;
+                                       var81 = (java.lang.String)var84;
+                                       var79 = var89;
                                        var77 = var67;
-                                       var75 = var17;
+                                       var75 = var103;
                                        var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var67 = var288;
-                                       var71 = var18;
+                                       var55 = var20;
+                                       var67 = var294;
+                                       var71 = (Integer)var109;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
                                        var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 17:
-                                       var71 = var44.v(var43, 17, al.h.a, var71) as java.lang.Boolean;
+                                       val var74: java.lang.Boolean = var44.v(var43, 17, il.h.a, var71) as java.lang.Boolean;
                                        var2 |= 131072;
-                                       var81 = (Integer)var84;
-                                       var79 = var90;
+                                       var81 = (java.lang.String)var84;
+                                       var79 = var89;
                                        var77 = var67;
-                                       var75 = var17;
-                                       var67 = var19;
-                                       var52 = var71;
-                                       var55 = (java.lang.String)var20;
-                                       var71 = var18;
+                                       var75 = var103;
+                                       var67 = (Integer)var19;
+                                       var52 = var74;
+                                       var55 = var20;
+                                       var71 = (Integer)var109;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
                                        var19 = var55;
                                        var20 = var93;
                                        break label130;
                                     case 18:
-                                       val var286: EmbedFooter = var44.v(var43, 18, EmbedFooter.$serializer.INSTANCE, var20) as EmbedFooter;
+                                       val var292: EmbedFooter = var44.v(var43, 18, EmbedFooter.$serializer.INSTANCE, var20) as EmbedFooter;
                                        var2 |= 262144;
-                                       var81 = (Integer)var84;
-                                       var79 = var90;
+                                       var81 = (java.lang.String)var84;
+                                       var79 = var89;
                                        var77 = var67;
-                                       var75 = var17;
-                                       var67 = var19;
+                                       var75 = var103;
+                                       var67 = (Integer)var19;
                                        var52 = var71;
-                                       var55 = var286;
-                                       var71 = var18;
+                                       var55 = var292;
+                                       var71 = (Integer)var109;
                                        var84 = var52;
-                                       var90 = var77;
+                                       var89 = var77;
                                        var93 = var75;
-                                       var17 = var79;
-                                       var18 = var81;
+                                       var103 = var79;
+                                       var109 = var81;
                                        var19 = var55;
                                        var20 = var93;
                                        break label130;
@@ -1299,11 +1301,11 @@ public data class Embed(type: EmbedType,
                                        var2 |= 4194304;
                                        break label131;
                                     case 23:
-                                       var148 = var44.v(var43, 23, EmbedFailureState.Serializer.INSTANCE, var148) as EmbedFailureState;
+                                       var28 = var44.v(var43, 23, EmbedFailureState.Serializer.INSTANCE, var28) as EmbedFailureState;
                                        var2 |= 8388608;
                                        break label131;
                                     case 24:
-                                       var143 = var44.v(var43, 24, n0.a, var143) as Int;
+                                       var25 = var44.v(var43, 24, n0.a, var25) as Int;
                                        var2 |= 16777216;
                                        break label131;
                                     case 25:
@@ -1323,7 +1325,7 @@ public data class Embed(type: EmbedType,
                                        var2 |= 268435456;
                                        break label131;
                                     case 29:
-                                       var147 = var44.v(var43, 29, b2.a, var147) as java.lang.String;
+                                       var27 = var44.v(var43, 29, b2.a, var27) as java.lang.String;
                                        var2 |= 536870912;
                                        break label131;
                                     case 30:
@@ -1339,137 +1341,136 @@ public data class Embed(type: EmbedType,
                               }
 
                               var93 = var75;
-                              var81 = (Integer)var84;
-                              var79 = var90;
+                              var81 = (java.lang.String)var84;
+                              var79 = var89;
                               var77 = var67;
-                              var75 = var17;
-                              var67 = var19;
-                              var55 = (java.lang.String)var20;
+                              var75 = var103;
+                              var67 = (Integer)var19;
+                              var55 = var20;
                               var52 = var71;
-                              var71 = var18;
+                              var71 = (Integer)var109;
                               var84 = var52;
-                              var90 = var77;
-                              var17 = var79;
-                              var18 = var81;
+                              var89 = var77;
+                              var103 = var79;
+                              var109 = var81;
                               var19 = var55;
                               var20 = var93;
                               break label130;
                            }
 
                            var93 = var75;
-                           var81 = (Integer)var84;
-                           var79 = var90;
+                           var81 = (java.lang.String)var84;
+                           var79 = var89;
                            var77 = var67;
-                           var75 = var17;
-                           var67 = var19;
-                           var55 = (java.lang.String)var20;
+                           var75 = var103;
+                           var67 = (Integer)var19;
+                           var55 = var20;
                            var52 = var71;
-                           var71 = var18;
+                           var71 = (Integer)var109;
                            var84 = var35;
-                           var90 = var77;
-                           var17 = var79;
-                           var18 = var81;
+                           var89 = var77;
+                           var103 = var79;
+                           var109 = var81;
                            var19 = var55;
                            var20 = var93;
                            break label130;
                         }
 
-                        var67 = var19;
-                        var55 = (java.lang.String)var20;
+                        var67 = (Integer)var19;
+                        var55 = var20;
                         var52 = var71;
-                        var71 = var18;
-                        var75 = var17;
+                        var71 = (Integer)var109;
+                        var75 = var103;
                         var77 = var67;
-                        var79 = var90;
-                        var81 = (Integer)var84;
+                        var79 = var89;
+                        var81 = (java.lang.String)var84;
                         var84 = var52;
-                        var90 = var77;
+                        var89 = var77;
                         var93 = var75;
-                        var17 = var79;
-                        var18 = var81;
+                        var103 = var79;
+                        var109 = var81;
                         var19 = var35;
                         var20 = var93;
                         break label130;
                      }
 
-                     var67 = var19;
-                     var19 = var55;
-                     var20 = var93;
-                     var81 = (Integer)var84;
-                     var79 = var90;
+                     var67 = (Integer)var19;
+                     var81 = (java.lang.String)var84;
+                     var79 = var89;
                      var52 = var71;
-                     var55 = (java.lang.String)var20;
-                     var71 = var18;
-                     var75 = var17;
+                     var55 = var20;
+                     var71 = (Integer)var109;
+                     var75 = var103;
                      var77 = var35;
                      var84 = var52;
-                     var90 = var77;
+                     var89 = var77;
                      var93 = var75;
-                     var17 = var79;
-                     var18 = var81;
+                     var103 = var79;
+                     var109 = var81;
+                     var19 = var55;
+                     var20 = var93;
                      break label130;
                   }
 
-                  var81 = (Integer)var84;
-                  var67 = var19;
+                  var81 = (java.lang.String)var84;
+                  var67 = (Integer)var19;
                   var20 = var93;
                   var19 = var55;
-                  var18 = var81;
-                  var17 = var79;
+                  var109 = var81;
+                  var103 = var79;
                   var93 = var75;
-                  var90 = var77;
+                  var89 = var77;
                   var84 = var52;
-                  var79 = var90;
+                  var79 = var89;
                   var77 = var67;
-                  var75 = var17;
-                  var71 = var18;
-                  var55 = (java.lang.String)var20;
+                  var75 = var103;
+                  var71 = (Integer)var109;
+                  var55 = var20;
                   var52 = var71;
                }
 
-               var67 = var77;
-               var77 = var90;
+               var67 = (Integer)var77;
+               var77 = var89;
                var75 = var93;
-               var79 = var17;
-               var81 = (Integer)var18;
-               var55 = (java.lang.String)var19;
+               var79 = var103;
+               var81 = (java.lang.String)var109;
+               var55 = var19;
                var93 = var20;
                var20 = var55;
-               var71 = var52;
+               var71 = (Integer)var52;
                var52 = var84;
                var84 = var81;
-               var90 = var79;
-               var17 = var75;
-               var18 = var71;
+               var89 = var79;
+               var103 = var75;
+               var109 = var71;
                var19 = var67;
             }
 
-            var40 = (Integer)var143;
-            var35 = var24;
-            var143 = var71;
+            var37 = var24;
+            var26 = var19;
+            var19 = var89;
+            var29 = var81;
+            var38 = var55;
             var46 = var26;
-            var55 = var147;
-            var27 = (Integer)var29;
-            var194 = (Integer)var31;
-            var81 = (Integer)var46;
-            var67 = var148;
-            var31 = var30;
-            var39 = var33;
-            var30 = var20;
-            var29 = var19;
-            var84 = var18;
-            var148 = var17;
-            var93 = var67;
-            var18 = var90;
-            var26 = var84;
-            var33 = var93;
-            var22 = var55;
-            var17 = var22;
-            var19 = var81;
+            var81 = (java.lang.String)var27;
+            var22 = (Integer)var29;
+            var256 = (Integer)var31;
+            var67 = (Integer)var46;
+            var71 = (Integer)var25;
+            var55 = var28;
+            var36 = var20;
+            var147 = var71;
+            var27 = var109;
+            var109 = var103;
+            var89 = var67;
+            var31 = var147;
+            var25 = var84;
+            var20 = var93;
+            var103 = var22;
             var24 = var79;
-            var38 = var75;
-            var37 = var77;
-            var20 = var52;
+            var93 = var75;
+            var28 = var77;
+            var35 = var52;
          }
 
          var44.b(var43);
@@ -1477,34 +1478,34 @@ public data class Embed(type: EmbedType,
             var2,
             (EmbedType)var34,
             (java.lang.String)var23,
-            (EmbedAuthor)var20,
-            (EmbedProvider)var37,
-            (java.lang.String)var38,
+            (EmbedAuthor)var35,
+            (EmbedProvider)var28,
+            (java.lang.String)var93,
             (StructurableText)var24,
+            (java.util.List)var29,
+            (java.lang.String)var103,
+            (java.lang.String)var38,
+            (StructurableText)var20,
+            (EmbedMedia)var25,
             (java.util.List)var19,
-            (java.lang.String)var17,
-            (java.lang.String)var22,
-            (StructurableText)var33,
-            (EmbedMedia)var26,
-            (java.util.List)var18,
-            (EmbedMedia)var21,
-            (EmbedThumbnail)var93,
-            (java.lang.String)var148,
-            (java.lang.String)var84,
-            (java.lang.String)var29,
-            (java.lang.Boolean)var143,
-            (EmbedFooter)var30,
+            (EmbedMedia)var31,
+            (EmbedThumbnail)var89,
+            (java.lang.String)var109,
+            (java.lang.String)var27,
+            (java.lang.String)var26,
+            (java.lang.Boolean)var147,
+            (EmbedFooter)var36,
             (java.lang.String)var32,
-            (java.lang.String)var39,
-            (java.lang.String)var31,
-            (java.lang.String)var35,
-            (EmbedFailureState)var67,
-            var40,
-            var81,
-            var194,
+            (java.lang.String)var33,
+            (java.lang.String)var30,
+            (java.lang.String)var37,
+            (EmbedFailureState)var55,
+            var71,
+            var67,
+            var256,
             var3,
-            var27,
-            var55,
+            var22,
+            var81,
             (java.lang.String)var46,
             null
          );
@@ -1520,7 +1521,7 @@ public data class Embed(type: EmbedType,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

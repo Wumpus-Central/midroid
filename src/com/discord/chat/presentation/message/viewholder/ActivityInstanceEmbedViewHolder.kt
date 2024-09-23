@@ -35,7 +35,7 @@ public class ActivityInstanceEmbedViewHolder(activityInstanceEmbedView: Activity
       val var3: java.util.List = var4.getParticipantAvatarUris();
       var var2: java.util.List = var3;
       if (var3 == null) {
-         var2 = kotlin.collections.i.j();
+         var2 = kotlin.collections.i.k();
       }
 
       var5.setParticipantAvatarUris(var2);

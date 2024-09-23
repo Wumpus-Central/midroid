@@ -4,12 +4,12 @@ import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.snowflake.SnowflakeUtils
-import fh.w
-import gh.r
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
+import nh.w
+import oh.r
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    q.h(var0, "<this>");

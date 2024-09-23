@@ -50,13 +50,13 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: InteractionStatus = this.interactionStatus;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: InteractionStatus = this.interactionStatus;
       val var2: StringBuilder = new StringBuilder();
       var2.append("InteractionStatusMessageAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", interactionStatus=");
       var2.append(var1);
+      var2.append(", interactionStatus=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

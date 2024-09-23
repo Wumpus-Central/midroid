@@ -32,15 +32,15 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
       if (var1 == null) {
          return null;
       } else {
-         ReadableMapKeySetIterator var2 = var1.keySetIterator();
-         HashMap var3 = new HashMap();
+         ReadableMapKeySetIterator var3 = var1.keySetIterator();
+         HashMap var2 = new HashMap();
 
-         while (var2.hasNextKey()) {
-            String var4 = var2.nextKey();
-            var3.put(var4, var1.getString(var4));
+         while (var3.hasNextKey()) {
+            String var4 = var3.nextKey();
+            var2.put(var4, var1.getString(var4));
          }
 
-         return var3;
+         return var2;
       }
    }
 
@@ -59,6 +59,6 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
          var4 = Collections.emptyMap();
       }
 
-      this.fetchWithRequest(var1, var2, new Builder().c(new a().e().a()).l(var5.toString()).f(Headers.q(var4)).d().b());
+      this.fetchWithRequest(var1, var2, new Builder().c(new a().e().a()).l(var5.toString()).f(Headers.p(var4)).d().b());
    }
 }

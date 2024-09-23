@@ -1,9 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import al.b2
-import al.g0
-import al.g0.a
 import com.discord.chat.bridge.spoiler.SpoilerableData
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, SpoilerableData {
@@ -93,13 +93,12 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
          var var2: Int;
          val var6: java.util.List;
          var var11: java.lang.String;
-         val var14: java.lang.String;
+         val var13: java.lang.String;
          if (var5) {
             var6 = var10.m(var9, 0, var8[0], null) as java.util.List;
-            val var13: java.lang.String = var10.t(var9, 1);
+            var13 = var10.t(var9, 1);
             var11 = var10.t(var9, 2);
             var2 = 7;
-            var14 = var13;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -130,12 +129,12 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
                }
             }
 
-            var14 = var12;
+            var13 = var12;
             var6 = var7;
          }
 
          var10.b(var9);
-         return new SpoilerContentNode(var2, var6, var14, var11, null);
+         return new SpoilerContentNode(var2, var6, var13, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SpoilerContentNode) {

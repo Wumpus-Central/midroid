@@ -9,11 +9,11 @@ import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
-import fh.w
-import gh.r
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import nh.w
+import oh.r
 
 public object DCDModuleProvider {
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {
@@ -43,7 +43,7 @@ public object DCDModuleProvider {
                var3 = null;
             }
 
-            return i.n(var3);
+            return i.o(var3);
          }
 
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
@@ -55,7 +55,7 @@ public object DCDModuleProvider {
                var3 = null;
             }
 
-            return i.n(var3);
+            return i.o(var3);
          }
       };
    }

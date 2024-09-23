@@ -12,13 +12,13 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
-import fh.l
-import fh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
+import nh.l
+import nh.p
 
 @SuppressLint(["ViewConstructor"])
 internal class EmojiPickerView(context: Context,
@@ -79,7 +79,7 @@ internal class EmojiPickerView(context: Context,
       q.h(var11, "onShowNitroUpsell");
       q.h(var13, "config");
       super(var1);
-      this.visibilityTracker$delegate = l.b(new Function0(var11, this) {
+      this.visibilityTracker$delegate = l.a(new Function0(var11, this) {
          final Function2 $onShowNitroUpsell;
          final EmojiPickerView this$0;
 
@@ -106,7 +106,7 @@ internal class EmojiPickerView(context: Context,
             });
          }
       });
-      this.scroller$delegate = l.b(
+      this.scroller$delegate = l.a(
          new Function0(this, var13, var10, var6, var7, var8) {
             final EmojiPickerView.Config $config;
             final Function2 $onScroll;

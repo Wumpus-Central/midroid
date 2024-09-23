@@ -5,10 +5,10 @@ import java.io.InputStream
 import java.io.OutputStream
 import java.io.RandomAccessFile
 import java.util.Arrays
-import kk.j
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lk.a
+import sk.j
+import tk.a
 
 public object BSDiff {
    private final val BSDIFF_CONFIG_MAGIC: ByteArray
@@ -29,8 +29,8 @@ public object BSDiff {
       extraInputStream: InputStream,
       newOutputStream: OutputStream
    ) {
-      val var20: ByteArray = new byte[1000000];
       val var21: ByteArray = new byte[1000000];
+      val var20: ByteArray = new byte[1000000];
       if (!Arrays.equals(InputStreamUtilsKt.readNBytesCompat(var3, 8), BSDIFF_CONFIG_MAGIC)) {
          throw new BSDiff.BsPatchError("Bad magic config header for patch file!");
       } else {
@@ -43,37 +43,37 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
-            var13 = InputStreamUtilsKt.readOffset(var3);
             val var15: Long = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var13 + var15 > var9) {
+            var13 = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var15 + var17 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var13).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var2, var20, 0, var8);
-               InputStreamUtilsKt.readNBytesCompat(var4, var21, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var2, var21, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var4, var20, 0, var8);
 
                for (int var7 = 0; var7 < var8; var7++) {
-                  var20[var7] += var21[var7];
+                  var21[var7] += var20[var7];
                }
 
-               var6.write(var20, 0, var8);
+               var6.write(var21, 0, var8);
             }
 
-            var19 = this.chunkRange(var15).iterator();
+            var19 = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var5, var20, 0, var22);
-               var6.write(var20, 0, var22);
+               InputStreamUtilsKt.readNBytesCompat(var5, var21, 0, var22);
+               var6.write(var21, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var17);
-            var11 += var13 + var15;
+            var1.seek(var1.getFilePointer() + var13);
+            var11 += var15 + var17;
          }
 
          var6.close();
@@ -81,7 +81,7 @@ public object BSDiff {
    }
 
    private fun chunkRange(total: Long): Sequence<Int> {
-      return j.y(i.S(f.q(f.s(0, var1), 1000000L)), new Function1(var1) {
+      return j.y(i.T(f.q(f.s(0, var1), 1000000L)), new Function1(var1) {
          final long $total;
 
          {
@@ -211,23 +211,23 @@ public object BSDiff {
       // 0cd: astore 6
       // 0cf: aload 3
       // 0d0: aconst_null
-      // 0d1: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0d1: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0d4: aload 2
       // 0d5: aconst_null
-      // 0d6: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0d6: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0d9: aload 4
       // 0db: aconst_null
-      // 0dc: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0dc: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0df: aload 1
       // 0e0: aconst_null
-      // 0e1: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0e1: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0e4: aload 5
       // 0e6: aconst_null
-      // 0e7: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 0e7: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 0ea: return
-      // 0eb: astore 1
+      // 0eb: astore 2
       // 0ec: goto 12d
-      // 0ef: astore 3
+      // 0ef: astore 2
       // 0f0: goto 123
       // 0f3: astore 2
       // 0f4: goto 118
@@ -239,7 +239,7 @@ public object BSDiff {
       // 101: astore 7
       // 103: aload 3
       // 104: aload 6
-      // 106: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 106: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 109: aload 7
       // 10b: athrow
       // 10c: aload 6
@@ -247,7 +247,7 @@ public object BSDiff {
       // 10f: astore 3
       // 110: aload 2
       // 111: aload 6
-      // 113: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 113: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 116: aload 3
       // 117: athrow
       // 118: aload 2
@@ -255,24 +255,24 @@ public object BSDiff {
       // 11a: astore 3
       // 11b: aload 4
       // 11d: aload 2
-      // 11e: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11e: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 121: aload 3
       // 122: athrow
-      // 123: aload 3
+      // 123: aload 2
       // 124: athrow
-      // 125: astore 2
+      // 125: astore 3
       // 126: aload 1
-      // 127: aload 3
-      // 128: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 12b: aload 2
+      // 127: aload 2
+      // 128: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 12b: aload 3
       // 12c: athrow
-      // 12d: aload 1
+      // 12d: aload 2
       // 12e: athrow
-      // 12f: astore 2
+      // 12f: astore 1
       // 130: aload 5
-      // 132: aload 1
-      // 133: invokestatic qh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 136: aload 2
+      // 132: aload 2
+      // 133: invokestatic yh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 136: aload 1
       // 137: athrow
    }
 

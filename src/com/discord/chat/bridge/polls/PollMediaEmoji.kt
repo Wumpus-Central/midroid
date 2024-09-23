@@ -1,8 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import al.b2
-import al.g0
 import com.discord.emoji.RenderableEmoji
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,9 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -111,19 +111,19 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    public override fun toString(): String {
       val var5: java.lang.String = this.id;
       val var3: java.lang.String = this.name;
-      val var2: java.lang.String = this.displayName;
+      val var4: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMediaEmoji(id=");
-      var4.append(var5);
-      var4.append(", name=");
-      var4.append(var3);
-      var4.append(", displayName=");
-      var4.append(var2);
-      var4.append(", animated=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PollMediaEmoji(id=");
+      var2.append(var5);
+      var2.append(", name=");
+      var2.append(var3);
+      var2.append(", displayName=");
+      var2.append(var4);
+      var2.append(", animated=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -147,7 +147,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), al.h.a};
+         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), il.h.a};
       }
 
       public open fun deserialize(decoder: Decoder): PollMediaEmoji {
@@ -218,7 +218,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

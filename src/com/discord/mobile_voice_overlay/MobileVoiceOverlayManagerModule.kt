@@ -12,10 +12,10 @@ import com.facebook.react.bridge.ActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
-import fh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
+import nh.l
 
 public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationContext) : NativeMobileVoiceOverlaySpec {
    private final val mobileVoiceOverlay: MobileVoiceOverlay
@@ -27,7 +27,7 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.mobileVoiceOverlay$delegate = l.b(new Function0(this) {
+      this.mobileVoiceOverlay$delegate = l.a(new Function0(this) {
          final MobileVoiceOverlayManagerModule this$0;
 
          {
@@ -63,22 +63,22 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
             public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
                if (var2 == 234780) {
                   MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
-                  val var6: Promise = this.$promise;
+                  val var7: Promise = this.$promise;
                   val var5: WindowUtils = WindowUtils.INSTANCE;
-                  val var7: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
-                  q.g(var7, "access$getReactApplicationContext(...)");
-                  var6.resolve(var5.canDrawOverlay(var7));
+                  val var6: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
+                  q.g(var6, "access$getReactApplicationContext(...)");
+                  var7.resolve(var5.canDrawOverlay(var6));
                }
             }
 
             public void onNewIntent(Intent var1) {
             }
          };
-         val var7: java.lang.String = this.getReactApplicationContext().getPackageName();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("package:");
-         var5.append(var7);
-         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var5.toString()));
+         val var5: java.lang.String = this.getReactApplicationContext().getPackageName();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("package:");
+         var7.append(var5);
+         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var7.toString()));
          this.getReactApplicationContext().addActivityEventListener(var4);
          this.getReactApplicationContext().startActivityForResult(var6, 234780, Bundle.EMPTY);
       }

@@ -112,12 +112,6 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
       q.h(var1, "view");
    }
 
-   @ReactProp(name = "animatedCustomKeyboardHeight")
-   public open fun setAnimatedCustomKeyboardHeight(view: ChatView, value: Float) {
-      q.h(var1, "view");
-      var1.setAnimatedCustomKeyboardHeight(var2);
-   }
-
    @ReactProp(name = "HACK_fixModalInteraction")
    public open fun setHACK_fixModalInteraction(view: ChatView, value: Boolean) {
       q.h(var1, "view");

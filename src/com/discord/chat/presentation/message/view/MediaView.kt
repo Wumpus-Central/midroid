@@ -213,16 +213,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       kotlin.jvm.internal.q.g(var4.inlineMediaGifIndicator, "inlineMediaGifIndicator");
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var13: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var5: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var5: GenericDraweeHierarchy = var13.getHierarchy() as GenericDraweeHierarchy;
+      val var13: GenericDraweeHierarchy = var5.getHierarchy() as GenericDraweeHierarchy;
       val var12: GradientDrawable = new GradientDrawable();
       var12.setShape(0);
       var12.setStroke(
-         var13.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+         var5.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var5.z(var12);
+      var13.z(var12);
    }
 
    private fun pause() {
@@ -256,12 +256,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var11: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var11, "getContext(...)");
-            val var7: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.q.e(var7);
-            var10 = var12.acquire(var11, var7, this.playerSettings);
+            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var7: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var7, "getContext(...)");
+            val var12: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.q.e(var12);
+            var10 = var11.acquire(var7, var12, this.playerSettings);
          }
 
          var10.setEventListener(
@@ -339,30 +339,30 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          val var3: java.lang.Double = this.mediaSource.getPortal();
          if (var3 != null) {
             val var1: Double = var3;
-            var var4: MediaPlayer = this.mediaPlayer;
-            val var6: Pair;
+            val var6: MediaPlayer = this.mediaPlayer;
+            val var7: Pair;
             if (this.mediaPlayer != null && this.mediaPlayerView != null) {
                kotlin.jvm.internal.q.e(this.mediaPlayer);
-               val var7: MediaPlayerView = this.mediaPlayerView;
+               val var9: MediaPlayerView = this.mediaPlayerView;
                kotlin.jvm.internal.q.e(this.mediaPlayerView);
-               var6 = new Pair(var4, var7);
+               var7 = new Pair(var6, var9);
             } else {
                if (!var5.isValid()) {
                   return;
                }
 
-               val var9: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
-               var6 = var9;
-               if (var9 == null) {
+               val var4: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
+               var7 = var4;
+               if (var4 == null) {
                   return;
                }
             }
 
-            var4 = var6.a() as MediaPlayer;
+            val var10: MediaPlayer = var7.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
                .addPortal(
                   var1,
-                  (var6.b() as MediaPlayerView).getView(),
+                  (var7.b() as MediaPlayerView).getView(),
                   new Function1(this) {
                      final MediaView this$0;
 
@@ -377,7 +377,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         ViewRemoveFromParentKt.removeFromParent(var1);
                      }
                   },
-                  new Function1(this, var5, var4) {
+                  new Function1(this, var5, var10) {
                      final MediaPlayer $mediaPlayer;
                      final MediaSource $mediaSource;
                      final MediaView this$0;
@@ -399,7 +399,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         MediaView.access$play(this.this$0);
                      }
                   },
-                  new Function1(this, var4, var5) {
+                  new Function1(this, var10, var5) {
                      final MediaPlayer $mediaPlayer;
                      final MediaSource $mediaSource;
                      final MediaView this$0;
@@ -626,16 +626,15 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      nk.f.d(
+      vk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.lang.String.lastIndexOf(String.java:2573)
-   //   at java.base/java.lang.String.lastIndexOf(String.java:2535)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:33)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
    //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
    //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
@@ -1657,21 +1656,23 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
       );
-      nk.f.d(
+      vk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2691,7 +2692,6 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null

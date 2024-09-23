@@ -1,7 +1,7 @@
 package com.discord.appreview;
 
 import com.google.android.gms.tasks.Task;
-import ob.d;
+import wb.d;
 
 // $VF: synthetic class
 public final class c implements d {

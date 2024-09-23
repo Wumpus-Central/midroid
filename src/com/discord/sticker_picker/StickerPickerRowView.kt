@@ -32,7 +32,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
       for (int var3 = 0; var5.hasNext(); var3++) {
          var var6: Any = var5.next();
          if (var3 < 0) {
-            i.t();
+            i.u();
          }
 
          var6 = var6 as StickerPickerRow.Sticker;
@@ -110,7 +110,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
       for (int var10 = 0; var9.hasNext(); var10++) {
          var var7: MarginLayoutParams = (MarginLayoutParams)var9.next();
          if (var10 < 0) {
-            i.t();
+            i.u();
          }
 
          var7 = var7 as StickerPickerRow.Sticker;

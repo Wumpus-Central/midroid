@@ -37,22 +37,22 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       var var4: Float = -1.0F;
 
       while (var9.hasNext()) {
-         val var10: Any = var9.next();
+         var var10: Any = var9.next();
          if (var7 < 0) {
-            i.t();
+            i.u();
          }
 
-         val var12: View = var10 as View;
-         val var11: RecyclerView.ViewHolder = var2.getChildViewHolder(var10 as View);
+         val var11: View = var10 as View;
+         var10 = var2.getChildViewHolder(var10 as View);
          var var3: Float;
          var var6: Float;
          if (var5 == -1.0F) {
-            q.e(var11);
+            q.e(var10);
             var3 = var5;
             var6 = var4;
-            if (this.isInsidePremiumRoadblock(var11)) {
-               if (var12.getTop() >= 0) {
-                  var3 = var12.getTop();
+            if (this.isInsidePremiumRoadblock((RecyclerView.ViewHolder)var10)) {
+               if (var11.getTop() >= 0) {
+                  var3 = var11.getTop();
                   var6 = var4;
                } else {
                   var3 = 0.0F;
@@ -64,10 +64,10 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
             var6 = var4;
             label38:
             if (var4 == -1.0F) {
-               q.e(var11);
+               q.e(var10);
                val var8: Int;
-               if (!this.isInsidePremiumRoadblock(var11)) {
-                  var8 = var12.getTop();
+               if (!this.isInsidePremiumRoadblock((RecyclerView.ViewHolder)var10)) {
+                  var8 = var11.getTop();
                } else {
                   var3 = var5;
                   var6 = var4;
@@ -75,7 +75,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
                      break label38;
                   }
 
-                  var8 = var12.getTop() + var12.getHeight();
+                  var8 = var11.getTop() + var11.getHeight();
                }
 
                var6 = var8;

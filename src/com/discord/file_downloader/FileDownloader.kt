@@ -1,20 +1,20 @@
 package com.discord.file_downloader
 
 import android.content.Context
-import fh.l
-import gh.r
 import java.io.File
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
+import nh.l
+import oh.r
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.Request.Builder
-import qk.d
+import yk.d
 
 public object FileDownloader {
-   private final val defaultClient: OkHttpClient by l.b(<unrepresentable>.INSTANCE)
+   private final val defaultClient: OkHttpClient by l.a(<unrepresentable>.INSTANCE)
       private final get() {
          return defaultClient$delegate.getValue() as OkHttpClient;
       }

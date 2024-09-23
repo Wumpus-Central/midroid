@@ -1,8 +1,5 @@
 package com.discord.contact_sync.react
 
-import al.b2
-import al.f
-import al.s0
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -11,6 +8,9 @@ import com.discord.react.utilities.PromiseWrapper
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactContext
+import il.b2
+import il.f
+import il.s0
 import java.util.ArrayList
 import java.util.Locale
 import kotlin.jvm.internal.q
@@ -22,16 +22,16 @@ fun `access$mapResultToContactSyncPermission`(var0: java.lang.String): Int {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var3: Locale = Locale.ROOT;
-   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-   q.g(var2, "toLowerCase(...)");
+   val var2: Locale = Locale.ROOT;
+   val var3: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+   q.g(var3, "toLowerCase(...)");
    val var1: Byte;
-   if (q.c(var0, var2)) {
+   if (q.c(var0, var3)) {
       var1 = 1;
    } else {
-      var2 = "DENIED".toLowerCase(var3);
-      q.g(var2, "toLowerCase(...)");
-      q.c(var0, var2);
+      val var4: java.lang.String = "DENIED".toLowerCase(var2);
+      q.g(var4, "toLowerCase(...)");
+      q.c(var0, var4);
       var1 = 0;
    }
 
@@ -78,7 +78,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       Json.d.a();
       var11 = var10.c(new s0(b2.a, ContactSyncBlobEntry.Companion.serializer()), var3);
       val var4: java.util.Collection = var3.values();
-      var12 = new ArrayList(i.u(var4, 10));
+      var12 = new ArrayList(i.v(var4, 10));
       var6 = var4.iterator();
    } catch (var8: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});

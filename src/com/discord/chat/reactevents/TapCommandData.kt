@@ -1,12 +1,14 @@
 package com.discord.chat.reactevents
 
-import al.b2
-import al.g0
-import al.g0.a
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,8 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class TapCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
@@ -98,21 +98,21 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.commandId;
-      val var5: java.lang.String = this.commandName;
-      val var2: java.lang.String = this.commandKey;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapCommandData(channelId=");
-      var1.append(var4);
-      var1.append(", commandId=");
-      var1.append(var3);
-      var1.append(", commandName=");
-      var1.append(var5);
-      var1.append(", commandKey=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.commandId;
+      val var2: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandKey;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapCommandData(channelId=");
+      var5.append(var3);
+      var5.append(", commandId=");
+      var5.append(var4);
+      var5.append(", commandName=");
+      var5.append(var2);
+      var5.append(", commandKey=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {

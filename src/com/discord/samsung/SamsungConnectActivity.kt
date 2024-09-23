@@ -30,7 +30,7 @@ public class SamsungConnectActivity : b {
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public void onServiceConnected(ComponentName var1, IBinder var2) {
             SamsungConnectActivity.access$setServiceBound$p(this.this$0, true);
-            val var5: a = com.msc.sa.aidl.a.a.c(var2);
+            val var5: a = com.msc.sa.aidl.a.a.a(var2);
             val var4: Log = Log.INSTANCE;
             Log.i$default(Log.INSTANCE, "Samsung", "Samsung Account service connection established", null, 4, null);
 
@@ -80,7 +80,7 @@ public class SamsungConnectActivity : b {
                try {
                   val var6: Bundle = new Bundle();
                   var6.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
-                  val var3: Boolean = var5.d0(1221, var38, var6);
+                  val var3: Boolean = var5.c0(1221, var38, var6);
                   val var39: StringBuilder = new StringBuilder();
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);

@@ -80,17 +80,17 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
    }
 
    public override fun toString(): String {
-      val var1: Float = this.topDp;
-      val var2: Float = this.rightDp;
-      val var3: Float = this.bottomDp;
+      val var3: Float = this.topDp;
+      val var1: Float = this.rightDp;
+      val var2: Float = this.bottomDp;
       val var4: Float = this.leftDp;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SafeAreaEdgeInsets(topDp=");
-      var5.append(var1);
-      var5.append(", rightDp=");
-      var5.append(var2);
-      var5.append(", bottomDp=");
       var5.append(var3);
+      var5.append(", rightDp=");
+      var5.append(var1);
+      var5.append(", bottomDp=");
+      var5.append(var2);
       var5.append(", leftDp=");
       var5.append(var4);
       var5.append(")");
@@ -114,24 +114,24 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
 
       public fun fromRootViewAsStableInsets(activity: Activity?): SafeAreaEdgeInsets {
          if (var1 != null) {
-            val var7: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var1);
-            if (var7 != null) {
-               val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var7, true);
-               val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var7, true);
+            val var5: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var1);
+            if (var5 != null) {
+               val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var5, true);
+               val var7: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var5, true);
                val var8: SafeAreaEdgeInsets;
                if (VERSION.SDK_INT > 29) {
                   var8 = new SafeAreaEdgeInsets(
-                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var6.b)),
-                     SizeUtilsKt.getPxToDp(var5.c),
-                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var6.d)),
-                     SizeUtilsKt.getPxToDp(var5.a)
+                     SizeUtilsKt.getPxToDp(Math.max(var6.b, var7.b)),
+                     SizeUtilsKt.getPxToDp(var6.c),
+                     SizeUtilsKt.getPxToDp(Math.max(var6.d, var7.d)),
+                     SizeUtilsKt.getPxToDp(var6.a)
                   );
                } else {
                   var8 = new SafeAreaEdgeInsets(
-                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var7.i())),
-                     SizeUtilsKt.getPxToDp(var5.c),
-                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var7.h())),
-                     SizeUtilsKt.getPxToDp(var5.a)
+                     SizeUtilsKt.getPxToDp(Math.max(var6.b, var5.i())),
+                     SizeUtilsKt.getPxToDp(var6.c),
+                     SizeUtilsKt.getPxToDp(Math.max(var6.d, var5.h())),
+                     SizeUtilsKt.getPxToDp(var6.a)
                   );
                }
 

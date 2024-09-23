@@ -551,7 +551,7 @@ public final class R {
    }
 
    public static final class styleable {
-      public static int[] PollMediaView = new int[]{2130968999};
+      public static int[] PollMediaView = new int[]{2130969004};
       public static int PollMediaView_emojiSize;
 
       private styleable() {

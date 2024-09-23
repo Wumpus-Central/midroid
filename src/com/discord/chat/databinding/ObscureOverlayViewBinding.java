@@ -38,27 +38,27 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
 
    public static ObscureOverlayViewBinding bind(View var0) {
       int var1 = R.id.blur_view;
-      BlurView var8 = (BlurView)a.a(var0, var1);
-      if (var8 != null) {
+      BlurView var5 = (BlurView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.description_label;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
+         TextView var6 = (TextView)a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.hide_button;
             IconButtonView var2 = (IconButtonView)a.a(var0, var1);
             if (var2 != null) {
                var1 = R.id.media_warning_icon;
-               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-               if (var6 != null) {
+               SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.overlay_centered_container;
-                  LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-                  if (var5 != null) {
+                  LinearLayout var7 = (LinearLayout)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.overlay_layout;
-                     ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-                     if (var4 != null) {
+                     ConstraintLayout var8 = (ConstraintLayout)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.reveal_button;
-                        IconButtonView var7 = (IconButtonView)a.a(var0, var1);
-                        if (var7 != null) {
-                           return new ObscureOverlayViewBinding(var0, var8, var3, var2, var6, var5, var4, var7);
+                        IconButtonView var4 = (IconButtonView)a.a(var0, var1);
+                        if (var4 != null) {
+                           return new ObscureOverlayViewBinding(var0, var5, var6, var2, var3, var7, var8, var4);
                         }
                      }
                   }

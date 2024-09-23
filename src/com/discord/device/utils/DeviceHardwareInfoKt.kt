@@ -15,25 +15,26 @@ internal fun getNumCpuCores(): Int {
 }
 
 internal fun getSocFromProcCpuInfo(): String {
-   val var0: Scanner = new Scanner(new File("/proc/cpuinfo"));
+   val var1: Scanner = new Scanner(new File("/proc/cpuinfo"));
 
+   var var0: java.lang.String;
    while (true) {
-      if (var0.hasNextLine()) {
-         val var1: java.lang.String = var0.nextLine();
-         q.e(var1);
-         if (!h.H(var1, "Hardware", false, 2, null)) {
+      if (var1.hasNextLine()) {
+         var0 = var1.nextLine();
+         q.e(var0);
+         if (!h.H(var0, "Hardware", false, 2, null)) {
             continue;
          }
 
-         var2 = h.X0(h.z0(var1, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
+         var0 = h.X0(h.z0(var0, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
          break;
       }
 
-      var2 = "";
+      var0 = "";
       break;
    }
 
-   return var2;
+   return var0;
 }
 
 internal fun maxCpuFreq(): String {
@@ -129,13 +130,13 @@ internal fun socName(): String {
          }
       }
 
-      var0 = a.a();
-      val var1: java.lang.String = b.a();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var0);
-      var2.append("_");
-      var2.append(var1);
-      return var2.toString();
+      val var1: java.lang.String = a.a();
+      val var2: java.lang.String = b.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var1);
+      var4.append("_");
+      var4.append(var2);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

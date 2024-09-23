@@ -1,9 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import al.b2
-import al.g0
-import al.x0
-import al.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.x0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
@@ -71,15 +71,15 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var4: java.lang.String = this.full;
-      val var5: java.lang.String = this.formatted;
+      val var5: java.lang.String = this.full;
+      val var4: java.lang.String = this.formatted;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TimestampContentNode(timestamp=");
       var3.append(var1);
       var3.append(", full=");
-      var3.append(var4);
-      var3.append(", formatted=");
       var3.append(var5);
+      var3.append(", formatted=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }
@@ -108,27 +108,26 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
       public open fun deserialize(decoder: Decoder): TimestampContentNode {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var5: Long;
-         val var8: java.lang.String;
-         val var11: java.lang.String;
-         if (var10.y()) {
-            var5 = var10.h(var9, 0);
-            var11 = var10.t(var9, 1);
-            val var7: java.lang.String = var10.t(var9, 2);
+         var var7: java.lang.String;
+         var var10: java.lang.String;
+         if (var9.y()) {
+            var5 = var9.h(var8, 0);
+            var7 = var9.t(var8, 1);
+            var10 = var9.t(var8, 2);
             var2 = 7;
-            var8 = var7;
          } else {
-            var var13: java.lang.String = null;
+            var7 = null;
             var var3: Boolean = true;
             var5 = 0L;
-            var var12: java.lang.String = null;
+            var10 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -136,27 +135,24 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
                            throw new n(var4);
                         }
 
-                        var12 = var10.t(var9, 2);
+                        var10 = var9.t(var8, 2);
                         var2 |= 4;
                      } else {
-                        var13 = var10.t(var9, 1);
+                        var7 = var9.t(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var5 = var10.h(var9, 0);
+                     var5 = var9.h(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var8 = var12;
-            var11 = var13;
          }
 
-         var10.b(var9);
-         return new TimestampContentNode(var2, var5, var11, var8, null);
+         var9.b(var8);
+         return new TimestampContentNode(var2, var5, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TimestampContentNode) {

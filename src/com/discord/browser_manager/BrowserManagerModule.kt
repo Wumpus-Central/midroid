@@ -6,10 +6,10 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import fh.w
-import gh.r
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import nh.w
+import oh.r
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val cacheModule: CacheModule

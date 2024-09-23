@@ -16,6 +16,6 @@ public class StickerPackage : ReactPackage {
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return i.p(new ViewManager[]{new StickerViewManagerAPNG(), new StickerViewManagerLottie()});
+      return i.q(new ViewManager[]{new StickerViewManagerAPNG(), new StickerViewManagerLottie()});
    }
 }

@@ -1,8 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import al.b2
-import al.g0
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -10,9 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescription: String? = null, clickable: ContentInventoryEntryClickable? = null) {
@@ -100,21 +101,21 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.badgeUrl;
+      val var4: java.lang.String = this.badgeUrl;
       val var2: java.lang.String = this.text;
-      val var3: java.lang.String = this.ariaDescription;
+      val var5: java.lang.String = this.ariaDescription;
       val var1: ContentInventoryEntryClickable = this.clickable;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Subtitle(badgeUrl=");
-      var4.append(var5);
-      var4.append(", text=");
-      var4.append(var2);
-      var4.append(", ariaDescription=");
-      var4.append(var3);
-      var4.append(", clickable=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Subtitle(badgeUrl=");
+      var3.append(var4);
+      var3.append(", text=");
+      var3.append(var2);
+      var3.append(", ariaDescription=");
+      var3.append(var5);
+      var3.append(", clickable=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -143,30 +144,30 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
 
       public open fun deserialize(decoder: Decoder): Subtitle {
          q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         val var5: Boolean = var11.y();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
+         val var5: Boolean = var10.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
+         var var6: java.lang.String;
          var var7: java.lang.String;
-         val var13: java.lang.String;
+         var var12: Any;
          if (var5) {
-            val var12: b2 = b2.a;
-            var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
-            var7 = var11.t(var10, 1);
-            var13 = var11.v(var10, 2, var12, null) as java.lang.String;
-            var6 = var11.v(var10, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, null) as ContentInventoryEntryClickable;
+            var12 = b2.a;
+            var8 = var10.v(var9, 0, b2.a, null) as java.lang.String;
+            var7 = var10.t(var9, 1);
+            var6 = var10.v(var9, 2, (DeserializationStrategy)var12, null) as java.lang.String;
+            var12 = var10.v(var9, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, null) as ContentInventoryEntryClickable;
             var2 = 15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var6 = null;
-            var var14: Any = null;
+            var12 = null;
 
             while (var3) {
-               val var4: Int = var11.x(var10);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -175,31 +176,28 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
                               throw new n(var4);
                            }
 
-                           var14 = var11.v(var10, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, var14) as ContentInventoryEntryClickable;
+                           var12 = var10.v(var9, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, var12) as ContentInventoryEntryClickable;
                            var2 |= 8;
                         } else {
-                           var6 = var11.v(var10, 2, b2.a, var6) as java.lang.String;
+                           var6 = var10.v(var9, 2, b2.a, var6) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.t(var10, 1);
+                        var7 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.v(var10, 0, b2.a, var8) as java.lang.String;
+                     var8 = var10.v(var9, 0, b2.a, var8) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = var14;
-            var13 = (java.lang.String)var6;
          }
 
-         var11.b(var10);
-         return new Subtitle(var2, var8, var7, var13, (ContentInventoryEntryClickable)var6, null);
+         var10.b(var9);
+         return new Subtitle(var2, var8, var7, var6, (ContentInventoryEntryClickable)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Subtitle) {
@@ -212,7 +210,7 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

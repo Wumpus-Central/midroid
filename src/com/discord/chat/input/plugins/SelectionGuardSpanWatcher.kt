@@ -18,7 +18,7 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
             var4 = 0;
          }
 
-         var var5: Int;
+         val var5: Int;
          if (var3 != null) {
             var5 = var3;
          } else if (var2 != null) {
@@ -29,7 +29,7 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
          val var13: Array<Any> = var1.getSpans(var4, var5, DCDNoSelectionSpan.class);
          q.g(var13, "getSpans(start, end, T::class.java)");
-         val var22: Array<DCDNoSelectionSpan> = var13 as Array<DCDNoSelectionSpan>;
+         val var14: Array<DCDNoSelectionSpan> = var13 as Array<DCDNoSelectionSpan>;
          if ((var13 as Array<DCDNoSelectionSpan>).length != 0) {
             if (var2 != null) {
                var4 = var2;
@@ -39,23 +39,23 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
                var4 = 0;
             }
 
-            val var12: Int = var22.length;
+            val var12: Int = var14.length;
             var var7: Int = 0;
-            var var6: Boolean = false;
-            var5 = var4;
+            var var19: Boolean = false;
+            var var6: Int = var4;
 
             while (var7 < var12) {
-               val var10: Int = var1.getSpanEnd(var22[var7]);
-               val var11: Int = var1.getSpanStart(var22[var7]);
-               var var8: Int = var5;
-               var var16: Int = var6;
-               if (var5 > var11) {
-                  var8 = var5;
-                  var16 = var6;
-                  if (var5 < var10) {
-                     var16 = var10;
-                     if (var10 - var5 > var5 - var11) {
-                        var16 = var11;
+               val var11: Int = var1.getSpanEnd(var14[var7]);
+               val var10: Int = var1.getSpanStart(var14[var7]);
+               var var8: Int = var6;
+               var var16: Int = var19;
+               if (var6 > var10) {
+                  var8 = var6;
+                  var16 = var19;
+                  if (var6 < var11) {
+                     var16 = var11;
+                     if (var11 - var6 > var6 - var10) {
+                        var16 = var10;
                      }
 
                      var8 = var16;
@@ -64,12 +64,12 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
                }
 
                var7++;
-               var5 = var8;
-               var6 = (boolean)var16;
+               var6 = var8;
+               var19 = (boolean)var16;
             }
 
             val var18: Boolean;
-            if (var2 != null && var2 != var5) {
+            if (var2 != null && var2 != var6) {
                var18 = true;
             } else {
                var18 = false;
@@ -78,13 +78,13 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
             var var21: Boolean = false;
             if (var3 != null) {
                var21 = false;
-               if (var3 != var5) {
+               if (var3 != var6) {
                   var21 = true;
                }
             }
 
-            if (var6 && (var21 || var18)) {
-               Selection.setSelection(var1, var5);
+            if (var19 && (var21 || var18)) {
+               Selection.setSelection(var1, var6);
             }
          }
       }

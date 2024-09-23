@@ -14,9 +14,9 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
-import fh.p
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import nh.p
 
 public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode, rc: RenderContext) {
    q.h(var0, "builder");
@@ -110,14 +110,14 @@ public fun EmojiContentNode.renderable(): RenderableEmoji {
    if (var0 is CustomEmojiContentNode) {
       val var5: RenderableEmoji.Companion = RenderableEmoji.Companion;
       val var6: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
-      val var1: Long = (var0 as CustomEmojiContentNode).getId();
-      val var4: Boolean = kotlin.text.h.x((var0 as CustomEmojiContentNode).getSrc());
-      var var3: Boolean = true;
-      if (!(var4 xor true) || q.c(var6.getSrc(), var6.getFrozenSrc())) {
-         var3 = false;
+      val var3: Long = (var0 as CustomEmojiContentNode).getId();
+      val var2: Boolean = kotlin.text.h.x((var0 as CustomEmojiContentNode).getSrc());
+      var var1: Boolean = true;
+      if (!(var2 xor true) || q.c(var6.getSrc(), var6.getFrozenSrc())) {
+         var1 = false;
       }
 
-      var7 = var5.customWithEmojiId(var1, var3, var6.getAlt());
+      var7 = var5.customWithEmojiId(var3, var1, var6.getAlt());
    } else {
       if (var0 !is UnicodeEmojiContentNode) {
          throw new p();

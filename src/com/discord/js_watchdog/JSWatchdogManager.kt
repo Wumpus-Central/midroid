@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import nk.f
-import nk.t0
+import vk.f
+import vk.t0
 
 public object JSWatchdogManager {
    private final lateinit var cacheDir: File

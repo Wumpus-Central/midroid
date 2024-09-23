@@ -47,7 +47,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
       }
 
       val var5: java.util.Set = var2.getAudioDevices();
-      val var4: ArrayList = new ArrayList(i.u(var5, 10));
+      val var4: ArrayList = new ArrayList(i.v(var5, 10));
       val var6: java.util.Iterator = var5.iterator();
 
       while (var6.hasNext()) {

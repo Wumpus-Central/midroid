@@ -18,7 +18,7 @@ import kotlin.jvm.internal.q
 
 public class ForegroundServiceManager {
    private final var service: Service?
-   private final var serviceConfigurations: List<ServiceNotificationConfiguration> = i.j()
+   private final var serviceConfigurations: List<ServiceNotificationConfiguration> = i.k()
    private final val serviceWakelocks: Wakelocks
 
    private fun getTypeFromServiceConfigurationList(serviceConfigurations: List<ServiceNotificationConfiguration>): Type {
@@ -31,20 +31,20 @@ public class ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var3: Int = var2;
-               if (var2 < var4) {
+               var var2: Int = var3;
+               if (var3 < var4) {
                   var8 = var6;
-                  var3 = var4;
+                  var2 = var4;
                }
 
                var5 = var8;
-               var2 = var3;
+               var3 = var2;
             } while (var7.hasNext());
          }
 
@@ -53,15 +53,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var4: Log = Log.INSTANCE;
-      val var5: java.lang.String = tag;
+      val var5: Log = Log.INSTANCE;
+      val var4: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
       val var6: StringBuilder = new StringBuilder();
       var6.append("Start service with ");
       var6.append(var3);
       var6.append(" configurations.");
-      Log.i$foreground_service_release$default(var4, var5, var6.toString(), null, 4, null);
+      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
    }
@@ -130,14 +130,14 @@ public class ForegroundServiceManager {
       // 03: ldc "foregroundService"
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 3
+      // 0b: astore 2
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 2
-      // 10: aload 2
+      // 0f: astore 3
+      // 10: aload 3
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 3
-      // 17: aload 2
+      // 16: aload 2
+      // 17: aload 3
       // 18: ldc "On service connected."
       // 1a: aconst_null
       // 1b: bipush 4
@@ -166,11 +166,11 @@ public class ForegroundServiceManager {
       // 4a: aload 0
       // 4b: aload 1
       // 4c: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
-      // 4f: aload 2
+      // 4f: aload 3
       // 50: ldc "tag"
       // 52: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 55: aload 3
-      // 56: aload 2
+      // 55: aload 2
+      // 56: aload 3
       // 57: ldc_w "No configuration present (process liked died), stopping service."
       // 5a: aconst_null
       // 5b: bipush 4
@@ -191,10 +191,10 @@ public class ForegroundServiceManager {
 
          try {
             q.h(var1, "context");
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = tag;
+            val var2: Log = Log.INSTANCE;
+            val var3: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var3, var2, "On service created.", null, 4, null);
+            Log.i$foreground_service_release$default(var2, var3, "On service created.", null, 4, null);
             this.serviceWakelocks.acquire(var1);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit

@@ -145,14 +145,14 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
    }
 
    public override fun toString(): String {
-      val var2: AudioAttachmentMessageAccessory = this.accessory;
+      val var3: AudioAttachmentMessageAccessory = this.accessory;
       val var1: Boolean = this.attached;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AudioPlayerViewState(accessory=");
-      var3.append(var2);
-      var3.append(", attached=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AudioPlayerViewState(accessory=");
+      var2.append(var3);
+      var2.append(", attached=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

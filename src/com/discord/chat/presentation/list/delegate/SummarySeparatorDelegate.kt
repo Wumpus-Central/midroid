@@ -38,8 +38,8 @@ public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandl
       var1.setDividerColor(var2.getColor());
       var1.setText(var2.getText());
       var1.setIsBeforeContent(var2.isBeforeContent());
-      var1.setMoreActionsHandler(new b(this, var2));
-      var1.setJumpToBottomHandler(new c(this, var2));
+      var1.setMoreActionsHandler(new a(this, var2));
+      var1.setJumpToBottomHandler(new b(this, var2));
    }
 
    public open fun createView(parent: ViewGroup): SummarySeparatorView {

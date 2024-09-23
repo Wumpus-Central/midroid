@@ -63,10 +63,10 @@ public data class DismissCallAction(tag: String, channelId: ChannelId) : Dismiss
    public override fun onNotificationAction(context: Context, intent: Intent) {
       q.h(var1, "context");
       q.h(var2, "intent");
-      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var4: Bundle = new Bundle();
-      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "DismissCallAction", 0L, false, var4, true, 12, null);
+      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: Bundle = new Bundle();
+      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
+      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "DismissCallAction", 0L, false, var3, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -78,15 +78,15 @@ public data class DismissCallAction(tag: String, channelId: ChannelId) : Dismiss
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DismissCallAction(tag=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.tag;
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DismissCallAction(tag=");
+      var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {

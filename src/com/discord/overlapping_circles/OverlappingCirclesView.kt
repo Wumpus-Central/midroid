@@ -28,10 +28,10 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
-import fh.l
-import fh.o
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
+import nh.l
+import nh.o
 
 public class OverlappingCirclesView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final var imageLoadingColor: Int
@@ -95,12 +95,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          var3 = this.maxItems - 1;
       }
 
-      val var12: java.util.Iterator = i.J0(var1, var3).iterator();
+      val var12: java.util.Iterator = i.K0(var1, var3).iterator();
 
       for (int var16 = 0; var12.hasNext(); var16++) {
          var var11: OverlappingItem = (OverlappingItem)var12.next();
          if (var16 < 0) {
-            i.t();
+            i.u();
          }
 
          var11 = var11;
@@ -129,12 +129,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             var11 = new OverlappingCirclesView.OverlappingClippedItem(var25, var18, var10, this.overlapPx, this.separatorSizePx, this.imageLoadingColorDrawable);
          } else {
             val var21: Context = this.getContext();
-            val var7: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
-            val var6: Int = this.overlapPx;
-            val var9: Int = this.separatorSizePx;
-            val var8: Int = this.getLayoutParams().height;
+            val var6: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
+            val var9: Int = this.overlapPx;
+            val var8: Int = this.separatorSizePx;
+            val var7: Int = this.getLayoutParams().height;
             q.e(var21);
-            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var7, var10, var6, var9, var8);
+            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var6, var10, var9, var8, var7);
          }
 
          val var26: LayoutParams = new LayoutParams(this.getLayoutParams().height, this.getLayoutParams().height);
@@ -148,12 +148,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       if (var2) {
          val var22: Context = this.getContext();
          q.g(var22, "getContext(...)");
-         val var24: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var23: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var22, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var23: LayoutParams = new LayoutParams(-2, -1);
-         var23.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var24, var23);
+         val var15: LayoutParams = new LayoutParams(-2, -1);
+         var15.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var23, var15);
       }
    }
 
@@ -311,7 +311,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.showSeparation = var3;
          this.overlapPx = var4;
          this.radius = var6 / 2.0F;
-         this.separatorClipPath$delegate = l.a(
+         this.separatorClipPath$delegate = l.b(
             o.l,
             new Function0(this, var5) {
                final int $separatorSizePx;

@@ -3,8 +3,8 @@ package com.discord.fastest_list.android.placeholder
 import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry
-import fh.p
 import kotlin.jvm.internal.q
+import nh.p
 
 internal sealed class FastestListPlaceholder protected constructor() {
    public abstract fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {

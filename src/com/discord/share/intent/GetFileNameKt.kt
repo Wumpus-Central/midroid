@@ -3,11 +3,11 @@ package com.discord.share.intent
 import android.content.ContentResolver
 import android.database.Cursor
 import android.net.Uri
-import fh.r
-import fh.s
-import fh.r.a
 import kotlin.jvm.internal.q
-import qh.c
+import nh.r
+import nh.s
+import nh.r.a
+import yh.c
 
 internal fun ContentResolver.getFileName(uri: Uri): String {
    label45: {
@@ -19,7 +19,7 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
          val var3: a = r.k;
          var17 = r.b(var0.query(var1, new java.lang.String[]{"_display_name"}, null, null, null));
       } catch (var7: java.lang.Throwable) {
-         val var20: a = r.k;
+         val var19: a = r.k;
          var17 = r.b(s.a(var7));
          break label42;
       }
@@ -38,10 +38,10 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
                   break label36;
                }
             } catch (var6: java.lang.Throwable) {
-               val var19: java.lang.Throwable = var6;
+               val var21: java.lang.Throwable = var6;
 
                try {
-                  throw var19;
+                  throw var21;
                } catch (var5: java.lang.Throwable) {
                   c.a(var4, var6);
                }

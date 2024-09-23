@@ -5,12 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import androidx.lifecycle.Lifecycle
 import com.discord.external_pip.ExternalPipModule
 import com.discord.foreground_service.ForegroundServiceManager
 import com.discord.notifications.client.NotificationClient
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
+import com.discord.window.WindowFoldingFeatureDetector
 import com.facebook.react.bridge.ReactContext
 import kotlin.jvm.internal.q
 
@@ -31,21 +33,26 @@ public class MainActivity : ReactActivity {
 
          private final void parseIntent(Intent var1) {
             val var3: NotificationClient = NotificationClient.Companion.getInstance();
-            var var2: Context = this.getContext();
+            val var2: Context = this.getContext();
             q.g(var2, "getContext(...)");
             var3.handleIntent(var2, var1);
-            val var5: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
-            var2 = this.getContext();
-            q.g(var2, "getContext(...)");
-            var5.handleIntent(var2, var1);
+            val var4: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
+            val var5: Context = this.getContext();
+            q.g(var5, "getContext(...)");
+            var4.handleIntent(var5, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
          }
 
          protected void onCreate(Bundle var1) {
             super.onCreate(var1);
-            val var2: Intent = this.this$0.getIntent();
-            q.g(var2, "getIntent(...)");
-            this.parseIntent(var2);
+            val var4: Intent = this.this$0.getIntent();
+            q.g(var4, "getIntent(...)");
+            this.parseIntent(var4);
+            val var5: WindowFoldingFeatureDetector = WindowFoldingFeatureDetector.INSTANCE;
+            val var3: MainActivity = this.this$0;
+            val var2: Lifecycle = this.this$0.getLifecycle();
+            q.g(var2, "getLifecycle(...)");
+            var5.configure(var3, var2, this.this$0);
          }
 
          public boolean onNewIntent(Intent var1) {

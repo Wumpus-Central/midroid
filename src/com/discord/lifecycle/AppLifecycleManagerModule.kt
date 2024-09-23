@@ -9,9 +9,9 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
-import fh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
+import nh.w
 
 public class AppLifecycleManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule, LifecycleEventListener, DefaultLifecycleObserver {
    private final val reactEvents: ReactEvents

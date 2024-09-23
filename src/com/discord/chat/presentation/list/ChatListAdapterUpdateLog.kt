@@ -51,12 +51,12 @@ internal object ChatListAdapterUpdateLog {
                   break;
                }
 
-               val var7: ChatListAdapterUpdateLogItem = var8.previous() as ChatListAdapterUpdateLogItem;
-               val var5: StringBuilder = new StringBuilder();
-               var5.append(var2);
-               var5.append(var7);
-               var5.append("\n");
-               var2 = var5.toString();
+               val var5: ChatListAdapterUpdateLogItem = var8.previous() as ChatListAdapterUpdateLogItem;
+               val var7: StringBuilder = new StringBuilder();
+               var7.append(var2);
+               var7.append(var5);
+               var7.append("\n");
+               var2 = var7.toString();
             }
          }
 

@@ -5,9 +5,9 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
-import gh.o
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import oh.o
 
 internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    q.h(var0, "data");
@@ -16,7 +16,7 @@ internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    val var2: Int = var0.getInt("itemSize");
    val var6: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var6);
-   val var5: ArrayList = new ArrayList(i.u(var4, 10));
+   val var5: ArrayList = new ArrayList(i.v(var4, 10));
    val var7: java.util.Iterator = var4.iterator();
 
    while (var7.hasNext()) {

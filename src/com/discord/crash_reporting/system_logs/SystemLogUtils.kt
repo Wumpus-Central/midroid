@@ -10,11 +10,11 @@ import java.util.HashSet
 import java.util.LinkedList
 import java.util.NoSuchElementException
 import java.util.concurrent.TimeUnit
-import kk.j
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lk.d
+import sk.j
+import tk.d
 
 internal object SystemLogUtils {
    private const val DEFAULT_TAG: String = "Discord"
@@ -27,12 +27,12 @@ internal object SystemLogUtils {
 
    @JvmStatic
    fun {
-      val var1: java.lang.String = Regex.k.c("libdiscord_version");
-      val var0: StringBuilder = new StringBuilder();
-      var0.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
-      var0.append(var1);
-      var0.append("\\].+))");
-      regexExtractTombstone = new Regex(var0.toString());
+      val var0: java.lang.String = Regex.k.c("libdiscord_version");
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
+      var1.append(var0);
+      var1.append("\\].+))");
+      regexExtractTombstone = new Regex(var1.toString());
    }
 
    private fun fetch(filter: Regex?, cb: (LinkedList<String>) -> Unit) {
@@ -51,7 +51,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         jh.a.b(
+         rh.a.b(
             false,
             false,
             null,
@@ -84,18 +84,18 @@ internal object SystemLogUtils {
                   // 000: bipush 0
                   // 001: istore 1
                   // 002: aconst_null
-                  // 003: astore 6
+                  // 003: astore 5
                   // 005: aconst_null
-                  // 006: astore 5
-                  // 008: aload 5
+                  // 006: astore 6
+                  // 008: aload 6
                   // 00a: astore 4
-                  // 00c: aload 6
+                  // 00c: aload 5
                   // 00e: astore 3
                   // 00f: new java/lang/ProcessBuilder
                   // 012: astore 7
-                  // 014: aload 5
+                  // 014: aload 6
                   // 016: astore 4
-                  // 018: aload 6
+                  // 018: aload 5
                   // 01a: astore 3
                   // 01b: aload 7
                   // 01d: bipush 2
@@ -109,9 +109,9 @@ internal object SystemLogUtils {
                   // 028: ldc "-d"
                   // 02a: aastore
                   // 02b: invokespecial java/lang/ProcessBuilder.<init> ([Ljava/lang/String;)V
-                  // 02e: aload 5
+                  // 02e: aload 6
                   // 030: astore 4
-                  // 032: aload 6
+                  // 032: aload 5
                   // 034: astore 3
                   // 035: aload 7
                   // 037: bipush 1
@@ -149,40 +149,40 @@ internal object SystemLogUtils {
                   // 078: astore 4
                   // 07a: aload 5
                   // 07c: astore 3
-                  // 07d: getstatic lk/a.b Ljava/nio/charset/Charset;
-                  // 080: astore 9
+                  // 07d: getstatic tk/a.b Ljava/nio/charset/Charset;
+                  // 080: astore 6
                   // 082: aload 5
                   // 084: astore 4
                   // 086: aload 5
                   // 088: astore 3
                   // 089: new java/io/InputStreamReader
-                  // 08c: astore 6
+                  // 08c: astore 9
                   // 08e: aload 5
                   // 090: astore 4
                   // 092: aload 5
                   // 094: astore 3
-                  // 095: aload 6
+                  // 095: aload 9
                   // 097: aload 8
-                  // 099: aload 9
+                  // 099: aload 6
                   // 09b: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
                   // 09e: aload 5
                   // 0a0: astore 4
                   // 0a2: aload 5
                   // 0a4: astore 3
-                  // 0a5: aload 6
+                  // 0a5: aload 9
                   // 0a7: instanceof java/io/BufferedReader
                   // 0aa: ifeq 0c7
                   // 0ad: aload 5
                   // 0af: astore 4
                   // 0b1: aload 5
                   // 0b3: astore 3
-                  // 0b4: aload 6
+                  // 0b4: aload 9
                   // 0b6: checkcast java/io/BufferedReader
                   // 0b9: astore 6
                   // 0bb: goto 0dc
                   // 0be: astore 3
                   // 0bf: goto 1e1
-                  // 0c2: astore 6
+                  // 0c2: astore 7
                   // 0c4: goto 108
                   // 0c7: aload 5
                   // 0c9: astore 4
@@ -190,7 +190,7 @@ internal object SystemLogUtils {
                   // 0cd: astore 3
                   // 0ce: new java/io/BufferedReader
                   // 0d1: dup
-                  // 0d2: aload 6
+                  // 0d2: aload 9
                   // 0d4: sipush 8192
                   // 0d7: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
                   // 0da: astore 6
@@ -218,7 +218,7 @@ internal object SystemLogUtils {
                   // 105: goto 1d2
                   // 108: aload 3
                   // 109: astore 4
-                  // 10b: aload 6
+                  // 10b: aload 7
                   // 10d: invokevirtual java/lang/Throwable.printStackTrace ()V
                   // 110: aload 3
                   // 111: astore 4
@@ -233,63 +233,63 @@ internal object SystemLogUtils {
                   // 123: aload 3
                   // 124: astore 4
                   // 126: new java/lang/StringBuilder
-                  // 129: astore 7
+                  // 129: astore 6
                   // 12b: aload 3
                   // 12c: astore 4
-                  // 12e: aload 7
+                  // 12e: aload 6
                   // 130: invokespecial java/lang/StringBuilder.<init> ()V
                   // 133: aload 3
                   // 134: astore 4
-                  // 136: aload 7
+                  // 136: aload 6
                   // 138: ldc "Exception getting system logs '"
                   // 13a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 13d: pop
                   // 13e: aload 3
                   // 13f: astore 4
-                  // 141: aload 7
-                  // 143: aload 6
+                  // 141: aload 6
+                  // 143: aload 7
                   // 145: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 148: pop
                   // 149: aload 3
                   // 14a: astore 4
-                  // 14c: aload 7
+                  // 14c: aload 6
                   // 14e: ldc "'"
                   // 150: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 153: pop
                   // 154: aload 3
                   // 155: astore 4
                   // 157: aload 5
-                  // 159: aload 7
+                  // 159: aload 6
                   // 15b: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 15e: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 161: pop
                   // 162: aload 3
                   // 163: astore 4
-                  // 165: aload 6
+                  // 165: aload 7
                   // 167: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-                  // 16a: astore 5
+                  // 16a: astore 6
                   // 16c: aload 3
                   // 16d: astore 4
-                  // 16f: aload 5
+                  // 16f: aload 6
                   // 171: ldc "getStackTrace(...)"
                   // 173: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
                   // 176: aload 3
                   // 177: astore 4
                   // 179: aload 0
                   // 17a: getfield com/discord/crash_reporting/system_logs/SystemLogUtils$fetch$1.$output Ljava/util/LinkedList;
-                  // 17d: astore 6
+                  // 17d: astore 7
                   // 17f: aload 3
                   // 180: astore 4
-                  // 182: aload 5
+                  // 182: aload 6
                   // 184: arraylength
                   // 185: istore 2
                   // 186: iload 1
                   // 187: iload 2
                   // 188: if_icmpge 1cb
-                  // 18b: aload 5
+                  // 18b: aload 6
                   // 18d: iload 1
                   // 18e: aaload
-                  // 18f: astore 7
+                  // 18f: astore 5
                   // 191: aload 3
                   // 192: astore 4
                   // 194: new java/lang/StringBuilder
@@ -307,12 +307,12 @@ internal object SystemLogUtils {
                   // 1ac: aload 3
                   // 1ad: astore 4
                   // 1af: aload 8
-                  // 1b1: aload 7
+                  // 1b1: aload 5
                   // 1b3: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 1b6: pop
                   // 1b7: aload 3
                   // 1b8: astore 4
-                  // 1ba: aload 6
+                  // 1ba: aload 7
                   // 1bc: aload 8
                   // 1be: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 1c1: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
@@ -348,7 +348,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         var var7: java.util.Iterator = var1.iterator();
+         val var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -411,18 +411,17 @@ internal object SystemLogUtils {
             );
 
             try {
-               var7 = var21.iterator();
+               val var8: java.util.Iterator = var21.iterator();
 
-               val var8: Any;
                do {
-                  if (!var7.hasNext()) {
+                  if (!var8.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var7.next();
-               } while (!(var13.contains((java.lang.String)var8) ^ true));
+                  var23 = var8.next();
+               } while (!(var13.contains((java.lang.String)var23) ^ true));
 
-               var14 = var8 as java.lang.String;
+               var14 = var23 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var14 = "Unknown";
             }
@@ -445,7 +444,7 @@ internal object SystemLogUtils {
 
    private fun hashString(input: String): String {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
-      val var3: ByteArray = var1.getBytes(lk.a.b);
+      val var3: ByteArray = var1.getBytes(tk.a.b);
       q.g(var3, "getBytes(...)");
       val var4: ByteArray = var2.digest(var3);
       q.e(var4);
@@ -718,8 +717,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var4: Long = System.nanoTime();
-      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var2: Long = System.nanoTime();
+      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -727,7 +726,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var4 + var2) {
+            if (System.nanoTime() >= var2 + var4) {
                return;
             }
          }
@@ -764,13 +763,13 @@ internal object SystemLogUtils {
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
       q.h(var1, "context");
-      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("[");
-      var2.append("libdiscord_version");
-      var2.append("]: ");
-      var2.append(var3);
-      Log.v("Discord", var2.toString());
+      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("[");
+      var3.append("libdiscord_version");
+      var3.append("]: ");
+      var3.append(var2);
+      Log.v("Discord", var3.toString());
       systemLogCapture.startThread();
    }
 
@@ -874,27 +873,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.text;
-         val var2: java.lang.String = this.cause;
+         val var2: java.lang.String = this.text;
+         val var4: java.lang.String = this.cause;
          val var5: java.lang.String = this.groupBy;
-         val var1: java.lang.String = this.origin;
-         val var3: java.lang.String = this.groupHash;
-         val var7: java.lang.String = this.textHash;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Tombstone(text=");
-         var6.append(var4);
-         var6.append(", cause=");
-         var6.append(var2);
-         var6.append(", groupBy=");
-         var6.append(var5);
-         var6.append(", origin=");
-         var6.append(var1);
-         var6.append(", groupHash=");
-         var6.append(var3);
-         var6.append(", textHash=");
-         var6.append(var7);
-         var6.append(")");
-         return var6.toString();
+         val var6: java.lang.String = this.origin;
+         val var7: java.lang.String = this.groupHash;
+         val var1: java.lang.String = this.textHash;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Tombstone(text=");
+         var3.append(var2);
+         var3.append(", cause=");
+         var3.append(var4);
+         var3.append(", groupBy=");
+         var3.append(var5);
+         var3.append(", origin=");
+         var3.append(var6);
+         var3.append(", groupHash=");
+         var3.append(var7);
+         var3.append(", textHash=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

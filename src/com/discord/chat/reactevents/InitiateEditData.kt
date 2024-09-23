@@ -1,12 +1,14 @@
 package com.discord.chat.reactevents
 
-import al.g0
-import al.o1
-import al.g0.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.g0
+import il.o1
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,8 +18,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import xk.f
-import xk.n
 
 @f
 internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId) : InitiateEditData(var1, var2), ReactEvent {
@@ -78,15 +78,15 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InitiateEditData(messageId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InitiateEditData(messageId=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -127,9 +127,9 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
             }
 
             val var6: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var2 = 3;
             var5 = var10;
             var11 = var6;
+            var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;

@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 248115
-  versionName: 248.15 - Beta
+  versionCode: 249109
+  versionName: 249.9 - Beta
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -118,6 +118,8 @@ doNotCompress:
 - META-INF/androidx.viewpager2_viewpager2.version
 - META-INF/androidx.viewpager_viewpager.version
 - META-INF/androidx.webkit_webkit.version
+- META-INF/androidx.window.extensions.core_core.version
+- META-INF/androidx.window_window.version
 - META-INF/androidx.work_work-runtime-ktx.version
 - META-INF/androidx.work_work-runtime.version
 - META-INF/com.google.android.material_material.version
@@ -125,9 +127,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/ei.a
-- META-INF/services/nk.z
-- META-INF/services/sk.v
+- META-INF/services/al.v
+- META-INF/services/mi.a
+- META-INF/services/vk.z
 - png
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
@@ -262,6 +264,8 @@ doNotCompress:
 - webp
 - mp3
 - res/raw/design_components_lottieicon_native_generated_lotties_camera.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_halloweenaction.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_halloweenidle.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_messagerequest.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_messagestab.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_microphone.lottie

@@ -16,10 +16,10 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
-import fh.p
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import nh.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,

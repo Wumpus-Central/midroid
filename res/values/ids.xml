@@ -80,6 +80,7 @@
     <item type="id" name="alt_text_container" />
     <item type="id" name="alt_text_label" />
     <item type="id" name="ampm" />
+    <item type="id" name="androidx_window_activity_scope" />
     <item type="id" name="answers" />
     <item type="id" name="arrow" />
     <item type="id" name="audio_details_view" />

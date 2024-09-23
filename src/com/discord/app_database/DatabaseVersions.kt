@@ -1,7 +1,9 @@
 package com.discord.app_database
 
-import al.g0
-import al.g0.a
+import fl.f
+import fl.n
+import il.g0
+import il.g0.a
 import java.util.Arrays
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -11,8 +13,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVersions: Any) {
@@ -61,15 +61,15 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = Arrays.toString((Object[])this.guildVersions);
+      val var2: java.lang.String = Arrays.toString((Object[])this.guildVersions);
       val var1: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DatabaseVersions(guildVersions=");
-      var2.append(var3);
-      var2.append(", nonGuildVersions=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DatabaseVersions(guildVersions=");
+      var3.append(var2);
+      var3.append(", nonGuildVersions=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

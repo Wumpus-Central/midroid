@@ -19,10 +19,10 @@ internal class TTIBroadcastReceiver : BroadcastReceiver {
       }
 
       if (var5 != null && var1 != null) {
-         val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
-         val var3: Bundle = new Bundle();
-         var3.putString("actionData", var5);
-         HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "TTITestAction", 30000L, false, var3, true, 8, null);
+         val var3: com.discord.react.headless_tasks.api.HeadlessTasks.Companion = HeadlessTasks.Companion;
+         val var4: Bundle = new Bundle();
+         var4.putString("actionData", var5);
+         com.discord.react.headless_tasks.api.HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "TTITestAction", 30000L, false, var4, true, 8, null);
       }
    }
 

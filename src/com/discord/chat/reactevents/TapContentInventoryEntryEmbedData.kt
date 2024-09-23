@@ -1,10 +1,12 @@
 package com.discord.chat.reactevents
 
-import al.b2
-import al.g0
-import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,8 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class TapContentInventoryEntryEmbedData(messageId: String, authorId: String, contentId: String, tappedElement: String) : ReactEvent {
@@ -92,19 +92,19 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.authorId;
-      val var3: java.lang.String = this.contentId;
-      val var4: java.lang.String = this.tappedElement;
+      val var3: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.authorId;
+      val var1: java.lang.String = this.contentId;
+      val var2: java.lang.String = this.tappedElement;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapContentInventoryEntryEmbedData(messageId=");
-      var5.append(var1);
-      var5.append(", authorId=");
-      var5.append(var2);
-      var5.append(", contentId=");
       var5.append(var3);
-      var5.append(", tappedElement=");
+      var5.append(", authorId=");
       var5.append(var4);
+      var5.append(", contentId=");
+      var5.append(var1);
+      var5.append(", tappedElement=");
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }
@@ -186,8 +186,8 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
                }
             }
 
-            var11 = var6;
             var6 = var12;
+            var11 = var6;
          }
 
          var10.b(var9);

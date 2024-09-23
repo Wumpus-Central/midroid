@@ -1,13 +1,14 @@
 package com.discord.media_player.reactevents
 
-import al.g0
-import al.x0
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import el.a
-import fh.w
+import fl.f
+import fl.j
+import fl.n
+import il.g0
+import il.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,9 +17,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.j
-import xk.n
+import ml.a
+import nh.w
 
 @f
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -80,7 +80,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
    public override fun serialize(): WritableMap {
       val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(w.a("time", this.time), w.a("duration", this.duration));
       if (this.source != null) {
-         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.d(MediaPlayerPlaybackSource.class), this.source)));
+         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source)));
       }
 
       return var1;
@@ -122,31 +122,33 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{yk.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), x0.a, x0.a};
+         return new KSerializer[]{gl.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), x0.a, x0.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackProgressUpdated {
          q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         val var9: Boolean = var11.y();
-         var var12: MediaPlayerPlaybackSource = null;
+         val var12: SerialDescriptor = this.getDescriptor();
+         val var13: c = var1.c(var12);
+         val var11: Boolean = var13.y();
+         var var14: MediaPlayerPlaybackSource = null;
          var var2: Int;
-         var var5: Long;
          var var7: Long;
-         if (var9) {
-            var12 = var11.v(var10, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
-            var7 = var11.h(var10, 1);
-            var5 = var11.h(var10, 2);
+         var var15: Long;
+         if (var11) {
+            var14 = var13.v(var12, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
+            var15 = var13.h(var12, 1);
+            val var9: Long = var13.h(var12, 2);
             var2 = 7;
+            var7 = var15;
+            var15 = var9;
          } else {
             var7 = 0L;
             var var3: Boolean = true;
             var2 = 0;
-            var5 = 0L;
+            var15 = 0L;
 
             while (var3) {
-               val var4: Int = var11.x(var10);
+               val var4: Int = var13.x(var12);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -154,14 +156,14 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
                            throw new n(var4);
                         }
 
-                        var5 = var11.h(var10, 2);
+                        var15 = var13.h(var12, 2);
                         var2 |= 4;
                      } else {
-                        var7 = var11.h(var10, 1);
+                        var7 = var13.h(var12, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var11.v(var10, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var12) as MediaPlayerPlaybackSource;
+                     var14 = var13.v(var12, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var14) as MediaPlayerPlaybackSource;
                      var2 |= 1;
                   }
                } else {
@@ -170,8 +172,8 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
             }
          }
 
-         var11.b(var10);
-         return new MediaPlayerPlaybackProgressUpdated(var2, var12, var7, var5, null);
+         var13.b(var12);
+         return new MediaPlayerPlaybackProgressUpdated(var2, var14, var7, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackProgressUpdated) {
@@ -184,7 +186,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

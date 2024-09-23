@@ -7,7 +7,7 @@ import androidx.metrics.performance.JankStats.OnFrameListener
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
 import kotlin.jvm.internal.q
-import m3.a
+import u3.a
 
 public object JankStatsAggregator {
    private final var jankStats: JankStats?
@@ -65,14 +65,14 @@ public object JankStatsAggregator {
 
    public fun issueJankReport(reason: String = ""): JankReport {
       q.h(var1, "reason");
-      val var4: Int = numFrames;
-      val var5: Int = numJankFrames;
+      val var5: Int = numFrames;
+      val var4: Int = numJankFrames;
       numFrames = 0;
       numJankFrames = 0;
       val var6: Log = Log.INSTANCE;
       val var2: Double;
-      if (var4 > 0) {
-         var2 = (double)var5 / var4 * 100.0;
+      if (var5 > 0) {
+         var2 = (double)var4 / var5 * 100.0;
       } else {
          var2 = 0.0;
       }
@@ -81,24 +81,24 @@ public object JankStatsAggregator {
       var7.append("*** Jank Report (");
       var7.append(var1);
       var7.append("), totalFrames = ");
-      var7.append(var4);
-      var7.append(", jankFrames = ");
       var7.append(var5);
+      var7.append(", jankFrames = ");
+      var7.append(var4);
       var7.append(", jank % = ");
       var7.append(var2);
       Log.i$default(var6, "JankStatsAggregator", var7.toString(), null, 4, null);
-      return new JankReport(var4, var5);
+      return new JankReport(var5, var4);
    }
 
    public fun setJankHeuristicMultiplier(jankHeuristicMultiplier: Float) {
       val var2: JankStats = jankStats;
       q.e(jankStats);
       var2.c(var1);
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Jank heuristic multiplier set to ");
-      var3.append(var1);
-      var3.append(".");
-      Log.i$default(var4, "JankStatsAggregator", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Jank heuristic multiplier set to ");
+      var4.append(var1);
+      var4.append(".");
+      Log.i$default(var3, "JankStatsAggregator", var4.toString(), null, 4, null);
    }
 }

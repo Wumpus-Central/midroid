@@ -22,10 +22,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    public open fun initialize() {
       super.initialize();
-      val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.register(var2, this.shareBroadcastReceiver);
+      val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.register(var1, this.shareBroadcastReceiver);
    }
 
    public open fun invalidate() {
@@ -72,7 +72,7 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
          val var5: Intent = new Intent("android.intent.action.SEND");
          var5.setAction("android.intent.action.SEND");
          var5.setType("text/plain");
-         var5.putExtra("android.intent.extra.TEXT", i.n0(i.o(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null));
+         var5.putExtra("android.intent.extra.TEXT", i.o0(i.p(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null));
          val var8: Activity = this.getReactApplicationContext().getCurrentActivity();
          if (var8 != null) {
             var1 = var3;

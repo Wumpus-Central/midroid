@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.view.botuikit.components
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -58,51 +57,50 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
       val var11: MessageComponentActionRowViewBinding = MessageComponentActionRowViewBinding.bind(this);
       q.g(var11, "bind(...)");
       val var9: java.util.List = var1.getComponents();
-      val var12: ArrayList = new ArrayList(i.u(var9, 10));
+      val var12: ArrayList = new ArrayList(i.v(var9, 10));
       val var13: java.util.Iterator = var9.iterator();
 
       for (int var5 = 0; var13.hasNext(); var5++) {
-         var var27: Any = var13.next();
+         var var27: ComponentView = (ComponentView)var13.next();
          if (var5 < 0) {
-            i.t();
+            i.u();
          }
 
          val var14: Component = var27 as Component;
          val var15: FlexboxLayout = var11.actionRowComponentViewGroup;
          q.g(var11.actionRowComponentViewGroup, "actionRowComponentViewGroup");
-         val var10: View = var15.getChildAt(var5);
-         val var8: Boolean = var10 is ComponentView;
-         var27 = null;
-         val var29: ComponentView;
+         var27 = var15.getChildAt(var5);
+         val var8: Boolean = var27 is ComponentView;
+         var var10: ComponentView = null;
          if (var8) {
-            var29 = var10 as ComponentView;
+            var27 = var27 as ComponentView;
          } else {
-            var29 = null;
+            var27 = null;
          }
 
          label52: {
-            if (var29 != null) {
-               if (var29.getComponentType() is Component) {
-                  var27 = var29;
+            if (var27 != null) {
+               if (((ComponentView)var27).getComponentType() is Component) {
+                  var10 = (ComponentView)var27;
                }
 
-               var30 = (ComponentView)var27;
-               if (var27 != null) {
+               var27 = var10;
+               if (var10 != null) {
                   break label52;
                }
             }
 
-            var30 = new ComponentInflater(var2.getContext()).inflateComponent(var14, var15);
+            var27 = new ComponentInflater(var2.getContext()).inflateComponent(var14, var15);
          }
 
-         if (var30 != null) {
-            var30.configure(var14, var2, var3, var4);
+         if (var27 != null) {
+            var27.configure(var14, var2, var3, var4);
          }
 
-         var12.add(var30);
+         var12.add(var27);
       }
 
-      val var17: java.util.List = i.a0(var12);
+      val var17: java.util.List = i.b0(var12);
       val var21: FlexboxLayout = var11.actionRowComponentViewGroup;
       q.g(var11.actionRowComponentViewGroup, "actionRowComponentViewGroup");
       MessageComponentsViewKt.replaceViews(var21, var17);

@@ -1,11 +1,13 @@
 package com.discord.chat.input.events
 
-import al.b2
-import al.g0
-import al.n0
-import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.n0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,8 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: String, editId: String) : ReactEvent {
@@ -86,19 +86,19 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    public override fun toString(): String {
       val var2: Int = this.start;
       val var1: Int = this.end;
-      val var3: java.lang.String = this.text;
-      val var4: java.lang.String = this.editId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("OnSelectionOrTextChangeEvent(start=");
-      var5.append(var2);
-      var5.append(", end=");
-      var5.append(var1);
-      var5.append(", text=");
-      var5.append(var3);
-      var5.append(", editId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.text;
+      val var3: java.lang.String = this.editId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("OnSelectionOrTextChangeEvent(start=");
+      var4.append(var2);
+      var4.append(", end=");
+      var4.append(var1);
+      var4.append(", text=");
+      var4.append(var5);
+      var4.append(", editId=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -135,10 +135,10 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
          val var11: java.lang.String;
          if (var10.y()) {
             var4 = var10.k(var9, 0);
-            var3 = var10.k(var9, 1);
+            var2 = var10.k(var9, 1);
             var7 = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
-            var2 = 15;
+            var3 = 15;
          } else {
             var7 = null;
             var var12: java.lang.String = null;
@@ -176,12 +176,14 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
                }
             }
 
-            var11 = var7;
             var7 = var12;
+            var3 = var2;
+            var11 = var7;
+            var2 = var3;
          }
 
          var10.b(var9);
-         return new OnSelectionOrTextChangeEvent(var2, var4, var3, var7, var11, null);
+         return new OnSelectionOrTextChangeEvent(var3, var4, var2, var7, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSelectionOrTextChangeEvent) {

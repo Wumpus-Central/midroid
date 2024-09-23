@@ -16,6 +16,6 @@ public class AvatarPackage : ReactPackage {
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return i.p(new ViewManager[]{new APNGDecorationViewManager()});
+      return i.q(new ViewManager[]{new APNGDecorationViewManager()});
    }
 }

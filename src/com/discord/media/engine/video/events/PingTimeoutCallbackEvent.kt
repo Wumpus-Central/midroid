@@ -1,11 +1,13 @@
 package com.discord.media.engine.video.events
 
-import al.b2
-import al.g0
-import al.n0
-import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.n0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,8 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, port: Int, seq: Int, timeout: Int) : ReactEvent {
@@ -143,29 +143,27 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
          val var10: c = var1.c(var9);
          var var2: Int;
          var var3: Int;
+         var var4: Int;
          var var5: Int;
          var var6: Int;
          var var11: java.lang.String;
-         var var14: Int;
          if (var10.y()) {
-            var14 = var10.k(var9, 0);
+            var6 = var10.k(var9, 0);
             var11 = var10.t(var9, 1);
-            val var7: Int = var10.k(var9, 2);
+            var5 = var10.k(var9, 2);
             var2 = var10.k(var9, 3);
             var3 = var10.k(var9, 4);
-            var5 = 31;
-            var6 = var14;
-            var14 = var7;
+            var4 = 31;
          } else {
             var11 = null;
-            var var17: Boolean = true;
+            var var7: Boolean = true;
             var6 = 0;
             var5 = 0;
-            var14 = 0;
+            var4 = 0;
             var3 = 0;
             var2 = 0;
 
-            while (var17) {
+            while (var7) {
                val var8: Int = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -176,7 +174,7 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
                                  throw new n(var8);
                               }
 
-                              var14 = var10.k(var9, 4);
+                              var4 = var10.k(var9, 4);
                               var2 |= 16;
                            } else {
                               var5 = var10.k(var9, 3);
@@ -195,18 +193,18 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
                      var2 |= 1;
                   }
                } else {
-                  var17 = false;
+                  var7 = false;
                }
             }
 
-            var14 = var3;
-            var3 = var14;
+            var4 = var2;
+            var3 = var4;
             var2 = var5;
-            var5 = var2;
+            var5 = var3;
          }
 
          var10.b(var9);
-         return new PingTimeoutCallbackEvent(var5, var6, var11, var14, var2, var3, null);
+         return new PingTimeoutCallbackEvent(var4, var6, var11, var5, var2, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PingTimeoutCallbackEvent) {

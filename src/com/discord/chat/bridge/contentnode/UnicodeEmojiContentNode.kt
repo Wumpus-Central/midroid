@@ -1,9 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import al.b2
-import al.g0
-import al.h
-import al.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.h
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class UnicodeEmojiContentNode(content: String, surrogate: String, jumboable: Boolean = false) : EmojiContentNode {
@@ -70,14 +70,14 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.content;
-      val var4: java.lang.String = this.surrogate;
+      val var4: java.lang.String = this.content;
+      val var3: java.lang.String = this.surrogate;
       val var1: Boolean = this.jumboable;
       val var2: StringBuilder = new StringBuilder();
       var2.append("UnicodeEmojiContentNode(content=");
-      var2.append(var3);
-      var2.append(", surrogate=");
       var2.append(var4);
+      var2.append(", surrogate=");
+      var2.append(var3);
       var2.append(", jumboable=");
       var2.append(var1);
       var2.append(")");
@@ -108,26 +108,28 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
 
       public open fun deserialize(decoder: Decoder): UnicodeEmojiContentNode {
          q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var5: Boolean;
-         var var6: java.lang.String;
-         var var9: java.lang.String;
-         if (var8.y()) {
-            var6 = var8.t(var7, 0);
-            var9 = var8.t(var7, 1);
-            var5 = var8.s(var7, 2);
+         val var7: java.lang.String;
+         var var11: java.lang.String;
+         if (var9.y()) {
+            val var10: java.lang.String = var9.t(var8, 0);
+            val var6: java.lang.String = var9.t(var8, 1);
+            var5 = var9.s(var8, 2);
             var2 = 7;
+            var7 = var10;
+            var11 = var6;
          } else {
-            var6 = null;
-            var9 = null;
+            var var12: java.lang.String = null;
+            var11 = null;
             var var3: Boolean = true;
             var5 = false;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var8.x(var7);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -135,24 +137,26 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
                            throw new n(var4);
                         }
 
-                        var5 = var8.s(var7, 2);
+                        var5 = var9.s(var8, 2);
                         var2 |= 4;
                      } else {
-                        var9 = var8.t(var7, 1);
+                        var11 = var9.t(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var8.t(var7, 0);
+                     var12 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var7 = var12;
          }
 
-         var8.b(var7);
-         return new UnicodeEmojiContentNode(var2, var6, var9, var5, null);
+         var9.b(var8);
+         return new UnicodeEmojiContentNode(var2, var7, var11, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UnicodeEmojiContentNode) {

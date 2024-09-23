@@ -8,17 +8,17 @@ import com.facebook.datasource.DataSource
 import com.facebook.imagepipeline.core.DefaultExecutorSupplier
 import com.facebook.imagepipeline.request.BasePostprocessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import fh.r
-import fh.s
-import fh.r.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import lh.b
-import o4.c
+import nh.r
+import nh.s
+import nh.r.a
+import th.b
+import w4.c
 
 private final val executorSupplier: DefaultExecutorSupplier = new DefaultExecutorSupplier(3)
 
@@ -40,7 +40,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = c.a().g(var7.H(var10).a(), var0);
-      var8.e(new w5.b(var6, var3) {
+      var8.f(new e6.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -67,7 +67,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(r.b(var4));
          }
       }, access$getExecutorSupplier$p().a());
-      var6.i(new Function1(var8) {
+      var6.f(new Function1(var8) {
          final DataSource $imageDataSource;
 
          {
@@ -92,16 +92,16 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var9: a = r.k;
-      var8 = r.b(Uri.parse(var1));
-   } catch (var6: java.lang.Throwable) {
       val var5: a = r.k;
-      var8 = r.b(s.a(var6));
+      var9 = r.b(Uri.parse(var1));
+   } catch (var6: java.lang.Throwable) {
+      val var8: a = r.k;
+      var9 = r.b(s.a(var6));
       break label15;
    }
 
-   var var10: Any = var8;
-   if (r.g(var8)) {
+   var var10: Any = var9;
+   if (r.g(var9)) {
       var10 = null;
    }
 
@@ -120,7 +120,7 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      c.a().g(var5.H(var6).a(), var0).e(new w5.b(var3) {
+      c.a().g(var5.H(var6).a(), var0).f(new e6.b(var3) {
          final Function1 $onDecodedImage;
 
          {
@@ -145,16 +145,16 @@ public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor?
 
    label16:
    try {
-      val var8: a = r.k;
-      var7 = r.b(Uri.parse(var1));
-   } catch (var5: java.lang.Throwable) {
       val var4: a = r.k;
-      var7 = r.b(s.a(var5));
+      var8 = r.b(Uri.parse(var1));
+   } catch (var5: java.lang.Throwable) {
+      val var7: a = r.k;
+      var8 = r.b(s.a(var5));
       break label16;
    }
 
-   var var9: Any = var7;
-   if (r.g(var7)) {
+   var var9: Any = var8;
+   if (r.g(var8)) {
       var9 = null;
    }
 

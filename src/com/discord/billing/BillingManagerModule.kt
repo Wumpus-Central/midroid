@@ -13,13 +13,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import fh.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
+import nh.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
@@ -208,10 +208,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var2: BillingManager = this.billingManager;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      var2.open(var1);
+      val var1: BillingManager = this.billingManager;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.open(var2);
    }
 
    @ReactMethod

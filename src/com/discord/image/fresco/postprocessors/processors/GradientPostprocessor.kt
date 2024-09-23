@@ -7,9 +7,9 @@ import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import com.discord.image.fresco.postprocessors.PostProcessor.Gradient
 import com.facebook.imagepipeline.request.BasePostprocessor
-import fh.p
-import fh.w
 import kotlin.jvm.internal.q
+import nh.p
+import nh.w
 
 internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
    private final val gradient: Gradient
@@ -116,13 +116,13 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
          }
 
          public override fun toString(): String {
-            val var2: Float = this.x;
-            val var1: Float = this.y;
+            val var1: Float = this.x;
+            val var2: Float = this.y;
             val var3: StringBuilder = new StringBuilder();
             var3.append("Point(x=");
-            var3.append(var2);
-            var3.append(", y=");
             var3.append(var1);
+            var3.append(", y=");
+            var3.append(var2);
             var3.append(")");
             return var3.toString();
          }

@@ -4,14 +4,14 @@ import android.text.format.DateUtils
 import java.text.DateFormat
 import java.util.Date
 import kotlin.jvm.internal.q
-import lk.b
+import tk.b
 
 public fun renderNotificationMessageContent(content: String): String {
    q.h(var0, "content");
-   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var13: java.lang.String = var3.i(var4.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
+   var var13: java.lang.String = var4.i(var3.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
    var var14: java.lang.String = var0;
 
    while (true) {
@@ -75,9 +75,9 @@ public fun renderNotificationMessageContent(content: String): String {
       }
 
       val var2: Int = var6.d().a();
-      val var12: Int = var6.d().m();
+      val var12: Int = var6.d().k();
       q.e(var10);
       var14 = h.t0(var14, var2, var12 + 1, var10).toString();
-      var13 = h.t0(var13, var6.d().a(), var6.d().m() + 1, var10).toString();
+      var13 = h.t0(var13, var6.d().a(), var6.d().k() + 1, var10).toString();
    }
 }

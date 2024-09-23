@@ -54,17 +54,17 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
          var var18: Int = var26.getSpanEnd(var22[var6]);
          val var38: BackgroundStyle = var37.getStyle();
          val var13: Float = SizeUtilsKt.getDpToPx(var38.getCornerRadius());
-         val var17: Int = var36.getLineForOffset(var9);
-         var10 = var36.getLineForOffset(var18);
-         if (var17 <= var11 && var11 <= var10) {
-            if (var17 == var11) {
+         var10 = var36.getLineForOffset(var9);
+         val var17: Int = var36.getLineForOffset(var18);
+         if (var10 <= var11 && var11 <= var17) {
+            if (var10 == var11) {
                var9 = (int)var36.getPrimaryHorizontal(var9);
             } else {
                var9 = var3;
             }
 
             val var12: Float;
-            if (var10 == var11) {
+            if (var17 == var11) {
                var12 = var36.getPrimaryHorizontal(Math.min(var18, var36.getLineEnd(var11)));
             } else {
                var12 = var36.getLineRight(var11);
@@ -73,7 +73,7 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
             val var19: Int = (int)var12;
             var18 = var2.getColor();
             var2.setColor(var38.getBackgroundColor());
-            if (var17 == var10) {
+            if (var10 == var17) {
                var1.drawRoundRect(
                   (float)var9,
                   (float)var5,
@@ -83,20 +83,20 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
                   (float)SizeUtilsKt.getDpToPx(var38.getCornerRadius()),
                   var2
                );
-            } else if (var17 == var11) {
-               var2.setColor(var38.getBackgroundColor());
-               val var23: Path = new Path();
-               var23.addRoundRect(
-                  (float)var9, (float)var5, (float)var19, (float)var7, new float[]{var13, var13, 0.0F, 0.0F, 0.0F, 0.0F, var13, var13}, Direction.CW
-               );
-               var1.drawPath(var23, var2);
             } else if (var10 == var11) {
                var2.setColor(var38.getBackgroundColor());
-               val var40: Path = new Path();
-               var40.addRoundRect(
+               val var39: Path = new Path();
+               var39.addRoundRect(
+                  (float)var9, (float)var5, (float)var19, (float)var7, new float[]{var13, var13, 0.0F, 0.0F, 0.0F, 0.0F, var13, var13}, Direction.CW
+               );
+               var1.drawPath(var39, var2);
+            } else if (var17 == var11) {
+               var2.setColor(var38.getBackgroundColor());
+               val var41: Path = new Path();
+               var41.addRoundRect(
                   (float)var9, (float)var5, (float)var19, (float)var7, new float[]{0.0F, 0.0F, var13, var13, var13, var13, 0.0F, 0.0F}, Direction.CW
                );
-               var1.drawPath(var40, var2);
+               var1.drawPath(var41, var2);
             } else {
                var1.drawRect((float)var9, (float)var5, (float)var19, (float)var7, var2);
             }

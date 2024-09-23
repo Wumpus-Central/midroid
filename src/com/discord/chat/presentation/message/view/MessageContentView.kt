@@ -62,7 +62,7 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = fh.l.b(new Function0(this) {
+      this.shadowView$delegate = nh.l.a(new Function0(this) {
          final MessageContentView this$0;
 
          {
@@ -84,13 +84,13 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
       kotlin.jvm.internal.q.g(var6, "getSpans(...)");
-      val var7: QuoteSpan = kotlin.collections.c.F(var6) as QuoteSpan;
+      val var8: QuoteSpan = kotlin.collections.c.F(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(" (");
-      var8.append(var2);
-      var8.append(")");
-      var1.append(var8.toString());
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(" (");
+      var7.append(var2);
+      var7.append(")");
+      var1.append(var7.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -100,8 +100,8 @@ public class MessageContentView  public constructor(context: Context, attrs: Att
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var7 != null) {
-         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
+      if (var8 != null) {
+         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
       }
    }
 

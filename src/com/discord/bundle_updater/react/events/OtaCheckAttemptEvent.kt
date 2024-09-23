@@ -1,14 +1,15 @@
 package com.discord.bundle_updater.react.events
 
-import al.g0
-import al.g0.a
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.bundle_updater.BundleUpdater.OtaMetric
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fh.w
+import fl.f
+import fl.n
+import il.g0
+import il.g0.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -18,8 +19,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
+import nh.w
 
 @f
 internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent {
@@ -56,7 +56,7 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
 
    public open fun serialize(): WritableNativeMap {
       val var2: java.util.List = this.metrics;
-      val var1: ArrayList = new ArrayList(i.u(this.metrics, 10));
+      val var1: ArrayList = new ArrayList(i.v(this.metrics, 10));
       val var3: java.util.Iterator = var2.iterator();
 
       while (var3.hasNext()) {

@@ -63,17 +63,17 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: Message = this.message;
-      val var4: AutoModerationContext = this.autoModerationContext;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("FlaggedMessageActionBarAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", message=");
-      var2.append(var1);
-      var2.append(", autoModerationContext=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Message = this.message;
+      val var3: AutoModerationContext = this.autoModerationContext;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FlaggedMessageActionBarAccessory(messageId=");
+      var4.append(var1);
+      var4.append(", message=");
+      var4.append(var2);
+      var4.append(", autoModerationContext=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

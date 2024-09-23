@@ -12,7 +12,7 @@ import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import q3.a
+import y3.a
 
 public object ImmersiveMode {
    private final var rootViewInsetUpdateCallbacks: MutableList<(WindowInsetsCompat) -> Unit> = new ArrayList()
@@ -49,7 +49,7 @@ public object ImmersiveMode {
       }
 
       val var5: WindowInsetsCompat = new WindowInsetsCompat.b(var3)
-         .b(WindowInsetsCompat.m.g(), Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
+         .b(WindowInsetsCompat.m.h(), Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
       r0.c0(var1, var5);
       return var5;

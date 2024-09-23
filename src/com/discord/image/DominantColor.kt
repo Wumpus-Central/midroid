@@ -13,7 +13,7 @@ public object DominantColor {
       if (!(var2.isEmpty() xor true)) {
          throw new DominantColor.NoSwatchesFoundException();
       } else {
-         val var3: ArrayList = new ArrayList(i.u(var2, 10));
+         val var3: ArrayList = new ArrayList(i.v(var2, 10));
          val var4: java.util.Iterator = var2.iterator();
 
          while (var4.hasNext()) {
@@ -38,7 +38,7 @@ public object DominantColor {
       }
 
       try {
-         var7 = new ArrayList(i.u(var3, 10));
+         var7 = new ArrayList(i.v(var3, 10));
          var8 = var3.iterator();
       } catch (var5: Exception) {
          return null;

@@ -4,13 +4,13 @@ import com.android.billingclient.api.SkuDetails
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
-import fh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import nh.w
 
 internal fun List<SkuDetails>.serializeSkuDetails(): ReadableNativeArray {
    q.h(var0, "<this>");
-   val var1: ArrayList = new ArrayList(i.u(var0, 10));
+   val var1: ArrayList = new ArrayList(i.v(var0, 10));
 
    for (SkuDetails var2 : var0) {
       var1.add(

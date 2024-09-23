@@ -1,11 +1,13 @@
 package com.discord.chat.reactevents
 
-import al.b2
-import al.g0
-import al.n0
-import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.n0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,8 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public class TapForwardFooterData(snapshotIndex: Int, channelId: String, messageId: String) : ReactEvent {
@@ -102,8 +102,8 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
                }
             }
 
-            var6 = var11;
             var10 = var6;
+            var6 = var11;
          }
 
          var9.b(var8);

@@ -75,6 +75,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_bookmarkoutlineicon;
       public static int design_components_icon_native_redesign_generated_images_boosttier2icon;
       public static int design_components_icon_native_redesign_generated_images_boosttier3icon;
+      public static int design_components_icon_native_redesign_generated_images_bugicon;
       public static int design_components_icon_native_redesign_generated_images_calendaricon;
       public static int design_components_icon_native_redesign_generated_images_calendarminusicon;
       public static int design_components_icon_native_redesign_generated_images_calendarplusicon;
@@ -228,6 +229,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_qrcodeicon;
       public static int design_components_icon_native_redesign_generated_images_questsicon;
       public static int design_components_icon_native_redesign_generated_images_reactionicon;
+      public static int design_components_icon_native_redesign_generated_images_recordplayericon;
       public static int design_components_icon_native_redesign_generated_images_refreshicon;
       public static int design_components_icon_native_redesign_generated_images_retryicon;
       public static int design_components_icon_native_redesign_generated_images_roboticon;
@@ -482,10 +484,6 @@ public final class R {
       public static int images_native_empties_empty_channel_no_text_channels_dark;
       public static int images_native_empties_empty_channel_no_text_channels_light;
       public static int images_native_empties_empty_dms_activities;
-      public static int images_native_empties_empty_expanded_friend_list_dark;
-      public static int images_native_empties_empty_expanded_friend_list_light;
-      public static int images_native_empties_empty_friends;
-      public static int images_native_empties_empty_friends_cta;
       public static int images_native_empties_empty_instant_invite_friends;
       public static int images_native_empties_empty_mentions;
       public static int images_native_empties_empty_quest_home;
@@ -663,7 +661,6 @@ public final class R {
       public static int images_native_icons_ic_community_guild_badge_dark_24px;
       public static int images_native_icons_ic_community_guild_badge_light_24px;
       public static int images_native_icons_ic_community_guild_badge_premium_24px;
-      public static int images_native_icons_ic_compose_24px;
       public static int images_native_icons_ic_content_warning_32px;
       public static int images_native_icons_ic_controller_24px;
       public static int images_native_icons_ic_crop;
@@ -714,7 +711,6 @@ public final class R {
       public static int images_native_icons_ic_guild_voice_24px;
       public static int images_native_icons_ic_hammer_and_chisel_24px;
       public static int images_native_icons_ic_header_members_24px;
-      public static int images_native_icons_ic_header_members_add_24px;
       public static int images_native_icons_ic_headset_24px;
       public static int images_native_icons_ic_headset_deafened_24px;
       public static int images_native_icons_ic_headset_deafened_dark_24px;
@@ -1640,6 +1636,8 @@ public final class R {
    public static final class raw {
       public static int _discord_common_js_packages_tokens_typography_generated_notosans_notosans700bold;
       public static int design_components_lottieicon_native_generated_lotties_camera;
+      public static int design_components_lottieicon_native_generated_lotties_halloweenaction;
+      public static int design_components_lottieicon_native_generated_lotties_halloweenidle;
       public static int design_components_lottieicon_native_generated_lotties_messagerequest;
       public static int design_components_lottieicon_native_generated_lotties_messagestab;
       public static int design_components_lottieicon_native_generated_lotties_microphone;

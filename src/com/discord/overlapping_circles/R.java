@@ -19,7 +19,7 @@ public final class R {
    }
 
    public static final class styleable {
-      public static int[] OverlappingCirclesView = new int[]{2130969509, 2130969510, 2130969511, 2130969512, 2130969513, 2130969514, 2130969515, 2130969516};
+      public static int[] OverlappingCirclesView = new int[]{2130969517, 2130969518, 2130969519, 2130969520, 2130969521, 2130969522, 2130969523, 2130969524};
       public static int OverlappingCirclesView_oc_circleBgColor;
       public static int OverlappingCirclesView_oc_maxItems;
       public static int OverlappingCirclesView_oc_overflowBgColor;

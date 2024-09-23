@@ -48,15 +48,15 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          this.initStartMs = System.currentTimeMillis();
       }
 
-      val var3: Log = Log.INSTANCE;
-      val var2: java.lang.String = this.name;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Initializing async dispatcher for ");
-      var4.append(var2);
-      var4.append(", ");
-      var4.append(var1);
-      var4.append(" queued tasks");
-      Log.i$default(var3, var2, var4.toString(), null, 4, null);
+      val var2: Log = Log.INSTANCE;
+      val var4: java.lang.String = this.name;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Initializing async dispatcher for ");
+      var3.append(var4);
+      var3.append(", ");
+      var3.append(var1);
+      var3.append(" queued tasks");
+      Log.i$default(var2, var4, var3.toString(), null, 4, null);
    }
 
    private fun onInitFinish() {
@@ -64,14 +64,14 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          val var3: Long = System.currentTimeMillis() - this.initStartMs;
          val var1: Long = this.longDispatchThresholdMs;
          if (var3 < this.longDispatchThresholdMs) {
-            val var5: Log = Log.INSTANCE;
+            val var6: Log = Log.INSTANCE;
             val var7: java.lang.String = this.name;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var7);
-            var6.append(": queued tasks  took ");
-            var6.append(var3);
-            var6.append(" ms");
-            Log.i$default(var5, var7, var6.toString(), null, 4, null);
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var7);
+            var5.append(": queued tasks  took ");
+            var5.append(var3);
+            var5.append(" ms");
+            Log.i$default(var6, var7, var5.toString(), null, 4, null);
          } else {
             val var9: Log = Log.INSTANCE;
             val var8: java.lang.String = this.name;

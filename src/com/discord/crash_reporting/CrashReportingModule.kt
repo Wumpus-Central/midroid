@@ -11,11 +11,11 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
-import fh.w
 import io.sentry.react.RNSentryModule
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
+import nh.w
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext

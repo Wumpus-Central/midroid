@@ -3,8 +3,8 @@ package com.discord.phone_verification
 import android.content.Context
 import android.content.IntentFilter
 import androidx.core.content.a
+import ga.b
 import kotlin.jvm.internal.q
-import y9.b
 
 internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> Unit) {
    private final val context: Context
@@ -23,7 +23,7 @@ internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> 
    }
 
    public fun startSmsRetriever() {
-      val var1: b = y9.a.a(this.context);
+      val var1: b = ga.a.a(this.context);
       q.g(var1, "getClient(...)");
       var1.H();
    }

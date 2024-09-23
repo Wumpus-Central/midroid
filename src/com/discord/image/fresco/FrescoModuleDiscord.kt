@@ -6,7 +6,7 @@ import com.discord.image.fresco.config.FrescoMemoryTrimmer
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.fresco.FrescoModule
 import kotlin.jvm.internal.q
-import o4.c
+import w4.c
 
 public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : FrescoModule {
    init {
