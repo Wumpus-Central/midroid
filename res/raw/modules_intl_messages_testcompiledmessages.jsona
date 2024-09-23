@@ -1,30 +1,4 @@
 {
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
-  "HMvECw": [
-    {
-      "type": 0,
-      "value": "All of this is managed locally and has "
-    },
-    {
-      "type": 8,
-      "value": "$b",
-      "children": [
-        {
-          "type": 0,
-          "value": "not yet"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " replaced the global i18n system."
-    }
-  ],
   "rdfRys": [
     {
       "type": 0,
@@ -43,6 +17,69 @@
     {
       "type": 0,
       "value": " here."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
+    }
+  ],
+  "Q+eyqq": [
+    {
+      "type": 6,
+      "value": "count",
+      "options": {
+        "one": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " thing"
+            }
+          ]
+        },
+        "other": {
+          "value": [
+            {
+              "type": 1,
+              "value": "count"
+            },
+            {
+              "type": 0,
+              "value": " things"
+            }
+          ]
+        }
+      },
+      "offset": 0,
+      "pluralType": "cardinal"
+    }
+  ],
+  "uczI4u": [
+    {
+      "type": 0,
+      "value": "This link uses a "
+    },
+    {
+      "type": 8,
+      "value": "$link",
+      "children": [
+        {
+          "type": 1,
+          "value": "linkTarget"
+        },
+        {
+          "type": 0,
+          "value": "variable link"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " provided at runtime."
     }
   ],
   "rmps8/": [
@@ -93,61 +130,24 @@
       "value": " for special content."
     }
   ],
-  "uczI4u": [
+  "HMvECw": [
     {
       "type": 0,
-      "value": "This link uses a "
+      "value": "All of this is managed locally and has "
     },
     {
       "type": 8,
-      "value": "$link",
+      "value": "$b",
       "children": [
         {
-          "type": 1,
-          "value": "linkTarget"
-        },
-        {
           "type": 0,
-          "value": "variable link"
+          "value": "not yet"
         }
       ]
     },
     {
       "type": 0,
-      "value": " provided at runtime."
-    }
-  ],
-  "Q+eyqq": [
-    {
-      "type": 6,
-      "value": "count",
-      "options": {
-        "one": {
-          "value": [
-            {
-              "type": 7
-            },
-            {
-              "type": 0,
-              "value": " thing"
-            }
-          ]
-        },
-        "other": {
-          "value": [
-            {
-              "type": 1,
-              "value": "count"
-            },
-            {
-              "type": 0,
-              "value": " things"
-            }
-          ]
-        }
-      },
-      "offset": 0,
-      "pluralType": "cardinal"
+      "value": " replaced the global i18n system."
     }
   ]
 }
