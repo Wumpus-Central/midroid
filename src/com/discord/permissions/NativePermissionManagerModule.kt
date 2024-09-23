@@ -164,36 +164,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       }
    }
 
-   public fun requestForegroundServicePermissionScreenShare(promise: Promise) {
-      q.h(var1, "promise");
-      if (VERSION.SDK_INT >= 34) {
-         this.requireAppInForeground(
-            var1,
-            new Function1(this, var1) {
-               final Promise $promise;
-               final NativePermissionManagerModule this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-                  this.$promise = var2;
-               }
-
-               public final void invoke(Promise var1) {
-                  q.h(var1, "it");
-                  NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
-                     .requestPermission(
-                        "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
-                        NativePermissionManagerModule.Companion.access$transformRequestResult(NativePermissionManagerModule.Companion, this.$promise)
-                     );
-               }
-            }
-         );
-      } else {
-         this.requestForegroundServicePermissionPreU(var1);
-      }
-   }
-
    public fun requestForegroundServicePermissionVoiceCall(promise: Promise) {
       q.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {

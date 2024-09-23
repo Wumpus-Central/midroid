@@ -10,9 +10,9 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
-import gh.w
+import fh.w
+import ih.a
 import java.util.Comparator
-import jh.a
 import kotlin.jvm.internal.q
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -51,7 +51,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
    public fun getPhotos(params: ReadableMap, promise: Promise) {
       q.h(var1, "params");
       q.h(var2, "promise");
-      val var4: Int = var1.getInt("first");
+      val var3: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
          var5 = var1.getInt("offset");
@@ -61,25 +61,25 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
       val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
-      var var3: Int;
+      var var4: Int;
       try {
-         val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var6: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var6, "getReactApplicationContext(...)");
-         var16 = i.J0(i.H0(var12.getMedia(var6, var7, var4, var5), new Comparator() {
+         val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var12: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var12, "getReactApplicationContext(...)");
+         var16 = i.J0(i.H0(var6.getMedia(var12, var7, var3, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
-         }), var4);
-         var3 = var16.size();
+         }), var3);
+         var4 = var16.size();
       } catch (var11: Exception) {
          var2.reject("E_UNABLE_TO_LOAD", var11);
          return;
       }
 
       val var14: WritableNativeMap;
-      if (var3 == var4) {
+      if (var4 == var3) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
                w.a("start_cursor", java.lang.String.valueOf((i.d0(var16) as ContentResolverMedia).getUri())),

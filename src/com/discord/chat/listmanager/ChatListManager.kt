@@ -26,9 +26,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
-import ok.f
-import ok.k0
-import qk.a
+import nk.f
+import nk.k0
+import pk.a
 
 public class ChatListManager(coroutineScope: CoroutineScope) {
    private final var isDisabled: Boolean
@@ -39,7 +39,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    init {
       q.h(var1, "coroutineScope");
       super();
-      this.updatesFlow = rk.q.a(1, 3, a.j);
+      this.updatesFlow = qk.q.a(1, 3, a.j);
       this.publishScope = g.h(var1, k0.a());
    }
 

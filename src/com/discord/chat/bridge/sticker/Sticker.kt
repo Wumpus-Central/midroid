@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.sticker
 
-import bl.b2
-import bl.g0
-import bl.n0
-import bl.x0
+import al.b2
+import al.g0
+import al.n0
+import al.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,9 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class Sticker(id: Long,
@@ -202,8 +202,8 @@ public data class Sticker(id: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: n0 = n0.a;
-         return new KSerializer[]{x0.a, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, b2.a, b2.a, b2.a, a.u(n0.a), a.u(var3), var3};
+         val var4: n0 = n0.a;
+         return new KSerializer[]{x0.a, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, b2.a, b2.a, b2.a, a.u(n0.a), a.u(var4), var4};
       }
 
       public open fun deserialize(decoder: Decoder): Sticker {
@@ -305,7 +305,7 @@ public data class Sticker(id: Long,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

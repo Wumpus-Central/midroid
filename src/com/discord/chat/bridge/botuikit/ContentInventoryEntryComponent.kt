@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import bl.b2
-import bl.g0
-import bl.n0
+import al.b2
+import al.g0
+import al.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,9 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component {
@@ -64,8 +64,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var2: Int = this.id.hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
       if (this.contentInventoryEntry == null) {
          var1 = 0;
@@ -73,22 +73,22 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = this.contentInventoryEntry.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var3: ContentInventoryEntry = this.contentInventoryEntry;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ContentInventoryEntryComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", contentInventoryEntry=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: ContentInventoryEntry = this.contentInventoryEntry;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContentInventoryEntryComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(", contentInventoryEntry=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -157,8 +157,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                }
             }
 
-            var2 = var3;
             var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
@@ -175,7 +175,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

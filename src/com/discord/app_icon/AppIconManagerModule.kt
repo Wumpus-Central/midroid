@@ -5,7 +5,7 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import gh.w
+import fh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
@@ -41,10 +41,10 @@ public class AppIconManagerModule(reactContext: ReactApplicationContext) : Nativ
       q.h(var2, "promise");
 
       try {
-         val var4: AppIconUtil = AppIconUtil.INSTANCE;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         var4.setAppIcon(var3, var1);
+         val var3: AppIconUtil = AppIconUtil.INSTANCE;
+         val var4: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var4, "getReactApplicationContext(...)");
+         var3.setAppIcon(var4, var1);
          var2.resolve(java.lang.Boolean.TRUE);
       } catch (var5: Exception) {
          var2.reject(var5);

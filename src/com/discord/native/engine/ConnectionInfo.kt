@@ -75,16 +75,16 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
 
    public override fun toString(): String {
       val var2: Boolean = this.isConnected;
-      val var3: java.lang.String = this.protocol;
-      val var4: java.lang.String = this.localAddress;
+      val var4: java.lang.String = this.protocol;
+      val var3: java.lang.String = this.localAddress;
       val var1: Int = this.localPort;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ConnectionInfo(isConnected=");
       var5.append(var2);
       var5.append(", protocol=");
-      var5.append(var3);
-      var5.append(", localAddress=");
       var5.append(var4);
+      var5.append(", localAddress=");
+      var5.append(var3);
       var5.append(", localPort=");
       var5.append(var1);
       var5.append(")");

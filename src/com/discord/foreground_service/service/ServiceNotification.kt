@@ -12,9 +12,9 @@ import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
-import gh.w
+import fh.w
+import ih.a
 import java.util.Comparator
-import jh.a
 import kotlin.jvm.internal.q
 
 internal object ServiceNotification {
@@ -43,10 +43,10 @@ internal object ServiceNotification {
          var7 = null;
       }
 
-      val var8: NotificationCompat.Builder = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      val var5: NotificationCompat.Builder = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
       for (ServiceNotificationConfiguration.Action var9 : var2.getAuxiliaryActions()) {
-         var8.a(
+         var5.a(
             0,
             var9.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
@@ -55,7 +55,7 @@ internal object ServiceNotification {
          );
       }
 
-      val var6: Notification = var8.A(e.a(w.a("permissionType", var2.getType().ordinal()))).g();
+      val var6: Notification = var5.A(e.a(w.a("permissionType", var2.getType().ordinal()))).g();
       q.g(var6, "build(...)");
       return var6;
    }

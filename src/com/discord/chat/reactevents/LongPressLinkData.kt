@@ -1,7 +1,7 @@
 package com.discord.chat.reactevents
 
-import bl.b2
-import bl.g0
+import al.b2
+import al.g0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -12,9 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class LongPressLinkData(url: String?) : ReactEvent {
@@ -130,7 +130,7 @@ public data class LongPressLinkData(url: String?) : ReactEvent {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

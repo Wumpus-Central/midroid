@@ -51,16 +51,16 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       kotlin.jvm.internal.q.h(var3, "onMediaItemClicked");
       kotlin.jvm.internal.q.h(var5, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var6, "eventHandler");
-      val var9: Message = var1.getMessage();
-      var var10: java.lang.String = var1.getMessageId-3Eiw7ao();
-      this.messageId = var10;
-      var10 = MessageId.toString-impl(var10);
-      val var11: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
-         MessageId.toString-impl(var9.getId-3Eiw7ao()),
-         MessageKt.shouldAnimateEmoji(var9),
-         MessageKt.shouldShowLinkDecorations(var9),
-         var9.getShouldShowRoleDot(),
-         var9.getShouldShowRoleOnName()
+      val var10: Message = var1.getMessage();
+      val var9: java.lang.String = var1.getMessageId-3Eiw7ao();
+      this.messageId = var9;
+      val var11: java.lang.String = MessageId.toString-impl(var9);
+      val var27: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+         MessageId.toString-impl(var10.getId-3Eiw7ao()),
+         MessageKt.shouldAnimateEmoji(var10),
+         MessageKt.shouldShowLinkDecorations(var10),
+         var10.getShouldShowRoleDot(),
+         var10.getShouldShowRoleOnName()
       );
       val var28: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
          new Function1(var6, this) {
@@ -256,7 +256,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          }
       });
       val var7: Int = var1.getConstrainedWidth();
-      val var26: java.lang.Boolean = var9.getGifAutoPlay();
+      val var26: java.lang.Boolean = var10.getGifAutoPlay();
       val var8: Boolean;
       if (var26 != null) {
          var8 = var26;
@@ -265,7 +265,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var10, var11, var28, var22, var24, var25, var7, var8), this);
+         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var11, var27, var28, var22, var24, var25, var7, var8), this);
    }
 
    public override fun onTapButtonActionComponent(componentId: String) {

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import bl.b2
-import bl.g0
-import bl.o1
+import al.b2
+import al.g0
+import al.o1
 import com.discord.chat.presentation.message.view.botuikit.ContentInventoryEventHandlers
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.q
@@ -14,9 +14,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ContentInventoryEntry(authorId: UserId,
@@ -439,24 +439,24 @@ public data class ContentInventoryEntry(authorId: UserId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
-         val var4: b2 = b2.a;
-         val var1: ContentInventoryEntryClickable.$serializer = ContentInventoryEntryClickable.$serializer.INSTANCE;
+         val var4: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
+         val var1: b2 = b2.a;
+         val var2: ContentInventoryEntryClickable.$serializer = ContentInventoryEntryClickable.$serializer.INSTANCE;
          return new KSerializer[]{
             UserId.$serializer.INSTANCE,
             b2.a,
             b2.a,
             a.u(ContentInventoryEntryClickable.$serializer.INSTANCE),
-            var4,
-            a.u(var4),
+            var1,
             a.u(var1),
-            var4,
-            a.u(var1),
-            var4,
-            a.u(var1),
-            var3[11],
-            var3[12],
-            a.u(var1)
+            a.u(var2),
+            var1,
+            a.u(var2),
+            var1,
+            a.u(var2),
+            var4[11],
+            var4[12],
+            a.u(var2)
          };
       }
 
@@ -464,63 +464,63 @@ public data class ContentInventoryEntry(authorId: UserId,
          q.h(var1, "decoder");
          val var24: SerialDescriptor = this.getDescriptor();
          val var25: c = var1.c(var24);
-         var var20: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
+         val var21: Array<KSerializer> = ContentInventoryEntry.access$get$childSerializers$cp();
          val var6: Boolean = var25.y();
          var var2: Int = 9;
          var var8: UserId = null;
-         var var3: Int;
-         var var11: java.lang.String;
-         var var12: Any;
+         var var13: Any;
+         val var14: UserId;
          var var15: java.lang.String;
          var var16: java.lang.String;
          var var17: java.lang.String;
-         var var18: Any;
-         var var19: UserId;
-         val var21: Any;
+         var var19: java.lang.String;
+         val var20: Any;
          val var22: Any;
-         val var23: java.lang.String;
-         var var27: Any;
+         var var26: Any;
          var var35: Any;
-         var var38: java.lang.String;
+         var var36: java.lang.String;
+         var var38: Any;
+         var var46: Any;
+         val var50: java.lang.String;
          if (var6) {
-            var19 = var25.m(var24, 0, UserId.$serializer.INSTANCE, null) as UserId;
-            var16 = var25.t(var24, 1);
+            var14 = var25.m(var24, 0, UserId.$serializer.INSTANCE, null) as UserId;
+            var17 = var25.t(var24, 1);
             var15 = var25.t(var24, 2);
             val var7: ContentInventoryEntryClickable.$serializer = ContentInventoryEntryClickable.$serializer.INSTANCE;
-            var22 = var25.v(var24, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, null) as ContentInventoryEntryClickable;
-            var17 = var25.t(var24, 4);
+            var20 = var25.v(var24, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, null) as ContentInventoryEntryClickable;
+            var16 = var25.t(var24, 4);
             var35 = var25.v(var24, 5, b2.a, null) as java.lang.String;
-            val var14: ContentInventoryEntryClickable = var25.v(var24, 6, var7, null) as ContentInventoryEntryClickable;
-            var11 = var25.t(var24, 7);
-            val var13: ContentInventoryEntryClickable = var25.v(var24, 8, var7, null) as ContentInventoryEntryClickable;
+            var46 = var25.v(var24, 6, var7, null) as ContentInventoryEntryClickable;
+            var36 = var25.t(var24, 7);
+            var38 = var25.v(var24, 8, var7, null) as ContentInventoryEntryClickable;
             val var9: java.lang.String = var25.t(var24, 9);
-            var12 = var25.v(var24, 10, var7, null) as ContentInventoryEntryClickable;
-            val var33: java.util.List = var25.m(var24, 11, var20[11], null) as java.util.List;
-            var27 = var25.m(var24, 12, var20[12], null) as java.util.List;
+            var13 = var25.v(var24, 10, var7, null) as ContentInventoryEntryClickable;
+            val var33: java.util.List = var25.m(var24, 11, var21[11], null) as java.util.List;
+            var26 = var25.m(var24, 12, var21[12], null) as java.util.List;
             val var31: ContentInventoryEntryClickable = var25.v(var24, 13, var7, null) as ContentInventoryEntryClickable;
-            var3 = 16383;
-            var23 = (java.lang.String)var35;
-            var35 = var14;
-            var18 = var13;
-            var38 = var9;
-            var20 = var33;
-            var21 = var27;
-            var27 = var31;
+            var2 = 16383;
+            var19 = (java.lang.String)var35;
+            var35 = var46;
+            var50 = var36;
+            var22 = var38;
+            var36 = var9;
+            var46 = var33;
+            var38 = var31;
          } else {
             var var5: Boolean = true;
-            var3 = 0;
+            var var3: Int = 0;
             var15 = null;
-            var var40: java.lang.String = null;
+            var var42: java.lang.String = null;
             var16 = null;
+            var13 = null;
             var38 = null;
-            var12 = null;
             var19 = null;
-            var11 = null;
+            var36 = null;
             var35 = null;
             var var34: Any = null;
             var var32: java.lang.String = null;
-            var27 = null;
-            var18 = null;
+            var26 = null;
+            var46 = null;
             var17 = null;
 
             while (var5) {
@@ -538,7 +538,7 @@ public data class ContentInventoryEntry(authorId: UserId,
                            var2 = var3 or 1;
                            break;
                         case 1:
-                           var40 = var25.t(var24, 1);
+                           var42 = var25.t(var24, 1);
                            var2 = var3 or 2;
                            break;
                         case 2:
@@ -550,7 +550,7 @@ public data class ContentInventoryEntry(authorId: UserId,
                            var2 = var3 or 8;
                            break;
                         case 4:
-                           var27 = var25.t(var24, 4);
+                           var26 = var25.t(var24, 4);
                            var2 = var3 or 16;
                            break;
                         case 5:
@@ -562,7 +562,7 @@ public data class ContentInventoryEntry(authorId: UserId,
                            var2 = var3 or 64;
                            break;
                         case 7:
-                           var18 = var25.t(var24, 7);
+                           var46 = var25.t(var24, 7);
                            var3 |= 128;
                            break label36;
                         case 8:
@@ -575,15 +575,15 @@ public data class ContentInventoryEntry(authorId: UserId,
                            var30 = var2;
                            break label37;
                         case 10:
-                           var11 = var25.v(var24, 10, ContentInventoryEntryClickable.$serializer.INSTANCE, var11) as ContentInventoryEntryClickable;
+                           var36 = var25.v(var24, 10, ContentInventoryEntryClickable.$serializer.INSTANCE, var36) as ContentInventoryEntryClickable;
                            var2 = var3 or 1024;
                            break;
                         case 11:
-                           var12 = var25.m(var24, 11, var20[11], var12) as java.util.List;
+                           var38 = var25.m(var24, 11, var21[11], var38) as java.util.List;
                            var2 = var3 or 2048;
                            break;
                         case 12:
-                           var38 = var25.m(var24, 12, var20[12], var38) as java.util.List;
+                           var13 = var25.m(var24, 12, var21[12], var13) as java.util.List;
                            var2 = var3 or 4096;
                            break;
                         case 13:
@@ -606,38 +606,39 @@ public data class ContentInventoryEntry(authorId: UserId,
                var2 = var30;
             }
 
-            var27 = var16;
-            var21 = var38;
-            var20 = (KSerializer[])var12;
-            var12 = var11;
-            var38 = var17;
-            var18 = var19;
-            var11 = (java.lang.String)var18;
-            var23 = var15;
-            var17 = (java.lang.String)var27;
-            var22 = var34;
+            var2 = var3;
+            var38 = var16;
+            var26 = var13;
+            var46 = var38;
+            var13 = var36;
+            var36 = var17;
+            var22 = var19;
+            var50 = (java.lang.String)var46;
+            var19 = var15;
+            var16 = (java.lang.String)var26;
+            var20 = var34;
             var15 = var32;
-            var16 = var40;
-            var19 = var8;
+            var17 = var42;
+            var14 = var8;
          }
 
          var25.b(var24);
          return new ContentInventoryEntry(
-            var3,
-            var19,
-            var16,
-            var15,
-            (ContentInventoryEntryClickable)var22,
+            var2,
+            var14,
             var17,
-            var23,
+            var15,
+            (ContentInventoryEntryClickable)var20,
+            var16,
+            var19,
             (ContentInventoryEntryClickable)var35,
-            var11,
-            (ContentInventoryEntryClickable)var18,
-            var38,
-            (ContentInventoryEntryClickable)var12,
-            var20,
-            (java.util.List)var21,
-            (ContentInventoryEntryClickable)var27,
+            var50,
+            (ContentInventoryEntryClickable)var22,
+            var36,
+            (ContentInventoryEntryClickable)var13,
+            (java.util.List)var46,
+            (java.util.List)var26,
+            (ContentInventoryEntryClickable)var38,
             null,
             null
          );
@@ -653,7 +654,7 @@ public data class ContentInventoryEntry(authorId: UserId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

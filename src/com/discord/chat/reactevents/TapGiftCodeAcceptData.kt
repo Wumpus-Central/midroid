@@ -1,8 +1,8 @@
 package com.discord.chat.reactevents
 
-import bl.b2
-import bl.g0
-import bl.o1
+import al.b2
+import al.g0
+import al.o1
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
@@ -15,9 +15,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?) : TapGiftCodeAcceptData(var1, var2), ReactEvent {
@@ -131,22 +131,23 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         val var15: java.lang.String;
+         var var11: java.lang.String;
+         var var12: java.lang.String;
          if (var5) {
-            var6 = var9.t(var8, 0);
-            val var7: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var7 != null) {
-               var10 = var7.unbox-impl();
+            val var7: java.lang.String = var9.t(var8, 0);
+            val var6: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var6 != null) {
+               var10 = var6.unbox-impl();
             }
 
             var2 = 3;
-            var15 = var10;
+            var12 = var10;
+            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var11: java.lang.String = null;
-            var6 = null;
+            var11 = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var9.x(var8);
@@ -157,17 +158,17 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
                      }
 
                      val var13: MessageId;
-                     if (var6 != null) {
-                        var13 = MessageId.box-impl(var6);
+                     if (var12 != null) {
+                        var13 = MessageId.box-impl(var12);
                      } else {
                         var13 = null;
                      }
 
                      val var14: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, var13) as MessageId;
                      if (var14 != null) {
-                        var6 = var14.unbox-impl();
+                        var12 = var14.unbox-impl();
                      } else {
-                        var6 = null;
+                        var12 = null;
                      }
 
                      var2 |= 2;
@@ -179,13 +180,10 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
                   var3 = false;
                }
             }
-
-            var15 = var6;
-            var6 = var11;
          }
 
          var9.b(var8);
-         return new TapGiftCodeAcceptData(var2, var6, var15, null, null);
+         return new TapGiftCodeAcceptData(var2, var11, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapGiftCodeAcceptData) {
@@ -198,7 +196,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

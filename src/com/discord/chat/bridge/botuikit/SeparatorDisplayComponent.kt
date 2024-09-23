@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
-import bl.b2
-import bl.g0
-import bl.h
-import bl.n0
-import bl.g0.a
+import al.b2
+import al.g0
+import al.h
+import al.n0
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,8 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class SeparatorDisplayComponent(type: Int, id: String, divider: Boolean, spacing: SeparatorSpacingSize) : Component {
@@ -82,18 +82,18 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
       val var1: Int = this.type;
       val var5: java.lang.String = this.id;
       val var2: Boolean = this.divider;
-      val var4: SeparatorSpacingSize = this.spacing;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SeparatorDisplayComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var5);
-      var3.append(", divider=");
-      var3.append(var2);
-      var3.append(", spacing=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: SeparatorSpacingSize = this.spacing;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SeparatorDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var5);
+      var4.append(", divider=");
+      var4.append(var2);
+      var4.append(", spacing=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

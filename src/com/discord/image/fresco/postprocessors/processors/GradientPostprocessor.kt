@@ -7,8 +7,8 @@ import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import com.discord.image.fresco.postprocessors.PostProcessor.Gradient
 import com.facebook.imagepipeline.request.BasePostprocessor
-import gh.p
-import gh.w
+import fh.p
+import fh.w
 import kotlin.jvm.internal.q
 
 internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
@@ -58,7 +58,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
       val var5: Float = var1.getWidth();
-      val var8: Float = var1.getHeight();
+      val var3: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -71,7 +71,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var5, var8, var15);
+      var18.drawRect(0.0F, 0.0F, var5, var3, var15);
    }
 
    public companion object {

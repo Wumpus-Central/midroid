@@ -137,29 +137,29 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Attachment = this.attachment;
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var7: java.lang.Float = this.attachmentsOpacity;
-      val var2: SpoilerAttributes = this.spoilerAttributes;
-      val var8: java.lang.String = this.uploaderId;
-      val var6: java.lang.String = this.uploaderItemId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("FileAttachmentMessageAccessory(messageId=");
-      var3.append(var5);
-      var3.append(", attachment=");
-      var3.append(var4);
-      var3.append(", attachmentIndex=");
-      var3.append(var1);
-      var3.append(", attachmentsOpacity=");
-      var3.append(var7);
-      var3.append(", spoilerAttributes=");
-      var3.append(var2);
-      var3.append(", uploaderId=");
-      var3.append(var8);
-      var3.append(", uploaderItemId=");
-      var3.append(var6);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.Float = this.attachmentsOpacity;
+      val var3: SpoilerAttributes = this.spoilerAttributes;
+      val var7: java.lang.String = this.uploaderId;
+      val var4: java.lang.String = this.uploaderItemId;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("FileAttachmentMessageAccessory(messageId=");
+      var8.append(var6);
+      var8.append(", attachment=");
+      var8.append(var2);
+      var8.append(", attachmentIndex=");
+      var8.append(var1);
+      var8.append(", attachmentsOpacity=");
+      var8.append(var5);
+      var8.append(", spoilerAttributes=");
+      var8.append(var3);
+      var8.append(", uploaderId=");
+      var8.append(var7);
+      var8.append(", uploaderItemId=");
+      var8.append(var4);
+      var8.append(")");
+      return var8.toString();
    }
 }

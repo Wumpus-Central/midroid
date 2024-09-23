@@ -23,7 +23,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
-import gh.w
+import fh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
@@ -185,9 +185,9 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       FastestListShadowNode.Companion.dropShadowNode(var1);
    }
 
-   public open fun scrollToLocation(view: FastestListView, section: Int, item: Int, animated: Boolean) {
+   public open fun scrollToLocation(view: FastestListView, section: Int, item: Int, animated: Boolean, paddingStart: Int) {
       q.h(var1, "view");
-      var1.scrollTo(var2, var3, var4);
+      var1.scrollTo(var2, var3, var4, var5);
    }
 
    public open fun scrollToTop(view: FastestListView, animated: Boolean) {

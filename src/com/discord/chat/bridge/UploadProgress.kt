@@ -1,10 +1,10 @@
 package com.discord.chat.bridge
 
-import bl.b2
-import bl.f0
-import bl.g0
-import bl.n0
-import bl.g0.a
+import al.b2
+import al.f0
+import al.g0
+import al.n0
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,8 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class UploadProgress(headerText: String,
@@ -274,34 +274,32 @@ public data class UploadProgress(headerText: String,
          var var9: Int;
          var var10: Int;
          val var11: Int;
+         var var14: java.lang.String;
          var var15: java.lang.String;
          val var19: java.lang.String;
          var var22: Int;
          var var24: Int;
-         var var36: java.lang.String;
          if (var13) {
-            var36 = var18.t(var17, 0);
-            var9 = var18.k(var17, 1);
-            var6 = var18.k(var17, 2);
+            var15 = var18.t(var17, 0);
+            var7 = var18.k(var17, 1);
+            var11 = var18.k(var17, 2);
             var2 = var18.G(var17, 3);
-            val var16: java.lang.String = var18.t(var17, 4);
+            var14 = var18.t(var17, 4);
             var19 = var18.t(var17, 5);
-            var10 = var18.k(var17, 6);
+            var9 = var18.k(var17, 6);
             var24 = var18.k(var17, 7);
-            var8 = var18.k(var17, 8);
+            var6 = var18.k(var17, 8);
             var22 = var18.k(var17, 9);
             var3 = var18.k(var17, 10);
-            var7 = 2047;
-            var15 = var36;
-            var36 = var16;
-            var11 = var24;
+            var8 = 2047;
+            var10 = var24;
             var24 = var22;
             var22 = var3;
          } else {
             var15 = null;
-            var36 = null;
+            var14 = null;
             var var20: java.lang.String = null;
-            var var33: Boolean = true;
+            var var30: Boolean = true;
             var9 = 0;
             var8 = 0;
             var7 = 0;
@@ -311,11 +309,11 @@ public data class UploadProgress(headerText: String,
             var2 = 0.0F;
             var10 = 0;
 
-            while (var33) {
+            while (var30) {
                val var12: Int = var18.x(var17);
                switch (var12) {
                   case -1:
-                     var33 = false;
+                     var30 = false;
                      break;
                   case 0:
                      var15 = var18.t(var17, 0);
@@ -338,7 +336,7 @@ public data class UploadProgress(headerText: String,
                      var3 |= 16;
                      break;
                   case 5:
-                     var36 = var18.t(var17, 5);
+                     var14 = var18.t(var17, 5);
                      var3 |= 32;
                      break;
                   case 6:
@@ -366,20 +364,19 @@ public data class UploadProgress(headerText: String,
                }
             }
 
-            var8 = var6;
-            var36 = var20;
-            var6 = var24;
+            var14 = var20;
+            var11 = var24;
             var22 = var10;
             var24 = var9;
-            var11 = var8;
-            var10 = var7;
-            var19 = var36;
-            var9 = var22;
-            var7 = var3;
+            var10 = var8;
+            var9 = var7;
+            var19 = var14;
+            var7 = var22;
+            var8 = var3;
          }
 
          var18.b(var17);
-         return new UploadProgress(var7, var15, var9, var6, var2, var36, var19, var10, var11, var8, var24, var22, null);
+         return new UploadProgress(var8, var15, var7, var11, var2, var14, var19, var9, var10, var6, var24, var22, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgress) {

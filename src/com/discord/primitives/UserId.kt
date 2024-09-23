@@ -1,9 +1,9 @@
 package com.discord.primitives
 
+import al.g0
+import al.x0
+import al.g0.a
 import android.os.Parcel
-import bl.g0
-import bl.x0
-import bl.g0.a
 import com.discord.snowflake.SnowflakePrimitive
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -11,7 +11,7 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.InlineClassDescriptor
-import yk.f
+import xk.f
 
 @f
 public inline class UserId : SnowflakePrimitive {
@@ -128,9 +128,9 @@ public inline class UserId : SnowflakePrimitive {
 
       public open fun serialize(encoder: Encoder, value: UserId) {
          q.h(var1, "encoder");
-         var1 = var1.y(this.getDescriptor());
+         var1 = var1.z(this.getDescriptor());
          if (var1 != null) {
-            var1.B(var2);
+            var1.C(var2);
          }
       }
 

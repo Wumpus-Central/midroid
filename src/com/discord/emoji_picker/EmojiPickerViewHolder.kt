@@ -30,7 +30,7 @@ import com.facebook.drawee.drawable.ScalingUtils.ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
-import gh.l
+import fh.l
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
@@ -211,10 +211,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiItem = var1;
          this.emojiSize = var3;
          this.emojiMargin = var4;
-         val var7: SimpleDraweeView = this.emojiView;
-         val var8: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
-         var8.setMargins(var4, var4, var4, var4);
-         var7.setLayoutParams(var8);
+         val var8: SimpleDraweeView = this.emojiView;
+         val var7: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
+         var7.setMargins(var4, var4, var4, var4);
+         var8.setLayoutParams(var7);
          this.emojiView.setContentDescription(var1.getName());
          val var11: GenericDraweeHierarchy = this.emojiView.getHierarchy() as GenericDraweeHierarchy;
          val var10: Drawable;

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import yk.f
+import xk.f
 
 @f
 public sealed class SearchableSelectComponent protected constructor() : SelectComponent() {

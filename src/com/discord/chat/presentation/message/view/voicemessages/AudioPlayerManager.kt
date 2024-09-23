@@ -17,7 +17,7 @@ import java.util.LinkedHashMap
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import rk.u
+import qk.u
 
 public object AudioPlayerManager {
    private final val _currentPlayerSourceFlow: MutableStateFlow<com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource?>
@@ -86,13 +86,13 @@ public object AudioPlayerManager {
    }
 
    private fun maybeCreateDuration(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource, durationMs: Long): com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress? {
-      val var4: java.util.Map = currentProgressMap;
+      val var5: java.util.Map = currentProgressMap;
       if (currentProgressMap.get(var1) != null) {
          return null;
       } else {
-         val var5: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
-         var4.put(var1, var5);
-         return var5;
+         val var4: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
+         var5.put(var1, var4);
+         return var4;
       }
    }
 
@@ -295,15 +295,15 @@ public object AudioPlayerManager {
             var12.setValue(var2);
             val var13: MediaPlayer = mediaPlayer;
             kotlin.jvm.internal.q.e(mediaPlayer);
-            val var10: ChannelId = var2.getChannelId-qMVnFVQ();
-            val var8: java.lang.String = var2.getMessageId-3Eiw7ao();
+            val var7: ChannelId = var2.getChannelId-qMVnFVQ();
+            val var10: java.lang.String = var2.getMessageId-3Eiw7ao();
             val var11: Int = var2.getIndex();
-            val var7: java.lang.String = var2.getUrl();
             val var9: java.lang.String = var2.getUrl();
+            val var8: java.lang.String = var2.getUrl();
             val var6: StringBuilder = new StringBuilder();
             var6.append("audio attachment: ");
-            var6.append(var9);
-            val var17: MediaSource = new MediaSource(var7, null, null, null, var6.toString(), MediaType.AUDIO, false, var10, var8, var11, null, 1102, null);
+            var6.append(var8);
+            val var17: MediaSource = new MediaSource(var9, null, null, null, var6.toString(), MediaType.AUDIO, false, var7, var10, var11, null, 1102, null);
             val var16: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
             if (var16 != null) {
                var3 = var16.getCurrentProgress();
@@ -430,31 +430,31 @@ public object AudioPlayerManager {
             var1 = ChannelId.hashCode-impl(this.channelId.unbox-impl());
          }
 
-         val var3: Int = MessageId.hashCode-impl(this.messageId);
-         val var4: Int = this.url.hashCode();
+         val var4: Int = MessageId.hashCode-impl(this.messageId);
+         val var3: Int = this.url.hashCode();
          if (this.index != null) {
             var2 = this.index.hashCode();
          }
 
-         return ((var1 * 31 + var3) * 31 + var4) * 31 + var2;
+         return ((var1 * 31 + var4) * 31 + var3) * 31 + var2;
       }
 
       public override fun toString(): String {
-         val var4: ChannelId = this.channelId;
-         val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-         val var3: java.lang.String = this.url;
-         val var5: Int = this.index;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("AudioSource(channelId=");
-         var1.append(var4);
-         var1.append(", messageId=");
-         var1.append(var2);
-         var1.append(", url=");
-         var1.append(var3);
-         var1.append(", index=");
-         var1.append(var5);
-         var1.append(")");
-         return var1.toString();
+         val var2: ChannelId = this.channelId;
+         val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+         val var5: java.lang.String = this.url;
+         val var3: Int = this.index;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("AudioSource(channelId=");
+         var4.append(var2);
+         var4.append(", messageId=");
+         var4.append(var1);
+         var4.append(", url=");
+         var4.append(var5);
+         var4.append(", index=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 

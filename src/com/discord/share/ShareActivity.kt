@@ -46,8 +46,8 @@ public class ShareActivity : ReactActivity {
             val var8: java.util.List = var5.getAttachments();
             val var6: ShareActivity = this.this$0;
 
-            for (ShareProps.Attachment var9 : var8) {
-               var6.grantUriPermission(var6.getPackageName(), Uri.parse(var9.getUri()), 1);
+            for (ShareProps.Attachment var10 : var8) {
+               var6.grantUriPermission(var6.getPackageName(), Uri.parse(var10.getUri()), 1);
             }
 
             super.onCreate(var1);

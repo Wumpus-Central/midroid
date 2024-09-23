@@ -8,8 +8,8 @@ import com.discord.device.utils.IsGestureNavigationEnabledKt
 import com.discord.device.utils.IsTabletKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.annotations.ReactModule
-import gh.w
-import hh.r
+import fh.w
+import gh.r
 import kotlin.jvm.internal.q
 
 @ReactModule(name = "RTNDeviceManager")

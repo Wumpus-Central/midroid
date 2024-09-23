@@ -1,8 +1,8 @@
 package com.discord.chat.reactevents
 
-import bl.b2
-import bl.g0
-import bl.g0.a
+import al.b2
+import al.g0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -13,8 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : ReactEvent {
@@ -67,15 +67,15 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.uploaderId;
+      val var1: java.lang.String = this.uploaderId;
       val var2: java.lang.String = this.itemId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapCancelUploadItemData(uploaderId=");
-      var1.append(var3);
-      var1.append(", itemId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapCancelUploadItemData(uploaderId=");
+      var3.append(var1);
+      var3.append(", itemId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

@@ -29,8 +29,8 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
-import gh.l
-import gh.o
+import fh.l
+import fh.o
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0

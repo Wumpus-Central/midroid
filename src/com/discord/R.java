@@ -43,8 +43,8 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_7b6ym4iigkwxrdbohhes5lf2ai_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_7b6ym4iigkwxrdbohhes5lf2ai_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -178,6 +178,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_imageicon;
       public static int design_components_icon_native_redesign_generated_images_imagelockicon;
       public static int design_components_icon_native_redesign_generated_images_imageplusicon;
+      public static int design_components_icon_native_redesign_generated_images_imagesicon;
       public static int design_components_icon_native_redesign_generated_images_imagetexticon;
       public static int design_components_icon_native_redesign_generated_images_imagewarningicon;
       public static int design_components_icon_native_redesign_generated_images_instagramneutralicon;
@@ -728,7 +729,6 @@ public final class R {
       public static int images_native_icons_ic_information_24px;
       public static int images_native_icons_ic_information_filled_24px;
       public static int images_native_icons_ic_input_clear_24px;
-      public static int images_native_icons_ic_integrations_24px;
       public static int images_native_icons_ic_leave_24px;
       public static int images_native_icons_ic_link;
       public static int images_native_icons_ic_link_24px;
@@ -744,7 +744,6 @@ public final class R {
       public static int images_native_icons_ic_mention_24px;
       public static int images_native_icons_ic_menu_24px;
       public static int images_native_icons_ic_message;
-      public static int images_native_icons_ic_message_history;
       public static int images_native_icons_ic_messages;
       public static int images_native_icons_ic_mic_24px;
       public static int images_native_icons_ic_mic_muted_24px;
@@ -847,7 +846,6 @@ public final class R {
       public static int images_native_icons_ic_volume_mute;
       public static int images_native_icons_ic_wand;
       public static int images_native_icons_ic_warning_24px;
-      public static int images_native_icons_ic_webhook_24px;
       public static int images_native_icons_ic_xbox_24px;
       public static int images_native_icons_midnight_border_left_radius;
       public static int images_native_icons_premium_ic_sparkle_basic_gradient;
@@ -1250,7 +1248,6 @@ public final class R {
       public static int modules_chat_input_native_images_ic_gift;
       public static int modules_chat_input_native_images_ic_sticker_icon_tilted;
       public static int modules_clyde_ai_assets_clydeavatar;
-      public static int modules_collectibles_images_wumpus_with_headset;
       public static int modules_collectibles_native_images_discord_logo_black;
       public static int modules_collectibles_native_images_discord_logo_white;
       public static int modules_collectibles_native_images_premium_sparkles;

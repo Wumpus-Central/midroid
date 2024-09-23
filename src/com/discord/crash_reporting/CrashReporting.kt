@@ -4,8 +4,8 @@ import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
 import com.discord.logging.Log
-import gh.p
-import hh.r
+import fh.p
+import gh.r
 import io.sentry.IScope
 import io.sentry.d5
 import io.sentry.e
@@ -17,6 +17,7 @@ import java.net.ConnectException
 import java.net.SocketException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
+import java.security.cert.CertPathValidatorException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
 import kotlin.enums.EnumEntries
@@ -35,7 +36,8 @@ public object CrashReporting {
             g0.b(SocketTimeoutException.class),
             g0.b(SocketException.class),
             g0.b(ConnectException.class),
-            g0.b(SSLException.class)
+            g0.b(SSLException.class),
+            g0.b(CertPathValidatorException.class)
          }
       )
 
@@ -84,7 +86,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("9c8b4081-650e-4822-834b-43444f605a51");
+      var5.setProguardUuid("c63a21ab-402a-4a4c-88fb-22fabefb9098");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -105,7 +107,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", gh.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", fh.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -193,7 +195,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = nh.a.a(var0);
+         $ENTRIES = mh.a.a(var0);
       }
 
       @JvmStatic

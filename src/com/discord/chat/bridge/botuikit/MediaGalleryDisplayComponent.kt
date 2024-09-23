@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
-import bl.b2
-import bl.g0
-import bl.n0
-import bl.g0.a
+import al.b2
+import al.g0
+import al.n0
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class MediaGalleryDisplayComponent(type: Int, id: String, items: List<MediaGalleryItem>) : Component {
@@ -71,17 +71,17 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var2: java.util.List = this.items;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MediaGalleryDisplayComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var4);
-      var3.append(", items=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.id;
+      val var4: java.util.List = this.items;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaGalleryDisplayComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var3);
+      var2.append(", items=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -116,10 +116,10 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
          var var6: java.lang.String;
          var var10: java.util.List;
          if (var8.y()) {
-            var2 = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
-            var3 = 7;
+            var2 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -150,13 +150,10 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                   var4 = false;
                }
             }
-
-            var2 = var3;
-            var3 = var2;
          }
 
          var8.b(var7);
-         return new MediaGalleryDisplayComponent(var3, var2, var6, var10, null);
+         return new MediaGalleryDisplayComponent(var2, var3, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaGalleryDisplayComponent) {

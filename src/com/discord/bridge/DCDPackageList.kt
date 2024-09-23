@@ -10,6 +10,7 @@ import com.discord.portals.PortalsPackage
 import com.discord.react_gesture_handler.DiscordGestureHandlerPackage
 import com.discord.sticker.react.StickerPackage
 import com.discord.sticker_picker.react.StickerPickerPackage
+import com.discord.suspense_visible_view.SuspenseVisibleViewPackage
 import com.discord.thumbhash.ThumbhashPackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactNativeHost
@@ -87,6 +88,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       var1.add(new StickerPackage());
       var1.add(new StickerPickerPackage());
       var1.add(new ThumbhashPackage());
+      var1.add(new SuspenseVisibleViewPackage());
       var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));

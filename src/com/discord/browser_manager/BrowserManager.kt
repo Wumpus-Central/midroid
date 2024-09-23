@@ -7,9 +7,9 @@ import android.net.Uri
 import com.discord.chrome_custom_tabs.CustomTabs
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
+import kk.j
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lk.j
 
 internal object BrowserManager {
    private fun openUrlExternally(context: Context, uri: Uri, onFailure: (Exception) -> Unit, forceExternal: Boolean = true) {

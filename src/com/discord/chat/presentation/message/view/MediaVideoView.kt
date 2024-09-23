@@ -178,9 +178,9 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var40: SpoilerViewManager = this.spoilerViewManager;
       val var39: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var36: ConstraintLayout = this.binding.container;
+      val var33: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var33: MediaView = this.binding.mediaView;
+      val var36: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -194,11 +194,11 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var40.configureSpoiler(var13, var39, var36, var33, null, var11, var15, var12, var10);
-      val var37: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var34: ConstraintLayout = this.binding.container;
+      var40.configureSpoiler(var13, var39, var33, var36, null, var11, var15, var12, var10);
+      val var34: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var37: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      var37.configureAttachmentOverlay(this, var34, var10, var16);
+      var34.configureAttachmentOverlay(this, var37, var10, var16);
    }
 
    public fun setDescription(description: String?, hint: String?) {
@@ -226,13 +226,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
+      val var3: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }

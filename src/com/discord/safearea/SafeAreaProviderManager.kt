@@ -15,7 +15,7 @@ import com.facebook.react.viewmanagers.SafeAreaViewManagerInterface
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.Rect
 import com.th3rdwave.safeareacontext.SafeAreaProvider
-import gh.w
+import fh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
@@ -191,13 +191,13 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
       }
 
       public override fun toString(): String {
-         val var1: Int = this.height;
-         val var2: Int = this.width;
+         val var2: Int = this.height;
+         val var1: Int = this.width;
          val var3: StringBuilder = new StringBuilder();
          var3.append("SafeAreaProviderDimensions(height=");
-         var3.append(var1);
-         var3.append(", width=");
          var3.append(var2);
+         var3.append(", width=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

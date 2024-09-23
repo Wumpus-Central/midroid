@@ -3,7 +3,7 @@ package com.discord.fastest_list.react_events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import gh.w
+import fh.w
 import kotlin.jvm.internal.q
 
 internal class OnVisibleItemsChangedEvent private constructor(data: WritableMap) : ReactEvent {

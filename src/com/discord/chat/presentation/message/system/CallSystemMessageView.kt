@@ -24,7 +24,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import ok.f
+import nk.f
 
 public class CallSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout {
    private final val binding: CallSystemMessageViewBinding
@@ -86,12 +86,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var2);
       this.binding.message.setText(var1.getTitle());
-      val var18: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var8: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var8: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var18: java.lang.String = CallSystemMessageView.class.getSimpleName();
       val var13: StringBuilder = new StringBuilder();
       var13.append("Binding ");
-      var13.append(var8);
-      AttachedViewCoroutineScope.cancelAllWork$default(var18, var13.toString(), null, 2, null);
+      var13.append(var18);
+      AttachedViewCoroutineScope.cancelAllWork$default(var8, var13.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var6)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);
@@ -102,8 +102,6 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
             new Function2(this, var14, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -1126,6 +1124,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
             3,
             null

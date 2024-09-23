@@ -90,13 +90,13 @@ private fun renderEmojiInto(
 ) {
    val var8: Int = var0.length();
    var0.append('\u200b');
-   val var10: a = (((c.g().B(var5) as PipelineDraweeControllerBuilder)
+   val var11: a = (((c.g().B(var5) as PipelineDraweeControllerBuilder)
             .F(ImageRequestBuilder.w(Uri.parse(var1)).L(new ResizeOptions(var4, var4, 0.0F, 0.0F, 12, null)).G(RequestLevel.k).a()) as PipelineDraweeControllerBuilder)
          .D(var2) as PipelineDraweeControllerBuilder)
       .d();
-   val var11: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var3.getResources()).w(ScaleType.e);
-   var7.invoke(var11);
-   var0.j(var3, var11.a(), var10, var8, var4, var4, false, var6);
+   val var10: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var3.getResources()).w(ScaleType.e);
+   var7.invoke(var10);
+   var0.j(var3, var10.a(), var11, var8, var4, var4, false, var6);
 }
 
 @JvmSynthetic

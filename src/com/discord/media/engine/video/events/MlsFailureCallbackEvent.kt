@@ -1,9 +1,9 @@
 package com.discord.media.engine.video.events
 
-import bl.b2
-import bl.g0
-import bl.n0
-import bl.g0.a
+import al.b2
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -14,8 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, reason: String) : ReactEvent {
@@ -123,10 +123,10 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          var var6: java.lang.String;
          val var7: java.lang.String;
          if (var9.y()) {
-            var3 = var9.k(var8, 0);
+            var2 = var9.k(var8, 0);
             var6 = var9.t(var8, 1);
             val var10: java.lang.String = var9.t(var8, 2);
-            var2 = 7;
+            var3 = 7;
             var7 = var10;
          } else {
             var6 = null;
@@ -159,12 +159,14 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
                }
             }
 
+            var3 = var2;
             var7 = var6;
             var6 = var11;
+            var2 = var3;
          }
 
          var9.b(var8);
-         return new MlsFailureCallbackEvent(var2, var3, var6, var7, null);
+         return new MlsFailureCallbackEvent(var3, var2, var6, var7, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {

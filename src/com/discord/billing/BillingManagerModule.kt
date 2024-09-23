@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import gh.w
+import fh.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
@@ -95,13 +95,13 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       q.g(var5, "toArrayList(...)");
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 
-      val var10: Function1 = new Function1(var4) {
+      val var9: Function1 = new Function1(var4) {
          final Promise $promise;
 
          {
@@ -114,9 +114,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       };
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var9, "getReactApplicationContext(...)");
-      var1.getSkus(var7, var3, var4, var10, var9);
+      val var10: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var10, "getReactApplicationContext(...)");
+      var1.getSkus(var7, var3, var4, var9, var10);
    }
 
    @ReactMethod

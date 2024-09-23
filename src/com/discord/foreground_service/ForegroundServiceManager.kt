@@ -53,15 +53,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var5: Log = Log.INSTANCE;
-      val var6: java.lang.String = tag;
+      val var4: Log = Log.INSTANCE;
+      val var5: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Start service with ");
-      var4.append(var3);
-      var4.append(" configurations.");
-      Log.i$foreground_service_release$default(var5, var6, var4.toString(), null, 4, null);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("Start service with ");
+      var6.append(var3);
+      var6.append(" configurations.");
+      Log.i$foreground_service_release$default(var4, var5, var6.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
    }
@@ -191,10 +191,10 @@ public class ForegroundServiceManager {
 
          try {
             q.h(var1, "context");
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = tag;
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var2, var3, "On service created.", null, 4, null);
+            Log.i$foreground_service_release$default(var3, var2, "On service created.", null, 4, null);
             this.serviceWakelocks.acquire(var1);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit
@@ -290,17 +290,17 @@ public class ForegroundServiceManager {
       // 5f: goto 7e
       // 62: aload 1
       // 63: aload 4
-      // 65: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionScreenShare (Lcom/facebook/react/bridge/Promise;)V
+      // 65: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionVoiceCall (Lcom/facebook/react/bridge/Promise;)V
       // 68: goto 7e
       // 6b: astore 1
       // 6c: goto 81
       // 6f: aload 1
       // 70: aload 4
-      // 72: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionFileUpload (Lcom/facebook/react/bridge/Promise;)V
+      // 72: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionVoiceCall (Lcom/facebook/react/bridge/Promise;)V
       // 75: goto 7e
       // 78: aload 1
       // 79: aload 4
-      // 7b: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionVoiceCall (Lcom/facebook/react/bridge/Promise;)V
+      // 7b: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionFileUpload (Lcom/facebook/react/bridge/Promise;)V
       // 7e: aload 0
       // 7f: monitorexit
       // 80: return
@@ -316,10 +316,10 @@ public class ForegroundServiceManager {
 
          try {
             q.h(var1, "context");
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = tag;
+            val var2: Log = Log.INSTANCE;
+            val var3: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var3, var2, "Stop service.", null, 4, null);
+            Log.i$foreground_service_release$default(var2, var3, "Stop service.", null, 4, null);
             ForegroundService.Companion.stop(var1, this.service);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit

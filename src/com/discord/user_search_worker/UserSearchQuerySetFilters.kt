@@ -1,8 +1,8 @@
 package com.discord.user_search_worker
 
-import bl.b2
-import bl.g0
-import bl.h
+import al.b2
+import al.g0
+import al.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,9 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Boolean? = null, strict: Boolean? = null) {
@@ -121,36 +121,34 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = a.u(b2.a);
-         val var2: h = h.a;
-         return new KSerializer[]{var1, a.u(h.a), a.u(var2)};
+         val var2: KSerializer = a.u(b2.a);
+         val var1: h = h.a;
+         return new KSerializer[]{var2, a.u(h.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetFilters {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
          var var7: java.lang.String = null;
          var var2: Int;
-         var var12: java.lang.Boolean;
-         var var13: java.lang.Boolean;
+         var var6: java.lang.Boolean;
+         var var11: java.lang.Boolean;
          if (var5) {
-            val var6: java.lang.String = var10.v(var9, 0, b2.a, null) as java.lang.String;
-            val var11: h = h.a;
-            val var8: java.lang.Boolean = var10.v(var9, 1, h.a, null) as java.lang.Boolean;
-            var12 = var10.v(var9, 2, var11, null) as java.lang.Boolean;
+            var7 = var9.v(var8, 0, b2.a, null) as java.lang.String;
+            val var10: h = h.a;
+            var6 = var9.v(var8, 1, h.a, null) as java.lang.Boolean;
+            var11 = var9.v(var8, 2, var10, null) as java.lang.Boolean;
             var2 = 7;
-            var7 = var6;
-            var13 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var13 = null;
-            var12 = null;
+            var6 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -158,14 +156,14 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
                            throw new n(var4);
                         }
 
-                        var12 = var10.v(var9, 2, h.a, var12) as java.lang.Boolean;
+                        var11 = var9.v(var8, 2, h.a, var11) as java.lang.Boolean;
                         var2 |= 4;
                      } else {
-                        var13 = var10.v(var9, 1, h.a, var13) as java.lang.Boolean;
+                        var6 = var9.v(var8, 1, h.a, var6) as java.lang.Boolean;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.v(var9, 0, b2.a, var7) as java.lang.String;
+                     var7 = var9.v(var8, 0, b2.a, var7) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -174,8 +172,8 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
             }
          }
 
-         var10.b(var9);
-         return new UserSearchQuerySetFilters(var2, var7, var13, var12, null);
+         var9.b(var8);
+         return new UserSearchQuerySetFilters(var2, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSearchQuerySetFilters) {
@@ -188,7 +186,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

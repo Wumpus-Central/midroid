@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.channelprompt
 
-import bl.b2
-import bl.g0
+import al.b2
+import al.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,9 +10,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ChannelPromptData(cameraButtonIcon: String? = null,
@@ -223,35 +223,34 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
          var var4: Byte = 6;
          var var17: java.lang.String = null;
          var var2: Int;
+         var var8: java.lang.String;
+         var var9: java.lang.String;
          var var10: java.lang.String;
          var var11: java.lang.String;
-         var var12: java.lang.String;
          val var13: java.lang.String;
          var var19: java.lang.String;
-         var var21: java.lang.String;
-         var var22: java.lang.String;
+         var var23: java.lang.String;
          if (var6) {
-            val var9: b2 = b2.a;
-            var10 = var16.v(var15, 0, b2.a, null) as java.lang.String;
-            var11 = var16.v(var15, 1, var9, null) as java.lang.String;
-            var12 = var16.v(var15, 2, var9, null) as java.lang.String;
-            var21 = var16.v(var15, 3, var9, null) as java.lang.String;
-            var19 = var16.v(var15, 4, var9, null) as java.lang.String;
-            val var18: java.lang.String = var16.v(var15, 5, var9, null) as java.lang.String;
-            val var14: java.lang.String = var16.v(var15, 6, var9, null) as java.lang.String;
+            val var12: b2 = b2.a;
+            var9 = var16.v(var15, 0, b2.a, null) as java.lang.String;
+            var11 = var16.v(var15, 1, var12, null) as java.lang.String;
+            var10 = var16.v(var15, 2, var12, null) as java.lang.String;
+            var8 = var16.v(var15, 3, var12, null) as java.lang.String;
+            var19 = var16.v(var15, 4, var12, null) as java.lang.String;
+            val var18: java.lang.String = var16.v(var15, 5, var12, null) as java.lang.String;
+            val var14: java.lang.String = var16.v(var15, 6, var12, null) as java.lang.String;
             var2 = 127;
-            var13 = var21;
-            var21 = var19;
-            var22 = var18;
+            var13 = var19;
+            var23 = var18;
             var19 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var12 = null;
+            var23 = null;
             var11 = null;
             var10 = null;
-            var22 = null;
-            var21 = null;
+            var9 = null;
+            var8 = null;
             var19 = null;
 
             while (var3) {
@@ -274,11 +273,11 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                      var2 |= 4;
                      continue;
                   case 3:
-                     var22 = var16.v(var15, 3, b2.a, var22) as java.lang.String;
+                     var9 = var16.v(var15, 3, b2.a, var9) as java.lang.String;
                      var2 |= 8;
                      continue;
                   case 4:
-                     var21 = var16.v(var15, 4, b2.a, var21) as java.lang.String;
+                     var8 = var16.v(var15, 4, b2.a, var8) as java.lang.String;
                      var2 |= 16;
                      continue;
                   case 5:
@@ -286,7 +285,7 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                      var2 |= 32;
                      continue;
                   case 6:
-                     var12 = var16.v(var15, var4, b2.a, var12) as java.lang.String;
+                     var23 = var16.v(var15, var4, b2.a, var23) as java.lang.String;
                      var2 |= 64;
                      continue;
                   default:
@@ -296,15 +295,15 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                var4 = 6;
             }
 
-            var13 = var22;
-            var22 = var19;
-            var19 = var12;
-            var12 = var10;
-            var10 = var17;
+            var19 = var23;
+            var23 = var19;
+            var13 = var8;
+            var8 = var9;
+            var9 = var17;
          }
 
          var16.b(var15);
-         return new ChannelPromptData(var2, var10, var11, var12, var13, var21, var22, var19, null);
+         return new ChannelPromptData(var2, var9, var11, var10, var8, var13, var23, var19, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChannelPromptData) {
@@ -317,7 +316,7 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

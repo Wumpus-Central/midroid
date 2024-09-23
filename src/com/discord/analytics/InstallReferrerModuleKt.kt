@@ -1,14 +1,14 @@
 package com.discord.analytics
 
 import com.android.installreferrer.api.InstallReferrerClient
-import gh.r
-import gh.s
+import fh.r
+import fh.s
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import mh.b
+import lh.b
 import v2.a
 
 @JvmSynthetic
@@ -38,7 +38,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(r.b(var1));
       }
    };
-   var2.f(
+   var2.i(
       new Function1(var0) {
          final InstallReferrerClient $this_await;
 
@@ -53,11 +53,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var5: gh.r.a = r.k;
+               val var5: fh.r.a = r.k;
                var2.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: gh.r.a = r.k;
+               val var6: fh.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,11 +67,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var10: gh.r.a = r.k;
+      val var10: fh.r.a = r.k;
       var0.d(var4);
       var7 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var3: gh.r.a = r.k;
+      val var3: fh.r.a = r.k;
       var7 = r.b(s.a(var5));
       break label20;
    }

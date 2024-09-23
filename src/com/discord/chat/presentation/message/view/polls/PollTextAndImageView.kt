@@ -116,15 +116,15 @@ public class PollTextAndImageView  public constructor(context: Context, attrs: A
          var10.setText(var6.getPollMedia().getText());
          (this.getBinding() as PollTextAndImageAnswerViewBinding).checkbox.configure(var1);
          if (var1.getCanShowVoteCounts()) {
-            val var13: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).votePercentage;
-            q.e(var13);
-            var13.setVisibility(0);
-            var13.setTextColor(var1.getLabelColor());
+            val var11: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).votePercentage;
+            q.e(var11);
+            var11.setVisibility(0);
+            var11.setTextColor(var1.getLabelColor());
             var14 = var6.getVotesPercentage();
-            val var11: StringBuilder = new StringBuilder();
-            var11.append(var14);
-            var11.append("%");
-            var13.setText(var11.toString());
+            val var13: StringBuilder = new StringBuilder();
+            var13.append(var14);
+            var13.append("%");
+            var11.setText(var13.toString());
             val var12: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).voteCounts;
             q.e(var12);
             var12.setVisibility(0);

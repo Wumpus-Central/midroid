@@ -1,7 +1,7 @@
 package com.discord.billing.types
 
 import kotlin.enums.EnumEntries
-import nh.a
+import mh.a
 
 internal enum class SkuType(rawType: String) {
    IAP("inapp"),

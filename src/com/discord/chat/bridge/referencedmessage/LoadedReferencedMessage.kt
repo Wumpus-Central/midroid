@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.referencedmessage
 
-import bl.g0
+import al.g0
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
@@ -12,9 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage {
@@ -69,13 +69,13 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public override fun toString(): String {
-      val var1: Message = this.message;
-      val var3: StructurableText = this.systemContent;
+      val var3: Message = this.message;
+      val var1: StructurableText = this.systemContent;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LoadedReferencedMessage(message=");
-      var2.append(var1);
-      var2.append(", systemContent=");
       var2.append(var3);
+      var2.append(", systemContent=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -154,7 +154,7 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

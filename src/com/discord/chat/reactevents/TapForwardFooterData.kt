@@ -1,9 +1,9 @@
 package com.discord.chat.reactevents
 
-import bl.b2
-import bl.g0
-import bl.n0
-import bl.g0.a
+import al.b2
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -14,8 +14,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public class TapForwardFooterData(snapshotIndex: Int, channelId: String, messageId: String) : ReactEvent {
@@ -64,15 +64,15 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
          val var9: c = var1.c(var8);
          var var2: Int;
          var var3: Int;
-         var var6: java.lang.String;
+         val var7: java.lang.String;
          val var10: java.lang.String;
          if (var9.y()) {
-            var3 = var9.k(var8, 0);
-            var6 = var9.t(var8, 1);
+            var2 = var9.k(var8, 0);
+            var7 = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
-            var2 = 7;
+            var3 = 7;
          } else {
-            var6 = null;
+            var var6: java.lang.String = null;
             var var11: java.lang.String = null;
             var var4: Boolean = true;
             var3 = 0;
@@ -102,12 +102,14 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
                }
             }
 
+            var7 = var11;
             var10 = var6;
-            var6 = var11;
+            var2 = var3;
+            var3 = var2;
          }
 
          var9.b(var8);
-         return new TapForwardFooterData(var2, var3, var6, var10, null);
+         return new TapForwardFooterData(var3, var2, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapForwardFooterData) {

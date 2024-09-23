@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.messageframe
 
-import bl.g0
-import bl.g0.a
+import al.g0
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,8 +10,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame {
@@ -47,12 +47,12 @@ public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame
    }
 
    public override fun toString(): String {
-      val var1: MessageFrameType = this.type;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MessageFrameMediaViewer(type=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: MessageFrameType = this.type;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MessageFrameMediaViewer(type=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

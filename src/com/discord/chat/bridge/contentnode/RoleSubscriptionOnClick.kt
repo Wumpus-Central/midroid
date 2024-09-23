@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
-import bl.b2
-import bl.g0
+import al.b2
+import al.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,9 +10,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class RoleSubscriptionOnClick(action: String, guildId: String, messageId: String?, channelId: String?, roleSubscriptionListingId: String?) {
@@ -164,27 +164,27 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
          val var5: Boolean = var12.y();
          var var9: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
          var var8: java.lang.String;
-         var var14: java.lang.String;
+         val var13: java.lang.String;
          var var15: java.lang.String;
+         var var17: java.lang.String;
          if (var5) {
-            var15 = var12.t(var11, 0);
+            var17 = var12.t(var11, 0);
             var8 = var12.t(var11, 1);
-            val var13: b2 = b2.a;
+            val var6: b2 = b2.a;
             val var10: java.lang.String = var12.v(var11, 2, b2.a, null) as java.lang.String;
-            var6 = var12.v(var11, 3, var13, null) as java.lang.String;
-            var14 = var12.v(var11, 4, var13, null) as java.lang.String;
+            var13 = var12.v(var11, 3, var6, null) as java.lang.String;
+            var15 = var12.v(var11, 4, var6, null) as java.lang.String;
             var2 = 31;
-            var9 = var15;
-            var15 = var10;
+            var9 = var17;
+            var17 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
+            var17 = null;
             var15 = null;
-            var6 = null;
-            var14 = null;
+            var var14: java.lang.String = null;
 
             while (var3) {
                val var4: Int = var12.x(var11);
@@ -200,11 +200,11 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
                               var14 = var12.v(var11, 4, b2.a, var14) as java.lang.String;
                               var2 |= 16;
                            } else {
-                              var6 = var12.v(var11, 3, b2.a, var6) as java.lang.String;
+                              var15 = var12.v(var11, 3, b2.a, var15) as java.lang.String;
                               var2 |= 8;
                            }
                         } else {
-                           var15 = var12.v(var11, 2, b2.a, var15) as java.lang.String;
+                           var17 = var12.v(var11, 2, b2.a, var17) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
@@ -219,10 +219,13 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
                   var3 = false;
                }
             }
+
+            var15 = var14;
+            var13 = var15;
          }
 
          var12.b(var11);
-         return new RoleSubscriptionOnClick(var2, var9, var8, var15, var6, var14, null);
+         return new RoleSubscriptionOnClick(var2, var9, var8, var17, var13, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleSubscriptionOnClick) {
@@ -235,7 +238,7 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

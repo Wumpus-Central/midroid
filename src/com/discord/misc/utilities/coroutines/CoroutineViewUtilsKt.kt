@@ -3,7 +3,6 @@ package com.discord.misc.utilities.coroutines
 import android.content.Context
 import android.content.ContextWrapper
 import android.view.View
-import androidx.core.view.r0
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.RepeatOnLifecycleKt
 import androidx.lifecycle.Lifecycle.State
@@ -11,7 +10,7 @@ import com.discord.misc.utilities.R
 import kotlin.coroutines.Continuation
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import mh.b
+import lh.b
 
 public final val attachedScope: AttachedViewCoroutineScope
    public final get() {
@@ -22,7 +21,7 @@ public final val attachedScope: AttachedViewCoroutineScope
 
 public fun View.attachedScope(verifyAttached: Boolean): AttachedViewCoroutineScope {
    q.h(var0, "<this>");
-   if (var1 && !r0.T(var0)) {
+   if (var1 && !var0.isAttachedToWindow()) {
       val var5: StringBuilder = new StringBuilder();
       var5.append("View not attached to window: ");
       var5.append(var0);

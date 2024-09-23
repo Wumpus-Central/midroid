@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
-import bl.b2
-import bl.g0
-import bl.n0
-import bl.o1
+import al.b2
+import al.g0
+import al.n0
+import al.o1
 import com.discord.primitives.ChannelId
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.q
@@ -15,9 +15,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class UserNameOnClick(action: String, userId: UserId, messageChannelId: ChannelId? = ..., linkColor: Int? = ...) : UserNameOnClick(
@@ -159,29 +159,30 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
 
       public open fun deserialize(decoder: Decoder): UserNameOnClick {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
+         val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: ChannelId;
+         val var6: java.lang.String;
          var var7: UserId;
-         var var11: Any;
+         val var9: ChannelId;
+         var var12: Any;
          if (var5) {
-            var8 = var10.t(var9, 0);
-            var7 = var10.m(var9, 1, UserId.$serializer.INSTANCE, null) as UserId;
-            var6 = var10.v(var9, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var11 = var10.v(var9, 3, n0.a, null) as Int;
+            var6 = var11.t(var10, 0);
+            var7 = var11.m(var10, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            var9 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var12 = var11.v(var10, 3, n0.a, null) as Int;
             var2 = 15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
-            var6 = null;
-            var11 = null;
+            var var13: ChannelId = null;
+            var12 = null;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -190,28 +191,31 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
                               throw new n(var4);
                            }
 
-                           var11 = var10.v(var9, 3, n0.a, var11) as Int;
+                           var12 = var11.v(var10, 3, n0.a, var12) as Int;
                            var2 |= 8;
                         } else {
-                           var6 = var10.v(var9, 2, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
+                           var13 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, var13) as ChannelId;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.m(var9, 1, UserId.$serializer.INSTANCE, var7) as UserId;
+                        var7 = var11.m(var10, 1, UserId.$serializer.INSTANCE, var7) as UserId;
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.t(var9, 0);
+                     var8 = var11.t(var10, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var9 = var13;
+            var6 = var8;
          }
 
-         var10.b(var9);
-         return new UserNameOnClick(var2, var8, var7, var6, (Integer)var11, null, null);
+         var11.b(var10);
+         return new UserNameOnClick(var2, var6, var7, var9, (Integer)var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserNameOnClick) {
@@ -224,7 +228,7 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

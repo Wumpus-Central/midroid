@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import bl.b2
-import bl.g0
-import bl.n0
+import al.b2
+import al.g0
+import al.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,9 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, height: Int, placeholder: String? = null, placeholderVersion: Int? = null) :
@@ -129,26 +129,26 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
 
    public override fun toString(): String {
       val var3: java.lang.String = this.url;
-      val var4: java.lang.String = this.proxyURL;
-      val var1: Int = this.width;
-      val var2: Int = this.height;
-      val var6: java.lang.String = this.placeholder;
-      val var7: Int = this.placeholderVersion;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("EmbedMedia(url=");
-      var5.append(var3);
-      var5.append(", proxyURL=");
-      var5.append(var4);
-      var5.append(", width=");
-      var5.append(var1);
-      var5.append(", height=");
-      var5.append(var2);
-      var5.append(", placeholder=");
-      var5.append(var6);
-      var5.append(", placeholderVersion=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var6: java.lang.String = this.proxyURL;
+      val var2: Int = this.width;
+      val var1: Int = this.height;
+      val var4: java.lang.String = this.placeholder;
+      val var5: Int = this.placeholderVersion;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("EmbedMedia(url=");
+      var7.append(var3);
+      var7.append(", proxyURL=");
+      var7.append(var6);
+      var7.append(", width=");
+      var7.append(var2);
+      var7.append(", height=");
+      var7.append(var1);
+      var7.append(", placeholder=");
+      var7.append(var4);
+      var7.append(", placeholderVersion=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : g0 {
@@ -175,90 +175,91 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: b2 = b2.a;
-         val var2: KSerializer = a.u(b2.a);
-         val var3: n0 = n0.a;
-         return new KSerializer[]{var1, var2, n0.a, n0.a, a.u(var1), a.u(var3), var1};
+         val var3: KSerializer = a.u(b2.a);
+         val var2: n0 = n0.a;
+         return new KSerializer[]{var1, var3, n0.a, n0.a, a.u(var1), a.u(var2), var1};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedMedia {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
+         val var12: SerialDescriptor = this.getDescriptor();
+         val var13: c = var1.c(var12);
+         var var2: Int;
          var var3: Int;
          var var4: Int;
-         val var5: Int;
          var var7: Any;
-         var var8: java.lang.String;
          var var9: java.lang.String;
          var var10: java.lang.String;
-         var var14: java.lang.String;
-         if (var12.y()) {
-            var10 = var12.t(var11, 0);
-            val var13: b2 = b2.a;
-            var9 = var12.v(var11, 1, b2.a, null) as java.lang.String;
-            var3 = var12.k(var11, 2);
-            val var2: Int = var12.k(var11, 3);
-            var8 = var12.v(var11, 4, var13, null) as java.lang.String;
-            var7 = var12.v(var11, 5, n0.a, null) as Int;
-            var14 = var12.t(var11, 6);
+         var var15: java.lang.String;
+         var var19: java.lang.String;
+         if (var13.y()) {
+            var19 = var13.t(var12, 0);
+            val var14: b2 = b2.a;
+            var9 = var13.v(var12, 1, b2.a, null) as java.lang.String;
+            var3 = var13.k(var12, 2);
+            var2 = var13.k(var12, 3);
+            val var11: java.lang.String = var13.v(var12, 4, var14, null) as java.lang.String;
+            var7 = var13.v(var12, 5, n0.a, null) as Int;
+            var15 = var13.t(var12, 6);
             var4 = 127;
-            var5 = var2;
+            var10 = var19;
+            var19 = var11;
          } else {
-            var var17: Boolean = true;
+            var var5: Boolean = true;
             var4 = 0;
-            var var15: Int = 0;
+            var2 = 0;
             var10 = null;
             var9 = null;
-            var8 = null;
+            var19 = null;
             var7 = null;
-            var14 = null;
+            var15 = null;
             var3 = 0;
 
-            while (var17) {
-               val var6: Int = var12.x(var11);
+            while (var5) {
+               val var6: Int = var13.x(var12);
                switch (var6) {
                   case -1:
-                     var17 = false;
+                     var5 = false;
                      break;
                   case 0:
-                     var10 = var12.t(var11, 0);
-                     var15 |= 1;
+                     var10 = var13.t(var12, 0);
+                     var2 |= 1;
                      break;
                   case 1:
-                     var9 = var12.v(var11, 1, b2.a, var9) as java.lang.String;
-                     var15 |= 2;
+                     var9 = var13.v(var12, 1, b2.a, var9) as java.lang.String;
+                     var2 |= 2;
                      break;
                   case 2:
-                     var3 = var12.k(var11, 2);
-                     var15 |= 4;
+                     var3 = var13.k(var12, 2);
+                     var2 |= 4;
                      break;
                   case 3:
-                     var4 = var12.k(var11, 3);
-                     var15 |= 8;
+                     var4 = var13.k(var12, 3);
+                     var2 |= 8;
                      break;
                   case 4:
-                     var8 = var12.v(var11, 4, b2.a, var8) as java.lang.String;
-                     var15 |= 16;
+                     var19 = var13.v(var12, 4, b2.a, var19) as java.lang.String;
+                     var2 |= 16;
                      break;
                   case 5:
-                     var7 = var12.v(var11, 5, n0.a, var7) as Int;
-                     var15 |= 32;
+                     var7 = var13.v(var12, 5, n0.a, var7) as Int;
+                     var2 |= 32;
                      break;
                   case 6:
-                     var14 = var12.t(var11, 6);
-                     var15 |= 64;
+                     var15 = var13.t(var12, 6);
+                     var2 |= 64;
                      break;
                   default:
                      throw new n(var6);
                }
             }
 
-            var5 = var4;
-            var4 = var15;
+            var4 = var2;
+            var2 = var4;
          }
 
-         var12.b(var11);
-         return new EmbedMedia(var4, var10, var9, var3, var5, var8, (Integer)var7, var14, null);
+         var13.b(var12);
+         return new EmbedMedia(var4, var10, var9, var3, var2, var19, (Integer)var7, var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EmbedMedia) {
@@ -271,7 +272,7 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

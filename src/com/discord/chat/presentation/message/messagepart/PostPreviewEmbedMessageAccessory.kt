@@ -71,8 +71,8 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
 
    public override fun hashCode(): Int {
       val var2: Int = MessageId.hashCode-impl(this.messageId);
-      val var3: Int = this.postPreviewEmbed.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
+      val var4: Int = this.postPreviewEmbed.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
       val var1: Int;
       if (this.spoilerAttributes == null) {
          var1 = 0;
@@ -80,23 +80,23 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
          var1 = this.spoilerAttributes.hashCode();
       }
 
-      return ((var2 * 31 + var3) * 31 + var4) * 31 + var1;
+      return ((var2 * 31 + var4) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: PostPreviewEmbed = this.postPreviewEmbed;
       val var1: Int = this.index;
-      val var4: SpoilerAttributes = this.spoilerAttributes;
+      val var5: SpoilerAttributes = this.spoilerAttributes;
       val var2: StringBuilder = new StringBuilder();
       var2.append("PostPreviewEmbedMessageAccessory(messageId=");
-      var2.append(var5);
+      var2.append(var4);
       var2.append(", postPreviewEmbed=");
       var2.append(var3);
       var2.append(", index=");
       var2.append(var1);
       var2.append(", spoilerAttributes=");
-      var2.append(var4);
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }

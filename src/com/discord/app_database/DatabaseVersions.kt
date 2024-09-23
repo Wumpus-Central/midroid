@@ -1,7 +1,7 @@
 package com.discord.app_database
 
-import bl.g0
-import bl.g0.a
+import al.g0
+import al.g0.a
 import java.util.Arrays
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -11,8 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVersions: Any) {

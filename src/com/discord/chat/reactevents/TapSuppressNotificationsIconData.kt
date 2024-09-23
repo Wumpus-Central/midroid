@@ -3,7 +3,7 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import yk.f
+import xk.f
 
 @f
 public object TapSuppressNotificationsIconData : ReactEvent {

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.messageframe
 
-import cl.d
-import cl.g
+import bl.d
+import bl.g
 import java.util.ArrayList
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
@@ -18,15 +18,15 @@ public object MessageFrameSerializer : d(g0.b(MessageFrame.class)) {
 
    @JvmStatic
    fun {
-      val var3: Array<MessageFrameType> = MessageFrameType.values();
-      val var2: ArrayList = new ArrayList(var3.length);
-      val var1: Int = var3.length;
+      val var2: Array<MessageFrameType> = MessageFrameType.values();
+      val var3: ArrayList = new ArrayList(var2.length);
+      val var1: Int = var2.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var2.add(var3[var0].getSerialNumber());
+         var3.add(var2[var0].getSerialNumber());
       }
 
-      knownTypes = var2;
+      knownTypes = var3;
       messageFrameClassSerializer = new SealedClassSerializer(
          "MessageFrame",
          g0.b(MessageFrame.class),

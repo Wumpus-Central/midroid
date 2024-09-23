@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.misc.utilities.ids.IdUtilsKt
-import gh.l
-import gh.o
+import fh.l
+import fh.o
 import kotlin.jvm.functions.Function0
 
 public sealed class ChatListItem protected constructor(id: String) {

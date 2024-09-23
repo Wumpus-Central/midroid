@@ -9,8 +9,8 @@ import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
-import gh.w
-import hh.r
+import fh.w
+import gh.r
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -112,15 +112,15 @@ public object DCDModuleProvider {
 
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
-            val var4: Array<Array<Function1>> = this.$onViewManager;
-            val var5: ArrayList = new ArrayList(this.$onViewManager.length);
-            val var3: Int = var4.length;
+            val var5: Array<Array<Function1>> = this.$onViewManager;
+            val var4: ArrayList = new ArrayList(this.$onViewManager.length);
+            val var3: Int = var5.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               var5.add(var4[var2].invoke(var1) as ViewManager);
+               var4.add(var5[var2].invoke(var1) as ViewManager);
             }
 
-            return var5;
+            return var4;
          }
       };
    }

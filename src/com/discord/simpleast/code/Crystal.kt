@@ -33,18 +33,18 @@ public object Crystal {
       val var5: Pattern = PATTERN_CRYSTAL_REGEX;
       q.g(PATTERN_CRYSTAL_REGEX, "PATTERN_CRYSTAL_REGEX");
       val var10: Rule = CodeRules.toMatchGroupRule$default(var2, var5, 0, var1.getLiteralStyleProvider(), 1, null);
-      var var6: Pattern = PATTERN_CRYSTAL_ANNOTATION;
+      val var6: Pattern = PATTERN_CRYSTAL_ANNOTATION;
       q.g(PATTERN_CRYSTAL_ANNOTATION, "PATTERN_CRYSTAL_ANNOTATION");
-      val var7: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
-      var6 = PATTERN_CRYSTAL_SYMBOL;
+      val var11: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
+      val var7: Pattern = PATTERN_CRYSTAL_SYMBOL;
       q.g(PATTERN_CRYSTAL_SYMBOL, "PATTERN_CRYSTAL_SYMBOL");
       return i.m(
          new Rule[]{
             var8,
             var9,
             var10,
-            var7,
-            CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getLiteralStyleProvider(), 1, null),
+            var11,
+            CodeRules.toMatchGroupRule$default(var2, var7, 0, var1.getLiteralStyleProvider(), 1, null),
             Crystal.FunctionNode.Companion.createFunctionRule(var1)
          }
       );

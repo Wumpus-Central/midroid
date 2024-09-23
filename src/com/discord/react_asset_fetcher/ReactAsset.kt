@@ -3,7 +3,7 @@ package com.discord.react_asset_fetcher
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import nh.a
+import mh.a
 
 public enum class ReactAsset {
    Activity,

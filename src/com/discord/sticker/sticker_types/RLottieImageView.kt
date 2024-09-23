@@ -12,8 +12,8 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import ok.f
-import ok.k0
+import nk.f
+import nk.k0
 
 internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieImageView {
    private final val placeholder: ShapeDrawable
@@ -1250,27 +1250,27 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
+         val var7: java.lang.String = this.url;
          val var4: Boolean = this.animate;
          val var2: Int = this.widthDp;
-         val var3: Int = this.heightDp;
-         val var6: java.lang.String = this.asset;
-         val var1: Int = this.renderMode;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Config(url=");
-         var7.append(var5);
-         var7.append(", animate=");
-         var7.append(var4);
-         var7.append(", widthDp=");
-         var7.append(var2);
-         var7.append(", heightDp=");
-         var7.append(var3);
-         var7.append(", asset=");
-         var7.append(var6);
-         var7.append(", renderMode=");
-         var7.append(var1);
-         var7.append(")");
-         return var7.toString();
+         val var1: Int = this.heightDp;
+         val var5: java.lang.String = this.asset;
+         val var3: Int = this.renderMode;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Config(url=");
+         var6.append(var7);
+         var6.append(", animate=");
+         var6.append(var4);
+         var6.append(", widthDp=");
+         var6.append(var2);
+         var6.append(", heightDp=");
+         var6.append(var1);
+         var6.append(", asset=");
+         var6.append(var5);
+         var6.append(", renderMode=");
+         var6.append(var3);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

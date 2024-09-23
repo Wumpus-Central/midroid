@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.forwarding
 
-import bl.b2
-import bl.g0
+import al.b2
+import al.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,9 +10,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ForwardFooterInfo(timestampLabel: String, originLabel: String, accessibilityLabel: String, originIconUrl: String? = null) {
@@ -136,31 +136,29 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
 
       public open fun deserialize(decoder: Decoder): ForwardFooterInfo {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
+         val var5: Boolean = var10.y();
          var var8: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
-         val var9: java.lang.String;
-         val var10: java.lang.String;
-         var var13: java.lang.String;
+         var var7: java.lang.String;
+         var var11: java.lang.String;
          if (var5) {
-            var6 = var12.t(var11, 0);
-            var10 = var12.t(var11, 1);
-            val var7: java.lang.String = var12.t(var11, 2);
-            var13 = var12.v(var11, 3, b2.a, null) as java.lang.String;
+            var8 = var10.t(var9, 0);
+            var7 = var10.t(var9, 1);
+            var6 = var10.t(var9, 2);
+            var11 = var10.v(var9, 3, b2.a, null) as java.lang.String;
             var2 = 15;
-            var9 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var15: java.lang.String = null;
+            var7 = null;
             var6 = null;
-            var13 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var12.x(var11);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -169,32 +167,28 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                               throw new n(var4);
                            }
 
-                           var13 = var12.v(var11, 3, b2.a, var13) as java.lang.String;
+                           var11 = var10.v(var9, 3, b2.a, var11) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var6 = var12.t(var11, 2);
+                           var6 = var10.t(var9, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var15 = var12.t(var11, 1);
+                        var7 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var12.t(var11, 0);
+                     var8 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var9 = var6;
-            var10 = var15;
-            var6 = var8;
          }
 
-         var12.b(var11);
-         return new ForwardFooterInfo(var2, var6, var10, var9, var13, null);
+         var10.b(var9);
+         return new ForwardFooterInfo(var2, var8, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardFooterInfo) {
@@ -207,7 +201,7 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

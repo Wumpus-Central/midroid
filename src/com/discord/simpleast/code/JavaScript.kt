@@ -25,8 +25,8 @@ public object JavaScript {
       val var8: Rule = CodeRules.toMatchGroupRule$default(var2, var3, 0, var1.getCommentStyleProvider(), 1, null);
       val var4: Pattern = PATTERN_JAVASCRIPT_STRINGS;
       q.g(PATTERN_JAVASCRIPT_STRINGS, "PATTERN_JAVASCRIPT_STRINGS");
-      val var5: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
-      val var9: Rule = JavaScript.ObjectPropertyNode.Companion.createObjectPropertyRule(var1);
+      val var9: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
+      val var5: Rule = JavaScript.ObjectPropertyNode.Companion.createObjectPropertyRule(var1);
       var var6: Pattern = PATTERN_JAVASCRIPT_GENERIC;
       q.g(PATTERN_JAVASCRIPT_GENERIC, "PATTERN_JAVASCRIPT_GENERIC");
       val var7: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
@@ -35,8 +35,8 @@ public object JavaScript {
       return i.m(
          new Rule[]{
             var8,
-            var5,
             var9,
+            var5,
             var7,
             CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getLiteralStyleProvider(), 1, null),
             JavaScript.FieldNode.Companion.createFieldRule(var1),

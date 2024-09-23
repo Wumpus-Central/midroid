@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.forums
 
-import bl.b2
-import bl.g0
-import bl.g0.a
+import al.b2
+import al.g0
+import al.g0.a
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
 import kotlin.jvm.internal.q
@@ -13,8 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class PostSharePrompt(title: String, subtitle: StructurableText, cta: String, icon: String, closeIcon: String) {
@@ -152,24 +152,25 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
          var var9: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
-         var var7: java.lang.String;
          var var8: StructurableText;
-         val var10: java.lang.String;
-         var var13: java.lang.String;
+         val var13: java.lang.String;
+         var var16: java.lang.String;
          if (var5) {
-            var7 = var12.t(var11, 0);
+            var16 = var12.t(var11, 0);
             var8 = var12.m(var11, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var10 = var12.t(var11, 2);
-            var6 = var12.t(var11, 3);
-            var13 = var12.t(var11, 4);
+            val var10: java.lang.String = var12.t(var11, 2);
+            var13 = var12.t(var11, 3);
+            var6 = var12.t(var11, 4);
             var2 = 31;
+            var9 = var16;
+            var16 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var7 = null;
+            var16 = null;
             var6 = null;
-            var13 = null;
+            var var14: java.lang.String = null;
 
             while (var3) {
                val var4: Int = var12.x(var11);
@@ -182,14 +183,14 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
                                  throw new n(var4);
                               }
 
-                              var13 = var12.t(var11, 4);
+                              var14 = var12.t(var11, 4);
                               var2 |= 16;
                            } else {
                               var6 = var12.t(var11, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var12.t(var11, 2);
+                           var16 = var12.t(var11, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -205,12 +206,12 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
                }
             }
 
-            var10 = var7;
-            var7 = var9;
+            var6 = var14;
+            var13 = var6;
          }
 
          var12.b(var11);
-         return new PostSharePrompt(var2, var7, var8, var10, var6, var13, null);
+         return new PostSharePrompt(var2, var9, var8, var16, var13, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PostSharePrompt) {

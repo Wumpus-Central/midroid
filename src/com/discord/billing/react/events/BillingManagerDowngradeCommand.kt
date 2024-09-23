@@ -1,8 +1,8 @@
 package com.discord.billing.react.events
 
-import bl.g0
-import bl.n0
-import bl.g0.a
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -13,8 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : ReactEvent {
@@ -86,14 +86,14 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var6: Boolean = var8.y();
-         var var3: Int = 1;
+         var var2: Int = 1;
          var var4: Boolean = true;
-         var var2: Int;
+         var var3: Int;
          if (var6) {
-            var2 = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
          } else {
-            var2 = 0;
             var3 = 0;
+            var2 = 0;
 
             while (var4) {
                val var5: Int = var8.x(var7);
@@ -102,8 +102,8 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
                      throw new n(var5);
                   }
 
-                  var2 = var8.k(var7, 0);
-                  var3 |= 1;
+                  var3 = var8.k(var7, 0);
+                  var2 |= 1;
                } else {
                   var4 = false;
                }
@@ -111,7 +111,7 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
          }
 
          var8.b(var7);
-         return new BillingManagerDowngradeCommand(var3, var2, null);
+         return new BillingManagerDowngradeCommand(var2, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BillingManagerDowngradeCommand) {

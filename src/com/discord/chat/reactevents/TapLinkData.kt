@@ -23,7 +23,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import gh.w
+import fh.w
 import kotlin.jvm.internal.q
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: String? = ..., content: String = ..., context: LinkContext? = ...) : TapLinkData(
@@ -367,21 +367,21 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       }
 
       val var2: java.lang.String = this.title;
-      val var5: java.lang.String = this.target;
+      val var4: java.lang.String = this.target;
       val var3: java.lang.String = this.content;
       val var6: LinkContext = this.context;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapLinkData(messageId=");
-      var4.append(var7);
-      var4.append(", title=");
-      var4.append(var2);
-      var4.append(", target=");
-      var4.append(var5);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(", context=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapLinkData(messageId=");
+      var5.append(var7);
+      var5.append(", title=");
+      var5.append(var2);
+      var5.append(", target=");
+      var5.append(var4);
+      var5.append(", content=");
+      var5.append(var3);
+      var5.append(", context=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 }

@@ -1,8 +1,8 @@
 package com.discord.chat.input.events
 
-import bl.g0
-import bl.n0
-import bl.g0.a
+import al.g0
+import al.n0
+import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -13,8 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEvent {
@@ -62,13 +62,13 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
    }
 
    public override fun toString(): String {
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnContentSizeChangeEvent(width=");
-      var3.append(var2);
-      var3.append(", height=");
       var3.append(var1);
+      var3.append(", height=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -103,8 +103,8 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
          var var4: Int;
          if (var8.y()) {
             var3 = var8.k(var7, 0);
-            var4 = var8.k(var7, 1);
-            var2 = 3;
+            var2 = var8.k(var7, 1);
+            var4 = 3;
          } else {
             var var5: Boolean = true;
             var3 = 0;
@@ -129,10 +129,13 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
                   var5 = false;
                }
             }
+
+            var4 = var2;
+            var2 = var4;
          }
 
          var8.b(var7);
-         return new OnContentSizeChangeEvent(var2, var3, var4, null);
+         return new OnContentSizeChangeEvent(var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnContentSizeChangeEvent) {

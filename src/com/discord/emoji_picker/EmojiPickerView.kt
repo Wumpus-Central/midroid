@@ -12,8 +12,8 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
-import gh.l
-import gh.p
+import fh.l
+import fh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -457,19 +457,19 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun toString(): String {
-         val var3: Boolean = this.animateEmoji;
-         val var4: Boolean = this.scrollFastOptimizationEnabled;
+         val var2: Boolean = this.animateEmoji;
+         val var3: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var2: Boolean = this.disableAnimationsOnScroll;
+         val var4: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var3);
+         var5.append(var2);
          var5.append(", scrollFastOptimizationEnabled=");
-         var5.append(var4);
+         var5.append(var3);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var2);
+         var5.append(var4);
          var5.append(")");
          return var5.toString();
       }

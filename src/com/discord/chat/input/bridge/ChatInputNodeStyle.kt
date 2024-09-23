@@ -1,7 +1,7 @@
 package com.discord.chat.input.bridge
 
-import bl.g0
-import bl.n0
+import al.g0
+import al.n0
 import com.discord.span.utilities.common.BackgroundStyle
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -11,9 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgroundStyle: BackgroundStyle?, fontWeight: ChatInputNodeFontWeight? = null) {
@@ -136,9 +136,9 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
-         val var2: n0 = n0.a;
-         return new KSerializer[]{a.u(n0.a), var2, a.u(BackgroundStyle.$serializer.INSTANCE), a.u(var1[3])};
+         val var2: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
+         val var1: n0 = n0.a;
+         return new KSerializer[]{a.u(n0.a), var1, a.u(BackgroundStyle.$serializer.INSTANCE), a.u(var2[3])};
       }
 
       public open fun deserialize(decoder: Decoder): ChatInputNodeStyle {
@@ -211,7 +211,7 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

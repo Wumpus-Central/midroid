@@ -1,9 +1,9 @@
 package com.discord.chat.bridge
 
-import bl.b2
-import bl.g0
-import bl.o1
-import bl.g0.a
+import al.b2
+import al.g0
+import al.o1
+import al.g0.a
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -14,8 +14,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {

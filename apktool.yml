@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 247021
-  versionName: 247.21 - Stable
+  versionCode: 248017
+  versionName: 248.17 - Stable
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -125,9 +125,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/fi.a
-- META-INF/services/ok.z
-- META-INF/services/tk.v
+- META-INF/services/ei.a
+- META-INF/services/nk.z
+- META-INF/services/sk.v
 - png
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

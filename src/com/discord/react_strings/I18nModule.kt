@@ -5,6 +5,7 @@ import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
+import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
 public class I18nModule(reactContext: ReactApplicationContext) : ReactResourceModule<I18nMessage> {
@@ -24,8 +25,8 @@ public class I18nModule(reactContext: ReactApplicationContext) : ReactResourceMo
       return "i18nManager";
    }
 
-   public open fun keys(): Array<I18nMessage> {
-      return I18nMessage.values();
+   public open fun keys(): EnumEntries<I18nMessage> {
+      return I18nMessage.getEntries();
    }
 
    @ReactMethod

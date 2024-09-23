@@ -79,21 +79,21 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
       for (int var3 = 0; var3 < var4; var3++) {
          val var9: SpoilerSpan = var18[var3];
          if (!var18[var3].isRevealed()) {
-            val var6: Int = var16.getSpanStart(var9);
-            val var5: Int = var16.getSpanEnd(var9);
+            val var5: Int = var16.getSpanStart(var9);
+            val var6: Int = var16.getSpanEnd(var9);
             val var23: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var23, "getContext(...)");
-            var16.replace(var6, var5, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+            var16.replace(var5, var6, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
          }
       }
 
       var8 = var16.getSpans(0, var16.length(), EmojiAccessibilitySpan.class);
       kotlin.jvm.internal.q.g(var8, "getSpans(...)");
-      val var20: Array<EmojiAccessibilitySpan> = var8 as Array<EmojiAccessibilitySpan>;
+      val var24: Array<EmojiAccessibilitySpan> = var8 as Array<EmojiAccessibilitySpan>;
       var4 = (var8 as Array<EmojiAccessibilitySpan>).length;
 
       for (int var13 = 0; var13 < var4; var13++) {
-         var16.replace(var16.getSpanStart(var20[var13]), var16.getSpanEnd(var20[var13]), var20[var13].getName());
+         var16.replace(var16.getSpanStart(var24[var13]), var16.getSpanEnd(var24[var13]), var24[var13].getName());
       }
 
       var8 = new ArrayList();

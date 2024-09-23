@@ -1,7 +1,7 @@
 package com.discord.chat.input.events
 
-import bl.b2
-import bl.g0
+import al.b2
+import al.g0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -12,9 +12,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
@@ -73,13 +73,13 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.url;
-      val var3: java.lang.String = this.type;
+      val var3: java.lang.String = this.url;
+      val var1: java.lang.String = this.type;
       val var2: StringBuilder = new StringBuilder();
       var2.append("OnPasteImageEvent(url=");
-      var2.append(var1);
-      var2.append(", type=");
       var2.append(var3);
+      var2.append(", type=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -156,7 +156,7 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

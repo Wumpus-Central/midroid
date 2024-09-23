@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
-import bl.g0
-import bl.h
-import bl.n0
-import bl.g0.a
+import al.g0
+import al.h
+import al.n0
+import al.g0.a
 import com.discord.chat.bridge.ChangeType
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -13,8 +13,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row {
@@ -80,16 +80,16 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var5: ChangeType = this.changeType;
-      val var4: LoadMoreButton = this.button;
+      val var4: ChangeType = this.changeType;
+      val var5: LoadMoreButton = this.button;
       val var2: Boolean = this.isLoading;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LoadingRow(index=");
       var3.append(var1);
       var3.append(", changeType=");
-      var3.append(var5);
-      var3.append(", button=");
       var3.append(var4);
+      var3.append(", button=");
+      var3.append(var5);
       var3.append(", isLoading=");
       var3.append(var2);
       var3.append(")");
@@ -123,7 +123,7 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
-         var var2: Int;
+         var var4: Int;
          val var5: Int;
          var var7: ChangeType;
          var var10: LoadMoreButton;
@@ -132,19 +132,19 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
             var11 = var9.k(var8, 0);
             var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
             var10 = var9.m(var8, 2, LoadMoreButton.$serializer.INSTANCE, null) as LoadMoreButton;
-            val var4: Byte = var9.s(var8, 3);
-            var2 = 15;
-            var5 = var11;
-            var11 = var4;
+            val var3: Byte = var9.s(var8, 3);
+            var5 = 15;
+            var4 = var11;
+            var11 = var3;
          } else {
-            var var13: Boolean = true;
-            var var12: Int = 0;
-            var2 = 0;
+            var var15: Boolean = true;
+            var4 = 0;
+            var11 = 0;
             var7 = null;
             var10 = null;
-            var11 = 0;
+            var var13: Int = 0;
 
-            while (var13) {
+            while (var15) {
                val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -154,30 +154,31 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
                               throw new n(var6);
                            }
 
-                           var11 = var9.s(var8, 3);
-                           var2 |= 8;
+                           var13 = var9.s(var8, 3);
+                           var11 |= 8;
                         } else {
                            var10 = var9.m(var8, 2, LoadMoreButton.$serializer.INSTANCE, var10) as LoadMoreButton;
-                           var2 |= 4;
+                           var11 |= 4;
                         }
                      } else {
                         var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, var7) as ChangeType;
-                        var2 |= 2;
+                        var11 |= 2;
                      }
                   } else {
-                     var12 = var9.k(var8, 0);
-                     var2 |= 1;
+                     var4 = var9.k(var8, 0);
+                     var11 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var15 = false;
                }
             }
 
-            var5 = var12;
+            var11 = var13;
+            var5 = var11;
          }
 
          var9.b(var8);
-         return new LoadingRow(var2, var5, var7, var10, (boolean)var11, null);
+         return new LoadingRow(var5, var4, var7, var10, (boolean)var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadingRow) {

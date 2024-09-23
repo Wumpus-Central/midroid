@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.summaries
 
-import bl.b2
-import bl.g0
-import bl.n0
-import bl.o1
-import bl.g0.a
+import al.b2
+import al.g0
+import al.n0
+import al.o1
+import al.g0.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
@@ -17,8 +17,8 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class Summary(id: String,
@@ -272,7 +272,7 @@ public data class Summary(id: String,
          var var24: java.lang.String;
          if (var7) {
             var13 = var18.t(var17, 0);
-            var12 = var18.t(var17, 1);
+            var11 = var18.t(var17, 1);
             val var14: java.lang.String = var18.t(var17, 2);
             var10 = var18.m(var17, 3, var15[3], null) as java.util.List;
             val var8: MessageId.$serializer = MessageId.$serializer.INSTANCE;
@@ -293,7 +293,7 @@ public data class Summary(id: String,
 
             var3 = var18.k(var17, 6);
             var9 = var18.m(var17, 7, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var11 = var20;
+            var12 = var20;
             var21 = var14;
             var2 = 255;
          } else {
@@ -383,15 +383,15 @@ public data class Summary(id: String,
                var4 = 7;
             }
 
-            var11 = (java.lang.String)var9;
             var9 = var12;
             var24 = var11;
+            var12 = (java.lang.String)var9;
             var21 = var24;
-            var12 = var22;
+            var11 = var22;
          }
 
          var18.b(var17);
-         return new Summary(var2, var13, var12, var21, var10, var11, var24, var3, var9, null, null);
+         return new Summary(var2, var13, var11, var21, var10, var12, var24, var3, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Summary) {

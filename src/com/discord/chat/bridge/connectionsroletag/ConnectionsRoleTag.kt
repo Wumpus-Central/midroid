@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.connectionsroletag
 
-import bl.b2
-import bl.g0
-import bl.n0
-import bl.g0.a
+import al.b2
+import al.g0
+import al.n0
+import al.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +12,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: Int, iconColor: Int) {
@@ -122,32 +122,29 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
 
       public open fun deserialize(decoder: Decoder): ConnectionsRoleTag {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         var var2: Int;
          var var3: Int;
          var var4: Int;
-         val var5: Int;
-         val var8: java.lang.String;
-         var var12: java.lang.String;
-         if (var10.y()) {
-            val var11: java.lang.String = var10.t(var9, 0);
-            val var7: java.lang.String = var10.t(var9, 1);
-            var4 = var10.k(var9, 2);
-            val var2: Int = var10.k(var9, 3);
-            var3 = 15;
-            var8 = var11;
-            var12 = var7;
-            var5 = var2;
+         var var7: java.lang.String;
+         var var10: java.lang.String;
+         if (var9.y()) {
+            var7 = var9.t(var8, 0);
+            var10 = var9.t(var8, 1);
+            var3 = var9.k(var8, 2);
+            var2 = var9.k(var8, 3);
+            var4 = 15;
          } else {
-            var var17: java.lang.String = null;
-            var12 = null;
-            var var16: Boolean = true;
+            var7 = null;
+            var10 = null;
+            var var5: Boolean = true;
             var4 = 0;
             var3 = 0;
-            var var13: Int = 0;
+            var2 = 0;
 
-            while (var16) {
-               val var6: Int = var10.x(var9);
+            while (var5) {
+               val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -156,33 +153,31 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
                               throw new n(var6);
                            }
 
-                           var4 = var10.k(var9, 3);
-                           var13 |= 8;
+                           var4 = var9.k(var8, 3);
+                           var2 |= 8;
                         } else {
-                           var3 = var10.k(var9, 2);
-                           var13 |= 4;
+                           var3 = var9.k(var8, 2);
+                           var2 |= 4;
                         }
                      } else {
-                        var12 = var10.t(var9, 1);
-                        var13 |= 2;
+                        var10 = var9.t(var8, 1);
+                        var2 |= 2;
                      }
                   } else {
-                     var17 = var10.t(var9, 0);
-                     var13 |= 1;
+                     var7 = var9.t(var8, 0);
+                     var2 |= 1;
                   }
                } else {
-                  var16 = false;
+                  var5 = false;
                }
             }
 
-            var5 = var4;
-            var4 = var3;
-            var8 = var17;
-            var3 = var13;
+            var2 = var4;
+            var4 = var2;
          }
 
-         var10.b(var9);
-         return new ConnectionsRoleTag(var3, var8, var12, var4, var5, null);
+         var9.b(var8);
+         return new ConnectionsRoleTag(var4, var7, var10, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ConnectionsRoleTag) {

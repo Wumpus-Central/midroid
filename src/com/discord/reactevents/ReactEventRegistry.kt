@@ -1,7 +1,7 @@
 package com.discord.reactevents
 
-import gh.w
-import hh.r
+import fh.w
+import gh.r
 import java.util.LinkedHashMap
 import java.util.Locale
 import kotlin.jvm.internal.g0
@@ -38,8 +38,8 @@ internal class ReactEventRegistry {
       this.didExportEvents = true;
       val var3: LinkedHashMap = new LinkedHashMap();
 
-      for (java.lang.String var2 : this.events.values()) {
-         var3.put(var2, r.m(new Pair[]{w.a("registrationName", var2)}));
+      for (java.lang.String var1 : this.events.values()) {
+         var3.put(var1, r.m(new Pair[]{w.a("registrationName", var1)}));
       }
 
       return var3;

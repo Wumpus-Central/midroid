@@ -47,7 +47,7 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import gh.w
+import fh.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function6
@@ -103,12 +103,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       val var19: StructurableText = var1.getContent();
       if (var19 != null) {
-         val var13: ArrayList = this.accessories;
-         val var12: java.lang.String = var1.getId-3Eiw7ao();
-         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var8: Boolean = var1.getShouldShowRoleDot();
-         val var7: Boolean = var1.getShouldShowRoleOnName();
+         val var12: ArrayList = this.accessories;
+         val var13: java.lang.String = var1.getId-3Eiw7ao();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var7: Boolean = var1.getShouldShowRoleDot();
+         val var9: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
             var4 = 0;
@@ -132,14 +132,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var6 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var13.add(
+         var12.add(
             new MessageContentAccessory(
-               var12,
+               var13,
                var19,
-               var9,
                var10,
                var8,
                var7,
+               var9,
                var4,
                var5,
                var6,
@@ -166,12 +166,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var11 = var1.getTotalMonthsSubscribed();
       if (var11 != null && var11.intValue() <= 1) {
-         val var22: ArrayList = this.accessories;
-         val var30: java.lang.String = var1.getId-3Eiw7ao();
-         val var27: java.lang.String = var1.getUsername();
-         val var32: Context = this.binding.getRoot().getContext();
-         q.g(var32, "getContext(...)");
-         var22.add(new RoleSubscriptionPurchaseAccessory(var30, var27, MessageKt.avatarUrl(var1, var32), var3, false, null));
+         val var27: ArrayList = this.accessories;
+         val var22: java.lang.String = var1.getId-3Eiw7ao();
+         val var32: java.lang.String = var1.getUsername();
+         val var30: Context = this.binding.getRoot().getContext();
+         q.g(var30, "getContext(...)");
+         var27.add(new RoleSubscriptionPurchaseAccessory(var22, var32, MessageKt.avatarUrl(var1, var30), var3, false, null));
       }
 
       val var23: Sticker = var1.getSticker();

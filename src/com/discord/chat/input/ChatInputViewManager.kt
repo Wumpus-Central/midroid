@@ -1,11 +1,11 @@
 package com.discord.chat.input
 
+import al.f
 import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.net.Uri
 import android.view.Window
-import bl.f
 import com.discord.chat.input.bridge.ChatInputNode
 import com.discord.chat.input.events.OnContentSizeChangeEvent
 import com.discord.chat.input.events.OnEndBlurEvent
@@ -91,12 +91,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          @Override
          public void onImageInserted(Uri var1) {
             q.h(var1, "uri");
-            val var4: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var5: ThemedReactContext = this.$reactContext;
-            val var2: ChatInputRootView = this.$view;
-            val var3: java.lang.String = var1.toString();
-            q.g(var3, "toString(...)");
-            var4.emitEvent(var5, var2, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
+            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var2: ThemedReactContext = this.$reactContext;
+            val var5: ChatInputRootView = this.$view;
+            val var4: java.lang.String = var1.toString();
+            q.g(var4, "toString(...)");
+            var3.emitEvent(var2, var5, new OnPasteImageEvent(var4, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -210,11 +210,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
                val var4: Int = var3.getInt(0);
                val var5: Int = var3.getInt(1);
-               val var6: java.lang.String = var3.getString(2);
-               q.g(var6, "getString(...)");
-               var2 = var3.getString(3);
+               var2 = var3.getString(2);
                q.g(var2, "getString(...)");
-               this.replaceRange(var1, var4, var5, var6, var2, var3.getBoolean(4), var3.getString(5));
+               val var6: java.lang.String = var3.getString(3);
+               q.g(var6, "getString(...)");
+               this.replaceRange(var1, var4, var5, var2, var6, var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:

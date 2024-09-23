@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.forwarding
 
-import bl.g0
-import bl.h
-import bl.n0
+import al.g0
+import al.h
+import al.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,9 +11,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
-import zk.a
+import xk.f
+import xk.n
+import yk.a
 
 @f
 public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo? = null, useOldIcon: Boolean) {
@@ -121,8 +121,8 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          if (var8.y()) {
             var4 = var8.k(var7, 0);
             var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, null) as ForwardFooterInfo;
-            var3 = var8.s(var7, 2);
-            var2 = 7;
+            var2 = var8.s(var7, 2);
+            var3 = 7;
          } else {
             var var5: Boolean = true;
             var4 = 0;
@@ -153,10 +153,13 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                   var5 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
-         return new ForwardInfo(var2, var4, var9, (boolean)var3, null);
+         return new ForwardInfo(var3, var4, var9, (boolean)var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardInfo) {
@@ -169,7 +172,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

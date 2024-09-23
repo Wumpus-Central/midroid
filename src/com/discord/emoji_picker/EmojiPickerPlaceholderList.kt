@@ -2,7 +2,7 @@ package com.discord.emoji_picker
 
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData.NativeSection
 import com.discord.misc.utilities.collections.StubbedList
-import gh.p
+import fh.p
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 

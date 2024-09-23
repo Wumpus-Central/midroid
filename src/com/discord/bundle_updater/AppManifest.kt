@@ -1,9 +1,9 @@
 package com.discord.bundle_updater
 
-import bl.b2
-import bl.g0
-import bl.s0
-import hh.r
+import al.b2
+import al.g0
+import al.s0
+import gh.r
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,8 +11,8 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = r.h(), patches: Map<String, String> = r.h()) {
@@ -122,17 +122,17 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
          val var5: Boolean = var10.y();
          var var7: AppManifestMetadata = null;
          var var2: Int;
-         var var6: java.util.Map;
          val var11: java.util.Map;
+         val var13: java.util.Map;
          if (var5) {
             var7 = var10.m(var9, 0, AppManifestMetadata.$serializer.INSTANCE, null) as AppManifestMetadata;
             var11 = var10.m(var9, 1, var8[1], null) as java.util.Map;
-            var6 = var10.m(var9, 2, var8[2], null) as java.util.Map;
+            var13 = var10.m(var9, 2, var8[2], null) as java.util.Map;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
+            var var6: java.util.Map = null;
             var var12: java.util.Map = null;
 
             while (var3) {
@@ -159,12 +159,12 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
                }
             }
 
-            var6 = var12;
+            var13 = var12;
             var11 = var6;
          }
 
          var10.b(var9);
-         return new AppManifest(var2, var7, var11, var6, null);
+         return new AppManifest(var2, var7, var11, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifest) {
@@ -177,7 +177,7 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

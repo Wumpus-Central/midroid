@@ -1,8 +1,8 @@
 package com.discord.chatreplay
 
-import bl.b2
-import bl.g0
-import bl.x0
+import al.b2
+import al.g0
+import al.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,8 +11,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import yk.f
-import yk.n
+import xk.f
+import xk.n
 
 @f
 public data class Replay(filename: String, lastModified: Long) {
@@ -59,15 +59,15 @@ public data class Replay(filename: String, lastModified: Long) {
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.filename;
+      val var3: java.lang.String = this.filename;
       val var1: Long = this.lastModified;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Replay(filename=");
-      var3.append(var4);
-      var3.append(", lastModified=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Replay(filename=");
+      var4.append(var3);
+      var4.append(", lastModified=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -142,7 +142,7 @@ public data class Replay(filename: String, lastModified: Long) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return bl.g0.a.a(this);
+         return al.g0.a.a(this);
       }
    }
 

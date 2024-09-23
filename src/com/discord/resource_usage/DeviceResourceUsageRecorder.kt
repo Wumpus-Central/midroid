@@ -7,13 +7,13 @@ import android.telephony.TelephonyManager
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
-import gh.w
+import fh.w
 import kotlin.jvm.internal.q
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
 import okio.BufferedSource
-import zl.e
+import yl.e
 
 public class DeviceResourceUsageRecorder {
    @JvmStatic
