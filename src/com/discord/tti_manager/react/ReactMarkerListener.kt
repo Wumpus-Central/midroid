@@ -3,9 +3,10 @@ package com.discord.tti_manager.react
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactMarker
 import com.facebook.react.bridge.ReactMarkerConstants
+import com.facebook.react.bridge.ReactMarker.MarkerListener
 import kotlin.properties.a
 
-public object ReactMarkerListener : ReactMarker.MarkerListener {
+public object ReactMarkerListener : MarkerListener {
    public final var bundleLoadedTimestamp: Long
       public final get() {
          return (bundleLoadedTimestamp$delegate.getValue(this, $$delegatedProperties[1]) as java.lang.Number).longValue();
@@ -46,7 +47,7 @@ public object ReactMarkerListener : ReactMarker.MarkerListener {
       bundleParsedTimestamp$delegate = var0.a();
    }
 
-   public override fun logMarker(marker: ReactMarkerConstants?, tag: String?, instanceKey: Int) {
+   public open fun logMarker(marker: ReactMarkerConstants?, tag: String?, instanceKey: Int) {
       val var4: Long = System.currentTimeMillis();
       val var6: java.lang.String;
       if (var1 != null) {

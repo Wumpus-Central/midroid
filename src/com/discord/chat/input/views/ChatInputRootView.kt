@@ -41,7 +41,7 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
-import yk.u
+import vk.u
 
 public class ChatInputRootView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : RelativeLayout, KeyboardEvent {
    private final val binding: ChatInputRootViewBinding
@@ -226,7 +226,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          }
       );
       var7.setOnFocusChangeListener(new c(this));
-      r0.H0(var7, new java.lang.String[]{"image/*"}, new d(this, var1));
+      r0.G0(var7, new java.lang.String[]{"image/*"}, new d(this, var1));
       var7.addTextChangedListener(
          new TextWatcher(this) {
             final ChatInputRootView this$0;
@@ -237,10 +237,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
             public void afterTextChanged(Editable var1) {
                val var3: java.lang.String = java.lang.String.valueOf(var1);
-               val var2: ChatInputRootView = this.this$0;
-               val var4: java.lang.String = UUID.randomUUID().toString();
-               q.g(var4, "toString(...)");
-               ChatInputRootView.access$setLastEditId$p(var2, var4);
+               val var4: ChatInputRootView = this.this$0;
+               val var2: java.lang.String = UUID.randomUUID().toString();
+               q.g(var2, "toString(...)");
+               ChatInputRootView.access$setLastEditId$p(var4, var2);
                ChatInputRootView.access$getCurrentTextFlow$p(this.this$0)
                   .setValue(
                      new ChatInputRootView.CurrentTextAndSelection(
@@ -309,10 +309,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var7: Uri = var9.c().getItemAt(var4).getUri();
-            q.g(var7, "getUri(...)");
+            val var8: Uri = var9.c().getItemAt(var4).getUri();
+            q.g(var8, "getUri(...)");
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var7);
+               var0.listener.onImageInserted(var8);
             }
          }
 
@@ -409,14 +409,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(i.v(var1, 10));
 
-      for (ChatInputNode var6 : var1) {
-         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var5 : var1) {
+         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var17 : var4) {
-         val var7: Editable = this.editText.getEditableText();
-         q.g(var7, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var7, var17);
+      for (ChatInputNode var7 : var4) {
+         val var18: Editable = this.editText.getEditableText();
+         q.g(var18, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var18, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -467,14 +467,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    public fun clearAndApplyChatNodes(editId: String?, chatInputNodes: List<ChatInputNode>) {
       q.h(var2, "chatInputNodes");
       if (q.c(this.lastEditId, var1) || var1 == null) {
-         val var6: Editable = this.editText.getEditableText();
-         val var5: Array<DCDInputSpan> = var6.getSpans(0, var6.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
-         if (var5 != null) {
-            q.e(var5);
-            val var4: Int = var5.length;
+         val var5: Editable = this.editText.getEditableText();
+         val var6: Array<DCDInputSpan> = var5.getSpans(0, var5.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
+         if (var6 != null) {
+            q.e(var6);
+            val var4: Int = var6.length;
 
             for (int var3 = 0; var3 < var4; var3++) {
-               var6.removeSpan(var5[var3]);
+               var5.removeSpan(var6[var3]);
             }
          }
 
@@ -488,18 +488,18 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      vk.f.d(
+      sk.f.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1531,13 +1531,15 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       if (!var1) {
-         this.blurJob = vk.f.d(
+         this.blurJob = sk.f.d(
             CoroutineViewUtilsKt.getAttachedScope(this),
             null,
             null,
             new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -2560,8 +2562,6 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
             3,
             null
@@ -2691,19 +2691,19 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       public override fun toString(): String {
          val var2: Int = this.selectionStart;
          val var1: Int = this.selectionEnd;
-         val var3: java.lang.String = this.text;
+         val var4: java.lang.String = this.text;
          val var5: java.lang.String = this.editId;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("CurrentTextAndSelection(selectionStart=");
-         var4.append(var2);
-         var4.append(", selectionEnd=");
-         var4.append(var1);
-         var4.append(", text=");
-         var4.append(var3);
-         var4.append(", editId=");
-         var4.append(var5);
-         var4.append(")");
-         return var4.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("CurrentTextAndSelection(selectionStart=");
+         var3.append(var2);
+         var3.append(", selectionEnd=");
+         var3.append(var1);
+         var3.append(", text=");
+         var3.append(var4);
+         var3.append(", editId=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

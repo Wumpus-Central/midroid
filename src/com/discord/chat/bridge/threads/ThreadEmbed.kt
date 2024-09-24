@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.threads
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.h
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -136,27 +136,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.title;
-      val var5: java.lang.String = this.messageCountLabel;
-      val var7: java.lang.String = this.messagePreviewString;
-      val var3: java.lang.Boolean = this.archived;
-      val var6: java.lang.String = this.archivedIconUrl;
-      val var4: ThreadEmbedMessage = this.referencedMessage;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ThreadEmbed(title=");
-      var1.append(var2);
-      var1.append(", messageCountLabel=");
-      var1.append(var5);
-      var1.append(", messagePreviewString=");
-      var1.append(var7);
-      var1.append(", archived=");
-      var1.append(var3);
-      var1.append(", archivedIconUrl=");
-      var1.append(var6);
-      var1.append(", referencedMessage=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = this.title;
+      val var4: java.lang.String = this.messageCountLabel;
+      val var6: java.lang.String = this.messagePreviewString;
+      val var1: java.lang.Boolean = this.archived;
+      val var5: java.lang.String = this.archivedIconUrl;
+      val var7: ThreadEmbedMessage = this.referencedMessage;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThreadEmbed(title=");
+      var2.append(var3);
+      var2.append(", messageCountLabel=");
+      var2.append(var4);
+      var2.append(", messagePreviewString=");
+      var2.append(var6);
+      var2.append(", archived=");
+      var2.append(var1);
+      var2.append(", archivedIconUrl=");
+      var2.append(var5);
+      var2.append(", referencedMessage=");
+      var2.append(var7);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -268,7 +268,7 @@ public data class ThreadEmbed(title: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

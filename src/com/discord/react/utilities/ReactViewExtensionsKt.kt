@@ -7,12 +7,12 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import java.lang.reflect.Method
+import kh.l
 import kotlin.jvm.internal.q
-import nh.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.a(<unrepresentable>.INSTANCE)
+private final val viewOperationQueueMethod: Method by l.b(<unrepresentable>.INSTANCE)
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }
@@ -53,11 +53,11 @@ fun `queueManualLayout$lambda$1`(var0: ReactContext, var1: Int) {
    val var4: ReactShadowNode = var2.resolveShadowNode(var1);
    if (var4 != null) {
       q.e(var2);
-      val var5: UIViewOperationQueue = getUIViewOperationQueue(var2);
-      if (var5 != null) {
-         val var3: ReactShadowNode = var4.getParent();
-         q.e(var3);
-         var5.enqueueUpdateLayout(var3.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight());
+      val var3: UIViewOperationQueue = getUIViewOperationQueue(var2);
+      if (var3 != null) {
+         val var5: ReactShadowNode = var4.getParent();
+         q.e(var5);
+         var3.enqueueUpdateLayout(var5.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight());
       }
    }
 

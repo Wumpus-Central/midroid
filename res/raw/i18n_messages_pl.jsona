@@ -6503,7 +6503,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Zmieniasz ustawienia ręcznie.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Użyj wstępnych ustawień",
   "APP_DIRECTORY_PARTNER": "Partner",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Zaproś aplikację na serwer",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Dodaj aplikację",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "na następującej liczbie serwerów: {guildCount}",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Ups, to łącze nie działa...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Nieprawidłowe łącze",

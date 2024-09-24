@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.h
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -104,23 +104,23 @@ public data class PollAction(label: String,
    }
 
    public fun getFullTextLabel(): String {
-      val var2: java.lang.String = this.secondaryLabel;
+      val var3: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
          val var1: java.lang.String = this.label;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var1);
-         var3.append("  •  ");
-         var3.append(var2);
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append(var1);
+         var2.append("  •  ");
+         var2.append(var3);
+         return var2.toString();
       }
    }
 
    public override fun hashCode(): Int {
       val var6: Int = this.label.hashCode();
-      val var4: Int = this.presentation.hashCode();
-      val var5: Int = java.lang.Boolean.hashCode(this.enabled);
+      val var5: Int = this.presentation.hashCode();
+      val var4: Int = java.lang.Boolean.hashCode(this.enabled);
       var var3: Int = 0;
       val var1: Int;
       if (this.type == null) {
@@ -140,31 +140,31 @@ public data class PollAction(label: String,
          var3 = this.accessibilityHint.hashCode();
       }
 
-      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var6 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.label;
-      val var3: PollActionPresentation = this.presentation;
+      val var7: java.lang.String = this.label;
+      val var2: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var5: java.lang.String = this.type;
-      val var7: java.lang.String = this.secondaryLabel;
-      val var6: java.lang.String = this.accessibilityHint;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollAction(label=");
-      var4.append(var2);
-      var4.append(", presentation=");
-      var4.append(var3);
-      var4.append(", enabled=");
-      var4.append(var1);
-      var4.append(", type=");
-      var4.append(var5);
-      var4.append(", secondaryLabel=");
-      var4.append(var7);
-      var4.append(", accessibilityHint=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var6: java.lang.String = this.type;
+      val var4: java.lang.String = this.secondaryLabel;
+      val var5: java.lang.String = this.accessibilityHint;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollAction(label=");
+      var3.append(var7);
+      var3.append(", presentation=");
+      var3.append(var2);
+      var3.append(", enabled=");
+      var3.append(var1);
+      var3.append(", type=");
+      var3.append(var6);
+      var3.append(", secondaryLabel=");
+      var3.append(var4);
+      var3.append(", accessibilityHint=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -277,7 +277,7 @@ public data class PollAction(label: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

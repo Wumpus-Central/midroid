@@ -1,11 +1,11 @@
 package com.discord.app_database
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.x0
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -64,8 +64,8 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.id.hashCode();
-      val var3: Int = java.lang.Long.hashCode(this.version);
+      val var3: Int = this.id.hashCode();
+      val var2: Int = java.lang.Long.hashCode(this.version);
       val var1: Int;
       if (this.versionString == null) {
          var1 = 0;
@@ -73,22 +73,22 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          var1 = this.versionString.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var5: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var5: java.lang.String = this.versionString;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("NonGuildVersion(id=");
-      var4.append(var3);
-      var4.append(", version=");
-      var4.append(var1);
-      var4.append(", versionString=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.versionString;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("NonGuildVersion(id=");
+      var3.append(var5);
+      var3.append(", version=");
+      var3.append(var1);
+      var3.append(", versionString=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -172,7 +172,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

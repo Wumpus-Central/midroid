@@ -6502,7 +6502,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "आप मैन्युअल तरह से सेटिंग बदल रहे हैं.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "प्रीसेट इस्तेमाल करें",
   "APP_DIRECTORY_PARTNER": "पार्टनर",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "ऐप को सर्वर पर इनवाइट करें",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "ऐप ऐड करें",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "{guildCount} सर्वर में मौजूद",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "अरे यार! ये लिंक काम नहीं करता...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "गलत लिंक",

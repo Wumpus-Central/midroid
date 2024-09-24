@@ -6501,7 +6501,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Αλλάζεις ρυθμίσεις χειροκίνητα.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Χρήση προεπιλογών",
   "APP_DIRECTORY_PARTNER": "Συνεργάτης",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Προσκάλεσε την εφαρμογή στον διακομιστή",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Προσθήκη εφαρμογής",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "σε {guildCount} διακομιστές",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Ουπς, αυτός ο σύνδεσμος δεν λειτουργεί...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Μη έγκυρος σύνδεσμος",

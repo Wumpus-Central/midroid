@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -98,21 +98,21 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.commandId;
-      val var1: java.lang.String = this.commandName;
-      val var3: java.lang.String = this.commandKey;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LongPressCommandData(channelId=");
-      var4.append(var2);
-      var4.append(", commandId=");
-      var4.append(var5);
-      var4.append(", commandName=");
-      var4.append(var1);
-      var4.append(", commandKey=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.commandId;
+      val var5: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandKey;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressCommandData(channelId=");
+      var2.append(var3);
+      var2.append(", commandId=");
+      var2.append(var4);
+      var2.append(", commandName=");
+      var2.append(var5);
+      var2.append(", commandKey=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -192,9 +192,9 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
                }
             }
 
+            var13 = var12;
             var11 = var6;
             var6 = var13;
-            var13 = var12;
          }
 
          var10.b(var9);

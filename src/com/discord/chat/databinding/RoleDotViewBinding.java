@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import n1.a;
+import o1.a;
 
 public final class RoleDotViewBinding implements ViewBinding {
    public final FrameLayout roleDotViewBackground;

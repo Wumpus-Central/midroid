@@ -75,28 +75,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun getItemId(position: Int): Long {
       val var2: Int = this.getAddBurstReactionIndex();
-      var var6: java.lang.String = null;
       var var7: java.lang.String = null;
+      var var6: java.lang.String = null;
       val var4: Long;
       if (var1 == var2) {
-         var6 = this.messageId;
-         if (this.messageId == null) {
-            q.y("messageId");
-            var6 = null;
-         }
-
-         if (this.addReactionLabel == null) {
-            q.y("addReactionLabel");
-         } else {
-            var7 = this.addReactionLabel;
-         }
-
-         val var17: StringBuilder = new StringBuilder();
-         var17.append(var6);
-         var17.append("_add_burst_reactions_");
-         var17.append(var7);
-         var4 = IdUtilsKt.convertToId(var17.toString());
-      } else if (var1 == this.getAddReactionIndex()) {
          var6 = this.messageId;
          if (this.messageId == null) {
             q.y("messageId");
@@ -107,6 +89,24 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          if (this.addReactionLabel == null) {
             q.y("addReactionLabel");
             var7 = null;
+         }
+
+         val var15: StringBuilder = new StringBuilder();
+         var15.append(var6);
+         var15.append("_add_burst_reactions_");
+         var15.append(var7);
+         var4 = IdUtilsKt.convertToId(var15.toString());
+      } else if (var1 == this.getAddReactionIndex()) {
+         var6 = this.messageId;
+         if (this.messageId == null) {
+            q.y("messageId");
+            var6 = null;
+         }
+
+         if (this.addReactionLabel == null) {
+            q.y("addReactionLabel");
+         } else {
+            var7 = this.addReactionLabel;
          }
 
          val var18: StringBuilder = new StringBuilder();
@@ -204,20 +204,20 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var18 = null;
          }
 
-         var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
             q.y("onAddReactionClick");
-            var5 = null;
+         } else {
+            var5 = this.onAddReactionClick;
          }
 
          var32.bind(var12, var18, var5, this.reactionsTheme);
       } else {
          if (var1 !is AddBurstReactionViewHolder) {
-            val var21: Class = var1.getClass();
-            val var14: StringBuilder = new StringBuilder();
-            var14.append("Invalid view holder type ");
-            var14.append(var21);
-            throw new IllegalStateException(var14.toString().toString());
+            val var14: Class = var1.getClass();
+            val var21: StringBuilder = new StringBuilder();
+            var21.append("Invalid view holder type ");
+            var21.append(var14);
+            throw new IllegalStateException(var21.toString().toString());
          }
 
          val var33: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;
@@ -233,10 +233,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var20 = null;
          }
 
+         var5 = this.onAddBurstReactionClick;
          if (this.onAddBurstReactionClick == null) {
             q.y("onAddBurstReactionClick");
-         } else {
-            var5 = this.onAddBurstReactionClick;
+            var5 = null;
          }
 
          var33.bind(var13, var20, var5, this.reactionsTheme);

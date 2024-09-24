@@ -1,11 +1,11 @@
 package com.discord.self_measured_view
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.n0
+import fl.g0
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -98,18 +98,18 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
          val var8: kotlinx.serialization.encoding.c = var1.c(var7);
          var var2: Int;
          var var3: Int;
-         val var5: Int;
+         var var4: Int;
          if (var8.y()) {
             var3 = var8.k(var7, 0);
-            var2 = var8.k(var7, 1);
-            var5 = 3;
+            var4 = var8.k(var7, 1);
+            var2 = 3;
          } else {
-            var var10: Boolean = true;
+            var var5: Boolean = true;
             var3 = 0;
-            var var4: Int = 0;
+            var4 = 0;
             var2 = 0;
 
-            while (var10) {
+            while (var5) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -124,16 +124,13 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
                      var2 |= 1;
                   }
                } else {
-                  var10 = false;
+                  var5 = false;
                }
             }
-
-            var5 = var2;
-            var2 = var4;
          }
 
          var8.b(var7);
-         return new OnWrappedViewMeasuredData(var5, var3, var2, null);
+         return new OnWrappedViewMeasuredData(var2, var3, var4, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnWrappedViewMeasuredData) {
@@ -146,7 +143,7 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

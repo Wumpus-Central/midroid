@@ -1,6 +1,6 @@
 package com.discord.billing;
 
-import b3.m;
+import c3.m;
 import com.android.billingclient.api.BillingResult;
 import java.util.List;
 import kotlinx.coroutines.CompletableDeferred;
@@ -11,6 +11,6 @@ public final class g implements m {
 
    @Override
    public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.g(this.a, var1, var2);
+      <unrepresentable>.b(this.a, var1, var2);
    }
 }

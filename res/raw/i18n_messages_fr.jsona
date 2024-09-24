@@ -6525,7 +6525,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Tu modifies les paramètres manuellement.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Utiliser les préréglages",
   "APP_DIRECTORY_PARTNER": "Partenaire",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Inviter une application sur le serveur",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Ajouter l'application",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "dans {guildCount} serveurs",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Mince, ce lien ne fonctionne pas...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Lien invalide",

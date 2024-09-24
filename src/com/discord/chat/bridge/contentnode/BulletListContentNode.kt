@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import gl.a
-import il.g0
-import il.h
-import il.x0
+import cl.f
+import cl.n
+import dl.a
+import fl.g0
+import fl.h
+import fl.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -171,7 +171,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

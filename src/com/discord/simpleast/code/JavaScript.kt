@@ -25,20 +25,20 @@ public object JavaScript {
       val var8: Rule = CodeRules.toMatchGroupRule$default(var2, var3, 0, var1.getCommentStyleProvider(), 1, null);
       val var4: Pattern = PATTERN_JAVASCRIPT_STRINGS;
       q.g(PATTERN_JAVASCRIPT_STRINGS, "PATTERN_JAVASCRIPT_STRINGS");
-      val var5: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
-      val var9: Rule = JavaScript.ObjectPropertyNode.Companion.createObjectPropertyRule(var1);
-      val var6: Pattern = PATTERN_JAVASCRIPT_GENERIC;
+      val var9: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
+      val var5: Rule = JavaScript.ObjectPropertyNode.Companion.createObjectPropertyRule(var1);
+      var var6: Pattern = PATTERN_JAVASCRIPT_GENERIC;
       q.g(PATTERN_JAVASCRIPT_GENERIC, "PATTERN_JAVASCRIPT_GENERIC");
-      val var10: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
-      val var7: Pattern = PATTERN_JAVASCRIPT_REGEX;
+      val var7: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
+      var6 = PATTERN_JAVASCRIPT_REGEX;
       q.g(PATTERN_JAVASCRIPT_REGEX, "PATTERN_JAVASCRIPT_REGEX");
       return i.n(
          new Rule[]{
             var8,
-            var5,
             var9,
-            var10,
-            CodeRules.toMatchGroupRule$default(var2, var7, 0, var1.getLiteralStyleProvider(), 1, null),
+            var5,
+            var7,
+            CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getLiteralStyleProvider(), 1, null),
             JavaScript.FieldNode.Companion.createFieldRule(var1),
             JavaScript.FunctionNode.Companion.createFunctionRule(var1)
          }
@@ -121,13 +121,13 @@ public object JavaScript {
                public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
                   q.h(var1, "matcher");
                   q.h(var2, "parser");
-                  val var4: java.lang.String = var1.group(1);
-                  val var7: java.lang.String = var1.group(2);
+                  val var7: java.lang.String = var1.group(1);
+                  val var4: java.lang.String = var1.group(2);
                   val var5: java.lang.String = var1.group(3);
                   val var6: ParseSpec.Companion = ParseSpec.Companion;
-                  q.e(var4);
+                  q.e(var7);
                   q.e(var5);
-                  return (ParseSpec<RC, S>)var6.createTerminal(new JavaScript.FunctionNode<>(var4, var7, var5, this.$codeStyleProviders), var3);
+                  return (ParseSpec<RC, S>)var6.createTerminal(new JavaScript.FunctionNode<>(var7, var4, var5, this.$codeStyleProviders), var3);
                }
             };
          }
@@ -168,14 +168,14 @@ public object JavaScript {
                public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
                   q.h(var1, "matcher");
                   q.h(var2, "parser");
-                  val var4: java.lang.String = var1.group(1);
-                  val var7: java.lang.String = var1.group(2);
+                  val var7: java.lang.String = var1.group(1);
+                  val var4: java.lang.String = var1.group(2);
                   val var6: java.lang.String = var1.group(3);
                   val var5: ParseSpec.Companion = ParseSpec.Companion;
-                  q.e(var4);
                   q.e(var7);
+                  q.e(var4);
                   q.e(var6);
-                  return (ParseSpec<RC, S>)var5.createTerminal(new JavaScript.ObjectPropertyNode<>(var4, var7, var6, this.$codeStyleProviders), var3);
+                  return (ParseSpec<RC, S>)var5.createTerminal(new JavaScript.ObjectPropertyNode<>(var7, var4, var6, this.$codeStyleProviders), var3);
                }
             };
          }

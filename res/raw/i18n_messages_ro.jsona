@@ -6502,7 +6502,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Schimbi setările manual.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Folosește presetate",
   "APP_DIRECTORY_PARTNER": "Partener",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Invită aplicația pe server",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Adaugă aplicația",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "în {guildCount} servere",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Ups, acest link nu funcționează...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Link nevalid",

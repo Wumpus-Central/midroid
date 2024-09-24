@@ -27,6 +27,7 @@ import java.util.UUID
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0
@@ -38,11 +39,10 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import nh.w
-import vk.j1
-import vk.k0
-import vk.s0
-import yk.u
+import sk.j1
+import sk.k0
+import sk.s0
+import vk.u
 
 @ReactModule(name = "MediaPlayerManager")
 public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -101,13 +101,13 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          val var11: java.lang.Double = var1.getPortal();
          if (var11 != null) {
             val var6: Double = var11.doubleValue();
-            val var12: ReactEvents = this.reactEvents;
-            val var14: ReactApplicationContext = this.reactContext;
+            val var14: ReactEvents = this.reactEvents;
+            val var12: ReactApplicationContext = this.reactContext;
             val var15: kotlin.time.Duration.a = Duration.k;
-            val var17: uk.b = uk.b.m;
-            var2 = kotlin.time.b.t(var2, uk.b.m);
-            val var16: uk.b = uk.b.n;
-            var12.emitModuleEvent(var14, new MediaPlayerProgress(var6, Duration.J(var2, uk.b.n), Duration.J(kotlin.time.b.t(var4, var17), var16)));
+            val var16: rk.b = rk.b.m;
+            var2 = kotlin.time.b.t(var2, rk.b.m);
+            val var17: rk.b = rk.b.n;
+            var14.emitModuleEvent(var12, new MediaPlayerProgress(var6, Duration.J(var2, rk.b.n), Duration.J(kotlin.time.b.t(var4, var16), var17)));
          }
       }
    }
@@ -164,7 +164,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          public final void invoke(SimpleExoPlayer var1) {
             q.h(var1, "player");
             val var2: kotlin.time.Duration.a = Duration.k;
-            var1.m0(Duration.u(kotlin.time.b.r(this.$seekToSec, uk.b.n)));
+            var1.m0(Duration.t(kotlin.time.b.r(this.$seekToSec, rk.b.n)));
          }
       });
    }
@@ -180,7 +180,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
 
    public fun onMediaPlayerViewDetached(channelId: ChannelId, vararg mediaSources: MediaSource): Job {
       q.h(var3, "mediaSources");
-      return vk.f.d(
+      return sk.f.d(
          this.scope,
          k0.c(),
          null,
@@ -1219,19 +1219,18 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
 
    public fun onMediaPlayerViewWillAppear(channelId: ChannelId, vararg mediaSources: MediaSource): Job {
       q.h(var3, "mediaSources");
-      return vk.f.d(
+      return sk.f.d(
          this.scope,
          k0.c(),
          null,
          new Function2(this, var1, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -2250,6 +2249,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -2292,9 +2292,9 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          public final void invoke(SimpleExoPlayer var1) {
             q.h(var1, "player");
             if (this.$loop) {
-               var1.M(1);
+               var1.N(1);
             } else {
-               var1.M(0);
+               var1.N(0);
             }
          }
       });
@@ -2334,17 +2334,18 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
       q.e(var4);
       var3.put(
          var4,
-         vk.f.d(
+         sk.f.d(
             this.scope,
             null,
             null,
             new Function2(var2, this, var1, null)// $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.StackOverflowError
-      //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
-      //   at java.base/java.util.HashMap.put(HashMap.java:618)
-      //   at java.base/java.util.HashSet.add(HashSet.java:229)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
+      //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+      //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+      //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -3364,7 +3365,6 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
       //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
       ,
             3,
             null
@@ -3384,15 +3384,13 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun subscribeToPlaybackEvents() {
-      vk.f.d(
+      sk.f.d(
          this.scope,
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -4415,19 +4413,19 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
       );
-      vk.f.d(
+      sk.f.d(
          this.scope,
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -5450,19 +5448,19 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
       );
-      vk.f.d(
+      sk.f.d(
          this.scope,
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -6485,6 +6483,8 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null
@@ -6509,12 +6509,12 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
 
             public final void invoke(SimpleExoPlayer var1) {
                q.h(var1, "player");
-               if (this.$play && var1.E() == 11) {
+               if (this.$play && var1.F() == 11) {
                   var1.m0(0L);
                }
 
-               if (var1.H() != this.$play) {
-                  var1.y(this.$play);
+               if (var1.I() != this.$play) {
+                  var1.z(this.$play);
                   MediaPlayerManagerModule.access$getReactEvents$p(this.this$0)
                      .emitModuleEvent(MediaPlayerManagerModule.access$getReactContext$p(this.this$0), new MediaPlayerPause(this.$portal, this.$play xor true));
                }

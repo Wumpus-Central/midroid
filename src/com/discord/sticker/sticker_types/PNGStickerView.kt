@@ -9,7 +9,7 @@ import com.facebook.drawee.drawable.ScalingUtils.ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
-import w4.c
+import x4.c
 
 internal class PNGStickerView(context: Context) : SimpleDraweeView {
    private final val placeholder: ShapeDrawable

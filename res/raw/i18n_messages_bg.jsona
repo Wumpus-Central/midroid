@@ -6501,7 +6501,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Променяш настройките ръчно.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Използване на предварителни настройки",
   "APP_DIRECTORY_PARTNER": "Партньор",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Покани приложение в сървър",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Добавяне на приложение",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "в {guildCount} сървъра",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Ами сега! Тази връзка не работи...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Невалидна връзка",

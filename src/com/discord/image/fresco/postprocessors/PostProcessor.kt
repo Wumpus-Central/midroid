@@ -6,10 +6,10 @@ import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
 import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostprocessor
 import com.facebook.imagepipeline.request.BasePostprocessor
 import java.util.ArrayList
+import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import nh.p
-import uh.a
+import rh.a
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -197,24 +197,24 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var6: PostProcessor.Gradient.Direction = this.direction;
+         val var5: PostProcessor.Gradient.Direction = this.direction;
          val var4: Int = this.startColor;
          val var3: Int = this.endColor;
-         val var1: Float = this.startPosition;
-         val var2: Float = this.endPosition;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Gradient(direction=");
-         var5.append(var6);
-         var5.append(", startColor=");
-         var5.append(var4);
-         var5.append(", endColor=");
-         var5.append(var3);
-         var5.append(", startPosition=");
-         var5.append(var1);
-         var5.append(", endPosition=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var2: Float = this.startPosition;
+         val var1: Float = this.endPosition;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Gradient(direction=");
+         var6.append(var5);
+         var6.append(", startColor=");
+         var6.append(var4);
+         var6.append(", endColor=");
+         var6.append(var3);
+         var6.append(", startPosition=");
+         var6.append(var2);
+         var6.append(", endPosition=");
+         var6.append(var1);
+         var6.append(")");
+         return var6.toString();
       }
 
       public enum class Direction {

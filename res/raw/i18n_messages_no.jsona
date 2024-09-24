@@ -6502,7 +6502,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Du endrer innstillingene manuelt.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Bruk forhåndsinnstillinger",
   "APP_DIRECTORY_PARTNER": "Partner",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Inviter app til server",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Legg til app",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "i {guildCount} servere",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Lenken fungerer ikke …",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Ugyldig lenke",

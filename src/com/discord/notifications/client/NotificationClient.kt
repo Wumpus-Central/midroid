@@ -25,13 +25,13 @@ import com.discord.push_notification_monitor.PushNotificationMeta
 import com.discord.push_notification_monitor.PushNotificationMonitor
 import com.discord.react.headless_tasks.api.HeadlessTasks
 import com.discord.shortcuts.ShortcutData
+import kh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
-import nh.w
-import oh.r
+import lh.r
 
 public class NotificationClient {
    public final var shouldDisplayNotification: () -> Boolean = <unrepresentable>.INSTANCE
@@ -79,8 +79,8 @@ public class NotificationClient {
    }
 
    private fun showNotification(context: Context, notificationData: NotificationData, notificationDataMap: Map<String, String>, makeOrUpdateShortcut: Boolean) {
-      var var12: CrashReporting = CrashReporting.INSTANCE;
-      val var11: Pair = w.a("type", var2.getType());
+      val var11: CrashReporting = CrashReporting.INSTANCE;
+      var var12: Pair = w.a("type", var2.getType());
       val var9: Pair = w.a("channelId", java.lang.String.valueOf(var2.getChannelId-qMVnFVQ()));
       var var8: java.lang.String = var2.getMessageId-N_6c4I0();
       var var10: java.lang.String = "null";
@@ -91,7 +91,7 @@ public class NotificationClient {
       }
 
       CrashReporting.addBreadcrumb$default(
-         var12, "Kotlin NotificationClient received Notification.", r.l(new Pair[]{var11, var9, w.a("messageId", var8)}), null, 4, null
+         var11, "Kotlin NotificationClient received Notification.", r.l(new Pair[]{var12, var9, w.a("messageId", var8)}), null, 4, null
       );
       if (this.cache.isAuthed(var1)) {
          val var82: SilentNotificationManager = SilentNotificationManager.Companion.get(var1);
@@ -143,14 +143,14 @@ public class NotificationClient {
 
                if (var8 != null) {
                   var var6: Long;
-                  var var13: java.lang.String;
+                  var var13: PushNotificationMonitor;
                   var var14: java.lang.String;
-                  var var15: PushNotificationMonitor;
+                  var var15: java.lang.String;
                   try {
-                     var15 = PushNotificationMonitor.INSTANCE;
-                     var14 = var2.getType();
+                     var13 = PushNotificationMonitor.INSTANCE;
+                     var15 = var2.getType();
                      var6 = System.currentTimeMillis();
-                     var13 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
+                     var14 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
                      var74 = NotificationDataUtilsKt.getContent(var2, var1, true);
                   } catch (var30: Exception) {
                      val var37: Log = Log.INSTANCE;
@@ -201,7 +201,7 @@ public class NotificationClient {
                   }
 
                   try {
-                     var15.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var14, var13, var75, var16, var10));
+                     var13.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var15, var14, var75, var16, var10));
                   } catch (var26: Exception) {
                      val var41: Log = Log.INSTANCE;
                      val var58: java.lang.String = NotificationClient.class.getSimpleName();
@@ -265,7 +265,7 @@ public class NotificationClient {
 
                   if (var76 != null && var78 != null) {
                      try {
-                        var12 = (CrashReporting)var3.get("receiving_user_id");
+                        var12 = (Pair)var3.get("receiving_user_id");
                         val var64: StringBuilder = new StringBuilder();
                         var64.append("@account.");
                         var64.append(var12);
@@ -294,10 +294,10 @@ public class NotificationClient {
 
                      try {
                         var10 = ChannelId.toString-impl(var78.unbox-impl());
-                        val var81: java.lang.String = MessageId.toString-impl(var76);
-                        val var77: a = Json.d;
+                        val var77: java.lang.String = MessageId.toString-impl(var76);
+                        val var81: a = Json.d;
                         Json.d.a();
-                        DiscordMobileApi.putMessage(var65, var50, var10, var81, var77.c(KvMessageEntry.Companion.serializer(), var72));
+                        DiscordMobileApi.putMessage(var65, var50, var10, var77, var81.c(KvMessageEntry.Companion.serializer(), var72));
                      } catch (var19: Exception) {
                         val var48: Log = Log.INSTANCE;
                         val var67: java.lang.String = NotificationClient.class.getSimpleName();
@@ -424,27 +424,27 @@ public class NotificationClient {
    public fun onDirectReplySuccess(context: Context, data: String) {
       q.h(var1, "context");
       q.h(var2, "data");
-      val var4: NotificationData = DirectReplyMessage.Companion.toNotificationData(var2);
-      val var3: Pair = w.a("type", var4.getType());
-      val var5: Pair = w.a("channel_id", java.lang.String.valueOf(var4.getChannelId-qMVnFVQ()));
-      var2 = var4.getMessageId-N_6c4I0();
+      val var3: NotificationData = DirectReplyMessage.Companion.toNotificationData(var2);
+      val var4: Pair = w.a("type", var3.getType());
+      val var5: Pair = w.a("channel_id", java.lang.String.valueOf(var3.getChannelId-qMVnFVQ()));
+      var2 = var3.getMessageId-N_6c4I0();
       if (var2 == null) {
          var2 = "null";
       } else {
          var2 = MessageId.toString-impl(var2);
       }
 
-      this.showNotification(var1, var4, r.l(new Pair[]{var3, var5, w.a("message_id", var2)}), false);
+      this.showNotification(var1, var3, r.l(new Pair[]{var4, var5, w.a("message_id", var2)}), false);
    }
 
    public fun onNotificationReceived(context: Context, data: Map<String, String>) {
       q.h(var1, "context");
       q.h(var2, "data");
-      val var3: ml.a.a = ml.a.b;
-      val var4: KSerializer = NotificationData.Companion.serializer();
+      val var3: jl.a.a = jl.a.b;
+      val var5: KSerializer = NotificationData.Companion.serializer();
       val var6: java.util.Map = r.x(var2);
       var6.put("time_received", java.lang.String.valueOf(System.currentTimeMillis()));
-      this.showNotification(var1, var3.d(var4, var6) as NotificationData, var2, true);
+      this.showNotification(var1, var3.d(var5, var6) as NotificationData, var2, true);
    }
 
    public fun setCurrentUser(context: Context, username: String?, userId: String?) {

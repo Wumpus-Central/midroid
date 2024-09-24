@@ -6502,7 +6502,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "คุณกำลังแก้ไขการตั้งค่าด้วยตนเอง",
   "NOTIFICATION_SETTINGS_USE_PRESET": "ใช้ค่าที่กำหนดล่วงหน้า",
   "APP_DIRECTORY_PARTNER": "พาร์ทเนอร์",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "เชิญแอปไปยังเซิร์ฟเวอร์",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "เพิ่มแอป",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "ใน {guildCount} เซิร์ฟเวอร์",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "แย่แล้ว ลิงก์นี้ใช้ไม่ได้...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "ลิงก์ไม่ถูกต้อง",

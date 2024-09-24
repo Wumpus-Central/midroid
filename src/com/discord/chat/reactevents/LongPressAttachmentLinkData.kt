@@ -1,13 +1,14 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import dl.a
+import fl.b2
+import fl.g0
+import kh.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,7 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, attachmentName: String? = null) : ReactEvent {
@@ -82,13 +82,13 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
+      val var1: java.lang.String = this.attachmentUrl;
+      val var3: java.lang.String = this.attachmentName;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressAttachmentLinkData(attachmentUrl=");
-      var2.append(var3);
-      var2.append(", attachmentName=");
       var2.append(var1);
+      var2.append(", attachmentName=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -167,7 +167,7 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

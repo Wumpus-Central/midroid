@@ -6501,7 +6501,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Měníš nastavení ručně.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Použít přednastavené",
   "APP_DIRECTORY_PARTNER": "Partner",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Pozvat aplikaci na server",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Přidat aplikaci",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "na {guildCount} serverech",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Jejda, tento odkaz nefunguje…",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Neplatný odkaz",

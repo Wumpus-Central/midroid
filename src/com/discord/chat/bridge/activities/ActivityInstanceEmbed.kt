@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.activities
 
+import cl.f
+import cl.n
 import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.h
-import il.n0
-import il.o1
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
+import fl.n0
+import fl.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -192,8 +192,8 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
    public override fun hashCode(): Int {
       val var4: Int = ApplicationId.hashCode-impl(this.applicationId);
-      val var3: Int = ChannelId.hashCode-impl(this.channelId);
-      val var5: Int = this.instanceId.hashCode();
+      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var3: Int = this.instanceId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.statusText == null) {
@@ -208,7 +208,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
       return (
                (
-                        (((((var4 * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.buttonDisabled)) * 31
+                        (((((var4 * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.buttonDisabled)) * 31
                            + this.buttonLabelText.hashCode()
                      )
                      * 31
@@ -219,36 +219,36 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var10: java.lang.String = this.instanceId;
-      val var8: java.lang.String = this.statusText;
-      val var5: java.util.List = this.participantAvatarUris;
+      val var6: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var9: java.lang.String = this.instanceId;
+      val var7: java.lang.String = this.statusText;
+      val var8: java.util.List = this.participantAvatarUris;
       val var3: Boolean = this.buttonDisabled;
-      val var4: java.lang.String = this.buttonLabelText;
+      val var10: java.lang.String = this.buttonLabelText;
       val var1: Int = this.buttonBackgroundColor;
       val var2: Boolean = this.submitting;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ActivityInstanceEmbed(applicationId=");
-      var6.append(var9);
-      var6.append(", channelId=");
-      var6.append(var7);
-      var6.append(", instanceId=");
-      var6.append(var10);
-      var6.append(", statusText=");
-      var6.append(var8);
-      var6.append(", participantAvatarUris=");
-      var6.append(var5);
-      var6.append(", buttonDisabled=");
-      var6.append(var3);
-      var6.append(", buttonLabelText=");
-      var6.append(var4);
-      var6.append(", buttonBackgroundColor=");
-      var6.append(var1);
-      var6.append(", submitting=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ActivityInstanceEmbed(applicationId=");
+      var4.append(var6);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", instanceId=");
+      var4.append(var9);
+      var4.append(", statusText=");
+      var4.append(var7);
+      var4.append(", participantAvatarUris=");
+      var4.append(var8);
+      var4.append(", buttonDisabled=");
+      var4.append(var3);
+      var4.append(", buttonLabelText=");
+      var4.append(var10);
+      var4.append(", buttonBackgroundColor=");
+      var4.append(var1);
+      var4.append(", submitting=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -277,50 +277,49 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var5: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
-         val var3: b2 = b2.a;
-         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var5[4]), h.a, var3, n0.a, h.a};
+         val var2: b2 = b2.a;
+         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, b2.a, a.u(b2.a), a.u(var5[4]), h.a, var2, n0.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): ActivityInstanceEmbed {
          q.h(var1, "decoder");
          val var18: SerialDescriptor = this.getDescriptor();
          val var19: c = var1.c(var18);
-         val var17: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
+         val var20: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
          val var11: Boolean = var19.y();
-         var var3: Byte = 7;
+         var var3: Int = 7;
          var var8: Byte = 6;
          var var9: Byte = 5;
-         val var4: Int;
+         var var2: Int;
+         var var4: Byte;
          var var5: Byte;
-         var var7: Int;
          var var12: java.lang.String;
-         var var13: java.lang.String;
+         val var13: java.util.List;
          var var14: Any;
          var var15: java.lang.String;
-         var var16: Any;
-         val var26: java.util.List;
+         val var16: java.lang.String;
+         val var17: Any;
          if (var11) {
-            var16 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
-            var14 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var13 = var19.t(var18, 2);
-            var15 = var19.v(var18, 3, b2.a, null) as java.lang.String;
-            val var20: java.util.List = var19.v(var18, 4, var17[4], null) as java.util.List;
+            var14 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
+            var17 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var15 = var19.t(var18, 2);
+            var16 = var19.v(var18, 3, b2.a, null) as java.lang.String;
+            val var21: java.util.List = var19.v(var18, 4, var20[4], null) as java.util.List;
             var5 = var19.s(var18, 5);
             var12 = var19.t(var18, 6);
-            val var2: Int = var19.k(var18, 7);
-            var3 = var19.s(var18, 8);
-            var4 = 511;
-            var26 = var20;
-            var7 = var2;
+            var2 = var19.k(var18, 7);
+            var4 = var19.s(var18, 8);
+            var3 = 511;
+            var13 = var21;
          } else {
             var var6: Boolean = true;
-            var7 = 0;
-            var var24: Byte = 0;
-            var var22: Int = 0;
-            var16 = null;
+            var var7: Int = 0;
+            var4 = 0;
+            var2 = 0;
+            var var28: java.util.List = null;
             var15 = null;
-            var var21: Any = null;
-            var13 = null;
+            var var22: Any = null;
+            var var25: java.lang.String = null;
             var12 = null;
             var14 = null;
             var5 = 0;
@@ -333,43 +332,43 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                         var6 = false;
                         break;
                      case 0:
-                        var21 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, var21) as ApplicationId;
-                        var22 |= 1;
+                        var22 = var19.m(var18, 0, ApplicationId.$serializer.INSTANCE, var22) as ApplicationId;
+                        var2 |= 1;
                         var3 = 7;
                         break;
                      case 1:
                         var14 = var19.m(var18, 1, ChannelId.$serializer.INSTANCE, var14) as ChannelId;
-                        var22 |= 2;
+                        var2 |= 2;
                         var3 = 7;
                         var8 = 6;
                         continue;
                      case 2:
-                        var13 = var19.t(var18, 2);
-                        var22 |= 4;
+                        var25 = var19.t(var18, 2);
+                        var2 |= 4;
                         break label40;
                      case 3:
                         var15 = var19.v(var18, 3, b2.a, var15) as java.lang.String;
-                        var22 |= 8;
+                        var2 |= 8;
                         break label40;
                      case 4:
-                        var16 = var19.v(var18, 4, var17[4], var16) as java.util.List;
-                        var22 |= 16;
+                        var28 = var19.v(var18, 4, var20[4], var28) as java.util.List;
+                        var2 |= 16;
                         continue;
                      case 5:
                         var5 = var19.s(var18, var9);
-                        var22 |= 32;
+                        var2 |= 32;
                         continue;
                      case 6:
                         var12 = var19.t(var18, var8);
-                        var22 |= 64;
+                        var2 |= 64;
                         continue;
                      case 7:
                         var7 = var19.k(var18, var3);
-                        var22 |= 128;
+                        var2 |= 128;
                         continue;
                      case 8:
-                        var24 = var19.s(var18, 8);
-                        var22 |= 256;
+                        var4 = var19.s(var18, 8);
+                        var2 |= 256;
                         continue;
                      default:
                         throw new n(var10);
@@ -383,15 +382,18 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
                var3 = 7;
             }
 
-            var3 = var24;
-            var26 = (java.util.List)var16;
-            var16 = var21;
-            var4 = var22;
+            var3 = var2;
+            var2 = var7;
+            var13 = var28;
+            var16 = var15;
+            var15 = var25;
+            var17 = var14;
+            var14 = var22;
          }
 
          var19.b(var18);
          return new ActivityInstanceEmbed(
-            var4, (ApplicationId)var16, (ChannelId)var14, var13, var15, var26, (boolean)var5, var12, var7, (boolean)var3, null, null
+            var3, (ApplicationId)var14, (ChannelId)var17, var15, var16, var13, (boolean)var5, var12, var2, (boolean)var4, null, null
          );
       }
 
@@ -405,7 +407,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

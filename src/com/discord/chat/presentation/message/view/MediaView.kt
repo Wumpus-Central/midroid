@@ -213,16 +213,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       kotlin.jvm.internal.q.g(var4.inlineMediaGifIndicator, "inlineMediaGifIndicator");
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var5: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var13: GenericDraweeHierarchy = var5.getHierarchy() as GenericDraweeHierarchy;
-      val var12: GradientDrawable = new GradientDrawable();
-      var12.setShape(0);
-      var12.setStroke(
-         var5.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+      val var13: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
+      val var5: GradientDrawable = new GradientDrawable();
+      var5.setShape(0);
+      var5.setStroke(
+         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var13.z(var12);
+      var13.z(var5);
    }
 
    private fun pause() {
@@ -257,11 +257,11 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
             val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var7: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var7, "getContext(...)");
-            val var12: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.q.e(var12);
-            var10 = var11.acquire(var7, var12, this.playerSettings);
+            val var12: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var12, "getContext(...)");
+            val var7: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.q.e(var7);
+            var10 = var11.acquire(var12, var7, this.playerSettings);
          }
 
          var10.setEventListener(
@@ -626,7 +626,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      vk.f.d(
+      sk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -1661,18 +1661,18 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      vk.f.d(
+      sk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)

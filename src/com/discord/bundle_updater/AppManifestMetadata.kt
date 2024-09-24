@@ -1,12 +1,13 @@
 package com.discord.bundle_updater
 
+import cl.f
+import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.h
+import fl.b2
+import fl.g0
+import fl.h
+import kh.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,7 +15,6 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
@@ -98,21 +98,21 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.build;
-      val var3: java.lang.String = this.releaseName;
+      val var3: java.lang.String = this.build;
+      val var5: java.lang.String = this.releaseName;
       val var2: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("AppManifestMetadata(build=");
-      var5.append(var4);
-      var5.append(", releaseName=");
-      var5.append(var3);
-      var5.append(", commit=");
-      var5.append(var2);
-      var5.append(", confirmUpdate=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AppManifestMetadata(build=");
+      var4.append(var3);
+      var4.append(", releaseName=");
+      var4.append(var5);
+      var4.append(", commit=");
+      var4.append(var2);
+      var4.append(", confirmUpdate=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -136,7 +136,7 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: b2 = b2.a;
-         return new KSerializer[]{b2.a, gl.a.u(b2.a), var1, h.a};
+         return new KSerializer[]{b2.a, dl.a.u(b2.a), var1, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): AppManifestMetadata {
@@ -206,7 +206,7 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

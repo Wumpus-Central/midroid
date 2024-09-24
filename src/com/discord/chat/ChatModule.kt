@@ -22,9 +22,9 @@ import kotlinx.coroutines.g
 import kotlinx.coroutines.v
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
-import vk.f
-import vk.j1
-import vk.s0
+import sk.f
+import sk.j1
+import sk.s0
 
 @ReactModule(name = "DCDChatManager")
 public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -40,23 +40,23 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
       super(var1);
       this.reactContext = var1;
       this.json = b.b(null, <unrepresentable>.INSTANCE, 1, null);
-      val var2: CompletableJob = j1.b(null, 1, null);
-      val var3: ExecutorService = Executors.newSingleThreadExecutor();
-      q.g(var3, "newSingleThreadExecutor(...)");
-      this.moduleScope = g.a(var2.Q(s0.b(var3)));
+      val var3: CompletableJob = j1.b(null, 1, null);
+      val var2: ExecutorService = Executors.newSingleThreadExecutor();
+      q.g(var2, "newSingleThreadExecutor(...)");
+      this.moduleScope = g.a(var3.Q(s0.b(var2)));
       this.listManagers = new LinkedHashMap<>();
       this.previousRowUpdateTag = -1;
       this.rowUpdateLoggers = new LinkedHashMap<>();
    }
 
    private fun rowUpdateLoggerFor(tag: Int): RowLogger {
-      val var4: java.util.Map = this.rowUpdateLoggers;
-      val var5: Int = var1;
-      val var3: Any = var4.get(var5);
+      val var5: java.util.Map = this.rowUpdateLoggers;
+      val var4: Int = var1;
+      val var3: Any = var5.get(var4);
       var var2: Any = var3;
       if (var3 == null) {
          var2 = new ReleaseRowLogger();
-         var4.put(var5, var2);
+         var5.put(var4, var2);
       }
 
       return var2 as RowLogger;
@@ -2199,11 +2199,11 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    public open fun invalidate() {
       super.invalidate();
       val var3: CoroutineContext = this.moduleScope.getCoroutineContext();
-      val var1: java.lang.String = ChatModule.class.getSimpleName();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var1);
-      var2.append(" invalidate()");
-      v.g(var3, new CancellationException(var2.toString()));
+      val var2: java.lang.String = ChatModule.class.getSimpleName();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(var2);
+      var1.append(" invalidate()");
+      v.g(var3, new CancellationException(var1.toString()));
    }
 
    @ReactMethod

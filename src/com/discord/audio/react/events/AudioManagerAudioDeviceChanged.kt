@@ -1,13 +1,14 @@
 package com.discord.audio.react.events
 
+import cl.f
+import cl.n
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fl.f
-import fl.n
-import il.g0
-import il.g0.a
+import fl.g0
+import fl.g0.a
+import kh.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,7 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) : ReactEvent {
@@ -56,12 +56,12 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public override fun toString(): String {
-      val var1: AndroidAudioDevice = this.device;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioManagerAudioDeviceChanged(device=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: AndroidAudioDevice = this.device;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AudioManagerAudioDeviceChanged(device=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import cl.f
+import cl.n
+import fl.b2
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -71,18 +71,18 @@ public data class TitleOnClick(action: String, targetChannelId: String, targetMe
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.action;
-      val var4: java.lang.String = this.targetChannelId;
+      val var3: java.lang.String = this.action;
+      val var2: java.lang.String = this.targetChannelId;
       val var1: java.lang.String = this.targetMessageId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TitleOnClick(action=");
-      var3.append(var2);
-      var3.append(", targetChannelId=");
-      var3.append(var4);
-      var3.append(", targetMessageId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TitleOnClick(action=");
+      var4.append(var3);
+      var4.append(", targetChannelId=");
+      var4.append(var2);
+      var4.append(", targetMessageId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

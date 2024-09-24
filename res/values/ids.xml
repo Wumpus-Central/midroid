@@ -147,6 +147,12 @@
     <item type="id" name="chat_list_feedback_icon" />
     <item type="id" name="chat_list_view" />
     <item type="id" name="checkbox" />
+    <item type="id" name="checked" />
+    <item type="id" name="chip" />
+    <item type="id" name="chip1" />
+    <item type="id" name="chip2" />
+    <item type="id" name="chip3" />
+    <item type="id" name="chip_group" />
     <item type="id" name="chronometer" />
     <item type="id" name="circle_center" />
     <item type="id" name="clan_tag_chiplet" />
@@ -194,8 +200,13 @@
     <item type="id" name="dialog_card" />
     <item type="id" name="disconnect_btn" />
     <item type="id" name="divider" />
+    <item type="id" name="dropdown_editable" />
+    <item type="id" name="dropdown_noneditable" />
     <item type="id" name="edit_query" />
     <item type="id" name="edit_text_id" />
+    <item type="id" name="edittext_dropdown_editable" />
+    <item type="id" name="edittext_dropdown_noneditable" />
+    <item type="id" name="embed" />
     <item type="id" name="emoji" />
     <item type="id" name="emoji_button" />
     <item type="id" name="empty_end" />
@@ -302,6 +313,7 @@
     <item type="id" name="gradient_icon" />
     <item type="id" name="gradients" />
     <item type="id" name="group_divider" />
+    <item type="id" name="guideline" />
     <item type="id" name="guild_avatar" />
     <item type="id" name="guild_communication_disabled_icon" />
     <item type="id" name="guild_icon" />
@@ -398,13 +410,10 @@
     <item type="id" name="list_item" />
     <item type="id" name="loading_dots" />
     <item type="id" name="lottie_layer_name" />
-    <item type="id" name="m3_side_sheet" />
     <item type="id" name="masked" />
     <item type="id" name="material_clock_display" />
-    <item type="id" name="material_clock_display_and_toggle" />
     <item type="id" name="material_clock_face" />
     <item type="id" name="material_clock_hand" />
-    <item type="id" name="material_clock_level" />
     <item type="id" name="material_clock_period_am_button" />
     <item type="id" name="material_clock_period_pm_button" />
     <item type="id" name="material_clock_period_toggle" />
@@ -416,6 +425,7 @@
     <item type="id" name="material_textinput_timepicker" />
     <item type="id" name="material_timepicker_cancel_button" />
     <item type="id" name="material_timepicker_container" />
+    <item type="id" name="material_timepicker_edit_text" />
     <item type="id" name="material_timepicker_mode_button" />
     <item type="id" name="material_timepicker_ok_button" />
     <item type="id" name="material_timepicker_view" />
@@ -533,7 +543,6 @@
     <item type="id" name="player_container" />
     <item type="id" name="pointer_events" />
     <item type="id" name="pooling_container_listener_holder_tag" />
-    <item type="id" name="pressed" />
     <item type="id" name="primary_action" />
     <item type="id" name="primary_cta" />
     <item type="id" name="progress" />
@@ -609,7 +618,6 @@
     <item type="id" name="scrollView" />
     <item type="id" name="search_badge" />
     <item type="id" name="search_bar" />
-    <item type="id" name="search_bar_text_view" />
     <item type="id" name="search_button" />
     <item type="id" name="search_close_btn" />
     <item type="id" name="search_edit_frame" />
@@ -617,19 +625,6 @@
     <item type="id" name="search_mag_icon" />
     <item type="id" name="search_plate" />
     <item type="id" name="search_src_text" />
-    <item type="id" name="search_view_background" />
-    <item type="id" name="search_view_clear_button" />
-    <item type="id" name="search_view_content_container" />
-    <item type="id" name="search_view_divider" />
-    <item type="id" name="search_view_dummy_toolbar" />
-    <item type="id" name="search_view_edit_text" />
-    <item type="id" name="search_view_header_container" />
-    <item type="id" name="search_view_root" />
-    <item type="id" name="search_view_scrim" />
-    <item type="id" name="search_view_search_prefix" />
-    <item type="id" name="search_view_status_bar_spacer" />
-    <item type="id" name="search_view_toolbar" />
-    <item type="id" name="search_view_toolbar_container" />
     <item type="id" name="search_voice_btn" />
     <item type="id" name="secondary_action_button" />
     <item type="id" name="secondary_button" />
@@ -706,6 +701,10 @@
     <item type="id" name="tag_unhandled_key_listeners" />
     <item type="id" name="tag_window_insets_animation_callback" />
     <item type="id" name="tertiary_action_button" />
+    <item type="id" name="test_checkbox_android_button_tint" />
+    <item type="id" name="test_checkbox_app_button_tint" />
+    <item type="id" name="test_radiobutton_android_button_tint" />
+    <item type="id" name="test_radiobutton_app_button_tint" />
     <item type="id" name="text" />
     <item type="id" name="text2" />
     <item type="id" name="textSpacerNoButtons" />
@@ -763,6 +762,7 @@
     <item type="id" name="ucrop" />
     <item type="id" name="ucrop_frame" />
     <item type="id" name="ucrop_photobox" />
+    <item type="id" name="unchecked" />
     <item type="id" name="up" />
     <item type="id" name="upload_cancel" />
     <item type="id" name="upload_complete" />
@@ -803,10 +803,10 @@
     <item type="id" name="welcome_reply_button" />
     <item type="id" name="welcome_reply_text" />
     <item type="id" name="wipe" />
-    <item type="id" name="with_icon" />
     <item type="id" name="wrapper_controls" />
     <item type="id" name="wrapper_reset_rotate" />
     <item type="id" name="wrapper_rotate_by_angle" />
     <item type="id" name="wrapper_states" />
     <item type="id" name="year" />
+    <item type="id" name="zero_corner_chip" />
 </resources>

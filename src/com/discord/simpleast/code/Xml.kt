@@ -8,9 +8,9 @@ import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
 import java.util.regex.Matcher
 import java.util.regex.Pattern
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import nh.w
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern

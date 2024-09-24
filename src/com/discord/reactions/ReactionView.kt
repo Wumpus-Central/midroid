@@ -119,7 +119,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean) {
-      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var4: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var2) {
          val var3: Int;
          if (this.currentCount != null) {
@@ -130,13 +130,13 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
          if (var1 > var3) {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_up);
-            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
+            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_up);
          } else {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_down);
-            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
+            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_down);
          }
 
-         var5.setText(java.lang.String.valueOf(var1));
+         var4.setText(java.lang.String.valueOf(var1));
       } else {
          this.binding.reactionCountSwitcher.setCurrentText(java.lang.String.valueOf(var1));
       }
@@ -186,16 +186,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          var3 = false;
       }
 
-      val var5: Int = var1.getCount();
+      val var4: Int = var1.getCount();
       var var11: Boolean = false;
       if (var3) {
          var11 = false;
          label23:
          if (this.currentCount != null) {
-            val var4: Int = var1.getCount();
+            val var5: Int = var1.getCount();
             if (this.currentCount != null) {
                var11 = false;
-               if (var4 == this.currentCount) {
+               if (var5 == this.currentCount) {
                   break label23;
                }
             }
@@ -204,16 +204,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          }
       }
 
-      this.configureCount(var5, var11);
+      this.configureCount(var4, var11);
       this.configureBackground(var1.isMe(), var2);
       this.configureTextColor(var1.isMe(), var2);
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var10: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
          val var12: RenderableEmoji = var1.getEmoji().renderable();
-         val var9: Context = this.getContext();
-         q.g(var9, "getContext(...)");
-         var10.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var12, var9, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var10: Context = this.getContext();
+         q.g(var10, "getContext(...)");
+         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var12, var10, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

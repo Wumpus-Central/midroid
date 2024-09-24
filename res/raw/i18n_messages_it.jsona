@@ -6506,7 +6506,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Stai modificando le impostazioni manualmente.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Utilizza predefiniti",
   "APP_DIRECTORY_PARTNER": "Partner",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Invita app nel server",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Aggiungi app",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "in {guildCount} server",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Ops, questo link non funziona...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Link non valido",

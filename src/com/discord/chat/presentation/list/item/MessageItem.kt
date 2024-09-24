@@ -144,32 +144,32 @@ public data class MessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var6: Message = this.message;
-      val var8: MessageFrame = this.messageFrame;
-      val var7: MessageContext = this.messageContext;
+      val var5: Message = this.message;
+      val var7: MessageFrame = this.messageFrame;
+      val var4: MessageContext = this.messageContext;
       val var3: Boolean = this.allowChildGestures;
-      val var2: Boolean = this.isHighlight;
-      val var9: BackgroundHighlight = this.backgroundHighlight;
-      val var5: Int = this.reactTag;
-      val var1: Boolean = this.renderContentOnly;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MessageItem(message=");
-      var4.append(var6);
-      var4.append(", messageFrame=");
-      var4.append(var8);
-      var4.append(", messageContext=");
-      var4.append(var7);
-      var4.append(", allowChildGestures=");
-      var4.append(var3);
-      var4.append(", isHighlight=");
-      var4.append(var2);
-      var4.append(", backgroundHighlight=");
-      var4.append(var9);
-      var4.append(", reactTag=");
-      var4.append(var5);
-      var4.append(", renderContentOnly=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: Boolean = this.isHighlight;
+      val var6: BackgroundHighlight = this.backgroundHighlight;
+      val var9: Int = this.reactTag;
+      val var2: Boolean = this.renderContentOnly;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("MessageItem(message=");
+      var8.append(var5);
+      var8.append(", messageFrame=");
+      var8.append(var7);
+      var8.append(", messageContext=");
+      var8.append(var4);
+      var8.append(", allowChildGestures=");
+      var8.append(var3);
+      var8.append(", isHighlight=");
+      var8.append(var1);
+      var8.append(", backgroundHighlight=");
+      var8.append(var6);
+      var8.append(", reactTag=");
+      var8.append(var9);
+      var8.append(", renderContentOnly=");
+      var8.append(var2);
+      var8.append(")");
+      return var8.toString();
    }
 }

@@ -168,18 +168,18 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       }
 
       public override fun toString(): String {
-         val var3: RecyclerView = this.recyclerView;
-         val var1: Int = this.dx;
-         val var2: Int = this.dy;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("ScrollEvent(recyclerView=");
-         var4.append(var3);
-         var4.append(", dx=");
-         var4.append(var1);
-         var4.append(", dy=");
-         var4.append(var2);
-         var4.append(")");
-         return var4.toString();
+         val var4: RecyclerView = this.recyclerView;
+         val var2: Int = this.dx;
+         val var1: Int = this.dy;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ScrollEvent(recyclerView=");
+         var3.append(var4);
+         var3.append(", dx=");
+         var3.append(var2);
+         var3.append(", dy=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

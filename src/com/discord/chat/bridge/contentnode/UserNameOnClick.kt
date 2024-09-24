@@ -1,14 +1,14 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
 import com.discord.primitives.ChannelId
 import com.discord.primitives.UserId
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.n0
-import il.o1
+import dl.a
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -117,21 +117,21 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.action;
-      val var5: java.lang.String = UserId.toString-impl(this.userId);
+      val var3: java.lang.String = this.action;
+      val var2: java.lang.String = UserId.toString-impl(this.userId);
       val var4: ChannelId = this.messageChannelId;
-      val var3: Int = this.linkColor;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UserNameOnClick(action=");
-      var1.append(var2);
-      var1.append(", userId=");
-      var1.append(var5);
-      var1.append(", messageChannelId=");
-      var1.append(var4);
-      var1.append(", linkColor=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: Int = this.linkColor;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("UserNameOnClick(action=");
+      var5.append(var3);
+      var5.append(", userId=");
+      var5.append(var2);
+      var5.append(", messageChannelId=");
+      var5.append(var4);
+      var5.append(", linkColor=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -224,7 +224,7 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

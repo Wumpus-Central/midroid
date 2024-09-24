@@ -7,8 +7,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.g
 import kotlinx.coroutines.Job.a
 import kotlinx.coroutines.flow.MutableSharedFlow
-import vk.f
-import vk.k0
+import sk.f
+import sk.k0
 
 internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, collectWithLeadingDebounce: Boolean = true) {
    private final val eventCoroutineScope: CoroutineScope
@@ -22,7 +22,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
       val var5: CoroutineScope = g.a(k0.c());
       this.eventCoroutineScope = var5;
       this.eventDetectorActive = true;
-      this.events = yk.q.b(0, 1, null, 4, null);
+      this.events = vk.q.b(0, 1, null, 4, null);
       this.eventDetectorJob = f.d(
          var5,
          null,
@@ -1070,6 +1070,6 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
    public fun tryEmit(event: Any) {
       q.h(var1, "event");
-      this.events.b(var1);
+      this.events.f(var1);
    }
 }

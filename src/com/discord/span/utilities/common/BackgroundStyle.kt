@@ -1,10 +1,10 @@
 package com.discord.span.utilities.common
 
-import fl.f
-import fl.n
-import il.g0
-import il.n0
-import il.g0.a
+import cl.f
+import cl.n
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor

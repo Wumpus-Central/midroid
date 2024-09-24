@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
 import com.discord.primitives.ChannelId
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.o1
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.o1
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -117,24 +117,24 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = this.commandId;
-      val var4: java.lang.String = this.commandName;
-      val var5: java.lang.String = this.commandKey;
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.commandId;
+      val var2: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandKey;
       val var3: java.util.List = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CommandMentionContentNode(channelId=");
-      var1.append(var2);
-      var1.append(", commandId=");
-      var1.append(var6);
-      var1.append(", commandName=");
-      var1.append(var4);
-      var1.append(", commandKey=");
-      var1.append(var5);
-      var1.append(", content=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("CommandMentionContentNode(channelId=");
+      var6.append(var4);
+      var6.append(", commandId=");
+      var6.append(var5);
+      var6.append(", commandName=");
+      var6.append(var2);
+      var6.append(", commandKey=");
+      var6.append(var1);
+      var6.append(", content=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -169,24 +169,26 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
          val var5: Boolean = var12.y();
          var var9: ChannelId = null;
          var var2: Int;
-         var var6: Any;
+         var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         val var13: java.lang.String;
+         var var14: Any;
          if (var5) {
             var9 = var12.m(var11, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var8 = var12.t(var11, 1);
             var7 = var12.t(var11, 2);
-            var13 = var12.t(var11, 3);
-            var6 = var12.m(var11, 4, var10[4], null) as java.util.List;
+            var14 = var12.t(var11, 3);
+            val var15: java.util.List = var12.m(var11, 4, var10[4], null) as java.util.List;
             var2 = 31;
+            var6 = (java.lang.String)var14;
+            var14 = var15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
             var7 = null;
             var6 = null;
-            var var14: Any = null;
+            var14 = null;
 
             while (var3) {
                val var4: Int = var12.x(var11);
@@ -221,13 +223,10 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
                   var3 = false;
                }
             }
-
-            var6 = var14;
-            var13 = (java.lang.String)var6;
          }
 
          var12.b(var11);
-         return new CommandMentionContentNode(var2, var9, var8, var7, var13, (java.util.List)var6, null, null);
+         return new CommandMentionContentNode(var2, var9, var8, var7, var6, (java.util.List)var14, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CommandMentionContentNode) {

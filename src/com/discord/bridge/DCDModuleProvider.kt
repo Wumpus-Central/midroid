@@ -10,10 +10,10 @@ import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 import java.util.ArrayList
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import nh.w
-import oh.r
+import lh.r
 
 public object DCDModuleProvider {
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {

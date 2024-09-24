@@ -8,7 +8,7 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
-import v3.a
+import w3.a
 
 public class KeyboardManagerModule(reactContext: ReactApplicationContext) : NativeKeyboardManagerSpec {
    init {

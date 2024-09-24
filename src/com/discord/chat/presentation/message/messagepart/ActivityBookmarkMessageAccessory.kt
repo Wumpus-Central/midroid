@@ -75,18 +75,18 @@ public data class ActivityBookmarkMessageAccessory(messageId: MessageId,
 
    public override fun toString(): String {
       val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Int = this.codedLinkIndex;
+      val var1: Int = this.codedLinkIndex;
       val var3: ActivityBookmarkEmbedImpl = this.activityBookmarkEmbed;
-      val var1: Int = this.constrainedWidth;
+      val var2: Int = this.constrainedWidth;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ActivityBookmarkMessageAccessory(messageId=");
       var4.append(var5);
       var4.append(", codedLinkIndex=");
-      var4.append(var2);
+      var4.append(var1);
       var4.append(", activityBookmarkEmbed=");
       var4.append(var3);
       var4.append(", constrainedWidth=");
-      var4.append(var1);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

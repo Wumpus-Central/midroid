@@ -53,15 +53,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var5: Log = Log.INSTANCE;
+      val var6: Log = Log.INSTANCE;
       val var4: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Start service with ");
-      var6.append(var3);
-      var6.append(" configurations.");
-      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Start service with ");
+      var5.append(var3);
+      var5.append(" configurations.");
+      Log.i$foreground_service_release$default(var6, var4, var5.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
    }
@@ -191,10 +191,10 @@ public class ForegroundServiceManager {
 
          try {
             q.h(var1, "context");
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = tag;
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var2, var3, "On service created.", null, 4, null);
+            Log.i$foreground_service_release$default(var3, var2, "On service created.", null, 4, null);
             this.serviceWakelocks.acquire(var1);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit
@@ -209,10 +209,10 @@ public class ForegroundServiceManager {
          synchronized (this){} // $VF: monitorenter 
 
          try {
-            val var2: Log = Log.INSTANCE;
-            val var1: java.lang.String = tag;
+            val var1: Log = Log.INSTANCE;
+            val var2: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var2, var1, "On service destroyed.", null, 4, null);
+            Log.i$foreground_service_release$default(var1, var2, "On service destroyed.", null, 4, null);
             this.serviceWakelocks.release();
             this.service = null;
          } catch (var3: java.lang.Throwable) {
@@ -246,16 +246,16 @@ public class ForegroundServiceManager {
       // 09: ldc_w "serviceConfigurations"
       // 0c: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f: getstatic com/discord/permissions/NativePermissionPromise.INSTANCE Lcom/discord/permissions/NativePermissionPromise;
-      // 12: astore 5
+      // 12: astore 4
       // 14: new com/discord/foreground_service/ForegroundServiceManager$startService$promise$1
-      // 17: astore 4
-      // 19: aload 4
+      // 17: astore 5
+      // 19: aload 5
       // 1b: aload 0
       // 1c: aload 1
       // 1d: aload 2
       // 1e: invokespecial com/discord/foreground_service/ForegroundServiceManager$startService$promise$1.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
-      // 21: aload 5
-      // 23: aload 4
+      // 21: aload 4
+      // 23: aload 5
       // 25: getstatic com/discord/foreground_service/ForegroundServiceManager$startService$promise$2.INSTANCE Lcom/discord/foreground_service/ForegroundServiceManager$startService$promise$2;
       // 28: invokevirtual com/discord/permissions/NativePermissionPromise.generate (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lcom/facebook/react/bridge/PromiseImpl;
       // 2b: astore 4
@@ -316,10 +316,10 @@ public class ForegroundServiceManager {
 
          try {
             q.h(var1, "context");
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = tag;
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var2, var3, "Stop service.", null, 4, null);
+            Log.i$foreground_service_release$default(var3, var2, "Stop service.", null, 4, null);
             ForegroundService.Companion.stop(var1, this.service);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit

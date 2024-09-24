@@ -85,10 +85,10 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       if (var1) {
          return false;
       } else {
-         val var5: Int = GIF_INDICATOR_PADDING;
+         val var3: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var5 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var3 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -206,8 +206,8 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       val var24: FrameLayout = this.binding.imageBlurBg;
       kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var24, var9);
-      val var25: SpoilerViewManager = this.spoiler;
-      val var31: ConstraintLayout = this.binding.container;
+      val var30: SpoilerViewManager = this.spoiler;
+      val var25: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var28: SimpleDraweeView = this.binding.image;
       kotlin.jvm.internal.q.g(this.binding.image, "image");
@@ -223,7 +223,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          var7 = true;
       }
 
-      var25.configureSpoiler(var8, this, var31, var28, this.binding.imageBlurBg, var13, var12, var7, var9);
+      var30.configureSpoiler(var8, this, var25, var28, this.binding.imageBlurBg, var13, var12, var7, var9);
       val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var26: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");

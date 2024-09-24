@@ -88,19 +88,19 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
    }
 
    public override fun toString(): String {
-      val var1: Function4 = this.onMediaItemClicked;
-      val var4: Function2 = this.onMediaItemLongClicked;
-      val var3: Function0 = this.onMediaItemSpoilerClicked;
-      val var2: Function1 = this.onMediaItemAltTextButtonClicked;
+      val var4: Function4 = this.onMediaItemClicked;
+      val var1: Function2 = this.onMediaItemLongClicked;
+      val var2: Function0 = this.onMediaItemSpoilerClicked;
+      val var3: Function1 = this.onMediaItemAltTextButtonClicked;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MediaItemEventHandlers(onMediaItemClicked=");
-      var5.append(var1);
-      var5.append(", onMediaItemLongClicked=");
       var5.append(var4);
+      var5.append(", onMediaItemLongClicked=");
+      var5.append(var1);
       var5.append(", onMediaItemSpoilerClicked=");
-      var5.append(var3);
-      var5.append(", onMediaItemAltTextButtonClicked=");
       var5.append(var2);
+      var5.append(", onMediaItemAltTextButtonClicked=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }

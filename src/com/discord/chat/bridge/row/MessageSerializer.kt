@@ -5,15 +5,15 @@ import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
 import com.discord.crash_reporting.CrashReporting
 import com.discord.primitives.MessageId
-import hl.g
-import hl.e.i
+import el.g
+import el.e.i
 import java.util.UUID
+import kh.e
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import nh.e
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor

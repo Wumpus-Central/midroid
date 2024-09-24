@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import vk.f
+import sk.f
 
 public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val activityEventListener: <unrepresentable>

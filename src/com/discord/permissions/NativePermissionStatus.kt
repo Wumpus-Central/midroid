@@ -26,7 +26,7 @@ public enum class NativePermissionStatus {
    fun {
       val var0: Array<NativePermissionStatus> = $values();
       $VALUES = var0;
-      $ENTRIES = uh.a.a(var0);
+      $ENTRIES = rh.a.a(var0);
    }
 
    @JvmStatic

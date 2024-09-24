@@ -10,7 +10,7 @@ import com.discord.misc.utilities.R
 import kotlin.coroutines.Continuation
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import th.b
+import qh.b
 
 public final val attachedScope: AttachedViewCoroutineScope
    public final get() {

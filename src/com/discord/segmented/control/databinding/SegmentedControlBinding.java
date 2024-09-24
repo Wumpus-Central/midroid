@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.segmented.control.R;
-import n1.a;
+import o1.a;
 
 public final class SegmentedControlBinding implements ViewBinding {
    public final CardView rootCardView;
@@ -25,12 +25,12 @@ public final class SegmentedControlBinding implements ViewBinding {
    public static SegmentedControlBinding bind(View var0) {
       CardView var2 = (CardView)var0;
       int var1 = R.id.segmentContainer;
-      LinearLayout var3 = (LinearLayout)a.a(var0, var1);
-      if (var3 != null) {
+      LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.selectedSegmentBg;
-         CardView var4 = (CardView)a.a(var0, var1);
-         if (var4 != null) {
-            return new SegmentedControlBinding(var2, var2, var3, var4);
+         CardView var3 = (CardView)a.a(var0, var1);
+         if (var3 != null) {
+            return new SegmentedControlBinding(var2, var2, var4, var3);
          }
       }
 

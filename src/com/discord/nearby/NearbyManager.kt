@@ -6,10 +6,10 @@ import com.google.android.gms.nearby.messages.SubscribeOptions
 import com.google.android.gms.nearby.messages.SubscribeOptions.a
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import rb.b
-import rb.d
-import rb.h
-import rb.i
+import sb.b
+import sb.d
+import sb.h
+import sb.i
 
 internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : b {
    private final val onFoundUser: (String) -> Unit
@@ -48,15 +48,15 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
 
    public fun disableNearby(context: Context) {
       q.h(var1, "context");
-      val var3: d = ob.a.a(var1);
-      var3.j(this.statusCallback);
+      val var3: d = pb.a.a(var1);
+      var3.d(this.statusCallback);
       var var4: Message = this.outboundMessage;
       if (this.outboundMessage == null) {
          q.y("outboundMessage");
          var4 = null;
       }
 
-      var3.d(var4);
+      var3.b(var4);
       var3.f(this);
    }
 
@@ -68,33 +68,33 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
          var2 = null;
       }
 
-      val var4: d = ob.a.a(var1);
-      var4.k(this.statusCallback);
-      var4.i(var2);
-      var4.m(this, this.subscribeOptions);
+      val var4: d = pb.a.a(var1);
+      var4.c(this.statusCallback);
+      var4.h(var2);
+      var4.g(this, this.subscribeOptions);
    }
 
    public open fun onFound(message: Message) {
       q.h(var1, "message");
       super.onFound(var1);
       val var2: Function1 = this.onFoundUser;
-      val var3: ByteArray = var1.n();
+      val var3: ByteArray = var1.o();
       q.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, tk.a.b));
+      var2.invoke(new java.lang.String(var3, qk.a.b));
    }
 
    public open fun onLost(message: Message) {
       q.h(var1, "message");
       super.onLost(var1);
       val var2: Function1 = this.onLostUser;
-      val var3: ByteArray = var1.n();
+      val var3: ByteArray = var1.o();
       q.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, tk.a.b));
+      var2.invoke(new java.lang.String(var3, qk.a.b));
    }
 
    public fun setOutboundMessage(message: String) {
       q.h(var1, "message");
-      val var2: ByteArray = var1.getBytes(tk.a.b);
+      val var2: ByteArray = var1.getBytes(qk.a.b);
       q.g(var2, "getBytes(...)");
       this.outboundMessage = new Message(var2);
    }

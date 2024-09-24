@@ -14,9 +14,9 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
+import kh.p
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import nh.p
 
 public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode, rc: RenderContext) {
    q.h(var0, "builder");

@@ -6502,7 +6502,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Nustatymus keiti rankiniu būdu.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Naudoti išankstinius nustatymus",
   "APP_DIRECTORY_PARTNER": "Partnerių",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Pakviesk programėlę į serverį",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Pridėti programėlę",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "{guildCount} serveriuose",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Oi, ši nuoroda neveikia...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Netinkama nuoroda",

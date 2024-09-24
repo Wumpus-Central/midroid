@@ -12,9 +12,9 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerDelegate
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerInterface
 import com.otaliastudios.zoom.ZoomEngine
+import kh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import nh.w
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
 public class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {

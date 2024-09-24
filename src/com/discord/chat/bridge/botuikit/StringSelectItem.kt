@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.h
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -94,8 +94,8 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.label.hashCode();
-      val var5: Int = this.value.hashCode();
+      val var5: Int = this.label.hashCode();
+      val var4: Int = this.value.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.emoji == null) {
@@ -115,28 +115,28 @@ public data class StringSelectItem(label: String,
          var3 = this.default.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.label;
-      val var2: java.lang.String = this.value;
+      val var1: java.lang.String = this.label;
+      val var3: java.lang.String = this.value;
       val var4: ComponentEmoji = this.emoji;
-      val var3: java.lang.String = this.description;
-      val var5: java.lang.Boolean = this.default;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("StringSelectItem(label=");
-      var1.append(var6);
-      var1.append(", value=");
-      var1.append(var2);
-      var1.append(", emoji=");
-      var1.append(var4);
-      var1.append(", description=");
-      var1.append(var3);
-      var1.append(", default=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var5: java.lang.String = this.description;
+      val var6: java.lang.Boolean = this.default;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("StringSelectItem(label=");
+      var2.append(var1);
+      var2.append(", value=");
+      var2.append(var3);
+      var2.append(", emoji=");
+      var2.append(var4);
+      var2.append(", description=");
+      var2.append(var5);
+      var2.append(", default=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -239,7 +239,7 @@ public data class StringSelectItem(label: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

@@ -1,12 +1,12 @@
 package com.discord.chat.input.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.n0
-import il.g0.a
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -62,13 +62,13 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
    }
 
    public override fun toString(): String {
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnContentSizeChangeEvent(width=");
-      var3.append(var2);
-      var3.append(", height=");
       var3.append(var1);
+      var3.append(", height=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

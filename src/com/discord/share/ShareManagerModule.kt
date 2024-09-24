@@ -32,10 +32,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
       super.invalidate();
 
       try {
-         val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var1.unregister(var2, this.shareBroadcastReceiver);
+         val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         var2.unregister(var1, this.shareBroadcastReceiver);
       } catch (var3: Exception) {
       }
    }
@@ -80,10 +80,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
                var1 = "";
             }
 
-            val var10: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-            val var6: ReactApplicationContext = this.getReactApplicationContext();
-            q.g(var6, "getReactApplicationContext(...)");
-            var8.startActivity(Intent.createChooser(var5, var1, var10.getPendingIntentSender(var6, var4)));
+            val var6: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+            val var10: ReactApplicationContext = this.getReactApplicationContext();
+            q.g(var10, "getReactApplicationContext(...)");
+            var8.startActivity(Intent.createChooser(var5, var1, var6.getPendingIntentSender(var10, var4)));
          }
       } else {
          val var9: StringBuilder = new StringBuilder();

@@ -9,7 +9,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.AltTextButtonView;
 import com.discord.chat.presentation.message.view.MediaView;
-import n1.a;
+import o1.a;
 
 public final class VideoAttachmentViewBinding implements ViewBinding {
    public final ConstraintLayout container;
@@ -28,18 +28,18 @@ public final class VideoAttachmentViewBinding implements ViewBinding {
 
    public static VideoAttachmentViewBinding bind(View var0) {
       int var1 = R.id.container;
-      ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-      if (var3 != null) {
+      ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.media_view;
-         MediaView var4 = (MediaView)a.a(var0, var1);
-         if (var4 != null) {
+         MediaView var5 = (MediaView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.media_view_alt_text;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.media_view_alt_text_button;
-               AltTextButtonView var5 = (AltTextButtonView)a.a(var0, var1);
-               if (var5 != null) {
-                  return new VideoAttachmentViewBinding(var0, var3, var4, var2, var5);
+               AltTextButtonView var2 = (AltTextButtonView)a.a(var0, var1);
+               if (var2 != null) {
+                  return new VideoAttachmentViewBinding(var0, var4, var5, var3, var2);
                }
             }
          }

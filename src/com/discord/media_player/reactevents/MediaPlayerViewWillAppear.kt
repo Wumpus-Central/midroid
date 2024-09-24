@@ -1,14 +1,15 @@
 package com.discord.media_player.reactevents
 
+import cl.f
+import cl.n
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.g0.a
+import kh.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,7 +18,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: List<String>) : ReactEvent {
@@ -70,15 +70,15 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.util.List = this.mediaItemIds;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MediaPlayerViewWillAppear(channelId=");
-      var3.append(var1);
-      var3.append(", mediaItemIds=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.channelId;
+      val var3: java.util.List = this.mediaItemIds;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MediaPlayerViewWillAppear(channelId=");
+      var1.append(var2);
+      var1.append(", mediaItemIds=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,13 +67,13 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.roleName;
-      val var1: java.lang.String = this.roleIconSource;
+      val var1: java.lang.String = this.roleName;
+      val var2: java.lang.String = this.roleIconSource;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapRoleIconData(roleName=");
-      var3.append(var2);
-      var3.append(", roleIconSource=");
       var3.append(var1);
+      var3.append(", roleIconSource=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

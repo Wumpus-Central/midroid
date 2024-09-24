@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.n0
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -68,15 +68,15 @@ public data class UrlOnClick(url: String, linkColor: Int? = null) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.url;
-      val var1: Int = this.linkColor;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UrlOnClick(url=");
-      var3.append(var2);
-      var3.append(", linkColor=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.url;
+      val var3: Int = this.linkColor;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UrlOnClick(url=");
+      var2.append(var1);
+      var2.append(", linkColor=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -151,7 +151,7 @@ public data class UrlOnClick(url: String, linkColor: Int? = null) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

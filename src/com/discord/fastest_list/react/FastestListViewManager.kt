@@ -23,13 +23,13 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
+import kh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import nh.w
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {

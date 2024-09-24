@@ -6525,7 +6525,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Estás modificando los ajustes manualmente.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Usar ajustes predeterminados",
   "APP_DIRECTORY_PARTNER": "Socio",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Invitar aplicación al servidor",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Añadir aplicación",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "en {guildCount} servidores",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Vaya, parece que el enlace no funciona...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Enlace no válido",

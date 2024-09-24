@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.emoji_picker.R;
-import n1.a;
+import o1.a;
 
 public final class PremiumInlineRoadblockFooterBinding implements ViewBinding {
    public final View gradient;
@@ -24,15 +24,15 @@ public final class PremiumInlineRoadblockFooterBinding implements ViewBinding {
 
    public static PremiumInlineRoadblockFooterBinding bind(View var0) {
       int var1 = R.id.gradient;
-      View var4 = a.a(var0, var1);
-      if (var4 != null) {
+      View var2 = a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.gradient_divider;
-         View var2 = a.a(var0, var1);
-         if (var2 != null) {
+         View var3 = a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.gradients;
-            LinearLayout var3 = (LinearLayout)a.a(var0, var1);
-            if (var3 != null) {
-               return new PremiumInlineRoadblockFooterBinding((RelativeLayout)var0, var4, var2, var3);
+            LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+            if (var4 != null) {
+               return new PremiumInlineRoadblockFooterBinding((RelativeLayout)var0, var2, var3, var4);
             }
          }
       }

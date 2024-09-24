@@ -12,7 +12,7 @@ import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import y3.a
+import z3.a
 
 public object ImmersiveMode {
    private final var rootViewInsetUpdateCallbacks: MutableList<(WindowInsetsCompat) -> Unit> = new ArrayList()
@@ -33,7 +33,7 @@ public object ImmersiveMode {
       }
 
       q.e(var3);
-      r0.G0(var5, new a(var5, var3));
+      r0.F0(var5, new a(var5, var3));
    }
 
    @JvmStatic

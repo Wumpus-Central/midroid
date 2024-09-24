@@ -1,8 +1,8 @@
 package com.discord.chat.reactevents
 
+import cl.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
 import kotlinx.serialization.KSerializer
 
 @f

@@ -45,11 +45,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun configureSpoilerOverlay(label: String) {
-      val var3: View = this.binding.spoiler.getOverlayView();
-      val var2: SpoilerOverlayView = this.binding.spoiler;
+      val var2: View = this.binding.spoiler.getOverlayView();
+      val var3: SpoilerOverlayView = this.binding.spoiler;
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
-      var2.setVisibility(0);
-      this.binding.spoiler.configure(var1, this.onClick(true, var3));
+      var3.setVisibility(0);
+      this.binding.spoiler.configure(var1, this.onClick(true, var2));
    }
 
    private fun onClick(showImage: Boolean, overlayView: View): () -> Unit {
@@ -193,11 +193,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var4.setLayoutParams(new ConstraintLayout.LayoutParams(0, 0));
          var1.addView(var4);
          val var5: ConstraintSet = new ConstraintSet();
-         var5.f(var1);
-         var5.g(var4.getId(), 6, 0, 6, 0);
-         var5.g(var4.getId(), 7, 0, 7, 0);
-         var5.g(var4.getId(), 3, 0, 3, 0);
-         var5.g(var4.getId(), 4, 0, 4, 0);
+         var5.g(var1);
+         var5.h(var4.getId(), 6, 0, 6, 0);
+         var5.h(var4.getId(), 7, 0, 7, 0);
+         var5.h(var4.getId(), 3, 0, 3, 0);
+         var5.h(var4.getId(), 4, 0, 4, 0);
          var5.c(var1);
          return var4;
       }

@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -121,8 +121,8 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          if (var8.y()) {
             var4 = var8.k(var7, 0);
             var9 = var8.t(var7, 1);
-            var3 = var8.k(var7, 2);
-            var2 = 7;
+            var2 = var8.k(var7, 2);
+            var3 = 7;
          } else {
             var9 = null;
             var var5: Boolean = true;
@@ -153,10 +153,13 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                   var5 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
-         return new UserSpeakingEvent(var2, var4, var9, var3, null);
+         return new UserSpeakingEvent(var3, var4, var9, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

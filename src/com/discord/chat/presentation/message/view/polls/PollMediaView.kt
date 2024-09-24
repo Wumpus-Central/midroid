@@ -25,10 +25,10 @@ import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
+import kh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
-import nh.l
 
 public class PollMediaView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val childViews: MutableList<View>
@@ -57,14 +57,14 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = d5.a.d(var1, var2);
+      this.hierarchyBuilder = e5.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       q.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = l.a(new Function0(var1, this) {
+      this.draweeView$delegate = l.b(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 
@@ -75,15 +75,15 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeView invoke() {
-            val var2: SimpleDraweeView = new SimpleDraweeView(this.$context);
-            val var1: PollMediaView = this.this$0;
-            var2.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
-            PollMediaView.access$getChildViews$p(var1).add(var2);
-            var1.addView(var2, new LayoutParams(-1, -1, 17));
-            return var2;
+            val var1: SimpleDraweeView = new SimpleDraweeView(this.$context);
+            val var2: PollMediaView = this.this$0;
+            var1.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
+            PollMediaView.access$getChildViews$p(var2).add(var1);
+            var2.addView(var1, new LayoutParams(-1, -1, 17));
+            return var1;
          }
       });
-      this.textView$delegate = l.a(new Function0(var1, this) {
+      this.textView$delegate = l.b(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 
@@ -94,11 +94,11 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeSpanTextView invoke() {
-            val var1: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
-            val var2: PollMediaView = this.this$0;
-            PollMediaView.access$getChildViews$p(this.this$0).add(var1);
-            var2.addView(var1, new LayoutParams(-2, -2, 17));
-            return var1;
+            val var2: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
+            val var1: PollMediaView = this.this$0;
+            PollMediaView.access$getChildViews$p(this.this$0).add(var2);
+            var1.addView(var2, new LayoutParams(-2, -2, 17));
+            return var2;
          }
       });
    }
@@ -178,9 +178,9 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
             val var16: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var10: RenderableEmoji = var16.renderable();
-            val var9: Context = this.getContext();
-            q.g(var9, "getContext(...)");
+            val var9: RenderableEmoji = var16.renderable();
+            val var10: Context = this.getContext();
+            q.g(var10, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
             if (var1.getShouldAnimateEmoji() && var16.getAnimated()) {
@@ -189,7 +189,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var10, var9, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var10, var4, var7, 0, null, 48, null));
             this.setOnClickListener(new h(var2));
             var4 = 1;
          } else {

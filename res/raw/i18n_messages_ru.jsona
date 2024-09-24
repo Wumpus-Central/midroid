@@ -6530,7 +6530,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Вы изменяете настройки вручную.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Использовать стандартные настройки",
   "APP_DIRECTORY_PARTNER": "Партнёрское",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Добавление приложения на сервер",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "Добавить приложение",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "на серверах: {guildCount}",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Ой! Ссылка не работает…",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Некорректная ссылка",

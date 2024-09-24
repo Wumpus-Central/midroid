@@ -24,8 +24,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import kh.w
 import kotlin.jvm.internal.q
-import nh.w
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: String? = ..., content: String = ..., context: LinkContext? = ...) : TapLinkData(
          var1, var2, var3, var4, var5
@@ -252,12 +252,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          }
       }
 
-      val var21: Log = Log.INSTANCE;
+      val var27: Log = Log.INSTANCE;
       val var4: java.lang.String = this.target;
-      val var27: StringBuilder = new StringBuilder();
-      var27.append("Missing target type in context: ");
-      var27.append(var4);
-      Log.e$default(var21, "TapLink", var27.toString(), null, 4, null);
+      val var21: StringBuilder = new StringBuilder();
+      var21.append("Missing target type in context: ");
+      var21.append(var4);
+      Log.e$default(var27, "TapLink", var21.toString(), null, 4, null);
       return var2;
    }
 
@@ -292,19 +292,16 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       } else if (var1 !is TapLinkData) {
          return false;
       } else {
-         val var3: TapLinkData = var1 as TapLinkData;
-         if (if (this.messageId == null)
-            (var1 as TapLinkData).messageId == null
-            else
-            (var1 as TapLinkData).messageId != null && MessageId.equals-impl0(this.messageId, (var1 as TapLinkData).messageId)) {
-            if (!q.c(this.title, var3.title)) {
+         var1 = var1;
+         if (if (this.messageId == null) var1.messageId == null else var1.messageId != null && MessageId.equals-impl0(this.messageId, var1.messageId)) {
+            if (!q.c(this.title, var1.title)) {
                return false;
-            } else if (!q.c(this.target, var3.target)) {
+            } else if (!q.c(this.target, var1.target)) {
                return false;
-            } else if (!q.c(this.content, var3.content)) {
+            } else if (!q.c(this.content, var1.content)) {
                return false;
             } else {
-               return q.c(this.context, var3.context);
+               return q.c(this.context, var1.context);
             }
          } else {
             return false;
@@ -379,20 +376,20 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       }
 
       val var2: java.lang.String = this.title;
-      val var5: java.lang.String = this.target;
-      val var3: java.lang.String = this.content;
-      val var4: LinkContext = this.context;
+      val var4: java.lang.String = this.target;
+      val var5: java.lang.String = this.content;
+      val var3: LinkContext = this.context;
       val var6: StringBuilder = new StringBuilder();
       var6.append("TapLinkData(messageId=");
       var6.append(var7);
       var6.append(", title=");
       var6.append(var2);
       var6.append(", target=");
-      var6.append(var5);
-      var6.append(", content=");
-      var6.append(var3);
-      var6.append(", context=");
       var6.append(var4);
+      var6.append(", content=");
+      var6.append(var5);
+      var6.append(", context=");
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }

@@ -10,11 +10,11 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.modules.fresco.FrescoModule
 import com.facebook.react.modules.network.OkHttpClientProvider
 import kotlin.jvm.internal.q
-import l6.c0
-import l6.e0
-import l6.f0
-import l6.o
-import l6.c0.a
+import m6.c0
+import m6.e0
+import m6.f0
+import m6.o
+import m6.c0.a
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.Interceptor.Chain
@@ -34,9 +34,9 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   val var1: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
+   var var1: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
    val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var3: Builder = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+   var1 = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .Y(var2.newSmallDiskCache(var0))
       .Q(new FrescoBitmapSupplier(var0))
       .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
@@ -51,28 +51,28 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             return this.$receiver$inlined.frescoInterceptor(var1);
          }
       }).c()));
-   val var5: a = c0.n();
+   val var3: a = c0.n();
    val var6: f0 = o.a();
-   val var4: Builder = var3.W(new e0(var5.n(new f0(var6.b, var6.a * 2, var6.c)).m())).R(new DefaultCacheKeyFactory() {
+   val var4: Builder = var1.W(new e0(var3.n(new f0(var6.b, var6.a * 2, var6.c)).m())).R(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var3: android.net.Uri.Builder = var1.buildUpon();
-            var3.clearQuery();
+            val var4: android.net.Uri.Builder = var1.buildUpon();
+            var4.clearQuery();
 
-            for (java.lang.String var2 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var5: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+            for (java.lang.String var3 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
+                  val var2: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
-                  while (var5.hasNext()) {
-                     var3.appendQueryParameter(var2, var5.next() as java.lang.String);
+                  while (var2.hasNext()) {
+                     var4.appendQueryParameter(var3, var2.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var3.build();
+            var1 = var4.build();
             q.g(var1, "build(...)");
             return var1;
          }

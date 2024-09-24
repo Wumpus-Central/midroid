@@ -1,4 +1,10 @@
 {
+  "swfLzc": [
+    {
+      "type": 0,
+      "value": "The translation for this file came from the same as the first file!"
+    }
+  ],
   "JJ0wpK": [
     {
       "type": 0,
@@ -9,12 +15,6 @@
     {
       "type": 0,
       "value": "All of this is managed locally and has not yet replaced the French i18n system."
-    }
-  ],
-  "swfLzc": [
-    {
-      "type": 0,
-      "value": "The translation for this file came from the same as the first file!"
     }
   ]
 }

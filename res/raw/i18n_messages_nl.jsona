@@ -6502,7 +6502,7 @@
   "NOTIFICATION_PRESET_CUSTOM_DESCRIPTION": "Je wijzigt instellingen handmatig.",
   "NOTIFICATION_SETTINGS_USE_PRESET": "Presets gebruiken",
   "APP_DIRECTORY_PARTNER": "Partner",
-  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "App uitnodigen op server",
+  "APP_DIRECTORY_PROFILE_EMBED_HEADER": "App toevoegen",
   "APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT": "op {guildCount} servers",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER": "Ai, deze link werkt niet...",
   "APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE": "Ongeldige link",

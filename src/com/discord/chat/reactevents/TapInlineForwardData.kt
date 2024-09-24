@@ -1,15 +1,16 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.n0
+import dl.a
+import fl.b2
+import fl.g0
+import fl.n0
+import kh.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,7 +19,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 public class TapInlineForwardData(channelId: String, messageId: String, targetKind: String, embedIndex: Int?) : ReactEvent {
@@ -39,14 +39,14 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
    }
 
    public override fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
          w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("targetKind", this.targetKind)
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
       }
 
-      return var2;
+      return var1;
    }
 
    public object `$serializer` : g0 {
@@ -139,7 +139,7 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

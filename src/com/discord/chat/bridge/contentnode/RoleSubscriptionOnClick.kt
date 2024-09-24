@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -87,8 +87,8 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.action.hashCode();
-      val var4: Int = this.guildId.hashCode();
+      val var4: Int = this.action.hashCode();
+      val var5: Int = this.guildId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.messageId == null) {
@@ -108,28 +108,28 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
          var3 = this.roleSubscriptionListingId.hashCode();
       }
 
-      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.action;
-      val var3: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.roleSubscriptionListingId;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("RoleSubscriptionOnClick(action=");
-      var6.append(var1);
-      var6.append(", guildId=");
-      var6.append(var3);
-      var6.append(", messageId=");
-      var6.append(var2);
-      var6.append(", channelId=");
-      var6.append(var5);
-      var6.append(", roleSubscriptionListingId=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var2: java.lang.String = this.action;
+      val var1: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.messageId;
+      val var6: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.roleSubscriptionListingId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("RoleSubscriptionOnClick(action=");
+      var3.append(var2);
+      var3.append(", guildId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(", channelId=");
+      var3.append(var6);
+      var3.append(", roleSubscriptionListingId=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -233,7 +233,7 @@ public data class RoleSubscriptionOnClick(action: String, guildId: String, messa
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 
