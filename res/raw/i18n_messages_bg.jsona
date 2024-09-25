@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Виж зрители",
+  "OPEN": "Отвори",
   "SELECT_PICTURE": "Избери снимка",
   "TAB_BAR": "Лента с раздели",
   "TAB_A11Y_ROLE_DESCRIPTION": "Раздел {position} от {tabCount}",

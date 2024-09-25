@@ -1981,6 +1981,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "Дивитися глядачів",
+  "OPEN": "Відкрити",
   "SELECT_PICTURE": "Обрати зображення",
   "TAB_BAR": "Панель вкладок",
   "TAB_A11Y_ROLE_DESCRIPTION": "Вкладка, {position} із {tabCount}",

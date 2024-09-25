@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Pogledaj tko su gledatelji",
+  "OPEN": "Otvori",
   "SELECT_PICTURE": "Odaberi sliku",
   "TAB_BAR": "Traka s karticama",
   "TAB_A11Y_ROLE_DESCRIPTION": "Kartica, {position} od {tabCount}",

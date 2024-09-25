@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "Wyświetl obserwatorów",
+  "OPEN": "Otwórz",
   "SELECT_PICTURE": "Wybierz obrazek",
   "TAB_BAR": "Pasek kart",
   "TAB_A11Y_ROLE_DESCRIPTION": "Zakładka, {position} z {tabCount}",

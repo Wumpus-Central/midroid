@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "Vis tilskuere",
+  "OPEN": "Åpne",
   "SELECT_PICTURE": "Velg bilde",
   "TAB_BAR": "Fanelinje",
   "TAB_A11Y_ROLE_DESCRIPTION": "Fane, {position} av {tabCount}",

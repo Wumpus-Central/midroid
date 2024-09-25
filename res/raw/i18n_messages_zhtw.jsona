@@ -1988,6 +1988,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "檢視觀眾人數",
+  "OPEN": "開啟",
   "SELECT_PICTURE": "選擇圖片",
   "TAB_BAR": "索引標籤列",
   "TAB_A11Y_ROLE_DESCRIPTION": "分頁，{tabCount} 中的 {position}",

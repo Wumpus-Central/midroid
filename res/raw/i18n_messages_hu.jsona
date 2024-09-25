@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Nézők megtekintése",
+  "OPEN": "Megnyitás",
   "SELECT_PICTURE": "Válassz képet",
   "TAB_BAR": "Ikonsáv",
   "TAB_A11Y_ROLE_DESCRIPTION": "Lap, {position}/{tabCount}",

@@ -1986,6 +1986,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "İzleyicileri görüntüle",
+  "OPEN": "Açık",
   "SELECT_PICTURE": "Resim seç",
   "TAB_BAR": "Sekme çubuğu",
   "TAB_A11Y_ROLE_DESCRIPTION": "Sekme, {position}/{tabCount}",

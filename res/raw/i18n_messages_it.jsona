@@ -1977,6 +1977,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Visualizza spettatori",
+  "OPEN": "Apri",
   "SELECT_PICTURE": "Seleziona immagine",
   "TAB_BAR": "Barra delle schede",
   "TAB_A11Y_ROLE_DESCRIPTION": "Scheda, {position} di {tabCount}",

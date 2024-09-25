@@ -1988,6 +1988,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "查看观战人员",
+  "OPEN": "打开",
   "SELECT_PICTURE": "选择图片",
   "TAB_BAR": "选项卡栏",
   "TAB_A11Y_ROLE_DESCRIPTION": "标签，第 {position} 项，共 {tabCount} 项",

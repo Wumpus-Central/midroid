@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "Zobrazit diváky",
+  "OPEN": "Otevřít",
   "SELECT_PICTURE": "Vybrat obrázek",
   "TAB_BAR": "Lišta karet",
   "TAB_A11Y_ROLE_DESCRIPTION": "Záložka, {position} z {tabCount}",

@@ -1984,6 +1984,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Ver espectadores",
+  "OPEN": "Abrir",
   "SELECT_PICTURE": "Escolha uma foto",
   "TAB_BAR": "Barra de abas",
   "TAB_A11Y_ROLE_DESCRIPTION": "Aba, {position} de {tabCount}",

@@ -1978,6 +1978,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Se tilskuere",
+  "OPEN": "Åbn",
   "SELECT_PICTURE": "Vælg billede",
   "TAB_BAR": "Fanebjælke",
   "TAB_A11Y_ROLE_DESCRIPTION": "Fane {position} af {tabCount}",

@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Näytä katselijat",
+  "OPEN": "Avaa",
   "SELECT_PICTURE": "Valitse kuva",
   "TAB_BAR": "Välilehtipalkki",
   "TAB_A11Y_ROLE_DESCRIPTION": "Välilehti, {position}/{tabCount}",

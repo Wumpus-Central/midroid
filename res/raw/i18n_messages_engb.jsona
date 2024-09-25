@@ -1978,6 +1978,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "View spectators",
+  "OPEN": "Open",
   "SELECT_PICTURE": "Select picture",
   "TAB_BAR": "Tab bar",
   "TAB_A11Y_ROLE_DESCRIPTION": "Tab, {position} of {tabCount}",

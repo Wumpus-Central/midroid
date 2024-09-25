@@ -1982,6 +1982,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "Afficher les spectateurs",
+  "OPEN": "Ouvrir",
   "SELECT_PICTURE": "Sélectionner l'image",
   "TAB_BAR": "Touche de tabulation",
   "TAB_A11Y_ROLE_DESCRIPTION": "Onglet, {position} sur {tabCount}",

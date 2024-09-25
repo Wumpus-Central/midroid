@@ -1983,6 +1983,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "Ver espectadores",
+  "OPEN": "Abrir",
   "SELECT_PICTURE": "Seleccionar foto",
   "TAB_BAR": "Barra de pestañas",
   "TAB_A11Y_ROLE_DESCRIPTION": "Pestaña, {position} de {tabCount}",

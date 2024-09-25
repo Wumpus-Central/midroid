@@ -1978,6 +1978,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "PlayStation",
   "VIEW_SPECTATORS": "Zuschauer anzeigen",
+  "OPEN": "Öffnen",
   "SELECT_PICTURE": "Bild auswählen",
   "TAB_BAR": "Registerkartenleiste",
   "TAB_A11Y_ROLE_DESCRIPTION": "Tab, {position} von {tabCount}",

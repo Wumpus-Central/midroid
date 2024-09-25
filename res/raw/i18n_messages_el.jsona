@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Προβολή θεατών",
+  "OPEN": "Άνοιγμα",
   "SELECT_PICTURE": "Επιλογή εικόνας",
   "TAB_BAR": "Μπάρα καρτέλας",
   "TAB_A11Y_ROLE_DESCRIPTION": "Καρτέλα, {position} από {tabCount}",

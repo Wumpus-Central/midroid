@@ -1979,6 +1979,7 @@
   "XBOX": "Xbox",
   "PLAYSTATION": "Playstation",
   "VIEW_SPECTATORS": "Xem khán giả",
+  "OPEN": "Mở",
   "SELECT_PICTURE": "Chọn hình ảnh",
   "TAB_BAR": "Thanh tab",
   "TAB_A11Y_ROLE_DESCRIPTION": "Thẻ, {position} / {tabCount}",
