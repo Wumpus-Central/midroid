@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "249109",
-    "commit": "766a6568830657796ae751fcc72f4fde77063d7d",
+    "build": "249113",
+    "commit": "3668edfe00f0a809efb61ec7042571bc3c730583",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "a86f413b3afc039d3ef42b4ee1403960",
+    "app/src/main/assets/index.android.bundle": "09d57b76c5ba0049a6905ff1e3ecc8b0",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_cs.png": "44a7840b2161275358742595c9257e76",
@@ -3257,6 +3257,6 @@
     "app/src/main/res/raw/modules_holidays_assets_snowsgiving_loading_light.webm": "69a0ecf46982cea47de18b3e75dfe8f5",
     "app/src/main/res/raw/modules_intl_messages_cache_intl_frmessagesd6ad2e79e20f3fa37f2d52cb6d698995compiledmessages.jsona": "9b35903193ce6a3c9d293b3cc9e72736",
     "app/src/main/res/raw/modules_intl_messages_secondtestcompiledmessages.jsona": "91e013f9fc5df854a9e6845bd2c3a3a1",
-    "app/src/main/res/raw/modules_intl_messages_testcompiledmessages.jsona": "6a260893543f78e4fb576b2472d2d57c"
+    "app/src/main/res/raw/modules_intl_messages_testcompiledmessages.jsona": "5003b8d91651742324b7661d4bc5309b"
   }
 }
