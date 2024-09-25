@@ -59,15 +59,15 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
 
    public override fun toString(): String {
       val var4: java.lang.String = this.id;
-      val var2: java.lang.String = this.json;
-      val var3: java.lang.String = this.causeMessage;
+      val var3: java.lang.String = this.json;
+      val var2: java.lang.String = this.causeMessage;
       val var1: StringBuilder = new StringBuilder();
       var1.append("DeserializationErrorChatListItem(id=");
       var1.append(var4);
       var1.append(", json=");
-      var1.append(var2);
-      var1.append(", causeMessage=");
       var1.append(var3);
+      var1.append(", causeMessage=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

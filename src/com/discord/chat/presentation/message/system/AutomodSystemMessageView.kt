@@ -238,11 +238,11 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          val var6: Long = var17.getChannelId-o4g7jtM();
          val var9: GuildId = var17.getGuildId-qOKuAAo();
          val var16: UserId = var17.getUserId-wUX8bhU();
-         val var10: java.lang.String = var17.getUsername();
+         val var15: java.lang.String = var17.getUsername();
          val var13: java.lang.String = var17.getAvatarURL();
-         val var14: StructurableText = var17.getContent();
+         val var10: StructurableText = var17.getContent();
          val var3: Int = var17.getUsernameColor();
-         val var15: Int = var17.getRoleColor();
+         val var14: Int = var17.getRoleColor();
          val var5: Boolean = var17.getShouldShowRoleDot();
          val var21: java.lang.Boolean = var17.getCommunicationDisabled();
          val var4: Boolean;
@@ -268,9 +268,9 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var10,
-            var3,
             var15,
+            var3,
+            var14,
             var5,
             false,
             null,
@@ -279,7 +279,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var14,
+            var10,
             null,
             null,
             null,

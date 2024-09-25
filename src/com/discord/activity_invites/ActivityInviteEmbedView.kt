@@ -165,15 +165,15 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       }
 
       var5.setVisibility(var2);
-      val var6: OverlappingCirclesView = this.binding.avatars;
-      val var4: ArrayList = new ArrayList(i.v(var3, 10));
+      val var4: OverlappingCirclesView = this.binding.avatars;
+      val var6: ArrayList = new ArrayList(i.v(var3, 10));
       val var7: java.util.Iterator = var3.iterator();
 
       while (var7.hasNext()) {
-         var4.add(new OverlappingItem(var7.next() as java.lang.String));
+         var6.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var6.setItems(var4);
+      var4.setItems(var6);
    }
 
    private fun setBottomEndLabel(text: CharSequence?, color: Int) {
@@ -361,18 +361,18 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.uri;
+            val var3: java.lang.String = this.uri;
             val var1: Boolean = this.fullSize;
             val var2: Boolean = this.grayscale;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("End(uri=");
-            var3.append(var4);
-            var3.append(", fullSize=");
-            var3.append(var1);
-            var3.append(", grayscale=");
-            var3.append(var2);
-            var3.append(")");
-            return var3.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("End(uri=");
+            var4.append(var3);
+            var4.append(", fullSize=");
+            var4.append(var1);
+            var4.append(", grayscale=");
+            var4.append(var2);
+            var4.append(")");
+            return var4.toString();
          }
       }
 

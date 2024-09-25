@@ -74,11 +74,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          }
       });
       this.accessoriesAdapter = var6;
-      val var3: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var3;
-      val var5: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var5;
-      val var4: DefaultItemAnimator = new DefaultItemAnimator() {
+      val var4: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var4;
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var3;
+      val var5: DefaultItemAnimator = new DefaultItemAnimator() {
          @Override
          public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.q.h(var1, "viewHolder");
@@ -93,8 +93,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var4.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var4;
+      var5.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var5;
       this.forwardBarPaint$delegate = kh.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -108,17 +108,17 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var5);
+      this.setLayoutManager(var3);
       this.setAdapter(var6);
-      var6.setMessageContentViewLifecycleListener(var3);
+      var6.setMessageContentViewLifecycleListener(var4);
    }
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : pk.j.H(v0.a(this))) {
-         val var1: View = var3.c() as View;
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ReactionsView || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 

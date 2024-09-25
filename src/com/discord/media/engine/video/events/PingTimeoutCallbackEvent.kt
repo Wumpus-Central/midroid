@@ -91,22 +91,22 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
    }
 
    public override fun toString(): String {
-      val var3: Int = this.connectionId;
+      val var2: Int = this.connectionId;
       val var6: java.lang.String = this.server;
-      val var1: Int = this.port;
+      val var3: Int = this.port;
       val var4: Int = this.seq;
-      val var2: Int = this.timeout;
+      val var1: Int = this.timeout;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PingTimeoutCallbackEvent(connectionId=");
-      var5.append(var3);
+      var5.append(var2);
       var5.append(", server=");
       var5.append(var6);
       var5.append(", port=");
-      var5.append(var1);
+      var5.append(var3);
       var5.append(", seq=");
       var5.append(var4);
       var5.append(", timeout=");
-      var5.append(var2);
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
@@ -141,33 +141,29 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
          q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
+         var var2: Int;
+         var var3: Int;
+         var var4: Int;
          var var5: Int;
          var var6: Int;
          var var11: java.lang.String;
-         var var13: Int;
-         var var15: Int;
-         var var18: Int;
          if (var10.y()) {
-            var15 = var10.k(var9, 0);
+            var6 = var10.k(var9, 0);
             var11 = var10.t(var9, 1);
-            var18 = var10.k(var9, 2);
-            var13 = var10.k(var9, 3);
-            val var2: Int = var10.k(var9, 4);
+            var4 = var10.k(var9, 2);
+            var2 = var10.k(var9, 3);
+            var3 = var10.k(var9, 4);
             var5 = 31;
-            var6 = var15;
-            var15 = var18;
-            var18 = var13;
-            var13 = var2;
          } else {
             var11 = null;
-            var var19: Boolean = true;
+            var var7: Boolean = true;
             var6 = 0;
             var5 = 0;
-            var15 = 0;
-            var13 = 0;
-            var var12: Int = 0;
+            var4 = 0;
+            var3 = 0;
+            var2 = 0;
 
-            while (var19) {
+            while (var7) {
                val var8: Int = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -178,37 +174,37 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
                                  throw new n(var8);
                               }
 
-                              var15 = var10.k(var9, 4);
-                              var12 |= 16;
+                              var4 = var10.k(var9, 4);
+                              var2 |= 16;
                            } else {
                               var5 = var10.k(var9, 3);
-                              var12 |= 8;
+                              var2 |= 8;
                            }
                         } else {
-                           var13 = var10.k(var9, 2);
-                           var12 |= 4;
+                           var3 = var10.k(var9, 2);
+                           var2 |= 4;
                         }
                      } else {
                         var11 = var10.t(var9, 1);
-                        var12 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var6 = var10.k(var9, 0);
-                     var12 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var19 = false;
+                  var7 = false;
                }
             }
 
-            var15 = var13;
-            var13 = var15;
-            var18 = var5;
-            var5 = var12;
+            var4 = var3;
+            var3 = var4;
+            var2 = var5;
+            var5 = var2;
          }
 
          var10.b(var9);
-         return new PingTimeoutCallbackEvent(var5, var6, var11, var15, var18, var13, null);
+         return new PingTimeoutCallbackEvent(var5, var6, var11, var4, var2, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PingTimeoutCallbackEvent) {

@@ -55,10 +55,10 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
          }
 
          public final void invoke() {
-            val var1: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
-            val var2: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
-            q.g(var2, "access$getReactApplicationContext(...)");
-            var1.emitModuleEvent(var2, new IntervalEvent((int)this.$id));
+            val var2: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
+            val var1: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
+            q.g(var1, "access$getReactApplicationContext(...)");
+            var2.emitModuleEvent(var1, new IntervalEvent((int)this.$id));
          }
       });
    }
@@ -75,10 +75,10 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
          }
 
          public final void invoke() {
-            val var1: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
-            val var2: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
-            q.g(var2, "access$getReactApplicationContext(...)");
-            var1.emitModuleEvent(var2, new TimerEvent((int)this.$id));
+            val var2: ReactEvents = TimersModule.access$getReactEvents$p(this.this$0);
+            val var1: ReactApplicationContext = TimersModule.access$getReactApplicationContext(this.this$0);
+            q.g(var1, "access$getReactApplicationContext(...)");
+            var2.emitModuleEvent(var1, new TimerEvent((int)this.$id));
          }
       });
    }

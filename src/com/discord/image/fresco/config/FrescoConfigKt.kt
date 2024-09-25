@@ -59,20 +59,20 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var4: android.net.Uri.Builder = var1.buildUpon();
-            var4.clearQuery();
+            val var5: android.net.Uri.Builder = var1.buildUpon();
+            var5.clearQuery();
 
             for (java.lang.String var3 : var1.getQueryParameterNames()) {
                if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
                   val var2: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
                   while (var2.hasNext()) {
-                     var4.appendQueryParameter(var3, var2.next() as java.lang.String);
+                     var5.appendQueryParameter(var3, var2.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var4.build();
+            var1 = var5.build();
             q.g(var1, "build(...)");
             return var1;
          }

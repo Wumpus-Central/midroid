@@ -210,8 +210,8 @@ public data class PollAction(label: String,
             var6 = var12.m(var11, 1, var10[1], null) as PollActionPresentation;
             var5 = var12.s(var11, 2);
             var14 = b2.a;
-            var7 = var12.v(var11, 3, b2.a, null) as java.lang.String;
-            var10 = var12.v(var11, 4, (DeserializationStrategy)var14, null) as java.lang.String;
+            var10 = var12.v(var11, 3, b2.a, null) as java.lang.String;
+            var7 = var12.v(var11, 4, (DeserializationStrategy)var14, null) as java.lang.String;
             var14 = var12.v(var11, 5, (DeserializationStrategy)var14, null) as java.lang.String;
             var2 = 63;
          } else {
@@ -259,12 +259,13 @@ public data class PollAction(label: String,
                }
             }
 
-            var10 = var6;
+            var10 = (KSerializer[])var7;
+            var7 = var6;
             var6 = var8;
          }
 
          var12.b(var11);
-         return new PollAction(var2, var9, var6, var5, (java.lang.String)var7, var10, (java.lang.String)var14, null);
+         return new PollAction(var2, var9, var6, var5, var10, (java.lang.String)var7, (java.lang.String)var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollAction) {

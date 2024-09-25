@@ -60,13 +60,13 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
    }
 
    public override fun toString(): String {
-      val var1: Int = this.measuredViewWidth;
-      val var2: Int = this.measuredViewHeight;
+      val var2: Int = this.measuredViewWidth;
+      val var1: Int = this.measuredViewHeight;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnWrappedViewMeasuredData(measuredViewWidth=");
-      var3.append(var1);
-      var3.append(", measuredViewHeight=");
       var3.append(var2);
+      var3.append(", measuredViewHeight=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

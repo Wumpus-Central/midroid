@@ -147,7 +147,7 @@
     <color name="bg_mod_faint_dark">#4d4e5058</color>
     <color name="bg_mod_faint_darker">#1f6c6f7c</color>
     <color name="bg_mod_faint_light">#1480848e</color>
-    <color name="bg_mod_faint_midnight">#146c6f7c</color>
+    <color name="bg_mod_faint_midnight">#296c6f7c</color>
     <color name="bg_mod_strong_dark">#8a4e5058</color>
     <color name="bg_mod_strong_darker">#3d6c6f7c</color>
     <color name="bg_mod_strong_light">#3d80848e</color>
@@ -224,7 +224,7 @@
     <color name="border_faint_dark">#08ffffff</color>
     <color name="border_faint_darker">#0f6c6f7c</color>
     <color name="border_faint_light">#0a000000</color>
-    <color name="border_faint_midnight">#0f6c6f7c</color>
+    <color name="border_faint_midnight">#146c6f7c</color>
     <color name="border_strong_dark">#29ffffff</color>
     <color name="border_strong_darker">#386c6f7c</color>
     <color name="border_strong_light">#29000000</color>
@@ -232,7 +232,7 @@
     <color name="border_subtle_dark">#14ffffff</color>
     <color name="border_subtle_darker">#1f6c6f7c</color>
     <color name="border_subtle_light">#14000000</color>
-    <color name="border_subtle_midnight">#1f6c6f7c</color>
+    <color name="border_subtle_midnight">#246c6f7c</color>
     <color name="brand">#ff5865f2</color>
     <color name="brand_100">#fff7f7fe</color>
     <color name="brand_130">#fff0f1fe</color>
@@ -958,7 +958,7 @@
     <color name="redesign_button_secondary_border_dark">#14ffffff</color>
     <color name="redesign_button_secondary_border_darker">#1f6c6f7c</color>
     <color name="redesign_button_secondary_border_light">#14000000</color>
-    <color name="redesign_button_secondary_border_midnight">#1f6c6f7c</color>
+    <color name="redesign_button_secondary_border_midnight">#246c6f7c</color>
     <color name="redesign_button_secondary_overlay_background_dark">#8a000000</color>
     <color name="redesign_button_secondary_overlay_background_darker">#8a000000</color>
     <color name="redesign_button_secondary_overlay_background_light">#8a000000</color>
@@ -970,7 +970,7 @@
     <color name="redesign_button_secondary_pressed_border_dark">#00000000</color>
     <color name="redesign_button_secondary_pressed_border_darker">#0f6c6f7c</color>
     <color name="redesign_button_secondary_pressed_border_light">#0a000000</color>
-    <color name="redesign_button_secondary_pressed_border_midnight">#0f6c6f7c</color>
+    <color name="redesign_button_secondary_pressed_border_midnight">#146c6f7c</color>
     <color name="redesign_button_selected_background_dark">#3d5865f2</color>
     <color name="redesign_button_selected_background_darker">#3d5865f2</color>
     <color name="redesign_button_selected_background_light">#295865f2</color>

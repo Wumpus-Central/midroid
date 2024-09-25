@@ -78,15 +78,15 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
 
    public override fun toString(): String {
       val var4: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.buttonType;
+      val var2: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.buttonType;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapChannelPromptButtonData(messageId=");
       var3.append(var4);
       var3.append(", channelId=");
-      var3.append(var1);
-      var3.append(", buttonType=");
       var3.append(var2);
+      var3.append(", buttonType=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }
@@ -159,8 +159,8 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
                }
             }
 
-            var12 = var11;
             var10 = var12;
+            var12 = var11;
          }
 
          var9.b(var8);

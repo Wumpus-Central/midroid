@@ -263,16 +263,16 @@ public data class CommandOnClick(action: String? = ...,
          val var12: SerialDescriptor = this.getDescriptor();
          val var13: c = var1.c(var12);
          var var2: Int;
-         var var6: Any;
          var var7: Any;
-         val var8: java.lang.String;
-         val var10: Any;
+         var var8: Any;
+         var var9: java.lang.String;
          var var16: Any;
          var var17: ChannelId;
+         var var24: Any;
          if (var13.y()) {
-            var8 = var13.v(var12, 0, b2.a, null) as java.lang.String;
+            var9 = var13.v(var12, 0, b2.a, null) as java.lang.String;
             val var5: UserId.$serializer = UserId.$serializer.INSTANCE;
-            val var9: UserId = var13.v(var12, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            var24 = var13.v(var12, 1, UserId.$serializer.INSTANCE, null) as UserId;
             var16 = var13.v(var12, 2, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var15: java.lang.String;
             if (var16 != null) {
@@ -282,17 +282,18 @@ public data class CommandOnClick(action: String? = ...,
             }
 
             var7 = var13.v(var12, 3, var5, null) as UserId;
-            var6 = var13.v(var12, 4, MessageType.Serializer.INSTANCE, null) as MessageType;
+            val var6: MessageType = var13.v(var12, 4, MessageType.Serializer.INSTANCE, null) as MessageType;
             var17 = var13.v(var12, 5, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var10 = var15;
-            var16 = var9;
+            var8 = var15;
+            var16 = (MessageId)var24;
             var2 = 63;
+            var24 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var25: java.lang.String = null;
-            var var23: ChannelId = null;
-            var6 = null;
+            var9 = null;
+            var8 = null;
+            var var19: Any = null;
             var17 = null;
             var7 = null;
             var16 = null;
@@ -304,7 +305,7 @@ public data class CommandOnClick(action: String? = ...,
                      var3 = false;
                      break;
                   case 0:
-                     var25 = var13.v(var12, 0, b2.a, var25) as java.lang.String;
+                     var9 = var13.v(var12, 0, b2.a, var9) as java.lang.String;
                      var2 |= 1;
                      break;
                   case 1:
@@ -328,7 +329,7 @@ public data class CommandOnClick(action: String? = ...,
                      var2 |= 4;
                      break;
                   case 3:
-                     var6 = var13.v(var12, 3, UserId.$serializer.INSTANCE, var6) as UserId;
+                     var19 = var13.v(var12, 3, UserId.$serializer.INSTANCE, var19) as UserId;
                      var2 |= 8;
                      break;
                   case 4:
@@ -336,7 +337,7 @@ public data class CommandOnClick(action: String? = ...,
                      var2 |= 16;
                      break;
                   case 5:
-                     var23 = var13.v(var12, 5, ChannelId.$serializer.INSTANCE, var23) as ChannelId;
+                     var8 = var13.v(var12, 5, ChannelId.$serializer.INSTANCE, var8) as ChannelId;
                      var2 |= 32;
                      break;
                   default:
@@ -344,15 +345,14 @@ public data class CommandOnClick(action: String? = ...,
                }
             }
 
-            var6 = var17;
-            var10 = var7;
-            var17 = var23;
-            var7 = (MessageId)var6;
-            var8 = var25;
+            var8 = var7;
+            var17 = (ChannelId)var8;
+            var24 = var17;
+            var7 = (MessageId)var19;
          }
 
          var13.b(var12);
-         return new CommandOnClick(var2, var8, var16, (java.lang.String)var10, var7, (MessageType)var6, var17, null, null);
+         return new CommandOnClick(var2, var9, var16, (java.lang.String)var8, var7, (MessageType)var24, var17, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CommandOnClick) {

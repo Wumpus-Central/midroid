@@ -198,21 +198,21 @@ public sealed interface PostProcessor {
 
       public override fun toString(): String {
          val var5: PostProcessor.Gradient.Direction = this.direction;
-         val var4: Int = this.startColor;
-         val var3: Int = this.endColor;
-         val var2: Float = this.startPosition;
-         val var1: Float = this.endPosition;
+         val var3: Int = this.startColor;
+         val var4: Int = this.endColor;
+         val var1: Float = this.startPosition;
+         val var2: Float = this.endPosition;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Gradient(direction=");
          var6.append(var5);
          var6.append(", startColor=");
-         var6.append(var4);
-         var6.append(", endColor=");
          var6.append(var3);
+         var6.append(", endColor=");
+         var6.append(var4);
          var6.append(", startPosition=");
-         var6.append(var2);
-         var6.append(", endPosition=");
          var6.append(var1);
+         var6.append(", endPosition=");
+         var6.append(var2);
          var6.append(")");
          return var6.toString();
       }

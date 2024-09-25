@@ -95,11 +95,11 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1253,9 +1253,9 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          val var7: java.lang.String = this.url;
          val var4: Boolean = this.animate;
          val var3: Int = this.widthDp;
-         val var2: Int = this.heightDp;
+         val var1: Int = this.heightDp;
          val var5: java.lang.String = this.asset;
-         val var1: Int = this.renderMode;
+         val var2: Int = this.renderMode;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Config(url=");
          var6.append(var7);
@@ -1264,11 +1264,11 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          var6.append(", widthDp=");
          var6.append(var3);
          var6.append(", heightDp=");
-         var6.append(var2);
+         var6.append(var1);
          var6.append(", asset=");
          var6.append(var5);
          var6.append(", renderMode=");
-         var6.append(var1);
+         var6.append(var2);
          var6.append(")");
          return var6.toString();
       }

@@ -118,7 +118,7 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
    }
 
    private fun configureCount(count: Int, animate: Boolean) {
-      val var4: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var2) {
          val var3: Int;
          if (this.currentCount != null) {
@@ -129,13 +129,13 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
 
          if (var1 > var3) {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_up);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_up);
+            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
          } else {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_down);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_down);
+            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
          }
 
-         var4.setText(java.lang.String.valueOf(var1));
+         var5.setText(java.lang.String.valueOf(var1));
       } else {
          this.binding.reactionCountSwitcher.setCurrentText(java.lang.String.valueOf(var1));
       }
@@ -172,16 +172,16 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
          var2 = false;
       }
 
-      val var4: Int = var1.getBurstCount();
+      val var3: Int = var1.getBurstCount();
       var var10: Boolean = false;
       if (var2) {
          var10 = false;
          label32:
          if (this.currentCount != null) {
-            val var3: Int = var1.getBurstCount();
+            val var4: Int = var1.getBurstCount();
             if (this.currentCount != null) {
                var10 = false;
-               if (var3 == this.currentCount) {
+               if (var4 == this.currentCount) {
                   break label32;
                }
             }
@@ -190,7 +190,7 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
          }
       }
 
-      this.configureCount(var4, var10);
+      this.configureCount(var3, var10);
       var10 = ThemeManager.INSTANCE.isThemeDark();
       var var12: BurstReactionView.BurstColorPalette = null;
       if (var10) {
@@ -209,12 +209,12 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
       this.configureTextColor(var12);
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var2) {
-         val var13: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var15: RenderableEmoji = var1.getEmoji().renderable();
-         val var9: Context = this.getContext();
-         q.g(var9, "getContext(...)");
-         var13.setDraweeSpanStringBuilder(
-            RenderableEmojiKt.renderEmoji$default(var15, var9, ReactionView.Companion.getEMOJI_SIZE(), var1.getEmoji().getShouldAnimate(), 0, null, 48, null)
+         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var13: RenderableEmoji = var1.getEmoji().renderable();
+         val var15: Context = this.getContext();
+         q.g(var15, "getContext(...)");
+         var9.setDraweeSpanStringBuilder(
+            RenderableEmojiKt.renderEmoji$default(var13, var15, ReactionView.Companion.getEMOJI_SIZE(), var1.getEmoji().getShouldAnimate(), 0, null, 48, null)
          );
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }

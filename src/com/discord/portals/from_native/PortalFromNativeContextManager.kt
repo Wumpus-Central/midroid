@@ -9,7 +9,7 @@ import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import vk.u
+import vk.w
 
 public object PortalFromNativeContextManager {
    private final var _portalContextIdsFlow: MutableStateFlow<com.discord.portals.from_native.PortalFromNativeContextManager.Event?>
@@ -18,7 +18,7 @@ public object PortalFromNativeContextManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = u.a(null);
+      val var0: MutableStateFlow = w.a(null);
       _portalContextIdsFlow = var0;
       portalContextIdsFlow = var0;
    }
@@ -81,18 +81,18 @@ public object PortalFromNativeContextManager {
    }
 
    public fun unregisterView(portal: Double) {
-      val var3: PortalFromNativeContext = portalContextMap.remove(var1);
-      if (var3 != null) {
+      val var4: PortalFromNativeContext = portalContextMap.remove(var1);
+      if (var4 != null) {
          _portalContextIdsFlow.setValue(null);
-         val var4: View = var3.getView().get();
-         if (var4 == null) {
+         val var3: View = var4.getView().get();
+         if (var3 == null) {
             return;
          }
 
-         q.e(var4);
-         ViewRemoveFromParentKt.removeFromParent(var4);
-         var3.getOnViewRemovedFromPortal().invoke(var4);
-         var3.getReturnViewToParent().invoke(var4);
+         q.e(var3);
+         ViewRemoveFromParentKt.removeFromParent(var3);
+         var4.getOnViewRemovedFromPortal().invoke(var3);
+         var4.getReturnViewToParent().invoke(var3);
       }
    }
 

@@ -22,12 +22,12 @@ public final class ChatLoadingViewBinding implements ViewBinding {
 
    public static ChatLoadingViewBinding bind(View var0) {
       int var1 = R.id.button;
-      Button var2 = (Button)a.a(var0, var1);
-      if (var2 != null) {
+      Button var3 = (Button)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.progress_spinner;
-         ProgressBar var3 = (ProgressBar)a.a(var0, var1);
-         if (var3 != null) {
-            return new ChatLoadingViewBinding(var0, var2, var3);
+         ProgressBar var2 = (ProgressBar)a.a(var0, var1);
+         if (var2 != null) {
+            return new ChatLoadingViewBinding(var0, var3, var2);
          }
       }
 

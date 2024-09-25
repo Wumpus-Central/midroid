@@ -18,18 +18,18 @@ internal fun LinearLayoutManager.isPositionVisible(position: Int): Boolean? {
       }
    }
 
-   var var4: Int = var0.findLastCompletelyVisibleItemPosition();
-   if (var4.intValue() == -1) {
-      var4 = null;
+   var3 = var0.findLastCompletelyVisibleItemPosition();
+   if (var3.intValue() == -1) {
+      var3 = null;
    }
 
-   var3 = var4;
-   if (var4 == null) {
-      var3 = var0.findLastVisibleItemPosition();
-      if (var3.intValue() == -1) {
-         var3 = null;
+   var var4: Int = var3;
+   if (var3 == null) {
+      var4 = var0.findLastVisibleItemPosition();
+      if (var4.intValue() == -1) {
+         var4 = null;
       }
    }
 
-   return if (var2 != null && var3 != null) new IntRange(var2, var3).contains(var1) else null;
+   return if (var2 != null && var4 != null) new IntRange(var2, var4).contains(var1) else null;
 }

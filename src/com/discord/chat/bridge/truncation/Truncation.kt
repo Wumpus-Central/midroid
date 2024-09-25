@@ -172,10 +172,10 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
             var8 = var11.v(var10, 2, b2.a, null) as java.lang.String;
             var12 = var11.v(var10, 3, n0.a, null) as Int;
             var7 = var11.v(var10, 4, h.a, null) as java.lang.Boolean;
-            var3 = 31;
-            var5 = var2;
+            var5 = 31;
+            var3 = var2;
          } else {
-            var var16: Boolean = true;
+            var var15: Boolean = true;
             var4 = 0;
             var var14: Int = 0;
             var8 = null;
@@ -183,7 +183,7 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
             var var13: Any = null;
             var3 = 0;
 
-            while (var16) {
+            while (var15) {
                val var6: Int = var11.x(var10);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -213,18 +213,17 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
                      var14 |= 1;
                   }
                } else {
-                  var16 = false;
+                  var15 = false;
                }
             }
 
             var7 = var13;
             var12 = (Integer)var7;
-            var5 = var3;
-            var3 = var14;
+            var5 = var14;
          }
 
          var11.b(var10);
-         return new Truncation(var3, var4, (boolean)var5, var8, var12, (java.lang.Boolean)var7, null);
+         return new Truncation(var5, var4, (boolean)var3, var8, var12, (java.lang.Boolean)var7, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Truncation) {

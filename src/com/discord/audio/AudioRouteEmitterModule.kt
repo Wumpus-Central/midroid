@@ -30,13 +30,13 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
             q.h(var1, "activeAudioDevice");
-            val var4: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
             val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var2: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            q.g(var2, "access$getReactApplicationContext(...)");
-            var3.emitModuleEvent(var2, var4);
+            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            q.g(var4, "access$getReactApplicationContext(...)");
+            var3.emitModuleEvent(var4, var2);
          }
 
          @Override

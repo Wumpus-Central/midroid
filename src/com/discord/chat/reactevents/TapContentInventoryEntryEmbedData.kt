@@ -92,21 +92,21 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.authorId;
-      val var3: java.lang.String = this.contentId;
-      val var1: java.lang.String = this.tappedElement;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapContentInventoryEntryEmbedData(messageId=");
-      var2.append(var4);
-      var2.append(", authorId=");
-      var2.append(var5);
-      var2.append(", contentId=");
-      var2.append(var3);
-      var2.append(", tappedElement=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.authorId;
+      val var1: java.lang.String = this.contentId;
+      val var3: java.lang.String = this.tappedElement;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapContentInventoryEntryEmbedData(messageId=");
+      var4.append(var5);
+      var4.append(", authorId=");
+      var4.append(var2);
+      var4.append(", contentId=");
+      var4.append(var1);
+      var4.append(", tappedElement=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -141,16 +141,16 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
          var var2: Int;
          var var5: java.lang.String;
          var var6: java.lang.String;
-         var var7: java.lang.String;
+         val var8: java.lang.String;
          val var11: java.lang.String;
          if (var10.y()) {
-            var7 = var10.t(var9, 0);
-            var6 = var10.t(var9, 1);
-            var5 = var10.t(var9, 2);
+            var5 = var10.t(var9, 0);
+            var8 = var10.t(var9, 1);
+            var6 = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
          } else {
-            var7 = null;
+            var var7: java.lang.String = null;
             var6 = null;
             var5 = null;
             var var12: java.lang.String = null;
@@ -186,12 +186,14 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
                }
             }
 
-            var6 = var12;
+            var8 = var12;
             var11 = var6;
+            var6 = var5;
+            var5 = var7;
          }
 
          var10.b(var9);
-         return new TapContentInventoryEntryEmbedData(var2, var7, var6, var5, var11, null);
+         return new TapContentInventoryEntryEmbedData(var2, var5, var8, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapContentInventoryEntryEmbedData) {

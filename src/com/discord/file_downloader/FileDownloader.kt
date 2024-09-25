@@ -11,7 +11,7 @@ import lh.r
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.Request.Builder
-import vk.d
+import vk.e
 
 public object FileDownloader {
    private final val defaultClient: OkHttpClient by l.b(<unrepresentable>.INSTANCE)
@@ -40,7 +40,7 @@ public object FileDownloader {
       q.h(var2, "fileUrl");
       q.h(var3, "fileName");
       q.h(var4, "downloadDirectory");
-      return d.l(
+      return e.m(
          new Function2(var4, var3, var2, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError

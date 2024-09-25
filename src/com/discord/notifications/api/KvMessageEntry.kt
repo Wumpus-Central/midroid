@@ -133,23 +133,23 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
 
    public override fun toString(): String {
       val var4: java.util.List = this.members;
-      val var2: java.util.List = this.users;
-      val var5: JsonObject = this.message;
-      val var6: java.lang.String = MessageId.toString-impl(this.id);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("KvMessageEntry(members=");
-      var3.append(var4);
-      var3.append(", users=");
-      var3.append(var2);
-      var3.append(", message=");
-      var3.append(var5);
-      var3.append(", id=");
-      var3.append(var6);
-      var3.append(", channelId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.util.List = this.users;
+      val var3: JsonObject = this.message;
+      val var5: java.lang.String = MessageId.toString-impl(this.id);
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("KvMessageEntry(members=");
+      var2.append(var4);
+      var2.append(", users=");
+      var2.append(var1);
+      var2.append(", message=");
+      var2.append(var3);
+      var2.append(", id=");
+      var2.append(var5);
+      var2.append(", channelId=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -187,19 +187,22 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
          var var6: java.util.List;
          var var7: Any;
          var var8: java.util.List;
-         var var14: Any;
+         var var15: Any;
          if (var11.y()) {
             var8 = var11.m(var10, 0, var9[0], null) as java.util.List;
             var6 = var11.m(var10, 1, var9[1], null) as java.util.List;
             var7 = var11.m(var10, 2, q.a, null) as JsonObject;
-            var14 = var11.m(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var14 != null) {
-               var14 = var14.unbox-impl();
+            var15 = var11.m(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var14: java.lang.String;
+            if (var15 != null) {
+               var14 = var15.unbox-impl();
             } else {
                var14 = null;
             }
 
-            var5 = var11.m(var10, 4, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var21: ChannelId = var11.m(var10, 4, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var5 = var14;
+            var15 = var21;
             var2 = 31;
          } else {
             var var3: Boolean = true;
@@ -208,7 +211,7 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
             var8 = null;
             var7 = null;
             var5 = null;
-            var14 = null;
+            var15 = null;
 
             while (var3) {
                val var4: Int = var11.x(var10);
@@ -240,7 +243,7 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
                               var2 |= 8;
                            }
                         } else {
-                           var14 = var11.m(var10, 2, q.a, var14) as JsonObject;
+                           var15 = var11.m(var10, 2, q.a, var15) as JsonObject;
                            var2 |= 4;
                         }
                      } else {
@@ -256,12 +259,13 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
                }
             }
 
-            var14 = (MessageId)var7;
-            var7 = var14;
+            var15 = (MessageId)var5;
+            var5 = var7;
+            var7 = var15;
          }
 
          var11.b(var10);
-         return new KvMessageEntry(var2, var8, var6, var7, var14, (ChannelId)var5, null, null);
+         return new KvMessageEntry(var2, var8, var6, var7, (java.lang.String)var5, var15, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: KvMessageEntry) {

@@ -184,10 +184,10 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          public final OverlayVoiceBubble invoke(OverlayViewProvider<OverlayVoiceBubble> var1) {
             q.h(var1, "it");
             val var2: Int = MobileVoiceOverlay.access$getContext$p(this.this$0).getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-            val var5: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
-            var5.getInsetMargins().set(-var2, var2, -var2, var2);
-            var5.setOnClickListener(new a(var5, this.this$0));
-            var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var5) {
+            val var4: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
+            var4.getInsetMargins().set(-var2, var2, -var2, var2);
+            var4.setOnClickListener(new a(var4, this.this$0));
+            var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var4) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
@@ -220,7 +220,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            var5.setOnMovingStateChanged(new Function1(this.this$0, var5) {
+            var4.setOnMovingStateChanged(new Function1(this.this$0, var4) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
@@ -255,7 +255,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            return var5;
+            return var4;
          }
       });
       this.trashWrapProvider = new OverlayViewProvider<>(new Function1(this) {
@@ -481,11 +481,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getVoiceBubbleProvider$p(this).removeViewFromOverlay();
          access$getTrashWrapProvider$p(this).removeViewFromOverlay();
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 

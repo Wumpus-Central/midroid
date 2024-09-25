@@ -77,16 +77,16 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.channelId;
       val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.type;
+      val var1: java.lang.String = this.type;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapPollAction(channelId=");
-      var4.append(var1);
+      var4.append(var2);
       var4.append(", messageId=");
       var4.append(var3);
       var4.append(", type=");
-      var4.append(var2);
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

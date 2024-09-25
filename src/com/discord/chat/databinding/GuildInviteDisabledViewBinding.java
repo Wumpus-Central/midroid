@@ -54,30 +54,30 @@ public final class GuildInviteDisabledViewBinding implements ViewBinding {
       Barrier var3 = (Barrier)a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.barrier_header;
-         Barrier var6 = (Barrier)a.a(var0, var1);
-         if (var6 != null) {
+         Barrier var8 = (Barrier)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.item_bottom_container;
-            ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-            if (var4 != null) {
+            ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
+            if (var9 != null) {
                var1 = R.id.item_invite_disabled_icon;
-               SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-               if (var7 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.item_invite_header;
-                  TextView var5 = (TextView)a.a(var0, var1);
-                  if (var5 != null) {
+                  TextView var4 = (TextView)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.item_invite_help_icon;
-                     SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var8 != null) {
+                     SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.item_invite_image;
-                        GuildView var2 = (GuildView)a.a(var0, var1);
-                        if (var2 != null) {
+                        GuildView var7 = (GuildView)a.a(var0, var1);
+                        if (var7 != null) {
                            var1 = R.id.item_invite_subtitle;
                            SimpleDraweeSpanTextView var10 = (SimpleDraweeSpanTextView)a.a(var0, var1);
                            if (var10 != null) {
                               var1 = R.id.item_invite_title;
-                              TextView var9 = (TextView)a.a(var0, var1);
-                              if (var9 != null) {
-                                 return new GuildInviteDisabledViewBinding(var0, var3, var6, var4, var7, var5, var8, var2, var10, var9);
+                              TextView var2 = (TextView)a.a(var0, var1);
+                              if (var2 != null) {
+                                 return new GuildInviteDisabledViewBinding(var0, var3, var8, var9, var6, var4, var5, var7, var10, var2);
                               }
                            }
                         }

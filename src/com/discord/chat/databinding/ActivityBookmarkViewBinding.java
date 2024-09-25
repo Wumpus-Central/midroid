@@ -59,39 +59,39 @@ public final class ActivityBookmarkViewBinding implements ViewBinding {
 
    public static ActivityBookmarkViewBinding bind(View var0) {
       int var1 = R.id.barrier_footer;
-      Barrier var12 = (Barrier)a.a(var0, var1);
-      if (var12 != null) {
+      Barrier var7 = (Barrier)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.item_bottom_container;
-            ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-            if (var4 != null) {
+            ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.item_description;
-               TextView var2 = (TextView)a.a(var0, var1);
-               if (var2 != null) {
+               TextView var9 = (TextView)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.item_header;
-                  TextView var10 = (TextView)a.a(var0, var1);
-                  if (var10 != null) {
+                  TextView var5 = (TextView)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.item_hero;
-                     SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var3 != null) {
+                     SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var12 != null) {
                         var1 = R.id.launch_button;
                         DCDButton var6 = (DCDButton)a.a(var0, var1);
                         if (var6 != null) {
                            var1 = R.id.participants;
-                           OverlappingCirclesView var9 = (OverlappingCirclesView)a.a(var0, var1);
-                           if (var9 != null) {
+                           OverlappingCirclesView var11 = (OverlappingCirclesView)a.a(var0, var1);
+                           if (var11 != null) {
                               var1 = R.id.participants_container;
-                              FrameLayout var11 = (FrameLayout)a.a(var0, var1);
-                              if (var11 != null) {
+                              FrameLayout var8 = (FrameLayout)a.a(var0, var1);
+                              if (var8 != null) {
                                  var1 = R.id.participants_info;
-                                 TextView var7 = (TextView)a.a(var0, var1);
-                                 if (var7 != null) {
+                                 TextView var10 = (TextView)a.a(var0, var1);
+                                 if (var10 != null) {
                                     var1 = R.id.participants_info_container;
-                                    LinearLayout var8 = (LinearLayout)a.a(var0, var1);
-                                    if (var8 != null) {
-                                       return new ActivityBookmarkViewBinding(var0, var12, var5, var4, var2, var10, var3, var6, var9, var11, var7, var8);
+                                    LinearLayout var2 = (LinearLayout)a.a(var0, var1);
+                                    if (var2 != null) {
+                                       return new ActivityBookmarkViewBinding(var0, var7, var4, var3, var9, var5, var12, var6, var11, var8, var10, var2);
                                     }
                                  }
                               }

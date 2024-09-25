@@ -68,33 +68,33 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
    public fun parse(source: CharSequence, initialState: Any, rules: List<Rule<Any, out Any, Any>> = var0.rules): MutableList<Any> {
       q.h(var1, "source");
       q.h(var3, "rules");
-      val var9: Stack = new Stack();
-      val var8: Node = new Node(null, 1, null);
+      val var8: Stack = new Stack();
+      val var9: Node = new Node(null, 1, null);
       if (var1.length() > 0) {
-         var9.add(new ParseSpec<>(var8, var2, 0, var1.length()));
+         var8.add(new ParseSpec<>(var9, var2, 0, var1.length()));
       }
 
       var var6: java.lang.String = null;
 
-      while (!var9.isEmpty()) {
-         val var10: ParseSpec = var9.pop() as ParseSpec;
+      while (!var8.isEmpty()) {
+         val var10: ParseSpec = var8.pop() as ParseSpec;
          if (var10.getStartIndex() >= var10.getEndIndex()) {
             break;
          }
 
-         val var12: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
-         val var4: Int = var10.getStartIndex();
-         val var11: java.util.Iterator = var3.iterator();
+         val var11: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
+         val var5: Int = var10.getStartIndex();
+         val var12: java.util.Iterator = var3.iterator();
 
          while (true) {
-            if (var11.hasNext()) {
-               val var18: Rule = var11.next() as Rule;
-               val var13: Matcher = var18.match(var12, var6, var10.getState());
+            if (var12.hasNext()) {
+               val var18: Rule = var12.next() as Rule;
+               val var13: Matcher = var18.match(var11, var6, var10.getState());
                if (var13 == null) {
-                  this.logMiss(var18, var12);
+                  this.logMiss(var18, var11);
                   var2 = null;
                } else {
-                  this.logMatch(var18, var12);
+                  this.logMatch(var18, var11);
                   var2 = w.a(var18, var13);
                }
 
@@ -111,17 +111,17 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
             val var21: Rule = var2.a() as Rule;
             val var20: Matcher = var2.b() as Matcher;
-            val var5: Int = var20.end() + var4;
+            val var4: Int = var20.end() + var5;
             val var22: ParseSpec = var21.parse(var20, this, (S)var10.getState());
             val var23: Node = var10.getRoot();
             var23.addChild(var22.getRoot());
-            if (var5 != var10.getEndIndex()) {
-               var9.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var5, var10.getEndIndex()));
+            if (var4 != var10.getEndIndex()) {
+               var8.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var4, var10.getEndIndex()));
             }
 
             if (!var22.isTerminal()) {
-               var22.applyOffset(var4);
-               var9.push(var22);
+               var22.applyOffset(var5);
+               var8.push(var22);
             }
 
             try {
@@ -133,7 +133,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
          }
       }
 
-      val var16: java.util.Collection = var8.getChildren();
+      val var16: java.util.Collection = var9.getChildren();
       var var17: Any;
       if (var16 != null) {
          var17 = i.T0(var16);

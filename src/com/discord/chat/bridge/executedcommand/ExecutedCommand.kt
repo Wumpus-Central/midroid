@@ -234,12 +234,12 @@ public data class ExecutedCommand(userId: UserId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: n0 = n0.a;
+         val var1: n0 = n0.a;
          return new KSerializer[]{
             UserId.$serializer.INSTANCE,
             n0.a,
             a.u(b2.a),
-            var2,
+            var1,
             AnnotatedStructurableTextSerializer.INSTANCE,
             a.u(ExecutedCommandBackgroundStyles.$serializer.INSTANCE),
             a.u(h.a)
@@ -252,69 +252,68 @@ public data class ExecutedCommand(userId: UserId,
          val var15: c = var1.c(var14);
          val var8: Boolean = var15.y();
          var var6: Byte = 6;
+         var var2: Int;
          var var3: Int;
-         var var4: Int;
          val var5: Int;
          var var9: Any;
-         var var10: java.lang.String;
-         var var11: UserId;
+         val var10: UserId;
          var var12: Any;
+         val var13: java.lang.String;
          var var16: Any;
          if (var8) {
-            var11 = var15.m(var14, 0, UserId.$serializer.INSTANCE, null) as UserId;
-            var3 = var15.k(var14, 1);
-            var10 = var15.v(var14, 2, b2.a, null) as java.lang.String;
-            val var2: Int = var15.k(var14, 3);
+            var10 = var15.m(var14, 0, UserId.$serializer.INSTANCE, null) as UserId;
+            var5 = var15.k(var14, 1);
+            var13 = var15.v(var14, 2, b2.a, null) as java.lang.String;
+            var2 = var15.k(var14, 3);
             var12 = var15.m(var14, 4, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
             var9 = var15.v(var14, 5, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null) as ExecutedCommandBackgroundStyles;
             var16 = var15.v(var14, 6, h.a, null) as java.lang.Boolean;
-            var5 = 127;
-            var4 = var2;
+            var3 = 127;
          } else {
-            var var19: Boolean = true;
-            var4 = 0;
-            var var18: Int = 0;
-            var11 = null;
-            var10 = null;
+            var var21: Boolean = true;
+            var var4: Int = 0;
+            var2 = 0;
+            var var11: UserId = null;
+            var var24: java.lang.String = null;
             var9 = null;
             var16 = null;
             var12 = null;
             var3 = 0;
 
-            while (var19) {
+            while (var21) {
                val var7: Int = var15.x(var14);
                switch (var7) {
                   case -1:
-                     var19 = false;
+                     var21 = false;
                      break;
                   case 0:
                      var11 = var15.m(var14, 0, UserId.$serializer.INSTANCE, var11) as UserId;
-                     var18 |= 1;
+                     var2 |= 1;
                      var6 = 6;
                      break;
                   case 1:
                      var3 = var15.k(var14, 1);
-                     var18 |= 2;
+                     var2 |= 2;
                      break;
                   case 2:
-                     var10 = var15.v(var14, 2, b2.a, var10) as java.lang.String;
-                     var18 |= 4;
+                     var24 = var15.v(var14, 2, b2.a, var24) as java.lang.String;
+                     var2 |= 4;
                      break;
                   case 3:
                      var4 = var15.k(var14, 3);
-                     var18 |= 8;
+                     var2 |= 8;
                      break;
                   case 4:
                      var9 = var15.m(var14, 4, AnnotatedStructurableTextSerializer.INSTANCE, var9) as AnnotatedStructurableText;
-                     var18 |= 16;
+                     var2 |= 16;
                      break;
                   case 5:
                      var16 = var15.v(var14, 5, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var16) as ExecutedCommandBackgroundStyles;
-                     var18 |= 32;
+                     var2 |= 32;
                      break;
                   case 6:
                      var12 = var15.v(var14, var6, h.a, var12) as java.lang.Boolean;
-                     var18 |= 64;
+                     var2 |= 64;
                      break;
                   default:
                      throw new n(var7);
@@ -324,12 +323,16 @@ public data class ExecutedCommand(userId: UserId,
             var9 = var16;
             var16 = var12;
             var12 = var9;
-            var5 = var18;
+            var2 = var4;
+            var13 = var24;
+            var5 = var3;
+            var10 = var11;
+            var3 = var2;
          }
 
          var15.b(var14);
          return new ExecutedCommand(
-            var5, var11, var3, var10, var4, (AnnotatedStructurableText)var12, (ExecutedCommandBackgroundStyles)var9, (java.lang.Boolean)var16, null, null
+            var3, var10, var5, var13, var2, (AnnotatedStructurableText)var12, (ExecutedCommandBackgroundStyles)var9, (java.lang.Boolean)var16, null, null
          );
       }
 

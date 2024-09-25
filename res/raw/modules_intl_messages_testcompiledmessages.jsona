@@ -19,48 +19,24 @@
       "value": " replaced the global i18n system."
     }
   ],
-  "uczI4u": [
+  "rdfRys": [
     {
       "type": 0,
-      "value": "This link uses a "
+      "value": "We have a "
     },
     {
       "type": 8,
-      "value": "$link",
+      "value": "$code",
       "children": [
-        {
-          "type": 1,
-          "value": "linkTarget"
-        },
         {
           "type": 0,
-          "value": "variable link"
+          "value": "const static codeSpan = 2;"
         }
       ]
     },
     {
       "type": 0,
-      "value": " provided at runtime."
-    }
-  ],
-  "XOdbAw": [
-    {
-      "type": 0,
-      "value": "Use hooks like "
-    },
-    {
-      "type": 8,
-      "value": "usernameHook",
-      "children": [
-        {
-          "type": 1,
-          "value": "username"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " for special content."
+      "value": " here."
     }
   ],
   "Q+eyqq": [
@@ -96,24 +72,54 @@
       "pluralType": "cardinal"
     }
   ],
-  "rdfRys": [
+  "XOdbAw": [
     {
       "type": 0,
-      "value": "We have a "
+      "value": "Use hooks like "
     },
     {
       "type": 8,
-      "value": "$code",
+      "value": "usernameHook",
       "children": [
         {
-          "type": 0,
-          "value": "const static codeSpan = 2;"
+          "type": 1,
+          "value": "username"
         }
       ]
     },
     {
       "type": 0,
-      "value": " here."
+      "value": " for special content."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
+    }
+  ],
+  "uczI4u": [
+    {
+      "type": 0,
+      "value": "This link uses a "
+    },
+    {
+      "type": 8,
+      "value": "$link",
+      "children": [
+        {
+          "type": 1,
+          "value": "linkTarget"
+        },
+        {
+          "type": 0,
+          "value": "variable link"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " provided at runtime."
     }
   ],
   "rmps8/": [
@@ -142,12 +148,6 @@
     {
       "type": 0,
       "value": ", with the url defined in the string."
-    }
-  ],
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
     }
   ]
 }

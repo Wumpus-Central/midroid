@@ -76,14 +76,14 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun toString(): String {
-      val var1: Message = this.message;
-      val var4: MessageContext = this.messageContext;
+      val var4: Message = this.message;
+      val var1: MessageContext = this.messageContext;
       val var2: BackgroundHighlight = this.backgroundHighlight;
       val var3: StringBuilder = new StringBuilder();
       var3.append("SystemMessageItem(message=");
-      var3.append(var1);
-      var3.append(", messageContext=");
       var3.append(var4);
+      var3.append(", messageContext=");
+      var3.append(var1);
       var3.append(", backgroundHighlight=");
       var3.append(var2);
       var3.append(")");

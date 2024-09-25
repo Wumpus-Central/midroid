@@ -1,8 +1,8 @@
 {
-  "swfLzc": [
+  "HMvECw": [
     {
       "type": 0,
-      "value": "The translation for this file came from the same as the first file!"
+      "value": "All of this is managed locally and has not yet replaced the French i18n system."
     }
   ],
   "JJ0wpK": [
@@ -11,10 +11,10 @@
       "value": "This page uses the new intl system in French!"
     }
   ],
-  "HMvECw": [
+  "swfLzc": [
     {
       "type": 0,
-      "value": "All of this is managed locally and has not yet replaced the French i18n system."
+      "value": "The translation for this file came from the same as the first file!"
     }
   ]
 }

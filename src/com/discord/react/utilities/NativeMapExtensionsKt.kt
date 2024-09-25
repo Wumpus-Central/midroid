@@ -139,14 +139,14 @@ public fun ReadableMap.getStringOrEmpty(name: String): String {
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
    q.h(var0, "pairs");
-   val var4: WritableNativeMap = new WritableNativeMap();
+   val var3: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
    for (int var1 = 0; var1 < var2; var1++) {
-      put(var4, var0[var1].a() as java.lang.String, var0[var1].b());
+      put(var3, var0[var1].a() as java.lang.String, var0[var1].b());
    }
 
-   return var4;
+   return var3;
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {
@@ -181,39 +181,39 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 
 public fun ReadableMap.toJson(): JSONObject {
    q.h(var0, "<this>");
-   val var3: JSONObject = new JSONObject();
+   val var1: JSONObject = new JSONObject();
    val var2: ReadableMapKeySetIterator = var0.keySetIterator();
    q.g(var2, "keySetIterator(...)");
 
    while (var2.hasNextKey()) {
-      val var1: java.lang.String = var2.nextKey();
-      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var1).ordinal()]) {
+      val var3: java.lang.String = var2.nextKey();
+      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var3).ordinal()]) {
          case 1:
-            var3.put(var1, JSONObject.NULL);
+            var1.put(var3, JSONObject.NULL);
             break;
          case 2:
-            var3.put(var1, var0.getBoolean(var1));
+            var1.put(var3, var0.getBoolean(var3));
             break;
          case 3:
-            var3.put(var1, var0.getDouble(var1));
+            var1.put(var3, var0.getDouble(var3));
             break;
          case 4:
-            var3.put(var1, var0.getString(var1));
+            var1.put(var3, var0.getString(var3));
             break;
          case 5:
-            val var6: ReadableMap = var0.getMap(var1);
+            val var6: ReadableMap = var0.getMap(var3);
             q.e(var6);
-            var3.put(var1, toJson(var6));
+            var1.put(var3, toJson(var6));
             break;
          case 6:
-            val var5: ReadableArray = var0.getArray(var1);
+            val var5: ReadableArray = var0.getArray(var3);
             q.e(var5);
-            var3.put(var1, NativeArrayExtensionsKt.toJson(var5));
+            var1.put(var3, NativeArrayExtensionsKt.toJson(var5));
          default:
       }
    }
 
-   return var3;
+   return var1;
 }
 
 public fun ReadableMap.toJsonString(): String {
@@ -238,8 +238,8 @@ public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    q.h(var0, "<this>");
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

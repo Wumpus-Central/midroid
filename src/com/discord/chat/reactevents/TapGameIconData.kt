@@ -68,14 +68,14 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
 
    public override fun toString(): String {
       val var3: java.lang.String = this.gameApplicationId;
-      val var1: java.lang.String = this.timestamp;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapGameIconData(gameApplicationId=");
-      var2.append(var3);
-      var2.append(", timestamp=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.timestamp;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapGameIconData(gameApplicationId=");
+      var1.append(var3);
+      var1.append(", timestamp=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

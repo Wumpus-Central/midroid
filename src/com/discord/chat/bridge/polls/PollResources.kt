@@ -129,17 +129,17 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
          val var5: Boolean = var10.y();
          var var7: java.lang.String = null;
          var var2: Int;
+         val var6: java.util.Map;
          val var11: java.lang.String;
-         val var13: java.util.Map;
          if (var5) {
             var7 = var10.t(var9, 0);
             var11 = var10.t(var9, 1);
-            var13 = var10.m(var9, 2, var8[2], null) as java.util.Map;
+            var6 = var10.m(var9, 2, var8[2], null) as java.util.Map;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var6: java.lang.String = null;
+            var var13: java.lang.String = null;
             var var12: java.util.Map = null;
 
             while (var3) {
@@ -154,7 +154,7 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
                         var12 = var10.m(var9, 2, var8[2], var12) as java.util.Map;
                         var2 |= 4;
                      } else {
-                        var6 = var10.t(var9, 1);
+                        var13 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -166,12 +166,12 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
                }
             }
 
-            var13 = var12;
-            var11 = var6;
+            var6 = var12;
+            var11 = var13;
          }
 
          var10.b(var9);
-         return new PollResources(var2, var7, var11, var13, null);
+         return new PollResources(var2, var7, var11, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollResources) {

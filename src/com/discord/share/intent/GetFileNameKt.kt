@@ -38,10 +38,10 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
                   break label36;
                }
             } catch (var6: java.lang.Throwable) {
-               val var20: java.lang.Throwable = var6;
+               val var21: java.lang.Throwable = var6;
 
                try {
-                  throw var20;
+                  throw var21;
                } catch (var5: java.lang.Throwable) {
                   c.a(var4, var6);
                }

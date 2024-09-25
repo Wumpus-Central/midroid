@@ -227,9 +227,9 @@ public object BSDiff {
       // 0ea: return
       // 0eb: astore 2
       // 0ec: goto 12d
-      // 0ef: astore 2
+      // 0ef: astore 3
       // 0f0: goto 123
-      // 0f3: astore 2
+      // 0f3: astore 3
       // 0f4: goto 118
       // 0f7: astore 6
       // 0f9: goto 10c
@@ -250,21 +250,21 @@ public object BSDiff {
       // 113: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 116: aload 3
       // 117: athrow
-      // 118: aload 2
+      // 118: aload 3
       // 119: athrow
-      // 11a: astore 3
+      // 11a: astore 2
       // 11b: aload 4
-      // 11d: aload 2
+      // 11d: aload 3
       // 11e: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 121: aload 3
+      // 121: aload 2
       // 122: athrow
-      // 123: aload 2
+      // 123: aload 3
       // 124: athrow
-      // 125: astore 3
+      // 125: astore 2
       // 126: aload 1
-      // 127: aload 2
+      // 127: aload 3
       // 128: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 12b: aload 3
+      // 12b: aload 2
       // 12c: athrow
       // 12d: aload 2
       // 12e: athrow

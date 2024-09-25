@@ -58,10 +58,10 @@ internal object FCMTokenHelper {
    }
 
    private fun Throwable.logError() {
-      val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = var1.getClass().getSimpleName();
-      q.g(var3, "getSimpleName(...)");
-      var2.w(var3, "Fetching FCM registration token failed", var1);
+      val var3: Log = Log.INSTANCE;
+      val var2: java.lang.String = var1.getClass().getSimpleName();
+      q.g(var2, "getSimpleName(...)");
+      var3.w(var2, "Fetching FCM registration token failed", var1);
    }
 
    public fun getToken(onToken: (String) -> Unit) {

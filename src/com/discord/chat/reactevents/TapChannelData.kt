@@ -97,18 +97,18 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapChannelData(guildId=");
-      var1.append(var3);
-      var1.append(", channelId=");
-      var1.append(var4);
-      var1.append(", messageId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapChannelData(guildId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", messageId=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

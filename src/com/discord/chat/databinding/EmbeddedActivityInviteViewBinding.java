@@ -62,43 +62,43 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
 
    public static EmbeddedActivityInviteViewBinding bind(View var0) {
       int var1 = R.id.barrier_footer;
-      Barrier var4 = (Barrier)a.a(var0, var1);
-      if (var4 != null) {
+      Barrier var12 = (Barrier)a.a(var0, var1);
+      if (var12 != null) {
          var1 = R.id.item_bottom_container;
-         ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
-         if (var2 != null) {
+         ConstraintLayout var10 = (ConstraintLayout)a.a(var0, var1);
+         if (var10 != null) {
             var1 = R.id.item_header;
-            TextView var10 = (TextView)a.a(var0, var1);
-            if (var10 != null) {
+            TextView var8 = (TextView)a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.item_hero;
-               SimpleDraweeView var13 = (SimpleDraweeView)a.a(var0, var1);
-               if (var13 != null) {
+               SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.item_subtitle;
-                  MessageContentView var6 = (MessageContentView)a.a(var0, var1);
-                  if (var6 != null) {
+                  MessageContentView var7 = (MessageContentView)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.item_title;
-                     TextView var11 = (TextView)a.a(var0, var1);
-                     if (var11 != null) {
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.launch_button;
-                        DCDButton var12 = (DCDButton)a.a(var0, var1);
-                        if (var12 != null) {
+                        DCDButton var2 = (DCDButton)a.a(var0, var1);
+                        if (var2 != null) {
                            var1 = R.id.no_participants_text;
-                           TextView var8 = (TextView)a.a(var0, var1);
-                           if (var8 != null) {
+                           TextView var3 = (TextView)a.a(var0, var1);
+                           if (var3 != null) {
                               var1 = R.id.participants;
-                              OverlappingCirclesView var7 = (OverlappingCirclesView)a.a(var0, var1);
-                              if (var7 != null) {
+                              OverlappingCirclesView var5 = (OverlappingCirclesView)a.a(var0, var1);
+                              if (var5 != null) {
                                  var1 = R.id.participants_container;
-                                 FrameLayout var9 = (FrameLayout)a.a(var0, var1);
-                                 if (var9 != null) {
+                                 FrameLayout var11 = (FrameLayout)a.a(var0, var1);
+                                 if (var11 != null) {
                                     var1 = R.id.subtitle_icon;
-                                    SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                                    if (var3 != null) {
+                                    SimpleDraweeView var13 = (SimpleDraweeView)a.a(var0, var1);
+                                    if (var13 != null) {
                                        var1 = R.id.subtitle_top_barrier;
-                                       Barrier var5 = (Barrier)a.a(var0, var1);
-                                       if (var5 != null) {
+                                       Barrier var4 = (Barrier)a.a(var0, var1);
+                                       if (var4 != null) {
                                           return new EmbeddedActivityInviteViewBinding(
-                                             var0, var4, var2, var10, var13, var6, var11, var12, var8, var7, var9, var3, var5
+                                             var0, var12, var10, var8, var9, var7, var6, var2, var3, var5, var11, var13, var4
                                           );
                                        }
                                     }

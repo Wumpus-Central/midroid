@@ -16,7 +16,7 @@ import java.util.LinkedHashMap
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import vk.u
+import vk.w
 
 public object AudioPlayerManager {
    private final val _currentPlayerSourceFlow: MutableStateFlow<com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource?>
@@ -42,7 +42,7 @@ public object AudioPlayerManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = u.a(null);
+      val var0: MutableStateFlow = w.a(null);
       _currentPlayerSourceFlow = var0;
       currentPlayerSourceFlow = var0;
    }
