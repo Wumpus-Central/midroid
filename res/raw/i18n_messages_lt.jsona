@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Atidaryti naudotojo veiksmų meniu",
   "USER_PROFILE_MEMBER_SINCE": "Narys (-ė) nuo",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord narys (-ė) nuo",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {{count} bendras draugas} few {{count} bendri draugai} other {{count} bendrų draugų}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {{count} bendras serveris} few {{count} bendri serveriai} other {{count} bendrų serverių}}",
   "USER_PROFILE_MOD_ACTIONS": "Moderatorių veiksmai",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Saulėlydis",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Chromo švytėjimas",

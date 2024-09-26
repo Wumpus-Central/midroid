@@ -2095,8 +2095,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Open User Action menu",
   "USER_PROFILE_MEMBER_SINCE": "Member Since",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord Member Since",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 Mutual Friend} other {{count} Mutual Friends}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 Mutual Server} other {{count} Mutual Servers}}",
   "USER_PROFILE_MOD_ACTIONS": "Moderator Actions",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Sunset",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Chroma Glow",

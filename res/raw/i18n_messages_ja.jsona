@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "ユーザー操作メニューを開く",
   "USER_PROFILE_MEMBER_SINCE": "メンバーになった日",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discordメンバーになった日",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1人の共通のフレンド} other {{count}人の共通のフレンド}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1件の共通のサーバー} other {{count}件の共通のサーバー}}",
   "USER_PROFILE_MOD_ACTIONS": "モデレーターアクション",
   "CLIENT_THEMES_GRADIENT_SUNSET": "サンセット",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "クロマグロー",

@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Åpne menyen Brukerhandlinger",
   "USER_PROFILE_MEMBER_SINCE": "Medlem siden",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord-medlem siden",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 felles venn} other {{count} felles venner}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 felles server} other {{count} felles servere}}",
   "USER_PROFILE_MOD_ACTIONS": "Moderatorhandlinger",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Solnedgang",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Kromatisk glød",

@@ -2105,8 +2105,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Открыть меню действий пользователя",
   "USER_PROFILE_MEMBER_SINCE": "В числе участников с",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "В числе участников Discord с",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 общий друг} few {{count} общих друга} other {{count} общих друзей}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 общий сервер} few {{count} общих сервера} other {{count} общих серверов}}",
   "USER_PROFILE_MOD_ACTIONS": "Действия модератора",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Закат",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Интенсивное сияние",

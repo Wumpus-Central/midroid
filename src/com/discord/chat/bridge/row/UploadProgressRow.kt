@@ -132,11 +132,11 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
          var var7: ChangeType;
          var var10: Any;
          if (var9.y()) {
-            var2 = var9.k(var8, 0);
+            var3 = var9.k(var8, 0);
             var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
             var6 = var9.m(var8, 2, Message.$serializer.INSTANCE, null) as Message;
             var10 = var9.t(var8, 3);
-            var3 = 15;
+            var2 = 15;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -173,13 +173,10 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
                   var4 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var9.b(var8);
-         return new UploadProgressRow(var3, var2, var7, var6, (java.lang.String)var10, null);
+         return new UploadProgressRow(var2, var3, var7, var6, (java.lang.String)var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgressRow) {

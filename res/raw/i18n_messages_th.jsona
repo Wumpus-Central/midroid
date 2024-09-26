@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "เปิดเมนูการดำเนินการสำหรับผู้ใช้",
   "USER_PROFILE_MEMBER_SINCE": "เป็นสมาชิกตั้งแต่",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "เป็นสมาชิก Discord ตั้งแต่",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {เพื่อนร่วมกัน 1 คน} other {{count} เพื่อนร่วมกัน}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {เซิร์ฟเวอร์ร่วมกัน 1 เซิร์ฟเวอร์} other {{count} เซิร์ฟเวอร์ร่วมกัน}}",
   "USER_PROFILE_MOD_ACTIONS": "การดำเนินการของผู้ดูแล",
   "CLIENT_THEMES_GRADIENT_SUNSET": "อาทิตย์ตก",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "โครมาโกลว์",

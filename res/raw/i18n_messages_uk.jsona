@@ -2098,8 +2098,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Відкрити меню дій користувача",
   "USER_PROFILE_MEMBER_SINCE": "У числі учасників з",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "У числі учасників Discord з",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 спільний друг} few {{count} спільних друга} other {{count} спільних друзів}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 спільний сервер} few {{count} спільних сервера} other {{count} спільних серверів}}",
   "USER_PROFILE_MOD_ACTIONS": "Дії модератора",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Захід сонця",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Інтенсивне сяйво",

@@ -117,10 +117,10 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          var var6: java.lang.String;
          var var9: StructurableText;
          if (var8.y()) {
-            var2 = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var9 = var8.m(var7, 2, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var3 = 7;
+            var2 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -151,13 +151,10 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
                   var4 = false;
                }
             }
-
-            var2 = var3;
-            var3 = var2;
          }
 
          var8.b(var7);
-         return new TextDisplayComponent(var3, var2, var6, var9, null);
+         return new TextDisplayComponent(var2, var3, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TextDisplayComponent) {

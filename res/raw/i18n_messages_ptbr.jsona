@@ -2101,8 +2101,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Abrir menu Ações de usuário",
   "USER_PROFILE_MEMBER_SINCE": "Membro desde",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Membro Discord desde",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 amigo mútuo} other {{count} amigos mútuos}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 servidor mútuo} other {{count} servidores mútuos}}",
   "USER_PROFILE_MOD_ACTIONS": "Ações de moderador",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Pôr do sol",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Brilho cromático",

@@ -2103,8 +2103,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Kullanıcı Eylem Menüsünü Aç",
   "USER_PROFILE_MEMBER_SINCE": "Şu Tarihten Beri Üye:",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Şu Tarihten Beri Discord Üyesi:",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 Ortak Arkadaş} other {{count} Ortak Arkadaş}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 Ortak Sunucu} other {{count} Ortak Sunucu}}",
   "USER_PROFILE_MOD_ACTIONS": "Moderatör Eylemleri",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Günbatımı",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Lacivert Geçişler",

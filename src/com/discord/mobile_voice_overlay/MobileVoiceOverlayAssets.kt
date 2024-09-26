@@ -282,6 +282,7 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
          var var2: Int = 0;
          var var6: java.lang.String;
          var var7: java.lang.String;
+         var var10: java.lang.String;
          var var11: java.lang.String;
          var var12: java.lang.String;
          var var13: java.lang.String;
@@ -290,22 +291,20 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
          val var16: java.lang.String;
          val var22: java.lang.String;
          var var26: java.lang.String;
-         var var28: java.lang.String;
          if (var5) {
             var15 = var21.t(var20, 0);
-            var14 = var21.t(var20, 1);
-            var11 = var21.t(var20, 2);
-            var12 = var21.t(var20, 3);
-            var16 = var21.t(var20, 4);
-            var28 = var21.t(var20, 5);
+            var10 = var21.t(var20, 1);
+            var12 = var21.t(var20, 2);
+            var11 = var21.t(var20, 3);
+            var14 = var21.t(var20, 4);
+            var13 = var21.t(var20, 5);
             var26 = var21.t(var20, 6);
             var7 = var21.t(var20, 7);
             val var9: java.lang.String = var21.t(var20, 8);
             var6 = var21.t(var20, 9);
             var22 = var21.t(var20, 10);
             var2 = 2047;
-            var13 = var28;
-            var28 = var26;
+            var16 = var26;
             var26 = var9;
          } else {
             var15 = null;
@@ -313,7 +312,7 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
             var13 = null;
             var12 = null;
             var11 = null;
-            var28 = null;
+            var10 = null;
             var var27: java.lang.String = null;
             var26 = null;
             var7 = null;
@@ -348,7 +347,7 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
                      var2 |= 16;
                      break;
                   case 5:
-                     var28 = var21.t(var20, 5);
+                     var10 = var21.t(var20, 5);
                      var2 |= 32;
                      break;
                   case 6:
@@ -379,16 +378,16 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
             var22 = var14;
             var6 = var13;
             var7 = var12;
-            var28 = var11;
-            var13 = var28;
-            var16 = var7;
-            var12 = var27;
-            var11 = var6;
-            var14 = var23;
+            var16 = var11;
+            var13 = var10;
+            var14 = var7;
+            var11 = var27;
+            var12 = var6;
+            var10 = var23;
          }
 
          var21.b(var20);
-         return new MobileVoiceOverlayAssets(var2, var15, var14, var11, var12, var16, var13, var28, var7, var26, var6, var22, null);
+         return new MobileVoiceOverlayAssets(var2, var15, var10, var12, var11, var14, var13, var16, var7, var26, var6, var22, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MobileVoiceOverlayAssets) {

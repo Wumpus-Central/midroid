@@ -101,23 +101,23 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
 
             for (Entry var15 : this.blurRectRenderNodes.entrySet()) {
                val var12: Int = (var15.getKey() as java.lang.Number).intValue();
-               val var17: RenderNode = j.a(var15.getValue());
-               val var16: BlurViewTargetHardwareAccelerated.BlurRect = var7.get(var12) as BlurViewTargetHardwareAccelerated.BlurRect;
-               if (var16 != null) {
+               val var16: RenderNode = j.a(var15.getValue());
+               val var17: BlurViewTargetHardwareAccelerated.BlurRect = var7.get(var12) as BlurViewTargetHardwareAccelerated.BlurRect;
+               if (var17 != null) {
                   val var2: Float = this.blurAmounts.getOrDefault(var12, -1.0F).floatValue();
-                  l.a(var17, k.a(Math.abs(var2), Math.abs(var2), TileMode.CLAMP));
-                  a.a(var17, 0, 0, var16.getWidth(), var16.getHeight());
-                  m.a(var17, (float)(var16.getWindowX() - this.blurViewTargetWindowOffsetX));
-                  b.a(var17, (float)(var16.getWindowY() - this.blurViewTargetWindowOffsetY));
-                  val var11: RecordingCanvas = e.a(var17);
+                  l.a(var16, k.a(Math.abs(var2), Math.abs(var2), TileMode.CLAMP));
+                  a.a(var16, 0, 0, var17.getWidth(), var17.getHeight());
+                  m.a(var16, (float)(var17.getWindowX() - this.blurViewTargetWindowOffsetX));
+                  b.a(var16, (float)(var17.getWindowY() - this.blurViewTargetWindowOffsetY));
+                  val var11: RecordingCanvas = e.a(var16);
                   f.a(
                      var11,
-                     -((float)(var16.getWindowX() - this.blurViewTargetWindowOffsetX)),
-                     -((float)(var16.getWindowY() - this.blurViewTargetWindowOffsetY))
+                     -((float)(var17.getWindowX() - this.blurViewTargetWindowOffsetX)),
+                     -((float)(var17.getWindowY() - this.blurViewTargetWindowOffsetY))
                   );
                   g.a(var11, this.blurContentRenderNode);
-                  h.a(var17);
-                  i.a(var1, var17);
+                  h.a(var16);
+                  i.a(var1, var16);
                }
             }
 

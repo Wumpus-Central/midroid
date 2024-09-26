@@ -161,8 +161,8 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: b2 = b2.a;
-         return new KSerializer[]{UserId.$serializer.INSTANCE, a.u(b2.a), a.u(var2), a.u(var2)};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{UserId.$serializer.INSTANCE, a.u(b2.a), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): DirectReplyUser {

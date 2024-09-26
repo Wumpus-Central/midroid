@@ -183,19 +183,19 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
          val var5: Boolean = var12.y();
          var var9: java.util.List = null;
          var var2: Int;
-         var var6: Any;
-         var var7: java.util.List;
+         var var6: java.util.List;
+         var var7: Any;
          var var8: JsonObject;
          var var14: java.util.List;
          if (var5) {
             var9 = var12.m(var11, 0, var10[0], null) as java.util.List;
             var8 = var12.v(var11, 1, gl.q.a, null) as JsonObject;
-            var7 = var12.m(var11, 2, var10[2], null) as java.util.List;
+            var6 = var12.m(var11, 2, var10[2], null) as java.util.List;
             val var13: Poll = var12.v(var11, 3, Poll.$serializer.INSTANCE, null) as Poll;
-            val var15: java.util.List = var12.m(var11, 4, var10[4], null) as java.util.List;
+            val var17: java.util.List = var12.m(var11, 4, var10[4], null) as java.util.List;
             var2 = 31;
-            var6 = var13;
-            var14 = var15;
+            var7 = var13;
+            var14 = var17;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -237,10 +237,13 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
                   var3 = false;
                }
             }
+
+            var7 = var6;
+            var6 = (java.util.List)var7;
          }
 
          var12.b(var11);
-         return new NotificationMessage(var2, var9, var8, var7, (Poll)var6, var14, null);
+         return new NotificationMessage(var2, var9, var8, var6, (Poll)var7, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NotificationMessage) {

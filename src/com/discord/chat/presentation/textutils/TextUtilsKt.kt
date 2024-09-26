@@ -824,16 +824,16 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                        q.h(var1, "$this$changeTextSizeSp");
                                        q.h(var2, "updatedRC");
                                        var1 = this.$builder;
-                                       val var5: ForegroundColorSpan = this.$fontColorSpan;
-                                       val var6: ContentNode = this.$contentNode;
+                                       val var6: ForegroundColorSpan = this.$fontColorSpan;
+                                       val var5: ContentNode = this.$contentNode;
                                        val var4: Boolean = this.$isLastContentNode;
                                        val var3: Int = this.$builder.length();
-                                       TextUtilsKt.access$appendToExistingBuilder((var6 as SubtextContentNode).getContent(), var2, var1);
+                                       TextUtilsKt.access$appendToExistingBuilder((var5 as SubtextContentNode).getContent(), var2, var1);
                                        if (!var4) {
                                           SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
                                        }
 
-                                       val var8: Any = new Object[]{var5}[0];
+                                       val var8: Any = new Object[]{var6}[0];
                                        if (var8 != null) {
                                           var1.setSpan(var8, var3, var1.length(), 13107233);
                                        }

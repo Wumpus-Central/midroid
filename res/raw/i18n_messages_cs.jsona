@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Otevření nabídky Akce uživatele",
   "USER_PROFILE_MEMBER_SINCE": "Členem od",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Členem Discordu od",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 společný přítel} few {{count} společní přátelé} other {{count} společných přátel}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 společný server} few {{count} společné servery} other {{count} společných serverů}}",
   "USER_PROFILE_MOD_ACTIONS": "Akce moderátora",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Západ slunce",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Chromatická záře",

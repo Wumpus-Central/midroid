@@ -74,20 +74,20 @@ public data class TimestampMessageAccessory(messageId: MessageId, timestamp: Str
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = this.timestamp;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var5: java.lang.String = this.timestamp;
       val var1: Int = this.textColor;
-      val var3: DiscordFont = this.discordFont;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TimestampMessageAccessory(messageId=");
-      var5.append(var2);
-      var5.append(", timestamp=");
-      var5.append(var4);
-      var5.append(", textColor=");
-      var5.append(var1);
-      var5.append(", discordFont=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var2: DiscordFont = this.discordFont;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TimestampMessageAccessory(messageId=");
+      var4.append(var3);
+      var4.append(", timestamp=");
+      var4.append(var5);
+      var4.append(", textColor=");
+      var4.append(var1);
+      var4.append(", discordFont=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 }

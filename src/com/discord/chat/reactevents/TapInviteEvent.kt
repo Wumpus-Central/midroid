@@ -134,8 +134,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: h = h.a;
-         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var1)};
+         val var3: h = h.a;
+         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): TapInviteEvent {
@@ -149,11 +149,11 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var var11: java.lang.Boolean;
          if (var9.y()) {
             var7 = var9.t(var8, 0);
-            var3 = var9.k(var8, 1);
+            var2 = var9.k(var8, 1);
             val var10: h = h.a;
             var6 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
             var11 = var9.v(var8, 3, var10, null) as java.lang.Boolean;
-            var2 = 15;
+            var3 = 15;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -190,10 +190,13 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
                   var4 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var9.b(var8);
-         return new TapInviteEvent(var2, var7, var3, var6, var11, null);
+         return new TapInviteEvent(var3, var7, var2, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInviteEvent) {

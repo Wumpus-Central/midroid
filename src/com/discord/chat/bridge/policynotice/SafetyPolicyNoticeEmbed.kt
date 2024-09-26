@@ -183,8 +183,8 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          var var17: java.lang.String;
          if (var13.y()) {
             var17 = var13.t(var12, 0);
-            val var10: java.lang.String = var13.t(var12, 1);
-            var8 = var13.t(var12, 2);
+            var8 = var13.t(var12, 1);
+            val var10: java.lang.String = var13.t(var12, 2);
             var5 = var13.t(var12, 3);
             var6 = var13.t(var12, 4);
             var14 = var13.t(var12, 5);
@@ -236,14 +236,14 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                }
             }
 
+            var8 = var15;
             var14 = var8;
             var5 = var17;
-            var8 = var5;
-            var17 = var15;
+            var17 = var5;
          }
 
          var13.b(var12);
-         return new SafetyPolicyNoticeEmbed(var2, var9, var17, var8, var5, var6, var14, null);
+         return new SafetyPolicyNoticeEmbed(var2, var9, var8, var17, var5, var6, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {

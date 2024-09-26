@@ -135,9 +135,9 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
             }
 
             val var6: java.lang.String = var8.v(var7, 1, b2.a, null) as java.lang.String;
-            var2 = 3;
             var5 = var10;
             var11 = var6;
+            var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;

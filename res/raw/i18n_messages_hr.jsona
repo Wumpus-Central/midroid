@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Otvori izbornik Radnje korisnika",
   "USER_PROFILE_MEMBER_SINCE": "Član od",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Član Discorda od",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 zajednički prijatelj} few {{count} zajednička prijatelja} other {{count} zajedničkih prijatelja}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 zajednički server} few {{count} zajednička servera} other {{count} zajedničkih servera}}",
   "USER_PROFILE_MOD_ACTIONS": "Radnje moderatora",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Zalazak",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Chroma sjaj",

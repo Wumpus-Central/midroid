@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "사용자 활동 메뉴 열기",
   "USER_PROFILE_MEMBER_SINCE": "가입 시기:",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord 가입 시기:",
-  "MUTUAL_FRIENDS_COUNT": "같이 아는 친구 {count, plural, =1 {1명} other {{count}명}}",
-  "MUTUAL_GUILDS_COUNT": "같이 있는 서버 {count, plural, =1 {1개} other {{count}개}}",
   "USER_PROFILE_MOD_ACTIONS": "관리자 활동",
   "CLIENT_THEMES_GRADIENT_SUNSET": "일몰",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "크로마 글로우",

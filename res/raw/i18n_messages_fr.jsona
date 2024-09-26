@@ -2099,8 +2099,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Ouvrir le menu Actions de l'utilisateur",
   "USER_PROFILE_MEMBER_SINCE": "Membre depuis",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Membre Discord depuis",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 ami(e) en commun} other {{count} amis en commun}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 serveur en commun} other {{count} serveurs en commun}}",
   "USER_PROFILE_MOD_ACTIONS": "Actions de modérateur",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Coucher de soleil",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Lueur chromée",

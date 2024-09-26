@@ -377,15 +377,15 @@ public data class Sticker(id: StickerId = ...,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: b2 = b2.a;
+         val var1: b2 = b2.a;
          return new KSerializer[]{
             StickerId.$serializer.INSTANCE,
             b2.a,
             a.u(x0.a),
             a.u(GuildId.$serializer.INSTANCE),
-            var2,
+            var1,
             StickerFormatType.Serializer.INSTANCE,
-            var2,
+            var1,
             StickerType.Serializer.INSTANCE,
             a.u(h.a)
          };
@@ -400,31 +400,30 @@ public data class Sticker(id: StickerId = ...,
          var var5: Byte = 6;
          var var9: StickerId = null;
          var var2: Int;
+         var var11: Any;
          var var12: Any;
-         var var13: Any;
+         var var13: StickerId;
          var var14: Any;
          var var15: Any;
-         val var16: java.lang.Boolean;
-         val var17: Any;
-         val var18: StickerId;
-         var var25: Any;
-         var var26: StickerType;
+         val var16: Any;
+         val var17: StickerType;
+         val var18: Any;
+         var var25: java.lang.Boolean;
          if (var7) {
-            val var11: StickerId = var20.m(var19, 0, StickerId.$serializer.INSTANCE, null) as StickerId;
+            var13 = var20.m(var19, 0, StickerId.$serializer.INSTANCE, null) as StickerId;
             var15 = var20.t(var19, 1);
-            var17 = var20.v(var19, 2, x0.a, null) as java.lang.Long;
+            var14 = var20.v(var19, 2, x0.a, null) as java.lang.Long;
             var12 = var20.v(var19, 3, GuildId.$serializer.INSTANCE, null) as GuildId;
-            var14 = var20.t(var19, 4);
-            var25 = var20.m(var19, 5, StickerFormatType.Serializer.INSTANCE, null) as StickerFormatType;
+            var11 = var20.t(var19, 4);
+            val var10: StickerFormatType = var20.m(var19, 5, StickerFormatType.Serializer.INSTANCE, null) as StickerFormatType;
             val var8: java.lang.String = var20.t(var19, 6);
             val var21: StickerType = var20.m(var19, 7, StickerType.Serializer.INSTANCE, null) as StickerType;
             val var24: java.lang.Boolean = var20.v(var19, 8, h.a, null) as java.lang.Boolean;
             var2 = 511;
-            var18 = var11;
-            var13 = var25;
-            var25 = var8;
-            var26 = var21;
-            var16 = var24;
+            var16 = var10;
+            var18 = var8;
+            var17 = var21;
+            var25 = var24;
          } else {
             var var4: Boolean = true;
             var2 = 0;
@@ -434,7 +433,7 @@ public data class Sticker(id: StickerId = ...,
             var var23: Any = null;
             var var22: Any = null;
             var12 = null;
-            var26 = null;
+            var11 = null;
             var25 = null;
 
             while (var4) {
@@ -463,7 +462,7 @@ public data class Sticker(id: StickerId = ...,
                         var3 = 7;
                         continue;
                      case 4:
-                        var26 = var20.t(var19, 4);
+                        var11 = var20.t(var19, 4);
                         var2 |= 16;
                         continue;
                      case 5:
@@ -493,26 +492,27 @@ public data class Sticker(id: StickerId = ...,
                var3 = 7;
             }
 
-            var16 = (java.lang.Boolean)var15;
-            var26 = (StickerType)var14;
-            var14 = var26;
-            var17 = var22;
+            var18 = var25;
+            var25 = (java.lang.Boolean)var15;
+            var17 = (StickerType)var14;
+            var16 = var13;
+            var14 = var22;
             var15 = var23;
-            var18 = var9;
+            var13 = var9;
          }
 
          var20.b(var19);
          return new Sticker(
             var2,
-            var18,
+            var13,
             (java.lang.String)var15,
-            (java.lang.Long)var17,
+            (java.lang.Long)var14,
             (GuildId)var12,
-            (java.lang.String)var14,
-            (StickerFormatType)var13,
-            (java.lang.String)var25,
-            var26,
-            var16,
+            (java.lang.String)var11,
+            (StickerFormatType)var16,
+            (java.lang.String)var18,
+            var17,
+            var25,
             null,
             null
          );

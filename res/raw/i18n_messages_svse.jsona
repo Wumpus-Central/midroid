@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Öppna menyn för användaråtgärder",
   "USER_PROFILE_MEMBER_SINCE": "Medlem sedan",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discordmedlem sedan",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {en gemensam vän} other {{count} gemensamma vänner}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {en gemensam server} other {{count} gemensamma servrar}}",
   "USER_PROFILE_MOD_ACTIONS": "Moderatoråtgärder",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Solnedgång",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Djuplila",

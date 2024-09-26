@@ -127,28 +127,26 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackProgressUpdated {
          q.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.c(var12);
-         val var11: Boolean = var13.y();
-         var var14: MediaPlayerPlaybackSource = null;
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
+         val var9: Boolean = var11.y();
+         var var12: MediaPlayerPlaybackSource = null;
          var var2: Int;
+         var var5: Long;
          var var7: Long;
-         var var15: Long;
-         if (var11) {
-            var14 = var13.v(var12, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
-            var15 = var13.h(var12, 1);
-            val var9: Long = var13.h(var12, 2);
+         if (var9) {
+            var12 = var11.v(var10, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
+            var7 = var11.h(var10, 1);
+            var5 = var11.h(var10, 2);
             var2 = 7;
-            var7 = var15;
-            var15 = var9;
          } else {
             var7 = 0L;
             var var3: Boolean = true;
             var2 = 0;
-            var15 = 0L;
+            var5 = 0L;
 
             while (var3) {
-               val var4: Int = var13.x(var12);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -156,14 +154,14 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
                            throw new n(var4);
                         }
 
-                        var15 = var13.h(var12, 2);
+                        var5 = var11.h(var10, 2);
                         var2 |= 4;
                      } else {
-                        var7 = var13.h(var12, 1);
+                        var7 = var11.h(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var14 = var13.v(var12, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var14) as MediaPlayerPlaybackSource;
+                     var12 = var11.v(var10, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var12) as MediaPlayerPlaybackSource;
                      var2 |= 1;
                   }
                } else {
@@ -172,8 +170,8 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
             }
          }
 
-         var13.b(var12);
-         return new MediaPlayerPlaybackProgressUpdated(var2, var14, var7, var15, null);
+         var11.b(var10);
+         return new MediaPlayerPlaybackProgressUpdated(var2, var12, var7, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackProgressUpdated) {

@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Deschide meniul Acțiuni pentru utilizator",
   "USER_PROFILE_MEMBER_SINCE": "Membru începând cu",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Membru Discord începând cu",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 prieten comun} other {{count} prieteni comuni}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 server comun} other {{count} servere comune}}",
   "USER_PROFILE_MOD_ACTIONS": "Acțiuni moderatori",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Apus",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Strălucire cromatică",

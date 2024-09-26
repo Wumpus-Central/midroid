@@ -788,6 +788,12 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       }
 
 
+   public open val customStatusBubbleBg: Int
+      public open get() {
+         return (this.customStatusBubbleBg$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
    public open val deprecatedCardBg: Int
       public open get() {
          return (this.deprecatedCardBg$delegate.getValue() as java.lang.Number).intValue();
@@ -3798,6 +3804,20 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
 
          public final Integer invoke() {
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.teal_400, this.$theme);
+         }
+      });
+      this.customStatusBubbleBg$delegate = l.b(new Function0(var1, var2) {
+         final Resources $resources;
+         final Theme $theme;
+
+         {
+            super(0);
+            this.$resources = var1;
+            this.$theme = var2;
+         }
+
+         public final Integer invoke() {
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_800, this.$theme);
          }
       });
       this.deprecatedCardBg$delegate = l.b(new Function0(var1, var2) {

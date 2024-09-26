@@ -112,17 +112,18 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          val var9: c = var1.c(var8);
          var var2: Int;
          var var5: Boolean;
-         val var7: java.lang.String;
-         val var10: java.lang.String;
+         var var6: java.lang.String;
+         var var11: java.lang.String;
          if (var9.y()) {
-            var10 = var9.t(var8, 0);
-            val var6: java.lang.String = var9.t(var8, 1);
+            val var10: java.lang.String = var9.t(var8, 0);
+            val var7: java.lang.String = var9.t(var8, 1);
             var5 = var9.s(var8, 2);
             var2 = 7;
-            var7 = var6;
+            var6 = var10;
+            var11 = var7;
          } else {
-            var var12: java.lang.String = null;
-            var var11: java.lang.String = null;
+            var6 = null;
+            var11 = null;
             var var3: Boolean = true;
             var5 = false;
             var2 = 0;
@@ -143,20 +144,17 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var9.t(var8, 0);
+                     var6 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var7 = var11;
-            var10 = var12;
          }
 
          var9.b(var8);
-         return new CodeBlockContentNode(var2, var10, var7, var5, null);
+         return new CodeBlockContentNode(var2, var6, var11, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CodeBlockContentNode) {

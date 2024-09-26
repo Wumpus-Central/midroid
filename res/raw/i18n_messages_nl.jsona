@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Menu met gebruikersacties openen",
   "USER_PROFILE_MEMBER_SINCE": "Lid sinds",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord-lid sinds",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 gemeenschappelijke vriend(in)} other {{count} gemeenschappelijke vriend(inn)en}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 gemeenschappelijke server} other {{count} gemeenschappelijke servers}}",
   "USER_PROFILE_MOD_ACTIONS": "Moderatoracties",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Zonsondergang",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Chromagloed",

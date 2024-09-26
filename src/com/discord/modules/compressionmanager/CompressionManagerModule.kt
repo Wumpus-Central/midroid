@@ -65,19 +65,19 @@ public class CompressionManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun enableZlibStreamSupport(socketId: Int) {
-      val var5: java.util.Map = this.zlibInflaters;
-      val var4: Int = var1;
-      var var3: WebSocketModule = (WebSocketModule)var5.get(var4);
-      var var2: Any = var3;
+      val var4: java.util.Map = this.zlibInflaters;
+      val var5: Int = var1;
+      var var3: Any = var4.get(var5);
+      var var2: WebSocketModule = (WebSocketModule)var3;
       if (var3 == null) {
          var2 = new Inflater();
-         var5.put(var4, var2);
+         var4.put(var5, var2);
       }
 
-      var2 = var2 as Inflater;
-      var3 = this.getWebSocketModule();
-      if (var3 != null) {
-         var3.setContentHandler(var1, new CompressionManagerModule.ZlibContentHandler((Inflater)var2));
+      var3 = var2 as Inflater;
+      var2 = this.getWebSocketModule();
+      if (var2 != null) {
+         var2.setContentHandler(var1, new CompressionManagerModule.ZlibContentHandler((Inflater)var3));
       }
    }
 

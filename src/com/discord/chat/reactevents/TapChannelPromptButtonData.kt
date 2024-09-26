@@ -159,8 +159,8 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
                }
             }
 
-            var10 = var12;
             var12 = var11;
+            var10 = var12;
          }
 
          var9.b(var8);

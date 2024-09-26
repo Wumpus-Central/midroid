@@ -218,42 +218,43 @@ public data class UnfurledMediaItem(url: String,
          var var4: Int;
          val var5: Int;
          var var7: Int;
-         var var8: Any;
          var var9: Any;
          var var10: Any;
          var var11: Any;
+         val var12: Any;
          val var16: ContentScanMetadata;
          if (var15.y()) {
-            var8 = var15.t(var14, 0);
-            var9 = var15.t(var14, 1);
-            var4 = var15.k(var14, 2);
+            var10 = var15.t(var14, 0);
+            var12 = var15.t(var14, 1);
+            var5 = var15.k(var14, 2);
             val var2: Int = var15.k(var14, 3);
             var11 = var15.t(var14, 4);
-            var10 = var15.v(var14, 5, b2.a, null) as java.lang.String;
+            val var8: java.lang.String = var15.v(var14, 5, b2.a, null) as java.lang.String;
             var7 = var15.v(var14, 6, n0.a, null) as Int;
             var16 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, null) as ContentScanMetadata;
-            var3 = 255;
-            var5 = var2;
+            var4 = 255;
+            var3 = var2;
+            var9 = var8;
          } else {
-            var var21: Boolean = true;
+            var var22: Boolean = true;
             var4 = 0;
             var var18: Int = 0;
             var11 = null;
             var10 = null;
-            var8 = null;
+            var var25: Any = null;
             var7 = null;
             var var17: Any = null;
             var9 = null;
             var3 = 0;
 
-            while (var21) {
+            while (var22) {
                val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
-                     var21 = false;
+                     var22 = false;
                      break;
                   case 0:
-                     var8 = var15.t(var14, 0);
+                     var25 = var15.t(var14, 0);
                      var18 |= 1;
                      break;
                   case 1:
@@ -289,19 +290,19 @@ public data class UnfurledMediaItem(url: String,
                }
             }
 
-            var9 = var7;
             var16 = (ContentScanMetadata)var11;
             var7 = (Integer)var10;
-            var10 = var9;
             var11 = var17;
-            var5 = var4;
-            var4 = var3;
-            var3 = var18;
+            var3 = var4;
+            var5 = var3;
+            var12 = var7;
+            var10 = var25;
+            var4 = var18;
          }
 
          var15.b(var14);
          return new UnfurledMediaItem(
-            var3, (java.lang.String)var8, (java.lang.String)var9, var4, var5, (java.lang.String)var11, (java.lang.String)var10, var7, var16, null
+            var4, (java.lang.String)var10, (java.lang.String)var12, var5, var3, (java.lang.String)var11, (java.lang.String)var9, var7, var16, null
          );
       }
 

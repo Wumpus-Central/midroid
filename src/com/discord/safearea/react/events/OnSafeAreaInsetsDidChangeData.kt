@@ -155,10 +155,10 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
          var var9: Int;
          if (var13.y()) {
             var6 = var13.G(var12, 0);
-            var5 = var13.G(var12, 1);
-            var4 = var13.G(var12, 2);
-            var3 = var13.G(var12, 3);
-            var2 = var13.G(var12, 4);
+            var4 = var13.G(var12, 1);
+            var5 = var13.G(var12, 2);
+            var2 = var13.G(var12, 3);
+            var3 = var13.G(var12, 4);
             var9 = 31;
          } else {
             var6 = 0.0F;
@@ -203,14 +203,14 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
                }
             }
 
-            var4 = var3;
-            var2 = var4;
-            var3 = var5;
-            var5 = var2;
+            var3 = var4;
+            var2 = var5;
+            var5 = var3;
+            var4 = var2;
          }
 
          var13.b(var12);
-         return new OnSafeAreaInsetsDidChangeData(var9, var6, var5, var4, var3, var2, null);
+         return new OnSafeAreaInsetsDidChangeData(var9, var6, var4, var5, var2, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSafeAreaInsetsDidChangeData) {

@@ -121,22 +121,22 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
          var var3: Int;
          var var4: Int;
          var var5: Int;
-         val var7: Int;
+         var var6: Int;
          if (var10.y()) {
-            var4 = var10.k(var9, 0);
+            var6 = var10.k(var9, 0);
             var5 = var10.k(var9, 1);
             var3 = var10.k(var9, 2);
             var2 = var10.G(var9, 3);
-            var7 = 15;
+            var4 = 15;
          } else {
             var2 = 0.0F;
-            var var14: Boolean = true;
-            var var6: Int = 0;
+            var var7: Boolean = true;
+            var6 = 0;
             var5 = 0;
             var4 = 0;
             var3 = 0;
 
-            while (var14) {
+            while (var7) {
                val var8: Int = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -161,18 +161,17 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                      var3 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var7 = false;
                }
             }
 
-            var7 = var3;
+            var4 = var3;
             var3 = var5;
             var5 = var4;
-            var4 = var6;
          }
 
          var10.b(var9);
-         return new GradientColor(var7, var4, var5, var3, var2, null);
+         return new GradientColor(var4, var6, var5, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GradientColor) {

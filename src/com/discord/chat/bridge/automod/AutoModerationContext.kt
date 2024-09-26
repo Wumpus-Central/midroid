@@ -252,42 +252,41 @@ public data class AutoModerationContext(headerText: String,
          var var3: Byte = 7;
          var var8: java.lang.String = null;
          var var2: Int;
+         var var11: Any;
          var var12: Any;
-         var var13: FlaggedMessageEmbed;
+         val var13: java.lang.String;
          var var14: Any;
-         val var15: java.lang.String;
+         val var15: Any;
          val var16: Any;
          val var17: Any;
          var var25: AutoModerationNotification;
-         var var27: Any;
-         var var29: Any;
+         var var27: FlaggedMessageEmbed;
          if (var6) {
-            var27 = var19.t(var18, 0);
-            var17 = var19.t(var18, 1);
+            val var10: java.lang.String = var19.t(var18, 0);
+            var11 = var19.t(var18, 1);
             val var20: b2 = b2.a;
-            var16 = var19.v(var18, 2, b2.a, null) as java.lang.String;
-            var29 = var19.v(var18, 3, var20, null) as java.lang.String;
-            var12 = var19.v(var18, 4, var20, null) as java.lang.String;
+            var17 = var19.v(var18, 2, b2.a, null) as java.lang.String;
+            var12 = var19.v(var18, 3, var20, null) as java.lang.String;
+            var16 = var19.v(var18, 4, var20, null) as java.lang.String;
             val var9: java.lang.String = var19.t(var18, 5);
             val var7: java.lang.String = var19.t(var18, 6);
             val var21: FlaggedMessageEmbed = var19.m(var18, 7, FlaggedMessageEmbed.$serializer.INSTANCE, null) as FlaggedMessageEmbed;
             val var24: AutoModerationNotification = var19.v(var18, 8, AutoModerationNotification.$serializer.INSTANCE, null) as AutoModerationNotification;
             var2 = 511;
-            var15 = (java.lang.String)var27;
-            var27 = var29;
-            var29 = var9;
+            var13 = var10;
+            var15 = var9;
             var14 = var7;
-            var13 = var21;
+            var27 = var21;
             var25 = var24;
          } else {
             var var4: Boolean = true;
             var2 = 0;
             var14 = null;
-            var13 = null;
+            var var31: FlaggedMessageEmbed = null;
             var12 = null;
             var var23: Any = null;
             var var22: Any = null;
-            var29 = null;
+            var11 = null;
             var27 = null;
             var25 = null;
 
@@ -310,7 +309,7 @@ public data class AutoModerationContext(headerText: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var29 = var19.v(var18, 3, b2.a, var29) as java.lang.String;
+                     var11 = var19.v(var18, 3, b2.a, var11) as java.lang.String;
                      var2 |= 8;
                      var3 = 7;
                      continue;
@@ -327,7 +326,7 @@ public data class AutoModerationContext(headerText: String,
                      var2 |= 64;
                      continue;
                   case 7:
-                     var13 = var19.m(var18, var3, FlaggedMessageEmbed.$serializer.INSTANCE, var13) as FlaggedMessageEmbed;
+                     var31 = var19.m(var18, var3, FlaggedMessageEmbed.$serializer.INSTANCE, var31) as FlaggedMessageEmbed;
                      var2 |= 128;
                      continue;
                   case 8:
@@ -341,26 +340,28 @@ public data class AutoModerationContext(headerText: String,
                var3 = 7;
             }
 
+            var15 = var27;
             var25 = (AutoModerationNotification)var14;
+            var27 = var31;
             var14 = var25;
-            var29 = var27;
-            var27 = var29;
-            var16 = var22;
-            var17 = var23;
-            var15 = var8;
+            var16 = var12;
+            var12 = var11;
+            var17 = var22;
+            var11 = var23;
+            var13 = var8;
          }
 
          var19.b(var18);
          return new AutoModerationContext(
             var2,
-            var15,
-            (java.lang.String)var17,
-            (java.lang.String)var16,
-            (java.lang.String)var27,
-            (java.lang.String)var12,
-            (java.lang.String)var29,
-            (java.lang.String)var14,
             var13,
+            (java.lang.String)var11,
+            (java.lang.String)var17,
+            (java.lang.String)var12,
+            (java.lang.String)var16,
+            (java.lang.String)var15,
+            (java.lang.String)var14,
+            var27,
             var25,
             null
          );

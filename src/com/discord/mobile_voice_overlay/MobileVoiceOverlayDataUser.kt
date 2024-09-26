@@ -151,9 +151,9 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
          if (var9.y()) {
             var7 = var9.m(var8, 0, UserId.$serializer.INSTANCE, null) as UserId;
             var10 = var9.v(var8, 1, b2.a, null) as java.lang.String;
-            var4 = var9.s(var8, 2);
+            var3 = var9.s(var8, 2);
             var2 = var9.k(var8, 3);
-            var3 = 15;
+            var4 = 15;
          } else {
             var var5: Boolean = true;
             var4 = 0;
@@ -192,12 +192,11 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
             }
 
             var2 = var4;
-            var4 = var3;
-            var3 = var2;
+            var4 = var2;
          }
 
          var9.b(var8);
-         return new MobileVoiceOverlayDataUser(var3, var7, var10, (boolean)var4, var2, null, null);
+         return new MobileVoiceOverlayDataUser(var4, var7, var10, (boolean)var3, var2, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MobileVoiceOverlayDataUser) {

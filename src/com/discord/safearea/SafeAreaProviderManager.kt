@@ -38,8 +38,8 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    }
 
    private fun handleInsetsChanged(reactContext: ThemedReactContext, safeAreaEdgeInsets: SafeAreaEdgeInsets, imeInsets: Insets?, view: SafeAreaProvider) {
-      val var8: Float = var2.getTopDp();
-      val var9: Float = var2.getBottomDp();
+      val var9: Float = var2.getTopDp();
+      val var8: Float = var2.getBottomDp();
       val var7: Float = var2.getLeftDp();
       val var6: Float = var2.getRightDp();
       val var5: Float;
@@ -49,7 +49,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
          var5 = 0.0F;
       }
 
-      val var10: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var8, var9, var7, var6, var5);
+      val var10: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var9, var8, var7, var6, var5);
       val var12: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var4);
       if (!q.c(this.dimensions, var12)) {
          this.changeData = DEFAULT_CHANGE_DATA;

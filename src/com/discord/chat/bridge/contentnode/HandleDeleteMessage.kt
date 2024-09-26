@@ -156,10 +156,10 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
-         var var6: Any;
+         val var8: Any;
          val var13: HandleDeleteMessageAuthor;
          var var15: Any;
-         var var18: java.lang.String;
+         var var17: java.lang.String;
          if (var10.y()) {
             val var11: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var12: java.lang.String;
@@ -169,17 +169,17 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                var12 = null;
             }
 
-            val var8: ChannelId = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var6 = var10.v(var9, 2, b2.a, null) as java.lang.String;
+            var8 = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var6: java.lang.String = var10.v(var9, 2, b2.a, null) as java.lang.String;
             var13 = var10.m(var9, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, null) as HandleDeleteMessageAuthor;
             var2 = 15;
-            var18 = var12;
-            var15 = var8;
+            var17 = var12;
+            var15 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var18 = null;
-            var6 = null;
+            var17 = null;
+            var var16: HandleDeleteMessageAuthor = null;
             var15 = null;
             var var14: Any = null;
 
@@ -193,7 +193,7 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                               throw new n(var4);
                            }
 
-                           var6 = var10.m(var9, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, var6) as HandleDeleteMessageAuthor;
+                           var16 = var10.m(var9, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, var16) as HandleDeleteMessageAuthor;
                            var2 |= 8;
                         } else {
                            var15 = var10.v(var9, 2, b2.a, var15) as java.lang.String;
@@ -204,18 +204,18 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                         var2 |= 2;
                      }
                   } else {
-                     val var19: MessageId;
-                     if (var18 != null) {
-                        var19 = MessageId.box-impl(var18);
-                     } else {
-                        var19 = null;
-                     }
-
-                     val var20: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var19) as MessageId;
-                     if (var20 != null) {
-                        var18 = var20.unbox-impl();
+                     val var18: MessageId;
+                     if (var17 != null) {
+                        var18 = MessageId.box-impl(var17);
                      } else {
                         var18 = null;
+                     }
+
+                     val var19: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var18) as MessageId;
+                     if (var19 != null) {
+                        var17 = var19.unbox-impl();
+                     } else {
+                        var17 = null;
                      }
 
                      var2 |= 1;
@@ -225,13 +225,12 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                }
             }
 
-            var13 = (HandleDeleteMessageAuthor)var6;
-            var6 = var15;
-            var15 = var14;
+            var8 = var14;
+            var13 = var16;
          }
 
          var10.b(var9);
-         return new HandleDeleteMessage(var2, var18, (ChannelId)var15, (java.lang.String)var6, var13, null, null);
+         return new HandleDeleteMessage(var2, var17, (ChannelId)var8, (java.lang.String)var15, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: HandleDeleteMessage) {

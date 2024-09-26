@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Felhasználói műveleti menü megnyitása",
   "USER_PROFILE_MEMBER_SINCE": "Tagság kezdete:",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord-tagság kezdete:",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 közös barát} other {{count} közös barát}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 közös szerver} other {{count} közös szerver}}",
   "USER_PROFILE_MOD_ACTIONS": "Moderátori műveletek",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Naplemente",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Ragyogó színrobbanás",

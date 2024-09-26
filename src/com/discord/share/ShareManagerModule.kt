@@ -22,10 +22,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    public open fun initialize() {
       super.initialize();
-      val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      var2.register(var1, this.shareBroadcastReceiver);
+      val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.register(var2, this.shareBroadcastReceiver);
    }
 
    public open fun invalidate() {

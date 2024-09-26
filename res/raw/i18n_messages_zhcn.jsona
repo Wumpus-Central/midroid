@@ -2105,8 +2105,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "打开用户操作菜单",
   "USER_PROFILE_MEMBER_SINCE": "成员加入时间",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord 成员加入时间",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 位共同好友} other {{count} 位共同好友}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 个共同服务器中} other {{count} 个共同服务器中}}",
   "USER_PROFILE_MOD_ACTIONS": "管理员操作",
   "CLIENT_THEMES_GRADIENT_SUNSET": "日暮",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "炫彩荧光",

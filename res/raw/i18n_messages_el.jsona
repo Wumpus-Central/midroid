@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Άνοιγμα μενού ενεργειών χρήστη",
   "USER_PROFILE_MEMBER_SINCE": "Μέλος από",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Μέλος Discord από",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 κοινός φίλος} other {{count} κοινοί φίλοι}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 κοινός διακομιστής} other {{count} κοινοί διακομιστές}}",
   "USER_PROFILE_MOD_ACTIONS": "Ενέργειες συντονιστή",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Ηλιοβασίλεμα",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Λυκόφως",

@@ -190,8 +190,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: b2 = b2.a;
-         return new KSerializer[]{x0.a, h.a, b2.a, b2.a, a.u(b2.a), a.u(var3), a.u(var3)};
+         val var1: b2 = b2.a;
+         return new KSerializer[]{x0.a, h.a, b2.a, b2.a, a.u(b2.a), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): PushNotificationMeta {

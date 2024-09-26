@@ -98,10 +98,10 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
       val var1: java.lang.Boolean = BuildConfig.logTTIMetrics;
       q.g(BuildConfig.logTTIMetrics, "logTTIMetrics");
       if (var1) {
-         val var3: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var3.register(var2, this.ttiBroadcastReceiver);
+         val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var2.register(var3, this.ttiBroadcastReceiver);
       }
    }
 

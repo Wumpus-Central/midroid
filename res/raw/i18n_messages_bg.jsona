@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Отвори менюто за потребителски действия",
   "USER_PROFILE_MEMBER_SINCE": "Член от",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Член на Discord от",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 общ приятел} other {{count} общи приятели}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 общ сървър} other {{count} общи сървъра}}",
   "USER_PROFILE_MOD_ACTIONS": "Действия на модератор",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Залез",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Хроматична светлина",

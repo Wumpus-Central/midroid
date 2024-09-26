@@ -586,13 +586,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             }
 
             public final void invoke(java.lang.Double var1, Integer var2) {
-               val var5: View = this.$holder.itemView;
-               val var6: java.lang.String = this.$part.getMessageId-3Eiw7ao();
+               val var6: View = this.$holder.itemView;
+               val var4: java.lang.String = this.$part.getMessageId-3Eiw7ao();
                val var3: Int = (this.$part as EmbedMessageAccessory).getIndex();
-               val var7: ViewResizeMode = ViewResizeMode.Fill;
-               val var4: MessageAccessoriesAdapter = this.this$0;
-               kotlin.jvm.internal.q.e(var5);
-               MessageAccessoriesAdapter.access$onMediaClicked-mdVZsaY(var4, var5, var6, "embed", var7, var1, var3, var2, null, null);
+               val var5: ViewResizeMode = ViewResizeMode.Fill;
+               val var7: MessageAccessoriesAdapter = this.this$0;
+               kotlin.jvm.internal.q.e(var6);
+               MessageAccessoriesAdapter.access$onMediaClicked-mdVZsaY(var7, var6, var4, "embed", var5, var1, var3, var2, null, null);
             }
          }, var13, var12.getPortal());
       } else if (var10 is InfoLinkMessageAccessory) {
@@ -925,8 +925,8 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             public final void invoke(int var1, MessageAccessory var2, MessagePartViewHolder var3) {
                kotlin.jvm.internal.q.h(var2, "attachment");
                kotlin.jvm.internal.q.h(var3, "attachmentViewHolder");
-               val var8: View = var3.itemView;
-               val var4: java.lang.String = var2.getMessageId-3Eiw7ao();
+               val var4: View = var3.itemView;
+               val var8: java.lang.String = var2.getMessageId-3Eiw7ao();
                val var7: java.lang.Double;
                if (var2 is ImageAttachmentMessageAccessory) {
                   var7 = null;
@@ -943,8 +943,8 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
 
                val var6: ViewResizeMode = ViewResizeMode.Cover;
                val var5: MessageAccessoriesAdapter = this.this$0;
-               kotlin.jvm.internal.q.e(var8);
-               MessageAccessoriesAdapter.access$onMediaClicked-mdVZsaY(var5, var8, var4, "attachment", var6, var7, var1, null, null, null);
+               kotlin.jvm.internal.q.e(var4);
+               MessageAccessoriesAdapter.access$onMediaClicked-mdVZsaY(var5, var4, var8, "attachment", var6, var7, var1, null, null, null);
             }
          };
          val var66: Function1;

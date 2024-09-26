@@ -113,23 +113,20 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var11: java.lang.String;
-         var var12: java.lang.String;
+         val var7: java.lang.String;
          if (var5) {
             val var6: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             if (var6 != null) {
                var10 = var6.unbox-impl();
             }
 
-            val var7: java.lang.String = var9.t(var8, 1);
+            var7 = var9.t(var8, 1);
             var2 = 3;
-            var12 = var10;
-            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var11 = null;
-            var12 = null;
+            var var11: java.lang.String = null;
+            var var12: java.lang.String = null;
 
             while (var3) {
                val var4: Int = var9.x(var8);
@@ -162,10 +159,13 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                   var3 = false;
                }
             }
+
+            var7 = var11;
+            var10 = var12;
          }
 
          var9.b(var8);
-         return new ErrorMessage(var2, var12, var11, null, null);
+         return new ErrorMessage(var2, var10, var7, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ErrorMessage) {

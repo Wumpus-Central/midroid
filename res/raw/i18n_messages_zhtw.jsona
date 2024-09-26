@@ -2105,8 +2105,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "開啟使用者操作選單",
   "USER_PROFILE_MEMBER_SINCE": "成為成員時間",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "成為 Discord 成員時間",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 位共同好友} other {{count} 位共同好友}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 個共同伺服器} other {{count} 個共同伺服器}}",
   "USER_PROFILE_MOD_ACTIONS": "版主動作",
   "CLIENT_THEMES_GRADIENT_SUNSET": "夕陽",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "彩度光澤",

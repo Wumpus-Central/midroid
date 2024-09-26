@@ -128,10 +128,10 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                public final void invoke(OverlayMenuBubbleDialog var1) {
                   q.h(var1, "menuDialog");
                   val var3x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
-                  val var2x: OverlayVoiceBubble = this.$voiceBubble;
-                  val var4x: Rect = this.$marginRect;
-                  var3x.width = this.$voiceBubble.getWidth() - var4x.left - var4x.right;
-                  var3x.height = var2x.getHeight();
+                  val var4x: OverlayVoiceBubble = this.$voiceBubble;
+                  val var2x: Rect = this.$marginRect;
+                  var3x.width = this.$voiceBubble.getWidth() - var2x.left - var2x.right;
+                  var3x.height = var4x.getHeight();
                   var1.getLinkedAnchorView().requestLayout();
                   var1.getLinkedAnchorView().setTag("Active Voice Bubble");
                   var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this.$voiceBubble) {
@@ -184,10 +184,10 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          public final OverlayVoiceBubble invoke(OverlayViewProvider<OverlayVoiceBubble> var1) {
             q.h(var1, "it");
             val var2: Int = MobileVoiceOverlay.access$getContext$p(this.this$0).getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-            val var4: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
-            var4.getInsetMargins().set(-var2, var2, -var2, var2);
-            var4.setOnClickListener(new a(var4, this.this$0));
-            var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var4) {
+            val var5: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
+            var5.getInsetMargins().set(-var2, var2, -var2, var2);
+            var5.setOnClickListener(new a(var5, this.this$0));
+            var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var5) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
@@ -220,7 +220,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            var4.setOnMovingStateChanged(new Function1(this.this$0, var4) {
+            var5.setOnMovingStateChanged(new Function1(this.this$0, var5) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
@@ -255,7 +255,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            return var4;
+            return var5;
          }
       });
       this.trashWrapProvider = new OverlayViewProvider<>(new Function1(this) {

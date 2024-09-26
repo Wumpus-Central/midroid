@@ -76,10 +76,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
    public open fun initialize() {
       super.initialize();
       if (VERSION.SDK_INT >= 33) {
-         val var1: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         this.audioManager = var1.getInstance(var2);
+         val var2: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         this.audioManager = var2.getInstance(var1);
       } else {
          val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
          val var3: ReactApplicationContext = this.getReactApplicationContext();

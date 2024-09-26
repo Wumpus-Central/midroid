@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "यूज़र एक्शन मेन्यू खोलें",
   "USER_PROFILE_MEMBER_SINCE": "से मेम्बर हैं",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "से Discord के मेम्बर हैं",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 म्यूचुअल फ्रेंड} other {{count} म्यूचुअल फ्रेंड्स}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 म्यूचुअल सर्वर} other {{count} म्यूचुअल सर्वर}}",
   "USER_PROFILE_MOD_ACTIONS": "मॉडरेटर एक्शन",
   "CLIENT_THEMES_GRADIENT_SUNSET": "सनसेट",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "क्रोमा ग्लो",

@@ -74,27 +74,28 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var1 = 0; var1 < var2; var1++) {
             val var7: Signature = var16[var1];
 
+            var var9: java.lang.String;
             try {
-               val var9: AppSignatureHelper.Companion = AppSignatureHelper.Companion;
+               val var8: AppSignatureHelper.Companion = AppSignatureHelper.Companion;
                q.e(var5);
                val var17: java.lang.String = var7.toCharsString();
                q.g(var17, "toCharsString(...)");
-               var18 = AppSignatureHelper.Companion.access$hash(var9, var5, var17);
-               val var8: Log = Log.INSTANCE;
-               val var19: java.lang.String = var9.getTAG();
+               var9 = AppSignatureHelper.Companion.access$hash(var8, var5, var17);
+               val var18: Log = Log.INSTANCE;
+               val var19: java.lang.String = var8.getTAG();
                val var10: StringBuilder = new StringBuilder();
                var10.append("Hash ");
-               var10.append(var18);
-               Log.i$default(var8, var19, var10.toString(), null, 4, null);
+               var10.append(var9);
+               Log.i$default(var18, var19, var10.toString(), null, 4, null);
             } catch (var12: NameNotFoundException) {
                Log.INSTANCE.e(AppSignatureHelper.Companion.getTAG(), "Unable to find package to obtain hash.", var12);
                i.k();
                break;
             }
 
-            if (var18 != null) {
+            if (var9 != null) {
                try {
-                  var6.add(var18);
+                  var6.add(var9);
                } catch (var11: NameNotFoundException) {
                   Log.INSTANCE.e(AppSignatureHelper.Companion.getTAG(), "Unable to find package to obtain hash.", var11);
                   i.k();

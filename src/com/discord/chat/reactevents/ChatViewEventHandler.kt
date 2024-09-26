@@ -50,10 +50,10 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
          public final void invoke(ReactEvent var1) {
             q.h(var1, "event");
-            val var3: ReactEvents = this.$reactEvents;
-            val var2: Context = this.$context;
+            val var2: ReactEvents = this.$reactEvents;
+            val var3: Context = this.$context;
             q.f(this.$context, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
-            var3.emitEvent(var2 as ReactContext, (this.$reactTag.invoke() as java.lang.Number).intValue(), var1);
+            var2.emitEvent(var3 as ReactContext, (this.$reactTag.invoke() as java.lang.Number).intValue(), var1);
          }
       };
       this.onMessageLongPressed = new Function6(this) {

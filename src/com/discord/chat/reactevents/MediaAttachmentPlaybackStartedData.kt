@@ -202,8 +202,8 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
          q.h(var1, "decoder");
          val var12: SerialDescriptor = this.getDescriptor();
          val var13: c = var1.c(var12);
+         var var2: Float;
          var var3: Float;
-         val var4: Float;
          var var5: Int;
          var var8: Boolean;
          var var9: Any;
@@ -219,17 +219,16 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
             }
 
             var3 = var13.G(var12, 1);
-            val var2: Float = var13.G(var12, 2);
+            var2 = var13.G(var12, 2);
             var9 = var13.m(var12, 3, UserId.$serializer.INSTANCE, null) as UserId;
             var8 = var13.s(var12, 4);
             val var11: java.lang.String = var13.t(var12, 5);
             var10 = var15;
             var16 = var11;
             var5 = 63;
-            var4 = var2;
          } else {
             var3 = 0.0F;
-            var var18: Float = 0.0F;
+            var2 = 0.0F;
             var var6: Boolean = true;
             var8 = false;
             var5 = 0;
@@ -261,7 +260,7 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
                      var5 |= 1;
                      break;
                   case 1:
-                     var18 = var13.G(var12, 1);
+                     var2 = var13.G(var12, 1);
                      var5 |= 2;
                      break;
                   case 2:
@@ -285,14 +284,14 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
                }
             }
 
-            var9 = var17;
             var16 = (java.lang.String)var9;
-            var4 = var3;
-            var3 = var18;
+            var9 = var17;
+            var2 = var3;
+            var3 = var2;
          }
 
          var13.b(var12);
-         return new MediaAttachmentPlaybackStartedData(var5, var10, var3, var4, (UserId)var9, var8, var16, null, null);
+         return new MediaAttachmentPlaybackStartedData(var5, var10, var3, var2, (UserId)var9, var8, var16, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaAttachmentPlaybackStartedData) {

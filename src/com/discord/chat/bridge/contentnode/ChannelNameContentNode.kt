@@ -138,30 +138,30 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
 
       public open fun deserialize(decoder: Decoder): ChannelNameContentNode {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var11: Array<KSerializer> = ChannelNameContentNode.access$get$childSerializers$cp();
-         val var5: Boolean = var10.y();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
+         val var9: Array<KSerializer> = ChannelNameContentNode.access$get$childSerializers$cp();
+         val var5: Boolean = var11.y();
          var var8: ChannelType = null;
          var var2: Int;
-         var var6: java.lang.String;
+         var var6: Any;
          var var7: java.lang.String;
-         var var12: Any;
+         val var12: java.lang.String;
          if (var5) {
-            var8 = var10.v(var9, 0, ChannelType.Serializer.INSTANCE, null) as ChannelType;
-            var7 = var10.t(var9, 1);
-            var6 = var10.v(var9, 2, b2.a, null) as java.lang.String;
-            var12 = var10.m(var9, 3, var11[3], null) as java.util.List;
+            var8 = var11.v(var10, 0, ChannelType.Serializer.INSTANCE, null) as ChannelType;
+            var7 = var11.t(var10, 1);
+            var12 = var11.v(var10, 2, b2.a, null) as java.lang.String;
+            var6 = var11.m(var10, 3, var9[3], null) as java.util.List;
             var2 = 15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var6 = null;
-            var12 = null;
+            var var13: Any = null;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -170,28 +170,31 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
                               throw new n(var4);
                            }
 
-                           var12 = var10.m(var9, 3, var11[3], var12) as java.util.List;
+                           var13 = var11.m(var10, 3, var9[3], var13) as java.util.List;
                            var2 |= 8;
                         } else {
-                           var6 = var10.v(var9, 2, b2.a, var6) as java.lang.String;
+                           var6 = var11.v(var10, 2, b2.a, var6) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.t(var9, 1);
+                        var7 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.v(var9, 0, ChannelType.Serializer.INSTANCE, var8) as ChannelType;
+                     var8 = var11.v(var10, 0, ChannelType.Serializer.INSTANCE, var8) as ChannelType;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var6 = var13;
+            var12 = (java.lang.String)var6;
          }
 
-         var10.b(var9);
-         return new ChannelNameContentNode(var2, var8, var7, var6, (java.util.List)var12, null);
+         var11.b(var10);
+         return new ChannelNameContentNode(var2, var8, var7, var12, (java.util.List)var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChannelNameContentNode) {

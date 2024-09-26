@@ -208,13 +208,13 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               val var4: Int = var3.getInt(0);
-               val var5: Int = var3.getInt(1);
-               var2 = var3.getString(2);
-               q.g(var2, "getString(...)");
-               val var6: java.lang.String = var3.getString(3);
+               val var5: Int = var3.getInt(0);
+               val var4: Int = var3.getInt(1);
+               val var6: java.lang.String = var3.getString(2);
                q.g(var6, "getString(...)");
-               this.replaceRange(var1, var4, var5, var2, var6, var3.getBoolean(4), var3.getString(5));
+               var2 = var3.getString(3);
+               q.g(var2, "getString(...)");
+               this.replaceRange(var1, var5, var4, var6, var2, var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:

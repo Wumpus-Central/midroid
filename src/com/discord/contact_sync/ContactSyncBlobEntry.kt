@@ -183,10 +183,10 @@ public data class ContactSyncBlobEntry(phone: String,
          val var13: java.lang.String;
          if (var12.y()) {
             var9 = var12.t(var11, 0);
-            var7 = var12.t(var11, 1);
+            var6 = var12.t(var11, 1);
             var5 = var12.s(var11, 2);
-            var8 = var12.t(var11, 3);
-            var6 = var12.t(var11, 4);
+            var7 = var12.t(var11, 3);
+            var8 = var12.t(var11, 4);
             var13 = var12.t(var11, 5);
             var2 = 63;
          } else {
@@ -234,13 +234,13 @@ public data class ContactSyncBlobEntry(phone: String,
                }
             }
 
+            var6 = var14;
             var13 = var8;
-            var8 = var7;
-            var7 = var14;
+            var8 = var6;
          }
 
          var12.b(var11);
-         return new ContactSyncBlobEntry(var2, var9, var7, var5, var8, var6, var13, null);
+         return new ContactSyncBlobEntry(var2, var9, var6, var5, var7, var8, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContactSyncBlobEntry) {

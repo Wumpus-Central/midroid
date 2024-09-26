@@ -107,8 +107,8 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
       kotlin.jvm.internal.q.h(var2, "eventHandler");
       val var9: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
       this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var9, null, 1, null));
-      val var7: Attachment = var1.getAttachment();
-      val var6: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
+      val var6: Attachment = var1.getAttachment();
+      val var7: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -121,7 +121,7 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
       });
       val var8: AudioPlayerView = this.view;
       this.view.setSourceUrl(var1);
-      val var4: ByteArray = var7.getWaveformByteArray();
+      val var4: ByteArray = var6.getWaveformByteArray();
       val var11: Unit;
       if (var4 != null) {
          var8.setSampleData(var4);
@@ -134,7 +134,7 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
          var8.setAudioFileDetails(var1.getAttachment());
       }
 
-      val var10: java.lang.Float = var7.getDurationSecs();
+      val var10: java.lang.Float = var6.getDurationSecs();
       var var12: Unit = null;
       if (var10 != null) {
          var8.setDurationMs((long)(var10.floatValue() * (float)1000));
@@ -145,11 +145,11 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
          var8.setUnknownDuration();
       }
 
-      var8.setUploadProgress(var6);
+      var8.setUploadProgress(var7);
       var8.setOnLongPress(new d(var3, var1));
-      var8.shouldAnimate(var7.isAnimated());
+      var8.shouldAnimate(var6.isAnimated());
       var8.setContainerBackgroundColor(var1.getColor());
-      var8.setListener(new AudioPlayerView.Listener(var7, var2, var1, var9) {
+      var8.setListener(new AudioPlayerView.Listener(var6, var2, var1, var9) {
          final AudioAttachmentMessageAccessory $accessory;
          final AudioPlayerManager.AudioSource $audioSource;
          final ChatEventHandler $eventHandler;

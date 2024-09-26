@@ -127,9 +127,9 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
             }
 
             val var6: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var2 = 3;
             var5 = var10;
             var11 = var6;
-            var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;

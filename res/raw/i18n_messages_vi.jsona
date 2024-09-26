@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Mở menu Hành động người dùng",
   "USER_PROFILE_MEMBER_SINCE": "Gia Nhập Từ",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Gia Nhập Discord Từ",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 Bạn Chung} other {{count} Bạn Chung}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 Máy Chủ Chung} other {{count} Máy Chủ Chung}}",
   "USER_PROFILE_MOD_ACTIONS": "Hoạt động điều phối viên",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Hoàng hôn",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Hào quang xanh tím",

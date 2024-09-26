@@ -177,8 +177,8 @@ internal data class LongPressMessageEvent(messageId: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: n0 = n0.a;
-         return new KSerializer[]{b2.a, b2.a, n0.a, b2.a, a.u(b2.a), a.u(var1)};
+         val var2: n0 = n0.a;
+         return new KSerializer[]{b2.a, b2.a, n0.a, b2.a, a.u(b2.a), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): LongPressMessageEvent {
@@ -197,13 +197,14 @@ internal data class LongPressMessageEvent(messageId: String,
             var8 = var12.t(var11, 1);
             var3 = var12.k(var11, 2);
             var7 = var12.t(var11, 3);
-            var10 = var12.v(var11, 4, b2.a, null) as java.lang.String;
+            val var9: java.lang.String = var12.v(var11, 4, b2.a, null) as java.lang.String;
             var13 = var12.v(var11, 5, n0.a, null) as Int;
             var2 = 63;
+            var10 = var9;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var var9: java.lang.String = null;
+            var var15: java.lang.String = null;
             var8 = null;
             var7 = null;
             var6 = null;
@@ -217,7 +218,7 @@ internal data class LongPressMessageEvent(messageId: String,
                      var4 = false;
                      break;
                   case 0:
-                     var9 = var12.t(var11, 0);
+                     var15 = var12.t(var11, 0);
                      var2 |= 1;
                      break;
                   case 1:
@@ -246,7 +247,7 @@ internal data class LongPressMessageEvent(messageId: String,
             }
 
             var10 = var6;
-            var6 = var9;
+            var6 = var15;
          }
 
          var12.b(var11);

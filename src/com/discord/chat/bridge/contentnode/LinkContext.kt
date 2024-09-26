@@ -336,110 +336,110 @@ public data class LinkContext(usernameOnClick: UserNameOnClick? = null,
 
       public open fun deserialize(decoder: Decoder): LinkContext {
          q.h(var1, "decoder");
-         val var21: SerialDescriptor = this.getDescriptor();
-         val var22: c = var1.c(var21);
-         val var5: Boolean = var22.y();
+         val var20: SerialDescriptor = this.getDescriptor();
+         val var21: c = var1.c(var20);
+         val var5: Boolean = var21.y();
          var var6: UserNameOnClick = null;
          var var2: Int;
+         var var8: Any;
          var var10: Any;
-         var var12: Any;
+         var var11: UserNameOnClick;
          var var13: Any;
          var var14: Any;
-         var var15: Any;
          var var16: TitleOnClick;
          val var17: Any;
-         val var18: UserNameOnClick;
+         val var18: Any;
          val var19: Any;
-         val var20: Any;
-         var var24: UrlOnClick;
-         var var30: Any;
+         var var23: UrlOnClick;
+         var var27: Any;
+         var var35: Any;
          if (var5) {
-            val var23: UserNameOnClick.$serializer = UserNameOnClick.$serializer.INSTANCE;
-            var18 = var22.v(var21, 0, UserNameOnClick.$serializer.INSTANCE, null) as UserNameOnClick;
-            var10 = var22.v(var21, 1, var23, null) as UserNameOnClick;
-            var13 = var22.v(var21, 2, CommandOnClick.$serializer.INSTANCE, null) as CommandOnClick;
-            var19 = var22.v(var21, 3, ActorHook.$serializer.INSTANCE, null) as ActorHook;
-            var12 = var22.v(var21, 4, ThreadOnClick.$serializer.INSTANCE, null) as ThreadOnClick;
-            var20 = var22.v(var21, 5, PinsOnClick.$serializer.INSTANCE, null) as PinsOnClick;
-            val var9: WebhookNameOnClick = var22.v(var21, 6, WebhookNameOnClick.$serializer.INSTANCE, null) as WebhookNameOnClick;
-            val var8: HandleDelete = var22.v(var21, 7, HandleDelete.$serializer.INSTANCE, null) as HandleDelete;
-            var30 = var22.v(var21, 8, RoleSubscriptionOnClick.$serializer.INSTANCE, null) as RoleSubscriptionOnClick;
-            val var7: HandleMessage = var22.v(var21, 9, HandleMessage.$serializer.INSTANCE, null) as HandleMessage;
-            val var25: TitleOnClick = var22.v(var21, 10, TitleOnClick.$serializer.INSTANCE, null) as TitleOnClick;
-            var24 = var22.v(var21, 11, UrlOnClick.$serializer.INSTANCE, null) as UrlOnClick;
+            val var22: UserNameOnClick.$serializer = UserNameOnClick.$serializer.INSTANCE;
+            var11 = var21.v(var20, 0, UserNameOnClick.$serializer.INSTANCE, null) as UserNameOnClick;
+            var27 = var21.v(var20, 1, var22, null) as UserNameOnClick;
+            var14 = var21.v(var20, 2, CommandOnClick.$serializer.INSTANCE, null) as CommandOnClick;
+            var17 = var21.v(var20, 3, ActorHook.$serializer.INSTANCE, null) as ActorHook;
+            var35 = var21.v(var20, 4, ThreadOnClick.$serializer.INSTANCE, null) as ThreadOnClick;
+            var19 = var21.v(var20, 5, PinsOnClick.$serializer.INSTANCE, null) as PinsOnClick;
+            var10 = var21.v(var20, 6, WebhookNameOnClick.$serializer.INSTANCE, null) as WebhookNameOnClick;
+            var8 = var21.v(var20, 7, HandleDelete.$serializer.INSTANCE, null) as HandleDelete;
+            val var12: RoleSubscriptionOnClick = var21.v(var20, 8, RoleSubscriptionOnClick.$serializer.INSTANCE, null) as RoleSubscriptionOnClick;
+            val var7: HandleMessage = var21.v(var20, 9, HandleMessage.$serializer.INSTANCE, null) as HandleMessage;
+            val var24: TitleOnClick = var21.v(var20, 10, TitleOnClick.$serializer.INSTANCE, null) as TitleOnClick;
+            var23 = var21.v(var20, 11, UrlOnClick.$serializer.INSTANCE, null) as UrlOnClick;
             var2 = 4095;
-            var17 = var9;
-            var14 = var8;
-            var15 = var30;
-            var30 = var7;
-            var16 = var25;
+            var13 = var27;
+            var27 = var35;
+            var35 = var12;
+            var18 = var7;
+            var16 = var24;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var24 = null;
+            var23 = null;
             var16 = null;
-            var15 = null;
+            var35 = null;
             var14 = null;
             var13 = null;
-            var12 = null;
-            var30 = null;
+            var var32: Any = null;
+            var11 = null;
             var10 = null;
-            var var28: Any = null;
-            var var27: Any = null;
-            var var26: Any = null;
+            var27 = null;
+            var8 = null;
+            var var25: Any = null;
 
             while (var3) {
-               val var4: Int = var22.x(var21);
+               val var4: Int = var21.x(var20);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var6 = var22.v(var21, 0, UserNameOnClick.$serializer.INSTANCE, var6) as UserNameOnClick;
+                     var6 = var21.v(var20, 0, UserNameOnClick.$serializer.INSTANCE, var6) as UserNameOnClick;
                      var2 |= 1;
                      break;
                   case 1:
-                     var26 = var22.v(var21, 1, UserNameOnClick.$serializer.INSTANCE, var26) as UserNameOnClick;
+                     var25 = var21.v(var20, 1, UserNameOnClick.$serializer.INSTANCE, var25) as UserNameOnClick;
                      var2 |= 2;
                      break;
                   case 2:
-                     var27 = var22.v(var21, 2, CommandOnClick.$serializer.INSTANCE, var27) as CommandOnClick;
+                     var8 = var21.v(var20, 2, CommandOnClick.$serializer.INSTANCE, var8) as CommandOnClick;
                      var2 |= 4;
                      break;
                   case 3:
-                     var28 = var22.v(var21, 3, ActorHook.$serializer.INSTANCE, var28) as ActorHook;
+                     var27 = var21.v(var20, 3, ActorHook.$serializer.INSTANCE, var27) as ActorHook;
                      var2 |= 8;
                      break;
                   case 4:
-                     var12 = var22.v(var21, 4, ThreadOnClick.$serializer.INSTANCE, var12) as ThreadOnClick;
+                     var32 = var21.v(var20, 4, ThreadOnClick.$serializer.INSTANCE, var32) as ThreadOnClick;
                      var2 |= 16;
                      break;
                   case 5:
-                     var10 = var22.v(var21, 5, PinsOnClick.$serializer.INSTANCE, var10) as PinsOnClick;
+                     var10 = var21.v(var20, 5, PinsOnClick.$serializer.INSTANCE, var10) as PinsOnClick;
                      var2 |= 32;
                      break;
                   case 6:
-                     var13 = var22.v(var21, 6, WebhookNameOnClick.$serializer.INSTANCE, var13) as WebhookNameOnClick;
+                     var13 = var21.v(var20, 6, WebhookNameOnClick.$serializer.INSTANCE, var13) as WebhookNameOnClick;
                      var2 |= 64;
                      break;
                   case 7:
-                     var14 = var22.v(var21, 7, HandleDelete.$serializer.INSTANCE, var14) as HandleDelete;
+                     var14 = var21.v(var20, 7, HandleDelete.$serializer.INSTANCE, var14) as HandleDelete;
                      var2 |= 128;
                      break;
                   case 8:
-                     var15 = var22.v(var21, 8, RoleSubscriptionOnClick.$serializer.INSTANCE, var15) as RoleSubscriptionOnClick;
+                     var35 = var21.v(var20, 8, RoleSubscriptionOnClick.$serializer.INSTANCE, var35) as RoleSubscriptionOnClick;
                      var2 |= 256;
                      break;
                   case 9:
-                     var30 = var22.v(var21, 9, HandleMessage.$serializer.INSTANCE, var30) as HandleMessage;
+                     var11 = var21.v(var20, 9, HandleMessage.$serializer.INSTANCE, var11) as HandleMessage;
                      var2 |= 512;
                      break;
                   case 10:
-                     var16 = var22.v(var21, 10, TitleOnClick.$serializer.INSTANCE, var16) as TitleOnClick;
+                     var16 = var21.v(var20, 10, TitleOnClick.$serializer.INSTANCE, var16) as TitleOnClick;
                      var2 |= 1024;
                      break;
                   case 11:
-                     var24 = var22.v(var21, 11, UrlOnClick.$serializer.INSTANCE, var24) as UrlOnClick;
+                     var23 = var21.v(var20, 11, UrlOnClick.$serializer.INSTANCE, var23) as UrlOnClick;
                      var2 |= 2048;
                      break;
                   default:
@@ -447,29 +447,32 @@ public data class LinkContext(usernameOnClick: UserNameOnClick? = null,
                }
             }
 
-            var17 = var13;
-            var20 = var10;
-            var19 = var28;
-            var13 = var27;
-            var10 = var26;
-            var18 = var6;
+            var18 = var11;
+            var19 = var10;
+            var17 = var27;
+            var8 = var14;
+            var10 = var13;
+            var27 = var32;
+            var14 = var8;
+            var13 = var25;
+            var11 = var6;
          }
 
-         var22.b(var21);
+         var21.b(var20);
          return new LinkContext(
             var2,
-            var18,
-            (UserNameOnClick)var10,
-            (CommandOnClick)var13,
-            (ActorHook)var19,
-            (ThreadOnClick)var12,
-            (PinsOnClick)var20,
-            (WebhookNameOnClick)var17,
-            (HandleDelete)var14,
-            (RoleSubscriptionOnClick)var15,
-            (HandleMessage)var30,
+            var11,
+            (UserNameOnClick)var13,
+            (CommandOnClick)var14,
+            (ActorHook)var17,
+            (ThreadOnClick)var27,
+            (PinsOnClick)var19,
+            (WebhookNameOnClick)var10,
+            (HandleDelete)var8,
+            (RoleSubscriptionOnClick)var35,
+            (HandleMessage)var18,
             var16,
-            var24,
+            var23,
             null
          );
       }

@@ -2096,8 +2096,6 @@
   "USER_PROFILE_ACTION_MENU_A11Y_LABEL": "Avaa Käyttäjän toimet -valikko",
   "USER_PROFILE_MEMBER_SINCE": "Jäsen alkaen",
   "USER_PROFILE_DISCORD_MEMBER_SINCE": "Discord-jäsen alkaen",
-  "MUTUAL_FRIENDS_COUNT": "{count, plural, =1 {1 yhteinen kaveri} other {{count} yhteistä kaveria}}",
-  "MUTUAL_GUILDS_COUNT": "{count, plural, =1 {1 yhteinen palvelin} other {{count} yhteistä palvelinta}}",
   "USER_PROFILE_MOD_ACTIONS": "Valvojatoiminta",
   "CLIENT_THEMES_GRADIENT_SUNSET": "Auringonlasku",
   "CLIENT_THEMES_GRADIENT_CHROMA_GLOW": "Kromahehku",
