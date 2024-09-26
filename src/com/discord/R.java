@@ -284,6 +284,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_twitterneutralicon;
       public static int design_components_icon_native_redesign_generated_images_unknowngameicon;
       public static int design_components_icon_native_redesign_generated_images_uploadicon;
+      public static int design_components_icon_native_redesign_generated_images_usercheckicon;
       public static int design_components_icon_native_redesign_generated_images_usercircleicon;
       public static int design_components_icon_native_redesign_generated_images_usericon;
       public static int design_components_icon_native_redesign_generated_images_userminusicon;
