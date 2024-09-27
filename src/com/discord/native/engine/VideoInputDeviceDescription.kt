@@ -58,17 +58,17 @@ public data class VideoInputDeviceDescription(name: String, guid: String, facing
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var1: java.lang.String = this.guid;
-      val var3: VideoInputDeviceFacing = this.facing;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("VideoInputDeviceDescription(name=");
-      var4.append(var2);
-      var4.append(", guid=");
-      var4.append(var1);
-      var4.append(", facing=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.name;
+      val var2: java.lang.String = this.guid;
+      val var1: VideoInputDeviceFacing = this.facing;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("VideoInputDeviceDescription(name=");
+      var3.append(var4);
+      var3.append(", guid=");
+      var3.append(var2);
+      var3.append(", facing=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

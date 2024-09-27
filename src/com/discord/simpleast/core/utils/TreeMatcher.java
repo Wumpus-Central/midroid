@@ -13,9 +13,9 @@ public class TreeMatcher {
    private Map<Class, TreeMatcher.NodeMatcher> matchers = new HashMap<>();
 
    public boolean matches(List<? extends Node> var1, List<? extends Node> var2) {
-      ArrayList var4 = new ArrayList();
       ArrayList var5 = new ArrayList();
-      ASTUtils.traversePostOrder(var1, new NodeProcessor(this, var4) {
+      ArrayList var4 = new ArrayList();
+      ASTUtils.traversePostOrder(var1, new NodeProcessor(this, var5) {
          final TreeMatcher this$0;
          final List val$tree1PostOrder;
 
@@ -29,7 +29,7 @@ public class TreeMatcher {
             this.val$tree1PostOrder.add(var1);
          }
       });
-      ASTUtils.traversePostOrder(var2, new NodeProcessor(this, var5) {
+      ASTUtils.traversePostOrder(var2, new NodeProcessor(this, var4) {
          final TreeMatcher this$0;
          final List val$tree2PostOrder;
 
@@ -43,18 +43,18 @@ public class TreeMatcher {
             this.val$tree2PostOrder.add(var1);
          }
       });
-      if (var4.size() != var5.size()) {
+      if (var5.size() != var4.size()) {
          return false;
       } else {
-         for (int var3 = 0; var3 < var4.size(); var3++) {
-            Node var7 = (Node)var4.get(var3);
+         for (int var3 = 0; var3 < var5.size(); var3++) {
             Node var6 = (Node)var5.get(var3);
-            if (var7.getClass() != var6.getClass()) {
+            Node var8 = (Node)var4.get(var3);
+            if (var6.getClass() != var8.getClass()) {
                return false;
             }
 
-            Class var8 = var7.getClass();
-            if (this.matchers.containsKey(var8) && !this.matchers.get(var8).matches(var7, var6)) {
+            Class var7 = var6.getClass();
+            if (this.matchers.containsKey(var7) && !this.matchers.get(var7).matches(var6, var8)) {
                return false;
             }
          }
@@ -90,14 +90,14 @@ public class TreeMatcher {
             StyleNode var6 = (StyleNode)var1;
             StyleNode var8 = (StyleNode)var2;
             List var7 = var6.getStyles();
-            List var9 = var8.getStyles();
-            if (var7.size() != var9.size()) {
+            List var4 = var8.getStyles();
+            if (var7.size() != var4.size()) {
                return false;
             } else {
                for (int var3 = 0; var3 < var7.size(); var3++) {
-                  CharacterStyle var5 = (CharacterStyle)var7.get(var3);
-                  CharacterStyle var4 = (CharacterStyle)var9.get(var3);
-                  if (var5.getClass() != var4.getClass()) {
+                  CharacterStyle var9 = (CharacterStyle)var7.get(var3);
+                  CharacterStyle var5 = (CharacterStyle)var4.get(var3);
+                  if (var9.getClass() != var5.getClass()) {
                      return false;
                   }
                }

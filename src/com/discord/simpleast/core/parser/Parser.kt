@@ -112,16 +112,16 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
             val var21: Rule = var2.a() as Rule;
             val var20: Matcher = var2.b() as Matcher;
             val var4: Int = var20.end() + var5;
-            val var22: ParseSpec = var21.parse(var20, this, (S)var10.getState());
-            val var23: Node = var10.getRoot();
-            var23.addChild(var22.getRoot());
+            val var23: ParseSpec = var21.parse(var20, this, (S)var10.getState());
+            val var22: Node = var10.getRoot();
+            var22.addChild(var23.getRoot());
             if (var4 != var10.getEndIndex()) {
-               var8.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var4, var10.getEndIndex()));
+               var8.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var4, var10.getEndIndex()));
             }
 
-            if (!var22.isTerminal()) {
-               var22.applyOffset(var5);
-               var8.push(var22);
+            if (!var23.isTerminal()) {
+               var23.applyOffset(var5);
+               var8.push(var23);
             }
 
             try {

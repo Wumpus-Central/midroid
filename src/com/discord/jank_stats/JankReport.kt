@@ -41,13 +41,13 @@ public data class JankReport(numFrames: Int, numJankFrames: Int) {
    }
 
    public override fun toString(): String {
-      val var1: Int = this.numFrames;
-      val var2: Int = this.numJankFrames;
+      val var2: Int = this.numFrames;
+      val var1: Int = this.numJankFrames;
       val var3: StringBuilder = new StringBuilder();
       var3.append("JankReport(numFrames=");
-      var3.append(var1);
-      var3.append(", numJankFrames=");
       var3.append(var2);
+      var3.append(", numJankFrames=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

@@ -50,13 +50,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    }
 
    private fun rowUpdateLoggerFor(tag: Int): RowLogger {
-      val var4: java.util.Map = this.rowUpdateLoggers;
-      val var5: Int = var1;
-      val var3: Any = var4.get(var5);
+      val var5: java.util.Map = this.rowUpdateLoggers;
+      val var4: Int = var1;
+      val var3: Any = var5.get(var4);
       var var2: Any = var3;
       if (var3 == null) {
          var2 = new ReleaseRowLogger();
-         var4.put(var5, var2);
+         var5.put(var4, var2);
       }
 
       return var2 as RowLogger;
@@ -2198,12 +2198,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
 
    public open fun invalidate() {
       super.invalidate();
-      val var3: CoroutineContext = this.moduleScope.getCoroutineContext();
-      val var1: java.lang.String = ChatModule.class.getSimpleName();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var1);
-      var2.append(" invalidate()");
-      v.g(var3, new CancellationException(var2.toString()));
+      val var2: CoroutineContext = this.moduleScope.getCoroutineContext();
+      val var3: java.lang.String = ChatModule.class.getSimpleName();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(var3);
+      var1.append(" invalidate()");
+      v.g(var2, new CancellationException(var1.toString()));
    }
 
    @ReactMethod

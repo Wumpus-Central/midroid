@@ -39,8 +39,8 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
 
    private fun handleInsetsChanged(reactContext: ThemedReactContext, safeAreaEdgeInsets: SafeAreaEdgeInsets, imeInsets: Insets?, view: SafeAreaProvider) {
       val var9: Float = var2.getTopDp();
-      val var8: Float = var2.getBottomDp();
-      val var6: Float = var2.getLeftDp();
+      val var6: Float = var2.getBottomDp();
+      val var8: Float = var2.getLeftDp();
       val var7: Float = var2.getRightDp();
       val var5: Float;
       if (var3 != null) {
@@ -49,19 +49,19 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
          var5 = 0.0F;
       }
 
-      val var10: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var9, var8, var6, var7, var5);
-      val var12: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var4);
-      if (!q.c(this.dimensions, var12)) {
+      val var12: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var9, var6, var8, var7, var5);
+      val var10: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var4);
+      if (!q.c(this.dimensions, var10)) {
          this.changeData = DEFAULT_CHANGE_DATA;
-         this.dimensions = var12;
+         this.dimensions = var10;
       }
 
       val var11: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(
-         Math.max(var10.getTop(), this.changeData.getTop()),
-         Math.max(var10.getBottom(), this.changeData.getBottom()),
-         Math.max(var10.getLeft(), this.changeData.getLeft()),
-         Math.max(var10.getRight(), this.changeData.getRight()),
-         var10.getImeInsetsBottom()
+         Math.max(var12.getTop(), this.changeData.getTop()),
+         Math.max(var12.getBottom(), this.changeData.getBottom()),
+         Math.max(var12.getLeft(), this.changeData.getLeft()),
+         Math.max(var12.getRight(), this.changeData.getRight()),
+         var12.getImeInsetsBottom()
       );
       this.changeData = var11;
       this.reactEvents.emitEvent(var1, var4, var11);
@@ -191,13 +191,13 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
       }
 
       public override fun toString(): String {
-         val var2: Int = this.height;
-         val var1: Int = this.width;
+         val var1: Int = this.height;
+         val var2: Int = this.width;
          val var3: StringBuilder = new StringBuilder();
          var3.append("SafeAreaProviderDimensions(height=");
-         var3.append(var2);
-         var3.append(", width=");
          var3.append(var1);
+         var3.append(", width=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

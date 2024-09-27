@@ -1,4 +1,91 @@
 {
+  "rmps8/": [
+    {
+      "type": 0,
+      "value": "This string has a "
+    },
+    {
+      "type": 8,
+      "value": "$link",
+      "children": [
+        {
+          "type": 0,
+          "value": "https://discord.com"
+        },
+        {
+          "type": 1,
+          "value": "$_"
+        },
+        {
+          "type": 0,
+          "value": "static link"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": ", with the url defined in the string."
+    }
+  ],
+  "Q+eyqq": [
+    {
+      "type": 6,
+      "value": "count",
+      "options": {
+        "one": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " thing"
+            }
+          ]
+        },
+        "other": {
+          "value": [
+            {
+              "type": 1,
+              "value": "count"
+            },
+            {
+              "type": 0,
+              "value": " things"
+            }
+          ]
+        }
+      },
+      "offset": 0,
+      "pluralType": "cardinal"
+    }
+  ],
+  "XOdbAw": [
+    {
+      "type": 0,
+      "value": "Use hooks like "
+    },
+    {
+      "type": 8,
+      "value": "usernameHook",
+      "children": [
+        {
+          "type": 1,
+          "value": "username"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " for special content."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
+    }
+  ],
   "HMvECw": [
     {
       "type": 0,
@@ -43,60 +130,6 @@
       "value": " provided at runtime."
     }
   ],
-  "XOdbAw": [
-    {
-      "type": 0,
-      "value": "Use hooks like "
-    },
-    {
-      "type": 8,
-      "value": "usernameHook",
-      "children": [
-        {
-          "type": 1,
-          "value": "username"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " for special content."
-    }
-  ],
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
-  "rmps8/": [
-    {
-      "type": 0,
-      "value": "This string has a "
-    },
-    {
-      "type": 8,
-      "value": "$link",
-      "children": [
-        {
-          "type": 0,
-          "value": "https://discord.com"
-        },
-        {
-          "type": 1,
-          "value": "$_"
-        },
-        {
-          "type": 0,
-          "value": "static link"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": ", with the url defined in the string."
-    }
-  ],
   "rdfRys": [
     {
       "type": 0,
@@ -115,39 +148,6 @@
     {
       "type": 0,
       "value": " here."
-    }
-  ],
-  "Q+eyqq": [
-    {
-      "type": 6,
-      "value": "count",
-      "options": {
-        "one": {
-          "value": [
-            {
-              "type": 7
-            },
-            {
-              "type": 0,
-              "value": " thing"
-            }
-          ]
-        },
-        "other": {
-          "value": [
-            {
-              "type": 1,
-              "value": "count"
-            },
-            {
-              "type": 0,
-              "value": " things"
-            }
-          ]
-        }
-      },
-      "offset": 0,
-      "pluralType": "cardinal"
     }
   ]
 }

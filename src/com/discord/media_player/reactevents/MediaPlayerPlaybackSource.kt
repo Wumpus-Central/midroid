@@ -89,15 +89,15 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       } else if (var1 !is MediaPlayerPlaybackSource) {
          return false;
       } else {
-         var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         val var2: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
+         if (!q.c(this.id, (var1 as MediaPlayerPlaybackSource).id)) {
             return false;
-         } else if (!q.c(this.assetUrl, var1.assetUrl)) {
+         } else if (!q.c(this.assetUrl, var2.assetUrl)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!q.c(this.channelId, var2.channelId)) {
             return false;
-         } else if (if (this.messageId == null) var1.messageId == null else var1.messageId != null && MessageId.equals-impl0(this.messageId, var1.messageId)) {
-            return q.c(this.attachmentIndex, var1.attachmentIndex);
+         } else if (if (this.messageId == null) var2.messageId == null else var2.messageId != null && MessageId.equals-impl0(this.messageId, var2.messageId)) {
+            return q.c(this.attachmentIndex, var2.attachmentIndex);
          } else {
             return false;
          }
@@ -142,9 +142,9 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var2: java.lang.String = this.assetUrl;
-      val var4: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.id;
+      val var4: java.lang.String = this.assetUrl;
+      val var3: java.lang.String = this.channelId;
       val var7: java.lang.String;
       if (this.messageId == null) {
          var7 = "null";
@@ -152,20 +152,20 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
          var7 = MessageId.toString-impl(this.messageId);
       }
 
-      val var6: Int = this.attachmentIndex;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MediaPlayerPlaybackSource(id=");
-      var5.append(var3);
-      var5.append(", assetUrl=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var4);
-      var5.append(", messageId=");
-      var5.append(var7);
-      var5.append(", attachmentIndex=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var5: Int = this.attachmentIndex;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MediaPlayerPlaybackSource(id=");
+      var6.append(var2);
+      var6.append(", assetUrl=");
+      var6.append(var4);
+      var6.append(", channelId=");
+      var6.append(var3);
+      var6.append(", messageId=");
+      var6.append(var7);
+      var6.append(", attachmentIndex=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -200,16 +200,16 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.c(var11);
          var var2: Int;
+         var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: java.lang.String;
          val var9: java.lang.String;
-         val var10: java.lang.String;
-         var var18: Any;
+         val var10: Any;
          if (var12.y()) {
             val var13: b2 = b2.a;
-            var7 = var12.v(var11, 0, b2.a, null) as java.lang.String;
-            var8 = var12.v(var11, 1, var13, null) as java.lang.String;
-            var18 = var12.v(var11, 2, var13, null) as java.lang.String;
+            var8 = var12.v(var11, 0, b2.a, null) as java.lang.String;
+            var7 = var12.v(var11, 1, var13, null) as java.lang.String;
+            var6 = var12.v(var11, 2, var13, null) as java.lang.String;
             val var14: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var15: java.lang.String;
             if (var14 != null) {
@@ -220,15 +220,14 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
 
             val var5: Int = var12.v(var11, 4, n0.a, null) as Int;
             var2 = 31;
-            var9 = (java.lang.String)var18;
-            var10 = var15;
-            var18 = var5;
+            var9 = var15;
+            var10 = var5;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var8 = null;
-            var18 = null;
+            var6 = null;
             var var17: java.lang.String = null;
             var var16: java.lang.String = null;
 
@@ -243,7 +242,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                                  throw new n(var4);
                               }
 
-                              var18 = var12.v(var11, 4, n0.a, var18) as Int;
+                              var6 = var12.v(var11, 4, n0.a, var6) as Int;
                               var2 |= 16;
                            } else {
                               val var21: MessageId;
@@ -279,14 +278,15 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                }
             }
 
-            var10 = var8;
-            var9 = var7;
-            var8 = var17;
-            var7 = var16;
+            var10 = var6;
+            var9 = var8;
+            var6 = var7;
+            var7 = var17;
+            var8 = var16;
          }
 
          var12.b(var11);
-         return new MediaPlayerPlaybackSource(var2, var7, var8, var9, var10, (Integer)var18, null, null);
+         return new MediaPlayerPlaybackSource(var2, var8, var7, var6, var9, (Integer)var10, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackSource) {

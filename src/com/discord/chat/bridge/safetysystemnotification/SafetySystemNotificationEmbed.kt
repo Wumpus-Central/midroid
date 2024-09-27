@@ -288,39 +288,38 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var var4: Byte = 9;
          var var9: java.lang.String = null;
          var var2: Int;
-         var var7: java.lang.String;
          var var10: java.lang.String;
          var var11: java.lang.String;
          var var12: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
          var var15: java.lang.String;
-         val var16: java.lang.String;
+         var var16: FooterTheme;
          val var18: java.lang.String;
-         val var24: FooterTheme;
-         val var32: java.lang.String;
+         val var23: java.lang.String;
+         var var25: java.lang.String;
+         val var33: java.lang.String;
          if (var6) {
-            var14 = var21.t(var20, 0);
+            var12 = var21.t(var20, 0);
             var13 = var21.t(var20, 1);
             var18 = var21.t(var20, 2);
-            var16 = var21.t(var20, 3);
+            var14 = var21.t(var20, 3);
             val var22: b2 = b2.a;
             var10 = var21.v(var20, 4, b2.a, null) as java.lang.String;
             var11 = var21.v(var20, 5, var22, null) as java.lang.String;
             val var8: java.lang.String = var21.v(var20, 6, var22, null) as java.lang.String;
-            var7 = var21.v(var20, 7, var22, null) as java.lang.String;
+            var25 = var21.v(var20, 7, var22, null) as java.lang.String;
             var9 = var21.v(var20, 8, var22, null) as java.lang.String;
-            val var23: java.lang.String = var21.v(var20, 9, var22, null) as java.lang.String;
-            val var19: FooterTheme = var21.m(var20, 10, var17[10], null) as FooterTheme;
+            var23 = var21.v(var20, 9, var22, null) as java.lang.String;
+            var16 = var21.m(var20, 10, var17[10], null) as FooterTheme;
             var2 = 2047;
-            var12 = var8;
-            var32 = var9;
-            var15 = var23;
-            var24 = var19;
+            var15 = var8;
+            var33 = var25;
+            var25 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var31: FooterTheme = null;
+            var16 = null;
             var15 = null;
             var14 = null;
             var13 = null;
@@ -328,8 +327,8 @@ public data class SafetySystemNotificationEmbed(titleText: String,
             var11 = null;
             var10 = null;
             var var27: java.lang.String = null;
-            var7 = null;
-            var var25: java.lang.String = null;
+            var25 = null;
+            var var24: java.lang.String = null;
 
             while (var3) {
                val var5: Int = var21.x(var20);
@@ -346,11 +345,11 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 2;
                      break;
                   case 2:
-                     var7 = var21.t(var20, 2);
+                     var25 = var21.t(var20, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var25 = var21.t(var20, 3);
+                     var24 = var21.t(var20, 3);
                      var2 |= 8;
                      break;
                   case 4:
@@ -379,7 +378,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 512;
                      continue;
                   case 10:
-                     var31 = var21.m(var20, 10, var17[10], var31) as FooterTheme;
+                     var16 = var21.m(var20, 10, var17[10], var16) as FooterTheme;
                      var2 |= 1024;
                      continue;
                   default:
@@ -389,17 +388,18 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                var4 = 9;
             }
 
-            var18 = var7;
-            var24 = var31;
-            var32 = var13;
-            var7 = var14;
-            var16 = var25;
+            var18 = var25;
+            var23 = var15;
+            var25 = var13;
+            var33 = var14;
+            var15 = var12;
+            var14 = var24;
             var13 = var27;
-            var14 = var9;
+            var12 = var9;
          }
 
          var21.b(var20);
-         return new SafetySystemNotificationEmbed(var2, var14, var13, var18, var16, var10, var11, var12, var7, var32, var15, var24, null);
+         return new SafetySystemNotificationEmbed(var2, var12, var13, var18, var14, var10, var11, var15, var33, var25, var23, var16, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetySystemNotificationEmbed) {

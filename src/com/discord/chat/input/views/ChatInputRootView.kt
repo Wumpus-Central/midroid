@@ -342,9 +342,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             for (int var19 = 0; var19 < var20; var19++) {
                val var12: Intent = var16.c().getItemAt(var19).getIntent();
                q.g(var12, "getIntent(...)");
-               val var17: java.lang.String = var12.getStringExtra("data");
-               if (var17 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var17);
+               val var13: java.lang.String = var12.getStringExtra("data");
+               if (var13 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var13);
                }
             }
 
@@ -409,14 +409,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(i.v(var1, 10));
 
-      for (ChatInputNode var6 : var1) {
-         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var5 : var1) {
+         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var17 : var4) {
-         val var7: Editable = this.editText.getEditableText();
-         q.g(var7, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var7, var17);
+      for (ChatInputNode var7 : var4) {
+         val var17: Editable = this.editText.getEditableText();
+         q.g(var17, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var17, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -495,8 +495,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at java.base/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1518,7 +1519,6 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
@@ -1538,6 +1538,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -2560,8 +2562,6 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
             3,
             null

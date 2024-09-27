@@ -15,17 +15,17 @@ public object DeviceFocusLockManager {
 
    private fun getParallelAncestorViewTrees(targetViews: List<View>): List<View> {
       val var8: LinkedHashSet = new LinkedHashSet();
-      val var9: LinkedHashSet = new LinkedHashSet();
+      val var7: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
-         val var7: ArrayList = new ArrayList();
+         val var6: ArrayList = new ArrayList();
 
          while (var4.getParent() instanceof ViewGroup) {
             val var5: ViewParent = var4.getParent();
             q.f(var5, "null cannot be cast to non-null type android.view.ViewGroup");
             val var11: ViewGroup = var5 as ViewGroup;
-            if (var9.contains(var5 as ViewGroup)) {
-               var7.clear();
+            if (var7.contains(var5 as ViewGroup)) {
+               var6.clear();
                break;
             }
 
@@ -35,15 +35,15 @@ public object DeviceFocusLockManager {
                var4 = var11.getChildAt(var2);
                if (!var1.contains(var4)) {
                   q.e(var4);
-                  var7.add(var4);
+                  var6.add(var4);
                }
             }
 
-            var9.add(var11);
+            var7.add(var11);
             var4 = var11;
          }
 
-         var8.addAll(var7);
+         var8.addAll(var6);
       }
 
       return i.R0(var8);

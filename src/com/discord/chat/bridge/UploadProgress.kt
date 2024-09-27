@@ -263,101 +263,100 @@ public data class UploadProgress(headerText: String,
 
       public open fun deserialize(decoder: Decoder): UploadProgress {
          q.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.c(var18);
-         val var14: Boolean = var19.y();
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.c(var17);
+         val var13: Boolean = var18.y();
          var var3: Int = 0;
          var var2: Float;
+         var var4: Int;
+         var var5: Int;
          var var6: Int;
          var var7: Int;
+         var var8: Int;
          var var9: Int;
          var var10: Int;
          val var11: Int;
-         var var12: Int;
          var var15: java.lang.String;
-         var var16: java.lang.String;
-         val var20: java.lang.String;
-         var var23: Int;
-         var var25: Int;
-         if (var14) {
-            var16 = var19.t(var18, 0);
-            var7 = var19.k(var18, 1);
-            var6 = var19.k(var18, 2);
-            var2 = var19.G(var18, 3);
-            var15 = var19.t(var18, 4);
-            var20 = var19.t(var18, 5);
-            var12 = var19.k(var18, 6);
-            var25 = var19.k(var18, 7);
-            val var8: Int = var19.k(var18, 8);
-            var23 = var19.k(var18, 9);
-            var3 = var19.k(var18, 10);
+         val var19: java.lang.String;
+         var var31: java.lang.String;
+         if (var13) {
+            var31 = var18.t(var17, 0);
+            var6 = var18.k(var17, 1);
+            var8 = var18.k(var17, 2);
+            var2 = var18.G(var17, 3);
+            val var16: java.lang.String = var18.t(var17, 4);
+            var19 = var18.t(var17, 5);
+            var7 = var18.k(var17, 6);
+            var5 = var18.k(var17, 7);
+            var9 = var18.k(var17, 8);
+            var4 = var18.k(var17, 9);
+            var3 = var18.k(var17, 10);
             var10 = 2047;
-            var11 = var25;
-            var25 = var8;
-            var9 = var23;
-            var23 = var3;
+            var15 = var31;
+            var31 = var16;
+            var11 = var3;
          } else {
-            var16 = null;
             var15 = null;
-            var var21: java.lang.String = null;
-            var var31: Boolean = true;
+            var31 = null;
+            var var20: java.lang.String = null;
+            var var29: Boolean = true;
             var9 = 0;
-            var var29: Int = 0;
+            var8 = 0;
             var7 = 0;
             var6 = 0;
-            var25 = 0;
-            var23 = 0;
+            var5 = 0;
+            var4 = 0;
             var2 = 0.0F;
             var10 = 0;
 
-            while (var31) {
-               var12 = var19.x(var18);
+            while (var29) {
+               val var12: Int = var18.x(var17);
                switch (var12) {
                   case -1:
-                     var31 = false;
+                     var29 = false;
                      break;
                   case 0:
-                     var16 = var19.t(var18, 0);
+                     var15 = var18.t(var17, 0);
                      var3 |= 1;
                      break;
                   case 1:
-                     var23 = var19.k(var18, 1);
+                     var4 = var18.k(var17, 1);
                      var3 |= 2;
                      break;
                   case 2:
-                     var25 = var19.k(var18, 2);
+                     var5 = var18.k(var17, 2);
                      var3 |= 4;
                      break;
                   case 3:
-                     var2 = var19.G(var18, 3);
+                     var2 = var18.G(var17, 3);
                      var3 |= 8;
                      break;
                   case 4:
-                     var21 = var19.t(var18, 4);
+                     var20 = var18.t(var17, 4);
                      var3 |= 16;
                      break;
                   case 5:
-                     var15 = var19.t(var18, 5);
+                     var31 = var18.t(var17, 5);
                      var3 |= 32;
                      break;
                   case 6:
-                     var7 = var19.k(var18, 6);
+                     var7 = var18.k(var17, 6);
                      var3 |= 64;
                      break;
                   case 7:
-                     var29 = var19.k(var18, 7);
+                     var8 = var18.k(var17, 7);
                      var3 |= 128;
                      break;
                   case 8:
-                     var6 = var19.k(var18, 8);
+                     var6 = var18.k(var17, 8);
                      var3 |= 256;
                      break;
                   case 9:
-                     var9 = var19.k(var18, 9);
+                     var9 = var18.k(var17, 9);
                      var3 |= 512;
                      break;
                   case 10:
-                     var10 = var19.k(var18, 10);
+                     var10 = var18.k(var17, 10);
                      var3 |= 1024;
                      break;
                   default:
@@ -365,19 +364,19 @@ public data class UploadProgress(headerText: String,
                }
             }
 
-            var15 = var21;
-            var6 = var25;
-            var23 = var10;
-            var25 = var6;
-            var11 = var29;
-            var12 = var7;
-            var20 = var15;
-            var7 = var23;
+            var11 = var10;
+            var6 = var4;
+            var4 = var9;
+            var9 = var6;
+            var5 = var8;
+            var19 = var31;
+            var31 = var20;
+            var8 = var5;
             var10 = var3;
          }
 
-         var19.b(var18);
-         return new UploadProgress(var10, var16, var7, var6, var2, var15, var20, var12, var11, var25, var9, var23, null);
+         var18.b(var17);
+         return new UploadProgress(var10, var15, var6, var8, var2, var31, var19, var7, var5, var9, var4, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgress) {

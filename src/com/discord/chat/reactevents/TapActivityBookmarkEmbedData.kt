@@ -68,14 +68,14 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
 
    public override fun toString(): String {
       val var2: java.lang.String = this.applicationId;
-      val var1: java.lang.String = this.channelId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapActivityBookmarkEmbedData(applicationId=");
-      var3.append(var2);
-      var3.append(", channelId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.channelId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapActivityBookmarkEmbedData(applicationId=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

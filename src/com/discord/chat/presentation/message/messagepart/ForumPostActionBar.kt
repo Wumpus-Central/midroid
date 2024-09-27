@@ -97,8 +97,8 @@ public data class ForumPostActionBar(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var4: Int = this.postActions.hashCode();
+      val var4: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = this.postActions.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.reactions == null) {
@@ -113,29 +113,29 @@ public data class ForumPostActionBar(messageId: MessageId,
          var2 = this.reactionsTheme.hashCode();
       }
 
-      return ((((var3 * 31 + var4) * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2;
+      return ((((var4 * 31 + var3) * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: ForumPostActions = this.postActions;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: ForumPostActions = this.postActions;
       val var7: java.util.List = this.reactions;
       val var1: Boolean = this.canAddNewReactions;
-      val var6: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var3: ReactionsTheme = this.reactionsTheme;
+      val var5: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var6: ReactionsTheme = this.reactionsTheme;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ForumPostActionBar(messageId=");
-      var2.append(var4);
+      var2.append(var3);
       var2.append(", postActions=");
-      var2.append(var5);
+      var2.append(var4);
       var2.append(", reactions=");
       var2.append(var7);
       var2.append(", canAddNewReactions=");
       var2.append(var1);
       var2.append(", addNewReactionAccessibilityLabel=");
-      var2.append(var6);
+      var2.append(var5);
       var2.append(", reactionsTheme=");
-      var2.append(var3);
+      var2.append(var6);
       var2.append(")");
       return var2.toString();
    }

@@ -122,25 +122,25 @@ public data class ContactSyncBlobEntry(phone: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.phone;
-      val var2: java.lang.String = this.unencryptedName;
+      val var2: java.lang.String = this.phone;
+      val var6: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var4: java.lang.String = this.deviceContactId;
-      val var6: java.lang.String = this.givenName;
-      val var3: java.lang.String = this.familyName;
+      val var3: java.lang.String = this.deviceContactId;
+      val var4: java.lang.String = this.givenName;
+      val var5: java.lang.String = this.familyName;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ContactSyncBlobEntry(phone=");
-      var7.append(var5);
-      var7.append(", unencryptedName=");
       var7.append(var2);
+      var7.append(", unencryptedName=");
+      var7.append(var6);
       var7.append(", hasImageData=");
       var7.append(var1);
       var7.append(", deviceContactId=");
-      var7.append(var4);
-      var7.append(", givenName=");
-      var7.append(var6);
-      var7.append(", familyName=");
       var7.append(var3);
+      var7.append(", givenName=");
+      var7.append(var4);
+      var7.append(", familyName=");
+      var7.append(var5);
       var7.append(")");
       return var7.toString();
    }
@@ -185,8 +185,8 @@ public data class ContactSyncBlobEntry(phone: String,
             var9 = var12.t(var11, 0);
             var7 = var12.t(var11, 1);
             var5 = var12.s(var11, 2);
-            var8 = var12.t(var11, 3);
-            var6 = var12.t(var11, 4);
+            var6 = var12.t(var11, 3);
+            var8 = var12.t(var11, 4);
             var13 = var12.t(var11, 5);
             var2 = 63;
          } else {
@@ -235,12 +235,13 @@ public data class ContactSyncBlobEntry(phone: String,
             }
 
             var13 = var8;
-            var8 = var7;
+            var8 = var6;
+            var6 = var7;
             var7 = var14;
          }
 
          var12.b(var11);
-         return new ContactSyncBlobEntry(var2, var9, var7, var5, var8, var6, var13, null);
+         return new ContactSyncBlobEntry(var2, var9, var7, var5, var6, var8, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContactSyncBlobEntry) {

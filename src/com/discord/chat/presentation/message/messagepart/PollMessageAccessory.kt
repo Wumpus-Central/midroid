@@ -155,8 +155,8 @@ public data class PollMessageAccessory(channelId: ChannelId,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = ChannelId.hashCode-impl(this.channelId);
-      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var3: Int = MessageId.hashCode-impl(this.messageId);
       val var1: Int;
       if (this.myAvatarUrl == null) {
          var1 = 0;
@@ -164,31 +164,31 @@ public data class PollMessageAccessory(channelId: ChannelId,
          var1 = this.myAvatarUrl.hashCode();
       }
 
-      return ((((var3 * 31 + var2) * 31 + var1) * 31 + this.data.hashCode()) * 31 + this.answers.hashCode()) * 31 + this.containerStyleSet.hashCode();
+      return ((((var2 * 31 + var3) * 31 + var1) * 31 + this.data.hashCode()) * 31 + this.answers.hashCode()) * 31 + this.containerStyleSet.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = this.myAvatarUrl;
-      val var5: PollData = this.data;
-      val var3: java.util.List = this.answers;
-      val var7: IPollStyleSet = this.containerStyleSet;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PollMessageAccessory(channelId=");
-      var1.append(var2);
-      var1.append(", messageId=");
-      var1.append(var6);
-      var1.append(", myAvatarUrl=");
-      var1.append(var4);
-      var1.append(", data=");
-      var1.append(var5);
-      var1.append(", answers=");
-      var1.append(var3);
-      var1.append(", containerStyleSet=");
-      var1.append(var7);
-      var1.append(")");
-      return var1.toString();
+      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = this.myAvatarUrl;
+      val var1: PollData = this.data;
+      val var4: java.util.List = this.answers;
+      val var6: IPollStyleSet = this.containerStyleSet;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PollMessageAccessory(channelId=");
+      var5.append(var7);
+      var5.append(", messageId=");
+      var5.append(var2);
+      var5.append(", myAvatarUrl=");
+      var5.append(var3);
+      var5.append(", data=");
+      var5.append(var1);
+      var5.append(", answers=");
+      var5.append(var4);
+      var5.append(", containerStyleSet=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {
@@ -196,21 +196,21 @@ public data class PollMessageAccessory(channelId: ChannelId,
          q.h(var1, "context");
          q.h(var2, "message");
          q.h(var3, "pollData");
-         val var13: java.lang.String = ReactAssetUtilsKt.inflateUrl(var1, var3.getMyAvatarUrl());
+         val var12: java.lang.String = ReactAssetUtilsKt.inflateUrl(var1, var3.getMyAvatarUrl());
          val var23: java.util.List = var3.getAnswers();
-         val var12: ArrayList = new ArrayList(i.v(var23, 10));
+         val var13: ArrayList = new ArrayList(i.v(var23, 10));
 
-         for (PollAnswer var14 : var23) {
-            val var15: java.lang.String = var2.getId-3Eiw7ao();
-            val var17: PollResources = var3.getResources();
+         for (PollAnswer var16 : var23) {
+            val var14: java.lang.String = var2.getId-3Eiw7ao();
+            val var19: PollResources = var3.getResources();
             val var9: Boolean = var3.getCanTapAnswers();
-            val var7: Boolean = var3.getCanSelectMultipleAnswers();
-            val var5: Boolean = var3.getCanShowVoteCounts();
-            val var8: Boolean = var3.getHasVoted();
+            val var5: Boolean = var3.getCanSelectMultipleAnswers();
+            val var8: Boolean = var3.getCanShowVoteCounts();
+            val var7: Boolean = var3.getHasVoted();
             val var6: Boolean = var3.isExpired();
-            val var16: PollChatAnswerInteractionType = var3.getAnswersInteraction();
-            val var19: java.lang.String = var3.getAnswerTapAccessibilityLabel();
-            val var24: java.lang.Boolean = var14.getShouldAnimateTransition();
+            val var18: PollChatAnswerInteractionType = var3.getAnswersInteraction();
+            val var17: java.lang.String = var3.getAnswerTapAccessibilityLabel();
+            val var24: java.lang.Boolean = var16.getShouldAnimateTransition();
             val var4: Boolean;
             if (var24 != null) {
                var4 = var24;
@@ -225,23 +225,23 @@ public data class PollMessageAccessory(channelId: ChannelId,
             if (var20 != null) {
                var25 = new ArrayList();
 
-               for (Object var22 : var20) {
-                  if (i.U(var14.getPollMedia().getAttachmentIds(), (var22 as Attachment).getId())) {
-                     var25.add(var22);
+               for (var20 : var20) {
+                  if (i.U(var16.getPollMedia().getAttachmentIds(), (var20 as Attachment).getId())) {
+                     var25.add(var20);
                   }
                }
             } else {
                var25 = i.k();
             }
 
-            var12.add(
+            var13.add(
                new PollAnswerAccessory(
-                  var15, var17, var14, (java.util.List)var25, var9, var7, var5, var8, var6, var13, var16, var19, var4, var11, var10, null, 32768, null
+                  var14, var19, var16, (java.util.List)var25, var9, var5, var8, var7, var6, var12, var18, var17, var4, var11, var10, null, 32768, null
                )
             );
          }
 
-         return new PollMessageAccessory(var2.getChannelId-o4g7jtM(), var2.getId-3Eiw7ao(), var13, var3, var12, null, 32, null);
+         return new PollMessageAccessory(var2.getChannelId-o4g7jtM(), var2.getId-3Eiw7ao(), var12, var3, var13, null, 32, null);
       }
    }
 }

@@ -111,8 +111,8 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
          var1 = this.proxyURL.hashCode();
       }
 
-      val var6: Int = Integer.hashCode(this.width);
-      val var5: Int = Integer.hashCode(this.height);
+      val var5: Int = Integer.hashCode(this.width);
+      val var6: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -124,31 +124,31 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
          var3 = this.placeholderVersion.hashCode();
       }
 
-      return ((((var4 * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2) * 31 + var3;
+      return ((((var4 * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
+      val var3: java.lang.String = this.url;
       val var7: java.lang.String = this.proxyURL;
-      val var1: Int = this.width;
-      val var2: Int = this.height;
-      val var3: java.lang.String = this.placeholder;
-      val var6: Int = this.placeholderVersion;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("EmbedMedia(url=");
-      var5.append(var4);
-      var5.append(", proxyURL=");
-      var5.append(var7);
-      var5.append(", width=");
-      var5.append(var1);
-      var5.append(", height=");
-      var5.append(var2);
-      var5.append(", placeholder=");
-      var5.append(var3);
-      var5.append(", placeholderVersion=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var2: Int = this.width;
+      val var1: Int = this.height;
+      val var4: java.lang.String = this.placeholder;
+      val var5: Int = this.placeholderVersion;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("EmbedMedia(url=");
+      var6.append(var3);
+      var6.append(", proxyURL=");
+      var6.append(var7);
+      var6.append(", width=");
+      var6.append(var2);
+      var6.append(", height=");
+      var6.append(var1);
+      var6.append(", placeholder=");
+      var6.append(var4);
+      var6.append(", placeholderVersion=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : g0 {
@@ -174,10 +174,10 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: b2 = b2.a;
+         val var1: b2 = b2.a;
          val var2: KSerializer = a.u(b2.a);
-         val var1: n0 = n0.a;
-         return new KSerializer[]{var3, var2, n0.a, n0.a, a.u(var3), a.u(var1), var3};
+         val var3: n0 = n0.a;
+         return new KSerializer[]{var1, var2, n0.a, n0.a, a.u(var1), a.u(var3), var1};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedMedia {
@@ -252,9 +252,9 @@ public data class EmbedMedia(url: String, proxyURL: String? = null, width: Int, 
                }
             }
 
+            var2 = var4;
             var4 = var3;
             var3 = var2;
-            var2 = var4;
          }
 
          var12.b(var11);

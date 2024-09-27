@@ -63,16 +63,16 @@ public data class UploadProgressMessageAccessory(messageId: MessageId, index: In
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.index;
-      val var2: UploadProgress = this.uploadProgress;
+      val var4: UploadProgress = this.uploadProgress;
       val var3: StringBuilder = new StringBuilder();
       var3.append("UploadProgressMessageAccessory(messageId=");
-      var3.append(var4);
+      var3.append(var2);
       var3.append(", index=");
       var3.append(var1);
       var3.append(", uploadProgress=");
-      var3.append(var2);
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

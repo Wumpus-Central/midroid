@@ -42,12 +42,12 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
          public final void invoke(Uri var1, int var2) {
             q.h(var1, "uri");
-            val var4: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
-            val var3: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
-            q.g(var3, "access$getReactApplicationContext(...)");
+            val var3: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
+            val var4: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
+            q.g(var4, "access$getReactApplicationContext(...)");
             val var5: java.lang.String = var1.toString();
             q.g(var5, "toString(...)");
-            var4.emitModuleEvent(var3, new CompressionProgressEvent(var5, var2));
+            var3.emitModuleEvent(var4, new CompressionProgressEvent(var5, var2));
          }
       });
    }

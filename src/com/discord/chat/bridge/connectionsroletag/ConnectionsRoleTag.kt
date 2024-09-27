@@ -132,19 +132,19 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
          if (var9.y()) {
             var7 = var9.t(var8, 0);
             var10 = var9.t(var8, 1);
-            var4 = var9.k(var8, 2);
+            var3 = var9.k(var8, 2);
             val var2: Int = var9.k(var8, 3);
-            var3 = 15;
+            var4 = 15;
             var5 = var2;
          } else {
             var7 = null;
             var10 = null;
-            var var14: Boolean = true;
+            var var13: Boolean = true;
             var4 = 0;
             var3 = 0;
             var var11: Int = 0;
 
-            while (var14) {
+            while (var13) {
                val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -169,17 +169,16 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
                      var11 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var13 = false;
                }
             }
 
             var5 = var4;
-            var4 = var3;
-            var3 = var11;
+            var4 = var11;
          }
 
          var9.b(var8);
-         return new ConnectionsRoleTag(var3, var7, var10, var4, var5, null);
+         return new ConnectionsRoleTag(var4, var7, var10, var3, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ConnectionsRoleTag) {

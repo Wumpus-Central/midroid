@@ -204,90 +204,95 @@ public data class VoiceInviteEmbed(guildId: String,
 
       public open fun deserialize(decoder: Decoder): VoiceInviteEmbed {
          q.h(var1, "decoder");
-         val var13: SerialDescriptor = this.getDescriptor();
-         val var14: c = var1.c(var13);
-         var var2: Int;
+         val var14: SerialDescriptor = this.getDescriptor();
+         val var15: c = var1.c(var14);
          var var3: Int;
+         val var4: Int;
          var var6: Boolean;
          var var7: java.lang.String;
          var var9: java.lang.String;
-         var var10: java.lang.String;
          var var11: java.lang.String;
          val var12: java.lang.String;
-         val var15: java.lang.String;
-         if (var14.y()) {
-            var10 = var14.t(var13, 0);
-            var9 = var14.t(var13, 1);
-            var11 = var14.t(var13, 2);
-            var7 = var14.t(var13, 3);
-            val var8: java.lang.String = var14.t(var13, 4);
-            var15 = var14.v(var13, 5, b2.a, null) as java.lang.String;
-            var3 = var14.s(var13, 6);
-            var6 = var14.s(var13, 7);
-            var2 = 255;
-            var12 = var8;
+         val var13: java.lang.String;
+         val var16: java.lang.String;
+         if (var15.y()) {
+            var9 = var15.t(var14, 0);
+            var12 = var15.t(var14, 1);
+            var11 = var15.t(var14, 2);
+            var7 = var15.t(var14, 3);
+            val var8: java.lang.String = var15.t(var14, 4);
+            var16 = var15.v(var14, 5, b2.a, null) as java.lang.String;
+            val var2: Byte = var15.s(var14, 6);
+            var6 = var15.s(var14, 7);
+            var3 = 255;
+            var13 = var8;
+            var4 = var2;
          } else {
-            var var4: Boolean = true;
+            var var20: Boolean = true;
             var6 = false;
-            var2 = 0;
-            var10 = null;
+            var var18: Int = 0;
+            var var10: java.lang.String = null;
             var9 = null;
-            var var17: java.lang.String = null;
+            var var21: java.lang.String = null;
             var7 = null;
-            var var16: java.lang.String = null;
+            var var17: java.lang.String = null;
             var11 = null;
             var3 = 0;
 
-            while (var4) {
-               val var5: Int = var14.x(var13);
+            while (var20) {
+               val var5: Int = var15.x(var14);
                switch (var5) {
                   case -1:
-                     var4 = false;
+                     var20 = false;
                      break;
                   case 0:
-                     var10 = var14.t(var13, 0);
-                     var2 |= 1;
+                     var10 = var15.t(var14, 0);
+                     var18 |= 1;
                      break;
                   case 1:
-                     var9 = var14.t(var13, 1);
-                     var2 |= 2;
+                     var9 = var15.t(var14, 1);
+                     var18 |= 2;
                      break;
                   case 2:
-                     var17 = var14.t(var13, 2);
-                     var2 |= 4;
+                     var21 = var15.t(var14, 2);
+                     var18 |= 4;
                      break;
                   case 3:
-                     var7 = var14.t(var13, 3);
-                     var2 |= 8;
+                     var7 = var15.t(var14, 3);
+                     var18 |= 8;
                      break;
                   case 4:
-                     var16 = var14.t(var13, 4);
-                     var2 |= 16;
+                     var17 = var15.t(var14, 4);
+                     var18 |= 16;
                      break;
                   case 5:
-                     var11 = var14.v(var13, 5, b2.a, var11) as java.lang.String;
-                     var2 |= 32;
+                     var11 = var15.v(var14, 5, b2.a, var11) as java.lang.String;
+                     var18 |= 32;
                      break;
                   case 6:
-                     var3 = var14.s(var13, 6);
-                     var2 |= 64;
+                     var3 = var15.s(var14, 6);
+                     var18 |= 64;
                      break;
                   case 7:
-                     var6 = var14.s(var13, 7);
-                     var2 |= 128;
+                     var6 = var15.s(var14, 7);
+                     var18 |= 128;
                      break;
                   default:
                      throw new n(var5);
                }
             }
 
-            var12 = var16;
-            var15 = var11;
-            var11 = var17;
+            var13 = var17;
+            var4 = var3;
+            var16 = var11;
+            var11 = var21;
+            var12 = var9;
+            var9 = var10;
+            var3 = var18;
          }
 
-         var14.b(var13);
-         return new VoiceInviteEmbed(var2, var10, var9, var11, var7, var12, var15, (boolean)var3, var6, null);
+         var15.b(var14);
+         return new VoiceInviteEmbed(var3, var9, var12, var11, var7, var13, var16, (boolean)var4, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceInviteEmbed) {

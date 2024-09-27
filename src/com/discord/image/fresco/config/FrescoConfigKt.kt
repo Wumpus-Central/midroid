@@ -34,10 +34,10 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   val var1: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
-   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var3: Builder = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Y(var2.newSmallDiskCache(var0))
+   var var2: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
+   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   var2 = var2.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Y(var1.newSmallDiskCache(var0))
       .Q(new FrescoBitmapSupplier(var0))
       .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
@@ -52,8 +52,8 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
          }
       }).c()));
    val var5: a = c0.n();
-   val var6: f0 = o.a();
-   val var4: Builder = var3.W(new e0(var5.n(new f0(var6.b, var6.a * 2, var6.c)).m())).R(new DefaultCacheKeyFactory() {
+   val var3: f0 = o.a();
+   val var4: Builder = var2.W(new e0(var5.n(new f0(var3.b, var3.a * 2, var3.c)).m())).R(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
@@ -64,10 +64,10 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
 
             for (java.lang.String var2 : var1.getQueryParameterNames()) {
                if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var5: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+                  val var4: java.util.Iterator = var1.getQueryParameters(var2).iterator();
 
-                  while (var5.hasNext()) {
-                     var3.appendQueryParameter(var2, var5.next() as java.lang.String);
+                  while (var4.hasNext()) {
+                     var3.appendQueryParameter(var2, var4.next() as java.lang.String);
                   }
                }
             }

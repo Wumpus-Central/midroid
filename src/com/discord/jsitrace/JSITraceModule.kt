@@ -31,11 +31,11 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
          val var8: java.lang.Long = ReactContextExtensionsKt.jsiId(var5);
          var var7: Boolean = false;
          if (var8 != null) {
-            val var1: Long = var8;
+            val var3: Long = var8;
 
             try {
                System.loadLibrary("jsitrace");
-               this.nativeInstall(var1);
+               this.nativeInstall(var3);
             } catch (var6: Exception) {
                return false;
             }
@@ -57,10 +57,10 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
 
    @ReactMethod
    public fun setEnabled(enabled: Boolean) {
-      val var2: JSITraceCache = JSITraceCache.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var2.setEnabled(var3, var1);
+      val var3: JSITraceCache = JSITraceCache.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var3.setEnabled(var2, var1);
    }
 
    public companion object {

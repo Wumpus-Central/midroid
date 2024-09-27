@@ -106,9 +106,9 @@ public data class SearchableSelectItem(label: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.label.hashCode();
-      val var4: Int = this.value.hashCode();
-      val var5: Int = this.type.hashCode();
+      val var5: Int = this.label.hashCode();
+      val var6: Int = this.value.hashCode();
+      val var4: Int = this.type.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.iconSrc == null) {
@@ -128,31 +128,31 @@ public data class SearchableSelectItem(label: String,
          var3 = this.iconEmoji.hashCode();
       }
 
-      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var5 * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.label;
-      val var6: java.lang.String = this.value;
-      val var2: SelectOptionType = this.type;
-      val var1: java.lang.String = this.iconSrc;
-      val var3: Int = this.iconColor;
-      val var7: ComponentEmoji = this.iconEmoji;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SearchableSelectItem(label=");
-      var4.append(var5);
-      var4.append(", value=");
-      var4.append(var6);
-      var4.append(", type=");
-      var4.append(var2);
-      var4.append(", iconSrc=");
-      var4.append(var1);
-      var4.append(", iconColor=");
-      var4.append(var3);
-      var4.append(", iconEmoji=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = this.label;
+      val var5: java.lang.String = this.value;
+      val var6: SelectOptionType = this.type;
+      val var2: java.lang.String = this.iconSrc;
+      val var7: Int = this.iconColor;
+      val var4: ComponentEmoji = this.iconEmoji;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SearchableSelectItem(label=");
+      var3.append(var1);
+      var3.append(", value=");
+      var3.append(var5);
+      var3.append(", type=");
+      var3.append(var6);
+      var3.append(", iconSrc=");
+      var3.append(var2);
+      var3.append(", iconColor=");
+      var3.append(var7);
+      var3.append(", iconEmoji=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -182,23 +182,23 @@ public data class SearchableSelectItem(label: String,
 
       public open fun deserialize(decoder: Decoder): SearchableSelectItem {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
+         val var12: SerialDescriptor = this.getDescriptor();
+         val var13: c = var1.c(var12);
+         val var5: Boolean = var13.y();
          var var10: java.lang.String = null;
          var var2: Int;
          var var6: Any;
          var var7: Any;
          var var8: SelectOptionType;
          var var9: java.lang.String;
-         var var13: Any;
+         var var14: Any;
          if (var5) {
-            var10 = var12.t(var11, 0);
-            var9 = var12.t(var11, 1);
-            var8 = var12.m(var11, 2, SelectOptionType.Serializer.INSTANCE, null) as SelectOptionType;
-            var7 = var12.v(var11, 3, b2.a, null) as java.lang.String;
-            var6 = var12.v(var11, 4, n0.a, null) as Int;
-            var13 = var12.v(var11, 5, ComponentEmoji.$serializer.INSTANCE, null) as ComponentEmoji;
+            var10 = var13.t(var12, 0);
+            var9 = var13.t(var12, 1);
+            var8 = var13.m(var12, 2, SelectOptionType.Serializer.INSTANCE, null) as SelectOptionType;
+            var6 = var13.v(var12, 3, b2.a, null) as java.lang.String;
+            var7 = var13.v(var12, 4, n0.a, null) as Int;
+            var14 = var13.v(var12, 5, ComponentEmoji.$serializer.INSTANCE, null) as ComponentEmoji;
             var2 = 63;
          } else {
             var var3: Boolean = true;
@@ -207,46 +207,49 @@ public data class SearchableSelectItem(label: String,
             var8 = null;
             var7 = null;
             var6 = null;
-            var13 = null;
+            var14 = null;
 
             while (var3) {
-               val var4: Int = var12.x(var11);
+               val var4: Int = var13.x(var12);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var10 = var12.t(var11, 0);
+                     var10 = var13.t(var12, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var12.t(var11, 1);
+                     var9 = var13.t(var12, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var12.m(var11, 2, SelectOptionType.Serializer.INSTANCE, var8) as SelectOptionType;
+                     var8 = var13.m(var12, 2, SelectOptionType.Serializer.INSTANCE, var8) as SelectOptionType;
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var12.v(var11, 3, b2.a, var7) as java.lang.String;
+                     var7 = var13.v(var12, 3, b2.a, var7) as java.lang.String;
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var12.v(var11, 4, n0.a, var6) as Int;
+                     var6 = var13.v(var12, 4, n0.a, var6) as Int;
                      var2 |= 16;
                      break;
                   case 5:
-                     var13 = var12.v(var11, 5, ComponentEmoji.$serializer.INSTANCE, var13) as ComponentEmoji;
+                     var14 = var13.v(var12, 5, ComponentEmoji.$serializer.INSTANCE, var14) as ComponentEmoji;
                      var2 |= 32;
                      break;
                   default:
                      throw new n(var4);
                }
             }
+
+            var7 = var6;
+            var6 = var7;
          }
 
-         var12.b(var11);
-         return new SearchableSelectItem(var2, var10, var9, var8, (java.lang.String)var7, (Integer)var6, (ComponentEmoji)var13, null);
+         var13.b(var12);
+         return new SearchableSelectItem(var2, var10, var9, var8, (java.lang.String)var6, (Integer)var7, (ComponentEmoji)var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SearchableSelectItem) {

@@ -163,15 +163,16 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
             val var12: b2 = b2.a;
             var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
             var6 = var11.v(var10, 1, var12, null) as java.lang.String;
-            var9 = var11.t(var10, 2);
+            val var7: java.lang.String = var11.t(var10, 2);
             var3 = var11.k(var10, 3);
             var13 = var11.t(var10, 4);
             var2 = 31;
+            var9 = var7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var8 = null;
-            var var7: java.lang.String = null;
+            var var15: java.lang.String = null;
             var6 = null;
             var13 = null;
             var2 = 0;
@@ -198,7 +199,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.v(var10, 1, b2.a, var7) as java.lang.String;
+                        var15 = var11.v(var10, 1, b2.a, var15) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
@@ -211,7 +212,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
             }
 
             var9 = var6;
-            var6 = var7;
+            var6 = var15;
          }
 
          var11.b(var10);

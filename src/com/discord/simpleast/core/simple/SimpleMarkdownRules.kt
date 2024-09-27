@@ -36,22 +36,22 @@ public object SimpleMarkdownRules {
 
    @JvmStatic
    public fun <R, S> createSimpleMarkdownRules(includeTextRule: Boolean = true, includeEscapeRule: Boolean = true): MutableList<Rule<R, Node<R>, S>> {
-      val var2: ArrayList = new ArrayList();
+      val var3: ArrayList = new ArrayList();
       if (var1) {
-         var2.add(INSTANCE.createEscapeRule());
+         var3.add(INSTANCE.createEscapeRule());
       }
 
-      val var3: SimpleMarkdownRules = INSTANCE;
-      var2.add(INSTANCE.createNewlineRule());
-      var2.add(var3.createBoldRule());
-      var2.add(var3.createUnderlineRule());
-      var2.add(var3.createItalicsRule());
-      var2.add(var3.createStrikethruRule());
+      val var2: SimpleMarkdownRules = INSTANCE;
+      var3.add(INSTANCE.createNewlineRule());
+      var3.add(var2.createBoldRule());
+      var3.add(var2.createUnderlineRule());
+      var3.add(var2.createItalicsRule());
+      var3.add(var2.createStrikethruRule());
       if (var0) {
-         var2.add(var3.createTextRule());
+         var3.add(var2.createTextRule());
       }
 
-      return var2;
+      return var3;
    }
 
    @JvmStatic

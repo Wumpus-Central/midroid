@@ -75,17 +75,17 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
 
    public override fun toString(): String {
       val var2: Int = this.connectionId;
-      val var4: java.lang.String = this.userId;
+      val var3: java.lang.String = this.userId;
       val var1: Int = this.isSpeaking;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UserSpeakingEvent(connectionId=");
-      var3.append(var2);
-      var3.append(", userId=");
-      var3.append(var4);
-      var3.append(", isSpeaking=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSpeakingEvent(connectionId=");
+      var4.append(var2);
+      var4.append(", userId=");
+      var4.append(var3);
+      var4.append(", isSpeaking=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -114,23 +114,24 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
-         var var2: Int;
          var var3: Int;
          var var4: Int;
+         val var5: Int;
          var var9: java.lang.String;
          if (var8.y()) {
             var4 = var8.k(var7, 0);
             var9 = var8.t(var7, 1);
-            var3 = var8.k(var7, 2);
-            var2 = 7;
+            val var2: Int = var8.k(var7, 2);
+            var5 = 7;
+            var3 = var2;
          } else {
             var9 = null;
-            var var5: Boolean = true;
+            var var11: Boolean = true;
             var4 = 0;
             var3 = 0;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var5) {
+            while (var11) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -140,23 +141,25 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                         }
 
                         var3 = var8.k(var7, 2);
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var9 = var8.t(var7, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var4 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var11 = false;
                }
             }
+
+            var5 = var10;
          }
 
          var8.b(var7);
-         return new UserSpeakingEvent(var2, var4, var9, var3, null);
+         return new UserSpeakingEvent(var5, var4, var9, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

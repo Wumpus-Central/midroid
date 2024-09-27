@@ -75,30 +75,30 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       private final val typefaces: ConcurrentHashMap<DiscordFont, Typeface>
 
       private fun getFontFromRN(context: Context, font: DiscordFont): Typeface {
-         val var4: Typeface = ReactFontManager.getInstance().getTypeface(var2.getRawName(), 0, var1.getAssets());
-         q.g(var4, "getTypeface(...)");
-         if (!q.c(var4, Typeface.DEFAULT)) {
-            return var4;
+         val var3: Typeface = ReactFontManager.getInstance().getTypeface(var2.getRawName(), 0, var1.getAssets());
+         q.g(var3, "getTypeface(...)");
+         if (!q.c(var3, Typeface.DEFAULT)) {
+            return var3;
          } else {
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Cannot find typeface ");
-            var3.append(var4);
-            var3.append(".rawName");
-            throw new IllegalStateException(var3.toString().toString());
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("Cannot find typeface ");
+            var4.append(var3);
+            var4.append(".rawName");
+            throw new IllegalStateException(var4.toString().toString());
          }
       }
 
       public fun findByStyle(weight: Int, italic: Boolean, monospace: Boolean = false): DiscordFont? {
-         val var6: java.util.Iterator = DiscordFont.getEntries().iterator();
+         val var5: java.util.Iterator = DiscordFont.getEntries().iterator();
 
          var var4: Any;
          do {
-            if (!var6.hasNext()) {
+            if (!var5.hasNext()) {
                var4 = null;
                break;
             }
 
-            var4 = var6.next();
+            var4 = var5.next();
          } while (((DiscordFont)var4).getWeight() != var1 || ((DiscordFont)var4).getItalic() != var2 || ((DiscordFont)var4).getMonospace() != var3);
 
          return var4 as DiscordFont;

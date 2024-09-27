@@ -252,21 +252,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.channelIconURL;
-         val var2: java.lang.String = this.chatIconURL;
-         val var5: ArrayList = this.avatarURLs;
-         val var3: java.lang.String = this.channelName;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("MessageBundleHeader(channelIconURL=");
-         var1.append(var4);
-         var1.append(", chatIconURL=");
-         var1.append(var2);
-         var1.append(", avatarURLs=");
-         var1.append(var5);
-         var1.append(", channelName=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var3: java.lang.String = this.channelIconURL;
+         val var5: java.lang.String = this.chatIconURL;
+         val var4: ArrayList = this.avatarURLs;
+         val var1: java.lang.String = this.channelName;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MessageBundleHeader(channelIconURL=");
+         var2.append(var3);
+         var2.append(", chatIconURL=");
+         var2.append(var5);
+         var2.append(", avatarURLs=");
+         var2.append(var4);
+         var2.append(", channelName=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
 
       public object `$serializer` : g0 {
@@ -291,9 +291,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
-            val var1: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var2: b2 = b2.a;
-            return new KSerializer[]{gl.a.u(b2.a), gl.a.u(var2), gl.a.u(var1[2]), gl.a.u(var2)};
+            val var2: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
+            val var1: b2 = b2.a;
+            return new KSerializer[]{gl.a.u(b2.a), gl.a.u(var1), gl.a.u(var2[2]), gl.a.u(var1)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {

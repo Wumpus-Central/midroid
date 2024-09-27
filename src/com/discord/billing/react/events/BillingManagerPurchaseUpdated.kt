@@ -111,8 +111,8 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
                }
             }
 
-            var5 = var11;
             var10 = var5;
+            var5 = var11;
          }
 
          var9.b(var8);

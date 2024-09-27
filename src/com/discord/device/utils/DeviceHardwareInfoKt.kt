@@ -40,13 +40,13 @@ internal fun getSocFromProcCpuInfo(): String {
 internal fun maxCpuFreq(): String {
    val var3: Int = getNumCpuCores();
    var var2: Int = 0;
-   var var6: Long = 0L;
+   var var4: Long = 0L;
 
    while (true) {
       var var10: java.lang.String = "";
       if (var2 >= var3) {
-         if (var6 > 0L) {
-            val var0: Double = var6 / 1000000.0;
+         if (var4 > 0L) {
+            val var0: Double = var4 / 1000000.0;
             val var15: l0 = l0.a;
             var10 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
             q.g(var10, "format(...)");
@@ -68,13 +68,13 @@ internal fun maxCpuFreq(): String {
          return "";
       }
 
-      var var4: Long = var6;
-      if (var8 > var6) {
-         var4 = var8;
+      var var6: Long = var4;
+      if (var8 > var4) {
+         var6 = var8;
       }
 
       var2++;
-      var6 = var4;
+      var4 = var6;
    }
 }
 
@@ -130,13 +130,13 @@ internal fun socName(): String {
          }
       }
 
-      val var1: java.lang.String = a.a();
-      val var2: java.lang.String = b.a();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var1);
-      var4.append("_");
-      var4.append(var2);
-      return var4.toString();
+      var0 = a.a();
+      val var1: java.lang.String = b.a();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var0);
+      var2.append("_");
+      var2.append(var1);
+      return var2.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

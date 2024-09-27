@@ -61,14 +61,14 @@ public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELE
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var3: ChangeType = this.changeType;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DeleteRow(index=");
-      var2.append(var1);
-      var2.append(", changeType=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: ChangeType = this.changeType;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DeleteRow(index=");
+      var3.append(var1);
+      var3.append(", changeType=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

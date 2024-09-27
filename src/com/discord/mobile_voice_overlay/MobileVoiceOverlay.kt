@@ -127,11 +127,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
                public final void invoke(OverlayMenuBubbleDialog var1) {
                   q.h(var1, "menuDialog");
-                  val var4x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
-                  val var3x: OverlayVoiceBubble = this.$voiceBubble;
-                  val var2x: Rect = this.$marginRect;
-                  var4x.width = this.$voiceBubble.getWidth() - var2x.left - var2x.right;
-                  var4x.height = var3x.getHeight();
+                  val var2x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
+                  val var4x: OverlayVoiceBubble = this.$voiceBubble;
+                  val var3x: Rect = this.$marginRect;
+                  var2x.width = this.$voiceBubble.getWidth() - var3x.left - var3x.right;
+                  var2x.height = var4x.getHeight();
                   var1.getLinkedAnchorView().requestLayout();
                   var1.getLinkedAnchorView().setTag("Active Voice Bubble");
                   var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this.$voiceBubble) {
@@ -361,11 +361,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                      }
 
                      public final void invoke_R7gqayM/* $VF was: invoke-R7gqayM*/(long var1) {
-                        val var3x: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
-                        val var4: Context = this.$this_apply.getContext();
-                        q.g(var4, "getContext(...)");
-                        var3x.startHeadlessTask(
-                           var4, "SelectChannel", e.a(w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE))
+                        val var4: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
+                        val var3x: Context = this.$this_apply.getContext();
+                        q.g(var3x, "getContext(...)");
+                        var4.startHeadlessTask(
+                           var3x, "SelectChannel", e.a(w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE))
                         );
                      }
                   }
@@ -497,11 +497,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getSelectorDialogProvider$p(this).setData(var1);
          access$getTrashWrapProvider$p(this).setData(var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -528,11 +528,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
             });
          }
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

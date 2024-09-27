@@ -115,24 +115,22 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          var var2: Int;
+         var var3: Int;
          var var4: Int;
          var var9: ForwardFooterInfo;
-         var var10: Int;
          if (var8.y()) {
-            var10 = var8.k(var7, 0);
+            var4 = var8.k(var7, 0);
             var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, null) as ForwardFooterInfo;
-            val var5: Byte = var8.s(var7, 2);
-            var2 = 7;
-            var4 = var10;
-            var10 = var5;
+            var2 = var8.s(var7, 2);
+            var3 = 7;
          } else {
-            var var11: Boolean = true;
+            var var5: Boolean = true;
             var4 = 0;
             var2 = 0;
             var9 = null;
-            var10 = 0;
+            var3 = 0;
 
-            while (var11) {
+            while (var5) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -141,7 +139,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                            throw new n(var6);
                         }
 
-                        var10 = var8.s(var7, 2);
+                        var3 = var8.s(var7, 2);
                         var2 |= 4;
                      } else {
                         var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, var9) as ForwardFooterInfo;
@@ -152,13 +150,16 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                      var2 |= 1;
                   }
                } else {
-                  var11 = false;
+                  var5 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
-         return new ForwardInfo(var2, var4, var9, (boolean)var10, null);
+         return new ForwardInfo(var3, var4, var9, (boolean)var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardInfo) {

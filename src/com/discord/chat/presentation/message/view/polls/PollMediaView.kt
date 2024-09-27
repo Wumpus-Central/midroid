@@ -75,12 +75,12 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeView invoke() {
-            val var2: SimpleDraweeView = new SimpleDraweeView(this.$context);
-            val var1: PollMediaView = this.this$0;
-            var2.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
-            PollMediaView.access$getChildViews$p(var1).add(var2);
-            var1.addView(var2, new LayoutParams(-1, -1, 17));
-            return var2;
+            val var1: SimpleDraweeView = new SimpleDraweeView(this.$context);
+            val var2: PollMediaView = this.this$0;
+            var1.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
+            PollMediaView.access$getChildViews$p(var2).add(var1);
+            var2.addView(var1, new LayoutParams(-1, -1, 17));
+            return var1;
          }
       });
       this.textView$delegate = l.a(new Function0(var1, this) {
@@ -94,11 +94,11 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeSpanTextView invoke() {
-            val var1: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
-            val var2: PollMediaView = this.this$0;
-            PollMediaView.access$getChildViews$p(this.this$0).add(var1);
-            var2.addView(var1, new LayoutParams(-2, -2, 17));
-            return var1;
+            val var2: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
+            val var1: PollMediaView = this.this$0;
+            PollMediaView.access$getChildViews$p(this.this$0).add(var2);
+            var1.addView(var2, new LayoutParams(-2, -2, 17));
+            return var2;
          }
       });
    }
@@ -177,19 +177,19 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var4 = 1;
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
-            val var16: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var10: RenderableEmoji = var16.renderable();
-            val var9: Context = this.getContext();
-            q.g(var9, "getContext(...)");
+            val var9: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
+            val var16: RenderableEmoji = var9.renderable();
+            val var10: Context = this.getContext();
+            q.g(var10, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
-            if (var1.getShouldAnimateEmoji() && var16.getAnimated()) {
+            if (var1.getShouldAnimateEmoji() && var9.getAnimated()) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var10, var9, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var10, var4, var7, 0, null, 48, null));
             this.setOnClickListener(new h(var2));
             var4 = 1;
          } else {

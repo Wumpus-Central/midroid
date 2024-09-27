@@ -224,19 +224,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var5: NativeConnection = this.engineConnections.get(var1);
-      if (var5 == null) {
+      val var4: NativeConnection = this.engineConnections.get(var1);
+      if (var4 == null) {
          val var3: Log = Log.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("[");
-         var4.append(var2);
-         var4.append("] no NativeConnection for connectionId=");
-         var4.append(var1);
-         var4.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("[");
+         var5.append(var2);
+         var5.append("] no NativeConnection for connectionId=");
+         var5.append(var1);
+         var5.append(", returning null");
+         Log.w$default(var3, "MediaEngine", var5.toString(), null, 4, null);
       }
 
-      return var5;
+      return var4;
    }
 
    @JvmStatic
@@ -1074,10 +1074,11 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   new Function1(this, var4)// $VF: Couldn't be decompiled
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          // java.lang.StackOverflowError
-         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+         //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+         //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+         //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+         //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -2097,7 +2098,6 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
          
                )
             );
@@ -2759,15 +2759,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var3: ScreenCapturer = this.screenCapturer;
+         val var2: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ScreenCapturerForConnection(screenCapturer=");
-         var2.append(var3);
-         var2.append(", connectionId=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ScreenCapturerForConnection(screenCapturer=");
+         var3.append(var2);
+         var3.append(", connectionId=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

@@ -206,8 +206,8 @@ public data class UnfurledMediaItem(url: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: n0 = n0.a;
-         return new KSerializer[]{b2.a, b2.a, n0.a, n0.a, b2.a, a.u(b2.a), a.u(var2), a.u(ContentScanMetadata.$serializer.INSTANCE)};
+         val var1: n0 = n0.a;
+         return new KSerializer[]{b2.a, b2.a, n0.a, n0.a, b2.a, a.u(b2.a), a.u(var1), a.u(ContentScanMetadata.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): UnfurledMediaItem {
@@ -217,47 +217,50 @@ public data class UnfurledMediaItem(url: String,
          var var3: Int;
          var var4: Int;
          val var5: Int;
-         var var7: Int;
-         var var8: Any;
-         var var9: Any;
          var var10: Any;
          var var11: Any;
+         val var12: Any;
+         val var13: Any;
          val var16: ContentScanMetadata;
+         var var23: Int;
          if (var15.y()) {
-            var8 = var15.t(var14, 0);
-            var11 = var15.t(var14, 1);
-            var4 = var15.k(var14, 2);
+            val var9: java.lang.String = var15.t(var14, 0);
+            var10 = var15.t(var14, 1);
+            var3 = var15.k(var14, 2);
             val var2: Int = var15.k(var14, 3);
-            var9 = var15.t(var14, 4);
-            var10 = var15.v(var14, 5, b2.a, null) as java.lang.String;
-            var7 = var15.v(var14, 6, n0.a, null) as Int;
+            var13 = var15.t(var14, 4);
+            val var8: java.lang.String = var15.v(var14, 5, b2.a, null) as java.lang.String;
+            val var7: Int = var15.v(var14, 6, n0.a, null) as Int;
             var16 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, null) as ContentScanMetadata;
-            var3 = 255;
+            var4 = 255;
+            var12 = var9;
             var5 = var2;
+            var11 = var8;
+            var23 = var7;
          } else {
-            var var21: Boolean = true;
+            var var20: Boolean = true;
             var4 = 0;
             var var18: Int = 0;
             var11 = null;
             var10 = null;
-            var8 = null;
-            var7 = null;
+            var var22: Any = null;
+            var var21: Any = null;
             var var17: Any = null;
-            var9 = null;
+            var23 = null;
             var3 = 0;
 
-            while (var21) {
+            while (var20) {
                val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
-                     var21 = false;
+                     var20 = false;
                      break;
                   case 0:
-                     var8 = var15.t(var14, 0);
+                     var22 = var15.t(var14, 0);
                      var18 |= 1;
                      break;
                   case 1:
-                     var7 = var15.t(var14, 1);
+                     var21 = var15.t(var14, 1);
                      var18 |= 2;
                      break;
                   case 2:
@@ -273,7 +276,7 @@ public data class UnfurledMediaItem(url: String,
                      var18 |= 16;
                      break;
                   case 5:
-                     var9 = var15.v(var14, 5, b2.a, var9) as java.lang.String;
+                     var23 = var15.v(var14, 5, b2.a, var23) as java.lang.String;
                      var18 |= 32;
                      break;
                   case 6:
@@ -289,19 +292,19 @@ public data class UnfurledMediaItem(url: String,
                }
             }
 
+            var13 = var17;
             var16 = (ContentScanMetadata)var11;
-            var7 = (Integer)var10;
-            var10 = var9;
-            var9 = var17;
+            var23 = (Integer)var10;
+            var11 = var23;
             var5 = var4;
-            var4 = var3;
-            var11 = var7;
-            var3 = var18;
+            var10 = var21;
+            var12 = var22;
+            var4 = var18;
          }
 
          var15.b(var14);
          return new UnfurledMediaItem(
-            var3, (java.lang.String)var8, (java.lang.String)var11, var4, var5, (java.lang.String)var9, (java.lang.String)var10, var7, var16, null
+            var4, (java.lang.String)var12, (java.lang.String)var10, var3, var5, (java.lang.String)var13, (java.lang.String)var11, var23, var16, null
          );
       }
 

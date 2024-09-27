@@ -86,14 +86,14 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var6: Boolean = var8.y();
-         var var2: Int = 1;
+         var var3: Int = 1;
          var var4: Boolean = true;
-         var var3: Int;
+         var var2: Int;
          if (var6) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
          } else {
-            var3 = 0;
             var2 = 0;
+            var3 = 0;
 
             while (var4) {
                val var5: Int = var8.x(var7);
@@ -102,8 +102,8 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
                      throw new n(var5);
                   }
 
-                  var3 = var8.k(var7, 0);
-                  var2 |= 1;
+                  var2 = var8.k(var7, 0);
+                  var3 |= 1;
                } else {
                   var4 = false;
                }
@@ -111,7 +111,7 @@ internal data class BillingManagerDowngradeCommand(downgradeCommand: Int) : Reac
          }
 
          var8.b(var7);
-         return new BillingManagerDowngradeCommand(var2, var3, null);
+         return new BillingManagerDowngradeCommand(var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BillingManagerDowngradeCommand) {

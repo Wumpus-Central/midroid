@@ -65,14 +65,14 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
 
          var var5: Float;
          if (this.config.getCount() > 1) {
-            var2 = var2 - this.config.getCount() * var3;
-            var5 = this.config.getCount() - 1;
+            var5 = var2 - this.config.getCount() * var3;
+            var2 = this.config.getCount() - 1;
          } else {
-            var2 = var2 - var3;
-            var5 = 2;
+            var5 = var2 - var3;
+            var2 = 2;
          }
 
-         val var6: Float = var2 / var5;
+         val var6: Float = var5 / var2;
          val var8: Int = this.config.getCount();
 
          for (int var9 = 0; var9 < var8; var9++) {

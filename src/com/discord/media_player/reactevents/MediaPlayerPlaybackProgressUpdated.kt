@@ -88,15 +88,15 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
 
    public override fun toString(): String {
       val var6: MediaPlayerPlaybackSource = this.source;
-      val var3: Long = this.time;
-      val var1: Long = this.duration;
+      val var1: Long = this.time;
+      val var3: Long = this.duration;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MediaPlayerPlaybackProgressUpdated(source=");
       var5.append(var6);
       var5.append(", time=");
-      var5.append(var3);
-      var5.append(", duration=");
       var5.append(var1);
+      var5.append(", duration=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -132,20 +132,18 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
          val var11: Boolean = var13.y();
          var var14: MediaPlayerPlaybackSource = null;
          var var2: Int;
-         var var7: Long;
-         var var15: Long;
+         var var5: Long;
+         val var9: Long;
          if (var11) {
             var14 = var13.v(var12, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
-            var15 = var13.h(var12, 1);
-            val var9: Long = var13.h(var12, 2);
+            var5 = var13.h(var12, 1);
+            var9 = var13.h(var12, 2);
             var2 = 7;
-            var7 = var15;
-            var15 = var9;
          } else {
-            var7 = 0L;
+            var var7: Long = 0L;
             var var3: Boolean = true;
             var2 = 0;
-            var15 = 0L;
+            var5 = 0L;
 
             while (var3) {
                val var4: Int = var13.x(var12);
@@ -156,7 +154,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
                            throw new n(var4);
                         }
 
-                        var15 = var13.h(var12, 2);
+                        var5 = var13.h(var12, 2);
                         var2 |= 4;
                      } else {
                         var7 = var13.h(var12, 1);
@@ -170,10 +168,13 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
                   var3 = false;
                }
             }
+
+            var9 = var5;
+            var5 = var7;
          }
 
          var13.b(var12);
-         return new MediaPlayerPlaybackProgressUpdated(var2, var14, var7, var15, null);
+         return new MediaPlayerPlaybackProgressUpdated(var2, var14, var5, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackProgressUpdated) {
