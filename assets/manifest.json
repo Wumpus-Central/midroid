@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "249114",
-    "commit": "a56c882ca4b99c133127970b210d39abc73608fb",
+    "build": "249115",
+    "commit": "a5d439cbcfe2627088eaf8956a1bc0038d78b98a",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "60e23d41fcf356f0437ee97ea77a5447",
+    "app/src/main/assets/index.android.bundle": "1b238105f7691f966f38ffa82599205f",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_cs.png": "44a7840b2161275358742595c9257e76",
@@ -3255,8 +3255,8 @@
     "app/src/main/res/raw/images_platforms_img_roblox_white.svg": "898dc79e0285b8e9855531eeca36bf84",
     "app/src/main/res/raw/modules_holidays_assets_snowsgiving_loading_dark.webm": "7209f284854b7ea1e5642c91fd2e43d4",
     "app/src/main/res/raw/modules_holidays_assets_snowsgiving_loading_light.webm": "69a0ecf46982cea47de18b3e75dfe8f5",
-    "app/src/main/res/raw/modules_intl_messages_cache_intl_frmessagesd6ad2e79e20f3fa37f2d52cb6d698995compiledmessages.jsona": "3cc68f42997b61fb795d998a3ffe2c69",
+    "app/src/main/res/raw/modules_intl_messages_cache_intl_frmessagesd6ad2e79e20f3fa37f2d52cb6d698995compiledmessages.jsona": "9b35903193ce6a3c9d293b3cc9e72736",
     "app/src/main/res/raw/modules_intl_messages_secondtestcompiledmessages.jsona": "91e013f9fc5df854a9e6845bd2c3a3a1",
-    "app/src/main/res/raw/modules_intl_messages_testcompiledmessages.jsona": "7ff8eb746bdc42b4c6dfc39c08bea89c"
+    "app/src/main/res/raw/modules_intl_messages_testcompiledmessages.jsona": "92c8b5667a80b8f6a6f2b96ac74dc873"
   }
 }
