@@ -169,26 +169,26 @@ public data class PollMessageAccessory(channelId: ChannelId,
 
    public override fun toString(): String {
       val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = this.myAvatarUrl;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = this.myAvatarUrl;
       val var1: PollData = this.data;
       val var5: java.util.List = this.answers;
-      val var6: IPollStyleSet = this.containerStyleSet;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PollMessageAccessory(channelId=");
-      var3.append(var4);
-      var3.append(", messageId=");
-      var3.append(var7);
-      var3.append(", myAvatarUrl=");
-      var3.append(var2);
-      var3.append(", data=");
-      var3.append(var1);
-      var3.append(", answers=");
-      var3.append(var5);
-      var3.append(", containerStyleSet=");
-      var3.append(var6);
-      var3.append(")");
-      return var3.toString();
+      val var2: IPollStyleSet = this.containerStyleSet;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("PollMessageAccessory(channelId=");
+      var7.append(var4);
+      var7.append(", messageId=");
+      var7.append(var3);
+      var7.append(", myAvatarUrl=");
+      var7.append(var6);
+      var7.append(", data=");
+      var7.append(var1);
+      var7.append(", answers=");
+      var7.append(var5);
+      var7.append(", containerStyleSet=");
+      var7.append(var2);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {
@@ -196,21 +196,21 @@ public data class PollMessageAccessory(channelId: ChannelId,
          q.h(var1, "context");
          q.h(var2, "message");
          q.h(var3, "pollData");
-         val var13: java.lang.String = ReactAssetUtilsKt.inflateUrl(var1, var3.getMyAvatarUrl());
+         val var12: java.lang.String = ReactAssetUtilsKt.inflateUrl(var1, var3.getMyAvatarUrl());
          val var23: java.util.List = var3.getAnswers();
-         val var12: ArrayList = new ArrayList(i.v(var23, 10));
+         val var13: ArrayList = new ArrayList(i.v(var23, 10));
 
-         for (PollAnswer var17 : var23) {
-            val var19: java.lang.String = var2.getId-3Eiw7ao();
-            val var18: PollResources = var3.getResources();
-            val var9: Boolean = var3.getCanTapAnswers();
+         for (PollAnswer var18 : var23) {
+            val var16: java.lang.String = var2.getId-3Eiw7ao();
+            val var17: PollResources = var3.getResources();
+            val var5: Boolean = var3.getCanTapAnswers();
             val var7: Boolean = var3.getCanSelectMultipleAnswers();
-            val var6: Boolean = var3.getCanShowVoteCounts();
-            val var8: Boolean = var3.getHasVoted();
-            val var5: Boolean = var3.isExpired();
+            val var8: Boolean = var3.getCanShowVoteCounts();
+            val var6: Boolean = var3.getHasVoted();
+            val var9: Boolean = var3.isExpired();
             val var15: PollChatAnswerInteractionType = var3.getAnswersInteraction();
-            val var16: java.lang.String = var3.getAnswerTapAccessibilityLabel();
-            val var24: java.lang.Boolean = var17.getShouldAnimateTransition();
+            val var19: java.lang.String = var3.getAnswerTapAccessibilityLabel();
+            val var24: java.lang.Boolean = var18.getShouldAnimateTransition();
             val var4: Boolean;
             if (var24 != null) {
                var4 = var24;
@@ -218,15 +218,15 @@ public data class PollMessageAccessory(channelId: ChannelId,
                var4 = false;
             }
 
-            val var10: Boolean = MessageKt.shouldAnimateEmoji(var2);
-            val var11: Boolean = MessageKt.shouldAutoPlayGifs(var2);
+            val var11: Boolean = MessageKt.shouldAnimateEmoji(var2);
+            val var10: Boolean = MessageKt.shouldAutoPlayGifs(var2);
             val var20: java.util.List = var2.getAttachments();
             val var25: Any;
             if (var20 != null) {
                var25 = new ArrayList();
 
                for (Object var21 : var20) {
-                  if (i.U(var17.getPollMedia().getAttachmentIds(), (var21 as Attachment).getId())) {
+                  if (i.U(var18.getPollMedia().getAttachmentIds(), (var21 as Attachment).getId())) {
                      var25.add(var21);
                   }
                }
@@ -234,14 +234,14 @@ public data class PollMessageAccessory(channelId: ChannelId,
                var25 = i.k();
             }
 
-            var12.add(
+            var13.add(
                new PollAnswerAccessory(
-                  var19, var18, var17, (java.util.List)var25, var9, var7, var6, var8, var5, var13, var15, var16, var4, var10, var11, null, 32768, null
+                  var16, var17, var18, (java.util.List)var25, var5, var7, var8, var6, var9, var12, var15, var19, var4, var11, var10, null, 32768, null
                )
             );
          }
 
-         return new PollMessageAccessory(var2.getChannelId-o4g7jtM(), var2.getId-3Eiw7ao(), var13, var3, var12, null, 32, null);
+         return new PollMessageAccessory(var2.getChannelId-o4g7jtM(), var2.getId-3Eiw7ao(), var12, var3, var13, null, 32, null);
       }
    }
 }

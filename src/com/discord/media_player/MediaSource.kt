@@ -234,9 +234,9 @@ public data class MediaSource(sourceUrl: String? = ...,
          var4 = this.placeholderVersion.hashCode();
       }
 
-      val var11: Int = this.featureTag.hashCode();
-      val var10: Int = this.type.hashCode();
-      val var9: Int = java.lang.Boolean.hashCode(this.shouldAutoPlay);
+      val var10: Int = this.featureTag.hashCode();
+      val var9: Int = this.type.hashCode();
+      val var11: Int = java.lang.Boolean.hashCode(this.shouldAutoPlay);
       val var5: Int;
       if (this.channelId == null) {
          var5 = 0;
@@ -262,18 +262,18 @@ public data class MediaSource(sourceUrl: String? = ...,
          var8 = this.portal.hashCode();
       }
 
-      return (((((((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var11) * 31 + var10) * 31 + var9) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var8;
+      return (((((((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var10) * 31 + var9) * 31 + var11) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var8;
    }
 
    public override fun toString(): String {
       val var3: java.lang.String = this.sourceUrl;
-      val var6: java.lang.String = this.previewUrl;
-      val var4: java.lang.String = this.placeholder;
-      val var7: Int = this.placeholderVersion;
-      val var5: java.lang.String = this.featureTag;
-      val var8: MediaType = this.type;
+      val var7: java.lang.String = this.previewUrl;
+      val var8: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
+      val var9: java.lang.String = this.featureTag;
+      val var5: MediaType = this.type;
       val var1: Boolean = this.shouldAutoPlay;
-      val var9: ChannelId = this.channelId;
+      val var6: ChannelId = this.channelId;
       val var13: java.lang.String;
       if (this.messageId == null) {
          var13 = "null";
@@ -281,31 +281,31 @@ public data class MediaSource(sourceUrl: String? = ...,
          var13 = MessageId.toString-impl(this.messageId);
       }
 
-      val var11: Int = this.index;
-      val var10: java.lang.Double = this.portal;
+      val var10: Int = this.index;
+      val var11: java.lang.Double = this.portal;
       val var12: StringBuilder = new StringBuilder();
       var12.append("MediaSource(sourceUrl=");
       var12.append(var3);
       var12.append(", previewUrl=");
-      var12.append(var6);
-      var12.append(", placeholder=");
-      var12.append(var4);
-      var12.append(", placeholderVersion=");
       var12.append(var7);
-      var12.append(", featureTag=");
-      var12.append(var5);
-      var12.append(", type=");
+      var12.append(", placeholder=");
       var12.append(var8);
+      var12.append(", placeholderVersion=");
+      var12.append(var4);
+      var12.append(", featureTag=");
+      var12.append(var9);
+      var12.append(", type=");
+      var12.append(var5);
       var12.append(", shouldAutoPlay=");
       var12.append(var1);
       var12.append(", channelId=");
-      var12.append(var9);
+      var12.append(var6);
       var12.append(", messageId=");
       var12.append(var13);
       var12.append(", index=");
-      var12.append(var11);
-      var12.append(", portal=");
       var12.append(var10);
+      var12.append(", portal=");
+      var12.append(var11);
       var12.append(")");
       return var12.toString();
    }

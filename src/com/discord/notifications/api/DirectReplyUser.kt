@@ -124,21 +124,21 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = UserId.toString-impl(this.id);
-      val var1: java.lang.String = this.username;
+      val var1: java.lang.String = UserId.toString-impl(this.id);
+      val var3: java.lang.String = this.username;
       val var4: java.lang.String = this.discriminator;
-      val var5: java.lang.String = this.avatar;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DirectReplyUser(id=");
-      var2.append(var3);
-      var2.append(", username=");
-      var2.append(var1);
-      var2.append(", discriminator=");
-      var2.append(var4);
-      var2.append(", avatar=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.avatar;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("DirectReplyUser(id=");
+      var5.append(var1);
+      var5.append(", username=");
+      var5.append(var3);
+      var5.append(", discriminator=");
+      var5.append(var4);
+      var5.append(", avatar=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -161,8 +161,8 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{UserId.$serializer.INSTANCE, a.u(b2.a), a.u(var1), a.u(var1)};
+         val var2: b2 = b2.a;
+         return new KSerializer[]{UserId.$serializer.INSTANCE, a.u(b2.a), a.u(var2), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): DirectReplyUser {

@@ -166,13 +166,13 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          }
 
          var34.x(var16);
-         val var35: SimpleDraweeView = this.binding.image;
+         val var36: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
-         val var36: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var35: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var21: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var35, var1, var36, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var21, var5, var6)
+            var36, var1, var35, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var21, var5, var6)
          );
       }
 
@@ -206,10 +206,10 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       val var24: FrameLayout = this.binding.imageBlurBg;
       kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var24, var9);
-      val var28: SpoilerViewManager = this.spoiler;
-      val var31: ConstraintLayout = this.binding.container;
+      val var31: SpoilerViewManager = this.spoiler;
+      val var30: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var30: SimpleDraweeView = this.binding.image;
+      val var25: SimpleDraweeView = this.binding.image;
       kotlin.jvm.internal.q.g(this.binding.image, "image");
       if (var11 && !var13) {
          var13 = true;
@@ -223,7 +223,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          var7 = true;
       }
 
-      var28.configureSpoiler(var8, this, var31, var30, this.binding.imageBlurBg, var13, var12, var7, var9);
+      var31.configureSpoiler(var8, this, var30, var25, this.binding.imageBlurBg, var13, var12, var7, var9);
       val var26: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var29: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -366,18 +366,18 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var1: Int = this.width;
-         val var2: Int = this.height;
-         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("TargetSize(width=");
-         var4.append(var1);
-         var4.append(", height=");
-         var4.append(var2);
-         var4.append(", resizeMode=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var2: Int = this.width;
+         val var1: Int = this.height;
+         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetSize(width=");
+         var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
+         var3.append(", resizeMode=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

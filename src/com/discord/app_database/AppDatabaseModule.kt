@@ -25,10 +25,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, String?> {
-      val var1: CacheModule.Companion = CacheModule.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      return r.m(new Pair[]{w.a("userId", var1.get(var2).getItem("_databaseUserId"))});
+      val var2: CacheModule.Companion = CacheModule.Companion;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      return r.m(new Pair[]{w.a("userId", var2.get(var1).getItem("_databaseUserId"))});
    }
 
    public open fun getName(): String {

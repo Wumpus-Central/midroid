@@ -262,16 +262,16 @@ public data class ExecutedCommand(userId: UserId,
          var var16: Any;
          if (var8) {
             var11 = var15.m(var14, 0, UserId.$serializer.INSTANCE, null) as UserId;
-            var3 = var15.k(var14, 1);
+            var4 = var15.k(var14, 1);
             var10 = var15.v(var14, 2, b2.a, null) as java.lang.String;
             val var2: Int = var15.k(var14, 3);
             var12 = var15.m(var14, 4, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
             var9 = var15.v(var14, 5, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null) as ExecutedCommandBackgroundStyles;
             var16 = var15.v(var14, 6, h.a, null) as java.lang.Boolean;
-            var4 = 127;
-            var5 = var2;
+            var5 = 127;
+            var3 = var2;
          } else {
-            var var20: Boolean = true;
+            var var21: Boolean = true;
             var4 = 0;
             var var18: Int = 0;
             var11 = null;
@@ -281,11 +281,11 @@ public data class ExecutedCommand(userId: UserId,
             var12 = null;
             var3 = 0;
 
-            while (var20) {
+            while (var21) {
                val var7: Int = var15.x(var14);
                switch (var7) {
                   case -1:
-                     var20 = false;
+                     var21 = false;
                      break;
                   case 0:
                      var11 = var15.m(var14, 0, UserId.$serializer.INSTANCE, var11) as UserId;
@@ -321,16 +321,17 @@ public data class ExecutedCommand(userId: UserId,
                }
             }
 
+            var4 = var3;
             var9 = var16;
             var16 = var12;
             var12 = var9;
-            var5 = var4;
-            var4 = var18;
+            var3 = var4;
+            var5 = var18;
          }
 
          var15.b(var14);
          return new ExecutedCommand(
-            var4, var11, var3, var10, var5, (AnnotatedStructurableText)var12, (ExecutedCommandBackgroundStyles)var9, (java.lang.Boolean)var16, null, null
+            var5, var11, var4, var10, var3, (AnnotatedStructurableText)var12, (ExecutedCommandBackgroundStyles)var9, (java.lang.Boolean)var16, null, null
          );
       }
 

@@ -159,30 +159,29 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
 
       public open fun deserialize(decoder: Decoder): UserNameOnClick {
          q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         val var5: Boolean = var11.y();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
+         val var5: Boolean = var10.y();
          var var8: java.lang.String = null;
          var var2: Int;
          var var6: ChannelId;
-         val var7: java.lang.String;
-         val var9: UserId;
-         var var12: Any;
+         var var7: UserId;
+         var var11: Any;
          if (var5) {
-            var7 = var11.t(var10, 0);
-            var9 = var11.m(var10, 1, UserId.$serializer.INSTANCE, null) as UserId;
-            var6 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var12 = var11.v(var10, 3, n0.a, null) as Int;
+            var8 = var10.t(var9, 0);
+            var7 = var10.m(var9, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            var6 = var10.v(var9, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var11 = var10.v(var9, 3, n0.a, null) as Int;
             var2 = 15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var13: UserId = null;
+            var7 = null;
             var6 = null;
-            var12 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var11.x(var10);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -191,31 +190,28 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
                               throw new n(var4);
                            }
 
-                           var12 = var11.v(var10, 3, n0.a, var12) as Int;
+                           var11 = var10.v(var9, 3, n0.a, var11) as Int;
                            var2 |= 8;
                         } else {
-                           var6 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
+                           var6 = var10.v(var9, 2, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
                            var2 |= 4;
                         }
                      } else {
-                        var13 = var11.m(var10, 1, UserId.$serializer.INSTANCE, var13) as UserId;
+                        var7 = var10.m(var9, 1, UserId.$serializer.INSTANCE, var7) as UserId;
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.t(var10, 0);
+                     var8 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var9 = var13;
-            var7 = var8;
          }
 
-         var11.b(var10);
-         return new UserNameOnClick(var2, var7, var9, var6, (Integer)var12, null, null);
+         var10.b(var9);
+         return new UserNameOnClick(var2, var8, var7, var6, (Integer)var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserNameOnClick) {

@@ -119,19 +119,19 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          val var10: c = var1.c(var9);
          var var2: Int;
          var var5: Long;
-         var var7: java.lang.String;
+         val var8: java.lang.String;
          var var12: java.lang.String;
          if (var10.y()) {
             val var11: java.lang.String = var10.t(var9, 0);
             var5 = var10.h(var9, 1);
-            val var8: java.lang.String = var10.v(var9, 2, b2.a, null) as java.lang.String;
+            val var7: java.lang.String = var10.v(var9, 2, b2.a, null) as java.lang.String;
             var2 = 7;
-            var7 = var11;
-            var12 = var8;
+            var8 = var11;
+            var12 = var7;
          } else {
             var5 = 0L;
             var var3: Boolean = true;
-            var7 = null;
+            var var13: java.lang.String = null;
             var12 = null;
             var2 = 0;
 
@@ -151,17 +151,19 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var10.t(var9, 0);
+                     var13 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var8 = var13;
          }
 
          var10.b(var9);
-         return new NonGuildVersion(var2, var7, var5, var12, null);
+         return new NonGuildVersion(var2, var8, var5, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NonGuildVersion) {

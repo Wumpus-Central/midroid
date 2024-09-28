@@ -101,14 +101,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      val var13: StructurableText = var1.getContent();
-      if (var13 != null) {
+      var var12: StructurableText = var1.getContent();
+      if (var12 != null) {
          val var19: ArrayList = this.accessories;
-         val var12: java.lang.String = var1.getId-3Eiw7ao();
-         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var10: Boolean = var1.getShouldShowRoleDot();
-         val var8: Boolean = var1.getShouldShowRoleOnName();
+         val var13: java.lang.String = var1.getId-3Eiw7ao();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var7: Boolean = var1.getShouldShowRoleDot();
+         val var9: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
             var4 = 0;
@@ -134,12 +134,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var19.add(
             new MessageContentAccessory(
-               var12,
                var13,
-               var9,
-               var7,
-               var10,
+               var12,
                var8,
+               var10,
+               var7,
+               var9,
                var4,
                var5,
                var6,
@@ -189,7 +189,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var25: java.util.Iterator = var24.iterator();
 
             for (int var18 = 0; var25.hasNext(); var18++) {
-               val var28: Any = var25.next();
+               var12 = (StructurableText)var25.next();
                if (var18 < 0) {
                   i.u();
                }
@@ -202,7 +202,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var28 as Embed,
+                        var12 as Embed,
                         false,
                         false,
                         false,
@@ -380,23 +380,23 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       val var12: SimpleDraweeView = this.binding.icon;
       q.g(this.binding.icon, "icon");
       ReactAssetUtilsKt.setReactAsset(var12, var6);
-      val var11: SimpleDraweeView = this.binding.icon;
+      val var10: SimpleDraweeView = this.binding.icon;
       q.g(this.binding.icon, "icon");
-      ColorUtilsKt.setTintColor(var11, var4);
-      val var8: java.util.List = this.generateMessageAccessories(var1, var2);
+      ColorUtilsKt.setTintColor(var10, var4);
+      val var11: java.util.List = this.generateMessageAccessories(var1, var2);
       this.binding
          .accessoriesView
-         .setAccessories-MNg-vQI(var1.getId-3Eiw7ao(), var1.getChannelId-o4g7jtM(), var1.getGuildId-qOKuAAo(), var8, var3, null, false);
-      val var9: MessageAccessoriesView = this.binding.accessoriesView;
+         .setAccessories-mFdI1tY(var1.getId-3Eiw7ao(), var1.getChannelId-o4g7jtM(), var1.getGuildId-qOKuAAo(), var11, var3, null, var2, false, false);
+      val var8: MessageAccessoriesView = this.binding.accessoriesView;
       q.g(this.binding.accessoriesView, "accessoriesView");
-      val var10: Byte;
-      if (var8.isEmpty() xor true) {
-         var10 = 0;
+      val var9: Byte;
+      if (var11.isEmpty() xor true) {
+         var9 = 0;
       } else {
-         var10 = 8;
+         var9 = 8;
       }
 
-      var9.setVisibility(var10);
+      var8.setVisibility(var9);
       this.binding.accessoriesView.setOnCurrentContentViewChanged(new Function1(this, var1, var5) {
          final Message $message;
          final OnLongClickListener $onLongClick;

@@ -217,75 +217,74 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
 
       public open fun deserialize(decoder: Decoder): ChannelPromptData {
          q.h(var1, "decoder");
-         val var15: SerialDescriptor = this.getDescriptor();
-         val var16: c = var1.c(var15);
-         val var6: Boolean = var16.y();
+         val var14: SerialDescriptor = this.getDescriptor();
+         val var15: c = var1.c(var14);
+         val var6: Boolean = var15.y();
          var var4: Byte = 6;
-         var var17: java.lang.String = null;
+         var var16: java.lang.String = null;
          var var2: Int;
-         var var7: java.lang.String;
-         var var9: java.lang.String;
+         var var8: java.lang.String;
          var var10: java.lang.String;
          var var11: java.lang.String;
+         var var12: java.lang.String;
          val var13: java.lang.String;
+         var var18: java.lang.String;
          var var20: java.lang.String;
-         var var23: java.lang.String;
          if (var6) {
-            val var12: b2 = b2.a;
-            var9 = var16.v(var15, 0, b2.a, null) as java.lang.String;
-            var11 = var16.v(var15, 1, var12, null) as java.lang.String;
-            var10 = var16.v(var15, 2, var12, null) as java.lang.String;
-            var7 = var16.v(var15, 3, var12, null) as java.lang.String;
-            var20 = var16.v(var15, 4, var12, null) as java.lang.String;
-            val var18: java.lang.String = var16.v(var15, 5, var12, null) as java.lang.String;
-            val var14: java.lang.String = var16.v(var15, 6, var12, null) as java.lang.String;
+            val var9: b2 = b2.a;
+            var13 = var15.v(var14, 0, b2.a, null) as java.lang.String;
+            var11 = var15.v(var14, 1, var9, null) as java.lang.String;
+            var10 = var15.v(var14, 2, var9, null) as java.lang.String;
+            var8 = var15.v(var14, 3, var9, null) as java.lang.String;
+            var18 = var15.v(var14, 4, var9, null) as java.lang.String;
+            val var17: java.lang.String = var15.v(var14, 5, var9, null) as java.lang.String;
+            var20 = var15.v(var14, 6, var9, null) as java.lang.String;
             var2 = 127;
-            var23 = var20;
-            var13 = var18;
-            var20 = var14;
+            var12 = var18;
+            var18 = var17;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var23 = null;
+            var12 = null;
             var11 = null;
             var10 = null;
-            var9 = null;
             var20 = null;
-            var7 = null;
+            var8 = null;
+            var18 = null;
 
             while (var3) {
-               val var5: Int = var16.x(var15);
+               val var5: Int = var15.x(var14);
                switch (var5) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var17 = var16.v(var15, 0, b2.a, var17) as java.lang.String;
+                     var16 = var15.v(var14, 0, b2.a, var16) as java.lang.String;
                      var2 |= 1;
                      break;
                   case 1:
-                     var11 = var16.v(var15, 1, b2.a, var11) as java.lang.String;
+                     var11 = var15.v(var14, 1, b2.a, var11) as java.lang.String;
                      var2 |= 2;
                      var4 = 6;
                      continue;
                   case 2:
-                     var10 = var16.v(var15, 2, b2.a, var10) as java.lang.String;
+                     var10 = var15.v(var14, 2, b2.a, var10) as java.lang.String;
                      var2 |= 4;
                      continue;
                   case 3:
-                     var9 = var16.v(var15, 3, b2.a, var9) as java.lang.String;
+                     var20 = var15.v(var14, 3, b2.a, var20) as java.lang.String;
                      var2 |= 8;
                      continue;
                   case 4:
-                     var20 = var16.v(var15, 4, b2.a, var20) as java.lang.String;
+                     var8 = var15.v(var14, 4, b2.a, var8) as java.lang.String;
                      var2 |= 16;
                      continue;
                   case 5:
-                     var7 = var16.v(var15, 5, b2.a, var7) as java.lang.String;
+                     var18 = var15.v(var14, 5, b2.a, var18) as java.lang.String;
                      var2 |= 32;
                      continue;
                   case 6:
-                     var23 = var16.v(var15, var4, b2.a, var23) as java.lang.String;
+                     var12 = var15.v(var14, var4, b2.a, var12) as java.lang.String;
                      var2 |= 64;
                      continue;
                   default:
@@ -295,15 +294,14 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                var4 = 6;
             }
 
-            var20 = var23;
-            var13 = var7;
-            var23 = var20;
-            var7 = var9;
-            var9 = var17;
+            var20 = var12;
+            var12 = var8;
+            var8 = var20;
+            var13 = var16;
          }
 
-         var16.b(var15);
-         return new ChannelPromptData(var2, var9, var11, var10, var7, var23, var13, var20, null);
+         var15.b(var14);
+         return new ChannelPromptData(var2, var13, var11, var10, var8, var12, var18, var20, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChannelPromptData) {

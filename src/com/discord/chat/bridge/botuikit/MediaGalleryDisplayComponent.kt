@@ -72,16 +72,16 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var3: java.util.List = this.items;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MediaGalleryDisplayComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", items=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.List = this.items;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaGalleryDisplayComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(", items=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

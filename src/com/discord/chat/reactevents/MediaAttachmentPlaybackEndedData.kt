@@ -229,14 +229,14 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
          q.h(var1, "decoder");
          val var13: SerialDescriptor = this.getDescriptor();
          val var14: c = var1.c(var13);
-         var var2: Float;
-         var var3: Float;
+         var var4: Float;
          val var5: Float;
          var var6: Int;
          var var9: Boolean;
          var var10: Any;
          var var11: java.lang.String;
          val var17: java.lang.String;
+         var var20: Float;
          if (var14.y()) {
             val var15: MessageId = var14.m(var13, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var16: java.lang.String;
@@ -246,19 +246,21 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                var16 = null;
             }
 
-            var5 = var14.G(var13, 1);
-            var3 = var14.G(var13, 2);
+            var4 = var14.G(var13, 1);
+            var20 = var14.G(var13, 2);
             var10 = var14.m(var13, 3, UserId.$serializer.INSTANCE, null) as UserId;
-            var2 = var14.G(var13, 4);
+            val var2: Float = var14.G(var13, 4);
             var9 = var14.s(var13, 5);
             val var12: java.lang.String = var14.t(var13, 6);
             var11 = var16;
             var17 = var12;
             var6 = 127;
+            var5 = var20;
+            var20 = var2;
          } else {
-            var var4: Float = 0.0F;
-            var3 = 0.0F;
-            var2 = 0.0F;
+            var4 = 0.0F;
+            var20 = 0.0F;
+            var var19: Float = 0.0F;
             var var7: Boolean = true;
             var9 = false;
             var6 = 0;
@@ -273,16 +275,16 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                      var7 = false;
                      break;
                   case 0:
-                     val var21: MessageId;
+                     val var24: MessageId;
                      if (var11 != null) {
-                        var21 = MessageId.box-impl(var11);
+                        var24 = MessageId.box-impl(var11);
                      } else {
-                        var21 = null;
+                        var24 = null;
                      }
 
-                     val var22: MessageId = var14.m(var13, 0, MessageId.$serializer.INSTANCE, var21) as MessageId;
-                     if (var22 != null) {
-                        var11 = var22.unbox-impl();
+                     val var25: MessageId = var14.m(var13, 0, MessageId.$serializer.INSTANCE, var24) as MessageId;
+                     if (var25 != null) {
+                        var11 = var25.unbox-impl();
                      } else {
                         var11 = null;
                      }
@@ -290,11 +292,11 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                      var6 |= 1;
                      break;
                   case 1:
-                     var2 = var14.G(var13, 1);
+                     var19 = var14.G(var13, 1);
                      var6 |= 2;
                      break;
                   case 2:
-                     var3 = var14.G(var13, 2);
+                     var20 = var14.G(var13, 2);
                      var6 |= 4;
                      break;
                   case 3:
@@ -318,14 +320,15 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                }
             }
 
-            var5 = var2;
-            var17 = (java.lang.String)var10;
-            var2 = var4;
             var10 = var18;
+            var5 = var20;
+            var17 = (java.lang.String)var10;
+            var20 = var4;
+            var4 = var19;
          }
 
          var14.b(var13);
-         return new MediaAttachmentPlaybackEndedData(var6, var11, var5, var3, (UserId)var10, var2, var9, var17, null, null);
+         return new MediaAttachmentPlaybackEndedData(var6, var11, var4, var5, (UserId)var10, var20, var9, var17, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaAttachmentPlaybackEndedData) {

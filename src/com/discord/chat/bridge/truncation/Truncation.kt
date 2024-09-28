@@ -151,9 +151,9 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: n0 = n0.a;
-         val var2: h = h.a;
-         return new KSerializer[]{n0.a, h.a, a.u(b2.a), a.u(var1), a.u(var2)};
+         val var2: n0 = n0.a;
+         val var1: h = h.a;
+         return new KSerializer[]{n0.a, h.a, a.u(b2.a), a.u(var2), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): Truncation {
@@ -168,11 +168,11 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
          var var11: Any;
          if (var10.y()) {
             var4 = var10.k(var9, 0);
-            var2 = var10.s(var9, 1);
+            var3 = var10.s(var9, 1);
             var8 = var10.v(var9, 2, b2.a, null) as java.lang.String;
             var7 = var10.v(var9, 3, n0.a, null) as Int;
             var11 = var10.v(var9, 4, h.a, null) as java.lang.Boolean;
-            var3 = 31;
+            var2 = 31;
          } else {
             var var5: Boolean = true;
             var4 = 0;
@@ -215,13 +215,10 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
                   var5 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var10.b(var9);
-         return new Truncation(var3, var4, (boolean)var2, var8, var7, (java.lang.Boolean)var11, null);
+         return new Truncation(var2, var4, (boolean)var3, var8, var7, (java.lang.Boolean)var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Truncation) {

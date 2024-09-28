@@ -1250,25 +1250,25 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var7: java.lang.String = this.url;
+         val var5: java.lang.String = this.url;
          val var4: Boolean = this.animate;
          val var3: Int = this.widthDp;
-         val var1: Int = this.heightDp;
-         val var5: java.lang.String = this.asset;
-         val var2: Int = this.renderMode;
+         val var2: Int = this.heightDp;
+         val var7: java.lang.String = this.asset;
+         val var1: Int = this.renderMode;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Config(url=");
-         var6.append(var7);
+         var6.append(var5);
          var6.append(", animate=");
          var6.append(var4);
          var6.append(", widthDp=");
          var6.append(var3);
          var6.append(", heightDp=");
-         var6.append(var1);
-         var6.append(", asset=");
-         var6.append(var5);
-         var6.append(", renderMode=");
          var6.append(var2);
+         var6.append(", asset=");
+         var6.append(var7);
+         var6.append(", renderMode=");
+         var6.append(var1);
          var6.append(")");
          return var6.toString();
       }

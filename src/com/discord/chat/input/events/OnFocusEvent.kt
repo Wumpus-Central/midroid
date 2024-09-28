@@ -110,23 +110,24 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
-         var var2: Int;
          var var3: Int;
          var var4: Int;
          var var5: Int;
+         val var6: Int;
          if (var9.y()) {
             var5 = var9.k(var8, 0);
-            var3 = var9.k(var8, 1);
-            var2 = var9.k(var8, 2);
+            var6 = var9.k(var8, 1);
+            val var2: Int = var9.k(var8, 2);
             var4 = 7;
+            var3 = var2;
          } else {
-            var var6: Boolean = true;
+            var var13: Boolean = true;
             var5 = 0;
             var4 = 0;
             var3 = 0;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var6) {
+            while (var13) {
                val var7: Int = var9.x(var8);
                if (var7 != -1) {
                   if (var7 != 0) {
@@ -136,26 +137,27 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
                         }
 
                         var4 = var9.k(var8, 2);
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var3 = var9.k(var8, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var5 = var9.k(var8, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var6 = false;
+                  var13 = false;
                }
             }
 
-            var4 = var2;
-            var2 = var4;
+            var6 = var3;
+            var3 = var4;
+            var4 = var10;
          }
 
          var9.b(var8);
-         return new OnFocusEvent(var4, var5, var3, var2, null);
+         return new OnFocusEvent(var4, var5, var6, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnFocusEvent) {

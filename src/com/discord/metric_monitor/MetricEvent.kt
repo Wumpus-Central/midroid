@@ -86,14 +86,14 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
 
    public override fun toString(): String {
       val var2: java.lang.String = this.name;
-      val var1: java.util.List = this.tags;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MetricEvent(name=");
-      var3.append(var2);
-      var3.append(", tags=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.List = this.tags;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MetricEvent(name=");
+      var1.append(var2);
+      var1.append(", tags=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

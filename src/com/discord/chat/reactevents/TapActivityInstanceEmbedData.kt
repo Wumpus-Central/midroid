@@ -92,21 +92,21 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.applicationId;
-      val var5: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.instanceId;
-      val var4: java.lang.String = this.messageId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapActivityInstanceEmbedData(applicationId=");
-      var3.append(var2);
-      var3.append(", channelId=");
-      var3.append(var5);
-      var3.append(", instanceId=");
-      var3.append(var1);
-      var3.append(", messageId=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.applicationId;
+      val var4: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.instanceId;
+      val var3: java.lang.String = this.messageId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapActivityInstanceEmbedData(applicationId=");
+      var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", instanceId=");
+      var2.append(var5);
+      var2.append(", messageId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -143,8 +143,8 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
          val var11: java.lang.String;
          if (var10.y()) {
             var7 = var10.t(var9, 0);
-            var5 = var10.t(var9, 1);
-            var6 = var10.t(var9, 2);
+            var6 = var10.t(var9, 1);
+            var5 = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
          } else {
@@ -184,13 +184,12 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
                }
             }
 
-            var5 = var12;
             var11 = var6;
-            var6 = var5;
+            var6 = var12;
          }
 
          var10.b(var9);
-         return new TapActivityInstanceEmbedData(var2, var7, var5, var6, var11, null);
+         return new TapActivityInstanceEmbedData(var2, var7, var6, var5, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapActivityInstanceEmbedData) {

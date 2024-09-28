@@ -154,12 +154,11 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
          var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: StructurableText;
-         val var10: java.lang.String;
          val var13: java.lang.String;
          if (var5) {
-            var7 = var12.t(var11, 0);
+            var9 = var12.t(var11, 0);
             var8 = var12.m(var11, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var10 = var12.t(var11, 2);
+            var7 = var12.t(var11, 2);
             var13 = var12.t(var11, 3);
             var6 = var12.t(var11, 4);
             var2 = 31;
@@ -207,12 +206,10 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
 
             var6 = var14;
             var13 = var6;
-            var10 = var7;
-            var7 = var9;
          }
 
          var12.b(var11);
-         return new PostSharePrompt(var2, var7, var8, var10, var13, var6, null);
+         return new PostSharePrompt(var2, var9, var8, var7, var13, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PostSharePrompt) {

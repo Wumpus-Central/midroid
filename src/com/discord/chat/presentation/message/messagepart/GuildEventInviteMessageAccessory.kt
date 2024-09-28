@@ -123,28 +123,28 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
-      val var8: GuildEventInviteEmbedImpl = this.invite;
+      val var7: GuildEventInviteEmbedImpl = this.invite;
       val var2: Boolean = this.shouldAnimateEmoji;
-      val var5: Boolean = this.shouldShowLinkDecorations;
+      val var4: Boolean = this.shouldShowLinkDecorations;
       val var3: Boolean = this.shouldShowRoleDot;
-      val var4: Boolean = this.shouldShowRoleOnName;
+      val var5: Boolean = this.shouldShowRoleOnName;
       val var6: StringBuilder = new StringBuilder();
       var6.append("GuildEventInviteMessageAccessory(messageId=");
-      var6.append(var7);
+      var6.append(var8);
       var6.append(", codedLinkIndex=");
       var6.append(var1);
       var6.append(", invite=");
-      var6.append(var8);
+      var6.append(var7);
       var6.append(", shouldAnimateEmoji=");
       var6.append(var2);
       var6.append(", shouldShowLinkDecorations=");
-      var6.append(var5);
+      var6.append(var4);
       var6.append(", shouldShowRoleDot=");
       var6.append(var3);
       var6.append(", shouldShowRoleOnName=");
-      var6.append(var4);
+      var6.append(var5);
       var6.append(")");
       return var6.toString();
    }

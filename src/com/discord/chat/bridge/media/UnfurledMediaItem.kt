@@ -214,95 +214,92 @@ public data class UnfurledMediaItem(url: String,
          q.h(var1, "decoder");
          val var14: SerialDescriptor = this.getDescriptor();
          val var15: c = var1.c(var14);
+         var var2: Int;
          var var3: Int;
          var var4: Int;
-         val var5: Int;
          var var7: Int;
+         var var8: Any;
          var var9: Any;
          var var10: Any;
          var var11: Any;
-         val var12: Any;
          val var16: ContentScanMetadata;
          if (var15.y()) {
-            var10 = var15.t(var14, 0);
-            var12 = var15.t(var14, 1);
-            var5 = var15.k(var14, 2);
-            val var2: Int = var15.k(var14, 3);
-            var11 = var15.t(var14, 4);
-            val var8: java.lang.String = var15.v(var14, 5, b2.a, null) as java.lang.String;
+            var8 = var15.t(var14, 0);
+            var11 = var15.t(var14, 1);
+            var4 = var15.k(var14, 2);
+            var2 = var15.k(var14, 3);
+            var10 = var15.t(var14, 4);
+            var9 = var15.v(var14, 5, b2.a, null) as java.lang.String;
             var7 = var15.v(var14, 6, n0.a, null) as Int;
             var16 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, null) as ContentScanMetadata;
-            var4 = 255;
-            var3 = var2;
-            var9 = var8;
+            var3 = 255;
          } else {
-            var var22: Boolean = true;
+            var var5: Boolean = true;
             var4 = 0;
-            var var18: Int = 0;
+            var2 = 0;
             var11 = null;
             var10 = null;
-            var var25: Any = null;
+            var8 = null;
             var7 = null;
             var var17: Any = null;
             var9 = null;
             var3 = 0;
 
-            while (var22) {
+            while (var5) {
                val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
-                     var22 = false;
+                     var5 = false;
                      break;
                   case 0:
-                     var25 = var15.t(var14, 0);
-                     var18 |= 1;
+                     var8 = var15.t(var14, 0);
+                     var2 |= 1;
                      break;
                   case 1:
                      var7 = var15.t(var14, 1);
-                     var18 |= 2;
+                     var2 |= 2;
                      break;
                   case 2:
                      var3 = var15.k(var14, 2);
-                     var18 |= 4;
+                     var2 |= 4;
                      break;
                   case 3:
                      var4 = var15.k(var14, 3);
-                     var18 |= 8;
+                     var2 |= 8;
                      break;
                   case 4:
                      var17 = var15.t(var14, 4);
-                     var18 |= 16;
+                     var2 |= 16;
                      break;
                   case 5:
                      var9 = var15.v(var14, 5, b2.a, var9) as java.lang.String;
-                     var18 |= 32;
+                     var2 |= 32;
                      break;
                   case 6:
                      var10 = var15.v(var14, 6, n0.a, var10) as Int;
-                     var18 |= 64;
+                     var2 |= 64;
                      break;
                   case 7:
                      var11 = var15.v(var14, 7, ContentScanMetadata.$serializer.INSTANCE, var11) as ContentScanMetadata;
-                     var18 |= 128;
+                     var2 |= 128;
                      break;
                   default:
                      throw new n(var6);
                }
             }
 
+            var3 = var2;
+            var11 = var7;
             var16 = (ContentScanMetadata)var11;
             var7 = (Integer)var10;
-            var11 = var17;
-            var3 = var4;
-            var5 = var3;
-            var12 = var7;
-            var10 = var25;
-            var4 = var18;
+            var10 = var17;
+            var2 = var4;
+            var4 = var3;
          }
 
          var15.b(var14);
          return new UnfurledMediaItem(
-            var4, (java.lang.String)var10, (java.lang.String)var12, var5, var3, (java.lang.String)var11, (java.lang.String)var9, var7, var16, null
+            var3, (java.lang.String)var8, (java.lang.String)var11, var4, var2, (java.lang.String)var10, (java.lang.String)var9, var7, var16, null
          );
       }
 

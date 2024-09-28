@@ -63,11 +63,11 @@ public class MobileVoiceOverlayManagerModule(reactContext: ReactApplicationConte
             public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
                if (var2 == 234780) {
                   MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
-                  val var5: Promise = this.$promise;
-                  val var6: WindowUtils = WindowUtils.INSTANCE;
+                  val var6: Promise = this.$promise;
+                  val var5: WindowUtils = WindowUtils.INSTANCE;
                   val var7: ReactApplicationContext = MobileVoiceOverlayManagerModule.access$getReactApplicationContext(this.this$0);
                   q.g(var7, "access$getReactApplicationContext(...)");
-                  var5.resolve(var6.canDrawOverlay(var7));
+                  var6.resolve(var5.canDrawOverlay(var7));
                }
             }
 

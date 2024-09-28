@@ -46,8 +46,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       val var5: PollRecyclerViewBinding = PollRecyclerViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var5, "inflate(...)");
       this.binding = var5;
-      val var4: RecyclerView = var5.answers;
-      val var7: NoMoveItemAnimator = new NoMoveItemAnimator() {
+      val var7: RecyclerView = var5.answers;
+      val var4: NoMoveItemAnimator = new NoMoveItemAnimator() {
          {
             super(null, null, 3, null);
          }
@@ -61,8 +61,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
             MaybeAnimateElevationToKt.maybeEndAnimation(var2);
          }
       };
-      var7.setSupportsChangeAnimations(false);
-      var4.setItemAnimator(var7);
+      var4.setSupportsChangeAnimations(false);
+      var7.setItemAnimator(var4);
       val var8: View = var5.getRoot();
       q.g(var8, "getRoot(...)");
       var3 = SizeUtilsKt.getDpToPx(16);
@@ -146,8 +146,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       r0.A0(var12, 1);
       r0.q0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
       val var9: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
-      var8 = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      val var10: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
+      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
       q.e(this.binding.promptText);
@@ -177,13 +177,13 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       }
 
       val var6: Boolean;
-      if (var8 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
+      if (var10 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
          var6 = true;
       } else {
          var6 = false;
       }
 
-      if (!var10 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 

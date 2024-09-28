@@ -56,12 +56,12 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public override fun toString(): String {
-      val var1: AndroidAudioDevice = this.device;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioManagerAudioDeviceChanged(device=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: AndroidAudioDevice = this.device;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AudioManagerAudioDeviceChanged(device=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

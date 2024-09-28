@@ -83,7 +83,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
          }
 
          val var11: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
-         val var5: Int = var10.getStartIndex();
+         val var4: Int = var10.getStartIndex();
          val var12: java.util.Iterator = var3.iterator();
 
          while (true) {
@@ -111,16 +111,16 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
             val var21: Rule = var2.a() as Rule;
             val var20: Matcher = var2.b() as Matcher;
-            val var4: Int = var20.end() + var5;
+            val var5: Int = var20.end() + var4;
             val var22: ParseSpec = var21.parse(var20, this, (S)var10.getState());
             val var23: Node = var10.getRoot();
             var23.addChild(var22.getRoot());
-            if (var4 != var10.getEndIndex()) {
-               var8.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var4, var10.getEndIndex()));
+            if (var5 != var10.getEndIndex()) {
+               var8.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var5, var10.getEndIndex()));
             }
 
             if (!var22.isTerminal()) {
-               var22.applyOffset(var5);
+               var22.applyOffset(var4);
                var8.push(var22);
             }
 

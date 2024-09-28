@@ -26,9 +26,9 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var8: ErrorMessageViewBinding = ErrorMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var8, "inflate(...)");
-      this.binding = var8;
+      val var6: ErrorMessageViewBinding = ErrorMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var6, "inflate(...)");
+      this.binding = var6;
       this.setOrientation(1);
       ViewBackgroundUtilsKt.setBackgroundRectangle(
          this,
@@ -37,14 +37,14 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
          ThemeManagerKt.getTheme().getStatusDangerBackground(),
          SizeUtilsKt.getDpToPx(1)
       );
-      var8.header.setText("Something went wrong here.");
-      var8.header.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      val var6: TextView = var8.header;
-      kotlin.jvm.internal.q.g(var8.header, "header");
-      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
-      var8.errorLabel.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      val var7: TextView = var8.errorLabel;
-      kotlin.jvm.internal.q.g(var8.errorLabel, "errorLabel");
+      var6.header.setText("Something went wrong here.");
+      var6.header.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      val var8: TextView = var6.header;
+      kotlin.jvm.internal.q.g(var6.header, "header");
+      DiscordFontUtilsKt.setDiscordFont(var8, DiscordFont.PrimarySemibold);
+      var6.errorLabel.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      val var7: TextView = var6.errorLabel;
+      kotlin.jvm.internal.q.g(var6.errorLabel, "errorLabel");
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
    }
 

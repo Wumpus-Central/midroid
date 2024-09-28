@@ -165,9 +165,9 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                }
             }
 
+            var5 = var4;
             var4 = var3;
             var3 = var5;
-            var5 = var4;
          }
 
          var10.b(var9);

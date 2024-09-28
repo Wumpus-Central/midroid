@@ -38,7 +38,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       q.h(var4, "onClicked");
       q.h(var6, "onTapSpoiler");
       val var16: Attachment = var2.getAttachment();
-      val var17: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
+      val var15: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -52,8 +52,8 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       val var18: java.lang.String = var16.getUrl();
       val var8: Int = var16.getWidth();
       val var10: Int = var16.getHeight();
-      val var15: java.lang.String = var16.getPlaceholder();
-      val var19: Int = var16.getPlaceholderVersion();
+      val var19: java.lang.String = var16.getPlaceholder();
+      val var17: Int = var16.getPlaceholderVersion();
       val var9: Int = var2.getRadiusPx();
       val var14: MediaContainingViewResizer.ResizeMode;
       if (var3) {
@@ -91,8 +91,8 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var18,
          var8,
          var10,
-         var15,
          var19,
+         var17,
          var13,
          var21,
          var11,
@@ -116,7 +116,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var3 xor true,
          var4,
          var5,
-         var17,
+         var15,
          var16.getRole(),
          var7,
          var16.getFilename()
@@ -147,10 +147,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       var15.append(var2);
       var15.append(").item[image]");
       val var18: SpoilerAttributes = var14.forGenericMedia(var3, var1, var15.toString(), var3.getMedia().getProxyUrl());
-      val var21: java.lang.String = var16.getProxyUrl();
+      val var20: java.lang.String = var16.getProxyUrl();
       val var11: Int = var16.getWidth();
       val var12: Int = var16.getHeight();
-      val var20: java.lang.String = var16.getPlaceholder();
+      val var21: java.lang.String = var16.getPlaceholder();
       val var22: Int = var16.getPlaceholderVersion();
       val var10: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
       val var17: MediaContainingViewResizer.ResizeMode;
@@ -169,10 +169,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       super.bind(
-         var21,
+         var20,
          var11,
          var12,
-         var20,
+         var21,
          var22,
          var13,
          var19,

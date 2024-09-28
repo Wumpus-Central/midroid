@@ -50,13 +50,13 @@ public data class UserEventHandlers(onTapUsername: (UserId) -> Unit, onTapAvatar
    }
 
    public override fun toString(): String {
-      val var2: Function1 = this.onTapUsername;
-      val var3: Function1 = this.onTapAvatar;
+      val var3: Function1 = this.onTapUsername;
+      val var2: Function1 = this.onTapAvatar;
       val var1: StringBuilder = new StringBuilder();
       var1.append("UserEventHandlers(onTapUsername=");
-      var1.append(var2);
-      var1.append(", onTapAvatar=");
       var1.append(var3);
+      var1.append(", onTapAvatar=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

@@ -274,9 +274,9 @@ public data class SafetySystemNotificationEmbed(titleText: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = SafetySystemNotificationEmbed.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
-         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a, a.u(b2.a), a.u(var1), a.u(var1), a.u(var1), a.u(var1), a.u(var1), var2[10]};
+         val var1: Array<KSerializer> = SafetySystemNotificationEmbed.access$get$childSerializers$cp();
+         val var2: b2 = b2.a;
+         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a, a.u(b2.a), a.u(var2), a.u(var2), a.u(var2), a.u(var2), a.u(var2), var1[10]};
       }
 
       public open fun deserialize(decoder: Decoder): SafetySystemNotificationEmbed {
@@ -291,45 +291,44 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var var7: java.lang.String;
          var var10: java.lang.String;
          var var11: java.lang.String;
-         var var12: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
          var var15: java.lang.String;
-         val var16: java.lang.String;
+         var var16: FooterTheme;
          val var17: java.lang.String;
-         val var24: FooterTheme;
-         val var36: java.lang.String;
+         val var23: java.lang.String;
+         var var30: java.lang.String;
+         val var34: java.lang.String;
          if (var6) {
-            var13 = var21.t(var20, 0);
-            var17 = var21.t(var20, 1);
+            var14 = var21.t(var20, 0);
+            var11 = var21.t(var20, 1);
             var10 = var21.t(var20, 2);
-            var11 = var21.t(var20, 3);
+            var17 = var21.t(var20, 3);
             val var22: b2 = b2.a;
-            var12 = var21.v(var20, 4, b2.a, null) as java.lang.String;
-            var14 = var21.v(var20, 5, var22, null) as java.lang.String;
+            var13 = var21.v(var20, 4, b2.a, null) as java.lang.String;
+            var30 = var21.v(var20, 5, var22, null) as java.lang.String;
             val var8: java.lang.String = var21.v(var20, 6, var22, null) as java.lang.String;
             var7 = var21.v(var20, 7, var22, null) as java.lang.String;
             var9 = var21.v(var20, 8, var22, null) as java.lang.String;
-            val var23: java.lang.String = var21.v(var20, 9, var22, null) as java.lang.String;
-            val var19: FooterTheme = var21.m(var20, 10, var18[10], null) as FooterTheme;
+            var23 = var21.v(var20, 9, var22, null) as java.lang.String;
+            var16 = var21.m(var20, 10, var18[10], null) as FooterTheme;
             var2 = 2047;
-            var36 = var8;
-            var16 = var9;
-            var15 = var23;
-            var24 = var19;
+            var34 = var30;
+            var30 = var8;
+            var15 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var34: FooterTheme = null;
+            var16 = null;
             var15 = null;
             var14 = null;
             var13 = null;
-            var12 = null;
+            var30 = null;
             var11 = null;
             var10 = null;
-            var var27: java.lang.String = null;
+            var var26: java.lang.String = null;
             var7 = null;
-            var var25: java.lang.String = null;
+            var var24: java.lang.String = null;
 
             while (var3) {
                val var5: Int = var21.x(var20);
@@ -342,7 +341,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 1;
                      break;
                   case 1:
-                     var27 = var21.t(var20, 1);
+                     var26 = var21.t(var20, 1);
                      var2 |= 2;
                      break;
                   case 2:
@@ -350,7 +349,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 4;
                      break;
                   case 3:
-                     var25 = var21.t(var20, 3);
+                     var24 = var21.t(var20, 3);
                      var2 |= 8;
                      break;
                   case 4:
@@ -362,7 +361,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 32;
                      break;
                   case 6:
-                     var12 = var21.v(var20, 6, b2.a, var12) as java.lang.String;
+                     var30 = var21.v(var20, 6, b2.a, var30) as java.lang.String;
                      var2 |= 64;
                      break;
                   case 7:
@@ -379,7 +378,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 512;
                      continue;
                   case 10:
-                     var34 = var21.m(var20, 10, var18[10], var34) as FooterTheme;
+                     var16 = var21.m(var20, 10, var18[10], var16) as FooterTheme;
                      var2 |= 1024;
                      continue;
                   default:
@@ -389,20 +388,19 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                var4 = 9;
             }
 
-            var24 = var34;
-            var16 = var13;
+            var17 = var24;
+            var23 = var15;
+            var15 = var13;
             var7 = var14;
-            var36 = var12;
-            var14 = var11;
-            var12 = var10;
-            var11 = var25;
+            var34 = var11;
+            var13 = var10;
             var10 = var7;
-            var17 = var27;
-            var13 = var9;
+            var11 = var26;
+            var14 = var9;
          }
 
          var21.b(var20);
-         return new SafetySystemNotificationEmbed(var2, var13, var17, var10, var11, var12, var14, var36, var7, var16, var15, var24, null);
+         return new SafetySystemNotificationEmbed(var2, var14, var11, var10, var17, var13, var34, var30, var7, var15, var23, var16, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetySystemNotificationEmbed) {

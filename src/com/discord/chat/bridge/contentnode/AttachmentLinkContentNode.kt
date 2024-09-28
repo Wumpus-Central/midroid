@@ -78,18 +78,18 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AttachmentLinkContentNode(attachmentUrl=");
-      var3.append(var4);
-      var3.append(", attachmentName=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.attachmentUrl;
+      val var3: java.lang.String = this.attachmentName;
+      val var4: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AttachmentLinkContentNode(attachmentUrl=");
+      var2.append(var1);
+      var2.append(", attachmentName=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -122,17 +122,17 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          val var5: Boolean = var10.y();
          var var7: java.lang.String = null;
          var var2: Int;
+         val var6: java.util.List;
          val var11: java.lang.String;
-         val var13: java.util.List;
          if (var5) {
             var7 = var10.t(var9, 0);
             var11 = var10.t(var9, 1);
-            var13 = var10.v(var9, 2, var8[2], null) as java.util.List;
+            var6 = var10.v(var9, 2, var8[2], null) as java.util.List;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var6: java.lang.String = null;
+            var var13: java.lang.String = null;
             var var12: java.util.List = null;
 
             while (var3) {
@@ -147,7 +147,7 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
                         var12 = var10.v(var9, 2, var8[2], var12) as java.util.List;
                         var2 |= 4;
                      } else {
-                        var6 = var10.t(var9, 1);
+                        var13 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -159,12 +159,12 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
                }
             }
 
-            var13 = var12;
-            var11 = var6;
+            var6 = var12;
+            var11 = var13;
          }
 
          var10.b(var9);
-         return new AttachmentLinkContentNode(var2, var7, var11, var13, null);
+         return new AttachmentLinkContentNode(var2, var7, var11, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AttachmentLinkContentNode) {

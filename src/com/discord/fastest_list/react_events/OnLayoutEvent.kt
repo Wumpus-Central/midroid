@@ -83,19 +83,19 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
    }
 
    public override fun toString(): String {
-      val var2: Float = this.x;
+      val var3: Float = this.x;
       val var4: Float = this.y;
-      val var1: Float = this.width;
-      val var3: Float = this.height;
+      val var2: Float = this.width;
+      val var1: Float = this.height;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnLayoutEvent(x=");
-      var5.append(var2);
+      var5.append(var3);
       var5.append(", y=");
       var5.append(var4);
       var5.append(", width=");
-      var5.append(var1);
+      var5.append(var2);
       var5.append(", height=");
-      var5.append(var3);
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
@@ -134,8 +134,8 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          var var7: Int;
          if (var11.y()) {
             var5 = var11.G(var10, 0);
-            var3 = var11.G(var10, 1);
-            var4 = var11.G(var10, 2);
+            var4 = var11.G(var10, 1);
+            var3 = var11.G(var10, 2);
             var2 = var11.G(var10, 3);
             var7 = 15;
          } else {
@@ -175,13 +175,12 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                }
             }
 
-            var3 = var2;
+            var4 = var2;
             var2 = var4;
-            var4 = var3;
          }
 
          var11.b(var10);
-         return new OnLayoutEvent(var7, var5, var3, var4, var2, null);
+         return new OnLayoutEvent(var7, var5, var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnLayoutEvent) {
