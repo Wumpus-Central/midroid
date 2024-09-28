@@ -1,4 +1,24 @@
 {
+  "HMvECw": [
+    {
+      "type": 0,
+      "value": "All of this is managed locally and has "
+    },
+    {
+      "type": 8,
+      "value": "$b",
+      "children": [
+        {
+          "type": 0,
+          "value": "not yet"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " replaced the global i18n system."
+    }
+  ],
   "rmps8/": [
     {
       "type": 0,
@@ -25,6 +45,30 @@
     {
       "type": 0,
       "value": ", with the url defined in the string."
+    }
+  ],
+  "uczI4u": [
+    {
+      "type": 0,
+      "value": "This link uses a "
+    },
+    {
+      "type": 8,
+      "value": "$link",
+      "children": [
+        {
+          "type": 1,
+          "value": "linkTarget"
+        },
+        {
+          "type": 0,
+          "value": "variable link"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " provided at runtime."
     }
   ],
   "Q+eyqq": [
@@ -60,74 +104,10 @@
       "pluralType": "cardinal"
     }
   ],
-  "XOdbAw": [
-    {
-      "type": 0,
-      "value": "Use hooks like "
-    },
-    {
-      "type": 8,
-      "value": "usernameHook",
-      "children": [
-        {
-          "type": 1,
-          "value": "username"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " for special content."
-    }
-  ],
   "JJ0wpK": [
     {
       "type": 0,
       "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
-  "HMvECw": [
-    {
-      "type": 0,
-      "value": "All of this is managed locally and has "
-    },
-    {
-      "type": 8,
-      "value": "$b",
-      "children": [
-        {
-          "type": 0,
-          "value": "not yet"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " replaced the global i18n system."
-    }
-  ],
-  "uczI4u": [
-    {
-      "type": 0,
-      "value": "This link uses a "
-    },
-    {
-      "type": 8,
-      "value": "$link",
-      "children": [
-        {
-          "type": 1,
-          "value": "linkTarget"
-        },
-        {
-          "type": 0,
-          "value": "variable link"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " provided at runtime."
     }
   ],
   "rdfRys": [
@@ -148,6 +128,26 @@
     {
       "type": 0,
       "value": " here."
+    }
+  ],
+  "XOdbAw": [
+    {
+      "type": 0,
+      "value": "Use hooks like "
+    },
+    {
+      "type": 8,
+      "value": "usernameHook",
+      "children": [
+        {
+          "type": 1,
+          "value": "username"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " for special content."
     }
   ]
 }
