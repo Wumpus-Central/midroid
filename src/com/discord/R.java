@@ -1593,8 +1593,6 @@ public final class R {
       public static int modules_video_calls_native_images_spectator;
       public static int modules_video_calls_native_images_watch;
       public static int modules_video_calls_native_images_xbox_voice_upsell;
-      public static int modules_voice_messages_native_images_vm_bottom_sparkles;
-      public static int modules_voice_messages_native_images_vm_upsell_banner;
       public static int modules_voice_panel_native_images_activity;
       public static int modules_voice_panel_native_images_airplay;
       public static int modules_voice_panel_native_images_background;

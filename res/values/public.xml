@@ -16,11 +16,11 @@
     <public type="drawable" name="modules_nuf_native_components_notification_pointer_hand" id="0x7f0806b3" />
     <public type="drawable" name="modules_pomelo_images_pomelo_cards_native" id="0x7f0806cf" />
     <public type="drawable" name="modules_stage_channels_native_images_img_empty_audience" id="0x7f080716" />
-    <public type="drawable" name="notification_bg_low_normal" id="0x7f080758" />
-    <public type="drawable" name="notification_bg_low_pressed" id="0x7f080759" />
-    <public type="drawable" name="notification_bg_normal" id="0x7f08075a" />
-    <public type="drawable" name="notification_bg_normal_pressed" id="0x7f08075b" />
-    <public type="drawable" name="notify_panel_notification_icon_bg" id="0x7f080761" />
+    <public type="drawable" name="notification_bg_low_normal" id="0x7f080756" />
+    <public type="drawable" name="notification_bg_low_pressed" id="0x7f080757" />
+    <public type="drawable" name="notification_bg_normal" id="0x7f080758" />
+    <public type="drawable" name="notification_bg_normal_pressed" id="0x7f080759" />
+    <public type="drawable" name="notify_panel_notification_icon_bg" id="0x7f08075f" />
     <public type="drawable" name="abc_ab_share_pack_mtrl_alpha" id="0x7f080027" />
     <public type="drawable" name="abc_cab_background_top_mtrl_alpha" id="0x7f080038" />
     <public type="drawable" name="abc_ic_commit_search_api_mtrl_alpha" id="0x7f08003f" />
@@ -1365,9 +1365,7 @@
     <public type="drawable" name="modules_video_calls_native_images_spectator" id="0x7f080739" />
     <public type="drawable" name="modules_video_calls_native_images_watch" id="0x7f08073a" />
     <public type="drawable" name="modules_video_calls_native_images_xbox_voice_upsell" id="0x7f08073b" />
-    <public type="drawable" name="modules_voice_messages_native_images_vm_bottom_sparkles" id="0x7f08073c" />
-    <public type="drawable" name="modules_voice_messages_native_images_vm_upsell_banner" id="0x7f08073d" />
-    <public type="drawable" name="modules_voice_panel_native_images_xbox" id="0x7f080748" />
+    <public type="drawable" name="modules_voice_panel_native_images_xbox" id="0x7f080746" />
     <public type="drawable" name="_node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon" id="0x7f080025" />
     <public type="drawable" name="abc_btn_check_to_on_mtrl_000" id="0x7f08002c" />
     <public type="drawable" name="abc_btn_check_to_on_mtrl_015" id="0x7f08002d" />
@@ -1401,17 +1399,17 @@
     <public type="drawable" name="modules_main_tabs_v2_native_tabs_guilds_empty_states_images_guildsemptyillustration" id="0x7f080693" />
     <public type="drawable" name="modules_main_tabs_v2_native_tabs_guilds_empty_states_images_iccustomize" id="0x7f080694" />
     <public type="drawable" name="modules_private_channel_integrations_native_images_nellypointing" id="0x7f0806e6" />
-    <public type="drawable" name="modules_voice_panel_native_images_activity" id="0x7f08073e" />
-    <public type="drawable" name="modules_voice_panel_native_images_airplay" id="0x7f08073f" />
-    <public type="drawable" name="modules_voice_panel_native_images_badconnection" id="0x7f080741" />
-    <public type="drawable" name="modules_voice_panel_native_images_cameraswap" id="0x7f080742" />
-    <public type="drawable" name="modules_voice_panel_native_images_close" id="0x7f080743" />
-    <public type="drawable" name="modules_voice_panel_native_images_deafen" id="0x7f080744" />
-    <public type="drawable" name="modules_voice_panel_native_images_maximize" id="0x7f080745" />
-    <public type="drawable" name="modules_voice_panel_native_images_stream" id="0x7f080746" />
-    <public type="drawable" name="modules_voice_panel_native_images_video" id="0x7f080747" />
-    <public type="drawable" name="ucrop_ic_angle" id="0x7f08076e" />
-    <public type="drawable" name="ucrop_ic_done" id="0x7f080772" />
+    <public type="drawable" name="modules_voice_panel_native_images_activity" id="0x7f08073c" />
+    <public type="drawable" name="modules_voice_panel_native_images_airplay" id="0x7f08073d" />
+    <public type="drawable" name="modules_voice_panel_native_images_badconnection" id="0x7f08073f" />
+    <public type="drawable" name="modules_voice_panel_native_images_cameraswap" id="0x7f080740" />
+    <public type="drawable" name="modules_voice_panel_native_images_close" id="0x7f080741" />
+    <public type="drawable" name="modules_voice_panel_native_images_deafen" id="0x7f080742" />
+    <public type="drawable" name="modules_voice_panel_native_images_maximize" id="0x7f080743" />
+    <public type="drawable" name="modules_voice_panel_native_images_stream" id="0x7f080744" />
+    <public type="drawable" name="modules_voice_panel_native_images_video" id="0x7f080745" />
+    <public type="drawable" name="ucrop_ic_angle" id="0x7f08076c" />
+    <public type="drawable" name="ucrop_ic_done" id="0x7f080770" />
     <public type="drawable" name="exo_edit_mode_logo" id="0x7f0801e0" />
     <public type="drawable" name="exo_ic_audiotrack" id="0x7f0801e1" />
     <public type="drawable" name="exo_ic_check" id="0x7f0801e2" />

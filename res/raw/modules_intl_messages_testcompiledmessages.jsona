@@ -1,22 +1,22 @@
 {
-  "rdfRys": [
+  "XOdbAw": [
     {
       "type": 0,
-      "value": "We have a "
+      "value": "Use hooks like "
     },
     {
       "type": 8,
-      "value": "$code",
+      "value": "usernameHook",
       "children": [
         {
-          "type": 0,
-          "value": "const static codeSpan = 2;"
+          "type": 1,
+          "value": "username"
         }
       ]
     },
     {
       "type": 0,
-      "value": " here."
+      "value": " for special content."
     }
   ],
   "Q+eyqq": [
@@ -52,6 +52,32 @@
       "pluralType": "cardinal"
     }
   ],
+  "HMvECw": [
+    {
+      "type": 0,
+      "value": "All of this is managed locally and has "
+    },
+    {
+      "type": 8,
+      "value": "$b",
+      "children": [
+        {
+          "type": 0,
+          "value": "not yet"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " replaced the global i18n system."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
+    }
+  ],
   "rmps8/": [
     {
       "type": 0,
@@ -80,32 +106,6 @@
       "value": ", with the url defined in the string."
     }
   ],
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
-  "HMvECw": [
-    {
-      "type": 0,
-      "value": "All of this is managed locally and has "
-    },
-    {
-      "type": 8,
-      "value": "$b",
-      "children": [
-        {
-          "type": 0,
-          "value": "not yet"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " replaced the global i18n system."
-    }
-  ],
   "uczI4u": [
     {
       "type": 0,
@@ -130,24 +130,24 @@
       "value": " provided at runtime."
     }
   ],
-  "XOdbAw": [
+  "rdfRys": [
     {
       "type": 0,
-      "value": "Use hooks like "
+      "value": "We have a "
     },
     {
       "type": 8,
-      "value": "usernameHook",
+      "value": "$code",
       "children": [
         {
-          "type": 1,
-          "value": "username"
+          "type": 0,
+          "value": "const static codeSpan = 2;"
         }
       ]
     },
     {
       "type": 0,
-      "value": " for special content."
+      "value": " here."
     }
   ]
 }
