@@ -7,9 +7,9 @@ import com.discord.snowflake.SnowflakeUtils
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
+import kh.w
 import kotlin.jvm.internal.q
-import nh.w
-import oh.r
+import lh.r
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    q.h(var0, "<this>");

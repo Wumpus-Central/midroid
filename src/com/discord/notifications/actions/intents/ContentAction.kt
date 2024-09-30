@@ -98,9 +98,9 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());
 
-      for (Entry var4 : var3.entrySet()) {
-         var1.writeString(var4.getKey() as java.lang.String);
-         var1.writeString(var4.getValue() as java.lang.String);
+      for (Entry var5 : var3.entrySet()) {
+         var1.writeString(var5.getKey() as java.lang.String);
+         var1.writeString(var5.getValue() as java.lang.String);
       }
    }
 
@@ -108,15 +108,15 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    internal class Creator : android.os.Parcelable.Creator<ContentAction> {
       fun createFromParcel(var1: Parcel): ContentAction {
          q.h(var1, "parcel");
-         val var5: java.lang.String = var1.readString();
+         val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var4: LinkedHashMap = new LinkedHashMap(var3);
+         val var5: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var4.put(var1.readString(), var1.readString());
+            var5.put(var1.readString(), var1.readString());
          }
 
-         return new ContentAction(var5, var4);
+         return new ContentAction(var4, var5);
       }
 
       fun newArray(var1: Int): Array<ContentAction> {

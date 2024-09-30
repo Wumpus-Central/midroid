@@ -18,13 +18,13 @@ import java.net.UnknownHostException
 import java.security.cert.CertPathValidatorException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
+import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
-import nh.p
-import oh.r
+import lh.r
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
@@ -86,7 +86,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("46700c6d-1c9c-453f-8bb4-9b161e019950");
+      var5.setProguardUuid("fb78902d-dd3f-4914-b0ea-23ff9863e0c2");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -96,8 +96,8 @@ public object CrashReporting {
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.n(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.n(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var4.m(var3);
@@ -107,7 +107,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", nh.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", kh.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -195,7 +195,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = uh.a.a(var0);
+         $ENTRIES = rh.a.a(var0);
       }
 
       @JvmStatic

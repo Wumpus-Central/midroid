@@ -26,9 +26,9 @@ public class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolea
    private fun createReviewManager(fake: Boolean, activity: Activity): ReviewManager {
       val var3: Any;
       if (var1) {
-         var3 = new ad.a(var2);
+         var3 = new xc.a(var2);
       } else {
-         var3 = xc.c.a(var2);
+         var3 = uc.c.a(var2);
          q.g(var3, "create(...)");
       }
 
@@ -41,7 +41,7 @@ public class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolea
       q.h(var1, "this$0");
       q.h(var2, "task");
       if (var2.p()) {
-         val var4: Task = var0.a(var1.activity, var2.l() as xc.b);
+         val var4: Task = var0.a(var1.activity, var2.l() as uc.b);
          q.g(var4, "launchReviewFlow(...)");
          var4.d(new c(var1));
       } else {
@@ -70,10 +70,10 @@ public class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolea
    }
 
    public fun executeRequest() {
-      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var2: Task = var1.b();
-      q.g(var2, "requestReviewFlow(...)");
-      var2.d(new a(var1, this));
-      var2.b(new b(this));
+      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var1: Task = var2.b();
+      q.g(var1, "requestReviewFlow(...)");
+      var1.d(new a(var2, this));
+      var1.b(new b(this));
    }
 }

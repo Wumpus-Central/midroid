@@ -13,7 +13,7 @@ import com.discord.chat.presentation.message.MessageTagView;
 import com.discord.chat.presentation.message.RoleDotView;
 import com.discord.chat.presentation.message.view.MessageContentView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import o1.a;
 
 public final class MessageViewReplyPreviewBinding implements ViewBinding {
    public final SimpleDraweeView replyAuthorAvatar;
@@ -59,39 +59,39 @@ public final class MessageViewReplyPreviewBinding implements ViewBinding {
 
    public static MessageViewReplyPreviewBinding bind(View var0) {
       int var1 = R.id.reply_author_avatar;
-      SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-      if (var7 != null) {
+      SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+      if (var9 != null) {
          var1 = R.id.reply_author_name;
-         TextView var9 = (TextView)a.a(var0, var1);
-         if (var9 != null) {
+         TextView var8 = (TextView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.reply_icon;
-            SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-            if (var8 != null) {
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.reply_leading_icon;
-               SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-               if (var2 != null) {
+               SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.reply_leading_views;
                   LinearLayout var3 = (LinearLayout)a.a(var0, var1);
                   if (var3 != null) {
                      var1 = R.id.reply_message_tag_view;
-                     MessageTagView var5 = (MessageTagView)a.a(var0, var1);
-                     if (var5 != null) {
+                     MessageTagView var6 = (MessageTagView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.reply_role_dot;
-                        RoleDotView var10 = (RoleDotView)a.a(var0, var1);
-                        if (var10 != null) {
+                        RoleDotView var11 = (RoleDotView)a.a(var0, var1);
+                        if (var11 != null) {
                            var1 = R.id.reply_spline;
-                           ChannelSpineView var6 = (ChannelSpineView)a.a(var0, var1);
-                           if (var6 != null) {
+                           ChannelSpineView var2 = (ChannelSpineView)a.a(var0, var1);
+                           if (var2 != null) {
                               var1 = R.id.reply_text;
-                              MessageContentView var11 = (MessageContentView)a.a(var0, var1);
-                              if (var11 != null) {
+                              MessageContentView var5 = (MessageContentView)a.a(var0, var1);
+                              if (var5 != null) {
                                  var1 = R.id.reply_trailing_icon;
-                                 SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
-                                 if (var12 != null) {
+                                 SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+                                 if (var10 != null) {
                                     var1 = R.id.tag_chiplet;
-                                    ClanTagChipletView var4 = (ClanTagChipletView)a.a(var0, var1);
-                                    if (var4 != null) {
-                                       return new MessageViewReplyPreviewBinding(var0, var7, var9, var8, var2, var3, var5, var10, var6, var11, var12, var4);
+                                    ClanTagChipletView var12 = (ClanTagChipletView)a.a(var0, var1);
+                                    if (var12 != null) {
+                                       return new MessageViewReplyPreviewBinding(var0, var9, var8, var4, var7, var3, var6, var11, var2, var5, var10, var12);
                                     }
                                  }
                               }

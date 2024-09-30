@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.o1
-import il.g0.a
+import fl.g0
+import fl.o1
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -65,12 +65,12 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapSeeMoreData(messageId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapSeeMoreData(messageId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

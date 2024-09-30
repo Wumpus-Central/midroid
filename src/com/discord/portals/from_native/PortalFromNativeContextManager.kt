@@ -9,7 +9,7 @@ import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import yk.u
+import vk.w
 
 public object PortalFromNativeContextManager {
    private final var _portalContextIdsFlow: MutableStateFlow<com.discord.portals.from_native.PortalFromNativeContextManager.Event?>
@@ -18,7 +18,7 @@ public object PortalFromNativeContextManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = u.a(null);
+      val var0: MutableStateFlow = w.a(null);
       _portalContextIdsFlow = var0;
       portalContextIdsFlow = var0;
    }

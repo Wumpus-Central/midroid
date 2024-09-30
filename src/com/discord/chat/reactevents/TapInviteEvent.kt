@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.h
-import il.n0
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -97,21 +97,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var2: java.lang.Boolean = this.primary;
+      val var3: java.lang.Boolean = this.primary;
       val var5: java.lang.Boolean = this.secondary;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapInviteEvent(messageId=");
-      var4.append(var3);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", primary=");
-      var4.append(var2);
-      var4.append(", secondary=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapInviteEvent(messageId=");
+      var2.append(var4);
+      var2.append(", index=");
+      var2.append(var1);
+      var2.append(", primary=");
+      var2.append(var3);
+      var2.append(", secondary=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -134,8 +134,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: h = h.a;
-         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var1)};
+         val var3: h = h.a;
+         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): TapInviteEvent {
@@ -208,7 +208,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

@@ -14,9 +14,9 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
+import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import nh.p
 
 public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
    private final val arcRect: RectF
@@ -140,22 +140,22 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          var5 = 0.5F * var1;
       }
 
-      val var7: Float = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      val var8: Float = this.getMeasuredWidth();
+      val var8: Float = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
+      val var7: Float = this.getMeasuredWidth();
       var1 = this.horizontalPadding;
       var5 = this.arcPercent() * this.getMeasuredWidth();
       var2 = var10[var3.ordinal()];
       if (var2 != 1) {
          if (var2 == 2) {
-            this.arcRect.set(var6, var7, var6 + var5, var5 + var7);
+            this.arcRect.set(var6, var8, var6 + var5, var5 + var8);
          }
       } else {
-         this.arcRect.set(var6, var7 - var5, var5 + var6, var7);
+         this.arcRect.set(var6, var8 - var5, var5 + var6, var8);
       }
 
       var11.moveTo(var6, var4);
       var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var11.lineTo(var8 - var1, var7);
+      var11.lineTo(var7 - var1, var8);
       return var11;
    }
 
@@ -273,7 +273,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = uh.a.a(var0);
+         $ENTRIES = rh.a.a(var0);
       }
 
       init {

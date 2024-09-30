@@ -24,11 +24,11 @@ import com.facebook.react.bridge.WritableNativeMap
 import com.jakewharton.processphoenix.ProcessPhoenix
 import java.io.File
 import java.lang.reflect.Field
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import nh.w
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -120,15 +120,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun showSpinnerView() {
-      val var2: ProgressBar = new ProgressBar(this.reactContext);
-      var2.setLayoutParams(new LayoutParams(-2, -2, 17));
-      var2.setIndeterminate(true);
-      val var1: FrameLayout = new FrameLayout(this.reactContext);
-      var1.setLayoutParams(new LayoutParams(-1, -1));
-      var1.addView(var2);
-      var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
-      var1.setClickable(true);
-      this.progressLayout = var1;
+      val var1: ProgressBar = new ProgressBar(this.reactContext);
+      var1.setLayoutParams(new LayoutParams(-2, -2, 17));
+      var1.setIndeterminate(true);
+      val var2: FrameLayout = new FrameLayout(this.reactContext);
+      var2.setLayoutParams(new LayoutParams(-1, -1));
+      var2.addView(var1);
+      var2.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
+      var2.setClickable(true);
+      this.progressLayout = var2;
       this.runOnActivity(new Function1(this) {
          final BundleUpdaterManager this$0;
 
@@ -222,9 +222,9 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                         if (var8 as ReactApplication != null) {
                            val var10: ReactNativeHost = var9.getReactNativeHost();
                            if (var10 != null) {
-                              val var4: ReactInstanceManager = var10.getReactInstanceManager();
-                              if (var4 != null) {
-                                 val var5: BundleUpdaterManager = this.this$0;
+                              val var5: ReactInstanceManager = var10.getReactInstanceManager();
+                              if (var5 != null) {
+                                 val var4: BundleUpdaterManager = this.this$0;
                                  val var6: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
                                  var var11: java.lang.String = null;
                                  if (var6 != null) {
@@ -235,8 +235,8 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                                     }
                                  }
 
-                                 BundleUpdaterManager.access$setJSBundle(var5, var4, var11);
-                                 var4.recreateReactContextInBackground();
+                                 BundleUpdaterManager.access$setJSBundle(var4, var5, var11);
+                                 var5.recreateReactContextInBackground();
                               }
                            }
                         }

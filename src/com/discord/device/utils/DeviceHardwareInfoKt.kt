@@ -130,13 +130,13 @@ internal fun socName(): String {
          }
       }
 
-      var0 = a.a();
-      val var1: java.lang.String = b.a();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var0);
-      var2.append("_");
-      var2.append(var1);
-      return var2.toString();
+      val var1: java.lang.String = a.a();
+      val var2: java.lang.String = b.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var1);
+      var4.append("_");
+      var4.append(var2);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

@@ -10,7 +10,7 @@ import com.facebook.drawee.controller.a
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import kotlin.jvm.internal.q
-import w4.c
+import x4.c
 
 public class ImageWithThumbhashPlaceholderView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView {
    private final var placeholder: String?

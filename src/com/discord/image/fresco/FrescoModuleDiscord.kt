@@ -6,7 +6,7 @@ import com.discord.image.fresco.config.FrescoMemoryTrimmer
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.fresco.FrescoModule
 import kotlin.jvm.internal.q
-import w4.c
+import x4.c
 
 public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : FrescoModule {
    init {
@@ -23,10 +23,10 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
    }
 
    public open fun initialize() {
-      val var2: FrescoModuleDiscord.Companion = Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      var2.initializeFresco(var1);
+      val var1: FrescoModuleDiscord.Companion = Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.initializeFresco(var2);
       this.initializeSkinny();
    }
 

@@ -75,19 +75,19 @@ public class DebugPrintableCollection {
       // 51: goto 8b
       // 54: aload 0
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
-      // 58: astore 14
+      // 58: astore 12
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
       // 5d: astore 13
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 12
-      // 64: aload 12
+      // 62: astore 14
+      // 64: aload 14
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
       // 6a: aload 13
       // 6c: aload 2
-      // 6d: aload 12
+      // 6d: aload 14
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
-      // 72: aload 14
+      // 72: aload 12
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
       // 79: aload 13
@@ -362,14 +362,14 @@ public class DebugPrintableCollection {
 
       public override fun toString(): String {
          val var3: java.lang.String = this.tag;
-         val var2: WeakReference = this.reference;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("DebugPrintableRef(tag=");
-         var1.append(var3);
-         var1.append(", reference=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: WeakReference = this.reference;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("DebugPrintableRef(tag=");
+         var2.append(var3);
+         var2.append(", reference=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

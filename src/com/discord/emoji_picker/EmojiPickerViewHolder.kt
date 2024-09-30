@@ -30,9 +30,9 @@ import com.facebook.drawee.drawable.ScalingUtils.ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
+import kh.l
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import nh.l
 
 internal sealed class EmojiPickerViewHolder protected constructor(view: View) : RecyclerView.ViewHolder(var1) {
    public class Category(context: Context) : EmojiPickerViewHolder {
@@ -123,7 +123,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          q.h(var2, "onPressEmoji");
          q.h(var3, "onLongPressEmoji");
          super(new SimpleDraweeView(var1), null);
-         this.placeholder$delegate = l.a(<unrepresentable>.INSTANCE);
+         this.placeholder$delegate = l.b(<unrepresentable>.INSTANCE);
          val var4: View = this.itemView;
          q.f(this.itemView, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
          val var5: SimpleDraweeView = var4 as SimpleDraweeView;
@@ -273,7 +273,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : a5.a {
+      private class EmojiLoadListener(animating: Boolean) : b5.a {
          private final var animating: Boolean
 
          init {

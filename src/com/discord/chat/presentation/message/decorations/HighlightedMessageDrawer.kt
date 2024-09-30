@@ -47,16 +47,16 @@ public open class HighlightedMessageDrawer(context: Context,
       q.h(var2, "child");
       val var7: Float = HighlightedMessageDrawerKt.access$getTranslatedLeft(var2);
       val var6: Float = HighlightedMessageDrawerKt.access$getTranslatedRight(var2);
-      val var8: Float = HighlightedMessageDrawerKt.access$getTranslatedTop(var2) - var3;
-      val var5: Float = HighlightedMessageDrawerKt.access$getTranslatedBottom(var2) + var4;
+      val var5: Float = HighlightedMessageDrawerKt.access$getTranslatedTop(var2) - var3;
+      val var8: Float = HighlightedMessageDrawerKt.access$getTranslatedBottom(var2) + var4;
       if (this.backgroundPaintColor != null) {
          this.backgroundPaint.setColor(this.backgroundPaintColor.intValue());
-         var1.drawRect(var7, var8, var6, var5, this.backgroundPaint);
+         var1.drawRect(var7, var5, var6, var8, this.backgroundPaint);
       }
 
       if (this.gutterPaintColor != null) {
          this.gutterPaint.setColor(this.gutterPaintColor.intValue());
-         var1.drawRect(var7, var8, var7 + (float)this.gutterWidth, var5, this.gutterPaint);
+         var1.drawRect(var7, var5, var7 + (float)this.gutterWidth, var8, this.gutterPaint);
       }
    }
 

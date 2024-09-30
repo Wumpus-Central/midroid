@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
-import n1.a;
+import o1.a;
 
 public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding {
    public final TextView categoryName;
@@ -26,16 +26,16 @@ public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding
 
    public static OverlayVoiceChannelSearchResultBinding bind(View var0) {
       int var1 = R.id.category_name;
-      TextView var4 = (TextView)a.a(var0, var1);
-      if (var4 != null) {
+      TextView var3 = (TextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.channel_name;
          TextView var5 = (TextView)a.a(var0, var1);
          if (var5 != null) {
             ConstraintLayout var2 = (ConstraintLayout)var0;
             var1 = R.id.guild_name;
-            TextView var3 = (TextView)a.a(var0, var1);
-            if (var3 != null) {
-               return new OverlayVoiceChannelSearchResultBinding(var2, var4, var5, var2, var3);
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
+               return new OverlayVoiceChannelSearchResultBinding(var2, var3, var5, var2, var4);
             }
          }
       }

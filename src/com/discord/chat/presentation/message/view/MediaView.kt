@@ -213,16 +213,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       kotlin.jvm.internal.q.g(var4.inlineMediaGifIndicator, "inlineMediaGifIndicator");
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var5: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var5: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
+      val var12: GenericDraweeHierarchy = var5.getHierarchy() as GenericDraweeHierarchy;
       val var13: GradientDrawable = new GradientDrawable();
       var13.setShape(0);
       var13.setStroke(
-         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+         var5.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var5.z(var13);
+      var12.z(var13);
    }
 
    private fun pause() {
@@ -256,12 +256,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
             val var7: Context = this.getContext();
             kotlin.jvm.internal.q.g(var7, "getContext(...)");
-            val var12: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.q.e(var12);
-            var10 = var11.acquire(var7, var12, this.playerSettings);
+            val var11: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.q.e(var11);
+            var10 = var12.acquire(var7, var11, this.playerSettings);
          }
 
          var10.setEventListener(
@@ -626,7 +626,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      vk.f.d(
+      sk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -1661,7 +1661,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      vk.f.d(
+      sk.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,

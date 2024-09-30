@@ -6,10 +6,10 @@ import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
-import k2.d1
 import kotlin.jvm.internal.q
-import s3.a
-import s3.b
+import l2.d1
+import t3.a
+import t3.b
 
 internal object CustomTabsPackages {
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"

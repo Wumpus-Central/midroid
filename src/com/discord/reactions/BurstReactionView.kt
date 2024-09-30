@@ -62,7 +62,7 @@ public class BurstReactionView  public constructor(context: Context, attrs: Attr
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.BurstReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = ci.a.b(var2.getOpacity() * (float)255);
+         var3 = zh.a.b(var2.getOpacity() * (float)255);
       }
 
       var var13: Int;

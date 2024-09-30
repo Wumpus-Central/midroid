@@ -23,7 +23,7 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import q3.a
+import r3.a
 
 public class WelcomeStickerView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final val binding: WelcomeStickerViewBinding

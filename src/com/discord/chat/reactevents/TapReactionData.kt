@@ -7,8 +7,8 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import kh.w
 import kotlin.jvm.internal.q
-import nh.w
 
 internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ...) : TapReactionData(var1, var2, var3), ReactEvent {
    public final val isBurst: Boolean?

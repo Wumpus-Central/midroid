@@ -21,7 +21,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import oh.o
+import lh.o
 
 public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {

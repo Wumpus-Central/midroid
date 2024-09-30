@@ -11,7 +11,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.polls.PollCheckboxView;
 import com.discord.chat.presentation.message.view.polls.PollMediaView;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import n1.a;
+import o1.a;
 
 public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
    public final PollCheckboxView checkbox;
@@ -45,27 +45,27 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
 
    public static PollTextAndImageAnswerViewBinding bind(View var0) {
       int var1 = R.id.checkbox;
-      PollCheckboxView var4 = (PollCheckboxView)a.a(var0, var1);
-      if (var4 != null) {
+      PollCheckboxView var7 = (PollCheckboxView)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.image;
-         PollMediaView var8 = (PollMediaView)a.a(var0, var1);
-         if (var8 != null) {
+         PollMediaView var2 = (PollMediaView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var7 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var7 != null) {
+            SimpleDraweeSpanTextView var8 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.percentage_bar_background;
-               View var2 = a.a(var0, var1);
-               if (var2 != null) {
+               View var3 = a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-                  if (var3 != null) {
+                  FrameLayout var5 = (FrameLayout)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var5 = (TextView)a.a(var0, var1);
-                     if (var5 != null) {
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var6 = (TextView)a.a(var0, var1);
-                        if (var6 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var4, var8, var7, var2, var3, var5, var6);
+                        TextView var4 = (TextView)a.a(var0, var1);
+                        if (var4 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var7, var2, var8, var3, var5, var6, var4);
                         }
                      }
                   }

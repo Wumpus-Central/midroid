@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import o1.a;
 
 public final class AddReactionViewBinding implements ViewBinding {
    public final SimpleDraweeView addReactionImage;

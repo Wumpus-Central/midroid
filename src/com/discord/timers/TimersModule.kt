@@ -6,10 +6,10 @@ import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
+import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import nh.w
 
 public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersSpec {
    private final val reactEvents: ReactEvents
@@ -18,32 +18,32 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(new Pair[]{w.a("timer", g0.b(TimerEvent.class)), w.a("interval", g0.b(IntervalEvent.class))});
+      this.reactEvents = new ReactEvents(w.a("timer", g0.b(TimerEvent.class)), w.a("interval", g0.b(IntervalEvent.class)));
       this.timersManager = new TimersManager(var1);
    }
 
    @ReactMethod
-   public open fun addListener(type: String) {
+   public override fun addListener(type: String) {
       q.h(var1, "type");
    }
 
-   public open fun clearInterval(id: Double) {
+   public override fun clearInterval(id: Double) {
       this.timersManager.clearInterval((int)var1);
    }
 
-   public open fun clearTimeout(id: Double) {
+   public override fun clearTimeout(id: Double) {
       this.timersManager.clearTimeout((int)var1);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "TimersModule";
    }
 
    @ReactMethod
-   public open fun removeListeners(count: Double) {
+   public override fun removeListeners(count: Double) {
    }
 
-   public open fun setInterval(id: Double, timeout: Double) {
+   public override fun setInterval(id: Double, timeout: Double) {
       this.timersManager.setInterval((int)var1, var3, new Function0(this, var1) {
          final double $id;
          final TimersModule this$0;
@@ -63,7 +63,7 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
       });
    }
 
-   public open fun setTimeout(id: Double, timeout: Double) {
+   public override fun setTimeout(id: Double, timeout: Double) {
       this.timersManager.setTimeout((int)var1, var3, new Function0(this, var1) {
          final double $id;
          final TimersModule this$0;

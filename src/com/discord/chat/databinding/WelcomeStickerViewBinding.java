@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.sticker.StickerView;
-import n1.a;
+import o1.a;
 
 public final class WelcomeStickerViewBinding implements ViewBinding {
    private final View rootView;
@@ -22,12 +22,12 @@ public final class WelcomeStickerViewBinding implements ViewBinding {
 
    public static WelcomeStickerViewBinding bind(View var0) {
       int var1 = R.id.sticker_view;
-      StickerView var3 = (StickerView)a.a(var0, var1);
-      if (var3 != null) {
+      StickerView var2 = (StickerView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.welcome_reply_text;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new WelcomeStickerViewBinding(var0, var3, var2);
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
+            return new WelcomeStickerViewBinding(var0, var2, var3);
          }
       }
 

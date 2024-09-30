@@ -122,18 +122,18 @@ private inline fun <reified T : Any, reified V> Any.getPrivateField(name: String
 
    val var4: Field = var2.getDeclaredField(var1);
    var4.setAccessible(true);
-   val var5: Any = var4.get(var0);
+   var0 = var4.get(var0);
    q.m(3, "V");
-   if (var5 is Any) {
-      return (V)var5;
+   if (var0 is Any) {
+      return (V)var0;
    } else {
       q.m(4, "V");
-      var0 = new StringBuilder();
-      var0.append("Field ");
-      var0.append(var5);
-      var0.append(" not instance of ");
-      var0.append(Object::class.java);
-      var0.append(".");
-      throw new IllegalStateException(var0.toString().toString());
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Field ");
+      var5.append(var0);
+      var5.append(" not instance of ");
+      var5.append(Object::class.java);
+      var5.append(".");
+      throw new IllegalStateException(var5.toString().toString());
    }
 }

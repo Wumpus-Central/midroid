@@ -8,9 +8,9 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
+import kh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import nh.p
 
 public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<LoadingChatListItem, ChatLoadingView> {
    init {

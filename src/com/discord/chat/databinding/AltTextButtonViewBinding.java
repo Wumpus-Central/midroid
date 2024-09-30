@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import n1.a;
+import o1.a;
 
 public final class AltTextButtonViewBinding implements ViewBinding {
    public final FrameLayout altTextContainer;

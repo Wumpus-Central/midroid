@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.codedlinks
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.h
-import il.n0
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.h
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -386,8 +386,8 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
    }
 
    public override fun hashCode(): Int {
-      val var29: Int = Integer.hashCode(this.backgroundColor);
-      val var28: Int = Integer.hashCode(this.borderColor);
+      val var28: Int = Integer.hashCode(this.backgroundColor);
+      val var29: Int = Integer.hashCode(this.borderColor);
       val var30: Int = Integer.hashCode(this.headerColor);
       var var27: Int = 0;
       val var1: Int;
@@ -606,9 +606,9 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                                                                                                                                                                                                                                                 (
                                                                                                                                                                                                                                                          (
                                                                                                                                                                                                                                                                   (
-                                                                                                                                                                                                                                                                           var29
+                                                                                                                                                                                                                                                                           var28
                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                              + var28
+                                                                                                                                                                                                                                                                              + var29
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
                                                                                                                                                                                                                                                                      + var30
@@ -699,102 +699,102 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
+      val var3: Int = this.backgroundColor;
       val var2: Int = this.borderColor;
-      val var3: Int = this.headerColor;
-      val var22: java.lang.String = this.headerText;
-      val var28: InviteType = this.type;
-      val var5: Int = this.acceptLabelBackgroundColor;
-      val var24: Int = this.acceptLabelBorderColor;
-      val var8: Int = this.acceptLabelColor;
-      val var20: java.lang.String = this.acceptLabelText;
-      val var11: java.lang.String = this.bodyText;
-      val var14: Int = this.bodyTextColor;
-      val var23: java.lang.Boolean = this.canBeAccepted;
-      val var18: java.lang.String = this.channelIcon;
-      val var12: java.lang.String = this.channelName;
-      val var4: java.lang.Boolean = this.embedCanBeTapped;
-      val var13: java.lang.String = this.memberText;
+      val var1: Int = this.headerColor;
+      val var14: java.lang.String = this.headerText;
+      val var5: InviteType = this.type;
+      val var28: Int = this.acceptLabelBackgroundColor;
+      val var29: Int = this.acceptLabelBorderColor;
+      val var32: Int = this.acceptLabelColor;
+      val var13: java.lang.String = this.acceptLabelText;
+      val var7: java.lang.String = this.bodyText;
+      val var12: Int = this.bodyTextColor;
+      val var24: java.lang.Boolean = this.canBeAccepted;
+      val var8: java.lang.String = this.channelIcon;
+      val var22: java.lang.String = this.channelName;
+      val var21: java.lang.Boolean = this.embedCanBeTapped;
+      val var30: java.lang.String = this.memberText;
       val var31: java.lang.String = this.onlineText;
-      val var10: Int = this.resolvingGradientEnd;
-      val var32: Int = this.resolvingGradientStart;
-      val var30: java.lang.Boolean = this.splashHasRadialGradient;
-      val var25: Int = this.splashOpacity;
-      val var15: java.lang.String = this.splashUrl;
-      val var26: java.lang.String = this.inviteSplash;
-      val var6: java.lang.String = this.subtitle;
-      val var16: Int = this.subtitleColor;
-      val var9: Int = this.thumbnailBackgroundColor;
-      val var21: Int = this.thumbnailCornerRadius;
-      val var7: java.lang.String = this.thumbnailText;
-      val var27: java.lang.String = this.thumbnailUrl;
-      val var19: Int = this.titleColor;
-      val var29: java.lang.String = this.titleText;
-      val var17: StringBuilder = new StringBuilder();
-      var17.append("GuildInviteEmbedImpl(backgroundColor=");
-      var17.append(var1);
-      var17.append(", borderColor=");
-      var17.append(var2);
-      var17.append(", headerColor=");
-      var17.append(var3);
-      var17.append(", headerText=");
-      var17.append(var22);
-      var17.append(", type=");
-      var17.append(var28);
-      var17.append(", acceptLabelBackgroundColor=");
-      var17.append(var5);
-      var17.append(", acceptLabelBorderColor=");
-      var17.append(var24);
-      var17.append(", acceptLabelColor=");
-      var17.append(var8);
-      var17.append(", acceptLabelText=");
-      var17.append(var20);
-      var17.append(", bodyText=");
-      var17.append(var11);
-      var17.append(", bodyTextColor=");
-      var17.append(var14);
-      var17.append(", canBeAccepted=");
-      var17.append(var23);
-      var17.append(", channelIcon=");
-      var17.append(var18);
-      var17.append(", channelName=");
-      var17.append(var12);
-      var17.append(", embedCanBeTapped=");
-      var17.append(var4);
-      var17.append(", memberText=");
-      var17.append(var13);
-      var17.append(", onlineText=");
-      var17.append(var31);
-      var17.append(", resolvingGradientEnd=");
-      var17.append(var10);
-      var17.append(", resolvingGradientStart=");
-      var17.append(var32);
-      var17.append(", splashHasRadialGradient=");
-      var17.append(var30);
-      var17.append(", splashOpacity=");
-      var17.append(var25);
-      var17.append(", splashUrl=");
-      var17.append(var15);
-      var17.append(", inviteSplash=");
-      var17.append(var26);
-      var17.append(", subtitle=");
-      var17.append(var6);
-      var17.append(", subtitleColor=");
-      var17.append(var16);
-      var17.append(", thumbnailBackgroundColor=");
-      var17.append(var9);
-      var17.append(", thumbnailCornerRadius=");
-      var17.append(var21);
-      var17.append(", thumbnailText=");
-      var17.append(var7);
-      var17.append(", thumbnailUrl=");
-      var17.append(var27);
-      var17.append(", titleColor=");
-      var17.append(var19);
-      var17.append(", titleText=");
-      var17.append(var29);
-      var17.append(")");
-      return var17.toString();
+      val var6: Int = this.resolvingGradientEnd;
+      val var19: Int = this.resolvingGradientStart;
+      val var20: java.lang.Boolean = this.splashHasRadialGradient;
+      val var11: Int = this.splashOpacity;
+      val var4: java.lang.String = this.splashUrl;
+      val var16: java.lang.String = this.inviteSplash;
+      val var17: java.lang.String = this.subtitle;
+      val var26: Int = this.subtitleColor;
+      val var10: Int = this.thumbnailBackgroundColor;
+      val var15: Int = this.thumbnailCornerRadius;
+      val var25: java.lang.String = this.thumbnailText;
+      val var9: java.lang.String = this.thumbnailUrl;
+      val var18: Int = this.titleColor;
+      val var27: java.lang.String = this.titleText;
+      val var23: StringBuilder = new StringBuilder();
+      var23.append("GuildInviteEmbedImpl(backgroundColor=");
+      var23.append(var3);
+      var23.append(", borderColor=");
+      var23.append(var2);
+      var23.append(", headerColor=");
+      var23.append(var1);
+      var23.append(", headerText=");
+      var23.append(var14);
+      var23.append(", type=");
+      var23.append(var5);
+      var23.append(", acceptLabelBackgroundColor=");
+      var23.append(var28);
+      var23.append(", acceptLabelBorderColor=");
+      var23.append(var29);
+      var23.append(", acceptLabelColor=");
+      var23.append(var32);
+      var23.append(", acceptLabelText=");
+      var23.append(var13);
+      var23.append(", bodyText=");
+      var23.append(var7);
+      var23.append(", bodyTextColor=");
+      var23.append(var12);
+      var23.append(", canBeAccepted=");
+      var23.append(var24);
+      var23.append(", channelIcon=");
+      var23.append(var8);
+      var23.append(", channelName=");
+      var23.append(var22);
+      var23.append(", embedCanBeTapped=");
+      var23.append(var21);
+      var23.append(", memberText=");
+      var23.append(var30);
+      var23.append(", onlineText=");
+      var23.append(var31);
+      var23.append(", resolvingGradientEnd=");
+      var23.append(var6);
+      var23.append(", resolvingGradientStart=");
+      var23.append(var19);
+      var23.append(", splashHasRadialGradient=");
+      var23.append(var20);
+      var23.append(", splashOpacity=");
+      var23.append(var11);
+      var23.append(", splashUrl=");
+      var23.append(var4);
+      var23.append(", inviteSplash=");
+      var23.append(var16);
+      var23.append(", subtitle=");
+      var23.append(var17);
+      var23.append(", subtitleColor=");
+      var23.append(var26);
+      var23.append(", thumbnailBackgroundColor=");
+      var23.append(var10);
+      var23.append(", thumbnailCornerRadius=");
+      var23.append(var15);
+      var23.append(", thumbnailText=");
+      var23.append(var25);
+      var23.append(", thumbnailUrl=");
+      var23.append(var9);
+      var23.append(", titleColor=");
+      var23.append(var18);
+      var23.append(", titleText=");
+      var23.append(var27);
+      var23.append(")");
+      return var23.toString();
    }
 
    public object `$serializer` : g0 {
@@ -844,49 +844,49 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: n0 = n0.a;
-         val var9: b2 = b2.a;
-         val var11: KSerializer = a.u(b2.a);
-         val var8: InviteType.Serializer = InviteType.Serializer.INSTANCE;
-         val var2: KSerializer = a.u(var1);
-         val var10: KSerializer = a.u(var1);
-         val var3: KSerializer = a.u(var1);
-         val var6: KSerializer = a.u(var9);
-         val var4: KSerializer = a.u(var9);
-         val var5: KSerializer = a.u(var1);
-         val var7: h = h.a;
+         val var11: n0 = n0.a;
+         val var5: b2 = b2.a;
+         val var8: KSerializer = a.u(b2.a);
+         val var1: InviteType.Serializer = InviteType.Serializer.INSTANCE;
+         val var4: KSerializer = a.u(var11);
+         val var6: KSerializer = a.u(var11);
+         val var10: KSerializer = a.u(var11);
+         val var7: KSerializer = a.u(var5);
+         val var3: KSerializer = a.u(var5);
+         val var2: KSerializer = a.u(var11);
+         val var9: h = h.a;
          return new KSerializer[]{
-            var1,
-            var1,
-            var1,
+            var11,
+            var11,
             var11,
             var8,
-            var2,
-            var10,
-            var3,
-            var6,
+            var1,
             var4,
-            var5,
+            var6,
+            var10,
+            var7,
+            var3,
+            var2,
             a.u(h.a),
+            a.u(var5),
+            a.u(var5),
             a.u(var9),
+            a.u(var5),
+            a.u(var5),
+            a.u(var11),
+            a.u(var11),
             a.u(var9),
-            a.u(var7),
-            a.u(var9),
-            a.u(var9),
-            a.u(var1),
-            a.u(var1),
-            a.u(var7),
-            a.u(var1),
-            a.u(var9),
-            a.u(var9),
-            a.u(var9),
-            a.u(var1),
-            a.u(var1),
-            a.u(var1),
-            a.u(var9),
-            a.u(var9),
-            a.u(var1),
-            a.u(var9)
+            a.u(var11),
+            a.u(var5),
+            a.u(var5),
+            a.u(var5),
+            a.u(var11),
+            a.u(var11),
+            a.u(var11),
+            a.u(var5),
+            a.u(var5),
+            a.u(var11),
+            a.u(var5)
          };
       }
 
@@ -901,81 +901,81 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
          var var4: Int;
          var var5: Int;
          val var6: Int;
-         var var13: Int;
-         var var15: Any;
+         var var15: Int;
          var var16: Any;
          var var17: Any;
-         var var18: Int;
+         var var18: Any;
          var var19: Any;
+         var var20: Int;
          var var21: Any;
          var var22: Any;
          var var23: Any;
-         var var24: java.lang.String;
+         var var24: Int;
          var var25: Any;
          var var26: Int;
          var var27: Int;
          var var28: Any;
-         var var29: Int;
          var var30: Int;
-         var var31: Any;
+         var var31: Int;
          var var33: Any;
          var var34: Any;
-         val var36: Int;
-         val var38: Int;
-         val var39: Any;
-         var var65: Int;
-         var var72: Int;
-         var var102: Any;
-         var var156: Any;
-         var var193: Int;
+         var var35: Int;
+         val var36: Any;
+         val var37: Int;
+         val var39: java.lang.String;
+         var var64: Int;
+         var var68: Any;
+         var var72: Any;
+         var var150: Int;
+         var var214: Any;
          if (var8) {
             var5 = var45.k(var44, 0);
             var3 = var45.k(var44, 1);
             var2 = var45.k(var44, 2);
             val var9: b2 = b2.a;
             var25 = var45.v(var44, 3, b2.a, null) as java.lang.String;
-            var31 = var45.m(var44, 4, InviteType.Serializer.INSTANCE, null) as InviteType;
+            var17 = var45.m(var44, 4, InviteType.Serializer.INSTANCE, null) as InviteType;
             val var46: n0 = n0.a;
-            var27 = var45.v(var44, 5, n0.a, null) as Int;
-            var36 = var45.v(var44, 6, var46, null) as Int;
-            var38 = var45.v(var44, 7, var46, null) as Int;
-            var15 = var45.v(var44, 8, var9, null) as java.lang.String;
-            var17 = var45.v(var44, 9, var9, null) as java.lang.String;
-            var18 = var45.v(var44, 10, var46, null) as Int;
+            var15 = var45.v(var44, 5, n0.a, null) as Int;
+            var35 = var45.v(var44, 6, var46, null) as Int;
+            var37 = var45.v(var44, 7, var46, null) as Int;
+            var33 = var45.v(var44, 8, var9, null) as java.lang.String;
+            var32 = var45.v(var44, 9, var9, null) as java.lang.String;
+            var20 = var45.v(var44, 10, var46, null) as Int;
             val var10: h = h.a;
-            var33 = var45.v(var44, 11, h.a, null) as java.lang.Boolean;
-            var21 = var45.v(var44, 12, var9, null) as java.lang.String;
-            var16 = var45.v(var44, 13, var9, null) as java.lang.String;
-            var32 = var45.v(var44, 14, var10, null) as java.lang.Boolean;
+            var21 = var45.v(var44, 11, h.a, null) as java.lang.Boolean;
+            var23 = var45.v(var44, 12, var9, null) as java.lang.String;
+            var36 = var45.v(var44, 13, var9, null) as java.lang.String;
+            var18 = var45.v(var44, 14, var10, null) as java.lang.Boolean;
             var19 = var45.v(var44, 15, var9, null) as java.lang.String;
-            var23 = var45.v(var44, 16, var9, null) as java.lang.String;
+            var16 = var45.v(var44, 16, var9, null) as java.lang.String;
             var72 = var45.v(var44, 17, var46, null) as Int;
-            var13 = var45.v(var44, 18, var46, null) as Int;
-            val var59: java.lang.Boolean = var45.v(var44, 19, var10, null) as java.lang.Boolean;
+            var68 = var45.v(var44, 18, var46, null) as Int;
+            val var58: java.lang.Boolean = var45.v(var44, 19, var10, null) as java.lang.Boolean;
             val var11: Int = var45.v(var44, 20, var46, null) as Int;
             val var12: java.lang.String = var45.v(var44, 21, var9, null) as java.lang.String;
-            var39 = var45.v(var44, 22, var9, null) as java.lang.String;
+            var22 = var45.v(var44, 22, var9, null) as java.lang.String;
             var34 = var45.v(var44, 23, var9, null) as java.lang.String;
-            var30 = var45.v(var44, 24, var46, null) as Int;
-            var193 = var45.v(var44, 25, var46, null) as Int;
-            var102 = var45.v(var44, 26, var46, null) as Int;
-            var24 = var45.v(var44, 27, var9, null) as java.lang.String;
-            var156 = var45.v(var44, 28, var9, null) as java.lang.String;
+            var31 = var45.v(var44, 24, var46, null) as Int;
+            var30 = var45.v(var44, 25, var46, null) as Int;
+            var150 = var45.v(var44, 26, var46, null) as Int;
+            var39 = var45.v(var44, 27, var9, null) as java.lang.String;
+            var214 = var45.v(var44, 28, var9, null) as java.lang.String;
             val var47: Int = var45.v(var44, 29, var46, null) as Int;
-            val var54: java.lang.String = var45.v(var44, 30, var9, null) as java.lang.String;
-            var4 = Integer.MAX_VALUE;
-            var6 = var2;
-            var29 = var72;
-            var28 = var59;
+            val var53: java.lang.String = var45.v(var44, 30, var9, null) as java.lang.String;
+            var6 = Integer.MAX_VALUE;
+            var4 = var2;
+            var27 = (Integer)var72;
+            var24 = (Integer)var68;
+            var28 = var58;
             var26 = var11;
-            var22 = var12;
-            var72 = var193;
-            var65 = (Integer)var102;
-            var102 = var156;
-            var193 = var47;
-            var156 = var54;
+            var68 = var12;
+            var64 = var150;
+            var72 = var214;
+            var150 = var47;
+            var214 = var53;
          } else {
-            var var52: Boolean = true;
+            var var51: Boolean = true;
             var5 = 0;
             var4 = 0;
             var3 = 0;
@@ -984,37 +984,37 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
             var23 = null;
             var24 = null;
             var34 = null;
-            var156 = null;
+            var35 = null;
             var33 = null;
             var31 = null;
             var30 = null;
-            var29 = null;
+            var150 = null;
             var28 = null;
             var27 = null;
             var25 = null;
-            var var63: Any = null;
-            var var55: Int = null;
-            var var60: Int = null;
-            var65 = null;
-            var13 = null;
+            var var62: Any = null;
+            var var54: Int = null;
+            var var59: Int = null;
+            var64 = null;
+            var68 = null;
             var72 = null;
             var15 = null;
             var16 = null;
             var17 = null;
             var18 = null;
             var19 = null;
-            var102 = null;
+            var20 = null;
             var21 = null;
             var22 = null;
 
-            while (var52) {
+            while (var51) {
                label137: {
                   label89: {
                      label88: {
                         var var7: Int = var45.x(var44);
                         switch (var7) {
                            case -1:
-                              var52 = false;
+                              var51 = false;
                               break label88;
                            case 0:
                               var5 = var45.k(var44, 0);
@@ -1034,316 +1034,316 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                               break label88;
                            case 4:
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var13 = (Integer)var102;
-                              var65 = (Integer)var21;
-                              var60 = (Integer)var23;
-                              var18 = var55;
-                              var17 = var45.m(var44, 4, InviteType.Serializer.INSTANCE, var63) as InviteType;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var68 = var20;
+                              var64 = (Integer)var21;
+                              var59 = (Integer)var23;
+                              var18 = var54;
+                              var17 = var45.m(var44, 4, InviteType.Serializer.INSTANCE, var62) as InviteType;
                               var2 |= 16;
-                              var55 = var24;
-                              var63 = var22;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var54 = var24;
+                              var62 = var22;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               break label137;
                            case 5:
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var13 = (Integer)var102;
-                              var65 = (Integer)var21;
-                              var19 = var60;
-                              var18 = var45.v(var44, 5, n0.a, var55) as Int;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var68 = var20;
+                              var64 = (Integer)var21;
+                              var19 = var59;
+                              var18 = var45.v(var44, 5, n0.a, var54) as Int;
                               var2 |= 32;
-                              var17 = var63;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var102 = var65;
-                              var21 = var13;
+                              var17 = var62;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               break label137;
                            case 6:
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var13 = (Integer)var102;
-                              var102 = var65;
-                              var19 = var45.v(var44, 6, n0.a, var60) as Int;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var68 = var20;
+                              var20 = var64;
+                              var19 = var45.v(var44, 6, n0.a, var59) as Int;
                               var2 |= 64;
-                              var17 = var63;
-                              var18 = var55;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var21 = var13;
+                              var17 = var62;
+                              var18 = var54;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               break label137;
                            case 7:
-                              var24 = (java.lang.String)var16;
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var21 = var13;
-                              val var116: Int = var45.v(var44, 7, n0.a, var65) as Int;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var21 = var68;
+                              val var116: Int = var45.v(var44, 7, n0.a, var64) as Int;
                               var2 |= 128;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var116;
+                              var19 = var59;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var17 = var62;
+                              var18 = var54;
+                              var20 = var116;
                               var22 = var72;
                               var23 = var15;
+                              var24 = (Integer)var16;
                               break label137;
                            case 8:
                               var16 = var17;
-                              var15 = var18;
+                              var15 = (Integer)var18;
                               var22 = var72;
-                              var21 = var45.v(var44, 8, b2.a, var13) as java.lang.String;
+                              var21 = var45.v(var44, 8, b2.a, var68) as java.lang.String;
                               var2 |= 256;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var72 = (Integer)var19;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var72 = var19;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               break label137;
                            case 9:
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               var16 = var17;
                               var23 = var15;
                               var22 = var45.v(var44, 9, b2.a, var72) as java.lang.String;
                               var2 |= 512;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var72 = (Integer)var19;
-                              var15 = var18;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var72 = var19;
+                              var15 = (Integer)var18;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               break label137;
                            case 10:
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               var23 = var45.v(var44, 10, n0.a, var15) as Int;
                               var2 |= 1024;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var72 = (Integer)var19;
-                              var15 = var18;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var72 = var19;
+                              var15 = (Integer)var18;
                               var16 = var17;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               break label137;
                            case 11:
                               var24 = var45.v(var44, 11, h.a, var16) as java.lang.Boolean;
                               var2 |= 2048;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var72 = (Integer)var19;
-                              var15 = var18;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var72 = var19;
+                              var15 = (Integer)var18;
                               var16 = var17;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
                               break label137;
                            case 12:
                               var17 = var45.v(var44, 12, b2.a, var17) as java.lang.String;
                               var2 |= 4096;
-                              var23 = var15;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var72 = (Integer)var19;
-                              var15 = var18;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var72 = var19;
+                              var15 = (Integer)var18;
                               var16 = var17;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
-                              var24 = (java.lang.String)var16;
+                              var23 = var15;
+                              var24 = (Integer)var16;
                               break label137;
                            case 13:
-                              val var93: java.lang.String = var45.v(var44, 13, b2.a, var18) as java.lang.String;
+                              val var201: java.lang.String = var45.v(var44, 13, b2.a, var18) as java.lang.String;
                               var2 |= 8192;
                               var16 = var17;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var72 = (Integer)var19;
-                              var15 = var93;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var72 = var19;
+                              var15 = var201;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               break label137;
                            case 14:
                               val var306: java.lang.Boolean = var45.v(var44, 14, h.a, var19) as java.lang.Boolean;
                               var2 |= 16384;
-                              var16 = var17;
-                              var15 = var18;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = (Integer)var102;
-                              var72 = var306;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
-                              var22 = var72;
+                              var19 = var59;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var16 = var17;
+                              var15 = (Integer)var18;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var20;
+                              var72 = var306;
+                              var17 = var62;
+                              var18 = var54;
+                              var20 = var64;
+                              var21 = var68;
+                              var22 = var72;
+                              var24 = (Integer)var16;
                               break label137;
                            case 15:
-                              val var305: java.lang.String = var45.v(var44, 15, b2.a, var102) as java.lang.String;
+                              val var305: java.lang.String = var45.v(var44, 15, b2.a, var20) as java.lang.String;
                               var2 |= 32768;
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = (Integer)var21;
-                              var13 = var305;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = (Integer)var21;
+                              var68 = var305;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               break label137;
                            case 16:
                               val var304: java.lang.String = var45.v(var44, 16, b2.a, var21) as java.lang.String;
                               var2 |= 65536;
-                              var21 = var13;
-                              var22 = var72;
-                              var24 = (java.lang.String)var16;
-                              var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var13 = (Integer)var102;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var22;
-                              var65 = var304;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
                               var23 = var15;
+                              var16 = var17;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var68 = var20;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var22;
+                              var64 = var304;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
+                              var22 = var72;
+                              var24 = (Integer)var16;
                               break label137;
                            case 17:
                               val var303: Int = var45.v(var44, 17, n0.a, var22) as Int;
                               var2 |= 131072;
-                              var24 = (java.lang.String)var16;
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var13 = (Integer)var102;
-                              var65 = (Integer)var21;
-                              var55 = var24;
-                              var60 = (Integer)var23;
-                              var63 = var303;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var68 = var20;
+                              var64 = (Integer)var21;
+                              var54 = var24;
+                              var59 = (Integer)var23;
+                              var62 = var303;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
+                              var24 = (Integer)var16;
                               break label137;
                            case 18:
                               val var302: Int = var45.v(var44, 18, n0.a, var23) as Int;
                               var2 |= 262144;
-                              var23 = var15;
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var13 = (Integer)var102;
-                              var65 = (Integer)var21;
-                              var63 = var22;
-                              var55 = var24;
-                              var60 = var302;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var68 = var20;
+                              var64 = (Integer)var21;
+                              var62 = var22;
+                              var54 = var24;
+                              var59 = var302;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
-                              var24 = (java.lang.String)var16;
+                              var23 = var15;
+                              var24 = (Integer)var16;
                               break label137;
                            case 19:
                               val var301: java.lang.Boolean = var45.v(var44, 19, h.a, var24) as java.lang.Boolean;
                               var2 |= 524288;
                               var16 = var17;
-                              var15 = var18;
-                              var72 = (Integer)var19;
-                              var13 = (Integer)var102;
-                              var65 = (Integer)var21;
-                              var63 = var22;
-                              var60 = (Integer)var23;
-                              var55 = var301;
-                              var17 = var63;
-                              var18 = var55;
-                              var19 = var60;
-                              var102 = var65;
-                              var21 = var13;
+                              var15 = (Integer)var18;
+                              var72 = var19;
+                              var68 = var20;
+                              var64 = (Integer)var21;
+                              var62 = var22;
+                              var59 = (Integer)var23;
+                              var54 = var301;
+                              var17 = var62;
+                              var18 = var54;
+                              var19 = var59;
+                              var20 = var64;
+                              var21 = var68;
                               var22 = var72;
                               var23 = var15;
-                              var24 = (java.lang.String)var16;
+                              var24 = (Integer)var16;
                               break label137;
                            case 20:
                               var26 = var45.v(var44, 20, n0.a, var26) as Int;
@@ -1362,7 +1362,7 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                               var2 |= 8388608;
                               break label89;
                            case 24:
-                              var29 = var45.v(var44, 24, n0.a, var29) as Int;
+                              var150 = var45.v(var44, 24, n0.a, var150) as Int;
                               var2 |= 16777216;
                               break label89;
                            case 25:
@@ -1386,7 +1386,7 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                               var2 |= 536870912;
                               break label89;
                            case 30:
-                              var156 = var45.v(var44, 30, b2.a, var156) as java.lang.String;
+                              var35 = var45.v(var44, 30, b2.a, var35) as java.lang.String;
                               var2 |= 1073741824;
                               break label89;
                            default:
@@ -1398,122 +1398,121 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
                      }
 
                      var16 = var17;
-                     var15 = var18;
-                     var72 = (Integer)var19;
-                     var13 = (Integer)var102;
-                     var65 = (Integer)var21;
-                     var63 = var22;
-                     var60 = (Integer)var23;
-                     var55 = var24;
-                     var17 = var63;
-                     var18 = var55;
-                     var19 = var60;
-                     var102 = var65;
-                     var21 = var13;
+                     var15 = (Integer)var18;
+                     var72 = var19;
+                     var68 = var20;
+                     var64 = (Integer)var21;
+                     var62 = var22;
+                     var59 = (Integer)var23;
+                     var54 = var24;
+                     var17 = var62;
+                     var18 = var54;
+                     var19 = var59;
+                     var20 = var64;
+                     var21 = var68;
                      var22 = var72;
                      var23 = var15;
-                     var24 = (java.lang.String)var16;
+                     var24 = (Integer)var16;
                      break label137;
                   }
 
                   var16 = var17;
-                  var15 = var18;
-                  var72 = (Integer)var19;
-                  var13 = (Integer)var102;
-                  var24 = (java.lang.String)var16;
+                  var15 = (Integer)var18;
+                  var72 = var19;
+                  var68 = var20;
+                  var24 = (Integer)var16;
                   var23 = var15;
                   var22 = var72;
-                  var21 = var13;
-                  var102 = var65;
-                  var19 = var60;
-                  var18 = var55;
-                  var17 = var63;
-                  var65 = (Integer)var21;
-                  var63 = var22;
-                  var60 = (Integer)var23;
-                  var55 = var24;
+                  var21 = var68;
+                  var20 = var64;
+                  var19 = var59;
+                  var18 = var54;
+                  var17 = var62;
+                  var64 = (Integer)var21;
+                  var62 = var22;
+                  var59 = (Integer)var23;
+                  var54 = var24;
                }
 
-               var63 = var17;
-               var55 = var18;
-               var60 = (Integer)var19;
-               var65 = (Integer)var102;
-               var13 = (Integer)var21;
-               var72 = (Integer)var22;
-               var15 = var23;
+               var62 = var17;
+               var54 = (Integer)var18;
+               var59 = (Integer)var19;
+               var64 = var20;
+               var68 = var21;
+               var72 = var22;
+               var15 = (Integer)var23;
                var16 = var24;
-               var23 = var60;
-               var24 = var55;
+               var23 = var59;
+               var24 = var54;
                var17 = var16;
-               var18 = (Integer)var15;
+               var18 = var15;
                var19 = var72;
-               var102 = var13;
-               var21 = var65;
-               var22 = var63;
+               var20 = (Integer)var68;
+               var21 = var64;
+               var22 = var62;
             }
 
-            var193 = (Integer)var33;
-            var29 = (Integer)var22;
-            var32 = (java.lang.String)var19;
-            var102 = var31;
-            var24 = var32;
-            var65 = var48;
-            var72 = var30;
-            var30 = var29;
-            var39 = var28;
-            var22 = var27;
+            var214 = var35;
+            var39 = var32;
+            var31 = var150;
+            var36 = var18;
+            var150 = (Integer)var33;
+            var72 = var31;
+            var64 = var48;
+            var22 = var28;
+            var68 = var27;
             var28 = var24;
-            var13 = (Integer)var23;
-            var23 = var21;
-            var19 = var102;
-            var16 = var18;
-            var21 = var17;
-            var33 = var16;
-            var18 = (Integer)var15;
-            var17 = var72;
-            var15 = var13;
-            var38 = var65;
-            var36 = var60;
-            var27 = var55;
-            var31 = var63;
-            var6 = var4;
-            var4 = var2;
+            var24 = (Integer)var23;
+            var27 = (Integer)var22;
+            var16 = var21;
+            var19 = var20;
+            var18 = var19;
+            var23 = var17;
+            var21 = var16;
+            var20 = var15;
+            var32 = (java.lang.String)var72;
+            var33 = var68;
+            var37 = var64;
+            var35 = var59;
+            var15 = var54;
+            var17 = var62;
+            var6 = var2;
          }
 
          var45.b(var44);
          return new GuildInviteEmbedImpl(
-            var4,
+            var6,
             var5,
             var3,
-            var6,
+            var4,
             (java.lang.String)var25,
-            (InviteType)var31,
-            var27,
-            var36,
-            var38,
-            (java.lang.String)var15,
-            (java.lang.String)var17,
-            var18,
-            (java.lang.Boolean)var33,
-            (java.lang.String)var21,
-            (java.lang.String)var16,
+            (InviteType)var17,
+            var15,
+            var35,
+            var37,
+            (java.lang.String)var33,
             var32,
-            (java.lang.String)var19,
+            var20,
+            (java.lang.Boolean)var21,
             (java.lang.String)var23,
-            var29,
-            var13,
+            (java.lang.String)var36,
+            (java.lang.Boolean)var18,
+            (java.lang.String)var19,
+            (java.lang.String)var16,
+            var27,
+            var24,
             (java.lang.Boolean)var28,
             var26,
+            (java.lang.String)var68,
             (java.lang.String)var22,
-            (java.lang.String)var39,
             (java.lang.String)var34,
+            var31,
             var30,
-            var72,
-            var65,
-            var24,
-            (java.lang.String)var102,
-            var193,
-            (java.lang.String)var156,
+            var64,
+            var39,
+            (java.lang.String)var72,
+            var150,
+            (java.lang.String)var214,
             null
          );
       }
@@ -1528,7 +1527,7 @@ public data class GuildInviteEmbedImpl(backgroundColor: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

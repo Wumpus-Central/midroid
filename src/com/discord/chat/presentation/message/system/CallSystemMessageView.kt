@@ -33,7 +33,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import vk.f
+import sk.f
 
 public class CallSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout {
    private final val binding: CallSystemMessageViewBinding
@@ -52,17 +52,17 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
       this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
       this.grayIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var3: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var5: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var5, "inflate(...)");
+      this.binding = var5;
       AddSystemMessageCardStyleKt.addSystemMessageCardStyle(this);
-      val var5: TextView = var3.message;
-      q.e(var3.message);
-      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      var5.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var4: TextView = var3.info;
-      q.e(var3.info);
+      val var3: TextView = var5.message;
+      q.e(var5.message);
+      SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+      var3.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var4: TextView = var5.info;
+      q.e(var5.info);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
@@ -103,12 +103,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
-      val var9: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
       val var19: StringBuilder = new StringBuilder();
       var19.append("Binding ");
-      var19.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var9, var19.toString(), null, 2, null);
+      var19.append(var9);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var19.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var7)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);
@@ -119,11 +119,11 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
             new Function2(this, var14, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
-   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
-   //   at java.base/java.util.HashMap.get(HashMap.java:564)
-   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)

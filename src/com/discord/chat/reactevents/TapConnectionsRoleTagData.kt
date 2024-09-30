@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -87,19 +87,19 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.userId;
-      val var2: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.userId;
+      val var4: java.lang.String = this.guildId;
       val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.roleId;
+      val var1: java.lang.String = this.roleId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapConnectionsRoleTagData(userId=");
-      var5.append(var1);
-      var5.append(", guildId=");
       var5.append(var2);
+      var5.append(", guildId=");
+      var5.append(var4);
       var5.append(", channelId=");
       var5.append(var3);
       var5.append(", roleId=");
-      var5.append(var4);
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }

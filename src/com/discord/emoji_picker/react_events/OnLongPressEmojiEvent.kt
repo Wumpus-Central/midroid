@@ -1,12 +1,12 @@
 package com.discord.emoji_picker.react_events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import dl.a
+import fl.b2
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,13 +73,13 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.emojiName;
-      val var2: java.lang.String = this.emojiId;
+      val var2: java.lang.String = this.emojiName;
+      val var1: java.lang.String = this.emojiId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnLongPressEmojiEvent(emojiName=");
-      var3.append(var1);
-      var3.append(", emojiId=");
       var3.append(var2);
+      var3.append(", emojiId=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }
@@ -156,7 +156,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

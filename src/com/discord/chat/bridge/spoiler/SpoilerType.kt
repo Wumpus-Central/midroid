@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.spoiler
 
 import kotlin.enums.EnumEntries
-import uh.a
+import rh.a
 
 public enum class SpoilerType {
    OBSCURE,

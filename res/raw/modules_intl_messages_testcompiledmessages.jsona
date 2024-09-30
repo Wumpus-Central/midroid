@@ -19,58 +19,6 @@
       "value": " replaced the global i18n system."
     }
   ],
-  "rmps8/": [
-    {
-      "type": 0,
-      "value": "This string has a "
-    },
-    {
-      "type": 8,
-      "value": "$link",
-      "children": [
-        {
-          "type": 0,
-          "value": "https://discord.com"
-        },
-        {
-          "type": 1,
-          "value": "$_"
-        },
-        {
-          "type": 0,
-          "value": "static link"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": ", with the url defined in the string."
-    }
-  ],
-  "uczI4u": [
-    {
-      "type": 0,
-      "value": "This link uses a "
-    },
-    {
-      "type": 8,
-      "value": "$link",
-      "children": [
-        {
-          "type": 1,
-          "value": "linkTarget"
-        },
-        {
-          "type": 0,
-          "value": "variable link"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " provided at runtime."
-    }
-  ],
   "Q+eyqq": [
     {
       "type": 6,
@@ -104,10 +52,28 @@
       "pluralType": "cardinal"
     }
   ],
-  "JJ0wpK": [
+  "uczI4u": [
     {
       "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
+      "value": "This link uses a "
+    },
+    {
+      "type": 8,
+      "value": "$link",
+      "children": [
+        {
+          "type": 1,
+          "value": "linkTarget"
+        },
+        {
+          "type": 0,
+          "value": "variable link"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " provided at runtime."
     }
   ],
   "rdfRys": [
@@ -128,6 +94,40 @@
     {
       "type": 0,
       "value": " here."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
+    }
+  ],
+  "rmps8/": [
+    {
+      "type": 0,
+      "value": "This string has a "
+    },
+    {
+      "type": 8,
+      "value": "$link",
+      "children": [
+        {
+          "type": 0,
+          "value": "https://discord.com"
+        },
+        {
+          "type": 1,
+          "value": "$_"
+        },
+        {
+          "type": 0,
+          "value": "static link"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": ", with the url defined in the string."
     }
   ],
   "XOdbAw": [

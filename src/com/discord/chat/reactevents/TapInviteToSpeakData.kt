@@ -4,8 +4,8 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kh.w
 import kotlin.jvm.internal.q
-import nh.w
 
 public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakData(var1), ReactEvent {
    public final val messageId: MessageId
@@ -44,11 +44,11 @@ public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakD
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapInviteToSpeakData(messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapInviteToSpeakData(messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

@@ -79,9 +79,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter = var6;
       val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
       this.contentViewTracker = var5;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var4;
-      val var3: DefaultItemAnimator = new DefaultItemAnimator() {
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var3;
+      val var4: DefaultItemAnimator = new DefaultItemAnimator() {
          @Override
          public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.q.h(var1, "viewHolder");
@@ -96,9 +96,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var3.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var3;
-      this.forwardBarPaint$delegate = nh.l.a(<unrepresentable>.INSTANCE);
+      var4.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var4;
+      this.forwardBarPaint$delegate = kh.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -111,13 +111,13 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
+      this.setLayoutManager(var3);
       this.setAdapter(var6);
       var6.setMessageContentViewLifecycleListener(var5);
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : sk.j.H(v0.a(this))) {
+      for (Pair var3 : pk.j.H(v0.a(this))) {
          val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ReactionsView || var4 is ThreadEmbedView) {
@@ -185,32 +185,32 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var12: MessageAccessoriesView.Companion = Companion;
-      val var17: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var17, "getResources(...)");
-      this.updateLeftMargin(var12.getAccessoryLeftMargin(var17, var8, var9));
-      val var18: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var17: MessageAccessoriesView.Companion = Companion;
+      val var12: Resources = this.getResources();
+      kotlin.jvm.internal.q.g(var12, "getResources(...)");
+      this.updateLeftMargin(var17.getAccessoryLeftMargin(var12, var8, var9));
+      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var9 = var5 is java.util.Collection;
       var10 = false;
       if (var9 && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var13: java.util.Iterator = var5.iterator();
+         val var18: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var13.hasNext()) {
+            if (!var18.hasNext()) {
                break;
             }
 
-            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var18.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var18.setShowThreadSpine(var9);
+      var13.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

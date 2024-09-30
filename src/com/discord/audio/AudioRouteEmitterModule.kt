@@ -8,9 +8,9 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
+import kh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import nh.w
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterSpec {
    private final lateinit var audioManager: DiscordAudioManagerInterface
@@ -81,10 +81,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          q.g(var2, "getReactApplicationContext(...)");
          this.audioManager = var1.getInstance(var2);
       } else {
-         val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         this.audioManager = var5.getInstance(var3);
+         val var3: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var5, "getReactApplicationContext(...)");
+         this.audioManager = var3.getInstance(var5);
       }
 
       var var4: DiscordAudioManagerInterface = this.audioManager;

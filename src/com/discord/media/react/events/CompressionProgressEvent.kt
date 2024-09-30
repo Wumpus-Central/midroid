@@ -1,13 +1,13 @@
 package com.discord.media.react.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,15 +66,15 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.uri;
+      val var2: java.lang.String = this.uri;
       val var1: Int = this.progress;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CompressionProgressEvent(uri=");
-      var2.append(var3);
-      var2.append(", progress=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CompressionProgressEvent(uri=");
+      var3.append(var2);
+      var3.append(", progress=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

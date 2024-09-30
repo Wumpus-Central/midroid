@@ -76,18 +76,18 @@ internal data class StickerPickerRow(rowContentWidth: Int,
       val var1: Int = this.rowContentWidth;
       val var3: Int = this.rowContentPaddingVertical;
       val var2: Int = this.itemSize;
-      val var5: java.util.List = this.items;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("StickerPickerRow(rowContentWidth=");
-      var4.append(var1);
-      var4.append(", rowContentPaddingVertical=");
-      var4.append(var3);
-      var4.append(", itemSize=");
-      var4.append(var2);
-      var4.append(", items=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.List = this.items;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("StickerPickerRow(rowContentWidth=");
+      var5.append(var1);
+      var5.append(", rowContentPaddingVertical=");
+      var5.append(var3);
+      var5.append(", itemSize=");
+      var5.append(var2);
+      var5.append(", items=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public data class Sticker(id: String,
@@ -205,30 +205,30 @@ internal data class StickerPickerRow(rowContentWidth: Int,
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.id;
-         val var8: java.lang.String = this.name;
-         val var5: StickerPickerRow.Sticker.Type = this.type;
-         val var1: Boolean = this.animated;
-         val var7: java.lang.String = this.url;
+         val var6: java.lang.String = this.id;
+         val var4: java.lang.String = this.name;
+         val var7: StickerPickerRow.Sticker.Type = this.type;
+         val var3: Boolean = this.animated;
+         val var8: java.lang.String = this.url;
          val var2: Boolean = this.disabled;
-         val var3: Boolean = this.opaque;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Sticker(id=");
-         var6.append(var4);
-         var6.append(", name=");
-         var6.append(var8);
-         var6.append(", type=");
-         var6.append(var5);
-         var6.append(", animated=");
-         var6.append(var1);
-         var6.append(", url=");
-         var6.append(var7);
-         var6.append(", disabled=");
-         var6.append(var2);
-         var6.append(", opaque=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var1: Boolean = this.opaque;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Sticker(id=");
+         var5.append(var6);
+         var5.append(", name=");
+         var5.append(var4);
+         var5.append(", type=");
+         var5.append(var7);
+         var5.append(", animated=");
+         var5.append(var3);
+         var5.append(", url=");
+         var5.append(var8);
+         var5.append(", disabled=");
+         var5.append(var2);
+         var5.append(", opaque=");
+         var5.append(var1);
+         var5.append(")");
+         return var5.toString();
       }
 
       public enum class Type {
@@ -244,7 +244,7 @@ internal data class StickerPickerRow(rowContentWidth: Int,
          fun {
             val var0: Array<StickerPickerRow.Sticker.Type> = $values();
             $VALUES = var0;
-            $ENTRIES = uh.a.a(var0);
+            $ENTRIES = rh.a.a(var0);
          }
 
          @JvmStatic

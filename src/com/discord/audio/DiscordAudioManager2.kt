@@ -162,19 +162,19 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
          public void onAudioDevicesRemoved(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var4: DiscordAudioManager2 = this.this$0;
-               val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var5: ArrayList = new ArrayList();
+               val var6: DiscordAudioManager2 = this.this$0;
+               val var5: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var7: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
                for (int var2 = 0; var2 < var3; var2++) {
-                  val var7: AudioDeviceInfo = var1[var2];
+                  val var4: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var5.add(var7);
+                     var7.add(var4);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var4, w.j(var6, i.V0(var5)));
+               DiscordAudioManager2.access$setAudioDevices$p(var6, w.j(var5, i.V0(var7)));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new Function1(this.this$0) {
                   final DiscordAudioManager2 this$0;
 
@@ -212,8 +212,8 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
       val var7: ArrayList = new ArrayList(i.v(var2, 10));
 
-      for (AudioDeviceInfo var8 : var2) {
-         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var8));
+      for (AudioDeviceInfo var5 : var2) {
+         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var5));
       }
 
       return i.U0(var7);

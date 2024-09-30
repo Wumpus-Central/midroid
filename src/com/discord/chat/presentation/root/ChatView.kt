@@ -15,9 +15,9 @@ import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.views.view.ReactViewGroup
+import kh.w
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
-import nh.w
 
 public class ChatView(context: Context) : ReactViewGroup {
    private final lateinit var chatList: ChatListView
@@ -140,19 +140,6 @@ public class ChatView(context: Context) : ReactViewGroup {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setAreChatAnimationsEnabled$cp(var1);
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
-      }
-   }
-
-   public fun setEventHandler(eventHandler: ChatEventHandler) {
-      q.h(var1, "eventHandler");
-      if (ThreadUtilsKt.isOnMainThread()) {
-         access$setEventHandler$p(this, var1);
-      } else {
          val var2: Thread = Thread.currentThread();
          val var3: StringBuilder = new StringBuilder();
          var3.append("Expected to be on android main thread. Current: ");
@@ -161,15 +148,28 @@ public class ChatView(context: Context) : ReactViewGroup {
       }
    }
 
-   public fun setInverted(inverted: Boolean) {
+   public fun setEventHandler(eventHandler: ChatEventHandler) {
+      q.h(var1, "eventHandler");
       if (ThreadUtilsKt.isOnMainThread()) {
-         access$setInverted$p(this, var1);
+         access$setEventHandler$p(this, var1);
       } else {
          val var3: Thread = Thread.currentThread();
          val var2: StringBuilder = new StringBuilder();
          var2.append("Expected to be on android main thread. Current: ");
          var2.append(var3);
          throw new IllegalStateException(var2.toString().toString());
+      }
+   }
+
+   public fun setInverted(inverted: Boolean) {
+      if (ThreadUtilsKt.isOnMainThread()) {
+         access$setInverted$p(this, var1);
+      } else {
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import n1.a;
+import o1.a;
 
 public final class ChatLoadingViewBinding implements ViewBinding {
    public final Button button;

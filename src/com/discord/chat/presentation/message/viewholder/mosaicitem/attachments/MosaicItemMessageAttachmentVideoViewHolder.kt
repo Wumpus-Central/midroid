@@ -51,16 +51,16 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          }
       });
       val var19: Long = var2.getChannelId-o4g7jtM();
-      val var21: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var25: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var12: Int = var2.getAttachmentIndex();
       val var23: java.lang.String = var27.getVideoUrl();
       q.e(var23);
-      val var24: java.lang.String = var27.getUrl();
-      val var9: Int = var27.getWidth();
+      val var26: java.lang.String = var27.getUrl();
+      val var10: Int = var27.getWidth();
       val var11: Int = var27.getHeight();
-      val var26: java.lang.String = var27.getPlaceholder();
-      val var25: Int = var27.getPlaceholderVersion();
-      val var10: Int = var2.getRadiusPx();
+      val var24: java.lang.String = var27.getPlaceholder();
+      val var21: Int = var27.getPlaceholderVersion();
+      val var9: Int = var2.getRadiusPx();
       val var15: Boolean = var27.isSpoiler();
       val var28: SpoilerAttributes = var2.getSpoilerAttributes();
       val var38: SpoilerConfig;
@@ -86,14 +86,14 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
 
       super.bind-kIVcwaw(
          ChannelId.box-impl(var19),
-         var21,
+         var25,
          var12,
          var23,
-         var24,
-         var11,
-         var9,
          var26,
-         var25,
+         var11,
+         var10,
+         var24,
+         var21,
          var15,
          var38,
          var13,
@@ -112,7 +112,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
                (super.receiver as ChatEventHandler).onTapShowAltText(var1);
             }
          },
-         var10,
+         var9,
          var3 xor true,
          var22,
          var3,
@@ -169,15 +169,15 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       var20.append(var2);
       var20.append(").item[image]");
       val var24: SpoilerAttributes = var19.forGenericMedia(var3, var1, var20.toString(), var3.getMedia().getProxyUrl());
-      val var30: java.lang.String = var21.getProxyUrl();
-      var2 = var3.getVideoPreviewUrl();
-      q.e(var2);
-      val var12: Int = var21.getWidth();
-      val var13: Int = var21.getHeight();
-      val var31: java.lang.String = var21.getPlaceholder();
+      val var31: java.lang.String = var21.getProxyUrl();
+      val var30: java.lang.String = var3.getVideoPreviewUrl();
+      q.e(var30);
+      val var13: Int = var21.getWidth();
+      val var11: Int = var21.getHeight();
+      var2 = var21.getPlaceholder();
       val var32: Int = var21.getPlaceholderVersion();
-      val var11: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
-      val var18: Boolean = var3.isSpoiler();
+      val var12: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
+      val var14: Boolean = var3.isSpoiler();
       val var25: SpoilerConfig;
       if (var24 != null) {
          var25 = var24.configure(var7);
@@ -185,12 +185,12 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          var25 = null;
       }
 
-      val var15: Boolean = var3.isObscure();
-      val var17: Boolean = var3.isObscureAwaitingScan();
-      val var14: Boolean = var3.getShowDescription();
+      val var17: Boolean = var3.isObscure();
+      val var16: Boolean = var3.isObscureAwaitingScan();
+      val var18: Boolean = var3.getShowDescription();
       val var22: java.lang.String = var3.getDescription();
       val var29: java.lang.String = var3.getDescriptionHint();
-      val var16: Boolean = var3.getShowDescription();
+      val var15: Boolean = var3.getShowDescription();
       val var23: java.lang.String = var3.getAccessibilityRole();
       val var27: java.lang.Double = var3.getPortalId();
       q.e(var27);
@@ -198,22 +198,22 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          null,
          null,
          null,
-         var30,
-         var2,
-         var13,
-         var12,
          var31,
+         var30,
+         var11,
+         var13,
+         var2,
          var32,
-         var18,
-         var25,
-         var15,
-         var17,
          var14,
+         var25,
+         var17,
+         var16,
+         var18,
          var22,
          var29,
-         var16,
+         var15,
          var8,
-         var11,
+         var12,
          var4 xor true,
          null,
          var4,

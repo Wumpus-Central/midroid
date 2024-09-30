@@ -8,7 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import n1.a;
+import o1.a;
 
 public final class MessageTagViewBinding implements ViewBinding {
    public final ConstraintLayout layout;
@@ -28,12 +28,12 @@ public final class MessageTagViewBinding implements ViewBinding {
       ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.tag;
-         TextView var4 = (TextView)a.a(var0, var1);
-         if (var4 != null) {
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.verified_bot_icon;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
-               return new MessageTagViewBinding(var0, var3, var4, var2);
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
+               return new MessageTagViewBinding(var0, var3, var2, var4);
             }
          }
       }

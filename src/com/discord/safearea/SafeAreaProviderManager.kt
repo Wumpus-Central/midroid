@@ -15,11 +15,11 @@ import com.facebook.react.viewmanagers.SafeAreaViewManagerInterface
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.Rect
 import com.th3rdwave.safeareacontext.SafeAreaProvider
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
-import nh.w
 
 @ReactModule(name = "DCDSafeArea")
 public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeAreaViewManagerInterface<SafeAreaProvider> {
@@ -38,10 +38,10 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    }
 
    private fun handleInsetsChanged(reactContext: ThemedReactContext, safeAreaEdgeInsets: SafeAreaEdgeInsets, imeInsets: Insets?, view: SafeAreaProvider) {
-      val var9: Float = var2.getTopDp();
+      val var8: Float = var2.getTopDp();
       val var6: Float = var2.getBottomDp();
-      val var8: Float = var2.getLeftDp();
-      val var7: Float = var2.getRightDp();
+      val var7: Float = var2.getLeftDp();
+      val var9: Float = var2.getRightDp();
       val var5: Float;
       if (var3 != null) {
          var5 = SizeUtilsKt.getPxToDp(var3.d);
@@ -49,7 +49,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
          var5 = 0.0F;
       }
 
-      val var12: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var9, var6, var8, var7, var5);
+      val var12: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var8, var6, var7, var9, var5);
       val var10: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var4);
       if (!q.c(this.dimensions, var10)) {
          this.changeData = DEFAULT_CHANGE_DATA;

@@ -22,9 +22,9 @@ import kotlinx.coroutines.g
 import kotlinx.coroutines.v
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
-import vk.f
-import vk.j1
-import vk.s0
+import sk.f
+import sk.j1
+import sk.s0
 
 @ReactModule(name = "DCDChatManager")
 public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -40,23 +40,23 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
       super(var1);
       this.reactContext = var1;
       this.json = b.b(null, <unrepresentable>.INSTANCE, 1, null);
-      val var2: CompletableJob = j1.b(null, 1, null);
-      val var3: ExecutorService = Executors.newSingleThreadExecutor();
-      q.g(var3, "newSingleThreadExecutor(...)");
-      this.moduleScope = g.a(var2.Q(s0.b(var3)));
+      val var3: CompletableJob = j1.b(null, 1, null);
+      val var2: ExecutorService = Executors.newSingleThreadExecutor();
+      q.g(var2, "newSingleThreadExecutor(...)");
+      this.moduleScope = g.a(var3.Q(s0.b(var2)));
       this.listManagers = new LinkedHashMap<>();
       this.previousRowUpdateTag = -1;
       this.rowUpdateLoggers = new LinkedHashMap<>();
    }
 
    private fun rowUpdateLoggerFor(tag: Int): RowLogger {
-      val var5: java.util.Map = this.rowUpdateLoggers;
-      val var4: Int = var1;
-      val var3: Any = var5.get(var4);
+      val var4: java.util.Map = this.rowUpdateLoggers;
+      val var5: Int = var1;
+      val var3: Any = var4.get(var5);
       var var2: Any = var3;
       if (var3 == null) {
          var2 = new ReleaseRowLogger();
-         var5.put(var4, var2);
+         var4.put(var5, var2);
       }
 
       return var2 as RowLogger;
@@ -70,7 +70,6 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
          new Function2(var2, this.getChatListManager(var1), null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
@@ -1094,6 +1093,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
@@ -1107,9 +1107,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
          new Function2(this, var1, var2, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
+   //   at java.base/java.util.HashMap.put(HashMap.java:618)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1746)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -2130,7 +2131,6 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    
       );
    }
@@ -2198,12 +2198,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
 
    public open fun invalidate() {
       super.invalidate();
-      val var2: CoroutineContext = this.moduleScope.getCoroutineContext();
-      val var3: java.lang.String = ChatModule.class.getSimpleName();
-      val var1: StringBuilder = new StringBuilder();
-      var1.append(var3);
-      var1.append(" invalidate()");
-      v.g(var2, new CancellationException(var1.toString()));
+      val var1: CoroutineContext = this.moduleScope.getCoroutineContext();
+      val var2: java.lang.String = ChatModule.class.getSimpleName();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var2);
+      var3.append(" invalidate()");
+      v.g(var1, new CancellationException(var3.toString()));
    }
 
    @ReactMethod
@@ -2215,9 +2215,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
          new Function2(this, var1, var2, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
+   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
+   //   at java.base/java.util.HashMap.put(HashMap.java:618)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1746)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -3238,7 +3239,6 @@ public class ChatModule(reactContext: ReactApplicationContext) : ReactContextBas
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    
       );
    }

@@ -38,58 +38,59 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
       q.h(var1, "canvas");
       q.h(var2, "paint");
       q.h(var8, "text");
-      val var20: SpannedString = SpannedString.valueOf(var8);
-      q.g(var20, "valueOf(this)");
-      val var21: Array<BackgroundSpan> = var20.getSpans(0, var8.length(), BackgroundSpan.class) as Array<BackgroundSpan>;
-      val var26: Layout = this.provider.getLayout();
-      q.g(var26, "getLayout(...)");
-      q.e(var21);
-      var4 = var21.length;
+      val var21: SpannedString = SpannedString.valueOf(var8);
+      q.g(var21, "valueOf(this)");
+      val var22: Array<BackgroundSpan> = var21.getSpans(0, var8.length(), BackgroundSpan.class) as Array<BackgroundSpan>;
+      val var20: Layout = this.provider.getLayout();
+      q.g(var20, "getLayout(...)");
+      q.e(var22);
+      var4 = var22.length;
+      var6 = 0;
 
-      for (int var25 = 0; var25 < var4; var25++) {
-         val var22: BackgroundSpan = var21[var25];
-         var9 = var20.getSpanStart(var21[var25]);
-         var var18: Int = var20.getSpanEnd(var21[var25]);
-         val var36: BackgroundStyle = var22.getStyle();
-         val var13: Float = SizeUtilsKt.getDpToPx(var36.getCornerRadius());
-         val var17: Int = var26.getLineForOffset(var9);
-         var10 = var26.getLineForOffset(var18);
-         if (var17 <= var11 && var11 <= var10) {
-            if (var17 == var11) {
-               var9 = (int)var26.getPrimaryHorizontal(var9);
+      for (SpannedString var26 = var21; var6 < var4; var6++) {
+         val var36: BackgroundSpan = var22[var6];
+         var9 = var26.getSpanStart(var22[var6]);
+         var var18: Int = var26.getSpanEnd(var22[var6]);
+         val var37: BackgroundStyle = var36.getStyle();
+         val var13: Float = SizeUtilsKt.getDpToPx(var37.getCornerRadius());
+         var10 = var20.getLineForOffset(var9);
+         val var17: Int = var20.getLineForOffset(var18);
+         if (var10 <= var11 && var11 <= var17) {
+            if (var10 == var11) {
+               var9 = (int)var20.getPrimaryHorizontal(var9);
             } else {
                var9 = var3;
             }
 
             val var12: Float;
-            if (var10 == var11) {
-               var12 = var26.getPrimaryHorizontal(Math.min(var18, var26.getLineEnd(var11)));
+            if (var17 == var11) {
+               var12 = var20.getPrimaryHorizontal(Math.min(var18, var20.getLineEnd(var11)));
             } else {
-               var12 = var26.getLineRight(var11);
+               var12 = var20.getLineRight(var11);
             }
 
             val var19: Int = (int)var12;
             var18 = var2.getColor();
-            var2.setColor(var36.getBackgroundColor());
-            if (var17 == var10) {
+            var2.setColor(var37.getBackgroundColor());
+            if (var10 == var17) {
                var1.drawRoundRect(
                   (float)var9,
                   (float)var5,
                   (float)var19,
                   (float)var7,
-                  (float)SizeUtilsKt.getDpToPx(var36.getCornerRadius()),
-                  (float)SizeUtilsKt.getDpToPx(var36.getCornerRadius()),
+                  (float)SizeUtilsKt.getDpToPx(var37.getCornerRadius()),
+                  (float)SizeUtilsKt.getDpToPx(var37.getCornerRadius()),
                   var2
                );
-            } else if (var17 == var11) {
-               var2.setColor(var36.getBackgroundColor());
+            } else if (var10 == var11) {
+               var2.setColor(var37.getBackgroundColor());
                val var23: Path = new Path();
                var23.addRoundRect(
                   (float)var9, (float)var5, (float)var19, (float)var7, new float[]{var13, var13, 0.0F, 0.0F, 0.0F, 0.0F, var13, var13}, Direction.CW
                );
                var1.drawPath(var23, var2);
-            } else if (var10 == var11) {
-               var2.setColor(var36.getBackgroundColor());
+            } else if (var17 == var11) {
+               var2.setColor(var37.getBackgroundColor());
                val var39: Path = new Path();
                var39.addRoundRect(
                   (float)var9, (float)var5, (float)var19, (float)var7, new float[]{0.0F, 0.0F, var13, var13, var13, var13, 0.0F, 0.0F}, Direction.CW

@@ -37,8 +37,8 @@ public class StickerGifViewHolder(stickerView: StickerView) : StickerPartViewHol
       kotlin.jvm.internal.q.h(var3, "onStickerLongClicked");
       if (!kotlin.jvm.internal.q.c(var1, this.sticker)) {
          this.sticker = var1;
-         val var8: StickerView = this.stickerView;
-         val var7: java.lang.String = var1.getUrl();
+         val var7: StickerView = this.stickerView;
+         val var8: java.lang.String = var1.getUrl();
          val var6: Boolean;
          if (var1.getRenderMode() == 0) {
             var6 = true;
@@ -46,7 +46,7 @@ public class StickerGifViewHolder(stickerView: StickerView) : StickerPartViewHol
             var6 = false;
          }
 
-         var8.asGif(var7, var4, var5, var6);
+         var7.asGif(var8, var4, var5, var6);
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new t(var2, var1), 1, null);
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new u(var3, var1), 1, null);
       }

@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -82,16 +82,16 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    public override fun toString(): String {
       val var1: java.lang.String = this.guildId;
       val var4: java.lang.String = this.content;
-      val var3: java.lang.String = this.icon;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("GuildNameContentNode(guildId=");
-      var2.append(var1);
-      var2.append(", content=");
-      var2.append(var4);
-      var2.append(", icon=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.icon;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("GuildNameContentNode(guildId=");
+      var3.append(var1);
+      var3.append(", content=");
+      var3.append(var4);
+      var3.append(", icon=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -180,7 +180,7 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

@@ -13,8 +13,8 @@ import androidx.core.os.e
 import com.discord.share.intent.GetFileNameKt
 import com.discord.shortcuts.ShortcutData
 import java.util.ArrayList
+import kh.w
 import kotlin.jvm.internal.q
-import nh.w
 
 internal data class ShareProps(text: String, attachments: List<com.discord.share.ShareProps.Attachment>, targetChannelId: String?, targetUserId: String?) {
    public final val attachments: List<com.discord.share.ShareProps.Attachment>
@@ -97,34 +97,34 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public fun toBundle(): Bundle {
-      val var1: Pair = w.a("text", this.text);
+      val var2: Pair = w.a("text", this.text);
       val var3: java.util.List = this.attachments;
-      val var2: ArrayList = new ArrayList(i.v(this.attachments, 10));
+      val var1: ArrayList = new ArrayList(i.v(this.attachments, 10));
       val var4: java.util.Iterator = var3.iterator();
 
       while (var4.hasNext()) {
-         var2.add((var4.next() as ShareProps.Attachment).toBundle());
+         var1.add((var4.next() as ShareProps.Attachment).toBundle());
       }
 
-      return e.a(var1, w.a("attachments", var2.toArray(new Bundle[0])), w.a("targetChannelId", this.targetChannelId), w.a("targetUserId", this.targetUserId));
+      return e.a(var2, w.a("attachments", var1.toArray(new Bundle[0])), w.a("targetChannelId", this.targetChannelId), w.a("targetUserId", this.targetUserId));
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var4: java.util.List = this.attachments;
-      val var3: java.lang.String = this.targetChannelId;
-      val var5: java.lang.String = this.targetUserId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ShareProps(text=");
-      var2.append(var1);
-      var2.append(", attachments=");
-      var2.append(var4);
-      var2.append(", targetChannelId=");
-      var2.append(var3);
-      var2.append(", targetUserId=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.text;
+      val var1: java.util.List = this.attachments;
+      val var2: java.lang.String = this.targetChannelId;
+      val var4: java.lang.String = this.targetUserId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ShareProps(text=");
+      var5.append(var3);
+      var5.append(", attachments=");
+      var5.append(var1);
+      var5.append(", targetChannelId=");
+      var5.append(var2);
+      var5.append(", targetUserId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -177,8 +177,8 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
       }
 
       public override fun hashCode(): Int {
-         val var2: Int = this.name.hashCode();
-         val var3: Int = this.uri.hashCode();
+         val var3: Int = this.name.hashCode();
+         val var2: Int = this.uri.hashCode();
          val var1: Int;
          if (this.mimeType == null) {
             var1 = 0;
@@ -186,7 +186,7 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
             var1 = this.mimeType.hashCode();
          }
 
-         return (var2 * 31 + var3) * 31 + var1;
+         return (var3 * 31 + var2) * 31 + var1;
       }
 
       public fun toBundle(): Bundle {
@@ -194,14 +194,14 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.name;
-         val var4: java.lang.String = this.uri;
+         val var4: java.lang.String = this.name;
+         val var1: java.lang.String = this.uri;
          val var3: java.lang.String = this.mimeType;
          val var2: StringBuilder = new StringBuilder();
          var2.append("Attachment(name=");
-         var2.append(var1);
-         var2.append(", uri=");
          var2.append(var4);
+         var2.append(", uri=");
+         var2.append(var1);
          var2.append(", mimeType=");
          var2.append(var3);
          var2.append(")");

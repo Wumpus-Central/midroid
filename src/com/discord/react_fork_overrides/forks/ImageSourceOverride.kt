@@ -23,7 +23,7 @@ internal object ImageSourceOverride {
             return var1;
          } else {
             val var4: File = new File(var3);
-            return if (var4.exists()) var1 else yh.j.k(var4);
+            return if (var4.exists()) var1 else vh.j.k(var4);
          }
       }
    }

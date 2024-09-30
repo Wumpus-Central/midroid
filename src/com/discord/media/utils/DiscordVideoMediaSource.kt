@@ -6,13 +6,13 @@ import android.media.MediaFormat
 import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
+import kh.r
+import kh.s
+import kh.w
 import kotlin.jvm.internal.q
-import nh.r
-import nh.s
-import nh.w
-import oh.o
+import lh.o
 
-internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUri: Uri, compressionQuality: VideoCompressionQuality) : sf.a {
+internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUri: Uri, compressionQuality: VideoCompressionQuality) : pf.a {
    public final val inputUri: Uri
    public final val outputUri: Uri
    private final val srcTrackFormats: List<MediaFormat>
@@ -81,15 +81,15 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
       } while (var95 == null || !h.H(var95, "audio", false, 2, null));
 
       this.srcAudioFormat = var69 as MediaFormat;
-      this.estimatedVideoBitrate = vf.h.a(this, i.j0(this.srcTrackFormats, this.srcVideoFormat));
+      this.estimatedVideoBitrate = sf.h.a(this, i.j0(this.srcTrackFormats, this.srcVideoFormat));
       val var98: MediaFormat = this.srcVideoFormat;
       if (this.srcVideoFormat != null) {
          label141:
          try {
-            val var71: nh.r.a = r.k;
+            val var71: kh.r.a = r.k;
             var70 = r.b(var98.getInteger("width"));
          } catch (var17: java.lang.Throwable) {
-            val var83: nh.r.a = r.k;
+            val var83: kh.r.a = r.k;
             var70 = r.b(s.a(var17));
             break label141;
          }
@@ -105,7 +105,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
          try {
             var73 = r.b(var98.getInteger("height"));
          } catch (var16: java.lang.Throwable) {
-            val var72: nh.r.a = r.k;
+            val var72: kh.r.a = r.k;
             var73 = r.b(s.a(var16));
             break label135;
          }
@@ -152,24 +152,24 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
 
          label117:
          try {
-            var77 = r.b(var98.getInteger("bitrate"));
+            var76 = r.b(var98.getInteger("bitrate"));
          } catch (var13: java.lang.Throwable) {
-            val var76: nh.r.a = r.k;
-            var77 = r.b(s.a(var13));
+            var84 = r.k;
+            var76 = r.b(s.a(var13));
             break label117;
          }
 
-         if (r.e(var77) != null) {
-            var77 = this.getAVCBitrate(this.rawWidth, this.rawHeight, this.frameRate);
+         if (r.e(var76) != null) {
+            var76 = this.getAVCBitrate(this.rawWidth, this.rawHeight, this.frameRate);
          }
 
-         this.rawBitrate = (var77 as java.lang.Number).intValue();
+         this.rawBitrate = (var76 as java.lang.Number).intValue();
 
          label111:
          try {
             var78 = r.b(var98.getFloat("i-frame-interval"));
          } catch (var12: java.lang.Throwable) {
-            var84 = r.k;
+            val var77: kh.r.a = r.k;
             var78 = r.b(s.a(var12));
             break label111;
          }
@@ -205,13 +205,13 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
          var5 = 1.0F;
       }
 
-      var var6: Int = ci.a.b((float)this.rawWidth * var5);
+      var var6: Int = zh.a.b((float)this.rawWidth * var5);
       if (var6 % 2 != 0) {
          var6++;
       }
 
       this.width = var6;
-      var var7: Int = ci.a.b(var5 * (float)this.rawHeight);
+      var var7: Int = zh.a.b(var5 * (float)this.rawHeight);
       if (var7 % 2 != 0) {
          var7++;
       }
@@ -246,22 +246,22 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
    }
 
    private fun getAVCBitrate(width: Int, height: Int, frameRate: Int): Int {
-      var var4: Int = -1;
-      var var5: Int = 0;
+      var var5: Int = -1;
+      var var4: Int = 0;
 
-      while (var5 < 2) {
+      while (var4 < 2) {
          var var6: Int = 0;
 
          var var7: Int;
          while (true) {
-            var7 = var4;
+            var7 = var5;
             if (var6 >= 5) {
                break;
             }
 
             var7 = new int[]{8, 6, 5, 4, 0}[var6];
-            if (CamcorderProfile.hasProfile(var5, var7)) {
-               val var10: CamcorderProfile = CamcorderProfile.get(var5, var7);
+            if (CamcorderProfile.hasProfile(var4, var7)) {
+               val var10: CamcorderProfile = CamcorderProfile.get(var4, var7);
                var var8: Boolean = true;
                val var14: Boolean;
                if (var1 == var10.videoFrameWidth && var2 == var10.videoFrameHeight) {
@@ -275,8 +275,8 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
                }
 
                if ((var14 || var8) && var3 == var10.videoFrameRate && var10.videoCodec == 2) {
-                  var7 = var4;
-                  if (var4 < var10.videoBitRate) {
+                  var7 = var5;
+                  if (var5 < var10.videoBitRate) {
                      var7 = var10.videoBitRate;
                   }
                   break;
@@ -286,11 +286,11 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
             var6++;
          }
 
-         var5++;
-         var4 = var7;
+         var4++;
+         var5 = var7;
       }
 
-      var var15: Int = var4;
+      var var15: Int = var5;
       if (var15.intValue() == -1) {
          var15 = null;
       }
@@ -324,7 +324,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri, outputUr
    }
 
    public fun getMetadata(): Map<String, Any> {
-      return oh.r.l(
+      return lh.r.l(
          new Pair[]{
             w.a("width", this.rawWidth),
             w.a("height", this.rawHeight),

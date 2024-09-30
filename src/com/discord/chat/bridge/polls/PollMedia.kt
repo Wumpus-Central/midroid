@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.x0
+import cl.f
+import cl.n
+import dl.a
+import fl.b2
+import fl.g0
+import fl.x0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -105,21 +105,21 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.text;
+      val var3: java.lang.String = this.text;
       val var4: java.util.Set = this.attachmentIds;
-      val var3: PollMediaEmoji = this.emoji;
+      val var2: PollMediaEmoji = this.emoji;
       val var1: java.lang.Long = this.stickerId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PollMedia(text=");
-      var2.append(var5);
-      var2.append(", attachmentIds=");
-      var2.append(var4);
-      var2.append(", emoji=");
-      var2.append(var3);
-      var2.append(", stickerId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PollMedia(text=");
+      var5.append(var3);
+      var5.append(", attachmentIds=");
+      var5.append(var4);
+      var5.append(", emoji=");
+      var5.append(var2);
+      var5.append(", stickerId=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -153,21 +153,23 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
          val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
-         val var12: java.util.Set;
-         val var15: PollMediaEmoji;
+         var var7: java.util.Set;
+         var var12: Any;
+         var var13: PollMediaEmoji;
          if (var5) {
             var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
-            var12 = var11.m(var10, 1, var9[1], null) as java.util.Set;
-            var15 = var11.v(var10, 2, PollMediaEmoji.$serializer.INSTANCE, null) as PollMediaEmoji;
-            var6 = var11.v(var10, 3, x0.a, null) as java.lang.Long;
+            val var6: java.util.Set = var11.m(var10, 1, var9[1], null) as java.util.Set;
+            val var14: PollMediaEmoji = var11.v(var10, 2, PollMediaEmoji.$serializer.INSTANCE, null) as PollMediaEmoji;
+            var12 = var11.v(var10, 3, x0.a, null) as java.lang.Long;
             var2 = 15;
+            var7 = var6;
+            var13 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var7: java.util.Set = null;
-            var6 = null;
-            var var13: Any = null;
+            var7 = null;
+            var13 = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var11.x(var10);
@@ -179,10 +181,10 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
                               throw new n(var4);
                            }
 
-                           var13 = var11.v(var10, 3, x0.a, var13) as java.lang.Long;
+                           var12 = var11.v(var10, 3, x0.a, var12) as java.lang.Long;
                            var2 |= 8;
                         } else {
-                           var6 = var11.v(var10, 2, PollMediaEmoji.$serializer.INSTANCE, var6) as PollMediaEmoji;
+                           var13 = var11.v(var10, 2, PollMediaEmoji.$serializer.INSTANCE, var13) as PollMediaEmoji;
                            var2 |= 4;
                         }
                      } else {
@@ -197,14 +199,10 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
                   var3 = false;
                }
             }
-
-            var15 = (PollMediaEmoji)var6;
-            var6 = var13;
-            var12 = var7;
          }
 
          var11.b(var10);
-         return new PollMedia(var2, var8, var12, var15, (java.lang.Long)var6, null);
+         return new PollMedia(var2, var8, var7, var13, (java.lang.Long)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PollMedia) {
@@ -217,7 +215,7 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

@@ -1,12 +1,12 @@
 package com.discord.mobile_voice_overlay
 
+import cl.f
+import cl.n
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.o1
+import fl.b2
+import fl.g0
+import fl.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -112,24 +112,24 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: java.lang.String = this.channelName;
-      val var5: java.lang.String = this.guildName;
-      val var4: java.lang.String = this.categoryName;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var6.append(var3);
-      var6.append(", channelId=");
-      var6.append(var1);
-      var6.append(", channelName=");
-      var6.append(var2);
-      var6.append(", guildName=");
-      var6.append(var5);
-      var6.append(", categoryName=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var6: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.channelName;
+      val var2: java.lang.String = this.guildName;
+      val var1: java.lang.String = this.categoryName;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MobileVoiceOverlaySelectorResult(guildId=");
+      var5.append(var6);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", channelName=");
+      var5.append(var3);
+      var5.append(", guildName=");
+      var5.append(var2);
+      var5.append(", categoryName=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -233,7 +233,7 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

@@ -42,7 +42,7 @@ private fun View.applyClickable(
       var5 = false;
    }
 
-   r0.J0(var0, var5);
+   r0.I0(var0, var5);
    var0.setClickable(var5);
 }
 

@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -139,7 +139,7 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
          q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
-         var var3: Int;
+         var var2: Int;
          var var4: Int;
          var var5: Int;
          var var6: Int;
@@ -147,22 +147,22 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
          var var11: java.lang.String;
          if (var10.y()) {
             var6 = var10.k(var9, 0);
-            var7 = var10.k(var9, 1);
+            var4 = var10.k(var9, 1);
             var11 = var10.t(var9, 2);
-            val var2: Int = var10.k(var9, 3);
-            var3 = var10.k(var9, 4);
-            var4 = 31;
-            var5 = var2;
+            val var3: Int = var10.k(var9, 3);
+            var2 = var10.k(var9, 4);
+            var5 = 31;
+            var7 = var3;
          } else {
             var11 = null;
-            var var15: Boolean = true;
+            var var17: Boolean = true;
             var6 = 0;
             var5 = 0;
             var4 = 0;
-            var3 = 0;
-            var var12: Int = 0;
+            var var13: Int = 0;
+            var2 = 0;
 
-            while (var15) {
+            while (var17) {
                val var8: Int = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -174,35 +174,36 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
                               }
 
                               var4 = var10.k(var9, 4);
-                              var12 |= 16;
+                              var2 |= 16;
                            } else {
                               var5 = var10.k(var9, 3);
-                              var12 |= 8;
+                              var2 |= 8;
                            }
                         } else {
                            var11 = var10.t(var9, 2);
-                           var12 |= 4;
+                           var2 |= 4;
                         }
                      } else {
-                        var3 = var10.k(var9, 1);
-                        var12 |= 2;
+                        var13 = var10.k(var9, 1);
+                        var2 |= 2;
                      }
                   } else {
                      var6 = var10.k(var9, 0);
-                     var12 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var17 = false;
                }
             }
 
-            var7 = var3;
-            var3 = var4;
-            var4 = var12;
+            var4 = var13;
+            var2 = var4;
+            var7 = var5;
+            var5 = var2;
          }
 
          var10.b(var9);
-         return new PingCallbackEvent(var4, var6, var7, var11, var5, var3, null);
+         return new PingCallbackEvent(var5, var6, var4, var11, var7, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PingCallbackEvent) {

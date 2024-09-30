@@ -4,7 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Map;
-import v6.a;
+import w6.a;
 
 public abstract class NativeDeviceLocaleManagerSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "RTNDeviceLocaleManager";

@@ -1,12 +1,12 @@
 package com.discord.safearea.react.events
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.f0
-import il.g0
-import il.g0.a
+import fl.f0
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -98,19 +98,19 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
 
    public override fun toString(): String {
       val var1: Float = this.top;
-      val var4: Float = this.bottom;
-      val var5: Float = this.left;
-      val var3: Float = this.right;
+      val var5: Float = this.bottom;
+      val var3: Float = this.left;
+      val var4: Float = this.right;
       val var2: Float = this.imeInsetsBottom;
       val var6: StringBuilder = new StringBuilder();
       var6.append("OnSafeAreaInsetsDidChangeData(top=");
       var6.append(var1);
       var6.append(", bottom=");
-      var6.append(var4);
-      var6.append(", left=");
       var6.append(var5);
-      var6.append(", right=");
+      var6.append(", left=");
       var6.append(var3);
+      var6.append(", right=");
+      var6.append(var4);
       var6.append(", imeInsetsBottom=");
       var6.append(var2);
       var6.append(")");
@@ -149,21 +149,23 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
          val var13: c = var1.c(var12);
          var var2: Float;
          var var3: Float;
-         var var4: Float;
          var var5: Float;
-         val var7: Float;
+         var var6: Float;
          var var9: Int;
+         var var16: Float;
          if (var13.y()) {
-            var4 = var13.G(var12, 0);
-            var5 = var13.G(var12, 1);
-            var7 = var13.G(var12, 2);
+            var16 = var13.G(var12, 0);
+            val var7: Float = var13.G(var12, 1);
+            var5 = var13.G(var12, 2);
             var3 = var13.G(var12, 3);
             var2 = var13.G(var12, 4);
             var9 = 31;
+            var6 = var16;
+            var16 = var7;
          } else {
-            var var6: Float = 0.0F;
+            var6 = 0.0F;
             var5 = 0.0F;
-            var4 = 0.0F;
+            var16 = 0.0F;
             var3 = 0.0F;
             var2 = 0.0F;
             var var10: Boolean = true;
@@ -180,7 +182,7 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
                                  throw new n(var11);
                               }
 
-                              var4 = var13.G(var12, 4);
+                              var16 = var13.G(var12, 4);
                               var9 |= 16;
                            } else {
                               var5 = var13.G(var12, 3);
@@ -203,15 +205,14 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
                }
             }
 
-            var7 = var3;
-            var2 = var4;
+            var16 = var2;
+            var2 = var16;
             var3 = var5;
-            var5 = var2;
-            var4 = var6;
+            var5 = var3;
          }
 
          var13.b(var12);
-         return new OnSafeAreaInsetsDidChangeData(var9, var4, var5, var7, var3, var2, null);
+         return new OnSafeAreaInsetsDidChangeData(var9, var6, var16, var5, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSafeAreaInsetsDidChangeData) {

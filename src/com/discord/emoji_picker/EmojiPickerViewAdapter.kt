@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerView.Config
+import kh.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import nh.p
-import oh.o
+import lh.o
 
 internal class EmojiPickerViewAdapter(coreData: CoreData,
       emojiSize: Int,
@@ -92,14 +92,14 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          var4 = f.m(var1, var2);
       }
 
-      val var5: java.util.Iterator = var4.iterator();
+      val var8: java.util.Iterator = var4.iterator();
       var2 = 0;
       var1 = 0;
 
-      while (var5.hasNext()) {
-         val var8: EmojiPickerItem = this.getItem((var5 as o).c());
-         if (var8 !is EmojiPickerItem.Emoji && var8 !is EmojiPickerItem.EmojiPlaceholder) {
-            if (var8 !is EmojiPickerItem.Category) {
+      while (var8.hasNext()) {
+         val var5: EmojiPickerItem = this.getItem((var8 as o).c());
+         if (var5 !is EmojiPickerItem.Emoji && var5 !is EmojiPickerItem.EmojiPlaceholder) {
+            if (var5 !is EmojiPickerItem.Category) {
                continue;
             }
          } else {
@@ -175,10 +175,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
    public open fun onBindViewHolder(holder: EmojiPickerViewHolder, position: Int) {
       q.h(var1, "holder");
       if (var1 is EmojiPickerViewHolder.Category) {
-         val var3: EmojiPickerViewHolder.Category = var1 as EmojiPickerViewHolder.Category;
-         val var4: EmojiPickerItem = this.getItem(var2);
-         q.f(var4, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Category");
-         var3.onBindViewHolder(var4 as EmojiPickerItem.Category);
+         val var4: EmojiPickerViewHolder.Category = var1 as EmojiPickerViewHolder.Category;
+         val var3: EmojiPickerItem = this.getItem(var2);
+         q.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Category");
+         var4.onBindViewHolder(var3 as EmojiPickerItem.Category);
       } else if (var1 is EmojiPickerViewHolder.EmojiPlaceholder) {
          (var1 as EmojiPickerViewHolder.EmojiPlaceholder).onBindViewHolder(this.emojiSize, this.emojiMargin);
       } else if (var1 is EmojiPickerViewHolder.Emoji) {

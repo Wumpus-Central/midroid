@@ -651,6 +651,11 @@ public sealed class DiscordThemeObject protected constructor() {
       }
 
 
+   public abstract val customStatusBubbleBg: Int
+      public abstract get() {
+      }
+
+
    public abstract val deprecatedCardBg: Int
       public abstract get() {
       }

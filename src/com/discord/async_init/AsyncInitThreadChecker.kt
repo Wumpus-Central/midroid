@@ -18,17 +18,17 @@ public class AsyncInitThreadChecker(name: String) {
       }
 
       if (Thread.currentThread() != this.thread) {
-         val var1: java.lang.String = this.name;
+         val var2: java.lang.String = this.name;
          val var4: Thread = this.thread;
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected all calls to async-initialized component: ");
-         var2.append(var1);
-         var2.append(" to be from the same thread: ");
-         var2.append(var4);
-         var2.append(", called on ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected all calls to async-initialized component: ");
+         var3.append(var2);
+         var3.append(" to be from the same thread: ");
+         var3.append(var4);
+         var3.append(", called on ");
+         var3.append(var1);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

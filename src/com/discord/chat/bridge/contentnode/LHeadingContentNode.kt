@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import cl.f
+import cl.n
+import fl.b2
+import fl.g0
+import fl.n0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -72,16 +72,16 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
    public override fun toString(): String {
       val var1: Int = this.level;
       val var2: java.lang.String = this.className;
-      val var3: java.util.List = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LHeadingContentNode(level=");
-      var4.append(var1);
-      var4.append(", className=");
-      var4.append(var2);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.List = this.content;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LHeadingContentNode(level=");
+      var3.append(var1);
+      var3.append(", className=");
+      var3.append(var2);
+      var3.append(", content=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -116,10 +116,10 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
          var var6: java.lang.String;
          var var10: java.util.List;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -150,10 +150,13 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
          var8.b(var7);
-         return new LHeadingContentNode(var2, var3, var6, var10, null);
+         return new LHeadingContentNode(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LHeadingContentNode) {

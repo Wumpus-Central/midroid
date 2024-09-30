@@ -48,10 +48,10 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
+import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
-import nh.w
 
 public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout, SpineParentMessage {
    private final var accessories: ArrayList<MessageAccessory>
@@ -101,14 +101,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      val var13: StructurableText = var1.getContent();
-      if (var13 != null) {
+      var var12: StructurableText = var1.getContent();
+      if (var12 != null) {
          val var19: ArrayList = this.accessories;
-         val var12: java.lang.String = var1.getId-3Eiw7ao();
-         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var13: java.lang.String = var1.getId-3Eiw7ao();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
          val var7: Boolean = var1.getShouldShowRoleDot();
-         val var8: Boolean = var1.getShouldShowRoleOnName();
+         val var9: Boolean = var1.getShouldShowRoleOnName();
          val var4: Int;
          if (var1.getTimestamp() != null) {
             var4 = 0;
@@ -134,12 +134,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var19.add(
             new MessageContentAccessory(
-               var12,
                var13,
-               var10,
-               var9,
-               var7,
+               var12,
                var8,
+               var10,
+               var7,
+               var9,
                var4,
                var5,
                var6,
@@ -166,12 +166,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var11 = var1.getTotalMonthsSubscribed();
       if (var11 != null && var11.intValue() <= 1) {
-         val var22: ArrayList = this.accessories;
-         val var27: java.lang.String = var1.getId-3Eiw7ao();
-         val var30: java.lang.String = var1.getUsername();
-         val var32: Context = this.binding.getRoot().getContext();
-         q.g(var32, "getContext(...)");
-         var22.add(new RoleSubscriptionPurchaseAccessory(var27, var30, MessageKt.avatarUrl(var1, var32), var3, false, null));
+         val var30: ArrayList = this.accessories;
+         val var32: java.lang.String = var1.getId-3Eiw7ao();
+         val var22: java.lang.String = var1.getUsername();
+         val var27: Context = this.binding.getRoot().getContext();
+         q.g(var27, "getContext(...)");
+         var30.add(new RoleSubscriptionPurchaseAccessory(var32, var22, MessageKt.avatarUrl(var1, var27), var3, false, null));
       }
 
       val var23: Sticker = var1.getSticker();
@@ -189,7 +189,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var25: java.util.Iterator = var24.iterator();
 
             for (int var18 = 0; var25.hasNext(); var18++) {
-               val var28: Any = var25.next();
+               var12 = (StructurableText)var25.next();
                if (var18 < 0) {
                   i.u();
                }
@@ -202,7 +202,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var28 as Embed,
+                        var12 as Embed,
                         false,
                         false,
                         false,

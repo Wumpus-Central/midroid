@@ -3,7 +3,7 @@ package com.discord.react_strings
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import uh.a
+import rh.a
 
 public enum class I18nMessage {
    A11Y_ROLE_BUTTON,

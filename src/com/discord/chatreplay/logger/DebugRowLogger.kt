@@ -10,8 +10,8 @@ import java.nio.file.Path
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
-import tk.a
-import yh.c
+import qk.a
+import vh.c
 
 public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    private final val jsonFile: File
@@ -21,21 +21,21 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    init {
       q.h(var1, "logsFolderPath");
       super();
-      var var4: java.lang.String = var1.toString();
-      var var3: StringBuilder = new StringBuilder();
+      val var4: java.lang.String = var1.toString();
+      val var3: StringBuilder = new StringBuilder();
       var3.append(var2);
       var3.append(".replay");
       new File(var4, var3.toString()).delete();
-      var4 = var1.toString();
-      var3 = new StringBuilder();
-      var3.append(var2);
-      var3.append(".json");
-      new File(var4, var3.toString()).delete();
-      var4 = var1.toString();
-      var3 = new StringBuilder();
-      var3.append(var2);
-      var3.append(".replay");
-      this.replayFile = new File(var4, var3.toString());
+      val var6: java.lang.String = var1.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append(var2);
+      var9.append(".json");
+      new File(var6, var9.toString()).delete();
+      val var7: java.lang.String = var1.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append(var2);
+      var10.append(".replay");
+      this.replayFile = new File(var7, var10.toString());
       val var8: java.lang.String = var1.toString();
       val var5: StringBuilder = new StringBuilder();
       var5.append(var2);
@@ -71,17 +71,17 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    }
 
    private fun maybeInsertDelay() {
-      val var1: Long = System.currentTimeMillis();
+      val var3: Long = System.currentTimeMillis();
       if (this.lastUpdateTimestamp != null) {
-         val var3: Long = this.lastUpdateTimestamp.longValue();
+         val var1: Long = this.lastUpdateTimestamp.longValue();
          val var6: StringBuilder = new StringBuilder();
          var6.append("{\"delayMs\":");
-         var6.append(var1 - var3);
+         var6.append(var3 - var1);
          var6.append("}");
          this.appendLine(var6.toString());
       }
 
-      this.lastUpdateTimestamp = var1;
+      this.lastUpdateTimestamp = var3;
    }
 
    private fun writeJson() {
@@ -93,7 +93,7 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
 
          try {
             var12.write("[\n");
-            yh.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new Function1(var2, var12) {
+            vh.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new Function1(var2, var12) {
                final BooleanRef $existingLine;
                final OutputStreamWriter $writer;
 
@@ -116,10 +116,10 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var7;
+            val var13: java.lang.Throwable = var7;
 
             try {
-               throw var3;
+               throw var13;
             } catch (var6: java.lang.Throwable) {
                c.a(var12, var7);
             }

@@ -1,6 +1,6 @@
 package com.discord.notifications.api
 
-import gl.a
+import dl.a
 import kotlin.jvm.internal.c
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -11,7 +11,7 @@ import kotlinx.serialization.encoding.Encoder
 public object CanReplySerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return a.w(c.a).getDescriptor();
+         return a.A(c.a).getDescriptor();
       }
 
 

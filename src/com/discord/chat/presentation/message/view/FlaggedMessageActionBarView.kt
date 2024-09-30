@@ -64,14 +64,14 @@ public class FlaggedMessageActionBarView  public constructor(context: Context, a
       kotlin.jvm.internal.q.h(var2, "onTapAutoModerationActions");
       kotlin.jvm.internal.q.h(var3, "onTapAutoModerationFeedback");
       val var5: java.lang.String = var1.getActionsIconURL();
-      val var4: java.lang.String = var1.getActionsText();
-      val var6: DCDButton = this.binding.actionsButton;
+      val var6: java.lang.String = var1.getActionsText();
+      val var4: DCDButton = this.binding.actionsButton;
       if (var5 != null) {
          this.binding.actionsButton.setIcon(var5, SizeUtilsKt.getDpToPx(16));
       }
 
-      this.binding.actionsButton.setText(var4);
-      var6.setOnClickButtonListener(var2);
+      this.binding.actionsButton.setText(var6);
+      var4.setOnClickButtonListener(var2);
       val var7: java.lang.String = var1.getFeedbackText();
       val var8: DCDButton = this.binding.feedbackButton;
       this.binding.feedbackButton.setText(var7);

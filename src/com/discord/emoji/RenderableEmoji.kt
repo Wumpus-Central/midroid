@@ -185,10 +185,10 @@ public sealed class RenderableEmoji protected constructor() {
          q.h(var1, "surrogates");
          super(null);
          this.surrogates = var1;
-         val var3: java.lang.String = Surrogates.withoutDiversity-impl(var1);
+         val var2: java.lang.String = Surrogates.withoutDiversity-impl(var1);
          var1 = null;
-         if (RenderableEmoji.access$getExceptions$cp().contains(var3)) {
-            var1 = var3;
+         if (RenderableEmoji.access$getExceptions$cp().contains(var2)) {
+            var1 = var2;
          }
 
          this.exception = var1;

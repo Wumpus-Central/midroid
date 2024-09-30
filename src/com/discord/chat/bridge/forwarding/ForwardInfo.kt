@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.forwarding
 
-import fl.f
-import fl.n
-import gl.a
-import il.g0
-import il.h
-import il.n0
+import cl.f
+import cl.n
+import dl.a
+import fl.g0
+import fl.h
+import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -75,17 +75,17 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
 
    public override fun toString(): String {
       val var1: Int = this.snapshotIndex;
-      val var4: ForwardFooterInfo = this.footerInfo;
+      val var3: ForwardFooterInfo = this.footerInfo;
       val var2: Boolean = this.useOldIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ForwardInfo(snapshotIndex=");
-      var3.append(var1);
-      var3.append(", footerInfo=");
-      var3.append(var4);
-      var3.append(", useOldIcon=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ForwardInfo(snapshotIndex=");
+      var4.append(var1);
+      var4.append(", footerInfo=");
+      var4.append(var3);
+      var4.append(", useOldIcon=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -172,7 +172,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

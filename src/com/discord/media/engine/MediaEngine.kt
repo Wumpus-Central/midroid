@@ -35,9 +35,9 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.webrtc.VideoFrame
 import org.webrtc.voiceengine.WebRtcAudioManager
-import vk.b0
-import vk.k0
-import vk.s1
+import sk.b0
+import sk.k0
+import sk.s1
 
 public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = k0.a()) {
    private final val context: Context
@@ -198,13 +198,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       kotlin.jvm.internal.q.h(var0, "$callback");
       kotlin.jvm.internal.q.h(var1, "connectionInfo");
       kotlin.jvm.internal.q.h(var2, "errorMessage");
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("On created with ");
-      var3.append(var1);
-      var3.append(", ");
-      var3.append(var2);
-      Log.i$default(var4, "MediaEngine", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("On created with ");
+      var4.append(var1);
+      var4.append(", ");
+      var4.append(var2);
+      Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       var0.invoke(var2, NativeTypeExtensionsKt.toMap(var1));
    }
 
@@ -2673,7 +2673,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
          label27: {
             val var5: Any = ((<unrepresentable>)var8).result;
-            val var10: Any = th.b.e();
+            val var10: Any = qh.b.e();
             val var6: ByteArray;
             if (((<unrepresentable>)var8).label != 0) {
                if (((<unrepresentable>)var8).label != 1) {
@@ -2682,14 +2682,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   }
 
                   var7 = ((<unrepresentable>)var8).L$0 as java.lang.String;
-                  nh.s.b(var5);
+                  kh.s.b(var5);
                   break label27;
                }
 
                var6 = ((<unrepresentable>)var8).L$0 as ByteArray;
-               nh.s.b(var5);
+               kh.s.b(var5);
             } else {
-               nh.s.b(var5);
+               kh.s.b(var5);
                var6 = this.compressToJpegBytes(var1);
                ((<unrepresentable>)var8).L$0 = var6;
                ((<unrepresentable>)var8).label = 1;

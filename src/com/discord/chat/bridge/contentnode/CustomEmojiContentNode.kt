@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.h
-import il.x0
-import il.g0.a
+import cl.f
+import cl.n
+import fl.b2
+import fl.g0
+import fl.h
+import fl.x0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -90,22 +90,22 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
    }
 
    public override fun toString(): String {
-      val var1: Long = this.id;
-      val var4: java.lang.String = this.alt;
-      val var7: java.lang.String = this.src;
+      val var2: Long = this.id;
+      val var7: java.lang.String = this.alt;
+      val var4: java.lang.String = this.src;
       val var5: java.lang.String = this.frozenSrc;
-      val var3: Boolean = this.jumboable;
+      val var1: Boolean = this.jumboable;
       val var6: StringBuilder = new StringBuilder();
       var6.append("CustomEmojiContentNode(id=");
-      var6.append(var1);
+      var6.append(var2);
       var6.append(", alt=");
-      var6.append(var4);
-      var6.append(", src=");
       var6.append(var7);
+      var6.append(", src=");
+      var6.append(var4);
       var6.append(", frozenSrc=");
       var6.append(var5);
       var6.append(", jumboable=");
-      var6.append(var3);
+      var6.append(var1);
       var6.append(")");
       return var6.toString();
    }
@@ -194,8 +194,8 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
                }
             }
 
-            var8 = var14;
             var13 = var8;
+            var8 = var14;
          }
 
          var12.b(var11);

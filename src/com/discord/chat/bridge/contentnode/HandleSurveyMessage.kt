@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
+import cl.f
+import cl.n
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.o1
+import dl.a
+import fl.b2
+import fl.g0
+import fl.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -82,8 +82,8 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.id);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.id);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.loggingName == null) {
          var1 = 0;
@@ -91,22 +91,22 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
          var1 = this.loggingName.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.id);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: java.lang.String = this.loggingName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("HandleSurveyMessage(id=");
-      var3.append(var1);
-      var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(", loggingName=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = this.loggingName;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("HandleSurveyMessage(id=");
+      var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var3);
+      var2.append(", loggingName=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -215,7 +215,7 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fl.g0.a.a(this);
       }
    }
 

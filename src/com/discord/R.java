@@ -284,6 +284,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_twitterneutralicon;
       public static int design_components_icon_native_redesign_generated_images_unknowngameicon;
       public static int design_components_icon_native_redesign_generated_images_uploadicon;
+      public static int design_components_icon_native_redesign_generated_images_usercheckicon;
       public static int design_components_icon_native_redesign_generated_images_usercircleicon;
       public static int design_components_icon_native_redesign_generated_images_usericon;
       public static int design_components_icon_native_redesign_generated_images_userminusicon;
@@ -1592,8 +1593,6 @@ public final class R {
       public static int modules_video_calls_native_images_spectator;
       public static int modules_video_calls_native_images_watch;
       public static int modules_video_calls_native_images_xbox_voice_upsell;
-      public static int modules_voice_messages_native_images_vm_bottom_sparkles;
-      public static int modules_voice_messages_native_images_vm_upsell_banner;
       public static int modules_voice_panel_native_images_activity;
       public static int modules_voice_panel_native_images_airplay;
       public static int modules_voice_panel_native_images_background;

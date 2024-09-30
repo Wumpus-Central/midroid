@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import cl.f
+import cl.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fl.b2
+import fl.g0
+import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,13 +67,13 @@ internal data class TapMessageData(messageId: String, channelId: String) : React
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapMessageData(messageId=");
-      var1.append(var2);
-      var1.append(", channelId=");
       var1.append(var3);
+      var1.append(", channelId=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

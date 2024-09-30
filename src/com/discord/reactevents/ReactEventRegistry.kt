@@ -2,11 +2,11 @@ package com.discord.reactevents
 
 import java.util.LinkedHashMap
 import java.util.Locale
+import kh.w
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import nh.w
-import oh.r
+import lh.r
 
 internal class ReactEventRegistry {
    public final var didExportEvents: Boolean
@@ -36,13 +36,13 @@ internal class ReactEventRegistry {
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var3: LinkedHashMap = new LinkedHashMap();
+      val var2: LinkedHashMap = new LinkedHashMap();
 
-      for (java.lang.String var1 : this.events.values()) {
-         var3.put(var1, r.m(new Pair[]{w.a("registrationName", var1)}));
+      for (java.lang.String var3 : this.events.values()) {
+         var2.put(var3, r.m(new Pair[]{w.a("registrationName", var3)}));
       }
 
-      return var3;
+      return var2;
    }
 
    public fun getEventName(event: ReactEvent): String {
@@ -65,14 +65,14 @@ internal class ReactEventRegistry {
       if (!this.events.containsKey(var2)) {
          this.events.put(var2, var1);
       } else {
-         val var4: Any = this.events.get(var2);
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("event ");
-         var3.append(var4);
-         var3.append(" already registered for");
-         var3.append(var2);
-         var3.append(". using the same class for multiple events is not supported.");
-         throw new IllegalStateException(var3.toString());
+         val var3: Any = this.events.get(var2);
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("event ");
+         var4.append(var3);
+         var4.append(" already registered for");
+         var4.append(var2);
+         var4.append(". using the same class for multiple events is not supported.");
+         throw new IllegalStateException(var4.toString());
       }
    }
 }

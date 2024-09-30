@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup.LayoutParams
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import uh.a
+import rh.a
 
 public object MediaContainingViewResizer {
    public fun View.resizeLayoutParams(
