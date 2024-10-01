@@ -178,7 +178,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean) {
-      val var4: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var2) {
          val var3: Int;
          if (this.currentCount != null) {
@@ -189,13 +189,13 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
          if (var1 > var3) {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_up);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_up);
+            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
          } else {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_down);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_down);
+            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
          }
 
-         var4.setText(java.lang.String.valueOf(var1));
+         var5.setText(java.lang.String.valueOf(var1));
       } else {
          this.binding.reactionCountSwitcher.setCurrentText(java.lang.String.valueOf(var1));
       }

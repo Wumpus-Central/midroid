@@ -891,6 +891,26 @@ public sealed class DiscordThemeObject protected constructor() {
       }
 
 
+   public abstract val inputBorder: Int
+      public abstract get() {
+      }
+
+
+   public abstract val inputErrorBackground: Int
+      public abstract get() {
+      }
+
+
+   public abstract val inputErrorBorder: Int
+      public abstract get() {
+      }
+
+
+   public abstract val inputErrorText: Int
+      public abstract get() {
+      }
+
+
    public abstract val inputFocusedBorder: Int
       public abstract get() {
       }

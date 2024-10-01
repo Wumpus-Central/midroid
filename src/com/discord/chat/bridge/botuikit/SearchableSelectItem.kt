@@ -107,8 +107,8 @@ public data class SearchableSelectItem(label: String,
 
    public override fun hashCode(): Int {
       val var5: Int = this.label.hashCode();
-      val var4: Int = this.value.hashCode();
-      val var6: Int = this.type.hashCode();
+      val var6: Int = this.value.hashCode();
+      val var4: Int = this.type.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.iconSrc == null) {
@@ -128,31 +128,31 @@ public data class SearchableSelectItem(label: String,
          var3 = this.iconEmoji.hashCode();
       }
 
-      return ((((var5 * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var5 * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.label;
-      val var6: java.lang.String = this.value;
-      val var7: SelectOptionType = this.type;
-      val var4: java.lang.String = this.iconSrc;
-      val var5: Int = this.iconColor;
-      val var2: ComponentEmoji = this.iconEmoji;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SearchableSelectItem(label=");
-      var1.append(var3);
-      var1.append(", value=");
-      var1.append(var6);
-      var1.append(", type=");
-      var1.append(var7);
-      var1.append(", iconSrc=");
-      var1.append(var4);
-      var1.append(", iconColor=");
-      var1.append(var5);
-      var1.append(", iconEmoji=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var7: java.lang.String = this.label;
+      val var2: java.lang.String = this.value;
+      val var4: SelectOptionType = this.type;
+      val var6: java.lang.String = this.iconSrc;
+      val var1: Int = this.iconColor;
+      val var3: ComponentEmoji = this.iconEmoji;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SearchableSelectItem(label=");
+      var5.append(var7);
+      var5.append(", value=");
+      var5.append(var2);
+      var5.append(", type=");
+      var5.append(var4);
+      var5.append(", iconSrc=");
+      var5.append(var6);
+      var5.append(", iconColor=");
+      var5.append(var1);
+      var5.append(", iconEmoji=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {

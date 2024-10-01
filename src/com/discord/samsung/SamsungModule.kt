@@ -99,13 +99,13 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
                   }
                }
 
-               val var14: SamsungModule = this.this$0;
-               val var17: StringBuilder = new StringBuilder();
-               var17.append("Connection requires disclaimer acceptance. [");
-               var17.append(var15);
-               var17.append("] ");
-               var17.append(var10);
-               SamsungModule.access$rejectConnection(var14, new java.lang.Throwable(var17.toString()));
+               val var17: SamsungModule = this.this$0;
+               val var14: StringBuilder = new StringBuilder();
+               var14.append("Connection requires disclaimer acceptance. [");
+               var14.append(var15);
+               var14.append("] ");
+               var14.append(var10);
+               SamsungModule.access$rejectConnection(var17, new java.lang.Throwable(var14.toString()));
             }
          }
       };
@@ -141,23 +141,23 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
             )
          );
       } else if (var1 is SamsungConnectActivity.Result.Failure) {
-         val var6: SamsungConnectActivity.Result.Failure = var1 as SamsungConnectActivity.Result.Failure;
+         val var8: SamsungConnectActivity.Result.Failure = var1 as SamsungConnectActivity.Result.Failure;
          if ((var1 as SamsungConnectActivity.Result.Failure).isRetryAllowed() && (var1 as SamsungConnectActivity.Result.Failure).getAttemptCount() < 2) {
-            val var5: Activity = this.getCurrentActivity();
-            q.e(var5);
-            val var9: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
             val var4: Activity = this.getCurrentActivity();
             q.e(var4);
-            var5.startActivityForResult(var9.getIntent(var4, var6.getAttemptCount()), 101);
+            val var6: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
+            val var5: Activity = this.getCurrentActivity();
+            q.e(var5);
+            var4.startActivityForResult(var6.getIntent(var5, var8.getAttemptCount()), 101);
          } else {
-            val var2: Int = var6.getAttemptCount();
-            val var3: Boolean = var6.isRetryAllowed();
-            val var8: StringBuilder = new StringBuilder();
-            var8.append("Attempts: ");
-            var8.append(var2);
-            var8.append(", Retry: ");
-            var8.append(var3);
-            this.rejectConnection(new java.lang.Throwable(var8.toString()));
+            val var2: Int = var8.getAttemptCount();
+            val var3: Boolean = var8.isRetryAllowed();
+            val var9: StringBuilder = new StringBuilder();
+            var9.append("Attempts: ");
+            var9.append(var2);
+            var9.append(", Retry: ");
+            var9.append(var3);
+            this.rejectConnection(new java.lang.Throwable(var9.toString()));
          }
       }
    }
@@ -253,10 +253,11 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
          new Function2(var2, this, var3, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.HashMap.putVal(HashMap.java:635)
-   //   at java.base/java.util.HashMap.put(HashMap.java:618)
-   //   at java.base/java.util.HashSet.add(HashSet.java:229)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1694)
+   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
+   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
+   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1276,7 +1277,6 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          3,
          null
@@ -1290,21 +1290,21 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
 
       label16:
       try {
-         val var7: a = r.k;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         val var8: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
-         val var10: Activity = this.getCurrentActivity();
-         q.e(var10);
-         var6 = r.b(var3.startActivityForResult(SamsungConnectActivity.Companion.getIntent$default(var8, var10, 0, 2, null), 101, Bundle.EMPTY));
+         val var8: a = r.k;
+         val var9: ReactApplicationContext = this.getReactApplicationContext();
+         val var3: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
+         val var2: Activity = this.getCurrentActivity();
+         q.e(var2);
+         var7 = r.b(var9.startActivityForResult(SamsungConnectActivity.Companion.getIntent$default(var3, var2, 0, 2, null), 101, Bundle.EMPTY));
       } catch (var4: java.lang.Throwable) {
-         val var2: a = r.k;
-         var6 = r.b(s.a(var4));
+         val var6: a = r.k;
+         var7 = r.b(s.a(var4));
          break label16;
       }
 
-      val var9: java.lang.Throwable = r.e(var6);
-      if (var9 != null) {
-         this.rejectConnection(var9);
+      val var10: java.lang.Throwable = r.e(var7);
+      if (var10 != null) {
+         this.rejectConnection(var10);
       }
    }
 

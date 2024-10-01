@@ -208,16 +208,16 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
          val var3: Long = System.currentTimeMillis();
-         val var8: Log = Log.INSTANCE;
-         val var12: java.lang.String = access$getName(this);
+         val var12: Log = Log.INSTANCE;
+         val var11: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("releaseEglSurface (");
-         var11.append(var3 - var5);
-         var11.append(" ms) (");
-         var11.append(var2);
-         var11.append(" total)");
-         Log.i$default(var8, var12, var11.toString(), null, 4, null);
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("releaseEglSurface (");
+         var8.append(var3 - var5);
+         var8.append(" ms) (");
+         var8.append(var2);
+         var8.append(" total)");
+         Log.i$default(var12, var11, var8.toString(), null, 4, null);
          return true;
       } else {
          val var9: Thread = Thread.currentThread();

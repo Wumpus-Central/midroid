@@ -309,53 +309,53 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    }
 
    public fun startAnimator(animateToPlay: Boolean, shouldAnimate: Boolean) {
-      var var8: Long = 0L;
+      var var7: Long = 0L;
       if (var2) {
          if (this.animateToPlay == var1) {
             return;
          }
 
-         var8 = 0L;
+         var7 = 0L;
          if (this.animateToPlay != var1) {
-            var8 = 0L;
+            var7 = 0L;
             if (this.animatorSet != null) {
-               var var4: Long = 0L;
+               var var3: Long = 0L;
                if (VERSION.SDK_INT >= 26) {
                   if (this.animatorSet != null) {
-                     var4 = this.animatorSet.getDuration();
+                     var3 = this.animatorSet.getDuration();
                   } else {
-                     var4 = 0L;
+                     var3 = 0L;
                   }
 
                   if (this.animatorSet != null) {
-                     var8 = n.a(this.animatorSet);
+                     var7 = n.a(this.animatorSet);
                   } else {
-                     var8 = 0L;
+                     var7 = 0L;
                   }
 
-                  var var15: java.lang.Long = var4 - var8;
-                  var4 = var15.longValue();
-                  if (0L > var4 || var4 >= 201L) {
+                  var var15: java.lang.Long = var3 - var7;
+                  var3 = var15.longValue();
+                  if (0L > var3 || var3 >= 201L) {
                      var15 = null;
                   }
 
-                  var4 = 0L;
+                  var3 = 0L;
                   if (var15 != null) {
-                     var4 = var15;
+                     var3 = var15;
                   }
                }
 
-               var8 = var4;
+               var7 = var3;
                if (this.animatorSet != null) {
                   this.animatorSet.cancel();
-                  var8 = var4;
+                  var7 = var3;
                }
             }
          }
       }
 
       this.animateToPlay = var1;
-      val var17: AnimatorSet = this.getAnimatorSet(var1, var8, var2);
+      val var17: AnimatorSet = this.getAnimatorSet(var1, var7, var2);
       var17.start();
       this.animatorSet = var17;
    }

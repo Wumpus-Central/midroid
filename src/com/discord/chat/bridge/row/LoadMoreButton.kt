@@ -149,39 +149,39 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: n0 = n0.a;
-         return new KSerializer[]{LoadingAction.$serializer.INSTANCE, b2.a, n0.a, a.u(n0.a), a.u(var2)};
+         val var3: n0 = n0.a;
+         return new KSerializer[]{LoadingAction.$serializer.INSTANCE, b2.a, n0.a, a.u(n0.a), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): LoadMoreButton {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
          var var2: Int;
          var var3: Int;
-         var var6: Any;
-         var var7: java.lang.String;
-         var var8: LoadingAction;
+         val var7: LoadingAction;
+         val var9: java.lang.String;
          var var12: Any;
-         if (var10.y()) {
-            var8 = var10.m(var9, 0, LoadingAction.$serializer.INSTANCE, null) as LoadingAction;
-            var7 = var10.t(var9, 1);
-            var2 = var10.k(var9, 2);
-            var12 = n0.a;
-            var6 = var10.v(var9, 3, n0.a, null) as Int;
-            var12 = var10.v(var9, 4, (DeserializationStrategy)var12, null) as Int;
+         var var17: Any;
+         if (var11.y()) {
+            var7 = var11.m(var10, 0, LoadingAction.$serializer.INSTANCE, null) as LoadingAction;
+            var9 = var11.t(var10, 1);
+            var2 = var11.k(var10, 2);
+            var17 = n0.a;
+            var12 = var11.v(var10, 3, n0.a, null) as Int;
+            var17 = var11.v(var10, 4, (DeserializationStrategy)var17, null) as Int;
             var3 = 31;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var8 = null;
-            var7 = null;
-            var6 = null;
+            var var8: LoadingAction = null;
+            var var19: java.lang.String = null;
+            var17 = null;
             var12 = null;
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var10.x(var9);
+               val var5: Int = var11.x(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -191,22 +191,22 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
                                  throw new n(var5);
                               }
 
-                              var12 = var10.v(var9, 4, n0.a, var12) as Int;
+                              var12 = var11.v(var10, 4, n0.a, var12) as Int;
                               var2 |= 16;
                            } else {
-                              var6 = var10.v(var9, 3, n0.a, var6) as Int;
+                              var17 = var11.v(var10, 3, n0.a, var17) as Int;
                               var2 |= 8;
                            }
                         } else {
-                           var3 = var10.k(var9, 2);
+                           var3 = var11.k(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var10.t(var9, 1);
+                        var19 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.m(var9, 0, LoadingAction.$serializer.INSTANCE, var8) as LoadingAction;
+                     var8 = var11.m(var10, 0, LoadingAction.$serializer.INSTANCE, var8) as LoadingAction;
                      var2 |= 1;
                   }
                } else {
@@ -214,12 +214,16 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
                }
             }
 
+            var17 = var12;
+            var12 = var17;
             var2 = var3;
+            var9 = var19;
+            var7 = var8;
             var3 = var2;
          }
 
-         var10.b(var9);
-         return new LoadMoreButton(var3, var8, var7, var2, (Integer)var6, (Integer)var12, null);
+         var11.b(var10);
+         return new LoadMoreButton(var3, var7, var9, var2, (Integer)var12, (Integer)var17, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LoadMoreButton) {

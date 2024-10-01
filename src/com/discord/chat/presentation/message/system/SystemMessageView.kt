@@ -57,6 +57,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    private final var accessories: ArrayList<MessageAccessory>
    private final val binding: SystemMessageViewBinding
    private final val greenIconColor: Int
+   private final val mutedIconColor: Int
    private final val normalIconColor: Int
    private final val pinkIconColor: Int
    private final val redIconColor: Int
@@ -84,6 +85,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
       this.warnIconColor = ColorUtilsKt.getColorCompat(this, R.color.yellow_300);
       this.pinkIconColor = ColorUtilsKt.getColorCompat(this, R.color.guild_boosting_pink);
+      this.mutedIconColor = ThemeManagerKt.getTheme().getTextMuted();
       val var3: SystemMessageViewBinding = SystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var3, "inflate(...)");
       this.binding = var3;
@@ -93,56 +95,63 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
    private fun generateMessageAccessories(message: Message, context: MessageContext): List<MessageAccessory> {
       this.accessories.clear();
-      var var11: Int = var1.getConstrainedWidth();
+      var var12: Int = var1.getConstrainedWidth();
       val var3: Int;
-      if (var11 != null) {
-         var3 = var11;
+      if (var12 != null) {
+         var3 = var12;
       } else {
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      val var19: StructurableText = var1.getContent();
-      if (var19 != null) {
-         val var12: ArrayList = this.accessories;
-         val var13: java.lang.String = var1.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var1);
+      val var4: Boolean;
+      if (var1.getTimestamp() != null && var1.getType() != MessageType.IN_GAME_MESSAGE_NUX) {
+         var4 = true;
+      } else {
+         var4 = false;
+      }
+
+      var var13: StructurableText = var1.getContent();
+      if (var13 != null) {
+         val var14: ArrayList = this.accessories;
+         val var20: java.lang.String = var1.getId-3Eiw7ao();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
          val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var8: Boolean = var1.getShouldShowRoleDot();
-         val var10: Boolean = var1.getShouldShowRoleOnName();
-         val var4: Int;
-         if (var1.getTimestamp() != null) {
-            var4 = 0;
-         } else {
-            var4 = this.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_accessories_vertical_spacing);
-         }
-
-         var var14: Int = var1.getLinkColor();
+         val var10: Boolean = var1.getShouldShowRoleDot();
+         val var11: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
-         if (var14 != null) {
-            var5 = var14;
+         if (var4) {
+            var5 = 0;
          } else {
-            var5 = ThemeManagerKt.getTheme().getTextNormal();
+            var5 = this.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_accessories_vertical_spacing);
          }
 
-         var14 = var1.getTextColor();
+         var var15: Int = var1.getLinkColor();
          val var6: Int;
-         if (var14 != null) {
-            var6 = var14;
+         if (var15 != null) {
+            var6 = var15;
          } else {
             var6 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var12.add(
+         var15 = var1.getTextColor();
+         val var7: Int;
+         if (var15 != null) {
+            var7 = var15;
+         } else {
+            var7 = ThemeManagerKt.getTheme().getTextNormal();
+         }
+
+         var14.add(
             new MessageContentAccessory(
+               var20,
                var13,
-               var19,
-               var7,
-               var9,
                var8,
+               var9,
                var10,
-               var4,
+               var11,
                var5,
                var6,
+               var7,
                DiscordFont.PrimaryNormal,
                16,
                true,
@@ -158,25 +167,27 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          );
       }
 
-      val var20: java.lang.String = var1.getTimestamp();
-      if (var20 != null) {
-         this.accessories
-            .add(new TimestampMessageAccessory(var1.getId-3Eiw7ao(), var20, ThemeManagerKt.getTheme().getTextMuted(), DiscordFont.PrimaryMedium, null));
+      if (var4) {
+         val var21: java.lang.String = var1.getTimestamp();
+         if (var21 != null) {
+            this.accessories
+               .add(new TimestampMessageAccessory(var1.getId-3Eiw7ao(), var21, ThemeManagerKt.getTheme().getTextMuted(), DiscordFont.PrimaryMedium, null));
+         }
       }
 
-      var11 = var1.getTotalMonthsSubscribed();
-      if (var11 != null && var11.intValue() <= 1) {
-         val var32: ArrayList = this.accessories;
-         val var27: java.lang.String = var1.getId-3Eiw7ao();
-         val var30: java.lang.String = var1.getUsername();
-         val var22: Context = this.binding.getRoot().getContext();
-         q.g(var22, "getContext(...)");
-         var32.add(new RoleSubscriptionPurchaseAccessory(var27, var30, MessageKt.avatarUrl(var1, var22), var3, false, null));
+      var12 = var1.getTotalMonthsSubscribed();
+      if (var12 != null && var12.intValue() <= 1) {
+         val var23: ArrayList = this.accessories;
+         val var33: java.lang.String = var1.getId-3Eiw7ao();
+         val var28: java.lang.String = var1.getUsername();
+         val var31: Context = this.binding.getRoot().getContext();
+         q.g(var31, "getContext(...)");
+         var23.add(new RoleSubscriptionPurchaseAccessory(var33, var28, MessageKt.avatarUrl(var1, var31), var3, false, null));
       }
 
-      val var23: Sticker = var1.getSticker();
-      if (var23 != null) {
-         this.accessories.add(new WelcomeStickerAccessory(var1, var23));
+      val var24: Sticker = var1.getSticker();
+      if (var24 != null) {
+         this.accessories.add(new WelcomeStickerAccessory(var1, var24));
       }
 
       if (var1.getType() === MessageType.STAGE_RAISE_HAND && q.c(var1.getShowInviteToSpeakButton(), java.lang.Boolean.TRUE)) {
@@ -184,13 +195,13 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       }
 
       if (var1.getType() === MessageType.GUILD_DEADCHAT_REVIVE_PROMPT || var1.getType() === MessageType.GUILD_GAMING_STATS_PROMPT) {
-         val var24: java.util.List = var1.getEmbeds();
-         if (var24 != null) {
-            val var25: java.util.Iterator = var24.iterator();
+         val var25: java.util.List = var1.getEmbeds();
+         if (var25 != null) {
+            val var26: java.util.Iterator = var25.iterator();
 
-            for (int var18 = 0; var25.hasNext(); var18++) {
-               val var28: Any = var25.next();
-               if (var18 < 0) {
+            for (int var19 = 0; var26.hasNext(); var19++) {
+               var13 = (StructurableText)var26.next();
+               if (var19 < 0) {
                   i.u();
                }
 
@@ -198,11 +209,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                   .add(
                      new EmbedMessageAccessory(
                         var1.getId-3Eiw7ao(),
-                        var18,
+                        var19,
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var28 as Embed,
+                        var13 as Embed,
                         false,
                         false,
                         false,
@@ -222,8 +233,8 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          this.accessories.add(new ChannelPromptActionsAccessory(var1));
       }
 
-      val var26: java.util.List = var1.getReactions();
-      if (var26 != null && var26.isEmpty() xor true) {
+      val var27: java.util.List = var1.getReactions();
+      if (var27 != null && var27.isEmpty() xor true) {
          this.accessories
             .add(
                new ReactionsMessageAccessory(
@@ -241,19 +252,19 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             );
       }
 
-      val var15: ThreadEmbed = var1.getThreadEmbed();
-      if (var15 != null) {
-         this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId-3Eiw7ao(), var15, null));
-      }
-
-      val var16: EphemeralIndication = var1.getEphemeralIndication();
+      val var16: ThreadEmbed = var1.getThreadEmbed();
       if (var16 != null) {
-         this.accessories.add(new EphemeralIndicationMessageAccessory(var1.getId-3Eiw7ao(), var16, null));
+         this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId-3Eiw7ao(), var16, null));
       }
 
-      val var17: SafetyPolicyNoticeEmbed = var1.getSafetyPolicyNoticeEmbed();
+      val var17: EphemeralIndication = var1.getEphemeralIndication();
       if (var17 != null) {
-         this.accessories.add(new SafetyPolicyNoticeMessageAccessory(var1.getId-3Eiw7ao(), var17, null));
+         this.accessories.add(new EphemeralIndicationMessageAccessory(var1.getId-3Eiw7ao(), var17, null));
+      }
+
+      val var18: SafetyPolicyNoticeEmbed = var1.getSafetyPolicyNoticeEmbed();
+      if (var18 != null) {
+         this.accessories.add(new SafetyPolicyNoticeMessageAccessory(var1.getId-3Eiw7ao(), var18, null));
       }
 
       return this.accessories;
@@ -333,6 +344,9 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             break;
          case 34:
             var3 = w.a(ReactAsset.Refresh, this.greenIconColor);
+            break;
+         case 35:
+            var3 = w.a(ReactAsset.GameController, this.mutedIconColor);
             break;
          default:
             val var2: StringBuilder = new StringBuilder();

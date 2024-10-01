@@ -119,29 +119,29 @@ public data class BlockedGroupChatListItem(text: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.text;
-      val var7: java.lang.String = this.id;
-      val var2: Int = this.textColor;
-      val var3: Int = this.backgroundColor;
-      val var1: Int = this.borderColor;
+      val var6: java.lang.String = this.text;
+      val var5: java.lang.String = this.id;
+      val var1: Int = this.textColor;
+      val var2: Int = this.backgroundColor;
+      val var3: Int = this.borderColor;
       val var4: Boolean = this.isRevealed;
-      val var8: java.util.List = this.content;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("BlockedGroupChatListItem(text=");
-      var6.append(var5);
-      var6.append(", id=");
-      var6.append(var7);
-      var6.append(", textColor=");
-      var6.append(var2);
-      var6.append(", backgroundColor=");
-      var6.append(var3);
-      var6.append(", borderColor=");
-      var6.append(var1);
-      var6.append(", isRevealed=");
-      var6.append(var4);
-      var6.append(", content=");
-      var6.append(var8);
-      var6.append(")");
-      return var6.toString();
+      val var7: java.util.List = this.content;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("BlockedGroupChatListItem(text=");
+      var8.append(var6);
+      var8.append(", id=");
+      var8.append(var5);
+      var8.append(", textColor=");
+      var8.append(var1);
+      var8.append(", backgroundColor=");
+      var8.append(var2);
+      var8.append(", borderColor=");
+      var8.append(var3);
+      var8.append(", isRevealed=");
+      var8.append(var4);
+      var8.append(", content=");
+      var8.append(var7);
+      var8.append(")");
+      return var8.toString();
    }
 }

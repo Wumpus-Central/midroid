@@ -53,15 +53,15 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var3: java.util.Map = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ShortcutData(tag=");
-      var2.append(var1);
-      var2.append(", data=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.tag;
+      val var2: java.util.Map = this.data;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ShortcutData(tag=");
+      var1.append(var3);
+      var1.append(", data=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

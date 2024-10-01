@@ -8,16 +8,16 @@ import kotlin.jvm.internal.q
 
 public fun Button.setBackgroundColors(color: Int, disabledColor: Int? = null) {
    q.h(var0, "<this>");
-   val var3: ArrayList = new ArrayList(2);
    val var4: ArrayList = new ArrayList(2);
+   val var3: ArrayList = new ArrayList(2);
    if (var2 != null) {
-      var3.add(new int[]{-16842910});
-      var4.add(var2);
+      var4.add(new int[]{-16842910});
+      var3.add(var2);
    }
 
-   var3.add(new int[0]);
-   var4.add(var1);
-   r0.v0(var0, new ColorStateList(var3.toArray(new int[0][]), i.Q0(var4)));
+   var4.add(new int[0]);
+   var3.add(var1);
+   r0.v0(var0, new ColorStateList(var4.toArray(new int[0][]), i.Q0(var3)));
 }
 
 @JvmSynthetic

@@ -22,15 +22,18 @@ internal fun AudioSource.toMediaSource(featureTag: String? = null): MediaSource 
    val var5: java.lang.String = var0.getMessageId-3Eiw7ao();
    val var3: Int = var0.getIndex();
    val var4: java.lang.String = var0.getUrl();
+   val var7: java.lang.String;
    if (var1 == null) {
-      val var6: java.lang.String = var0.getUrl();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("audio attachment: ");
-      var7.append(var6);
-      var1 = var7.toString();
+      var1 = var0.getUrl();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("audio attachment: ");
+      var6.append(var1);
+      var7 = var6.toString();
+   } else {
+      var7 = var1;
    }
 
-   return new MediaSource(var4, null, null, null, var1, MediaType.AUDIO, false, var2, var5, var3, null, 1102, null);
+   return new MediaSource(var4, null, null, null, var7, MediaType.AUDIO, false, var2, var5, var3, null, 1102, null);
 }
 
 @JvmSynthetic

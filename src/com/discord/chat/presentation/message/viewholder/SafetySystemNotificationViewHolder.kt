@@ -16,10 +16,10 @@ public class SafetySystemNotificationViewHolder(safetySystemNotificationView: Sa
       kotlin.jvm.internal.q.h(var1, "safetySystemNotificationEmbed");
       kotlin.jvm.internal.q.h(var2, "onTapCta");
       val var12: SafetySystemNotificationView = this.safetySystemNotificationView;
-      val var10: java.lang.String = var1.getTitleText();
-      val var11: java.lang.String = var1.getTitleIcon();
+      val var11: java.lang.String = var1.getTitleText();
+      val var13: java.lang.String = var1.getTitleIcon();
       val var14: java.lang.String = var1.getSubtitleText();
-      val var13: java.lang.String = var1.getDescriptionText();
+      val var10: java.lang.String = var1.getDescriptionText();
       var var4: java.lang.String = var1.getPrimaryCtaText();
       var var3: java.lang.String = var4;
       if (var4 == null) {
@@ -56,6 +56,6 @@ public class SafetySystemNotificationViewHolder(safetySystemNotificationView: Sa
          var8 = "";
       }
 
-      var12.setContent(var10, var11, var14, var13, var3, var4, var5, var6, var7, var8, var1.getFooterTheme(), var2);
+      var12.setContent(var11, var13, var14, var10, var3, var4, var5, var6, var7, var8, var1.getFooterTheme(), var2);
    }
 }

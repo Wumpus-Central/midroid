@@ -34,10 +34,10 @@ public object MediaPlayerManager {
 
    @JvmStatic
    fun {
-      val var1: CompletableJob = j1.b(null, 1, null);
-      val var0: ExecutorService = Executors.newSingleThreadExecutor();
-      q.g(var0, "newSingleThreadExecutor(...)");
-      scope = g.a(var1.Q(s0.b(var0)));
+      val var0: CompletableJob = j1.b(null, 1, null);
+      val var1: ExecutorService = Executors.newSingleThreadExecutor();
+      q.g(var1, "newSingleThreadExecutor(...)");
+      scope = g.a(var0.Q(s0.b(var1)));
    }
 
    private fun startProgressMonitor(playerRef: WeakReference<MediaPlayer>): Job {
@@ -4399,18 +4399,18 @@ public object MediaPlayerManager {
       }
 
       public override fun toString(): String {
-         val var5: MediaSource = this.source;
+         val var6: MediaSource = this.source;
          val var1: Long = this.timeMs;
          val var3: Long = this.durationMs;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("PlaybackProgress(source=");
-         var6.append(var5);
-         var6.append(", timeMs=");
-         var6.append(var1);
-         var6.append(", durationMs=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("PlaybackProgress(source=");
+         var5.append(var6);
+         var5.append(", timeMs=");
+         var5.append(var1);
+         var5.append(", durationMs=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

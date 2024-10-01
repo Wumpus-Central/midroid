@@ -529,6 +529,14 @@
     <color name="input_background_darker">#d90f1014</color>
     <color name="input_background_light">#14000000</color>
     <color name="input_background_midnight">#1abcbcf0</color>
+    <color name="input_border_dark">#526c6f7c</color>
+    <color name="input_border_darker">#526c6f7c</color>
+    <color name="input_border_light">#526c6f7c</color>
+    <color name="input_border_midnight">#526c6f7c</color>
+    <color name="input_error_background_dark">#1fa12829</color>
+    <color name="input_error_background_darker">#1fa12829</color>
+    <color name="input_error_background_light">#1fa12829</color>
+    <color name="input_error_background_midnight">#1fa12829</color>
     <color name="input_focused_border_dark">#29ffffff</color>
     <color name="input_focused_border_darker">#526c6f7c</color>
     <color name="input_focused_border_light">#29000000</color>

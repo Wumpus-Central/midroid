@@ -100,21 +100,21 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.backgroundColor;
+      val var3: java.lang.String = this.backgroundColor;
       val var4: java.lang.String = this.accentColor;
-      val var3: java.lang.String = this.highlightColor;
+      val var5: java.lang.String = this.highlightColor;
       val var1: Float = this.opacity;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("BurstReactionColorPalette(backgroundColor=");
-      var5.append(var2);
-      var5.append(", accentColor=");
-      var5.append(var4);
-      var5.append(", highlightColor=");
-      var5.append(var3);
-      var5.append(", opacity=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BurstReactionColorPalette(backgroundColor=");
+      var2.append(var3);
+      var2.append(", accentColor=");
+      var2.append(var4);
+      var2.append(", highlightColor=");
+      var2.append(var5);
+      var2.append(", opacity=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

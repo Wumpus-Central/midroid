@@ -43,8 +43,8 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_m5bcfvgfujrfwaue3rcd2tzdaa_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_br2sraobipod64k4kjkev7zbnu_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_reactnavigationnative617_reactnativehttpscodeloa_br2sraobipod64k4kjkev7zbnu_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -1217,6 +1217,12 @@ public final class R {
       public static int images_platforms_img_roblox_dark;
       public static int images_platforms_img_roblox_light;
       public static int images_platforms_img_roblox_white;
+      public static int images_provisional_account_avatars_default_provisional_avatar_0;
+      public static int images_provisional_account_avatars_default_provisional_avatar_1;
+      public static int images_provisional_account_avatars_default_provisional_avatar_2;
+      public static int images_provisional_account_avatars_default_provisional_avatar_3;
+      public static int images_provisional_account_avatars_default_provisional_avatar_4;
+      public static int images_provisional_account_avatars_default_provisional_avatar_5;
       public static int images_public_guilds_systemuseravatar;
       public static int images_user_settings_crunchyroll_connect;
       public static int images_user_settings_crunchyroll_link_intro;

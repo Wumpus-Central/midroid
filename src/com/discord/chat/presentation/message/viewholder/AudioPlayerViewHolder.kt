@@ -170,29 +170,29 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var3 = var7;
             } else {
                val var13: MediaPlayer = AudioPlayerManager.INSTANCE.getPlayer(this.$audioSource);
-               val var4: Long;
+               val var5: Long;
                if (var13 != null) {
-                  var4 = var13.durationMs();
+                  var5 = var13.durationMs();
                } else {
-                  var4 = 0L;
+                  var5 = 0L;
                }
 
-               var3 = (float)var4 * 1000.0F;
+               var3 = (float)var5 * 1000.0F;
             }
 
-            val var10: ChatEventHandler = this.$eventHandler;
-            val var9: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
+            val var9: ChatEventHandler = this.$eventHandler;
+            val var10: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
             val var14: UserId = this.$accessory.getAuthorId-wUX8bhU();
             if (var14 != null) {
                val var11: Long = var14.unbox-impl();
-               val var6: Boolean = this.$accessory.isVoiceMessage();
+               val var4: Boolean = this.$accessory.isVoiceMessage();
                val var8: java.lang.String = this.$accessory.getAttachment().getId();
                var var15: java.lang.String = var8;
                if (var8 == null) {
                   var15 = "";
                }
 
-               var10.mediaAttachmentPlaybackEnded-O97gnAM(var9, var3, var1, var11, var2, var6, var15);
+               var9.mediaAttachmentPlaybackEnded-O97gnAM(var10, var3, var1, var11, var2, var4, var15);
             }
          }
 
@@ -214,8 +214,8 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var2 = (float)var3 * 1000.0F;
             }
 
-            val var8: ChatEventHandler = this.$eventHandler;
-            val var9: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
+            val var9: ChatEventHandler = this.$eventHandler;
+            val var8: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
             val var13: UserId = this.$accessory.getAuthorId-wUX8bhU();
             if (var13 != null) {
                val var10: Long = var13.unbox-impl();
@@ -226,7 +226,7 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                   var14 = "";
                }
 
-               var8.mediaAttachmentPlaybackStarted-jd4C3YQ(var9, var2, var1, var10, var5, var14);
+               var9.mediaAttachmentPlaybackStarted-jd4C3YQ(var8, var2, var1, var10, var5, var14);
             }
          }
 

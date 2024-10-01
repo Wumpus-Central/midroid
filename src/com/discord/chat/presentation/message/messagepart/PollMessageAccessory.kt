@@ -168,27 +168,27 @@ public data class PollMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = this.myAvatarUrl;
+      val var1: java.lang.String = this.myAvatarUrl;
       val var6: PollData = this.data;
-      val var2: java.util.List = this.answers;
+      val var7: java.util.List = this.answers;
       val var3: IPollStyleSet = this.containerStyleSet;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PollMessageAccessory(channelId=");
-      var1.append(var7);
-      var1.append(", messageId=");
-      var1.append(var5);
-      var1.append(", myAvatarUrl=");
-      var1.append(var4);
-      var1.append(", data=");
-      var1.append(var6);
-      var1.append(", answers=");
-      var1.append(var2);
-      var1.append(", containerStyleSet=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PollMessageAccessory(channelId=");
+      var4.append(var2);
+      var4.append(", messageId=");
+      var4.append(var5);
+      var4.append(", myAvatarUrl=");
+      var4.append(var1);
+      var4.append(", data=");
+      var4.append(var6);
+      var4.append(", answers=");
+      var4.append(var7);
+      var4.append(", containerStyleSet=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

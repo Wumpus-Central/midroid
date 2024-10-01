@@ -43,10 +43,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
          q.g(var3, "getReactApplicationContext(...)");
          var2.get(var3).setItem("_databaseUserId", var1);
       } else {
-         val var5: CacheModule.Companion = CacheModule.Companion;
-         val var4: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var4, "getReactApplicationContext(...)");
-         var5.get(var4).removeItem("_databaseUserId");
+         val var4: CacheModule.Companion = CacheModule.Companion;
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var5, "getReactApplicationContext(...)");
+         var4.get(var5).removeItem("_databaseUserId");
       }
    }
 

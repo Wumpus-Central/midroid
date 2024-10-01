@@ -220,13 +220,13 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.q.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var35: java.util.List = kotlin.collections.i.K0(var8, --var2);
-         val var23: ReactionsFlexbox = this.binding.reactionsView;
+         val var23: java.util.List = kotlin.collections.i.K0(var8, --var2);
+         val var35: ReactionsFlexbox = this.binding.reactionsView;
          kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
-         var23.setVisibility(0);
-         this.setReactions(var35, var12, var13, var14, var15);
+         var35.setVisibility(0);
+         this.setReactions(var23, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var36: DCDButton = this.binding.otherReactionsCount;
+         val var33: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.q.e(this.binding.otherReactionsCount);
          var var25: Boolean;
          if (var22 != 0) {
@@ -241,11 +241,11 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var36.setVisibility(var25);
-         if (var36.getVisibility() == 0) {
-            val var33: Context = var36.getContext();
-            kotlin.jvm.internal.q.g(var33, "getContext(...)");
-            var36.setText(I18nUtilsKt.i18nFormat(var33, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
+         var33.setVisibility(var25);
+         if (var33.getVisibility() == 0) {
+            val var36: Context = var33.getContext();
+            kotlin.jvm.internal.q.g(var36, "getContext(...)");
+            var33.setText(I18nUtilsKt.i18nFormat(var36, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
                final int $otherReactionsCount;
 
                {
@@ -258,8 +258,8 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
                   var1.getArgs().put("count", java.lang.String.valueOf(this.$otherReactionsCount));
                }
             }));
-            RippleUtilsKt.addRipple$default(var36, true, 0, 2, null);
-            var36.setOnClickButtonListener(var18);
+            RippleUtilsKt.addRipple$default(var33, true, 0, 2, null);
+            var33.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;

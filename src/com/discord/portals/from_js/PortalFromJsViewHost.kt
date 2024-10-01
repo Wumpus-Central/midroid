@@ -50,11 +50,11 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
       if (this.childView == null) {
          this.addChildView(var1);
       } else {
-         val var4: java.lang.String = this.getPortalId$portals_release();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Adding more than one child unsupported: ");
-         var5.append(var4);
-         throw new IllegalArgumentException(var5.toString().toString());
+         val var5: java.lang.String = this.getPortalId$portals_release();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Adding more than one child unsupported: ");
+         var4.append(var5);
+         throw new IllegalArgumentException(var4.toString().toString());
       }
    }
 
@@ -94,10 +94,10 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
    public fun onAfterUpdateTransaction() {
       if (this.portalIdPrev != null) {
          this.childViewRemoved(this.portalIdPrev);
-         val var2: java.lang.String = this.getPortalId$portals_release();
-         val var3: View = this.childView;
+         val var3: java.lang.String = this.getPortalId$portals_release();
+         val var2: View = this.childView;
          q.e(this.childView);
-         this.childViewAdded(var2, var3);
+         this.childViewAdded(var3, var2);
          this.portalIdPrev = null;
       }
    }

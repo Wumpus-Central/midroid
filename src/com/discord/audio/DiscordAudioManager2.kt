@@ -203,10 +203,10 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
       val var3: java.util.Set = this.audioDevices;
       val var2: ArrayList = new ArrayList();
 
-      for (Object var4 : var3) {
-         val var1: Int = (var4 as AudioDeviceInfo).getType();
+      for (var3 : var3) {
+         val var1: Int = (var3 as AudioDeviceInfo).getType();
          if (var1 != 8 && var1 != 18 && var1 != 24 && var1 != 27 && var1 != 30) {
-            var2.add(var4);
+            var2.add(var3);
          }
       }
 

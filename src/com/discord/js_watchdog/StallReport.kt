@@ -66,8 +66,8 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.stallTime);
-      val var3: Int = this.sessionId.hashCode();
+      val var3: Int = Integer.hashCode(this.stallTime);
+      val var2: Int = this.sessionId.hashCode();
       val var1: Int;
       if (this.trace == null) {
          var1 = 0;
@@ -75,7 +75,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var1 = this.trace.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -128,10 +128,10 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var var6: java.lang.String;
          var var9: java.lang.String;
          if (var8.y()) {
-            var2 = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var9 = var8.v(var7, 2, b2.a, null) as java.lang.String;
-            var3 = 7;
+            var2 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -162,13 +162,10 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
                   var4 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var8.b(var7);
-         return new StallReport(var3, var2, var6, var9, null);
+         return new StallReport(var2, var3, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: StallReport) {

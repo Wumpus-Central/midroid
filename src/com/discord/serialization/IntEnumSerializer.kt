@@ -60,15 +60,15 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             q.g(this.choices[var2], "get(...)");
             return (T)var9;
          } else {
-            val var11: java.lang.String = this.serialName;
+            val var8: java.lang.String = this.serialName;
             var3 = this.choices.length;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append(var2);
-            var8.append(" is not among valid ");
-            var8.append(var11);
-            var8.append(" choices, choices size is ");
-            var8.append(var3);
-            throw new IllegalStateException(var8.toString().toString());
+            val var11: StringBuilder = new StringBuilder();
+            var11.append(var2);
+            var11.append(" is not among valid ");
+            var11.append(var8);
+            var11.append(" choices, choices size is ");
+            var11.append(var3);
+            throw new IllegalStateException(var11.toString().toString());
          }
       } else {
          val var6: java.lang.String = this.serialName;
@@ -90,15 +90,15 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       } else if (var3 != -1) {
          var1.y(this.choicesNumbers[var3]);
       } else {
-         val var5: java.lang.String = this.serialName;
-         val var7: Array<IntEnum> = this.choices;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var2);
-         var6.append(" is not a valid enum ");
-         var6.append(var5);
-         var6.append(", choices are ");
-         var6.append(var7);
-         throw new IllegalStateException(var6.toString().toString());
+         val var6: java.lang.String = this.serialName;
+         val var5: Array<IntEnum> = this.choices;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append(var2);
+         var7.append(" is not a valid enum ");
+         var7.append(var6);
+         var7.append(", choices are ");
+         var7.append(var5);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 }

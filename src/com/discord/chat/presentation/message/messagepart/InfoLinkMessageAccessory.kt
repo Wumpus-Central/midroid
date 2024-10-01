@@ -93,8 +93,8 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = MessageId.hashCode-impl(this.messageId);
-      val var3: Int = ChannelId.hashCode-impl(this.channelId);
+      val var3: Int = MessageId.hashCode-impl(this.messageId);
+      val var4: Int = ChannelId.hashCode-impl(this.channelId);
       var var2: Int = 0;
       val var1: Int;
       if (this.attachmentId == null) {
@@ -107,30 +107,30 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
          var2 = this.embedId.hashCode();
       }
 
-      return ((((var4 * 31 + var3) * 31 + var1) * 31 + var2) * 31 + this.text.hashCode()) * 31 + this.icon.hashCode();
+      return ((((var3 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.text.hashCode()) * 31 + this.icon.hashCode();
    }
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.attachmentId;
-      val var6: java.lang.String = this.embedId;
-      val var5: java.lang.String = this.text;
-      val var1: ReactAsset = this.icon;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InfoLinkMessageAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var7);
-      var2.append(", attachmentId=");
-      var2.append(var4);
-      var2.append(", embedId=");
-      var2.append(var6);
-      var2.append(", text=");
-      var2.append(var5);
-      var2.append(", icon=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.attachmentId;
+      val var2: java.lang.String = this.embedId;
+      val var6: java.lang.String = this.text;
+      val var7: ReactAsset = this.icon;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InfoLinkMessageAccessory(messageId=");
+      var1.append(var3);
+      var1.append(", channelId=");
+      var1.append(var4);
+      var1.append(", attachmentId=");
+      var1.append(var5);
+      var1.append(", embedId=");
+      var1.append(var2);
+      var1.append(", text=");
+      var1.append(var6);
+      var1.append(", icon=");
+      var1.append(var7);
+      var1.append(")");
+      return var1.toString();
    }
 }

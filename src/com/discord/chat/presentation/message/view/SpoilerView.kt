@@ -37,11 +37,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun configureObscureOverlay(label: String, parent: ViewGroup) {
-      val var3: View = this.binding.obscure.getOverlayView();
-      val var4: ObscureOverlayView = this.binding.obscure;
+      val var4: View = this.binding.obscure.getOverlayView();
+      val var3: ObscureOverlayView = this.binding.obscure;
       kotlin.jvm.internal.q.g(this.binding.obscure, "obscure");
-      var4.setVisibility(0);
-      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, this.onClick(true, var3), this.onClick(false, var3));
+      var3.setVisibility(0);
+      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, this.onClick(true, var4), this.onClick(false, var4));
    }
 
    private fun configureSpoilerOverlay(label: String) {
@@ -84,11 +84,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
                var1 = 1;
             }
 
-            val var5: androidx.transition.c = new androidx.transition.c(var1);
+            val var4: androidx.transition.c = new androidx.transition.c(var1);
             val var2: Boolean = this.$showImage;
-            val var4: SpoilerView = this.this$0;
-            var5.b0(150L);
-            var5.b(new androidx.transition.i(var2, var4) {
+            val var5: SpoilerView = this.this$0;
+            var4.b0(150L);
+            var4.b(new androidx.transition.i(var2, var5) {
                final boolean $showImage;
                final SpoilerView this$0;
 
@@ -109,7 +109,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
                   }
                }
             });
-            androidx.transition.j.a((ViewGroup)var3, var5);
+            androidx.transition.j.a((ViewGroup)var3, var4);
             if (this.$showImage xor true) {
                var1 = 0;
             } else {

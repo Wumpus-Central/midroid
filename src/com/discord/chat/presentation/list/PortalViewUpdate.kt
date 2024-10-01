@@ -53,14 +53,14 @@ public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, 
    }
 
    public override fun toString(): String {
-      val var3: PortalViewChatListItem = this.portalChatListItem;
+      val var2: PortalViewChatListItem = this.portalChatListItem;
       val var1: Int = this.updateId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PortalViewUpdate(portalChatListItem=");
-      var2.append(var3);
-      var2.append(", updateId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PortalViewUpdate(portalChatListItem=");
+      var3.append(var2);
+      var3.append(", updateId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

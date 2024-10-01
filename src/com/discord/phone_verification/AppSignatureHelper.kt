@@ -74,18 +74,18 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var1 = 0; var1 < var2; var1++) {
             val var7: Signature = var16[var1];
 
-            var var9: java.lang.String;
+            var var8: java.lang.String;
             try {
-               val var8: AppSignatureHelper.Companion = AppSignatureHelper.Companion;
+               val var9: AppSignatureHelper.Companion = AppSignatureHelper.Companion;
                q.e(var5);
                val var17: java.lang.String = var7.toCharsString();
                q.g(var17, "toCharsString(...)");
-               var9 = AppSignatureHelper.Companion.access$hash(var8, var5, var17);
+               var8 = AppSignatureHelper.Companion.access$hash(var9, var5, var17);
                val var18: Log = Log.INSTANCE;
-               val var19: java.lang.String = var8.getTAG();
+               val var19: java.lang.String = var9.getTAG();
                val var10: StringBuilder = new StringBuilder();
                var10.append("Hash ");
-               var10.append(var9);
+               var10.append(var8);
                Log.i$default(var18, var19, var10.toString(), null, 4, null);
             } catch (var12: NameNotFoundException) {
                Log.INSTANCE.e(AppSignatureHelper.Companion.getTAG(), "Unable to find package to obtain hash.", var12);
@@ -93,9 +93,9 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
                break;
             }
 
-            if (var9 != null) {
+            if (var8 != null) {
                try {
-                  var6.add(var9);
+                  var6.add(var8);
                } catch (var11: NameNotFoundException) {
                   Log.INSTANCE.e(AppSignatureHelper.Companion.getTAG(), "Unable to find package to obtain hash.", var11);
                   i.k();
@@ -131,11 +131,11 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
-            val var12: java.lang.String = var3.toString();
-            val var8: MessageDigest = MessageDigest.getInstance("SHA-256");
-            q.g(var8, "getInstance(...)");
-            var8.update(f.a(var12));
-            val var9: ByteArray = var8.digest();
+            val var8: java.lang.String = var3.toString();
+            val var12: MessageDigest = MessageDigest.getInstance("SHA-256");
+            q.g(var12, "getInstance(...)");
+            var12.update(f.a(var8));
+            val var9: ByteArray = var12.digest();
             q.g(var9, "digest(...)");
             val var10: java.lang.String = Base64.encodeToString(c.j(var9, 0, 9), 3);
             q.g(var10, "encodeToString(...)");

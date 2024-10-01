@@ -162,12 +162,12 @@ public class MessageBundleConversationView  public constructor(context: Context,
          SpannableExtensionsKt.coverWithSpan(var26, new BackgroundSpanDrawer(var31));
          var20 = ReplyUtilsKt.createReplyContent(var19, var26);
       } else {
-         val var21: TextView = this.binding.replyAuthorName;
+         val var27: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var27: Context = this.getContext();
-         q.g(var27, "getContext(...)");
+         val var21: Context = this.getContext();
+         q.g(var21, "getContext(...)");
          var20 = ReplyUtilsKt.createSystemReplyContent(
-            var21, I18nUtilsKt.i18nFormat$default(var27, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
+            var27, I18nUtilsKt.i18nFormat$default(var21, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
          );
       }
 

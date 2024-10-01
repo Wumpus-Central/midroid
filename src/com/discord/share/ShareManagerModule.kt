@@ -32,10 +32,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
       super.invalidate();
 
       try {
-         val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var1.unregister(var2, this.shareBroadcastReceiver);
+         val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         var2.unregister(var1, this.shareBroadcastReceiver);
       } catch (var3: Exception) {
       }
    }

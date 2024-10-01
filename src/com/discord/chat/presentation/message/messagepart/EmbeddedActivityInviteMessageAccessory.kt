@@ -79,20 +79,20 @@ public data class EmbeddedActivityInviteMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: Int = this.codedLinkIndex;
       val var3: EmbeddedActivityInviteEmbedImpl = this.embeddedActivityInviteEmbed;
       val var1: Int = this.constrainedWidth;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("EmbeddedActivityInviteMessageAccessory(messageId=");
-      var5.append(var4);
-      var5.append(", codedLinkIndex=");
-      var5.append(var2);
-      var5.append(", embeddedActivityInviteEmbed=");
-      var5.append(var3);
-      var5.append(", constrainedWidth=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("EmbeddedActivityInviteMessageAccessory(messageId=");
+      var4.append(var5);
+      var4.append(", codedLinkIndex=");
+      var4.append(var2);
+      var4.append(", embeddedActivityInviteEmbed=");
+      var4.append(var3);
+      var4.append(", constrainedWidth=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

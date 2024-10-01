@@ -67,7 +67,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -76,12 +76,12 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var3;
-      val var6: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var6;
+      this.accessoriesAdapter = var4;
+      val var3: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var3;
       val var5: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
       this.transitionResilientLinearLayoutManager = var5;
-      val var4: DefaultItemAnimator = new DefaultItemAnimator() {
+      val var6: DefaultItemAnimator = new DefaultItemAnimator() {
          @Override
          public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.q.h(var1, "viewHolder");
@@ -96,8 +96,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var4.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var4;
+      var6.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var6;
       this.forwardBarPaint$delegate = kh.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -112,16 +112,16 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
       this.setLayoutManager(var5);
-      this.setAdapter(var3);
-      var3.setMessageContentViewLifecycleListener(var6);
+      this.setAdapter(var4);
+      var4.setMessageContentViewLifecycleListener(var3);
    }
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : pk.j.H(v0.a(this))) {
-         val var1: View = var3.c() as View;
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ReactionsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
@@ -187,32 +187,32 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var17: MessageAccessoriesView.Companion = Companion;
-      val var12: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var12, "getResources(...)");
-      this.updateLeftMargin(var17.getAccessoryLeftMargin(var12, var8, var9));
-      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var12: MessageAccessoriesView.Companion = Companion;
+      val var17: Resources = this.getResources();
+      kotlin.jvm.internal.q.g(var17, "getResources(...)");
+      this.updateLeftMargin(var12.getAccessoryLeftMargin(var17, var8, var9));
+      val var18: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var9 = var5 is java.util.Collection;
       var10 = false;
       if (var9 && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var18: java.util.Iterator = var5.iterator();
+         val var13: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var18.hasNext()) {
+            if (!var13.hasNext()) {
                break;
             }
 
-            if (var18.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var13.setShowThreadSpine(var9);
+      var18.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

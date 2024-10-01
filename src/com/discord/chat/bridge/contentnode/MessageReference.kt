@@ -116,48 +116,43 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
 
       public open fun deserialize(decoder: Decoder): MessageReference {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         val var5: Boolean = var9.y();
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.c(var7);
+         val var5: Boolean = var8.y();
          var var6: ChannelId = null;
          var var2: Int;
-         val var7: ChannelId;
-         var var11: GuildId;
+         var var9: GuildId;
          if (var5) {
-            val var10: ChannelId = var9.m(var8, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            val var12: GuildId = var9.v(var8, 1, GuildId.$serializer.INSTANCE, null) as GuildId;
+            var6 = var8.m(var7, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var9 = var8.v(var7, 1, GuildId.$serializer.INSTANCE, null) as GuildId;
             var2 = 3;
-            var7 = var10;
-            var11 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var11 = null;
+            var9 = null;
 
             while (var3) {
-               val var4: Int = var9.x(var8);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var11 = var9.v(var8, 1, GuildId.$serializer.INSTANCE, var11) as GuildId;
+                     var9 = var8.v(var7, 1, GuildId.$serializer.INSTANCE, var9) as GuildId;
                      var2 |= 2;
                   } else {
-                     var6 = var9.m(var8, 0, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
+                     var6 = var8.m(var7, 0, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var7 = var6;
          }
 
-         var9.b(var8);
-         return new MessageReference(var2, var7, var11, null, null);
+         var8.b(var7);
+         return new MessageReference(var2, var6, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageReference) {

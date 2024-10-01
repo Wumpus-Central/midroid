@@ -148,25 +148,25 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: Float = this.totalDurationSecs;
       val var1: Float = this.startDurationSecs;
-      val var5: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var4: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var3: Boolean = this.isVoiceMessage;
-      val var6: java.lang.String = this.attachmentId;
+      val var5: java.lang.String = this.attachmentId;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MediaAttachmentPlaybackStartedData(messageId=");
-      var7.append(var4);
+      var7.append(var6);
       var7.append(", totalDurationSecs=");
       var7.append(var2);
       var7.append(", startDurationSecs=");
       var7.append(var1);
       var7.append(", senderUserId=");
-      var7.append(var5);
+      var7.append(var4);
       var7.append(", isVoiceMessage=");
       var7.append(var3);
       var7.append(", attachmentId=");
-      var7.append(var6);
+      var7.append(var5);
       var7.append(")");
       return var7.toString();
    }
@@ -206,8 +206,8 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
          var var3: Float;
          var var5: Int;
          var var8: Boolean;
-         var var9: Any;
-         var var10: java.lang.String;
+         var var9: java.lang.String;
+         val var11: Any;
          val var16: java.lang.String;
          if (var13.y()) {
             val var14: MessageId = var13.m(var12, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -220,11 +220,11 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
 
             var3 = var13.G(var12, 1);
             var2 = var13.G(var12, 2);
-            var9 = var13.m(var12, 3, UserId.$serializer.INSTANCE, null) as UserId;
+            var11 = var13.m(var12, 3, UserId.$serializer.INSTANCE, null) as UserId;
             var8 = var13.s(var12, 4);
-            val var11: java.lang.String = var13.t(var12, 5);
-            var10 = var15;
-            var16 = var11;
+            val var10: java.lang.String = var13.t(var12, 5);
+            var9 = var15;
+            var16 = var10;
             var5 = 63;
          } else {
             var3 = 0.0F;
@@ -232,7 +232,7 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
             var var6: Boolean = true;
             var8 = false;
             var5 = 0;
-            var10 = null;
+            var var21: java.lang.String = null;
             var9 = null;
             var var17: Any = null;
 
@@ -243,18 +243,18 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
                      var6 = false;
                      break;
                   case 0:
-                     val var21: MessageId;
-                     if (var10 != null) {
-                        var21 = MessageId.box-impl(var10);
+                     val var22: MessageId;
+                     if (var21 != null) {
+                        var22 = MessageId.box-impl(var21);
                      } else {
-                        var21 = null;
+                        var22 = null;
                      }
 
-                     val var22: MessageId = var13.m(var12, 0, MessageId.$serializer.INSTANCE, var21) as MessageId;
-                     if (var22 != null) {
-                        var10 = var22.unbox-impl();
+                     val var23: MessageId = var13.m(var12, 0, MessageId.$serializer.INSTANCE, var22) as MessageId;
+                     if (var23 != null) {
+                        var21 = var23.unbox-impl();
                      } else {
-                        var10 = null;
+                        var21 = null;
                      }
 
                      var5 |= 1;
@@ -284,14 +284,15 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
                }
             }
 
-            var9 = var17;
+            var11 = var17;
             var3 = var2;
-            var16 = (java.lang.String)var9;
+            var16 = var9;
             var2 = var3;
+            var9 = var21;
          }
 
          var13.b(var12);
-         return new MediaAttachmentPlaybackStartedData(var5, var10, var3, var2, (UserId)var9, var8, var16, null, null);
+         return new MediaAttachmentPlaybackStartedData(var5, var9, var3, var2, (UserId)var11, var8, var16, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaAttachmentPlaybackStartedData) {

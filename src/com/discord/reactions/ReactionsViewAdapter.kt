@@ -152,9 +152,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       q.h(var1, "holder");
-      val var8: ThemeManager = ThemeManager.INSTANCE;
-      val var7: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var8.setThemeOverride(this.theme);
+      val var7: ThemeManager = ThemeManager.INSTANCE;
+      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var7.setThemeOverride(this.theme);
       val var3: Boolean = var1 is ReactionViewHolder;
       var var5: OnClickListener = null;
       var var4: Function1 = null;
@@ -188,20 +188,20 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var15 = null;
          }
 
+         var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
             q.y("onAddReactionClick");
-         } else {
-            var5 = this.onAddReactionClick;
+            var5 = null;
          }
 
          var26.bind(var11, var15, var5, this.reactionsTheme);
       } else {
          if (var1 !is AddBurstReactionViewHolder) {
-            val var18: Class = var1.getClass();
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("Invalid view holder type ");
-            var13.append(var18);
-            throw new IllegalStateException(var13.toString().toString());
+            val var13: Class = var1.getClass();
+            val var18: StringBuilder = new StringBuilder();
+            var18.append("Invalid view holder type ");
+            var18.append(var13);
+            throw new IllegalStateException(var18.toString().toString());
          }
 
          val var27: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;
@@ -217,16 +217,16 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var17 = null;
          }
 
-         var5 = this.onAddBurstReactionClick;
          if (this.onAddBurstReactionClick == null) {
             q.y("onAddBurstReactionClick");
-            var5 = null;
+         } else {
+            var5 = this.onAddBurstReactionClick;
          }
 
          var27.bind(var12, var17, var5, this.reactionsTheme);
       }
 
-      var8.setThemeOverride(var7);
+      var7.setThemeOverride(var8);
    }
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

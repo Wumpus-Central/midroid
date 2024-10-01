@@ -423,6 +423,14 @@ public final class R {
       public static int input_background_darker;
       public static int input_background_light;
       public static int input_background_midnight;
+      public static int input_border_dark;
+      public static int input_border_darker;
+      public static int input_border_light;
+      public static int input_border_midnight;
+      public static int input_error_background_dark;
+      public static int input_error_background_darker;
+      public static int input_error_background_light;
+      public static int input_error_background_midnight;
       public static int input_focused_border_dark;
       public static int input_focused_border_darker;
       public static int input_focused_border_light;

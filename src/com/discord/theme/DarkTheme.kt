@@ -1076,6 +1076,30 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       }
 
 
+   public open val inputBorder: Int
+      public open get() {
+         return (this.inputBorder$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
+   public open val inputErrorBackground: Int
+      public open get() {
+         return (this.inputErrorBackground$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
+   public open val inputErrorBorder: Int
+      public open get() {
+         return (this.inputErrorBorder$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
+   public open val inputErrorText: Int
+      public open get() {
+         return (this.inputErrorText$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
    public open val inputFocusedBorder: Int
       public open get() {
          return (this.inputFocusedBorder$delegate.getValue() as java.lang.Number).intValue();
@@ -4476,6 +4500,62 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
 
          public final Integer invoke() {
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_700, this.$theme);
+         }
+      });
+      this.inputBorder$delegate = l.b(new Function0(var1, var2) {
+         final Resources $resources;
+         final Theme $theme;
+
+         {
+            super(0);
+            this.$resources = var1;
+            this.$theme = var2;
+         }
+
+         public final Integer invoke() {
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.input_border_dark, this.$theme);
+         }
+      });
+      this.inputErrorBackground$delegate = l.b(new Function0(var1, var2) {
+         final Resources $resources;
+         final Theme $theme;
+
+         {
+            super(0);
+            this.$resources = var1;
+            this.$theme = var2;
+         }
+
+         public final Integer invoke() {
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.input_error_background_dark, this.$theme);
+         }
+      });
+      this.inputErrorBorder$delegate = l.b(new Function0(var1, var2) {
+         final Resources $resources;
+         final Theme $theme;
+
+         {
+            super(0);
+            this.$resources = var1;
+            this.$theme = var2;
+         }
+
+         public final Integer invoke() {
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_360, this.$theme);
+         }
+      });
+      this.inputErrorText$delegate = l.b(new Function0(var1, var2) {
+         final Resources $resources;
+         final Theme $theme;
+
+         {
+            super(0);
+            this.$resources = var1;
+            this.$theme = var2;
+         }
+
+         public final Integer invoke() {
+            return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_260, this.$theme);
          }
       });
       this.inputFocusedBorder$delegate = l.b(new Function0(var1, var2) {

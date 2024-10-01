@@ -115,9 +115,8 @@ public data class PinsOnClick(action: String, messageChannelId: ChannelId) : Pin
          val var10: java.lang.String;
          if (var5) {
             var10 = var9.t(var8, 0);
-            val var12: ChannelId = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var7 = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
-            var7 = var12;
          } else {
             var var3: Boolean = true;
             var2 = 0;

@@ -25,14 +25,14 @@ internal object SystemLogReport {
 
    private fun recordBreadcrumb(msg: String, category: String) {
       val var3: Log = Log.INSTANCE;
-      val var5: java.lang.String = TAG;
+      val var4: java.lang.String = TAG;
       q.g(TAG, "TAG");
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Breadcrumb, [");
-      var4.append(var2);
-      var4.append("]: ");
-      var4.append(var1);
-      Log.i$default(var3, var5, var4.toString(), null, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Breadcrumb, [");
+      var5.append(var2);
+      var5.append("]: ");
+      var5.append(var1);
+      Log.i$default(var3, var4, var5.toString(), null, 4, null);
    }
 
    internal fun reportLastCrash(context: Context, cb: (Reason?, Tombstone?) -> Unit) {
@@ -53,8 +53,8 @@ internal object SystemLogReport {
             if (var1 != null) {
                val var3: Context = this.$context;
 
-               for (java.lang.String var5 : h.z0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
-                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var5, "Tombstone");
+               for (java.lang.String var4 : h.z0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
+                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var4, "Tombstone");
                }
 
                val var7: SystemLogReport = SystemLogReport.INSTANCE;

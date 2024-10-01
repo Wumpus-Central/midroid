@@ -37,8 +37,8 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       q.h(var2, "imageAttachmentMessageAccessory");
       q.h(var4, "onClicked");
       q.h(var6, "onTapSpoiler");
-      val var18: Attachment = var2.getAttachment();
-      val var17: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
+      val var15: Attachment = var2.getAttachment();
+      val var16: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -49,12 +49,12 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var19: java.lang.String = var18.getUrl();
-      val var8: Int = var18.getWidth();
-      val var9: Int = var18.getHeight();
-      val var16: java.lang.String = var18.getPlaceholder();
-      val var15: Int = var18.getPlaceholderVersion();
-      val var10: Int = var2.getRadiusPx();
+      val var18: java.lang.String = var15.getUrl();
+      val var10: Int = var15.getWidth();
+      val var8: Int = var15.getHeight();
+      val var17: java.lang.String = var15.getPlaceholder();
+      val var19: Int = var15.getPlaceholderVersion();
+      val var9: Int = var2.getRadiusPx();
       val var14: MediaContainingViewResizer.ResizeMode;
       if (var3) {
          var14 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -62,7 +62,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var14 = MediaContainingViewResizer.ResizeMode.Cover;
       }
 
-      val var13: Boolean = var18.isSpoiler();
+      val var13: Boolean = var15.isSpoiler();
       val var20: SpoilerAttributes = var2.getSpoilerAttributes();
       val var21: SpoilerConfig;
       if (var20 != null) {
@@ -71,7 +71,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var21 = null;
       }
 
-      val var22: java.lang.Boolean = var18.getObscure();
+      val var22: java.lang.Boolean = var15.getObscure();
       val var11: Boolean;
       if (var22 != null) {
          var11 = var22;
@@ -79,7 +79,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var11 = false;
       }
 
-      val var23: java.lang.Boolean = var18.getObscureAwaitingScan();
+      val var23: java.lang.Boolean = var15.getObscureAwaitingScan();
       val var12: Boolean;
       if (var23 != null) {
          var12 = var23;
@@ -88,18 +88,18 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       super.bind(
-         var19,
+         var18,
+         var10,
          var8,
-         var9,
-         var16,
-         var15,
+         var17,
+         var19,
          var13,
          var21,
          var11,
          var12,
-         var18.getShowDescription(),
-         var18.getDescription(),
-         var18.getHint(),
+         var15.getShowDescription(),
+         var15.getDescription(),
+         var15.getHint(),
          var2.getUseNewAltTextButton(),
          new Function1(var1) {
             {
@@ -111,15 +111,15 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
                (super.receiver as ChatEventHandler).onTapShowAltText(var1);
             }
          },
-         var10,
+         var9,
          var14,
          var3 xor true,
          var4,
          var5,
-         var17,
-         var18.getRole(),
+         var16,
+         var15.getRole(),
          var7,
-         var18.getFilename()
+         var15.getFilename()
       );
    }
 
@@ -141,15 +141,15 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       q.h(var7, "onTapSpoiler");
       q.h(var8, "onAltTextButtonClicked");
       val var16: UnfurledMediaItem = var3.getMedia();
-      val var15: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var14: StringBuilder = new StringBuilder();
-      var14.append("MediaGalleryDisplayComponent(");
-      var14.append(var2);
-      var14.append(").item[image]");
-      val var18: SpoilerAttributes = var15.forGenericMedia(var3, var1, var14.toString(), var3.getMedia().getProxyUrl());
+      val var14: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var15: StringBuilder = new StringBuilder();
+      var15.append("MediaGalleryDisplayComponent(");
+      var15.append(var2);
+      var15.append(").item[image]");
+      val var18: SpoilerAttributes = var14.forGenericMedia(var3, var1, var15.toString(), var3.getMedia().getProxyUrl());
       val var20: java.lang.String = var16.getProxyUrl();
-      val var10: Int = var16.getWidth();
-      val var11: Int = var16.getHeight();
+      val var11: Int = var16.getWidth();
+      val var10: Int = var16.getHeight();
       val var21: java.lang.String = var16.getPlaceholder();
       val var22: Int = var16.getPlaceholderVersion();
       val var12: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
@@ -170,8 +170,8 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
 
       super.bind(
          var20,
-         var10,
          var11,
+         var10,
          var21,
          var22,
          var13,

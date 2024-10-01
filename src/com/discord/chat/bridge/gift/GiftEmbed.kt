@@ -203,37 +203,37 @@ public sealed interface GiftEmbed {
          }
 
          public override fun toString(): String {
-            val var7: java.lang.String = this.headerText;
-            val var2: Int = this.headerColor;
-            val var1: Int = this.backgroundColor;
-            val var3: Int = this.thumbnailCornerRadius;
+            val var8: java.lang.String = this.headerText;
+            val var3: Int = this.headerColor;
+            val var5: Int = this.backgroundColor;
+            val var1: Int = this.thumbnailCornerRadius;
             val var9: java.lang.String = this.thumbnailUrl;
-            val var11: java.lang.String = this.titleText;
-            val var4: Int = this.titleColor;
-            val var8: java.lang.String = this.subtitle;
-            val var5: Int = this.subtitleColor;
-            val var6: Int = this.thumbnailBackgroundColor;
+            val var7: java.lang.String = this.titleText;
+            val var6: Int = this.titleColor;
+            val var11: java.lang.String = this.subtitle;
+            val var4: Int = this.subtitleColor;
+            val var2: Int = this.thumbnailBackgroundColor;
             val var10: StringBuilder = new StringBuilder();
             var10.append("Invalid(headerText=");
-            var10.append(var7);
+            var10.append(var8);
             var10.append(", headerColor=");
-            var10.append(var2);
-            var10.append(", backgroundColor=");
-            var10.append(var1);
-            var10.append(", thumbnailCornerRadius=");
             var10.append(var3);
+            var10.append(", backgroundColor=");
+            var10.append(var5);
+            var10.append(", thumbnailCornerRadius=");
+            var10.append(var1);
             var10.append(", thumbnailUrl=");
             var10.append(var9);
             var10.append(", titleText=");
-            var10.append(var11);
+            var10.append(var7);
             var10.append(", titleColor=");
-            var10.append(var4);
-            var10.append(", subtitle=");
-            var10.append(var8);
-            var10.append(", subtitleColor=");
-            var10.append(var5);
-            var10.append(", thumbnailBackgroundColor=");
             var10.append(var6);
+            var10.append(", subtitle=");
+            var10.append(var11);
+            var10.append(", subtitleColor=");
+            var10.append(var4);
+            var10.append(", thumbnailBackgroundColor=");
+            var10.append(var2);
             var10.append(")");
             return var10.toString();
          }
@@ -275,55 +275,58 @@ public sealed interface GiftEmbed {
                val var17: c = var1.c(var16);
                val var11: Boolean = var17.y();
                var var2: Int = 0;
-               var var3: Int;
                var var4: Int;
                var var5: Int;
                var var6: Int;
                var var7: Int;
                var var8: Int;
                val var9: Int;
-               var var12: java.lang.String;
                var var13: java.lang.String;
                var var14: java.lang.String;
                val var18: java.lang.String;
+               var var21: Int;
+               var var30: java.lang.String;
                if (var11) {
-                  var14 = var17.t(var16, 0);
-                  var7 = var17.k(var16, 1);
-                  var9 = var17.k(var16, 2);
-                  var5 = var17.k(var16, 3);
-                  var13 = var17.t(var16, 4);
-                  var12 = var17.t(var16, 5);
-                  var3 = var17.k(var16, 6);
+                  var30 = var17.t(var16, 0);
+                  var5 = var17.k(var16, 1);
+                  var7 = var17.k(var16, 2);
+                  var6 = var17.k(var16, 3);
+                  val var15: java.lang.String = var17.t(var16, 4);
+                  var13 = var17.t(var16, 5);
+                  var21 = var17.k(var16, 6);
                   var18 = var17.t(var16, 7);
                   var4 = var17.k(var16, 8);
                   var2 = var17.k(var16, 9);
-                  var6 = 1023;
-                  var8 = var2;
+                  var8 = 1023;
+                  var14 = var30;
+                  var30 = var15;
+                  var9 = var21;
+                  var21 = var2;
                } else {
                   var14 = null;
                   var13 = null;
-                  var12 = null;
+                  var30 = null;
                   var var19: java.lang.String = null;
-                  var var26: Boolean = true;
+                  var var27: Boolean = true;
                   var8 = 0;
                   var7 = 0;
                   var6 = 0;
                   var5 = 0;
                   var4 = 0;
-                  var3 = 0;
+                  var21 = 0;
 
-                  while (var26) {
+                  while (var27) {
                      val var10: Int = var17.x(var16);
                      switch (var10) {
                         case -1:
-                           var26 = false;
+                           var27 = false;
                            break;
                         case 0:
                            var14 = var17.t(var16, 0);
                            var2 |= 1;
                            break;
                         case 1:
-                           var3 = var17.k(var16, 1);
+                           var21 = var17.k(var16, 1);
                            var2 |= 2;
                            break;
                         case 2:
@@ -339,7 +342,7 @@ public sealed interface GiftEmbed {
                            var2 |= 16;
                            break;
                         case 5:
-                           var12 = var17.t(var16, 5);
+                           var30 = var17.t(var16, 5);
                            var2 |= 32;
                            break;
                         case 6:
@@ -363,18 +366,19 @@ public sealed interface GiftEmbed {
                      }
                   }
 
-                  var13 = var19;
-                  var9 = var4;
+                  var30 = var19;
+                  var5 = var21;
+                  var21 = var8;
                   var4 = var5;
                   var18 = var13;
-                  var3 = var7;
-                  var5 = var6;
-                  var7 = var3;
-                  var6 = var2;
+                  var9 = var7;
+                  var13 = var30;
+                  var7 = var4;
+                  var8 = var2;
                }
 
                var17.b(var16);
-               return new GiftEmbed.Resolved.Invalid(var6, var14, var7, var9, var5, var13, var12, var3, var18, var4, var8, null);
+               return new GiftEmbed.Resolved.Invalid(var8, var14, var5, var7, var6, var30, var13, var9, var18, var4, var21, null);
             }
 
             public open fun serialize(encoder: Encoder, value: com.discord.chat.bridge.gift.GiftEmbed.Resolved.Invalid) {
@@ -610,8 +614,8 @@ public sealed interface GiftEmbed {
 
          public override fun hashCode(): Int {
             val var7: Int = this.headerText.hashCode();
-            val var9: Int = Integer.hashCode(this.headerColor);
-            val var8: Int = Integer.hashCode(this.backgroundColor);
+            val var8: Int = Integer.hashCode(this.headerColor);
+            val var9: Int = Integer.hashCode(this.backgroundColor);
             val var10: Int = Integer.hashCode(this.thumbnailCornerRadius);
             var var6: Int = 0;
             val var1: Int;
@@ -676,10 +680,10 @@ public sealed interface GiftEmbed {
                                                                                                                                                    (
                                                                                                                                                             var7
                                                                                                                                                                   * 31
-                                                                                                                                                               + var9
+                                                                                                                                                               + var8
                                                                                                                                                          )
                                                                                                                                                          * 31
-                                                                                                                                                      + var8
+                                                                                                                                                      + var9
                                                                                                                                                 )
                                                                                                                                                 * 31
                                                                                                                                              + var10
@@ -728,63 +732,63 @@ public sealed interface GiftEmbed {
          }
 
          public override fun toString(): String {
-            val var15: java.lang.String = this.headerText;
-            val var8: Int = this.headerColor;
-            val var4: Int = this.backgroundColor;
-            val var6: Int = this.thumbnailCornerRadius;
-            val var13: java.lang.String = this.thumbnailUrl;
-            val var16: java.lang.String = this.titleText;
-            val var3: Int = this.titleColor;
-            val var17: java.lang.String = this.subtitle;
-            val var2: Int = this.subtitleColor;
-            val var18: java.lang.String = this.bodyText;
-            val var9: Int = this.bodyTextColor;
-            val var12: java.lang.String = this.acceptLabelText;
+            val var11: java.lang.String = this.headerText;
+            val var2: Int = this.headerColor;
+            val var5: Int = this.backgroundColor;
+            val var8: Int = this.thumbnailCornerRadius;
+            val var15: java.lang.String = this.thumbnailUrl;
+            val var18: java.lang.String = this.titleText;
+            val var4: Int = this.titleColor;
+            val var12: java.lang.String = this.subtitle;
+            val var6: Int = this.subtitleColor;
+            val var13: java.lang.String = this.bodyText;
+            val var3: Int = this.bodyTextColor;
+            val var19: java.lang.String = this.acceptLabelText;
             val var7: Int = this.acceptLabelColor;
-            val var5: Int = this.acceptLabelBackgroundColor;
-            val var14: java.lang.String = this.splashUrl;
+            val var9: Int = this.acceptLabelBackgroundColor;
+            val var17: java.lang.String = this.splashUrl;
             val var1: Float = this.splashOpacity;
             val var10: Boolean = this.canBeAccepted;
-            val var19: java.lang.String = this.giftCode;
-            val var11: StringBuilder = new StringBuilder();
-            var11.append("Valid(headerText=");
-            var11.append(var15);
-            var11.append(", headerColor=");
-            var11.append(var8);
-            var11.append(", backgroundColor=");
-            var11.append(var4);
-            var11.append(", thumbnailCornerRadius=");
-            var11.append(var6);
-            var11.append(", thumbnailUrl=");
-            var11.append(var13);
-            var11.append(", titleText=");
-            var11.append(var16);
-            var11.append(", titleColor=");
-            var11.append(var3);
-            var11.append(", subtitle=");
-            var11.append(var17);
-            var11.append(", subtitleColor=");
-            var11.append(var2);
-            var11.append(", bodyText=");
-            var11.append(var18);
-            var11.append(", bodyTextColor=");
-            var11.append(var9);
-            var11.append(", acceptLabelText=");
-            var11.append(var12);
-            var11.append(", acceptLabelColor=");
-            var11.append(var7);
-            var11.append(", acceptLabelBackgroundColor=");
-            var11.append(var5);
-            var11.append(", splashUrl=");
-            var11.append(var14);
-            var11.append(", splashOpacity=");
-            var11.append(var1);
-            var11.append(", canBeAccepted=");
-            var11.append(var10);
-            var11.append(", giftCode=");
-            var11.append(var19);
-            var11.append(")");
-            return var11.toString();
+            val var14: java.lang.String = this.giftCode;
+            val var16: StringBuilder = new StringBuilder();
+            var16.append("Valid(headerText=");
+            var16.append(var11);
+            var16.append(", headerColor=");
+            var16.append(var2);
+            var16.append(", backgroundColor=");
+            var16.append(var5);
+            var16.append(", thumbnailCornerRadius=");
+            var16.append(var8);
+            var16.append(", thumbnailUrl=");
+            var16.append(var15);
+            var16.append(", titleText=");
+            var16.append(var18);
+            var16.append(", titleColor=");
+            var16.append(var4);
+            var16.append(", subtitle=");
+            var16.append(var12);
+            var16.append(", subtitleColor=");
+            var16.append(var6);
+            var16.append(", bodyText=");
+            var16.append(var13);
+            var16.append(", bodyTextColor=");
+            var16.append(var3);
+            var16.append(", acceptLabelText=");
+            var16.append(var19);
+            var16.append(", acceptLabelColor=");
+            var16.append(var7);
+            var16.append(", acceptLabelBackgroundColor=");
+            var16.append(var9);
+            var16.append(", splashUrl=");
+            var16.append(var17);
+            var16.append(", splashOpacity=");
+            var16.append(var1);
+            var16.append(", canBeAccepted=");
+            var16.append(var10);
+            var16.append(", giftCode=");
+            var16.append(var14);
+            var16.append(")");
+            return var16.toString();
          }
 
          public object `$serializer` : g0 {
@@ -863,7 +867,6 @@ public sealed interface GiftEmbed {
                val var14: Int;
                val var15: Int;
                var var16: Int;
-               var var20: java.lang.String;
                var var21: java.lang.String;
                var var22: java.lang.String;
                var var23: java.lang.String;
@@ -871,34 +874,36 @@ public sealed interface GiftEmbed {
                val var25: java.lang.String;
                val var26: java.lang.String;
                val var27: java.lang.String;
+               var var48: java.lang.String;
                if (var17) {
-                  var22 = var29.t(var28, 0);
-                  var12 = var29.k(var28, 1);
-                  var7 = var29.k(var28, 2);
-                  var8 = var29.k(var28, 3);
+                  var21 = var29.t(var28, 0);
+                  var9 = var29.k(var28, 1);
+                  var12 = var29.k(var28, 2);
+                  var7 = var29.k(var28, 3);
                   val var30: b2 = b2.a;
                   var27 = var29.v(var28, 4, b2.a, null) as java.lang.String;
-                  var21 = var29.v(var28, 5, var30, null) as java.lang.String;
-                  var11 = var29.k(var28, 6);
+                  var25 = var29.v(var28, 5, var30, null) as java.lang.String;
+                  var15 = var29.k(var28, 6);
                   var24 = var29.v(var28, 7, var30, null) as java.lang.String;
-                  val var4: Int = var29.k(var28, 8);
-                  var20 = var29.v(var28, 9, var30, null) as java.lang.String;
+                  val var3: Int = var29.k(var28, 8);
+                  var48 = var29.v(var28, 9, var30, null) as java.lang.String;
                   val var6: Int = var29.k(var28, 10);
                   val var19: java.lang.String = var29.v(var28, 11, var30, null) as java.lang.String;
-                  val var3: Int = var29.k(var28, 12);
-                  var13 = var29.k(var28, 13);
+                  val var4: Int = var29.k(var28, 12);
+                  var14 = var29.k(var28, 13);
                   val var31: java.lang.String = var29.v(var28, 14, var30, null) as java.lang.String;
                   var2 = var29.G(var28, 15);
                   val var5: Byte = var29.s(var28, 16);
                   val var18: java.lang.String = var29.t(var28, 17);
-                  var10 = 262143;
-                  var9 = var4;
-                  var16 = var6;
-                  var25 = var19;
-                  var15 = var3;
-                  var23 = var31;
-                  var14 = var5;
-                  var26 = var18;
+                  var11 = 262143;
+                  var16 = var3;
+                  var23 = var48;
+                  var10 = var6;
+                  var26 = var19;
+                  var8 = var4;
+                  var48 = var31;
+                  var13 = var5;
+                  var22 = var18;
                } else {
                   var var43: Byte = 17;
                   var var44: Boolean = true;
@@ -906,7 +911,7 @@ public sealed interface GiftEmbed {
                   var24 = null;
                   var22 = null;
                   var21 = null;
-                  var20 = null;
+                  var48 = null;
                   var var32: java.lang.String = null;
                   var23 = null;
                   var var33: Int = 0;
@@ -976,7 +981,7 @@ public sealed interface GiftEmbed {
                                  var33 |= 1024;
                                  break label46;
                               case 11:
-                                 var20 = var29.v(var28, 11, b2.a, var20) as java.lang.String;
+                                 var48 = var29.v(var28, 11, b2.a, var48) as java.lang.String;
                                  var33 |= 2048;
                                  break label46;
                               case 12:
@@ -1019,45 +1024,45 @@ public sealed interface GiftEmbed {
                      var43 = 17;
                   }
 
-                  var11 = var13;
-                  var26 = var23;
-                  var14 = var12;
-                  var23 = var22;
-                  var13 = var10;
-                  var15 = var8;
-                  var25 = var20;
-                  var16 = var7;
-                  var20 = var21;
-                  var21 = var47;
+                  var26 = var48;
+                  var22 = var23;
+                  var15 = var13;
+                  var13 = var12;
+                  var48 = var22;
+                  var14 = var10;
+                  var10 = var7;
+                  var23 = var21;
+                  var16 = var9;
+                  var25 = var47;
                   var27 = var46;
-                  var8 = var34;
-                  var7 = var36;
-                  var12 = var35;
-                  var22 = var32;
-                  var10 = var33;
+                  var7 = var34;
+                  var12 = var36;
+                  var9 = var35;
+                  var21 = var32;
+                  var11 = var33;
                }
 
                var29.b(var28);
                return new GiftEmbed.Resolved.Valid(
-                  var10,
-                  var22,
+                  var11,
+                  var21,
+                  var9,
                   var12,
                   var7,
-                  var8,
                   var27,
-                  var21,
-                  var11,
-                  var24,
-                  var9,
-                  var20,
-                  var16,
                   var25,
                   var15,
-                  var13,
+                  var24,
+                  var16,
                   var23,
-                  var2,
-                  (boolean)var14,
+                  var10,
                   var26,
+                  var8,
+                  var14,
+                  var48,
+                  var2,
+                  (boolean)var13,
+                  var22,
                   null
                );
             }
@@ -1185,24 +1190,24 @@ public sealed interface GiftEmbed {
 
       public override fun toString(): String {
          val var6: java.lang.String = this.headerText;
-         val var4: Int = this.headerColor;
-         val var1: Int = this.backgroundColor;
-         val var5: Int = this.thumbnailCornerRadius;
+         val var3: Int = this.headerColor;
+         val var5: Int = this.backgroundColor;
+         val var4: Int = this.thumbnailCornerRadius;
          val var2: Int = this.resolvingGradientStart;
-         val var3: Int = this.resolvingGradientEnd;
+         val var1: Int = this.resolvingGradientEnd;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Resolving(headerText=");
          var7.append(var6);
          var7.append(", headerColor=");
-         var7.append(var4);
+         var7.append(var3);
          var7.append(", backgroundColor=");
-         var7.append(var1);
-         var7.append(", thumbnailCornerRadius=");
          var7.append(var5);
+         var7.append(", thumbnailCornerRadius=");
+         var7.append(var4);
          var7.append(", resolvingGradientStart=");
          var7.append(var2);
          var7.append(", resolvingGradientEnd=");
-         var7.append(var3);
+         var7.append(var1);
          var7.append(")");
          return var7.toString();
       }
@@ -1237,36 +1242,37 @@ public sealed interface GiftEmbed {
             val var10: SerialDescriptor = this.getDescriptor();
             val var11: c = var1.c(var10);
             var var3: Int;
-            var var4: Int;
             var var5: Int;
             var var6: Int;
             var var7: Int;
             val var8: Int;
+            var var9: Int;
             var var12: java.lang.String;
             if (var11.y()) {
                var12 = var11.t(var10, 0);
-               var6 = var11.k(var10, 1);
-               var8 = var11.k(var10, 2);
-               var4 = var11.k(var10, 3);
-               var3 = var11.k(var10, 4);
+               var9 = var11.k(var10, 1);
+               var6 = var11.k(var10, 2);
+               var3 = var11.k(var10, 3);
+               val var4: Int = var11.k(var10, 4);
                val var2: Int = var11.k(var10, 5);
                var5 = 63;
+               var8 = var4;
                var7 = var2;
             } else {
                var12 = null;
-               var var19: Boolean = true;
+               var var20: Boolean = true;
                var7 = 0;
                var6 = 0;
                var5 = 0;
-               var4 = 0;
+               var var15: Int = 0;
                var3 = 0;
                var var13: Int = 0;
 
-               while (var19) {
-                  val var9: Int = var11.x(var10);
+               while (var20) {
+                  var9 = var11.x(var10);
                   switch (var9) {
                      case -1:
-                        var19 = false;
+                        var20 = false;
                         break;
                      case 0:
                         var12 = var11.t(var10, 0);
@@ -1277,7 +1283,7 @@ public sealed interface GiftEmbed {
                         var13 |= 2;
                         break;
                      case 2:
-                        var4 = var11.k(var10, 2);
+                        var15 = var11.k(var10, 2);
                         var13 |= 4;
                         break;
                      case 3:
@@ -1297,15 +1303,15 @@ public sealed interface GiftEmbed {
                   }
                }
 
-               var3 = var5;
-               var4 = var6;
-               var8 = var4;
-               var6 = var3;
+               var8 = var5;
+               var3 = var6;
+               var6 = var15;
+               var9 = var3;
                var5 = var13;
             }
 
             var11.b(var10);
-            return new GiftEmbed.Resolving(var5, var12, var6, var8, var4, var3, var7, null);
+            return new GiftEmbed.Resolving(var5, var12, var9, var6, var3, var8, var7, null);
          }
 
          public open fun serialize(encoder: Encoder, value: com.discord.chat.bridge.gift.GiftEmbed.Resolving) {

@@ -53,9 +53,9 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       this.sectionsId = this.sections.getId();
       this.positionStartPrev = var2;
       this.positionEndPrev = var1;
-      val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
-      val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
-      this.onVisibleItemsChanged.invoke(this.sectionsId, var3.getSection-sZRFyWU(), var4.getSection-sZRFyWU(), var3.getItem-JXkbwXs(), var4.getItem-JXkbwXs());
+      val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
+      val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
+      this.onVisibleItemsChanged.invoke(this.sectionsId, var4.getSection-sZRFyWU(), var3.getSection-sZRFyWU(), var4.getItem-JXkbwXs(), var3.getItem-JXkbwXs());
    }
 
    private fun isUnchanged(itemEndPosition: Int, itemStartPosition: Int): Boolean {

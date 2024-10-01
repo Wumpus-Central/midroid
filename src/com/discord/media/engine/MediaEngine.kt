@@ -906,10 +906,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          val var3: Int = var16.length;
 
          for (int var4 = 0; var4 < var3; var4++) {
-            val var13: MediaCodecInfo = var16[var4];
-            val var12: java.lang.String = var16[var4].getName();
-            kotlin.jvm.internal.q.g(var12, "getName(...)");
-            val var8: Array<java.lang.String> = var13.getSupportedTypes();
+            val var12: MediaCodecInfo = var16[var4];
+            val var13: java.lang.String = var16[var4].getName();
+            kotlin.jvm.internal.q.g(var13, "getName(...)");
+            val var8: Array<java.lang.String> = var12.getSupportedTypes();
             kotlin.jvm.internal.q.g(var8, "getSupportedTypes(...)");
             val var14: ArrayList = new ArrayList();
             val var6: Int = var8.length;
@@ -927,7 +927,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             for (java.lang.String var21 : var14) {
                val var18: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
-                  if (com.discord.a.a(var13)) {
+                  if (com.discord.a.a(var12)) {
                      var18 = "(HW)";
                   } else {
                      var18 = "(SW)";
@@ -937,9 +937,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                }
 
                val var19: java.lang.String = kotlin.collections.i.o0(
-                  kotlin.collections.i.n(new java.lang.String[]{var21, var12, var18}), " ", null, null, 0, null, null, 62, null
+                  kotlin.collections.i.n(new java.lang.String[]{var21, var13, var18}), " ", null, null, 0, null, null, 62, null
                );
-               if (var13.isEncoder()) {
+               if (var12.isEncoder()) {
                   var10 = kotlin.collections.c.p(var10, var19) as Array<java.lang.String>;
                } else {
                   var9 = kotlin.collections.c.p(var9, var19) as Array<java.lang.String>;
