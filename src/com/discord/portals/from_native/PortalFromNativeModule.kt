@@ -14,7 +14,7 @@ import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import nk.f
+import vk.f
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {

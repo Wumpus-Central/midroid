@@ -8,22 +8,22 @@ import timber.log.a.c
 
 internal class LoggingLineNumberTree : c {
    private final val ignoreClasses: List<String> =
-      i.m(
+      i.n(
          new java.lang.String[]{
             a.class.getName(), b.class.getName(), c.class.getName(), timber.log.a.a.class.getName(), LoggingLineNumberTree.class.getName(), Log.class.getName()
          }
       )
 
    private fun getCalleStackTraceElement(): StackTraceElement {
-      val var4: Array<StackTraceElement> = new java.lang.Throwable().getStackTrace();
-      q.g(var4, "getStackTrace(...)");
-      val var2: Int = var4.length;
+      val var3: Array<StackTraceElement> = new java.lang.Throwable().getStackTrace();
+      q.g(var3, "getStackTrace(...)");
+      val var2: Int = var3.length;
 
       for (int var1 = 0; var1 < var2; var1++) {
-         val var3: StackTraceElement = var4[var1];
-         if (this.ignoreClasses.contains(var4[var1].getClassName()) xor true) {
-            q.g(var3, "first(...)");
-            return var3;
+         val var4: StackTraceElement = var3[var1];
+         if (this.ignoreClasses.contains(var3[var1].getClassName()) xor true) {
+            q.g(var4, "first(...)");
+            return var4;
          }
       }
 

@@ -2,10 +2,10 @@ package com.discord.shortcuts
 
 import android.content.Context
 import android.content.Intent
-import gh.r
 import java.util.Map.Entry
-import kk.j
 import kotlin.jvm.internal.q
+import oh.r
+import sk.j
 
 public data class ShortcutData(tag: String, data: Map<String, String>) {
    public final val data: Map<String, String>
@@ -53,15 +53,15 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var2: java.util.Map = this.data;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ShortcutData(tag=");
-      var1.append(var3);
-      var1.append(", data=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.tag;
+      val var1: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ShortcutData(tag=");
+      var3.append(var2);
+      var3.append(", data=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {
@@ -110,11 +110,11 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var9: java.lang.String = var5.get(0) as java.lang.String;
+                        val var4: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        q.e(var9);
+                        q.e(var4);
                         q.e(var12);
-                        var11.put(var9, var12);
+                        var11.put(var4, var12);
                      }
                   }
                }

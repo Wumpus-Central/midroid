@@ -4,9 +4,9 @@ import com.discord.media.utils.ContentResolverMedia
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import fh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import nh.w
 
 internal class GetPhotosData(edges: List<ContentResolverMedia>) {
    private final val edges: List<ContentResolverMedia>
@@ -36,7 +36,7 @@ internal class GetPhotosData(edges: List<ContentResolverMedia>) {
 
    public fun toNativeMap(): WritableNativeMap {
       val var2: java.util.List = this.edges;
-      val var1: ArrayList = new ArrayList(i.u(this.edges, 10));
+      val var1: ArrayList = new ArrayList(i.v(this.edges, 10));
       val var3: java.util.Iterator = var2.iterator();
 
       while (var3.hasNext()) {

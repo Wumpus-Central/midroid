@@ -1,9 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import al.b2
-import al.g0
-import al.x0
-import al.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.x0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
@@ -113,19 +113,18 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
          var var2: Int;
          var var5: Long;
          val var8: java.lang.String;
-         var var12: java.lang.String;
+         val var11: java.lang.String;
          if (var10.y()) {
             var5 = var10.h(var9, 0);
-            val var11: java.lang.String = var10.t(var9, 1);
+            var11 = var10.t(var9, 1);
             val var7: java.lang.String = var10.t(var9, 2);
             var2 = 7;
-            var8 = var11;
-            var12 = var7;
+            var8 = var7;
          } else {
             var var13: java.lang.String = null;
             var var3: Boolean = true;
             var5 = 0L;
-            var12 = null;
+            var var12: java.lang.String = null;
             var2 = 0;
 
             while (var3) {
@@ -152,11 +151,12 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
                }
             }
 
-            var8 = var13;
+            var8 = var12;
+            var11 = var13;
          }
 
          var10.b(var9);
-         return new TimestampContentNode(var2, var5, var8, var12, null);
+         return new TimestampContentNode(var2, var5, var11, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TimestampContentNode) {

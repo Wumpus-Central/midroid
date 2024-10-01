@@ -3,7 +3,7 @@ package com.discord.react_asset_fetcher
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import mh.a
+import uh.a
 
 public enum class ReactAsset {
    Activity,
@@ -80,6 +80,7 @@ public enum class ReactAsset {
    PoopLight,
    RaisedHand,
    Reactions,
+   Refresh,
    Remix,
    Reply,
    RoleSubscriptionBadge,

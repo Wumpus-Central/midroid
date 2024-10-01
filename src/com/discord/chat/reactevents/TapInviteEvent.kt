@@ -1,11 +1,14 @@
 package com.discord.chat.reactevents
 
-import al.b2
-import al.g0
-import al.h
-import al.n0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.h
+import il.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,9 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean?, secondary: Boolean?) : ReactEvent {
@@ -75,8 +75,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.messageId.hashCode();
-      val var3: Int = Integer.hashCode(this.index);
+      val var3: Int = this.messageId.hashCode();
+      val var4: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -89,7 +89,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -97,21 +97,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var3: java.lang.Boolean = this.primary;
+      val var2: java.lang.Boolean = this.primary;
       val var5: java.lang.Boolean = this.secondary;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapInviteEvent(messageId=");
-      var2.append(var4);
-      var2.append(", index=");
-      var2.append(var1);
-      var2.append(", primary=");
-      var2.append(var3);
-      var2.append(", secondary=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapInviteEvent(messageId=");
+      var4.append(var3);
+      var4.append(", index=");
+      var4.append(var1);
+      var4.append(", primary=");
+      var4.append(var2);
+      var4.append(", secondary=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -144,21 +144,23 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          val var10: c = var1.c(var9);
          var var2: Int;
          var var3: Int;
-         val var6: java.lang.String;
-         val var8: java.lang.Boolean;
+         var var7: java.lang.String;
          var var12: java.lang.Boolean;
+         var var13: java.lang.Boolean;
          if (var10.y()) {
-            var6 = var10.t(var9, 0);
+            val var6: java.lang.String = var10.t(var9, 0);
             var3 = var10.k(var9, 1);
             val var11: h = h.a;
-            var8 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
+            val var8: java.lang.Boolean = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
             var12 = var10.v(var9, 3, var11, null) as java.lang.Boolean;
             var2 = 15;
+            var7 = var6;
+            var13 = var8;
          } else {
             var var4: Boolean = true;
             var3 = 0;
-            var var7: java.lang.String = null;
-            var var13: java.lang.Boolean = null;
+            var7 = null;
+            var13 = null;
             var12 = null;
             var2 = 0;
 
@@ -190,13 +192,10 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
                   var4 = false;
                }
             }
-
-            var8 = var13;
-            var6 = var7;
          }
 
          var10.b(var9);
-         return new TapInviteEvent(var2, var6, var3, var8, var12, null);
+         return new TapInviteEvent(var2, var7, var3, var13, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInviteEvent) {
@@ -209,7 +208,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

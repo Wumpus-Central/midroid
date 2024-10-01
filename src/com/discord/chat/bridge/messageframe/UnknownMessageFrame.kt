@@ -1,7 +1,9 @@
 package com.discord.chat.bridge.messageframe
 
-import al.g0
-import al.g0.a
+import fl.f
+import fl.n
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -10,8 +12,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {

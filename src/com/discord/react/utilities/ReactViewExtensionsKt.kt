@@ -6,13 +6,13 @@ import com.facebook.react.uimanager.ReactShadowNode
 import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
-import fh.l
 import java.lang.reflect.Method
 import kotlin.jvm.internal.q
+import nh.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.b(<unrepresentable>.INSTANCE)
+private final val viewOperationQueueMethod: Method by l.a(<unrepresentable>.INSTANCE)
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }

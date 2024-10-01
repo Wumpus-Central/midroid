@@ -12,9 +12,9 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.os.e
 import com.discord.share.intent.GetFileNameKt
 import com.discord.shortcuts.ShortcutData
-import fh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import nh.w
 
 internal data class ShareProps(text: String, attachments: List<com.discord.share.ShareProps.Attachment>, targetChannelId: String?, targetUserId: String?) {
    public final val attachments: List<com.discord.share.ShareProps.Attachment>
@@ -99,7 +99,7 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    public fun toBundle(): Bundle {
       val var1: Pair = w.a("text", this.text);
       val var3: java.util.List = this.attachments;
-      val var2: ArrayList = new ArrayList(i.u(this.attachments, 10));
+      val var2: ArrayList = new ArrayList(i.v(this.attachments, 10));
       val var4: java.util.Iterator = var3.iterator();
 
       while (var4.hasNext()) {
@@ -110,17 +110,17 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.text;
-      val var3: java.util.List = this.attachments;
-      val var1: java.lang.String = this.targetChannelId;
+      val var1: java.lang.String = this.text;
+      val var4: java.util.List = this.attachments;
+      val var3: java.lang.String = this.targetChannelId;
       val var5: java.lang.String = this.targetUserId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ShareProps(text=");
-      var2.append(var4);
-      var2.append(", attachments=");
-      var2.append(var3);
-      var2.append(", targetChannelId=");
       var2.append(var1);
+      var2.append(", attachments=");
+      var2.append(var4);
+      var2.append(", targetChannelId=");
+      var2.append(var3);
       var2.append(", targetUserId=");
       var2.append(var5);
       var2.append(")");
@@ -195,17 +195,17 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
 
       public override fun toString(): String {
          val var1: java.lang.String = this.name;
-         val var3: java.lang.String = this.uri;
-         val var2: java.lang.String = this.mimeType;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Attachment(name=");
-         var4.append(var1);
-         var4.append(", uri=");
-         var4.append(var3);
-         var4.append(", mimeType=");
-         var4.append(var2);
-         var4.append(")");
-         return var4.toString();
+         val var4: java.lang.String = this.uri;
+         val var3: java.lang.String = this.mimeType;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Attachment(name=");
+         var2.append(var1);
+         var2.append(", uri=");
+         var2.append(var4);
+         var2.append(", mimeType=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
@@ -216,7 +216,7 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          if (var2 != null) {
             var3 = var2;
          } else {
-            var3 = i.n(b.b(var1, "android.intent.extra.STREAM", Uri.class) as Parcelable);
+            var3 = i.o(b.b(var1, "android.intent.extra.STREAM", Uri.class) as Parcelable);
          }
 
          return (java.util.List<Uri>)var3;
@@ -273,15 +273,15 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          }
 
          val var20: java.util.List = this.getUriExtras(var1);
-         val var11: ArrayList = new ArrayList(i.u(var20, 10));
+         val var11: ArrayList = new ArrayList(i.v(var20, 10));
 
          for (Uri var8 : var20) {
             val var9: ContentResolver = var2.getContentResolver();
             q.g(var9, "getContentResolver(...)");
-            val var22: java.lang.String = GetFileNameKt.getFileName(var9, var8);
-            val var10: java.lang.String = var8.toString();
-            q.g(var10, "toString(...)");
-            var11.add(new ShareProps.Attachment(var22, var10, var2.getContentResolver().getType(var8)));
+            val var10: java.lang.String = GetFileNameKt.getFileName(var9, var8);
+            val var22: java.lang.String = var8.toString();
+            q.g(var22, "toString(...)");
+            var11.add(new ShareProps.Attachment(var10, var22, var2.getContentResolver().getType(var8)));
          }
 
          return new ShareProps(var14, var11, var4, var5);

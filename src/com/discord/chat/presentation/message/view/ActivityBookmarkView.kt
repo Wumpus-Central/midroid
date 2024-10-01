@@ -90,7 +90,7 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
 
       var5.setVisibility(var2);
       val var6: OverlappingCirclesView = this.binding.participants;
-      val var10: ArrayList = new ArrayList(kotlin.collections.i.u(var1, 10));
+      val var10: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
       val var7: java.util.Iterator = var1.iterator();
 
       while (var7.hasNext()) {
@@ -166,7 +166,7 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
    }
 
    public fun setSplash(splashUrl: String?, constrainedWidth: Int) {
-      val var4: SimpleDraweeView = this.binding.itemHero;
+      var var4: SimpleDraweeView = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
       var var3: Boolean;
       if (var1 != null) {
@@ -183,11 +183,11 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var2 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
-      var3 = var2 * 9 / 16;
-      val var9: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-      val var5: SimpleDraweeView = this.binding.itemHero;
+      var3 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
+      var2 = var3 * 9 / 16;
+      val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+      var4 = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
-      var9.resizeLayoutParams(var5, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
+      var5.resizeLayoutParams(var4, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
    }
 }

@@ -114,23 +114,23 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
 
       public fun fromRootViewAsStableInsets(activity: Activity?): SafeAreaEdgeInsets {
          if (var1 != null) {
-            val var7: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var1);
-            if (var7 != null) {
-               val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var7, true);
-               val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var7, true);
+            val var6: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var1);
+            if (var6 != null) {
+               val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var6, true);
+               val var7: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var6, true);
                val var8: SafeAreaEdgeInsets;
                if (VERSION.SDK_INT > 29) {
                   var8 = new SafeAreaEdgeInsets(
-                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var6.b)),
+                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var7.b)),
                      SizeUtilsKt.getPxToDp(var5.c),
-                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var6.d)),
+                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var7.d)),
                      SizeUtilsKt.getPxToDp(var5.a)
                   );
                } else {
                   var8 = new SafeAreaEdgeInsets(
-                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var7.i())),
+                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var6.i())),
                      SizeUtilsKt.getPxToDp(var5.c),
-                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var7.h())),
+                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var6.h())),
                      SizeUtilsKt.getPxToDp(var5.a)
                   );
                }

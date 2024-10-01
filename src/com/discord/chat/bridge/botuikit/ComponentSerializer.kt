@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import bl.d
-import bl.g
 import java.util.ArrayList
+import jl.d
+import jl.g
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -79,7 +79,7 @@ public object ComponentSerializer : d(g0.b(Component.class)) {
       }
 
       val var6: Any;
-      if (i.T(var2, var5)) {
+      if (i.U(var2, var5)) {
          var6 = componentClassSerializer;
       } else {
          var6 = UnknownComponent.Companion.serializer();

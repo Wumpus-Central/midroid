@@ -8,7 +8,7 @@ import com.discord.mobile_voice_overlay.MobileVoiceOverlayDataUser
 import kotlin.jvm.internal.q
 
 private class VoiceUserAdapter : RecyclerView.Adapter {
-   private final var data: List<MobileVoiceOverlayDataUser> = i.j()
+   private final var data: List<MobileVoiceOverlayDataUser> = i.k()
 
    public override fun getItemCount(): Int {
       return this.data.size();

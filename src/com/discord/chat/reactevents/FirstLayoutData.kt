@@ -1,10 +1,12 @@
 package com.discord.chat.reactevents
 
-import al.g0
-import al.n0
-import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.g0
+import il.n0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,8 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 internal data class FirstLayoutData(firstVisibleMessageIndex: Int, lastVisibleMessageIndex: Int) : ReactEvent {
@@ -62,13 +62,13 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int, lastVisibleMe
    }
 
    public override fun toString(): String {
-      val var2: Int = this.firstVisibleMessageIndex;
-      val var1: Int = this.lastVisibleMessageIndex;
+      val var1: Int = this.firstVisibleMessageIndex;
+      val var2: Int = this.lastVisibleMessageIndex;
       val var3: StringBuilder = new StringBuilder();
       var3.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var3.append(var2);
-      var3.append(", lastVisibleMessageIndex=");
       var3.append(var1);
+      var3.append(", lastVisibleMessageIndex=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

@@ -5,11 +5,11 @@ import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
 import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostprocessor
 import com.facebook.imagepipeline.request.BasePostprocessor
-import fh.p
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import mh.a
+import nh.p
+import uh.a
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -27,7 +27,7 @@ public sealed interface PostProcessor {
          val var5: Any;
          if (var1 is PostProcessor.Composite) {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
-            val var4: ArrayList = new ArrayList(i.u(var2, 10));
+            val var4: ArrayList = new ArrayList(i.v(var2, 10));
 
             for (PostProcessor var3 : var2) {
                var4.add($$INSTANCE.create(var3));
@@ -91,12 +91,12 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var1: java.util.List = this.postprocessors;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Composite(postprocessors=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.util.List = this.postprocessors;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Composite(postprocessors=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 

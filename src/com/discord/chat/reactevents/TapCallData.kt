@@ -1,14 +1,15 @@
 package com.discord.chat.reactevents
 
-import al.g0
-import al.o1
-import al.g0.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fh.w
+import fl.f
+import fl.n
+import il.g0
+import il.o1
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,8 +19,7 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import xk.f
-import xk.n
+import nh.w
 
 @f
 internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : TapCallData(var1, var2), ReactEvent {
@@ -124,26 +124,23 @@ internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : Ta
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          var var2: Int;
-         var var5: java.lang.String;
-         var var11: ChannelId;
+         val var6: ChannelId;
+         val var10: java.lang.String;
          if (var8.y()) {
             val var9: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
-            val var10: java.lang.String;
             if (var9 != null) {
                var10 = var9.unbox-impl();
             } else {
                var10 = null;
             }
 
-            val var6: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var6 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
-            var5 = var10;
-            var11 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var5 = null;
-            var11 = null;
+            var var5: java.lang.String = null;
+            var var11: ChannelId = null;
 
             while (var3) {
                val var4: Int = var8.x(var7);
@@ -176,10 +173,13 @@ internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : Ta
                   var3 = false;
                }
             }
+
+            var6 = var11;
+            var10 = var5;
          }
 
          var8.b(var7);
-         return new TapCallData(var2, var5, var11, null, null);
+         return new TapCallData(var2, var10, var6, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapCallData) {

@@ -13,7 +13,7 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import o4.c
+import w4.c
 
 public fun renderEmoji(
    emoji: RenderableEmoji,

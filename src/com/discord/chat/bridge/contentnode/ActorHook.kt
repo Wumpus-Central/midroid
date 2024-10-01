@@ -1,10 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import al.b2
-import al.g0
-import al.o1
-import al.g0.a
 import com.discord.primitives.UserId
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.o1
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,8 +16,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 import kotlinx.serialization.internal.SerializationConstructorMarker
-import xk.f
-import xk.n
 
 @f
 public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, var2) {
@@ -72,15 +72,15 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.action;
-      val var1: java.lang.String = UserId.toString-impl(this.userId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ActorHook(action=");
-      var3.append(var2);
-      var3.append(", userId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.action;
+      val var2: java.lang.String = UserId.toString-impl(this.userId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ActorHook(action=");
+      var1.append(var3);
+      var1.append(", userId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

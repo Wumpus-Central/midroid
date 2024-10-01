@@ -37,7 +37,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
             if (var1 != null) {
                val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
                if (var3 != null) {
-                  val var4: ArrayList = new ArrayList(i.u(var3, 10));
+                  val var4: ArrayList = new ArrayList(i.v(var3, 10));
                   val var5: java.util.Iterator = var3.iterator();
 
                   while (var5.hasNext()) {

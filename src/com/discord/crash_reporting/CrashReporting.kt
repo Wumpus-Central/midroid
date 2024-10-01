@@ -4,8 +4,6 @@ import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
 import com.discord.logging.Log
-import fh.p
-import gh.r
 import io.sentry.IScope
 import io.sentry.d5
 import io.sentry.e
@@ -25,12 +23,14 @@ import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
+import nh.p
+import oh.r
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
    private const val TAG_BUILD_NUMBER: String = "buildNumber"
    public final val ignoreNetworkExceptionList: List<KClass<out Throwable>> =
-      i.m(
+      i.n(
          new KClass[]{
             g0.b(UnknownHostException.class),
             g0.b(SocketTimeoutException.class),
@@ -86,7 +86,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("c63a21ab-402a-4a4c-88fb-22fabefb9098");
+      var5.setProguardUuid("7ba074d8-f36b-43af-aeaf-6d03bb84d885");
       var5.setTag("buildNumber", var6.getVersionCode());
       var5.setTag("appVersion", var6.getVersionName());
    }
@@ -107,7 +107,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", fh.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", nh.e.b(var1), null, 4, null);
       if (!var2) {
          n3.h(var1);
       } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
@@ -195,7 +195,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = mh.a.a(var0);
+         $ENTRIES = uh.a.a(var0);
       }
 
       @JvmStatic

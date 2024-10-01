@@ -6,9 +6,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
-import fh.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import nh.w
 
 internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDevice>) : ReactEvent {
    public final val devices: List<AndroidAudioDevice>
@@ -57,7 +57,7 @@ internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDe
 
    public companion object {
       private fun convertDevices(devices: List<AndroidAudioDevice>): ReadableNativeArray {
-         val var2: ArrayList = new ArrayList(i.u(var1, 10));
+         val var2: ArrayList = new ArrayList(i.v(var1, 10));
          val var3: java.util.Iterator = var1.iterator();
 
          while (var3.hasNext()) {

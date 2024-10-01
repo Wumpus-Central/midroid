@@ -257,18 +257,18 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    public open fun anchorOn(targetView: View) {
       q.h(var1, "targetView");
-      val var3: IntArray = WindowUtils.INSTANCE.getCenterPointOnScreen(var1, new int[2]);
-      val var5: Point = this.setAnchorAround(var3[0] - this.screenOffset[0], var3[1] - this.screenOffset[1]);
+      val var4: IntArray = WindowUtils.INSTANCE.getCenterPointOnScreen(var1, new int[2]);
+      val var5: Point = this.setAnchorAround(var4[0] - this.screenOffset[0], var4[1] - this.screenOffset[1]);
       animateToCoordinate$default(this, var5.x, var5.y, null, 4, null);
    }
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
       q.h(var3, "screenBounds");
-      val var5: Int = var3.right;
-      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var5 - this.getWidth()));
-      var1 = this.screenOffset[1];
-      val var12: Int = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var1, var2), var12 - this.getHeight()));
+      var var4: Int = var3.right;
+      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var4 - this.getWidth()));
+      var4 = this.screenOffset[1];
+      var1 = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var4, var2), var1 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {

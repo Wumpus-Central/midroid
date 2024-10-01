@@ -53,7 +53,7 @@ public class ZoomLayoutFixed  public constructor(context: Context, attrs: Attrib
       var0.getViewTreeObserver().dispatchOnGlobalLayout();
    }
 
-   protected open fun onDetachedFromWindow() {
+   protected override fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
       val var1: View = this.getChildAt(0);
       if (var1 != null) {
@@ -61,7 +61,7 @@ public class ZoomLayoutFixed  public constructor(context: Context, attrs: Attrib
       }
    }
 
-   public open fun onGlobalLayout() {
+   public override fun onGlobalLayout() {
       super.onGlobalLayout();
       val var1: View = this.getChildAt(0);
       if (var1 != null) {
@@ -69,14 +69,14 @@ public class ZoomLayoutFixed  public constructor(context: Context, attrs: Attrib
       }
    }
 
-   protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+   protected override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
       MeasureSpecAssertions.assertExplicitMeasureSpec(var1, var2);
       this.setMeasuredDimension(MeasureSpec.getSize(var1), MeasureSpec.getSize(var2));
-      this.post(new a(this));
+      this.post(new com.discord.zoom_layout.a(this));
    }
 
    @SuppressLint(["ClickableViewAccessibility"])
-   public open fun onTouchEvent(ev: MotionEvent): Boolean {
+   public override fun onTouchEvent(ev: MotionEvent): Boolean {
       q.h(var1, "ev");
       if (!this.gestureEnabled) {
          return true;

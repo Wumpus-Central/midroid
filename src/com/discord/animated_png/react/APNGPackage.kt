@@ -16,6 +16,6 @@ public class APNGPackage : ReactPackage {
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return i.p(new ViewManager[]{new APNGViewManager()});
+      return i.q(new ViewManager[]{new APNGViewManager()});
    }
 }

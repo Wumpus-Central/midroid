@@ -13,12 +13,12 @@ import kotlin.jvm.internal.q
 public class ChatPackage : ReactPackage {
    public open fun createNativeModules(reactContext: ReactApplicationContext): MutableList<ChatModule> {
       q.h(var1, "reactContext");
-      return i.p(new ChatModule[]{new ChatModule(var1)});
+      return i.q(new ChatModule[]{new ChatModule(var1)});
    }
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<BaseViewManager<out ViewGroup, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return i.p(
+      return i.q(
          new BaseViewManager[]{
             new ChatViewManager(),
             new ChatListViewManager(),

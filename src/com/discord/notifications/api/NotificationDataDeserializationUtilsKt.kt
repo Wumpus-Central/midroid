@@ -4,12 +4,12 @@ import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.snowflake.SnowflakeUtils
-import fh.w
-import gh.r
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
+import nh.w
+import oh.r
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    q.h(var0, "<this>");
@@ -25,9 +25,9 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var7 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var5 : var7.entrySet()) {
-            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
-               var3.put(var5.getKey(), var5.getValue());
+         for (Entry var6 : var7.entrySet()) {
+            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
+               var3.put(var6.getKey(), var6.getValue());
             }
          }
 

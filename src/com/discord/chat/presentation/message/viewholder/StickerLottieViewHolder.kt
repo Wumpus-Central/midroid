@@ -37,8 +37,8 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
       kotlin.jvm.internal.q.h(var3, "onStickerLongClicked");
       if (!kotlin.jvm.internal.q.c(var1, this.sticker)) {
          this.sticker = var1;
-         val var7: StickerView = this.stickerView;
-         val var8: java.lang.String = var1.getUrl();
+         val var8: StickerView = this.stickerView;
+         val var7: java.lang.String = var1.getUrl();
          val var6: Boolean;
          if (var1.getRenderMode() == 0) {
             var6 = true;
@@ -46,7 +46,7 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
             var6 = false;
          }
 
-         var7.asLottie(var8, var4, var5, var6, var1.getAsset(), var1.getRenderMode());
+         var8.asLottie(var7, var4, var5, var6, var1.getAsset(), var1.getRenderMode());
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new v(var2, var1), 1, null);
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new w(var3, var1), 1, null);
       }

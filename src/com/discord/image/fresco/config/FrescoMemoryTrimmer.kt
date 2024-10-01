@@ -4,7 +4,7 @@ import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
 import kotlin.jvm.internal.q
-import o4.c
+import w4.c
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {

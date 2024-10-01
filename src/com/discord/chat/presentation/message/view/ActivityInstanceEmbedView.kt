@@ -107,7 +107,7 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
 
       var4.setVisibility(var2);
       val var5: OverlappingCirclesView = this.binding.participants;
-      val var7: ArrayList = new ArrayList(kotlin.collections.i.u(var1, 10));
+      val var7: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
       val var6: java.util.Iterator = var1.iterator();
 
       while (var6.hasNext()) {

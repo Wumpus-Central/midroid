@@ -12,7 +12,7 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>> : RecyclerView.Adapter {
-   private final var items: List<PollAnswerAccessory> = i.j()
+   private final var items: List<PollAnswerAccessory> = i.k()
    public final var onTapAnswer: (String) -> Unit = <unrepresentable>.INSTANCE
    private final var onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    public final var myAvatarUrl: String?

@@ -16,7 +16,7 @@ import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import mh.a
+import uh.a
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    public final var clipDirectionX: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX
@@ -92,10 +92,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
          if (var5 != 2) {
             if (var5 == 3) {
                val var19: RectF = this.pathRect;
-               val var13: Float = this.width;
-               val var9: Float = this.shapeWidth;
+               val var12: Float = this.width;
+               val var13: Float = this.shapeWidth;
                this.pathRect.left = (this.width - this.shapeWidth) / 2;
-               var19.right = var13 - (var13 - var9) / 2;
+               var19.right = var12 - (var12 - var13) / 2;
             }
          } else {
             val var20: RectF = this.pathRect;

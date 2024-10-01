@@ -12,7 +12,7 @@ public class ScreenWakeLockManagerModule(reactContext: ReactApplicationContext) 
       super(var1);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ScreenWakeLockManager";
    }
 

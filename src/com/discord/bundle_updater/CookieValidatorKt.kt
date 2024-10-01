@@ -11,7 +11,7 @@ public fun CookieManager.getCookiesForUrl(url: String): List<Cookie> {
    q.h(var1, "url");
    val var4: java.lang.String = var0.getCookie(var1);
    if (var4 == null) {
-      return i.j();
+      return i.k();
    } else {
       val var2: java.util.List = h.z0(var4, new java.lang.String[]{"; "}, false, 0, 6, null);
       val var5: ArrayList = new ArrayList();

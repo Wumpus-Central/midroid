@@ -1,9 +1,11 @@
 package com.discord.chat.bridge.media
 
-import al.g0
-import al.n0
-import al.x0
-import al.g0.a
+import fl.f
+import fl.n
+import il.g0
+import il.n0
+import il.x0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class ContentScanMetadata(version: Int, contentFlags: Long) {
@@ -94,20 +94,21 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: Long;
          if (var9.y()) {
-            var3 = var9.k(var8, 0);
+            val var2: Int = var9.k(var8, 0);
             var6 = var9.h(var8, 1);
-            var2 = 3;
+            var3 = 3;
+            var4 = var2;
          } else {
             var6 = 0L;
-            var var4: Boolean = true;
+            var var12: Boolean = true;
             var3 = 0;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var4) {
+            while (var12) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -116,19 +117,22 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
                      }
 
                      var6 = var9.h(var8, 1);
-                     var2 |= 2;
+                     var10 |= 2;
                   } else {
                      var3 = var9.k(var8, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
+
+            var4 = var3;
+            var3 = var10;
          }
 
          var9.b(var8);
-         return new ContentScanMetadata(var2, var3, var6, null);
+         return new ContentScanMetadata(var3, var4, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentScanMetadata) {

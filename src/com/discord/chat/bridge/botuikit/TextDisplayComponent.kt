@@ -1,11 +1,13 @@
 package com.discord.chat.bridge.botuikit
 
-import al.b2
-import al.g0
-import al.n0
-import al.g0.a
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.n0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,8 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component {
@@ -73,17 +73,17 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var2: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var3: StructurableText = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TextDisplayComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TextDisplayComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

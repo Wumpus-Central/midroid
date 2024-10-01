@@ -19,50 +19,38 @@
       "value": " here."
     }
   ],
-  "XOdbAw": [
-    {
-      "type": 0,
-      "value": "Use hooks like "
-    },
-    {
-      "type": 8,
-      "value": "usernameHook",
-      "children": [
-        {
-          "type": 1,
-          "value": "username"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " for special content."
-    }
-  ],
   "JJ0wpK": [
     {
       "type": 0,
       "value": "This page uses the new intl system for displaying messages"
     }
   ],
-  "HMvECw": [
+  "rmps8/": [
     {
       "type": 0,
-      "value": "All of this is managed locally and has "
+      "value": "This string has a "
     },
     {
       "type": 8,
-      "value": "$b",
+      "value": "$link",
       "children": [
         {
           "type": 0,
-          "value": "not yet"
+          "value": "https://discord.com"
+        },
+        {
+          "type": 1,
+          "value": "$_"
+        },
+        {
+          "type": 0,
+          "value": "static link"
         }
       ]
     },
     {
       "type": 0,
-      "value": " replaced the global i18n system."
+      "value": ", with the url defined in the string."
     }
   ],
   "Q+eyqq": [
@@ -98,32 +86,44 @@
       "pluralType": "cardinal"
     }
   ],
-  "rmps8/": [
+  "XOdbAw": [
     {
       "type": 0,
-      "value": "This string has a "
+      "value": "Use hooks like "
     },
     {
       "type": 8,
-      "value": "$link",
+      "value": "usernameHook",
       "children": [
         {
-          "type": 0,
-          "value": "https://discord.com"
-        },
-        {
           "type": 1,
-          "value": "$_"
-        },
-        {
-          "type": 0,
-          "value": "static link"
+          "value": "username"
         }
       ]
     },
     {
       "type": 0,
-      "value": ", with the url defined in the string."
+      "value": " for special content."
+    }
+  ],
+  "HMvECw": [
+    {
+      "type": 0,
+      "value": "All of this is managed locally and has "
+    },
+    {
+      "type": 8,
+      "value": "$b",
+      "children": [
+        {
+          "type": 0,
+          "value": "not yet"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " replaced the global i18n system."
     }
   ],
   "uczI4u": [

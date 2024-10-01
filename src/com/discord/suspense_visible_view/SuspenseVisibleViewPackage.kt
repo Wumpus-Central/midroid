@@ -9,11 +9,11 @@ import kotlin.jvm.internal.q
 public class SuspenseVisibleViewPackage : ReactPackage {
    public open fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
       q.h(var1, "reactContext");
-      return i.j();
+      return i.k();
    }
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, *>> {
       q.h(var1, "reactContext");
-      return i.p(new ViewManager[]{new SuspenseVisibleViewManager()});
+      return i.q(new ViewManager[]{new SuspenseVisibleViewManager()});
    }
 }

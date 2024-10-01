@@ -1,8 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import al.b2
-import al.g0
 import com.discord.chat.bridge.ChannelType
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,9 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 public data class ChannelNameContentNode(channelType: ChannelType? = null, iconType: String, icon: String? = null, content: List<ContentNode>) : ContentNode {
@@ -96,21 +96,21 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var4: ChannelType = this.channelType;
-      val var1: java.lang.String = this.iconType;
-      val var5: java.lang.String = this.icon;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChannelNameContentNode(channelType=");
-      var3.append(var4);
-      var3.append(", iconType=");
-      var3.append(var1);
-      var3.append(", icon=");
-      var3.append(var5);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var5: ChannelType = this.channelType;
+      val var4: java.lang.String = this.iconType;
+      val var3: java.lang.String = this.icon;
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ChannelNameContentNode(channelType=");
+      var2.append(var5);
+      var2.append(", iconType=");
+      var2.append(var4);
+      var2.append(", icon=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -206,7 +206,7 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

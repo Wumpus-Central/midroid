@@ -19,9 +19,9 @@ import com.discord.primitives.MessageId
 import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
-import fh.p
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
+import nh.p
 
 public class PollActionButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: PollActionButtonBinding

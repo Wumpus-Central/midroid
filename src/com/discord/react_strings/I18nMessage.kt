@@ -3,9 +3,13 @@ package com.discord.react_strings
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import mh.a
+import uh.a
 
 public enum class I18nMessage {
+   A11Y_ROLE_BUTTON,
+   AUDIO_FILE_A11Y_LABEL,
+   AUDIO_FILE_NOT_PLAYING_VALUE,
+   AUDIO_FILE_PLAYING_VALUE,
    CANCEL,
    DECLINE,
    DISMISS,
@@ -47,6 +51,8 @@ public enum class I18nMessage {
    OBSCURED_CONTENT_INFO_LINK_TEXT,
    OBSCURED_CONTENT_SHOW_CONTENT_ALT,
    OVERLAY_FRIEND_CALLING,
+   PAUSE,
+   PLAY,
    PLAY_FULL_VIDEO,
    POLL_ANSWER_VOTED_ARIA,
    POLL_OPTIONS_ARIA,
@@ -78,6 +84,7 @@ public enum class I18nMessage {
    SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012,
    SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013,
    UPLOAD_COMPLETE,
+   VOICE_MESSAGES_A11Y_LABEL,
    VOICE_MESSAGES_A11Y_STATUS,
    VOICE_MESSAGES_PLAYING_A11Y_STATUS,
    VOICE_MESSAGES_SENT_NOTIFICATION   @JvmStatic

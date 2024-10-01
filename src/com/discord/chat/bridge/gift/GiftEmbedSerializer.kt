@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.gift
 
-import bl.d
-import bl.g
+import jl.d
+import jl.g
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy

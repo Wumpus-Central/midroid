@@ -1,10 +1,12 @@
 package com.discord.chat.reactevents
 
-import al.b2
-import al.g0
-import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,8 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 internal data class TapSummaryJumpData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -77,18 +77,18 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.summaryId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSummaryJumpData(channelId=");
-      var2.append(var4);
-      var2.append(", messageId=");
-      var2.append(var1);
-      var2.append(", summaryId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.summaryId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapSummaryJumpData(channelId=");
+      var4.append(var3);
+      var4.append(", messageId=");
+      var4.append(var2);
+      var4.append(", summaryId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -157,8 +157,8 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
                }
             }
 
-            var10 = var5;
             var5 = var11;
+            var10 = var5;
          }
 
          var9.b(var8);

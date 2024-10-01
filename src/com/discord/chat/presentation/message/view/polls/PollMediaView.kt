@@ -24,11 +24,11 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
-import fh.l
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
+import nh.l
 
 public class PollMediaView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val childViews: MutableList<View>
@@ -57,14 +57,14 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = v4.a.d(var1, var2);
+      this.hierarchyBuilder = d5.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       q.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = l.b(new Function0(var1, this) {
+      this.draweeView$delegate = l.a(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 
@@ -83,7 +83,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             return var1;
          }
       });
-      this.textView$delegate = l.b(new Function0(var1, this) {
+      this.textView$delegate = l.a(new Function0(var1, this) {
          final Context $context;
          final PollMediaView this$0;
 

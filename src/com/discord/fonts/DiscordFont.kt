@@ -7,7 +7,7 @@ import java.util.Map.Entry
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import mh.a
+import uh.a
 
 public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, monospace: Boolean = false) {
    CodeBold("ggmono-Bold, SourceCodePro-Bold", 700, false, true),
@@ -75,16 +75,16 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       private final val typefaces: ConcurrentHashMap<DiscordFont, Typeface>
 
       private fun getFontFromRN(context: Context, font: DiscordFont): Typeface {
-         val var4: Typeface = ReactFontManager.getInstance().getTypeface(var2.getRawName(), 0, var1.getAssets());
-         q.g(var4, "getTypeface(...)");
-         if (!q.c(var4, Typeface.DEFAULT)) {
-            return var4;
+         val var3: Typeface = ReactFontManager.getInstance().getTypeface(var2.getRawName(), 0, var1.getAssets());
+         q.g(var3, "getTypeface(...)");
+         if (!q.c(var3, Typeface.DEFAULT)) {
+            return var3;
          } else {
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Cannot find typeface ");
-            var3.append(var4);
-            var3.append(".rawName");
-            throw new IllegalStateException(var3.toString().toString());
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("Cannot find typeface ");
+            var4.append(var3);
+            var4.append(".rawName");
+            throw new IllegalStateException(var4.toString().toString());
          }
       }
 

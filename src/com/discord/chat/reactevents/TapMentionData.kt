@@ -1,9 +1,12 @@
 package com.discord.chat.reactevents
 
-import al.b2
-import al.g0
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,9 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 internal data class TapMentionData(userId: String?, channelId: String, roleName: String?, parsedUserId: String?) : ReactEvent {
@@ -106,21 +106,21 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.userId;
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleName;
-      val var4: java.lang.String = this.parsedUserId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapMentionData(userId=");
-      var5.append(var3);
-      var5.append(", channelId=");
-      var5.append(var2);
-      var5.append(", roleName=");
-      var5.append(var1);
-      var5.append(", parsedUserId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.userId;
+      val var4: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.roleName;
+      val var5: java.lang.String = this.parsedUserId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapMentionData(userId=");
+      var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", roleName=");
+      var2.append(var3);
+      var2.append(", parsedUserId=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -218,7 +218,7 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

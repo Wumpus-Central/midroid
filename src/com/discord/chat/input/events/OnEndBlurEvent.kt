@@ -1,10 +1,12 @@
 package com.discord.chat.input.events
 
-import al.b2
-import al.g0
-import al.g0.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,8 +15,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 internal data class OnEndBlurEvent(text: String) : ReactEvent {
@@ -54,12 +54,12 @@ internal data class OnEndBlurEvent(text: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OnEndBlurEvent(text=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.text;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnEndBlurEvent(text=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

@@ -1,8 +1,5 @@
 package com.discord.chat.presentation.list.messagebundling
 
-import al.b2
-import al.f0
-import al.g0
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -32,6 +29,11 @@ import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
+import fl.f
+import fl.n
+import il.b2
+import il.f0
+import il.g0
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -41,8 +43,6 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 public class MessageBundleView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout {
    private final val binding: MessageBundleViewBinding
@@ -163,7 +163,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                }
             }
 
-            val var25: java.util.List = i.y0(var11, var29);
+            val var25: java.util.List = i.z0(var11, var29);
             val var21: java.lang.String = var1.getViewMoreText();
             val var22: MessageBundleViewMoreItem;
             if (var21 != null) {
@@ -174,7 +174,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
 
             var var14: Boolean;
             label61: {
-               var8 = i.z0(var25, var22);
+               var8 = i.A0(var25, var22);
                var30 = this.spineItemDecoration;
                if (!(var1.getReferenceMessageRows().isEmpty() xor true)) {
                   val var26: java.lang.String = var1.getViewMoreText();
@@ -188,13 +188,13 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             }
 
             var30.setShowThreadSpine(var14);
-            val var27: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
-            val var31: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
-            if (var31 != null) {
-               var27.configure(var31, new d(var3));
+            val var31: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
+            val var27: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
+            if (var27 != null) {
+               var31.configure(var27, new d(var3));
             }
 
-            q.e(var27);
+            q.e(var31);
             var var6: Boolean;
             if (var1.getMessageFrame() != null) {
                var6 = 1;
@@ -208,10 +208,10 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var6 = 8;
             }
 
-            var27.setVisibility(var6);
+            var31.setVisibility(var6);
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var2, 1, null);
             NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this, false, var3, 1, null);
-            this.adapter.setItems(i.a0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
+            this.adapter.setItems(i.b0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
                final Function1 $onTapReply;
 
                {
@@ -249,7 +249,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
    public data class MessageBundle(messageFrame: MessageBundleHeader? = null,
       rows: List<MessageRow>,
       truncationThreshold: Float? = null,
-      referenceMessageRows: List<MessageRow> = i.j(),
+      referenceMessageRows: List<MessageRow> = i.k(),
       viewMoreText: String? = null
    ) {
       public final val messageFrame: MessageBundleHeader?
@@ -261,7 +261,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new al.f(MessageRow.$serializer.INSTANCE), null, new al.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new il.f(MessageRow.$serializer.INSTANCE), null, new il.f(var0), null};
       }
 
       init {
@@ -354,24 +354,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var4: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var6: java.util.List = this.rows;
-         val var1: java.lang.Float = this.truncationThreshold;
-         val var3: java.util.List = this.referenceMessageRows;
-         val var5: java.lang.String = this.viewMoreText;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("MessageBundle(messageFrame=");
-         var2.append(var4);
-         var2.append(", rows=");
-         var2.append(var6);
-         var2.append(", truncationThreshold=");
-         var2.append(var1);
-         var2.append(", referenceMessageRows=");
-         var2.append(var3);
-         var2.append(", viewMoreText=");
-         var2.append(var5);
-         var2.append(")");
-         return var2.toString();
+         val var1: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var5: java.util.List = this.rows;
+         val var2: java.lang.Float = this.truncationThreshold;
+         val var6: java.util.List = this.referenceMessageRows;
+         val var4: java.lang.String = this.viewMoreText;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("MessageBundle(messageFrame=");
+         var3.append(var1);
+         var3.append(", rows=");
+         var3.append(var5);
+         var3.append(", truncationThreshold=");
+         var3.append(var2);
+         var3.append(", referenceMessageRows=");
+         var3.append(var6);
+         var3.append(", viewMoreText=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
 
       public object `$serializer` : g0 {
@@ -398,7 +398,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
 
          public open fun childSerializers(): Array<KSerializer<*>> {
             val var1: Array<KSerializer> = MessageBundleView.MessageBundle.access$get$childSerializers$cp();
-            return new KSerializer[]{yk.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], yk.a.u(f0.a), var1[3], yk.a.u(b2.a)};
+            return new KSerializer[]{gl.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], gl.a.u(f0.a), var1[3], gl.a.u(b2.a)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.list.messagebundling.MessageBundleView.MessageBundle {
@@ -480,7 +480,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return al.g0.a.a(this);
+            return il.g0.a.a(this);
          }
       }
 

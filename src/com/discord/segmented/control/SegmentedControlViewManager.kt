@@ -14,12 +14,12 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
-import fh.w
-import gh.o
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
+import nh.w
+import oh.o
 
 @ReactModule(name = "DCDSegmentedControl")
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {
@@ -68,12 +68,12 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
-         val var5: java.util.Iterator = var4.iterator();
+         val var6: java.util.Iterator = var4.iterator();
 
-         while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as o).c());
-            if (var6 != null) {
-               var3.add(var6);
+         while (var6.hasNext()) {
+            val var5: java.lang.String = var2.getString((var6 as o).c());
+            if (var5 != null) {
+               var3.add(var5);
             }
          }
 

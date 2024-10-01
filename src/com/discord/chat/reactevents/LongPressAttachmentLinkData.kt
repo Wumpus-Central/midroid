@@ -1,11 +1,13 @@
 package com.discord.chat.reactevents
 
-import al.b2
-import al.g0
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fh.w
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,9 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
+import nh.w
 
 @f
 internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, attachmentName: String? = null) : ReactEvent {
@@ -82,15 +82,15 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressAttachmentLinkData(attachmentUrl=");
-      var2.append(var3);
-      var2.append(", attachmentName=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.attachmentUrl;
+      val var2: java.lang.String = this.attachmentName;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressAttachmentLinkData(attachmentUrl=");
+      var3.append(var1);
+      var3.append(", attachmentName=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -167,7 +167,7 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

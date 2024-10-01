@@ -15,9 +15,9 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import lk.a
-import nk.f
-import nk.k0
+import tk.a
+import vk.f
+import vk.k0
 
 public class APNGView(context: Context) : m {
    private final val placeholder: ShapeDrawable
@@ -106,11 +106,11 @@ public class APNGView(context: Context) : m {
          new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
+   //   at java.base/java.util.HashMap.hash(HashMap.java:338)
+   //   at java.base/java.util.HashMap.getNode(HashMap.java:576)
+   //   at java.base/java.util.HashMap.get(HashMap.java:564)
+   //   at org.jetbrains.java.decompiler.util.collections.VBStyleCollection.getWithKey(VBStyleCollection.java:111)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1637)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
@@ -1208,12 +1208,12 @@ public class APNGView(context: Context) : m {
          var1 = "";
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-            q.g(var5, "format(...)");
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var1);
-            var6.append(var5);
-            var1 = var6.toString();
+            val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+            q.g(var6, "format(...)");
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var1);
+            var5.append(var6);
+            var1 = var5.toString();
          }
 
          return var1;
@@ -1305,9 +1305,9 @@ public class APNGView(context: Context) : m {
       }
 
       public override fun hashCode(): Int {
-         val var3: Int = this.url.hashCode();
-         val var5: Int = java.lang.Boolean.hashCode(this.animate);
-         val var4: Int = java.lang.Boolean.hashCode(this.showLoading);
+         val var5: Int = this.url.hashCode();
+         val var4: Int = java.lang.Boolean.hashCode(this.animate);
+         val var3: Int = java.lang.Boolean.hashCode(this.showLoading);
          var var2: Int = 0;
          val var1: Int;
          if (this.widthDp == null) {
@@ -1320,31 +1320,31 @@ public class APNGView(context: Context) : m {
             var2 = this.heightDp.hashCode();
          }
 
-         return ((((var3 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
+         return ((((var5 * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.url;
+         val var7: java.lang.String = this.url;
          val var2: Boolean = this.animate;
          val var1: Boolean = this.showLoading;
-         val var5: Int = this.widthDp;
-         val var6: Int = this.heightDp;
-         val var3: java.lang.String = this.cacheDirectory;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Config(url=");
-         var7.append(var4);
-         var7.append(", animate=");
-         var7.append(var2);
-         var7.append(", showLoading=");
-         var7.append(var1);
-         var7.append(", widthDp=");
-         var7.append(var5);
-         var7.append(", heightDp=");
-         var7.append(var6);
-         var7.append(", cacheDirectory=");
-         var7.append(var3);
-         var7.append(")");
-         return var7.toString();
+         val var3: Int = this.widthDp;
+         val var4: Int = this.heightDp;
+         val var5: java.lang.String = this.cacheDirectory;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Config(url=");
+         var6.append(var7);
+         var6.append(", animate=");
+         var6.append(var2);
+         var6.append(", showLoading=");
+         var6.append(var1);
+         var6.append(", widthDp=");
+         var6.append(var3);
+         var6.append(", heightDp=");
+         var6.append(var4);
+         var6.append(", cacheDirectory=");
+         var6.append(var5);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

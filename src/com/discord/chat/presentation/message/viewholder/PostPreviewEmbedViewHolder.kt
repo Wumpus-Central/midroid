@@ -35,14 +35,14 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
       kotlin.jvm.internal.q.h(var1, "postPreviewEmbed");
       kotlin.jvm.internal.q.h(var2, "onTapPostPreviewEmbed");
       val var9: PostPreviewEmbedView = this.postPreviewEmbedView;
-      val var13: java.lang.String = var1.getTitle();
-      val var12: java.lang.String = var1.getSubtitle();
-      val var10: java.lang.String = var1.getCtaText();
+      val var12: java.lang.String = var1.getTitle();
+      val var13: java.lang.String = var1.getSubtitle();
+      val var16: java.lang.String = var1.getCtaText();
       val var4: Int = var1.getCtaButtonColor();
-      val var16: java.lang.String = var1.getCoverImage();
-      val var8: java.lang.String = var1.getBlurredCoverImage();
-      val var14: java.lang.String = var1.getMessageId-3Eiw7ao();
-      val var7: StructurableText = var1.getFooter();
+      val var8: java.lang.String = var1.getCoverImage();
+      val var10: java.lang.String = var1.getBlurredCoverImage();
+      val var7: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var14: StructurableText = var1.getFooter();
       val var15: java.lang.String = var1.getCoverImageOverlayText();
       val var11: java.lang.String = var1.getBackgroundImage();
       val var18: q = new q(var2, var1);
@@ -55,6 +55,6 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
          var5 = false;
       }
 
-      var9.setPostPreviewEmbed-6_IDHbM(var13, var12, var10, var4, var7, var14, var16, var8, var15, var11, var18, var6, var5, var3);
+      var9.setPostPreviewEmbed-6_IDHbM(var12, var13, var16, var4, var14, var7, var8, var10, var15, var11, var18, var6, var5, var3);
    }
 }

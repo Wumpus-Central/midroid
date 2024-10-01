@@ -6,11 +6,11 @@ import com.discord.simpleast.core.node.StyleNode
 import com.discord.simpleast.core.parser.ParseSpec
 import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
-import fh.w
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import nh.w
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern
@@ -45,14 +45,14 @@ public object Xml {
          public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
             q.h(var1, "matcher");
             q.h(var2, "parser");
-            val var6: java.lang.String = var1.group(1);
-            q.e(var6);
-            val var4: java.lang.String = var1.group(3);
+            val var4: java.lang.String = var1.group(1);
+            q.e(var4);
+            val var6: java.lang.String = var1.group(3);
             val var5: ParseSpec;
             if (var1.group(2) != null) {
-               var5 = ParseSpec.Companion.createNonterminal(new Xml.TagNode(var6, var4, this.$codeStyleProviders), var3, var1.start(2), var1.end(2));
+               var5 = ParseSpec.Companion.createNonterminal(new Xml.TagNode(var4, var6, this.$codeStyleProviders), var3, var1.start(2), var1.end(2));
             } else {
-               var5 = ParseSpec.Companion.createTerminal(new Xml.TagNode(var6, var4, this.$codeStyleProviders), var3);
+               var5 = ParseSpec.Companion.createTerminal(new Xml.TagNode(var4, var6, this.$codeStyleProviders), var3);
             }
 
             return var5;

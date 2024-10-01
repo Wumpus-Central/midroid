@@ -20,6 +20,7 @@ import com.discord.tti_manager.TTIMetrics
 import com.discord.tti_manager.react.ReactMarkerListener
 import com.discord.utils.OkHttpDNSSelector
 import com.discord.utils.SoLoaderUtils
+import com.discord.utils.OkHttpDNSSelector.IPvMode
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
@@ -53,10 +54,10 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
 
    @JvmStatic
    fun `initialize$lambda$1`(var0: Builder) {
-      var0.i(new OkHttpDNSSelector(OkHttpDNSSelector.IPvMode.IPV4_FIRST));
+      var0.i(new OkHttpDNSSelector(IPvMode.IPV4_FIRST));
    }
 
-   public override fun initialize() {
+   public open fun initialize() {
       var var3: TTIMetrics;
       var var5: java.lang.String;
       label11: {
@@ -72,7 +73,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "248.17", 248017, "google", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "249.19", 249019, "google", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -85,7 +86,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@248.17.0-0+248017";
+         var5 = "discord_android@249.19.0-0+249019";
       }
 
       CrashReporting.INSTANCE.init(this, var5);

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.attachment
 
 import kotlin.enums.EnumEntries
-import mh.a
+import uh.a
 
 public enum class AttachmentType(indexLabel: String) {
    Audio("audioAttachmentIndex"),

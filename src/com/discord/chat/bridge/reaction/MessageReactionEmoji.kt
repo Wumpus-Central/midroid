@@ -1,11 +1,15 @@
 package com.discord.chat.bridge.reaction
 
-import al.b2
-import al.g0
-import al.h
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
+import il.h
 import kotlin.jvm.internal.q
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -13,9 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) :
@@ -129,23 +130,23 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
 
    public override fun toString(): String {
       val var3: java.lang.String = this.name;
-      val var1: java.lang.String = this.src;
-      val var4: java.lang.String = this.displayName;
-      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.src;
+      val var6: java.lang.String = this.displayName;
+      val var1: java.lang.String = this.id;
       val var2: java.lang.Boolean = this.animated;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageReactionEmoji(name=");
-      var6.append(var3);
-      var6.append(", src=");
-      var6.append(var1);
-      var6.append(", displayName=");
-      var6.append(var4);
-      var6.append(", id=");
-      var6.append(var5);
-      var6.append(", animated=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MessageReactionEmoji(name=");
+      var5.append(var3);
+      var5.append(", src=");
+      var5.append(var4);
+      var5.append(", displayName=");
+      var5.append(var6);
+      var5.append(", id=");
+      var5.append(var1);
+      var5.append(", animated=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -175,22 +176,22 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
 
       public open fun deserialize(decoder: Decoder): MessageReactionEmoji {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
+         val var5: Boolean = var11.y();
          var var9: java.lang.String = null;
          var var2: Int;
-         var var6: Any;
+         var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         val var14: java.lang.String;
+         var var13: Any;
          if (var5) {
-            val var13: b2 = b2.a;
-            var9 = var12.v(var11, 0, b2.a, null) as java.lang.String;
-            var8 = var12.t(var11, 1);
-            var7 = var12.t(var11, 2);
-            var14 = var12.v(var11, 3, var13, null) as java.lang.String;
-            var6 = var12.v(var11, 4, h.a, null) as java.lang.Boolean;
+            var13 = b2.a;
+            var9 = var11.v(var10, 0, b2.a, null) as java.lang.String;
+            var8 = var11.t(var10, 1);
+            var7 = var11.t(var10, 2);
+            var6 = var11.v(var10, 3, (DeserializationStrategy)var13, null) as java.lang.String;
+            var13 = var11.v(var10, 4, h.a, null) as java.lang.Boolean;
             var2 = 31;
          } else {
             var var3: Boolean = true;
@@ -198,10 +199,10 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
             var8 = null;
             var7 = null;
             var6 = null;
-            var var15: Any = null;
+            var13 = null;
 
             while (var3) {
-               val var4: Int = var12.x(var11);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -211,35 +212,32 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
                                  throw new n(var4);
                               }
 
-                              var15 = var12.v(var11, 4, h.a, var15) as java.lang.Boolean;
+                              var13 = var11.v(var10, 4, h.a, var13) as java.lang.Boolean;
                               var2 |= 16;
                            } else {
-                              var6 = var12.v(var11, 3, b2.a, var6) as java.lang.String;
+                              var6 = var11.v(var10, 3, b2.a, var6) as java.lang.String;
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var12.t(var11, 2);
+                           var7 = var11.t(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var12.t(var11, 1);
+                        var8 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var12.v(var11, 0, b2.a, var9) as java.lang.String;
+                     var9 = var11.v(var10, 0, b2.a, var9) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var6 = var15;
-            var14 = (java.lang.String)var6;
          }
 
-         var12.b(var11);
-         return new MessageReactionEmoji(var2, var9, var8, var7, var14, (java.lang.Boolean)var6, null);
+         var11.b(var10);
+         return new MessageReactionEmoji(var2, var9, var8, var7, var6, (java.lang.Boolean)var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MessageReactionEmoji) {
@@ -252,7 +250,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

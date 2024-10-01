@@ -1,9 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import al.b2
-import al.g0
-import al.h
-import al.g0.a
+import fl.f
+import fl.n
+import il.b2
+import il.g0
+import il.h
+import il.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,8 +14,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
 
 @f
 public data class CodeBlockContentNode(lang: String, content: String, inQuote: Boolean) : ContentNode {
@@ -70,18 +70,18 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.lang;
+      val var3: java.lang.String = this.lang;
       val var2: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CodeBlockContentNode(lang=");
-      var3.append(var4);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(", inQuote=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CodeBlockContentNode(lang=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(", inQuote=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {
@@ -113,17 +113,15 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          var var2: Int;
          var var5: Boolean;
          val var7: java.lang.String;
-         var var11: java.lang.String;
+         val var10: java.lang.String;
          if (var9.y()) {
-            val var10: java.lang.String = var9.t(var8, 0);
-            val var6: java.lang.String = var9.t(var8, 1);
+            var10 = var9.t(var8, 0);
+            var7 = var9.t(var8, 1);
             var5 = var9.s(var8, 2);
             var2 = 7;
-            var7 = var10;
-            var11 = var6;
          } else {
-            var var12: java.lang.String = null;
-            var11 = null;
+            var var6: java.lang.String = null;
+            var var11: java.lang.String = null;
             var var3: Boolean = true;
             var5 = false;
             var2 = 0;
@@ -144,7 +142,7 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var9.t(var8, 0);
+                     var6 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -152,11 +150,12 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
                }
             }
 
-            var7 = var12;
+            var7 = var11;
+            var10 = var6;
          }
 
          var9.b(var8);
-         return new CodeBlockContentNode(var2, var7, var11, var5, null);
+         return new CodeBlockContentNode(var2, var10, var7, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CodeBlockContentNode) {

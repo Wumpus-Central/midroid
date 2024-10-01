@@ -1,12 +1,14 @@
 package com.discord.chat.bridge.botuikit
 
-import al.b2
-import al.g0
 import com.discord.chat.bridge.media.UnfurledMediaItem
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import com.discord.misc.utilities.ids.IdUtilsKt
+import fl.f
+import fl.n
+import gl.a
+import il.b2
+import il.g0
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -14,9 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import xk.f
-import xk.n
-import yk.a
 
 @f
 public data class MediaGalleryItem(media: UnfurledMediaItem,
@@ -260,8 +259,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var4 = this.description.hashCode();
       }
 
-      val var13: Int = this.descriptionHint.hashCode();
-      val var12: Int = this.accessibilityRole.hashCode();
+      val var12: Int = this.descriptionHint.hashCode();
+      val var13: Int = this.accessibilityRole.hashCode();
       if (this.portalIdString != null) {
          var5 = this.portalIdString.hashCode();
       }
@@ -270,58 +269,58 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                (
                         (((((((((var6 * 31 + var7) * 31 + var1) * 31 + var8) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var3) * 31 + var11) * 31 + var4)
                               * 31
-                           + var13
+                           + var12
                      )
                      * 31
-                  + var12
+                  + var13
             )
             * 31
          + var5;
    }
 
    public override fun toString(): String {
-      val var11: UnfurledMediaItem = this.media;
-      val var5: MediaGalleryItemType = this.mediaType;
-      val var13: java.lang.String = this.videoPreviewUrl;
+      val var13: UnfurledMediaItem = this.media;
+      val var7: MediaGalleryItemType = this.mediaType;
+      val var8: java.lang.String = this.videoPreviewUrl;
       val var2: Boolean = this.isSpoiler;
-      val var12: java.lang.String = this.spoilerDescription;
-      val var3: Boolean = this.isObscure;
-      val var4: Boolean = this.isObscureAwaitingScan;
+      val var6: java.lang.String = this.spoilerDescription;
+      val var4: Boolean = this.isObscure;
+      val var3: Boolean = this.isObscureAwaitingScan;
       val var10: java.lang.String = this.obscureDescription;
       val var1: Boolean = this.showDescription;
-      val var6: java.lang.String = this.description;
-      val var8: java.lang.String = this.descriptionHint;
-      val var9: java.lang.String = this.accessibilityRole;
-      val var14: java.lang.String = this.portalIdString;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("MediaGalleryItem(media=");
-      var7.append(var11);
-      var7.append(", mediaType=");
-      var7.append(var5);
-      var7.append(", videoPreviewUrl=");
-      var7.append(var13);
-      var7.append(", isSpoiler=");
-      var7.append(var2);
-      var7.append(", spoilerDescription=");
-      var7.append(var12);
-      var7.append(", isObscure=");
-      var7.append(var3);
-      var7.append(", isObscureAwaitingScan=");
-      var7.append(var4);
-      var7.append(", obscureDescription=");
-      var7.append(var10);
-      var7.append(", showDescription=");
-      var7.append(var1);
-      var7.append(", description=");
-      var7.append(var6);
-      var7.append(", descriptionHint=");
-      var7.append(var8);
-      var7.append(", accessibilityRole=");
-      var7.append(var9);
-      var7.append(", portalIdString=");
-      var7.append(var14);
-      var7.append(")");
-      return var7.toString();
+      val var9: java.lang.String = this.description;
+      val var14: java.lang.String = this.descriptionHint;
+      val var5: java.lang.String = this.accessibilityRole;
+      val var12: java.lang.String = this.portalIdString;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("MediaGalleryItem(media=");
+      var11.append(var13);
+      var11.append(", mediaType=");
+      var11.append(var7);
+      var11.append(", videoPreviewUrl=");
+      var11.append(var8);
+      var11.append(", isSpoiler=");
+      var11.append(var2);
+      var11.append(", spoilerDescription=");
+      var11.append(var6);
+      var11.append(", isObscure=");
+      var11.append(var4);
+      var11.append(", isObscureAwaitingScan=");
+      var11.append(var3);
+      var11.append(", obscureDescription=");
+      var11.append(var10);
+      var11.append(", showDescription=");
+      var11.append(var1);
+      var11.append(", description=");
+      var11.append(var9);
+      var11.append(", descriptionHint=");
+      var11.append(var14);
+      var11.append(", accessibilityRole=");
+      var11.append(var5);
+      var11.append(", portalIdString=");
+      var11.append(var12);
+      var11.append(")");
+      return var11.toString();
    }
 
    public object `$serializer` : g0 {
@@ -355,142 +354,147 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var4: UnfurledMediaItem.$serializer = UnfurledMediaItem.$serializer.INSTANCE;
+         val var2: UnfurledMediaItem.$serializer = UnfurledMediaItem.$serializer.INSTANCE;
          val var1: MediaGalleryItemType.Serializer = MediaGalleryItemType.Serializer.INSTANCE;
-         val var2: b2 = b2.a;
-         val var5: KSerializer = a.u(b2.a);
-         val var3: al.h = al.h.a;
-         return new KSerializer[]{var4, var1, var5, al.h.a, a.u(var2), var3, var3, a.u(var2), var3, a.u(var2), var2, var2, a.u(var2), a.u(var2), a.u(var2)};
+         val var5: b2 = b2.a;
+         val var3: KSerializer = a.u(b2.a);
+         val var4: il.h = il.h.a;
+         return new KSerializer[]{var2, var1, var3, il.h.a, a.u(var5), var4, var4, a.u(var5), var4, a.u(var5), var5, var5, a.u(var5), a.u(var5), a.u(var5)};
       }
 
       public open fun deserialize(decoder: Decoder): MediaGalleryItem {
          q.h(var1, "decoder");
-         val var24: SerialDescriptor = this.getDescriptor();
-         val var25: c = var1.c(var24);
-         var var7: Boolean = var25.y();
+         val var26: SerialDescriptor = this.getDescriptor();
+         val var27: c = var1.c(var26);
+         var var7: Boolean = var27.y();
          var var3: Byte = 11;
-         var var17: UnfurledMediaItem = null;
+         var var18: UnfurledMediaItem = null;
          var var2: Int;
          var var8: Boolean;
-         var var9: Boolean;
          var var10: Boolean;
          val var11: Boolean;
-         var var12: Any;
-         var var13: Any;
-         var var15: Any;
-         var var16: Any;
-         var var18: Any;
-         var var19: MediaGalleryItemType;
-         var var20: java.lang.String;
-         val var22: Any;
-         var var27: Any;
-         var var39: Any;
+         val var12: Boolean;
+         var var14: Any;
+         var var17: Any;
+         var var21: java.lang.String;
+         var var22: Any;
+         val var23: Any;
+         var var29: Any;
+         var var37: Any;
+         var var42: Any;
+         var var46: MediaGalleryItemType;
+         var var47: Any;
          if (var7) {
-            var17 = var25.m(var24, 0, UnfurledMediaItem.$serializer.INSTANCE, null) as UnfurledMediaItem;
-            var19 = var25.m(var24, 1, MediaGalleryItemType.Serializer.INSTANCE, null) as MediaGalleryItemType;
-            var39 = b2.a;
-            var20 = var25.v(var24, 2, b2.a, null) as java.lang.String;
-            var10 = var25.s(var24, 3);
-            var18 = var25.v(var24, 4, (DeserializationStrategy)var39, null) as java.lang.String;
-            var8 = var25.s(var24, 5);
-            var7 = var25.s(var24, 6);
-            var15 = var25.v(var24, 7, (DeserializationStrategy)var39, null) as java.lang.String;
-            var11 = var25.s(var24, 8);
-            val var14: java.lang.String = var25.v(var24, 9, (DeserializationStrategy)var39, null) as java.lang.String;
-            var12 = var25.t(var24, 10);
-            var27 = var25.t(var24, 11);
-            var16 = var25.v(var24, 12, (DeserializationStrategy)var39, null) as java.lang.String;
-            var13 = var25.v(var24, 13, (DeserializationStrategy)var39, null) as java.lang.String;
-            val var23: java.lang.String = var25.v(var24, 14, (DeserializationStrategy)var39, null) as java.lang.String;
+            var18 = var27.m(var26, 0, UnfurledMediaItem.$serializer.INSTANCE, null) as UnfurledMediaItem;
+            var42 = var27.m(var26, 1, MediaGalleryItemType.Serializer.INSTANCE, null) as MediaGalleryItemType;
+            val var19: b2 = b2.a;
+            var21 = var27.v(var26, 2, b2.a, null) as java.lang.String;
+            var12 = var27.s(var26, 3);
+            var17 = var27.v(var26, 4, var19, null) as java.lang.String;
+            var8 = var27.s(var26, 5);
+            var7 = var27.s(var26, 6);
+            var47 = var27.v(var26, 7, var19, null) as java.lang.String;
+            val var9: Boolean = var27.s(var26, 8);
+            var14 = var27.v(var26, 9, var19, null) as java.lang.String;
+            var37 = var27.t(var26, 10);
+            var29 = var27.t(var26, 11);
+            val var24: java.lang.String = var27.v(var26, 12, var19, null) as java.lang.String;
+            val var15: java.lang.String = var27.v(var26, 13, var19, null) as java.lang.String;
+            val var25: java.lang.String = var27.v(var26, 14, var19, null) as java.lang.String;
             var2 = 32767;
-            var9 = var7;
-            var39 = var14;
-            var22 = var27;
-            var27 = var23;
+            var46 = (MediaGalleryItemType)var42;
+            var10 = var7;
+            var42 = var47;
+            var11 = var9;
+            var23 = var37;
+            var22 = var29;
+            var29 = var24;
+            var47 = var15;
+            var37 = var25;
          } else {
             var var5: Boolean = true;
             var2 = 0;
-            var9 = false;
+            var var35: Boolean = false;
             var8 = false;
             var7 = false;
             var10 = false;
-            var20 = null;
-            var19 = null;
-            var18 = null;
-            var16 = null;
-            var15 = null;
-            var var35: Any = null;
-            var39 = null;
-            var13 = null;
-            var12 = null;
-            var27 = null;
+            var21 = null;
+            var46 = null;
+            var47 = null;
+            var17 = null;
+            var42 = null;
+            var var41: Any = null;
+            var22 = null;
+            var14 = null;
+            var37 = null;
+            var29 = null;
 
             while (var5) {
-               val var6: Int = var25.x(var24);
+               val var6: Int = var27.x(var26);
                switch (var6) {
                   case -1:
                      var5 = false;
                      continue;
                   case 0:
-                     var17 = var25.m(var24, 0, UnfurledMediaItem.$serializer.INSTANCE, var17) as UnfurledMediaItem;
+                     var18 = var27.m(var26, 0, UnfurledMediaItem.$serializer.INSTANCE, var18) as UnfurledMediaItem;
                      var2 |= 1;
                      break;
                   case 1:
-                     var19 = var25.m(var24, 1, MediaGalleryItemType.Serializer.INSTANCE, var19) as MediaGalleryItemType;
+                     var46 = var27.m(var26, 1, MediaGalleryItemType.Serializer.INSTANCE, var46) as MediaGalleryItemType;
                      var2 |= 2;
                      break;
                   case 2:
-                     var20 = var25.v(var24, 2, b2.a, var20) as java.lang.String;
+                     var21 = var27.v(var26, 2, b2.a, var21) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var25.s(var24, 3);
+                     var7 = var27.s(var26, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var13 = var25.v(var24, 4, b2.a, var13) as java.lang.String;
+                     var14 = var27.v(var26, 4, b2.a, var14) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
-                     var8 = var25.s(var24, 5);
+                     var8 = var27.s(var26, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var9 = var25.s(var24, 6);
+                     var35 = var27.s(var26, 6);
                      var2 |= 64;
                      break;
                   case 7:
-                     var35 = var25.v(var24, 7, b2.a, var35) as java.lang.String;
+                     var41 = var27.v(var26, 7, b2.a, var41) as java.lang.String;
                      var2 |= 128;
                      break;
                   case 8:
-                     var10 = var25.s(var24, 8);
+                     var10 = var27.s(var26, 8);
                      var2 |= 256;
                      var3 = 11;
                      continue;
                   case 9:
-                     var39 = var25.v(var24, 9, b2.a, var39) as java.lang.String;
+                     var22 = var27.v(var26, 9, b2.a, var22) as java.lang.String;
                      var2 |= 512;
                      var3 = 11;
                      continue;
                   case 10:
-                     var12 = var25.t(var24, 10);
+                     var37 = var27.t(var26, 10);
                      var2 |= 1024;
                      continue;
                   case 11:
-                     var27 = var25.t(var24, var3);
+                     var29 = var27.t(var26, var3);
                      var2 |= 2048;
                      continue;
                   case 12:
-                     var15 = var25.v(var24, 12, b2.a, var15) as java.lang.String;
+                     var42 = var27.v(var26, 12, b2.a, var42) as java.lang.String;
                      var2 |= 4096;
                      continue;
                   case 13:
-                     var16 = var25.v(var24, 13, b2.a, var16) as java.lang.String;
+                     var17 = var27.v(var26, 13, b2.a, var17) as java.lang.String;
                      var2 |= 8192;
                      continue;
                   case 14:
-                     var18 = var25.v(var24, 14, b2.a, var18) as java.lang.String;
+                     var47 = var27.v(var26, 14, b2.a, var47) as java.lang.String;
                      var2 |= 16384;
                      continue;
                   default:
@@ -500,34 +504,37 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                var3 = 11;
             }
 
-            var18 = var13;
-            var27 = var18;
-            var13 = var16;
-            var16 = var15;
-            var22 = var27;
+            var17 = var14;
+            var22 = var29;
+            var37 = var47;
+            var47 = var17;
+            var29 = var42;
+            var23 = var37;
+            var14 = var22;
             var11 = var10;
-            var15 = var35;
-            var10 = var7;
+            var42 = var41;
+            var10 = var35;
+            var12 = var7;
          }
 
-         var25.b(var24);
+         var27.b(var26);
          return new MediaGalleryItem(
             var2,
-            var17,
-            var19,
-            var20,
-            var10,
-            (java.lang.String)var18,
+            var18,
+            var46,
+            var21,
+            var12,
+            (java.lang.String)var17,
             var8,
-            var9,
-            (java.lang.String)var15,
+            var10,
+            (java.lang.String)var42,
             var11,
-            (java.lang.String)var39,
-            (java.lang.String)var12,
+            (java.lang.String)var14,
+            (java.lang.String)var23,
             (java.lang.String)var22,
-            (java.lang.String)var16,
-            (java.lang.String)var13,
-            (java.lang.String)var27,
+            (java.lang.String)var29,
+            (java.lang.String)var47,
+            (java.lang.String)var37,
             null
          );
       }
@@ -542,7 +549,7 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return al.g0.a.a(this);
+         return il.g0.a.a(this);
       }
    }
 

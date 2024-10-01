@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.presentation.textutils.Jumboable
+import fl.f
 import kotlinx.serialization.KSerializer
-import xk.f
 
 @f
 public sealed class EmojiContentNode protected constructor() : ContentNode(), Jumboable {

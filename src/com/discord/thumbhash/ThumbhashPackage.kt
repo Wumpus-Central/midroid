@@ -9,11 +9,11 @@ import kotlin.jvm.internal.q
 public class ThumbhashPackage : ReactPackage {
    public open fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
       q.h(var1, "reactContext");
-      return i.j();
+      return i.k();
    }
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
       q.h(var1, "reactContext");
-      return i.p(new ImageWithThumbhashPlaceholderViewManager[]{new ImageWithThumbhashPlaceholderViewManager()});
+      return i.q(new ImageWithThumbhashPlaceholderViewManager[]{new ImageWithThumbhashPlaceholderViewManager()});
    }
 }

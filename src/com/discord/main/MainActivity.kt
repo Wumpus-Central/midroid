@@ -5,12 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import androidx.lifecycle.Lifecycle
 import com.discord.external_pip.ExternalPipModule
 import com.discord.foreground_service.ForegroundServiceManager
 import com.discord.notifications.client.NotificationClient
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
+import com.discord.window.WindowFoldingFeatureDetector
 import com.facebook.react.bridge.ReactContext
 import kotlin.jvm.internal.q
 
@@ -43,9 +45,14 @@ public class MainActivity : ReactActivity {
 
          protected void onCreate(Bundle var1) {
             super.onCreate(var1);
-            val var2: Intent = this.this$0.getIntent();
-            q.g(var2, "getIntent(...)");
-            this.parseIntent(var2);
+            val var4: Intent = this.this$0.getIntent();
+            q.g(var4, "getIntent(...)");
+            this.parseIntent(var4);
+            val var2: WindowFoldingFeatureDetector = WindowFoldingFeatureDetector.INSTANCE;
+            val var5: MainActivity = this.this$0;
+            val var3: Lifecycle = this.this$0.getLifecycle();
+            q.g(var3, "getLifecycle(...)");
+            var2.configure(var5, var3, this.this$0);
          }
 
          public boolean onNewIntent(Intent var1) {

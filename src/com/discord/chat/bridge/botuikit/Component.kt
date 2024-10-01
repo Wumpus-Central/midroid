@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
+import fl.f
 import kotlinx.serialization.KSerializer
-import xk.f
 
 @f(with = ComponentSerializer::class)
 public sealed class Component protected constructor() {

@@ -2,9 +2,9 @@ package com.discord.emoji_picker
 
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData.NativeSection
 import com.discord.misc.utilities.collections.StubbedList
-import fh.p
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import nh.p
 
 internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, offsetId: Long) : StubbedList<EmojiPickerItem> {
    private final val listHeaderIndices: List<Int>
@@ -33,7 +33,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
       this.listSize = var4;
       val var6: java.util.List = this.nativeSection;
       var var9: Int = 0;
-      var4 = i.u(var6, 9);
+      var4 = i.v(var6, 9);
       val var10: Any;
       if (var4 == 0) {
          var10 = i.e(var9);
@@ -49,7 +49,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
          var10 = var5;
       }
 
-      this.listHeaderIndices = i.W((java.util.List)var10, 1);
+      this.listHeaderIndices = i.X((java.util.List)var10, 1);
    }
 
    public open operator fun get(index: Int): EmojiPickerItem {

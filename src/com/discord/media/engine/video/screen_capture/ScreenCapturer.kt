@@ -58,12 +58,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private fun createRecorder(): AudioRecord? {
       var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
-         val var7: AudioPlaybackCaptureConfiguration = d.a(c.a(c.a(c.a(f.a(this.mediaProjection), 1), 14), 0));
-         q.g(var7, "build(...)");
+         val var4: AudioPlaybackCaptureConfiguration = c.a(b.a(b.a(b.a(e.a(this.mediaProjection), 1), 14), 0));
+         q.g(var4, "build(...)");
 
          try {
-            var1 = e.a(
-                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var7
+            var1 = d.a(
+                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var4
                )
                .build();
          } catch (var5: SecurityException) {
@@ -82,7 +82,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
          q.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
-         var3.set(b.a(a.a(var4 as WindowManager)));
+         var3.set(x1.e.a(a.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
       }

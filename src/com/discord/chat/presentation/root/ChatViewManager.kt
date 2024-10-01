@@ -23,10 +23,10 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
       q.h(var1, "reactContext");
-      val var3: ChatView = new ChatView(var1);
-      val var2: Context = var3.getContext();
-      q.g(var2, "getContext(...)");
-      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new Function0(var3) {
+      val var2: ChatView = new ChatView(var1);
+      val var3: Context = var2.getContext();
+      q.g(var3, "getContext(...)");
+      var2.setEventHandler(new ChatViewEventHandler(var3, this.reactEvents, new Function0(var2) {
          final ChatView $chatView;
 
          {
@@ -38,7 +38,7 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
             return this.$chatView.getId();
          }
       }));
-      return var3;
+      return var2;
    }
 
    protected open fun getDelegate(): DCDChatManagerDelegate<ChatView, ChatViewManager> {
@@ -110,12 +110,6 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    @ReactProp(name = "animateEmoji")
    public open fun setAnimateEmoji(view: ChatView, value: Boolean) {
       q.h(var1, "view");
-   }
-
-   @ReactProp(name = "animatedCustomKeyboardHeight")
-   public open fun setAnimatedCustomKeyboardHeight(view: ChatView, value: Float) {
-      q.h(var1, "view");
-      var1.setAnimatedCustomKeyboardHeight(var2);
    }
 
    @ReactProp(name = "HACK_fixModalInteraction")

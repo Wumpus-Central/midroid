@@ -9,19 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.ChatModule
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.ChatListView
-import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.views.view.ReactViewGroup
-import fh.w
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
+import nh.w
 
 public class ChatView(context: Context) : ReactViewGroup {
-   private final var animatedCustomKeyboardHeight: Int
    private final lateinit var chatList: ChatListView
    private final lateinit var eventHandler: ChatEventHandler
    private final var inverted: Boolean
@@ -37,7 +35,7 @@ public class ChatView(context: Context) : ReactViewGroup {
    }
 
    @JvmStatic
-   fun `attachPortalViewToChatList$lambda$6`(
+   fun `attachPortalViewToChatList$lambda$5`(
       var0: View, var1: ChatView, var2: View, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int, var10: Int
    ) {
       q.h(var0, "$portalView");
@@ -142,18 +140,6 @@ public class ChatView(context: Context) : ReactViewGroup {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setAreChatAnimationsEnabled$cp(var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
-      }
-   }
-
-   public fun setAnimatedCustomKeyboardHeight(height: Float) {
-      if (ThreadUtilsKt.isOnMainThread()) {
-         access$setAnimatedCustomKeyboardHeight$p(this, SizeUtilsKt.getDpToPx(var1));
-      } else {
          val var3: Thread = Thread.currentThread();
          val var2: StringBuilder = new StringBuilder();
          var2.append("Expected to be on android main thread. Current: ");
@@ -179,11 +165,11 @@ public class ChatView(context: Context) : ReactViewGroup {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setInverted$p(this, var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

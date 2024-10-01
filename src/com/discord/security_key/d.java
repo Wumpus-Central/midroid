@@ -1,6 +1,6 @@
 package com.discord.security_key;
 
-import ob.e;
+import wb.e;
 
 // $VF: synthetic class
 public final class d implements e {

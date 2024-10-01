@@ -176,9 +176,9 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var32, var10);
       val var40: SpoilerViewManager = this.spoilerViewManager;
-      val var39: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var33: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.q.g(this.binding.container, "container");
+      val var39: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var36: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
@@ -194,7 +194,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var40.configureSpoiler(var13, var39, var33, var36, null, var11, var15, var12, var10);
+      var40.configureSpoiler(var13, var33, var39, var36, null, var11, var15, var12, var10);
       val var34: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var37: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -332,13 +332,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
          var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }
@@ -391,14 +391,14 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
       public override fun toString(): String {
          val var2: java.lang.String = this.sourceUrl;
-         val var3: java.lang.String = this.previewUrl;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("TargetUrl(sourceUrl=");
-         var1.append(var2);
-         var1.append(", previewUrl=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.previewUrl;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetUrl(sourceUrl=");
+         var3.append(var2);
+         var3.append(", previewUrl=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

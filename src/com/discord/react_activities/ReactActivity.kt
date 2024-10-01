@@ -17,9 +17,9 @@ import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
+import g7.b
 import java.util.concurrent.Future
 import kotlin.jvm.internal.q
-import y6.b
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    internal final lateinit var rootView: ReactRootView

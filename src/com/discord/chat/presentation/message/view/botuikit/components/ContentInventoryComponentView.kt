@@ -29,13 +29,13 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
-import fh.l
-import fh.o
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import nh.l
+import nh.o
 
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -61,8 +61,8 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      this.draweeControllerBuilder = o4.c.g();
-      this.binding$delegate = l.a(o.l, new Function0(this) {
+      this.draweeControllerBuilder = w4.c.g();
+      this.binding$delegate = l.b(o.l, new Function0(this) {
          final ContentInventoryComponentView this$0;
 
          {
@@ -108,14 +108,14 @@ public class ContentInventoryComponentView  public constructor(context: Context,
          this.getBinding().getRoot().setVisibility(8);
       } else {
          val var23: java.util.List = var29.getGradientColors();
-         val var7: ArrayList = new ArrayList(i.u(var23, 10));
+         val var7: ArrayList = new ArrayList(i.v(var23, 10));
          val var24: java.util.Iterator = var23.iterator();
 
          while (var24.hasNext()) {
             var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var25: IntArray = i.P0(var7);
+         val var25: IntArray = i.Q0(var7);
          val var8: ContentInventoryComponentView = this.getBinding().getRoot();
          var8.setVisibility(0);
          q.e(var8);

@@ -10,11 +10,11 @@ import java.util.HashSet
 import java.util.LinkedList
 import java.util.NoSuchElementException
 import java.util.concurrent.TimeUnit
-import kk.j
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lk.d
+import sk.j
+import tk.d
 
 internal object SystemLogUtils {
    private const val DEFAULT_TAG: String = "Discord"
@@ -51,7 +51,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         jh.a.b(
+         rh.a.b(
             false,
             false,
             null,
@@ -84,18 +84,18 @@ internal object SystemLogUtils {
                   // 000: bipush 0
                   // 001: istore 1
                   // 002: aconst_null
-                  // 003: astore 6
+                  // 003: astore 5
                   // 005: aconst_null
-                  // 006: astore 5
-                  // 008: aload 5
+                  // 006: astore 6
+                  // 008: aload 6
                   // 00a: astore 4
-                  // 00c: aload 6
+                  // 00c: aload 5
                   // 00e: astore 3
                   // 00f: new java/lang/ProcessBuilder
                   // 012: astore 7
-                  // 014: aload 5
+                  // 014: aload 6
                   // 016: astore 4
-                  // 018: aload 6
+                  // 018: aload 5
                   // 01a: astore 3
                   // 01b: aload 7
                   // 01d: bipush 2
@@ -109,9 +109,9 @@ internal object SystemLogUtils {
                   // 028: ldc "-d"
                   // 02a: aastore
                   // 02b: invokespecial java/lang/ProcessBuilder.<init> ([Ljava/lang/String;)V
-                  // 02e: aload 5
+                  // 02e: aload 6
                   // 030: astore 4
-                  // 032: aload 6
+                  // 032: aload 5
                   // 034: astore 3
                   // 035: aload 7
                   // 037: bipush 1
@@ -149,34 +149,34 @@ internal object SystemLogUtils {
                   // 078: astore 4
                   // 07a: aload 5
                   // 07c: astore 3
-                  // 07d: getstatic lk/a.b Ljava/nio/charset/Charset;
-                  // 080: astore 8
+                  // 07d: getstatic tk/a.b Ljava/nio/charset/Charset;
+                  // 080: astore 6
                   // 082: aload 5
                   // 084: astore 4
                   // 086: aload 5
                   // 088: astore 3
                   // 089: new java/io/InputStreamReader
-                  // 08c: astore 6
+                  // 08c: astore 8
                   // 08e: aload 5
                   // 090: astore 4
                   // 092: aload 5
                   // 094: astore 3
-                  // 095: aload 6
+                  // 095: aload 8
                   // 097: aload 9
-                  // 099: aload 8
+                  // 099: aload 6
                   // 09b: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
                   // 09e: aload 5
                   // 0a0: astore 4
                   // 0a2: aload 5
                   // 0a4: astore 3
-                  // 0a5: aload 6
+                  // 0a5: aload 8
                   // 0a7: instanceof java/io/BufferedReader
                   // 0aa: ifeq 0c7
                   // 0ad: aload 5
                   // 0af: astore 4
                   // 0b1: aload 5
                   // 0b3: astore 3
-                  // 0b4: aload 6
+                  // 0b4: aload 8
                   // 0b6: checkcast java/io/BufferedReader
                   // 0b9: astore 6
                   // 0bb: goto 0dc
@@ -190,7 +190,7 @@ internal object SystemLogUtils {
                   // 0cd: astore 3
                   // 0ce: new java/io/BufferedReader
                   // 0d1: dup
-                  // 0d2: aload 6
+                  // 0d2: aload 8
                   // 0d4: sipush 8192
                   // 0d7: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
                   // 0da: astore 6
@@ -289,31 +289,31 @@ internal object SystemLogUtils {
                   // 18b: aload 5
                   // 18d: iload 1
                   // 18e: aaload
-                  // 18f: astore 8
+                  // 18f: astore 7
                   // 191: aload 3
                   // 192: astore 4
                   // 194: new java/lang/StringBuilder
-                  // 197: astore 7
+                  // 197: astore 8
                   // 199: aload 3
                   // 19a: astore 4
-                  // 19c: aload 7
+                  // 19c: aload 8
                   // 19e: invokespecial java/lang/StringBuilder.<init> ()V
                   // 1a1: aload 3
                   // 1a2: astore 4
-                  // 1a4: aload 7
+                  // 1a4: aload 8
                   // 1a6: ldc "    "
                   // 1a8: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 1ab: pop
                   // 1ac: aload 3
                   // 1ad: astore 4
-                  // 1af: aload 7
-                  // 1b1: aload 8
+                  // 1af: aload 8
+                  // 1b1: aload 7
                   // 1b3: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 1b6: pop
                   // 1b7: aload 3
                   // 1b8: astore 4
                   // 1ba: aload 6
-                  // 1bc: aload 7
+                  // 1bc: aload 8
                   // 1be: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 1c1: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 1c4: pop
@@ -348,7 +348,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         var var7: java.util.Iterator = var1.iterator();
+         val var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -406,25 +406,25 @@ internal object SystemLogUtils {
                   }
                }
             );
-            val var13: HashSet = w.e(
+            val var23: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               var7 = var21.iterator();
+               val var14: java.util.Iterator = var21.iterator();
 
                val var8: Any;
                do {
-                  if (!var7.hasNext()) {
+                  if (!var14.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var7.next();
-               } while (!(var13.contains((java.lang.String)var8) ^ true));
+                  var8 = var14.next();
+               } while (!(var23.contains((java.lang.String)var8) ^ true));
 
-               var14 = var8 as java.lang.String;
+               var13 = var8 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var14 = "Unknown";
+               var13 = "Unknown";
             }
 
             val var22: java.lang.String = j.w(var21, "\n", null, null, 0, null, null, 62, null);
@@ -438,14 +438,14 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
          }
       }
    }
 
    private fun hashString(input: String): String {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
-      val var3: ByteArray = var1.getBytes(lk.a.b);
+      val var3: ByteArray = var1.getBytes(tk.a.b);
       q.g(var3, "getBytes(...)");
       val var4: ByteArray = var2.digest(var3);
       q.e(var4);
@@ -718,8 +718,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var4: Long = System.nanoTime();
-      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var2: Long = System.nanoTime();
+      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -727,7 +727,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var4 + var2) {
+            if (System.nanoTime() >= var2 + var4) {
                return;
             }
          }
@@ -874,27 +874,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.text;
-         val var2: java.lang.String = this.cause;
-         val var5: java.lang.String = this.groupBy;
+         val var7: java.lang.String = this.text;
+         val var3: java.lang.String = this.cause;
+         val var4: java.lang.String = this.groupBy;
          val var1: java.lang.String = this.origin;
-         val var3: java.lang.String = this.groupHash;
-         val var7: java.lang.String = this.textHash;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Tombstone(text=");
-         var6.append(var4);
-         var6.append(", cause=");
-         var6.append(var2);
-         var6.append(", groupBy=");
-         var6.append(var5);
-         var6.append(", origin=");
-         var6.append(var1);
-         var6.append(", groupHash=");
-         var6.append(var3);
-         var6.append(", textHash=");
-         var6.append(var7);
-         var6.append(")");
-         return var6.toString();
+         val var6: java.lang.String = this.groupHash;
+         val var5: java.lang.String = this.textHash;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Tombstone(text=");
+         var2.append(var7);
+         var2.append(", cause=");
+         var2.append(var3);
+         var2.append(", groupBy=");
+         var2.append(var4);
+         var2.append(", origin=");
+         var2.append(var1);
+         var2.append(", groupHash=");
+         var2.append(var6);
+         var2.append(", textHash=");
+         var2.append(var5);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

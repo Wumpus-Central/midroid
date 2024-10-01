@@ -64,7 +64,7 @@ public object MarkdownRules {
             return (CharacterStyle)var3;
          }
       };
-      return i.m(new MarkdownRules.HeaderRule[]{new MarkdownRules.HeaderRule(new Function1(var2) {
+      return i.n(new MarkdownRules.HeaderRule[]{new MarkdownRules.HeaderRule(new Function1(var2) {
          final <unrepresentable> $spanProvider$1;
 
          {
@@ -93,7 +93,7 @@ public object MarkdownRules {
    public fun <R, S> createMarkdownRules(context: Context, headerStyles: List<Int>): List<Rule<R, Node<R>, S>> {
       q.h(var0, "context");
       q.h(var1, "headerStyles");
-      return i.z0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
+      return i.A0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
    }
 
    public open class HeaderLineClassedRule<RC, T, S>(styleSpanProvider: (Int) -> CharacterStyle,
@@ -106,7 +106,7 @@ public object MarkdownRules {
 
       public constructor(styleSpanProvider: (Int) -> CharacterStyle, classSpanProvider: (String) -> Any?) : q.h(var1, "styleSpanProvider") {
          q.h(var2, "classSpanProvider");
-         this(var1, var2, i.z0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule()));
+         this(var1, var2, i.A0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule()));
       }
 
       init {
@@ -131,12 +131,12 @@ public object MarkdownRules {
 
          q.g(var4, "headerBody");
 
-         for (var4 : var2.parse(var4, var3, this.innerRules)) {
-            if (var4 == null) {
+         for (Object var12 : var2.parse(var4, var3, this.innerRules)) {
+            if (var12 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            var5.addChild(var4 as Node);
+            var5.addChild(var12 as Node);
          }
 
          label42: {
@@ -169,7 +169,7 @@ public object MarkdownRules {
                }
             }
          } else {
-            var9 = i.j();
+            var9 = i.k();
          }
 
          var var14: StyleNode = var5;
@@ -205,10 +205,10 @@ public object MarkdownRules {
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
          q.h(var1, "matcher");
          q.h(var2, "parser");
-         val var5: ParseSpec.Companion = ParseSpec.Companion;
-         val var4: java.lang.String = var1.group(2);
-         q.g(var4, "matcher.group(2)");
-         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(1), var1.end(1));
+         val var4: ParseSpec.Companion = ParseSpec.Companion;
+         val var5: java.lang.String = var1.group(2);
+         q.g(var5, "matcher.group(2)");
+         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(1), var1.end(1));
       }
    }
 
@@ -234,10 +234,10 @@ public object MarkdownRules {
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
          q.h(var1, "matcher");
          q.h(var2, "parser");
-         val var4: ParseSpec.Companion = ParseSpec.Companion;
-         val var5: java.lang.String = var1.group(1);
-         q.g(var5, "matcher.group(1)");
-         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(2), var1.end(2));
+         val var5: ParseSpec.Companion = ParseSpec.Companion;
+         val var4: java.lang.String = var1.group(1);
+         q.g(var4, "matcher.group(1)");
+         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(2), var1.end(2));
       }
    }
 

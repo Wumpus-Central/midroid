@@ -22,13 +22,13 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.WritableNativeMap
 import com.jakewharton.processphoenix.ProcessPhoenix
-import fh.w
 import java.io.File
 import java.lang.reflect.Field
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.g0
 import kotlin.jvm.internal.q
+import nh.w
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -120,15 +120,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun showSpinnerView() {
-      val var1: ProgressBar = new ProgressBar(this.reactContext);
-      var1.setLayoutParams(new LayoutParams(-2, -2, 17));
-      var1.setIndeterminate(true);
-      val var2: FrameLayout = new FrameLayout(this.reactContext);
-      var2.setLayoutParams(new LayoutParams(-1, -1));
-      var2.addView(var1);
-      var2.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
-      var2.setClickable(true);
-      this.progressLayout = var2;
+      val var2: ProgressBar = new ProgressBar(this.reactContext);
+      var2.setLayoutParams(new LayoutParams(-2, -2, 17));
+      var2.setIndeterminate(true);
+      val var1: FrameLayout = new FrameLayout(this.reactContext);
+      var1.setLayoutParams(new LayoutParams(-1, -1));
+      var1.addView(var2);
+      var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
+      var1.setClickable(true);
+      this.progressLayout = var1;
       this.runOnActivity(new Function1(this) {
          final BundleUpdaterManager this$0;
 

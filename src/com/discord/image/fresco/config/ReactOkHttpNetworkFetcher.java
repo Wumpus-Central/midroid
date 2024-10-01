@@ -59,6 +59,6 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
          var4 = Collections.emptyMap();
       }
 
-      this.fetchWithRequest(var1, var2, new Builder().c(new a().e().a()).l(var5.toString()).f(Headers.q(var4)).d().b());
+      this.fetchWithRequest(var1, var2, new Builder().c(new a().e().a()).l(var5.toString()).f(Headers.p(var4)).d().b());
    }
 }

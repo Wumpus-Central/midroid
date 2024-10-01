@@ -13,7 +13,7 @@ public fun ViewGroup.replaceViews(views: List<ComponentView<out Component>>) {
    for (int var2 = 0; var3.hasNext(); var2++) {
       var var4: Any = var3.next();
       if (var2 < 0) {
-         i.t();
+         i.u();
       }
 
       var4 = var4 as ComponentView;

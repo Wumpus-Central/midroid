@@ -2,13 +2,13 @@ package com.discord.chat.bridge.polls
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import fh.l
-import fh.o
+import fl.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.g0
 import kotlinx.serialization.KSerializer
-import mh.a
-import xk.f
+import nh.l
+import nh.o
+import uh.a
 
 @f(with = ShadowType.Serializer::class)
 public enum class ShadowType(serialNumber: Int, elevationDp: Int) : IntEnum {
@@ -22,7 +22,7 @@ public enum class ShadowType(serialNumber: Int, elevationDp: Int) : IntEnum {
    @JvmStatic
    private ShadowType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public ShadowType.Companion Companion = new ShadowType.Companion(null);
 

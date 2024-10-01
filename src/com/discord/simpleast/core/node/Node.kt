@@ -41,17 +41,17 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    public open class Parent<R>(vararg children: Node<Any>?) : Node<R> {
       init {
          q.h(var1, "children");
-         val var4: ArrayList = new ArrayList();
+         val var5: ArrayList = new ArrayList();
          val var3: Int = var1.length;
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var5: Node = var1[var2];
+            val var4: Node = var1[var2];
             if (var1[var2] != null) {
-               var4.add(var5);
+               var5.add(var4);
             }
          }
 
-         super(i.S0(var4));
+         super(i.T0(var5));
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
@@ -73,7 +73,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
          val var1: java.util.Collection = this.getChildren();
          val var3: java.lang.String;
          if (var1 != null) {
-            var3 = i.n0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
+            var3 = i.o0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
          } else {
             var3 = null;
          }

@@ -250,7 +250,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
          this.getPermissionsModule()
             .requestMultiplePermissions(
                NativeArrayExtensionsKt.toNativeArray(
-                  i.m(
+                  i.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES",
                         "android.permission.READ_MEDIA_VIDEO",
@@ -265,7 +265,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
          this.getPermissionsModule()
             .requestMultiplePermissions(
                NativeArrayExtensionsKt.toNativeArray(
-                  i.m(
+                  i.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VIDEO", "android.permission.READ_MEDIA_AUDIO"
                      }
