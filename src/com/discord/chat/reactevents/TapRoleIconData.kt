@@ -67,15 +67,15 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.roleName;
+      val var2: java.lang.String = this.roleName;
       val var3: java.lang.String = this.roleIconSource;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapRoleIconData(roleName=");
-      var2.append(var1);
-      var2.append(", roleIconSource=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapRoleIconData(roleName=");
+      var1.append(var2);
+      var1.append(", roleIconSource=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

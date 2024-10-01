@@ -115,28 +115,26 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
 
       public open fun deserialize(decoder: Decoder): NonGuildVersion {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var5: Long;
-         val var8: java.lang.String;
-         var var12: java.lang.String;
-         if (var10.y()) {
-            val var11: java.lang.String = var10.t(var9, 0);
-            var5 = var10.h(var9, 1);
-            val var7: java.lang.String = var10.v(var9, 2, b2.a, null) as java.lang.String;
+         var var7: java.lang.String;
+         var var10: java.lang.String;
+         if (var9.y()) {
+            var7 = var9.t(var8, 0);
+            var5 = var9.h(var8, 1);
+            var10 = var9.v(var8, 2, b2.a, null) as java.lang.String;
             var2 = 7;
-            var8 = var11;
-            var12 = var7;
          } else {
             var5 = 0L;
             var var3: Boolean = true;
-            var var13: java.lang.String = null;
-            var12 = null;
+            var7 = null;
+            var10 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var10.x(var9);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -144,26 +142,24 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
                            throw new n(var4);
                         }
 
-                        var12 = var10.v(var9, 2, b2.a, var12) as java.lang.String;
+                        var10 = var9.v(var8, 2, b2.a, var10) as java.lang.String;
                         var2 |= 4;
                      } else {
-                        var5 = var10.h(var9, 1);
+                        var5 = var9.h(var8, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var13 = var10.t(var9, 0);
+                     var7 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var8 = var13;
          }
 
-         var10.b(var9);
-         return new NonGuildVersion(var2, var8, var5, var12, null);
+         var9.b(var8);
+         return new NonGuildVersion(var2, var7, var5, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NonGuildVersion) {

@@ -26,16 +26,16 @@ public class MessageHighlightHeader  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var5: MessageHighlightHeaderBinding = MessageHighlightHeaderBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
-      this.binding = var5;
-      val var3: TextView = var5.header;
-      var5.header.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-      kotlin.jvm.internal.q.e(var3);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      var3.setText(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.HIGHLIGHT, null, 2, null));
-      val var4: SimpleDraweeView = var5.highlightIcon;
-      kotlin.jvm.internal.q.g(var5.highlightIcon, "highlightIcon");
+      val var3: MessageHighlightHeaderBinding = MessageHighlightHeaderBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      this.binding = var3;
+      val var5: TextView = var3.header;
+      var3.header.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
+      kotlin.jvm.internal.q.e(var5);
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      var5.setText(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.HIGHLIGHT, null, 2, null));
+      val var4: SimpleDraweeView = var3.highlightIcon;
+      kotlin.jvm.internal.q.g(var3.highlightIcon, "highlightIcon");
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Highlight);
    }
 }

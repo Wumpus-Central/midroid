@@ -283,51 +283,52 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          q.h(var1, "decoder");
          val var20: SerialDescriptor = this.getDescriptor();
          val var21: c = var1.c(var20);
-         val var18: Array<KSerializer> = SafetySystemNotificationEmbed.access$get$childSerializers$cp();
+         val var17: Array<KSerializer> = SafetySystemNotificationEmbed.access$get$childSerializers$cp();
          val var6: Boolean = var21.y();
          var var4: Byte = 9;
          var var9: java.lang.String = null;
          var var2: Int;
-         var var7: java.lang.String;
          var var10: java.lang.String;
          var var11: java.lang.String;
+         var var12: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
          var var15: java.lang.String;
-         var var16: FooterTheme;
-         val var17: java.lang.String;
+         val var16: java.lang.String;
+         val var18: java.lang.String;
          val var23: java.lang.String;
-         var var30: java.lang.String;
-         val var34: java.lang.String;
+         val var25: FooterTheme;
+         val var37: java.lang.String;
          if (var6) {
-            var14 = var21.t(var20, 0);
+            var12 = var21.t(var20, 0);
             var11 = var21.t(var20, 1);
-            var10 = var21.t(var20, 2);
-            var17 = var21.t(var20, 3);
+            var13 = var21.t(var20, 2);
+            var18 = var21.t(var20, 3);
             val var22: b2 = b2.a;
-            var13 = var21.v(var20, 4, b2.a, null) as java.lang.String;
-            var30 = var21.v(var20, 5, var22, null) as java.lang.String;
+            var16 = var21.v(var20, 4, b2.a, null) as java.lang.String;
+            var10 = var21.v(var20, 5, var22, null) as java.lang.String;
             val var8: java.lang.String = var21.v(var20, 6, var22, null) as java.lang.String;
-            var7 = var21.v(var20, 7, var22, null) as java.lang.String;
+            val var7: java.lang.String = var21.v(var20, 7, var22, null) as java.lang.String;
             var9 = var21.v(var20, 8, var22, null) as java.lang.String;
             var23 = var21.v(var20, 9, var22, null) as java.lang.String;
-            var16 = var21.m(var20, 10, var18[10], null) as FooterTheme;
+            val var19: FooterTheme = var21.m(var20, 10, var17[10], null) as FooterTheme;
             var2 = 2047;
-            var34 = var30;
-            var30 = var8;
-            var15 = var9;
+            var15 = var8;
+            var14 = var7;
+            var37 = var9;
+            var25 = var19;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var16 = null;
+            var var36: FooterTheme = null;
             var15 = null;
             var14 = null;
             var13 = null;
-            var30 = null;
+            var12 = null;
             var11 = null;
             var10 = null;
+            var var27: java.lang.String = null;
             var var26: java.lang.String = null;
-            var7 = null;
             var var24: java.lang.String = null;
 
             while (var3) {
@@ -341,11 +342,11 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 1;
                      break;
                   case 1:
-                     var26 = var21.t(var20, 1);
+                     var27 = var21.t(var20, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var7 = var21.t(var20, 2);
+                     var26 = var21.t(var20, 2);
                      var2 |= 4;
                      break;
                   case 3:
@@ -361,7 +362,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 32;
                      break;
                   case 6:
-                     var30 = var21.v(var20, 6, b2.a, var30) as java.lang.String;
+                     var12 = var21.v(var20, 6, b2.a, var12) as java.lang.String;
                      var2 |= 64;
                      break;
                   case 7:
@@ -378,7 +379,7 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                      var2 |= 512;
                      continue;
                   case 10:
-                     var16 = var21.m(var20, 10, var18[10], var16) as FooterTheme;
+                     var36 = var21.m(var20, 10, var17[10], var36) as FooterTheme;
                      var2 |= 1024;
                      continue;
                   default:
@@ -388,19 +389,20 @@ public data class SafetySystemNotificationEmbed(titleText: String,
                var4 = 9;
             }
 
-            var17 = var24;
+            var37 = var13;
+            var18 = var24;
+            var25 = var36;
             var23 = var15;
-            var15 = var13;
-            var7 = var14;
-            var34 = var11;
-            var13 = var10;
-            var10 = var7;
-            var11 = var26;
-            var14 = var9;
+            var15 = var12;
+            var10 = var11;
+            var16 = var10;
+            var13 = var26;
+            var11 = var27;
+            var12 = var9;
          }
 
          var21.b(var20);
-         return new SafetySystemNotificationEmbed(var2, var14, var11, var10, var17, var13, var34, var30, var7, var15, var23, var16, null);
+         return new SafetySystemNotificationEmbed(var2, var12, var11, var13, var18, var16, var10, var15, var14, var37, var23, var25, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetySystemNotificationEmbed) {

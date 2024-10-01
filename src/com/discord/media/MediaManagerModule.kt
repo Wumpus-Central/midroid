@@ -42,12 +42,12 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
          public final void invoke(Uri var1, int var2) {
             q.h(var1, "uri");
-            val var3: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
-            val var4: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
-            q.g(var4, "access$getReactApplicationContext(...)");
+            val var4: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
+            val var3: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
+            q.g(var3, "access$getReactApplicationContext(...)");
             val var5: java.lang.String = var1.toString();
             q.g(var5, "toString(...)");
-            var3.emitModuleEvent(var4, new CompressionProgressEvent(var5, var2));
+            var4.emitModuleEvent(var3, new CompressionProgressEvent(var5, var2));
          }
       });
    }
@@ -114,9 +114,11 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          new Function2(this, var1, var3, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1634)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1136,8 +1138,6 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          2,
          null

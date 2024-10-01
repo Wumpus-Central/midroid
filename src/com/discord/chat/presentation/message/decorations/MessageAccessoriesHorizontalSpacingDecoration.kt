@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.presentation.message.MessageAccessoriesView
 import com.discord.chat.presentation.message.view.ForumPostActionBarView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
-import com.discord.reactions.ReactionsView
+import com.discord.reactions.ReactionsFlexbox
 import kotlin.jvm.internal.q
 
 public class MessageAccessoriesHorizontalSpacingDecoration(leftMarginPx: Int, rightMarginPx: Int, isForwardedMessage: Boolean) : RecyclerView.ItemDecoration {
@@ -24,7 +24,7 @@ public class MessageAccessoriesHorizontalSpacingDecoration(leftMarginPx: Int, ri
    private fun computeLeftMarginPx(view: View): Int {
       if (!this.isForwardedMessage) {
          return this.leftMarginPx;
-      } else if (var1 is ReactionsView) {
+      } else if (var1 is ReactionsFlexbox) {
          return this.leftMarginPx;
       } else {
          return if (var1 is ThreadEmbedView) this.leftMarginPx else this.leftMarginPx + MessageAccessoriesView.Companion.getFORWARD_BAR_SPACING();

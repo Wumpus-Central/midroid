@@ -24,15 +24,15 @@ public final class FlaggedMessageEmbedFooterViewBinding implements ViewBinding {
 
    public static FlaggedMessageEmbedFooterViewBinding bind(View var0) {
       int var1 = R.id.flagged_message_keyword;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var4 = (TextView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.flagged_message_rule_name;
-         TextView var4 = (TextView)a.a(var0, var1);
-         if (var4 != null) {
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.separator_dot;
             ImageView var2 = (ImageView)a.a(var0, var1);
             if (var2 != null) {
-               return new FlaggedMessageEmbedFooterViewBinding(var0, var3, var4, var2);
+               return new FlaggedMessageEmbedFooterViewBinding(var0, var4, var3, var2);
             }
          }
       }

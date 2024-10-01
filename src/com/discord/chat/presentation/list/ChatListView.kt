@@ -222,10 +222,10 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       val var3: Pair = w.a(RegularMessageDelegate.class, 50);
       var var4: Int = 25;
 
-      for (Entry var5 : r.l(new Pair[]{var3, w.a(SystemMessageDelegate.class, var4), w.a(SeparatorDelegate.class, var4)}).entrySet()) {
-         val var7: Class = var5.getKey() as Class;
-         val var1: Int = (var5.getValue() as java.lang.Number).intValue();
-         var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
+      for (Entry var7 : r.l(new Pair[]{var3, w.a(SystemMessageDelegate.class, var4), w.a(SeparatorDelegate.class, var4)}).entrySet()) {
+         val var5: Class = var7.getKey() as Class;
+         val var1: Int = (var7.getValue() as java.lang.Number).intValue();
+         var4 = this.chatListAdapter.getDelegateViewTypes().get(var5);
          q.e(var4);
          this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var1);
       }
@@ -244,13 +244,13 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          var3.setAccessible(true);
          val var5: Any = var3.get(this);
          val var9: CrashReporting = CrashReporting.INSTANCE;
-         val var4: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("About to crash because of ChatList, dumping update log:\n");
-         var6.append(var4);
-         var6.append("\n Recycler State: ");
-         var6.append(var5);
-         CrashReporting.addBreadcrumb$default(var9, var6.toString(), null, null, 6, null);
+         val var6: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("About to crash because of ChatList, dumping update log:\n");
+         var4.append(var6);
+         var4.append("\n Recycler State: ");
+         var4.append(var5);
+         CrashReporting.addBreadcrumb$default(var9, var4.toString(), null, null, 6, null);
          throw var8;
       }
 
@@ -262,13 +262,13 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             var10.setAccessible(true);
             val var13: Any = var10.get(this);
             val var11: CrashReporting = CrashReporting.INSTANCE;
-            val var12: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-            val var14: StringBuilder = new StringBuilder();
-            var14.append("About to crash because of ChatList, dumping update log:\n");
-            var14.append(var12);
-            var14.append("\n Recycler State: ");
-            var14.append(var13);
-            CrashReporting.addBreadcrumb$default(var11, var14.toString(), null, null, 6, null);
+            val var14: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("About to crash because of ChatList, dumping update log:\n");
+            var12.append(var14);
+            var12.append("\n Recycler State: ");
+            var12.append(var13);
+            CrashReporting.addBreadcrumb$default(var11, var12.toString(), null, null, 6, null);
             throw var7;
          }
       }
@@ -340,19 +340,19 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                         val var3: Boolean = ChatListView.access$getLinearLayoutManager$p(this.this$0).getReverseLayout();
                         var var4: ChatEventHandler = null;
                         if (var3) {
+                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
+                           if (var4 == null) {
+                              q.y("eventHandler");
+                              var4 = null;
+                           }
+
+                           var4.onFirstLayout(var2, var1);
+                        } else {
                            val var10: ChatEventHandler = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var10 == null) {
                               q.y("eventHandler");
                            } else {
                               var4 = var10;
-                           }
-
-                           var4.onFirstLayout(var2, var1);
-                        } else {
-                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
-                           if (var4 == null) {
-                              q.y("eventHandler");
-                              var4 = null;
                            }
 
                            var4.onFirstLayout(var1, var2);
@@ -401,11 +401,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             null
          );
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -425,6 +425,8 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          new Function2(this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -1447,8 +1449,6 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    ,
          3,
          null

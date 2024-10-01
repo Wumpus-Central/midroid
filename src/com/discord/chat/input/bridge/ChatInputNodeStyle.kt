@@ -136,37 +136,37 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
-         val var2: n0 = n0.a;
-         return new KSerializer[]{a.u(n0.a), var2, a.u(BackgroundStyle.$serializer.INSTANCE), a.u(var1[3])};
+         val var2: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
+         val var1: n0 = n0.a;
+         return new KSerializer[]{a.u(n0.a), var1, a.u(BackgroundStyle.$serializer.INSTANCE), a.u(var2[3])};
       }
 
       public open fun deserialize(decoder: Decoder): ChatInputNodeStyle {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         val var10: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
+         val var8: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
          var var2: Int;
          var var3: Int;
-         var var6: BackgroundStyle;
+         var var6: Any;
          var var7: Int;
-         var var11: Any;
-         if (var9.y()) {
-            var7 = var9.v(var8, 0, n0.a, null) as Int;
-            var3 = var9.k(var8, 1);
-            var6 = var9.v(var8, 2, BackgroundStyle.$serializer.INSTANCE, null) as BackgroundStyle;
-            var11 = var9.v(var8, 3, var10[3], null) as ChatInputNodeFontWeight;
+         val var11: BackgroundStyle;
+         if (var10.y()) {
+            var7 = var10.v(var9, 0, n0.a, null) as Int;
+            var3 = var10.k(var9, 1);
+            var11 = var10.v(var9, 2, BackgroundStyle.$serializer.INSTANCE, null) as BackgroundStyle;
+            var6 = var10.v(var9, 3, var8[3], null) as ChatInputNodeFontWeight;
             var2 = 15;
          } else {
             var var4: Boolean = true;
             var2 = 0;
             var7 = null;
             var6 = null;
-            var11 = null;
+            var var12: Any = null;
             var3 = 0;
 
             while (var4) {
-               val var5: Int = var9.x(var8);
+               val var5: Int = var10.x(var9);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -175,28 +175,31 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
                               throw new n(var5);
                            }
 
-                           var11 = var9.v(var8, 3, var10[3], var11) as ChatInputNodeFontWeight;
+                           var12 = var10.v(var9, 3, var8[3], var12) as ChatInputNodeFontWeight;
                            var2 |= 8;
                         } else {
-                           var6 = var9.v(var8, 2, BackgroundStyle.$serializer.INSTANCE, var6) as BackgroundStyle;
+                           var6 = var10.v(var9, 2, BackgroundStyle.$serializer.INSTANCE, var6) as BackgroundStyle;
                            var2 |= 4;
                         }
                      } else {
-                        var3 = var9.k(var8, 1);
+                        var3 = var10.k(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.v(var8, 0, n0.a, var7) as Int;
+                     var7 = var10.v(var9, 0, n0.a, var7) as Int;
                      var2 |= 1;
                   }
                } else {
                   var4 = false;
                }
             }
+
+            var6 = var12;
+            var11 = (BackgroundStyle)var6;
          }
 
-         var9.b(var8);
-         return new ChatInputNodeStyle(var2, var7, var3, var6, (ChatInputNodeFontWeight)var11, null);
+         var10.b(var9);
+         return new ChatInputNodeStyle(var2, var7, var3, var11, (ChatInputNodeFontWeight)var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChatInputNodeStyle) {

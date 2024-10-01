@@ -178,9 +178,9 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
             val var9: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var10: RenderableEmoji = var9.renderable();
-            val var16: Context = this.getContext();
-            q.g(var16, "getContext(...)");
+            val var16: RenderableEmoji = var9.renderable();
+            val var10: Context = this.getContext();
+            q.g(var10, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
             if (var1.getShouldAnimateEmoji() && var9.getAnimated()) {
@@ -189,7 +189,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var10, var16, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var10, var4, var7, 0, null, 48, null));
             this.setOnClickListener(new h(var2));
             var4 = 1;
          } else {

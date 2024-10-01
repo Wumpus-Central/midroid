@@ -13,7 +13,6 @@ import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.forums.PostSharePrompt
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.databinding.ForumPostActionBarViewBinding
-import com.discord.chat.presentation.root.ChatView
 import com.discord.chat.presentation.textutils.TextUtilsKt
 import com.discord.core.DCDButton
 import com.discord.fonts.DiscordFont
@@ -27,7 +26,7 @@ import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.discord.react_strings.RenderContext
 import com.discord.reactions.AddReactionView
-import com.discord.reactions.ReactionsView
+import com.discord.reactions.ReactionsFlexbox
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.ReactionView.ReactionsTheme
 import com.discord.ripple.RippleUtilsKt
@@ -100,21 +99,18 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
    }
 
    private fun setReactions(
-      messageId: String,
       reactionsToDisplay: List<Reaction>,
       reactionsTheme: ReactionsTheme?,
       onAddReactionClick: OnClickListener,
       onReactionClick: (Reaction) -> Unit,
       onReactionLongPress: (Reaction) -> Unit = <unrepresentable>.INSTANCE
    ) {
-      var var7: ReactionsView = this.binding.reactionsView;
+      var var6: ReactionsFlexbox = this.binding.reactionsView;
       kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
-      var7.setVisibility(0);
-      var7 = this.binding.reactionsView;
+      var6.setVisibility(0);
+      var6 = this.binding.reactionsView;
       kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
-      ReactionsView.setReactions$default(
-         var7, var1, var2, false, false, "", "", "", var3, var4, null, var5, var6, null, ChatView.Companion.getAreChatAnimationsEnabled(), 4608, null
-      );
+      ReactionsFlexbox.setReactions$default(var6, var1, false, false, "", "", "", var2, var3, null, var4, var5, null, 2304, null);
    }
 
    private fun setSharePrompt(
@@ -224,13 +220,13 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.q.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var23: java.util.List = kotlin.collections.i.K0(var8, --var2);
-         val var36: ReactionsView = this.binding.reactionsView;
+         val var35: java.util.List = kotlin.collections.i.K0(var8, --var2);
+         val var23: ReactionsFlexbox = this.binding.reactionsView;
          kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
-         var36.setVisibility(0);
-         this.setReactions(MessageId.toString-impl(var1), var23, var12, var13, var14, var15);
+         var23.setVisibility(0);
+         this.setReactions(var35, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var34: DCDButton = this.binding.otherReactionsCount;
+         val var36: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.q.e(this.binding.otherReactionsCount);
          var var25: Boolean;
          if (var22 != 0) {
@@ -245,11 +241,11 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var34.setVisibility(var25);
-         if (var34.getVisibility() == 0) {
-            val var37: Context = var34.getContext();
-            kotlin.jvm.internal.q.g(var37, "getContext(...)");
-            var34.setText(I18nUtilsKt.i18nFormat(var37, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
+         var36.setVisibility(var25);
+         if (var36.getVisibility() == 0) {
+            val var33: Context = var36.getContext();
+            kotlin.jvm.internal.q.g(var33, "getContext(...)");
+            var36.setText(I18nUtilsKt.i18nFormat(var33, I18nMessage.FORUM_REACTIONS_OVERFLOW, new Function1(var22) {
                final int $otherReactionsCount;
 
                {
@@ -262,37 +258,37 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
                   var1.getArgs().put("count", java.lang.String.valueOf(this.$otherReactionsCount));
                }
             }));
-            RippleUtilsKt.addRipple$default(var34, true, 0, 2, null);
-            var34.setOnClickButtonListener(var18);
+            RippleUtilsKt.addRipple$default(var36, true, 0, 2, null);
+            var36.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.q.g(this.binding.otherReactionsCount, "otherReactionsCount");
          var31.setVisibility(8);
          if (var9 != null && var10) {
-            setReactions$default(this, MessageId.toString-impl(var1), kotlin.collections.i.e(var9), var12, var13, var14, null, 32, null);
+            setReactions$default(this, kotlin.collections.i.e(var9), var12, var13, var14, null, 16, null);
          } else {
-            val var32: ReactionsView = this.binding.reactionsView;
+            val var32: ReactionsFlexbox = this.binding.reactionsView;
             kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
             var32.setVisibility(8);
          }
       }
 
-      val var35: DCDButton = this.binding.followButton;
+      val var34: DCDButton = this.binding.followButton;
       if (var4 != null) {
          this.binding.followButton.setIcon(var4, SizeUtilsKt.getDpToPx(16));
       }
 
       this.binding.followButton.setText(var5);
-      var35.setContentDescription(var5);
+      var34.setContentDescription(var5);
       if (var3) {
          var2 = ThemeManagerKt.getTheme().getTextBrand();
       } else {
          var2 = ThemeManagerKt.getTheme().getInteractiveNormal();
       }
 
-      var35.setTextColor(var2);
-      var35.setOnClickButtonListener(var16);
+      var34.setTextColor(var2);
+      var34.setOnClickButtonListener(var16);
       val var29: DCDButton = this.binding.shareButton;
       if (var6 != null) {
          this.binding.shareButton.setIcon(var6, SizeUtilsKt.getDpToPx(16));

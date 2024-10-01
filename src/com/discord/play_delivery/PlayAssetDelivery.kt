@@ -54,12 +54,12 @@ public object PlayAssetDelivery {
                   }
                }
 
-               val var10: Log = Log.INSTANCE;
-               val var6: StringBuilder = new StringBuilder();
-               var6.append("Download of ");
-               var6.append(var11);
-               var6.append(" Asset failed");
-               Log.i$default(var10, "PlayAssetDelivery", var6.toString(), null, 4, null);
+               val var6: Log = Log.INSTANCE;
+               val var10: StringBuilder = new StringBuilder();
+               var10.append("Download of ");
+               var10.append(var11);
+               var10.append(" Asset failed");
+               Log.i$default(var6, "PlayAssetDelivery", var10.toString(), null, 4, null);
                var9 = java.lang.Boolean.FALSE;
             }
          }

@@ -87,17 +87,17 @@ public class EmbedViewResizingMediaView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var4: Int = this.width;
+         val var2: Int = this.width;
          val var3: Int = this.height;
-         val var2: Int = this.maxHeightPx;
+         val var4: Int = this.maxHeightPx;
          val var1: Int = this.maxWidthPx;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Target(width=");
-         var5.append(var4);
+         var5.append(var2);
          var5.append(", height=");
          var5.append(var3);
          var5.append(", maxHeightPx=");
-         var5.append(var2);
+         var5.append(var4);
          var5.append(", maxWidthPx=");
          var5.append(var1);
          var5.append(")");

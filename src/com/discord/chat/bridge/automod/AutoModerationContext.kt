@@ -252,44 +252,41 @@ public data class AutoModerationContext(headerText: String,
          var var3: Byte = 7;
          var var8: java.lang.String = null;
          var var2: Int;
-         var var11: Any;
+         var var9: Any;
+         var var10: java.lang.String;
+         var var11: FlaggedMessageEmbed;
          var var12: Any;
-         val var13: java.lang.String;
-         val var15: AutoModerationNotification;
+         var var13: Any;
+         var var14: AutoModerationNotification;
+         val var15: Any;
          val var16: Any;
          val var17: Any;
-         var var25: FlaggedMessageEmbed;
-         var var27: Any;
-         var var30: Any;
          if (var6) {
-            var27 = var19.t(var18, 0);
+            var10 = var19.t(var18, 0);
             var17 = var19.t(var18, 1);
             val var20: b2 = b2.a;
-            var30 = var19.v(var18, 2, b2.a, null) as java.lang.String;
-            var11 = var19.v(var18, 3, var20, null) as java.lang.String;
+            var16 = var19.v(var18, 2, b2.a, null) as java.lang.String;
+            var15 = var19.v(var18, 3, var20, null) as java.lang.String;
             var12 = var19.v(var18, 4, var20, null) as java.lang.String;
-            val var9: java.lang.String = var19.t(var18, 5);
+            var9 = var19.t(var18, 5);
             val var7: java.lang.String = var19.t(var18, 6);
             val var21: FlaggedMessageEmbed = var19.m(var18, 7, FlaggedMessageEmbed.$serializer.INSTANCE, null) as FlaggedMessageEmbed;
             val var24: AutoModerationNotification = var19.v(var18, 8, AutoModerationNotification.$serializer.INSTANCE, null) as AutoModerationNotification;
             var2 = 511;
-            var13 = (java.lang.String)var27;
-            var27 = var30;
-            var30 = var9;
-            var16 = var7;
-            var25 = var21;
-            var15 = var24;
+            var13 = var7;
+            var11 = var21;
+            var14 = var24;
          } else {
             var var4: Boolean = true;
             var2 = 0;
-            var30 = null;
-            var var29: FlaggedMessageEmbed = null;
+            var14 = null;
+            var13 = null;
             var12 = null;
             var var23: Any = null;
             var var22: Any = null;
             var11 = null;
-            var27 = null;
-            var25 = null;
+            var10 = null;
+            var9 = null;
 
             while (var4) {
                val var5: Int = var19.x(var18);
@@ -319,19 +316,19 @@ public data class AutoModerationContext(headerText: String,
                      var2 |= 16;
                      continue;
                   case 5:
-                     var27 = var19.t(var18, 5);
+                     var10 = var19.t(var18, 5);
                      var2 |= 32;
                      continue;
                   case 6:
-                     var25 = var19.t(var18, 6);
+                     var9 = var19.t(var18, 6);
                      var2 |= 64;
                      continue;
                   case 7:
-                     var29 = var19.m(var18, var3, FlaggedMessageEmbed.$serializer.INSTANCE, var29) as FlaggedMessageEmbed;
+                     var13 = var19.m(var18, var3, FlaggedMessageEmbed.$serializer.INSTANCE, var13) as FlaggedMessageEmbed;
                      var2 |= 128;
                      continue;
                   case 8:
-                     var30 = var19.v(var18, 8, AutoModerationNotification.$serializer.INSTANCE, var30) as AutoModerationNotification;
+                     var14 = var19.v(var18, 8, AutoModerationNotification.$serializer.INSTANCE, var14) as AutoModerationNotification;
                      var2 |= 256;
                      continue;
                   default:
@@ -341,27 +338,27 @@ public data class AutoModerationContext(headerText: String,
                var3 = 7;
             }
 
-            var16 = var25;
-            var15 = (AutoModerationNotification)var30;
-            var25 = var29;
-            var30 = var27;
-            var27 = var22;
+            var15 = var11;
+            var11 = (FlaggedMessageEmbed)var13;
+            var13 = var9;
+            var9 = var10;
+            var16 = var22;
             var17 = var23;
-            var13 = var8;
+            var10 = var8;
          }
 
          var19.b(var18);
          return new AutoModerationContext(
             var2,
-            var13,
+            var10,
             (java.lang.String)var17,
-            (java.lang.String)var27,
-            (java.lang.String)var11,
-            (java.lang.String)var12,
-            (java.lang.String)var30,
             (java.lang.String)var16,
-            var25,
-            var15,
+            (java.lang.String)var15,
+            (java.lang.String)var12,
+            (java.lang.String)var9,
+            (java.lang.String)var13,
+            var11,
+            var14,
             null
          );
       }

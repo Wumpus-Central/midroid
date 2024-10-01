@@ -130,24 +130,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.stickerItems;
-      val var1: JsonObject = this.author;
-      val var6: java.util.List = this.mentions;
-      val var5: Poll = this.poll;
-      val var2: java.util.List = this.embeds;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("NotificationMessage(stickerItems=");
-      var4.append(var3);
-      var4.append(", author=");
-      var4.append(var1);
-      var4.append(", mentions=");
-      var4.append(var6);
-      var4.append(", poll=");
-      var4.append(var5);
-      var4.append(", embeds=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var6: java.util.List = this.stickerItems;
+      val var5: JsonObject = this.author;
+      val var1: java.util.List = this.mentions;
+      val var4: Poll = this.poll;
+      val var3: java.util.List = this.embeds;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("NotificationMessage(stickerItems=");
+      var2.append(var6);
+      var2.append(", author=");
+      var2.append(var5);
+      var2.append(", mentions=");
+      var2.append(var1);
+      var2.append(", poll=");
+      var2.append(var4);
+      var2.append(", embeds=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -179,27 +179,28 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.c(var11);
-         var var10: Array<KSerializer> = NotificationMessage.access$get$childSerializers$cp();
+         val var10: Array<KSerializer> = NotificationMessage.access$get$childSerializers$cp();
          val var5: Boolean = var12.y();
          var var9: java.util.List = null;
          var var2: Int;
-         var var6: java.util.List;
+         var var6: Any;
+         var var7: java.util.List;
          var var8: JsonObject;
          var var14: java.util.List;
          if (var5) {
             var9 = var12.m(var11, 0, var10[0], null) as java.util.List;
             var8 = var12.v(var11, 1, gl.q.a, null) as JsonObject;
-            var6 = var12.m(var11, 2, var10[2], null) as java.util.List;
+            var7 = var12.m(var11, 2, var10[2], null) as java.util.List;
             val var13: Poll = var12.v(var11, 3, Poll.$serializer.INSTANCE, null) as Poll;
-            val var7: java.util.List = var12.m(var11, 4, var10[4], null) as java.util.List;
+            val var15: java.util.List = var12.m(var11, 4, var10[4], null) as java.util.List;
             var2 = 31;
-            var10 = var13;
-            var14 = var7;
+            var6 = var13;
+            var14 = var15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var var16: java.util.List = null;
+            var7 = null;
             var6 = null;
             var14 = null;
 
@@ -221,7 +222,7 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
                               var2 |= 8;
                            }
                         } else {
-                           var16 = var12.m(var11, 2, var10[2], var16) as java.util.List;
+                           var7 = var12.m(var11, 2, var10[2], var7) as java.util.List;
                            var2 |= 4;
                         }
                      } else {
@@ -236,13 +237,10 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
                   var3 = false;
                }
             }
-
-            var10 = var6;
-            var6 = var16;
          }
 
          var12.b(var11);
-         return new NotificationMessage(var2, var9, var8, var6, var10, var14, null);
+         return new NotificationMessage(var2, var9, var8, var7, (Poll)var6, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NotificationMessage) {

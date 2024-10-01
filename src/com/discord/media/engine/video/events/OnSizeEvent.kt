@@ -62,13 +62,13 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnSizeEvent(width=");
-      var3.append(var2);
-      var3.append(", height=");
       var3.append(var1);
+      var3.append(", height=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -100,18 +100,18 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
          val var8: c = var1.c(var7);
          var var2: Int;
          var var3: Int;
-         val var5: Int;
+         var var4: Int;
          if (var8.y()) {
             var3 = var8.k(var7, 0);
-            var2 = var8.k(var7, 1);
-            var5 = 3;
+            var4 = var8.k(var7, 1);
+            var2 = 3;
          } else {
-            var var10: Boolean = true;
+            var var5: Boolean = true;
             var3 = 0;
-            var var4: Int = 0;
+            var4 = 0;
             var2 = 0;
 
-            while (var10) {
+            while (var5) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -126,16 +126,13 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
                      var2 |= 1;
                   }
                } else {
-                  var10 = false;
+                  var5 = false;
                }
             }
-
-            var5 = var2;
-            var2 = var4;
          }
 
          var8.b(var7);
-         return new OnSizeEvent(var5, var3, var2, null);
+         return new OnSizeEvent(var2, var3, var4, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSizeEvent) {

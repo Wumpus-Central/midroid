@@ -189,9 +189,9 @@ public data class PollAction(label: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
-         val var2: b2 = b2.a;
-         return new KSerializer[]{b2.a, var1[1], h.a, a.u(b2.a), a.u(var2), a.u(var2)};
+         val var2: Array<KSerializer> = PollAction.access$get$childSerializers$cp();
+         val var1: b2 = b2.a;
+         return new KSerializer[]{b2.a, var2[1], h.a, a.u(b2.a), a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): PollAction {

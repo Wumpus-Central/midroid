@@ -39,14 +39,14 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
    }
 
    public override fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
          w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("targetKind", this.targetKind)
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
       }
 
-      return var2;
+      return var1;
    }
 
    public object `$serializer` : g0 {
@@ -80,20 +80,20 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          var var8: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
-         var var7: java.lang.String;
-         val var9: java.lang.String;
          var var12: Any;
+         var var13: java.lang.String;
          if (var5) {
-            var6 = var11.t(var10, 0);
-            var7 = var11.t(var10, 1);
-            var8 = var11.t(var10, 2);
+            var13 = var11.t(var10, 0);
+            val var9: java.lang.String = var11.t(var10, 1);
+            var6 = var11.t(var10, 2);
             var12 = var11.v(var10, 3, n0.a, null) as Int;
             var2 = 15;
-            var9 = var8;
+            var8 = var13;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
+            var13 = null;
             var6 = null;
             var12 = null;
 
@@ -114,7 +114,7 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.t(var10, 1);
+                        var13 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -125,13 +125,10 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                   var3 = false;
                }
             }
-
-            var9 = var6;
-            var6 = var8;
          }
 
          var11.b(var10);
-         return new TapInlineForwardData(var2, var6, var7, var9, (Integer)var12, null);
+         return new TapInlineForwardData(var2, var8, var13, var6, (Integer)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInlineForwardData) {

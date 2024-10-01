@@ -199,9 +199,9 @@ internal data class UserSearchTransformedUser(id: String,
          val var12: LinkedHashMap = new LinkedHashMap();
 
          for (Entry var3 : var5.entrySet()) {
-            val var4: java.lang.String = var3.getKey() as java.lang.String;
-            val var6: JsonElement = var3.getValue() as JsonElement;
-            if (!TRANSFORMED_USER_KEYS.contains(var4) && (gl.g.p(var6).m() || gl.g.p(var6) is JsonNull)) {
+            val var6: java.lang.String = var3.getKey() as java.lang.String;
+            val var4: JsonElement = var3.getValue() as JsonElement;
+            if (!TRANSFORMED_USER_KEYS.contains(var6) && (gl.g.p(var4).m() || gl.g.p(var4) is JsonNull)) {
                var12.put(var3.getKey(), var3.getValue());
             }
          }

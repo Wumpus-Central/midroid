@@ -83,13 +83,13 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
       q.h(var1, "context");
       val var7: HeadlessTasks.Companion = HeadlessTasks.Companion;
       val var4: java.lang.String = this.taskName;
-      val var3: Bundle = new Bundle();
+      val var5: Bundle = new Bundle();
 
-      for (Entry var6 : this.data.entrySet()) {
-         var3.putString(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var3 : this.data.entrySet()) {
+         var5.putString(var3.getKey() as java.lang.String, var3.getValue() as java.lang.String);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var7, var1, var4, 0L, false, var3, var2, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var7, var1, var4, 0L, false, var5, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -122,9 +122,9 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());
 
-      for (Entry var4 : var3.entrySet()) {
-         var1.writeString(var4.getKey() as java.lang.String);
-         var1.writeString(var4.getValue() as java.lang.String);
+      for (Entry var5 : var3.entrySet()) {
+         var1.writeString(var5.getKey() as java.lang.String);
+         var1.writeString(var5.getValue() as java.lang.String);
       }
    }
 
@@ -133,15 +133,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
       fun createFromParcel(var1: Parcel): GenericAction {
          q.h(var1, "parcel");
          val var6: java.lang.String = var1.readString();
-         val var5: java.lang.String = var1.readString();
+         val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var4: LinkedHashMap = new LinkedHashMap(var3);
+         val var5: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var4.put(var1.readString(), var1.readString());
+            var5.put(var1.readString(), var1.readString());
          }
 
-         return new GenericAction(var6, var5, var4);
+         return new GenericAction(var6, var4, var5);
       }
 
       fun newArray(var1: Int): Array<GenericAction> {

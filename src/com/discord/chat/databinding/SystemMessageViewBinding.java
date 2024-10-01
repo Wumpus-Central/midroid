@@ -22,12 +22,12 @@ public final class SystemMessageViewBinding implements ViewBinding {
 
    public static SystemMessageViewBinding bind(View var0) {
       int var1 = R.id.accessories_view;
-      MessageAccessoriesView var3 = (MessageAccessoriesView)a.a(var0, var1);
-      if (var3 != null) {
+      MessageAccessoriesView var2 = (MessageAccessoriesView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
-            return new SystemMessageViewBinding(var0, var3, var2);
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
+            return new SystemMessageViewBinding(var0, var2, var3);
          }
       }
 

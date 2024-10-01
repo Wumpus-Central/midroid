@@ -71,15 +71,15 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var4: java.lang.String = this.full;
-      val var3: java.lang.String = this.formatted;
+      val var3: java.lang.String = this.full;
+      val var4: java.lang.String = this.formatted;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TimestampContentNode(timestamp=");
       var5.append(var1);
       var5.append(", full=");
-      var5.append(var4);
-      var5.append(", formatted=");
       var5.append(var3);
+      var5.append(", formatted=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -108,26 +108,28 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
       public open fun deserialize(decoder: Decoder): TimestampContentNode {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
          var var2: Int;
          var var5: Long;
          var var7: java.lang.String;
-         var var10: java.lang.String;
-         if (var9.y()) {
-            var5 = var9.h(var8, 0);
-            var7 = var9.t(var8, 1);
-            var10 = var9.t(var8, 2);
+         var var12: java.lang.String;
+         if (var10.y()) {
+            var5 = var10.h(var9, 0);
+            val var11: java.lang.String = var10.t(var9, 1);
+            val var8: java.lang.String = var10.t(var9, 2);
             var2 = 7;
+            var7 = var11;
+            var12 = var8;
          } else {
             var7 = null;
             var var3: Boolean = true;
             var5 = 0L;
-            var10 = null;
+            var12 = null;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var9.x(var8);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -135,14 +137,14 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
                            throw new n(var4);
                         }
 
-                        var10 = var9.t(var8, 2);
+                        var12 = var10.t(var9, 2);
                         var2 |= 4;
                      } else {
-                        var7 = var9.t(var8, 1);
+                        var7 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var5 = var9.h(var8, 0);
+                     var5 = var10.h(var9, 0);
                      var2 |= 1;
                   }
                } else {
@@ -151,8 +153,8 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
             }
          }
 
-         var9.b(var8);
-         return new TimestampContentNode(var2, var5, var7, var10, null);
+         var10.b(var9);
+         return new TimestampContentNode(var2, var5, var7, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TimestampContentNode) {

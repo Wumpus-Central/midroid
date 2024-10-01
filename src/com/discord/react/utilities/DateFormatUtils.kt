@@ -16,14 +16,14 @@ public class DateFormatUtils(reactContext: ReactApplicationContext) : ReactConte
       val var4: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var4, "getReactApplicationContext(...)");
       val var5: java.lang.Long = ReactContextExtensionsKt.jsiId(var4);
-      val var3: Boolean;
+      val var1: Boolean;
       if (var5 != null) {
-         var3 = JSINativeModule.INSTANCE.install(var5.longValue());
+         var1 = JSINativeModule.INSTANCE.install(var5.longValue());
       } else {
-         var3 = false;
+         var1 = false;
       }
 
-      return var3;
+      return var1;
    }
 
    public open fun getName(): String {

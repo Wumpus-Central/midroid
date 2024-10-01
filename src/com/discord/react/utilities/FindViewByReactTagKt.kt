@@ -40,16 +40,17 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 
             val var8: Field = var7.getDeclaredField("mUIViewOperationQueue");
             var8.setAccessible(true);
-            var var9: Class = (Class)var8.get(var15);
-            if (var9 is UIViewOperationQueue) {
-               val var17: UIViewOperationQueue = var9 as UIViewOperationQueue;
-               if ((var9 as UIViewOperationQueue).getClass().getSuperclass() === UIViewOperationQueue::class.java) {
-                  var9 = var17.getClass().getSuperclass();
+            var2 = (UIImplementation)var8.get(var15);
+            if (var2 is UIViewOperationQueue) {
+               val var17: UIViewOperationQueue = var2 as UIViewOperationQueue;
+               val var10: Class;
+               if ((var2 as UIViewOperationQueue).getClass().getSuperclass() === UIViewOperationQueue::class.java) {
+                  var10 = var17.getClass().getSuperclass();
                } else {
-                  var9 = var17.getClass();
+                  var10 = var17.getClass();
                }
 
-               val var11: Field = var9.getDeclaredField("mNativeViewHierarchyManager");
+               val var11: Field = var10.getDeclaredField("mNativeViewHierarchyManager");
                var11.setAccessible(true);
                var2 = (UIImplementation)var11.get(var17);
                if (var2 is NativeViewHierarchyManager) {
@@ -66,13 +67,13 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
                   throw new IllegalStateException(var12.toString().toString());
                }
             } else {
-               val var16: StringBuilder = new StringBuilder();
-               var16.append("Field ");
-               var16.append(var9);
-               var16.append(" not instance of ");
-               var16.append(UIViewOperationQueue::class.java);
-               var16.append(".");
-               throw new IllegalStateException(var16.toString().toString());
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Field ");
+               var9.append(var2);
+               var9.append(" not instance of ");
+               var9.append(UIViewOperationQueue::class.java);
+               var9.append(".");
+               throw new IllegalStateException(var9.toString().toString());
             }
          } else {
             val var6: StringBuilder = new StringBuilder();

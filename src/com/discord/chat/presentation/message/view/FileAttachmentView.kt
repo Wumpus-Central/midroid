@@ -1153,12 +1153,12 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
          var10 = false;
       }
 
-      val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var13: java.lang.String = FileAttachmentView.class.getSimpleName();
+      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var14: java.lang.String = FileAttachmentView.class.getSimpleName();
       val var15: StringBuilder = new StringBuilder();
       var15.append("Binding ");
-      var15.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var14, var15.toString(), null, 2, null);
+      var15.append(var14);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var15.toString(), null, 2, null);
       val var29: SimpleDraweeView = this.binding.fileAttachmentDownload;
       kotlin.jvm.internal.q.g(this.binding.fileAttachmentDownload, "fileAttachmentDownload");
       var var11: Byte;
@@ -1218,14 +1218,14 @@ public class FileAttachmentView  public constructor(context: Context, attrs: Att
       var17.setAlpha(var9);
       val var18: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       val var12: Int = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var22: ShapeDrawable = new ShapeDrawable();
-      val var23: Paint = var22.getPaint();
-      val var25: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var25, "getContext(...)");
-      var23.setColor(ColorUtilsKt.getColorCompat(var25, 17170445));
+      val var25: ShapeDrawable = new ShapeDrawable();
+      val var23: Paint = var25.getPaint();
+      val var22: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var22, "getContext(...)");
+      var23.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
       var11 = ThemeManagerKt.getTheme().getBackgroundModifierAccent();
       kotlin.jvm.internal.q.e(var18);
-      AttachmentUploadOverlayView.configureProgressView$default(var18, null, var22, null, var12, null, var11, 21, null);
+      AttachmentUploadOverlayView.configureProgressView$default(var18, null, var25, null, var12, null, var11, 21, null);
       if (!kotlin.jvm.internal.q.c(this.uploadContext, this.uploadContext)) {
          this.uploadContext = this.uploadContext;
          this.uploadFinished = false;

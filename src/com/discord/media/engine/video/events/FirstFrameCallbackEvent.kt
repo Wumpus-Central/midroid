@@ -132,25 +132,25 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.c(var10);
          var var2: Int;
-         var var3: Int;
+         val var4: Int;
          var var6: Long;
-         val var9: java.lang.String;
+         var var8: java.lang.String;
          val var12: java.lang.String;
          if (var11.y()) {
             var2 = var11.k(var10, 0);
-            var9 = var11.t(var10, 1);
+            var8 = var11.t(var10, 1);
             var6 = var11.h(var10, 2);
             var12 = var11.t(var10, 3);
-            var3 = 15;
+            var4 = 15;
          } else {
             var var13: java.lang.String = null;
-            var var4: Boolean = true;
+            var var15: Boolean = true;
             var6 = 0L;
-            var var8: java.lang.String = null;
-            var3 = 0;
+            var8 = null;
+            var var3: Int = 0;
             var2 = 0;
 
-            while (var4) {
+            while (var15) {
                val var5: Int = var11.x(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -175,18 +175,18 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                      var2 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var15 = false;
                }
             }
 
-            var3 = var2;
-            var9 = var13;
+            var4 = var2;
             var12 = var8;
+            var8 = var13;
             var2 = var3;
          }
 
          var11.b(var10);
-         return new FirstFrameCallbackEvent(var3, var2, var9, var6, var12, null);
+         return new FirstFrameCallbackEvent(var4, var2, var8, var6, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {

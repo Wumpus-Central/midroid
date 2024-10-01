@@ -52,7 +52,7 @@ public final class ThumbhashUtils {
       float var8 = (var11 & 63) / 63.0F;
       float var9 = (var11 >> 6 & 63) / 31.5F;
       float var10 = (var11 >> 12 & 63) / 31.5F;
-      float var4 = (var11 >> 18 & 31) / 31.0F;
+      float var6 = (var11 >> 18 & 31) / 31.0F;
       boolean var48;
       if (var11 >> 23 != 0) {
          var48 = 1;
@@ -61,7 +61,7 @@ public final class ThumbhashUtils {
       }
 
       float var5 = (var15 >> 3 & 63) / 63.0F;
-      float var6 = (var15 >> 9 & 63) / 63.0F;
+      float var4 = (var15 >> 9 & 63) / 63.0F;
       boolean var13;
       if (var15 >> 15 != 0) {
          var13 = 1;
@@ -110,7 +110,7 @@ public final class ThumbhashUtils {
       ThumbhashUtils.Channel var26 = new ThumbhashUtils.Channel(var20, var16);
       ThumbhashUtils.Channel var25 = new ThumbhashUtils.Channel(3, 3);
       ThumbhashUtils.Channel var27 = new ThumbhashUtils.Channel(3, 3);
-      var13 = var27.decode(var0, var53, var25.decode(var0, var53, var26.decode(var0, var53, 0, var4), var5 * var2), var6 * var2);
+      var13 = var27.decode(var0, var53, var25.decode(var0, var53, var26.decode(var0, var53, 0, var6), var5 * var2), var4 * var2);
       float[] var23 = null;
       ThumbhashUtils.Channel var24;
       if (var48) {
@@ -160,8 +160,8 @@ public final class ThumbhashUtils {
       }
 
       var14 = Math.max(var16, var55);
-      float[] var28 = new float[var15];
-      float[] var29 = new float[var14];
+      float[] var29 = new float[var15];
+      float[] var28 = new float[var14];
       var13 = 0;
       float[] var73 = var23;
       int[] var72 = var30;
@@ -174,14 +174,14 @@ public final class ThumbhashUtils {
 
          while (var17 < var21) {
             for (int var61 = 0; var61 < var15; var61++) {
-               var28[var61] = (float)Math.cos(Math.PI / var21 * (var17 + 0.5F) * var61);
+               var29[var61] = (float)Math.cos(Math.PI / var21 * (var17 + 0.5F) * var61);
             }
 
             int var18 = 0;
             var14 = var48;
 
             for (int var50 = var18; var50 < var14; var50++) {
-               var29[var50] = (float)Math.cos(Math.PI / var22 * (var13 + 0.5F) * var50);
+               var28[var50] = (float)Math.cos(Math.PI / var22 * (var13 + 0.5F) * var50);
             }
 
             var4 = var8;
@@ -189,7 +189,7 @@ public final class ThumbhashUtils {
             int var19 = 0;
 
             for (var48 = var16; var18 < var48; var18++) {
-               var5 = var29[var18];
+               var5 = var28[var18];
                if (var18 > 0) {
                   var16 = 0;
                } else {
@@ -202,7 +202,7 @@ public final class ThumbhashUtils {
                      if (var18 > var1) {
                         var2 = var4;
                      } else {
-                        var2 = var4 + var75[var19] * var28[var16] * var5 * 2.0F;
+                        var2 = var4 + var75[var19] * var29[var16] * var5 * 2.0F;
                      }
                   }
 
@@ -217,7 +217,7 @@ public final class ThumbhashUtils {
             var18 = 0;
 
             for (int var70 = 0; var18 < 3; var18++) {
-               var2 = var29[var18];
+               var2 = var28[var18];
                if (var18 > 0) {
                   var16 = 0;
                } else {
@@ -225,7 +225,7 @@ public final class ThumbhashUtils {
                }
 
                while (var16 < 3 - var18) {
-                  var7 = var28[var16] * var2 * 2.0F;
+                  var7 = var29[var16] * var2 * 2.0F;
                   var6 += var31[var70] * var7;
                   var5 += var76[var70] * var7;
                   var16++;
@@ -245,7 +245,7 @@ public final class ThumbhashUtils {
                      break;
                   }
 
-                  var7 = var29[var18];
+                  var7 = var28[var18];
                   if (var18 > 0) {
                      var16 = 0;
                   } else {
@@ -253,7 +253,7 @@ public final class ThumbhashUtils {
                   }
 
                   while (var16 < 5 - var18) {
-                     var2 += var73[var19] * var28[var16] * var7 * 2.0F;
+                     var2 += var73[var19] * var29[var16] * var7 * 2.0F;
                      var16++;
                      var19++;
                   }

@@ -121,9 +121,9 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = a.u(b2.a);
-         val var2: h = h.a;
-         return new KSerializer[]{var1, a.u(h.a), a.u(var2)};
+         val var2: KSerializer = a.u(b2.a);
+         val var1: h = h.a;
+         return new KSerializer[]{var2, a.u(h.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetFilters {

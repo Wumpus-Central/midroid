@@ -89,17 +89,17 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    public override fun toString(): String {
       val var2: java.lang.String = this.userId;
       val var4: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleId;
+      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.roleId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapConnectionsRoleTagData(userId=");
       var5.append(var2);
       var5.append(", guildId=");
       var5.append(var4);
       var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", roleId=");
       var5.append(var1);
+      var5.append(", roleId=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -132,20 +132,22 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
-         var var5: java.lang.String;
          var var6: java.lang.String;
          var var7: java.lang.String;
          val var11: java.lang.String;
+         var var13: java.lang.String;
          if (var10.y()) {
-            var7 = var10.t(var9, 0);
-            var6 = var10.t(var9, 1);
-            var5 = var10.t(var9, 2);
+            var13 = var10.t(var9, 0);
+            val var8: java.lang.String = var10.t(var9, 1);
+            var6 = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
+            var7 = var13;
+            var13 = var8;
          } else {
             var7 = null;
             var6 = null;
-            var5 = null;
+            var13 = null;
             var var12: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -163,7 +165,7 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
                            var6 = var10.t(var9, 3);
                            var2 |= 8;
                         } else {
-                           var5 = var10.t(var9, 2);
+                           var13 = var10.t(var9, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -179,12 +181,13 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
                }
             }
 
+            var13 = var12;
             var11 = var6;
-            var6 = var12;
+            var6 = var13;
          }
 
          var10.b(var9);
-         return new TapConnectionsRoleTagData(var2, var7, var6, var5, var11, null);
+         return new TapConnectionsRoleTagData(var2, var7, var13, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapConnectionsRoleTagData) {

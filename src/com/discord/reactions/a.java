@@ -10,6 +10,6 @@ public final class a implements OnClickListener {
    public final ReactionView.Reaction k;
 
    public final void onClick(View var1) {
-      BurstReactionViewHolder.b(this.j, this.k, var1);
+      ReactionViewHolder.c(this.j, this.k, var1);
    }
 }

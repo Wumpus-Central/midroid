@@ -6,10 +6,10 @@ import kh.l
 import kotlin.jvm.internal.q
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "cc9e3f18-35ab-4c11-be85-6098101a4b52"
+   public const val PROGUARD_UUID: String = "d31d00de-5c01-4840-8316-076cddea14e3"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@251.0.0-2+251200"
+   public const val SENTRY_RELEASE: String = "discord_android@251.1.0-2+251201"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String
@@ -124,11 +124,11 @@ public object ClientInfo {
       var2 = var1.getPackageName();
       q.g(var2, "getPackageName(...)");
       this.setPackageName(var2);
-      val var9: ClientUserAgent = ClientUserAgent.INSTANCE;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("Discord-Android/");
-      var10.append(var3);
-      var10.append(";RNA");
-      var9.init(var1, var10.toString());
+      val var10: ClientUserAgent = ClientUserAgent.INSTANCE;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Discord-Android/");
+      var9.append(var3);
+      var9.append(";RNA");
+      var10.init(var1, var9.toString());
    }
 }

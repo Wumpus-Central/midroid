@@ -116,10 +116,10 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
          var var6: java.lang.String;
          var var10: java.util.List;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -150,10 +150,13 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                   var4 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
-         return new MediaGalleryDisplayComponent(var2, var3, var6, var10, null);
+         return new MediaGalleryDisplayComponent(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaGalleryDisplayComponent) {

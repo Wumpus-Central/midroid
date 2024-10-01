@@ -2,7 +2,7 @@ package com.discord.chat.bridge.reaction
 
 import cl.f
 import cl.n
-import com.discord.reactions.BurstReactionView
+import com.discord.reactions.ReactionView
 import fl.g0
 import fl.g0.a
 import kotlin.jvm.internal.q
@@ -15,8 +15,7 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) :
-   BurstReactionView.ThemedBurstColorPalette {
+public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) : ReactionView.ThemedBurstColorPalette {
    public open val dark: BurstReactionColorPalette
    public open val light: BurstReactionColorPalette
 

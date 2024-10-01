@@ -73,15 +73,15 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.app;
-      val var2: java.lang.String = this.location;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ShareBroadcastReceiverAppClicked(app=");
-      var1.append(var3);
-      var1.append(", location=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.app;
+      val var1: java.lang.String = this.location;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ShareBroadcastReceiverAppClicked(app=");
+      var3.append(var2);
+      var3.append(", location=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

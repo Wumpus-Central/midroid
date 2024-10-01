@@ -4,15 +4,20 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate
+import com.discord.chat.presentation.list.delegate.RegularMessageDelegate
+import com.discord.chat.presentation.list.delegate.SeparatorDelegate
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.message.MessageAccessoriesAdapter
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
+import kh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import lh.r
 import sk.k0
 
 private final val accessoriesToCreate: Map<Int, Int>
-private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int>
+private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int> =
+   r.l(new Pair[]{w.a(RegularMessageDelegate.class, 40), w.a(SeparatorDelegate.class, 10)})
 
 @JvmSynthetic
 fun `access$getAccessoriesToCreate$p`(): java.util.Map {

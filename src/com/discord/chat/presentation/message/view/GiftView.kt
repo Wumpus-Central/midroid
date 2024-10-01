@@ -215,7 +215,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          this.binding.title.setText(var27.getTitleText());
          var32.setTextColor(var27.getTitleColor());
          kotlin.jvm.internal.q.e(var32);
-         var var11: java.lang.CharSequence = var32.getText();
+         val var11: java.lang.CharSequence = var32.getText();
          kotlin.jvm.internal.q.g(var11, "getText(...)");
          var var20: Byte;
          if (kotlin.text.h.x(var11) xor true) {
@@ -225,19 +225,19 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          }
 
          var32.setVisibility(var20);
-         val var33: TextView = this.binding.subtitle;
+         val var35: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
-         var33.setTextColor(var27.getSubtitleColor());
-         kotlin.jvm.internal.q.e(var33);
-         var11 = var33.getText();
-         kotlin.jvm.internal.q.g(var11, "getText(...)");
-         if (kotlin.text.h.x(var11) xor true) {
+         var35.setTextColor(var27.getSubtitleColor());
+         kotlin.jvm.internal.q.e(var35);
+         val var33: java.lang.CharSequence = var35.getText();
+         kotlin.jvm.internal.q.g(var33, "getText(...)");
+         if (kotlin.text.h.x(var33) xor true) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var33.setVisibility(var20);
+         var35.setVisibility(var20);
          if (var27 is GiftEmbed.Resolved.Invalid) {
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
                .v(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));

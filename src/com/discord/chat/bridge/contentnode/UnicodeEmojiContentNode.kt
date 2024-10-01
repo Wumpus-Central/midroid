@@ -70,14 +70,14 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var4: java.lang.String = this.surrogate;
+      val var4: java.lang.String = this.content;
+      val var2: java.lang.String = this.surrogate;
       val var1: Boolean = this.jumboable;
       val var3: StringBuilder = new StringBuilder();
       var3.append("UnicodeEmojiContentNode(content=");
-      var3.append(var2);
-      var3.append(", surrogate=");
       var3.append(var4);
+      var3.append(", surrogate=");
+      var3.append(var2);
       var3.append(", jumboable=");
       var3.append(var1);
       var3.append(")");

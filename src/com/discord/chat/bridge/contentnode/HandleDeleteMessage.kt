@@ -156,10 +156,10 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
+         var var5: Any;
          var var6: Any;
+         var var7: java.lang.String;
          val var13: HandleDeleteMessageAuthor;
-         var var15: Any;
-         var var17: java.lang.String;
          if (var10.y()) {
             val var11: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var12: java.lang.String;
@@ -170,17 +170,17 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
             }
 
             var6 = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            val var8: java.lang.String = var10.v(var9, 2, b2.a, null) as java.lang.String;
-            var13 = var10.m(var9, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, null) as HandleDeleteMessageAuthor;
+            var5 = var10.v(var9, 2, b2.a, null) as java.lang.String;
+            val var8: HandleDeleteMessageAuthor = var10.m(var9, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, null) as HandleDeleteMessageAuthor;
+            var7 = var12;
+            var13 = var8;
             var2 = 15;
-            var17 = var12;
-            var15 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var17 = null;
+            var7 = null;
             var6 = null;
-            var15 = null;
+            var5 = null;
             var var14: Any = null;
 
             while (var3) {
@@ -196,7 +196,7 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                            var6 = var10.m(var9, 3, HandleDeleteMessageAuthor.$serializer.INSTANCE, var6) as HandleDeleteMessageAuthor;
                            var2 |= 8;
                         } else {
-                           var15 = var10.v(var9, 2, b2.a, var15) as java.lang.String;
+                           var5 = var10.v(var9, 2, b2.a, var5) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
@@ -204,18 +204,18 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
                         var2 |= 2;
                      }
                   } else {
-                     val var18: MessageId;
-                     if (var17 != null) {
-                        var18 = MessageId.box-impl(var17);
+                     val var16: MessageId;
+                     if (var7 != null) {
+                        var16 = MessageId.box-impl(var7);
                      } else {
-                        var18 = null;
+                        var16 = null;
                      }
 
-                     val var19: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var18) as MessageId;
-                     if (var19 != null) {
-                        var17 = var19.unbox-impl();
+                     val var17: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var16) as MessageId;
+                     if (var17 != null) {
+                        var7 = var17.unbox-impl();
                      } else {
-                        var17 = null;
+                        var7 = null;
                      }
 
                      var2 |= 1;
@@ -230,7 +230,7 @@ public data class HandleDeleteMessage(id: MessageId, channelId: ChannelId, loggi
          }
 
          var10.b(var9);
-         return new HandleDeleteMessage(var2, var17, (ChannelId)var6, (java.lang.String)var15, var13, null, null);
+         return new HandleDeleteMessage(var2, var7, (ChannelId)var6, (java.lang.String)var5, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: HandleDeleteMessage) {

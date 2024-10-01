@@ -223,12 +223,12 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
          var var4: Byte = 6;
          var var16: java.lang.String = null;
          var var2: Int;
+         var var7: java.lang.String;
          var var8: java.lang.String;
          var var10: java.lang.String;
          var var11: java.lang.String;
          var var12: java.lang.String;
          val var13: java.lang.String;
-         var var18: java.lang.String;
          var var20: java.lang.String;
          if (var6) {
             val var9: b2 = b2.a;
@@ -236,12 +236,11 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
             var11 = var15.v(var14, 1, var9, null) as java.lang.String;
             var10 = var15.v(var14, 2, var9, null) as java.lang.String;
             var8 = var15.v(var14, 3, var9, null) as java.lang.String;
-            var18 = var15.v(var14, 4, var9, null) as java.lang.String;
+            var7 = var15.v(var14, 4, var9, null) as java.lang.String;
             val var17: java.lang.String = var15.v(var14, 5, var9, null) as java.lang.String;
-            var20 = var15.v(var14, 6, var9, null) as java.lang.String;
+            var12 = var15.v(var14, 6, var9, null) as java.lang.String;
             var2 = 127;
-            var12 = var18;
-            var18 = var17;
+            var20 = var17;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -250,7 +249,7 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
             var10 = null;
             var20 = null;
             var8 = null;
-            var18 = null;
+            var7 = null;
 
             while (var3) {
                val var5: Int = var15.x(var14);
@@ -280,7 +279,7 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                      var2 |= 16;
                      continue;
                   case 5:
-                     var18 = var15.v(var14, 5, b2.a, var18) as java.lang.String;
+                     var7 = var15.v(var14, 5, b2.a, var7) as java.lang.String;
                      var2 |= 32;
                      continue;
                   case 6:
@@ -294,14 +293,14 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                var4 = 6;
             }
 
-            var20 = var12;
-            var12 = var8;
+            var20 = var7;
+            var7 = var8;
             var8 = var20;
             var13 = var16;
          }
 
          var15.b(var14);
-         return new ChannelPromptData(var2, var13, var11, var10, var8, var12, var18, var20, null);
+         return new ChannelPromptData(var2, var13, var11, var10, var8, var7, var20, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChannelPromptData) {

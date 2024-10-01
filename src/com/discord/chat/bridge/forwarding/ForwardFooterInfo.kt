@@ -142,19 +142,20 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var var8: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
-         var var7: java.lang.String;
-         val var9: java.lang.String;
          var var12: java.lang.String;
+         var var13: java.lang.String;
          if (var5) {
-            var6 = var11.t(var10, 0);
-            var7 = var11.t(var10, 1);
-            var9 = var11.t(var10, 2);
+            var13 = var11.t(var10, 0);
+            val var9: java.lang.String = var11.t(var10, 1);
+            var6 = var11.t(var10, 2);
             var12 = var11.v(var10, 3, b2.a, null) as java.lang.String;
             var2 = 15;
+            var8 = var13;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
+            var13 = null;
             var6 = null;
             var12 = null;
 
@@ -175,7 +176,7 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.t(var10, 1);
+                        var13 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -186,13 +187,10 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
                   var3 = false;
                }
             }
-
-            var9 = var6;
-            var6 = var8;
          }
 
          var11.b(var10);
-         return new ForwardFooterInfo(var2, var6, var7, var9, var12, null);
+         return new ForwardFooterInfo(var2, var8, var13, var6, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardFooterInfo) {

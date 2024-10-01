@@ -252,21 +252,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.channelIconURL;
+         val var1: java.lang.String = this.channelIconURL;
          val var3: java.lang.String = this.chatIconURL;
-         val var1: ArrayList = this.avatarURLs;
-         val var5: java.lang.String = this.channelName;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("MessageBundleHeader(channelIconURL=");
-         var4.append(var2);
-         var4.append(", chatIconURL=");
-         var4.append(var3);
-         var4.append(", avatarURLs=");
-         var4.append(var1);
-         var4.append(", channelName=");
-         var4.append(var5);
-         var4.append(")");
-         return var4.toString();
+         val var4: ArrayList = this.avatarURLs;
+         val var2: java.lang.String = this.channelName;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("MessageBundleHeader(channelIconURL=");
+         var5.append(var1);
+         var5.append(", chatIconURL=");
+         var5.append(var3);
+         var5.append(", avatarURLs=");
+         var5.append(var4);
+         var5.append(", channelName=");
+         var5.append(var2);
+         var5.append(")");
+         return var5.toString();
       }
 
       public object `$serializer` : g0 {

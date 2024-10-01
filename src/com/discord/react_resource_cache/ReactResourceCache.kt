@@ -51,15 +51,15 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public fun set(context: Context, newReactResources: Map<String, String>) {
       q.h(var1, "context");
       q.h(var2, "newReactResources");
-      val var3: Editor = this.getCache(var1).edit();
-      q.g(var3, "editor");
-      var3.clear();
+      val var4: Editor = this.getCache(var1).edit();
+      q.g(var4, "editor");
+      var4.clear();
 
-      for (Entry var4 : var2.entrySet()) {
-         var3.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);
-      var3.apply();
+      var4.apply();
    }
 }

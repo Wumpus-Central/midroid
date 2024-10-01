@@ -214,15 +214,15 @@ public data class Sticker(id: Long,
          val var4: Int;
          var var6: Long;
          var var8: Any;
+         var var9: java.lang.String;
          var var10: Any;
          var var11: java.lang.String;
          val var12: java.lang.String;
          val var18: Int;
-         var var24: java.lang.String;
          if (var16.y()) {
             var6 = var16.h(var15, 0);
-            val var9: StickerFormatType = var16.m(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, null) as StickerFormatType;
-            val var13: java.lang.String = var16.t(var15, 2);
+            var10 = var16.m(var15, 1, StickerFormatType.StickerFormatTypeSerializer.INSTANCE, null) as StickerFormatType;
+            var9 = var16.t(var15, 2);
             var11 = var16.t(var15, 3);
             var12 = var16.t(var15, 4);
             val var17: n0 = n0.a;
@@ -230,18 +230,16 @@ public data class Sticker(id: Long,
             var18 = var16.v(var15, 6, var17, null) as Int;
             val var2: Int = var16.k(var15, 7);
             var3 = 255;
-            var10 = var9;
-            var24 = var13;
             var4 = var2;
          } else {
             var var22: Boolean = true;
             var3 = 0;
-            var var26: Int = null;
+            var var25: Int = null;
             var8 = null;
             var var19: java.lang.String = null;
             var6 = 0L;
             var10 = null;
-            var24 = null;
+            var9 = null;
             var11 = null;
             var var20: Int = 0;
 
@@ -260,7 +258,7 @@ public data class Sticker(id: Long,
                      var20 |= 2;
                      break;
                   case 2:
-                     var24 = var16.t(var15, 2);
+                     var9 = var16.t(var15, 2);
                      var20 |= 4;
                      break;
                   case 3:
@@ -276,7 +274,7 @@ public data class Sticker(id: Long,
                      var20 |= 32;
                      break;
                   case 6:
-                     var26 = var16.v(var15, 6, n0.a, var26) as Int;
+                     var25 = var16.v(var15, 6, n0.a, var25) as Int;
                      var20 |= 64;
                      break;
                   case 7:
@@ -289,7 +287,7 @@ public data class Sticker(id: Long,
             }
 
             var4 = var3;
-            var18 = var26;
+            var18 = var25;
             var8 = var11;
             var12 = var19;
             var11 = (java.lang.String)var8;
@@ -297,7 +295,7 @@ public data class Sticker(id: Long,
          }
 
          var16.b(var15);
-         return new Sticker(var3, var6, (StickerFormatType)var10, var24, var11, var12, (Integer)var8, var18, var4, null);
+         return new Sticker(var3, var6, (StickerFormatType)var10, var9, var11, var12, (Integer)var8, var18, var4, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Sticker) {

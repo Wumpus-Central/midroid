@@ -144,12 +144,12 @@ public open class RLottieImageView : m {
       playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP
    ) {
       q.i(var5, "playbackMode");
-      val var6: Context = this.getContext();
-      q.d(var6, "context");
       val var7: Context = this.getContext();
       q.d(var7, "context");
+      val var6: Context = this.getContext();
+      q.d(var6, "context");
       val var9: RLottieDrawable = new RLottieDrawable(
-         var6, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var7).getRefreshRate(), false, var4
+         var7, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var6).getRefreshRate(), false, var4
       );
       this.drawable = var9;
       this.playbackMode = var5;

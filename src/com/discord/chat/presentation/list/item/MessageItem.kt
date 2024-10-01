@@ -126,9 +126,9 @@ public data class MessageItem(message: Message,
          var1 = this.messageFrame.hashCode();
       }
 
-      val var7: Int = this.messageContext.hashCode();
-      val var5: Int = java.lang.Boolean.hashCode(this.allowChildGestures);
-      val var6: Int = java.lang.Boolean.hashCode(this.isHighlight);
+      val var6: Int = this.messageContext.hashCode();
+      val var7: Int = java.lang.Boolean.hashCode(this.allowChildGestures);
+      val var5: Int = java.lang.Boolean.hashCode(this.isHighlight);
       val var2: Int;
       if (this.backgroundHighlight == null) {
          var2 = 0;
@@ -140,36 +140,36 @@ public data class MessageItem(message: Message,
          var3 = this.reactTag.hashCode();
       }
 
-      return ((((((var4 * 31 + var1) * 31 + var7) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.renderContentOnly);
+      return ((((((var4 * 31 + var1) * 31 + var6) * 31 + var7) * 31 + var5) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.renderContentOnly);
    }
 
    public override fun toString(): String {
-      val var9: Message = this.message;
-      val var7: MessageFrame = this.messageFrame;
-      val var6: MessageContext = this.messageContext;
+      val var7: Message = this.message;
+      val var5: MessageFrame = this.messageFrame;
+      val var4: MessageContext = this.messageContext;
       val var2: Boolean = this.allowChildGestures;
-      val var1: Boolean = this.isHighlight;
-      val var4: BackgroundHighlight = this.backgroundHighlight;
+      val var3: Boolean = this.isHighlight;
+      val var6: BackgroundHighlight = this.backgroundHighlight;
       val var8: Int = this.reactTag;
-      val var3: Boolean = this.renderContentOnly;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MessageItem(message=");
-      var5.append(var9);
-      var5.append(", messageFrame=");
-      var5.append(var7);
-      var5.append(", messageContext=");
-      var5.append(var6);
-      var5.append(", allowChildGestures=");
-      var5.append(var2);
-      var5.append(", isHighlight=");
-      var5.append(var1);
-      var5.append(", backgroundHighlight=");
-      var5.append(var4);
-      var5.append(", reactTag=");
-      var5.append(var8);
-      var5.append(", renderContentOnly=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var1: Boolean = this.renderContentOnly;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("MessageItem(message=");
+      var9.append(var7);
+      var9.append(", messageFrame=");
+      var9.append(var5);
+      var9.append(", messageContext=");
+      var9.append(var4);
+      var9.append(", allowChildGestures=");
+      var9.append(var2);
+      var9.append(", isHighlight=");
+      var9.append(var3);
+      var9.append(", backgroundHighlight=");
+      var9.append(var6);
+      var9.append(", reactTag=");
+      var9.append(var8);
+      var9.append(", renderContentOnly=");
+      var9.append(var1);
+      var9.append(")");
+      return var9.toString();
    }
 }
