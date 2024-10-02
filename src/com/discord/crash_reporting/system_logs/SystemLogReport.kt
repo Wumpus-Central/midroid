@@ -24,15 +24,15 @@ internal object SystemLogReport {
    }
 
    private fun recordBreadcrumb(msg: String, category: String) {
-      val var3: Log = Log.INSTANCE;
-      val var4: java.lang.String = TAG;
+      val var4: Log = Log.INSTANCE;
+      val var5: java.lang.String = TAG;
       q.g(TAG, "TAG");
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("Breadcrumb, [");
-      var5.append(var2);
-      var5.append("]: ");
-      var5.append(var1);
-      Log.i$default(var3, var4, var5.toString(), null, 4, null);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Breadcrumb, [");
+      var3.append(var2);
+      var3.append("]: ");
+      var3.append(var1);
+      Log.i$default(var4, var5, var3.toString(), null, 4, null);
    }
 
    internal fun reportLastCrash(context: Context, cb: (Reason?, Tombstone?) -> Unit) {
@@ -64,13 +64,13 @@ internal object SystemLogReport {
                var2 = false;
             }
 
-            val var8: Function2 = this.$cb;
-            val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
+            val var6: Function2 = this.$cb;
+            val var8: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
             if (!var2) {
                var1 = null;
             }
 
-            var8.invoke(var6, var1);
+            var6.invoke(var8, var1);
          }
       });
    }

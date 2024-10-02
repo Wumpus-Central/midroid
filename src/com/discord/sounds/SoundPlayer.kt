@@ -158,16 +158,17 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, soun
    public fun setPan(pan: Float) {
       val var15: Float;
       val var4: Byte = (byte)(if ((var15 = var1 - 0.5F) == 0.0F) 0 else (if (var15 < 0.0F) -1 else 1));
-      var var13: Float;
+      val var13: Float;
       if (var1 >= 0.5F) {
+         var var3: Float;
          try {
-            var13 = this.volume;
+            var3 = this.volume;
          } catch (var11: Exception) {
             Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to pan.", var11);
             return;
          }
 
-         var13 = var13 * (2 - var1 * 2);
+         var13 = var3 * (2 - var1 * 2);
       } else {
          try {
             var13 = this.volume;

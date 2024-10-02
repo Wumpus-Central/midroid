@@ -22,16 +22,16 @@ fun `access$mapResultToContactSyncPermission`(var0: java.lang.String): Int {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var3: Locale = Locale.ROOT;
-   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-   q.g(var2, "toLowerCase(...)");
+   val var2: Locale = Locale.ROOT;
+   val var3: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+   q.g(var3, "toLowerCase(...)");
    val var1: Byte;
-   if (q.c(var0, var2)) {
+   if (q.c(var0, var3)) {
       var1 = 1;
    } else {
-      var2 = "DENIED".toLowerCase(var3);
-      q.g(var2, "toLowerCase(...)");
-      q.c(var0, var2);
+      val var4: java.lang.String = "DENIED".toLowerCase(var2);
+      q.g(var4, "toLowerCase(...)");
+      q.c(var0, var4);
       var1 = 0;
    }
 
@@ -69,9 +69,9 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
    q.h(var0, "<this>");
    q.h(var1, "callback");
 
+   var var6: java.util.Iterator;
    var var11: java.lang.String;
    var var12: ArrayList;
-   var var13: java.util.Iterator;
    try {
       val var3: java.util.Map = ContactSyncProvider.INSTANCE.getContactsMap(var0);
       var10 = Json.d;
@@ -79,7 +79,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       var11 = var10.c(new s0(b2.a, ContactSyncBlobEntry.Companion.serializer()), var3);
       val var4: java.util.Collection = var3.values();
       var12 = new ArrayList(i.v(var4, 10));
-      var13 = var4.iterator();
+      var6 = var4.iterator();
    } catch (var8: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
       return;
@@ -87,11 +87,11 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    while (true) {
       try {
-         if (!var13.hasNext()) {
+         if (!var6.hasNext()) {
             break;
          }
 
-         var12.add(new ContactSyncPayloadEntry((var13.next() as ContactSyncBlobEntry).getPhone()));
+         var12.add(new ContactSyncPayloadEntry((var6.next() as ContactSyncBlobEntry).getPhone()));
       } catch (var9: SecurityException) {
          var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
          return;

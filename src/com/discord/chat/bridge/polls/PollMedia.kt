@@ -105,21 +105,21 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.text;
+      val var5: java.lang.String = this.text;
       val var4: java.util.Set = this.attachmentIds;
       val var2: PollMediaEmoji = this.emoji;
-      val var1: java.lang.Long = this.stickerId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PollMedia(text=");
-      var5.append(var3);
-      var5.append(", attachmentIds=");
-      var5.append(var4);
-      var5.append(", emoji=");
-      var5.append(var2);
-      var5.append(", stickerId=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.Long = this.stickerId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PollMedia(text=");
+      var1.append(var5);
+      var1.append(", attachmentIds=");
+      var1.append(var4);
+      var1.append(", emoji=");
+      var1.append(var2);
+      var1.append(", stickerId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {

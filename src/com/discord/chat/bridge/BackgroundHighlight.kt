@@ -73,14 +73,14 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
 
    public override fun toString(): String {
       val var1: Int = this.backgroundColor;
-      val var3: Int = this.gutterColor;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BackgroundHighlight(backgroundColor=");
-      var2.append(var1);
-      var2.append(", gutterColor=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: Int = this.gutterColor;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BackgroundHighlight(backgroundColor=");
+      var3.append(var1);
+      var3.append(", gutterColor=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

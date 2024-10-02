@@ -33,40 +33,40 @@ internal class ExternalPipManager {
    public fun enterPipMode(activity: Activity?, force: Boolean = false, onResult: (r<Unit>) -> Unit = <unrepresentable>.INSTANCE) {
       q.h(var3, "onResult");
       if ((this.enabled || var2) && CAN_PIP) {
-         val var11: java.lang.Boolean;
+         val var10: java.lang.Boolean;
          if (var1 != null) {
             try {
-               val var4: ExternalPipManager.Companion = Companion;
+               val var5: ExternalPipManager.Companion = Companion;
                e.a();
-               val var5: Builder = a.a(d.a(), this.aspectRatio);
-               q.g(var5, "setAspectRatio(...)");
-               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var4, var5, false)));
+               val var14: Builder = a.a(d.a(), this.aspectRatio);
+               q.g(var14, "setAspectRatio(...)");
+               var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var14, false)));
             } catch (var8: Exception) {
-               val var10: kh.r.a = r.k;
+               val var4: kh.r.a = r.k;
                var3.invoke(r.a(r.b(s.a(var8))));
                return;
             }
          } else {
-            var11 = null;
+            var10 = null;
          }
 
          try {
-            if (q.c(var11, java.lang.Boolean.TRUE)) {
-               val var16: kh.r.a = r.k;
+            if (q.c(var10, java.lang.Boolean.TRUE)) {
+               val var13: kh.r.a = r.k;
                var3.invoke(r.a(r.b(Unit.a)));
                return;
             }
          } catch (var7: Exception) {
-            val var12: kh.r.a = r.k;
+            val var15: kh.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var7))));
             return;
          }
 
          try {
-            val var14: kh.r.a = r.k;
+            val var11: kh.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var6: Exception) {
-            val var13: kh.r.a = r.k;
+            val var16: kh.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var6))));
          }
       } else {

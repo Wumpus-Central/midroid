@@ -73,14 +73,14 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
 
    public override fun toString(): String {
       val var3: java.lang.String = this.action;
-      val var2: java.lang.String = UserId.toString-impl(this.userId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ActorHook(action=");
-      var1.append(var3);
-      var1.append(", userId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = UserId.toString-impl(this.userId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActorHook(action=");
+      var2.append(var3);
+      var2.append(", userId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -106,33 +106,35 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
 
       public open fun deserialize(decoder: Decoder): ActorHook {
          q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         val var5: Boolean = var8.y();
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
+         val var5: Boolean = var9.y();
          var var6: java.lang.String = null;
          var var2: Int;
-         var var9: UserId;
+         var var11: UserId;
          if (var5) {
-            var6 = var8.t(var7, 0);
-            var9 = var8.m(var7, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            val var10: java.lang.String = var9.t(var8, 0);
+            val var7: UserId = var9.m(var8, 1, UserId.$serializer.INSTANCE, null) as UserId;
             var2 = 3;
+            var6 = var10;
+            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var9 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var8.x(var7);
+               val var4: Int = var9.x(var8);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
                         throw new n(var4);
                      }
 
-                     var9 = var8.m(var7, 1, UserId.$serializer.INSTANCE, var9) as UserId;
+                     var11 = var9.m(var8, 1, UserId.$serializer.INSTANCE, var11) as UserId;
                      var2 |= 2;
                   } else {
-                     var6 = var8.t(var7, 0);
+                     var6 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -141,8 +143,8 @@ public data class ActorHook(action: String, userId: UserId) : ActorHook(var1, va
             }
          }
 
-         var8.b(var7);
-         return new ActorHook(var2, var6, var9, null, null);
+         var9.b(var8);
+         return new ActorHook(var2, var6, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActorHook) {

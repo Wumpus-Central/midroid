@@ -129,16 +129,16 @@ public class ReactionsFlexbox  public constructor(context: Context, attrs: Attri
       val var17: java.util.Iterator = var20.iterator();
 
       for (int var13 = 0; var17.hasNext(); var13++) {
-         var var23: ReactionView = (ReactionView)var17.next();
+         var var23: Any = var17.next();
          if (var13 < 0) {
             i.u();
          }
 
-         val var16: ReactionView.Reaction = var23 as ReactionView.Reaction;
-         var23 = this.getOrCreateReactionView(var13);
-         var23.setReaction(var16, var7);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var23, false, new e(var10, var16), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var23, false, new f(var11, var16), 1, null);
+         var23 = var23 as ReactionView.Reaction;
+         val var16: ReactionView = this.getOrCreateReactionView(var13);
+         var16.setReaction((ReactionView.Reaction)var23, var7);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var16, false, new e(var10, (ReactionView.Reaction)var23), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var16, false, new f(var11, (ReactionView.Reaction)var23), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var20.size());

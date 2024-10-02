@@ -117,21 +117,21 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.action;
-      val var2: java.lang.String = UserId.toString-impl(this.userId);
-      val var4: ChannelId = this.messageChannelId;
-      val var1: Int = this.linkColor;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UserNameOnClick(action=");
-      var5.append(var3);
-      var5.append(", userId=");
-      var5.append(var2);
-      var5.append(", messageChannelId=");
-      var5.append(var4);
-      var5.append(", linkColor=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.action;
+      val var5: java.lang.String = UserId.toString-impl(this.userId);
+      val var2: ChannelId = this.messageChannelId;
+      val var4: Int = this.linkColor;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserNameOnClick(action=");
+      var3.append(var1);
+      var3.append(", userId=");
+      var3.append(var5);
+      var3.append(", messageChannelId=");
+      var3.append(var2);
+      var3.append(", linkColor=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -164,23 +164,22 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
          val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var7: UserId;
-         val var9: java.lang.String;
+         var var6: ChannelId;
          var var12: Any;
-         var var13: ChannelId;
+         var var13: UserId;
          if (var5) {
-            val var6: java.lang.String = var11.t(var10, 0);
-            var7 = var11.m(var10, 1, UserId.$serializer.INSTANCE, null) as UserId;
-            val var14: ChannelId = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var7: java.lang.String = var11.t(var10, 0);
+            val var9: UserId = var11.m(var10, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            var6 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var12 = var11.v(var10, 3, n0.a, null) as Int;
             var2 = 15;
-            var9 = var6;
-            var13 = var14;
+            var8 = var7;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
             var13 = null;
+            var6 = null;
             var12 = null;
 
             while (var3) {
@@ -196,11 +195,11 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
                            var12 = var11.v(var10, 3, n0.a, var12) as Int;
                            var2 |= 8;
                         } else {
-                           var13 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, var13) as ChannelId;
+                           var6 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.m(var10, 1, UserId.$serializer.INSTANCE, var7) as UserId;
+                        var13 = var11.m(var10, 1, UserId.$serializer.INSTANCE, var13) as UserId;
                         var2 |= 2;
                      }
                   } else {
@@ -211,12 +210,10 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
                   var3 = false;
                }
             }
-
-            var9 = var8;
          }
 
          var11.b(var10);
-         return new UserNameOnClick(var2, var9, var7, var13, (Integer)var12, null, null);
+         return new UserNameOnClick(var2, var8, var13, var6, (Integer)var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserNameOnClick) {

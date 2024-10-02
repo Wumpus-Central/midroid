@@ -100,24 +100,24 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.title;
-      val var3: StructurableText = this.subtitle;
-      val var2: java.lang.String = this.cta;
-      val var1: java.lang.String = this.icon;
-      val var4: java.lang.String = this.closeIcon;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("PostSharePrompt(title=");
-      var6.append(var5);
-      var6.append(", subtitle=");
-      var6.append(var3);
-      var6.append(", cta=");
-      var6.append(var2);
-      var6.append(", icon=");
-      var6.append(var1);
-      var6.append(", closeIcon=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var1: java.lang.String = this.title;
+      val var5: StructurableText = this.subtitle;
+      val var6: java.lang.String = this.cta;
+      val var2: java.lang.String = this.icon;
+      val var3: java.lang.String = this.closeIcon;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PostSharePrompt(title=");
+      var4.append(var1);
+      var4.append(", subtitle=");
+      var4.append(var5);
+      var4.append(", cta=");
+      var4.append(var6);
+      var4.append(", icon=");
+      var4.append(var2);
+      var4.append(", closeIcon=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

@@ -70,7 +70,7 @@ public class MessageBundleSpineItemDecoration(context: Context, contentStartPosi
                         var var5: Int = 0;
 
                         while (var11.hasNext()) {
-                           var var6: Int = (var11 as o).c();
+                           var var6: Int = (var11 as o).a();
                            if (var5 < 0) {
                               i.u();
                            }

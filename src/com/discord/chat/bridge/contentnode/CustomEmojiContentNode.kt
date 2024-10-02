@@ -92,22 +92,22 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
    public override fun toString(): String {
       val var2: Long = this.id;
       val var6: java.lang.String = this.alt;
-      val var5: java.lang.String = this.src;
-      val var7: java.lang.String = this.frozenSrc;
+      val var7: java.lang.String = this.src;
+      val var4: java.lang.String = this.frozenSrc;
       val var1: Boolean = this.jumboable;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CustomEmojiContentNode(id=");
-      var4.append(var2);
-      var4.append(", alt=");
-      var4.append(var6);
-      var4.append(", src=");
-      var4.append(var5);
-      var4.append(", frozenSrc=");
-      var4.append(var7);
-      var4.append(", jumboable=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("CustomEmojiContentNode(id=");
+      var5.append(var2);
+      var5.append(", alt=");
+      var5.append(var6);
+      var5.append(", src=");
+      var5.append(var7);
+      var5.append(", frozenSrc=");
+      var5.append(var4);
+      var5.append(", jumboable=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {

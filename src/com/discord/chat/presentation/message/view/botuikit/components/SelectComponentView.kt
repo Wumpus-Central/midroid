@@ -215,20 +215,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label68: {
                      if (var36 is SearchableSelectItem) {
-                        val var14: SearchableSelectItem = var36 as SearchableSelectItem;
+                        val var20: SearchableSelectItem = var36 as SearchableSelectItem;
                         if ((var36 as SearchableSelectItem).getIconSrc() != null) {
-                           val var13: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
+                           val var14: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var21: java.lang.String = var14.getIconSrc();
-                           val var38: Int = var14.getIconColor();
+                           val var13: java.lang.String = var20.getIconSrc();
+                           val var38: Int = var20.getIconColor();
                            val var30: Boolean;
-                           if (var14.getType() === SelectOptionType.USER) {
+                           if (var20.getType() === SelectOptionType.USER) {
                               var30 = true;
                            } else {
                               var30 = false;
                            }
 
-                           this.setImage(var13, var21, var38, var30);
+                           this.setImage(var14, var13, var38, var30);
                            val var22: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                            q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var22.setVisibility(0);
@@ -236,20 +236,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                         }
                      }
 
-                     val var20: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
+                     val var21: SimpleDraweeSpanTextView = var28.selectComponentSelectionIcon;
                      q.g(var28.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                     var20.setVisibility(8);
+                     var21.setVisibility(8);
                   }
                }
             }
          } else {
-            val var23: FlexboxLayout = var28.selectComponentSelectionsRoot;
+            val var41: FlexboxLayout = var28.selectComponentSelectionsRoot;
             q.g(var28.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            val var41: MaterialTextView = var28.selectComponentSelectionText;
+            val var23: MaterialTextView = var28.selectComponentSelectionText;
             q.g(var28.selectComponentSelectionText, "selectComponentSelectionText");
-            var41.setVisibility(8);
-            var23.setVisibility(0);
-            this.setSelectedOptions(var23, var35);
+            var23.setVisibility(8);
+            var41.setVisibility(0);
+            this.setSelectedOptions(var41, var35);
          }
       } else {
          val var39: MaterialTextView = var28.selectComponentSelectionText;

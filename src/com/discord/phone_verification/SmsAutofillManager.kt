@@ -25,7 +25,7 @@ internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> 
    public fun startSmsRetriever() {
       val var1: b = ha.a.a(this.context);
       q.g(var1, "getClient(...)");
-      var1.H();
+      var1.I();
    }
 
    public fun unregisterReceiver() {

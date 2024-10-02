@@ -136,27 +136,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.title;
-      val var4: java.lang.String = this.messageCountLabel;
-      val var6: java.lang.String = this.messagePreviewString;
-      val var1: java.lang.Boolean = this.archived;
-      val var5: java.lang.String = this.archivedIconUrl;
-      val var7: ThreadEmbedMessage = this.referencedMessage;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ThreadEmbed(title=");
-      var2.append(var3);
-      var2.append(", messageCountLabel=");
-      var2.append(var4);
-      var2.append(", messagePreviewString=");
-      var2.append(var6);
-      var2.append(", archived=");
-      var2.append(var1);
-      var2.append(", archivedIconUrl=");
-      var2.append(var5);
-      var2.append(", referencedMessage=");
-      var2.append(var7);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.title;
+      val var5: java.lang.String = this.messageCountLabel;
+      val var7: java.lang.String = this.messagePreviewString;
+      val var6: java.lang.Boolean = this.archived;
+      val var4: java.lang.String = this.archivedIconUrl;
+      val var3: ThreadEmbedMessage = this.referencedMessage;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ThreadEmbed(title=");
+      var1.append(var2);
+      var1.append(", messageCountLabel=");
+      var1.append(var5);
+      var1.append(", messagePreviewString=");
+      var1.append(var7);
+      var1.append(", archived=");
+      var1.append(var6);
+      var1.append(", archivedIconUrl=");
+      var1.append(var4);
+      var1.append(", referencedMessage=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : g0 {
@@ -187,24 +187,25 @@ public data class ThreadEmbed(title: String,
 
       public open fun deserialize(decoder: Decoder): ThreadEmbed {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
+         val var12: SerialDescriptor = this.getDescriptor();
+         val var13: c = var1.c(var12);
+         val var5: Boolean = var13.y();
          var var10: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
          var var7: Any;
          var var8: java.lang.String;
          var var9: java.lang.String;
-         var var14: Any;
+         val var11: java.lang.String;
+         var var15: Any;
          if (var5) {
-            var10 = var12.t(var11, 0);
-            var9 = var12.t(var11, 1);
-            var14 = b2.a;
-            var8 = var12.v(var11, 2, b2.a, null) as java.lang.String;
-            var7 = var12.v(var11, 3, h.a, null) as java.lang.Boolean;
-            var6 = var12.v(var11, 4, (DeserializationStrategy)var14, null) as java.lang.String;
-            var14 = var12.v(var11, 5, ThreadEmbedMessage.$serializer.INSTANCE, null) as ThreadEmbedMessage;
+            var8 = var13.t(var12, 0);
+            var9 = var13.t(var12, 1);
+            var15 = b2.a;
+            var11 = var13.v(var12, 2, b2.a, null) as java.lang.String;
+            var7 = var13.v(var12, 3, h.a, null) as java.lang.Boolean;
+            var6 = var13.v(var12, 4, (DeserializationStrategy)var15, null) as java.lang.String;
+            var15 = var13.v(var12, 5, ThreadEmbedMessage.$serializer.INSTANCE, null) as ThreadEmbedMessage;
             var2 = 63;
          } else {
             var var3: Boolean = true;
@@ -213,46 +214,49 @@ public data class ThreadEmbed(title: String,
             var8 = null;
             var7 = null;
             var6 = null;
-            var14 = null;
+            var15 = null;
 
             while (var3) {
-               val var4: Int = var12.x(var11);
+               val var4: Int = var13.x(var12);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var10 = var12.t(var11, 0);
+                     var10 = var13.t(var12, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var12.t(var11, 1);
+                     var9 = var13.t(var12, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var12.v(var11, 2, b2.a, var8) as java.lang.String;
+                     var8 = var13.v(var12, 2, b2.a, var8) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var12.v(var11, 3, h.a, var7) as java.lang.Boolean;
+                     var7 = var13.v(var12, 3, h.a, var7) as java.lang.Boolean;
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var12.v(var11, 4, b2.a, var6) as java.lang.String;
+                     var6 = var13.v(var12, 4, b2.a, var6) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
-                     var14 = var12.v(var11, 5, ThreadEmbedMessage.$serializer.INSTANCE, var14) as ThreadEmbedMessage;
+                     var15 = var13.v(var12, 5, ThreadEmbedMessage.$serializer.INSTANCE, var15) as ThreadEmbedMessage;
                      var2 |= 32;
                      break;
                   default:
                      throw new n(var4);
                }
             }
+
+            var11 = var8;
+            var8 = var10;
          }
 
-         var12.b(var11);
-         return new ThreadEmbed(var2, var10, var9, var8, (java.lang.Boolean)var7, var6, (ThreadEmbedMessage)var14, null);
+         var13.b(var12);
+         return new ThreadEmbed(var2, var8, var9, var11, (java.lang.Boolean)var7, var6, (ThreadEmbedMessage)var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ThreadEmbed) {

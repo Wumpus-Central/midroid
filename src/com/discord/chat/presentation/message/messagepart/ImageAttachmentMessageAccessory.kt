@@ -136,32 +136,32 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var9: Attachment = this.attachment;
-      val var1: Int = this.attachmentIndex;
-      val var6: java.lang.Float = this.attachmentsOpacity;
-      val var2: Int = this.constrainedWidth;
-      val var3: Int = this.radiusPx;
-      val var8: SpoilerAttributes = this.spoilerAttributes;
+      val var9: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: Attachment = this.attachment;
+      val var3: Int = this.attachmentIndex;
+      val var7: java.lang.Float = this.attachmentsOpacity;
+      val var1: Int = this.constrainedWidth;
+      val var2: Int = this.radiusPx;
+      val var5: SpoilerAttributes = this.spoilerAttributes;
       val var4: Boolean = this.useNewAltTextButton;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ImageAttachmentMessageAccessory(messageId=");
-      var7.append(var5);
-      var7.append(", attachment=");
-      var7.append(var9);
-      var7.append(", attachmentIndex=");
-      var7.append(var1);
-      var7.append(", attachmentsOpacity=");
-      var7.append(var6);
-      var7.append(", constrainedWidth=");
-      var7.append(var2);
-      var7.append(", radiusPx=");
-      var7.append(var3);
-      var7.append(", spoilerAttributes=");
-      var7.append(var8);
-      var7.append(", useNewAltTextButton=");
-      var7.append(var4);
-      var7.append(")");
-      return var7.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ImageAttachmentMessageAccessory(messageId=");
+      var6.append(var9);
+      var6.append(", attachment=");
+      var6.append(var8);
+      var6.append(", attachmentIndex=");
+      var6.append(var3);
+      var6.append(", attachmentsOpacity=");
+      var6.append(var7);
+      var6.append(", constrainedWidth=");
+      var6.append(var1);
+      var6.append(", radiusPx=");
+      var6.append(var2);
+      var6.append(", spoilerAttributes=");
+      var6.append(var5);
+      var6.append(", useNewAltTextButton=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 }

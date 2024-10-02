@@ -32,11 +32,11 @@ public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactCo
 
    public fun reactResources(values: ReadableArray): HashMap<String, String> {
       q.h(var1, "values");
-      val var4: HashMap = new HashMap(var1.size());
-      val var3: java.util.Iterator = this.keys().iterator();
+      val var3: HashMap = new HashMap(var1.size());
+      val var4: java.util.Iterator = this.keys().iterator();
 
-      for (int var2 = 0; var3.hasNext(); var2++) {
-         var var5: Any = var3.next();
+      for (int var2 = 0; var4.hasNext(); var2++) {
+         var var5: Any = var4.next();
          if (var2 < 0) {
             i.u();
          }
@@ -44,9 +44,9 @@ public abstract class ReactResourceModule<T extends java.lang.Enum<?>> : ReactCo
          var5 = (var5 as java.lang.Enum).name();
          val var6: java.lang.String = var1.getString(var2);
          q.g(var6, "getString(...)");
-         var4.put(var5, var6);
+         var3.put(var5, var6);
       }
 
-      return var4;
+      return var3;
    }
 }

@@ -104,24 +104,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.source;
-      val var3: java.lang.String = this.unicodeEmoji;
-      val var6: java.lang.String = this.name;
+      val var6: java.lang.String = this.source;
+      val var2: java.lang.String = this.unicodeEmoji;
+      val var4: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var4: java.lang.String = this.alt;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("RoleIcon(source=");
-      var5.append(var2);
-      var5.append(", unicodeEmoji=");
-      var5.append(var3);
-      var5.append(", name=");
-      var5.append(var6);
-      var5.append(", size=");
-      var5.append(var1);
-      var5.append(", alt=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.alt;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("RoleIcon(source=");
+      var3.append(var6);
+      var3.append(", unicodeEmoji=");
+      var3.append(var2);
+      var3.append(", name=");
+      var3.append(var4);
+      var3.append(", size=");
+      var3.append(var1);
+      var3.append(", alt=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

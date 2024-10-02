@@ -43,13 +43,13 @@ private fun ListOperation.label(): String {
       var3.append(")");
       var4 = var3.toString();
    } else if (var0 is ListOperation.InsertRange) {
-      val var13: Int = (var0 as ListOperation.InsertRange).getFirst();
-      val var2: Int = (var0 as ListOperation.InsertRange).getLast();
+      val var2: Int = (var0 as ListOperation.InsertRange).getFirst();
+      val var13: Int = (var0 as ListOperation.InsertRange).getLast();
       val var6: StringBuilder = new StringBuilder();
       var6.append("IRNG(");
-      var6.append(var13);
-      var6.append("-");
       var6.append(var2);
+      var6.append("-");
+      var6.append(var13);
       var6.append(")");
       var4 = var6.toString();
    } else if (var0 is ListOperation.Remove) {

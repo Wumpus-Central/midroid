@@ -36,10 +36,10 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
    val var1: Builder = FrescoModule.getDefaultConfigBuilder(new ReactContext(var0));
    val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var6: Builder = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+   val var3: Builder = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .Y(var2.newSmallDiskCache(var0))
       .Q(new FrescoBitmapSupplier(var0))
-      .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+      .V(new ReactOkHttpNetworkFetcher(OkHttpClientProvider.createClient().B().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
@@ -51,9 +51,9 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             return this.$receiver$inlined.frescoInterceptor(var1);
          }
       }).c()));
-   val var3: a = c0.n();
+   val var6: a = c0.n();
    val var5: f0 = o.a();
-   val var4: Builder = var6.W(new e0(var3.n(new f0(var5.b, var5.a * 2, var5.c)).m())).R(new DefaultCacheKeyFactory() {
+   val var4: Builder = var3.W(new e0(var6.n(new f0(var5.b, var5.a * 2, var5.c)).m())).R(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
@@ -62,12 +62,12 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             val var5: android.net.Uri.Builder = var1.buildUpon();
             var5.clearQuery();
 
-            for (java.lang.String var4 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var4)) {
-                  val var3: java.util.Iterator = var1.getQueryParameters(var4).iterator();
+            for (java.lang.String var3 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
+                  val var4: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
-                  while (var3.hasNext()) {
-                     var5.appendQueryParameter(var4, var3.next() as java.lang.String);
+                  while (var4.hasNext()) {
+                     var5.appendQueryParameter(var3, var4.next() as java.lang.String);
                   }
                }
             }

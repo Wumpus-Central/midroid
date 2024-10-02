@@ -77,18 +77,18 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.type;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapPollAction(channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var2);
-      var4.append(", type=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.type;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapPollAction(channelId=");
+      var3.append(var2);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(", type=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -157,8 +157,8 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
                }
             }
 
-            var10 = var5;
             var5 = var11;
+            var10 = var5;
          }
 
          var9.b(var8);

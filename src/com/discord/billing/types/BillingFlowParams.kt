@@ -39,12 +39,12 @@ internal object BillingFlowParams {
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         q.g(var6, "format(...)");
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var1);
-         var5.append(var6);
-         var1 = var5.toString();
+         val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+         q.g(var5, "format(...)");
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var1);
+         var6.append(var5);
+         var1 = var6.toString();
       }
 
       return var1;
@@ -52,7 +52,7 @@ internal object BillingFlowParams {
 
    private fun getPriceAmountMicros(productDetails: ProductDetails): Long {
       if (q.c(var1.e(), "inapp")) {
-         val var2: ProductDetails.a = var1.c();
+         val var2: ProductDetails.b = var1.c();
          if (var2 != null) {
             return var2.b();
          }
@@ -68,7 +68,7 @@ internal object BillingFlowParams {
          throw new AssertionError("Attempted to retrieve pricing phase for one time purchase");
       } else {
          val var4: java.util.List = var1.f();
-         val var7: ProductDetails.c;
+         val var7: ProductDetails.d;
          if (var4 != null) {
             val var2: java.util.Iterator = var4.iterator();
 
@@ -79,16 +79,16 @@ internal object BillingFlowParams {
                }
 
                var5 = var2.next();
-            } while (((ProductDetails.c)var5).b() != null);
+            } while (((ProductDetails.d)var5).b() != null);
 
-            var7 = var5 as ProductDetails.c;
+            var7 = var5 as ProductDetails.d;
          } else {
             var7 = null;
          }
 
          var var6: ProductDetails.PricingPhase = null;
          if (var7 != null) {
-            val var8: ProductDetails.b = var7.e();
+            val var8: ProductDetails.c = var7.e();
             var6 = null;
             if (var8 != null) {
                val var9: java.util.List = var8.a();
@@ -107,16 +107,16 @@ internal object BillingFlowParams {
       }
    }
 
-   private fun getProrationMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var6: Long = this.getPriceAmountMicros(var1);
-      val var4: Long = this.getPriceAmountMicros(var2);
+   private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
+      val var4: Long = this.getPriceAmountMicros(var1);
+      val var6: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
       q.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
       q.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
-         var3 = 4;
+      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
+         var3 = 6;
       } else {
          var3 = 2;
       }
@@ -124,7 +124,7 @@ internal object BillingFlowParams {
       return var3;
    }
 
-   private fun getProrationMode(oldSkuDetails: SkuDetails, newSkuDetails: SkuDetails): Int {
+   private fun getReplacementMode(oldSkuDetails: SkuDetails, newSkuDetails: SkuDetails): Int {
       val var6: Long = var1.c();
       val var4: Long = var2.c();
       val var8: java.lang.String = var1.f();
@@ -133,7 +133,7 @@ internal object BillingFlowParams {
       q.g(var9, "getSubscriptionPeriod(...)");
       val var3: Byte;
       if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
-         var3 = 4;
+         var3 = 6;
       } else {
          var3 = 2;
       }
@@ -189,7 +189,7 @@ internal object BillingFlowParams {
             .f(var11)
             .c(this.getObfuscatedUserId(var5));
          if (var9 != null && var4 != null) {
-            var12.g(com.android.billingclient.api.BillingFlowParams.c.a().c(var4).f(INSTANCE.getProrationMode(var9, var11)).a());
+            var12.g(com.android.billingclient.api.BillingFlowParams.SubscriptionUpdateParams.a().b(var4).d(INSTANCE.getReplacementMode(var9, var11)).a());
          }
 
          return var12.a();
@@ -263,9 +263,9 @@ internal object BillingFlowParams {
                         }
 
                         var15 = var29.next();
-                     } while (!q.c(((ProductDetails.c)var15).b(), var6));
+                     } while (!q.c(((ProductDetails.d)var15).b(), var6));
 
-                     val var30: ProductDetails.c = var15 as ProductDetails.c;
+                     val var30: ProductDetails.d = var15 as ProductDetails.d;
                      var13 = null;
                      if (var30 != null) {
                         var13 = var30.d();
@@ -284,9 +284,9 @@ internal object BillingFlowParams {
                         }
 
                         var14 = var26.next();
-                     } while (((ProductDetails.c)var14).b() != null);
+                     } while (((ProductDetails.d)var14).b() != null);
 
-                     val var27: ProductDetails.c = var14 as ProductDetails.c;
+                     val var27: ProductDetails.d = var14 as ProductDetails.d;
                      var13 = null;
                      if (var27 != null) {
                         var13 = var27.d();
@@ -315,7 +315,7 @@ internal object BillingFlowParams {
                .c(this.getObfuscatedUserId(var5))
                .b(false);
             if (var24 != null && var4 != null) {
-               var17.g(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).e(INSTANCE.getProrationMode(var24, var20)).a());
+               var17.g(com.android.billingclient.api.BillingFlowParams.SubscriptionUpdateParams.a().b(var4).d(INSTANCE.getReplacementMode(var24, var20)).a());
             }
 
             return var17.a();

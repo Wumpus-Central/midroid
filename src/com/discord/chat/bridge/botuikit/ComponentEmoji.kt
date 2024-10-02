@@ -111,24 +111,24 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var6: java.lang.String = this.name;
-      val var2: java.lang.String = this.src;
+      val var6: java.lang.String = this.id;
+      val var5: java.lang.String = this.name;
+      val var3: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var5: java.lang.String = this.surrogates;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ComponentEmoji(id=");
-      var4.append(var3);
-      var4.append(", name=");
-      var4.append(var6);
-      var4.append(", src=");
-      var4.append(var2);
-      var4.append(", animated=");
-      var4.append(var1);
-      var4.append(", surrogates=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.surrogates;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ComponentEmoji(id=");
+      var2.append(var6);
+      var2.append(", name=");
+      var2.append(var5);
+      var2.append(", src=");
+      var2.append(var3);
+      var2.append(", animated=");
+      var2.append(var1);
+      var2.append(", surrogates=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -164,23 +164,25 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          var var5: Boolean;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         val var12: java.lang.String;
+         var var13: java.lang.String;
          var var14: java.lang.String;
          if (var11.y()) {
             val var6: b2 = b2.a;
             var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
             var7 = var11.t(var10, 1);
-            var12 = var11.v(var10, 2, var6, null) as java.lang.String;
+            val var12: java.lang.String = var11.v(var10, 2, var6, null) as java.lang.String;
             var5 = var11.s(var10, 3);
-            var14 = var11.v(var10, 4, var6, null) as java.lang.String;
+            val var9: java.lang.String = var11.v(var10, 4, var6, null) as java.lang.String;
             var2 = 31;
+            var14 = var12;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var8 = null;
             var7 = null;
             var14 = null;
-            var var13: java.lang.String = null;
+            var13 = null;
             var2 = 0;
 
             while (var3) {
@@ -216,13 +218,10 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
                   var3 = false;
                }
             }
-
-            var14 = var13;
-            var12 = var14;
          }
 
          var11.b(var10);
-         return new ComponentEmoji(var2, var8, var7, var12, var5, var14, null);
+         return new ComponentEmoji(var2, var8, var7, var14, var5, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ComponentEmoji) {

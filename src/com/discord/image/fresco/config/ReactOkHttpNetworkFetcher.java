@@ -32,15 +32,15 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
       if (var1 == null) {
          return null;
       } else {
-         ReadableMapKeySetIterator var3 = var1.keySetIterator();
-         HashMap var4 = new HashMap();
+         ReadableMapKeySetIterator var2 = var1.keySetIterator();
+         HashMap var3 = new HashMap();
 
-         while (var3.hasNextKey()) {
-            String var2 = var3.nextKey();
-            var4.put(var2, var1.getString(var2));
+         while (var2.hasNextKey()) {
+            String var4 = var2.nextKey();
+            var3.put(var4, var1.getString(var4));
          }
 
-         return var4;
+         return var3;
       }
    }
 
@@ -48,8 +48,8 @@ class ReactOkHttpNetworkFetcher extends OkHttpNetworkFetcher {
       var1.f = SystemClock.elapsedRealtime();
       Uri var5 = var1.g();
       Map var3;
-      if (var1.b().v() instanceof ReactNetworkImageRequest) {
-         var3 = this.getHeaders(((ReactNetworkImageRequest)var1.b().v()).getHeaders());
+      if (var1.b().m() instanceof ReactNetworkImageRequest) {
+         var3 = this.getHeaders(((ReactNetworkImageRequest)var1.b().m()).getHeaders());
       } else {
          var3 = null;
       }

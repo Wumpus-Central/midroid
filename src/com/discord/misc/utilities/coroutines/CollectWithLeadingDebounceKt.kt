@@ -14,14 +14,14 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
    label23: {
       if (var4 is <unrepresentable>) {
          val var6: <unrepresentable> = var4 as <unrepresentable>;
-         if (((var4 as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
-            var6.label = (var4 as <unrepresentable>).label + Integer.MIN_VALUE;
-            var9 = var6;
+         if ((var4.label and Integer.MIN_VALUE) != 0) {
+            var6.label = var4.label + Integer.MIN_VALUE;
+            var4 = var6;
             break label23;
          }
       }
 
-      var9 = new d(var4) {
+      var4 = new d(var4) {
          int label;
          Object result;
 
@@ -29,6 +29,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             super(var1);
          }
 
+         @Override
          public final Object invokeSuspend(Object var1) {
             this.result = var1;
             this.label |= Integer.MIN_VALUE;
@@ -37,10 +38,10 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
       };
    }
 
-   val var7: Any = ((<unrepresentable>)var9).result;
+   val var7: Any = var4.result;
    val var11: Any = b.e();
-   if (((<unrepresentable>)var9).label != 0) {
-      if (((<unrepresentable>)var9).label != 1) {
+   if (var4.label != 0) {
+      if (var4.label != 1) {
          throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
       }
 
@@ -64,14 +65,14 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             label39: {
                if (var2 is <unrepresentable>) {
                   val var10: <unrepresentable> = var2 as <unrepresentable>;
-                  if (((var2 as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
-                     var10.label = (var2 as <unrepresentable>).label + Integer.MIN_VALUE;
-                     var12 = var10;
+                  if ((var2.label and Integer.MIN_VALUE) != 0) {
+                     var10.label = var2.label + Integer.MIN_VALUE;
+                     var2 = var10;
                      break label39;
                   }
                }
 
-               var12 = new d(this, var2) {
+               var2 = new d(this, var2) {
                   Object L$0;
                   Object L$1;
                   int label;
@@ -83,6 +84,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                      this.this$0 = var1;
                   }
 
+                  @Override
                   public final Object invokeSuspend(Object var1) {
                      this.result = var1;
                      this.label |= Integer.MIN_VALUE;
@@ -91,43 +93,43 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                };
             }
 
-            var var11: Any = ((<unrepresentable>)var12).result;
-            val var15: Any = b.e();
+            var var15: Any = var2.result;
+            val var11: Any = b.e();
             val var13: <unrepresentable>;
-            if (((<unrepresentable>)var12).label != 0) {
-               if (((<unrepresentable>)var12).label == 1) {
-                  s.b(var11);
+            if (var2.label != 0) {
+               if (var2.label == 1) {
+                  s.b(var15);
                   return Unit.a;
                }
 
-               if (((<unrepresentable>)var12).label != 2) {
+               if (var2.label != 2) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               var1 = ((<unrepresentable>)var12).L$1;
-               var13 = ((<unrepresentable>)var12).L$0 as <unrepresentable>;
-               s.b(var11);
+               var1 = var2.L$1;
+               var13 = var2.L$0 as <unrepresentable>;
+               s.b(var15);
             } else {
-               s.b(var11);
-               val var6: Long = System.currentTimeMillis();
-               val var4: Long = var6 - this.$timeLastEmitted.j;
-               val var8: Long = this.$timeoutMillis;
-               if (var4 > this.$timeoutMillis) {
-                  this.$timeLastEmitted.j = var6;
-                  var11 = this.$collector;
-                  ((<unrepresentable>)var12).label = 1;
-                  if (var11.emit(var1, (Continuation)var12) === var15) {
-                     return var15;
+               s.b(var15);
+               val var8: Long = System.currentTimeMillis();
+               val var6: Long = var8 - this.$timeLastEmitted.j;
+               val var4: Long = this.$timeoutMillis;
+               if (var6 > this.$timeoutMillis) {
+                  this.$timeLastEmitted.j = var8;
+                  var15 = this.$collector;
+                  var2.label = 1;
+                  if (var15.emit(var1, var2) === var11) {
+                     return var11;
                   }
 
                   return Unit.a;
                }
 
-               ((<unrepresentable>)var12).L$0 = this;
-               ((<unrepresentable>)var12).L$1 = var1;
-               ((<unrepresentable>)var12).label = 2;
-               if (i0.a(var8 - var4, (Continuation)var12) === var15) {
-                  return var15;
+               var2.L$0 = this;
+               var2.L$1 = var1;
+               var2.label = 2;
+               if (i0.a(var4 - var6, var2) === var11) {
+                  return var11;
                }
 
                var13 = this;
@@ -137,8 +139,8 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             return Unit.a;
          }
       };
-      ((<unrepresentable>)var9).label = 1;
-      if (var0.collect(var3, (Continuation)var9) === var11) {
+      var4.label = 1;
+      if (var0.collect(var3, var4) === var11) {
          return var11;
       }
    }

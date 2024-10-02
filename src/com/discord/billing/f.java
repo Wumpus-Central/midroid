@@ -5,7 +5,7 @@ import java.util.List;
 import kotlinx.coroutines.CompletableDeferred;
 
 // $VF: synthetic class
-public final class f implements c3.g {
+public final class f implements c3.f {
    public final CompletableDeferred a;
 
    @Override

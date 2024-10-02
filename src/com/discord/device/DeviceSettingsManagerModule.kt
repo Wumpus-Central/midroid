@@ -84,7 +84,7 @@ public class DeviceSettingsManagerModule(reactContext: ReactApplicationContext) 
       val var5: java.util.Iterator = var4.iterator();
 
       while (var5.hasNext()) {
-         val var7: ReadableMap = var1.getMap((var5 as o).c());
+         val var7: ReadableMap = var1.getMap((var5 as o).a());
          var6.add(
             new Rect(
                SizeUtilsKt.getDpToPx(var7.getInt("left")),

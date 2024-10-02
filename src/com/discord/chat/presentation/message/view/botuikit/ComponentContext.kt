@@ -142,27 +142,27 @@ public data class ComponentContext(containerId: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.containerId;
-      val var7: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
-      val var4: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
+      val var7: java.lang.String = this.containerId;
+      val var4: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var3: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
       val var5: MediaItemEventHandlers = this.mediaItemEventHandlers;
-      val var3: UserEventHandlers = this.userEventHandlers;
-      val var8: ContentInventoryEventHandlers = this.contentInventoryEventHandlers;
+      val var8: UserEventHandlers = this.userEventHandlers;
+      val var9: ContentInventoryEventHandlers = this.contentInventoryEventHandlers;
       val var1: Int = this.constrainedWidth;
       val var2: Boolean = this.shouldAutoPlayGif;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ComponentContext(containerId=");
-      var6.append(var9);
-      var6.append(", markdownTextRenderOptions=");
       var6.append(var7);
-      var6.append(", markdownTextRenderEventHandlers=");
+      var6.append(", markdownTextRenderOptions=");
       var6.append(var4);
+      var6.append(", markdownTextRenderEventHandlers=");
+      var6.append(var3);
       var6.append(", mediaItemEventHandlers=");
       var6.append(var5);
       var6.append(", userEventHandlers=");
-      var6.append(var3);
-      var6.append(", contentInventoryEventHandlers=");
       var6.append(var8);
+      var6.append(", contentInventoryEventHandlers=");
+      var6.append(var9);
       var6.append(", constrainedWidth=");
       var6.append(var1);
       var6.append(", shouldAutoPlayGif=");

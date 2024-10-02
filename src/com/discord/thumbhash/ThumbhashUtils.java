@@ -52,7 +52,7 @@ public final class ThumbhashUtils {
       float var8 = (var11 & 63) / 63.0F;
       float var9 = (var11 >> 6 & 63) / 31.5F;
       float var10 = (var11 >> 12 & 63) / 31.5F;
-      float var5 = (var11 >> 18 & 31) / 31.0F;
+      float var4 = (var11 >> 18 & 31) / 31.0F;
       boolean var48;
       if (var11 >> 23 != 0) {
          var48 = 1;
@@ -61,7 +61,7 @@ public final class ThumbhashUtils {
       }
 
       float var6 = (var15 >> 3 & 63) / 63.0F;
-      float var4 = (var15 >> 9 & 63) / 63.0F;
+      float var5 = (var15 >> 9 & 63) / 63.0F;
       boolean var13;
       if (var15 >> 15 != 0) {
          var13 = 1;
@@ -110,7 +110,7 @@ public final class ThumbhashUtils {
       ThumbhashUtils.Channel var26 = new ThumbhashUtils.Channel(var20, var16);
       ThumbhashUtils.Channel var25 = new ThumbhashUtils.Channel(3, 3);
       ThumbhashUtils.Channel var27 = new ThumbhashUtils.Channel(3, 3);
-      var13 = var27.decode(var0, var53, var25.decode(var0, var53, var26.decode(var0, var53, 0, var5), var6 * var2), var4 * var2);
+      var13 = var27.decode(var0, var53, var25.decode(var0, var53, var26.decode(var0, var53, 0, var4), var6 * var2), var5 * var2);
       float[] var23 = null;
       ThumbhashUtils.Channel var24;
       if (var48) {
@@ -313,19 +313,17 @@ public final class ThumbhashUtils {
       }
 
       int decode(byte[] var1, int var2, int var3, float var4) {
-         byte var6 = 0;
-         int var5 = var3;
-         var3 = var6;
+         int var5 = 0;
 
          while (true) {
-            float[] var7 = this.ac;
-            if (var3 >= var7.length) {
-               return var5;
+            float[] var6 = this.ac;
+            if (var5 >= var6.length) {
+               return var3;
             }
 
-            var7[var3] = ((var1[(var5 >> 1) + var2] >> ((var5 & 1) << 2) & 15) / 7.5F - 1.0F) * var4;
-            var5++;
+            var6[var5] = ((var1[(var3 >> 1) + var2] >> ((var3 & 1) << 2) & 15) / 7.5F - 1.0F) * var4;
             var3++;
+            var5++;
          }
       }
    }

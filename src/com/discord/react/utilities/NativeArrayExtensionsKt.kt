@@ -26,7 +26,7 @@ public inline fun ReadableArray.forEach(action: (Int, ReadableArray) -> Unit) {
    val var2: java.util.Iterator = sizeRange(var0).iterator();
 
    while (var2.hasNext()) {
-      var1.invoke((var2 as o).c(), var0);
+      var1.invoke((var2 as o).a(), var0);
    }
 }
 
@@ -52,7 +52,7 @@ public inline fun <T> ReadableArray.map(transform: (Int, ReadableArray) -> Any):
    val var4: java.util.Iterator = var3.iterator();
 
    while (var4.hasNext()) {
-      var2.add(var1.invoke((var4 as o).c(), var0));
+      var2.add(var1.invoke((var4 as o).a(), var0));
    }
 
    return var2;
@@ -78,7 +78,7 @@ public inline fun <T, C : MutableCollection<in Any>> ReadableArray.mapTo(destina
    val var3: java.util.Iterator = sizeRange(var0).iterator();
 
    while (var3.hasNext()) {
-      var1.add(var2.invoke((var3 as o).c(), var0));
+      var1.add(var2.invoke((var3 as o).a(), var0));
    }
 
    return (C)var1;
@@ -133,7 +133,7 @@ public fun ReadableArray.toBooleanList(): List<Boolean> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getBoolean((var3 as o).c()));
+      var1.add(var0.getBoolean((var3 as o).a()));
    }
 
    return var1;
@@ -146,7 +146,7 @@ public fun ReadableArray.toDoubleList(): List<Double> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getDouble((var3 as o).c()));
+      var1.add(var0.getDouble((var3 as o).a()));
    }
 
    return var1;
@@ -159,7 +159,7 @@ public fun ReadableArray.toIntList(): List<Int> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getInt((var3 as o).c()));
+      var1.add(var0.getInt((var3 as o).a()));
    }
 
    return var1;
@@ -262,7 +262,7 @@ public fun ReadableArray.toStringList(): List<String> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getString((var3 as o).c()));
+      var1.add(var0.getString((var3 as o).a()));
    }
 
    return var1;

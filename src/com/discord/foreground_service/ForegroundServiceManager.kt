@@ -316,10 +316,10 @@ public class ForegroundServiceManager {
 
          try {
             q.h(var1, "context");
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = tag;
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = tag;
             q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var2, var3, "Stop service.", null, 4, null);
+            Log.i$foreground_service_release$default(var3, var2, "Stop service.", null, 4, null);
             ForegroundService.Companion.stop(var1, this.service);
          } catch (var4: java.lang.Throwable) {
             // $VF: monitorexit

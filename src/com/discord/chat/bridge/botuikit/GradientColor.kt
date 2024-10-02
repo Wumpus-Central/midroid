@@ -73,17 +73,17 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
    }
 
    public override fun toString(): String {
-      val var2: Int = this.r;
+      val var4: Int = this.r;
       val var3: Int = this.g;
-      val var4: Int = this.b;
+      val var2: Int = this.b;
       val var1: Float = this.a;
       val var5: StringBuilder = new StringBuilder();
       var5.append("GradientColor(r=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", g=");
       var5.append(var3);
       var5.append(", b=");
-      var5.append(var4);
+      var5.append(var2);
       var5.append(", a=");
       var5.append(var1);
       var5.append(")");
@@ -167,9 +167,9 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                }
             }
 
-            var13 = var4;
             var4 = var3;
             var3 = var13;
+            var13 = var4;
          }
 
          var10.b(var9);

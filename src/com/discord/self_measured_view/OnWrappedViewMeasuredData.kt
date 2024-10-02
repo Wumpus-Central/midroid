@@ -60,13 +60,13 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
    }
 
    public override fun toString(): String {
-      val var2: Int = this.measuredViewWidth;
-      val var1: Int = this.measuredViewHeight;
+      val var1: Int = this.measuredViewWidth;
+      val var2: Int = this.measuredViewHeight;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnWrappedViewMeasuredData(measuredViewWidth=");
-      var3.append(var2);
-      var3.append(", measuredViewHeight=");
       var3.append(var1);
+      var3.append(", measuredViewHeight=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -101,8 +101,8 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
          var var4: Int;
          if (var8.y()) {
             var3 = var8.k(var7, 0);
-            var4 = var8.k(var7, 1);
-            var2 = 3;
+            var2 = var8.k(var7, 1);
+            var4 = 3;
          } else {
             var var5: Boolean = true;
             var3 = 0;
@@ -127,10 +127,13 @@ internal data class OnWrappedViewMeasuredData(measuredViewWidth: Int, measuredVi
                   var5 = false;
                }
             }
+
+            var4 = var2;
+            var2 = var4;
          }
 
          var8.b(var7);
-         return new OnWrappedViewMeasuredData(var2, var3, var4, null);
+         return new OnWrappedViewMeasuredData(var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnWrappedViewMeasuredData) {

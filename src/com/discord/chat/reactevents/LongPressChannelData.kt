@@ -123,21 +123,21 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.originalLink;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LongPressChannelData(guildId=");
-      var4.append(var3);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", messageId=");
-      var4.append(var5);
-      var4.append(", originalLink=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.originalLink;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressChannelData(guildId=");
+      var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(", originalLink=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

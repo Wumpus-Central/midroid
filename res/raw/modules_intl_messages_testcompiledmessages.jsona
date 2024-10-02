@@ -1,48 +1,35 @@
 {
-  "rdfRys": [
+  "Q+eyqq": [
     {
-      "type": 0,
-      "value": "We have a "
-    },
-    {
-      "type": 8,
-      "value": "$code",
-      "children": [
-        {
-          "type": 0,
-          "value": "const static codeSpan = 2;"
+      "type": 6,
+      "value": "count",
+      "options": {
+        "one": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " thing"
+            }
+          ]
+        },
+        "other": {
+          "value": [
+            {
+              "type": 1,
+              "value": "count"
+            },
+            {
+              "type": 0,
+              "value": " things"
+            }
+          ]
         }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " here."
-    }
-  ],
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
-  "HMvECw": [
-    {
-      "type": 0,
-      "value": "All of this is managed locally and has "
-    },
-    {
-      "type": 8,
-      "value": "$b",
-      "children": [
-        {
-          "type": 0,
-          "value": "not yet"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " replaced the global i18n system."
+      },
+      "offset": 0,
+      "pluralType": "cardinal"
     }
   ],
   "rmps8/": [
@@ -71,6 +58,32 @@
     {
       "type": 0,
       "value": ", with the url defined in the string."
+    }
+  ],
+  "HMvECw": [
+    {
+      "type": 0,
+      "value": "All of this is managed locally and has "
+    },
+    {
+      "type": 8,
+      "value": "$b",
+      "children": [
+        {
+          "type": 0,
+          "value": "not yet"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " replaced the global i18n system."
+    }
+  ],
+  "JJ0wpK": [
+    {
+      "type": 0,
+      "value": "This page uses the new intl system for displaying messages"
     }
   ],
   "uczI4u": [
@@ -117,37 +130,24 @@
       "value": " for special content."
     }
   ],
-  "Q+eyqq": [
+  "rdfRys": [
     {
-      "type": 6,
-      "value": "count",
-      "options": {
-        "one": {
-          "value": [
-            {
-              "type": 7
-            },
-            {
-              "type": 0,
-              "value": " thing"
-            }
-          ]
-        },
-        "other": {
-          "value": [
-            {
-              "type": 1,
-              "value": "count"
-            },
-            {
-              "type": 0,
-              "value": " things"
-            }
-          ]
+      "type": 0,
+      "value": "We have a "
+    },
+    {
+      "type": 8,
+      "value": "$code",
+      "children": [
+        {
+          "type": 0,
+          "value": "const static codeSpan = 2;"
         }
-      },
-      "offset": 0,
-      "pluralType": "cardinal"
+      ]
+    },
+    {
+      "type": 0,
+      "value": " here."
     }
   ]
 }

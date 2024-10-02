@@ -83,10 +83,10 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       q.h(var1, "canvas");
       val var8: java.util.Map = this.blurRects;
       val var7: LinkedHashMap = new LinkedHashMap();
-      val var10: java.util.Iterator = var8.entrySet().iterator();
+      val var9: java.util.Iterator = var8.entrySet().iterator();
 
       while (true) {
-         val var6: Boolean = var10.hasNext();
+         val var6: Boolean = var9.hasNext();
          var var4: Boolean = false;
          if (!var6) {
             if (var7.isEmpty()) {
@@ -124,9 +124,9 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
             return;
          }
 
-         val var9: Entry = var10.next() as Entry;
-         val var5: Int = (var9.getKey() as java.lang.Number).intValue();
-         val var13: BlurViewTargetHardwareAccelerated.BlurRect = var9.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
+         val var10: Entry = var9.next() as Entry;
+         val var5: Int = (var10.getKey() as java.lang.Number).intValue();
+         val var13: BlurViewTargetHardwareAccelerated.BlurRect = var10.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
          val var3: Boolean;
          if (var13.getWidth() != 0 && var13.getHeight() != 0) {
             var3 = true;
@@ -139,7 +139,7 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
          }
 
          if (var3 && var4) {
-            var7.put(var9.getKey(), var9.getValue());
+            var7.put(var10.getKey(), var10.getValue());
          }
       }
    }
@@ -248,17 +248,17 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       public override fun toString(): String {
          val var1: Int = this.windowX;
          val var3: Int = this.windowY;
-         val var4: Int = this.width;
-         val var2: Int = this.height;
+         val var2: Int = this.width;
+         val var4: Int = this.height;
          val var5: StringBuilder = new StringBuilder();
          var5.append("BlurRect(windowX=");
          var5.append(var1);
          var5.append(", windowY=");
          var5.append(var3);
          var5.append(", width=");
-         var5.append(var4);
-         var5.append(", height=");
          var5.append(var2);
+         var5.append(", height=");
+         var5.append(var4);
          var5.append(")");
          return var5.toString();
       }

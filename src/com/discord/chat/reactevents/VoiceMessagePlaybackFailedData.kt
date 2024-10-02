@@ -86,13 +86,13 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = this.errorMessage;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = this.errorMessage;
       val var3: StringBuilder = new StringBuilder();
       var3.append("VoiceMessagePlaybackFailedData(messageId=");
-      var3.append(var2);
-      var3.append(", errorMessage=");
       var3.append(var1);
+      var3.append(", errorMessage=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -123,7 +123,7 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          var var2: Int;
-         var var5: java.lang.String;
+         val var6: java.lang.String;
          var var11: java.lang.String;
          if (var8.y()) {
             val var9: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -134,14 +134,14 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
                var10 = null;
             }
 
-            val var6: java.lang.String = var8.v(var7, 1, b2.a, null) as java.lang.String;
-            var5 = var10;
-            var11 = var6;
+            val var5: java.lang.String = var8.v(var7, 1, b2.a, null) as java.lang.String;
             var2 = 3;
+            var6 = var10;
+            var11 = var5;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var5 = null;
+            var var12: java.lang.String = null;
             var11 = null;
 
             while (var3) {
@@ -155,18 +155,18 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
                      var11 = var8.v(var7, 1, b2.a, var11) as java.lang.String;
                      var2 |= 2;
                   } else {
-                     val var12: MessageId;
-                     if (var5 != null) {
-                        var12 = MessageId.box-impl(var5);
+                     val var13: MessageId;
+                     if (var12 != null) {
+                        var13 = MessageId.box-impl(var12);
                      } else {
-                        var12 = null;
+                        var13 = null;
                      }
 
-                     val var13: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, var12) as MessageId;
-                     if (var13 != null) {
-                        var5 = var13.unbox-impl();
+                     val var14: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
+                     if (var14 != null) {
+                        var12 = var14.unbox-impl();
                      } else {
-                        var5 = null;
+                        var12 = null;
                      }
 
                      var2 |= 1;
@@ -175,10 +175,12 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
                   var3 = false;
                }
             }
+
+            var6 = var12;
          }
 
          var8.b(var7);
-         return new VoiceMessagePlaybackFailedData(var2, var5, var11, null, null);
+         return new VoiceMessagePlaybackFailedData(var2, var6, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceMessagePlaybackFailedData) {

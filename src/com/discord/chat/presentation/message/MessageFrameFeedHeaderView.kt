@@ -68,9 +68,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
    public fun configure(messageFrame: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader, onOverflowClick: OnClickListener?) {
       kotlin.jvm.internal.q.h(var1, "messageFrame");
-      val var6: TextView = this.binding.feedChannelText;
+      var var7: TextView = this.binding.feedChannelText;
       kotlin.jvm.internal.q.e(this.binding.feedChannelText);
-      ViewUtilsKt.setOptionalText(var6, var1.getChannelName());
+      ViewUtilsKt.setOptionalText(var7, var1.getChannelName());
       var var3: Boolean;
       if (var1.getChannelIconURL() != null) {
          var3 = 1;
@@ -84,7 +84,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = (byte)8;
       }
 
-      var6.setVisibility(var3);
+      var7.setVisibility(var3);
       val var19: SimpleDraweeView = this.binding.feedChannelIcon;
       kotlin.jvm.internal.q.g(this.binding.feedChannelIcon, "feedChannelIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var19, var1.getChannelIconURL());
@@ -99,7 +99,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = 0;
       }
 
-      val var23: TextView = this.binding.feedReplyCount;
+      var7 = this.binding.feedReplyCount;
       kotlin.jvm.internal.q.g(this.binding.feedReplyCount, "feedReplyCount");
       val var11: java.lang.String;
       if (var3 > 3) {
@@ -110,7 +110,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var11 = null;
       }
 
-      ViewUtilsKt.setOptionalText(var23, var11);
+      ViewUtilsKt.setOptionalText(var7, var11);
       val var24: OverlappingCirclesView = this.binding.feedReplyParticipants;
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
@@ -252,21 +252,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.channelIconURL;
+         val var5: java.lang.String = this.channelIconURL;
          val var3: java.lang.String = this.chatIconURL;
          val var4: ArrayList = this.avatarURLs;
-         val var2: java.lang.String = this.channelName;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("MessageBundleHeader(channelIconURL=");
-         var5.append(var1);
-         var5.append(", chatIconURL=");
-         var5.append(var3);
-         var5.append(", avatarURLs=");
-         var5.append(var4);
-         var5.append(", channelName=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var1: java.lang.String = this.channelName;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MessageBundleHeader(channelIconURL=");
+         var2.append(var5);
+         var2.append(", chatIconURL=");
+         var2.append(var3);
+         var2.append(", avatarURLs=");
+         var2.append(var4);
+         var2.append(", channelName=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
 
       public object `$serializer` : g0 {
@@ -291,9 +291,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
-            val var2: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var1: b2 = b2.a;
-            return new KSerializer[]{dl.a.u(b2.a), dl.a.u(var1), dl.a.u(var2[2]), dl.a.u(var1)};
+            val var1: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
+            val var2: b2 = b2.a;
+            return new KSerializer[]{dl.a.u(b2.a), dl.a.u(var2), dl.a.u(var1[2]), dl.a.u(var2)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {

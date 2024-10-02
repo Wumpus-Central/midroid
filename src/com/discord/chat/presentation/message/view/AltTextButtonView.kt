@@ -19,14 +19,14 @@ public class AltTextButtonView(context: Context, attrs: AttributeSet? = null) : 
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var4: AltTextButtonViewBinding = AltTextButtonViewBinding.inflate(LayoutInflater.from(var1), this, true);
-      kotlin.jvm.internal.q.g(var4, "inflate(...)");
-      this.binding = var4;
-      val var3: FrameLayout = var4.altTextContainer;
-      kotlin.jvm.internal.q.g(var4.altTextContainer, "altTextContainer");
-      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
-      var4.altTextLabel.setText(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MEDIA_MOSAIC_ALT_TEXT_CTA, null, 2, null));
-      var4.altTextLabel.setContentDescription(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE, null, 2, null));
+      val var3: AltTextButtonViewBinding = AltTextButtonViewBinding.inflate(LayoutInflater.from(var1), this, true);
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      this.binding = var3;
+      val var4: FrameLayout = var3.altTextContainer;
+      kotlin.jvm.internal.q.g(var3.altTextContainer, "altTextContainer");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(8));
+      var3.altTextLabel.setText(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MEDIA_MOSAIC_ALT_TEXT_CTA, null, 2, null));
+      var3.altTextLabel.setContentDescription(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE, null, 2, null));
    }
 
    @JvmStatic

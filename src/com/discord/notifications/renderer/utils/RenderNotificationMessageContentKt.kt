@@ -8,10 +8,10 @@ import qk.b
 
 public fun renderNotificationMessageContent(content: String): String {
    q.h(var0, "content");
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var13: java.lang.String = var4.i(var3.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
+   var var13: java.lang.String = var3.i(var4.i(var0, <unrepresentable>.INSTANCE), <unrepresentable>.INSTANCE);
    var var14: java.lang.String = var0;
 
    while (true) {

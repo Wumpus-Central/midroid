@@ -41,7 +41,7 @@ internal object ClientUserAgent {
 
       public open fun intercept(chain: Chain): Response {
          q.h(var1, "chain");
-         return var1.a(var1.v().i().i("User-Agent").a("User-Agent", this.userAgent).b());
+         return var1.a(var1.w().i().i("User-Agent").a("User-Agent", this.userAgent).b());
       }
    }
 }

@@ -11,31 +11,31 @@ import kotlin.jvm.internal.q
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
    q.h(var0, "<this>");
    val var7: ArrayList = new ArrayList(i.v(var0, 10));
-   val var8: java.util.Iterator = var0.iterator();
+   val var10: java.util.Iterator = var0.iterator();
 
-   val var10: ProductDetails;
+   val var9: ProductDetails;
    while (true) {
-      if (!var8.hasNext()) {
+      if (!var10.hasNext()) {
          return NativeArrayExtensionsKt.toNativeArray(var7);
       }
 
       var var1: Long;
-      var var9: ArrayList;
+      var var8: ArrayList;
       var var22: java.lang.String;
       var var26: java.lang.String;
       label55: {
-         var10 = var8.next() as ProductDetails;
-         var9 = new ArrayList();
-         val var3: Boolean = q.c(var10.e(), "inapp");
+         var9 = var10.next() as ProductDetails;
+         var8 = new ArrayList();
+         val var3: Boolean = q.c(var9.e(), "inapp");
          var22 = null;
          if (var3) {
-            val var12: ProductDetails.a = var10.c();
+            val var12: ProductDetails.b = var9.c();
             if (var12 == null) {
-               val var14: java.lang.String = var10.d();
-               val var20: StringBuilder = new StringBuilder();
-               var20.append("Could not find oneTimePurchaseOfferDetails for product: ");
-               var20.append(var14);
-               throw new AssertionError(var20.toString());
+               var22 = var9.d();
+               val var14: StringBuilder = new StringBuilder();
+               var14.append("Could not find oneTimePurchaseOfferDetails for product: ");
+               var14.append(var22);
+               throw new AssertionError(var14.toString());
             }
 
             q.e(var12);
@@ -44,7 +44,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
             var22 = var12.c();
             var13 = null;
          } else {
-            if (!q.c(var10.e(), "subs")) {
+            if (!q.c(var9.e(), "subs")) {
                var1 = 0L;
                var26 = null;
                var13 = null;
@@ -52,7 +52,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
                break label55;
             }
 
-            val var27: java.util.List = var10.f();
+            val var27: java.util.List = var9.f();
             if (var27 == null) {
                break;
             }
@@ -66,32 +66,32 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
                }
 
                var15 = var25.next();
-            } while (((ProductDetails.c)var15).b() != null);
+            } while (((ProductDetails.d)var15).b() != null);
 
-            val var16: ProductDetails.c = var15 as ProductDetails.c;
-            if (var15 as ProductDetails.c == null) {
+            val var16: ProductDetails.d = var15 as ProductDetails.d;
+            if (var15 as ProductDetails.d == null) {
                break;
             }
 
             val var21: ProductDetails.PricingPhase = var16.e().a().get(0) as ProductDetails.PricingPhase;
             if (var21 == null) {
-               var22 = var10.d();
-               val var17: StringBuilder = new StringBuilder();
-               var17.append("Could not find pricingPhase for product: ");
-               var17.append(var22);
-               throw new AssertionError(var17.toString());
+               val var17: java.lang.String = var9.d();
+               val var23: StringBuilder = new StringBuilder();
+               var23.append("Could not find pricingPhase for product: ");
+               var23.append(var17);
+               throw new AssertionError(var23.toString());
             }
 
             var1 = var21.d();
             var26 = var21.c();
             var13 = var21.b();
             var22 = var21.e();
-            val var11: java.util.Iterator = var27.iterator();
+            val var28: java.util.Iterator = var27.iterator();
 
-            while (var11.hasNext()) {
-               val var28: java.lang.String = (var11.next() as ProductDetails.c).b();
-               if (var28 != null) {
-                  var9.add(var28);
+            while (var28.hasNext()) {
+               val var11: java.lang.String = (var28.next() as ProductDetails.d).b();
+               if (var11 != null) {
+                  var8.add(var11);
                }
             }
          }
@@ -102,22 +102,22 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
       var7.add(
          NativeMapExtensionsKt.nativeMapOf(
-            w.a("identifier", var10.d()),
-            w.a("title", var10.g()),
-            w.a("description", var10.a()),
+            w.a("identifier", var9.d()),
+            w.a("title", var9.g()),
+            w.a("description", var9.a()),
             w.a("priceString", var22),
             w.a("currencyCode", var26),
             w.a("price", (int)(var1 / (long)10000)),
-            w.a("type", var10.e()),
-            w.a("offerIds", NativeArrayExtensionsKt.toNativeArray(var9)),
+            w.a("type", var9.e()),
+            w.a("offerIds", NativeArrayExtensionsKt.toNativeArray(var8)),
             w.a("billingPeriod", var13)
          )
       );
    }
 
-   val var18: java.lang.String = var10.d();
-   val var24: StringBuilder = new StringBuilder();
-   var24.append("Could not find subscriptionOfferDetails for product: ");
-   var24.append(var18);
-   throw new AssertionError(var24.toString());
+   val var24: java.lang.String = var9.d();
+   val var18: StringBuilder = new StringBuilder();
+   var18.append("Could not find subscriptionOfferDetails for product: ");
+   var18.append(var24);
+   throw new AssertionError(var18.toString());
 }

@@ -14,7 +14,7 @@ public fun ViewGroup.getMaximumSizeOfChildren(widthMeasureSpec: Int): Pair<Int, 
    val var6: Pair = new Pair(var3, var3);
    val var7: java.util.Iterator = var4.iterator();
    if (var7.hasNext()) {
-      val var5: View = var0.getChildAt((var7 as o).c());
+      val var5: View = var0.getChildAt((var7 as o).a());
       if (var5.getVisibility() == 8) {
          return var6;
       } else {

@@ -74,11 +74,11 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-      var2 = this.getMeasuredWidth();
-      val var3: Int = this.getMeasuredHeight();
+      val var3: Int = this.getMeasuredWidth();
+      var2 = this.getMeasuredHeight();
       val var4: Pair = ViewMeasureExtensionsKt.getMaximumSizeOfChildren(this, var1);
       this.setMeasuredDimension((var4.a() as java.lang.Number).intValue(), (var4.b() as java.lang.Number).intValue());
-      this.maybePostMeasuredEvent(var2, this.getMeasuredWidth(), var3, this.getMeasuredHeight());
+      this.maybePostMeasuredEvent(var3, this.getMeasuredWidth(), var2, this.getMeasuredHeight());
    }
 
    public open fun requestLayout() {

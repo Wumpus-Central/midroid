@@ -1,7 +1,7 @@
 package com.discord.billing;
 
 import android.app.Activity;
-import c3.m;
+import c3.l;
 import com.android.billingclient.api.BillingResult;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
@@ -9,7 +9,7 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Ref.BooleanRef;
 
 // $VF: synthetic class
-public final class c implements m {
+public final class c implements l {
    public final BillingManager a;
    public final Function1 b;
    public final String c;

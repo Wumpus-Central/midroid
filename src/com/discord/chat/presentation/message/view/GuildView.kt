@@ -34,14 +34,14 @@ public class GuildView  public constructor(context: Context, attrs: AttributeSet
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      val var4: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var4, "inflate(...)");
-      this.binding = var4;
-      val var6: View = var4.getRoot();
-      kotlin.jvm.internal.q.g(var6, "getRoot(...)");
-      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(16));
-      val var5: TextView = var4.guildText;
-      kotlin.jvm.internal.q.e(var4.guildText);
+      val var6: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var6, "inflate(...)");
+      this.binding = var6;
+      val var4: View = var6.getRoot();
+      kotlin.jvm.internal.q.g(var4, "getRoot(...)");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(16));
+      val var5: TextView = var6.guildText;
+      kotlin.jvm.internal.q.e(var6.guildText);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryNormal);
    }

@@ -132,13 +132,13 @@ internal object HistoricalProcessExitReason {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.reason;
-         val var1: java.lang.String = this.description;
+         val var1: java.lang.String = this.reason;
+         val var2: java.lang.String = this.description;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Reason(reason=");
-         var3.append(var2);
-         var3.append(", description=");
          var3.append(var1);
+         var3.append(", description=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

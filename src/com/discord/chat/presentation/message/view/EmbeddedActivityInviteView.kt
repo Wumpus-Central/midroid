@@ -84,7 +84,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
    public fun setAvatarUris(avatarUris: List<String>) {
       kotlin.jvm.internal.q.h(var1, "avatarUris");
       val var4: Boolean = var1.isEmpty();
-      val var5: OverlappingCirclesView = this.binding.participants;
+      var var5: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       var var2: Byte;
       if (var4 xor true) {
@@ -94,15 +94,15 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       }
 
       var5.setVisibility(var2);
-      val var6: OverlappingCirclesView = this.binding.participants;
-      val var10: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
+      var5 = this.binding.participants;
+      val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
       val var7: java.util.Iterator = var1.iterator();
 
       while (var7.hasNext()) {
-         var10.add(new OverlappingItem(var7.next() as java.lang.String));
+         var6.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var6.setItems(var10);
+      var5.setItems(var6);
       val var8: TextView = this.binding.noParticipantsText;
       kotlin.jvm.internal.q.g(this.binding.noParticipantsText, "noParticipantsText");
       var2 = 8;

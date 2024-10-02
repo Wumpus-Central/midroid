@@ -68,12 +68,12 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
-         val var5: java.util.Iterator = var4.iterator();
+         val var6: java.util.Iterator = var4.iterator();
 
-         while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as o).c());
-            if (var6 != null) {
-               var3.add(var6);
+         while (var6.hasNext()) {
+            val var5: java.lang.String = var2.getString((var6 as o).a());
+            if (var5 != null) {
+               var3.add(var5);
             }
          }
 
@@ -136,7 +136,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
          val var6: java.util.Iterator = var4.iterator();
 
          while (var6.hasNext()) {
-            val var5: java.lang.String = var2.getString((var6 as o).c());
+            val var5: java.lang.String = var2.getString((var6 as o).a());
             if (var5 != null) {
                var3.add(var5);
             }

@@ -24,10 +24,10 @@ internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
       }
 
       try {
-         val var2: Json = json;
-         var1 = vh.q.e(var11);
-         var2.a();
-         var14 = var2.b(AppManifest.Companion.serializer(), var1) as AppManifest;
+         val var13: Json = json;
+         val var2: java.lang.String = vh.q.e(var11);
+         var13.a();
+         var14 = var13.b(AppManifest.Companion.serializer(), var2) as AppManifest;
       } catch (var4: java.lang.Throwable) {
          val var12: java.lang.Throwable = var4;
 

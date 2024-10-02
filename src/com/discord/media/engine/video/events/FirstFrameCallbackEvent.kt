@@ -88,18 +88,18 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
       val var1: Int = this.connectionId;
       val var6: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var4: java.lang.String = this.streamId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("FirstFrameCallbackEvent(connectionId=");
-      var5.append(var1);
-      var5.append(", userId=");
-      var5.append(var6);
-      var5.append(", ssrc=");
-      var5.append(var2);
-      var5.append(", streamId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.streamId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FirstFrameCallbackEvent(connectionId=");
+      var4.append(var1);
+      var4.append(", userId=");
+      var4.append(var6);
+      var4.append(", ssrc=");
+      var4.append(var2);
+      var4.append(", streamId=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

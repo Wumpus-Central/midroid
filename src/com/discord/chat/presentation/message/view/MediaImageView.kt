@@ -166,13 +166,13 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          }
 
          var34.x(var16);
-         val var36: SimpleDraweeView = this.binding.image;
+         val var21: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
-         val var21: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var36: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var35: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var36, var1, var21, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var35, var5, var6)
+            var21, var1, var36, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var35, var5, var6)
          );
       }
 
@@ -206,7 +206,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       val var24: FrameLayout = this.binding.imageBlurBg;
       kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var24, var9);
-      val var31: SpoilerViewManager = this.spoiler;
+      val var25: SpoilerViewManager = this.spoiler;
       val var30: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var28: SimpleDraweeView = this.binding.image;
@@ -223,7 +223,7 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
          var7 = true;
       }
 
-      var31.configureSpoiler(var8, this, var30, var28, this.binding.imageBlurBg, var13, var12, var7, var9);
+      var25.configureSpoiler(var8, this, var30, var28, this.binding.imageBlurBg, var13, var12, var7, var9);
       val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var26: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -248,13 +248,13 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
+      val var3: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -366,14 +366,14 @@ public class MediaImageView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
          var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
          var3.append(", resizeMode=");
          var3.append(var4);
          var3.append(")");

@@ -60,12 +60,12 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      val var2: ThemeManager = ThemeManager.INSTANCE;
+      val var1: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
       if (q.c(DiscordGestureHandlerEnabledRootView.Companion.access$getNullable(Companion, this), this)) {
-         val var1: Context = this.getContext();
-         q.g(var1, "getContext(...)");
-         var2.updateWindowBackground(var1, false);
+         val var2: Context = this.getContext();
+         q.g(var2, "getContext(...)");
+         var1.updateWindowBackground(var2, false);
       }
    }
 

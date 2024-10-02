@@ -82,13 +82,13 @@ public data class MessageReference(channelId: ChannelId, guildId: GuildId? = ...
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: GuildId = this.guildId;
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: GuildId = this.guildId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MessageReference(channelId=");
-      var2.append(var3);
-      var2.append(", guildId=");
       var2.append(var1);
+      var2.append(", guildId=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

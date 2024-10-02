@@ -1,7 +1,6 @@
 package com.discord.billing
 
 import com.discord.billing.react.events.BillingManagerConnectionStateUpdated
-import com.discord.billing.react.events.BillingManagerDowngradeCommand
 import com.discord.billing.react.events.BillingManagerPurchaseStateUpdated
 import com.discord.billing.react.events.BillingManagerPurchaseUpdated
 import com.discord.billing.types.SkuType
@@ -33,7 +32,6 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       this.reactEvents = new ReactEvents(
          w.a("billing-manager-connection-state-updated", g0.b(BillingManagerConnectionStateUpdated.class)),
          w.a("billing-manager-purchase-updated", g0.b(BillingManagerPurchaseUpdated.class)),
-         w.a("billing-manager-downgrade-command", g0.b(BillingManagerDowngradeCommand.class)),
          w.a("billing-manager-purchase-state-updated", g0.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new Function1(this) {
@@ -71,17 +69,6 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
             q.h(var2, "packageName");
             q.h(var3, "sku");
             BillingManagerModule.access$emitEvent(this.this$0, new BillingManagerPurchaseUpdated(var1, var2, var3));
-         }
-      }, new Function1(this) {
-         final BillingManagerModule this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(int var1) {
-            BillingManagerModule.access$emitEvent(this.this$0, new BillingManagerDowngradeCommand(var1));
          }
       });
    }
@@ -208,10 +195,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var1: BillingManager = this.billingManager;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.open(var2);
+      val var2: BillingManager = this.billingManager;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.open(var1);
    }
 
    @ReactMethod

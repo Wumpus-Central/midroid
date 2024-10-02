@@ -1,12 +1,12 @@
 package com.discord.billing;
 
-import c3.m;
+import c3.l;
 import com.android.billingclient.api.BillingResult;
 import java.util.List;
 import kotlinx.coroutines.CompletableDeferred;
 
 // $VF: synthetic class
-public final class g implements m {
+public final class g implements l {
    public final CompletableDeferred a;
 
    @Override

@@ -116,23 +116,22 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          val var8: c = var1.c(var7);
          var var3: Int;
          var var4: Int;
+         val var5: Int;
          var var9: ForwardFooterInfo;
-         var var10: Int;
          if (var8.y()) {
-            var10 = var8.k(var7, 0);
+            val var2: Int = var8.k(var7, 0);
             var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, null) as ForwardFooterInfo;
-            val var5: Byte = var8.s(var7, 2);
-            var3 = 7;
-            var4 = var10;
-            var10 = var5;
+            var3 = var8.s(var7, 2);
+            var4 = 7;
+            var5 = var2;
          } else {
-            var var13: Boolean = true;
+            var var12: Boolean = true;
             var4 = 0;
-            var10 = 0;
+            var var10: Int = 0;
             var9 = null;
             var3 = 0;
 
-            while (var13) {
+            while (var12) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -152,16 +151,16 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
                      var10 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var12 = false;
                }
             }
 
-            var3 = var10;
-            var10 = var3;
+            var5 = var4;
+            var4 = var10;
          }
 
          var8.b(var7);
-         return new ForwardInfo(var3, var4, var9, (boolean)var10, null);
+         return new ForwardInfo(var4, var5, var9, (boolean)var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardInfo) {

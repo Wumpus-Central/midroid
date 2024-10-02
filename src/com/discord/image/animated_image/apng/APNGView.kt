@@ -106,12 +106,11 @@ public class APNGView(context: Context) : m {
          new Function2(this, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at org.jetbrains.java.decompiler.struct.gen.VarType.<init>(VarType.java:82)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:67)
-   //   at org.jetbrains.java.decompiler.struct.gen.MethodDescriptor.parseDescriptor(MethodDescriptor.java:80)
-   //   at org.jetbrains.java.decompiler.struct.StructMethod.methodDescriptor(StructMethod.java:371)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1649)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
@@ -1130,6 +1129,7 @@ public class APNGView(context: Context) : m {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
    ,
          2,
          null
@@ -1324,27 +1324,27 @@ public class APNGView(context: Context) : m {
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.url;
-         val var1: Boolean = this.animate;
-         val var2: Boolean = this.showLoading;
+         val var7: java.lang.String = this.url;
+         val var2: Boolean = this.animate;
+         val var1: Boolean = this.showLoading;
          val var3: Int = this.widthDp;
-         val var7: Int = this.heightDp;
+         val var4: Int = this.heightDp;
          val var5: java.lang.String = this.cacheDirectory;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Config(url=");
-         var4.append(var6);
-         var4.append(", animate=");
-         var4.append(var1);
-         var4.append(", showLoading=");
-         var4.append(var2);
-         var4.append(", widthDp=");
-         var4.append(var3);
-         var4.append(", heightDp=");
-         var4.append(var7);
-         var4.append(", cacheDirectory=");
-         var4.append(var5);
-         var4.append(")");
-         return var4.toString();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Config(url=");
+         var6.append(var7);
+         var6.append(", animate=");
+         var6.append(var2);
+         var6.append(", showLoading=");
+         var6.append(var1);
+         var6.append(", widthDp=");
+         var6.append(var3);
+         var6.append(", heightDp=");
+         var6.append(var4);
+         var6.append(", cacheDirectory=");
+         var6.append(var5);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

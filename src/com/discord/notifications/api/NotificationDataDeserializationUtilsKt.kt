@@ -25,9 +25,9 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var7 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var4 : var7.entrySet()) {
-            if (var4.getKey() is java.lang.String && var4.getValue() is java.lang.String) {
-               var3.put(var4.getKey(), var4.getValue());
+         for (Entry var6 : var7.entrySet()) {
+            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
+               var3.put(var6.getKey(), var6.getValue());
             }
          }
 

@@ -30,7 +30,7 @@ public class SamsungConnectActivity : b {
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public void onServiceConnected(ComponentName var1, IBinder var2) {
             SamsungConnectActivity.access$setServiceBound$p(this.this$0, true);
-            val var5: a = com.msc.sa.aidl.a.a.a(var2);
+            val var5: a = com.msc.sa.aidl.a.a.b(var2);
             val var4: Log = Log.INSTANCE;
             Log.i$default(Log.INSTANCE, "Samsung", "Samsung Account service connection established", null, 4, null);
 
@@ -78,9 +78,9 @@ public class SamsungConnectActivity : b {
                }
             } else {
                try {
-                  val var6: Bundle = new Bundle();
-                  var6.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
-                  val var3: Boolean = var5.f0(1221, var38, var6);
+                  val var42: Bundle = new Bundle();
+                  var42.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
+                  val var3: Boolean = var5.f0(1221, var38, var42);
                   val var39: StringBuilder = new StringBuilder();
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);
@@ -234,14 +234,14 @@ public class SamsungConnectActivity : b {
    }
 
    private fun startAndBindSamsungAuthService() {
-      val var2: Log = Log.INSTANCE;
+      val var1: Log = Log.INSTANCE;
       Log.i$default(Log.INSTANCE, "Samsung", "Samsung starting SA Service", null, 4, null);
-      val var1: Intent = serviceIntent;
+      val var2: Intent = serviceIntent;
       if (this.startService(serviceIntent) == null) {
-         Log.e$default(var2, "Samsung", "Samsung Account service could not be started", null, 4, null);
+         Log.e$default(var1, "Samsung", "Samsung Account service could not be started", null, 4, null);
       } else {
-         if (!this.bindService(var1, this.serviceConnection, 1)) {
-            Log.e$default(var2, "Samsung", "Samsung Account service could not be bound", null, 4, null);
+         if (!this.bindService(var2, this.serviceConnection, 1)) {
+            Log.e$default(var1, "Samsung", "Samsung Account service could not be bound", null, 4, null);
          }
       }
    }
@@ -380,15 +380,15 @@ public class SamsungConnectActivity : b {
          }
 
          public override fun toString(): String {
-            val var3: java.lang.String = this.authCode;
-            val var2: java.lang.String = this.serverUrl;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Success(authCode=");
-            var1.append(var3);
-            var1.append(", serverUrl=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.lang.String = this.authCode;
+            val var3: java.lang.String = this.serverUrl;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Success(authCode=");
+            var2.append(var1);
+            var2.append(", serverUrl=");
+            var2.append(var3);
+            var2.append(")");
+            return var2.toString();
          }
       }
    }

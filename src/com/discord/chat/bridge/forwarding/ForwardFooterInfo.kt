@@ -80,9 +80,9 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.timestampLabel.hashCode();
+      val var2: Int = this.timestampLabel.hashCode();
       val var3: Int = this.originLabel.hashCode();
-      val var2: Int = this.accessibilityLabel.hashCode();
+      val var4: Int = this.accessibilityLabel.hashCode();
       val var1: Int;
       if (this.originIconUrl == null) {
          var1 = 0;
@@ -90,25 +90,25 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var1 = this.originIconUrl.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var2) * 31 + var1;
+      return ((var2 * 31 + var3) * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.timestampLabel;
-      val var1: java.lang.String = this.originLabel;
+      val var1: java.lang.String = this.timestampLabel;
+      val var3: java.lang.String = this.originLabel;
       val var4: java.lang.String = this.accessibilityLabel;
-      val var2: java.lang.String = this.originIconUrl;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ForwardFooterInfo(timestampLabel=");
-      var5.append(var3);
-      var5.append(", originLabel=");
-      var5.append(var1);
-      var5.append(", accessibilityLabel=");
-      var5.append(var4);
-      var5.append(", originIconUrl=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.originIconUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ForwardFooterInfo(timestampLabel=");
+      var2.append(var1);
+      var2.append(", originLabel=");
+      var2.append(var3);
+      var2.append(", accessibilityLabel=");
+      var2.append(var4);
+      var2.append(", originIconUrl=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {

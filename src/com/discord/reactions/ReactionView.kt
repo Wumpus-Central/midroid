@@ -317,11 +317,11 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var11: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
          val var9: RenderableEmoji = var1.getEmoji().renderable();
-         val var11: Context = this.getContext();
-         q.g(var11, "getContext(...)");
-         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var11, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var16: Context = this.getContext();
+         q.g(var16, "getContext(...)");
+         var11.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var16, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

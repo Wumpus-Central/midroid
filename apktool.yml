@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 251202
-  versionName: 251.2 - Alpha
+  versionCode: 251203
+  versionName: 251.3 - Alpha
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -46,7 +46,9 @@ unknownFiles:
   play-services-cloud-messaging.properties: 8
   play-services-deviceperformance.properties: 8
   play-services-fido.properties: 8
+  play-services-location.properties: 8
   play-services-nearby.properties: 8
+  play-services-places-placereport.properties: 8
   play-services-stats.properties: 8
   play-services-tagmanager-v4-impl.properties: 8
   play-services-tasks.properties: 8
@@ -263,6 +265,8 @@ doNotCompress:
 - jpg
 - webp
 - mp3
+- res/raw/com_android_billingclient_heterodyne_info
+- res/raw/com_android_billingclient_registration_info.binarypb
 - res/raw/design_components_lottieicon_native_generated_lotties_camera.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_halloweenaction.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_halloweenidle.lottie

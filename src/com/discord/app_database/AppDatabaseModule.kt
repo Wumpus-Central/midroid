@@ -25,10 +25,10 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, String?> {
-      val var2: CacheModule.Companion = CacheModule.Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      return r.m(new Pair[]{w.a("userId", var2.get(var1).getItem("_databaseUserId"))});
+      val var1: CacheModule.Companion = CacheModule.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      return r.m(new Pair[]{w.a("userId", var1.get(var2).getItem("_databaseUserId"))});
    }
 
    public open fun getName(): String {
@@ -38,15 +38,15 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : ReactCon
    @ReactMethod
    public fun setUserId(userId: String?) {
       if (var1 != null) {
-         val var2: CacheModule.Companion = CacheModule.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         var2.get(var3).setItem("_databaseUserId", var1);
+         val var3: CacheModule.Companion = CacheModule.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var3.get(var2).setItem("_databaseUserId", var1);
       } else {
-         val var4: CacheModule.Companion = CacheModule.Companion;
-         val var5: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var5, "getReactApplicationContext(...)");
-         var4.get(var5).removeItem("_databaseUserId");
+         val var5: CacheModule.Companion = CacheModule.Companion;
+         val var4: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var4, "getReactApplicationContext(...)");
+         var5.get(var4).removeItem("_databaseUserId");
       }
    }
 

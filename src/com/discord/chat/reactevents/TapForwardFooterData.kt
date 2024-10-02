@@ -63,23 +63,22 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          var var2: Int;
-         val var4: Int;
+         var var3: Int;
          var var6: java.lang.String;
-         val var7: java.lang.String;
+         val var10: java.lang.String;
          if (var9.y()) {
-            var2 = var9.k(var8, 0);
+            var3 = var9.k(var8, 0);
             var6 = var9.t(var8, 1);
-            val var10: java.lang.String = var9.t(var8, 2);
-            var4 = 7;
-            var7 = var10;
+            var10 = var9.t(var8, 2);
+            var2 = 7;
          } else {
             var6 = null;
             var var11: java.lang.String = null;
-            var var13: Boolean = true;
-            var var3: Int = 0;
+            var var4: Boolean = true;
+            var3 = 0;
             var2 = 0;
 
-            while (var13) {
+            while (var4) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -99,18 +98,16 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
                      var2 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var4 = false;
                }
             }
 
-            var4 = var2;
-            var7 = var6;
+            var10 = var6;
             var6 = var11;
-            var2 = var3;
          }
 
          var9.b(var8);
-         return new TapForwardFooterData(var4, var2, var6, var7, null);
+         return new TapForwardFooterData(var2, var3, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapForwardFooterData) {

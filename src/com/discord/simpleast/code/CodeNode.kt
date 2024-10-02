@@ -18,12 +18,12 @@ public open class CodeNode<RC>(content: com.discord.simpleast.code.CodeNode.Cont
       this.language = var2;
       this.stylesProvider = var3;
       if (var1 is CodeNode.Content.Parsed) {
-         for (Node var4 : ((CodeNode.Content.Parsed)var1).getChildren()) {
-            if (var4 == null) {
+         for (Node var5 : ((CodeNode.Content.Parsed)var1).getChildren()) {
+            if (var5 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            this.addChild(var4);
+            this.addChild(var5);
          }
       }
    }

@@ -26,17 +26,17 @@ public object MessageSerializer : KSerializer {
       q.h(var1, "decoder");
 
       try {
-         var5 = var1.C(Message.Companion.serializer()) as MessageBase;
+         var6 = var1.C(Message.Companion.serializer()) as MessageBase;
       } catch (var4: Exception) {
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var4, false, 2, null);
-         val var2: UUID = UUID.randomUUID();
+         val var5: UUID = UUID.randomUUID();
          val var3: StringBuilder = new StringBuilder();
          var3.append("RENDERING_ERROR_");
-         var3.append(var2);
-         var5 = new ErrorMessage(MessageId.constructor-impl(var3.toString()), e.b(var4), null);
+         var3.append(var5);
+         var6 = new ErrorMessage(MessageId.constructor-impl(var3.toString()), e.b(var4), null);
       }
 
-      return (MessageBase)var5;
+      return (MessageBase)var6;
    }
 
    public open fun serialize(encoder: Encoder, value: MessageBase) {

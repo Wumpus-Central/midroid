@@ -99,20 +99,20 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
 
    public override fun toString(): String {
       val var3: java.lang.String = this.build;
-      val var5: java.lang.String = this.releaseName;
+      val var4: java.lang.String = this.releaseName;
       val var2: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AppManifestMetadata(build=");
-      var4.append(var3);
-      var4.append(", releaseName=");
-      var4.append(var5);
-      var4.append(", commit=");
-      var4.append(var2);
-      var4.append(", confirmUpdate=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("AppManifestMetadata(build=");
+      var5.append(var3);
+      var5.append(", releaseName=");
+      var5.append(var4);
+      var5.append(", commit=");
+      var5.append(var2);
+      var5.append(", confirmUpdate=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
