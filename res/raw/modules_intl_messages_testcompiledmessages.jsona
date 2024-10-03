@@ -27,6 +27,26 @@
       "value": ", with the url defined in the string."
     }
   ],
+  "XOdbAw": [
+    {
+      "type": 0,
+      "value": "Use hooks like "
+    },
+    {
+      "type": 8,
+      "value": "usernameHook",
+      "children": [
+        {
+          "type": 1,
+          "value": "username"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " for special content."
+    }
+  ],
   "uczI4u": [
     {
       "type": 0,
@@ -51,24 +71,50 @@
       "value": " provided at runtime."
     }
   ],
-  "XOdbAw": [
+  "JJ0wpK": [
     {
       "type": 0,
-      "value": "Use hooks like "
+      "value": "This page uses the new intl system for displaying messages"
+    }
+  ],
+  "HMvECw": [
+    {
+      "type": 0,
+      "value": "All of this is managed locally and has "
     },
     {
       "type": 8,
-      "value": "usernameHook",
+      "value": "$b",
       "children": [
         {
-          "type": 1,
-          "value": "username"
+          "type": 0,
+          "value": "not yet"
         }
       ]
     },
     {
       "type": 0,
-      "value": " for special content."
+      "value": " replaced the global i18n system."
+    }
+  ],
+  "rdfRys": [
+    {
+      "type": 0,
+      "value": "We have a "
+    },
+    {
+      "type": 8,
+      "value": "$code",
+      "children": [
+        {
+          "type": 0,
+          "value": "const static codeSpan = 2;"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": " here."
     }
   ],
   "Q+eyqq": [
@@ -102,52 +148,6 @@
       },
       "offset": 0,
       "pluralType": "cardinal"
-    }
-  ],
-  "HMvECw": [
-    {
-      "type": 0,
-      "value": "All of this is managed locally and has "
-    },
-    {
-      "type": 8,
-      "value": "$b",
-      "children": [
-        {
-          "type": 0,
-          "value": "not yet"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " replaced the global i18n system."
-    }
-  ],
-  "JJ0wpK": [
-    {
-      "type": 0,
-      "value": "This page uses the new intl system for displaying messages"
-    }
-  ],
-  "rdfRys": [
-    {
-      "type": 0,
-      "value": "We have a "
-    },
-    {
-      "type": 8,
-      "value": "$code",
-      "children": [
-        {
-          "type": 0,
-          "value": "const static codeSpan = 2;"
-        }
-      ]
-    },
-    {
-      "type": 0,
-      "value": " here."
     }
   ]
 }
