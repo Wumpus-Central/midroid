@@ -58,7 +58,7 @@ public object PublicFileDownloader {
       // 15: astore 2
       // 16: aload 2
       // 17: invokeinterface android/database/Cursor.moveToFirst ()Z 1
-      // 1c: ifeq 4e
+      // 1c: ifeq 4d
       // 1f: new java/io/File
       // 22: astore 7
       // 24: aload 7
@@ -75,46 +75,46 @@ public object PublicFileDownloader {
       // 3e: aload 5
       // 40: invokeinterface uk/s.h (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
-      // 46: goto 79
-      // 49: astore 5
-      // 4b: goto 8a
-      // 4e: new com/discord/file_downloader/DownloadState$Failure
-      // 51: astore 5
-      // 53: new java/lang/IllegalStateException
-      // 56: astore 8
-      // 58: new java/io/FileNotFoundException
-      // 5b: astore 7
-      // 5d: aload 7
-      // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 62: aload 8
-      // 64: aload 7
-      // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 69: aload 5
-      // 6b: aload 8
-      // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
-      // 70: aload 1
-      // 71: aload 5
-      // 73: invokeinterface uk/s.h (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 78: pop
-      // 79: aload 1
-      // 7a: aconst_null
-      // 7b: bipush 1
-      // 7c: aconst_null
-      // 7d: invokestatic uk/s$a.a (Luk/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
-      // 80: istore 6
-      // 82: aload 2
-      // 83: aconst_null
-      // 84: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 87: iload 6
-      // 89: ireturn
-      // 8a: aload 5
-      // 8c: athrow
-      // 8d: astore 1
-      // 8e: aload 2
-      // 8f: aload 5
-      // 91: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 94: aload 1
-      // 95: athrow
+      // 46: goto 78
+      // 49: astore 1
+      // 4a: goto 89
+      // 4d: new com/discord/file_downloader/DownloadState$Failure
+      // 50: astore 8
+      // 52: new java/lang/IllegalStateException
+      // 55: astore 7
+      // 57: new java/io/FileNotFoundException
+      // 5a: astore 5
+      // 5c: aload 5
+      // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
+      // 61: aload 7
+      // 63: aload 5
+      // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
+      // 68: aload 8
+      // 6a: aload 7
+      // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
+      // 6f: aload 1
+      // 70: aload 8
+      // 72: invokeinterface uk/s.h (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 77: pop
+      // 78: aload 1
+      // 79: aconst_null
+      // 7a: bipush 1
+      // 7b: aconst_null
+      // 7c: invokestatic uk/s$a.a (Luk/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
+      // 7f: istore 6
+      // 81: aload 2
+      // 82: aconst_null
+      // 83: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 86: iload 6
+      // 88: ireturn
+      // 89: aload 1
+      // 8a: athrow
+      // 8b: astore 5
+      // 8d: aload 2
+      // 8e: aload 1
+      // 8f: invokestatic vh/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 92: aload 5
+      // 94: athrow
    }
 
    public fun downloadFile(context: Context, url: String, fileName: String, description: String? = null): Flow<DownloadState> {
@@ -125,8 +125,6 @@ public object PublicFileDownloader {
          new Function2(var1, var2, var3, var4, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.StackOverflowError
-   //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
    //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -1149,6 +1147,8 @@ public object PublicFileDownloader {
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
    
       );
    }

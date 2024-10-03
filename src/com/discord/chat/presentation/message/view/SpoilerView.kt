@@ -37,19 +37,19 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun configureObscureOverlay(label: String, parent: ViewGroup) {
-      val var3: View = this.binding.obscure.getOverlayView();
-      val var4: ObscureOverlayView = this.binding.obscure;
+      val var4: View = this.binding.obscure.getOverlayView();
+      val var3: ObscureOverlayView = this.binding.obscure;
       kotlin.jvm.internal.q.g(this.binding.obscure, "obscure");
-      var4.setVisibility(0);
-      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, this.onClick(true, var3), this.onClick(false, var3));
+      var3.setVisibility(0);
+      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, this.onClick(true, var4), this.onClick(false, var4));
    }
 
    private fun configureSpoilerOverlay(label: String) {
-      val var3: View = this.binding.spoiler.getOverlayView();
-      val var2: SpoilerOverlayView = this.binding.spoiler;
+      val var2: View = this.binding.spoiler.getOverlayView();
+      val var3: SpoilerOverlayView = this.binding.spoiler;
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
-      var2.setVisibility(0);
-      this.binding.spoiler.configure(var1, this.onClick(true, var3));
+      var3.setVisibility(0);
+      this.binding.spoiler.configure(var1, this.onClick(true, var2));
    }
 
    private fun onClick(showImage: Boolean, overlayView: View): () -> Unit {

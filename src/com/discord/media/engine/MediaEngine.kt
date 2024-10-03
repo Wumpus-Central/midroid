@@ -23,6 +23,7 @@ import com.discord.native.engine.NativeEngine
 import com.discord.native.engine.VideoInputDeviceDescription
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
+import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -905,10 +906,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          val var3: Int = var16.length;
 
          for (int var4 = 0; var4 < var3; var4++) {
-            val var13: MediaCodecInfo = var16[var4];
-            val var12: java.lang.String = var16[var4].getName();
-            kotlin.jvm.internal.q.g(var12, "getName(...)");
-            val var14: Array<java.lang.String> = var13.getSupportedTypes();
+            val var12: MediaCodecInfo = var16[var4];
+            val var13: java.lang.String = var16[var4].getName();
+            kotlin.jvm.internal.q.g(var13, "getName(...)");
+            val var14: Array<java.lang.String> = var12.getSupportedTypes();
             kotlin.jvm.internal.q.g(var14, "getSupportedTypes(...)");
             val var8: ArrayList = new ArrayList();
             val var6: Int = var14.length;
@@ -926,7 +927,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             for (java.lang.String var21 : var8) {
                val var18: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
-                  if (com.discord.a.a(var13)) {
+                  if (com.discord.a.a(var12)) {
                      var18 = "(HW)";
                   } else {
                      var18 = "(SW)";
@@ -936,9 +937,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                }
 
                val var19: java.lang.String = kotlin.collections.i.o0(
-                  kotlin.collections.i.n(new java.lang.String[]{var21, var12, var18}), " ", null, null, 0, null, null, 62, null
+                  kotlin.collections.i.n(new java.lang.String[]{var21, var13, var18}), " ", null, null, 0, null, null, 62, null
                );
-               if (var13.isEncoder()) {
+               if (var12.isEncoder()) {
                   var10 = kotlin.collections.c.p(var10, var19) as Array<java.lang.String>;
                } else {
                   var9 = kotlin.collections.c.p(var9, var19) as Array<java.lang.String>;
@@ -1073,8 +1074,6 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   new Function1(this, var4)// $VF: Couldn't be decompiled
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          // java.lang.StackOverflowError
-         //   at java.base/java.util.ArrayList.addAll(ArrayList.java:752)
-         //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getAllExprents(InvocationExprent.java:675)
          //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:130)
          //   at org.jetbrains.java.decompiler.modules.decompiler.exps.Exprent.getAllExprents(Exprent.java:119)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1488)
@@ -2097,6 +2096,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1672)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1492)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1541)
          
                )
             );
@@ -2644,14 +2645,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          label32: {
             if (var2 is <unrepresentable>) {
                val var4: <unrepresentable> = var2 as <unrepresentable>;
-               if ((var2.label and Integer.MIN_VALUE) != 0) {
-                  var4.label = var2.label + Integer.MIN_VALUE;
-                  var2 = var4;
+               if (((var2 as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
+                  var4.label = (var2 as <unrepresentable>).label + Integer.MIN_VALUE;
+                  var8 = var4;
                   break label32;
                }
             }
 
-            var2 = new kotlin.coroutines.jvm.internal.d(this, var2) {
+            var8 = new kotlin.coroutines.jvm.internal.d(this, var2) {
                Object L$0;
                int label;
                Object result;
@@ -2662,7 +2663,6 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   this.this$0 = var1;
                }
 
-               @Override
                public final Object invokeSuspend(Object var1) {
                   this.result = var1;
                   this.label |= Integer.MIN_VALUE;
@@ -2672,36 +2672,36 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          }
 
          label27: {
-            val var5: Any = var2.result;
+            val var5: Any = ((<unrepresentable>)var8).result;
             val var10: Any = qh.b.e();
             val var6: ByteArray;
-            if (var2.label != 0) {
-               if (var2.label != 1) {
-                  if (var2.label != 2) {
+            if (((<unrepresentable>)var8).label != 0) {
+               if (((<unrepresentable>)var8).label != 1) {
+                  if (((<unrepresentable>)var8).label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  var7 = var2.L$0 as java.lang.String;
+                  var7 = ((<unrepresentable>)var8).L$0 as java.lang.String;
                   kh.s.b(var5);
                   break label27;
                }
 
-               var6 = var2.L$0 as ByteArray;
+               var6 = ((<unrepresentable>)var8).L$0 as ByteArray;
                kh.s.b(var5);
             } else {
                kh.s.b(var5);
                var6 = this.compressToJpegBytes(var1);
-               var2.L$0 = var6;
-               var2.label = 1;
-               if (s1.a(var2) === var10) {
+               ((<unrepresentable>)var8).L$0 = var6;
+               ((<unrepresentable>)var8).label = 1;
+               if (s1.a((Continuation)var8) === var10) {
                   return var10;
                }
             }
 
             var7 = Base64.encodeToString(var6, 0);
-            var2.L$0 = var7;
-            var2.label = 2;
-            if (s1.a(var2) === var10) {
+            ((<unrepresentable>)var8).L$0 = var7;
+            ((<unrepresentable>)var8).label = 2;
+            if (s1.a((Continuation)var8) === var10) {
                return var10;
             }
          }

@@ -92,16 +92,16 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var5: a = r.k;
-      var9 = r.b(Uri.parse(var1));
+      val var9: a = r.k;
+      var8 = r.b(Uri.parse(var1));
    } catch (var6: java.lang.Throwable) {
-      val var8: a = r.k;
-      var9 = r.b(s.a(var6));
+      val var5: a = r.k;
+      var8 = r.b(s.a(var6));
       break label15;
    }
 
-   var var10: Any = var9;
-   if (r.g(var9)) {
+   var var10: Any = var8;
+   if (r.g(var8)) {
       var10 = null;
    }
 

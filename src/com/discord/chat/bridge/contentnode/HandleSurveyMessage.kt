@@ -197,8 +197,8 @@ public data class HandleSurveyMessage(id: MessageId, channelId: ChannelId, loggi
                }
             }
 
-            var14 = var13;
             var12 = (java.lang.String)var14;
+            var14 = var13;
          }
 
          var9.b(var8);

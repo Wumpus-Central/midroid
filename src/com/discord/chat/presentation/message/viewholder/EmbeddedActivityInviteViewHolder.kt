@@ -34,13 +34,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "embeddedActivityInviteAccessory");
-      val var6: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var12: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
       val var2: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var6.getSplashUrl(), var1.getConstrainedWidth());
-      var2.setTitleText(var6.getTitleText());
-      var2.setHeaderText(var6.getHeaderText());
+      this.embeddedActivityInviteView.setSplash(var12.getSplashUrl(), var1.getConstrainedWidth());
+      var2.setTitleText(var12.getTitleText());
+      var2.setHeaderText(var12.getHeaderText());
       var2.setSubtitleText-oCLp7l4(
-         var6.getStructurableSubtitleText(),
+         var12.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2(this.eventHandler) {
             {
@@ -194,9 +194,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var2.setNoParticipantsText(var6.getNoParticipantsText());
-      var2.setLaunchButton(var6.getAcceptLabelText(), var6.getAcceptLabelBackgroundColor(), var6.getCtaEnabled());
-      var2.setAvatarUris(var6.getParticipantAvatarUris());
+      var2.setNoParticipantsText(var12.getNoParticipantsText());
+      var2.setLaunchButton(var12.getAcceptLabelText(), var12.getAcceptLabelBackgroundColor(), var12.getCtaEnabled());
+      var2.setAvatarUris(var12.getParticipantAvatarUris());
       var2.setOnLaunchButtonClickListener(new k(this, var1));
    }
 }

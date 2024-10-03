@@ -81,7 +81,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                         public final void invoke(View var1, java.lang.Long var2, java.lang.String var3) {
                            q.h(var1, "view");
                            q.h(var3, "emojiName");
-                           val var5: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
+                           val var4: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
                            val var6: java.lang.String;
                            if (var2 != null) {
                               var6 = var2.toString();
@@ -89,7 +89,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                               var6 = null;
                            }
 
-                           var5.emitEvent(this.$reactContext, var1, new OnPressEmojiEvent(var3, var6));
+                           var4.emitEvent(this.$reactContext, var1, new OnPressEmojiEvent(var3, var6));
                         }
                      },
                      new Function2(this) {

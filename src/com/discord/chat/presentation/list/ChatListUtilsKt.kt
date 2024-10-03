@@ -11,7 +11,7 @@ public fun RecyclerView.configureMessageRecyclerView(context: Context, vararg de
    q.h(var1, "context");
    q.h(var2, "decorations");
    var0.addItemDecoration(new BackgroundHighlightDecoration(var1));
-   var0.setItemViewCacheSize(20);
+   var0.setItemViewCacheSize(5);
    val var4: Int = var2.length;
 
    for (int var3 = 0; var3 < var4; var3++) {

@@ -47,30 +47,30 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
 
    public static ThreadEmbedViewBinding bind(View var0) {
       int var1 = R.id.tag_chiplet;
-      ClanTagChipletView var7 = (ClanTagChipletView)a.a(var0, var1);
-      if (var7 != null) {
+      ClanTagChipletView var2 = (ClanTagChipletView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.thread_embed_icon;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+         if (var9 != null) {
             var1 = R.id.thread_embed_messages_count;
             TextView var4 = (TextView)a.a(var0, var1);
             if (var4 != null) {
                var1 = R.id.thread_embed_most_recent_message_avatar;
-               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-               if (var8 != null) {
+               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.thread_embed_most_recent_message_content;
-                  SimpleDraweeSpanTextView var9 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                  if (var9 != null) {
+                  SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.thread_embed_most_recent_message_header;
-                     LinearLayout var3 = (LinearLayout)a.a(var0, var1);
-                     if (var3 != null) {
+                     LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.thread_embed_most_recent_message_name;
                         TextView var6 = (TextView)a.a(var0, var1);
                         if (var6 != null) {
                            var1 = R.id.thread_embed_name;
-                           TextView var5 = (TextView)a.a(var0, var1);
-                           if (var5 != null) {
-                              return new ThreadEmbedViewBinding(var0, var7, var2, var4, var8, var9, var3, var6, var5);
+                           TextView var7 = (TextView)a.a(var0, var1);
+                           if (var7 != null) {
+                              return new ThreadEmbedViewBinding(var0, var2, var9, var4, var5, var3, var8, var6, var7);
                            }
                         }
                      }

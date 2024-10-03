@@ -67,7 +67,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var5: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var6: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -76,12 +76,12 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var5;
-      val var6: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var6;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var4;
-      val var3: DefaultItemAnimator = new DefaultItemAnimator() {
+      this.accessoriesAdapter = var6;
+      val var4: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var4;
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var3;
+      val var5: DefaultItemAnimator = new DefaultItemAnimator() {
          @Override
          public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
             kotlin.jvm.internal.q.h(var1, "viewHolder");
@@ -96,8 +96,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             return var3;
          }
       };
-      var3.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var3;
+      var5.setSupportsChangeAnimations(false);
+      this.defaultItemAnimator = var5;
       this.forwardBarPaint$delegate = kh.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -111,9 +111,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
-      this.setAdapter(var5);
-      var5.setMessageContentViewLifecycleListener(var6);
+      this.setLayoutManager(var3);
+      this.setAdapter(var6);
+      var6.setMessageContentViewLifecycleListener(var4);
    }
 
    private fun getForwardBarHeight(): Int {
@@ -145,11 +145,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, (float)FORWARD_BAR_WIDTH + var2, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, (float)FORWARD_BAR_WIDTH + var3, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -187,10 +187,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var12: MessageAccessoriesView.Companion = Companion;
-      val var17: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var17, "getResources(...)");
-      this.updateLeftMargin(var12.getAccessoryLeftMargin(var17, var8, var9));
+      val var17: MessageAccessoriesView.Companion = Companion;
+      val var12: Resources = this.getResources();
+      kotlin.jvm.internal.q.g(var12, "getResources(...)");
+      this.updateLeftMargin(var17.getAccessoryLeftMargin(var12, var8, var9));
       val var18: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var9 = var5 is java.util.Collection;
       var10 = false;

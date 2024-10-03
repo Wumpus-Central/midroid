@@ -2,17 +2,14 @@ package com.discord.chat.presentation.message.view.botuikit
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.LayoutInflater
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.LinearLayout
+import android.widget.LinearLayout.LayoutParams
 import com.discord.chat.bridge.botuikit.Component
-import com.discord.chat.databinding.MessageComponentsViewBinding
-import com.google.android.flexbox.FlexboxLayout
+import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
-public class MessageComponentsView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
-   private final val binding: MessageComponentsViewBinding
-
+public class MessageComponentsView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout {
    fun MessageComponentsView(var1: Context) {
       q.h(var1, "context");
       this(var1, null, 0, 6, null);
@@ -26,9 +23,8 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      val var4: MessageComponentsViewBinding = MessageComponentsViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var4, "inflate(...)");
-      this.binding = var4;
+      this.setOrientation(1);
+      this.setLayoutParams(new LayoutParams(-1, -2));
    }
 
    public fun setComponents(
@@ -44,51 +40,47 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
       val var9: java.util.Iterator = var2.iterator();
 
       for (int var5 = 0; var9.hasNext(); var5++) {
-         var var13: ComponentView = (ComponentView)var9.next();
+         var var11: ComponentView = (ComponentView)var9.next();
          if (var5 < 0) {
             i.u();
          }
 
-         val var10: Component = var13 as Component;
+         val var10: Component = var11 as Component;
          var var6: ComponentView = null;
          if (var1 != null) {
-            val var11: FlexboxLayout = this.binding.itemComponentsRoot;
-            q.g(this.binding.itemComponentsRoot, "itemComponentsRoot");
-            var13 = var11.getChildAt(var5);
-            if (var13 is ComponentView) {
-               var13 = var13 as ComponentView;
+            var11 = this.getChildAt(var5);
+            if (var11 is ComponentView) {
+               var11 = var11 as ComponentView;
             } else {
-               var13 = null;
+               var11 = null;
             }
 
             label32: {
-               if (var13 != null) {
+               if (var11 != null) {
                   var6 = null;
-                  if (((ComponentView)var13).getComponentType() is Component) {
-                     var6 = (ComponentView)var13;
+                  if (((ComponentView)var11).getComponentType() is Component) {
+                     var6 = (ComponentView)var11;
                   }
 
-                  var13 = var6;
+                  var11 = var6;
                   if (var6 != null) {
                      break label32;
                   }
                }
 
-               var13 = new ComponentInflater(var1.getContext()).inflateComponent(var10, var11);
+               var11 = var1.getInflater().getComponent(var10, this);
             }
 
-            var6 = var13;
-            if (var13 != null) {
-               var13.configure(var10, var1, var4, var3);
-               var6 = var13;
+            var6 = var11;
+            if (var11 != null) {
+               var11.configure(var10, var1, var4, var3);
+               var6 = var11;
             }
          }
 
          var8.add(var6);
       }
 
-      val var12: FlexboxLayout = this.binding.itemComponentsRoot;
-      q.g(this.binding.itemComponentsRoot, "itemComponentsRoot");
-      MessageComponentsViewKt.replaceViews(var12, i.b0(var8));
+      MessageComponentsViewKt.replaceViews$default(this, i.b0(var8), var1, SizeUtilsKt.getDpToPx(8), 0, 8, null);
    }
 }

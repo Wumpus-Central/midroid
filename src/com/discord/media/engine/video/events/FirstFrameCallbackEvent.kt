@@ -131,27 +131,27 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          q.h(var1, "decoder");
          val var10: SerialDescriptor = this.getDescriptor();
          val var11: c = var1.c(var10);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: Long;
          var var8: java.lang.String;
-         val var9: java.lang.String;
+         val var12: java.lang.String;
          if (var11.y()) {
-            var3 = var11.k(var10, 0);
+            val var2: Int = var11.k(var10, 0);
             var8 = var11.t(var10, 1);
             var6 = var11.h(var10, 2);
-            val var12: java.lang.String = var11.t(var10, 3);
-            var2 = 15;
-            var9 = var12;
+            var12 = var11.t(var10, 3);
+            var4 = 15;
+            var3 = var2;
          } else {
             var var13: java.lang.String = null;
-            var var4: Boolean = true;
+            var var15: Boolean = true;
             var6 = 0L;
             var8 = null;
             var3 = 0;
-            var2 = 0;
+            var var14: Int = 0;
 
-            while (var4) {
+            while (var15) {
                val var5: Int = var11.x(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -162,30 +162,31 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                            }
 
                            var8 = var11.t(var10, 3);
-                           var2 |= 8;
+                           var14 |= 8;
                         } else {
                            var6 = var11.h(var10, 2);
-                           var2 |= 4;
+                           var14 |= 4;
                         }
                      } else {
                         var13 = var11.t(var10, 1);
-                        var2 |= 2;
+                        var14 |= 2;
                      }
                   } else {
                      var3 = var11.k(var10, 0);
-                     var2 |= 1;
+                     var14 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var15 = false;
                }
             }
 
-            var9 = var8;
+            var12 = var8;
             var8 = var13;
+            var4 = var14;
          }
 
          var11.b(var10);
-         return new FirstFrameCallbackEvent(var2, var3, var8, var6, var9, null);
+         return new FirstFrameCallbackEvent(var4, var3, var8, var6, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {

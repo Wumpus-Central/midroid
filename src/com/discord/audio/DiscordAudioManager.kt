@@ -162,8 +162,8 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
 
       val var10: ArrayList = new ArrayList(i.v(var2, 10));
 
-      for (AudioDeviceInfo var11 : var2) {
-         var10.add(AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var11.getType(), SimpleDeviceType.INVALID));
+      for (AudioDeviceInfo var7 : var2) {
+         var10.add(AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(var7.getType(), SimpleDeviceType.INVALID));
       }
 
       val var8: java.util.Set = i.U0(var10);
@@ -341,8 +341,8 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       val var2: java.util.Set = this.getSimpleDevices();
       val var1: ArrayList = new ArrayList(i.v(var2, 10));
 
-      for (SimpleDeviceType var4 : var2) {
-         var1.add(AndroidAudioDevice.Companion.fromSimpleDeviceType(var4));
+      for (SimpleDeviceType var3 : var2) {
+         var1.add(AndroidAudioDevice.Companion.fromSimpleDeviceType(var3));
       }
 
       return i.U0(var1);
@@ -350,7 +350,7 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
       val var2: SimpleDeviceType = this.getActiveAudioDevice();
-      val var1: SimpleDeviceType = this.desiredDeviceType;
+      val var3: SimpleDeviceType = this.desiredDeviceType;
       if (this.desiredDeviceType === SimpleDeviceType.DEFAULT) {
          return AndroidAudioDevice.Companion.fromSimpleDeviceType(var2);
       } else {

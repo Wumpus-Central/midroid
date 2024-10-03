@@ -39,14 +39,14 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
    }
 
    public override fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
          w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("targetKind", this.targetKind)
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
       }
 
-      return var2;
+      return var1;
    }
 
    public object `$serializer` : g0 {
@@ -74,31 +74,31 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
 
       public open fun deserialize(decoder: Decoder): TapInlineForwardData {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
+         val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
          val var9: java.lang.String;
-         val var10: java.lang.String;
-         var var13: Any;
+         var var12: Any;
+         var var13: java.lang.String;
          if (var5) {
-            var6 = var12.t(var11, 0);
-            var10 = var12.t(var11, 1);
-            val var7: java.lang.String = var12.t(var11, 2);
-            var13 = var12.v(var11, 3, n0.a, null) as Int;
+            var13 = var11.t(var10, 0);
+            var9 = var11.t(var10, 1);
+            val var7: java.lang.String = var11.t(var10, 2);
+            var12 = var11.v(var10, 3, n0.a, null) as Int;
             var2 = 15;
-            var9 = var7;
+            var8 = var13;
+            var13 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var15: java.lang.String = null;
-            var6 = null;
+            var var14: java.lang.String = null;
             var13 = null;
+            var12 = null;
 
             while (var3) {
-               val var4: Int = var12.x(var11);
+               val var4: Int = var11.x(var10);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -107,18 +107,18 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                               throw new n(var4);
                            }
 
-                           var13 = var12.v(var11, 3, n0.a, var13) as Int;
+                           var12 = var11.v(var10, 3, n0.a, var12) as Int;
                            var2 |= 8;
                         } else {
-                           var6 = var12.t(var11, 2);
+                           var13 = var11.t(var10, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var15 = var12.t(var11, 1);
+                        var14 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var12.t(var11, 0);
+                     var8 = var11.t(var10, 0);
                      var2 |= 1;
                   }
                } else {
@@ -126,13 +126,11 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
                }
             }
 
-            var9 = var6;
-            var10 = var15;
-            var6 = var8;
+            var9 = var14;
          }
 
-         var12.b(var11);
-         return new TapInlineForwardData(var2, var6, var10, var9, (Integer)var13, null);
+         var11.b(var10);
+         return new TapInlineForwardData(var2, var8, var9, var13, (Integer)var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInlineForwardData) {

@@ -55,14 +55,14 @@ public data class ContactNameEntry(givenName: String?, familyName: String?) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.givenName;
-      val var1: java.lang.String = this.familyName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ContactNameEntry(givenName=");
-      var3.append(var2);
-      var3.append(", familyName=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.givenName;
+      val var2: java.lang.String = this.familyName;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ContactNameEntry(givenName=");
+      var1.append(var3);
+      var1.append(", familyName=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

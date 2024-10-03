@@ -80,8 +80,8 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.tagType == null) {
          var1 = 0;
@@ -89,7 +89,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          var1 = this.tagType.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -99,16 +99,16 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = this.tagType;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapTagData(messageId=");
-      var4.append(var1);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", tagType=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.tagType;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapTagData(messageId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(", tagType=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {
@@ -138,9 +138,9 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          var var2: Int;
-         var var5: Any;
-         var var6: java.lang.String;
          val var12: java.lang.String;
+         var var14: Any;
+         var var16: java.lang.String;
          if (var9.y()) {
             val var10: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var11: java.lang.String;
@@ -150,16 +150,16 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
                var11 = null;
             }
 
-            var5 = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            val var7: java.lang.String = var9.v(var8, 2, b2.a, null) as java.lang.String;
-            var6 = var11;
-            var12 = var7;
+            val var7: ChannelId = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var12 = var9.v(var8, 2, b2.a, null) as java.lang.String;
             var2 = 7;
+            var16 = var11;
+            var14 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
-            var5 = null;
+            var16 = null;
+            var14 = null;
             var var13: Any = null;
 
             while (var3) {
@@ -171,25 +171,25 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
                            throw new n(var4);
                         }
 
-                        var5 = var9.v(var8, 2, b2.a, var5) as java.lang.String;
+                        var14 = var9.v(var8, 2, b2.a, var14) as java.lang.String;
                         var2 |= 4;
                      } else {
                         var13 = var9.m(var8, 1, ChannelId.$serializer.INSTANCE, var13) as ChannelId;
                         var2 |= 2;
                      }
                   } else {
-                     val var15: MessageId;
-                     if (var6 != null) {
-                        var15 = MessageId.box-impl(var6);
+                     val var17: MessageId;
+                     if (var16 != null) {
+                        var17 = MessageId.box-impl(var16);
                      } else {
-                        var15 = null;
+                        var17 = null;
                      }
 
-                     val var16: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var15) as MessageId;
-                     if (var16 != null) {
-                        var6 = var16.unbox-impl();
+                     val var18: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var17) as MessageId;
+                     if (var18 != null) {
+                        var16 = var18.unbox-impl();
                      } else {
-                        var6 = null;
+                        var16 = null;
                      }
 
                      var2 |= 1;
@@ -199,12 +199,12 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
                }
             }
 
-            var12 = (java.lang.String)var5;
-            var5 = var13;
+            var12 = (java.lang.String)var14;
+            var14 = var13;
          }
 
          var9.b(var8);
-         return new TapTagData(var2, var6, (ChannelId)var5, var12, null, null);
+         return new TapTagData(var2, var16, (ChannelId)var14, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapTagData) {

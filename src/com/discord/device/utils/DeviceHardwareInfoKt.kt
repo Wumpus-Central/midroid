@@ -40,13 +40,13 @@ internal fun getSocFromProcCpuInfo(): String {
 internal fun maxCpuFreq(): String {
    val var3: Int = getNumCpuCores();
    var var2: Int = 0;
-   var var4: Long = 0L;
+   var var6: Long = 0L;
 
    while (true) {
       var var10: java.lang.String = "";
       if (var2 >= var3) {
-         if (var4 > 0L) {
-            val var0: Double = var4 / 1000000.0;
+         if (var6 > 0L) {
+            val var0: Double = var6 / 1000000.0;
             val var15: l0 = l0.a;
             var10 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
             q.g(var10, "format(...)");
@@ -68,37 +68,38 @@ internal fun maxCpuFreq(): String {
          return "";
       }
 
-      var var6: Long = var4;
-      if (var8 > var4) {
-         var6 = var8;
+      var var4: Long = var6;
+      if (var8 > var6) {
+         var4 = var8;
       }
 
       var2++;
-      var4 = var6;
+      var6 = var4;
    }
 }
 
 internal fun ramSize(): String {
-   val var3: Scanner = new Scanner(new File("/proc/meminfo"));
+   val var5: Scanner = new Scanner(new File("/proc/meminfo"));
 
    var var4: java.lang.String;
+   var var8: java.lang.String;
    while (true) {
-      val var2: Boolean = var3.hasNextLine();
+      val var2: Boolean = var5.hasNextLine();
       var4 = "";
       if (var2) {
-         var var5: java.lang.String = var3.nextLine();
-         q.e(var5);
-         if (!h.H(var5, "MemTotal", false, 2, null)) {
+         var8 = var5.nextLine();
+         q.e(var8);
+         if (!h.H(var8, "MemTotal", false, 2, null)) {
             continue;
          }
 
          val var7: MatchResult = Regex.c(
-            new Regex("\\d+"), h.X0(h.z0(var5, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString(), 0, 2, null
+            new Regex("\\d+"), h.X0(h.z0(var8, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString(), 0, 2, null
          );
          if (var7 != null) {
-            var5 = var7.getValue();
-            var8 = var5;
-            if (var5 != null) {
+            val var10: java.lang.String = var7.getValue();
+            var8 = var10;
+            if (var10 != null) {
                break;
             }
          }
@@ -131,12 +132,12 @@ internal fun socName(): String {
       }
 
       val var2: java.lang.String = a.a();
-      val var1: java.lang.String = b.a();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var2);
-      var4.append("_");
-      var4.append(var1);
-      return var4.toString();
+      var0 = b.a();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(var2);
+      var1.append("_");
+      var1.append(var0);
+      return var1.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

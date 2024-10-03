@@ -74,11 +74,11 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    public override fun onNotificationAction(context: Context, intent: Intent) {
       q.h(var1, "context");
       q.h(var2, "intent");
-      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var4: Bundle = new Bundle();
-      var4.putString("channelId", ChannelId.toString-impl(this.channelId));
-      var4.putString("messageId", MessageId.toString-impl(this.messageId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "MarkAsRead", 0L, false, var4, true, 12, null);
+      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: Bundle = new Bundle();
+      var3.putString("channelId", ChannelId.toString-impl(this.channelId));
+      var3.putString("messageId", MessageId.toString-impl(this.messageId));
+      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MarkAsRead", 0L, false, var3, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -92,16 +92,16 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    public override fun toString(): String {
       val var4: java.lang.String = this.tag;
       val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MarkAsReadAction(tag=");
-      var3.append(var4);
-      var3.append(", channelId=");
-      var3.append(var2);
-      var3.append(", messageId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MarkAsReadAction(tag=");
+      var1.append(var4);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {

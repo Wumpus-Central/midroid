@@ -164,22 +164,23 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
          val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var6: ChannelId;
+         var var7: UserId;
+         val var9: java.lang.String;
          var var12: Any;
-         var var13: UserId;
+         var var13: ChannelId;
          if (var5) {
-            val var7: java.lang.String = var11.t(var10, 0);
-            val var9: UserId = var11.m(var10, 1, UserId.$serializer.INSTANCE, null) as UserId;
-            var6 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var6: java.lang.String = var11.t(var10, 0);
+            var7 = var11.m(var10, 1, UserId.$serializer.INSTANCE, null) as UserId;
+            val var14: ChannelId = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var12 = var11.v(var10, 3, n0.a, null) as Int;
             var2 = 15;
-            var8 = var7;
-            var13 = var9;
+            var9 = var6;
+            var13 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
+            var7 = null;
             var13 = null;
-            var6 = null;
             var12 = null;
 
             while (var3) {
@@ -195,11 +196,11 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
                            var12 = var11.v(var10, 3, n0.a, var12) as Int;
                            var2 |= 8;
                         } else {
-                           var6 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, var6) as ChannelId;
+                           var13 = var11.v(var10, 2, ChannelId.$serializer.INSTANCE, var13) as ChannelId;
                            var2 |= 4;
                         }
                      } else {
-                        var13 = var11.m(var10, 1, UserId.$serializer.INSTANCE, var13) as UserId;
+                        var7 = var11.m(var10, 1, UserId.$serializer.INSTANCE, var7) as UserId;
                         var2 |= 2;
                      }
                   } else {
@@ -210,10 +211,12 @@ public data class UserNameOnClick(action: String, userId: UserId, messageChannel
                   var3 = false;
                }
             }
+
+            var9 = var8;
          }
 
          var11.b(var10);
-         return new UserNameOnClick(var2, var8, var13, var6, (Integer)var12, null, null);
+         return new UserNameOnClick(var2, var9, var7, var13, (Integer)var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserNameOnClick) {

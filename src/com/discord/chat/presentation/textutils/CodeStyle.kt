@@ -78,16 +78,16 @@ public object CodeStyle {
       label16:
       try {
          val var11: kh.r.a = r.k;
-         var8 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         var9 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var10: kh.r.a = r.k;
-         var8 = r.b(s.a(var4));
+         val var8: kh.r.a = r.k;
+         var9 = r.b(s.a(var4));
          break label16;
       }
 
       val var12: java.util.List = i.e(new TextNode(var2));
-      var2 = (java.lang.String)var8;
-      if (r.g(var8)) {
+      var2 = (java.lang.String)var9;
+      if (r.g(var9)) {
          var2 = var12;
       }
 
@@ -145,7 +145,7 @@ public object CodeStyle {
          var4 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var8: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var6: BlockBackgroundSpan = new BlockBackgroundSpan(
          var4,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -155,10 +155,10 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       var4 = SizeUtilsKt.getDpToPx(4);
-      val var9: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var6: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-      val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var7: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var9: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var10: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      val var8: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var5: Int = var1.length();
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var4));
@@ -166,7 +166,7 @@ public object CodeStyle {
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var4));
 
       for (int var13 = 0; var13 < 5; var13++) {
-         val var11: Any = new Object[]{var8, var9, var6, var7, var10}[var13];
+         val var11: Any = new Object[]{var6, var7, var9, var10, var8}[var13];
          if (var11 != null) {
             var1.setSpan(var11, var5, var1.length(), 33);
          }

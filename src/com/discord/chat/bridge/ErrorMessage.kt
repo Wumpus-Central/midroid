@@ -74,15 +74,15 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var3: java.lang.String = this.stackTrace;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ErrorMessage(id=");
-      var1.append(var2);
-      var1.append(", stackTrace=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.id);
+      val var1: java.lang.String = this.stackTrace;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ErrorMessage(id=");
+      var2.append(var3);
+      var2.append(", stackTrace=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -113,7 +113,6 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var11: java.lang.String;
          var var12: java.lang.String;
          if (var5) {
             val var6: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -121,14 +120,12 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                var10 = var6.unbox-impl();
             }
 
-            val var7: java.lang.String = var9.t(var8, 1);
+            var12 = var9.t(var8, 1);
             var2 = 3;
-            var12 = var10;
-            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var11 = null;
+            var var11: java.lang.String = null;
             var12 = null;
 
             while (var3) {
@@ -142,16 +139,16 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                      var11 = var9.t(var8, 1);
                      var2 |= 2;
                   } else {
-                     val var13: MessageId;
+                     val var14: MessageId;
                      if (var12 != null) {
-                        var13 = MessageId.box-impl(var12);
+                        var14 = MessageId.box-impl(var12);
                      } else {
-                        var13 = null;
+                        var14 = null;
                      }
 
-                     val var14: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
-                     if (var14 != null) {
-                        var12 = var14.unbox-impl();
+                     val var15: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var14) as MessageId;
+                     if (var15 != null) {
+                        var12 = var15.unbox-impl();
                      } else {
                         var12 = null;
                      }
@@ -162,10 +159,13 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                   var3 = false;
                }
             }
+
+            var12 = var11;
+            var10 = var12;
          }
 
          var9.b(var8);
-         return new ErrorMessage(var2, var12, var11, null, null);
+         return new ErrorMessage(var2, var10, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ErrorMessage) {

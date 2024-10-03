@@ -79,15 +79,15 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
    }
 
    public override fun toString(): String {
-      val var3: MediaPlayerPlaybackSource = this.source;
+      val var4: MediaPlayerPlaybackSource = this.source;
       val var1: Double = this.rate;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MediaPlayerPlaybackRateChanged(source=");
-      var4.append(var3);
-      var4.append(", rate=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaPlayerPlaybackRateChanged(source=");
+      var3.append(var4);
+      var3.append(", rate=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : g0 {

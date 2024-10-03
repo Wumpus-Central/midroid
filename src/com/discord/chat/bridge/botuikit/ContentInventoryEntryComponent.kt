@@ -64,8 +64,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.contentInventoryEntry == null) {
          var1 = 0;
@@ -73,22 +73,22 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = this.contentInventoryEntry.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var3: ContentInventoryEntry = this.contentInventoryEntry;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContentInventoryEntryComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var4);
-      var2.append(", contentInventoryEntry=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.id;
+      val var2: ContentInventoryEntry = this.contentInventoryEntry;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ContentInventoryEntryComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", contentInventoryEntry=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : g0 {

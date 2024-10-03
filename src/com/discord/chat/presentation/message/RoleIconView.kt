@@ -69,14 +69,14 @@ public class RoleIconView(context: Context, attrs: AttributeSet) : FrameLayout {
 
       this.setVisibility(var3);
       if (var8 != null) {
-         val var5: SimpleDraweeSpanTextView = this.binding.roleIconViewUnicodeEmoji;
-         val var6: Context = this.binding.roleIconViewUnicodeEmoji.getContext();
-         kotlin.jvm.internal.q.g(var6, "getContext(...)");
-         var5.setDraweeSpanStringBuilder(
-            RenderableEmojiKt.renderEmoji$default((RenderableEmoji)var8, var6, SizeUtilsKt.getSpToPx(var1.getSize()), true, 0, null, 48, null)
+         val var6: SimpleDraweeSpanTextView = this.binding.roleIconViewUnicodeEmoji;
+         val var5: Context = this.binding.roleIconViewUnicodeEmoji.getContext();
+         kotlin.jvm.internal.q.g(var5, "getContext(...)");
+         var6.setDraweeSpanStringBuilder(
+            RenderableEmojiKt.renderEmoji$default((RenderableEmoji)var8, var5, SizeUtilsKt.getSpToPx(var1.getSize()), true, 0, null, 48, null)
          );
-         kotlin.jvm.internal.q.e(var5);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new y(var2, var1, (RenderableEmoji)var8), 1, null);
+         kotlin.jvm.internal.q.e(var6);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new y(var2, var1, (RenderableEmoji)var8), 1, null);
       }
    }
 }

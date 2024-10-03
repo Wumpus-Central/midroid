@@ -26,12 +26,12 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
 
    private fun ReactEvent.requireEventExporting() {
       if (!this.eventRegistry.getDidExportEvents()) {
-         val var3: KClass = g0.b(var1.getClass());
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("attempting to emit event: ");
-         var2.append(var3);
-         var2.append(" before exporting event constants. see usages of exportEventConstants");
-         throw new IllegalStateException(var2.toString());
+         val var2: KClass = g0.b(var1.getClass());
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("attempting to emit event: ");
+         var3.append(var2);
+         var3.append(" before exporting event constants. see usages of exportEventConstants");
+         throw new IllegalStateException(var3.toString());
       }
    }
 

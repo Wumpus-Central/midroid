@@ -75,16 +75,16 @@ internal object CustomFontFamilyOverride {
       val var20: Int = FILE_EXTENSIONS.length;
 
       for (int var19 = 0; var19 < var20; var19++) {
-         val var13: java.lang.String = var17[var19];
-         val var22: StringBuilder = new StringBuilder();
-         var22.append("fonts/");
-         var22.append(var11);
-         var22.append(var13);
-         val var23: java.lang.String = var22.toString();
-         kotlin.jvm.internal.q.g(var23, "toString(...)");
+         var var22: java.lang.String = var17[var19];
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("fonts/");
+         var13.append(var11);
+         var13.append(var22);
+         var22 = var13.toString();
+         kotlin.jvm.internal.q.g(var22, "toString(...)");
 
          try {
-            val var24: Typeface = Typeface.createFromAsset(var3, var23);
+            val var24: Typeface = Typeface.createFromAsset(var3, var22);
             kotlin.jvm.internal.q.e(var24);
             return var24;
          } catch (var14: RuntimeException) {
@@ -107,17 +107,17 @@ internal object CustomFontFamilyOverride {
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var10[var5];
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("fonts/");
-            var13.append(var11);
-            var13.append(var12);
-            var12 = var13.toString();
-            kotlin.jvm.internal.q.g(var12, "toString(...)");
+            val var13: java.lang.String = var10[var5];
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("fonts/");
+            var12.append(var11);
+            var12.append(var13);
+            val var28: java.lang.String = var12.toString();
+            kotlin.jvm.internal.q.g(var28, "toString(...)");
 
             try {
                b.a();
-               val var29: Font = a.a(k.a(var3, var12));
+               val var29: Font = a.a(k.a(var3, var28));
                kotlin.jvm.internal.q.g(var29, "build(...)");
                c.a();
                val var30: FontFamily = f.a(l.a(var29));
@@ -177,12 +177,12 @@ internal object CustomFontFamilyOverride {
 
    @JvmStatic
    fun `override$lambda$0`(var0: CreateTypefaceObject): Typeface {
-      val var2: CustomFontFamilyOverride = INSTANCE;
-      val var3: java.lang.String = var0.fontFamilyName;
+      val var3: CustomFontFamilyOverride = INSTANCE;
+      val var2: java.lang.String = var0.fontFamilyName;
       val var1: Int = var0.style;
       val var4: AssetManager = var0.assetManager;
       kotlin.jvm.internal.q.f(var0.assetManager, "null cannot be cast to non-null type android.content.res.AssetManager");
-      return var2.createAssetTypeface(var3, var1, var4);
+      return var3.createAssetTypeface(var2, var1, var4);
    }
 
    public fun override() {

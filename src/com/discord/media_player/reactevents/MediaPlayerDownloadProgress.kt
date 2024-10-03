@@ -88,19 +88,19 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
    }
 
    public override fun toString(): String {
-      val var7: Double = this.id;
-      val var5: Double = this.progressSeconds;
-      val var1: Double = this.progressPercent;
-      val var3: Double = this.totalDurationSeconds;
+      val var1: Double = this.id;
+      val var3: Double = this.progressSeconds;
+      val var7: Double = this.progressPercent;
+      val var5: Double = this.totalDurationSeconds;
       val var9: StringBuilder = new StringBuilder();
       var9.append("MediaPlayerDownloadProgress(id=");
-      var9.append(var7);
-      var9.append(", progressSeconds=");
-      var9.append(var5);
-      var9.append(", progressPercent=");
       var9.append(var1);
-      var9.append(", totalDurationSeconds=");
+      var9.append(", progressSeconds=");
       var9.append(var3);
+      var9.append(", progressPercent=");
+      var9.append(var7);
+      var9.append(", totalDurationSeconds=");
+      var9.append(var5);
       var9.append(")");
       return var9.toString();
    }
@@ -132,63 +132,62 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
 
       public open fun deserialize(decoder: Decoder): MediaPlayerDownloadProgress {
          q.h(var1, "decoder");
-         val var17: SerialDescriptor = this.getDescriptor();
-         val var18: c = var1.c(var17);
+         val var15: SerialDescriptor = this.getDescriptor();
+         val var16: c = var1.c(var15);
          var var2: Double;
          var var4: Double;
          var var6: Double;
          var var8: Double;
-         var var14: Int;
-         if (var18.y()) {
-            var4 = var18.A(var17, 0);
-            var8 = var18.A(var17, 1);
-            var2 = var18.A(var17, 2);
-            var6 = var18.A(var17, 3);
-            var14 = 15;
+         var var12: Int;
+         if (var16.y()) {
+            var4 = var16.A(var15, 0);
+            var6 = var16.A(var15, 1);
+            var2 = var16.A(var15, 2);
+            var8 = var16.A(var15, 3);
+            var12 = 15;
          } else {
             var8 = 0.0;
-            var var15: Boolean = true;
-            var14 = 0;
+            var var13: Boolean = true;
+            var12 = 0;
             var6 = 0.0;
             var4 = 0.0;
             var2 = 0.0;
 
-            while (var15) {
-               val var16: Int = var18.x(var17);
-               if (var16 != -1) {
-                  if (var16 != 0) {
-                     if (var16 != 1) {
-                        if (var16 != 2) {
-                           if (var16 != 3) {
-                              throw new n(var16);
+            while (var13) {
+               val var14: Int = var16.x(var15);
+               if (var14 != -1) {
+                  if (var14 != 0) {
+                     if (var14 != 1) {
+                        if (var14 != 2) {
+                           if (var14 != 3) {
+                              throw new n(var14);
                            }
 
-                           var8 = var18.A(var17, 3);
-                           var14 |= 8;
+                           var8 = var16.A(var15, 3);
+                           var12 |= 8;
                         } else {
-                           var6 = var18.A(var17, 2);
-                           var14 |= 4;
+                           var6 = var16.A(var15, 2);
+                           var12 |= 4;
                         }
                      } else {
-                        var2 = var18.A(var17, 1);
-                        var14 |= 2;
+                        var2 = var16.A(var15, 1);
+                        var12 |= 2;
                      }
                   } else {
-                     var4 = var18.A(var17, 0);
-                     var14 |= 1;
+                     var4 = var16.A(var15, 0);
+                     var12 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var13 = false;
                }
             }
 
-            var6 = var8;
             var2 = var6;
-            var8 = var2;
+            var6 = var2;
          }
 
-         var18.b(var17);
-         return new MediaPlayerDownloadProgress(var14, var4, var8, var2, var6, null);
+         var16.b(var15);
+         return new MediaPlayerDownloadProgress(var12, var4, var6, var2, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerDownloadProgress) {

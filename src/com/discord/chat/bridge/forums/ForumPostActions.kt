@@ -212,85 +212,86 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
+         val var3: b2 = b2.a;
          return new KSerializer[]{
-            n0.a, h.a, a.u(b2.a), var1, a.u(var1), var1, a.u(MessageReaction.$serializer.INSTANCE), a.u(PostSharePrompt.$serializer.INSTANCE)
+            n0.a, h.a, a.u(b2.a), var3, a.u(var3), var3, a.u(MessageReaction.$serializer.INSTANCE), a.u(PostSharePrompt.$serializer.INSTANCE)
          };
       }
 
       public open fun deserialize(decoder: Decoder): ForumPostActions {
          q.h(var1, "decoder");
-         val var13: SerialDescriptor = this.getDescriptor();
-         val var14: c = var1.c(var13);
+         val var14: SerialDescriptor = this.getDescriptor();
+         val var15: c = var1.c(var14);
          var var2: Int;
          var var3: Int;
          var var4: Int;
          var var7: Any;
-         var var8: java.lang.String;
          var var9: java.lang.String;
          var var10: java.lang.String;
-         var var11: PostSharePrompt;
+         val var11: java.lang.String;
          val var12: java.lang.String;
-         if (var14.y()) {
-            var4 = var14.k(var13, 0);
-            var3 = var14.s(var13, 1);
-            val var15: b2 = b2.a;
-            var9 = var14.v(var13, 2, b2.a, null) as java.lang.String;
-            var12 = var14.t(var13, 3);
-            var10 = var14.v(var13, 4, var15, null) as java.lang.String;
-            var8 = var14.t(var13, 5);
-            var7 = var14.v(var13, 6, MessageReaction.$serializer.INSTANCE, null) as MessageReaction;
-            val var16: PostSharePrompt = var14.v(var13, 7, PostSharePrompt.$serializer.INSTANCE, null) as PostSharePrompt;
-            var2 = 255;
-            var11 = var16;
+         val var23: PostSharePrompt;
+         if (var15.y()) {
+            var4 = var15.k(var14, 0);
+            var2 = var15.s(var14, 1);
+            val var16: b2 = b2.a;
+            var9 = var15.v(var14, 2, b2.a, null) as java.lang.String;
+            var10 = var15.t(var14, 3);
+            var11 = var15.v(var14, 4, var16, null) as java.lang.String;
+            val var8: java.lang.String = var15.t(var14, 5);
+            var7 = var15.v(var14, 6, MessageReaction.$serializer.INSTANCE, null) as MessageReaction;
+            val var17: PostSharePrompt = var15.v(var14, 7, PostSharePrompt.$serializer.INSTANCE, null) as PostSharePrompt;
+            var3 = 255;
+            var12 = var8;
+            var23 = var17;
          } else {
             var var5: Boolean = true;
             var4 = 0;
             var2 = 0;
-            var11 = null;
-            var var17: java.lang.String = null;
+            var var27: PostSharePrompt = null;
+            var var18: java.lang.String = null;
             var9 = null;
-            var8 = null;
+            var var24: java.lang.String = null;
             var7 = null;
             var10 = null;
             var3 = 0;
 
             while (var5) {
-               val var6: Int = var14.x(var13);
+               val var6: Int = var15.x(var14);
                switch (var6) {
                   case -1:
                      var5 = false;
                      break;
                   case 0:
-                     var4 = var14.k(var13, 0);
+                     var4 = var15.k(var14, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var3 = var14.s(var13, 1);
+                     var3 = var15.s(var14, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var17 = var14.v(var13, 2, b2.a, var17) as java.lang.String;
+                     var18 = var15.v(var14, 2, b2.a, var18) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
-                     var9 = var14.t(var13, 3);
+                     var9 = var15.t(var14, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var8 = var14.v(var13, 4, b2.a, var8) as java.lang.String;
+                     var24 = var15.v(var14, 4, b2.a, var24) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
-                     var7 = var14.t(var13, 5);
+                     var7 = var15.t(var14, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var10 = var14.v(var13, 6, MessageReaction.$serializer.INSTANCE, var10) as MessageReaction;
+                     var10 = var15.v(var14, 6, MessageReaction.$serializer.INSTANCE, var10) as MessageReaction;
                      var2 |= 64;
                      break;
                   case 7:
-                     var11 = var14.v(var13, 7, PostSharePrompt.$serializer.INSTANCE, var11) as PostSharePrompt;
+                     var27 = var15.v(var14, 7, PostSharePrompt.$serializer.INSTANCE, var27) as PostSharePrompt;
                      var2 |= 128;
                      break;
                   default:
@@ -298,15 +299,18 @@ public data class ForumPostActions(numDisplayedReactions: Int,
                }
             }
 
-            var8 = (java.lang.String)var7;
+            var3 = var2;
+            var12 = (java.lang.String)var7;
+            var23 = var27;
             var7 = var10;
-            var10 = var8;
-            var12 = var9;
-            var9 = var17;
+            var11 = var24;
+            var10 = var9;
+            var9 = var18;
+            var2 = var3;
          }
 
-         var14.b(var13);
-         return new ForumPostActions(var2, var4, (boolean)var3, var9, var12, var10, var8, (MessageReaction)var7, var11, null);
+         var15.b(var14);
+         return new ForumPostActions(var3, var4, (boolean)var2, var9, var10, var11, var12, (MessageReaction)var7, var23, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForumPostActions) {

@@ -142,32 +142,32 @@ public data class ComponentContext(containerId: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.containerId;
-      val var4: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
-      val var3: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
-      val var5: MediaItemEventHandlers = this.mediaItemEventHandlers;
-      val var8: UserEventHandlers = this.userEventHandlers;
-      val var9: ContentInventoryEventHandlers = this.contentInventoryEventHandlers;
+      val var3: java.lang.String = this.containerId;
+      val var7: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var5: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
+      val var6: MediaItemEventHandlers = this.mediaItemEventHandlers;
+      val var4: UserEventHandlers = this.userEventHandlers;
+      val var8: ContentInventoryEventHandlers = this.contentInventoryEventHandlers;
       val var1: Int = this.constrainedWidth;
       val var2: Boolean = this.shouldAutoPlayGif;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ComponentContext(containerId=");
-      var6.append(var7);
-      var6.append(", markdownTextRenderOptions=");
-      var6.append(var4);
-      var6.append(", markdownTextRenderEventHandlers=");
-      var6.append(var3);
-      var6.append(", mediaItemEventHandlers=");
-      var6.append(var5);
-      var6.append(", userEventHandlers=");
-      var6.append(var8);
-      var6.append(", contentInventoryEventHandlers=");
-      var6.append(var9);
-      var6.append(", constrainedWidth=");
-      var6.append(var1);
-      var6.append(", shouldAutoPlayGif=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("ComponentContext(containerId=");
+      var9.append(var3);
+      var9.append(", markdownTextRenderOptions=");
+      var9.append(var7);
+      var9.append(", markdownTextRenderEventHandlers=");
+      var9.append(var5);
+      var9.append(", mediaItemEventHandlers=");
+      var9.append(var6);
+      var9.append(", userEventHandlers=");
+      var9.append(var4);
+      var9.append(", contentInventoryEventHandlers=");
+      var9.append(var8);
+      var9.append(", constrainedWidth=");
+      var9.append(var1);
+      var9.append(", shouldAutoPlayGif=");
+      var9.append(var2);
+      var9.append(")");
+      return var9.toString();
    }
 }

@@ -244,7 +244,6 @@ public final class R {
       public static int invite_to_speak_button;
       public static int invite_to_speak_text;
       public static int item_bottom_container;
-      public static int item_components_root;
       public static int item_description;
       public static int item_header;
       public static int item_hero;
@@ -272,12 +271,14 @@ public final class R {
       public static int json_header;
       public static int jump_button;
       public static int label;
+      public static int label_container;
       public static int launch_button;
       public static int layout;
       public static int learn_more;
       public static int left_bar;
       public static int link_icon;
       public static int loading_dots;
+      public static int loading_dots_stub;
       public static int media_view;
       public static int media_view_alt_text;
       public static int media_view_alt_text_button;
@@ -471,6 +472,7 @@ public final class R {
       public static int chat_loading_view;
       public static int clan_tag_chiplet_view;
       public static int component_failed_label_view;
+      public static int component_loading_dots;
       public static int connections_role_tag_view;
       public static int cta_button;
       public static int decorated_message_view;
@@ -510,7 +512,6 @@ public final class R {
       public static int message_component_select_view;
       public static int message_component_separator_display_view;
       public static int message_component_text_display_view;
-      public static int message_components_view;
       public static int message_frame_feed_header;
       public static int message_frame_jump_header;
       public static int message_highlight_header;

@@ -129,12 +129,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             var11 = new OverlappingCirclesView.OverlappingClippedItem(var25, var18, var10, this.overlapPx, this.separatorSizePx, this.imageLoadingColorDrawable);
          } else {
             val var21: Context = this.getContext();
-            val var6: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
-            val var7: Int = this.overlapPx;
+            val var9: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
+            val var6: Int = this.overlapPx;
             val var8: Int = this.separatorSizePx;
-            val var9: Int = this.getLayoutParams().height;
+            val var7: Int = this.getLayoutParams().height;
             q.e(var21);
-            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var6, var10, var7, var8, var9);
+            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var9, var10, var6, var8, var7);
          }
 
          val var26: LayoutParams = new LayoutParams(this.getLayoutParams().height, this.getLayoutParams().height);

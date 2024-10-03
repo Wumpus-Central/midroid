@@ -123,27 +123,26 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
+         var var2: Int;
          var var3: Int;
          var var4: Int;
-         val var5: Int;
          var var7: java.lang.String;
          var var10: SeparatorSpacingSize;
          if (var9.y()) {
             var4 = var9.k(var8, 0);
             var7 = var9.t(var8, 1);
-            val var2: Byte = var9.s(var8, 2);
+            var3 = var9.s(var8, 2);
             var10 = var9.m(var8, 3, SeparatorSpacingSize.Serializer.INSTANCE, null) as SeparatorSpacingSize;
-            var5 = 15;
-            var3 = var2;
+            var2 = 15;
          } else {
-            var var12: Boolean = true;
+            var var5: Boolean = true;
             var4 = 0;
-            var var11: Int = 0;
+            var2 = 0;
             var7 = null;
             var10 = null;
             var3 = 0;
 
-            while (var12) {
+            while (var5) {
                val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -154,29 +153,27 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
                            }
 
                            var10 = var9.m(var8, 3, SeparatorSpacingSize.Serializer.INSTANCE, var10) as SeparatorSpacingSize;
-                           var11 |= 8;
+                           var2 |= 8;
                         } else {
                            var3 = var9.s(var8, 2);
-                           var11 |= 4;
+                           var2 |= 4;
                         }
                      } else {
                         var7 = var9.t(var8, 1);
-                        var11 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var4 = var9.k(var8, 0);
-                     var11 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var5 = false;
                }
             }
-
-            var5 = var11;
          }
 
          var9.b(var8);
-         return new SeparatorDisplayComponent(var5, var4, var7, (boolean)var3, var10, null);
+         return new SeparatorDisplayComponent(var2, var4, var7, (boolean)var3, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SeparatorDisplayComponent) {

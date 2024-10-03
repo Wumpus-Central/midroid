@@ -115,12 +115,12 @@ public class ContentInventoryComponentView  public constructor(context: Context,
             var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var8: IntArray = i.Q0(var7);
-         val var25: ContentInventoryComponentView = this.getBinding().getRoot();
-         var25.setVisibility(0);
-         q.e(var25);
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var25, var8, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         ContentInventoryComponentViewKt.access$applyClickable(var25, var4, var29, var29.getClickable(), "container");
+         val var25: IntArray = i.Q0(var7);
+         val var8: ContentInventoryComponentView = this.getBinding().getRoot();
+         var8.setVisibility(0);
+         q.e(var8);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var8, var25, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         ContentInventoryComponentViewKt.access$applyClickable(var8, var4, var29, var29.getClickable(), "container");
          val var9: TextView = this.getBinding().contentInventoryComponentUsername;
          var9.setText(var29.getUserActionDescription());
          q.e(var9);
@@ -199,6 +199,10 @@ public class ContentInventoryComponentView  public constructor(context: Context,
 
    public override fun getComponentType(): KClass<ContentInventoryEntryComponent> {
       return g0.b(ContentInventoryEntryComponent.class);
+   }
+
+   override fun onRecycle(var1: ComponentProvider) {
+      ComponentView.DefaultImpls.onRecycle(this, var1);
    }
 
    public companion object {

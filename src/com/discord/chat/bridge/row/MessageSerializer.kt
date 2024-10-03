@@ -30,10 +30,10 @@ public object MessageSerializer : KSerializer {
       } catch (var4: Exception) {
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var4, false, 2, null);
          val var5: UUID = UUID.randomUUID();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("RENDERING_ERROR_");
-         var3.append(var5);
-         var6 = new ErrorMessage(MessageId.constructor-impl(var3.toString()), e.b(var4), null);
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("RENDERING_ERROR_");
+         var2.append(var5);
+         var6 = new ErrorMessage(MessageId.constructor-impl(var2.toString()), e.b(var4), null);
       }
 
       return (MessageBase)var6;

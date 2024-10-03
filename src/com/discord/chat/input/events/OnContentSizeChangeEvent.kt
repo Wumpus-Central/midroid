@@ -103,8 +103,8 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
          var var4: Int;
          if (var8.y()) {
             var3 = var8.k(var7, 0);
-            var2 = var8.k(var7, 1);
-            var4 = 3;
+            var4 = var8.k(var7, 1);
+            var2 = 3;
          } else {
             var var5: Boolean = true;
             var3 = 0;
@@ -129,13 +129,10 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
                   var5 = false;
                }
             }
-
-            var4 = var2;
-            var2 = var4;
          }
 
          var8.b(var7);
-         return new OnContentSizeChangeEvent(var4, var3, var2, null);
+         return new OnContentSizeChangeEvent(var2, var3, var4, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnContentSizeChangeEvent) {

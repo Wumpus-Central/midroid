@@ -150,39 +150,39 @@ internal object SystemLogUtils {
                   // 07a: aload 5
                   // 07c: astore 3
                   // 07d: getstatic qk/a.b Ljava/nio/charset/Charset;
-                  // 080: astore 9
+                  // 080: astore 6
                   // 082: aload 5
                   // 084: astore 4
                   // 086: aload 5
                   // 088: astore 3
                   // 089: new java/io/InputStreamReader
-                  // 08c: astore 6
+                  // 08c: astore 9
                   // 08e: aload 5
                   // 090: astore 4
                   // 092: aload 5
                   // 094: astore 3
-                  // 095: aload 6
+                  // 095: aload 9
                   // 097: aload 8
-                  // 099: aload 9
+                  // 099: aload 6
                   // 09b: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
                   // 09e: aload 5
                   // 0a0: astore 4
                   // 0a2: aload 5
                   // 0a4: astore 3
-                  // 0a5: aload 6
+                  // 0a5: aload 9
                   // 0a7: instanceof java/io/BufferedReader
                   // 0aa: ifeq 0c7
                   // 0ad: aload 5
                   // 0af: astore 4
                   // 0b1: aload 5
                   // 0b3: astore 3
-                  // 0b4: aload 6
+                  // 0b4: aload 9
                   // 0b6: checkcast java/io/BufferedReader
                   // 0b9: astore 6
                   // 0bb: goto 0dc
                   // 0be: astore 3
                   // 0bf: goto 1e1
-                  // 0c2: astore 7
+                  // 0c2: astore 5
                   // 0c4: goto 108
                   // 0c7: aload 5
                   // 0c9: astore 4
@@ -190,7 +190,7 @@ internal object SystemLogUtils {
                   // 0cd: astore 3
                   // 0ce: new java/io/BufferedReader
                   // 0d1: dup
-                  // 0d2: aload 6
+                  // 0d2: aload 9
                   // 0d4: sipush 8192
                   // 0d7: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
                   // 0da: astore 6
@@ -218,7 +218,7 @@ internal object SystemLogUtils {
                   // 105: goto 1d2
                   // 108: aload 3
                   // 109: astore 4
-                  // 10b: aload 7
+                  // 10b: aload 5
                   // 10d: invokevirtual java/lang/Throwable.printStackTrace ()V
                   // 110: aload 3
                   // 111: astore 4
@@ -233,39 +233,39 @@ internal object SystemLogUtils {
                   // 123: aload 3
                   // 124: astore 4
                   // 126: new java/lang/StringBuilder
-                  // 129: astore 5
+                  // 129: astore 7
                   // 12b: aload 3
                   // 12c: astore 4
-                  // 12e: aload 5
+                  // 12e: aload 7
                   // 130: invokespecial java/lang/StringBuilder.<init> ()V
                   // 133: aload 3
                   // 134: astore 4
-                  // 136: aload 5
+                  // 136: aload 7
                   // 138: ldc "Exception getting system logs '"
                   // 13a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 13d: pop
                   // 13e: aload 3
                   // 13f: astore 4
-                  // 141: aload 5
-                  // 143: aload 7
+                  // 141: aload 7
+                  // 143: aload 5
                   // 145: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 148: pop
                   // 149: aload 3
                   // 14a: astore 4
-                  // 14c: aload 5
+                  // 14c: aload 7
                   // 14e: ldc "'"
                   // 150: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 153: pop
                   // 154: aload 3
                   // 155: astore 4
                   // 157: aload 6
-                  // 159: aload 5
+                  // 159: aload 7
                   // 15b: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 15e: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 161: pop
                   // 162: aload 3
                   // 163: astore 4
-                  // 165: aload 7
+                  // 165: aload 5
                   // 167: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
                   // 16a: astore 5
                   // 16c: aload 3
@@ -289,31 +289,31 @@ internal object SystemLogUtils {
                   // 18b: aload 5
                   // 18d: iload 1
                   // 18e: aaload
-                  // 18f: astore 8
+                  // 18f: astore 7
                   // 191: aload 3
                   // 192: astore 4
                   // 194: new java/lang/StringBuilder
-                  // 197: astore 7
+                  // 197: astore 8
                   // 199: aload 3
                   // 19a: astore 4
-                  // 19c: aload 7
+                  // 19c: aload 8
                   // 19e: invokespecial java/lang/StringBuilder.<init> ()V
                   // 1a1: aload 3
                   // 1a2: astore 4
-                  // 1a4: aload 7
+                  // 1a4: aload 8
                   // 1a6: ldc "    "
                   // 1a8: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
                   // 1ab: pop
                   // 1ac: aload 3
                   // 1ad: astore 4
-                  // 1af: aload 7
-                  // 1b1: aload 8
+                  // 1af: aload 8
+                  // 1b1: aload 7
                   // 1b3: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
                   // 1b6: pop
                   // 1b7: aload 3
                   // 1b8: astore 4
                   // 1ba: aload 6
-                  // 1bc: aload 7
+                  // 1bc: aload 8
                   // 1be: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
                   // 1c1: invokevirtual java/util/LinkedList.add (Ljava/lang/Object;)Z
                   // 1c4: pop
@@ -406,22 +406,23 @@ internal object SystemLogUtils {
                   }
                }
             );
-            val var8: HashSet = w.e(
+            val var23: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
                val var14: java.util.Iterator = var21.iterator();
 
+               val var8: Any;
                do {
                   if (!var14.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var23 = var14.next();
-               } while (!(var8.contains((java.lang.String)var23) ^ true));
+                  var8 = var14.next();
+               } while (!(var23.contains((java.lang.String)var8) ^ true));
 
-               var13 = var23 as java.lang.String;
+               var13 = var8 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var13 = "Unknown";
             }
@@ -717,8 +718,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var2: Long = System.nanoTime();
-      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var4: Long = System.nanoTime();
+      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -726,7 +727,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var2 + var4) {
+            if (System.nanoTime() >= var4 + var2) {
                return;
             }
          }
@@ -763,13 +764,13 @@ internal object SystemLogUtils {
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
       q.h(var1, "context");
-      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("[");
-      var2.append("libdiscord_version");
-      var2.append("]: ");
-      var2.append(var3);
-      Log.v("Discord", var2.toString());
+      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("[");
+      var3.append("libdiscord_version");
+      var3.append("]: ");
+      var3.append(var2);
+      Log.v("Discord", var3.toString());
       systemLogCapture.startThread();
    }
 
@@ -874,26 +875,26 @@ internal object SystemLogUtils {
 
       public override fun toString(): String {
          val var3: java.lang.String = this.text;
-         val var4: java.lang.String = this.cause;
+         val var1: java.lang.String = this.cause;
          val var7: java.lang.String = this.groupBy;
-         val var1: java.lang.String = this.origin;
+         val var4: java.lang.String = this.origin;
          val var5: java.lang.String = this.groupHash;
-         val var6: java.lang.String = this.textHash;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Tombstone(text=");
-         var2.append(var3);
-         var2.append(", cause=");
-         var2.append(var4);
-         var2.append(", groupBy=");
-         var2.append(var7);
-         var2.append(", origin=");
-         var2.append(var1);
-         var2.append(", groupHash=");
-         var2.append(var5);
-         var2.append(", textHash=");
-         var2.append(var6);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.lang.String = this.textHash;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Tombstone(text=");
+         var6.append(var3);
+         var6.append(", cause=");
+         var6.append(var1);
+         var6.append(", groupBy=");
+         var6.append(var7);
+         var6.append(", origin=");
+         var6.append(var4);
+         var6.append(", groupHash=");
+         var6.append(var5);
+         var6.append(", textHash=");
+         var6.append(var2);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

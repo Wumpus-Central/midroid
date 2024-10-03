@@ -368,7 +368,6 @@
     <item type="id" name="invite_to_speak_text" />
     <item type="id" name="is_pooling_container_tag" />
     <item type="id" name="item_bottom_container" />
-    <item type="id" name="item_components_root" />
     <item type="id" name="item_description" />
     <item type="id" name="item_header" />
     <item type="id" name="item_hero" />
@@ -397,6 +396,7 @@
     <item type="id" name="json_header" />
     <item type="id" name="jump_button" />
     <item type="id" name="label" />
+    <item type="id" name="label_container" />
     <item type="id" name="labelled_by" />
     <item type="id" name="launch_button" />
     <item type="id" name="layout_aspect_ratio" />
@@ -409,6 +409,7 @@
     <item type="id" name="link_icon" />
     <item type="id" name="list_item" />
     <item type="id" name="loading_dots" />
+    <item type="id" name="loading_dots_stub" />
     <item type="id" name="lottie_layer_name" />
     <item type="id" name="masked" />
     <item type="id" name="material_clock_display" />

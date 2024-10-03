@@ -49,10 +49,10 @@ public class MainActivity : ReactActivity {
             q.g(var4, "getIntent(...)");
             this.parseIntent(var4);
             val var3: WindowFoldingFeatureDetector = WindowFoldingFeatureDetector.INSTANCE;
-            val var2: MainActivity = this.this$0;
-            val var5: Lifecycle = this.this$0.getLifecycle();
-            q.g(var5, "getLifecycle(...)");
-            var3.configure(var2, var5, this.this$0);
+            val var5: MainActivity = this.this$0;
+            val var2: Lifecycle = this.this$0.getLifecycle();
+            q.g(var2, "getLifecycle(...)");
+            var3.configure(var5, var2, this.this$0);
          }
 
          public boolean onNewIntent(Intent var1) {

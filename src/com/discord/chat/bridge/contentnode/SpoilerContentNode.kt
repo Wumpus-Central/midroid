@@ -53,12 +53,12 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SpoilerContentNode(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SpoilerContentNode(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -91,21 +91,20 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
          val var5: Boolean = var10.y();
          var var7: java.util.List = null;
          var var2: Int;
-         val var11: java.util.List;
-         var var13: java.lang.String;
-         val var16: java.lang.String;
+         var var12: java.lang.String;
+         val var14: java.lang.String;
          if (var5) {
-            var11 = var10.m(var9, 0, var8[0], null) as java.util.List;
-            var13 = var10.t(var9, 1);
-            val var15: java.lang.String = var10.t(var9, 2);
+            var7 = var10.m(var9, 0, var8[0], null) as java.util.List;
+            val var11: java.lang.String = var10.t(var9, 1);
+            val var6: java.lang.String = var10.t(var9, 2);
             var2 = 7;
-            var16 = var13;
-            var13 = var15;
+            var14 = var11;
+            var12 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var13 = null;
-            var var12: java.lang.String = null;
+            var var13: java.lang.String = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var10.x(var9);
@@ -131,13 +130,11 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
                }
             }
 
-            var16 = var13;
-            var13 = var12;
-            var11 = var7;
+            var14 = var13;
          }
 
          var10.b(var9);
-         return new SpoilerContentNode(var2, var11, var16, var13, null);
+         return new SpoilerContentNode(var2, var7, var14, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SpoilerContentNode) {

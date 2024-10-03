@@ -29,43 +29,45 @@ public class ReactionsFlexbox  public constructor(context: Context, attrs: Attri
       super(var1, var2);
       this.addReactionView = new AddReactionView(var1, null, 2, null);
       this.addBurstReactionView = new AddReactionView(var1, null, 2, null);
+      var var3: Int = 0;
       this.setFlexDirection(0);
       this.setFlexWrap(1);
       this.setJustifyContent(0);
 
-      for (int var3 = 0; var3 < 10; var3++) {
-         this.addView(this.createReactionView());
+      while (var3 < 10) {
+         this.createAndAddReactionView(var3);
+         var3++;
       }
 
       this.addView(this.addReactionView);
       this.addView(this.addBurstReactionView);
-      this.setPadding(0, 0, 0, SizeUtilsKt.getDpToPx(-4));
    }
 
-   private fun createReactionView(): ReactionView {
-      val var1: Context = this.getContext();
-      q.g(var1, "getContext(...)");
-      return new ReactionView(var1, null, 2, null);
+   private fun createAndAddReactionView(index: Int): ReactionView {
+      val var2: Context = this.getContext();
+      q.g(var2, "getContext(...)");
+      val var4: ReactionView = new ReactionView(var2, null, 2, null);
+      this.addView(var4, var1);
+      val var3: LayoutParams = var4.getLayoutParams();
+      q.f(var3, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
+      val var5: com.google.android.flexbox.FlexboxLayout.LayoutParams = var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
+      (var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(4), SizeUtilsKt.getDpToPx(4));
+      var4.setLayoutParams(var5);
+      return var4;
    }
 
    private fun getOrCreateReactionView(index: Int): ReactionView {
-      val var4: ReactionView;
+      val var3: ReactionView;
       if (var1 < this.getChildCount() - 2) {
          val var2: View = this.getChildAt(var1);
          q.f(var2, "null cannot be cast to non-null type com.discord.reactions.ReactionView");
-         var4 = var2 as ReactionView;
+         var3 = var2 as ReactionView;
          (var2 as ReactionView).setVisibility(0);
       } else {
-         var4 = this.createReactionView();
-         this.addView(var4, this.getChildCount() - 2);
-         val var3: LayoutParams = var4.getLayoutParams();
-         q.f(var3, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
-         val var5: com.google.android.flexbox.FlexboxLayout.LayoutParams = var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
-         (var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(4), SizeUtilsKt.getDpToPx(4));
-         var4.setLayoutParams(var5);
+         var3 = this.createAndAddReactionView(this.getChildCount() - 2);
       }
 
-      return var4;
+      return var3;
    }
 
    private fun hideRemainingReactionsInRow(startIndex: Int) {

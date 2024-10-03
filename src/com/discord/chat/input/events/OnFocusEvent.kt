@@ -112,23 +112,23 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
          val var9: c = var1.c(var8);
          var var3: Int;
          var var4: Int;
-         var var5: Int;
          val var6: Int;
+         var var7: Int;
          if (var9.y()) {
-            var5 = var9.k(var8, 0);
-            var4 = var9.k(var8, 1);
+            var3 = var9.k(var8, 0);
+            var6 = var9.k(var8, 1);
             val var2: Int = var9.k(var8, 2);
-            var3 = 7;
-            var6 = var2;
+            var4 = 7;
+            var7 = var2;
          } else {
             var var13: Boolean = true;
-            var5 = 0;
+            var var5: Int = 0;
             var4 = 0;
             var3 = 0;
             var var10: Int = 0;
 
             while (var13) {
-               val var7: Int = var9.x(var8);
+               var7 = var9.x(var8);
                if (var7 != -1) {
                   if (var7 != 0) {
                      if (var7 != 1) {
@@ -151,13 +151,14 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
                }
             }
 
-            var6 = var4;
-            var4 = var3;
-            var3 = var10;
+            var7 = var4;
+            var6 = var3;
+            var3 = var5;
+            var4 = var10;
          }
 
          var9.b(var8);
-         return new OnFocusEvent(var3, var5, var4, var6, null);
+         return new OnFocusEvent(var4, var3, var6, var7, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnFocusEvent) {

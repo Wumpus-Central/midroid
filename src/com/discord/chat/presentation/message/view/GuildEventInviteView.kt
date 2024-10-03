@@ -275,12 +275,12 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
 
    public fun setHeader(iconUrl: String?, text: String, color: Int) {
       kotlin.jvm.internal.q.h(var2, "text");
-      val var5: GuildEventInviteViewBinding = this.binding;
-      val var4: SimpleDraweeView = this.binding.headerIcon;
+      val var4: GuildEventInviteViewBinding = this.binding;
+      val var5: SimpleDraweeView = this.binding.headerIcon;
       kotlin.jvm.internal.q.g(this.binding.headerIcon, "headerIcon");
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
-      var5.headerText.setText(var2);
-      var5.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var5, var1);
+      var4.headerText.setText(var2);
+      var4.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
    }
 
    public fun setSecondaryButton(iconUrl: String?, listener: OnClickListener?) {

@@ -204,13 +204,13 @@ public class SamsungConnectActivity : b {
    }
 
    private fun finishWithResult(authCode: String?, authServerUrl: String?) {
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Finishing With Result. AuthCode: ");
-      var3.append(var1);
-      var3.append(", AuthServerUrl: ");
-      var3.append(var2);
-      Log.i$default(var4, "Samsung", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Finishing With Result. AuthCode: ");
+      var4.append(var1);
+      var4.append(", AuthServerUrl: ");
+      var4.append(var2);
+      Log.i$default(var3, "Samsung", var4.toString(), null, 4, null);
       if (var1 != null && !h.x(var1) && var2 != null && !h.x(var2)) {
          val var6: Intent = new Intent();
          var6.putExtra("com.discord.samsung.intent.extra.AUTH_CODE", var1);
@@ -380,15 +380,15 @@ public class SamsungConnectActivity : b {
          }
 
          public override fun toString(): String {
-            val var1: java.lang.String = this.authCode;
-            val var3: java.lang.String = this.serverUrl;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Success(authCode=");
-            var2.append(var1);
-            var2.append(", serverUrl=");
-            var2.append(var3);
-            var2.append(")");
-            return var2.toString();
+            val var3: java.lang.String = this.authCode;
+            val var2: java.lang.String = this.serverUrl;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Success(authCode=");
+            var1.append(var3);
+            var1.append(", serverUrl=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

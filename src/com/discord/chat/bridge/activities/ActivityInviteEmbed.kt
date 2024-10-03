@@ -246,105 +246,104 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var4: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
+         val var1: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
+         val var3: b2 = b2.a;
          val var2: KSerializer = a.u(b2.a);
-         val var3: h = h.a;
-         return new KSerializer[]{var2, h.a, var1, var1, a.u(var4[4]), n0.a, a.u(var1), a.u(var1), var3, var1};
+         val var4: h = h.a;
+         return new KSerializer[]{var2, h.a, var3, var3, a.u(var1[4]), n0.a, a.u(var3), a.u(var3), var4, var3};
       }
 
       public open fun deserialize(decoder: Decoder): ActivityInviteEmbed {
          q.h(var1, "decoder");
-         val var17: SerialDescriptor = this.getDescriptor();
-         val var18: c = var1.c(var17);
-         val var16: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
-         var var8: Boolean = var18.y();
+         val var18: SerialDescriptor = this.getDescriptor();
+         val var19: c = var1.c(var18);
+         var var15: Array<KSerializer> = ActivityInviteEmbed.access$get$childSerializers$cp();
+         var var8: Boolean = var19.y();
          var var5: Int = 9;
          var var3: Int;
          var var4: Int;
          var var9: java.lang.String;
          var var12: java.lang.String;
-         var var13: Any;
+         var var13: java.lang.String;
          var var14: java.lang.String;
-         val var15: java.lang.String;
-         var var20: java.lang.String;
-         val var30: java.lang.String;
+         val var16: java.lang.String;
+         var var21: java.lang.String;
          if (var8) {
-            val var19: b2 = b2.a;
-            var12 = var18.v(var17, 0, b2.a, null) as java.lang.String;
-            var3 = var18.s(var17, 1);
-            var14 = var18.t(var17, 2);
-            var15 = var18.t(var17, 3);
-            val var10: java.util.List = var18.v(var17, 4, var16[4], null) as java.util.List;
-            val var2: Int = var18.k(var17, 5);
-            val var11: java.lang.String = var18.v(var17, 6, var19, null) as java.lang.String;
-            var9 = var18.v(var17, 7, var19, null) as java.lang.String;
-            var8 = var18.s(var17, 8);
-            var20 = var18.t(var17, 9);
-            var4 = 1023;
-            var13 = var10;
-            var5 = var2;
-            var30 = var11;
+            val var20: b2 = b2.a;
+            var12 = var19.v(var18, 0, b2.a, null) as java.lang.String;
+            var3 = var19.s(var18, 1);
+            var13 = var19.t(var18, 2);
+            var14 = var19.t(var18, 3);
+            val var10: java.util.List = var19.v(var18, 4, var15[4], null) as java.util.List;
+            val var2: Int = var19.k(var18, 5);
+            val var11: java.lang.String = var19.v(var18, 6, var20, null) as java.lang.String;
+            var9 = var19.v(var18, 7, var20, null) as java.lang.String;
+            var8 = var19.s(var18, 8);
+            var21 = var19.t(var18, 9);
+            var5 = 1023;
+            var15 = var10;
+            var4 = var2;
+            var16 = var11;
          } else {
             var var6: Boolean = true;
             var8 = false;
-            var var21: Int = 0;
+            var var22: Int = 0;
             var3 = 0;
             var14 = null;
             var13 = null;
             var12 = null;
             var var26: java.lang.String = null;
             var9 = null;
-            var20 = null;
+            var21 = null;
             var var27: Any = null;
             var4 = 0;
 
             while (var6) {
-               val var7: Int = var18.x(var17);
+               val var7: Int = var19.x(var18);
                switch (var7) {
                   case -1:
                      var6 = false;
                      continue;
                   case 0:
-                     var12 = var18.v(var17, 0, b2.a, var12) as java.lang.String;
-                     var21 |= 1;
+                     var12 = var19.v(var18, 0, b2.a, var12) as java.lang.String;
+                     var22 |= 1;
                      var5 = 9;
                      continue;
                   case 1:
-                     var3 = var18.s(var17, 1);
-                     var21 |= 2;
+                     var3 = var19.s(var18, 1);
+                     var22 |= 2;
                      break;
                   case 2:
-                     var26 = var18.t(var17, 2);
-                     var21 |= 4;
+                     var26 = var19.t(var18, 2);
+                     var22 |= 4;
                      break;
                   case 3:
-                     var9 = var18.t(var17, 3);
-                     var21 |= 8;
+                     var9 = var19.t(var18, 3);
+                     var22 |= 8;
                      continue;
                   case 4:
-                     var27 = var18.v(var17, 4, var16[4], var27) as java.util.List;
-                     var21 |= 16;
+                     var27 = var19.v(var18, 4, var15[4], var27) as java.util.List;
+                     var22 |= 16;
                      continue;
                   case 5:
-                     var4 = var18.k(var17, 5);
-                     var21 |= 32;
+                     var4 = var19.k(var18, 5);
+                     var22 |= 32;
                      continue;
                   case 6:
-                     var13 = var18.v(var17, 6, b2.a, var13) as java.lang.String;
-                     var21 |= 64;
+                     var13 = var19.v(var18, 6, b2.a, var13) as java.lang.String;
+                     var22 |= 64;
                      continue;
                   case 7:
-                     var14 = var18.v(var17, 7, b2.a, var14) as java.lang.String;
-                     var21 |= 128;
+                     var14 = var19.v(var18, 7, b2.a, var14) as java.lang.String;
+                     var22 |= 128;
                      continue;
                   case 8:
-                     var8 = var18.s(var17, 8);
-                     var21 |= 256;
+                     var8 = var19.s(var18, 8);
+                     var22 |= 256;
                      continue;
                   case 9:
-                     var20 = var18.t(var17, var5);
-                     var21 |= 512;
+                     var21 = var19.t(var18, var5);
+                     var22 |= 512;
                      continue;
                   default:
                      throw new n(var7);
@@ -353,17 +352,16 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
                var5 = 9;
             }
 
-            var15 = var9;
             var9 = var14;
-            var30 = (java.lang.String)var13;
-            var5 = var4;
-            var13 = var27;
-            var14 = var26;
-            var4 = var21;
+            var16 = var13;
+            var15 = (KSerializer[])var27;
+            var14 = var9;
+            var13 = var26;
+            var5 = var22;
          }
 
-         var18.b(var17);
-         return new ActivityInviteEmbed(var4, var12, (boolean)var3, var14, var15, (java.util.List)var13, var5, var30, var9, var8, var20, null);
+         var19.b(var18);
+         return new ActivityInviteEmbed(var5, var12, (boolean)var3, var13, var14, var15, var4, var16, var9, var8, var21, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActivityInviteEmbed) {

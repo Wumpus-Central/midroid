@@ -110,18 +110,18 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
+      val var1: java.util.List = this.content;
       val var3: java.lang.String = this.target;
-      val var1: LinkContext = this.context;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LinkContentNode(content=");
-      var4.append(var2);
-      var4.append(", target=");
-      var4.append(var3);
-      var4.append(", context=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var4: LinkContext = this.context;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LinkContentNode(content=");
+      var2.append(var1);
+      var2.append(", target=");
+      var2.append(var3);
+      var2.append(", context=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : g0 {
@@ -158,10 +158,10 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          var var2: Int;
          var var5: Boolean;
          var var6: java.lang.String;
-         val var7: java.util.List;
+         var var8: java.util.List;
          var var12: java.lang.String;
          if (var11.y()) {
-            var7 = var11.m(var10, 0, var9[0], null) as java.util.List;
+            var8 = var11.m(var10, 0, var9[0], null) as java.util.List;
             var6 = var11.t(var10, 1);
             var9 = var11.v(var10, 2, LinkContext.$serializer.INSTANCE, null) as LinkContext;
             var12 = var11.t(var10, 3);
@@ -170,8 +170,8 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var var8: java.util.List = null;
-            var var14: java.lang.String = null;
+            var8 = null;
+            var var7: java.lang.String = null;
             var6 = null;
             var12 = null;
             var2 = 0;
@@ -198,7 +198,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
                            var2 |= 4;
                         }
                      } else {
-                        var14 = var11.t(var10, 1);
+                        var7 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -211,12 +211,11 @@ public data class LinkContentNode(content: List<ContentNode>, target: String, co
             }
 
             var9 = var6;
-            var6 = var14;
-            var7 = var8;
+            var6 = var7;
          }
 
          var11.b(var10);
-         return new LinkContentNode(var2, var7, var6, var9, var12, var5, null);
+         return new LinkContentNode(var2, var8, var6, var9, var12, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LinkContentNode) {

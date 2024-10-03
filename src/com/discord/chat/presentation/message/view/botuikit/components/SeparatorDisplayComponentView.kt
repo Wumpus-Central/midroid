@@ -84,6 +84,10 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       return g0.b(SeparatorDisplayComponent.class);
    }
 
+   override fun onRecycle(var1: ComponentProvider) {
+      ComponentView.DefaultImpls.onRecycle(this, var1);
+   }
+
    public companion object {
       public fun inflateComponent(context: Context, root: ViewGroup): SeparatorDisplayComponentView {
          q.h(var1, "context");

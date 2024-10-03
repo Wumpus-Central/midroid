@@ -160,10 +160,10 @@ public open class RLottieImageView : m {
          }
 
          for (Entry var16 : this.layerColors.entrySet()) {
-            val var11: java.lang.String = var16.getKey() as java.lang.String;
+            val var15: java.lang.String = var16.getKey() as java.lang.String;
             var1 = (var16.getValue() as java.lang.Number).intValue();
             if (this.drawable != null) {
-               this.drawable.setLayerColor(var11, var1);
+               this.drawable.setLayerColor(var15, var1);
             }
          }
 

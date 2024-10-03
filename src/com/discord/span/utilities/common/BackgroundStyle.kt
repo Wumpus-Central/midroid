@@ -56,13 +56,13 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
    }
 
    public override fun toString(): String {
-      val var2: Int = this.backgroundColor;
-      val var1: Int = this.cornerRadius;
+      val var1: Int = this.backgroundColor;
+      val var2: Int = this.cornerRadius;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BackgroundStyle(backgroundColor=");
-      var3.append(var2);
-      var3.append(", cornerRadius=");
       var3.append(var1);
+      var3.append(", cornerRadius=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

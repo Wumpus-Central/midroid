@@ -97,21 +97,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var2: java.lang.Boolean = this.primary;
-      val var5: java.lang.Boolean = this.secondary;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapInviteEvent(messageId=");
-      var4.append(var3);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", primary=");
-      var4.append(var2);
-      var4.append(", secondary=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.Boolean = this.primary;
+      val var2: java.lang.Boolean = this.secondary;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapInviteEvent(messageId=");
+      var5.append(var4);
+      var5.append(", index=");
+      var5.append(var1);
+      var5.append(", primary=");
+      var5.append(var3);
+      var5.append(", secondary=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : g0 {
@@ -134,36 +134,38 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: h = h.a;
-         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var1)};
+         val var2: h = h.a;
+         return new KSerializer[]{b2.a, n0.a, a.u(h.a), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): TapInviteEvent {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
          var var2: Int;
-         val var4: Int;
-         var var6: java.lang.Boolean;
+         var var3: Int;
          var var7: java.lang.String;
-         var var11: java.lang.Boolean;
-         if (var9.y()) {
-            var7 = var9.t(var8, 0);
-            var2 = var9.k(var8, 1);
-            val var10: h = h.a;
-            var6 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
-            var11 = var9.v(var8, 3, var10, null) as java.lang.Boolean;
-            var4 = 15;
+         var var12: java.lang.Boolean;
+         var var13: java.lang.Boolean;
+         if (var10.y()) {
+            val var6: java.lang.String = var10.t(var9, 0);
+            var3 = var10.k(var9, 1);
+            val var11: h = h.a;
+            val var8: java.lang.Boolean = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
+            var12 = var10.v(var9, 3, var11, null) as java.lang.Boolean;
+            var2 = 15;
+            var7 = var6;
+            var13 = var8;
          } else {
-            var var13: Boolean = true;
-            var var3: Int = 0;
+            var var4: Boolean = true;
+            var3 = 0;
             var7 = null;
-            var6 = null;
-            var11 = null;
+            var13 = null;
+            var12 = null;
             var2 = 0;
 
-            while (var13) {
-               val var5: Int = var9.x(var8);
+            while (var4) {
+               val var5: Int = var10.x(var9);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -172,31 +174,28 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
                               throw new n(var5);
                            }
 
-                           var11 = var9.v(var8, 3, h.a, var11) as java.lang.Boolean;
+                           var12 = var10.v(var9, 3, h.a, var12) as java.lang.Boolean;
                            var2 |= 8;
                         } else {
-                           var6 = var9.v(var8, 2, h.a, var6) as java.lang.Boolean;
+                           var13 = var10.v(var9, 2, h.a, var13) as java.lang.Boolean;
                            var2 |= 4;
                         }
                      } else {
-                        var3 = var9.k(var8, 1);
+                        var3 = var10.k(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.t(var8, 0);
+                     var7 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var4 = false;
                }
             }
-
-            var4 = var2;
-            var2 = var3;
          }
 
-         var9.b(var8);
-         return new TapInviteEvent(var4, var7, var2, var6, var11, null);
+         var10.b(var9);
+         return new TapInviteEvent(var2, var7, var3, var13, var12, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInviteEvent) {

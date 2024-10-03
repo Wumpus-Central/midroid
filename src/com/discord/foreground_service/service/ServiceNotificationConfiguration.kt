@@ -113,27 +113,27 @@ internal data class ServiceNotificationConfiguration(title: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.title;
-      val var2: java.lang.String = this.content;
-      val var7: ServiceNotificationConfiguration.Priority = this.priority;
+      val var1: java.lang.String = this.title;
+      val var5: java.lang.String = this.content;
+      val var3: ServiceNotificationConfiguration.Priority = this.priority;
       val var4: ServiceNotificationConfiguration.Action = this.contentAction;
-      val var6: java.util.List = this.auxiliaryActions;
-      val var1: ServiceNotificationConfiguration.Type = this.type;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ServiceNotificationConfiguration(title=");
-      var5.append(var3);
-      var5.append(", content=");
-      var5.append(var2);
-      var5.append(", priority=");
-      var5.append(var7);
-      var5.append(", contentAction=");
-      var5.append(var4);
-      var5.append(", auxiliaryActions=");
-      var5.append(var6);
-      var5.append(", type=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.util.List = this.auxiliaryActions;
+      val var6: ServiceNotificationConfiguration.Type = this.type;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ServiceNotificationConfiguration(title=");
+      var7.append(var1);
+      var7.append(", content=");
+      var7.append(var5);
+      var7.append(", priority=");
+      var7.append(var3);
+      var7.append(", contentAction=");
+      var7.append(var4);
+      var7.append(", auxiliaryActions=");
+      var7.append(var2);
+      var7.append(", type=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public data class Action(tag: String, taskName: String, title: String?, data: Map<String, String>) {
@@ -209,21 +209,21 @@ internal data class ServiceNotificationConfiguration(title: String,
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.tag;
-         val var3: java.lang.String = this.taskName;
-         val var4: java.lang.String = this.title;
+         val var4: java.lang.String = this.tag;
+         val var1: java.lang.String = this.taskName;
+         val var5: java.lang.String = this.title;
          val var2: java.util.Map = this.data;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Action(tag=");
-         var5.append(var1);
-         var5.append(", taskName=");
-         var5.append(var3);
-         var5.append(", title=");
-         var5.append(var4);
-         var5.append(", data=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Action(tag=");
+         var3.append(var4);
+         var3.append(", taskName=");
+         var3.append(var1);
+         var3.append(", title=");
+         var3.append(var5);
+         var3.append(", data=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 
