@@ -25,7 +25,6 @@ internal object ClientInfoCache {
          var2 = UUID.randomUUID().toString();
          q.g(var2, "toString(...)");
          val var4: Editor = INSTANCE.getCache(var1).edit();
-         q.g(var4, "editor");
          var4.putString("DeviceVendorID", var2);
          var4.apply();
       }

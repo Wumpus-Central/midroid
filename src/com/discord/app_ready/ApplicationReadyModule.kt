@@ -1,12 +1,12 @@
 package com.discord.app_ready
 
-import com.discord.codegen.NativeApplicationReadyManagerSpec
+import com.discord.codegen.NativeApplicationReadyModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import h1.a
 import kotlin.jvm.internal.q
-import l3.a
 
-public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyManagerSpec {
+public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
@@ -21,9 +21,5 @@ public class ApplicationReadyModule(reactContext: ReactApplicationContext) : Nat
 
    public override fun applicationReady(promise: Promise?) {
       this.getReactApplicationContext().runOnNativeModulesQueueThread(new a(var1));
-   }
-
-   public companion object {
-      public const val NAME: String
    }
 }

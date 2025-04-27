@@ -1,12 +1,12 @@
 package com.discord.chat.bridge
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.p0
+import ba.G.a
 import com.discord.primitives.MessageId
-import fl.b2
-import fl.g0
-import fl.o1
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -24,7 +24,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
 
    fun ErrorMessage(var1: Int, var2: java.lang.String, var3: java.lang.String, var4: SerializationConstructorMarker) {
       if (3 != (var1 and 3)) {
-         o1.b(var1, 3, ErrorMessage.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 3, ErrorMessage.$serializer.INSTANCE.getDescriptor());
       }
 
       super(var1, var4);
@@ -85,7 +85,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -103,7 +103,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{MessageId.$serializer.INSTANCE, b2.a};
+         return new KSerializer[]{MessageId.$serializer.INSTANCE, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): ErrorMessage {
@@ -113,6 +113,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          val var5: Boolean = var9.y();
          var var10: java.lang.String = null;
          var var2: Int;
+         var var11: java.lang.String;
          var var12: java.lang.String;
          if (var5) {
             val var6: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -120,12 +121,14 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                var10 = var6.unbox-impl();
             }
 
-            var12 = var9.t(var8, 1);
+            val var7: java.lang.String = var9.t(var8, 1);
             var2 = 3;
+            var12 = var10;
+            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var11: java.lang.String = null;
+            var11 = null;
             var12 = null;
 
             while (var3) {
@@ -139,16 +142,16 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                      var11 = var9.t(var8, 1);
                      var2 |= 2;
                   } else {
-                     val var14: MessageId;
+                     val var13: MessageId;
                      if (var12 != null) {
-                        var14 = MessageId.box-impl(var12);
+                        var13 = MessageId.box-impl(var12);
                      } else {
-                        var14 = null;
+                        var13 = null;
                      }
 
-                     val var15: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var14) as MessageId;
-                     if (var15 != null) {
-                        var12 = var15.unbox-impl();
+                     val var14: MessageId = var9.m(var8, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
+                     if (var14 != null) {
+                        var12 = var14.unbox-impl();
                      } else {
                         var12 = null;
                      }
@@ -159,13 +162,10 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
                   var3 = false;
                }
             }
-
-            var12 = var11;
-            var10 = var12;
          }
 
          var9.b(var8);
-         return new ErrorMessage(var2, var10, var12, null, null);
+         return new ErrorMessage(var2, var12, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ErrorMessage) {

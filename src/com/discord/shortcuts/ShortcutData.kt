@@ -1,11 +1,10 @@
 package com.discord.shortcuts
 
+import L9.j
 import android.content.Context
 import android.content.Intent
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
-import lh.r
-import pk.j
 
 public data class ShortcutData(tag: String, data: Map<String, String>) {
    public final val data: Map<String, String>
@@ -53,15 +52,15 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var1: java.util.Map = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ShortcutData(tag=");
-      var2.append(var3);
-      var2.append(", data=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.tag;
+      val var2: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ShortcutData(tag=");
+      var3.append(var1);
+      var3.append(", data=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {
@@ -102,10 +101,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = r.c();
+            val var11: java.util.Map = g8.q.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
-               val var7: Sequence = c.u(var6);
+               val var7: Sequence = c.v(var6);
                if (var7 != null) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
@@ -120,7 +119,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                }
             }
 
-            var10 = new ShortcutData(var2, r.b(var11));
+            var10 = new ShortcutData(var2, g8.q.b(var11));
          } else {
             var10 = null;
          }

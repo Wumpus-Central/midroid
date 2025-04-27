@@ -6,6 +6,6 @@ import com.discord.simpleast.core.node.StyleNode;
 public final class f implements StyleNode.SpanProvider {
    @Override
    public final Iterable get(Object var1) {
-      return CodeStyle.b((RenderContext)var1);
+      return CodeStyle.h((RenderContext)var1);
    }
 }

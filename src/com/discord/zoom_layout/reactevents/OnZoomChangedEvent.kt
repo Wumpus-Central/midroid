@@ -1,13 +1,12 @@
 package com.discord.zoom_layout.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.F
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import fl.f0
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -47,8 +46,8 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       return java.lang.Float.hashCode(this.zoomScale);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -60,7 +59,7 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -77,7 +76,7 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{f0.a};
+         return new KSerializer[]{F.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnZoomChangedEvent {
@@ -85,13 +84,13 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var6: Boolean = var8.y();
-         var var3: Int = 1;
-         var var4: Boolean = true;
+         var var3: Byte = 1;
          var var2: Float;
          if (var6) {
             var2 = var8.G(var7, 0);
          } else {
             var2 = 0.0F;
+            var var4: Boolean = true;
             var3 = 0;
 
             while (var4) {
@@ -102,7 +101,7 @@ internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
                   }
 
                   var2 = var8.G(var7, 0);
-                  var3 |= 1;
+                  var3 = 1;
                } else {
                   var4 = false;
                }

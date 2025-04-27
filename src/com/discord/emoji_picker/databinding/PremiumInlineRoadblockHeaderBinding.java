@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.emoji_picker.R;
-import o1.a;
+import u0.a;
 
 public final class PremiumInlineRoadblockHeaderBinding implements ViewBinding {
    public final View gradient;
@@ -33,12 +33,12 @@ public final class PremiumInlineRoadblockHeaderBinding implements ViewBinding {
          View var3 = a.a(var0, var1);
          if (var3 != null) {
             var1 = R.id.gradient_icon;
-            FrameLayout var5 = (FrameLayout)a.a(var0, var1);
-            if (var5 != null) {
+            FrameLayout var4 = (FrameLayout)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.gradients;
-               LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-               if (var4 != null) {
-                  return new PremiumInlineRoadblockHeaderBinding((RelativeLayout)var0, var2, var3, var5, var4);
+               LinearLayout var5 = (LinearLayout)a.a(var0, var1);
+               if (var5 != null) {
+                  return new PremiumInlineRoadblockHeaderBinding((RelativeLayout)var0, var2, var3, var4, var5);
                }
             }
          }

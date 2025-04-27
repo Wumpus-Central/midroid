@@ -22,7 +22,8 @@ public class ActivityBookmarkViewHolder(activityBookmarkView: ActivityBookmarkVi
    fun `bind$lambda$1$lambda$0`(var0: ActivityBookmarkEmbedImpl, var1: ActivityBookmarkViewHolder, var2: View) {
       kotlin.jvm.internal.q.h(var0, "$activityBookmarkEmbed");
       kotlin.jvm.internal.q.h(var1, "this$0");
-      var1.eventHandler.onTapActivityBookmarkEmbed-uU1mFKc(var0.getApplicationId-VavddsQ(), var0.getChannelId-o4g7jtM());
+      var1.eventHandler
+         .onTapActivityBookmarkEmbed-TySkC8w(var0.getApplicationId-VavddsQ(), var0.getChannelId-o4g7jtM(), var0.getReferrerId(), var0.getCustomId());
    }
 
    public fun bind(activityMessageAccessory: ActivityBookmarkMessageAccessory) {

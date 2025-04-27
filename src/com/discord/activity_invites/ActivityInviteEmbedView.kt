@@ -1,5 +1,7 @@
 package com.discord.activity_invites
 
+import J1.f
+import R1.c
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
@@ -23,12 +25,10 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
+import f8.l
+import f8.o
 import java.util.ArrayList
-import kh.l
-import kh.o
 import kotlin.jvm.internal.q
-import p4.f
-import x4.c
 
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ActivityInviteEmbedViewBinding
@@ -96,7 +96,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          var4 = new ActivityInviteEmbedView.ImageConfig.End(var1, true, false);
       } else {
          if (var2 || var3) {
-            throw new IllegalStateException("this can never happen.".toString());
+            throw new IllegalStateException("this can never happen.");
          }
 
          var4 = new ActivityInviteEmbedView.ImageConfig.End(var1, true, true);
@@ -158,7 +158,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       val var5: OverlappingCirclesView = this.binding.avatars;
       q.g(this.binding.avatars, "avatars");
       val var2: Byte;
-      if (var3.isEmpty() xor true) {
+      if (!var3.isEmpty()) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -362,15 +362,15 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
          public override fun toString(): String {
             val var4: java.lang.String = this.uri;
-            val var1: Boolean = this.fullSize;
-            val var2: Boolean = this.grayscale;
+            val var2: Boolean = this.fullSize;
+            val var1: Boolean = this.grayscale;
             val var3: StringBuilder = new StringBuilder();
             var3.append("End(uri=");
             var3.append(var4);
             var3.append(", fullSize=");
-            var3.append(var1);
-            var3.append(", grayscale=");
             var3.append(var2);
+            var3.append(", grayscale=");
+            var3.append(var1);
             var3.append(")");
             return var3.toString();
          }

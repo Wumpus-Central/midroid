@@ -1,12 +1,13 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.G
+import ba.N
+import ba.y
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,25 +18,48 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-internal data class FirstLayoutData(firstVisibleMessageIndex: Int, lastVisibleMessageIndex: Int) : ReactEvent {
+internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
+      firstVisibleMessagePercentVisible: Double?,
+      lastVisibleMessageIndex: Int,
+      lastVisibleMessagePercentVisible: Double?
+   ) :
+   ReactEvent {
    public final val firstVisibleMessageIndex: Int
+   public final val firstVisibleMessagePercentVisible: Double?
    public final val lastVisibleMessageIndex: Int
+   public final val lastVisibleMessagePercentVisible: Double?
 
    init {
+      super();
       this.firstVisibleMessageIndex = var1;
-      this.lastVisibleMessageIndex = var2;
+      this.firstVisibleMessagePercentVisible = var2;
+      this.lastVisibleMessageIndex = var3;
+      this.lastVisibleMessagePercentVisible = var4;
    }
 
    public operator fun component1(): Int {
       return this.firstVisibleMessageIndex;
    }
 
-   public operator fun component2(): Int {
+   public operator fun component2(): Double? {
+      return this.firstVisibleMessagePercentVisible;
+   }
+
+   public operator fun component3(): Int {
       return this.lastVisibleMessageIndex;
    }
 
-   public fun copy(firstVisibleMessageIndex: Int = var0.firstVisibleMessageIndex, lastVisibleMessageIndex: Int = var0.lastVisibleMessageIndex): FirstLayoutData {
-      return new FirstLayoutData(var1, var2);
+   public operator fun component4(): Double? {
+      return this.lastVisibleMessagePercentVisible;
+   }
+
+   public fun copy(
+      firstVisibleMessageIndex: Int = var0.firstVisibleMessageIndex,
+      firstVisibleMessagePercentVisible: Double? = var0.firstVisibleMessagePercentVisible,
+      lastVisibleMessageIndex: Int = var0.lastVisibleMessageIndex,
+      lastVisibleMessagePercentVisible: Double? = var0.lastVisibleMessagePercentVisible
+   ): FirstLayoutData {
+      return new FirstLayoutData(var1, var2, var3, var4);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -47,14 +71,32 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int, lastVisibleMe
          var1 = var1;
          if (this.firstVisibleMessageIndex != var1.firstVisibleMessageIndex) {
             return false;
+         } else if (!q.c(this.firstVisibleMessagePercentVisible, var1.firstVisibleMessagePercentVisible)) {
+            return false;
+         } else if (this.lastVisibleMessageIndex != var1.lastVisibleMessageIndex) {
+            return false;
          } else {
-            return this.lastVisibleMessageIndex == var1.lastVisibleMessageIndex;
+            return q.c(this.lastVisibleMessagePercentVisible, var1.lastVisibleMessagePercentVisible);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return Integer.hashCode(this.firstVisibleMessageIndex) * 31 + Integer.hashCode(this.lastVisibleMessageIndex);
+      val var3: Int = Integer.hashCode(this.firstVisibleMessageIndex);
+      var var2: Int = 0;
+      val var1: Int;
+      if (this.firstVisibleMessagePercentVisible == null) {
+         var1 = 0;
+      } else {
+         var1 = this.firstVisibleMessagePercentVisible.hashCode();
+      }
+
+      val var4: Int = Integer.hashCode(this.lastVisibleMessageIndex);
+      if (this.lastVisibleMessagePercentVisible != null) {
+         var2 = this.lastVisibleMessagePercentVisible.hashCode();
+      }
+
+      return ((var3 * 31 + var1) * 31 + var4) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -62,18 +104,24 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int, lastVisibleMe
    }
 
    public override fun toString(): String {
-      val var1: Int = this.firstVisibleMessageIndex;
-      val var2: Int = this.lastVisibleMessageIndex;
+      val var2: Int = this.firstVisibleMessageIndex;
+      val var4: java.lang.Double = this.firstVisibleMessagePercentVisible;
+      val var1: Int = this.lastVisibleMessageIndex;
+      val var5: java.lang.Double = this.lastVisibleMessagePercentVisible;
       val var3: StringBuilder = new StringBuilder();
       var3.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var3.append(var1);
-      var3.append(", lastVisibleMessageIndex=");
       var3.append(var2);
+      var3.append(", firstVisibleMessagePercentVisible=");
+      var3.append(var4);
+      var3.append(", lastVisibleMessageIndex=");
+      var3.append(var1);
+      var3.append(", lastVisibleMessagePercentVisible=");
+      var3.append(var5);
       var3.append(")");
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -84,55 +132,80 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int, lastVisibleMe
       fun {
          val var0: FirstLayoutData.$serializer = new FirstLayoutData.$serializer();
          INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.FirstLayoutData", var0, 2);
+         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.FirstLayoutData", var0, 4);
          var1.l("firstVisibleMessageIndex", false);
+         var1.l("firstVisibleMessagePercentVisible", false);
          var1.l("lastVisibleMessageIndex", false);
+         var1.l("lastVisibleMessagePercentVisible", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, n0.a};
+         val var2: y = y.a;
+         return new KSerializer[]{N.a, a.u(y.a), N.a, a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): FirstLayoutData {
          q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         var var2: Int;
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
          var var3: Int;
          var var4: Int;
-         if (var8.y()) {
-            var3 = var8.k(var7, 0);
-            var4 = var8.k(var7, 1);
-            var2 = 3;
+         val var5: Int;
+         var var7: java.lang.Double;
+         var var11: java.lang.Double;
+         if (var9.y()) {
+            var3 = var9.k(var8, 0);
+            val var10: y = y.a;
+            var7 = var9.v(var8, 1, y.a, null) as java.lang.Double;
+            val var2: Int = var9.k(var8, 2);
+            var11 = var9.v(var8, 3, var10, null) as java.lang.Double;
+            var4 = 15;
+            var5 = var2;
          } else {
-            var var5: Boolean = true;
-            var3 = 0;
+            var var15: Boolean = true;
             var4 = 0;
-            var2 = 0;
+            var var12: Int = 0;
+            var7 = null;
+            var11 = null;
+            var3 = 0;
 
-            while (var5) {
-               val var6: Int = var8.x(var7);
+            while (var15) {
+               val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
-                        throw new n(var6);
-                     }
+                        if (var6 != 2) {
+                           if (var6 != 3) {
+                              throw new n(var6);
+                           }
 
-                     var4 = var8.k(var7, 1);
-                     var2 |= 2;
+                           var11 = var9.v(var8, 3, y.a, var11) as java.lang.Double;
+                           var12 |= 8;
+                        } else {
+                           var3 = var9.k(var8, 2);
+                           var12 |= 4;
+                        }
+                     } else {
+                        var7 = var9.v(var8, 1, y.a, var7) as java.lang.Double;
+                        var12 |= 2;
+                     }
                   } else {
-                     var3 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var4 = var9.k(var8, 0);
+                     var12 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var15 = false;
                }
             }
+
+            var5 = var3;
+            var3 = var4;
+            var4 = var12;
          }
 
-         var8.b(var7);
-         return new FirstLayoutData(var2, var3, var4, null);
+         var9.b(var8);
+         return new FirstLayoutData(var4, var3, var7, var5, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstLayoutData) {
@@ -145,7 +218,7 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int, lastVisibleMe
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

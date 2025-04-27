@@ -83,7 +83,7 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.h(var4, "onHelpArticleClicked");
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
       this.binding.chatListAdapterItemIconHelp.setContentDescription(var2.getHelpButtonAccessibilityLabel());
-      var6.setOnClickListener(new x(var4, var2));
+      var6.setOnClickListener(new z(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
       kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextDismiss);
       val var9: StructurableText = var2.getContent();
@@ -108,7 +108,7 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
             kotlin.jvm.internal.q.h(var1, "node");
             this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
          }
-      }, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var5, null, 12582656, null);
+      }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var5, null, 50331392, null);
       SpannableExtensionsKt.coverWithSpan(var8, new BackgroundSpanDrawer(var10));
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var10, var8);
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var10, false, 1, null);

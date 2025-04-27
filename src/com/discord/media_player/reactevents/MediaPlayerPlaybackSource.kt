@@ -1,14 +1,14 @@
 package com.discord.media_player.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
+import ba.p0
 import com.discord.media_player.MediaSource
 import com.discord.primitives.MessageId
-import dl.a
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -39,7 +39,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       var7: SerializationConstructorMarker
    ) {
       if (31 != (var1 and 31)) {
-         o1.b(var1, 31, MediaPlayerPlaybackSource.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 31, MediaPlayerPlaybackSource.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -89,17 +89,34 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       } else if (var1 !is MediaPlayerPlaybackSource) {
          return false;
       } else {
-         val var2: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
+         val var3: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
          if (!q.c(this.id, (var1 as MediaPlayerPlaybackSource).id)) {
             return false;
-         } else if (!q.c(this.assetUrl, var2.assetUrl)) {
+         } else if (!q.c(this.assetUrl, var3.assetUrl)) {
             return false;
-         } else if (!q.c(this.channelId, var2.channelId)) {
+         } else if (!q.c(this.channelId, var3.channelId)) {
             return false;
-         } else if (if (this.messageId == null) var2.messageId == null else var2.messageId != null && MessageId.equals-impl0(this.messageId, var2.messageId)) {
-            return q.c(this.attachmentIndex, var2.attachmentIndex);
          } else {
-            return false;
+            var var2: Boolean;
+            label37: {
+               if (this.messageId == null) {
+                  if (var3.messageId == null) {
+                     var2 = true;
+                     break label37;
+                  }
+               } else if (var3.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
+                  break label37;
+               }
+
+               var2 = false;
+            }
+
+            if (!var2) {
+               return false;
+            } else {
+               return q.c(this.attachmentIndex, var3.attachmentIndex);
+            }
          }
       }
    }
@@ -142,9 +159,9 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.assetUrl;
-      val var2: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.id;
+      val var3: java.lang.String = this.assetUrl;
+      val var4: java.lang.String = this.channelId;
       val var7: java.lang.String;
       if (this.messageId == null) {
          var7 = "null";
@@ -152,23 +169,23 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
          var7 = MessageId.toString-impl(this.messageId);
       }
 
-      val var5: Int = this.attachmentIndex;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MediaPlayerPlaybackSource(id=");
-      var6.append(var3);
-      var6.append(", assetUrl=");
-      var6.append(var4);
-      var6.append(", channelId=");
-      var6.append(var2);
-      var6.append(", messageId=");
-      var6.append(var7);
-      var6.append(", attachmentIndex=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var6: Int = this.attachmentIndex;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaPlayerPlaybackSource(id=");
+      var5.append(var2);
+      var5.append(", assetUrl=");
+      var5.append(var3);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", messageId=");
+      var5.append(var7);
+      var5.append(", attachmentIndex=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -191,8 +208,8 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), a.u(var1), a.u(var1), a.u(MessageId.$serializer.INSTANCE), a.u(n0.a)};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), a.u(var1), a.u(var1), a.u(MessageId.$serializer.INSTANCE), a.u(N.a)};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackSource {
@@ -200,16 +217,16 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.c(var11);
          var var2: Int;
-         var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: java.lang.String;
          val var9: java.lang.String;
          val var10: Any;
+         var var17: java.lang.String;
          if (var12.y()) {
-            val var13: b2 = b2.a;
-            var9 = var12.v(var11, 0, b2.a, null) as java.lang.String;
+            val var13: C0 = C0.a;
+            var8 = var12.v(var11, 0, C0.a, null) as java.lang.String;
             var7 = var12.v(var11, 1, var13, null) as java.lang.String;
-            var6 = var12.v(var11, 2, var13, null) as java.lang.String;
+            var17 = var12.v(var11, 2, var13, null) as java.lang.String;
             val var14: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var15: java.lang.String;
             if (var14 != null) {
@@ -218,17 +235,18 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                var15 = null;
             }
 
-            val var5: Int = var12.v(var11, 4, n0.a, null) as Int;
+            val var6: Int = var12.v(var11, 4, N.a, null) as Int;
             var2 = 31;
-            var8 = var15;
-            var10 = var5;
+            var9 = var17;
+            var17 = var15;
+            var10 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var8 = null;
-            var6 = null;
-            var var17: java.lang.String = null;
+            var var19: Any = null;
+            var17 = null;
             var var16: java.lang.String = null;
 
             while (var3) {
@@ -242,19 +260,19 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                                  throw new n(var4);
                               }
 
-                              var6 = var12.v(var11, 4, n0.a, var6) as Int;
+                              var19 = var12.v(var11, 4, N.a, var19) as Int;
                               var2 |= 16;
                            } else {
-                              val var20: MessageId;
+                              val var23: MessageId;
                               if (var8 != null) {
-                                 var20 = MessageId.box-impl(var8);
+                                 var23 = MessageId.box-impl(var8);
                               } else {
-                                 var20 = null;
+                                 var23 = null;
                               }
 
-                              val var21: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, var20) as MessageId;
-                              if (var21 != null) {
-                                 var8 = var21.unbox-impl();
+                              val var24: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, var23) as MessageId;
+                              if (var24 != null) {
+                                 var8 = var24.unbox-impl();
                               } else {
                                  var8 = null;
                               }
@@ -262,15 +280,15 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var12.v(var11, 2, b2.a, var7) as java.lang.String;
+                           var7 = var12.v(var11, 2, C0.a, var7) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var17 = var12.v(var11, 1, b2.a, var17) as java.lang.String;
+                        var17 = var12.v(var11, 1, C0.a, var17) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
-                     var16 = var12.v(var11, 0, b2.a, var16) as java.lang.String;
+                     var16 = var12.v(var11, 0, C0.a, var16) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -278,14 +296,15 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                }
             }
 
-            var10 = var6;
-            var6 = var7;
+            var10 = var19;
+            var17 = var8;
+            var9 = var7;
             var7 = var17;
-            var9 = var16;
+            var8 = var16;
          }
 
          var12.b(var11);
-         return new MediaPlayerPlaybackSource(var2, var9, var7, var6, var8, (Integer)var10, null, null);
+         return new MediaPlayerPlaybackSource(var2, var8, var7, var9, var17, (Integer)var10, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackSource) {
@@ -298,7 +317,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

@@ -14,6 +14,6 @@ public final class c implements OnClickListener {
    public final MessagePartViewHolder m;
 
    public final void onClick(View var1) {
-      MediaGalleryDisplayComponentAdapter.b(this.j, this.k, this.l, this.m, var1);
+      MediaGalleryDisplayComponentAdapter.a(this.j, this.k, this.l, this.m, var1);
    }
 }

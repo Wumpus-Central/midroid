@@ -12,42 +12,42 @@ import kotlin.jvm.internal.q
 public fun MessageRow.getMessageContext(): MessageContext {
    q.h(var0, "<this>");
    val var9: MessageFrame = var0.getMessageFrame();
-   val var17: MessageFrameType;
+   val var18: MessageFrameType;
    if (var9 != null) {
-      var17 = var9.getType();
+      var18 = var9.getType();
    } else {
-      var17 = null;
+      var18 = null;
    }
 
    val var1: Boolean;
-   if (var17 === MessageFrameType.JUMP_MESSAGE_FRAME) {
+   if (var18 === MessageFrameType.JUMP_MESSAGE_FRAME) {
       var1 = true;
    } else {
       var1 = false;
    }
 
-   val var18: java.lang.Boolean = var0.getCanAddNewReactions();
+   val var19: java.lang.Boolean = var0.getCanAddNewReactions();
    val var13: java.lang.Boolean = java.lang.Boolean.TRUE;
-   val var8: Boolean = q.c(var18, java.lang.Boolean.TRUE);
+   val var8: Boolean = q.c(var19, java.lang.Boolean.TRUE);
    var var10: java.lang.String = var0.getAddReactionLabel();
-   var var11: java.lang.String = "";
-   var var19: java.lang.String = var10;
+   var var20: java.lang.String = var10;
    if (var10 == null) {
-      var19 = "";
+      var20 = "";
    }
 
-   var var12: java.lang.String = var0.getAddNewReactionAccessibilityLabel();
-   var10 = var12;
-   if (var12 == null) {
+   var var11: java.lang.String = var0.getAddNewReactionAccessibilityLabel();
+   var10 = var11;
+   if (var11 == null) {
       var10 = "";
    }
 
-   var12 = var0.getAddNewBurstReactionAccessibilityLabel();
-   if (var12 != null) {
-      var11 = var12;
+   val var12: java.lang.String = var0.getAddNewBurstReactionAccessibilityLabel();
+   var11 = var12;
+   if (var12 == null) {
+      var11 = "";
    }
 
-   val var14: ReactionsTheme = var0.getReactionsTheme();
+   val var16: ReactionsTheme = var0.getReactionsTheme();
    val var2: Boolean;
    if (var0.getMessage() is Message && q.c((var0.getMessage() as Message).getUsingGradientTheme(), var13)) {
       var2 = true;
@@ -91,11 +91,26 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var7 = false;
    }
 
-   val var22: MessageContextType = var0.getContextType();
-   var var16: MessageContextType = var22;
-   if (var22 == null) {
-      var16 = MessageContextType.DEFAULT;
+   val var24: MessageContextType = var0.getContextType();
+   var var23: MessageContextType = var24;
+   if (var24 == null) {
+      var23 = MessageContextType.DEFAULT;
    }
 
-   return new MessageContext(var1, var8, var19, var10, var11, var14, var2, var15, var3, var4, var5, var6, var7, null, var16, 8192, null);
+   var var25: java.lang.String = var0.getReplyAccessibilityLabel();
+   if (var25 == null) {
+      var25 = "";
+   }
+
+   var var14: java.lang.String = var0.getForwardAccessibilityLabel();
+   if (var14 == null) {
+      var14 = "";
+   }
+
+   var var17: java.lang.String = var0.getThreadAccessibilityLabel();
+   if (var17 == null) {
+      var17 = "";
+   }
+
+   return new MessageContext(var1, var8, var20, var10, var11, var16, var2, var15, var3, var4, var5, var6, var7, null, var23, var25, var14, var17, 8192, null);
 }

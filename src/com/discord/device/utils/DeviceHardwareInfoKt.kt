@@ -1,13 +1,12 @@
 package com.discord.device.utils
 
+import android.app.ActivityManager
+import android.app.ActivityManager.MemoryInfo
+import android.content.Context
 import android.os.Build.VERSION
-import java.io.File
-import java.io.FileReader
-import java.io.IOException
 import java.util.Arrays
 import java.util.Locale
-import java.util.Scanner
-import kotlin.jvm.internal.l0
+import kotlin.jvm.internal.J
 import kotlin.jvm.internal.q
 
 internal fun getNumCpuCores(): Int {
@@ -15,107 +14,317 @@ internal fun getNumCpuCores(): Int {
 }
 
 internal fun getSocFromProcCpuInfo(): String {
-   val var1: Scanner = new Scanner(new File("/proc/cpuinfo"));
-
-   var var0: java.lang.String;
-   while (true) {
-      if (var1.hasNextLine()) {
-         var0 = var1.nextLine();
-         q.e(var0);
-         if (!h.H(var0, "Hardware", false, 2, null)) {
-            continue;
-         }
-
-         var0 = h.X0(h.z0(var0, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString();
-         break;
-      }
-
-      var0 = "";
-      break;
-   }
-
-   return var0;
+   // $VF: Couldn't be decompiled
+   // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+   //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+   //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+   //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+   //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+   //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+   //
+   // Bytecode:
+   // 00: ldc ""
+   // 02: astore 1
+   // 03: new java/io/File
+   // 06: astore 4
+   // 08: aload 4
+   // 0a: ldc "/proc/cpuinfo"
+   // 0c: invokespecial java/io/File.<init> (Ljava/lang/String;)V
+   // 0f: getstatic M9/a.b Ljava/nio/charset/Charset;
+   // 12: astore 2
+   // 13: new java/io/InputStreamReader
+   // 16: astore 0
+   // 17: new java/io/FileInputStream
+   // 1a: astore 3
+   // 1b: aload 3
+   // 1c: aload 4
+   // 1e: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
+   // 21: aload 0
+   // 22: aload 3
+   // 23: aload 2
+   // 24: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
+   // 27: new java/io/BufferedReader
+   // 2a: astore 2
+   // 2b: aload 2
+   // 2c: aload 0
+   // 2d: sipush 8192
+   // 30: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
+   // 33: aload 2
+   // 34: invokestatic q8/q.d (Ljava/io/BufferedReader;)Lkotlin/sequences/Sequence;
+   // 37: invokeinterface kotlin/sequences/Sequence.iterator ()Ljava/util/Iterator; 1
+   // 3c: astore 3
+   // 3d: aload 3
+   // 3e: invokeinterface java/util/Iterator.hasNext ()Z 1
+   // 43: ifeq 63
+   // 46: aload 3
+   // 47: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+   // 4c: astore 0
+   // 4d: aload 0
+   // 4e: checkcast java/lang/String
+   // 51: ldc "Hardware"
+   // 53: bipush 0
+   // 54: bipush 2
+   // 55: aconst_null
+   // 56: invokestatic kotlin/text/h.J (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+   // 59: ifeq 3d
+   // 5c: goto 65
+   // 5f: astore 0
+   // 60: goto 9e
+   // 63: aconst_null
+   // 64: astore 0
+   // 65: aload 0
+   // 66: checkcast java/lang/String
+   // 69: astore 0
+   // 6a: aload 0
+   // 6b: ifnull 93
+   // 6e: aload 0
+   // 6f: bipush 1
+   // 70: anewarray 93
+   // 73: dup
+   // 74: bipush 0
+   // 75: ldc ":"
+   // 77: aastore
+   // 78: bipush 0
+   // 79: bipush 0
+   // 7a: bipush 6
+   // 7c: aconst_null
+   // 7d: invokestatic kotlin/text/h.C0 (Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Ljava/util/List;
+   // 80: bipush 1
+   // 81: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
+   // 86: checkcast java/lang/String
+   // 89: invokestatic kotlin/text/h.a1 (Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+   // 8c: invokevirtual java/lang/Object.toString ()Ljava/lang/String;
+   // 8f: astore 0
+   // 90: goto 96
+   // 93: ldc ""
+   // 95: astore 0
+   // 96: aload 2
+   // 97: aconst_null
+   // 98: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 9b: goto a8
+   // 9e: aload 0
+   // 9f: athrow
+   // a0: astore 3
+   // a1: aload 2
+   // a2: aload 0
+   // a3: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // a6: aload 3
+   // a7: athrow
+   // a8: aload 0
+   // a9: areturn
+   // aa: astore 0
+   // ab: aload 1
+   // ac: astore 0
+   // ad: goto a8
 }
 
 internal fun maxCpuFreq(): String {
-   val var3: Int = getNumCpuCores();
-   var var2: Int = 0;
-   var var4: Long = 0L;
-
-   while (true) {
-      var var10: java.lang.String = "";
-      if (var2 >= var3) {
-         if (var4 > 0L) {
-            val var0: Double = var4 / 1000000.0;
-            val var15: l0 = l0.a;
-            var10 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
-            q.g(var10, "format(...)");
-         }
-
-         return var10;
-      }
-
-      var var8: Long;
-      try {
-         val var13: StringBuilder = new StringBuilder();
-         var13.append("/sys/devices/system/cpu/cpu");
-         var13.append(var2);
-         var13.append("/cpufreq/cpuinfo_max_freq");
-         val var16: Scanner = new Scanner(new FileReader(var13.toString()));
-         var8 = var16.nextLong();
-         var16.close();
-      } catch (var12: IOException) {
-         return "";
-      }
-
-      var var6: Long = var4;
-      if (var8 > var4) {
-         var6 = var8;
-      }
-
-      var2++;
-      var4 = var6;
-   }
+   // $VF: Couldn't be decompiled
+   // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+   //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+   //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+   //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+   //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+   //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+   //
+   // Bytecode:
+   // 000: invokestatic com/discord/device/utils/DeviceHardwareInfoKt.getNumCpuCores ()I
+   // 003: istore 3
+   // 004: bipush 0
+   // 005: istore 2
+   // 006: lconst_0
+   // 007: lstore 4
+   // 009: iload 2
+   // 00a: iload 3
+   // 00b: if_icmpge 127
+   // 00e: lload 4
+   // 010: lstore 8
+   // 012: new java/io/File
+   // 015: astore 12
+   // 017: lload 4
+   // 019: lstore 8
+   // 01b: new java/lang/StringBuilder
+   // 01e: astore 13
+   // 020: lload 4
+   // 022: lstore 8
+   // 024: aload 13
+   // 026: invokespecial java/lang/StringBuilder.<init> ()V
+   // 029: lload 4
+   // 02b: lstore 8
+   // 02d: aload 13
+   // 02f: ldc "/sys/devices/system/cpu/cpu"
+   // 031: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+   // 034: pop
+   // 035: lload 4
+   // 037: lstore 8
+   // 039: aload 13
+   // 03b: iload 2
+   // 03c: invokevirtual java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
+   // 03f: pop
+   // 040: lload 4
+   // 042: lstore 8
+   // 044: aload 13
+   // 046: ldc "/cpufreq/cpuinfo_max_freq"
+   // 048: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+   // 04b: pop
+   // 04c: lload 4
+   // 04e: lstore 8
+   // 050: aload 12
+   // 052: aload 13
+   // 054: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+   // 057: invokespecial java/io/File.<init> (Ljava/lang/String;)V
+   // 05a: lload 4
+   // 05c: lstore 8
+   // 05e: getstatic M9/a.b Ljava/nio/charset/Charset;
+   // 061: astore 14
+   // 063: lload 4
+   // 065: lstore 8
+   // 067: new java/io/InputStreamReader
+   // 06a: astore 13
+   // 06c: lload 4
+   // 06e: lstore 8
+   // 070: new java/io/FileInputStream
+   // 073: astore 15
+   // 075: lload 4
+   // 077: lstore 8
+   // 079: aload 15
+   // 07b: aload 12
+   // 07d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
+   // 080: lload 4
+   // 082: lstore 8
+   // 084: aload 13
+   // 086: aload 15
+   // 088: aload 14
+   // 08a: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
+   // 08d: lload 4
+   // 08f: lstore 8
+   // 091: new java/io/BufferedReader
+   // 094: astore 12
+   // 096: lload 4
+   // 098: lstore 8
+   // 09a: aload 12
+   // 09c: aload 13
+   // 09e: sipush 8192
+   // 0a1: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
+   // 0a4: lload 4
+   // 0a6: lstore 10
+   // 0a8: aload 12
+   // 0aa: invokevirtual java/io/BufferedReader.readLine ()Ljava/lang/String;
+   // 0ad: astore 13
+   // 0af: lload 4
+   // 0b1: lstore 10
+   // 0b3: aload 13
+   // 0b5: ldc "readLine(...)"
+   // 0b7: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+   // 0ba: lload 4
+   // 0bc: lstore 10
+   // 0be: aload 13
+   // 0c0: invokestatic kotlin/text/h.o (Ljava/lang/String;)Ljava/lang/Long;
+   // 0c3: astore 13
+   // 0c5: aload 13
+   // 0c7: ifnull 0dd
+   // 0ca: lload 4
+   // 0cc: lstore 10
+   // 0ce: aload 13
+   // 0d0: invokevirtual java/lang/Long.longValue ()J
+   // 0d3: lstore 8
+   // 0d5: goto 0e0
+   // 0d8: astore 14
+   // 0da: goto 10a
+   // 0dd: lconst_0
+   // 0de: lstore 8
+   // 0e0: lload 4
+   // 0e2: lstore 6
+   // 0e4: lload 8
+   // 0e6: lload 4
+   // 0e8: lcmp
+   // 0e9: ifle 0f0
+   // 0ec: lload 8
+   // 0ee: lstore 6
+   // 0f0: lload 6
+   // 0f2: lstore 10
+   // 0f4: getstatic kotlin/Unit.a Lkotlin/Unit;
+   // 0f7: astore 13
+   // 0f9: lload 6
+   // 0fb: lstore 8
+   // 0fd: aload 12
+   // 0ff: aconst_null
+   // 100: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 103: lload 6
+   // 105: lstore 4
+   // 107: goto 121
+   // 10a: aload 14
+   // 10c: athrow
+   // 10d: astore 13
+   // 10f: lload 10
+   // 111: lstore 8
+   // 113: aload 12
+   // 115: aload 14
+   // 117: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 11a: lload 10
+   // 11c: lstore 8
+   // 11e: aload 13
+   // 120: athrow
+   // 121: iinc 2 1
+   // 124: goto 009
+   // 127: lload 4
+   // 129: lconst_0
+   // 12a: lcmp
+   // 12b: ifle 15e
+   // 12e: lload 4
+   // 130: l2d
+   // 131: ldc2_w 1000000.0
+   // 134: ddiv
+   // 135: dstore 0
+   // 136: getstatic kotlin/jvm/internal/J.a Lkotlin/jvm/internal/J;
+   // 139: astore 12
+   // 13b: invokestatic java/util/Locale.getDefault ()Ljava/util/Locale;
+   // 13e: ldc "%.2f"
+   // 140: bipush 1
+   // 141: anewarray 4
+   // 144: dup
+   // 145: bipush 0
+   // 146: dload 0
+   // 147: invokestatic java/lang/Double.valueOf (D)Ljava/lang/Double;
+   // 14a: aastore
+   // 14b: bipush 1
+   // 14c: invokestatic java/util/Arrays.copyOf ([Ljava/lang/Object;I)[Ljava/lang/Object;
+   // 14f: invokestatic java/lang/String.format (Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   // 152: astore 12
+   // 154: aload 12
+   // 156: ldc "format(...)"
+   // 158: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+   // 15b: goto 162
+   // 15e: ldc ""
+   // 160: astore 12
+   // 162: aload 12
+   // 164: areturn
+   // 165: astore 12
+   // 167: lload 8
+   // 169: lstore 4
+   // 16b: goto 121
 }
 
-internal fun ramSize(): String {
-   val var3: Scanner = new Scanner(new File("/proc/meminfo"));
-
-   var var4: java.lang.String;
-   while (true) {
-      val var2: Boolean = var3.hasNextLine();
-      var4 = "";
-      if (var2) {
-         var var5: java.lang.String = var3.nextLine();
-         q.e(var5);
-         if (!h.H(var5, "MemTotal", false, 2, null)) {
-            continue;
-         }
-
-         val var7: MatchResult = Regex.c(
-            new Regex("\\d+"), h.X0(h.z0(var5, new java.lang.String[]{":"}, false, 0, 6, null).get(1) as java.lang.String).toString(), 0, 2, null
-         );
-         if (var7 != null) {
-            var5 = var7.getValue();
-            var8 = var5;
-            if (var5 != null) {
-               break;
-            }
-         }
-      }
-
-      var8 = "";
-      break;
-   }
-
-   if (var8.length() > 0) {
-      val var0: Double = java.lang.Long.parseLong(var8) / 1048576.0;
-      val var9: l0 = l0.a;
-      var4 = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var0}, 1));
-      q.g(var4, "format(...)");
-   }
-
-   return var4;
+internal fun ramSize(context: Context): String {
+   q.h(var0, "context");
+   var var4: ActivityManager = (ActivityManager)var0.getSystemService("activity");
+   q.f(var4, "null cannot be cast to non-null type android.app.ActivityManager");
+   var4 = var4;
+   val var3: MemoryInfo = new MemoryInfo();
+   var4.getMemoryInfo(var3);
+   val var1: Double = var3.totalMem / 1.0737418E9F;
+   val var6: J = J.a;
+   val var7: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var1}, 1));
+   q.g(var7, "format(...)");
+   return var7;
 }
 
 internal fun socName(): String {
@@ -130,12 +339,12 @@ internal fun socName(): String {
          }
       }
 
-      val var1: java.lang.String = a.a();
-      val var2: java.lang.String = b.a();
+      val var2: java.lang.String = a.a();
+      val var1: java.lang.String = b.a();
       val var4: StringBuilder = new StringBuilder();
-      var4.append(var1);
-      var4.append("_");
       var4.append(var2);
+      var4.append("_");
+      var4.append(var1);
       return var4.toString();
    } else {
       return getSocFromProcCpuInfo();

@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.view;
 
 import android.view.View;
 import android.view.View.OnClickListener;
+import com.discord.chat.bridge.ephemeral.EphemeralIndication;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class z implements OnClickListener {
-   public final FileAttachmentView j;
-   public final String k;
-   public final String l;
-   public final String m;
+   public final Function1 j;
+   public final EphemeralIndication k;
 
    public final void onClick(View var1) {
-      FileAttachmentView.h(this.j, this.k, this.l, this.m, var1);
+      EphemeralIndicationView.g(this.j, this.k, var1);
    }
 }

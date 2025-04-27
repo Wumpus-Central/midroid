@@ -6,8 +6,8 @@ import android.view.View
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
-import com.discord.misc.utilities.insets.WindowInsetsCompatExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
+import com.discord.safearea.extensions.WindowInsetsCompatExtensionsKt
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.e
 import kotlin.jvm.internal.q
@@ -82,22 +82,64 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
    public override fun toString(): String {
       val var1: Float = this.topDp;
       val var4: Float = this.rightDp;
-      val var3: Float = this.bottomDp;
-      val var2: Float = this.leftDp;
+      val var2: Float = this.bottomDp;
+      val var3: Float = this.leftDp;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SafeAreaEdgeInsets(topDp=");
       var5.append(var1);
       var5.append(", rightDp=");
       var5.append(var4);
       var5.append(", bottomDp=");
-      var5.append(var3);
-      var5.append(", leftDp=");
       var5.append(var2);
+      var5.append(", leftDp=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
 
    public companion object {
+      private fun fromRootViewAsStableInsets(insets: WindowInsetsCompat, leftRight: Boolean = false): SafeAreaEdgeInsets {
+         val var9: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var1, true);
+         val var10: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var1, true);
+         var var6: Int = -1;
+         val var11: SafeAreaEdgeInsets;
+         if (VERSION.SDK_INT > 29) {
+            val var4: Float = SizeUtilsKt.getPxToDp(Math.max(var9.b, var10.b));
+            val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var9.d, var10.d));
+            val var15: Int;
+            if (var2) {
+               var15 = var10.a;
+            } else {
+               var15 = -1;
+            }
+
+            val var3: Float = SizeUtilsKt.getPxToDp(Math.max(var9.a, var15));
+            if (var2) {
+               var6 = var10.c;
+            }
+
+            var11 = new SafeAreaEdgeInsets(var4, SizeUtilsKt.getPxToDp(Math.max(var9.c, var6)), var5, var3);
+         } else {
+            val var14: Float = SizeUtilsKt.getPxToDp(Math.max(var9.b, var1.k()));
+            val var12: Float = SizeUtilsKt.getPxToDp(Math.max(var9.d, var1.h()));
+            val var17: Int;
+            if (var2) {
+               var17 = var1.i();
+            } else {
+               var17 = -1;
+            }
+
+            val var13: Float = SizeUtilsKt.getPxToDp(Math.max(var9.a, var17));
+            if (var2) {
+               var6 = var1.j();
+            }
+
+            var11 = new SafeAreaEdgeInsets(var14, SizeUtilsKt.getPxToDp(Math.max(var9.c, var6)), var12, var13);
+         }
+
+         return var11;
+      }
+
       public fun fromRootView(activity: Activity?): SafeAreaEdgeInsets {
          if (var1 != null) {
             val var2: View = ActivityExtensionsKt.getRootView(var1);
@@ -114,28 +156,9 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
 
       public fun fromRootViewAsStableInsets(activity: Activity?): SafeAreaEdgeInsets {
          if (var1 != null) {
-            val var6: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var1);
-            if (var6 != null) {
-               val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var6, true);
-               val var7: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var6, true);
-               val var8: SafeAreaEdgeInsets;
-               if (VERSION.SDK_INT > 29) {
-                  var8 = new SafeAreaEdgeInsets(
-                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var7.b)),
-                     SizeUtilsKt.getPxToDp(var5.c),
-                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var7.d)),
-                     SizeUtilsKt.getPxToDp(var5.a)
-                  );
-               } else {
-                  var8 = new SafeAreaEdgeInsets(
-                     SizeUtilsKt.getPxToDp(Math.max(var5.b, var6.i())),
-                     SizeUtilsKt.getPxToDp(var5.c),
-                     SizeUtilsKt.getPxToDp(Math.max(var5.d, var6.h())),
-                     SizeUtilsKt.getPxToDp(var5.a)
-                  );
-               }
-
-               return var8;
+            val var2: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var1);
+            if (var2 != null) {
+               return fromRootViewAsStableInsets$default(this, var2, false, 2, null);
             }
          }
 

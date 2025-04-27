@@ -4,7 +4,9 @@ import android.view.View
 import com.discord.chat.bridge.codedlinks.GuildEventInviteEmbedImpl
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.GuildEventInviteMessageAccessory
 import com.discord.chat.presentation.message.view.GuildEventInviteView
@@ -50,12 +52,12 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "inviteAccessory");
       val var18: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var13: GuildEventInviteView = this.guildEventInviteView;
+      val var19: GuildEventInviteView = this.guildEventInviteView;
       this.guildEventInviteView.setHeader(var18.getHeaderIcon(), var18.getHeaderText(), var18.getHeaderColor());
-      var13.setCreatorAvatar(var18.getCreatorAvatar());
-      var13.setBadge(var18.getBadgeIcon(), var18.getBadgeCount());
-      var13.setTitle(var18.getTitleText(), var18.getTitleColor());
-      var13.setDescription-nMRbdFE(
+      var19.setCreatorAvatar(var18.getCreatorAvatar());
+      var19.setBadge(var18.getBadgeIcon(), var18.getBadgeCount());
+      var19.setTitle(var18.getTitleText(), var18.getTitleColor());
+      var19.setDescription-iRUqyQU(
          var18.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
@@ -206,6 +208,18 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
          },
          new Function1(this.eventHandler) {
             {
+               super(
+                  1, var1, ChatEventHandler::class.java, "onTapInlineCode", "onTapInlineCode(Lcom/discord/chat/bridge/contentnode/InlineCodeContentNode;)V", 0
+               );
+            }
+
+            public final void invoke(InlineCodeContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapInlineCode(var1);
+            }
+         },
+         new Function1(this.eventHandler) {
+            {
                super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
             }
 
@@ -223,11 +237,21 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
                kotlin.jvm.internal.q.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
             }
+         },
+         new Function1(this.eventHandler) {
+            {
+               super(1, var1, ChatEventHandler::class.java, "onTapSoundmoji", "onTapSoundmoji(Lcom/discord/chat/bridge/contentnode/SoundmojiContentNode;)V", 0);
+            }
+
+            public final void invoke(SoundmojiContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
+            }
          }
       );
-      var13.setGuild(var18.getGuildName(), var18.getGuildIcon());
-      var13.setChannel(var18.getChannelIcon(), var18.getChannelName());
-      var13.setAcceptButton(
+      var19.setGuild(var18.getGuildName(), var18.getGuildIcon());
+      var19.setChannel(var18.getChannelIcon(), var18.getChannelName());
+      var19.setAcceptButton(
          var18.getAcceptLabelIcon(),
          var18.getAcceptLabelText(),
          var18.getAcceptLabelColor(),
@@ -235,6 +259,6 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
          var18.getAcceptLabelBackgroundColor(),
          new n(this, var1)
       );
-      var13.setSecondaryButton(var18.getSecondaryActionIcon(), new o(this, var1));
+      var19.setSecondaryButton(var18.getSecondaryActionIcon(), new o(this, var1));
    }
 }

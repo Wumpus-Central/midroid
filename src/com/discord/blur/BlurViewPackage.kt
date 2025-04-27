@@ -1,20 +1,26 @@
 package com.discord.blur
 
-import com.discord.react.utilities.InitialPropsViewGroupManager
-import com.facebook.react.ReactPackage
-import com.facebook.react.bridge.NativeModule
+import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
+import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.module.model.ReactModuleInfoProvider
+import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 import kotlin.jvm.internal.q
 
-public class BlurViewPackage : ReactPackage {
-   public open fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
+public class BlurViewPackage : TurboReactPackage {
+   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return kotlin.collections.i.k();
+      return kotlin.collections.i.n(new ViewManager[]{new BlurViewManager(), new BlurViewTargetManager()});
    }
 
-   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-      q.h(var1, "reactContext");
-      return kotlin.collections.i.q(new InitialPropsViewGroupManager[]{new BlurViewManager(), new BlurViewTargetManager()});
+   public open fun getModule(name: String, context: ReactApplicationContext): Nothing? {
+      q.h(var1, "name");
+      q.h(var2, "context");
+      return null;
+   }
+
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+      return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

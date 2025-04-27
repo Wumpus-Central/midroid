@@ -1,12 +1,12 @@
 package com.discord.emoji_picker.react_events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dl.a
-import fl.b2
-import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -84,7 +84,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -102,7 +102,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, a.u(b2.a)};
+         return new KSerializer[]{C0.a, a.u(C0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): OnLongPressEmojiEvent {
@@ -114,7 +114,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
          var var8: java.lang.String;
          if (var7.y()) {
             var8 = var7.t(var6, 0);
-            var5 = var7.v(var6, 1, b2.a, null) as java.lang.String;
+            var5 = var7.v(var6, 1, C0.a, null) as java.lang.String;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -130,7 +130,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
                         throw new n(var4);
                      }
 
-                     var5 = var7.v(var6, 1, b2.a, var5) as java.lang.String;
+                     var5 = var7.v(var6, 1, C0.a, var5) as java.lang.String;
                      var2 |= 2;
                   } else {
                      var8 = var7.t(var6, 0);
@@ -156,7 +156,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

@@ -46,6 +46,8 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
       kotlin.jvm.internal.q.e(var5);
       SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
+      val var6: DCDButton = var4.launchButton;
+      this.setMinWidth(SizeUtilsKt.getDpToPx(64));
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          this,
          ColorUtilsKt.getColorCompat(var1, ThemeManagerKt.getTheme().getColorRes(R.color.primary_130, R.color.primary_630)),
@@ -67,7 +69,7 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
          var6 = 1;
       }
 
-      if (var6 xor true) {
+      if (!var6) {
          var6 = 0;
       } else {
          var6 = 8;
@@ -99,7 +101,7 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
       var var4: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       val var2: Byte;
-      if (var3 xor true) {
+      if (!var3) {
          var2 = 0;
       } else {
          var2 = 8;

@@ -12,5 +12,5 @@ public fun ReactContext.getMediaEngine(): MediaEngine {
       }
    }
 
-   throw new IllegalStateException("Unable to get MediaEngine native module".toString());
+   throw new IllegalStateException("Unable to get MediaEngine native module");
 }

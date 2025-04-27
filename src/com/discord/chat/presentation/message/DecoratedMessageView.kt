@@ -53,15 +53,14 @@ public class DecoratedMessageView  public constructor(context: Context, attrs: A
       componentProvider: ComponentProvider? = null,
       onChainPart: () -> ChainPart = <unrepresentable>.INSTANCE,
       allowChildGestures: Boolean = true,
-      isHighlight: Boolean = false,
       renderContentOnly: Boolean = false
    ) {
       kotlin.jvm.internal.q.h(var1, "message");
       kotlin.jvm.internal.q.h(var2, "messageContext");
       kotlin.jvm.internal.q.h(var4, "eventHandler");
       kotlin.jvm.internal.q.h(var6, "onChainPart");
-      this.binding.messageView.setMessage(var1, var2, var3, var4, var5, var6, var7, var8, var9);
-      this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, var3, var2, var7, var8, null, null, var9, 96, null)) as java.lang.Boolean;
+      this.binding.messageView.setMessage(var1, var2, var3, var4, var5, var6, var7, var8);
+      this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, var3, var2, var7, null, null, var8, 48, null)) as java.lang.Boolean;
       this.messageFrame = var3;
    }
 }

@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.v0
+import androidx.core.view.g0
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
@@ -61,7 +61,11 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                   if (var4 != 3) {
                      if (var4 == 4) {
                         var10.asGif(
-                           ((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getAnimated()
+                           ((StickerPickerRow.Sticker)var6).getUrl(),
+                           var1.getItemSize(),
+                           var1.getItemSize(),
+                           ((StickerPickerRow.Sticker)var6).getAnimated(),
+                           ((StickerPickerRow.Sticker)var6).getName()
                         );
                      }
                   } else {
@@ -71,16 +75,21 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                         var1.getItemSize(),
                         ((StickerPickerRow.Sticker)var6).getAnimated(),
                         ((StickerPickerRow.Sticker)var6).getId(),
-                        ((StickerPickerRow.Sticker)var6).getAnimated() xor 1
+                        ((StickerPickerRow.Sticker)var6).getAnimated() xor 1,
+                        ((StickerPickerRow.Sticker)var6).getName()
                      );
                   }
                } else {
                   var10.asApng(
-                     ((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getAnimated()
+                     ((StickerPickerRow.Sticker)var6).getUrl(),
+                     var1.getItemSize(),
+                     var1.getItemSize(),
+                     ((StickerPickerRow.Sticker)var6).getAnimated(),
+                     ((StickerPickerRow.Sticker)var6).getName()
                   );
                }
             } else {
-               var10.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize());
+               var10.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getName());
             }
          }
       }
@@ -133,9 +142,9 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var2 : v0.a(this)) {
-         q.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         (var2 as StickerView).recycle();
+      for (View var1 : g0.a(this)) {
+         q.f(var1, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         (var1 as StickerView).recycle();
       }
    }
 

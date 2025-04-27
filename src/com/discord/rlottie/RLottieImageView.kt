@@ -9,10 +9,10 @@ import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.widget.m
 import com.discord.rlottie.RLottieDrawable.PlaybackMode
+import f8.x
 import java.io.File
 import java.util.HashMap
 import java.util.Map.Entry
-import kh.x
 import kotlin.jvm.internal.q
 
 public open class RLottieImageView : m {
@@ -160,10 +160,10 @@ public open class RLottieImageView : m {
          }
 
          for (Entry var16 : this.layerColors.entrySet()) {
-            val var15: java.lang.String = var16.getKey() as java.lang.String;
+            val var11: java.lang.String = var16.getKey() as java.lang.String;
             var1 = (var16.getValue() as java.lang.Number).intValue();
             if (this.drawable != null) {
-               this.drawable.setLayerColor(var15, var1);
+               this.drawable.setLayerColor(var11, var1);
             }
          }
 

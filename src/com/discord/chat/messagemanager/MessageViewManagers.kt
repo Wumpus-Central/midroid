@@ -15,7 +15,9 @@ import com.discord.chat.presentation.list.AccessoriesViewPool
 import com.discord.chat.presentation.list.messagebundling.MessageBundleView
 import com.discord.chat.presentation.message.DecoratedMessageView
 import com.discord.chat.presentation.message.MessageView
+import com.discord.chat.presentation.message.system.AutomodSystemMessageWrapperView
 import com.discord.chat.presentation.message.system.SystemMessageWrapperView
+import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
 import com.discord.chat.reactevents.ChatViewEventHandler
@@ -31,6 +33,8 @@ import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
+import com.facebook.react.viewmanagers.DCDAutoModerationSystemMessageViewManagerDelegate
+import com.facebook.react.viewmanagers.DCDAutoModerationSystemMessageViewManagerInterface
 import com.facebook.react.viewmanagers.DCDGuildFeedMessageItemViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDGuildFeedMessageItemViewManagerInterface
 import com.facebook.react.viewmanagers.DCDGuildMultilineSystemMessageViewManagerDelegate
@@ -39,10 +43,10 @@ import com.facebook.react.viewmanagers.DCDMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDMessageViewManagerInterface
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerInterface
-import kh.w
+import f8.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 
@@ -85,6 +89,52 @@ public object MessageViewManagers {
       }
 
       return (ChatEventHandler)var3;
+   }
+
+   @ReactModule(name = "DCDAutoModerationSystemMessageView")
+   public class AutoModerationSystemMessageViewManager
+      : ViewGroupManager<AutomodSystemMessageWrapperView>,
+      DCDAutoModerationSystemMessageViewManagerInterface<AutomodSystemMessageWrapperView> {
+      private final val delegate: DCDAutoModerationSystemMessageViewManagerDelegate<
+         AutomodSystemMessageWrapperView,
+         com.discord.chat.messagemanager.MessageViewManagers.AutoModerationSystemMessageViewManager
+      > = new DCDAutoModerationSystemMessageViewManagerDelegate(this)
+
+      protected open fun createViewInstance(reactContext: ThemedReactContext): AutomodSystemMessageWrapperView {
+         q.h(var1, "reactContext");
+         return new AutomodSystemMessageWrapperView(var1, null, 2, null);
+      }
+
+      protected open fun getDelegate(): DCDAutoModerationSystemMessageViewManagerDelegate<
+            AutomodSystemMessageWrapperView,
+            com.discord.chat.messagemanager.MessageViewManagers.AutoModerationSystemMessageViewManager
+         > {
+         return this.delegate;
+      }
+
+      public open fun getName(): String {
+         return "DCDAutoModerationSystemMessageView";
+      }
+
+      @ReactProp(name = "row")
+      public open fun setRow(view: AutomodSystemMessageWrapperView, value: String?) {
+         q.h(var1, "view");
+         if (var2 != null) {
+            val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
+            val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
+            val var4: MessageBase = var7.getMessage();
+            q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
+            val var6: Message = var4 as Message;
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var5: Context = var1.getContext();
+            q.g(var5, "getContext(...)");
+            var1.setMessage(var6, var8, MessageViewManagers.access$getEventHandler(var3, var7, var5));
+         }
+      }
+
+      public companion object {
+         public const val NAME: String
+      }
    }
 
    @ReactModule(name = "DCDGuildMultilineSystemMessageView")
@@ -131,11 +181,11 @@ public object MessageViewManagers {
       private final val messageRowViewPool: RecycledViewPool
       private final val reactEvents: ReactEvents =
          new ReactEvents(
-            w.a("onTapItem", g0.b(OnTapMessageBundleItemData.class)),
-            w.a("onLongPressItem", g0.b(OnLongPressMessageBundleItemData.class)),
-            w.a("onTruncateMessage", g0.b(OnTruncateMessageData.class)),
-            w.a("onTapReplyItem", g0.b(OnTapReplyItemData.class)),
-            w.a("onTapViewMoreText", g0.b(OnTapViewMoreTextData.class))
+            w.a("onTapItem", E.b(OnTapMessageBundleItemData.class)),
+            w.a("onLongPressItem", E.b(OnLongPressMessageBundleItemData.class)),
+            w.a("onTruncateMessage", E.b(OnTruncateMessageData.class)),
+            w.a("onTapReplyItem", E.b(OnTapReplyItemData.class)),
+            w.a("onTapViewMoreText", E.b(OnTapViewMoreTextData.class))
          )
 
       private fun emitOnLongPressItem(view: View): Boolean {
@@ -255,11 +305,26 @@ public object MessageViewManagers {
 
    @ReactModule(name = "DCDMessageView")
    public class MessageViewManager : ViewGroupManager<DecoratedMessageView>, DCDMessageViewManagerInterface<DecoratedMessageView> {
+      private final var componentProvider: ComponentProvider?
       private final val delegate: DCDMessageViewManagerDelegate<DecoratedMessageView, com.discord.chat.messagemanager.MessageViewManagers.MessageViewManager> =
          new DCDMessageViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): DecoratedMessageView {
          q.h(var1, "reactContext");
+         if (this.componentProvider != null) {
+            val var3: Context;
+            if (this.componentProvider != null) {
+               var3 = this.componentProvider.getContext();
+            } else {
+               var3 = null;
+            }
+
+            if (q.c(var3, var1)) {
+               return new DecoratedMessageView(var1, null, 2, null);
+            }
+         }
+
+         this.componentProvider = new ComponentProvider(var1, false);
          return new DecoratedMessageView(var1, null, 2, null);
       }
 
@@ -294,13 +359,13 @@ public object MessageViewManagers {
 
             val var10: MessageBase = var4.getMessage();
             q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var10 as Message;
-            val var7: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var11: MessageFrame = var4.getMessageFrame();
-            val var5: Context = var1.getContext();
-            q.g(var5, "getContext(...)");
+            val var11: Message = var10 as Message;
+            val var5: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var7: MessageFrame = var4.getMessageFrame();
+            val var6: Context = var1.getContext();
+            q.g(var6, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var6, var7, var11, MessageViewManagers.access$getEventHandler(var3, var4, var5), null, null, false, var4.isHighlight(), false, 368, null
+               var1, var11, var5, var7, MessageViewManagers.access$getEventHandler(var3, var4, var6), this.componentProvider, null, false, false, 224, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -342,11 +407,11 @@ public object MessageViewManagers {
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
             q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var5: Message = var4 as Message;
-            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Message = var4 as Message;
+            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
             val var8: Context = var1.getContext();
             q.g(var8, "getContext(...)");
-            var1.setMessage(var5, var6, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            var1.setMessage(var6, var5, MessageViewManagers.access$getEventHandler(var3, var7, var8));
          }
       }
 

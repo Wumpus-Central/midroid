@@ -1,14 +1,14 @@
 package com.discord.billing.react.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fl.b2
-import fl.g0
-import fl.g0.a
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -43,7 +43,7 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
       );
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -64,7 +64,7 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): BillingManagerPurchaseUpdated {

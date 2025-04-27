@@ -11,9 +11,9 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerDelegate
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
-import kh.w
+import f8.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 
 @ReactModule(name = "StickerPickerRowView")
@@ -21,7 +21,7 @@ internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowV
    private final val delegate: StickerPickerRowViewManagerDelegate<StickerPickerRowView, StickerPickerRowViewManager> =
       new StickerPickerRowViewManagerDelegate(this)
       private final val reactEvents: ReactEvents =
-      new ReactEvents(w.a("onPressSticker", g0.b(OnPressStickerEvent.class)), w.a("onLongPressSticker", g0.b(OnLongPressStickerEvent.class)))
+      new ReactEvents(w.a("onPressSticker", E.b(OnPressStickerEvent.class)), w.a("onLongPressSticker", E.b(OnLongPressStickerEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): StickerPickerRowView {
       q.h(var1, "reactContext");

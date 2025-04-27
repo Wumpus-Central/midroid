@@ -56,15 +56,22 @@ internal fun EditText.removeEllipsizedHint(maxLines: Int) {
 internal fun Editable.setChatInputNodeStyle(node: ChatInputNode) {
    q.h(var0, "<this>");
    q.h(var1, "node");
-   val var2: ChatInputNodeStyle = var1.getStyle();
-   if (var2 != null) {
-      applyDCDSpan(var0, new DCDColorSpan(var2.getColor()), var1);
-      if (var2.getBackgroundStyle() != null) {
-         applyDCDSpan(var0, new DCDBackgroundSpan(var2.getBackgroundStyle()), var1);
+   val var3: ChatInputNodeStyle = var1.getStyle();
+   if (var3 != null) {
+      applyDCDSpan(var0, new DCDColorSpan(var3.getColor()), var1);
+      if (var3.getBackgroundStyle() != null) {
+         applyDCDSpan(var0, new DCDBackgroundSpan(var3.getBackgroundStyle()), var1);
       }
 
-      val var3: ChatInputNodeFontWeight = var2.getFontWeight();
-      if (var3 != null && EditTextUtilsKt.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()] == 1) {
+      val var4: ChatInputNodeFontWeight = var3.getFontWeight();
+      val var2: Int;
+      if (var4 == null) {
+         var2 = -1;
+      } else {
+         var2 = EditTextUtilsKt.WhenMappings.$EnumSwitchMapping$0[var4.ordinal()];
+      }
+
+      if (var2 == 1) {
          applyDCDSpan(var0, new DCDBoldSpan(), var1);
       }
    }
@@ -85,13 +92,13 @@ internal class WhenMappings {
 
    @JvmStatic
    fun {
-      val var1: IntArray = new int[ChatInputNodeFontWeight.values().length];
+      val var0: IntArray = new int[ChatInputNodeFontWeight.values().length];
 
       try {
-         var1[ChatInputNodeFontWeight.Bold.ordinal()] = 1;
+         var0[ChatInputNodeFontWeight.Bold.ordinal()] = 1;
       } catch (var2: NoSuchFieldError) {
       }
 
-      $EnumSwitchMapping$0 = var1;
+      $EnumSwitchMapping$0 = var0;
    }
 }

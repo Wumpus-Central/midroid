@@ -1,15 +1,15 @@
 package com.discord.media_player.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.g0.a
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,22 +66,24 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
    }
 
    public override fun serialize(): WritableMap {
-      return NativeMapExtensionsKt.nativeMapOf(w.a("channelId", this.channelId), w.a("mediaItemIds", NativeArrayExtensionsKt.toNativeArray(this.mediaItemIds)));
+      return NativeMapExtensionsKt.nativeMapOf(
+         w.a("channelId", this.channelId), w.a("mediaItemIds", NativeArrayExtensionsKt.toNativeArray$default(this.mediaItemIds, null, 1, null))
+      );
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.channelId;
       val var1: java.util.List = this.mediaItemIds;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MediaPlayerViewWillAppear(channelId=");
-      var3.append(var2);
-      var3.append(", mediaItemIds=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaPlayerViewWillAppear(channelId=");
+      var2.append(var3);
+      var2.append(", mediaItemIds=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -101,7 +103,7 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, MediaPlayerViewWillAppear.access$get$childSerializers$cp()[1]};
+         return new KSerializer[]{C0.a, MediaPlayerViewWillAppear.access$get$childSerializers$cp()[1]};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerViewWillAppear {

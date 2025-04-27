@@ -1,10 +1,10 @@
 package com.discord.notifications.api
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -83,7 +83,7 @@ public data class EmbedField(name: String? = null, value: String? = null) {
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -101,8 +101,8 @@ public data class EmbedField(name: String? = null, value: String? = null) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), a.u(var1)};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedField {
@@ -113,8 +113,8 @@ public data class EmbedField(name: String? = null, value: String? = null) {
          var var5: java.lang.String;
          var var9: java.lang.String;
          if (var7.y()) {
-            val var8: b2 = b2.a;
-            var5 = var7.v(var6, 0, b2.a, null) as java.lang.String;
+            val var8: C0 = C0.a;
+            var5 = var7.v(var6, 0, C0.a, null) as java.lang.String;
             var9 = var7.v(var6, 1, var8, null) as java.lang.String;
             var2 = 3;
          } else {
@@ -131,10 +131,10 @@ public data class EmbedField(name: String? = null, value: String? = null) {
                         throw new n(var4);
                      }
 
-                     var9 = var7.v(var6, 1, b2.a, var9) as java.lang.String;
+                     var9 = var7.v(var6, 1, C0.a, var9) as java.lang.String;
                      var2 |= 2;
                   } else {
-                     var5 = var7.v(var6, 0, b2.a, var5) as java.lang.String;
+                     var5 = var7.v(var6, 0, C0.a, var5) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -157,7 +157,7 @@ public data class EmbedField(name: String? = null, value: String? = null) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

@@ -112,7 +112,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
          var8.add(var11);
       }
 
-      if (var8.isEmpty() xor true) {
+      if (!var8.isEmpty()) {
          val var12: java.lang.String = kotlin.collections.i.o0(var8, ", ", null, null, 0, null, null, 62, null);
          val var22: StringBuilder = new StringBuilder();
          var22.append(var12);

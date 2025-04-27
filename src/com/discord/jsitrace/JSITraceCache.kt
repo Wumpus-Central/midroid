@@ -25,7 +25,6 @@ internal object JSITraceCache {
    public fun setEnabled(context: Context, enabled: Boolean) {
       q.h(var1, "context");
       val var3: Editor = this.getCache(var1).edit();
-      q.g(var3, "editor");
       var3.putBoolean("CACHE_KEY_JSI_TRACE_ENABLED", var2);
       var3.apply();
    }

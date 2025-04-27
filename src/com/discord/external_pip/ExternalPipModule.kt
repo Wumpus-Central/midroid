@@ -13,10 +13,10 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import kh.r
-import kh.w
+import f8.r
+import f8.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 
 @ReactModule(name = "ExternalPip")
@@ -29,7 +29,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
       super(var1);
       this.manager = new ExternalPipManager();
       this.reactEvents = new ReactEvents(
-         w.a("onPipModeChanged", g0.b(OnPipModeChangedEvent.class)), w.a("onPipModeWillChange", g0.b(OnPipModeWillChangeEvent.class))
+         w.a("onPipModeChanged", E.b(OnPipModeChangedEvent.class)), w.a("onPipModeWillChange", E.b(OnPipModeWillChangeEvent.class))
       );
    }
 
@@ -58,15 +58,15 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var1: ReactEvents = this.reactEvents;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
+         val var2: ReactEvents = this.reactEvents;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
       }
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return lh.r.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return g8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {
@@ -78,19 +78,28 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
       q.h(var2, "onResultPromise");
       if (ThreadUtilsKt.isOnMainThread()) {
          if (var1) {
-            access$enterPipMode(this, true, new Function1(var2) {
+            access$enterPipMode(this, true, new Function1(this, var2) {
                final Promise $onResultPromise;
+               final ExternalPipModule this$0;
 
                {
                   super(1);
-                  this.$onResultPromise = var1;
+                  this.this$0 = var1;
+                  this.$onResultPromise = var2;
                }
 
                public final void invoke(Object var1) {
-                  if (r.h(var1)) {
-                     this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
+                  var1 = r.e(var1);
+                  val var3: Unit;
+                  if (var1 != null) {
+                     this.$onResultPromise.reject(var1);
+                     var3 = Unit.a;
                   } else {
-                     this.$onResultPromise.reject(r.e(var1));
+                     var3 = null;
+                  }
+
+                  if (var3 == null) {
+                     this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
                   }
                }
             });
@@ -112,19 +121,28 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
             @Override
             public final void run() {
                if (this.$active$inlined) {
-                  ExternalPipModule.access$enterPipMode(this.this$0, true, new Function1(this.$onResultPromise$inlined) {
+                  ExternalPipModule.access$enterPipMode(this.this$0, true, new Function1(this.this$0, this.$onResultPromise$inlined) {
                      final Promise $onResultPromise;
+                     final ExternalPipModule this$0;
 
                      {
                         super(1);
-                        this.$onResultPromise = var1;
+                        this.this$0 = var1;
+                        this.$onResultPromise = var2;
                      }
 
                      public final void invoke(Object var1) {
-                        if (r.h(var1)) {
-                           this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
+                        var1 = r.e(var1);
+                        val var3: Unit;
+                        if (var1 != null) {
+                           this.$onResultPromise.reject(var1);
+                           var3 = Unit.a;
                         } else {
-                           this.$onResultPromise.reject(r.e(var1));
+                           var3 = null;
+                        }
+
+                        if (var3 == null) {
+                           this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
                         }
                      }
                   });

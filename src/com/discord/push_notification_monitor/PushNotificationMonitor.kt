@@ -12,7 +12,6 @@ public object PushNotificationMonitor {
 
    private fun writePushLog(context: Context, userId: String, pushLog: PushNotificationLog) {
       val var4: Editor = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1).edit();
-      q.g(var4, "editor");
       val var5: a = Json.d;
       Json.d.a();
       var4.putString(var2, var5.c(PushNotificationLog.Companion.serializer(), var3));
@@ -23,7 +22,6 @@ public object PushNotificationMonitor {
       q.h(var1, "context");
       val var2: SharedPreferences = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1);
       val var3: Editor = var2.edit();
-      q.g(var3, "editor");
       val var4: java.util.Iterator = var2.getAll().keySet().iterator();
 
       while (var4.hasNext()) {

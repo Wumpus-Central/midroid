@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.p0
+import ba.G.a
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.o1
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -33,7 +33,7 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
       var1: Int, var2: java.lang.String, var3: java.lang.String, var4: java.lang.String, var5: java.lang.String, var6: SerializationConstructorMarker
    ) {
       if (15 != (var1 and 15)) {
-         o1.b(var1, 15, TapPostPreviewEmbedData.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 15, TapPostPreviewEmbedData.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -108,23 +108,23 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
 
    public override fun toString(): String {
       val var2: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.parentChannelId;
+      val var5: java.lang.String = this.parentChannelId;
       val var1: java.lang.String = this.threadId;
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapPostPreviewEmbedData(guildId=");
-      var5.append(var2);
-      var5.append(", parentChannelId=");
-      var5.append(var4);
-      var5.append(", threadId=");
-      var5.append(var1);
-      var5.append(", messageId=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapPostPreviewEmbedData(guildId=");
+      var4.append(var2);
+      var4.append(", parentChannelId=");
+      var4.append(var5);
+      var4.append(", threadId=");
+      var4.append(var1);
+      var4.append(", messageId=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -144,7 +144,7 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a, MessageId.$serializer.INSTANCE};
+         return new KSerializer[]{C0.a, C0.a, C0.a, MessageId.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): TapPostPreviewEmbedData {
@@ -155,27 +155,25 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
          var var12: java.lang.String = null;
          var var2: Int;
          var var6: java.lang.String;
-         var var14: java.lang.String;
-         var var18: java.lang.String;
+         var var8: java.lang.String;
+         val var9: java.lang.String;
          if (var5) {
-            var14 = var11.t(var10, 0);
-            val var9: java.lang.String = var11.t(var10, 1);
+            var8 = var11.t(var10, 0);
+            var9 = var11.t(var10, 1);
             var6 = var11.t(var10, 2);
-            val var8: MessageId = var11.m(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var8 != null) {
-               var12 = var8.unbox-impl();
+            val var7: MessageId = var11.m(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var7 != null) {
+               var12 = var7.unbox-impl();
             }
 
             var2 = 15;
-            var18 = var14;
-            var14 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var18 = null;
+            var8 = null;
             var6 = null;
             var var13: java.lang.String = null;
-            var14 = null;
+            var var14: java.lang.String = null;
 
             while (var3) {
                val var4: Int = var11.x(var10);
@@ -187,16 +185,16 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
                               throw new n(var4);
                            }
 
-                           val var16: MessageId;
+                           val var15: MessageId;
                            if (var14 != null) {
-                              var16 = MessageId.box-impl(var14);
+                              var15 = MessageId.box-impl(var14);
                            } else {
-                              var16 = null;
+                              var15 = null;
                            }
 
-                           val var17: MessageId = var11.m(var10, 3, MessageId.$serializer.INSTANCE, var16) as MessageId;
-                           if (var17 != null) {
-                              var14 = var17.unbox-impl();
+                           val var16: MessageId = var11.m(var10, 3, MessageId.$serializer.INSTANCE, var15) as MessageId;
+                           if (var16 != null) {
+                              var14 = var16.unbox-impl();
                            } else {
                               var14 = null;
                            }
@@ -211,7 +209,7 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
                         var2 |= 2;
                      }
                   } else {
-                     var18 = var11.t(var10, 0);
+                     var8 = var11.t(var10, 0);
                      var2 |= 1;
                   }
                } else {
@@ -219,12 +217,12 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
                }
             }
 
+            var9 = var13;
             var12 = var14;
-            var14 = var13;
          }
 
          var11.b(var10);
-         return new TapPostPreviewEmbedData(var2, var18, var14, var6, var12, null, null);
+         return new TapPostPreviewEmbedData(var2, var8, var9, var6, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapPostPreviewEmbedData) {

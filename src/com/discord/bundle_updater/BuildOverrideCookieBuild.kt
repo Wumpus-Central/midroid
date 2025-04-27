@@ -1,12 +1,12 @@
 package com.discord.bundle_updater
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import fl.b2
-import fl.g0
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,18 +66,18 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.type;
-      val var2: java.lang.String = this.id;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("BuildOverrideCookieBuild(type=");
-      var1.append(var3);
-      var1.append(", id=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.type;
+      val var3: java.lang.String = this.id;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BuildOverrideCookieBuild(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -95,7 +95,7 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): BuildOverrideCookieBuild {
@@ -149,7 +149,7 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

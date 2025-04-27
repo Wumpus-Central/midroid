@@ -1,5 +1,6 @@
 package com.discord.chatreplay.logger
 
+import M9.a
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -10,8 +11,7 @@ import java.nio.file.Path
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
-import qk.a
-import vh.c
+import q8.c
 
 public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    private final val jsonFile: File
@@ -45,20 +45,20 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
 
    private fun appendLine(line: String) {
       label21: {
-         if (h.x(var1) xor true) {
+         if (!h.d0(var1)) {
             val var2: OutputStreamWriter = new OutputStreamWriter(DebugRowLoggerKt.outputStream(this.replayFile, true), a.b);
 
             try {
-               val var3: StringBuilder = new StringBuilder();
-               var3.append(var1);
-               var3.append("\n");
-               var2.write(var3.toString());
+               val var11: StringBuilder = new StringBuilder();
+               var11.append(var1);
+               var11.append("\n");
+               var2.write(var11.toString());
                var2.flush();
             } catch (var5: java.lang.Throwable) {
-               val var10: java.lang.Throwable = var5;
+               val var3: java.lang.Throwable = var5;
 
                try {
-                  throw var10;
+                  throw var3;
                } catch (var4: java.lang.Throwable) {
                   c.a(var2, var5);
                }
@@ -93,7 +93,7 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
 
          try {
             var12.write("[\n");
-            vh.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new Function1(var2, var12) {
+            q8.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new Function1(var2, var12) {
                final BooleanRef $existingLine;
                final OutputStreamWriter $writer;
 

@@ -20,7 +20,7 @@ internal class AddReactionViewHolder(addReactionView: AddReactionView) : Recycle
       q.h(var2, "addNewReactionAccessibilityLabel");
       q.h(var3, "onAddReactionClick");
       val var5: AddReactionView = this.addReactionView;
-      this.addReactionView.configure(var1, var4, false);
+      AddReactionView.configure$default(this.addReactionView, var1, var4, false, null, 8, null);
       var5.setContentDescription(var2);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, var3, 1, null);
    }

@@ -8,6 +8,6 @@ public final class d implements OnClickListener {
    public final OverlayMenuBubbleDialog j;
 
    public final void onClick(View var1) {
-      OverlayMenuBubbleDialog.b(this.j, var1);
+      OverlayMenuBubbleDialog.c(this.j, var1);
    }
 }

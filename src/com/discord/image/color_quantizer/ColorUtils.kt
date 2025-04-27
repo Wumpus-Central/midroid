@@ -16,35 +16,35 @@ internal object ColorUtils {
       var var7: Int;
       switch ((int)var1 / 60) {
          case 0:
-            var5 = zh.a.b((var8 + var4) * 255.0F);
-            var6 = zh.a.b((var9 + var4) * 255.0F);
-            var7 = zh.a.b(var4 * 255.0F);
+            var5 = v8.a.c((var8 + var4) * 255.0F);
+            var6 = v8.a.c((var9 + var4) * 255.0F);
+            var7 = v8.a.c(var4 * 255.0F);
             break;
          case 1:
-            var5 = zh.a.b((var9 + var4) * 255.0F);
-            var6 = zh.a.b((var8 + var4) * 255.0F);
-            var7 = zh.a.b(var4 * 255.0F);
+            var5 = v8.a.c((var9 + var4) * 255.0F);
+            var6 = v8.a.c((var8 + var4) * 255.0F);
+            var7 = v8.a.c(var4 * 255.0F);
             break;
          case 2:
-            var5 = zh.a.b(var4 * 255.0F);
-            var6 = zh.a.b((var8 + var4) * 255.0F);
-            var7 = zh.a.b((var9 + var4) * 255.0F);
+            var5 = v8.a.c(var4 * 255.0F);
+            var6 = v8.a.c((var8 + var4) * 255.0F);
+            var7 = v8.a.c((var9 + var4) * 255.0F);
             break;
          case 3:
-            var5 = zh.a.b(var4 * 255.0F);
-            var6 = zh.a.b((var9 + var4) * 255.0F);
-            var7 = zh.a.b((var8 + var4) * 255.0F);
+            var5 = v8.a.c(var4 * 255.0F);
+            var6 = v8.a.c((var9 + var4) * 255.0F);
+            var7 = v8.a.c((var8 + var4) * 255.0F);
             break;
          case 4:
-            var5 = zh.a.b((var9 + var4) * 255.0F);
-            var6 = zh.a.b(var4 * 255.0F);
-            var7 = zh.a.b((var8 + var4) * 255.0F);
+            var5 = v8.a.c((var9 + var4) * 255.0F);
+            var6 = v8.a.c(var4 * 255.0F);
+            var7 = v8.a.c((var8 + var4) * 255.0F);
             break;
          case 5:
          case 6:
-            var5 = zh.a.b((var8 + var4) * 255.0F);
-            var6 = zh.a.b(var4 * 255.0F);
-            var7 = zh.a.b((var9 + var4) * 255.0F);
+            var5 = v8.a.c((var8 + var4) * 255.0F);
+            var6 = v8.a.c(var4 * 255.0F);
+            var7 = v8.a.c((var9 + var4) * 255.0F);
             break;
          default:
             var7 = 0;
@@ -60,19 +60,19 @@ internal object ColorUtils {
       q.h(var3, "hsl");
       val var10: Float = var0 / 255.0F;
       val var8: Float = var1 / 255.0F;
-      var var4: Float = var2 / 255.0F;
-      val var9: Float = Math.max(var10, Math.max(var8, (float)var2 / 255.0F));
-      val var7: Float = Math.min(var10, Math.min(var8, (float)var2 / 255.0F));
-      var var5: Float = var9 - var7;
-      val var6: Float = (var9 + var7) / 2.0F;
-      if (var9 == var7) {
+      val var9: Float = var2 / 255.0F;
+      val var7: Float = Math.max(var10, Math.max(var8, (float)var2 / 255.0F));
+      var var4: Float = Math.min(var10, Math.min(var8, (float)var2 / 255.0F));
+      var var5: Float = var7 - var4;
+      val var6: Float = (var7 + var4) / 2.0F;
+      if (var7 == var4) {
          var4 = 0.0F;
          var5 = 0.0F;
       } else {
-         if (var9 == var10) {
-            var4 = (var8 - var4) / var5 % 6.0F;
-         } else if (var9 == var8) {
-            var4 = (var4 - var10) / var5 + 2.0F;
+         if (var7 == var10) {
+            var4 = (var8 - var9) / var5 % 6.0F;
+         } else if (var7 == var8) {
+            var4 = (var9 - var10) / var5 + 2.0F;
          } else {
             var4 = (var10 - var8) / var5 + 4.0F;
          }

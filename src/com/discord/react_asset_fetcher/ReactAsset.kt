@@ -3,7 +3,7 @@ package com.discord.react_asset_fetcher
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import rh.a
+import m8.a
 
 public enum class ReactAsset {
    Activity,
@@ -18,6 +18,7 @@ public enum class ReactAsset {
    ArrowRight,
    Attachment,
    BellSnooze,
+   BrokenImage,
    CallConnect,
    CallDisconnect,
    CallStatusGreen,
@@ -120,5 +121,10 @@ public enum class ReactAsset {
    public fun getUri(context: Context): String {
       q.h(var1, "context");
       return ReactAssetCache.INSTANCE.get(var1, this);
+   }
+
+   public fun wasSet(context: Context): Boolean {
+      q.h(var1, "context");
+      return ReactAssetCache.INSTANCE.wasSet(var1, this);
    }
 }

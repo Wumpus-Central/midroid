@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,19 +79,19 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    public override fun toString(): String {
       val var2: java.lang.String = this.channelId;
       val var1: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.summaryId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapSummaryJumpData(channelId=");
-      var3.append(var2);
-      var3.append(", messageId=");
-      var3.append(var1);
-      var3.append(", summaryId=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.summaryId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapSummaryJumpData(channelId=");
+      var4.append(var2);
+      var4.append(", messageId=");
+      var4.append(var1);
+      var4.append(", summaryId=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -110,7 +110,7 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapSummaryJumpData {

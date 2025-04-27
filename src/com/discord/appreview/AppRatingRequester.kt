@@ -6,7 +6,7 @@ import com.google.android.play.core.review.ReviewManager
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
-public class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
+internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
    private final val onComplete: () -> Unit
    private final val onFailure: (Exception) -> Unit
@@ -26,9 +26,9 @@ public class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolea
    private fun createReviewManager(fake: Boolean, activity: Activity): ReviewManager {
       val var3: Any;
       if (var1) {
-         var3 = new xc.a(var2);
+         var3 = new W5.a(var2);
       } else {
-         var3 = uc.c.a(var2);
+         var3 = T5.c.a(var2);
          q.g(var3, "create(...)");
       }
 
@@ -41,7 +41,7 @@ public class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolea
       q.h(var1, "this$0");
       q.h(var2, "task");
       if (var2.p()) {
-         val var4: Task = var0.a(var1.activity, var2.l() as uc.b);
+         val var4: Task = var0.a(var1.activity, var2.l() as T5.b);
          q.g(var4, "launchReviewFlow(...)");
          var4.d(new c(var1));
       } else {

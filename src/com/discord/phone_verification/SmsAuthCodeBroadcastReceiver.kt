@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.core.os.d
+import androidx.core.os.c
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
 import kotlin.jvm.internal.q
@@ -64,11 +64,11 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
       }
 
       if (var5 != null && var5.length() != 0) {
-         val var7: Log = Log.INSTANCE;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Successfully extracted code from SMS: ");
-         var6.append(var5);
-         Log.i$default(var7, "SmsAuthCodeBroadcastReceiver", var6.toString(), null, 4, null);
+         val var6: Log = Log.INSTANCE;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Successfully extracted code from SMS: ");
+         var7.append(var5);
+         Log.i$default(var6, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
          this.onReceiveCallback.invoke(var5);
          this.handled = true;
       } else {
@@ -83,14 +83,14 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
          val var4: Bundle = var2.getExtras();
          val var5: Status;
          if (var4 != null) {
-            var5 = d.a(var4, "com.google.android.gms.auth.api.phone.EXTRA_STATUS", Status.class) as Status;
+            var5 = c.a(var4, "com.google.android.gms.auth.api.phone.EXTRA_STATUS", Status.class) as Status;
          } else {
             var5 = null;
          }
 
          val var7: Int;
          if (var5 != null) {
-            var7 = var5.p();
+            var7 = var5.q();
          } else {
             var7 = null;
          }
@@ -104,7 +104,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             val var9: Log = Log.INSTANCE;
             var var8: Int = null;
             if (var5 != null) {
-               var8 = var5.p();
+               var8 = var5.q();
             }
 
             val var6: StringBuilder = new StringBuilder();

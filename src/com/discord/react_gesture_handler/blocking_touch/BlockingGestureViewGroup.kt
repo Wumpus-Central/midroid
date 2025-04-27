@@ -2,6 +2,7 @@ package com.discord.react_gesture_handler.blocking_touch
 
 import android.content.Context
 import android.view.MotionEvent
+import android.view.ViewGroup
 import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootViewKt
 import com.facebook.react.views.view.ReactViewGroup
 import kotlin.jvm.internal.q
@@ -15,7 +16,10 @@ internal class BlockingGestureViewGroup(context: Context) : ReactViewGroup {
    public open fun onInterceptTouchEvent(event: MotionEvent): Boolean {
       q.h(var1, "event");
       if (var1.getAction() == 0) {
-         GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this).requestDisallowInterceptTouchEvent(true);
+         val var2: ViewGroup = GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this);
+         if (var2 != null) {
+            var2.requestDisallowInterceptTouchEvent(true);
+         }
       }
 
       return super.onInterceptTouchEvent(var1);

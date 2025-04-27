@@ -8,7 +8,7 @@ import com.facebook.react.viewmanagers.DCDImageWithThumbhashPlaceholderViewManag
 import kotlin.jvm.internal.q
 
 @ReactModule(name = "DCDImageWithThumbhashPlaceholderView")
-public class ImageWithThumbhashPlaceholderViewManager
+internal class ImageWithThumbhashPlaceholderViewManager
    : SimpleViewManager<ImageWithThumbhashPlaceholderView>,
    DCDImageWithThumbhashPlaceholderViewManagerInterface<ImageWithThumbhashPlaceholderView> {
    protected open fun createViewInstance(reactContext: ThemedReactContext): ImageWithThumbhashPlaceholderView {

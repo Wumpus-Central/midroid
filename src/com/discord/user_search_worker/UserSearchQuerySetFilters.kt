@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -88,21 +88,21 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.guild;
-      val var4: java.lang.Boolean = this.friends;
+      val var4: java.lang.String = this.guild;
+      val var1: java.lang.Boolean = this.friends;
       val var2: java.lang.Boolean = this.strict;
       val var3: StringBuilder = new StringBuilder();
       var3.append("UserSearchQuerySetFilters(guild=");
-      var3.append(var1);
-      var3.append(", friends=");
       var3.append(var4);
+      var3.append(", friends=");
+      var3.append(var1);
       var3.append(", strict=");
       var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -121,7 +121,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = a.u(b2.a);
+         val var1: KSerializer = a.u(C0.a);
          val var2: h = h.a;
          return new KSerializer[]{var1, a.u(h.a), a.u(var2)};
       }
@@ -136,7 +136,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
          var var6: java.lang.Boolean;
          var var11: java.lang.Boolean;
          if (var5) {
-            var7 = var9.v(var8, 0, b2.a, null) as java.lang.String;
+            var7 = var9.v(var8, 0, C0.a, null) as java.lang.String;
             val var10: h = h.a;
             var6 = var9.v(var8, 1, h.a, null) as java.lang.Boolean;
             var11 = var9.v(var8, 2, var10, null) as java.lang.Boolean;
@@ -163,7 +163,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.v(var8, 0, b2.a, var7) as java.lang.String;
+                     var7 = var9.v(var8, 0, C0.a, var7) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -186,7 +186,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

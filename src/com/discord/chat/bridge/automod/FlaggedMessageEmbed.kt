@@ -1,21 +1,20 @@
 package com.discord.chat.bridge.automod
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
+import ba.h
+import ba.p0
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
-import fl.n0
-import fl.o1
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -69,7 +68,7 @@ public data class FlaggedMessageEmbed(id: MessageId,
       var14: SerializationConstructorMarker
    ) {
       if (643 != (var1 and 643)) {
-         o1.b(var1, 643, FlaggedMessageEmbed.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 643, FlaggedMessageEmbed.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -258,8 +257,8 @@ public data class FlaggedMessageEmbed(id: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = MessageId.hashCode-impl(this.id);
-      val var9: Int = ChannelId.hashCode-impl(this.channelId);
+      val var9: Int = MessageId.hashCode-impl(this.id);
+      val var10: Int = ChannelId.hashCode-impl(this.channelId);
       var var8: Int = 0;
       val var1: Int;
       if (this.guildId == null) {
@@ -316,54 +315,54 @@ public data class FlaggedMessageEmbed(id: MessageId,
          var8 = this.communicationDisabled.hashCode();
       }
 
-      return ((((((((((var10 * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
+      return ((((((((((var9 * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
             * 31
          + var8;
    }
 
    public override fun toString(): String {
-      val var12: java.lang.String = MessageId.toString-impl(this.id);
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = MessageId.toString-impl(this.id);
+      val var11: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var8: GuildId = this.guildId;
-      val var5: UserId = this.userId;
+      val var12: UserId = this.userId;
       val var13: StructurableText = this.content;
-      val var4: java.lang.String = this.channelName;
-      val var6: java.lang.String = this.username;
+      val var3: java.lang.String = this.channelName;
+      val var9: java.lang.String = this.username;
       val var1: Int = this.usernameColor;
-      val var9: Int = this.roleColor;
+      val var6: Int = this.roleColor;
       val var2: Boolean = this.shouldShowRoleDot;
       val var10: java.lang.String = this.avatarURL;
-      val var3: java.lang.Boolean = this.communicationDisabled;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("FlaggedMessageEmbed(id=");
-      var11.append(var12);
-      var11.append(", channelId=");
-      var11.append(var7);
-      var11.append(", guildId=");
-      var11.append(var8);
-      var11.append(", userId=");
-      var11.append(var5);
-      var11.append(", content=");
-      var11.append(var13);
-      var11.append(", channelName=");
-      var11.append(var4);
-      var11.append(", username=");
-      var11.append(var6);
-      var11.append(", usernameColor=");
-      var11.append(var1);
-      var11.append(", roleColor=");
-      var11.append(var9);
-      var11.append(", shouldShowRoleDot=");
-      var11.append(var2);
-      var11.append(", avatarURL=");
-      var11.append(var10);
-      var11.append(", communicationDisabled=");
-      var11.append(var3);
-      var11.append(")");
-      return var11.toString();
+      val var5: java.lang.Boolean = this.communicationDisabled;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("FlaggedMessageEmbed(id=");
+      var7.append(var4);
+      var7.append(", channelId=");
+      var7.append(var11);
+      var7.append(", guildId=");
+      var7.append(var8);
+      var7.append(", userId=");
+      var7.append(var12);
+      var7.append(", content=");
+      var7.append(var13);
+      var7.append(", channelName=");
+      var7.append(var3);
+      var7.append(", username=");
+      var7.append(var9);
+      var7.append(", usernameColor=");
+      var7.append(var1);
+      var7.append(", roleColor=");
+      var7.append(var6);
+      var7.append(", shouldShowRoleDot=");
+      var7.append(var2);
+      var7.append(", avatarURL=");
+      var7.append(var10);
+      var7.append(", communicationDisabled=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -391,18 +390,18 @@ public data class FlaggedMessageEmbed(id: MessageId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: MessageId.$serializer = MessageId.$serializer.INSTANCE;
-         val var2: ChannelId.$serializer = ChannelId.$serializer.INSTANCE;
          val var8: KSerializer = a.u(GuildId.$serializer.INSTANCE);
-         val var10: KSerializer = a.u(UserId.$serializer.INSTANCE);
-         val var6: KSerializer = a.u(StructurableTextSerializer.INSTANCE);
-         val var11: b2 = b2.a;
-         val var4: KSerializer = a.u(b2.a);
-         val var9: KSerializer = a.u(var11);
-         val var5: n0 = n0.a;
-         val var3: KSerializer = a.u(n0.a);
-         val var7: h = h.a;
-         return new KSerializer[]{var1, var2, var8, var10, var6, var4, var9, var5, var3, h.a, a.u(var11), a.u(var7)};
+         val var3: KSerializer = a.u(UserId.$serializer.INSTANCE);
+         val var4: KSerializer = a.u(StructurableTextSerializer.INSTANCE);
+         val var9: C0 = C0.a;
+         val var1: KSerializer = a.u(C0.a);
+         val var2: KSerializer = a.u(var9);
+         val var7: N = N.a;
+         val var5: KSerializer = a.u(N.a);
+         val var6: h = h.a;
+         return new KSerializer[]{
+            MessageId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, var8, var3, var4, var1, var2, var7, var5, h.a, a.u(var9), a.u(var6)
+         };
       }
 
       public open fun deserialize(decoder: Decoder): FlaggedMessageEmbed {
@@ -417,15 +416,15 @@ public data class FlaggedMessageEmbed(id: MessageId,
          var var3: Int;
          val var4: Int;
          val var5: Byte;
-         var var17: Any;
+         var var13: Any;
+         var var16: Any;
          var var18: Any;
-         var var19: java.lang.String;
+         var var19: Any;
          val var20: Any;
          val var21: Any;
          val var22: java.lang.String;
          val var23: Any;
-         var var36: Any;
-         var var42: Int;
+         var var43: Int;
          if (var10) {
             val var26: MessageId = var25.m(var24, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var27: java.lang.String;
@@ -435,46 +434,46 @@ public data class FlaggedMessageEmbed(id: MessageId,
                var27 = null;
             }
 
-            var17 = var25.m(var24, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var15 = var25.v(var24, 2, GuildId.$serializer.INSTANCE, null) as GuildId;
-            var21 = var25.v(var24, 3, UserId.$serializer.INSTANCE, null) as UserId;
-            var20 = var25.v(var24, 4, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var36 = b2.a;
-            val var14: java.lang.String = var25.v(var24, 5, b2.a, null) as java.lang.String;
-            val var12: java.lang.String = var25.v(var24, 6, (DeserializationStrategy)var36, null) as java.lang.String;
-            var3 = var25.k(var24, 7);
-            val var11: Int = var25.v(var24, 8, n0.a, null) as Int;
+            var23 = var25.m(var24, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var21 = var25.v(var24, 2, GuildId.$serializer.INSTANCE, null) as GuildId;
+            var20 = var25.v(var24, 3, UserId.$serializer.INSTANCE, null) as UserId;
+            var16 = var25.v(var24, 4, StructurableTextSerializer.INSTANCE, null) as StructurableText;
+            val var12: C0 = C0.a;
+            val var14: java.lang.String = var25.v(var24, 5, C0.a, null) as java.lang.String;
+            var13 = var25.v(var24, 6, var12, null) as java.lang.String;
+            var4 = var25.k(var24, 7);
+            val var11: Int = var25.v(var24, 8, N.a, null) as Int;
             val var2: Byte = var25.s(var24, 9);
-            val var16: java.lang.String = var25.v(var24, 10, (DeserializationStrategy)var36, null) as java.lang.String;
-            var36 = var25.v(var24, 11, h.a, null) as java.lang.Boolean;
-            var19 = var27;
-            var4 = 4095;
-            var23 = var14;
-            var18 = var12;
-            var42 = var11;
+            val var17: java.lang.String = var25.v(var24, 10, var12, null) as java.lang.String;
+            val var35: java.lang.Boolean = var25.v(var24, 11, h.a, null) as java.lang.Boolean;
+            var15 = var27;
+            var3 = 4095;
+            var19 = var14;
+            var43 = var11;
             var5 = var2;
-            var22 = var16;
+            var22 = var17;
+            var18 = var35;
          } else {
-            var var32: Boolean = true;
+            var var33: Boolean = true;
             var var30: Int = 0;
-            var var31: Byte = 0;
+            var var32: Byte = 0;
             var3 = 0;
             var var38: java.lang.String = null;
-            var42 = null;
-            var17 = null;
-            var36 = null;
+            var16 = null;
+            var43 = null;
+            var13 = null;
             var18 = null;
             var19 = null;
             var var29: Any = null;
-            var var35: Any = null;
+            var var36: Any = null;
             var var34: Any = null;
 
-            while (var32) {
+            while (var33) {
                label63: {
                   val var9: Int = var25.x(var24);
                   switch (var9) {
                      case -1:
-                        var32 = false;
+                        var33 = false;
                         break;
                      case 0:
                         val var39: MessageId;
@@ -498,11 +497,11 @@ public data class FlaggedMessageEmbed(id: MessageId,
                         var30 |= 2;
                         break;
                      case 2:
-                        var35 = var25.v(var24, 2, GuildId.$serializer.INSTANCE, var35) as GuildId;
+                        var36 = var25.v(var24, 2, GuildId.$serializer.INSTANCE, var36) as GuildId;
                         var30 |= 4;
                         break;
                      case 3:
-                        var36 = var25.v(var24, 3, UserId.$serializer.INSTANCE, var36) as UserId;
+                        var13 = var25.v(var24, 3, UserId.$serializer.INSTANCE, var13) as UserId;
                         var30 |= 8;
                         break label63;
                      case 4:
@@ -510,12 +509,12 @@ public data class FlaggedMessageEmbed(id: MessageId,
                         var30 |= 16;
                         break label63;
                      case 5:
-                        var18 = var25.v(var24, 5, b2.a, var18) as java.lang.String;
+                        var18 = var25.v(var24, 5, C0.a, var18) as java.lang.String;
                         var30 |= 32;
                         var6 = 10;
                         continue;
                      case 6:
-                        var19 = var25.v(var24, 6, b2.a, var19) as java.lang.String;
+                        var19 = var25.v(var24, 6, C0.a, var19) as java.lang.String;
                         var30 |= 64;
                         var6 = 10;
                         continue;
@@ -524,19 +523,19 @@ public data class FlaggedMessageEmbed(id: MessageId,
                         var30 |= 128;
                         continue;
                      case 8:
-                        var42 = var25.v(var24, 8, n0.a, var42) as Int;
+                        var16 = var25.v(var24, 8, N.a, var16) as Int;
                         var30 |= 256;
                         continue;
                      case 9:
-                        var31 = var25.s(var24, var7);
+                        var32 = var25.s(var24, var7);
                         var30 |= 512;
                         continue;
                      case 10:
-                        var15 = var25.v(var24, var6, b2.a, var15) as java.lang.String;
+                        var15 = var25.v(var24, var6, C0.a, var15) as java.lang.String;
                         var30 |= 1024;
                         continue;
                      case 11:
-                        var17 = var25.v(var24, 11, h.a, var17) as java.lang.Boolean;
+                        var43 = var25.v(var24, 11, h.a, var43) as java.lang.Boolean;
                         var30 |= 2048;
                         continue;
                      default:
@@ -553,34 +552,36 @@ public data class FlaggedMessageEmbed(id: MessageId,
                var7 = 9;
             }
 
-            var23 = var18;
-            var18 = var19;
-            var36 = var17;
+            var20 = var13;
+            var13 = var19;
+            var18 = var43;
             var22 = var15;
-            var5 = var31;
-            var20 = var29;
+            var5 = var32;
+            var43 = (Integer)var16;
+            var4 = var3;
+            var19 = var18;
+            var16 = var29;
             var21 = var36;
-            var15 = (java.lang.String)var35;
-            var17 = var34;
-            var19 = var38;
-            var4 = var30;
+            var23 = var34;
+            var15 = var38;
+            var3 = var30;
          }
 
          var25.b(var24);
          return new FlaggedMessageEmbed(
-            var4,
-            var19,
-            (ChannelId)var17,
-            var15,
-            (UserId)var21,
-            (StructurableText)var20,
-            (java.lang.String)var23,
-            (java.lang.String)var18,
             var3,
-            var42,
+            var15,
+            (ChannelId)var23,
+            (GuildId)var21,
+            (UserId)var20,
+            (StructurableText)var16,
+            (java.lang.String)var19,
+            (java.lang.String)var13,
+            var4,
+            var43,
             (boolean)var5,
             var22,
-            (java.lang.Boolean)var36,
+            (java.lang.Boolean)var18,
             null,
             null
          );
@@ -596,7 +597,7 @@ public data class FlaggedMessageEmbed(id: MessageId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

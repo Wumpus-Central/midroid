@@ -1,0 +1,60 @@
+{
+  "rdfRys": "Tady máme „const static codeSpan = 2;“.",
+  "HMvECw": [
+    "Tohle všechno se spravuje lokálně a ",
+    [
+      8,
+      "$b",
+      [
+        "zatím"
+      ]
+    ],
+    " nenahradilo globální systém i18n."
+  ],
+  "XOdbAw": [
+    "Pro speciální obsah používej hooky jako například ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "rmps8/": [
+    "Tento řetězec má ",
+    [
+      8,
+      "$link",
+      [
+        "statický odkaz"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    " s URL definovanou v rámci řetězce."
+  ],
+  "uczI4u": [
+    "Tento odkaz využívá ",
+    [
+      8,
+      "$link",
+      [
+        "variabilní odkaz"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    " zadaný při spuštění."
+  ],
+  "swfLzc": "Tato zpráva pochází ze samostatného souboru"
+}

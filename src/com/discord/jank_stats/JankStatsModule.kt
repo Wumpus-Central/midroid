@@ -1,13 +1,13 @@
 package com.discord.jank_stats
 
-import com.discord.codegen.NativeJankStatsSpec
+import com.discord.codegen.NativeJankStatsModuleSpec
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 
-public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJankStatsSpec {
+public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJankStatsModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
@@ -28,9 +28,5 @@ public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJank
 
    public override fun stopTracking() {
       JankStatsAggregator.INSTANCE.disableTracking();
-   }
-
-   public companion object {
-      public const val NAME: String
    }
 }

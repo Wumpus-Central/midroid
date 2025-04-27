@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import o1.a;
+import u0.a;
 
 public final class PollActionButtonBinding implements ViewBinding {
    public final DCDButton actionButton;

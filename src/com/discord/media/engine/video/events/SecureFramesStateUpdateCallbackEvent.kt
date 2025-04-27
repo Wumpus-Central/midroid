@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,7 +77,7 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -97,7 +97,7 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a};
+         return new KSerializer[]{N.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): SecureFramesStateUpdateCallbackEvent {

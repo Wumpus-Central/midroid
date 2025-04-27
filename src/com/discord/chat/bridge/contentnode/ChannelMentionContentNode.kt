@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -33,7 +33,7 @@ public data class ChannelMentionContentNode(channelId: String,
    @JvmStatic
    fun {
       val var0: ContentNodeSerializer = ContentNodeSerializer.INSTANCE;
-      $childSerializers = new KSerializer[]{null, null, null, null, new fl.f(ContentNodeSerializer.INSTANCE), new fl.f(var0)};
+      $childSerializers = new KSerializer[]{null, null, null, null, new ba.f(ContentNodeSerializer.INSTANCE), new ba.f(var0)};
    }
 
    init {
@@ -145,30 +145,30 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.guildId;
-      val var6: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.originalLink;
-      val var5: java.util.List = this.inContent;
-      val var3: java.util.List = this.content;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ChannelMentionContentNode(channelId=");
-      var7.append(var2);
-      var7.append(", guildId=");
-      var7.append(var1);
-      var7.append(", messageId=");
-      var7.append(var6);
-      var7.append(", originalLink=");
-      var7.append(var4);
-      var7.append(", inContent=");
-      var7.append(var5);
-      var7.append(", content=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var1: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.originalLink;
+      val var6: java.util.List = this.inContent;
+      val var7: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ChannelMentionContentNode(channelId=");
+      var2.append(var1);
+      var2.append(", guildId=");
+      var2.append(var5);
+      var2.append(", messageId=");
+      var2.append(var4);
+      var2.append(", originalLink=");
+      var2.append(var3);
+      var2.append(", inContent=");
+      var2.append(var6);
+      var2.append(", content=");
+      var2.append(var7);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -191,8 +191,8 @@ public data class ChannelMentionContentNode(channelId: String,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var2: Array<KSerializer> = ChannelMentionContentNode.access$get$childSerializers$cp();
-         val var1: b2 = b2.a;
-         return new KSerializer[]{b2.a, a.u(b2.a), a.u(var1), a.u(var1), a.u(var2[4]), a.u(var2[5])};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{C0.a, a.u(C0.a), a.u(var1), a.u(var1), a.u(var2[4]), a.u(var2[5])};
       }
 
       public open fun deserialize(decoder: Decoder): ChannelMentionContentNode {
@@ -210,8 +210,8 @@ public data class ChannelMentionContentNode(channelId: String,
          val var15: java.lang.String;
          if (var5) {
             var10 = var13.t(var12, 0);
-            val var14: b2 = b2.a;
-            var9 = var13.v(var12, 1, b2.a, null) as java.lang.String;
+            val var14: C0 = C0.a;
+            var9 = var13.v(var12, 1, C0.a, null) as java.lang.String;
             var8 = var13.v(var12, 2, var14, null) as java.lang.String;
             var15 = var13.v(var12, 3, var14, null) as java.lang.String;
             var6 = var13.v(var12, 4, var11[4], null) as java.util.List;
@@ -237,15 +237,15 @@ public data class ChannelMentionContentNode(channelId: String,
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var13.v(var12, 1, b2.a, var9) as java.lang.String;
+                     var9 = var13.v(var12, 1, C0.a, var9) as java.lang.String;
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var13.v(var12, 2, b2.a, var8) as java.lang.String;
+                     var8 = var13.v(var12, 2, C0.a, var8) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var13.v(var12, 3, b2.a, var7) as java.lang.String;
+                     var7 = var13.v(var12, 3, C0.a, var7) as java.lang.String;
                      var2 |= 8;
                      break;
                   case 4:
@@ -279,7 +279,7 @@ public data class ChannelMentionContentNode(channelId: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

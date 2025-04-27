@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -74,21 +74,21 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public override fun toString(): String {
-      val var1: Int = this.connectionId;
-      val var3: java.lang.String = this.userId;
-      val var2: Int = this.isSpeaking;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UserSpeakingEvent(connectionId=");
-      var4.append(var1);
-      var4.append(", userId=");
-      var4.append(var3);
-      var4.append(", isSpeaking=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var2: Int = this.connectionId;
+      val var4: java.lang.String = this.userId;
+      val var1: Int = this.isSpeaking;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserSpeakingEvent(connectionId=");
+      var3.append(var2);
+      var3.append(", userId=");
+      var3.append(var4);
+      var3.append(", isSpeaking=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -107,7 +107,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, n0.a};
+         return new KSerializer[]{N.a, C0.a, N.a};
       }
 
       public open fun deserialize(decoder: Decoder): UserSpeakingEvent {

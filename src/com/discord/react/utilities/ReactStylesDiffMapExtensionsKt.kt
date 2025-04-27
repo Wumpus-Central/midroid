@@ -8,10 +8,10 @@ import kotlin.jvm.internal.q
 public fun ReactStylesDiffMap.getBoolean(key: String): Boolean {
    q.h(var0, "<this>");
    q.h(var1, "key");
-   if (var0.isNull(var1) xor true) {
+   if (!var0.isNull(var1)) {
       return var0.getBoolean(var1, false);
    } else {
-      throw new IllegalArgumentException("Failed requirement.".toString());
+      throw new IllegalArgumentException("Failed requirement.");
    }
 }
 
@@ -26,10 +26,10 @@ public fun ReactStylesDiffMap.getNonNullArray(key: String): ReadableArray {
 public fun ReactStylesDiffMap.getNonNullInt(key: String): Int {
    q.h(var0, "<this>");
    q.h(var1, "key");
-   if (var0.isNull(var1) xor true) {
+   if (!var0.isNull(var1)) {
       return var0.getInt(var1, Integer.MAX_VALUE);
    } else {
-      throw new IllegalArgumentException("Failed requirement.".toString());
+      throw new IllegalArgumentException("Failed requirement.");
    }
 }
 

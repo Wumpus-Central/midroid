@@ -1,24 +1,41 @@
 package com.discord.keyboard
 
 import java.util.ArrayList
-import kotlin.jvm.internal.q
 
 public object KeyboardManager {
    private final val keyboardListeners: MutableList<KeyboardEvent> = new ArrayList()
 
    public fun addKeyboardListener(listener: KeyboardEvent) {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            q.h(var1, "listener");
-            keyboardListeners.add(var1);
-         } catch (var2: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 1
+      // 03: ldc "listener"
+      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 08: getstatic com/discord/keyboard/KeyboardManager.keyboardListeners Ljava/util/List;
+      // 0b: aload 1
+      // 0c: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
+      // 11: pop
+      // 12: aload 0
+      // 13: monitorexit
+      // 14: return
+      // 15: astore 1
+      // 16: aload 0
+      // 17: monitorexit
+      // 18: aload 1
+      // 19: athrow
    }
 
    internal fun onKeyboardChanged(opened: Boolean) {
@@ -31,8 +48,8 @@ public object KeyboardManager {
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.insertSemaphore(FinallyProcessor.java:350)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:99)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
       // 00: aload 0
@@ -61,17 +78,35 @@ public object KeyboardManager {
    }
 
    public fun removeKeyboardListener(listener: KeyboardEvent) {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            q.h(var1, "listener");
-            keyboardListeners.remove(var1);
-         } catch (var2: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 1
+      // 03: ldc "listener"
+      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 08: getstatic com/discord/keyboard/KeyboardManager.keyboardListeners Ljava/util/List;
+      // 0b: aload 1
+      // 0c: invokeinterface java/util/List.remove (Ljava/lang/Object;)Z 2
+      // 11: pop
+      // 12: aload 0
+      // 13: monitorexit
+      // 14: return
+      // 15: astore 1
+      // 16: aload 0
+      // 17: monitorexit
+      // 18: aload 1
+      // 19: athrow
    }
 }

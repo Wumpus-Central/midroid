@@ -7,6 +7,6 @@ import kotlin.jvm.internal.q
 internal class DCDBackgroundSpan(style: BackgroundStyle) : BackgroundSpan, DCDInputSpan {
    init {
       q.h(var1, "style");
-      super(var1);
+      super(var1, null, null, 6, null);
    }
 }

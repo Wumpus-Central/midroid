@@ -4,8 +4,8 @@ import com.discord.media.utils.ContentResolverMedia
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
+import f8.w
 import java.util.ArrayList
-import kh.w
 import kotlin.jvm.internal.q
 
 internal class GetPhotosData(edges: List<ContentResolverMedia>) {
@@ -43,7 +43,7 @@ internal class GetPhotosData(edges: List<ContentResolverMedia>) {
          var1.add(NativeMapExtensionsKt.nativeMapOf(w.a("node", this.toNativeMap(var3.next() as ContentResolverMedia))));
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(w.a("edges", NativeArrayExtensionsKt.toNativeArray(var1)));
+      return NativeMapExtensionsKt.nativeMapOf(w.a("edges", NativeArrayExtensionsKt.toNativeArray$default(var1, null, 1, null)));
    }
 
    public companion object {

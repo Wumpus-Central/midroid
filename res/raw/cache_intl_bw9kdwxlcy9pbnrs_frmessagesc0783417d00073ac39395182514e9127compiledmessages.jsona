@@ -1,0 +1,70 @@
+{
+  "rdfRys": [
+    "Nous avons un ",
+    [
+      8,
+      "$code",
+      [
+        "const static codeSpan = 2;"
+      ]
+    ],
+    " ici."
+  ],
+  "HMvECw": [
+    "Tout cela est géré localement et n'a ",
+    [
+      8,
+      "$b",
+      [
+        "pas encore"
+      ]
+    ],
+    " remplacé le système i18n global."
+  ],
+  "XOdbAw": [
+    "Utilise des crochets comme ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " pour le contenu spécial."
+  ],
+  "rmps8/": [
+    "Cette chaîne a un ",
+    [
+      8,
+      "$link",
+      [
+        "lien statique"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    ", avec l'URL définie dans la chaîne."
+  ],
+  "uczI4u": [
+    "Ce lien utilise un ",
+    [
+      8,
+      "$link",
+      [
+        "lien variable"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    " fourni à l'exécution."
+  ],
+  "swfLzc": "Ce message vient d'un fichier séparé"
+}

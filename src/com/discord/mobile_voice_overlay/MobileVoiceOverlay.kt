@@ -12,8 +12,7 @@ import android.view.View.OnAttachStateChangeListener
 import android.view.View.OnLayoutChangeListener
 import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
-import androidx.core.os.e
-import androidx.core.view.r0
+import androidx.core.os.d
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.mobile_voice_overlay.utils.OverlayViewProvider
 import com.discord.mobile_voice_overlay.utils.WindowUtils
@@ -28,7 +27,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.bridge.CatalystInstance
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
-import kh.w
+import f8.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -127,11 +126,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
                public final void invoke(OverlayMenuBubbleDialog var1) {
                   q.h(var1, "menuDialog");
-                  val var3x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
-                  val var4x: OverlayVoiceBubble = this.$voiceBubble;
-                  val var2x: Rect = this.$marginRect;
-                  var3x.width = this.$voiceBubble.getWidth() - var2x.left - var2x.right;
-                  var3x.height = var4x.getHeight();
+                  val var4x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
+                  val var2x: OverlayVoiceBubble = this.$voiceBubble;
+                  val var3x: Rect = this.$marginRect;
+                  var4x.width = this.$voiceBubble.getWidth() - var3x.left - var3x.right;
+                  var4x.height = var2x.getHeight();
                   var1.getLinkedAnchorView().requestLayout();
                   var1.getLinkedAnchorView().setTag("Active Voice Bubble");
                   var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this.$voiceBubble) {
@@ -144,7 +143,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                      public void onViewAttachedToWindow(View var1) {
                         q.h(var1, "v");
                         val var2x: OverlayVoiceBubble = this.$voiceBubble;
-                        if (r0.U(var1) && !var1.isLayoutRequested()) {
+                        if (var1.isLaidOut() && !var1.isLayoutRequested()) {
                            var1 = var1.findViewWithTag("Active Voice Bubble");
                            q.g(var1, "findViewWithTag(...)");
                            var2x.anchorOn(var1);
@@ -183,18 +182,18 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
          public final OverlayVoiceBubble invoke(OverlayViewProvider<OverlayVoiceBubble> var1) {
             q.h(var1, "it");
-            val var3: Int = MobileVoiceOverlay.access$getContext$p(this.this$0).getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-            val var5: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
-            var5.getInsetMargins().set(-var3, var3, -var3, var3);
-            var5.setOnClickListener(new a(var5, this.this$0));
-            var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var5) {
+            val var2: Int = MobileVoiceOverlay.access$getContext$p(this.this$0).getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
+            val var4: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
+            var4.getInsetMargins().set(-var2, var2, -var2, var2);
+            var4.setOnClickListener(new a(var4, this.this$0));
+            var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var4) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
                {
                   super(1);
                   this.this$0 = var1;
-                  this.$voiceBubble = var2;
+                  this.$voiceBubble = var2x;
                }
 
                public final void invoke(MotionEvent var1) {
@@ -207,8 +206,8 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                      {
                         super(1);
                         this.$voiceBubble = var1;
-                        this.$event = var2;
-                        this.this$0 = var3x;
+                        this.$event = var2x;
+                        this.this$0 = var3;
                      }
 
                      public final void invoke(OverlayTrashWrap var1) {
@@ -220,7 +219,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            var5.setOnMovingStateChanged(new Function1(this.this$0, var5) {
+            var4.setOnMovingStateChanged(new Function1(this.this$0, var4) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
@@ -239,8 +238,8 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                      {
                         super(1);
                         this.$isMoving = var1;
-                        this.this$0 = var2;
-                        this.$voiceBubble = var3x;
+                        this.this$0 = var2x;
+                        this.$voiceBubble = var3;
                      }
 
                      public final void invoke(OverlayTrashWrap var1) {
@@ -255,7 +254,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            return var5;
+            return var4;
          }
       });
       this.trashWrapProvider = new OverlayViewProvider<>(new Function1(this) {
@@ -365,7 +364,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                         val var3x: Context = this.$this_apply.getContext();
                         q.g(var3x, "getContext(...)");
                         var4.startHeadlessTask(
-                           var3x, "SelectChannel", e.a(w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE))
+                           var3x, "SelectChannel", d.a(w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE))
                         );
                      }
                   }
@@ -396,7 +395,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
       var var4: CatalystInstance = this.context.getCatalystInstance();
       if (var4 != null) {
-         if (!(var4.isDestroyed() xor true)) {
+         if (var4.isDestroyed()) {
             var4 = null;
          }
 
@@ -481,11 +480,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getVoiceBubbleProvider$p(this).removeViewFromOverlay();
          access$getTrashWrapProvider$p(this).removeViewFromOverlay();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -528,11 +527,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
             });
          }
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

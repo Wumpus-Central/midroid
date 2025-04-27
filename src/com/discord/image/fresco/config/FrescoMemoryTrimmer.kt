@@ -1,10 +1,10 @@
 package com.discord.image.fresco.config
 
+import R1.c
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
 import kotlin.jvm.internal.q
-import x4.c
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {
@@ -23,7 +23,7 @@ internal object FrescoMemoryTrimmer {
          }
 
          public void onTrimMemory(int var1) {
-            if (var1 == 5 || var1 == 10 || var1 == 15 || var1 == 40 || var1 == 60 || var1 == 80) {
+            if (var1 == 40) {
                this.clearMemoryCaches();
             }
          }

@@ -6,63 +6,138 @@ import kotlin.jvm.internal.q
 public object TTIMetrics {
    public final var loggedTTI: Boolean
       public final get() {
-         label13: {
-            synchronized (this){} // $VF: monitorenter 
-
-            try {
-               val var1: Boolean = loggedTTI;
-            } catch (var3: java.lang.Throwable) {
-               // $VF: monitorexit
-            }
-
-            // $VF: monitorexit
-         }
+         // $VF: Couldn't be decompiled
+         // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+         // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+         //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+         //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+         //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+         //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+         //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+         //
+         // Bytecode:
+         // 0: aload 0
+         // 1: monitorenter
+         // 2: getstatic com/discord/tti_manager/TTIMetrics.loggedTTI Z
+         // 5: istore 1
+         // 6: aload 0
+         // 7: monitorexit
+         // 8: iload 1
+         // 9: ireturn
+         // a: astore 2
+         // b: aload 0
+         // c: monitorexit
+         // d: aload 2
+         // e: athrow
       }
 
       public final set(<set-?>) {
-         label13: {
-            synchronized (this){} // $VF: monitorenter 
-
-            try {
-               loggedTTI = var1;
-            } catch (var3: java.lang.Throwable) {
-               // $VF: monitorexit
-            }
-
-            // $VF: monitorexit
-         }
+         // $VF: Couldn't be decompiled
+         // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+         // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+         //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+         //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+         //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+         //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+         //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+         //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+         //
+         // Bytecode:
+         // 0: aload 0
+         // 1: monitorenter
+         // 2: iload 1
+         // 3: putstatic com/discord/tti_manager/TTIMetrics.loggedTTI Z
+         // 6: aload 0
+         // 7: monitorexit
+         // 8: return
+         // 9: astore 2
+         // a: aload 0
+         // b: monitorexit
+         // c: aload 2
+         // d: athrow
       }
 
 
    private final val timings: MutableList<com.discord.tti_manager.TTIMetrics.Timing> = new ArrayList()
 
    public fun getTimings(): ArrayList<com.discord.tti_manager.TTIMetrics.Timing> {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            new ArrayList<>(timings);
-         } catch (var2: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: new java/util/ArrayList
+      // 05: dup
+      // 06: getstatic com/discord/tti_manager/TTIMetrics.timings Ljava/util/List;
+      // 09: invokespecial java/util/ArrayList.<init> (Ljava/util/Collection;)V
+      // 0c: astore 1
+      // 0d: aload 0
+      // 0e: monitorexit
+      // 0f: aload 1
+      // 10: areturn
+      // 11: astore 1
+      // 12: aload 0
+      // 13: monitorexit
+      // 14: aload 1
+      // 15: athrow
    }
 
    public fun record(label: String, timestamp: Long = System.currentTimeMillis(), tag: String? = null, autoGenerated: Boolean = false) {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            q.h(var1, "label");
-            timings.add(new TTIMetrics.Timing(var1, var2, var4, var5));
-         } catch (var8: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 1
+      // 03: ldc "label"
+      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 08: getstatic com/discord/tti_manager/TTIMetrics.timings Ljava/util/List;
+      // 0b: astore 6
+      // 0d: new com/discord/tti_manager/TTIMetrics$Timing
+      // 10: astore 7
+      // 12: aload 7
+      // 14: aload 1
+      // 15: lload 2
+      // 16: aload 4
+      // 18: iload 5
+      // 1a: invokespecial com/discord/tti_manager/TTIMetrics$Timing.<init> (Ljava/lang/String;JLjava/lang/String;Z)V
+      // 1d: aload 6
+      // 1f: aload 7
+      // 21: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
+      // 26: pop
+      // 27: aload 0
+      // 28: monitorexit
+      // 29: return
+      // 2a: astore 1
+      // 2b: aload 0
+      // 2c: monitorexit
+      // 2d: aload 1
+      // 2e: athrow
    }
 
    public data class Timing(label: String, timestamp: Long, tag: String?, autoGenerated: Boolean) {
@@ -121,8 +196,8 @@ public object TTIMetrics {
       }
 
       public override fun hashCode(): Int {
-         val var2: Int = this.label.hashCode();
-         val var3: Int = java.lang.Long.hashCode(this.timestamp);
+         val var3: Int = this.label.hashCode();
+         val var2: Int = java.lang.Long.hashCode(this.timestamp);
          val var1: Int;
          if (this.tag == null) {
             var1 = 0;
@@ -130,25 +205,25 @@ public object TTIMetrics {
             var1 = this.tag.hashCode();
          }
 
-         return ((var2 * 31 + var3) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.autoGenerated);
+         return ((var3 * 31 + var2) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.autoGenerated);
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.label;
+         val var6: java.lang.String = this.label;
          val var1: Long = this.timestamp;
-         val var6: java.lang.String = this.tag;
+         val var4: java.lang.String = this.tag;
          val var3: Boolean = this.autoGenerated;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Timing(label=");
-         var4.append(var5);
-         var4.append(", timestamp=");
-         var4.append(var1);
-         var4.append(", tag=");
-         var4.append(var6);
-         var4.append(", autoGenerated=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Timing(label=");
+         var5.append(var6);
+         var5.append(", timestamp=");
+         var5.append(var1);
+         var5.append(", tag=");
+         var5.append(var4);
+         var5.append(", autoGenerated=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

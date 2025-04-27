@@ -15,7 +15,7 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
 import kotlin.text.MatchResult.b
-import zh.a
+import v8.a
 
 private final val hsv: FloatArray = new float[3]
 private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(\\d+),\\s*(\\d+(?:\\.\\d*)?|\\.\\d+)\\)")
@@ -50,7 +50,7 @@ private fun applySaturationFactor(color: Int): Int {
 }
 
 public fun argbWithAdjustedAlpha(color: Int, alpha: Float): Int {
-   return Color.argb(a.b((float)Color.alpha(var0) * var1), Color.red(var0), Color.green(var0), Color.blue(var0));
+   return Color.argb(a.c((float)Color.alpha(var0) * var1), Color.red(var0), Color.green(var0), Color.blue(var0));
 }
 
 public fun Context.getColorCompat(id: Int): Int {
@@ -93,10 +93,10 @@ public fun interpolateColors(colorA: Int, colorB: Int, t: Float, minT: Float = 0
       val var5: Int = Color.blue(var0);
       var0 = Color.alpha(var0);
       return Color.argb(
-         f.k((int)((float)var0 + (float)(Color.alpha(var1) - var0) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         f.k((int)((float)var9 + (float)(Color.red(var1) - var9) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         f.k((int)((float)var6 + (float)(Color.green(var1) - var6) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         f.k((int)((float)var5 + (float)(Color.blue(var1) - var5) * ((var2 - var3) / (var4 - var3))), 0, 255)
+         d.k((int)((float)var0 + (float)(Color.alpha(var1) - var0) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         d.k((int)((float)var9 + (float)(Color.red(var1) - var9) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         d.k((int)((float)var6 + (float)(Color.green(var1) - var6) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         d.k((int)((float)var5 + (float)(Color.blue(var1) - var5) * ((var2 - var3) / (var4 - var3))), 0, 255)
       );
    }
 }
@@ -119,12 +119,12 @@ public fun rgbaToArgb(rgbaString: String?): Int {
    if (var0 != null) {
       val var5: MatchResult = rgbaPattern.f(var0);
       if (var5 != null) {
-         val var2: b = var5.a();
+         val var3: b = var5.a();
          var1 = Color.argb(
-            (int)(java.lang.Double.parseDouble(var2.a().b().get(4) as java.lang.String) * (double)255),
-            Integer.parseInt(var2.a().b().get(1) as java.lang.String),
-            Integer.parseInt(var2.a().b().get(2) as java.lang.String),
-            Integer.parseInt(var2.a().b().get(3) as java.lang.String)
+            (int)(java.lang.Double.parseDouble(var3.a().b().get(4) as java.lang.String) * (double)255),
+            Integer.parseInt(var3.a().b().get(1) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(2) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(3) as java.lang.String)
          );
       } else {
          var1 = -16777216;

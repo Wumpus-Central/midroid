@@ -54,16 +54,16 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
       q.h(var3, "items");
       if (var1 is MessageView) {
          if (var2 is MessageBundleMessageItem) {
-            val var12: MessageView = var1 as MessageView;
-            val var7: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
-            val var8: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
-            val var13: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
-            val var9: MessageFrame = var7.getMessageItem().getMessageFrame();
-            val var10: MessageItem = var7.getMessageItem();
-            val var11: Context = var12.getContext();
-            q.g(var11, "getContext(...)");
+            val var11: MessageView = var1 as MessageView;
+            val var8: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
+            val var6: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
+            val var12: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
+            val var7: MessageFrame = var8.getMessageItem().getMessageFrame();
+            val var10: MessageItem = var8.getMessageItem();
+            val var9: Context = var11.getContext();
+            q.g(var9, "getContext(...)");
             MessageView.setMessage$default(
-               var12, var8, var13, var9, MessageBundleDelegateUtilsKt.getEventHandler(var10, var11), null, new Function0(this, var3, var4) {
+               var11, var6, var12, var7, MessageBundleDelegateUtilsKt.getEventHandler(var10, var9), null, new Function0(this, var3, var4) {
                   final java.util.List<MessageBundleItem> $items;
                   final int $position;
                   final MessageBundleMessageDelegate this$0;
@@ -78,10 +78,10 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
                   public final MessageView.ChainPart invoke() {
                      return MessageBundleMessageDelegate.access$getChainPart(this.this$0, this.$items, this.$position);
                   }
-               }, false, var7.getMessageItem().isHighlight(), var7.getMessageItem().getRenderContentOnly(), 80, null
+               }, false, var8.getMessageItem().getRenderContentOnly(), 80, null
             );
             if (this.messageAccessoriesViewPool != null) {
-               var12.setAccessoriesRecycledViewPool(this.messageAccessoriesViewPool);
+               var11.setAccessoriesRecycledViewPool(this.messageAccessoriesViewPool);
             }
          }
       }

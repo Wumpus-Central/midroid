@@ -10,22 +10,24 @@ import java.io.IOException
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
-internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, soundResIdPrepared: (Int) -> Unit) {
+internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    private final var mediaPlayer: MediaPlayer?
+   public final val usage: Int
    private final var volume: Float
    public final var numberOfLoops: Int
 
    public constructor(context: Context, usage: Int, soundResId: Int?, filePath: String?, soundResIdPrepared: (Int) -> Unit) : q.h(var1, "context") {
       q.h(var5, "soundResIdPrepared");
-      this(SoundPlayer.Companion.access$createMediaPlayer(Companion, var1, var2, var3, var4), var5);
+      this(SoundPlayer.Companion.access$createMediaPlayer(Companion, var1, var2, var3, var4), var2, var5);
    }
 
    init {
-      q.h(var2, "soundResIdPrepared");
+      q.h(var3, "soundResIdPrepared");
       super();
       this.mediaPlayer = var1;
+      this.usage = var2;
       this.volume = 1.0F;
-      this.initializeMediaPlayer(var2);
+      this.initializeMediaPlayer(var3);
    }
 
    private fun initializeMediaPlayer(soundResIdPrepared: (Int) -> Unit) {

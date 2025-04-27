@@ -13,7 +13,7 @@ public class ChatListItemViewHolder<V extends View>(view: Any) : RecyclerView.Vi
       super(var1);
       this.view = (V)var1;
       if (var1 !is ChatListChildView) {
-         throw new IllegalArgumentException("Failed requirement.".toString());
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 }

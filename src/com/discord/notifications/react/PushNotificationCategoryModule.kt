@@ -8,7 +8,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import kotlin.jvm.internal.q
-import lh.r
 
 public class PushNotificationCategoryModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -23,10 +22,10 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    @ReactMethod
    public fun registerNotificationCategories(localizedCategoryNames: ReadableMap) {
       q.h(var1, "localizedCategoryNames");
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), r.h());
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var3.initNotificationCategories(var2, NativeMapExtensionsKt.toStringMap(var1), g8.q.h());
    }
 
    @ReactMethod

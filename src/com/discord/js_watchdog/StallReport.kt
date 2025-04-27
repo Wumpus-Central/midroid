@@ -1,13 +1,13 @@
 package com.discord.js_watchdog
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import dl.a
-import fl.b2
-import fl.g0
-import fl.n0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,8 +66,8 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.stallTime);
-      val var2: Int = this.sessionId.hashCode();
+      val var2: Int = Integer.hashCode(this.stallTime);
+      val var3: Int = this.sessionId.hashCode();
       val var1: Int;
       if (this.trace == null) {
          var1 = 0;
@@ -75,7 +75,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var1 = this.trace.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -84,20 +84,20 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var2: java.lang.String = this.sessionId;
-      val var3: java.lang.String = this.trace;
+      val var3: java.lang.String = this.sessionId;
+      val var2: java.lang.String = this.trace;
       val var4: StringBuilder = new StringBuilder();
       var4.append("StallReport(stallTime=");
       var4.append(var1);
       var4.append(", sessionId=");
-      var4.append(var2);
-      var4.append(", trace=");
       var4.append(var3);
+      var4.append(", trace=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -116,30 +116,31 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, a.u(b2.a)};
+         return new KSerializer[]{N.a, C0.a, a.u(C0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): StallReport {
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: java.lang.String;
          var var9: java.lang.String;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            val var2: Int = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
-            var9 = var8.v(var7, 2, b2.a, null) as java.lang.String;
-            var2 = 7;
+            var9 = var8.v(var7, 2, C0.a, null) as java.lang.String;
+            var3 = 7;
+            var4 = var2;
          } else {
-            var var4: Boolean = true;
+            var var12: Boolean = true;
             var3 = 0;
             var6 = null;
             var9 = null;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var4) {
+            while (var12) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -148,24 +149,27 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
                            throw new n(var5);
                         }
 
-                        var9 = var8.v(var7, 2, b2.a, var9) as java.lang.String;
-                        var2 |= 4;
+                        var9 = var8.v(var7, 2, C0.a, var9) as java.lang.String;
+                        var10 |= 4;
                      } else {
                         var6 = var8.t(var7, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var3 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
+
+            var4 = var3;
+            var3 = var10;
          }
 
          var8.b(var7);
-         return new StallReport(var2, var3, var6, var9, null);
+         return new StallReport(var3, var4, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: StallReport) {
@@ -178,7 +182,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

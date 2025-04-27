@@ -25,12 +25,12 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerViewManagerDelegate
 import com.facebook.react.viewmanagers.EmojiPickerViewManagerInterface
+import f8.w
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kh.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 
 @ReactModule(name = "EmojiPickerView")
@@ -39,13 +39,13 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
    private final val emojiPickerCaches: MutableMap<EmojiPickerView, EmojiPickerCache> = new LinkedHashMap()
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         w.a("onPressEmoji", g0.b(OnPressEmojiEvent.class)),
-         w.a("onLongPressEmoji", g0.b(OnLongPressEmojiEvent.class)),
-         w.a("onScroll", g0.b(OnScrollEvent.class)),
-         w.a("onScrollBeginDrag", g0.b(OnScrollBeginDragEvent.class)),
-         w.a("onScrollEndDrag", g0.b(OnScrollEndDragEvent.class)),
-         w.a("onStickyHeaderRender", g0.b(OnStickyHeaderRenderEvent.class)),
-         w.a("onShowNitroUpsell", g0.b(OnShowNitroUpsell.class))
+         w.a("onPressEmoji", E.b(OnPressEmojiEvent.class)),
+         w.a("onLongPressEmoji", E.b(OnLongPressEmojiEvent.class)),
+         w.a("onScroll", E.b(OnScrollEvent.class)),
+         w.a("onScrollBeginDrag", E.b(OnScrollBeginDragEvent.class)),
+         w.a("onScrollEndDrag", E.b(OnScrollEndDragEvent.class)),
+         w.a("onStickyHeaderRender", E.b(OnStickyHeaderRenderEvent.class)),
+         w.a("onShowNitroUpsell", E.b(OnShowNitroUpsell.class))
       )
 
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): EmojiPickerView {
@@ -54,19 +54,19 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       val var9: ReadableMap = var2.getMap("config");
       val var4: Float = var2.getFloat("paddingTop", 0.0F);
       val var3: Float = var2.getFloat("paddingBottom", 0.0F);
-      val var5: Int = var2.getInt("emojiSize", -1);
-      val var6: Int = var2.getInt("emojiMargin", -1);
+      val var6: Int = var2.getInt("emojiSize", -1);
+      val var5: Int = var2.getInt("emojiMargin", -1);
       val var8: ReadableMap = var2.getMap("emojiData");
       if (var9 != null) {
-         if (var5 != -1) {
-            if (var6 != -1) {
+         if (var6 != -1) {
+            if (var5 != -1) {
                if (var8 != null) {
                   val var12: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.INSTANCE
                      .deserialize(EmojiPickerItemData.CoreData.Companion, var8, var3, var4);
                   val var10: EmojiPickerView = new EmojiPickerView(
                      var1,
-                     var5,
                      var6,
+                     var5,
                      var12,
                      new Function3(this, var1) {
                         final ThemedReactContext $reactContext;
@@ -81,7 +81,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                         public final void invoke(View var1, java.lang.Long var2, java.lang.String var3) {
                            q.h(var1, "view");
                            q.h(var3, "emojiName");
-                           val var5: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
+                           val var4: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
                            val var6: java.lang.String;
                            if (var2 != null) {
                               var6 = var2.toString();
@@ -89,7 +89,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                               var6 = null;
                            }
 
-                           var5.emitEvent(this.$reactContext, var1, new OnPressEmojiEvent(var3, var6));
+                           var4.emitEvent(this.$reactContext, var1, new OnPressEmojiEvent(var3, var6));
                         }
                      },
                      new Function2(this) {
@@ -147,7 +147,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                         public final void invoke(View var1, java.lang.Long var2, java.lang.String var3) {
                            q.h(var1, "view");
                            q.h(var3, "emojiName");
-                           val var5: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
+                           val var4: ReactEvents = EmojiPickerViewManager.access$getReactEvents$p(this.this$0);
                            val var6: java.lang.String;
                            if (var2 != null) {
                               var6 = var2.toString();
@@ -155,7 +155,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                               var6 = null;
                            }
 
-                           var5.emitEvent(this.$reactContext, var1, new OnLongPressEmojiEvent(var3, var6));
+                           var4.emitEvent(this.$reactContext, var1, new OnLongPressEmojiEvent(var3, var6));
                         }
                      },
                      new Function2(this, var1) {
@@ -194,16 +194,16 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
                   this.emojiPickerCaches.put(var10, new EmojiPickerCache(var10, var12));
                   return var10;
                } else {
-                  throw new IllegalArgumentException("Failed requirement.".toString());
+                  throw new IllegalArgumentException("Failed requirement.");
                }
             } else {
-               throw new IllegalArgumentException("Failed requirement.".toString());
+               throw new IllegalArgumentException("Failed requirement.");
             }
          } else {
-            throw new IllegalArgumentException("Failed requirement.".toString());
+            throw new IllegalArgumentException("Failed requirement.");
          }
       } else {
-         throw new IllegalArgumentException("Failed requirement.".toString());
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 
@@ -270,15 +270,15 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
    public open fun setEmojiData(view: EmojiPickerView, value: ReadableMap?) {
       q.h(var1, "view");
       if (!this.isInitialProp(var1, "emojiData") && var2 != null) {
-         val var3: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.deserialize$default(
+         val var4: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.deserialize$default(
             EmojiPickerItemDataCoreDataDeserializer.INSTANCE, EmojiPickerItemData.CoreData.Companion, var2, 0.0F, 0.0F, 6, null
          );
-         val var4: EmojiPickerCache = this.emojiPickerCaches.get(var1);
-         if (var4 != null) {
-            var4.refreshEmojis(var3);
+         val var3: EmojiPickerCache = this.emojiPickerCaches.get(var1);
+         if (var3 != null) {
+            var3.refreshEmojis(var4);
          }
 
-         var1.setCoreData(var3);
+         var1.setCoreData(var4);
       }
    }
 

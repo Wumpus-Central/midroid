@@ -10,6 +10,6 @@ public final class c implements Runnable {
 
    @Override
    public final void run() {
-      BundleUpdaterManager.b(this.j, this.k);
+      BundleUpdaterManager.a(this.j, this.k);
    }
 }

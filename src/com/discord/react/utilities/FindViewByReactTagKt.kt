@@ -51,19 +51,19 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 
                val var11: Field = var9.getDeclaredField("mNativeViewHierarchyManager");
                var11.setAccessible(true);
-               var2 = (UIImplementation)var11.get(var17);
-               if (var2 is NativeViewHierarchyManager) {
-                  val var13: View = (var2 as NativeViewHierarchyManager).resolveView(var1);
+               var9 = (Class)var11.get(var17);
+               if (var9 is NativeViewHierarchyManager) {
+                  val var13: View = (var9 as NativeViewHierarchyManager).resolveView(var1);
                   q.g(var13, "resolveView(...)");
                   return var13;
                } else {
-                  val var12: StringBuilder = new StringBuilder();
-                  var12.append("Field ");
-                  var12.append(var2);
-                  var12.append(" not instance of ");
-                  var12.append(NativeViewHierarchyManager::class.java);
-                  var12.append(".");
-                  throw new IllegalStateException(var12.toString().toString());
+                  val var18: StringBuilder = new StringBuilder();
+                  var18.append("Field ");
+                  var18.append(var9);
+                  var18.append(" not instance of ");
+                  var18.append(NativeViewHierarchyManager::class.java);
+                  var18.append(".");
+                  throw new IllegalStateException(var18.toString().toString());
                }
             } else {
                val var16: StringBuilder = new StringBuilder();
@@ -84,10 +84,10 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
             throw new IllegalStateException(var6.toString().toString());
          }
       } else {
-         throw new IllegalStateException("Unable to resolve UIImplementation".toString());
+         throw new IllegalStateException("Unable to resolve UIImplementation");
       }
    } else {
-      throw new IllegalStateException("Unable to resolve UIManagerModule".toString());
+      throw new IllegalStateException("Unable to resolve UIManagerModule");
    }
 }
 
@@ -124,7 +124,7 @@ private inline fun <reified T : Any, reified V> Any.getPrivateField(name: String
    var4.setAccessible(true);
    var0 = var4.get(var0);
    q.m(3, "V");
-   if (var0 is Any) {
+   if (var0 != null) {
       return (V)var0;
    } else {
       q.m(4, "V");

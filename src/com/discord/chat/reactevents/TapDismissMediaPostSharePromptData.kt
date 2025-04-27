@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.G
+import ba.p0
+import ba.G.a
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.g0
-import fl.o1
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -24,7 +24,7 @@ public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : Tap
 
    fun TapDismissMediaPostSharePromptData(var1: Int, var2: java.lang.String, var3: SerializationConstructorMarker) {
       if (1 != (var1 and 1)) {
-         o1.b(var1, 1, TapDismissMediaPostSharePromptData.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 1, TapDismissMediaPostSharePromptData.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -73,7 +73,7 @@ public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : Tap
       return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -100,8 +100,7 @@ public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : Tap
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var10: java.lang.String;
          if (var5) {
             val var9: MessageId = var7.m(var6, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -111,6 +110,7 @@ public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : Tap
                var10 = null;
             }
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var10 = null;
 
@@ -135,7 +135,7 @@ public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : Tap
                      var10 = null;
                   }
 
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

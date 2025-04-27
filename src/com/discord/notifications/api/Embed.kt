@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
-import cl.f
-import cl.n
-import dl.a
-import fl.g0
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -55,15 +55,15 @@ public data class Embed(fields: List<EmbedField>? = null) {
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.fields;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Embed(fields=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.fields;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Embed(fields=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -89,12 +89,12 @@ public data class Embed(fields: List<EmbedField>? = null) {
          val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = Embed.access$get$childSerializers$cp();
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var9: java.util.List;
          if (var5) {
             var9 = var7.v(var6, 0, var8[0], null) as java.util.List;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var9 = null;
 
@@ -106,7 +106,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
                   }
 
                   var9 = var7.v(var6, 0, var8[0], var9) as java.util.List;
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }
@@ -127,7 +127,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

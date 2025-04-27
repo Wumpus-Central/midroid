@@ -24,7 +24,9 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import kotlin.jvm.internal.q
 
-public class PollTextAndImageView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : BasePollWithRecyclerView {
+public class PollTextAndImageView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+   : BasePollWithRecyclerView,
+   PollPresenter {
    protected open val myAdapter: com.discord.chat.presentation.message.view.polls.PollTextAndImageView.ImageAndTextAnswerAdapter
 
    fun PollTextAndImageView(var1: Context) {

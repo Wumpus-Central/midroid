@@ -3,18 +3,18 @@ package com.discord.misc.utilities.measure
 import android.view.View
 import android.view.ViewGroup
 import android.view.View.MeasureSpec
+import g8.n
 import kotlin.jvm.internal.q
-import lh.o
 
 public fun ViewGroup.getMaximumSizeOfChildren(widthMeasureSpec: Int): Pair<Int, Int> {
    q.h(var0, "<this>");
    val var2: Int = var0.getChildCount();
    val var3: Int = 0;
-   val var4: IntRange = f.r(0, var2);
+   val var4: IntRange = d.r(0, var2);
    val var6: Pair = new Pair(var3, var3);
    val var7: java.util.Iterator = var4.iterator();
    if (var7.hasNext()) {
-      val var5: View = var0.getChildAt((var7 as o).c());
+      val var5: View = var0.getChildAt((var7 as n).a());
       if (var5.getVisibility() == 8) {
          return var6;
       } else {

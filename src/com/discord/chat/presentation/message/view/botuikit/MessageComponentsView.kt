@@ -2,16 +2,18 @@ package com.discord.chat.presentation.message.view.botuikit
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.LayoutInflater
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.view.View.MeasureSpec
+import android.widget.LinearLayout
+import android.widget.LinearLayout.LayoutParams
 import com.discord.chat.bridge.botuikit.Component
-import com.discord.chat.databinding.MessageComponentsViewBinding
-import com.google.android.flexbox.FlexboxLayout
+import com.discord.chat.presentation.message.MessageAccessoriesView
+import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
-public class MessageComponentsView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
-   private final val binding: MessageComponentsViewBinding
+public class MessageComponentsView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout {
+   public final var componentContext: ComponentContext?
+      internal set
 
    fun MessageComponentsView(var1: Context) {
       q.h(var1, "context");
@@ -26,69 +28,48 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      val var4: MessageComponentsViewBinding = MessageComponentsViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var4, "inflate(...)");
-      this.binding = var4;
+      this.setOrientation(1);
+      this.setLayoutParams(new LayoutParams(-1, -2));
    }
 
-   public fun setComponents(
-      componentProvider: ComponentProvider?,
-      components: List<Component>,
-      componentContext: ComponentContext,
-      actionListener: ComponentActionListener
-   ) {
-      q.h(var2, "components");
-      q.h(var3, "componentContext");
-      q.h(var4, "actionListener");
-      val var8: ArrayList = new ArrayList(i.v(var2, 10));
-      val var9: java.util.Iterator = var2.iterator();
+   protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+      val var5: ComponentContext = this.componentContext;
+      if (this.componentContext == null) {
+         super.onMeasure(var1, var2);
+      } else if (MessageAccessoriesView.Companion.getWidth(this.componentContext.getConstrainedWidth(), var5.isForwardedContent()) <= MAX_ALLOWED_WIDTH) {
+         super.onMeasure(var1, var2);
+      } else {
+         super.onMeasure(MeasureSpec.makeMeasureSpec(MAX_ALLOWED_WIDTH, Integer.MIN_VALUE), var2);
+      }
+   }
 
-      for (int var5 = 0; var9.hasNext(); var5++) {
-         var var13: ComponentView = (ComponentView)var9.next();
-         if (var5 < 0) {
+   public fun setComponents(components: List<Component>, componentProvider: ComponentProvider?, componentContext: ComponentContext) {
+      q.h(var1, "components");
+      q.h(var3, "componentContext");
+      this.componentContext = var3;
+      val var5: ArrayList = new ArrayList(i.v(var1, 10));
+      val var6: java.util.Iterator = var1.iterator();
+
+      for (int var4 = 0; var6.hasNext(); var4++) {
+         var var7: Any = var6.next();
+         if (var4 < 0) {
             i.u();
          }
 
-         val var10: Component = var13 as Component;
-         var var6: ComponentView = null;
-         if (var1 != null) {
-            val var11: FlexboxLayout = this.binding.itemComponentsRoot;
-            q.g(this.binding.itemComponentsRoot, "itemComponentsRoot");
-            var13 = var11.getChildAt(var5);
-            if (var13 is ComponentView) {
-               var13 = var13 as ComponentView;
-            } else {
-               var13 = null;
-            }
-
-            label32: {
-               if (var13 != null) {
-                  var6 = null;
-                  if (((ComponentView)var13).getComponentType() is Component) {
-                     var6 = (ComponentView)var13;
-                  }
-
-                  var13 = var6;
-                  if (var6 != null) {
-                     break label32;
-                  }
-               }
-
-               var13 = new ComponentInflater(var1.getContext()).inflateComponent(var10, var11);
-            }
-
-            var6 = var13;
-            if (var13 != null) {
-               var13.configure(var10, var1, var4, var3);
-               var6 = var13;
-            }
+         var7 = var7 as Component;
+         if (var2 != null) {
+            var7 = var2.getConfiguredComponentView((Component)var7, var3, this, var4);
+         } else {
+            var7 = null;
          }
 
-         var8.add(var6);
+         var5.add(var7);
       }
 
-      val var12: FlexboxLayout = this.binding.itemComponentsRoot;
-      q.g(this.binding.itemComponentsRoot, "itemComponentsRoot");
-      MessageComponentsViewKt.replaceViews(var12, i.b0(var8));
+      MessageComponentsViewKt.replaceViews$default(this, i.c0(var5), var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+   }
+
+   public companion object {
+      private final val MAX_ALLOWED_WIDTH: Int
    }
 }

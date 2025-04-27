@@ -19,7 +19,7 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
       this.messageContext = var2;
       this.backgroundHighlight = var3;
       if (!MessageKt.isSystemMessage(var1)) {
-         throw new IllegalArgumentException("Only system messages are allowed".toString());
+         throw new IllegalArgumentException("Only system messages are allowed");
       }
    }
 
@@ -63,8 +63,8 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.message.hashCode();
-      val var2: Int = this.messageContext.hashCode();
+      val var2: Int = this.message.hashCode();
+      val var3: Int = this.messageContext.hashCode();
       val var1: Int;
       if (this.backgroundHighlight == null) {
          var1 = 0;
@@ -72,20 +72,20 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
          var1 = this.backgroundHighlight.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
+      val var3: Message = this.message;
       val var1: MessageContext = this.messageContext;
-      val var3: BackgroundHighlight = this.backgroundHighlight;
+      val var2: BackgroundHighlight = this.backgroundHighlight;
       val var4: StringBuilder = new StringBuilder();
       var4.append("SystemMessageItem(message=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(", messageContext=");
       var4.append(var1);
       var4.append(", backgroundHighlight=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

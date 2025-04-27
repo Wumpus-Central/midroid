@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeConnection;
-import kotlin.jvm.functions.Function0;
+import com.discord.native.engine.NativeEngine;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class w implements NativeConnection.SecureFramesTransitionReadyCallback {
-   public final Function0 a;
+public final class w implements NativeEngine.StopLocalAudioRecordingCallback {
+   public final Function2 a;
 
    @Override
-   public final void onTransitionReady() {
-      MediaEngine.l(this.a);
+   public final void onStopLocalAudioRecording(String var1, int var2) {
+      MediaEngine.i(this.a, var1, var2);
    }
 }

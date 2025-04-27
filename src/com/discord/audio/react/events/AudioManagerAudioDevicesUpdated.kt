@@ -6,8 +6,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
+import f8.w
 import java.util.ArrayList
-import kh.w
 import kotlin.jvm.internal.q
 
 internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDevice>) : ReactEvent {
@@ -64,7 +64,7 @@ internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDe
             var2.add((var3.next() as AndroidAudioDevice).toNativeMap());
          }
 
-         return NativeArrayExtensionsKt.toNativeArray(var2);
+         return NativeArrayExtensionsKt.toNativeArray$default(var2, null, 1, null);
       }
    }
 }

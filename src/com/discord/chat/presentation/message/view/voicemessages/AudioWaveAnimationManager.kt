@@ -14,9 +14,9 @@ public class AudioWaveAnimationManager {
    private fun animateAdditionalHeight(progress: Float): Float {
       val var4: Float = 1.5F * (1.0F - var1) * (1.0F - var1);
       if (var1 <= 0.5F) {
-         var1 = 4 * var1 * 2.0F * (var4 + 1.0F);
+         var1 = 4 * (var1 * 2.0F) * (var4 + 1.0F);
       } else {
-         var1 = 4 + -4 * (var1 - 0.5F) * 2.0F * (var4 + 1.0F);
+         var1 = 4 + -4 * ((var1 - 0.5F) * 2.0F) * (var4 + 1.0F);
       }
 
       return var1;

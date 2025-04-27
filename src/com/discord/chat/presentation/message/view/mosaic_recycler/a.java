@@ -12,6 +12,6 @@ public final class a implements OnClickListener {
    public final MessagePartViewHolder l;
 
    public final void onClick(View var1) {
-      AttachmentMediaMosaicAdapter.b(this.j, this.k, this.l, var1);
+      AttachmentMediaMosaicAdapter.d(this.j, this.k, this.l, var1);
    }
 }

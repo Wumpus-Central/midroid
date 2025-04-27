@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.row
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.G.a
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -99,7 +99,7 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
       return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -119,33 +119,34 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, ChangeType.Serializer.INSTANCE, Message.$serializer.INSTANCE, b2.a};
+         return new KSerializer[]{N.a, ChangeType.Serializer.INSTANCE, Message.$serializer.INSTANCE, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): UploadProgressRow {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: Message;
          var var7: ChangeType;
          var var10: Any;
          if (var9.y()) {
-            var3 = var9.k(var8, 0);
+            val var2: Int = var9.k(var8, 0);
             var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
             var6 = var9.m(var8, 2, Message.$serializer.INSTANCE, null) as Message;
             var10 = var9.t(var8, 3);
-            var2 = 15;
+            var4 = 15;
+            var3 = var2;
          } else {
-            var var4: Boolean = true;
+            var var12: Boolean = true;
             var3 = 0;
             var7 = null;
             var6 = null;
             var10 = null;
-            var2 = 0;
+            var var11: Int = 0;
 
-            while (var4) {
+            while (var12) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -156,27 +157,29 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
                            }
 
                            var10 = var9.t(var8, 3);
-                           var2 |= 8;
+                           var11 |= 8;
                         } else {
                            var6 = var9.m(var8, 2, Message.$serializer.INSTANCE, var6) as Message;
-                           var2 |= 4;
+                           var11 |= 4;
                         }
                      } else {
                         var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, var7) as ChangeType;
-                        var2 |= 2;
+                        var11 |= 2;
                      }
                   } else {
                      var3 = var9.k(var8, 0);
-                     var2 |= 1;
+                     var11 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
+
+            var4 = var11;
          }
 
          var9.b(var8);
-         return new UploadProgressRow(var2, var3, var7, var6, (java.lang.String)var10, null);
+         return new UploadProgressRow(var4, var3, var7, var6, (java.lang.String)var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgressRow) {

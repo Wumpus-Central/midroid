@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import fl.g0
-import fl.n0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.G
+import ba.N
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -60,17 +60,17 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("HeadingContentNode(level=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("HeadingContentNode(level=");
+      var2.append(var1);
+      var2.append(", content=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -88,7 +88,7 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, HeadingContentNode.access$get$childSerializers$cp()[1]};
+         return new KSerializer[]{N.a, HeadingContentNode.access$get$childSerializers$cp()[1]};
       }
 
       public open fun deserialize(decoder: Decoder): HeadingContentNode {

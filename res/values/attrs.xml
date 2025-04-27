@@ -842,6 +842,7 @@
     <attr name="hideMotionSpec" format="reference" />
     <attr name="hideOnContentScroll" format="boolean" />
     <attr name="hideOnScroll" format="boolean" />
+    <attr name="hideWheelUntilFocused" format="boolean" />
     <attr name="hide_during_ads" format="boolean" />
     <attr name="hide_on_touch" format="boolean" />
     <attr name="hintAnimationEnabled" format="boolean" />
@@ -904,6 +905,11 @@
     <attr name="indicatorSize" format="dimension" />
     <attr name="initialActivityCount" format="string" />
     <attr name="insetForeground" format="reference|color" />
+    <attr name="internalLayout" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="internalMaxHeight" format="dimension" />
+    <attr name="internalMaxWidth" format="dimension" />
+    <attr name="internalMinHeight" format="dimension" />
+    <attr name="internalMinWidth" format="dimension" />
     <attr name="isAutofillInlineSuggestionTheme" format="boolean" />
     <attr name="isLightTheme" format="boolean" />
     <attr name="isMaterial3Theme" format="boolean" />
@@ -1367,35 +1373,8 @@
     </attr>
     <attr name="nestedScrollViewStyle" format="reference" />
     <attr name="nestedScrollable" format="boolean" />
-    <attr name="npv_AlternativeHint" format="reference|string" />
-    <attr name="npv_AlternativeTextArrayWithMeasureHint" format="reference" />
-    <attr name="npv_AlternativeTextArrayWithoutMeasureHint" format="reference" />
-    <attr name="npv_DividerColor" format="reference|color" />
-    <attr name="npv_DividerHeight" format="reference|dimension" />
-    <attr name="npv_DividerMarginLeft" format="reference|dimension" />
-    <attr name="npv_DividerMarginRight" format="reference|dimension" />
-    <attr name="npv_EmptyItemHint" format="reference|string" />
-    <attr name="npv_HintText" format="reference|string" />
-    <attr name="npv_ItemPaddingHorizontal" format="reference|dimension" />
-    <attr name="npv_ItemPaddingVertical" format="reference|dimension" />
-    <attr name="npv_MarginEndOfHint" format="reference|dimension" />
-    <attr name="npv_MarginStartOfHint" format="reference|dimension" />
-    <attr name="npv_MaxValue" format="reference|integer" />
-    <attr name="npv_MinValue" format="reference|integer" />
-    <attr name="npv_RespondChangeInMainThread" format="reference|boolean" />
-    <attr name="npv_RespondChangeOnDetached" format="reference|boolean" />
-    <attr name="npv_ShowDivider" format="reference|boolean" />
-    <attr name="npv_ShownCount" format="reference|integer" />
-    <attr name="npv_TextArray" format="reference" />
-    <attr name="npv_TextColorHint" format="reference|color" />
-    <attr name="npv_TextColorNormal" format="reference|color" />
-    <attr name="npv_TextColorSelected" format="reference|color" />
-    <attr name="npv_TextEllipsize" format="reference|string" />
-    <attr name="npv_TextSizeHint" format="reference|dimension" />
-    <attr name="npv_TextSizeNormal" format="reference|dimension" />
-    <attr name="npv_TextSizeSelected" format="reference|dimension" />
-    <attr name="npv_WrapSelectorWheel" format="reference|boolean" />
     <attr name="number" format="integer" />
+    <attr name="numberPickerStyle" format="reference" />
     <attr name="numericModifiers">
         <flag name="META" value="0x00010000" />
         <flag name="CTRL" value="0x00001000" />
@@ -1597,6 +1576,9 @@
     <attr name="seekBarStyle" format="reference" />
     <attr name="selectableItemBackground" format="reference" />
     <attr name="selectableItemBackgroundBorderless" format="reference" />
+    <attr name="selectionDivider" format="reference" />
+    <attr name="selectionDividerHeight" format="dimension" />
+    <attr name="selectionDividersDistance" format="dimension" />
     <attr name="selectionRequired" format="boolean" />
     <attr name="selectorSize" format="dimension" />
     <attr name="shader" format="string" />
@@ -1672,6 +1654,7 @@
     <attr name="snackbarButtonStyle" format="reference" />
     <attr name="snackbarStyle" format="reference" />
     <attr name="snackbarTextViewStyle" format="reference" />
+    <attr name="solidColor" format="reference|color" />
     <attr name="spanCount" format="integer" />
     <attr name="spinBars" format="boolean" />
     <attr name="spinnerDropDownItemStyle" format="reference" />
@@ -2019,6 +2002,7 @@
     <attr name="verticalPanEnabled" format="boolean" />
     <attr name="viewAspectRatio" format="float" />
     <attr name="viewInflaterClass" format="string" />
+    <attr name="virtualButtonPressedDrawable" format="reference" />
     <attr name="visibilityMode">
         <enum name="normal" value="0" />
         <enum name="ignore" value="1" />

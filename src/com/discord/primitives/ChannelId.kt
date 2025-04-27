@@ -1,11 +1,11 @@
 package com.discord.primitives
 
+import Y9.f
 import android.os.Parcel
-import cl.f
+import ba.G
+import ba.Y
+import ba.G.a
 import com.discord.snowflake.SnowflakePrimitive
-import fl.g0
-import fl.x0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -101,7 +101,7 @@ public inline class ChannelId : SnowflakePrimitive {
       writeToParcel-impl(this.snowflake, var1, var2);
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -118,7 +118,7 @@ public inline class ChannelId : SnowflakePrimitive {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{x0.a};
+         return new KSerializer[]{Y.a};
       }
 
       public open fun deserialize(decoder: Decoder): ChannelId {
@@ -128,9 +128,9 @@ public inline class ChannelId : SnowflakePrimitive {
 
       public open fun serialize(encoder: Encoder, value: ChannelId) {
          q.h(var1, "encoder");
-         var1 = var1.z(this.getDescriptor());
+         var1 = var1.y(this.getDescriptor());
          if (var1 != null) {
-            var1.C(var2);
+            var1.B(var2);
          }
       }
 

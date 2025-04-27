@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.messageframe
 
-import cl.f
-import cl.n
-import fl.g0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.G
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -55,7 +55,7 @@ public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {
       return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -80,12 +80,12 @@ public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: MessageFrameType;
          if (var5) {
             var8 = var7.m(var6, 0, MessageFrameType.Serializer.INSTANCE, null) as MessageFrameType;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -97,7 +97,7 @@ public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {
                   }
 
                   var8 = var7.m(var6, 0, MessageFrameType.Serializer.INSTANCE, var8) as MessageFrameType;
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

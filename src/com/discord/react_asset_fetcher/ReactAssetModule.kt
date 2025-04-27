@@ -1,15 +1,14 @@
 package com.discord.react_asset_fetcher
 
-import com.discord.react_resource_cache.ReactResourceCache
-import com.discord.react_resource_cache.ReactResourceModule
+import com.discord.codegen.NativeReactAssetModuleSpec
+import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import kotlin.enums.EnumEntries
+import java.util.HashMap
 import kotlin.jvm.internal.q
 
-public class ReactAssetModule(reactContext: ReactApplicationContext) : ReactResourceModule<ReactAsset> {
+public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeReactAssetModuleSpec {
    private final val reactContext: ReactApplicationContext
 
    init {
@@ -18,32 +17,27 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : ReactReso
       this.reactContext = var1;
    }
 
-   public override fun cache(): ReactResourceCache<ReactAsset> {
-      val var1: ReactAssetCache = ReactAssetCache.INSTANCE;
-      q.f(
-         ReactAssetCache.INSTANCE,
-         "null cannot be cast to non-null type com.discord.react_resource_cache.ReactResourceCache<com.discord.react_asset_fetcher.ReactAsset>"
-      );
-      return var1;
-   }
-
-   public open fun getName(): String {
-      return "ReactAssetModule";
-   }
-
-   public open fun keys(): EnumEntries<ReactAsset> {
-      return ReactAsset.getEntries();
-   }
-
-   @ReactMethod
-   public fun keysRequest(callback: Callback) {
+   public override fun keysRequest(callback: Callback) {
       q.h(var1, "callback");
-      var1.invoke(new Object[]{this.keysArray()});
+      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(ReactAsset.getEntries(), <unrepresentable>.INSTANCE)});
    }
 
-   @ReactMethod
-   public fun valuesResult(values: ReadableArray) {
+   public override fun valuesResult(values: ReadableArray) {
       q.h(var1, "values");
-      this.cache().set(this.reactContext, this.reactResources(var1));
+      val var5: ReactAssetCache = ReactAssetCache.INSTANCE;
+      val var4: ReactApplicationContext = this.reactContext;
+      val var3: HashMap = new HashMap();
+      val var6: java.util.Iterator = ReactAsset.getEntries().iterator();
+
+      for (int var2 = 0; var6.hasNext(); var2++) {
+         val var7: Any = var6.next();
+         if (var2 < 0) {
+            i.u();
+         }
+
+         var3.put((var7 as ReactAsset).name(), var1.getString(var2));
+      }
+
+      var5.set(var4, var3);
    }
 }

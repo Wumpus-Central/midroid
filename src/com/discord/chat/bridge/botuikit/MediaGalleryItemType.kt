@@ -1,20 +1,21 @@
 package com.discord.chat.bridge.botuikit
 
-import cl.f
+import Y9.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import kh.l
-import kh.o
+import f8.l
+import f8.o
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlinx.serialization.KSerializer
-import rh.a
+import m8.a
 
 @f(with = MediaGalleryItemType.Serializer::class)
 public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
    IMAGE(1),
    UNKNOWN(0),
-   VIDEO(2)
+   VIDEO(2),
+   VISUAL_PLACEHOLDER(3)
    public open val serialNumber: Int
    @JvmStatic
    private EnumEntries $ENTRIES;
@@ -47,5 +48,5 @@ public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(g0.b(MediaGalleryItemType.class), MediaGalleryItemType.UNKNOWN)
+   public object Serializer : IntEnumSerializer(E.b(MediaGalleryItemType.class), MediaGalleryItemType.UNKNOWN)
 }

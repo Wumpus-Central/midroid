@@ -20,12 +20,12 @@ public class NativeEngine(context: Context, logLevel: Int) {
       super();
       this.logLevel = var2;
       val var3: Context = var1.getApplicationContext();
-      q.g(var3, "context.applicationContext");
+      q.g(var3, "getApplicationContext(...)");
       CameraEnumeratorProvider.maybeInit(var3);
       var1 = var1.getApplicationContext();
-      q.g(var1, "context.applicationContext");
+      q.g(var1, "getApplicationContext(...)");
       val var5: org.webrtc.EglBase.Context = SharedEglBaseContext.getEglContext();
-      q.g(var5, "getEglContext()");
+      q.g(var5, "getEglContext(...)");
       this.nativeInstance = this.nativeCreateInstance(var1, var5, var2);
    }
 
@@ -80,6 +80,9 @@ public class NativeEngine(context: Context, logLevel: Int) {
    }
 
    public external fun setAudioInputEnabled(enable: Boolean) {
+   }
+
+   public external fun setAudioInputInitializationCallback(callback: com.discord.native.engine.NativeEngine.AudioInputInitializationCallback) {
    }
 
    public external fun setEmitVADLevel2(enable: Boolean) {
@@ -137,6 +140,11 @@ public class NativeEngine(context: Context, logLevel: Int) {
    }
 
    public external fun stopLocalAudioRecording(callback: com.discord.native.engine.NativeEngine.StopLocalAudioRecordingCallback) {
+   }
+
+   public fun interface AudioInputInitializationCallback {
+      public abstract fun onAudioInputInitialized(info: AudioInputInitializationInfo) {
+      }
    }
 
    public companion object {
@@ -224,7 +232,7 @@ public class NativeEngine(context: Context, logLevel: Int) {
    }
 
    public fun interface VideoFrameCallback {
-      public abstract fun onFrame(frame: VideoFrame): Boolean {
+      public abstract fun onFrame(frame: VideoFrame, mirror: Boolean): Boolean {
       }
    }
 }

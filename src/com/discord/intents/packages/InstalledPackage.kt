@@ -2,7 +2,7 @@ package com.discord.intents.packages
 
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import rh.a
+import m8.a
 
 internal enum class InstalledPackage(appName: String, appPackage: String?) {
    GMAIL("googlegmail", null),
@@ -40,32 +40,26 @@ internal enum class InstalledPackage(appName: String, appPackage: String?) {
    public companion object {
       public fun parse(appName: String): InstalledPackage {
          q.h(var1, "appName");
-         val var5: Array<InstalledPackage> = InstalledPackage.values();
-         val var3: Int = var5.length;
-         var var2: Int = 0;
+         val var3: java.util.Iterator = InstalledPackage.getEntries().iterator();
 
-         var var4: InstalledPackage;
-         while (true) {
-            if (var2 >= var3) {
-               var4 = null;
+         var var2: Any;
+         do {
+            if (!var3.hasNext()) {
+               var2 = null;
                break;
             }
 
-            var4 = var5[var2];
-            if (q.c(InstalledPackage.access$getAppName$p(var5[var2]), var1)) {
-               break;
-            }
+            var2 = (InstalledPackage)var3.next();
+         } while (!q.c(InstalledPackage.access$getAppName$p(var2), var1));
 
-            var2++;
-         }
-
-         if (var4 != null) {
-            return var4;
+         var2 = var2;
+         if (var2 != null) {
+            return var2;
          } else {
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("Unknown app name ");
-            var6.append(var1);
-            throw new IllegalArgumentException(var6.toString());
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("Unknown app name ");
+            var5.append(var1);
+            throw new IllegalArgumentException(var5.toString());
          }
       }
    }

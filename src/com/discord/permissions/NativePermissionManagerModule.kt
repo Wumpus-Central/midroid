@@ -2,7 +2,8 @@ package com.discord.permissions
 
 import android.os.Build.VERSION
 import androidx.core.app.NotificationManagerCompat
-import com.discord.lifecycle.AppLifecycleManagerModule
+import com.discord.crash_reporting.CrashReporting
+import com.discord.lifecycle.AppLifecycle
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.PromiseWrapper
 import com.facebook.react.bridge.NativeModule
@@ -39,7 +40,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
    }
 
    private fun requireAppInForeground(promise: Promise, withForegroundApp: (Promise) -> Unit) {
-      if (!AppLifecycleManagerModule.Companion.isForegrounded()) {
+      if (!AppLifecycle.INSTANCE.isForegrounded()) {
          val var3: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
          q.g(var3, "toLowerCase(...)");
          var1.resolve(var3);
@@ -196,16 +197,51 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
                                  }
 
                                  public final void invoke() {
-                                    NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
-                                       .requestPermission(
-                                          "android.permission.FOREGROUND_SERVICE_MICROPHONE",
-                                          NativePermissionManagerModule.Companion.access$transformRequestResult(
-                                             NativePermissionManagerModule.Companion, this.$promise
-                                          )
-                                       );
+                                    NativePermissionManagerModule.access$requireAppInForeground(
+                                       this.this$0,
+                                       this.$promise,
+                                       new Function1(this.this$0, this.$promise) {
+                                          final Promise $promise;
+                                          final NativePermissionManagerModule this$0;
+
+                                          {
+                                             super(1);
+                                             this.this$0 = var1;
+                                             this.$promise = var2;
+                                          }
+
+                                          public final void invoke(Promise var1) {
+                                             q.h(var1, "it");
+                                             NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
+                                                .requestPermission(
+                                                   "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+                                                   NativePermissionManagerModule.Companion.access$transformRequestResult(
+                                                      NativePermissionManagerModule.Companion, this.$promise
+                                                   )
+                                                );
+                                          }
+                                       }
+                                    );
                                  }
                               },
-                              <unrepresentable>.INSTANCE
+                              new Function0(this.$promise) {
+                                 final Promise $promise;
+
+                                 {
+                                    super(0);
+                                    this.$promise = var1;
+                                 }
+
+                                 public final void invoke() {
+                                    CrashReporting.addBreadcrumb$default(
+                                       CrashReporting.INSTANCE, "requestForegroundServicePermissionVoiceCall: Permission Rejected", null, null, 6, null
+                                    );
+                                    val var1: Promise = this.$promise;
+                                    val var2: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
+                                    q.g(var2, "toLowerCase(...)");
+                                    var1.resolve(var2);
+                                 }
+                              }
                            )
                      );
                }
@@ -249,7 +285,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       if (VERSION.SDK_INT >= 34) {
          this.getPermissionsModule()
             .requestMultiplePermissions(
-               NativeArrayExtensionsKt.toNativeArray(
+               NativeArrayExtensionsKt.toNativeArray$default(
                   i.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES",
@@ -257,19 +293,25 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
                         "android.permission.READ_MEDIA_AUDIO",
                         "android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
                      }
-                  )
+                  ),
+                  null,
+                  1,
+                  null
                ),
                NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
             );
       } else if (VERSION.SDK_INT >= 33) {
          this.getPermissionsModule()
             .requestMultiplePermissions(
-               NativeArrayExtensionsKt.toNativeArray(
+               NativeArrayExtensionsKt.toNativeArray$default(
                   i.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VIDEO", "android.permission.READ_MEDIA_AUDIO"
                      }
-                  )
+                  ),
+                  null,
+                  1,
+                  null
                ),
                NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
             );

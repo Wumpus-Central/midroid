@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.n0
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -78,20 +78,20 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
+      val var2: java.lang.String = this.id;
       val var4: ContentInventoryEntry = this.contentInventoryEntry;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContentInventoryEntryComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var3);
-      var2.append(", contentInventoryEntry=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContentInventoryEntryComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(", contentInventoryEntry=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -110,7 +110,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, a.u(ContentInventoryEntry.$serializer.INSTANCE)};
+         return new KSerializer[]{N.a, C0.a, a.u(ContentInventoryEntry.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): ContentInventoryEntryComponent {
@@ -122,10 +122,10 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var var6: java.lang.String;
          var var9: ContentInventoryEntry;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null) as ContentInventoryEntry;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -156,10 +156,13 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                   var4 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
-         return new ContentInventoryEntryComponent(var2, var3, var6, var9, null);
+         return new ContentInventoryEntryComponent(var3, var2, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentInventoryEntryComponent) {
@@ -172,7 +175,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

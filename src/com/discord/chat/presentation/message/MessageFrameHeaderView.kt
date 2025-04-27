@@ -48,7 +48,7 @@ public class MessageFrameHeaderView  public constructor(context: Context, attrs:
             this.configureMessageFrameJump(var1 as MessageFrameJump);
          }
       } else {
-         throw new IllegalStateException("Should not have more than one child".toString());
+         throw new IllegalStateException("Should not have more than one child");
       }
    }
 }

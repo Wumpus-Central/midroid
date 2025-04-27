@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.reaction
 
-import cl.f
-import cl.n
-import com.discord.reactions.BurstReactionView
-import fl.g0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.G
+import ba.G.a
+import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,8 +15,7 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) :
-   BurstReactionView.ThemedBurstColorPalette {
+public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) : ReactionView.ThemedBurstColorPalette {
    public open val dark: BurstReactionColorPalette
    public open val light: BurstReactionColorPalette
 
@@ -62,18 +61,18 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
    }
 
    public override fun toString(): String {
-      val var3: BurstReactionColorPalette = this.light;
+      val var2: BurstReactionColorPalette = this.light;
       val var1: BurstReactionColorPalette = this.dark;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ThemedBurstReactionColorPalette(light=");
-      var2.append(var3);
-      var2.append(", dark=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ThemedBurstReactionColorPalette(light=");
+      var3.append(var2);
+      var3.append(", dark=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;

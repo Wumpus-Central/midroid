@@ -1,60 +1,43 @@
 package com.discord.browser_manager
 
 import android.content.Context
-import com.discord.cache.CacheModule
+import com.discord.cache.Cache
+import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.bridge.ReactMethod
-import kh.w
+import f8.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lh.r
 
-public class BrowserManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   private final val cacheModule: CacheModule
-      private final get() {
-         val var2: CacheModule.Companion = CacheModule.Companion;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var1, "getReactApplicationContext(...)");
-         return var2.get(var1);
-      }
-
-
+public class BrowserManagerModule(reactContext: ReactApplicationContext) : NativeBrowserManagerModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
    }
 
-   public open fun getConstants(): MutableMap<String, Any?> {
-      val var2: java.lang.String = this.getCacheModule().getItem("SELECTED_BROWSER");
+   protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
+      val var2: java.lang.String = Cache.Companion.get().getItem("SELECTED_BROWSER");
       if (var2 != null) {
          val var3: Int = h.m(var2);
          if (var3 != null) {
-            return r.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return g8.q.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return r.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return g8.q.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
-   public open fun getName(): String {
-      return "BrowserManager";
-   }
-
-   @ReactMethod
-   public fun openInAppURL(url: String, unused: String, promise: Promise) {
+   public override fun openInAppURL(url: String, promise: Promise) {
       q.h(var1, "url");
-      q.h(var2, "unused");
-      q.h(var3, "promise");
+      q.h(var2, "promise");
       val var4: BrowserManager = BrowserManager.INSTANCE;
-      var var5: Any = this.getCurrentActivity();
-      if (var5 == null) {
-         var5 = this.getReactApplicationContext();
+      var var3: Any = this.getCurrentActivity();
+      if (var3 == null) {
+         var3 = this.getReactApplicationContext();
       }
 
-      q.e(var5);
-      var4.tryOpenUrlWithCustomTabs((Context)var5, var1, new Function1(var3) {
+      q.e(var3);
+      var4.tryOpenUrlWithCustomTabs((Context)var3, var1, new Function1(var2) {
          final Promise $promise;
 
          {
@@ -64,19 +47,18 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
 
          public final void invoke(Exception var1) {
             q.h(var1, "e");
-            this.$promise.reject(var1);
+            this.$promise.reject(null, var1.getMessage(), var1, null);
          }
       });
    }
 
-   @ReactMethod
-   public fun openInChromeURL(url: String, newTab: Boolean, promise: Promise) {
+   public override fun openInChromeURL(url: String, promise: Promise) {
       q.h(var1, "url");
-      q.h(var3, "promise");
-      val var5: BrowserManager = BrowserManager.INSTANCE;
+      q.h(var2, "promise");
+      val var3: BrowserManager = BrowserManager.INSTANCE;
       val var4: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var4, "getReactApplicationContext(...)");
-      var5.tryOpenUrlExternally(var4, var1, new Function1(var3) {
+      var3.tryOpenUrlExternally(var4, var1, new Function1(var2) {
          final Promise $promise;
 
          {
@@ -86,24 +68,24 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : React
 
          public final void invoke(Exception var1) {
             q.h(var1, "e");
-            this.$promise.reject(var1);
+            this.$promise.reject(null, var1.getMessage(), var1, null);
          }
       });
    }
 
-   @ReactMethod
-   public fun selectBrowser(browser: Int) {
-      if (var1 != 0) {
-         if (var1 != 1 && var1 != 2) {
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Unknown browser id provided: ");
-            var2.append(var1);
-            throw new IllegalArgumentException(var2.toString());
+   public override fun selectBrowser(browser: Double) {
+      val var3: Int = (int)var1;
+      if ((int)var1 != 0) {
+         if (var3 != 1 && var3 != 2) {
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("Unknown browser id provided: ");
+            var4.append(var1);
+            throw new IllegalArgumentException(var4.toString());
          }
 
-         this.getCacheModule().setItem("SELECTED_BROWSER", java.lang.String.valueOf(var1));
+         Cache.Companion.get().setItem("SELECTED_BROWSER", java.lang.String.valueOf(var1));
       } else {
-         this.getCacheModule().setItem("SELECTED_BROWSER", "1");
+         Cache.Companion.get().setItem("SELECTED_BROWSER", "1");
       }
    }
 

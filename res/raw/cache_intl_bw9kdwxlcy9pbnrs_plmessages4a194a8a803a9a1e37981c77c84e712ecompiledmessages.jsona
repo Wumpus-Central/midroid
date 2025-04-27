@@ -1,0 +1,60 @@
+{
+  "rdfRys": "Mamy tutaj „const static codeSpan = 2;”.",
+  "HMvECw": [
+    "Wszystko to jest zarządzane lokalnie i ",
+    [
+      8,
+      "$b",
+      [
+        "jeszcze nie"
+      ]
+    ],
+    " zastąpiło globalnego systemu i18n."
+  ],
+  "XOdbAw": [
+    "Użyj haków takich jak ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " dla specjalnej zawartości."
+  ],
+  "rmps8/": [
+    "Ten tekst zawiera ",
+    [
+      8,
+      "$link",
+      [
+        "statyczne łącze"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    " z adresem URL zdefiniowanym w tekście."
+  ],
+  "uczI4u": [
+    "To łącze jest ",
+    [
+      8,
+      "$link",
+      [
+        "zmiennym łączem"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    " dostarczonym w czasie działania."
+  ],
+  "swfLzc": "Ta wiadomość pochodzi z osobnego pliku"
+}

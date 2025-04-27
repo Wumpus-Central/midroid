@@ -31,7 +31,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
       this.audioDeviceCallback = this.setupAudioDeviceCallback();
       val var3: Array<AudioDeviceInfo> = var2.getDevices(2);
       q.e(var3);
-      this.audioDevices = kotlin.collections.c.M0(var3);
+      this.audioDevices = kotlin.collections.c.N0(var3);
    }
 
    private fun emitEffectiveDevice() {
@@ -60,7 +60,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
    private fun setActiveAudioDevice(device: AudioDeviceInfo) {
       try {
-         b.a(this.androidAudioManager, var1);
+         a.a(this.androidAudioManager, var1);
       } catch (RemoteException | var2: IllegalArgumentException) {
       }
    }
@@ -76,19 +76,19 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          // $VF: Duplicated exception handlers to handle obfuscated exceptions
          public void onAudioDevicesAdded(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var5: DiscordAudioManager2 = this.this$0;
-               var var7: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var8: ArrayList = new ArrayList();
+               var var7: DiscordAudioManager2 = this.this$0;
+               val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var5: ArrayList = new ArrayList();
                var var4: Int = var1.length;
 
                for (int var2 = 0; var2 < var4; var2++) {
-                  val var6: AudioDeviceInfo = var1[var2];
+                  val var8: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var8.add(var6);
+                     var5.add(var8);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var5, w.l(var7, var8));
+               DiscordAudioManager2.access$setAudioDevices$p(var7, w.l(var6, var5));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new Function1(this.this$0) {
                   final DiscordAudioManager2 this$0;
 
@@ -126,7 +126,6 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
                   var4 = var1.length;
                   var11 = 0;
 
-                  var var17: AudioDeviceInfo;
                   while (true) {
                      var17 = var7;
                      if (var11 >= var4) {
@@ -145,12 +144,12 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
                   if (var16 != null) {
                      try {
-                        b.a(DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0), var16);
+                        a.a(DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0), var16);
                      } catch (RemoteException | var10: IllegalArgumentException) {
                      }
                   } else if (var17 != null) {
                      try {
-                        b.a(DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0), var17);
+                        a.a(DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0), var17);
                      } catch (RemoteException | var9: IllegalArgumentException) {
                      }
                   }
@@ -162,8 +161,8 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
          public void onAudioDevicesRemoved(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var6: DiscordAudioManager2 = this.this$0;
-               val var5: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var5: DiscordAudioManager2 = this.this$0;
+               val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
                val var7: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
@@ -174,7 +173,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var6, w.j(var5, i.V0(var7)));
+               DiscordAudioManager2.access$setAudioDevices$p(var5, w.j(var6, i.V0(var7)));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new Function1(this.this$0) {
                   final DiscordAudioManager2 this$0;
 
@@ -212,15 +211,15 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
       val var7: ArrayList = new ArrayList(i.v(var2, 10));
 
-      for (AudioDeviceInfo var5 : var2) {
-         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var5));
+      for (AudioDeviceInfo var8 : var2) {
+         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var8));
       }
 
       return i.U0(var7);
    }
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
-      val var1: AudioDeviceInfo = a.a(this.androidAudioManager);
+      val var1: AudioDeviceInfo = b.a(this.androidAudioManager);
       return if (var1 != null) AndroidAudioDevice.Companion.fromAudioDeviceInfo(var1) else new AndroidAudioDevice();
    }
 
@@ -270,7 +269,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          }
 
          val var13: AudioDeviceInfo = this.preferredAudioDevice;
-         val var6: java.util.Iterator = this.audioDevices.iterator();
+         var var6: java.util.Iterator = this.audioDevices.iterator();
 
          var var9: Any;
          do {
@@ -286,30 +285,30 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          );
 
          val var14: AudioDeviceInfo = var9 as AudioDeviceInfo;
-         var var7: java.util.Iterator = this.audioDevices.iterator();
+         var6 = this.audioDevices.iterator();
 
          do {
-            if (!var7.hasNext()) {
+            if (!var6.hasNext()) {
                var9 = null;
                break;
             }
 
-            var9 = var7.next();
+            var9 = var6.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.WIRED_HEADSET
          );
 
          val var16: AudioDeviceInfo = var9 as AudioDeviceInfo;
-         var7 = this.audioDevices.iterator();
+         val var17: java.util.Iterator = this.audioDevices.iterator();
 
          do {
             var9 = var3;
-            if (!var7.hasNext()) {
+            if (!var17.hasNext()) {
                break;
             }
 
-            var9 = var7.next();
+            var9 = var17.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.SPEAKERPHONE

@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.threads
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -136,30 +136,30 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.title;
+      val var6: java.lang.String = this.title;
       val var4: java.lang.String = this.messageCountLabel;
-      val var6: java.lang.String = this.messagePreviewString;
-      val var1: java.lang.Boolean = this.archived;
-      val var5: java.lang.String = this.archivedIconUrl;
-      val var7: ThreadEmbedMessage = this.referencedMessage;
+      val var1: java.lang.String = this.messagePreviewString;
+      val var3: java.lang.Boolean = this.archived;
+      val var7: java.lang.String = this.archivedIconUrl;
+      val var5: ThreadEmbedMessage = this.referencedMessage;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ThreadEmbed(title=");
-      var2.append(var3);
+      var2.append(var6);
       var2.append(", messageCountLabel=");
       var2.append(var4);
       var2.append(", messagePreviewString=");
-      var2.append(var6);
-      var2.append(", archived=");
       var2.append(var1);
+      var2.append(", archived=");
+      var2.append(var3);
       var2.append(", archivedIconUrl=");
-      var2.append(var5);
-      var2.append(", referencedMessage=");
       var2.append(var7);
+      var2.append(", referencedMessage=");
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -181,8 +181,8 @@ public data class ThreadEmbed(title: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{b2.a, b2.a, a.u(b2.a), a.u(h.a), a.u(var1), a.u(ThreadEmbedMessage.$serializer.INSTANCE)};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{C0.a, C0.a, a.u(C0.a), a.u(h.a), a.u(var1), a.u(ThreadEmbedMessage.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): ThreadEmbed {
@@ -200,8 +200,8 @@ public data class ThreadEmbed(title: String,
          if (var5) {
             var18 = var13.t(var12, 0);
             var9 = var13.t(var12, 1);
-            var15 = b2.a;
-            val var11: java.lang.String = var13.v(var12, 2, b2.a, null) as java.lang.String;
+            var15 = C0.a;
+            val var11: java.lang.String = var13.v(var12, 2, C0.a, null) as java.lang.String;
             var6 = var13.v(var12, 3, h.a, null) as java.lang.Boolean;
             var7 = var13.v(var12, 4, (DeserializationStrategy)var15, null) as java.lang.String;
             var15 = var13.v(var12, 5, ThreadEmbedMessage.$serializer.INSTANCE, null) as ThreadEmbedMessage;
@@ -232,7 +232,7 @@ public data class ThreadEmbed(title: String,
                      var2 |= 2;
                      break;
                   case 2:
-                     var18 = var13.v(var12, 2, b2.a, var18) as java.lang.String;
+                     var18 = var13.v(var12, 2, C0.a, var18) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
@@ -240,7 +240,7 @@ public data class ThreadEmbed(title: String,
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var13.v(var12, 4, b2.a, var6) as java.lang.String;
+                     var6 = var13.v(var12, 4, C0.a, var6) as java.lang.String;
                      var2 |= 16;
                      break;
                   case 5:
@@ -270,7 +270,7 @@ public data class ThreadEmbed(title: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

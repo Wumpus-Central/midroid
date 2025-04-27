@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import fl.b2
-import fl.g0
-import fl.x0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.Y
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -71,20 +71,20 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var4: java.lang.String = this.full;
-      val var3: java.lang.String = this.formatted;
+      val var3: java.lang.String = this.full;
+      val var4: java.lang.String = this.formatted;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TimestampContentNode(timestamp=");
       var5.append(var1);
       var5.append(", full=");
-      var5.append(var4);
-      var5.append(", formatted=");
       var5.append(var3);
+      var5.append(", formatted=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -103,7 +103,7 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{x0.a, b2.a, b2.a};
+         return new KSerializer[]{Y.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TimestampContentNode {

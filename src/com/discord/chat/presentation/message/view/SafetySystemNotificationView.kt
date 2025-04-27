@@ -45,7 +45,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setDescription(description: String) {
-      if (kotlin.text.h.x(var1)) {
+      if (kotlin.text.h.d0(var1)) {
          this.binding.description.setVisibility(8);
       } else {
          val var2: TextView = this.binding.description;
@@ -59,7 +59,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setPrimaryCta(primaryCtaText: String, primaryCtaType: String, primaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.primaryCta;
-      this.binding.primaryCta.setOnClickListener(new p0(var4, var2, var3));
+      this.binding.primaryCta.setOnClickListener(new S(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.q.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
@@ -75,7 +75,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setSecondaryCta(secondaryCtaText: String, secondaryCtaType: String, secondaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.secondaryCta;
-      this.binding.secondaryCta.setOnClickListener(new q0(var4, var2, var3));
+      this.binding.secondaryCta.setOnClickListener(new T(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.q.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
@@ -90,7 +90,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setSubtitle(subtitle: String) {
-      if (kotlin.text.h.x(var1)) {
+      if (kotlin.text.h.d0(var1)) {
          this.binding.subtitleText.setVisibility(8);
       } else {
          val var2: TextView = this.binding.subtitleText;
@@ -121,7 +121,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setTitle(titleText: String) {
-      if (kotlin.text.h.x(var1)) {
+      if (kotlin.text.h.d0(var1)) {
          this.binding.titleContainer.setVisibility(8);
       } else {
          val var2: TextView = this.binding.title;
@@ -136,7 +136,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    private fun setTitleIcon(titleIcon: String) {
       val var2: SimpleDraweeView = this.binding.icon;
       kotlin.jvm.internal.q.g(this.binding.icon, "icon");
-      SetOptionalImageUrlKt.setOptionalImageUrl$default(var2, var1, null, null, 6, null);
+      SetOptionalImageUrlKt.setOptionalImageUrl$default(var2, var1, null, null, null, 14, null);
    }
 
    public fun setContent(
@@ -171,11 +171,11 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
       this.setDescription(var4);
       this.setTheme(var11);
       this.setPrimaryCta(var5, var7, var6, var12);
-      if (kotlin.text.h.x(var8) xor true && kotlin.text.h.x(var10) xor true) {
+      if (!kotlin.text.h.d0(var8) && !kotlin.text.h.d0(var10)) {
          this.setSecondaryCta(var8, var9, var10, var12);
       }
 
-      if (kotlin.text.h.x(var5) xor true && kotlin.text.h.x(var8) xor true) {
+      if (!kotlin.text.h.d0(var5) && !kotlin.text.h.d0(var8)) {
          this.binding.separator.setVisibility(0);
       }
    }

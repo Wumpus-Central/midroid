@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.FabricViewStateManager
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.FabricViewStateManager.HasFabricViewStateManager
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout, HasFabricViewStateManager {
@@ -35,17 +35,17 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
       super(var1, var2, var3);
       this.reactContext = var1 as ReactContext;
       this.fabricViewStateManager = new FabricViewStateManager();
-      this.runnable = new c(this);
+      this.runnable = new a(this);
    }
 
    private fun maybePostMeasuredEvent(previousMeasuredWidth: Int, newMeasuredWidth: Int, previousMeasuredHeight: Int, newMeasuredHeight: Int) {
       if (Math.abs(var4 - var3) >= 2 || Math.abs(var2 - var1) >= 2) {
          if (this.fabricEnabled) {
-            this.fabricViewStateManager.setState(new a(PixelUtil.toDIPFromPixel((float)var2), PixelUtil.toDIPFromPixel((float)var4)));
+            this.fabricViewStateManager.setState(new b(PixelUtil.toDIPFromPixel((float)var2), PixelUtil.toDIPFromPixel((float)var4)));
          } else {
             val var7: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class) as UIManagerModule;
             if (var7 != null) {
-               this.reactContext.runOnNativeModulesQueueThread(new b(var7, this));
+               this.reactContext.runOnNativeModulesQueueThread(new c(var7, this));
             }
          }
       }

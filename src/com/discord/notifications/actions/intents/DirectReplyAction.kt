@@ -135,18 +135,18 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.tag;
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.channelName;
+      val var2: java.lang.String = this.tag;
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.channelName;
       val var6: Int = this.channelType;
       val var1: java.lang.String = this.guildName;
       val var3: StringBuilder = new StringBuilder();
       var3.append("DirectReplyAction(tag=");
-      var3.append(var5);
-      var3.append(", channelId=");
       var3.append(var2);
-      var3.append(", channelName=");
+      var3.append(", channelId=");
       var3.append(var4);
+      var3.append(", channelName=");
+      var3.append(var5);
       var3.append(", channelType=");
       var3.append(var6);
       var3.append(", guildName=");
@@ -182,7 +182,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
             var var5: java.lang.CharSequence = var2.getCharSequence("remote_input_key");
             var4 = null;
             if (var5 != null) {
-               if (!(h.x(var5) xor true)) {
+               if (h.d0(var5)) {
                   var5 = null;
                }
 

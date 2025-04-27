@@ -82,7 +82,7 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
       var var5: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       var var2: Byte;
-      if (var4 xor true) {
+      if (!var4) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -124,7 +124,7 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
 
       val var4: TextView = this.binding.itemHeader;
       kotlin.jvm.internal.q.g(this.binding.itemHeader, "itemHeader");
-      if (true xor var2) {
+      if (!var2) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -144,7 +144,7 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
          var3 = 1;
       }
 
-      if (true xor var3) {
+      if (!var3) {
          var3 = 0;
       } else {
          var3 = 8;
@@ -183,11 +183,11 @@ public class ActivityBookmarkView  public constructor(context: Context, attrs: A
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var2 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
-      var3 = var2 * 9 / 16;
+      var3 = MessageAccessoriesView.Companion.getWidth(var2, false);
+      var2 = var3 * 9 / 16;
       val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
       var4 = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
-      var5.resizeLayoutParams(var4, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
+      var5.resizeLayoutParams(var4, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
    }
 }

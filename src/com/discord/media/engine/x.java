@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
 import com.discord.native.engine.NativeConnection;
-import kotlin.jvm.functions.Function2;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class x implements NativeConnection.OnSpeakingCallback {
-   public final Function2 a;
+public final class x implements NativeConnection.MLSKeyPackageCallback {
+   public final Function1 a;
 
    @Override
-   public final void onSpeaking(String var1, int var2) {
-      MediaEngine.r(this.a, var1, var2);
+   public final void onMLSKeyPackage(String var1) {
+      MediaEngine.w(this.a, var1);
    }
 }

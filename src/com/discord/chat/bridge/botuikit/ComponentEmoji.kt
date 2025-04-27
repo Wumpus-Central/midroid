@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
-import fl.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -111,27 +111,27 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var6: java.lang.String = this.name;
+      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.name;
       val var2: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var5: java.lang.String = this.surrogates;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ComponentEmoji(id=");
-      var4.append(var3);
-      var4.append(", name=");
-      var4.append(var6);
-      var4.append(", src=");
-      var4.append(var2);
-      var4.append(", animated=");
-      var4.append(var1);
-      var4.append(", surrogates=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var6: java.lang.String = this.surrogates;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ComponentEmoji(id=");
+      var3.append(var5);
+      var3.append(", name=");
+      var3.append(var4);
+      var3.append(", src=");
+      var3.append(var2);
+      var3.append(", animated=");
+      var3.append(var1);
+      var3.append(", surrogates=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -152,8 +152,8 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), h.a, a.u(var1)};
+         val var3: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), var3, a.u(var3), h.a, a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): ComponentEmoji {
@@ -164,25 +164,23 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          var var5: Boolean;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         var var13: java.lang.String;
+         val var12: java.lang.String;
          var var14: java.lang.String;
          if (var11.y()) {
-            val var6: b2 = b2.a;
-            var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
+            val var6: C0 = C0.a;
+            var8 = var11.v(var10, 0, C0.a, null) as java.lang.String;
             var7 = var11.t(var10, 1);
-            val var12: java.lang.String = var11.v(var10, 2, var6, null) as java.lang.String;
+            var12 = var11.v(var10, 2, var6, null) as java.lang.String;
             var5 = var11.s(var10, 3);
-            val var9: java.lang.String = var11.v(var10, 4, var6, null) as java.lang.String;
+            var14 = var11.v(var10, 4, var6, null) as java.lang.String;
             var2 = 31;
-            var14 = var12;
-            var13 = var9;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var8 = null;
             var7 = null;
             var14 = null;
-            var13 = null;
+            var var13: java.lang.String = null;
             var2 = 0;
 
             while (var3) {
@@ -196,14 +194,14 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
                                  throw new n(var4);
                               }
 
-                              var13 = var11.v(var10, 4, b2.a, var13) as java.lang.String;
+                              var13 = var11.v(var10, 4, C0.a, var13) as java.lang.String;
                               var2 |= 16;
                            } else {
                               var5 = var11.s(var10, 3);
                               var2 |= 8;
                            }
                         } else {
-                           var14 = var11.v(var10, 2, b2.a, var14) as java.lang.String;
+                           var14 = var11.v(var10, 2, C0.a, var14) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
@@ -211,17 +209,20 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.v(var10, 0, b2.a, var8) as java.lang.String;
+                     var8 = var11.v(var10, 0, C0.a, var8) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var14 = var13;
+            var12 = var14;
          }
 
          var11.b(var10);
-         return new ComponentEmoji(var2, var8, var7, var14, var5, var13, null);
+         return new ComponentEmoji(var2, var8, var7, var12, var5, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ComponentEmoji) {
@@ -234,7 +235,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

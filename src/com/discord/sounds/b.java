@@ -9,6 +9,6 @@ public final class b implements OnPreparedListener {
    public final Function1 a;
 
    public final void onPrepared(MediaPlayer var1) {
-      SoundPlayer.b(this.a, var1);
+      SoundPlayer.a(this.a, var1);
    }
 }

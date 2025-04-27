@@ -1,11 +1,11 @@
 package com.discord.image.fresco.postprocessors.processors
 
+import I2.a
 import android.graphics.Bitmap
 import kotlin.jvm.internal.q
-import o6.a
 
 internal class SafeRoundAsCirclePostprocessor : a {
-   public open fun process(bitmap: Bitmap) {
+   public override fun process(bitmap: Bitmap) {
       q.h(var1, "bitmap");
       if (var1.getWidth() >= 2 && var1.getHeight() >= 2) {
          super.process(var1);

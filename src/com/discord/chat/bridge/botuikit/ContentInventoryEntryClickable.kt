@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
-import cl.f
-import cl.n
-import dl.a
-import fl.b2
-import fl.g0
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -64,7 +64,7 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -83,7 +83,7 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(b2.a)};
+         return new KSerializer[]{a.u(C0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): ContentInventoryEntryClickable {
@@ -91,12 +91,12 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: java.lang.String;
          if (var5) {
-            var8 = var7.v(var6, 0, b2.a, null) as java.lang.String;
+            var8 = var7.v(var6, 0, C0.a, null) as java.lang.String;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -107,8 +107,8 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
                      throw new n(var4);
                   }
 
-                  var8 = var7.v(var6, 0, b2.a, var8) as java.lang.String;
-                  var2 |= 1;
+                  var8 = var7.v(var6, 0, C0.a, var8) as java.lang.String;
+                  var2 = 1;
                } else {
                   var3 = false;
                }
@@ -129,7 +129,7 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

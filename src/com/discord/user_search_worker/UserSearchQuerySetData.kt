@@ -1,10 +1,10 @@
 package com.discord.user_search_worker
 
-import cl.f
-import cl.n
-import fl.b2
-import fl.g0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -72,7 +72,7 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -90,7 +90,7 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, UserSearchQuerySetPayload.$serializer.INSTANCE};
+         return new KSerializer[]{C0.a, UserSearchQuerySetPayload.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetData {

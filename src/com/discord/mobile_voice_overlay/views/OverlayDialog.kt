@@ -8,7 +8,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import android.view.WindowManager.LayoutParams
-import androidx.core.view.r0
 import com.discord.mobile_voice_overlay.utils.WindowUtils
 import kotlin.jvm.internal.q
 
@@ -77,7 +76,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    public fun closeDialog() {
-      if (!r0.T(this)) {
+      if (!this.isAttachedToWindow()) {
          this.onDialogClosed.invoke(this);
       } else {
          val var1: Animator = this.getClosingAnimator();

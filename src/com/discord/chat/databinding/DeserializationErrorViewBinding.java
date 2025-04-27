@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import o1.a;
+import u0.a;
 
 public final class DeserializationErrorViewBinding implements ViewBinding {
    public final TextView causeHeader;
@@ -39,15 +39,15 @@ public final class DeserializationErrorViewBinding implements ViewBinding {
             TextView var7 = (TextView)a.a(var0, var1);
             if (var7 != null) {
                var1 = R.id.header;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var2 = (TextView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.json;
-                  TextView var4 = (TextView)a.a(var0, var1);
-                  if (var4 != null) {
+                  TextView var6 = (TextView)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.json_header;
-                     TextView var2 = (TextView)a.a(var0, var1);
-                     if (var2 != null) {
-                        return new DeserializationErrorViewBinding(var0, var5, var3, var7, var6, var4, var2);
+                     TextView var4 = (TextView)a.a(var0, var1);
+                     if (var4 != null) {
+                        return new DeserializationErrorViewBinding(var0, var5, var3, var7, var2, var6, var4);
                      }
                   }
                }

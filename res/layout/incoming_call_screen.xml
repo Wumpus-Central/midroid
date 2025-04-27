@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/incoming_call_screen" android:layout_width="fill_parent" android:layout_height="fill_parent" android:noHistory="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="#20000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="center" android:id="@id/imageView" android:layout_width="96.0sp" android:layout_height="96.0sp" android:layout_marginTop="120.0sp" android:layout_marginBottom="18.0sp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:importantForAccessibility="no" />
+    <ImageView android:layout_gravity="center" android:background="@drawable/round_button" android:padding="6.0sp" android:layout_width="32.0sp" android:layout_height="32.0sp" android:layout_marginTop="-48.0sp" android:src="@mipmap/img_logo_dark" android:layout_below="@id/imageView" android:importantForAccessibility="no" android:layout_alignEnd="@id/imageView" android:backgroundTint="@color/brand" />
+    <LinearLayout android:orientation="vertical" android:id="@id/textContainer" android:paddingLeft="40.0sp" android:paddingRight="40.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0sp" android:layout_below="@id/imageView" android:paddingHorizontal="40.0sp">
+        <TextView android:textSize="32.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/userName" android:paddingBottom="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/textView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/channelName" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="42.0sp" android:layout_below="@id/textContainer" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/buttonContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/buttonLabels">
+            <RelativeLayout android:orientation="horizontal" android:id="@id/declineButton" android:layout_width="168.0sp" android:layout_height="wrap_content">
+                <ImageButton android:layout_gravity="center" android:id="@id/declineCallContainer" android:background="@drawable/round_button" android:layout_width="64.0sp" android:layout_height="64.0sp" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@id/acceptButton" android:layout_width="168.0sp" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+                <ImageButton android:layout_gravity="end" android:id="@id/acceptCallContainer" android:background="@drawable/round_button" android:layout_width="64.0sp" android:layout_height="64.0sp" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/buttonLabels" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0sp" android:layout_marginRight="32.0sp" android:layout_alignParentBottom="true" android:layout_marginHorizontal="32.0sp">
+            <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/declineCallText" android:clickable="false" android:layout_width="104.0sp" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" />
+            <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/acceptCallText" android:clickable="false" android:layout_width="104.0sp" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

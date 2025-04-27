@@ -1,11 +1,10 @@
 package com.discord.chat.bridge.forwarding
 
-import cl.f
-import cl.n
-import dl.a
-import fl.g0
-import fl.h
-import fl.n0
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.G
+import ba.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,16 +15,14 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo? = null, useOldIcon: Boolean) {
+public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo? = null) {
    public final val footerInfo: ForwardFooterInfo?
    public final val snapshotIndex: Int
-   public final val useOldIcon: Boolean
 
    init {
       super();
       this.snapshotIndex = var1;
       this.footerInfo = var2;
-      this.useOldIcon = var3;
    }
 
    public operator fun component1(): Int {
@@ -36,12 +33,8 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       return this.footerInfo;
    }
 
-   public operator fun component3(): Boolean {
-      return this.useOldIcon;
-   }
-
-   public fun copy(snapshotIndex: Int = var0.snapshotIndex, footerInfo: ForwardFooterInfo? = var0.footerInfo, useOldIcon: Boolean = var0.useOldIcon): ForwardInfo {
-      return new ForwardInfo(var1, var2, var3);
+   public fun copy(snapshotIndex: Int = var0.snapshotIndex, footerInfo: ForwardFooterInfo? = var0.footerInfo): ForwardInfo {
+      return new ForwardInfo(var1, var2);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -53,10 +46,8 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          var1 = var1;
          if (this.snapshotIndex != var1.snapshotIndex) {
             return false;
-         } else if (!q.c(this.footerInfo, var1.footerInfo)) {
-            return false;
          } else {
-            return this.useOldIcon == var1.useOldIcon;
+            return q.c(this.footerInfo, var1.footerInfo);
          }
       }
    }
@@ -70,25 +61,22 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          var1 = this.footerInfo.hashCode();
       }
 
-      return (var2 * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.useOldIcon);
+      return var2 * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.snapshotIndex;
-      val var3: ForwardFooterInfo = this.footerInfo;
-      val var2: Boolean = this.useOldIcon;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ForwardInfo(snapshotIndex=");
-      var4.append(var1);
-      var4.append(", footerInfo=");
-      var4.append(var3);
-      var4.append(", useOldIcon=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var2: ForwardFooterInfo = this.footerInfo;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForwardInfo(snapshotIndex=");
+      var3.append(var1);
+      var3.append(", footerInfo=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -99,67 +87,55 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       fun {
          val var0: ForwardInfo.$serializer = new ForwardInfo.$serializer();
          INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.forwarding.ForwardInfo", var0, 3);
+         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.forwarding.ForwardInfo", var0, 2);
          var1.l("snapshotIndex", false);
          var1.l("footerInfo", true);
-         var1.l("useOldIcon", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, a.u(ForwardFooterInfo.$serializer.INSTANCE), h.a};
+         return new KSerializer[]{N.a, a.u(ForwardFooterInfo.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): ForwardInfo {
          q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
+         val var6: SerialDescriptor = this.getDescriptor();
+         val var7: c = var1.c(var6);
          var var2: Int;
          var var3: Int;
-         var var4: Int;
-         var var9: ForwardFooterInfo;
-         if (var8.y()) {
-            var4 = var8.k(var7, 0);
-            var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, null) as ForwardFooterInfo;
-            var2 = var8.s(var7, 2);
-            var3 = 7;
+         var var8: ForwardFooterInfo;
+         if (var7.y()) {
+            var3 = var7.k(var6, 0);
+            var8 = var7.v(var6, 1, ForwardFooterInfo.$serializer.INSTANCE, null) as ForwardFooterInfo;
+            var2 = 3;
          } else {
-            var var5: Boolean = true;
-            var4 = 0;
-            var2 = 0;
-            var9 = null;
+            var var4: Boolean = true;
             var3 = 0;
+            var2 = 0;
+            var8 = null;
 
-            while (var5) {
-               val var6: Int = var8.x(var7);
-               if (var6 != -1) {
-                  if (var6 != 0) {
-                     if (var6 != 1) {
-                        if (var6 != 2) {
-                           throw new n(var6);
-                        }
-
-                        var3 = var8.s(var7, 2);
-                        var2 |= 4;
-                     } else {
-                        var9 = var8.v(var7, 1, ForwardFooterInfo.$serializer.INSTANCE, var9) as ForwardFooterInfo;
-                        var2 |= 2;
+            while (var4) {
+               val var5: Int = var7.x(var6);
+               if (var5 != -1) {
+                  if (var5 != 0) {
+                     if (var5 != 1) {
+                        throw new n(var5);
                      }
+
+                     var8 = var7.v(var6, 1, ForwardFooterInfo.$serializer.INSTANCE, var8) as ForwardFooterInfo;
+                     var2 |= 2;
                   } else {
-                     var4 = var8.k(var7, 0);
+                     var3 = var7.k(var6, 0);
                      var2 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var4 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
-         var8.b(var7);
-         return new ForwardInfo(var3, var4, var9, (boolean)var2, null);
+         var7.b(var6);
+         return new ForwardInfo(var2, var3, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ForwardInfo) {
@@ -172,7 +148,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

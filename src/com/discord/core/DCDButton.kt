@@ -1,7 +1,10 @@
 package com.discord.core
 
+import M5.k
+import M5.k.b
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.drawable.Drawable
 import android.text.TextUtils.TruncateAt
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -18,8 +21,6 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.google.android.material.button.MaterialButton
 import kotlin.jvm.internal.q
-import nc.k
-import nc.k.b
 
 public class DCDButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DcdButtonBinding
@@ -39,22 +40,22 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
       val var3: DcdButtonBinding = DcdButtonBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var3, "inflate(...)");
       this.binding = var3;
-      val var4: MaterialButton = var3.button;
+      val var5: MaterialButton = var3.button;
       q.g(var3.button, "button");
-      this.button = var4;
-      val var5: ProgressBar = var3.progress;
+      this.button = var5;
+      val var4: ProgressBar = var3.progress;
       q.g(var3.progress, "progress");
-      this.progress = var5;
+      this.progress = var4;
       val var6: ProgressDots = var3.loadingDots;
       q.g(var3.loadingDots, "loadingDots");
       this.loadingDots = var6;
-      var4.setStateListAnimator(null);
-      var4.setMinimumHeight(var5.getHeight());
-      var4.setMinHeight(var5.getHeight());
-      var4.setMinimumWidth(var5.getWidth());
-      var4.setMinWidth(var5.getWidth());
-      var4.setInsetTop(0);
-      var4.setInsetBottom(0);
+      var5.setStateListAnimator(null);
+      var5.setMinimumHeight(var4.getHeight());
+      var5.setMinHeight(var4.getHeight());
+      var5.setMinimumWidth(var4.getWidth());
+      var5.setMinWidth(var4.getWidth());
+      var5.setInsetTop(0);
+      var5.setInsetBottom(0);
       this.setTextSizeSp(14.0F);
       this.setDiscordFont(DiscordFont.PrimarySemibold);
       this.setButtonPadding();
@@ -139,6 +140,12 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    public fun setDiscordFont(font: DiscordFont) {
       q.h(var1, "font");
       DiscordFontUtilsKt.setDiscordFont(this.button, var1);
+   }
+
+   public fun setDrawableBackground(drawable: Drawable) {
+      q.h(var1, "drawable");
+      this.button.setBackground(var1);
+      this.button.setBackgroundTintList(null);
    }
 
    public open fun setEnabled(enabled: Boolean) {
