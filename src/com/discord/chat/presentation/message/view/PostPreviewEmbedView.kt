@@ -24,7 +24,7 @@ import com.discord.primitives.MessageId
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.facebook.drawee.drawable.ScalingUtils.ScaleType
+import com.facebook.drawee.drawable.ScalingUtils
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -83,7 +83,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
 
    private fun setCoverImage(url: String?, blurredThumbnailUrl: String?, backgroundImageUrl: String?) {
       var var4: Boolean;
-      if ((var1 == null || kotlin.text.h.x(var1)) && (var2 == null || kotlin.text.h.x(var2))) {
+      if ((var1 == null || kotlin.text.h.d0(var1)) && (var2 == null || kotlin.text.h.d0(var2))) {
          var4 = 0;
       } else {
          var4 = 1;
@@ -104,7 +104,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
          kotlin.jvm.internal.q.g(this.binding.backgroundImage, "backgroundImage");
          if (var4 && var3 != null) {
             var4 = (boolean)1;
-            if (!kotlin.text.h.x(var3)) {
+            if (!kotlin.text.h.d0(var3)) {
                break label54;
             }
          }
@@ -119,16 +119,16 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       }
 
       var8.setVisibility(var4);
-      if (var1 != null && !kotlin.text.h.x(var1)) {
-         if (var3 != null && !kotlin.text.h.x(var3)) {
-            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.e);
+      if (var1 != null && !kotlin.text.h.d0(var1)) {
+         if (var3 != null && !kotlin.text.h.d0(var3)) {
+            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils.ScaleType.e);
             this.binding.backgroundImage.setImageURI(var3);
          } else {
-            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.i);
+            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils.ScaleType.i);
          }
 
          this.binding.coverImage.setImageURI(var1);
-      } else if (var2 != null && !kotlin.text.h.x(var2)) {
+      } else if (var2 != null && !kotlin.text.h.d0(var2)) {
          val var9: SimpleDraweeView = this.binding.coverImage;
          kotlin.jvm.internal.q.g(this.binding.coverImage, "coverImage");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var9, var2);
@@ -139,13 +139,13 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       val var4: DCDButton = this.binding.coverImageOverlayButton;
       kotlin.jvm.internal.q.e(this.binding.coverImageOverlayButton);
       var var2: Boolean;
-      if (var1 != null && !kotlin.text.h.x(var1)) {
+      if (var1 != null && !kotlin.text.h.d0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;
       }
 
-      if (true xor var2) {
+      if (!var2) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -156,20 +156,20 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    }
 
    private fun setFooter(footer: StructurableText, messageId: MessageId) {
-      val var5: SimpleDraweeSpanTextView = this.binding.footer;
+      val var4: SimpleDraweeSpanTextView = this.binding.footer;
       kotlin.jvm.internal.q.e(this.binding.footer);
-      val var4: Context = var5.getContext();
-      val var6: FontMetrics = var5.getPaint().getFontMetrics();
+      val var5: Context = var4.getContext();
+      val var6: FontMetrics = var4.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var6, "getFontMetrics(...)");
       val var3: Float = TextUtilsKt.getBaselineHeightPx(var6);
-      val var7: TextPaint = var5.getPaint();
-      kotlin.jvm.internal.q.e(var4);
+      val var7: TextPaint = var4.getPaint();
+      kotlin.jvm.internal.q.e(var5);
       kotlin.jvm.internal.q.e(var7);
       ViewUtilsKt.setOptionalText(
-         var5,
+         var4,
          TextUtilsKt.toSpannable$default(
             var1,
-            var4,
+            var5,
             var2,
             false,
             false,
@@ -189,28 +189,30 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
             null,
             null,
             null,
+            null,
+            null,
             true,
             null,
             var3,
             null,
-            11534208,
+            46137216,
             null
          )
       );
-      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var5, false, 1, null);
+      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var4, false, 1, null);
    }
 
    private fun setSubtitle(subtitle: CharSequence?) {
       val var4: TextView = this.binding.subtitle;
       kotlin.jvm.internal.q.g(this.binding.subtitle, "subtitle");
       var var2: Boolean;
-      if (var1 != null && !kotlin.text.h.x(var1)) {
+      if (var1 != null && !kotlin.text.h.d0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;
       }
 
-      if (true xor var2) {
+      if (!var2) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -224,20 +226,28 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       this.binding.title.setText(var1);
    }
 
-   private fun setupSpoilerView(spoilerConfig: SpoilerConfig?, isSpoiler: Boolean, isObscureAwaitingScan: Boolean) {
+   private fun setupSpoilerView(
+      spoilerConfig: SpoilerConfig?,
+      isSpoiler: Boolean,
+      isObscureAwaitingScan: Boolean,
+      obscureHideControls: Boolean,
+      obscureIsOpaque: Boolean
+   ) {
       this.binding.spoiler.configure(var1, this);
-      val var4: SpoilerView = this.binding.spoiler;
+      val var6: SpoilerView = this.binding.spoiler;
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
-      if (var4.getVisibility() == 0) {
+      if (var6.getVisibility() == 0) {
          this.binding.spoiler.handleObscureAwaitingScan(var3);
-         val var5: FrameLayout = this.binding.imageBlurBg;
+         this.binding.spoiler.setRevealButtonVisible(var4 xor true);
+         this.binding.spoiler.setOpaqueBackgroundVisible(var5);
+         val var7: FrameLayout = this.binding.imageBlurBg;
          kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
-         var5.setVisibility(0);
+         var7.setVisibility(0);
          this.binding.coverImage.setImportantForAccessibility(4);
       } else {
-         val var6: FrameLayout = this.binding.imageBlurBg;
+         val var8: FrameLayout = this.binding.imageBlurBg;
          kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
-         var6.setVisibility(8);
+         var8.setVisibility(8);
          this.binding.coverImage.setImportantForAccessibility(0);
          if (var2) {
             this.binding.coverImage.requestFocus();
@@ -259,6 +269,8 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       onButtonClickListener: OnClickListener,
       isSpoiler: Boolean,
       isObscureAwaitingScan: Boolean,
+      obscureHideControls: Boolean,
+      obscureIsOpaque: Boolean,
       spoilerConfig: SpoilerConfig?
    ) {
       kotlin.jvm.internal.q.h(var1, "title");
@@ -274,10 +286,10 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       this.setCoverImage(var7, var8, var10);
       this.setCoverImageButtonText(var9);
       this.binding.cta.setOnClickButtonListener(var11);
-      val var15: SimpleDraweeView = this.binding.coverImage;
+      val var17: SimpleDraweeView = this.binding.coverImage;
       kotlin.jvm.internal.q.g(this.binding.coverImage, "coverImage");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, var11, 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var17, false, var11, 1, null);
       this.binding.coverImageOverlayButton.setOnClickButtonListener(var11);
-      this.setupSpoilerView(var14, var12, var13);
+      this.setupSpoilerView(var16, var12, var13, var14, var15);
    }
 }

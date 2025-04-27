@@ -25,7 +25,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
    fun {
       val var0: Array<VideoCompressionQuality> = $values();
       $VALUES = var0;
-      $ENTRIES = rh.a.a(var0);
+      $ENTRIES = m8.a.a(var0);
    }
 
    init {
@@ -41,31 +41,30 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
 
    public companion object {
       public fun fromString(value: String?): VideoCompressionQuality {
-         val var5: Array<VideoCompressionQuality> = VideoCompressionQuality.values();
-         val var3: Int = var5.length;
-         var var2: Int = 0;
+         val var3: java.util.Iterator = VideoCompressionQuality.getEntries().iterator();
 
          while (true) {
-            if (var2 >= var3) {
-               var6 = null;
+            if (var3.hasNext()) {
+               val var2: Any = var3.next();
+               if (!q.c((var2 as VideoCompressionQuality).getValue(), var1)) {
+                  continue;
+               }
+
+               var4 = var2;
                break;
             }
 
-            val var4: VideoCompressionQuality = var5[var2];
-            if (q.c(var5[var2].getValue(), var1)) {
-               var6 = var4;
-               break;
-            }
-
-            var2++;
+            var4 = null;
+            break;
          }
 
-         var var7: VideoCompressionQuality = var6;
+         val var6: VideoCompressionQuality = var4 as VideoCompressionQuality;
+         var var5: VideoCompressionQuality = var4 as VideoCompressionQuality;
          if (var6 == null) {
-            var7 = VideoCompressionQuality.None;
+            var5 = VideoCompressionQuality.None;
          }
 
-         return var7;
+         return var5;
       }
    }
 }

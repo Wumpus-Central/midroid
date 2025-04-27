@@ -26,7 +26,7 @@ import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.discord.react_strings.RenderContext
 import com.discord.reactions.AddReactionView
-import com.discord.reactions.ReactionsFlexbox
+import com.discord.reactions.ShortcutsFlexbox
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.ReactionView.ReactionsTheme
 import com.discord.ripple.RippleUtilsKt
@@ -105,12 +105,39 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onReactionClick: (Reaction) -> Unit,
       onReactionLongPress: (Reaction) -> Unit = <unrepresentable>.INSTANCE
    ) {
-      var var6: ReactionsFlexbox = this.binding.reactionsView;
+      var var6: ShortcutsFlexbox = this.binding.reactionsView;
       kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
       var6.setVisibility(0);
       var6 = this.binding.reactionsView;
       kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
-      ReactionsFlexbox.setReactions$default(var6, var1, false, false, "", "", "", var2, var3, null, var4, var5, null, 2304, null);
+      ShortcutsFlexbox.setReactions$default(
+         var6,
+         var1,
+         false,
+         false,
+         "",
+         "",
+         "",
+         var2,
+         var3,
+         null,
+         var4,
+         var5,
+         null,
+         false,
+         false,
+         false,
+         false,
+         false,
+         null,
+         null,
+         null,
+         "",
+         "",
+         "",
+         1046784,
+         null
+      );
    }
 
    private fun setSharePrompt(
@@ -178,7 +205,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
                   kotlin.jvm.internal.q.h(var1, "node");
                   this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
                }
-            }, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var7, null, 12582656, null)
+            }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var7, null, 50331392, null)
          );
          NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var13, false, 1, null);
       }
@@ -220,11 +247,11 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.q.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var23: java.util.List = kotlin.collections.i.K0(var8, --var2);
-         val var35: ReactionsFlexbox = this.binding.reactionsView;
+         val var35: java.util.List = kotlin.collections.i.K0(var8, --var2);
+         val var23: ShortcutsFlexbox = this.binding.reactionsView;
          kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
-         var35.setVisibility(0);
-         this.setReactions(var23, var12, var13, var14, var15);
+         var23.setVisibility(0);
+         this.setReactions(var35, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
          val var36: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.q.e(this.binding.otherReactionsCount);
@@ -268,7 +295,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          if (var9 != null && var10) {
             setReactions$default(this, kotlin.collections.i.e(var9), var12, var13, var14, null, 16, null);
          } else {
-            val var32: ReactionsFlexbox = this.binding.reactionsView;
+            val var32: ShortcutsFlexbox = this.binding.reactionsView;
             kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
             var32.setVisibility(8);
          }
@@ -310,6 +337,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          RippleUtilsKt.addRipple$default(var30, true, 0, 2, null);
          var30.setContentDescription(var11);
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var30, false, var13, 1, null);
+         AddReactionView.configure$default(var30, "", var12, false, null, 8, null);
       }
 
       this.setSharePrompt-LdU2QRA(var1, var19, var17, var6, var20, var21);

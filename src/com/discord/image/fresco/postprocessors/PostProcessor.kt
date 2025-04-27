@@ -5,19 +5,35 @@ import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
 import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostprocessor
 import com.facebook.imagepipeline.request.BasePostprocessor
+import f8.p
 import java.util.ArrayList
-import kh.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import rh.a
+import m8.a
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
    }
 
-   public object Circle : PostProcessor {
+   public data object Circle : PostProcessor {
       override fun create(): BasePostprocessor {
          return PostProcessor.DefaultImpls.create(this);
+      }
+
+      public override operator fun equals(other: Any?): Boolean {
+         if (this === var1) {
+            return true;
+         } else {
+            return var1 is PostProcessor.Circle;
+         }
+      }
+
+      public override fun hashCode(): Int {
+         return 1231636723;
+      }
+
+      public override fun toString(): String {
+         return "Circle";
       }
    }
 
@@ -60,7 +76,7 @@ public sealed interface PostProcessor {
       }
 
       public constructor(vararg postprocessors: PostProcessor) : q.h(var1, "postprocessors") {
-         this(c.z0(var1));
+         this(c.A0(var1));
       }
 
       public operator fun component1(): List<PostProcessor> {
@@ -198,21 +214,21 @@ public sealed interface PostProcessor {
 
       public override fun toString(): String {
          val var6: PostProcessor.Gradient.Direction = this.direction;
-         val var3: Int = this.startColor;
-         val var4: Int = this.endColor;
-         val var1: Float = this.startPosition;
-         val var2: Float = this.endPosition;
+         val var4: Int = this.startColor;
+         val var3: Int = this.endColor;
+         val var2: Float = this.startPosition;
+         val var1: Float = this.endPosition;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Gradient(direction=");
          var5.append(var6);
          var5.append(", startColor=");
-         var5.append(var3);
-         var5.append(", endColor=");
          var5.append(var4);
+         var5.append(", endColor=");
+         var5.append(var3);
          var5.append(", startPosition=");
-         var5.append(var1);
-         var5.append(", endPosition=");
          var5.append(var2);
+         var5.append(", endPosition=");
+         var5.append(var1);
          var5.append(")");
          return var5.toString();
       }
@@ -240,9 +256,25 @@ public sealed interface PostProcessor {
       }
    }
 
-   public object Grayscale : PostProcessor {
+   public data object Grayscale : PostProcessor {
       override fun create(): BasePostprocessor {
          return PostProcessor.DefaultImpls.create(this);
+      }
+
+      public override operator fun equals(other: Any?): Boolean {
+         if (this === var1) {
+            return true;
+         } else {
+            return var1 is PostProcessor.Grayscale;
+         }
+      }
+
+      public override fun hashCode(): Int {
+         return -1916771900;
+      }
+
+      public override fun toString(): String {
+         return "Grayscale";
       }
    }
 }

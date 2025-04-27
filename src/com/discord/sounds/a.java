@@ -8,6 +8,6 @@ public final class a implements OnCompletionListener {
    public final SoundPlayer a;
 
    public final void onCompletion(MediaPlayer var1) {
-      SoundPlayer.a(this.a, var1);
+      SoundPlayer.b(this.a, var1);
    }
 }

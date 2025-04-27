@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.Color
 import android.net.Uri
 import android.view.Window
+import ba.f
 import com.discord.chat.input.bridge.ChatInputNode
 import com.discord.chat.input.events.OnContentSizeChangeEvent
 import com.discord.chat.input.events.OnEndBlurEvent
@@ -13,6 +14,7 @@ import com.discord.chat.input.events.OnPasteCommandEvent
 import com.discord.chat.input.events.OnPasteImageEvent
 import com.discord.chat.input.events.OnRequestSendEvent
 import com.discord.chat.input.events.OnSelectionOrTextChangeEvent
+import com.discord.chat.input.events.OnTextFlushedEvent
 import com.discord.chat.input.views.ChatInputRootView
 import com.discord.keyboard.KeyboardManager
 import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
@@ -25,7 +27,6 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatInputManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatInputManagerInterface
-import fl.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
@@ -91,12 +92,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          @Override
          public void onImageInserted(Uri var1) {
             q.h(var1, "uri");
-            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
             val var4: ThemedReactContext = this.$reactContext;
-            val var5: ChatInputRootView = this.$view;
-            val var2: java.lang.String = var1.toString();
-            q.g(var2, "toString(...)");
-            var3.emitEvent(var4, var5, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
+            val var2: ChatInputRootView = this.$view;
+            val var3: java.lang.String = var1.toString();
+            q.g(var3, "toString(...)");
+            var5.emitEvent(var4, var2, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -113,6 +114,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
       });
       KeyboardManager.INSTANCE.addKeyboardListener(var2);
       return var2;
+   }
+
+   public open fun flushText(view: ChatInputRootView, requestId: String) {
+      q.h(var1, "view");
+      q.h(var2, "requestId");
+      this.reactEvents.emitEvent(var1, new OnTextFlushedEvent(var1.getText(), var2));
    }
 
    public open fun focus(view: ChatInputRootView) {
@@ -181,6 +188,15 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                this.openSystemKeyboard(var1);
             }
             break;
+         case -577056175:
+            if (var2.equals("flushText")) {
+               if (var3 == null) {
+                  return;
+               }
+
+               this.flushText(var1, var3.getString(0));
+            }
+            break;
          case 3027047:
             if (var2.equals("blur")) {
                this.blur(var1);
@@ -192,9 +208,7 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               var2 = var3.getString(0);
-               q.g(var2, "getString(...)");
-               this.updateTextBlocks(var1, var2, var3.getString(1));
+               this.updateTextBlocks(var1, var3.getString(0), var3.getString(1));
             }
             break;
          case 97604824:
@@ -208,13 +222,7 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               val var4: Int = var3.getInt(0);
-               val var5: Int = var3.getInt(1);
-               var2 = var3.getString(2);
-               q.g(var2, "getString(...)");
-               val var6: java.lang.String = var3.getString(3);
-               q.g(var6, "getString(...)");
-               this.replaceRange(var1, var4, var5, var2, var6, var3.getBoolean(4), var3.getString(5));
+               this.replaceRange(var1, var3.getInt(0), var3.getInt(1), var3.getString(2), var3.getString(3), var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:
@@ -297,6 +305,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
       q.h(var1, "view");
    }
 
+   @ReactProp(name = "setNoExtractUI")
+   public open fun setSetNoExtractUI(view: ChatInputRootView, value: Boolean) {
+      q.h(var1, "view");
+      var1.setNoExtractUI(var2);
+   }
+
    @ReactProp(name = "shouldShowCursor")
    public open fun setShouldShowCursor(view: ChatInputRootView, shouldShowCursor: Boolean) {
       q.h(var1, "view");
@@ -331,6 +345,7 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    public companion object {
       private const val COMMAND_BACKSPACE: String
       private const val COMMAND_BLUR: String
+      private const val COMMAND_FLUSH_TEXT: String
       private const val COMMAND_FOCUS: String
       private const val COMMAND_OPEN_CUSTOM_KEYBOARD: String
       private const val COMMAND_OPEN_SYSTEM_KEYBOARD: String

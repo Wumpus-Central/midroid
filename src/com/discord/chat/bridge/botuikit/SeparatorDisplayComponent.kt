@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import cl.f
-import cl.n
-import fl.b2
-import fl.g0
-import fl.h
-import fl.n0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.h
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -96,7 +96,7 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
       return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -116,7 +116,7 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, h.a, SeparatorSpacingSize.Serializer.INSTANCE};
+         return new KSerializer[]{N.a, C0.a, h.a, SeparatorSpacingSize.Serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): SeparatorDisplayComponent {
@@ -131,9 +131,9 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
          if (var9.y()) {
             var4 = var9.k(var8, 0);
             var7 = var9.t(var8, 1);
-            var3 = var9.s(var8, 2);
+            var2 = var9.s(var8, 2);
             var10 = var9.m(var8, 3, SeparatorSpacingSize.Serializer.INSTANCE, null) as SeparatorSpacingSize;
-            var2 = 15;
+            var3 = 15;
          } else {
             var var5: Boolean = true;
             var4 = 0;
@@ -170,10 +170,13 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
                   var5 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var9.b(var8);
-         return new SeparatorDisplayComponent(var2, var4, var7, (boolean)var3, var10, null);
+         return new SeparatorDisplayComponent(var3, var4, var7, (boolean)var2, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SeparatorDisplayComponent) {

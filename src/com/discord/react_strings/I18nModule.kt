@@ -1,14 +1,14 @@
 package com.discord.react_strings
 
-import com.discord.react_resource_cache.ReactResourceModule
+import com.discord.codegen.NativeI18nModuleSpec
+import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import kotlin.enums.EnumEntries
+import java.util.HashMap
 import kotlin.jvm.internal.q
 
-public class I18nModule(reactContext: ReactApplicationContext) : ReactResourceModule<I18nMessage> {
+public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModuleSpec {
    private final val reactContext: ReactApplicationContext
 
    init {
@@ -17,27 +17,27 @@ public class I18nModule(reactContext: ReactApplicationContext) : ReactResourceMo
       this.reactContext = var1;
    }
 
-   public open fun cache(): I18nCache {
-      return I18nCache.INSTANCE;
-   }
-
-   public open fun getName(): String {
-      return "i18nManager";
-   }
-
-   public open fun keys(): EnumEntries<I18nMessage> {
-      return I18nMessage.getEntries();
-   }
-
-   @ReactMethod
-   public fun keysRequest(callback: Callback) {
+   public override fun keysRequest(callback: Callback) {
       q.h(var1, "callback");
-      var1.invoke(new Object[]{this.keysArray()});
+      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), <unrepresentable>.INSTANCE)});
    }
 
-   @ReactMethod
-   public fun valuesResult(values: ReadableArray) {
+   public override fun valuesResult(values: ReadableArray) {
       q.h(var1, "values");
-      this.cache().set(this.reactContext, this.reactResources(var1));
+      val var5: I18nCache = I18nCache.INSTANCE;
+      val var4: ReactApplicationContext = this.reactContext;
+      val var3: HashMap = new HashMap();
+      val var7: java.util.Iterator = I18nMessage.getEntries().iterator();
+
+      for (int var2 = 0; var7.hasNext(); var2++) {
+         val var6: Any = var7.next();
+         if (var2 < 0) {
+            i.u();
+         }
+
+         var3.put((var6 as I18nMessage).name(), var1.getString(var2));
+      }
+
+      var5.set(var4, var3);
    }
 }

@@ -38,7 +38,7 @@ public class ForwardHeaderView  public constructor(context: Context, attrs: Attr
       var3.getRoot().setPadding(0, SizeUtilsKt.getDpToPx(2), 0, 0);
       val var4: SimpleDraweeView = var3.icon;
       kotlin.jvm.internal.q.g(var3.icon, "icon");
-      ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.ChatArrowRightIcon);
+      ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.ArrowAngleRightUpIcon);
       val var5: SimpleDraweeView = var3.icon;
       kotlin.jvm.internal.q.g(var3.icon, "icon");
       ColorUtilsKt.setTintColor(var5, ThemeManagerKt.getTheme().getTextLowContrast());
@@ -49,22 +49,6 @@ public class ForwardHeaderView  public constructor(context: Context, attrs: Attr
       kotlin.jvm.internal.q.g(var3.label, "label");
       I18nUtilsKt.i18nSetText$default(var7, I18nMessage.MESSAGE_FORWARDED, null, 2, null);
       var3.label.setTextColor(ThemeManagerKt.getTheme().getTextLowContrast());
-   }
-
-   public fun setIcon(useOldIcon: Boolean) {
-      if (var1) {
-         val var2: SimpleDraweeView = this.binding.icon;
-         kotlin.jvm.internal.q.g(this.binding.icon, "icon");
-         ReactAssetUtilsKt.setReactAsset(var2, ReactAsset.ArrowAngleRightUpIcon);
-      } else {
-         val var3: SimpleDraweeView = this.binding.icon;
-         kotlin.jvm.internal.q.g(this.binding.icon, "icon");
-         ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.ChatArrowRightIcon);
-      }
-
-      val var4: SimpleDraweeView = this.binding.icon;
-      kotlin.jvm.internal.q.g(this.binding.icon, "icon");
-      ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextLowContrast());
    }
 
    public override fun spacingPxOverride(): Int {

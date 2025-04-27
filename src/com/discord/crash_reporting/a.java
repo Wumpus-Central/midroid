@@ -1,18 +1,15 @@
 package com.discord.crash_reporting;
 
 import android.content.Context;
-import io.sentry.i5;
-import io.sentry.android.core.SentryAndroidOptions;
-import kotlin.jvm.internal.Ref.ObjectRef;
+import io.sentry.Hint;
+import io.sentry.SentryEvent;
+import io.sentry.n2.d;
 
 // $VF: synthetic class
-public final class a implements io.sentry.n3.a {
-   public final ObjectRef a;
-   public final String b;
-   public final Context c;
-   public final double d;
+public final class a implements d {
+   public final Context a;
 
-   public final void a(i5 var1) {
-      CrashReporting.b(this.a, this.b, this.c, this.d, (SentryAndroidOptions)var1);
+   public final SentryEvent a(SentryEvent var1, Hint var2) {
+      return CrashReporting.c(this.a, var1, var2);
    }
 }

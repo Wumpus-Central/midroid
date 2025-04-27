@@ -31,7 +31,7 @@ public fun SpannableStringBuilder.debugSpans(): String {
 public fun SpannableStringBuilder.ensureNewline(span: Any? = null) {
    q.h(var0, "<this>");
    if (var0.length() > 0) {
-      val var3: Character = h.a1(var0);
+      val var3: Character = h.d1(var0);
       if (var3 == null || var3 != '\n') {
          if (var1 != null) {
             val var2: Int = var0.length();

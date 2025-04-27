@@ -2,6 +2,8 @@ package com.discord.chat.presentation.message.view.botuikit
 
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams
+import android.view.ViewGroup.MarginLayoutParams
 import com.discord.chat.bridge.botuikit.Component
 import kotlin.jvm.internal.q
 
@@ -15,7 +17,7 @@ public fun ViewGroup.recycleChildComponents(componentProvider: ComponentProvider
             var3,
             "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
          );
-         var1.recycleComponentView(var3 as ComponentView<? extends Component>);
+         var1.recycleComponentView(var3 as ComponentView<out Component>);
       }
 
       var0.removeViewAt(var2);
@@ -30,39 +32,60 @@ public fun ViewGroup.replaceViews(
 ) {
    q.h(var0, "<this>");
    q.h(var1, "views");
-   val var6: java.util.Iterator = var1.iterator();
+   val var8: java.util.Iterator = var1.iterator();
 
-   for (int var5 = 0; var6.hasNext(); var5++) {
-      var var7: Any = var6.next();
+   for (int var5 = 0; var8.hasNext(); var5++) {
+      var var6: Any = var8.next();
       if (var5 < 0) {
          i.u();
       }
 
-      var7 = var7 as ComponentView;
+      val var10: ComponentView = var6 as ComponentView;
+      q.f(var6 as ComponentView, "null cannot be cast to non-null type android.view.View");
+      val var9: View = var10 as View;
+      val var7: LayoutParams = (var10 as View).getLayoutParams();
+      var6 = var7;
+      if (var7 == null) {
+         var6 = new MarginLayoutParams(-1, -2);
+      }
+
+      var9.setLayoutParams((LayoutParams)var6);
       if (var5 < var1.size() - 1) {
-         q.f(var7, "null cannot be cast to non-null type android.view.View");
-         (var7 as View).setPadding(0, 0, var4, var3);
+         var6 = var9.getLayoutParams();
+         if (var6 == null) {
+            throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+         }
+
+         val var16: MarginLayoutParams = var6 as MarginLayoutParams;
+         (var6 as MarginLayoutParams).setMargins(0, 0, var4, var3);
+         var9.setLayoutParams(var16);
       } else {
-         q.f(var7, "null cannot be cast to non-null type android.view.View");
-         (var7 as View).setPadding(0, 0, 0, 0);
+         var6 = var9.getLayoutParams();
+         if (var6 == null) {
+            throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+         }
+
+         val var18: MarginLayoutParams = var6 as MarginLayoutParams;
+         (var6 as MarginLayoutParams).setMargins(0, 0, 0, 0);
+         var9.setLayoutParams(var18);
       }
 
       if (var5 < var0.getChildCount()) {
-         if (var0.getChildAt(var5) != var7) {
+         if (var0.getChildAt(var5) != var10) {
             if (var2 != null) {
-               val var8: View = var0.getChildAt(var5);
+               var6 = var0.getChildAt(var5);
                q.f(
-                  var8,
+                  var6,
                   "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
                );
-               var2.recycleComponentView(var8 as ComponentView<? extends Component>);
+               var2.recycleComponentView(var6 as ComponentView<out Component>);
             }
 
             var0.removeViewAt(var5);
-            var0.addView(var7 as View, var5);
+            var0.addView(var9, var5);
          }
       } else {
-         var0.addView(var7 as View, var5);
+         var0.addView(var9, var5);
       }
    }
 
@@ -72,13 +95,13 @@ public fun ViewGroup.replaceViews(
       if (var4 <= var3) {
          while (true) {
             if (var0.getChildAt(var3) != null) {
-               val var9: View = var0.getChildAt(var3);
+               val var11: View = var0.getChildAt(var3);
                if (var2 != null) {
                   q.f(
-                     var9,
+                     var11,
                      "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
                   );
-                  var2.recycleComponentView(var9 as ComponentView<? extends Component>);
+                  var2.recycleComponentView(var11 as ComponentView<out Component>);
                }
 
                var0.removeViewAt(var3);

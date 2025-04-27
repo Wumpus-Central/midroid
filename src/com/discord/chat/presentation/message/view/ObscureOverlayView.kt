@@ -16,6 +16,7 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.react_strings.I18nMessage
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
@@ -34,20 +35,21 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var3: ObscureOverlayViewBinding = ObscureOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
-      this.binding = var3;
-      val var5: BlurView = var3.blurView;
-      kotlin.jvm.internal.q.g(var3.blurView, "blurView");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new n0(), 1, null);
-      val var6: SimpleDraweeView = var3.mediaWarningIcon;
-      kotlin.jvm.internal.q.e(var3.mediaWarningIcon);
-      ReactAssetUtilsKt.setReactAsset(var6, ReactAsset.MediaChannelNSFW);
-      ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getWhite());
-      (var6.getHierarchy() as GenericDraweeHierarchy).x(0);
-      val var4: TextView = var3.descriptionLabel;
-      kotlin.jvm.internal.q.g(var3.descriptionLabel, "descriptionLabel");
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
+      val var4: ObscureOverlayViewBinding = ObscureOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      this.binding = var4;
+      val var3: BlurView = var4.blurView;
+      kotlin.jvm.internal.q.g(var4.blurView, "blurView");
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new O(), 1, null);
+      val var5: SimpleDraweeView = var4.mediaWarningIcon;
+      kotlin.jvm.internal.q.e(var4.mediaWarningIcon);
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.MediaChannelNSFW);
+      ColorUtilsKt.setTintColor(var5, ThemeManagerKt.getTheme().getWhite());
+      (var5.getHierarchy() as GenericDraweeHierarchy).x(0);
+      val var6: TextView = var4.descriptionLabel;
+      kotlin.jvm.internal.q.g(var4.descriptionLabel, "descriptionLabel");
+      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryNormal);
+      var4.opaqueBackground.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_500));
    }
 
    @JvmStatic
@@ -109,7 +111,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       val var3: ConstraintLayout = this.binding.overlayLayout;
       kotlin.jvm.internal.q.g(this.binding.overlayLayout, "overlayLayout");
       val var2: Byte;
-      if (var1 xor true) {
+      if (!var1) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -127,6 +129,32 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
    public fun setLabelVisible(isVisible: Boolean) {
       val var3: TextView = this.binding.descriptionLabel;
       kotlin.jvm.internal.q.g(this.binding.descriptionLabel, "descriptionLabel");
+      val var2: Byte;
+      if (var1) {
+         var2 = 0;
+      } else {
+         var2 = 8;
+      }
+
+      var3.setVisibility(var2);
+   }
+
+   public fun setOpaqueBackgroundVisible(isVisible: Boolean) {
+      val var3: FrameLayout = this.binding.opaqueBackground;
+      kotlin.jvm.internal.q.g(this.binding.opaqueBackground, "opaqueBackground");
+      val var2: Byte;
+      if (var1) {
+         var2 = 0;
+      } else {
+         var2 = 8;
+      }
+
+      var3.setVisibility(var2);
+   }
+
+   public fun setRevealButtonVisible(isVisible: Boolean) {
+      val var3: IconButtonView = this.binding.revealButton;
+      kotlin.jvm.internal.q.g(this.binding.revealButton, "revealButton");
       val var2: Byte;
       if (var1) {
          var2 = 0;

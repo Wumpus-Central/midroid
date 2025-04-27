@@ -9,7 +9,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.databinding.EmbeddedActivityInviteViewBinding
 import com.discord.chat.presentation.media.MediaContainingViewResizer
@@ -84,25 +86,25 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
    public fun setAvatarUris(avatarUris: List<String>) {
       kotlin.jvm.internal.q.h(var1, "avatarUris");
       val var4: Boolean = var1.isEmpty();
-      var var5: OverlappingCirclesView = this.binding.participants;
+      val var5: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       var var2: Byte;
-      if (var4 xor true) {
+      if (!var4) {
          var2 = 0;
       } else {
          var2 = 8;
       }
 
       var5.setVisibility(var2);
-      var5 = this.binding.participants;
-      val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
+      val var6: OverlappingCirclesView = this.binding.participants;
+      val var10: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
       val var7: java.util.Iterator = var1.iterator();
 
       while (var7.hasNext()) {
-         var6.add(new OverlappingItem(var7.next() as java.lang.String));
+         var10.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var5.setItems(var6);
+      var6.setItems(var10);
       val var8: TextView = this.binding.noParticipantsText;
       kotlin.jvm.internal.q.g(this.binding.noParticipantsText, "noParticipantsText");
       var2 = 8;
@@ -123,7 +125,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       val var4: TextView = this.binding.itemHeader;
       kotlin.jvm.internal.q.g(this.binding.itemHeader, "itemHeader");
-      if (true xor var2) {
+      if (!var2) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -143,7 +145,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
          var5 = 1;
       }
 
-      if (true xor var5) {
+      if (!var5) {
          var5 = 0;
       } else {
          var5 = 8;
@@ -174,7 +176,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
    }
 
    public fun setSplash(splashUrl: String?, constrainedWidth: Int) {
-      val var4: SimpleDraweeView = this.binding.itemHero;
+      var var4: SimpleDraweeView = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
       var var3: Boolean;
       if (var1 != null) {
@@ -191,12 +193,12 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var3 = MessageAccessoriesView.Companion.getWidth(var2, false, false);
-      var2 = var3 * 9 / 16;
-      val var9: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-      val var5: SimpleDraweeView = this.binding.itemHero;
+      var2 = MessageAccessoriesView.Companion.getWidth(var2, false);
+      var3 = var2 * 9 / 16;
+      val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+      var4 = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
-      var9.resizeLayoutParams(var5, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
+      var5.resizeLayoutParams(var4, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
    }
 
    public fun setSubtitleText(
@@ -213,8 +215,10 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       onLongPressCommand: (CommandMentionContentNode) -> Unit,
       onTapSpoiler: () -> Unit,
       onTapTimestamp: (String) -> Unit,
+      onTapInlineCode: (InlineCodeContentNode) -> Unit,
       onTapEmoji: (EmojiContentNode) -> Unit,
-      onTapSeeMore: (MessageId) -> Unit
+      onTapSeeMore: (MessageId) -> Unit,
+      onTapSoundmoji: (SoundmojiContentNode) -> Unit
    ) {
       kotlin.jvm.internal.q.h(var2, "messageId");
       kotlin.jvm.internal.q.h(var3, "onTapLink");
@@ -228,58 +232,94 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       kotlin.jvm.internal.q.h(var11, "onLongPressCommand");
       kotlin.jvm.internal.q.h(var12, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var13, "onTapTimestamp");
-      kotlin.jvm.internal.q.h(var14, "onTapEmoji");
-      kotlin.jvm.internal.q.h(var15, "onTapSeeMore");
-      var var18: MessageContentView = this.binding.itemSubtitle;
+      kotlin.jvm.internal.q.h(var14, "onTapInlineCode");
+      kotlin.jvm.internal.q.h(var15, "onTapEmoji");
+      kotlin.jvm.internal.q.h(var16, "onTapSeeMore");
+      kotlin.jvm.internal.q.h(var17, "onTapSoundmoji");
+      var var20: MessageContentView = this.binding.itemSubtitle;
       kotlin.jvm.internal.q.g(this.binding.itemSubtitle, "itemSubtitle");
-      var var16: Boolean;
+      var var18: Boolean;
       if (var1 != null) {
-         var16 = 1;
+         var18 = 1;
       } else {
-         var16 = 0;
+         var18 = 0;
       }
 
-      if (var16) {
-         var16 = 0;
+      if (var18) {
+         var18 = 0;
       } else {
-         var16 = 8;
+         var18 = 8;
       }
 
-      var18.setVisibility(var16);
-      val var22: SimpleDraweeView = this.binding.subtitleIcon;
+      var20.setVisibility(var18);
+      val var24: SimpleDraweeView = this.binding.subtitleIcon;
       kotlin.jvm.internal.q.g(this.binding.subtitleIcon, "subtitleIcon");
-      var var20: Boolean;
+      var var22: Boolean;
       if (var1 != null) {
-         var20 = 1;
+         var22 = 1;
       } else {
-         var20 = 0;
+         var22 = 0;
       }
 
-      if (var20) {
-         var20 = 0;
+      if (var22) {
+         var22 = 0;
       } else {
-         var20 = 8;
+         var22 = 8;
       }
 
-      var22.setVisibility(var20);
+      var24.setVisibility(var22);
       if (var1 != null) {
-         var18 = this.binding.itemSubtitle;
+         var20 = this.binding.itemSubtitle;
          kotlin.jvm.internal.q.g(this.binding.itemSubtitle, "itemSubtitle");
-         MessageContentView.setMessageContent-2ZcwkLU$default(var18, var1, var2, false, false, false, false, new Function1(var3, var2) {
-            final java.lang.String $messageId;
-            final Function2 $onTapLink;
+         MessageContentView.setMessageContent-AeCz66Y$default(
+            var20,
+            var1,
+            var2,
+            false,
+            false,
+            false,
+            false,
+            new Function1(var3, var2) {
+               final java.lang.String $messageId;
+               final Function2 $onTapLink;
 
-            {
-               super(1);
-               this.$onTapLink = var1;
-               this.$messageId = var2;
-            }
+               {
+                  super(1);
+                  this.$onTapLink = var1;
+                  this.$messageId = var2;
+               }
 
-            public final void invoke(LinkContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "node");
-               this.$onTapLink.invoke(MessageId.box-impl(this.$messageId), var1);
-            }
-         }, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, null, 0, 0, false, null, null, null, null, null, 260571136, null);
+               public final void invoke(LinkContentNode var1) {
+                  kotlin.jvm.internal.q.h(var1, "node");
+                  this.$onTapLink.invoke(MessageId.box-impl(this.$messageId), var1);
+               }
+            },
+            var4,
+            var5,
+            var6,
+            var7,
+            var8,
+            var9,
+            var10,
+            var11,
+            var12,
+            var13,
+            var14,
+            var15,
+            var16,
+            var17,
+            null,
+            0,
+            0,
+            false,
+            null,
+            null,
+            null,
+            null,
+            null,
+            1042284544,
+            null
+         );
       }
    }
 
@@ -293,7 +333,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       val var4: TextView = this.binding.itemTitle;
       kotlin.jvm.internal.q.g(this.binding.itemTitle, "itemTitle");
-      if (true xor var2) {
+      if (!var2) {
          var2 = 0;
       } else {
          var2 = 8;

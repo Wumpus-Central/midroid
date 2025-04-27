@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import com.discord.chat.bridge.rolecolors.RoleColors
 import com.discord.chat.databinding.RoleDotViewBinding
 import com.discord.chat.presentation.message.viewholder.RoleDotDrawable
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -23,7 +24,8 @@ public class RoleDotView(context: Context, attrs: AttributeSet? = null) : FrameL
       this.binding = var3;
    }
 
-   public fun configure(roleColor: Int, spSize: Int = 20) {
+   public fun configure(roleColors: RoleColors, spSize: Int = 20) {
+      kotlin.jvm.internal.q.h(var1, "roleColors");
       val var4: FrameLayout = this.binding.roleDotViewBackground;
       kotlin.jvm.internal.q.g(this.binding.roleDotViewBackground, "roleDotViewBackground");
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
@@ -33,7 +35,7 @@ public class RoleDotView(context: Context, attrs: AttributeSet? = null) : FrameL
       val var5: Context = this.getContext();
       kotlin.jvm.internal.q.g(var5, "getContext(...)");
       val var6: RoleDotDrawable = new RoleDotDrawable(var5, var3, var2);
-      var6.setColor(var1);
+      var6.setColors(var1);
       this.binding.roleDotViewDot.setImageDrawable(var6);
    }
 }

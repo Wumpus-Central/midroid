@@ -6,9 +6,9 @@ import com.discord.simpleast.core.node.StyleNode
 import com.discord.simpleast.core.parser.ParseSpec
 import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
+import f8.w
 import java.util.regex.Matcher
 import java.util.regex.Pattern
-import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 

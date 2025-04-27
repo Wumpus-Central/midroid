@@ -4,14 +4,14 @@ import com.facebook.react.bridge.ReactMarker
 import com.facebook.react.bridge.ReactMarkerConstants
 import com.facebook.react.bridge.ReactMarker.MarkerListener
 import io.sentry.ISpan
-import io.sentry.n3
-import io.sentry.x0
+import io.sentry.Y
+import io.sentry.p1
 import java.util.LinkedHashMap
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
 public class PerformanceTracing : MarkerListener {
-   private final val ongoingTransactions: MutableMap<TraceTransaction, x0> = new LinkedHashMap()
+   private final val ongoingTransactions: MutableMap<TraceTransaction, Y> = new LinkedHashMap()
    private final val ongoingSpans: MutableMap<String, ISpan>
    private final val spanStarts: MutableMap<String, Long>
    private final var lastNativeModuleSetupStart: ISpan?
@@ -62,10 +62,10 @@ public class PerformanceTracing : MarkerListener {
 
    private fun getMarker(name: String, tag: String?): com.discord.crash_reporting.PerformanceTracing.TransactionMarker? {
       var var3: PerformanceTracing.TransactionMarker = null;
-      if (h.t(var1, "_START", false, 2, null)) {
-         var3 = new PerformanceTracing.TransactionMarker(h.q0(var1, "_START"), var2, PerformanceTracing.MarkerEnd.START);
-      } else if (h.t(var1, "_END", false, 2, null)) {
-         var3 = new PerformanceTracing.TransactionMarker(h.q0(var1, "_END"), var2, PerformanceTracing.MarkerEnd.END);
+      if (h.u(var1, "_START", false, 2, null)) {
+         var3 = new PerformanceTracing.TransactionMarker(h.t0(var1, "_START"), var2, PerformanceTracing.MarkerEnd.START);
+      } else if (h.u(var1, "_END", false, 2, null)) {
+         var3 = new PerformanceTracing.TransactionMarker(h.t0(var1, "_END"), var2, PerformanceTracing.MarkerEnd.END);
       }
 
       return var3;
@@ -95,7 +95,7 @@ public class PerformanceTracing : MarkerListener {
       } else if (this.wildcardEventNames.contains(var1.getName())) {
          val var3: java.lang.String = this.startupRootEventsTree.get(var1.getName());
          var2 = var3;
-         if (i.U(this.wildcardEventNames, var3)) {
+         if (i.V(this.wildcardEventNames, var3)) {
             val var4: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
             val var6: StringBuilder = new StringBuilder();
             var6.append(var3);
@@ -116,7 +116,7 @@ public class PerformanceTracing : MarkerListener {
 
    private fun startTransaction(transaction: TraceTransaction) {
       if (!this.ongoingTransactions.containsKey(var1)) {
-         val var2: x0 = n3.E(var1.getTransactionName(), var1.getOperation());
+         val var2: Y = p1.G(var1.getTransactionName(), var1.getOperation());
          q.g(var2, "startTransaction(...)");
          this.ongoingTransactions.put(var1, var2);
          this.ongoingSpans.put("root", var2);
@@ -125,7 +125,7 @@ public class PerformanceTracing : MarkerListener {
    }
 
    private fun stopTransaction(transaction: TraceTransaction) {
-      val var2: x0 = this.ongoingTransactions.get(var1);
+      val var2: Y = this.ongoingTransactions.get(var1);
       if (var2 != null) {
          var2.i();
       }
@@ -145,7 +145,7 @@ public class PerformanceTracing : MarkerListener {
          this.logSpanForTransaction(var4, var2);
       }
 
-      if (h.v(var4, "CONTENT_APPEARED", false, 2, null)) {
+      if (h.w(var4, "CONTENT_APPEARED", false, 2, null)) {
          this.stop();
       }
    }
@@ -153,14 +153,14 @@ public class PerformanceTracing : MarkerListener {
    public fun logSpanForTransaction(marker: com.discord.crash_reporting.PerformanceTracing.TransactionMarker) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
@@ -254,7 +254,7 @@ public class PerformanceTracing : MarkerListener {
       // 0ba: bipush 0
       // 0bb: bipush 2
       // 0bc: aconst_null
-      // 0bd: invokestatic kotlin/text/h.t (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+      // 0bd: invokestatic kotlin/text/h.u (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 0c0: bipush 1
       // 0c1: if_icmpne 11a
       // 0c4: aload 0
@@ -413,14 +413,14 @@ public class PerformanceTracing : MarkerListener {
    public fun logSpanForTransaction(marker: String, tag: String?) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
@@ -493,7 +493,7 @@ public class PerformanceTracing : MarkerListener {
       fun {
          val var0: Array<PerformanceTracing.MarkerEnd> = $values();
          $VALUES = var0;
-         $ENTRIES = rh.a.a(var0);
+         $ENTRIES = m8.a.a(var0);
       }
 
       @JvmStatic
@@ -564,18 +564,18 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.name;
+         val var1: java.lang.String = this.name;
          val var4: java.lang.String = this.tag;
-         val var1: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TransactionMarker(name=");
-         var3.append(var2);
-         var3.append(", tag=");
-         var3.append(var4);
-         var3.append(", markerEnd=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var3: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("TransactionMarker(name=");
+         var2.append(var1);
+         var2.append(", tag=");
+         var2.append(var4);
+         var2.append(", markerEnd=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

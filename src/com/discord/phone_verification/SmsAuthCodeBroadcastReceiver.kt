@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.core.os.d
+import androidx.core.os.c
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
 import kotlin.jvm.internal.q
@@ -83,7 +83,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
          val var4: Bundle = var2.getExtras();
          val var5: Status;
          if (var4 != null) {
-            var5 = d.a(var4, "com.google.android.gms.auth.api.phone.EXTRA_STATUS", Status.class) as Status;
+            var5 = c.a(var4, "com.google.android.gms.auth.api.phone.EXTRA_STATUS", Status.class) as Status;
          } else {
             var5 = null;
          }

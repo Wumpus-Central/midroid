@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -54,15 +54,15 @@ public data class TapUploadProgressCloseData(fileId: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.fileId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapUploadProgressCloseData(fileId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.fileId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapUploadProgressCloseData(fileId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -79,7 +79,7 @@ public data class TapUploadProgressCloseData(fileId: String) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a};
+         return new KSerializer[]{C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapUploadProgressCloseData {
@@ -87,12 +87,12 @@ public data class TapUploadProgressCloseData(fileId: String) : ReactEvent {
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: java.lang.String;
          if (var5) {
             var8 = var7.t(var6, 0);
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -104,7 +104,7 @@ public data class TapUploadProgressCloseData(fileId: String) : ReactEvent {
                   }
 
                   var8 = var7.t(var6, 0);
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

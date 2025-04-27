@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.LinearLayout.LayoutParams
 import androidx.cardview.widget.CardView
-import androidx.core.view.r0
+import androidx.core.view.a0
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -190,7 +190,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var var3: TextView = var4;
       if (var4 == null) {
          var3 = new TextView(this.getContext());
-         r0.q0(var3, new androidx.core.view.a(var1, this) {
+         a0.p0(var3, new androidx.core.view.a(var1, this) {
             final int $index;
             final SegmentedControlView this$0;
 

@@ -16,28 +16,17 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
       this.shareBroadcastReceiver = new ShareBroadcastReceiver(var1);
    }
 
+   @ReactMethod
+   public fun addListener(type: String) {
+      q.h(var1, "type");
+      val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var2.register(var3, this.shareBroadcastReceiver);
+   }
+
    public open fun getName(): String {
       return "ShareManager";
-   }
-
-   public open fun initialize() {
-      super.initialize();
-      val var1: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.register(var2, this.shareBroadcastReceiver);
-   }
-
-   public open fun invalidate() {
-      super.invalidate();
-
-      try {
-         val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var1, "getReactApplicationContext(...)");
-         var2.unregister(var1, this.shareBroadcastReceiver);
-      } catch (var3: Exception) {
-      }
    }
 
    @ReactMethod
@@ -58,6 +47,17 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
    }
 
    @ReactMethod
+   public fun removeListeners(count: Int) {
+      try {
+         val var3: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var3.unregister(var2, this.shareBroadcastReceiver);
+      } catch (var4: Exception) {
+      }
+   }
+
+   @ReactMethod
    public fun setAuthenticationToken(authenticationToken: String?, superProperties: String) {
       q.h(var2, "superProperties");
    }
@@ -68,7 +68,7 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun share(text: String?, url: String?, chooserText: String?, location: String?) {
-      if (var1 != null && !h.x(var1) || var2 != null && !h.x(var2)) {
+      if (var1 != null && !h.d0(var1) || var2 != null && !h.d0(var2)) {
          val var5: Intent = new Intent("android.intent.action.SEND");
          var5.setAction("android.intent.action.SEND");
          var5.setType("text/plain");

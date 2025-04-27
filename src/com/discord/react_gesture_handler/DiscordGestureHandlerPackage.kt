@@ -1,23 +1,28 @@
 package com.discord.react_gesture_handler
 
+import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
 import com.discord.react_gesture_handler.blocking_touch.BlockingGestureViewManager
 import com.discord.react_gesture_handler.passthrough_touch.PassthroughTouchViewManager
-import com.facebook.react.ReactPackage
-import com.facebook.react.bridge.NativeModule
+import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
-import java.util.ArrayList
 import kotlin.jvm.internal.q
 
-public class DiscordGestureHandlerPackage : ReactPackage {
-   public open fun createNativeModules(reactContext: ReactApplicationContext): MutableList<NativeModule> {
+public class DiscordGestureHandlerPackage : TurboReactPackage {
+   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return new ArrayList<>();
+      return i.n(new ViewManager[]{new BlockingGestureViewManager(), new PassthroughTouchViewManager(), new DiscordGestureHandlerRootViewManager()});
    }
 
-   public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
-      q.h(var1, "reactContext");
-      return i.q(new ViewManager[]{new BlockingGestureViewManager(), new PassthroughTouchViewManager(), new DiscordGestureHandlerRootViewManager()});
+   public open fun getModule(name: String, context: ReactApplicationContext): Nothing? {
+      q.h(var1, "name");
+      q.h(var2, "context");
+      return null;
+   }
+
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+      return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

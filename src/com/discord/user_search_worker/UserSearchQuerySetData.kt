@@ -1,10 +1,10 @@
 package com.discord.user_search_worker
 
-import cl.f
-import cl.n
-import fl.b2
-import fl.g0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -61,18 +61,18 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uuid;
-      val var2: UserSearchQuerySetPayload = this.payload;
+      val var2: java.lang.String = this.uuid;
+      val var1: UserSearchQuerySetPayload = this.payload;
       val var3: StringBuilder = new StringBuilder();
       var3.append("UserSearchQuerySetData(uuid=");
-      var3.append(var1);
-      var3.append(", payload=");
       var3.append(var2);
+      var3.append(", payload=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -90,7 +90,7 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, UserSearchQuerySetPayload.$serializer.INSTANCE};
+         return new KSerializer[]{C0.a, UserSearchQuerySetPayload.$serializer.INSTANCE};
       }
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetData {

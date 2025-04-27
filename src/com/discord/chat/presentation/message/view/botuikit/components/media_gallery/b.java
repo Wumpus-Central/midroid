@@ -12,6 +12,6 @@ public final class b implements OnLongClickListener {
    public final MediaGalleryItem l;
 
    public final boolean onLongClick(View var1) {
-      return MediaGalleryDisplayComponentAdapter.c(this.j, this.k, this.l, var1);
+      return MediaGalleryDisplayComponentAdapter.b(this.j, this.k, this.l, var1);
    }
 }

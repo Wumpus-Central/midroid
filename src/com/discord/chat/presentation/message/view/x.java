@@ -1,16 +1,15 @@
 package com.discord.chat.presentation.message.view;
 
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.bridge.ephemeral.EphemeralIndication;
+import android.view.View.OnLongClickListener;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class x implements OnClickListener {
+public final class x implements OnLongClickListener {
    public final Function1 j;
-   public final EphemeralIndication k;
+   public final CharSequence k;
 
-   public final void onClick(View var1) {
-      EphemeralIndicationView.g(this.j, this.k, var1);
+   public final boolean onLongClick(View var1) {
+      return EmbedView.i(this.j, this.k, var1);
    }
 }

@@ -8,19 +8,19 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.MessageContentView;
-import com.discord.reactions.ReactionsFlexbox;
+import com.discord.reactions.ShortcutsFlexbox;
 import com.facebook.drawee.view.SimpleDraweeView;
-import o1.a;
+import u0.a;
 
 public final class MessageBundleConversationViewBinding implements ViewBinding {
    public final Barrier barrier;
-   public final ReactionsFlexbox reactionsView;
+   public final ShortcutsFlexbox reactionsView;
    public final SimpleDraweeView replyAuthorAvatar;
    public final TextView replyAuthorName;
    public final MessageContentView replyText;
    private final View rootView;
 
-   private MessageBundleConversationViewBinding(View var1, Barrier var2, ReactionsFlexbox var3, SimpleDraweeView var4, TextView var5, MessageContentView var6) {
+   private MessageBundleConversationViewBinding(View var1, Barrier var2, ShortcutsFlexbox var3, SimpleDraweeView var4, TextView var5, MessageContentView var6) {
       this.rootView = var1;
       this.barrier = var2;
       this.reactionsView = var3;
@@ -34,18 +34,18 @@ public final class MessageBundleConversationViewBinding implements ViewBinding {
       Barrier var5 = (Barrier)a.a(var0, var1);
       if (var5 != null) {
          var1 = R.id.reactions_view;
-         ReactionsFlexbox var2 = (ReactionsFlexbox)a.a(var0, var1);
+         ShortcutsFlexbox var2 = (ShortcutsFlexbox)a.a(var0, var1);
          if (var2 != null) {
             var1 = R.id.reply_author_avatar;
             SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
             if (var3 != null) {
                var1 = R.id.reply_author_name;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var4 = (TextView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.reply_text;
-                  MessageContentView var4 = (MessageContentView)a.a(var0, var1);
-                  if (var4 != null) {
-                     return new MessageBundleConversationViewBinding(var0, var5, var2, var3, var6, var4);
+                  MessageContentView var6 = (MessageContentView)a.a(var0, var1);
+                  if (var6 != null) {
+                     return new MessageBundleConversationViewBinding(var0, var5, var2, var3, var4, var6);
                   }
                }
             }

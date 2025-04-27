@@ -4,105 +4,103 @@ import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.snowflake.SnowflakeUtils
+import f8.w
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kh.w
 import kotlin.jvm.internal.q
-import lh.r
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    q.h(var0, "<this>");
    q.h(var1, "notification");
-   var var7: java.util.Map = (java.util.Map)var1.get("userInfo");
-   if (var7 is java.util.Map) {
-      var7 = var7;
+   var var9: java.util.Map = (java.util.Map)var1.get("userInfo");
+   if (var9 is java.util.Map) {
+      var9 = var9;
    } else {
-      var7 = null;
+      var9 = null;
    }
 
-   label73: {
-      if (var7 != null) {
+   label72: {
+      if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var5 : var7.entrySet()) {
-            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
-               var3.put(var5.getKey(), var5.getValue());
+         for (Entry var4 : var9.entrySet()) {
+            if (var4.getKey() is java.lang.String && var4.getValue() is java.lang.String) {
+               var3.put(var4.getKey(), var4.getValue());
             }
          }
 
-         val var10: ArrayList = new ArrayList(var3.size());
+         val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var22 : var3.entrySet()) {
-            var var18: Any = var22.getKey();
-            val var23: Any = var22.getValue();
-            q.f(var18, "null cannot be cast to non-null type kotlin.String");
-            var18 = var18 as java.lang.String;
-            q.f(var23, "null cannot be cast to non-null type kotlin.String");
-            var10.add(w.a(var18, var23 as java.lang.String));
+         for (Entry var24 : var3.entrySet()) {
+            var var20: Any = var24.getKey();
+            val var25: Any = var24.getValue();
+            q.f(var20, "null cannot be cast to non-null type kotlin.String");
+            var20 = var20 as java.lang.String;
+            q.f(var25, "null cannot be cast to non-null type kotlin.String");
+            var12.add(w.a(var20, var25 as java.lang.String));
          }
 
-         var7 = r.t(var10);
-         if (var7 != null) {
-            break label73;
-         }
-      }
-
-      var7 = r.h();
-   }
-
-   var var17: ChannelId;
-   label56: {
-      val var15: java.lang.String = var7.get("channel_id") as java.lang.String;
-      if (var15 != null) {
-         val var16: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var15);
-         if (var16 != null) {
-            var17 = ChannelId.box-impl(ChannelId.constructor-impl(var16));
-            break label56;
+         var9 = g8.q.t(var12);
+         if (var9 != null) {
+            break label72;
          }
       }
 
-      var17 = null;
+      var9 = g8.q.h();
    }
 
-   var var20: java.lang.String = var7.get("message_id") as java.lang.String;
-   if (var20 != null) {
-      var20 = MessageId.constructor-impl(var20);
+   var var19: ChannelId;
+   label55: {
+      val var17: java.lang.String = var9.get("channel_id") as java.lang.String;
+      if (var17 != null) {
+         val var18: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var17);
+         if (var18 != null) {
+            var19 = ChannelId.box-impl(ChannelId.constructor-impl(var18));
+            break label55;
+         }
+      }
+
+      var19 = null;
+   }
+
+   var var22: java.lang.String = var9.get("message_id") as java.lang.String;
+   if (var22 != null) {
+      var22 = MessageId.constructor-impl(var22);
    } else {
-      var20 = null;
+      var22 = null;
    }
 
-   var var24: Any = var1.get("alertTitle");
-   if (var24 is java.lang.String) {
-      var24 = var24 as java.lang.String;
-   } else {
-      var24 = null;
-   }
-
-   var var26: Any = var1.get("alertBody");
+   var var26: Any = var1.get("alertTitle");
    if (var26 is java.lang.String) {
       var26 = var26 as java.lang.String;
    } else {
       var26 = null;
    }
 
-   var var12: java.lang.Boolean = (java.lang.Boolean)var1.get("silent");
-   if (var12 is java.lang.Boolean) {
-      var12 = var12;
+   var var28: Any = var1.get("alertBody");
+   if (var28 is java.lang.String) {
+      var28 = var28 as java.lang.String;
    } else {
-      var12 = null;
+      var28 = null;
    }
 
-   val var2: Boolean;
-   if (var12 != null) {
-      var2 = var12;
+   val var8: Any = var1.get("silent");
+   var var14: java.lang.Boolean = null;
+   if (var8 is java.lang.Boolean) {
+      var14 = var8 as java.lang.Boolean;
+   }
+
+   val var15: Boolean;
+   if (var14 != null) {
+      var15 = var14;
    } else {
-      var2 = false;
+      var15 = false;
    }
 
    return new NotificationData(
       "LOCAL_NOTIFICATION",
-      var20,
+      var22,
       null,
       null,
       null,
@@ -110,7 +108,7 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       null,
       null,
       null,
-      var17,
+      var19,
       null,
       null,
       null,
@@ -140,8 +138,8 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       false,
       false,
       null,
-      (java.lang.String)var24,
       (java.lang.String)var26,
+      (java.lang.String)var28,
       null,
       null,
       null,
@@ -149,10 +147,16 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       null,
       null,
       null,
-      var2,
-      var7,
+      var15,
+      var9,
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
       -516,
-      65151,
+      16580223,
       null
    );
 }

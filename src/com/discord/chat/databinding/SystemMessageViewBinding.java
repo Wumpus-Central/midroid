@@ -7,7 +7,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.MessageAccessoriesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import o1.a;
+import u0.a;
 
 public final class SystemMessageViewBinding implements ViewBinding {
    public final MessageAccessoriesView accessoriesView;

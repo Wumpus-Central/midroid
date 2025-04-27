@@ -22,7 +22,6 @@ public class CrashReportingCache(context: Context) {
 
    public fun setStaff(isStaff: Boolean) {
       val var2: Editor = this.cache.edit();
-      q.g(var2, "editor");
       var2.putBoolean("staff", var1);
       var2.apply();
    }

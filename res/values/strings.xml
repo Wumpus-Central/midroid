@@ -49,7 +49,7 @@
 "</string>
     <string name="catalyst_debug_connecting">Connecting to debugger...</string>
     <string name="catalyst_debug_error">Failed to connect to debugger!</string>
-    <string name="catalyst_debug_open">Open Debugger</string>
+    <string name="catalyst_debug_open">Open DevTools</string>
     <string name="catalyst_debug_open_disabled">Connect to the bundler to debug JavaScript</string>
     <string name="catalyst_dev_menu_header">React Native Dev Menu (%1$s)</string>
     <string name="catalyst_dev_menu_sub_header">Running %1$s</string>
@@ -62,7 +62,7 @@
     <string name="catalyst_hot_reloading_stop">Disable Fast Refresh</string>
     <string name="catalyst_inspector_toggle">Toggle Element Inspector</string>
     <string name="catalyst_loading_from_url">Loading from %1$s…</string>
-    <string name="catalyst_open_debugger_error">Failed to open debugger. Please check that the dev server is running and reload the app.</string>
+    <string name="catalyst_open_debugger_error">Failed to open DevTools. Please check that the dev server is running and reload the app.</string>
     <string name="catalyst_perf_monitor">Show Perf Monitor</string>
     <string name="catalyst_perf_monitor_stop">Hide Perf Monitor</string>
     <string name="catalyst_reload">Reload</string>

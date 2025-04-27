@@ -5,7 +5,9 @@ import android.text.TextPaint
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.presentation.message.messagepart.MessageContentAccessory
 import com.discord.chat.presentation.message.view.MessageContentView
 import com.discord.chat.presentation.textutils.LinkStyle
@@ -39,8 +41,10 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       onLongPressCommand: (CommandMentionContentNode) -> Unit,
       onTapSpoiler: () -> Unit,
       onTapTimestamp: (String) -> Unit,
+      onTapInlineCode: (InlineCodeContentNode) -> Unit,
       onTapEmoji: (EmojiContentNode) -> Unit,
-      onTapSeeMore: (MessageId) -> Unit
+      onTapSeeMore: (MessageId) -> Unit,
+      onTapSoundmoji: (SoundmojiContentNode) -> Unit
    ) {
       kotlin.jvm.internal.q.h(var1, "messageContentItem");
       kotlin.jvm.internal.q.h(var2, "onLinkClicked");
@@ -54,18 +58,20 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       kotlin.jvm.internal.q.h(var10, "onLongPressCommand");
       kotlin.jvm.internal.q.h(var11, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var12, "onTapTimestamp");
-      kotlin.jvm.internal.q.h(var13, "onTapEmoji");
-      kotlin.jvm.internal.q.h(var14, "onTapSeeMore");
+      kotlin.jvm.internal.q.h(var13, "onTapInlineCode");
+      kotlin.jvm.internal.q.h(var14, "onTapEmoji");
+      kotlin.jvm.internal.q.h(var15, "onTapSeeMore");
+      kotlin.jvm.internal.q.h(var16, "onTapSoundmoji");
       this.messageContentView.setTextColor(var1.getMessageTextColor());
       DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
-      val var25: TextPaint = this.messageContentView.getPaint();
-      kotlin.jvm.internal.q.g(var25, "getPaint(...)");
-      val var23: FontManager = FontManager.INSTANCE;
-      val var24: Context = this.messageContentView.getContext();
-      kotlin.jvm.internal.q.g(var24, "getContext(...)");
+      val var26: TextPaint = this.messageContentView.getPaint();
+      kotlin.jvm.internal.q.g(var26, "getPaint(...)");
+      val var25: FontManager = FontManager.INSTANCE;
+      val var27: Context = this.messageContentView.getContext();
+      kotlin.jvm.internal.q.g(var27, "getContext(...)");
       this.messageContentView
-         .setMessageContent-2ZcwkLU(
+         .setMessageContent-AeCz66Y(
             var1.getMessageContent(),
             var1.getMessageId-3Eiw7ao(),
             var1.getShouldAnimateEmoji(),
@@ -99,6 +105,8 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var12,
             var13,
             var14,
+            var15,
+            var16,
             new Function1(var1) {
                final MessageContentAccessory $messageContentItem;
 
@@ -126,7 +134,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var25, var23.getScaledSpToPx(16, var24))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var26, var25.getScaledSpToPx(16, var27))
          );
    }
 }

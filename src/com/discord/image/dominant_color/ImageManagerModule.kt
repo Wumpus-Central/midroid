@@ -45,7 +45,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
                      var4.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
                   }
 
-                  this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray(var4));
+                  this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));
                } else {
                   this.$promise.reject(new Exception("Unable get representative color."));
                }

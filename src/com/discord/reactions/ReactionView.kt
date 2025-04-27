@@ -62,7 +62,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = zh.a.b(var2.getOpacity() * (float)255);
+         var3 = v8.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -317,11 +317,11 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var11: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var16: RenderableEmoji = var1.getEmoji().renderable();
-         val var9: Context = this.getContext();
-         q.g(var9, "getContext(...)");
-         var11.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var9, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var11: RenderableEmoji = var1.getEmoji().renderable();
+         val var16: Context = this.getContext();
+         q.g(var16, "getContext(...)");
+         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var16, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }
@@ -394,7 +394,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          fun renderable(var0: ReactionView.Emoji): RenderableEmoji {
             var var3: java.lang.String = var0.getId();
             if (var3 != null) {
-               val var7: java.lang.Long = h.o(var3);
+               val var7: java.lang.Long = kotlin.text.h.o(var3);
                if (var7 != null) {
                   val var8: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion
                      .customWithEmojiId(var7.longValue(), var0.getShouldAnimate(), var0.getDisplayName());

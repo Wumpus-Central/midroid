@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerView.Config
-import kh.p
+import f8.p
+import g8.n
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import lh.o
 
 internal class EmojiPickerViewAdapter(coreData: CoreData,
       emojiSize: Int,
@@ -53,27 +53,27 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
 
    public fun findFirstItemPositionAboveOrBelowPosition(position: Int, itemType: Int): Int {
       val var5: Int = this.getItemCount();
-      var var4: Int = var1;
+      var var3: Int = var1;
 
       while (true) {
-         var var3: Int = var1;
-         if (var4 < 0) {
-            while (var3 < var5) {
-               if (this.getItemViewType(var3) == var2) {
-                  return var3;
+         var var4: Int = var1;
+         if (var3 < 0) {
+            while (var4 < var5) {
+               if (this.getItemViewType(var4) == var2) {
+                  return var4;
                }
 
-               var3++;
+               var4++;
             }
 
             return -1;
          }
 
-         if (this.getItemViewType(var4) == var2) {
-            return var4;
+         if (this.getItemViewType(var3) == var2) {
+            return var3;
          }
 
-         var4--;
+         var3--;
       }
    }
 
@@ -85,24 +85,27 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          var3 = false;
       }
 
-      val var4: Any;
+      val var5: Any;
       if (var3) {
-         var4 = new IntRange(var1, var2);
+         var5 = new IntRange(var1, var2);
       } else {
-         var4 = f.m(var1, var2);
+         var5 = kotlin.ranges.d.m(var1, var2);
       }
 
-      val var8: java.util.Iterator = var4.iterator();
+      val var6: java.util.Iterator = var5.iterator();
       var2 = 0;
       var1 = 0;
 
-      while (var8.hasNext()) {
-         val var5: EmojiPickerItem = this.getItem((var8 as o).a());
-         if (var5 !is EmojiPickerItem.Emoji && var5 !is EmojiPickerItem.EmojiPlaceholder) {
-            if (var5 !is EmojiPickerItem.Category) {
-               continue;
-            }
+      while (var6.hasNext()) {
+         val var9: EmojiPickerItem = this.getItem((var6 as n).a());
+         val var4: Boolean;
+         if (var9 is EmojiPickerItem.Emoji) {
+            var4 = true;
          } else {
+            var4 = var9 is EmojiPickerItem.EmojiPlaceholder;
+         }
+
+         if (var4) {
             if (var1 == 0) {
                var1++;
                var2 = var2 + this.emojiSize + this.emojiMargin;
@@ -113,6 +116,8 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
                var1++;
                continue;
             }
+         } else if (var9 !is EmojiPickerItem.Category) {
+            continue;
          }
 
          var1 = 0;
@@ -147,7 +152,7 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
       val var5: java.util.Iterator = new IntRange(0, var4).iterator();
 
       while (var5.hasNext()) {
-         var4 = (var5 as o).a();
+         var4 = (var5 as n).a();
          if (this.getItem(var4).itemType() == var2) {
             if (var3 == var1) {
                return var4;
@@ -182,11 +187,11 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
       } else if (var1 is EmojiPickerViewHolder.EmojiPlaceholder) {
          (var1 as EmojiPickerViewHolder.EmojiPlaceholder).onBindViewHolder(this.emojiSize, this.emojiMargin);
       } else if (var1 is EmojiPickerViewHolder.Emoji) {
-         val var5: EmojiPickerViewHolder.Emoji = var1 as EmojiPickerViewHolder.Emoji;
-         val var8: EmojiPickerItem = this.getItem(var2);
-         q.f(var8, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Emoji");
-         var5.onBindViewHolder(
-            var8 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
+         val var8: EmojiPickerViewHolder.Emoji = var1 as EmojiPickerViewHolder.Emoji;
+         val var5: EmojiPickerItem = this.getItem(var2);
+         q.f(var5, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Emoji");
+         var8.onBindViewHolder(
+            var5 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
          );
       } else if (var1 is EmojiPickerViewHolder.Spacer) {
          val var6: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
@@ -194,10 +199,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          q.f(var9, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
          var6.onBindViewHolder(var9 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
-         val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
-         val var7: EmojiPickerItem = this.getItem(var2);
-         q.f(var7, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
-         var10.onBindViewHolder(var7 as EmojiPickerItem.FooterUpsell);
+         val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
+         val var10: EmojiPickerItem = this.getItem(var2);
+         q.f(var10, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
+         var7.onBindViewHolder(var10 as EmojiPickerItem.FooterUpsell);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockFooter) {
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockFooter).onBindViewHolder(this.useTier0UpsellContent);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockHeader) {

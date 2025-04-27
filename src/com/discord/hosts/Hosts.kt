@@ -55,7 +55,6 @@ public object Hosts {
       }
 
       val var5: Editor = var3.edit();
-      q.g(var5, "editor");
       var5.putString(var1, var2);
       var5.apply();
    }

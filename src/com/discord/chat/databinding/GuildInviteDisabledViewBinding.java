@@ -11,7 +11,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.GuildView;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import o1.a;
+import u0.a;
 
 public final class GuildInviteDisabledViewBinding implements ViewBinding {
    public final Barrier barrierButton;
@@ -51,33 +51,33 @@ public final class GuildInviteDisabledViewBinding implements ViewBinding {
 
    public static GuildInviteDisabledViewBinding bind(View var0) {
       int var1 = R.id.barrier_button;
-      Barrier var5 = (Barrier)a.a(var0, var1);
-      if (var5 != null) {
+      Barrier var3 = (Barrier)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.barrier_header;
-         Barrier var2 = (Barrier)a.a(var0, var1);
-         if (var2 != null) {
+         Barrier var7 = (Barrier)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.item_bottom_container;
-            ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-            if (var3 != null) {
+            ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
+            if (var9 != null) {
                var1 = R.id.item_invite_disabled_icon;
-               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-               if (var8 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.item_invite_header;
-                  TextView var7 = (TextView)a.a(var0, var1);
-                  if (var7 != null) {
+                  TextView var5 = (TextView)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.item_invite_help_icon;
-                     SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var4 != null) {
+                     SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.item_invite_image;
-                        GuildView var6 = (GuildView)a.a(var0, var1);
-                        if (var6 != null) {
+                        GuildView var10 = (GuildView)a.a(var0, var1);
+                        if (var10 != null) {
                            var1 = R.id.item_invite_subtitle;
-                           SimpleDraweeSpanTextView var10 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                           if (var10 != null) {
+                           SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                           if (var2 != null) {
                               var1 = R.id.item_invite_title;
-                              TextView var9 = (TextView)a.a(var0, var1);
-                              if (var9 != null) {
-                                 return new GuildInviteDisabledViewBinding(var0, var5, var2, var3, var8, var7, var4, var6, var10, var9);
+                              TextView var4 = (TextView)a.a(var0, var1);
+                              if (var4 != null) {
+                                 return new GuildInviteDisabledViewBinding(var0, var3, var7, var9, var6, var5, var8, var10, var2, var4);
                               }
                            }
                         }

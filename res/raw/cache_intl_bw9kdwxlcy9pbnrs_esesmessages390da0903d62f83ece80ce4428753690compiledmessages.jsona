@@ -1,0 +1,60 @@
+{
+  "rdfRys": "Tenemos un «const static codeSpan = 2;» aquí.",
+  "HMvECw": [
+    "Todo esto se gestiona localmente y ",
+    [
+      8,
+      "$b",
+      [
+        "aún no"
+      ]
+    ],
+    " ha sustituido el sistema global de i18n."
+  ],
+  "XOdbAw": [
+    "Usa hooks como ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " para el contenido especial."
+  ],
+  "rmps8/": [
+    "Esta cadena tiene un ",
+    [
+      8,
+      "$link",
+      [
+        "enlace estático"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    ", con la url definida en la cadena."
+  ],
+  "uczI4u": [
+    "Este enlace usa un ",
+    [
+      8,
+      "$link",
+      [
+        "enlace variable"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    " que se proporciona en tiempo de ejecución."
+  ],
+  "swfLzc": "Este mensaje proviene de un archivo independiente"
+}

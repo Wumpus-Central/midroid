@@ -1,8 +1,8 @@
 package com.discord.resource_usage.utils
 
 import java.io.File
-import vh.j
-import yl.c
+import q8.j
+import ua.e
 
 internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    public final val rssPages: Long
@@ -71,7 +71,7 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
                return var8;
             }
 
-            var12 = j.d(var1, null, 1, null);
+            var12 = j.f(var1, null, 1, null);
          } catch (var11: Exception) {
             return null;
          }
@@ -80,9 +80,9 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
 
          try {
             if (var12.length() > 0) {
-               val var13: java.util.List = h.y0(var12, new char[]{' '}, false, 0, 6, null);
+               val var13: java.util.List = h.B0(var12, new char[]{' '}, false, 0, 6, null);
                var8 = new ProcfsStats(
-                  c.T(var13.get(13) as java.lang.String, 0L) + c.T(var13.get(14) as java.lang.String, 0L), c.T(var13.get(23) as java.lang.String, 0L)
+                  e.X(var13.get(13) as java.lang.String, 0L) + e.X(var13.get(14) as java.lang.String, 0L), e.X(var13.get(23) as java.lang.String, 0L)
                );
             }
          } catch (var10: Exception) {

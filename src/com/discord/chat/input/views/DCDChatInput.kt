@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 import android.view.Window
 import androidx.appcompat.widget.AppCompatEditText
 import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
@@ -28,7 +29,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    init {
       q.h(var1, "context");
       super(var1, var2);
-      this.measureAndLayoutRunnable = new e(this);
+      this.measureAndLayoutRunnable = new f(this);
       this.setupExternalKeyboardSendRequests();
    }
 
@@ -39,7 +40,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    }
 
    private fun setupExternalKeyboardSendRequests() {
-      this.setOnKeyListener(new f(new BooleanRef(), this));
+      this.setOnKeyListener(new e(new BooleanRef(), this));
    }
 
    @JvmStatic
@@ -85,12 +86,12 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    public open fun forceLayout() {
       val var1: Boolean = this.isLayoutRequested();
       super.forceLayout();
-      if (var1 xor true) {
+      if (!var1) {
          this.post(this.measureAndLayoutRunnable);
       }
    }
 
-   protected open fun onDetachedFromWindow() {
+   protected override fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
       this.removeCallbacks(this.measureAndLayoutRunnable);
    }
@@ -115,7 +116,10 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    public open fun onTouchEvent(event: MotionEvent): Boolean {
       q.h(var1, "event");
       if (var1.getAction() == 0) {
-         GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this).requestDisallowInterceptTouchEvent(true);
+         val var2: ViewGroup = GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this);
+         if (var2 != null) {
+            var2.requestDisallowInterceptTouchEvent(true);
+         }
       }
 
       return super.onTouchEvent(var1);
@@ -124,9 +128,20 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    public open fun requestLayout() {
       val var1: Boolean = this.isLayoutRequested();
       super.requestLayout();
-      if (var1 xor true) {
+      if (!var1) {
          this.post(this.measureAndLayoutRunnable);
       }
+   }
+
+   public fun setNoExtractUI(enabled: Boolean) {
+      val var2: Int;
+      if (var1) {
+         var2 = this.getImeOptions() or 268435456;
+      } else {
+         var2 = this.getImeOptions() and -268435457;
+      }
+
+      this.setImeOptions(var2);
    }
 
    public fun setOnRequestSend(onRequestSend: () -> Unit) {

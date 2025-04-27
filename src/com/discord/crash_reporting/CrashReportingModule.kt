@@ -11,10 +11,10 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
+import f8.w
 import io.sentry.react.RNSentryModule
-import kh.w
-import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.g0
+import kotlin.jvm.functions.Function3
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -33,29 +33,29 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("onCrashReportsReceived", g0.b(CrashReportEvent.class)));
+      this.reactEvents = new ReactEvents(w.a("onCrashReportsReceived", E.b(CrashReportEvent.class)));
    }
 
    @ReactMethod
    public fun addListener(type: String) {
       q.h(var1, "type");
       if (q.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
-         val var3: SystemLogReport = SystemLogReport.INSTANCE;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var3.reportLastCrash$crash_reporting_release(var2, new Function2(this) {
+         val var2: SystemLogReport = SystemLogReport.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var3, "getReactApplicationContext(...)");
+         var2.reportLastCrash$crash_reporting_release(var3, new Function3(this) {
             final CrashReportingModule this$0;
 
             {
-               super(2);
+               super(3);
                this.this$0 = var1;
             }
 
-            public final void invoke(HistoricalProcessExitReason.Reason var1, SystemLogUtils.Tombstone var2) {
-               val var3: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
-               val var4: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
-               q.g(var4, "access$getReactApplicationContext(...)");
-               var3.emitModuleEvent(var4, new CrashReportEvent(java.lang.Boolean.TRUE, var1, var2));
+            public final void invoke(HistoricalProcessExitReason.Reason var1, SystemLogUtils.Tombstone var2, SystemLogReport.SentryCrashData var3) {
+               val var4: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
+               val var5: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
+               q.g(var5, "access$getReactApplicationContext(...)");
+               var4.emitModuleEvent(var5, new CrashReportEvent(java.lang.Boolean.TRUE, var3, var1, var2));
             }
          });
       }
@@ -91,18 +91,18 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
       q.h(var1, "callback");
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var2.fetch(var3)});
+      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var3.fetch(var2)});
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      var2.initSystemLogCapture(var1);
+      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.initSystemLogCapture(var2);
    }
 
    @ReactMethod

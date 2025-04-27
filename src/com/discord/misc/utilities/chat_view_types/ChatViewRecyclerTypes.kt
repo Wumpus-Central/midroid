@@ -4,6 +4,7 @@ public object ChatViewRecyclerTypes {
    public const val ACTIVITY_BOOKMARK: Int = 30
    public const val ACTIVITY_INSTANCE_EMBED: Int = 40
    public const val ACTIVITY_INVITE_EMBED: Int = 17
+   public const val APP_MESSAGE_EMBED: Int = 54
    public const val AUDIO_ATTACHMENT: Int = 29
    public const val AUTO_MODERATION_NOTIFICATION_EMBED: Int = 33
    public const val BOT_COMPONENTS: Int = 12
@@ -23,10 +24,12 @@ public object ChatViewRecyclerTypes {
    public const val GUILD_EVENT_INVITE: Int = 15
    public const val GUILD_INVITE: Int = 5
    public const val GUILD_INVITE_DISABLED: Int = 25
+   public const val GUILD_PROFILE_INVITE: Int = 53
    public const val INFO_LINK: Int = 35
    public const val INTERACTION_STATUS: Int = 19
    public const val MEDIA_ATTACHMENT_MOSAIC_IMAGE: Int = 49
    public const val MEDIA_ATTACHMENT_MOSAIC_VIDEO: Int = 50
+   public const val MEDIA_ATTACHMENT_MOSAIC_VISUAL_PLACEHOLDER: Int = 51
    public const val MEDIA_MOSAIC_ATTACHMENT: Int = 26
    public const val POLL_IMAGE_ONLY: Int = 38
    public const val POLL_TEXT_AND_IMAGE: Int = 37
@@ -36,6 +39,7 @@ public object ChatViewRecyclerTypes {
    public const val REACTION_ADD_REACTION: Int = 47
    public const val REACTION_BURST_REACTION: Int = 45
    public const val REACTION_REACTION: Int = 46
+   public const val REFERRAL: Int = 52
    public const val ROLE_SUBSCRIPTION_PURCHASE: Int = 23
    public const val SAFETY_POLICY_NOTICE: Int = 36
    public const val SAFETY_SYSTEM_NOTIFICATION: Int = 39

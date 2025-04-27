@@ -1,8 +1,8 @@
 package com.discord.media.utils
 
 import android.media.MediaFormat
-import kh.r
-import kh.s
+import f8.r
+import f8.s
 import kotlin.jvm.internal.q
 
 public final val codecType: String?
@@ -63,16 +63,39 @@ public final val codecType: String?
    }
 
 
+public final val level: Int?
+   public final get() {
+      q.h(var0, "<this>");
+
+      label16:
+      try {
+         val var5: f8.r.a = r.k;
+         var4 = r.b(var0.getInteger("level"));
+      } catch (var2: java.lang.Throwable) {
+         val var1: f8.r.a = r.k;
+         var4 = r.b(s.a(var2));
+         break label16;
+      }
+
+      var var6: Any = var4;
+      if (r.g(var4)) {
+         var6 = null;
+      }
+
+      return var6 as Int;
+   }
+
+
 public final val mimeType: String?
    public final get() {
       q.h(var0, "<this>");
 
       label16:
       try {
-         val var1: kh.r.a = r.k;
+         val var1: f8.r.a = r.k;
          var5 = r.b(var0.getString("mime"));
       } catch (var2: java.lang.Throwable) {
-         val var4: kh.r.a = r.k;
+         val var4: f8.r.a = r.k;
          var5 = r.b(s.a(var2));
          break label16;
       }
@@ -83,6 +106,97 @@ public final val mimeType: String?
       }
 
       return var6 as java.lang.String;
+   }
+
+
+public final val profile: Int?
+   public final get() {
+      q.h(var0, "<this>");
+
+      label16:
+      try {
+         val var5: f8.r.a = r.k;
+         var4 = r.b(var0.getInteger("profile"));
+      } catch (var2: java.lang.Throwable) {
+         val var1: f8.r.a = r.k;
+         var4 = r.b(s.a(var2));
+         break label16;
+      }
+
+      var var6: Any = var4;
+      if (r.g(var4)) {
+         var6 = null;
+      }
+
+      return var6 as Int;
+   }
+
+
+public final val profileName: String?
+   public final get() {
+      q.h(var0, "<this>");
+      val var3: java.lang.String = getMimeType(var0);
+      if (q.c(var3, "video/avc")) {
+         val var6: Int = getProfile(var0);
+         if (var6 != null && var6 == 1) {
+            return "baseline";
+         }
+
+         if (var6 == null || var6 != 2) {
+            if (var6 != null && var6 == 4) {
+               return "extended";
+            }
+
+            if (var6 != null && var6 == 8) {
+               return "high";
+            }
+
+            val var12: java.lang.String;
+            if (var6 == null) {
+               var12 = "other";
+            } else {
+               var12 = "other";
+               if (var6 == 16) {
+                  return "high10";
+               }
+            }
+
+            return var12;
+         }
+      } else {
+         if (!q.c(var3, "video/hevc")) {
+            return null;
+         }
+
+         val var5: Int = getProfile(var0);
+         if (var5 == null || var5 != 1) {
+            if (var5 != null && var5 == 2) {
+               return "main10";
+            }
+
+            if (var5 != null && var5 == 4) {
+               return "mainstill";
+            }
+
+            if (var5 != null && var5 == 4096) {
+               return "main10hdr";
+            }
+
+            val var4: java.lang.String;
+            if (var5 == null) {
+               var4 = "other";
+            } else {
+               var4 = "other";
+               if (var5 == 8192) {
+                  return "main10hdrplus";
+               }
+            }
+
+            return var4;
+         }
+      }
+
+      return "main";
    }
 
 

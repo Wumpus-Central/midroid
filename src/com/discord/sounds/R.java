@@ -11,10 +11,9 @@ public final class R {
       public static int activity_user_left;
       public static int call_calling;
       public static int call_ringing;
-      public static int call_ringing_halloween;
       public static int deafen;
       public static int disconnect;
-      public static int hang_status_select;
+      public static int halloween_call_ringing;
       public static int mention1;
       public static int mention2;
       public static int mention3;

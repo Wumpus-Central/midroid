@@ -1,12 +1,12 @@
 package com.discord.sticker_picker.react_events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -62,7 +62,7 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
       return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -81,7 +81,7 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a};
+         return new KSerializer[]{C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnLongPressStickerEvent {
@@ -89,12 +89,12 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: java.lang.String;
          if (var5) {
             var8 = var7.t(var6, 0);
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -106,7 +106,7 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
                   }
 
                   var8 = var7.t(var6, 0);
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

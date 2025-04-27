@@ -9,6 +9,7 @@ import android.widget.ProgressBar
 import android.widget.FrameLayout.LayoutParams
 import com.discord.bundle_updater.react.events.BundleDownloadedEvent
 import com.discord.bundle_updater.react.events.OtaCheckAttemptEvent
+import com.discord.main.MainActivity
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.reactevents.ReactEvents
 import com.discord.theme.ThemeManagerKt
@@ -22,12 +23,12 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.WritableNativeMap
 import com.jakewharton.processphoenix.ProcessPhoenix
+import f8.w
 import java.io.File
 import java.lang.reflect.Field
-import kh.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -39,7 +40,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("BundleDownloaded", g0.b(BundleDownloadedEvent.class)), w.a("OtaUpdateChecked", g0.b(OtaCheckAttemptEvent.class)));
+      this.reactEvents = new ReactEvents(w.a("BundleDownloaded", E.b(BundleDownloadedEvent.class)), w.a("OtaUpdateChecked", E.b(OtaCheckAttemptEvent.class)));
    }
 
    private fun removeSpinnerView() {
@@ -190,6 +191,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
+      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new Function0(this) {
          final BundleUpdaterManager this$0;
 
@@ -222,9 +224,9 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                         if (var8 as ReactApplication != null) {
                            val var10: ReactNativeHost = var9.getReactNativeHost();
                            if (var10 != null) {
-                              val var5: ReactInstanceManager = var10.getReactInstanceManager();
-                              if (var5 != null) {
-                                 val var4: BundleUpdaterManager = this.this$0;
+                              val var4: ReactInstanceManager = var10.getReactInstanceManager();
+                              if (var4 != null) {
+                                 val var5: BundleUpdaterManager = this.this$0;
                                  val var6: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
                                  var var11: java.lang.String = null;
                                  if (var6 != null) {
@@ -235,8 +237,8 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
                                     }
                                  }
 
-                                 BundleUpdaterManager.access$setJSBundle(var4, var5, var11);
-                                 var5.recreateReactContextInBackground();
+                                 BundleUpdaterManager.access$setJSBundle(var5, var4, var11);
+                                 var4.recreateReactContextInBackground();
                               }
                            }
                         }
@@ -246,6 +248,10 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
             });
          }
       }, 1, null);
+      val var3: ReactApplicationContext = this.reactContext;
+      val var1: Int = MainActivity.j;
+      q.g(MainActivity::class.java, "forName(...)");
+      var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);
    }
 
    @ReactMethod
@@ -277,7 +283,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getManifestInfo(promise: Promise) {
       q.h(var1, "promise");
-      var1.resolve(BundleUpdater.Companion.instance().manifestInfo().toNativeMap());
+      val var2: BundleUpdater.ManifestInfo = BundleUpdater.Companion.instance().manifestInfo();
+      val var3: WritableNativeMap;
+      if (var2 != null) {
+         var3 = var2.toNativeMap();
+      } else {
+         var3 = null;
+      }
+
+      var1.resolve(var3);
    }
 
    public open fun getName(): String {

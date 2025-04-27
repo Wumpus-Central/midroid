@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.summaries
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.p0
+import ba.G.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.o1
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -52,7 +52,7 @@ public data class Summary(id: String,
       var10: SerializationConstructorMarker
    ) {
       if (255 != (var1 and 255)) {
-         o1.b(var1, 255, Summary.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 255, Summary.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -189,36 +189,36 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.id;
-      val var2: java.lang.String = this.topic;
-      val var7: java.lang.String = this.summShort;
-      val var4: java.util.List = this.people;
-      val var8: java.lang.String = MessageId.toString-impl(this.startId);
+      val var7: java.lang.String = this.id;
+      val var6: java.lang.String = this.topic;
+      val var8: java.lang.String = this.summShort;
+      val var9: java.util.List = this.people;
+      val var3: java.lang.String = MessageId.toString-impl(this.startId);
       val var5: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("Summary(id=");
-      var9.append(var6);
-      var9.append(", topic=");
-      var9.append(var2);
-      var9.append(", summShort=");
-      var9.append(var7);
-      var9.append(", people=");
-      var9.append(var4);
-      var9.append(", startId=");
-      var9.append(var8);
-      var9.append(", endId=");
-      var9.append(var5);
-      var9.append(", count=");
-      var9.append(var1);
-      var9.append(", channelId=");
-      var9.append(var3);
-      var9.append(")");
-      return var9.toString();
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("Summary(id=");
+      var2.append(var7);
+      var2.append(", topic=");
+      var2.append(var6);
+      var2.append(", summShort=");
+      var2.append(var8);
+      var2.append(", people=");
+      var2.append(var9);
+      var2.append(", startId=");
+      var2.append(var3);
+      var2.append(", endId=");
+      var2.append(var5);
+      var2.append(", count=");
+      var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -243,13 +243,13 @@ public data class Summary(id: String,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          return new KSerializer[]{
-            b2.a,
-            b2.a,
-            b2.a,
+            C0.a,
+            C0.a,
+            C0.a,
             Summary.access$get$childSerializers$cp()[3],
             MessageId.$serializer.INSTANCE,
             MessageId.$serializer.INSTANCE,
-            n0.a,
+            N.a,
             ChannelId.$serializer.INSTANCE
          };
       }
@@ -272,8 +272,8 @@ public data class Summary(id: String,
          var var23: java.lang.String;
          if (var7) {
             var13 = var18.t(var17, 0);
-            var12 = var18.t(var17, 1);
-            var11 = var18.t(var17, 2);
+            var11 = var18.t(var17, 1);
+            var12 = var18.t(var17, 2);
             var10 = var18.m(var17, 3, var14[3], null) as java.util.List;
             val var8: MessageId.$serializer = MessageId.$serializer.INSTANCE;
             val var19: MessageId = var18.m(var17, 4, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -380,15 +380,15 @@ public data class Summary(id: String,
                var4 = 7;
             }
 
-            var11 = var23;
-            var12 = var21;
+            var12 = var23;
+            var11 = var21;
             var9 = var12;
             var23 = var11;
             var20 = (java.lang.String)var9;
          }
 
          var18.b(var17);
-         return new Summary(var2, var13, var12, var11, var10, var20, var23, var3, var9, null, null);
+         return new Summary(var2, var13, var11, var12, var10, var20, var23, var3, var9, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Summary) {

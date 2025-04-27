@@ -8,7 +8,7 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {
@@ -59,8 +59,8 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.reaction == null) {
          var1 = 0;
@@ -68,7 +68,7 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var1 = this.reaction.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun serialize(): WritableMap {
@@ -94,16 +94,16 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: ReactionView.Reaction = this.reaction;
+      val var4: ReactionView.Reaction = this.reaction;
       val var1: StringBuilder = new StringBuilder();
       var1.append("LongPressReactionData(messageId=");
-      var1.append(var4);
+      var1.append(var2);
       var1.append(", channelId=");
       var1.append(var3);
       var1.append(", reaction=");
-      var1.append(var2);
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

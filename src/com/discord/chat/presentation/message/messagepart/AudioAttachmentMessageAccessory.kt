@@ -143,28 +143,28 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
 
    public override fun toString(): String {
       val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Attachment = this.attachment;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var9: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var5: java.lang.Float = this.attachmentsOpacity;
-      val var7: UserId = this.authorId;
-      val var9: Int = this.color;
+      val var3: java.lang.Float = this.attachmentsOpacity;
+      val var6: UserId = this.authorId;
+      val var7: Int = this.color;
       val var2: Boolean = this.isVoiceMessage;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AudioAttachmentMessageAccessory(channelId=");
       var4.append(var8);
       var4.append(", messageId=");
-      var4.append(var6);
+      var4.append(var5);
       var4.append(", attachment=");
-      var4.append(var3);
+      var4.append(var9);
       var4.append(", attachmentIndex=");
       var4.append(var1);
       var4.append(", attachmentsOpacity=");
-      var4.append(var5);
+      var4.append(var3);
       var4.append(", authorId=");
-      var4.append(var7);
+      var4.append(var6);
       var4.append(", color=");
-      var4.append(var9);
+      var4.append(var7);
       var4.append(", isVoiceMessage=");
       var4.append(var2);
       var4.append(")");

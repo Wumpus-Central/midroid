@@ -2,21 +2,35 @@ package com.discord.portals
 
 import com.discord.portals.from_js.PortalFromJsViewManager
 import com.discord.portals.from_native.PortalFromNativeModule
-import com.facebook.react.ReactPackage
+import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
+import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 import kotlin.jvm.internal.q
 
-public class PortalsPackage : ReactPackage {
-   public open fun createNativeModules(reactContext: ReactApplicationContext): MutableList<NativeModule> {
-      q.h(var1, "reactContext");
-      return i.q(new NativeModule[]{new PortalFromNativeModule(var1)});
-   }
-
+public class PortalsPackage : TurboReactPackage {
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
       return i.q(new ViewManager[]{new PortalFromNativeModule.ViewManager(), new PortalFromJsViewManager()});
+   }
+
+   public open fun getModule(name: String, context: ReactApplicationContext): NativeModule? {
+      q.h(var1, "name");
+      q.h(var2, "context");
+      val var3: PortalFromNativeModule;
+      if (q.c(var1, "NativePortalFromNativeModule")) {
+         var3 = new PortalFromNativeModule(var2);
+      } else {
+         var3 = null;
+      }
+
+      return var3;
+   }
+
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+      return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(i.e("NativePortalFromNativeModule"), false, 2, null);
    }
 }

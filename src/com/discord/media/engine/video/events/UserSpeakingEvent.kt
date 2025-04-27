@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -88,7 +88,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -107,7 +107,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, n0.a};
+         return new KSerializer[]{N.a, C0.a, N.a};
       }
 
       public open fun deserialize(decoder: Decoder): UserSpeakingEvent {
@@ -121,8 +121,8 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          if (var8.y()) {
             var4 = var8.k(var7, 0);
             var9 = var8.t(var7, 1);
-            var2 = var8.k(var7, 2);
-            var3 = 7;
+            var3 = var8.k(var7, 2);
+            var2 = 7;
          } else {
             var9 = null;
             var var5: Boolean = true;
@@ -153,13 +153,10 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                   var5 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var8.b(var7);
-         return new UserSpeakingEvent(var3, var4, var9, var2, null);
+         return new UserSpeakingEvent(var2, var4, var9, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

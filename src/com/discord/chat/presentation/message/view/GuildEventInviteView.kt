@@ -13,7 +13,9 @@ import com.discord.SetTextSizeSpKt
 import com.discord.chat.R
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.databinding.GuildEventInviteViewBinding
 import com.discord.core.DCDButton
@@ -118,11 +120,11 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    }
 
    public fun setBadge(iconUrl: String?, count: String?) {
-      val var3: GuildEventInviteViewBinding = this.binding;
-      val var4: SimpleDraweeView = this.binding.badgeIcon;
+      val var4: GuildEventInviteViewBinding = this.binding;
+      val var3: SimpleDraweeView = this.binding.badgeIcon;
       kotlin.jvm.internal.q.g(this.binding.badgeIcon, "badgeIcon");
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
-      var3.badgeText.setText(var2);
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var3, var1);
+      var4.badgeText.setText(var2);
    }
 
    public fun setChannel(iconUrl: String?, text: String?) {
@@ -160,8 +162,10 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
       onLongPressCommand: (CommandMentionContentNode) -> Unit,
       onTapSpoiler: () -> Unit,
       onTapTimestamp: (String) -> Unit,
+      onTapInlineCode: (InlineCodeContentNode) -> Unit,
       onTapEmoji: (EmojiContentNode) -> Unit,
-      onTapSeeMore: (MessageId) -> Unit
+      onTapSeeMore: (MessageId) -> Unit,
+      onTapSoundmoji: (SoundmojiContentNode) -> Unit
    ) {
       kotlin.jvm.internal.q.h(var2, "messageId");
       kotlin.jvm.internal.q.h(var7, "onTapLink");
@@ -175,13 +179,15 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
       kotlin.jvm.internal.q.h(var15, "onLongPressCommand");
       kotlin.jvm.internal.q.h(var16, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var17, "onTapTimestamp");
-      kotlin.jvm.internal.q.h(var18, "onTapEmoji");
-      kotlin.jvm.internal.q.h(var19, "onTapSeeMore");
+      kotlin.jvm.internal.q.h(var18, "onTapInlineCode");
+      kotlin.jvm.internal.q.h(var19, "onTapEmoji");
+      kotlin.jvm.internal.q.h(var20, "onTapSeeMore");
+      kotlin.jvm.internal.q.h(var21, "onTapSoundmoji");
       if (var1 != null) {
-         val var22: MessageContentView = this.binding.descriptionText;
+         val var24: MessageContentView = this.binding.descriptionText;
          kotlin.jvm.internal.q.g(this.binding.descriptionText, "descriptionText");
-         MessageContentView.setMessageContent-2ZcwkLU$default(
-            var22,
+         MessageContentView.setMessageContent-AeCz66Y$default(
+            var24,
             var1,
             var2,
             var3,
@@ -215,6 +221,8 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
             var17,
             var18,
             var19,
+            var20,
+            var21,
             null,
             this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing),
             0,
@@ -224,27 +232,27 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
             null,
             null,
             null,
-            260571136,
+            1042284544,
             null
          );
       }
 
-      val var23: MessageContentView = this.binding.descriptionText;
+      val var25: MessageContentView = this.binding.descriptionText;
       kotlin.jvm.internal.q.g(this.binding.descriptionText, "descriptionText");
-      var var20: Boolean;
+      var var22: Boolean;
       if (var1 != null) {
-         var20 = 1;
+         var22 = 1;
       } else {
-         var20 = 0;
+         var22 = 0;
       }
 
-      if (var20) {
-         var20 = 0;
+      if (var22) {
+         var22 = 0;
       } else {
-         var20 = 8;
+         var22 = 8;
       }
 
-      var23.setVisibility(var20);
+      var25.setVisibility(var22);
    }
 
    public fun setGuild(name: String?, iconUrl: String?) {

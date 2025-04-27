@@ -24,8 +24,8 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
+import f8.l
 import java.util.ArrayList
-import kh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
@@ -57,7 +57,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = e5.a.d(var1, var2);
+      this.hierarchyBuilder = Y1.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       q.g(R.styleable.PollMediaView, "PollMediaView");
@@ -75,12 +75,12 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeView invoke() {
-            val var2: SimpleDraweeView = new SimpleDraweeView(this.$context);
-            val var1: PollMediaView = this.this$0;
-            var2.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
-            PollMediaView.access$getChildViews$p(var1).add(var2);
-            var1.addView(var2, new LayoutParams(-1, -1, 17));
-            return var2;
+            val var1: SimpleDraweeView = new SimpleDraweeView(this.$context);
+            val var2: PollMediaView = this.this$0;
+            var1.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
+            PollMediaView.access$getChildViews$p(var2).add(var1);
+            var2.addView(var1, new LayoutParams(-1, -1, 17));
+            return var1;
          }
       });
       this.textView$delegate = l.b(new Function0(var1, this) {
@@ -94,11 +94,11 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
          }
 
          public final SimpleDraweeSpanTextView invoke() {
-            val var1: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
-            val var2: PollMediaView = this.this$0;
-            PollMediaView.access$getChildViews$p(this.this$0).add(var1);
-            var2.addView(var1, new LayoutParams(-2, -2, 17));
-            return var1;
+            val var2: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
+            val var1: PollMediaView = this.this$0;
+            PollMediaView.access$getChildViews$p(this.this$0).add(var2);
+            var1.addView(var2, new LayoutParams(-2, -2, 17));
+            return var2;
          }
       });
    }
@@ -121,7 +121,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
    private fun setImageURL(url: String, scaleType: ScaleType, autoPlayAnimations: Boolean) {
       this.hideViews();
       this.getDraweeView().setScaleType(var2);
-      SetOptionalImageUrlKt.setOptionalImageUrl$default(this.getDraweeView(), var1, var3, null, 4, null);
+      SetOptionalImageUrlKt.setOptionalImageUrl$default(this.getDraweeView(), var1, var3, null, null, 12, null);
    }
 
    @JvmStatic
@@ -177,19 +177,19 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var4 = 1;
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
-            val var9: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var10: RenderableEmoji = var9.renderable();
-            val var16: Context = this.getContext();
-            q.g(var16, "getContext(...)");
+            val var10: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
+            val var16: RenderableEmoji = var10.renderable();
+            val var9: Context = this.getContext();
+            q.g(var9, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
-            if (var1.getShouldAnimateEmoji() && var9.getAnimated()) {
+            if (var1.getShouldAnimateEmoji() && var10.getAnimated()) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var10, var16, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var9, var4, var7, 0, null, 48, null));
             this.setOnClickListener(new h(var2));
             var4 = 1;
          } else {

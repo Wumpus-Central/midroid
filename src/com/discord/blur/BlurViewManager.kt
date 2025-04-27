@@ -31,7 +31,7 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
             var4 = false;
          }
 
-         if (var4 xor true) {
+         if (!var4) {
             val var7: Any;
             if (Companion.isHardwareBlurEnabled$blur_release()) {
                var7 = new BlurViewHardwareAccelerated(var1, var5, ColorUtilsKt.rgbaToArgb(var6), ColorUtilsKt.rgbaToArgb(var8), var3);
@@ -41,10 +41,10 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
 
             return (ViewGroup)var7;
          } else {
-            throw new IllegalArgumentException("Failed requirement.".toString());
+            throw new IllegalArgumentException("Failed requirement.");
          }
       } else {
-         throw new IllegalArgumentException("Failed requirement.".toString());
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 
@@ -62,7 +62,7 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
       if (var1 is BlurViewAPI) {
          (var1 as BlurViewAPI).setBlurAmount(var1.getId(), var2);
       } else {
-         throw new IllegalArgumentException("Failed requirement.".toString());
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 
@@ -73,10 +73,10 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
          if (var2 != null) {
             (var1 as BlurViewAPI).setBlurTargetNativeId(var2);
          } else {
-            throw new IllegalArgumentException("Failed requirement.".toString());
+            throw new IllegalArgumentException("Failed requirement.");
          }
       } else {
-         throw new IllegalArgumentException("Failed requirement.".toString());
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 
@@ -85,7 +85,7 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
       if (var1 is BlurViewAPI) {
          (var1 as BlurViewAPI).setBlurTintIOSParityCompensation(ColorUtilsKt.rgbaToArgb(var2));
       } else {
-         throw new IllegalArgumentException("Failed requirement.".toString());
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 
@@ -95,7 +95,7 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
       if (var1 is BlurViewAPI) {
          (var1 as BlurViewAPI).setBlurTint(ColorUtilsKt.rgbaToArgb(var2));
       } else {
-         throw new IllegalArgumentException("Failed requirement.".toString());
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 

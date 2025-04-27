@@ -1,5 +1,7 @@
 package com.discord.icons.media
 
+import android.net.Uri
+import android.net.Uri.Builder
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
@@ -8,41 +10,41 @@ internal object MediaProxy {
    private final val MEDIA_PROXY_SIZES: Array<Int>
 
    private fun getMediaProxySize(size: Int): Int {
-      var var8: Array<Int> = MEDIA_PROXY_SIZES;
-      val var7: ArrayList = new ArrayList();
-      var var3: Int = var8.length;
+      var var9: Array<Int> = MEDIA_PROXY_SIZES;
+      val var8: ArrayList = new ArrayList();
+      var var3: Int = var9.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var9: Int = var8[var2];
-         if (var8[var2].intValue() <= var1) {
-            var7.add(var9);
+         val var7: Int = var9[var2];
+         if (var9[var2].intValue() <= var1) {
+            var8.add(var7);
          }
       }
 
-      val var11: java.util.Iterator = var7.iterator();
+      val var11: java.util.Iterator = var8.iterator();
       val var6: Boolean = var11.hasNext();
-      val var22: Any = null;
+      var9 = null;
       var var17: Any;
       if (!var6) {
          var17 = null;
       } else {
          var17 = (Integer)var11.next();
          if (var11.hasNext()) {
-            var3 = var17.intValue();
-            var8 = var17;
+            var var13: Int = var17.intValue();
+            var var20: Any = var17;
 
             do {
                val var10: Any = var11.next();
                val var5: Int = (var10 as java.lang.Number).intValue();
-               var17 = var8;
-               var var13: Int = var3;
-               if (var3 < var5) {
+               var17 = (Integer)var20;
+               var3 = var13;
+               if (var13 < var5) {
                   var17 = (Integer)var10;
-                  var13 = var5;
+                  var3 = var5;
                }
 
-               var8 = var17;
-               var3 = var13;
+               var20 = var17;
+               var13 = var3;
             } while (var11.hasNext());
          }
       }
@@ -51,18 +53,18 @@ internal object MediaProxy {
       if (var17 != null && (double)var1 / var17.intValue() <= 1.25) {
          return var17;
       } else {
-         var8 = MEDIA_PROXY_SIZES;
+         val var21: Array<Int> = MEDIA_PROXY_SIZES;
          var3 = MEDIA_PROXY_SIZES.length;
          var var14: Int = 0;
 
          while (true) {
-            var17 = (Integer)var22;
+            var17 = var9;
             if (var14 >= var3) {
                break;
             }
 
-            var17 = var8[var14];
-            if (var8[var14].intValue() >= var1) {
+            var17 = var21[var14];
+            if (var21[var14].intValue() >= var1) {
                break;
             }
 
@@ -79,48 +81,31 @@ internal object MediaProxy {
       }
    }
 
-   public fun withSize(url: String, size: Int?, params: String? = null): String {
-      q.h(var1, "url");
-      var var5: java.lang.String = "";
-      if (var2 != null && var2 > 0) {
-         val var4: Int = this.getMediaProxySize(var2);
-         var var12: java.lang.String = null;
-         if (var3 != null) {
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("&");
-            var13.append(var3);
-            var12 = var13.toString();
-         }
-
-         if (var12 != null) {
-            var5 = var12;
-         }
-
-         val var14: StringBuilder = new StringBuilder();
-         var14.append(var1);
-         var14.append("?size=");
-         var14.append(var4);
-         var14.append(var5);
-         var1 = var14.toString();
+   public fun withSize(urlWithoutExtension: String, animated: Boolean, size: Int?, imageHash: String?): String {
+      q.h(var1, "urlWithoutExtension");
+      val var5: Boolean;
+      if (var2 && MediaExtensionKt.isImageHashAnimated(var4)) {
+         var5 = true;
       } else {
-         var var9: java.lang.String = null;
-         if (var3 != null) {
-            val var10: StringBuilder = new StringBuilder();
-            var10.append("?");
-            var10.append(var3);
-            var9 = var10.toString();
-         }
-
-         if (var9 != null) {
-            var5 = var9;
-         }
-
-         val var11: StringBuilder = new StringBuilder();
-         var11.append(var1);
-         var11.append(var5);
-         var1 = var11.toString();
+         var5 = false;
       }
 
+      var4 = MediaExtensionKt.getMediaExtension(var5);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var1);
+      var6.append(".");
+      var6.append(var4);
+      val var7: Builder = Uri.parse(var6.toString()).buildUpon();
+      if (var3 != null && var3 > 0) {
+         var7.appendQueryParameter("size", java.lang.String.valueOf(this.getMediaProxySize(var3)));
+      }
+
+      if (var2) {
+         var7.appendQueryParameter("animated", "true");
+      }
+
+      var1 = var7.build().toString();
+      q.g(var1, "toString(...)");
       return var1;
    }
 }

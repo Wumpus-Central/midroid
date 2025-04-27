@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.forums
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import fl.b2
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -100,27 +100,27 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.title;
-      val var5: StructurableText = this.subtitle;
-      val var6: java.lang.String = this.cta;
+      val var5: java.lang.String = this.title;
+      val var3: StructurableText = this.subtitle;
+      val var1: java.lang.String = this.cta;
       val var2: java.lang.String = this.icon;
-      val var3: java.lang.String = this.closeIcon;
+      val var6: java.lang.String = this.closeIcon;
       val var4: StringBuilder = new StringBuilder();
       var4.append("PostSharePrompt(title=");
-      var4.append(var1);
-      var4.append(", subtitle=");
       var4.append(var5);
+      var4.append(", subtitle=");
+      var4.append(var3);
       var4.append(", cta=");
-      var4.append(var6);
+      var4.append(var1);
       var4.append(", icon=");
       var4.append(var2);
       var4.append(", closeIcon=");
-      var4.append(var3);
+      var4.append(var6);
       var4.append(")");
       return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -141,7 +141,7 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, StructurableTextSerializer.INSTANCE, b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, StructurableTextSerializer.INSTANCE, C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): PostSharePrompt {

@@ -2,14 +2,19 @@ package com.discord.chat.presentation.message.view.botuikit
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View.MeasureSpec
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import com.discord.chat.bridge.botuikit.Component
+import com.discord.chat.presentation.message.MessageAccessoriesView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
 public class MessageComponentsView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout {
+   public final var componentContext: ComponentContext?
+      internal set
+
    fun MessageComponentsView(var1: Context) {
       q.h(var1, "context");
       this(var1, null, 0, 6, null);
@@ -27,60 +32,44 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
       this.setLayoutParams(new LayoutParams(-1, -2));
    }
 
-   public fun setComponents(
-      componentProvider: ComponentProvider?,
-      components: List<Component>,
-      componentContext: ComponentContext,
-      actionListener: ComponentActionListener
-   ) {
-      q.h(var2, "components");
-      q.h(var3, "componentContext");
-      q.h(var4, "actionListener");
-      val var8: ArrayList = new ArrayList(i.v(var2, 10));
-      val var9: java.util.Iterator = var2.iterator();
+   protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+      val var5: ComponentContext = this.componentContext;
+      if (this.componentContext == null) {
+         super.onMeasure(var1, var2);
+      } else if (MessageAccessoriesView.Companion.getWidth(this.componentContext.getConstrainedWidth(), var5.isForwardedContent()) <= MAX_ALLOWED_WIDTH) {
+         super.onMeasure(var1, var2);
+      } else {
+         super.onMeasure(MeasureSpec.makeMeasureSpec(MAX_ALLOWED_WIDTH, Integer.MIN_VALUE), var2);
+      }
+   }
 
-      for (int var5 = 0; var9.hasNext(); var5++) {
-         var var11: ComponentView = (ComponentView)var9.next();
-         if (var5 < 0) {
+   public fun setComponents(components: List<Component>, componentProvider: ComponentProvider?, componentContext: ComponentContext) {
+      q.h(var1, "components");
+      q.h(var3, "componentContext");
+      this.componentContext = var3;
+      val var5: ArrayList = new ArrayList(i.v(var1, 10));
+      val var6: java.util.Iterator = var1.iterator();
+
+      for (int var4 = 0; var6.hasNext(); var4++) {
+         var var7: Any = var6.next();
+         if (var4 < 0) {
             i.u();
          }
 
-         val var10: Component = var11 as Component;
-         var var6: ComponentView = null;
-         if (var1 != null) {
-            var11 = this.getChildAt(var5);
-            if (var11 is ComponentView) {
-               var11 = var11 as ComponentView;
-            } else {
-               var11 = null;
-            }
-
-            label32: {
-               if (var11 != null) {
-                  var6 = null;
-                  if (((ComponentView)var11).getComponentType() is Component) {
-                     var6 = (ComponentView)var11;
-                  }
-
-                  var11 = var6;
-                  if (var6 != null) {
-                     break label32;
-                  }
-               }
-
-               var11 = var1.getInflater().getComponent(var10, this);
-            }
-
-            var6 = var11;
-            if (var11 != null) {
-               var11.configure(var10, var1, var4, var3);
-               var6 = var11;
-            }
+         var7 = var7 as Component;
+         if (var2 != null) {
+            var7 = var2.getConfiguredComponentView((Component)var7, var3, this, var4);
+         } else {
+            var7 = null;
          }
 
-         var8.add(var6);
+         var5.add(var7);
       }
 
-      MessageComponentsViewKt.replaceViews$default(this, i.b0(var8), var1, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+      MessageComponentsViewKt.replaceViews$default(this, i.c0(var5), var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+   }
+
+   public companion object {
+      private final val MAX_ALLOWED_WIDTH: Int
    }
 }

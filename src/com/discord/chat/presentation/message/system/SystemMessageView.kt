@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnLongClickListener
-import androidx.core.view.r0
+import androidx.core.view.a0
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
@@ -47,8 +47,8 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import f8.w
 import java.util.ArrayList
-import kh.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
@@ -110,14 +110,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      val var14: StructurableText = var1.getContent();
-      if (var14 != null) {
-         val var20: ArrayList = this.accessories;
-         val var13: java.lang.String = var1.getId-3Eiw7ao();
-         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+      val var20: StructurableText = var1.getContent();
+      if (var20 != null) {
+         val var13: ArrayList = this.accessories;
+         val var14: java.lang.String = var1.getId-3Eiw7ao();
+         val var11: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
          val var10: Boolean = var1.getShouldShowRoleDot();
-         val var11: Boolean = var1.getShouldShowRoleOnName();
+         val var8: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
             var5 = 0;
@@ -141,14 +141,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var20.add(
+         var13.add(
             new MessageContentAccessory(
-               var13,
                var14,
-               var9,
-               var8,
-               var10,
+               var20,
                var11,
+               var9,
+               var10,
+               var8,
                var5,
                var6,
                var7,
@@ -178,11 +178,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
          val var28: ArrayList = this.accessories;
-         val var23: java.lang.String = var1.getId-3Eiw7ao();
-         val var33: java.lang.String = var1.getUsername();
-         val var31: Context = this.binding.getRoot().getContext();
-         q.g(var31, "getContext(...)");
-         var28.add(new RoleSubscriptionPurchaseAccessory(var23, var33, MessageKt.avatarUrl(var1, var31), var3, false, null));
+         val var33: java.lang.String = var1.getId-3Eiw7ao();
+         val var31: java.lang.String = var1.getUsername();
+         val var23: Context = this.binding.getRoot().getContext();
+         q.g(var23, "getContext(...)");
+         var28.add(new RoleSubscriptionPurchaseAccessory(var33, var31, MessageKt.avatarUrl(var1, var23), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();
@@ -222,8 +222,6 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         null,
                         null,
                         false,
-                        false,
-                        false,
                         null
                      )
                   );
@@ -247,6 +245,17 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                   var2.getAddNewBurstReactionAccessibilityLabel(),
                   var2.getReactionsTheme(),
                   null,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  523776,
                   null
                )
             );
@@ -289,72 +298,74 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             break;
          case 11:
          case 12:
+         case 13:
+         case 14:
             var3 = w.a(ReactAsset.Pencil, this.normalIconColor);
             break;
-         case 13:
+         case 15:
             var3 = w.a(ReactAsset.Pin, this.normalIconColor);
             break;
-         case 14:
+         case 16:
             var3 = w.a(ReactAsset.Ticket, this.normalIconColor);
             break;
-         case 15:
-         case 16:
          case 17:
          case 18:
+         case 19:
+         case 20:
             var3 = w.a(ReactAsset.MemberListBadge, this.pinkIconColor);
             break;
-         case 19:
+         case 21:
             var3 = w.a(ReactAsset.AnnouncementThread, this.normalIconColor);
             break;
-         case 20:
+         case 22:
             var3 = w.a(ReactAsset.Close, this.redIconColor);
             break;
-         case 21:
-            var3 = w.a(ReactAsset.Check, this.greenIconColor);
-            break;
-         case 22:
          case 23:
-            var3 = w.a(ReactAsset.Alert, this.warnIconColor);
+            var3 = w.a(ReactAsset.Check, this.greenIconColor);
             break;
          case 24:
          case 25:
-            var3 = w.a(ReactAsset.Thread, this.normalIconColor);
+            var3 = w.a(ReactAsset.Alert, this.warnIconColor);
             break;
          case 26:
+         case 27:
+            var3 = w.a(ReactAsset.Thread, this.normalIconColor);
+            break;
+         case 28:
             var3 = w.a(ReactAsset.StageChannel, this.greenIconColor);
             break;
-         case 27:
-         case 28:
+         case 29:
+         case 30:
             var3 = w.a(ReactAsset.StageChannel, this.normalIconColor);
             break;
-         case 29:
+         case 31:
             var3 = w.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
             break;
-         case 30:
+         case 32:
             var3 = w.a(ReactAsset.RaisedHand, this.normalIconColor);
             break;
-         case 31:
+         case 33:
             var3 = w.a(ReactAsset.LockClosed, this.normalIconColor);
             break;
-         case 32:
+         case 34:
             var3 = w.a(ReactAsset.LockOpen, this.normalIconColor);
             break;
-         case 33:
+         case 35:
             var3 = w.a(ReactAsset.PollsIcon, this.normalIconColor);
             break;
-         case 34:
+         case 36:
             var3 = w.a(ReactAsset.Refresh, this.greenIconColor);
             break;
-         case 35:
+         case 37:
             var3 = w.a(ReactAsset.GameController, this.mutedIconColor);
             break;
-         case 36:
+         case 38:
             var3 = w.a(ReactAsset.Check, this.greenIconColor);
             break;
-         case 37:
+         case 39:
             var3 = w.a(ReactAsset.Close, this.redIconColor);
             break;
-         case 38:
+         case 40:
             var3 = w.a(ReactAsset.ArrowBack, this.normalIconColor);
             break;
          default:
@@ -413,7 +424,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       val var8: MessageAccessoriesView = this.binding.accessoriesView;
       q.g(this.binding.accessoriesView, "accessoriesView");
       val var9: Byte;
-      if (var11.isEmpty() xor true) {
+      if (!var11.isEmpty()) {
          var9 = 0;
       } else {
          var9 = 8;
@@ -437,7 +448,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          public final void invoke(MessageContentView var1) {
             q.h(var1, "it");
-            r0.q0(this.this$0, new MessageViewAccessibilityDelegate(this.$message, var1, new d(), this.$onLongClick));
+            a0.p0(this.this$0, new MessageViewAccessibilityDelegate(this.$message, var1, new d(), this.$onLongClick));
          }
       });
    }

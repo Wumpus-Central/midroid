@@ -11,7 +11,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
-import o1.a;
+import u0.a;
 
 public final class MessageComponentButtonViewBinding implements ViewBinding {
    public final MaterialButton button;
@@ -19,7 +19,7 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
    public final MaterialTextView label;
    public final LinearLayout labelContainer;
    public final SimpleDraweeView linkIcon;
-   public final ViewStub loadingDotsStub;
+   public final ViewStub loadingDots;
    private final View rootView;
 
    private MessageComponentButtonViewBinding(
@@ -31,29 +31,29 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
       this.label = var4;
       this.labelContainer = var5;
       this.linkIcon = var6;
-      this.loadingDotsStub = var7;
+      this.loadingDots = var7;
    }
 
    public static MessageComponentButtonViewBinding bind(View var0) {
       int var1 = R.id.button;
-      MaterialButton var2 = (MaterialButton)a.a(var0, var1);
-      if (var2 != null) {
+      MaterialButton var4 = (MaterialButton)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.emoji;
-         SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.label;
             MaterialTextView var3 = (MaterialTextView)a.a(var0, var1);
             if (var3 != null) {
                var1 = R.id.label_container;
-               LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-               if (var5 != null) {
+               LinearLayout var7 = (LinearLayout)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.link_icon;
-                  SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var6 != null) {
-                     var1 = R.id.loading_dots_stub;
-                     ViewStub var7 = (ViewStub)a.a(var0, var1);
-                     if (var7 != null) {
-                        return new MessageComponentButtonViewBinding(var0, var2, var4, var3, var5, var6, var7);
+                  SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var5 != null) {
+                     var1 = R.id.loading_dots;
+                     ViewStub var6 = (ViewStub)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new MessageComponentButtonViewBinding(var0, var4, var2, var3, var7, var5, var6);
                      }
                   }
                }

@@ -1,0 +1,60 @@
+{
+  "rdfRys": "Egy „const static codeSpan = 2;” szerepel itt.",
+  "HMvECw": [
+    "Mindezt helyileg kezeljük, és ",
+    [
+      8,
+      "$b",
+      [
+        "egyelőre"
+      ]
+    ],
+    " nem vette át a globális i18n rendszer helyét."
+  ],
+  "XOdbAw": [
+    "Használj például ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " hookokat a különleges tartalmaknál."
+  ],
+  "rmps8/": [
+    "Ez a karaktersor ",
+    [
+      8,
+      "$link",
+      [
+        "statikus hivatkozás"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    ". Az URL-cím a karaktersorban van meghatározva."
+  ],
+  "uczI4u": [
+    "Ez a hivatkozás a futtatási idő során megadott, ",
+    [
+      8,
+      "$link",
+      [
+        "változó hivatkozást"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    " használ."
+  ],
+  "swfLzc": "Ez az üzenet különálló fájlból származik"
+}

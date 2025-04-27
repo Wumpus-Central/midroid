@@ -24,6 +24,6 @@ public class VoiceInviteEmbedViewHolder(embedView: VoiceInviteEmbedView) : Messa
    public fun bind(embed: VoiceInviteEmbed, onTapChannel: (String, String, String?) -> Unit) {
       kotlin.jvm.internal.q.h(var1, "embed");
       kotlin.jvm.internal.q.h(var2, "onTapChannel");
-      this.embedView.setContent(var1.getTitleText(), var1.getBodyText(), var1.getJoinText(), var1.getJoinIcon(), var1.getJoinDisabled(), new a0(var2, var1));
+      this.embedView.setContent(var1.getTitleText(), var1.getBodyText(), var1.getJoinText(), var1.getJoinIcon(), var1.getJoinDisabled(), new D(var2, var1));
    }
 }

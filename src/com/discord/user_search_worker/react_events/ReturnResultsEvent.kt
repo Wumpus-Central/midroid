@@ -5,8 +5,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.discord.user_search_worker.UserSearchWorkerResult
 import com.facebook.react.bridge.WritableMap
+import f8.w
 import java.util.ArrayList
-import kh.w
 import kotlin.jvm.internal.q
 
 internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, query: String, uuid: String, type: String) : ReactEvent {
@@ -74,43 +74,43 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
       return ((this.results.hashCode() * 31 + this.query.hashCode()) * 31 + this.uuid.hashCode()) * 31 + this.type.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
-      val var3: Pair = w.a("uuid", this.uuid);
-      val var2: Pair = w.a("type", this.type);
-      val var4: Pair = w.a("query", this.query);
+   public override fun serialize(): WritableMap {
+      val var4: Pair = w.a("uuid", this.uuid);
+      val var3: Pair = w.a("type", this.type);
+      val var2: Pair = w.a("query", this.query);
       val var5: java.util.List = this.results;
       val var1: ArrayList = new ArrayList(i.v(this.results, 10));
 
       for (UserSearchWorkerResult var7 : var5) {
          var1.add(
             NativeMapExtensionsKt.nativeMapOf(
-               new Pair[]{w.a("id", var7.getId()), w.a("username", var7.getUsername()), w.a("comparator", var7.getComparator()), w.a("score", var7.getScore())}
+               w.a("id", var7.getId()), w.a("username", var7.getUsername()), w.a("comparator", var7.getComparator()), w.a("score", var7.getScore())
             )
          );
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            var3, var2, w.a("payload", NativeMapExtensionsKt.nativeMapOf(new Pair[]{var4, w.a("results", NativeArrayExtensionsKt.toNativeArray(var1))}))
-         }
+         var4,
+         var3,
+         w.a("payload", NativeMapExtensionsKt.nativeMapOf(var2, w.a("results", NativeArrayExtensionsKt.toNativeArray$default(var1, null, 1, null))))
       );
    }
 
    public override fun toString(): String {
       val var3: java.util.List = this.results;
-      val var2: java.lang.String = this.query;
-      val var1: java.lang.String = this.uuid;
-      val var5: java.lang.String = this.type;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ReturnResultsEvent(results=");
-      var4.append(var3);
-      var4.append(", query=");
-      var4.append(var2);
-      var4.append(", uuid=");
-      var4.append(var1);
-      var4.append(", type=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.String = this.query;
+      val var4: java.lang.String = this.uuid;
+      val var1: java.lang.String = this.type;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ReturnResultsEvent(results=");
+      var2.append(var3);
+      var2.append(", query=");
+      var2.append(var5);
+      var2.append(", uuid=");
+      var2.append(var4);
+      var2.append(", type=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

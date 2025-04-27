@@ -6,6 +6,6 @@ public final class a implements Runnable {
 
    @Override
    public final void run() {
-      PortalFromNativeModule.b(this.j);
+      PortalFromNativeModule.a(this.j);
    }
 }

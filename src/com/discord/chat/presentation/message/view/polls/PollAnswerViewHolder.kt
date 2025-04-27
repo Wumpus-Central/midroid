@@ -13,7 +13,7 @@ public abstract class PollAnswerViewHolder<T extends ViewBinding> : RecyclerView
       public final get() {
          val var1: RecyclerView.Adapter = this.getBindingAdapter();
          q.f(var1, "null cannot be cast to non-null type com.discord.chat.presentation.message.view.polls.PollAnswerAdapter<*>");
-         return var1 as PollAnswerAdapter<?>;
+         return var1 as PollAnswerAdapter<*>;
       }
 
 

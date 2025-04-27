@@ -1,9 +1,9 @@
 package com.discord.misc.utilities.time
 
+import f8.l
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import kh.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 

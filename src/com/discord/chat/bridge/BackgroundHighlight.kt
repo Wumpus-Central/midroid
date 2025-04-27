@@ -1,10 +1,10 @@
 package com.discord.chat.bridge
 
-import cl.f
-import cl.n
-import dl.a
-import fl.g0
-import fl.n0
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.G
+import ba.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -83,7 +83,7 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -101,8 +101,8 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: n0 = n0.a;
-         return new KSerializer[]{a.u(n0.a), a.u(var1)};
+         val var1: N = N.a;
+         return new KSerializer[]{a.u(N.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): BackgroundHighlight {
@@ -113,8 +113,8 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          var var5: Int;
          var var9: Int;
          if (var7.y()) {
-            val var8: n0 = n0.a;
-            var5 = var7.v(var6, 0, n0.a, null) as Int;
+            val var8: N = N.a;
+            var5 = var7.v(var6, 0, N.a, null) as Int;
             var9 = var7.v(var6, 1, var8, null) as Int;
             var2 = 3;
          } else {
@@ -131,10 +131,10 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
                         throw new n(var4);
                      }
 
-                     var9 = var7.v(var6, 1, n0.a, var9) as Int;
+                     var9 = var7.v(var6, 1, N.a, var9) as Int;
                      var2 |= 2;
                   } else {
-                     var5 = var7.v(var6, 0, n0.a, var5) as Int;
+                     var5 = var7.v(var6, 0, N.a, var5) as Int;
                      var2 |= 1;
                   }
                } else {
@@ -157,7 +157,7 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

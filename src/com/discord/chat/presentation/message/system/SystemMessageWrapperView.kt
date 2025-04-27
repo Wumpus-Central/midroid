@@ -55,7 +55,7 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
       q.h(var3, "eventHandler");
       val var4: MessageView = this.binding.messageView;
       q.g(this.binding.messageView, "messageView");
-      MessageView.setMessage$default(var4, var1, var2, null, var3, null, null, false, false, false, 500, null);
+      MessageView.setMessage$default(var4, var1, var2, null, var3, null, null, false, false, 244, null);
       val var6: Function0 = new Function0(var3) {
          final ChatEventHandler $eventHandler;
 
@@ -77,8 +77,6 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
       }
 
       this.addView((View)var7, -1, -2);
-      this.drawHighlight = this.highlightDrawer
-         .getShouldRenderHighlight()
-         .invoke(new MessageItem(var1, null, var2, false, false, null, null, false, 250, null)) as java.lang.Boolean;
+      this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, null, var2, false, null, null, false, 122, null)) as java.lang.Boolean;
    }
 }

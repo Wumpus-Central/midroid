@@ -6,27 +6,33 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import o1.a;
+import u0.a;
 
 public final class ErrorMessageViewBinding implements ViewBinding {
    public final TextView errorLabel;
    public final TextView header;
    private final View rootView;
+   public final TextView seeMoreButton;
 
-   private ErrorMessageViewBinding(View var1, TextView var2, TextView var3) {
+   private ErrorMessageViewBinding(View var1, TextView var2, TextView var3, TextView var4) {
       this.rootView = var1;
       this.errorLabel = var2;
       this.header = var3;
+      this.seeMoreButton = var4;
    }
 
    public static ErrorMessageViewBinding bind(View var0) {
       int var1 = R.id.error_label;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var4 = (TextView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.header;
          TextView var2 = (TextView)a.a(var0, var1);
          if (var2 != null) {
-            return new ErrorMessageViewBinding(var0, var3, var2);
+            var1 = R.id.see_more_button;
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
+               return new ErrorMessageViewBinding(var0, var4, var2, var3);
+            }
          }
       }
 

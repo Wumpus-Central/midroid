@@ -1,14 +1,14 @@
 package com.discord.media.engine.video.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.Y
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.x0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -104,26 +104,26 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var6: java.lang.String = this.userId;
+      val var5: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var4: java.lang.String = this.streamId;
+      val var6: java.lang.String = this.streamId;
       val var7: java.lang.String = this.videoStreamParametersJSON;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("OnVideoCallbackEvent(connectionId=");
-      var5.append(var1);
-      var5.append(", userId=");
-      var5.append(var6);
-      var5.append(", ssrc=");
-      var5.append(var2);
-      var5.append(", streamId=");
-      var5.append(var4);
-      var5.append(", videoStreamParametersJSON=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("OnVideoCallbackEvent(connectionId=");
+      var4.append(var1);
+      var4.append(", userId=");
+      var4.append(var5);
+      var4.append(", ssrc=");
+      var4.append(var2);
+      var4.append(", streamId=");
+      var4.append(var6);
+      var4.append(", videoStreamParametersJSON=");
+      var4.append(var7);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -144,7 +144,7 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, x0.a, b2.a, b2.a};
+         return new KSerializer[]{N.a, C0.a, Y.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnVideoCallbackEvent {

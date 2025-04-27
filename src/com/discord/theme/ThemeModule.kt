@@ -1,12 +1,12 @@
 package com.discord.theme
 
 import android.app.Activity
-import com.discord.codegen.NativeThemeManagerSpec
+import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
 
-public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeManagerSpec {
+public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
@@ -19,10 +19,6 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMan
       if (var1 != null) {
          ActivityThemeUtils.INSTANCE.updateActivityTheming$theme_release(var1);
       }
-   }
-
-   public override fun getName(): String {
-      return "RTNThemeManager";
    }
 
    public override fun updateSaturation(saturationFactor: Double) {
@@ -82,9 +78,5 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMan
       var2.append("Invalid theme: ");
       var2.append(var1);
       throw new IllegalArgumentException(var2.toString());
-   }
-
-   public companion object {
-      public const val NAME: String
    }
 }

@@ -4,13 +4,13 @@ import android.view.View.OnClickListener
 import com.discord.chat.bridge.reaction.MessageReaction
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.reactions.ReactionView
-import com.discord.reactions.ReactionsFlexbox
+import com.discord.reactions.ShortcutsFlexbox
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.theme.DiscordTheme
 import kotlin.jvm.functions.Function1
 
-public class ReactionsViewHolder(reactionsView: ReactionsFlexbox) : MessagePartViewHolder {
-   private final val reactionsView: ReactionsFlexbox
+public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartViewHolder {
+   private final val reactionsView: ShortcutsFlexbox
 
    init {
       kotlin.jvm.internal.q.h(var1, "reactionsView");
@@ -30,7 +30,18 @@ public class ReactionsViewHolder(reactionsView: ReactionsFlexbox) : MessagePartV
       onAddBurstReactionClick: OnClickListener,
       onReactionClick: (Reaction) -> Unit,
       onReactionLongPress: (Reaction) -> Unit,
-      theme: DiscordTheme? = null
+      theme: DiscordTheme? = null,
+      showReactionShortcut: Boolean = false,
+      showReplyShortcut: Boolean = false,
+      showForwardShortcut: Boolean = false,
+      showThreadShortcut: Boolean = ...,
+      shortcutsEnabled: Boolean = ...,
+      onReplyClick: OnClickListener,
+      onForwardClick: OnClickListener,
+      onThreadClick: OnClickListener,
+      replyAccessibilityLabel: String? = ...,
+      forwardAccessibilityLabel: String? = ...,
+      threadAccessibilityLabel: String? = null
    ) {
       kotlin.jvm.internal.q.h(var1, "reactions");
       kotlin.jvm.internal.q.h(var4, "addReactionLabel");
@@ -40,6 +51,9 @@ public class ReactionsViewHolder(reactionsView: ReactionsFlexbox) : MessagePartV
       kotlin.jvm.internal.q.h(var9, "onAddBurstReactionClick");
       kotlin.jvm.internal.q.h(var10, "onReactionClick");
       kotlin.jvm.internal.q.h(var11, "onReactionLongPress");
+      kotlin.jvm.internal.q.h(var18, "onReplyClick");
+      kotlin.jvm.internal.q.h(var19, "onForwardClick");
+      kotlin.jvm.internal.q.h(var20, "onThreadClick");
       this.reactionsView.setReactions(var1, var2, var3, var4, var5, var6, var7, var8, var9, new Function1(var10) {
          final Function1 $onReactionClick;
 
@@ -64,6 +78,6 @@ public class ReactionsViewHolder(reactionsView: ReactionsFlexbox) : MessagePartV
             kotlin.jvm.internal.q.h(var1, "reaction");
             this.$onReactionLongPress.invoke(var1);
          }
-      }, var12);
+      }, var12, var13, var14, var15, var16, var17, var18, var19, var20, var21, var22, var23);
    }
 }

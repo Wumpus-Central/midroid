@@ -8,6 +8,6 @@ public final class b implements Callback {
    public final Function0 a;
 
    public final void invoke(Object[] var1) {
-      NativePermissionPromise.a(this.a, var1);
+      NativePermissionPromise.b(this.a, var1);
    }
 }

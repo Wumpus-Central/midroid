@@ -19,10 +19,17 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
    }
 
    @JvmStatic
-   fun `bind$lambda$1$lambda$0`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
+   fun `bind$lambda$2$lambda$0`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
       kotlin.jvm.internal.q.h(var0, "this$0");
       kotlin.jvm.internal.q.h(var1, "$inviteAccessory");
       var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
+   }
+
+   @JvmStatic
+   fun `bind$lambda$2$lambda$1`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
+      kotlin.jvm.internal.q.h(var0, "this$0");
+      kotlin.jvm.internal.q.h(var1, "$inviteAccessory");
+      var0.eventHandler.onTapInviteEmbedAccept-ntcYbpo(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex());
    }
 
    public fun bind(inviteAccessory: GuildInviteMessageAccessory) {
@@ -30,11 +37,11 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
       val var3: GuildInviteEmbedImpl = var1.getInvite();
       val var4: GuildInviteView = this.guildInviteView;
       var var2: java.lang.String = var3.getSubtitle();
-      if (var2 != null && !kotlin.text.h.x(var2)) {
+      if (var2 != null && !kotlin.text.h.d0(var2)) {
          var2 = var3.getSubtitle();
       } else {
          var2 = var3.getChannelIcon();
-         if (var2 != null && !kotlin.text.h.x(var2)) {
+         if (var2 != null && !kotlin.text.h.d0(var2)) {
             var2 = var3.getChannelName();
          } else {
             var2 = null;
@@ -45,13 +52,14 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
       var4.setHeaderText(var3.getHeaderText());
       var4.setHeaderColor(var3.getHeaderColor());
       var4.setTitleText(var3.getTitleText());
+      var4.setGuildBadge(var3.getBadgeIconUrl());
       var4.setTitleColor(var3.getTitleColor());
       var4.setPresence(var3.getOnlineText(), var3.getMemberText());
-      var4.setGuildImage(var3.getThumbnailUrl(), var3.getThumbnailText(), var3.getThumbnailBackgroundColor());
+      var4.setGuildImage(var3.getThumbnailUrl(), var3.getThumbnailText(), var3.getThumbnailBackgroundColor(), var3.getThumbnailCornerRadius());
       var4.setSubtitle(var2);
       var4.setSubtitleColor(var3.getSubtitleColor());
       var4.setSubtitleIcon(var3.getChannelIcon());
-      var4.setOnButtonClickListener(new p(this, var1));
+      var4.setClickListeners(var3.getCanBeAccepted(), new p(this, var1), new q(this, var1));
       var4.setButtonText(var3.getAcceptLabelText());
       var4.setButtonTextColor(var3.getAcceptLabelColor());
       var4.setButtonBackgroundColor(var3.getAcceptLabelBackgroundColor());

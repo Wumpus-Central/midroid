@@ -5,14 +5,14 @@ public final class BuildConfig {
    public static final String BUILD_TYPE = "release";
    public static final boolean DEBUG = false;
    public static final String FLAVOR = "canary";
-   public static final String INTEGRATION_TEST_PASSWORD = "null";
-   public static final String INTEGRATION_TEST_USERNAME = "null";
+   public static final String INTEGRATION_TEST_PASSWORD = "";
+   public static final String INTEGRATION_TEST_USERNAME = "";
    public static final boolean IS_HERMES_ENABLED = true;
    public static final boolean IS_NEW_ARCHITECTURE_ENABLED = false;
    public static final String MAIN_MODULE = "index.native";
-   public static final String USER_AGENT = "Discord-Android/251205";
-   public static final int VERSION_CODE = 251205;
-   public static final String VERSION_NAME = "251.5 - Alpha";
-   public static final String VERSION_NAME_RNA = "251.5";
+   public static final String USER_AGENT = "Discord-Android/278204";
+   public static final int VERSION_CODE = 278204;
+   public static final String VERSION_NAME = "278.4 - Alpha";
+   public static final String VERSION_NAME_RNA = "278.4";
    public static final Boolean logTTIMetrics = Boolean.FALSE;
 }

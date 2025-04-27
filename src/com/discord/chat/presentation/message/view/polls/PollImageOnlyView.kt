@@ -24,7 +24,9 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
 
-public class PollImageOnlyView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : BasePollWithRecyclerView {
+public class PollImageOnlyView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+   : BasePollWithRecyclerView,
+   PollPresenter {
    protected open val myAdapter: com.discord.chat.presentation.message.view.polls.PollImageOnlyView.ImageOnlyAnswerAdapter
 
    fun PollImageOnlyView(var1: Context) {
@@ -87,18 +89,18 @@ public class PollImageOnlyView  public constructor(context: Context, attrs: Attr
          val var7: ConstraintLayout = (this.getBinding() as PollImageOnlyAnswerViewBinding).getRoot();
          q.e(var7);
          ViewBackgroundUtilsKt.setBackgroundRectangle(var7, var1.getAnswerBackgroundColor(), SizeUtilsKt.getDpToPx(12), var1.getBorderColor(), var5);
-         val var22: PollMediaView = (this.getBinding() as PollImageOnlyAnswerViewBinding).image;
-         var22.setContentDescription(var8.getPollMedia().getText());
-         var22.setAlpha(var1.getStyleSet().getOpacity());
-         q.e(var22);
-         val var9: android.view.ViewGroup.LayoutParams = var22.getLayoutParams();
+         val var21: PollMediaView = (this.getBinding() as PollImageOnlyAnswerViewBinding).image;
+         var21.setContentDescription(var8.getPollMedia().getText());
+         var21.setAlpha(var1.getStyleSet().getOpacity());
+         q.e(var21);
+         val var9: android.view.ViewGroup.LayoutParams = var21.getLayoutParams();
          if (var9 == null) {
             throw new NullPointerException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
          } else {
-            val var25: ConstraintLayout.LayoutParams = var9 as ConstraintLayout.LayoutParams;
+            val var24: ConstraintLayout.LayoutParams = var9 as ConstraintLayout.LayoutParams;
             (var9 as ConstraintLayout.LayoutParams).setMargins(var5, var5, var5, var5);
-            var22.setLayoutParams(var25);
-            var22.setMedia(var1, var2, var3);
+            var21.setLayoutParams(var24);
+            var21.setMedia(var1, var2, var3);
             val var6: Boolean = var8.getDidSelfVote();
             val var12: Flow = (this.getBinding() as PollImageOnlyAnswerViewBinding).infoBar;
             q.e(var12);
@@ -118,33 +120,33 @@ public class PollImageOnlyView  public constructor(context: Context, attrs: Attr
             var12.setVisibility(var4);
             var12.setBackgroundTintList(ColorStateList.valueOf(var1.getAnswerFillColor()));
             var12.setPaddingBottom(SizeUtilsKt.getDpToPx(4) - var5);
-            val var23: SimpleDraweeView = (this.getBinding() as PollImageOnlyAnswerViewBinding).avatar;
-            q.e(var23);
+            val var22: SimpleDraweeView = (this.getBinding() as PollImageOnlyAnswerViewBinding).avatar;
+            q.e(var22);
             var var13: java.lang.String = var1.getMyAvatarUrl();
-            if (!java.lang.Boolean.valueOf(var6)) {
+            if (!var6) {
                var13 = null;
             }
 
-            SetOptionalImageUrlKt.setOptionalImageUrl$default(var23, var13, null, null, 6, null);
-            val var26: SimpleDraweeView = (this.getBinding() as PollImageOnlyAnswerViewBinding).selectedIcon;
-            q.e(var26);
-            val var24: java.lang.String = var1.getResources().getSelectedIcon();
+            SetOptionalImageUrlKt.setOptionalImageUrl$default(var22, var13, null, null, null, 14, null);
+            val var25: SimpleDraweeView = (this.getBinding() as PollImageOnlyAnswerViewBinding).selectedIcon;
+            q.e(var25);
+            val var23: java.lang.String = var1.getResources().getSelectedIcon();
             var var14: java.lang.String = null;
-            if (java.lang.Boolean.valueOf(q.c(var8.isSelected(), java.lang.Boolean.TRUE))) {
-               var14 = var24;
+            if (q.c(var8.isSelected(), java.lang.Boolean.TRUE)) {
+               var14 = var23;
             }
 
-            ReactAssetUtilsKt.setOptionalReactImageUrl(var26, var14);
+            ReactAssetUtilsKt.setOptionalReactImageUrl(var25, var14);
             if (var1.getCanShowVoteCounts()) {
-               val var15: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).votePercentage;
-               q.e(var15);
-               var15.setVisibility(0);
+               val var18: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).votePercentage;
+               q.e(var18);
+               var18.setVisibility(0);
                var4 = var8.getVotesPercentage();
-               val var18: StringBuilder = new StringBuilder();
-               var18.append(var4);
-               var18.append("%");
-               var15.setText(var18.toString());
-               var15.setTextColor(var1.getLabelColor());
+               val var15: StringBuilder = new StringBuilder();
+               var15.append(var4);
+               var15.append("%");
+               var18.setText(var15.toString());
+               var18.setTextColor(var1.getLabelColor());
                val var16: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).voteCounts;
                q.e(var16);
                var16.setVisibility(0);

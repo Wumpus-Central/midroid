@@ -1,10 +1,10 @@
 package com.discord.span.utilities.common
 
-import cl.f
-import cl.n
-import fl.g0
-import fl.n0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.G
+import ba.N
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,13 +15,15 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
+public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, marginVertical: Int = 0) {
    public final val backgroundColor: Int
    public final val cornerRadius: Int
+   public final val marginVertical: Int
 
    init {
       this.backgroundColor = var1;
       this.cornerRadius = var2;
+      this.marginVertical = var3;
    }
 
    public operator fun component1(): Int {
@@ -32,8 +34,12 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
       return this.cornerRadius;
    }
 
-   public fun copy(backgroundColor: Int = var0.backgroundColor, cornerRadius: Int = var0.cornerRadius): BackgroundStyle {
-      return new BackgroundStyle(var1, var2);
+   public operator fun component3(): Int {
+      return this.marginVertical;
+   }
+
+   public fun copy(backgroundColor: Int = var0.backgroundColor, cornerRadius: Int = var0.cornerRadius, marginVertical: Int = var0.marginVertical): BackgroundStyle {
+      return new BackgroundStyle(var1, var2, var3);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -45,29 +51,34 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
          var1 = var1;
          if (this.backgroundColor != var1.backgroundColor) {
             return false;
+         } else if (this.cornerRadius != var1.cornerRadius) {
+            return false;
          } else {
-            return this.cornerRadius == var1.cornerRadius;
+            return this.marginVertical == var1.marginVertical;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return Integer.hashCode(this.backgroundColor) * 31 + Integer.hashCode(this.cornerRadius);
+      return (Integer.hashCode(this.backgroundColor) * 31 + Integer.hashCode(this.cornerRadius)) * 31 + Integer.hashCode(this.marginVertical);
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
-      val var2: Int = this.cornerRadius;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("BackgroundStyle(backgroundColor=");
-      var3.append(var1);
-      var3.append(", cornerRadius=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: Int = this.backgroundColor;
+      val var1: Int = this.cornerRadius;
+      val var2: Int = this.marginVertical;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("BackgroundStyle(backgroundColor=");
+      var4.append(var3);
+      var4.append(", cornerRadius=");
+      var4.append(var1);
+      var4.append(", marginVertical=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -78,55 +89,68 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int) {
       fun {
          val var0: BackgroundStyle.$serializer = new BackgroundStyle.$serializer();
          INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.span.utilities.common.BackgroundStyle", var0, 2);
+         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.span.utilities.common.BackgroundStyle", var0, 3);
          var1.l("backgroundColor", false);
-         var1.l("cornerRadius", false);
+         var1.l("cornerRadius", true);
+         var1.l("marginVertical", true);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, n0.a};
+         return new KSerializer[]{N.a, N.a, N.a};
       }
 
       public open fun deserialize(decoder: Decoder): BackgroundStyle {
          q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
+         val var8: SerialDescriptor = this.getDescriptor();
+         val var9: c = var1.c(var8);
          var var2: Int;
          var var3: Int;
          var var4: Int;
-         if (var8.y()) {
-            var3 = var8.k(var7, 0);
-            var4 = var8.k(var7, 1);
-            var2 = 3;
+         var var5: Int;
+         if (var9.y()) {
+            var5 = var9.k(var8, 0);
+            var4 = var9.k(var8, 1);
+            var2 = var9.k(var8, 2);
+            var3 = 7;
          } else {
-            var var5: Boolean = true;
-            var3 = 0;
+            var var6: Boolean = true;
+            var5 = 0;
             var4 = 0;
+            var3 = 0;
             var2 = 0;
 
-            while (var5) {
-               val var6: Int = var8.x(var7);
-               if (var6 != -1) {
-                  if (var6 != 0) {
-                     if (var6 != 1) {
-                        throw new n(var6);
-                     }
+            while (var6) {
+               val var7: Int = var9.x(var8);
+               if (var7 != -1) {
+                  if (var7 != 0) {
+                     if (var7 != 1) {
+                        if (var7 != 2) {
+                           throw new n(var7);
+                        }
 
-                     var4 = var8.k(var7, 1);
-                     var2 |= 2;
+                        var4 = var9.k(var8, 2);
+                        var2 |= 4;
+                     } else {
+                        var3 = var9.k(var8, 1);
+                        var2 |= 2;
+                     }
                   } else {
-                     var3 = var8.k(var7, 0);
+                     var5 = var9.k(var8, 0);
                      var2 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var6 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var4;
+            var4 = var3;
          }
 
-         var8.b(var7);
-         return new BackgroundStyle(var2, var3, var4, null);
+         var9.b(var8);
+         return new BackgroundStyle(var3, var5, var4, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundStyle) {

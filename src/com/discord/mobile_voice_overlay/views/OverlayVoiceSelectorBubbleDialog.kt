@@ -137,7 +137,7 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
          val var8: RecyclerView = this.binding.resultsRv;
          q.g(this.binding.resultsRv, "resultsRv");
          var1 = 8;
-         if (var3 xor true) {
+         if (!var3) {
             var1 = 0;
          }
 

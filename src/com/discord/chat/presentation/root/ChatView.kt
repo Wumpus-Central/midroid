@@ -12,10 +12,8 @@ import com.discord.chat.presentation.list.ChatListView
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
-import com.facebook.react.bridge.NativeModule
-import com.facebook.react.bridge.ReactContext
 import com.facebook.react.views.view.ReactViewGroup
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
 
@@ -35,7 +33,7 @@ public class ChatView(context: Context) : ReactViewGroup {
    }
 
    @JvmStatic
-   fun `attachPortalViewToChatList$lambda$5`(
+   fun `attachPortalViewToChatList$lambda$4`(
       var0: View, var1: ChatView, var2: View, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int, var10: Int
    ) {
       q.h(var0, "$portalView");
@@ -81,7 +79,7 @@ public class ChatView(context: Context) : ReactViewGroup {
          }
       } else {
          if (var1 !is ChatListView) {
-            throw new IllegalArgumentException("Failed requirement.".toString());
+            throw new IllegalArgumentException("Failed requirement.");
          }
 
          RecyclerViewExtensionsKt.setReactNativeClipToPadding(var1 as RecyclerView);
@@ -94,29 +92,23 @@ public class ChatView(context: Context) : ReactViewGroup {
 
          var4.setEventHandler(var5);
          var4.setInverted(this.inverted);
-         val var6: Context = this.getContext();
-         q.f(var6, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
-         val var7: NativeModule = (var6 as ReactContext).getNativeModule(ChatModule.class);
-         q.e(var7);
-         var4.setDataSource(new ChatListView.DataSource(var7 as ChatModule, this) {
-            final ChatModule $chatModule;
+         var4.setDataSource(new ChatListView.DataSource(this) {
             final ChatView this$0;
 
             {
-               this.$chatModule = var1;
-               this.this$0 = var2;
+               this.this$0 = var1;
             }
 
             @Override
             public Flow getUpdatesFlow() {
-               return this.$chatModule.getChatListManager(this.this$0.getId()).observeUpdates();
+               return ChatModule.Companion.getChatListManager(this.this$0.getId()).observeUpdates();
             }
          });
          this.chatList = var4;
       }
    }
 
-   public fun scrollTo(index: Int, targetScreenLocation: TargetAlignment, animated: Boolean, isHighlight: Boolean) {
+   public fun scrollTo(index: Int, targetScreenLocation: TargetAlignment, animated: Boolean, highlight: Boolean) {
       q.h(var2, "targetScreenLocation");
       if (ThreadUtilsKt.isOnMainThread()) {
          val var6: ChatListView = access$getChatList$p(this);
@@ -128,17 +120,18 @@ public class ChatView(context: Context) : ReactViewGroup {
 
          var8.scrollToPosition(var1, var2, var3, var4);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var7);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var5);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 
-   public fun setAnimated(animated: Boolean) {
+   public fun setEventHandler(eventHandler: ChatEventHandler) {
+      q.h(var1, "eventHandler");
       if (ThreadUtilsKt.isOnMainThread()) {
-         access$setAreChatAnimationsEnabled$cp(var1);
+         access$setEventHandler$p(this, var1);
       } else {
          val var3: Thread = Thread.currentThread();
          val var2: StringBuilder = new StringBuilder();
@@ -148,10 +141,9 @@ public class ChatView(context: Context) : ReactViewGroup {
       }
    }
 
-   public fun setEventHandler(eventHandler: ChatEventHandler) {
-      q.h(var1, "eventHandler");
+   public fun setInverted(inverted: Boolean) {
       if (ThreadUtilsKt.isOnMainThread()) {
-         access$setEventHandler$p(this, var1);
+         access$setInverted$p(this, var1);
       } else {
          val var2: Thread = Thread.currentThread();
          val var3: StringBuilder = new StringBuilder();
@@ -161,23 +153,8 @@ public class ChatView(context: Context) : ReactViewGroup {
       }
    }
 
-   public fun setInverted(inverted: Boolean) {
-      if (ThreadUtilsKt.isOnMainThread()) {
-         access$setInverted$p(this, var1);
-      } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
-      }
-   }
-
    public companion object {
       private const val INDEX_CHAT_LIST: Int
       private const val INDEX_PORTAL_VIEW: Int
-
-      public final var areChatAnimationsEnabled: Boolean
-         internal set
    }
 }

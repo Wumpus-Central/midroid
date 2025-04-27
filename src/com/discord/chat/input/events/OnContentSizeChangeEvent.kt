@@ -1,12 +1,12 @@
 package com.discord.chat.input.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.G
+import ba.N
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,7 +73,7 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -91,7 +91,7 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, n0.a};
+         return new KSerializer[]{N.a, N.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnContentSizeChangeEvent {
@@ -103,8 +103,8 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
          var var4: Int;
          if (var8.y()) {
             var3 = var8.k(var7, 0);
-            var4 = var8.k(var7, 1);
-            var2 = 3;
+            var2 = var8.k(var7, 1);
+            var4 = 3;
          } else {
             var var5: Boolean = true;
             var3 = 0;
@@ -129,10 +129,13 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
                   var5 = false;
                }
             }
+
+            var4 = var2;
+            var2 = var4;
          }
 
          var8.b(var7);
-         return new OnContentSizeChangeEvent(var2, var3, var4, null);
+         return new OnContentSizeChangeEvent(var4, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnContentSizeChangeEvent) {

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.gift
 
-import gl.g
+import ca.g
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
@@ -26,7 +26,7 @@ private fun JsonObject.hasPrimitive(key: String): Boolean {
          var2 = false;
          if (var6 != null) {
             var2 = false;
-            if (h.x(var6) xor true) {
+            if (h.d0(var6) xor true) {
                var2 = true;
             }
          }

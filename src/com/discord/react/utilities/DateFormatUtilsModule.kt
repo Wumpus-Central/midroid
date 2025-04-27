@@ -1,0 +1,27 @@
+package com.discord.react.utilities
+
+import com.discord.codegen.NativeDateFormatUtilsModuleSpec
+import com.facebook.react.bridge.ReactApplicationContext
+import kotlin.jvm.internal.q
+
+public class DateFormatUtilsModule(reactContext: ReactApplicationContext) : NativeDateFormatUtilsModuleSpec {
+   private final val reactContext: ReactApplicationContext
+
+   init {
+      q.h(var1, "reactContext");
+      super(var1);
+      this.reactContext = var1;
+   }
+
+   public override fun activate(): Boolean {
+      val var4: java.lang.Long = ReactContextExtensionsKt.jsiId(this.reactContext);
+      val var1: Boolean;
+      if (var4 != null) {
+         var1 = JSINativeModule.INSTANCE.install(var4.longValue());
+      } else {
+         var1 = false;
+      }
+
+      return var1;
+   }
+}

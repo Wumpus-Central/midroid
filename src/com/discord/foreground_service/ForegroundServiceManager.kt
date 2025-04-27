@@ -13,7 +13,7 @@ import com.discord.misc.utilities.intent.IntentUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
 import java.util.NoSuchElementException
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 
 public class ForegroundServiceManager {
@@ -31,20 +31,20 @@ public class ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var3: Int = var2;
-               if (var2 < var4) {
+               var var2: Int = var3;
+               if (var3 < var4) {
                   var8 = var6;
-                  var3 = var4;
+                  var2 = var4;
                }
 
                var5 = var8;
-               var2 = var3;
+               var3 = var2;
             } while (var7.hasNext());
          }
 
@@ -53,15 +53,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var5: Log = Log.INSTANCE;
-      val var4: java.lang.String = tag;
+      val var4: Log = Log.INSTANCE;
+      val var6: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Start service with ");
-      var6.append(var3);
-      var6.append(" configurations.");
-      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Start service with ");
+      var5.append(var3);
+      var5.append(" configurations.");
+      Log.i$foreground_service_release$default(var4, var6, var5.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
    }
@@ -71,7 +71,7 @@ public class ForegroundServiceManager {
       q.h(var2, "intent");
       val var4: NotificationAction.Companion = NotificationAction.Companion;
       val var6: NotificationAction;
-      if (IntentUtilsKt.hasExtra(var2, g0.b(GenericAction.class))) {
+      if (IntentUtilsKt.hasExtra(var2, E.b(GenericAction.class))) {
          var6 = (b.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
       } else {
          var6 = null;
@@ -88,39 +88,53 @@ public class ForegroundServiceManager {
    }
 
    internal fun isRunning(): Boolean {
-      label18: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            ;
-         } catch (var3: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         val var1: Boolean;
-         val var2: <unknown>;
-         if (var2 != null) {
-            var1 = true;
-         } else {
-            var1 = false;
-         }
-
-         // $VF: monitorexit
-         return var1;
-      }
-   }
-
-   internal fun onServiceConnected(foregroundService: Service) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 0
+      // 03: getfield com/discord/foreground_service/ForegroundServiceManager.service Landroid/app/Service;
+      // 06: astore 2
+      // 07: aload 2
+      // 08: ifnull 10
+      // 0b: bipush 1
+      // 0c: istore 1
+      // 0d: goto 12
+      // 10: bipush 0
+      // 11: istore 1
+      // 12: aload 0
+      // 13: monitorexit
+      // 14: iload 1
+      // 15: ireturn
+      // 16: astore 2
+      // 17: aload 0
+      // 18: monitorexit
+      // 19: aload 2
+      // 1a: athrow
+   }
+
+   internal fun onServiceConnected(foregroundService: Service) {
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
@@ -147,93 +161,146 @@ public class ForegroundServiceManager {
       // 21: aload 1
       // 22: putfield com/discord/foreground_service/ForegroundServiceManager.service Landroid/app/Service;
       // 25: aload 1
-      // 26: ifnull 60
+      // 26: ifnull 5e
       // 29: aload 0
       // 2a: getfield com/discord/foreground_service/ForegroundServiceManager.serviceConfigurations Ljava/util/List;
       // 2d: invokeinterface java/util/Collection.isEmpty ()Z 1
-      // 32: bipush 1
-      // 33: ixor
-      // 34: ifeq 4a
-      // 37: getstatic com/discord/foreground_service/service/ServiceNotification.INSTANCE Lcom/discord/foreground_service/service/ServiceNotification;
-      // 3a: aload 1
-      // 3b: aload 1
-      // 3c: aload 0
-      // 3d: getfield com/discord/foreground_service/ForegroundServiceManager.serviceConfigurations Ljava/util/List;
-      // 40: invokevirtual com/discord/foreground_service/service/ServiceNotification.startForegroundCompat (Landroid/app/Service;Landroid/content/Context;Ljava/util/List;)V
-      // 43: goto 60
-      // 46: astore 1
-      // 47: goto 63
-      // 4a: aload 0
-      // 4b: aload 1
-      // 4c: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
-      // 4f: aload 2
-      // 50: ldc "tag"
-      // 52: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 55: aload 3
-      // 56: aload 2
-      // 57: ldc_w "No configuration present (process liked died), stopping service."
+      // 32: ifne 48
+      // 35: getstatic com/discord/foreground_service/service/ServiceNotification.INSTANCE Lcom/discord/foreground_service/service/ServiceNotification;
+      // 38: aload 1
+      // 39: aload 1
+      // 3a: aload 0
+      // 3b: getfield com/discord/foreground_service/ForegroundServiceManager.serviceConfigurations Ljava/util/List;
+      // 3e: invokevirtual com/discord/foreground_service/service/ServiceNotification.startForegroundCompat (Landroid/app/Service;Landroid/content/Context;Ljava/util/List;)V
+      // 41: goto 5e
+      // 44: astore 1
+      // 45: goto 61
+      // 48: aload 0
+      // 49: aload 1
+      // 4a: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
+      // 4d: aload 2
+      // 4e: ldc "tag"
+      // 50: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 53: aload 3
+      // 54: aload 2
+      // 55: ldc_w "No configuration present (process liked died), stopping service."
+      // 58: aconst_null
+      // 59: bipush 4
       // 5a: aconst_null
-      // 5b: bipush 4
-      // 5c: aconst_null
-      // 5d: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
-      // 60: aload 0
-      // 61: monitorexit
-      // 62: return
-      // 63: aload 0
-      // 64: monitorexit
-      // 65: aload 1
-      // 66: athrow
+      // 5b: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 5e: aload 0
+      // 5f: monitorexit
+      // 60: return
+      // 61: aload 0
+      // 62: monitorexit
+      // 63: aload 1
+      // 64: athrow
    }
 
    internal fun onServiceCreated(context: Context) {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            q.h(var1, "context");
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = tag;
-            q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var3, var2, "On service created.", null, 4, null);
-            this.serviceWakelocks.acquire(var1);
-         } catch (var4: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
-   }
-
-   internal fun onServiceDisconnected() {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            val var1: Log = Log.INSTANCE;
-            val var2: java.lang.String = tag;
-            q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var1, var2, "On service destroyed.", null, 4, null);
-            this.serviceWakelocks.release();
-            this.service = null;
-         } catch (var3: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
-   }
-
-   internal fun startService(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 1
+      // 03: ldc "context"
+      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 0b: astore 2
+      // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
+      // 0f: astore 3
+      // 10: aload 3
+      // 11: ldc "tag"
+      // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 16: aload 2
+      // 17: aload 3
+      // 18: ldc_w "On service created."
+      // 1b: aconst_null
+      // 1c: bipush 4
+      // 1d: aconst_null
+      // 1e: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 21: aload 0
+      // 22: getfield com/discord/foreground_service/ForegroundServiceManager.serviceWakelocks Lcom/discord/foreground_service/utils/Wakelocks;
+      // 25: aload 1
+      // 26: invokevirtual com/discord/foreground_service/utils/Wakelocks.acquire (Landroid/content/Context;)V
+      // 29: aload 0
+      // 2a: monitorexit
+      // 2b: return
+      // 2c: astore 1
+      // 2d: aload 0
+      // 2e: monitorexit
+      // 2f: aload 1
+      // 30: athrow
+   }
+
+   internal fun onServiceDisconnected() {
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 05: astore 1
+      // 06: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
+      // 09: astore 2
+      // 0a: aload 2
+      // 0b: ldc "tag"
+      // 0d: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 10: aload 1
+      // 11: aload 2
+      // 12: ldc_w "On service destroyed."
+      // 15: aconst_null
+      // 16: bipush 4
+      // 17: aconst_null
+      // 18: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 1b: aload 0
+      // 1c: getfield com/discord/foreground_service/ForegroundServiceManager.serviceWakelocks Lcom/discord/foreground_service/utils/Wakelocks;
+      // 1f: invokevirtual com/discord/foreground_service/utils/Wakelocks.release ()V
+      // 22: aload 0
+      // 23: aconst_null
+      // 24: putfield com/discord/foreground_service/ForegroundServiceManager.service Landroid/app/Service;
+      // 27: aload 0
+      // 28: monitorexit
+      // 29: return
+      // 2a: astore 1
+      // 2b: aload 0
+      // 2c: monitorexit
+      // 2d: aload 1
+      // 2e: athrow
+   }
+
+   internal fun startService(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
@@ -246,16 +313,16 @@ public class ForegroundServiceManager {
       // 09: ldc_w "serviceConfigurations"
       // 0c: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f: getstatic com/discord/permissions/NativePermissionPromise.INSTANCE Lcom/discord/permissions/NativePermissionPromise;
-      // 12: astore 5
+      // 12: astore 4
       // 14: new com/discord/foreground_service/ForegroundServiceManager$startService$promise$1
-      // 17: astore 4
-      // 19: aload 4
+      // 17: astore 5
+      // 19: aload 5
       // 1b: aload 0
       // 1c: aload 1
       // 1d: aload 2
       // 1e: invokespecial com/discord/foreground_service/ForegroundServiceManager$startService$promise$1.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
-      // 21: aload 5
-      // 23: aload 4
+      // 21: aload 4
+      // 23: aload 5
       // 25: getstatic com/discord/foreground_service/ForegroundServiceManager$startService$promise$2.INSTANCE Lcom/discord/foreground_service/ForegroundServiceManager$startService$promise$2;
       // 28: invokevirtual com/discord/permissions/NativePermissionPromise.generate (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lcom/facebook/react/bridge/PromiseImpl;
       // 2b: astore 4
@@ -311,22 +378,51 @@ public class ForegroundServiceManager {
    }
 
    internal fun stopService(context: Context) {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            q.h(var1, "context");
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = tag;
-            q.g(tag, "tag");
-            Log.i$foreground_service_release$default(var3, var2, "Stop service.", null, 4, null);
-            ForegroundService.Companion.stop(var1, this.service);
-         } catch (var4: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 1
+      // 03: ldc "context"
+      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 0b: astore 3
+      // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
+      // 0f: astore 2
+      // 10: aload 2
+      // 11: ldc "tag"
+      // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 16: aload 3
+      // 17: aload 2
+      // 18: ldc_w "Stop service."
+      // 1b: aconst_null
+      // 1c: bipush 4
+      // 1d: aconst_null
+      // 1e: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 21: getstatic com/discord/foreground_service/ForegroundService.Companion Lcom/discord/foreground_service/ForegroundService$Companion;
+      // 24: aload 1
+      // 25: aload 0
+      // 26: getfield com/discord/foreground_service/ForegroundServiceManager.service Landroid/app/Service;
+      // 29: invokevirtual com/discord/foreground_service/ForegroundService$Companion.stop (Landroid/content/Context;Landroid/app/Service;)V
+      // 2c: aload 0
+      // 2d: monitorexit
+      // 2e: return
+      // 2f: astore 1
+      // 30: aload 0
+      // 31: monitorexit
+      // 32: aload 1
+      // 33: athrow
    }
 
    public companion object {

@@ -24,6 +24,17 @@
         <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.MaterialComponents.Body.Text</item>
         <item name="materialAlertDialogButtonSpacerVisibility">@integer/mtrl_view_invisible</item>
     </style>
+    <style name="CallTheme" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#ff18191f</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:statusBarColor">#ff18191f</item>
+        <item name="android:navigationBarColor">#ff323b87</item>
+        <item name="android:colorEdgeEffect">@color/brand</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorAccent">@color/brand_260</item>
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorPrimaryDark">#ff18191f</item>
+    </style>
     <style name="TextAppearance.M3.Sys.Typescale.BodyLarge" parent="@style/TextAppearance.AppCompat.Body2">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textStyle">normal</item>

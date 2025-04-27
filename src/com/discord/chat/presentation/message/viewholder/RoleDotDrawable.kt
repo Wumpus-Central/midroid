@@ -4,8 +4,11 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.ColorFilter
+import android.graphics.LinearGradient
 import android.graphics.Paint
+import android.graphics.Shader.TileMode
 import android.graphics.drawable.Drawable
+import com.discord.chat.bridge.rolecolors.RoleColors
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.FontManager
 
@@ -15,12 +18,10 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    private final val roleColorAlphaPaint: Paint
    private final val roleColorPaint: Paint
    private final val scale: Float
-   private final val spSize: Int
 
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super();
-      this.spSize = var3;
       val var4: Float = FontManager.INSTANCE.getFontScale(var1);
       this.scale = var4;
       this.pxSize = SizeUtilsKt.getSpToPx(var3) * var4;
@@ -50,21 +51,37 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    }
 
    public open fun setAlpha(p0: Int) {
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("An operation is not implemented: ");
-      var2.append("Not yet implemented");
-      throw new kh.q(var2.toString());
-   }
-
-   public fun setColor(roleColor: Int) {
-      this.roleColorAlphaPaint.setColor(Color.argb(102, Color.red(var1), Color.green(var1), Color.blue(var1)));
-      this.roleColorPaint.setColor(Color.argb(255, Color.red(var1), Color.green(var1), Color.blue(var1)));
    }
 
    public open fun setColorFilter(p0: ColorFilter?) {
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("An operation is not implemented: ");
-      var2.append("Not yet implemented");
-      throw new kh.q(var2.toString());
+   }
+
+   public fun setColors(roleColors: RoleColors) {
+      kotlin.jvm.internal.q.h(var1, "roleColors");
+      if (var1.getSecondaryColor() != null) {
+         val var5: java.util.List = kotlin.collections.i.q(new Integer[]{var1.getPrimaryColor(), var1.getSecondaryColor()});
+         if (var1.getTertiaryColor() != null) {
+            var5.add(var1.getTertiaryColor());
+         }
+
+         this.roleColorPaint
+            .setShader(
+               new LinearGradient(
+                  this.pxSize / (float)2 / (float)2,
+                  0.0F,
+                  this.pxSize / (float)2 / (float)2 + (this.pxSize / (float)2 + (float)2),
+                  0.0F,
+                  kotlin.collections.i.Q0(var5),
+                  null,
+                  TileMode.MIRROR
+               )
+            );
+      } else {
+         this.roleColorPaint
+            .setColor(Color.argb(255, Color.red(var1.getPrimaryColor()), Color.green(var1.getPrimaryColor()), Color.blue(var1.getPrimaryColor())));
+      }
+
+      this.roleColorAlphaPaint
+         .setColor(Color.argb(102, Color.red(var1.getPrimaryColor()), Color.green(var1.getPrimaryColor()), Color.blue(var1.getPrimaryColor())));
    }
 }

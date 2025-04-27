@@ -4,7 +4,10 @@ import android.content.Context
 import com.discord.chat.bridge.MediaType
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.LinkContextData
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.events.TapReactionOverflow
@@ -69,8 +72,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          ) {
             q.h(var1, "messageId");
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var11: java.lang.String = MessageId.toString-impl(var1);
-            val var10: java.lang.String = ChannelId.toString-impl(var2);
+            val var10: java.lang.String = MessageId.toString-impl(var1);
+            val var11: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -90,7 +93,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2(this) {
@@ -140,8 +143,13 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       this.emitReactEvent.invoke(new CompleteFirstLayoutData());
    }
 
-   public override fun onFirstLayout(firstVisibleMessageIndex: Int, lastVisibleMessageIndex: Int) {
-      this.emitReactEvent.invoke(new FirstLayoutData(var1, var2));
+   public override fun onFirstLayout(
+      firstVisibleMessageIndex: Int,
+      firstVisibleMessagePercentVisible: Double?,
+      lastVisibleMessageIndex: Int,
+      lastVisibleMessagePercentVisible: Double?
+   ) {
+      this.emitReactEvent.invoke(new FirstLayoutData(var1, var2, var3, var4));
    }
 
    public override fun onInitiateEdit(messageId: MessageId, channelId: ChannelId) {
@@ -149,9 +157,14 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       this.emitReactEvent.invoke(new InitiateEditData(var1, var2, null));
    }
 
-   public override fun onInitiateReply(messageId: MessageId, channelId: ChannelId) {
+   public override fun onInitiateReply(messageId: MessageId, channelId: ChannelId, triggerHaptic: Boolean?, location: String?) {
       q.h(var1, "messageId");
-      this.emitReactEvent.invoke(new InitiateReplyData(var1, var2, null));
+      this.emitReactEvent.invoke(new InitiateReplyData(var1, var2, var4, var5, null));
+   }
+
+   public override fun onInitiateThread(messageId: MessageId, channelId: ChannelId) {
+      q.h(var1, "messageId");
+      this.emitReactEvent.invoke(new InitiateThreadData(var1, var2, null));
    }
 
    public override fun onLinkClicked(messageId: MessageId, node: LinkContentNode) {
@@ -163,17 +176,19 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
    public override fun onLinkClicked(messageId: MessageId, url: String, title: String?) {
       q.h(var1, "messageId");
       q.h(var2, "url");
-      var var4: java.lang.String = var3;
+      val var4: Function1 = this.emitReactEvent;
+      val var5: LinkContextData.LinkUrl = new LinkContextData.LinkUrl(var2);
+      var2 = var3;
       if (var3 == null) {
-         var4 = "";
+         var2 = "";
       }
 
-      this.emitReactEvent.invoke(new TapLinkData(var1, var4, var2, null, null, 24, null));
+      var4.invoke(new TapLinkData(var1, var2, var5, null, 8, null));
    }
 
    public override fun onLinkLongClicked(node: LinkContentNode) {
       q.h(var1, "node");
-      this.emitReactEvent.invoke(new LongPressLinkData(var1.getTarget()));
+      this.emitReactEvent.invoke(new LongPressLinkData(var1.getUrl()));
    }
 
    public override fun onLongPressAttachmentLink(attachmentUrl: String, attachmentName: String) {
@@ -262,7 +277,18 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var6, var3, var4, var8, var7, var5, var1.isFirstMessageVisible(), var1.getFirstVisibleMessageIndex(), var1.getLastVisibleMessageIndex(), var2
+            var6,
+            var3,
+            var4,
+            var8,
+            var7,
+            var5,
+            var1.isFirstMessageVisible(),
+            var1.getFirstVisibleMessageIndex(),
+            var1.getFirstVisibleMessagePercentVisible(),
+            var1.getLastVisibleMessageIndex(),
+            var1.getLastVisibleMessagePercentVisible(),
+            var2
          )
       );
    }
@@ -279,8 +305,12 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       this.emitReactEvent.invoke(new LongPressStickerData(var2, var1, null));
    }
 
-   public override fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId) {
-      this.emitReactEvent.invoke(new TapActivityBookmarkEmbedData(ApplicationId.toString-impl(var1), ChannelId.toString-impl(var3)));
+   public override fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId, referrerId: String, customId: String?) {
+      q.h(var5, "referrerId");
+      this.emitReactEvent
+         .invoke(
+            new TapActivityBookmarkEmbedData(ApplicationId.toString-impl(var1), ChannelId.toString-impl(var3), var5.toString(), java.lang.String.valueOf(var6))
+         );
    }
 
    public override fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
@@ -288,6 +318,14 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       q.h(var6, "messageId");
       this.emitReactEvent
          .invoke(new TapActivityInstanceEmbedData(ApplicationId.toString-impl(var1), ChannelId.toString-impl(var3), var5, MessageId.toString-impl(var6)));
+   }
+
+   public override fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {
+      q.h(var1, "messageId");
+      q.h(var2, "actionId");
+      q.h(var3, "appId");
+      q.h(var4, "embedUrl");
+      this.emitReactEvent.invoke(new TapAppMessageEmbedData(var1, var2, var3, var4));
    }
 
    public override fun onTapAttachmentLink(attachmentUrl: String) {
@@ -430,15 +468,32 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          .invoke(new TapImageData(MessageId.toString-impl(var1), var2, var3, new TapImageData.Layout(var4, var5, var6, var7, var8), var9, var10, var11, var12));
    }
 
-   public override fun onTapInlineForward(channelId: ChannelId, messageId: MessageId, targetKind: String, embedIndex: Int?) {
+   public override fun onTapInlineCode(node: InlineCodeContentNode) {
+      q.h(var1, "node");
+      this.emitReactEvent.invoke(new TapInlineCodeEvent(var1));
+   }
+
+   public override fun onTapInlineForward(
+      channelId: ChannelId,
+      messageId: MessageId,
+      targetKind: String,
+      embedIndex: Int?,
+      triggerHaptic: Boolean?,
+      location: String?
+   ) {
       q.h(var3, "messageId");
       q.h(var4, "targetKind");
-      this.emitReactEvent.invoke(new TapInlineForwardData(ChannelId.toString-impl(var1), MessageId.toString-impl(var3), var4, var5));
+      this.emitReactEvent.invoke(new TapInlineForwardData(ChannelId.toString-impl(var1), MessageId.toString-impl(var3), var4, var5, var6, var7));
    }
 
    public override fun onTapInviteEmbed(messageId: MessageId, index: Int, primary: Boolean?, secondary: Boolean?) {
       q.h(var1, "messageId");
       this.emitReactEvent.invoke(new TapInviteEvent(var1, var2, var3, var4));
+   }
+
+   public override fun onTapInviteEmbedAccept(messageId: MessageId, index: Int) {
+      q.h(var1, "messageId");
+      this.emitReactEvent.invoke(new TapInviteAcceptEvent(var1, var2));
    }
 
    public override fun onTapInviteToSpeak(messageId: MessageId) {
@@ -479,6 +534,16 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          );
    }
 
+   public override fun onTapObscuredMediaToggle(messageId: MessageId, channelId: ChannelId, isReveal: Boolean, attachmentId: String?, embedId: String?) {
+      q.h(var1, "messageId");
+      this.emitReactEvent
+         .invoke(
+            new TapObscuredMediaToggleData(
+               MessageId.toString-impl(var1), ChannelId.toString-impl(var2), java.lang.String.valueOf(var5), java.lang.String.valueOf(var6), var4
+            )
+         );
+   }
+
    public override fun onTapOpTag() {
       this.emitReactEvent.invoke(TapOpTagData.INSTANCE);
    }
@@ -506,14 +571,18 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          .invoke(new TapPostPreviewEmbedData(GuildId.toString-impl(var1), ChannelId.toString-impl(var3), ChannelId.toString-impl(var5), var7, null));
    }
 
-   public override fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean?) {
+   public override fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean?, location: String?) {
       q.h(var1, "messageId");
-      this.emitReactEvent.invoke(new TapReactionData(var1, var2, var3, null));
+      this.emitReactEvent.invoke(new TapReactionData(var1, var2, var3, var4, null));
    }
 
    public override fun onTapReactionOverflow(messageId: MessageId, channelId: ChannelId) {
       q.h(var1, "messageId");
       this.emitReactEvent.invoke(new TapReactionOverflow(MessageId.toString-impl(var1), ChannelId.toString-impl(var2)));
+   }
+
+   public override fun onTapReferralRedeem(referralId: String?) {
+      this.emitReactEvent.invoke(new TapReferralRedeemData(var1));
    }
 
    public override fun onTapRemix(messageId: MessageId) {
@@ -556,6 +625,14 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
    public override fun onTapShowAltText(description: String) {
       q.h(var1, "description");
       this.emitReactEvent.invoke(new TapShowAltTextData(var1));
+   }
+
+   public override fun onTapSoundmoji(node: SoundmojiContentNode) {
+      q.h(var1, "node");
+      this.emitReactEvent
+         .invoke(
+            new TapSoundmojiData(var1.getSoundId(), ChannelId.toString-impl(var1.getChannelId-o4g7jtM()), var1.getGuildId(), var1.getMessageId-3Eiw7ao(), null)
+         );
    }
 
    public override fun onTapSummary(channelId: ChannelId, messageId: MessageId, summaryId: String) {

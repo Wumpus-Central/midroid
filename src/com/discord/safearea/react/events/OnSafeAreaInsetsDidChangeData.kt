@@ -1,12 +1,12 @@
 package com.discord.safearea.react.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.F
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f0
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,9 +17,8 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, left: Float, right: Float, imeInsetsBottom: Float) : ReactEvent {
+internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, left: Float, right: Float) : ReactEvent {
    public final val bottom: Float
-   public final val imeInsetsBottom: Float
    public final val left: Float
    public final val right: Float
    public final val top: Float
@@ -29,7 +28,6 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
       this.bottom = var2;
       this.left = var3;
       this.right = var4;
-      this.imeInsetsBottom = var5;
    }
 
    public operator fun component1(): Float {
@@ -48,18 +46,8 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
       return this.right;
    }
 
-   public operator fun component5(): Float {
-      return this.imeInsetsBottom;
-   }
-
-   public fun copy(
-      top: Float = var0.top,
-      bottom: Float = var0.bottom,
-      left: Float = var0.left,
-      right: Float = var0.right,
-      imeInsetsBottom: Float = var0.imeInsetsBottom
-   ): OnSafeAreaInsetsDidChangeData {
-      return new OnSafeAreaInsetsDidChangeData(var1, var2, var3, var4, var5);
+   public fun copy(top: Float = var0.top, bottom: Float = var0.bottom, left: Float = var0.left, right: Float = var0.right): OnSafeAreaInsetsDidChangeData {
+      return new OnSafeAreaInsetsDidChangeData(var1, var2, var3, var4);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -75,21 +63,15 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
             return false;
          } else if (java.lang.Float.compare(this.left, var1.left) != 0) {
             return false;
-         } else if (java.lang.Float.compare(this.right, var1.right) != 0) {
-            return false;
          } else {
-            return java.lang.Float.compare(this.imeInsetsBottom, var1.imeInsetsBottom) == 0;
+            return java.lang.Float.compare(this.right, var1.right) == 0;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return (
-               ((java.lang.Float.hashCode(this.top) * 31 + java.lang.Float.hashCode(this.bottom)) * 31 + java.lang.Float.hashCode(this.left)) * 31
-                  + java.lang.Float.hashCode(this.right)
-            )
-            * 31
-         + java.lang.Float.hashCode(this.imeInsetsBottom);
+      return ((java.lang.Float.hashCode(this.top) * 31 + java.lang.Float.hashCode(this.bottom)) * 31 + java.lang.Float.hashCode(this.left)) * 31
+         + java.lang.Float.hashCode(this.right);
    }
 
    override fun serialize(): WritableMap {
@@ -97,27 +79,24 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
    }
 
    public override fun toString(): String {
-      val var1: Float = this.top;
-      val var2: Float = this.bottom;
-      val var3: Float = this.left;
-      val var5: Float = this.right;
-      val var4: Float = this.imeInsetsBottom;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("OnSafeAreaInsetsDidChangeData(top=");
-      var6.append(var1);
-      var6.append(", bottom=");
-      var6.append(var2);
-      var6.append(", left=");
-      var6.append(var3);
-      var6.append(", right=");
-      var6.append(var5);
-      var6.append(", imeInsetsBottom=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var4: Float = this.top;
+      val var1: Float = this.bottom;
+      val var2: Float = this.left;
+      val var3: Float = this.right;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("OnSafeAreaInsetsDidChangeData(top=");
+      var5.append(var4);
+      var5.append(", bottom=");
+      var5.append(var1);
+      var5.append(", left=");
+      var5.append(var2);
+      var5.append(", right=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -129,90 +108,79 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
          val var0: OnSafeAreaInsetsDidChangeData.$serializer = new OnSafeAreaInsetsDidChangeData.$serializer();
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.safearea.react.events.OnSafeAreaInsetsDidChangeData", var0, 5
+            "com.discord.safearea.react.events.OnSafeAreaInsetsDidChangeData", var0, 4
          );
          var1.l("top", false);
          var1.l("bottom", false);
          var1.l("left", false);
          var1.l("right", false);
-         var1.l("imeInsetsBottom", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{f0.a, f0.a, f0.a, f0.a, f0.a};
+         return new KSerializer[]{F.a, F.a, F.a, F.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnSafeAreaInsetsDidChangeData {
          q.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.c(var12);
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
          var var2: Float;
          var var3: Float;
-         var var5: Float;
-         var var6: Float;
-         var var9: Int;
-         var var16: Float;
-         if (var13.y()) {
-            var16 = var13.G(var12, 0);
-            var5 = var13.G(var12, 1);
-            val var7: Float = var13.G(var12, 2);
-            var2 = var13.G(var12, 3);
-            var3 = var13.G(var12, 4);
-            var9 = 31;
-            var6 = var16;
-            var16 = var7;
+         var var4: Float;
+         val var6: Float;
+         var var7: Int;
+         if (var11.y()) {
+            var3 = var11.G(var10, 0);
+            var6 = var11.G(var10, 1);
+            var4 = var11.G(var10, 2);
+            var2 = var11.G(var10, 3);
+            var7 = 15;
          } else {
-            var6 = 0.0F;
-            var5 = 0.0F;
-            var16 = 0.0F;
+            var var5: Float = 0.0F;
+            var4 = 0.0F;
             var3 = 0.0F;
             var2 = 0.0F;
-            var var10: Boolean = true;
-            var9 = 0;
+            var var8: Boolean = true;
+            var7 = 0;
 
-            while (var10) {
-               val var11: Int = var13.x(var12);
-               if (var11 != -1) {
-                  if (var11 != 0) {
-                     if (var11 != 1) {
-                        if (var11 != 2) {
-                           if (var11 != 3) {
-                              if (var11 != 4) {
-                                 throw new n(var11);
-                              }
-
-                              var16 = var13.G(var12, 4);
-                              var9 |= 16;
-                           } else {
-                              var5 = var13.G(var12, 3);
-                              var9 |= 8;
+            while (var8) {
+               val var9: Int = var11.x(var10);
+               if (var9 != -1) {
+                  if (var9 != 0) {
+                     if (var9 != 1) {
+                        if (var9 != 2) {
+                           if (var9 != 3) {
+                              throw new n(var9);
                            }
+
+                           var4 = var11.G(var10, 3);
+                           var7 |= 8;
                         } else {
-                           var3 = var13.G(var12, 2);
-                           var9 |= 4;
+                           var3 = var11.G(var10, 2);
+                           var7 |= 4;
                         }
                      } else {
-                        var2 = var13.G(var12, 1);
-                        var9 |= 2;
+                        var2 = var11.G(var10, 1);
+                        var7 |= 2;
                      }
                   } else {
-                     var6 = var13.G(var12, 0);
-                     var9 |= 1;
+                     var5 = var11.G(var10, 0);
+                     var7 |= 1;
                   }
                } else {
-                  var10 = false;
+                  var8 = false;
                }
             }
 
-            var16 = var3;
-            var3 = var16;
-            var2 = var5;
-            var5 = var2;
+            var6 = var2;
+            var2 = var4;
+            var4 = var3;
+            var3 = var5;
          }
 
-         var13.b(var12);
-         return new OnSafeAreaInsetsDidChangeData(var9, var6, var5, var16, var2, var3, null);
+         var11.b(var10);
+         return new OnSafeAreaInsetsDidChangeData(var7, var3, var6, var4, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSafeAreaInsetsDidChangeData) {

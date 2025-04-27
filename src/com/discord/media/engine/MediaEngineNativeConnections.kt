@@ -13,15 +13,15 @@ internal class MediaEngineNativeConnections {
 
    public fun register(connectionId: Int, connection: NativeConnection) {
       kotlin.jvm.internal.q.h(var2, "connection");
-      if (this.connections.containsKey(var1) xor true) {
-         if (this.connections.containsValue(var2) xor true) {
+      if (!this.connections.containsKey(var1)) {
+         if (!this.connections.containsValue(var2)) {
             this.connections.put(var1, var2);
             val var3: Debug = Debug.INSTANCE;
          } else {
-            throw new IllegalStateException("Check failed.".toString());
+            throw new IllegalStateException("Check failed.");
          }
       } else {
-         throw new IllegalStateException("Check failed.".toString());
+         throw new IllegalStateException("Check failed.");
       }
    }
 
@@ -50,7 +50,7 @@ internal class MediaEngineNativeConnections {
       }
 
       if (!this.connections.isEmpty()) {
-         throw new IllegalStateException("Check failed.".toString());
+         throw new IllegalStateException("Check failed.");
       }
    }
 

@@ -13,6 +13,6 @@ public final class c implements OnClickListener {
    public final String m;
 
    public final void onClick(View var1) {
-      PollActionButton.a(this.j, this.k, this.l, this.m, var1);
+      PollActionButton.b(this.j, this.k, this.l, this.m, var1);
    }
 }

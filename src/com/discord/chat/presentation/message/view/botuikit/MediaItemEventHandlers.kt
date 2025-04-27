@@ -10,22 +10,26 @@ import kotlin.jvm.internal.q
 public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int, Double?) -> Unit,
    onMediaItemLongClicked: ((String, Int?) -> Unit)?,
    onMediaItemSpoilerClicked: () -> Unit,
-   onMediaItemAltTextButtonClicked: (String) -> Unit
+   onMediaItemAltTextButtonClicked: (String) -> Unit,
+   onMediaItemObscureToggle: (Boolean) -> Unit
 ) {
    public final val onMediaItemClicked: (View, String, Int, Double?) -> Unit
    public final val onMediaItemLongClicked: ((String, Int?) -> Unit)?
    public final val onMediaItemSpoilerClicked: () -> Unit
    public final val onMediaItemAltTextButtonClicked: (String) -> Unit
+   public final val onMediaItemObscureToggle: (Boolean) -> Unit
 
    init {
       q.h(var1, "onMediaItemClicked");
       q.h(var3, "onMediaItemSpoilerClicked");
       q.h(var4, "onMediaItemAltTextButtonClicked");
+      q.h(var5, "onMediaItemObscureToggle");
       super();
       this.onMediaItemClicked = var1;
       this.onMediaItemLongClicked = var2;
       this.onMediaItemSpoilerClicked = var3;
       this.onMediaItemAltTextButtonClicked = var4;
+      this.onMediaItemObscureToggle = var5;
    }
 
    public operator fun component1(): (View, String, Int, Double?) -> Unit {
@@ -44,16 +48,22 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
       return this.onMediaItemAltTextButtonClicked;
    }
 
+   public operator fun component5(): (Boolean) -> Unit {
+      return this.onMediaItemObscureToggle;
+   }
+
    public fun copy(
       onMediaItemClicked: (View, String, Int, Double?) -> Unit = var0.onMediaItemClicked,
       onMediaItemLongClicked: ((String, Int?) -> Unit)? = var0.onMediaItemLongClicked,
       onMediaItemSpoilerClicked: () -> Unit = var0.onMediaItemSpoilerClicked,
-      onMediaItemAltTextButtonClicked: (String) -> Unit = var0.onMediaItemAltTextButtonClicked
+      onMediaItemAltTextButtonClicked: (String) -> Unit = var0.onMediaItemAltTextButtonClicked,
+      onMediaItemObscureToggle: (Boolean) -> Unit = var0.onMediaItemObscureToggle
    ): MediaItemEventHandlers {
       q.h(var1, "onMediaItemClicked");
       q.h(var3, "onMediaItemSpoilerClicked");
       q.h(var4, "onMediaItemAltTextButtonClicked");
-      return new MediaItemEventHandlers(var1, var2, var3, var4);
+      q.h(var5, "onMediaItemObscureToggle");
+      return new MediaItemEventHandlers(var1, var2, var3, var4, var5);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -69,8 +79,10 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
             return false;
          } else if (!q.c(this.onMediaItemSpoilerClicked, var1.onMediaItemSpoilerClicked)) {
             return false;
+         } else if (!q.c(this.onMediaItemAltTextButtonClicked, var1.onMediaItemAltTextButtonClicked)) {
+            return false;
          } else {
-            return q.c(this.onMediaItemAltTextButtonClicked, var1.onMediaItemAltTextButtonClicked);
+            return q.c(this.onMediaItemObscureToggle, var1.onMediaItemObscureToggle);
          }
       }
    }
@@ -84,24 +96,28 @@ public data class MediaItemEventHandlers(onMediaItemClicked: (View, String, Int,
          var1 = this.onMediaItemLongClicked.hashCode();
       }
 
-      return ((var2 * 31 + var1) * 31 + this.onMediaItemSpoilerClicked.hashCode()) * 31 + this.onMediaItemAltTextButtonClicked.hashCode();
+      return (((var2 * 31 + var1) * 31 + this.onMediaItemSpoilerClicked.hashCode()) * 31 + this.onMediaItemAltTextButtonClicked.hashCode()) * 31
+         + this.onMediaItemObscureToggle.hashCode();
    }
 
    public override fun toString(): String {
-      val var4: Function4 = this.onMediaItemClicked;
-      val var1: Function2 = this.onMediaItemLongClicked;
-      val var5: Function0 = this.onMediaItemSpoilerClicked;
-      val var2: Function1 = this.onMediaItemAltTextButtonClicked;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MediaItemEventHandlers(onMediaItemClicked=");
-      var3.append(var4);
-      var3.append(", onMediaItemLongClicked=");
-      var3.append(var1);
-      var3.append(", onMediaItemSpoilerClicked=");
-      var3.append(var5);
-      var3.append(", onMediaItemAltTextButtonClicked=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: Function4 = this.onMediaItemClicked;
+      val var5: Function2 = this.onMediaItemLongClicked;
+      val var4: Function0 = this.onMediaItemSpoilerClicked;
+      val var3: Function1 = this.onMediaItemAltTextButtonClicked;
+      val var6: Function1 = this.onMediaItemObscureToggle;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaItemEventHandlers(onMediaItemClicked=");
+      var2.append(var1);
+      var2.append(", onMediaItemLongClicked=");
+      var2.append(var5);
+      var2.append(", onMediaItemSpoilerClicked=");
+      var2.append(var4);
+      var2.append(", onMediaItemAltTextButtonClicked=");
+      var2.append(var3);
+      var2.append(", onMediaItemObscureToggle=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -24,6 +24,7 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
 
    private fun applyCustomTypeFace(paint: Paint) {
       var var7: Typeface = var1.getTypeface();
+      var var6: Boolean = false;
       val var2: Int;
       if (var7 != null) {
          var2 = var7.getStyle();
@@ -51,21 +52,21 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
 
          var1.setTypeface(var12.typeface(this.context));
       } else {
-         var var5: Boolean;
-         label45: {
+         label47: {
             if (var1.getTextSkewX() == 0.0F && !this.discordFont.getItalic() && (var3 and 2) == 0) {
-               var5 = false;
-               if (var11 == null) {
-                  break label45;
+               val var5: Boolean;
+               if (var11 != null) {
+                  var5 = var11.getItalic();
+               } else {
+                  var5 = false;
                }
 
-               var5 = false;
-               if (!var11.getItalic()) {
-                  break label45;
+               if (!var5) {
+                  break label47;
                }
             }
 
-            var5 = true;
+            var6 = true;
          }
 
          val var4: Int = this.discordFont.getWeight();
@@ -74,7 +75,7 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
             var3 = Math.max(700, var4);
          }
 
-         val var14: DiscordFont = DiscordFont.Companion.findByStyle$default(var8, var3, var5, false, 4, null);
+         val var14: DiscordFont = DiscordFont.Companion.findByStyle$default(var8, var3, var6, false, 4, null);
          if (var14 != null) {
             var7 = var14.typeface(this.context);
          } else {

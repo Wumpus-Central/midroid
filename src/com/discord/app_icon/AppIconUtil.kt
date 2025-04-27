@@ -7,26 +7,24 @@ import kotlin.jvm.internal.q
 
 public object AppIconUtil {
    private fun getAppIconFromId(id: String): AppIcon? {
-      val var5: Array<AppIcon> = AppIcon.values();
-      val var3: Int = var5.length;
-      var var2: Int = 0;
+      val var3: java.util.Iterator = AppIcon.getEntries().iterator();
 
       while (true) {
-         if (var2 >= var3) {
-            var6 = null;
+         if (var3.hasNext()) {
+            val var2: Any = var3.next();
+            if (!q.c((var2 as AppIcon).getId(), var1)) {
+               continue;
+            }
+
+            var4 = var2;
             break;
          }
 
-         val var4: AppIcon = var5[var2];
-         if (q.c(var5[var2].getId(), var1)) {
-            var6 = var4;
-            break;
-         }
-
-         var2++;
+         var4 = null;
+         break;
       }
 
-      return var6;
+      return var4 as AppIcon;
    }
 
    private fun setComponentState(packageManager: PackageManager, componentName: ComponentName, enabled: Boolean) {
@@ -41,67 +39,63 @@ public object AppIconUtil {
    }
 
    public fun getAvailableIcons(): Array<AppIcon> {
-      return AppIcon.values();
+      return AppIcon.getEntries().toArray(new AppIcon[0]);
    }
 
    public fun getCurrentAppIcon(context: Context): AppIcon {
       q.h(var1, "context");
-      val var5: PackageManager = var1.getPackageManager();
-      val var6: Array<AppIcon> = AppIcon.values();
-      val var3: Int = var6.length;
-      var var2: Int = 0;
+      val var4: PackageManager = var1.getPackageManager();
+      val var3: java.util.Iterator = AppIcon.getEntries().iterator();
 
       while (true) {
-         if (var2 >= var3) {
-            var7 = null;
+         if (var3.hasNext()) {
+            val var2: Any = var3.next();
+            if (var4.getComponentEnabledSetting(new ComponentName(var1, (var2 as AppIcon).getAlias())) != 1) {
+               continue;
+            }
+
+            var5 = var2;
             break;
          }
 
-         val var4: AppIcon = var6[var2];
-         if (var5.getComponentEnabledSetting(new ComponentName(var1, var6[var2].getAlias())) == 1) {
-            var7 = var4;
-            break;
-         }
-
-         var2++;
+         var5 = null;
+         break;
       }
 
-      var var8: AppIcon = var7;
+      val var7: AppIcon = var5 as AppIcon;
+      var var6: AppIcon = var5 as AppIcon;
       if (var7 == null) {
-         var8 = AppIcon.DEFAULT;
+         var6 = AppIcon.DEFAULT;
       }
 
-      return var8;
+      return var6;
    }
 
    public fun setAppIcon(context: Context, id: String) {
       q.h(var1, "context");
       q.h(var2, "id");
-      val var6: AppIcon = this.getAppIconFromId(var2);
-      if (var6 != null) {
-         val var7: PackageManager = var1.getPackageManager();
-         val var9: Array<AppIcon> = AppIcon.values();
-         val var4: Int = var9.length;
+      val var4: AppIcon = this.getAppIconFromId(var2);
+      if (var4 != null) {
+         val var6: PackageManager = var1.getPackageManager();
 
-         for (int var3 = 0; var3 < var4; var3++) {
-            val var8: AppIcon = var9[var3];
-            val var11: ComponentName = new ComponentName(var1, var9[var3].getAlias());
-            val var5: Boolean;
-            if (var8 === var6) {
-               var5 = true;
+         for (AppIcon var7 : AppIcon.getEntries()) {
+            val var5: ComponentName = new ComponentName(var1, var7.getAlias());
+            val var3: Boolean;
+            if (var7 === var4) {
+               var3 = true;
             } else {
-               var5 = false;
+               var3 = false;
             }
 
-            q.e(var7);
-            this.setComponentState(var7, var11, var5);
+            q.e(var6);
+            this.setComponentState(var6, var5, var3);
          }
       } else {
-         val var10: StringBuilder = new StringBuilder();
-         var10.append("App Icon ");
-         var10.append(var2);
-         var10.append(" does not exist.");
-         throw new IllegalArgumentException(var10.toString());
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("App Icon ");
+         var8.append(var2);
+         var8.append(" does not exist.");
+         throw new IllegalArgumentException(var8.toString());
       }
    }
 }

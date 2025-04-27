@@ -9,7 +9,27 @@ import kotlin.jvm.internal.q
 
 internal fun RecyclerView.scrollToCenter(position: Int) {
    q.h(var0, "<this>");
-   scrollToPositionWithOffset(var0, var1, var0.getHeight() / 2);
+   val var3: RecyclerView.LayoutManager = var0.getLayoutManager();
+   q.f(var3, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+   if ((var3 as LinearLayoutManager).getReverseLayout()) {
+      var var2: Int;
+      val var4: RecyclerView.ViewHolder = var0.findViewHolderForAdapterPosition(var1);
+      label17:
+      if (var4 != null && var4.itemView != null) {
+         var2 = var4.itemView.getHeight();
+         break label17;
+      } else {
+         var2 = 0;
+      }
+
+      if (var2 == 0) {
+         var0.scrollToPosition(var1);
+      } else {
+         scrollToPositionWithOffset(var0, var1, var0.getHeight() / 2 - var2 / 2);
+      }
+   } else {
+      scrollToPositionWithOffset(var0, var1, var0.getHeight() / 2);
+   }
 }
 
 internal fun RecyclerView.scrollToPositionAnimated(position: Int, targetAlignment: TargetAlignment, onComplete: () -> Unit) {

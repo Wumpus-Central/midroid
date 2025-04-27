@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.text.style.DynamicDrawableSpan
+import com.discord.chat.bridge.rolecolors.RoleColors
 import com.discord.chat.presentation.message.viewholder.RoleDotDrawable
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.FontManager
@@ -43,7 +44,8 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
       return this.layerDrawable;
    }
 
-   public fun setColor(roleColor: Int) {
-      this.roleDot.setColor(var1);
+   public fun setColors(roleColors: RoleColors) {
+      kotlin.jvm.internal.q.h(var1, "roleColors");
+      this.roleDot.setColors(var1);
    }
 }

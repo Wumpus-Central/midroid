@@ -8,11 +8,8 @@ internal data object FastestListPlaceholderTypeNone : FastestListPlaceholder() {
    public override operator fun equals(other: Any?): Boolean {
       if (this === var1) {
          return true;
-      } else if (var1 !is FastestListPlaceholderTypeNone) {
-         return false;
       } else {
-         var1 = var1;
-         return true;
+         return var1 is FastestListPlaceholderTypeNone;
       }
    }
 

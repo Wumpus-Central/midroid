@@ -6,7 +6,7 @@ import android.graphics.LinearGradient
 import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import android.view.View
-import androidx.core.view.v0
+import androidx.core.view.g0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -31,7 +31,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    private fun drawGradient(c: Canvas, parent: RecyclerView) {
-      val var9: java.util.Iterator = v0.a(var2).iterator();
+      val var9: java.util.Iterator = g0.a(var2).iterator();
       var var7: Int = 0;
       var var5: Float = -1.0F;
       var var4: Float = -1.0F;
@@ -175,21 +175,21 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       }
 
       private fun Context.getColors(useTier0UpsellContent: Boolean): IntArray {
-         val var3: IntArray;
+         val var4: IntArray;
          if (var2) {
-            var3 = new int[]{
+            var4 = new int[]{
                var1.getColor(com.discord.theme.R.color.premium_tier_0_purple_for_gradients),
                var1.getColor(com.discord.theme.R.color.premium_tier_0_blue_for_gradients)
             };
          } else {
-            var3 = new int[]{
+            var4 = new int[]{
                var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients),
                var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients_2),
                var1.getColor(com.discord.theme.R.color.premium_tier_2_pink_for_gradients)
             };
          }
 
-         return var3;
+         return var4;
       }
    }
 }

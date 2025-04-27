@@ -18,7 +18,10 @@ public data class MessageContext(showDivider: Boolean = false,
    enableSwipeToEdit: Boolean = false,
    useAddBurstReaction: Boolean = false,
    obscureLearnMoreLabel: String = "",
-   contextType: MessageContextType = MessageContextType.DEFAULT
+   contextType: MessageContextType = MessageContextType.DEFAULT,
+   replyAccessibilityLabel: String = "",
+   forwardAccessibilityLabel: String = "",
+   threadAccessibilityLabel: String = ""
 ) {
    public final val addNewBurstReactionAccessibilityLabel: String
    public final val addNewReactionAccessibilityLabel: String
@@ -27,9 +30,12 @@ public data class MessageContext(showDivider: Boolean = false,
    public final val contextType: MessageContextType
    public final val enableSwipeToEdit: Boolean
    public final val enableSwipeToReply: Boolean
+   public final val forwardAccessibilityLabel: String
    public final val obscureLearnMoreLabel: String
    public final val reactionsTheme: ReactionsTheme?
+   public final val replyAccessibilityLabel: String
    public final val showDivider: Boolean
+   public final val threadAccessibilityLabel: String
    public final val truncation: Truncation?
    public final val useAddBurstReaction: Boolean
    public final val useAttachmentGridLayout: Boolean
@@ -37,7 +43,7 @@ public data class MessageContext(showDivider: Boolean = false,
    public final val usingGradientTheme: Boolean
 
    fun MessageContext() {
-      this(false, false, null, null, null, null, false, null, false, false, false, false, false, null, null, 32767, null);
+      this(false, false, null, null, null, null, false, null, false, false, false, false, false, null, null, null, null, null, 262143, null);
    }
 
    init {
@@ -46,6 +52,9 @@ public data class MessageContext(showDivider: Boolean = false,
       q.h(var5, "addNewBurstReactionAccessibilityLabel");
       q.h(var14, "obscureLearnMoreLabel");
       q.h(var15, "contextType");
+      q.h(var16, "replyAccessibilityLabel");
+      q.h(var17, "forwardAccessibilityLabel");
+      q.h(var18, "threadAccessibilityLabel");
       super();
       this.showDivider = var1;
       this.canAddNewReactions = var2;
@@ -62,6 +71,9 @@ public data class MessageContext(showDivider: Boolean = false,
       this.useAddBurstReaction = var13;
       this.obscureLearnMoreLabel = var14;
       this.contextType = var15;
+      this.replyAccessibilityLabel = var16;
+      this.forwardAccessibilityLabel = var17;
+      this.threadAccessibilityLabel = var18;
    }
 
    public operator fun component1(): Boolean {
@@ -90,6 +102,18 @@ public data class MessageContext(showDivider: Boolean = false,
 
    public operator fun component15(): MessageContextType {
       return this.contextType;
+   }
+
+   public operator fun component16(): String {
+      return this.replyAccessibilityLabel;
+   }
+
+   public operator fun component17(): String {
+      return this.forwardAccessibilityLabel;
+   }
+
+   public operator fun component18(): String {
+      return this.threadAccessibilityLabel;
    }
 
    public operator fun component2(): Boolean {
@@ -139,14 +163,20 @@ public data class MessageContext(showDivider: Boolean = false,
       enableSwipeToEdit: Boolean = var0.enableSwipeToEdit,
       useAddBurstReaction: Boolean = var0.useAddBurstReaction,
       obscureLearnMoreLabel: String = var0.obscureLearnMoreLabel,
-      contextType: MessageContextType = var0.contextType
+      contextType: MessageContextType = var0.contextType,
+      replyAccessibilityLabel: String = var0.replyAccessibilityLabel,
+      forwardAccessibilityLabel: String = var0.forwardAccessibilityLabel,
+      threadAccessibilityLabel: String = var0.threadAccessibilityLabel
    ): MessageContext {
       q.h(var3, "addReactionLabel");
       q.h(var4, "addNewReactionAccessibilityLabel");
       q.h(var5, "addNewBurstReactionAccessibilityLabel");
       q.h(var14, "obscureLearnMoreLabel");
       q.h(var15, "contextType");
-      return new MessageContext(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15);
+      q.h(var16, "replyAccessibilityLabel");
+      q.h(var17, "forwardAccessibilityLabel");
+      q.h(var18, "threadAccessibilityLabel");
+      return new MessageContext(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -184,18 +214,24 @@ public data class MessageContext(showDivider: Boolean = false,
             return false;
          } else if (!q.c(this.obscureLearnMoreLabel, var1.obscureLearnMoreLabel)) {
             return false;
+         } else if (this.contextType != var1.contextType) {
+            return false;
+         } else if (!q.c(this.replyAccessibilityLabel, var1.replyAccessibilityLabel)) {
+            return false;
+         } else if (!q.c(this.forwardAccessibilityLabel, var1.forwardAccessibilityLabel)) {
+            return false;
          } else {
-            return this.contextType === var1.contextType;
+            return q.c(this.threadAccessibilityLabel, var1.threadAccessibilityLabel);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = java.lang.Boolean.hashCode(this.showDivider);
-      val var4: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
-      val var7: Int = this.addReactionLabel.hashCode();
-      val var5: Int = this.addNewReactionAccessibilityLabel.hashCode();
-      val var3: Int = this.addNewBurstReactionAccessibilityLabel.hashCode();
+      val var4: Int = java.lang.Boolean.hashCode(this.showDivider);
+      val var7: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
+      val var6: Int = this.addReactionLabel.hashCode();
+      val var3: Int = this.addNewReactionAccessibilityLabel.hashCode();
+      val var5: Int = this.addNewBurstReactionAccessibilityLabel.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.reactionsTheme == null) {
@@ -216,80 +252,121 @@ public data class MessageContext(showDivider: Boolean = false,
                                           (
                                                    (
                                                             (
-                                                                     ((((((var6 * 31 + var4) * 31 + var7) * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var8)
+                                                                     (
+                                                                              (
+                                                                                       (
+                                                                                                (
+                                                                                                         (
+                                                                                                                  (
+                                                                                                                           (
+                                                                                                                                    (
+                                                                                                                                             (var4 * 31 + var7)
+                                                                                                                                                   * 31
+                                                                                                                                                + var6
+                                                                                                                                          )
+                                                                                                                                          * 31
+                                                                                                                                       + var3
+                                                                                                                                 )
+                                                                                                                                 * 31
+                                                                                                                              + var5
+                                                                                                                        )
+                                                                                                                        * 31
+                                                                                                                     + var1
+                                                                                                               )
+                                                                                                               * 31
+                                                                                                            + var8
+                                                                                                      )
+                                                                                                      * 31
+                                                                                                   + var2
+                                                                                             )
+                                                                                             * 31
+                                                                                          + java.lang.Boolean.hashCode(this.useAttachmentGridLayout)
+                                                                                    )
+                                                                                    * 31
+                                                                                 + java.lang.Boolean.hashCode(this.useAttachmentUploadPreview)
+                                                                           )
                                                                            * 31
-                                                                        + var2
+                                                                        + java.lang.Boolean.hashCode(this.enableSwipeToReply)
                                                                   )
                                                                   * 31
-                                                               + java.lang.Boolean.hashCode(this.useAttachmentGridLayout)
+                                                               + java.lang.Boolean.hashCode(this.enableSwipeToEdit)
                                                          )
                                                          * 31
-                                                      + java.lang.Boolean.hashCode(this.useAttachmentUploadPreview)
+                                                      + java.lang.Boolean.hashCode(this.useAddBurstReaction)
                                                 )
                                                 * 31
-                                             + java.lang.Boolean.hashCode(this.enableSwipeToReply)
+                                             + this.obscureLearnMoreLabel.hashCode()
                                        )
                                        * 31
-                                    + java.lang.Boolean.hashCode(this.enableSwipeToEdit)
+                                    + this.contextType.hashCode()
                               )
                               * 31
-                           + java.lang.Boolean.hashCode(this.useAddBurstReaction)
+                           + this.replyAccessibilityLabel.hashCode()
                      )
                      * 31
-                  + this.obscureLearnMoreLabel.hashCode()
+                  + this.forwardAccessibilityLabel.hashCode()
             )
             * 31
-         + this.contextType.hashCode();
+         + this.threadAccessibilityLabel.hashCode();
    }
 
    public override fun toString(): String {
       val var4: Boolean = this.showDivider;
-      val var3: Boolean = this.canAddNewReactions;
-      val var14: java.lang.String = this.addReactionLabel;
+      val var2: Boolean = this.canAddNewReactions;
+      val var16: java.lang.String = this.addReactionLabel;
       val var11: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var9: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
-      val var16: ReactionsTheme = this.reactionsTheme;
-      val var5: Boolean = this.usingGradientTheme;
-      val var12: Truncation = this.truncation;
-      val var1: Boolean = this.useAttachmentGridLayout;
-      val var6: Boolean = this.useAttachmentUploadPreview;
-      val var7: Boolean = this.enableSwipeToReply;
-      val var2: Boolean = this.enableSwipeToEdit;
-      val var8: Boolean = this.useAddBurstReaction;
-      val var10: java.lang.String = this.obscureLearnMoreLabel;
+      val var14: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
+      val var18: ReactionsTheme = this.reactionsTheme;
+      val var7: Boolean = this.usingGradientTheme;
+      val var13: Truncation = this.truncation;
+      val var6: Boolean = this.useAttachmentGridLayout;
+      val var3: Boolean = this.useAttachmentUploadPreview;
+      val var8: Boolean = this.enableSwipeToReply;
+      val var5: Boolean = this.enableSwipeToEdit;
+      val var1: Boolean = this.useAddBurstReaction;
+      val var9: java.lang.String = this.obscureLearnMoreLabel;
       val var15: MessageContextType = this.contextType;
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("MessageContext(showDivider=");
-      var13.append(var4);
-      var13.append(", canAddNewReactions=");
-      var13.append(var3);
-      var13.append(", addReactionLabel=");
-      var13.append(var14);
-      var13.append(", addNewReactionAccessibilityLabel=");
-      var13.append(var11);
-      var13.append(", addNewBurstReactionAccessibilityLabel=");
-      var13.append(var9);
-      var13.append(", reactionsTheme=");
-      var13.append(var16);
-      var13.append(", usingGradientTheme=");
-      var13.append(var5);
-      var13.append(", truncation=");
-      var13.append(var12);
-      var13.append(", useAttachmentGridLayout=");
-      var13.append(var1);
-      var13.append(", useAttachmentUploadPreview=");
-      var13.append(var6);
-      var13.append(", enableSwipeToReply=");
-      var13.append(var7);
-      var13.append(", enableSwipeToEdit=");
-      var13.append(var2);
-      var13.append(", useAddBurstReaction=");
-      var13.append(var8);
-      var13.append(", obscureLearnMoreLabel=");
-      var13.append(var10);
-      var13.append(", contextType=");
-      var13.append(var15);
-      var13.append(")");
-      return var13.toString();
+      val var19: java.lang.String = this.replyAccessibilityLabel;
+      val var12: java.lang.String = this.forwardAccessibilityLabel;
+      val var10: java.lang.String = this.threadAccessibilityLabel;
+      val var17: StringBuilder = new StringBuilder();
+      var17.append("MessageContext(showDivider=");
+      var17.append(var4);
+      var17.append(", canAddNewReactions=");
+      var17.append(var2);
+      var17.append(", addReactionLabel=");
+      var17.append(var16);
+      var17.append(", addNewReactionAccessibilityLabel=");
+      var17.append(var11);
+      var17.append(", addNewBurstReactionAccessibilityLabel=");
+      var17.append(var14);
+      var17.append(", reactionsTheme=");
+      var17.append(var18);
+      var17.append(", usingGradientTheme=");
+      var17.append(var7);
+      var17.append(", truncation=");
+      var17.append(var13);
+      var17.append(", useAttachmentGridLayout=");
+      var17.append(var6);
+      var17.append(", useAttachmentUploadPreview=");
+      var17.append(var3);
+      var17.append(", enableSwipeToReply=");
+      var17.append(var8);
+      var17.append(", enableSwipeToEdit=");
+      var17.append(var5);
+      var17.append(", useAddBurstReaction=");
+      var17.append(var1);
+      var17.append(", obscureLearnMoreLabel=");
+      var17.append(var9);
+      var17.append(", contextType=");
+      var17.append(var15);
+      var17.append(", replyAccessibilityLabel=");
+      var17.append(var19);
+      var17.append(", forwardAccessibilityLabel=");
+      var17.append(var12);
+      var17.append(", threadAccessibilityLabel=");
+      var17.append(var10);
+      var17.append(")");
+      return var17.toString();
    }
 }

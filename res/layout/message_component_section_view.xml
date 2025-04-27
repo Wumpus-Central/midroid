@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.flexbox.FlexboxLayout android:id="@id/section_layout_box" android:layout_width="fill_parent" android:layout_height="fill_parent" app:dividerDrawableHorizontal="@drawable/drawable_bot_component_section_row_gap" app:dividerDrawableVertical="@drawable/drawable_bot_component_section_column_gap" app:flexWrap="nowrap" app:showDivider="middle" />
+    <include android:id="@id/section_component_view_group_error_row" layout="@layout/component_failed_label_view" />
+</merge>

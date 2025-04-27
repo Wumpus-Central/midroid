@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.threads
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.G
+import ba.G.a
 import com.discord.chat.bridge.Message
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -56,7 +56,7 @@ public data class ThreadEmbedMessage(message: Message) {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -81,12 +81,12 @@ public data class ThreadEmbedMessage(message: Message) {
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: Message;
          if (var5) {
             var8 = var7.m(var6, 0, Message.$serializer.INSTANCE, null) as Message;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -98,7 +98,7 @@ public data class ThreadEmbedMessage(message: Message) {
                   }
 
                   var8 = var7.m(var6, 0, Message.$serializer.INSTANCE, var8) as Message;
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.R
-import com.discord.chat.bridge.MessageState
 import com.discord.chat.databinding.AttachmentMediaMosaicContainerViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.AccessoriesViewPool
@@ -14,7 +13,6 @@ import com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageA
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
 import com.discord.chat.presentation.message.messagepart.MessageAttachmentAccessory
 import com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory
-import com.discord.chat.presentation.message.view.InlineForwardButtonView
 import com.discord.chat.presentation.message.view.mosaic_recycler.AttachmentMediaMosaicAdapter
 import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
@@ -32,6 +30,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
    private final var onAttachmentClicked: ((Int, MessageAccessory, MessagePartViewHolder) -> Unit)?
    private final var onAttachmentLongClicked: ((Int) -> Unit)?
    private final var onAttachmentSpoilerClicked: (() -> Unit)?
+   private final var onAttachmentObscureToggle: ((Boolean) -> Unit)?
 
    fun AttachmentMediaMosaicContainerView(var1: Context) {
       q.h(var1, "context");
@@ -44,9 +43,9 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       val var4: AttachmentMediaMosaicContainerViewBinding = AttachmentMediaMosaicContainerViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var4, "inflate(...)");
       this.binding = var4;
-      val var5: MosaicLayoutManager = new MosaicLayoutManager(var1);
-      this.mosaicLayoutManager = var5;
-      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new Function2(this) {
+      val var3: MosaicLayoutManager = new MosaicLayoutManager(var1);
+      this.mosaicLayoutManager = var3;
+      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new Function2(this) {
          final AttachmentMediaMosaicContainerView this$0;
 
          {
@@ -92,14 +91,28 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
                var2.invoke();
             }
          }
+      }, new Function1(this) {
+         final AttachmentMediaMosaicContainerView this$0;
+
+         {
+            super(1);
+            this.this$0 = var1;
+         }
+
+         public final void invoke(boolean var1) {
+            val var2: Function1 = AttachmentMediaMosaicContainerView.access$getOnAttachmentObscureToggle$p(this.this$0);
+            if (var2 != null) {
+               var2.invoke(var1);
+            }
+         }
       });
-      this.attachmentAdapter = var3;
+      this.attachmentAdapter = var5;
       val var6: RecyclerView = var4.mosaic;
       q.e(var4.mosaic);
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
       var6.setRecycledViewPool(new AccessoriesViewPool());
-      var6.setLayoutManager(var5);
-      var6.setAdapter(var3);
+      var6.setLayoutManager(var3);
+      var6.setAdapter(var5);
    }
 
    private fun getAttachmentIndex(item: MessageAttachmentAccessory): Int {
@@ -126,46 +139,26 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       onAttachmentClicked: (Int, MessageAccessory, MessagePartViewHolder) -> Unit,
       onAttachmentLongClicked: ((Int) -> Unit)?,
       onAttachmentSpoilerClicked: () -> Unit,
-      onTapInlineForward: () -> Unit,
-      isShowingInlineForward: Boolean,
+      onAttachmentObscureToggle: (Boolean) -> Unit,
       isForwardedContent: Boolean,
       constrainedWidth: Int,
-      messageState: MessageState,
-      shouldAutoPlayGif: Boolean,
-      useOldForwardIcon: Boolean
+      shouldAutoPlayGif: Boolean
    ) {
       q.h(var1, "attachments");
       q.h(var2, "eventHandler");
       q.h(var3, "onAttachmentClicked");
       q.h(var5, "onAttachmentSpoilerClicked");
-      q.h(var6, "onTapInlineForward");
-      q.h(var10, "messageState");
-      val var15: InlineForwardButtonView = this.binding.forward;
-      q.e(this.binding.forward);
-      var var14: Boolean = false;
-      val var13: Byte;
-      if (var7) {
-         var13 = 0;
-      } else {
-         var13 = 8;
-      }
-
-      var15.setVisibility(var13);
-      if (var10 === MessageState.Sent) {
-         var14 = true;
-      }
-
-      var15.configure(var14, var6, var12);
-      val var16: RecyclerView.LayoutManager = this.binding.mosaic.getLayoutManager();
-      q.f(var16, "null cannot be cast to non-null type com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager");
-      val var17: MosaicLayoutManager = var16 as MosaicLayoutManager;
-      (var16 as MosaicLayoutManager).setConstrainedWidth(var9);
-      var17.setIsForwardedContent(var8);
-      var17.setIsShowingInlineForward(var7);
+      q.h(var6, "onAttachmentObscureToggle");
+      val var10: RecyclerView.LayoutManager = this.binding.mosaic.getLayoutManager();
+      q.f(var10, "null cannot be cast to non-null type com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager");
+      val var11: MosaicLayoutManager = var10 as MosaicLayoutManager;
+      (var10 as MosaicLayoutManager).setConstrainedWidth(var8);
+      var11.setIsForwardedContent(var7);
       this.onAttachmentClicked = var3;
       this.onAttachmentLongClicked = var4;
       this.onAttachmentSpoilerClicked = var5;
+      this.onAttachmentObscureToggle = var6;
       this.attachmentAdapter.setChatEventHandler(var2);
-      this.attachmentAdapter.setMediaItems(var1, var11);
+      this.attachmentAdapter.setMediaItems(var1, var9);
    }
 }

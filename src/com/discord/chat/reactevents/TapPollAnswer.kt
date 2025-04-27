@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,21 +77,21 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
       val var3: java.lang.String = this.answerId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapPollAnswer(channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var2);
-      var4.append(", answerId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapPollAnswer(channelId=");
+      var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var1);
+      var2.append(", answerId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -110,7 +110,7 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapPollAnswer {
@@ -118,17 +118,19 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          var var2: Int;
-         var var5: java.lang.String;
          var var6: java.lang.String;
          val var10: java.lang.String;
+         var var12: java.lang.String;
          if (var9.y()) {
-            var6 = var9.t(var8, 0);
-            var5 = var9.t(var8, 1);
+            var12 = var9.t(var8, 0);
+            val var7: java.lang.String = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
             var2 = 7;
+            var6 = var12;
+            var12 = var7;
          } else {
             var6 = null;
-            var5 = null;
+            var12 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -142,7 +144,7 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
                            throw new n(var4);
                         }
 
-                        var5 = var9.t(var8, 2);
+                        var12 = var9.t(var8, 2);
                         var2 |= 4;
                      } else {
                         var11 = var9.t(var8, 1);
@@ -157,12 +159,12 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
                }
             }
 
-            var5 = var11;
-            var10 = var5;
+            var12 = var11;
+            var10 = var12;
          }
 
          var9.b(var8);
-         return new TapPollAnswer(var2, var6, var5, var10, null);
+         return new TapPollAnswer(var2, var6, var12, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapPollAnswer) {

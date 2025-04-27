@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import com.discord.emoji.RenderableEmoji
-import dl.a
-import fl.b2
-import fl.g0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -92,13 +92,13 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       if (this.id != null) {
          val var7: java.lang.Long = h.o(this.id);
          if (var7 != null) {
-            val var2: Long = var7.longValue();
+            val var1: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
             if (this.displayName == null) {
                var8 = this.name;
             }
 
-            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
+            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var1, this.animated, var8);
             if (var9 != null) {
                return var9;
             }
@@ -109,24 +109,24 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var5: java.lang.String = this.name;
-      val var3: java.lang.String = this.displayName;
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.name;
+      val var5: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
       val var2: StringBuilder = new StringBuilder();
       var2.append("PollMediaEmoji(id=");
-      var2.append(var4);
-      var2.append(", name=");
-      var2.append(var5);
-      var2.append(", displayName=");
       var2.append(var3);
+      var2.append(", name=");
+      var2.append(var4);
+      var2.append(", displayName=");
+      var2.append(var5);
       var2.append(", animated=");
       var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -146,8 +146,8 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), fl.h.a};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), var1, a.u(var1), ba.h.a};
       }
 
       public open fun deserialize(decoder: Decoder): PollMediaEmoji {
@@ -160,8 +160,8 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
          var var7: java.lang.String;
          var var11: java.lang.String;
          if (var9.y()) {
-            val var10: b2 = b2.a;
-            var7 = var9.v(var8, 0, b2.a, null) as java.lang.String;
+            val var10: C0 = C0.a;
+            var7 = var9.v(var8, 0, C0.a, null) as java.lang.String;
             var6 = var9.t(var8, 1);
             var11 = var9.v(var8, 2, var10, null) as java.lang.String;
             var5 = var9.s(var8, 3);
@@ -187,7 +187,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
                            var5 = var9.s(var8, 3);
                            var2 |= 8;
                         } else {
-                           var11 = var9.v(var8, 2, b2.a, var11) as java.lang.String;
+                           var11 = var9.v(var8, 2, C0.a, var11) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
@@ -195,7 +195,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.v(var8, 0, b2.a, var7) as java.lang.String;
+                     var7 = var9.v(var8, 0, C0.a, var7) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -218,7 +218,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

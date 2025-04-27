@@ -5,12 +5,7 @@ import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
 public interface ComponentView<T extends Component> {
-   public abstract fun configure(
-      component: Any,
-      componentProvider: ComponentProvider,
-      componentActionListener: ComponentActionListener,
-      componentContext: ComponentContext
-   ) {
+   public abstract fun configure(component: Any, componentProvider: ComponentProvider, componentContext: ComponentContext) {
    }
 
    public abstract fun getComponentType(): KClass<Any> {

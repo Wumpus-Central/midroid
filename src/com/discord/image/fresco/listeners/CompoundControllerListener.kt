@@ -13,7 +13,7 @@ public class CompoundControllerListener(vararg listeners: com.facebook.drawee.co
       this.internalListeners = var1;
    }
 
-   public open fun onFailure(id: String?, throwable: Throwable?) {
+   public override fun onFailure(id: String?, throwable: Throwable?) {
       val var5: Array<com.facebook.drawee.controller.ControllerListener> = this.internalListeners;
       val var4: Int = this.internalListeners.length;
 
@@ -22,7 +22,7 @@ public class CompoundControllerListener(vararg listeners: com.facebook.drawee.co
       }
    }
 
-   public open fun onFinalImageSet(id: String?, imageInfo: Any?, animatable: Animatable?) {
+   public override fun onFinalImageSet(id: String?, imageInfo: Any?, animatable: Animatable?) {
       val var6: Array<com.facebook.drawee.controller.ControllerListener> = this.internalListeners;
       val var5: Int = this.internalListeners.length;
 
@@ -31,7 +31,7 @@ public class CompoundControllerListener(vararg listeners: com.facebook.drawee.co
       }
    }
 
-   public open fun onIntermediateImageFailed(id: String?, throwable: Throwable?) {
+   public override fun onIntermediateImageFailed(id: String?, throwable: Throwable?) {
       val var5: Array<com.facebook.drawee.controller.ControllerListener> = this.internalListeners;
       val var4: Int = this.internalListeners.length;
 
@@ -40,7 +40,7 @@ public class CompoundControllerListener(vararg listeners: com.facebook.drawee.co
       }
    }
 
-   public open fun onIntermediateImageSet(id: String?, imageInfo: Any?) {
+   public override fun onIntermediateImageSet(id: String?, imageInfo: Any?) {
       val var5: Array<com.facebook.drawee.controller.ControllerListener> = this.internalListeners;
       val var4: Int = this.internalListeners.length;
 
@@ -49,7 +49,7 @@ public class CompoundControllerListener(vararg listeners: com.facebook.drawee.co
       }
    }
 
-   public open fun onRelease(id: String?) {
+   public override fun onRelease(id: String?) {
       val var4: Array<com.facebook.drawee.controller.ControllerListener> = this.internalListeners;
       val var3: Int = this.internalListeners.length;
 
@@ -58,7 +58,7 @@ public class CompoundControllerListener(vararg listeners: com.facebook.drawee.co
       }
    }
 
-   public open fun onSubmit(id: String?, callerContext: Any?) {
+   public override fun onSubmit(id: String?, callerContext: Any?) {
       val var5: Array<com.facebook.drawee.controller.ControllerListener> = this.internalListeners;
       val var4: Int = this.internalListeners.length;
 

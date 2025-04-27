@@ -6,6 +6,6 @@ import android.view.View.OnClickListener;
 // $VF: synthetic class
 public final class k implements OnClickListener {
    public final void onClick(View var1) {
-      CtaButtonView.a(var1);
+      AttachmentUploadOverlayView.m(var1);
    }
 }

@@ -39,7 +39,7 @@ internal class StickerViewManagerAPNG : SimpleViewManager<StickerView>, APNGStic
    public open fun setUrl(view: StickerView, value: String?) {
       q.h(var1, "view");
       if (var2 != null) {
-         var1.asApng(var2, null, null, true);
+         var1.asApng(var2, null, null, true, null);
       }
    }
 

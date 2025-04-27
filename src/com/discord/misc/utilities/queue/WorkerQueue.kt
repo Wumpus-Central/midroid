@@ -30,7 +30,7 @@ public class WorkerQueue<T>(popFromEnd: Boolean = true) {
          if (this.popFromEnd) {
             var4 = i.r0(this.nextWorkers);
          } else {
-            var4 = i.f0(this.nextWorkers);
+            var4 = i.g0(this.nextWorkers);
          }
 
          this.currWorker = (T)var4;

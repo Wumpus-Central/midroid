@@ -1,13 +1,13 @@
 package com.discord.chat.input.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -101,7 +101,7 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -121,36 +121,34 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, n0.a, b2.a, b2.a};
+         return new KSerializer[]{N.a, N.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnSelectionOrTextChangeEvent {
          q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
+         var var2: Int;
+         var var3: Int;
          var var4: Int;
-         val var5: Int;
          var var7: java.lang.String;
          val var8: java.lang.String;
-         var var13: Int;
          if (var10.y()) {
-            var13 = var10.k(var9, 0);
-            val var3: Int = var10.k(var9, 1);
+            var4 = var10.k(var9, 0);
+            var3 = var10.k(var9, 1);
             var7 = var10.t(var9, 2);
             val var11: java.lang.String = var10.t(var9, 3);
-            var5 = 15;
-            var4 = var13;
-            var13 = var3;
+            var2 = 15;
             var8 = var11;
          } else {
             var7 = null;
             var var12: java.lang.String = null;
-            var var17: Boolean = true;
+            var var5: Boolean = true;
             var4 = 0;
-            var var15: Int = 0;
-            var13 = 0;
+            var3 = 0;
+            var2 = 0;
 
-            while (var17) {
+            while (var5) {
                val var6: Int = var10.x(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -161,32 +159,30 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
                            }
 
                            var7 = var10.t(var9, 3);
-                           var13 |= 8;
+                           var2 |= 8;
                         } else {
                            var12 = var10.t(var9, 2);
-                           var13 |= 4;
+                           var2 |= 4;
                         }
                      } else {
-                        var15 = var10.k(var9, 1);
-                        var13 |= 2;
+                        var3 = var10.k(var9, 1);
+                        var2 |= 2;
                      }
                   } else {
                      var4 = var10.k(var9, 0);
-                     var13 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var17 = false;
+                  var5 = false;
                }
             }
 
             var8 = var7;
             var7 = var12;
-            var13 = var15;
-            var5 = var13;
          }
 
          var10.b(var9);
-         return new OnSelectionOrTextChangeEvent(var5, var4, var13, var7, var8, null);
+         return new OnSelectionOrTextChangeEvent(var2, var4, var3, var7, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSelectionOrTextChangeEvent) {

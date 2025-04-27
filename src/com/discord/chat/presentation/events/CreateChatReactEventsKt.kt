@@ -5,6 +5,7 @@ import com.discord.chat.reactevents.CompleteFirstLayoutData
 import com.discord.chat.reactevents.FirstLayoutData
 import com.discord.chat.reactevents.InitiateEditData
 import com.discord.chat.reactevents.InitiateReplyData
+import com.discord.chat.reactevents.InitiateThreadData
 import com.discord.chat.reactevents.LongPressAttachmentLinkData
 import com.discord.chat.reactevents.LongPressAvatarData
 import com.discord.chat.reactevents.LongPressChannelData
@@ -19,6 +20,7 @@ import com.discord.chat.reactevents.MediaAttachmentPlaybackEndedData
 import com.discord.chat.reactevents.MediaAttachmentPlaybackStartedData
 import com.discord.chat.reactevents.TapActivityBookmarkEmbedData
 import com.discord.chat.reactevents.TapActivityInstanceEmbedData
+import com.discord.chat.reactevents.TapAppMessageEmbedData
 import com.discord.chat.reactevents.TapAttachmentLinkData
 import com.discord.chat.reactevents.TapAutoModerationActionsData
 import com.discord.chat.reactevents.TapAutoModerationFeedbackData
@@ -42,7 +44,9 @@ import com.discord.chat.reactevents.TapGameIconData
 import com.discord.chat.reactevents.TapGiftCodeAcceptData
 import com.discord.chat.reactevents.TapGiftCodeEmbedData
 import com.discord.chat.reactevents.TapImageData
+import com.discord.chat.reactevents.TapInlineCodeEvent
 import com.discord.chat.reactevents.TapInlineForwardData
+import com.discord.chat.reactevents.TapInviteAcceptEvent
 import com.discord.chat.reactevents.TapInviteEvent
 import com.discord.chat.reactevents.TapInviteToSpeakData
 import com.discord.chat.reactevents.TapJoinActivityData
@@ -51,12 +55,14 @@ import com.discord.chat.reactevents.TapMentionData
 import com.discord.chat.reactevents.TapMessageData
 import com.discord.chat.reactevents.TapMessageReplyData
 import com.discord.chat.reactevents.TapObscuredMediaLearnMoreData
+import com.discord.chat.reactevents.TapObscuredMediaToggleData
 import com.discord.chat.reactevents.TapOpTagData
 import com.discord.chat.reactevents.TapPollAction
 import com.discord.chat.reactevents.TapPollAnswer
 import com.discord.chat.reactevents.TapPollSubmitVote
 import com.discord.chat.reactevents.TapPostPreviewEmbedData
 import com.discord.chat.reactevents.TapReactionData
+import com.discord.chat.reactevents.TapReferralRedeemData
 import com.discord.chat.reactevents.TapRemixData
 import com.discord.chat.reactevents.TapRoleIconData
 import com.discord.chat.reactevents.TapSafetyPolicyNoticeEmbed
@@ -66,6 +72,7 @@ import com.discord.chat.reactevents.TapSelectActionComponent
 import com.discord.chat.reactevents.TapSeparatorData
 import com.discord.chat.reactevents.TapShareForumPost
 import com.discord.chat.reactevents.TapShowAltTextData
+import com.discord.chat.reactevents.TapSoundmojiData
 import com.discord.chat.reactevents.TapStickerData
 import com.discord.chat.reactevents.TapSummaryData
 import com.discord.chat.reactevents.TapSummaryJumpData
@@ -79,89 +86,96 @@ import com.discord.chat.reactevents.TapWelcomeReplyData
 import com.discord.chat.reactevents.VoiceMessagePlaybackFailedData
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.reactevents.ReactEvents
-import kh.w
-import kotlin.jvm.internal.g0
+import f8.w
+import kotlin.jvm.internal.E
 
 internal fun createChatReactEvents(): ReactEvents {
    return new ReactEvents(
-      w.a("onChatScrollPosition", g0.b(ChatScrollPositionEvent.class)),
-      w.a("onLongPressAttachmentLink", g0.b(LongPressAttachmentLinkData.class)),
-      w.a("onLongPressAvatar", g0.b(LongPressAvatarData.class)),
-      w.a("onLongPressMessage", g0.b(LongPressMessageEvent.class)),
-      w.a("onLongPressReaction", g0.b(LongPressReactionData.class)),
-      w.a("onLongPressSticker", g0.b(LongPressStickerData.class)),
-      w.a("onLongPressUsername", g0.b(LongPressUsernameData.class)),
-      w.a("onLongPressCommandMention", g0.b(LongPressCommandData.class)),
-      w.a("onLongPressChannel", g0.b(LongPressChannelData.class)),
-      w.a("onTapAttachmentLink", g0.b(TapAttachmentLinkData.class)),
-      w.a("onTapAvatar", g0.b(TapAvatarData.class)),
-      w.a("onTapButtonActionComponent", g0.b(TapButtonActionComponent.class)),
-      w.a("onTapCall", g0.b(TapCallData.class)),
-      w.a("onTapChannel", g0.b(TapChannelData.class)),
-      w.a("onTapCopyText", g0.b(TapCopyText.class)),
-      w.a("onTapGiftCodeAccept", g0.b(TapGiftCodeAcceptData.class)),
-      w.a("onTapGiftCodeEmbed", g0.b(TapGiftCodeEmbedData.class)),
-      w.a("onTapImage", g0.b(TapImageData.class)),
-      w.a("onTapInviteEmbed", g0.b(TapInviteEvent.class)),
-      w.a("onTapJoinActivity", g0.b(TapJoinActivityData.class)),
-      w.a("onTapLink", g0.b(TapLinkData.class)),
-      w.a("onLongPressLink", g0.b(LongPressLinkData.class)),
-      w.a("onTapMention", g0.b(TapMentionData.class)),
-      w.a("onTapCommandMention", g0.b(TapCommandData.class)),
-      w.a("onTapMessage", g0.b(TapMessageData.class)),
-      w.a("onTapMessageReply", g0.b(TapMessageReplyData.class)),
-      w.a("onTapSummary", g0.b(TapSummaryData.class)),
-      w.a("onTapSummaryJump", g0.b(TapSummaryJumpData.class)),
-      w.a("onTapReaction", g0.b(TapReactionData.class)),
-      w.a("onTapRoleIcon", g0.b(TapRoleIconData.class)),
-      w.a("onTapGameIcon", g0.b(TapGameIconData.class)),
-      w.a("onTapSuppressNotificationsIcon", g0.b(TapSuppressNotificationsIconData.class)),
-      w.a("onTapSeeMore", g0.b(TapSeeMoreData.class)),
-      w.a("onInitiateReply", g0.b(InitiateReplyData.class)),
-      w.a("onInitiateEdit", g0.b(InitiateEditData.class)),
-      w.a("onTapConnectionsRoleTag", g0.b(TapConnectionsRoleTagData.class)),
-      w.a("onTapSelectActionComponent", g0.b(TapSelectActionComponent.class)),
-      w.a("onTapSeparator", g0.b(TapSeparatorData.class)),
-      w.a("onTapSticker", g0.b(TapStickerData.class)),
-      w.a("onTapTimestamp", g0.b(TapTimestampEvent.class)),
-      w.a("onTapThreadEmbed", g0.b(TapThreadEmbedEvent.class)),
-      w.a("onTapUsername", g0.b(TapUsernameData.class)),
-      w.a("onTapUploadProgressClose", g0.b(TapUploadProgressCloseData.class)),
-      w.a("onTapCancelUploadItem", g0.b(TapCancelUploadItemData.class)),
-      w.a("onTapWelcomeReply", g0.b(TapWelcomeReplyData.class)),
-      w.a("onTapInviteToSpeak", g0.b(TapInviteToSpeakData.class)),
-      w.a("onTapEmoji", g0.b(TapEmojiData.class)),
-      w.a("onTapFollowForumPost", g0.b(TapFollowForumPost.class)),
-      w.a("onTapShareForumPost", g0.b(TapShareForumPost.class)),
-      w.a("onTapReactionOverflow", g0.b(TapReactionOverflow.class)),
-      w.a("onTapAutoModerationActions", g0.b(TapAutoModerationActionsData.class)),
-      w.a("onTapAutoModerationFeedback", g0.b(TapAutoModerationFeedbackData.class)),
-      w.a("onTapOpTag", g0.b(TapOpTagData.class)),
-      w.a("onTapShowAltText", g0.b(TapShowAltTextData.class)),
-      w.a("onMediaAttachmentPlaybackEnded", g0.b(MediaAttachmentPlaybackEndedData.class)),
-      w.a("onVoiceMessagePlaybackFailed", g0.b(VoiceMessagePlaybackFailedData.class)),
-      w.a("onMediaAttachmentPlaybackStarted", g0.b(MediaAttachmentPlaybackStartedData.class)),
-      w.a("onTapActivityBookmarkEmbed", g0.b(TapActivityBookmarkEmbedData.class)),
-      w.a("onTapActivityInstanceEmbed", g0.b(TapActivityInstanceEmbedData.class)),
-      w.a("onTapPostPreviewEmbed", g0.b(TapPostPreviewEmbedData.class)),
-      w.a("onTapDismissMediaPostSharePrompt", g0.b(TapDismissMediaPostSharePromptData.class)),
-      w.a("onTapTag", g0.b(TapTagData.class)),
-      w.a("onTapRemix", g0.b(TapRemixData.class)),
-      w.a("onTapChannelPromptButton", g0.b(TapChannelPromptButtonData.class)),
-      w.a("onTapObscuredMediaLearnMore", g0.b(TapObscuredMediaLearnMoreData.class)),
-      w.a("onTapSafetyPolicyNoticeEmbed", g0.b(TapSafetyPolicyNoticeEmbed.class)),
-      w.a("onTapSafetySystemNotificationCta", g0.b(TapSafetySystemNotificationCta.class)),
-      w.a("onTapPollAnswer", g0.b(TapPollAnswer.class)),
-      w.a("onTapPollSubmitVote", g0.b(TapPollSubmitVote.class)),
-      w.a("onTapPollAction", g0.b(TapPollAction.class)),
-      w.a("onLongPressPollImage", g0.b(LongPressPollImageData.class)),
-      w.a("onTapCtaButton", g0.b(TapCtaButton.class)),
-      w.a("onFirstLayout", g0.b(FirstLayoutData.class)),
-      w.a("onCompleteFirstLayout", g0.b(CompleteFirstLayoutData.class)),
-      w.a("onMediaPlayFinishedAnalytics", g0.b(MediaPlayFinishedAnalytics.class)),
-      w.a("onTapForwardFooter", g0.b(TapForwardFooterData.class)),
-      w.a("onTapInlineForward", g0.b(TapInlineForwardData.class)),
-      w.a("onTapClanTagChiplet", g0.b(TapClanTagChipletData.class)),
-      w.a("onTapContentInventoryEntryEmbed", g0.b(TapContentInventoryEntryEmbedData.class))
+      w.a("onChatScrollPosition", E.b(ChatScrollPositionEvent.class)),
+      w.a("onLongPressAttachmentLink", E.b(LongPressAttachmentLinkData.class)),
+      w.a("onLongPressAvatar", E.b(LongPressAvatarData.class)),
+      w.a("onLongPressMessage", E.b(LongPressMessageEvent.class)),
+      w.a("onLongPressReaction", E.b(LongPressReactionData.class)),
+      w.a("onLongPressSticker", E.b(LongPressStickerData.class)),
+      w.a("onLongPressUsername", E.b(LongPressUsernameData.class)),
+      w.a("onLongPressCommandMention", E.b(LongPressCommandData.class)),
+      w.a("onLongPressChannel", E.b(LongPressChannelData.class)),
+      w.a("onTapAttachmentLink", E.b(TapAttachmentLinkData.class)),
+      w.a("onTapAvatar", E.b(TapAvatarData.class)),
+      w.a("onTapButtonActionComponent", E.b(TapButtonActionComponent.class)),
+      w.a("onTapCall", E.b(TapCallData.class)),
+      w.a("onTapChannel", E.b(TapChannelData.class)),
+      w.a("onTapCopyText", E.b(TapCopyText.class)),
+      w.a("onTapGiftCodeAccept", E.b(TapGiftCodeAcceptData.class)),
+      w.a("onTapGiftCodeEmbed", E.b(TapGiftCodeEmbedData.class)),
+      w.a("onTapReferralRedeem", E.b(TapReferralRedeemData.class)),
+      w.a("onTapImage", E.b(TapImageData.class)),
+      w.a("onTapInviteEmbed", E.b(TapInviteEvent.class)),
+      w.a("onTapInviteEmbedAccept", E.b(TapInviteAcceptEvent.class)),
+      w.a("onTapJoinActivity", E.b(TapJoinActivityData.class)),
+      w.a("onTapLink", E.b(TapLinkData.class)),
+      w.a("onLongPressLink", E.b(LongPressLinkData.class)),
+      w.a("onTapMention", E.b(TapMentionData.class)),
+      w.a("onTapCommandMention", E.b(TapCommandData.class)),
+      w.a("onTapMessage", E.b(TapMessageData.class)),
+      w.a("onTapMessageReply", E.b(TapMessageReplyData.class)),
+      w.a("onTapSummary", E.b(TapSummaryData.class)),
+      w.a("onTapSummaryJump", E.b(TapSummaryJumpData.class)),
+      w.a("onTapReaction", E.b(TapReactionData.class)),
+      w.a("onTapRoleIcon", E.b(TapRoleIconData.class)),
+      w.a("onTapGameIcon", E.b(TapGameIconData.class)),
+      w.a("onTapSuppressNotificationsIcon", E.b(TapSuppressNotificationsIconData.class)),
+      w.a("onTapSeeMore", E.b(TapSeeMoreData.class)),
+      w.a("onInitiateReply", E.b(InitiateReplyData.class)),
+      w.a("onInitiateThread", E.b(InitiateThreadData.class)),
+      w.a("onInitiateEdit", E.b(InitiateEditData.class)),
+      w.a("onTapConnectionsRoleTag", E.b(TapConnectionsRoleTagData.class)),
+      w.a("onTapSelectActionComponent", E.b(TapSelectActionComponent.class)),
+      w.a("onTapSeparator", E.b(TapSeparatorData.class)),
+      w.a("onTapSticker", E.b(TapStickerData.class)),
+      w.a("onTapTimestamp", E.b(TapTimestampEvent.class)),
+      w.a("onTapInlineCode", E.b(TapInlineCodeEvent.class)),
+      w.a("onTapThreadEmbed", E.b(TapThreadEmbedEvent.class)),
+      w.a("onTapUsername", E.b(TapUsernameData.class)),
+      w.a("onTapUploadProgressClose", E.b(TapUploadProgressCloseData.class)),
+      w.a("onTapCancelUploadItem", E.b(TapCancelUploadItemData.class)),
+      w.a("onTapWelcomeReply", E.b(TapWelcomeReplyData.class)),
+      w.a("onTapInviteToSpeak", E.b(TapInviteToSpeakData.class)),
+      w.a("onTapEmoji", E.b(TapEmojiData.class)),
+      w.a("onTapFollowForumPost", E.b(TapFollowForumPost.class)),
+      w.a("onTapShareForumPost", E.b(TapShareForumPost.class)),
+      w.a("onTapReactionOverflow", E.b(TapReactionOverflow.class)),
+      w.a("onTapAutoModerationActions", E.b(TapAutoModerationActionsData.class)),
+      w.a("onTapAutoModerationFeedback", E.b(TapAutoModerationFeedbackData.class)),
+      w.a("onTapOpTag", E.b(TapOpTagData.class)),
+      w.a("onTapShowAltText", E.b(TapShowAltTextData.class)),
+      w.a("onMediaAttachmentPlaybackEnded", E.b(MediaAttachmentPlaybackEndedData.class)),
+      w.a("onVoiceMessagePlaybackFailed", E.b(VoiceMessagePlaybackFailedData.class)),
+      w.a("onMediaAttachmentPlaybackStarted", E.b(MediaAttachmentPlaybackStartedData.class)),
+      w.a("onTapActivityBookmarkEmbed", E.b(TapActivityBookmarkEmbedData.class)),
+      w.a("onTapActivityInstanceEmbed", E.b(TapActivityInstanceEmbedData.class)),
+      w.a("onTapAppMessageEmbed", E.b(TapAppMessageEmbedData.class)),
+      w.a("onTapPostPreviewEmbed", E.b(TapPostPreviewEmbedData.class)),
+      w.a("onTapDismissMediaPostSharePrompt", E.b(TapDismissMediaPostSharePromptData.class)),
+      w.a("onTapTag", E.b(TapTagData.class)),
+      w.a("onTapRemix", E.b(TapRemixData.class)),
+      w.a("onTapChannelPromptButton", E.b(TapChannelPromptButtonData.class)),
+      w.a("onTapObscuredMediaLearnMore", E.b(TapObscuredMediaLearnMoreData.class)),
+      w.a("onTapObscuredMediaToggle", E.b(TapObscuredMediaToggleData.class)),
+      w.a("onTapSafetyPolicyNoticeEmbed", E.b(TapSafetyPolicyNoticeEmbed.class)),
+      w.a("onTapSafetySystemNotificationCta", E.b(TapSafetySystemNotificationCta.class)),
+      w.a("onTapPollAnswer", E.b(TapPollAnswer.class)),
+      w.a("onTapPollSubmitVote", E.b(TapPollSubmitVote.class)),
+      w.a("onTapPollAction", E.b(TapPollAction.class)),
+      w.a("onLongPressPollImage", E.b(LongPressPollImageData.class)),
+      w.a("onTapCtaButton", E.b(TapCtaButton.class)),
+      w.a("onFirstLayout", E.b(FirstLayoutData.class)),
+      w.a("onCompleteFirstLayout", E.b(CompleteFirstLayoutData.class)),
+      w.a("onMediaPlayFinishedAnalytics", E.b(MediaPlayFinishedAnalytics.class)),
+      w.a("onTapForwardFooter", E.b(TapForwardFooterData.class)),
+      w.a("onTapInlineForward", E.b(TapInlineForwardData.class)),
+      w.a("onTapClanTagChiplet", E.b(TapClanTagChipletData.class)),
+      w.a("onTapContentInventoryEntryEmbed", E.b(TapContentInventoryEntryEmbedData.class)),
+      w.a("onTapSoundmoji", E.b(TapSoundmojiData.class))
    );
 }

@@ -27,6 +27,8 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       spoilerConfig: SpoilerConfig?,
       isObscure: Boolean,
       isObscureAwaitingScan: Boolean,
+      obscureHideControls: Boolean,
+      obscureIsOpaque: Boolean,
       showDescription: Boolean,
       description: String?,
       descriptionHint: String?,
@@ -40,34 +42,35 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       uploadItemProps: UploadItemProps?,
       accessibilityRole: String?,
       shouldAutoPlayGif: Boolean,
-      filename: String?
+      filename: String?,
+      srcIsAnimated: Boolean
    ) {
       kotlin.jvm.internal.q.h(var1, "url");
-      kotlin.jvm.internal.q.h(var16, "resizeMode");
-      this.view.setContent(var1, var2, var3, var16, var4, var5, var6, var7, var15, var20, var8, var9, var17, var22, var23);
-      if (var18 != null) {
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.view, false, var18, 1, null);
+      kotlin.jvm.internal.q.h(var18, "resizeMode");
+      this.view.setContent(var1, var2, var3, var18, var4, var5, var6, var7, var17, var22, var8, var9, var10, var11, var19, var24, var25, var26);
+      if (var20 != null) {
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.view, false, var20, 1, null);
       }
 
-      if (var19 != null) {
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.view, false, var19, 1, null);
+      if (var21 != null) {
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.view, false, var21, 1, null);
       }
 
-      this.view.setDescription(var11, var12);
-      if (var13 && var10) {
+      this.view.setDescription(var13, var14);
+      if (var15 && var12) {
          var6 = true;
       } else {
          var6 = false;
       }
 
-      this.view.showAltTextButton(var6, var11, var14);
-      if (!var13 && var10) {
+      this.view.showAltTextButton(var6, var13, var16);
+      if (!var15 && var12) {
          var6 = true;
       } else {
          var6 = false;
       }
 
-      this.view.showDescription(var6, var11);
-      this.view.setRole(var21);
+      this.view.showDescription(var6, var13);
+      this.view.setRole(var23);
    }
 }

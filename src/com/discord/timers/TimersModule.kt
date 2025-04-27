@@ -1,28 +1,26 @@
 package com.discord.timers
 
-import com.discord.codegen.NativeTimersSpec
+import com.discord.codegen.NativeTimersModuleSpec
 import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactMethod
-import kh.w
+import f8.w
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 
-public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersSpec {
+public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersModuleSpec {
    private final val reactEvents: ReactEvents
    private final val timersManager: TimersManager
 
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(w.a("timer", g0.b(TimerEvent.class)), w.a("interval", g0.b(IntervalEvent.class)));
+      this.reactEvents = new ReactEvents(w.a("timer", E.b(TimerEvent.class)), w.a("interval", E.b(IntervalEvent.class)));
       this.timersManager = new TimersManager(var1);
    }
 
-   @ReactMethod
    public override fun addListener(type: String) {
       q.h(var1, "type");
    }
@@ -35,11 +33,6 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
       this.timersManager.clearTimeout((int)var1);
    }
 
-   public override fun getName(): String {
-      return "TimersModule";
-   }
-
-   @ReactMethod
    public override fun removeListeners(count: Double) {
    }
 
@@ -81,9 +74,5 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersS
             var1.emitModuleEvent(var2, new TimerEvent((int)this.$id));
          }
       });
-   }
-
-   public companion object {
-      public const val NAME: String
    }
 }

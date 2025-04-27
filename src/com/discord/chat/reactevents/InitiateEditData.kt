@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.G
+import ba.p0
+import ba.G.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.g0
-import fl.o1
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -26,7 +26,7 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
 
    fun InitiateEditData(var1: Int, var2: java.lang.String, var3: ChannelId, var4: SerializationConstructorMarker) {
       if (3 != (var1 and 3)) {
-         o1.b(var1, 3, InitiateEditData.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 3, InitiateEditData.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -89,7 +89,7 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -115,10 +115,11 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          var var2: Int;
-         val var6: ChannelId;
-         val var10: java.lang.String;
+         val var6: java.lang.String;
+         var var11: ChannelId;
          if (var8.y()) {
             val var9: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var10: java.lang.String;
             if (var9 != null) {
                var10 = var9.unbox-impl();
             } else {
@@ -127,12 +128,13 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
 
             val var5: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
-            var6 = var5;
+            var6 = var10;
+            var11 = var5;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var var12: java.lang.String = null;
-            var var11: ChannelId = null;
+            var11 = null;
 
             while (var3) {
                val var4: Int = var8.x(var7);
@@ -166,12 +168,11 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
                }
             }
 
-            var6 = var11;
-            var10 = var12;
+            var6 = var12;
          }
 
          var8.b(var7);
-         return new InitiateEditData(var2, var10, var6, null, null);
+         return new InitiateEditData(var2, var6, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: InitiateEditData) {

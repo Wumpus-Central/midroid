@@ -3,10 +3,10 @@ package com.discord.chat.presentation.message.view.media
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import kh.l
+import f8.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import zb.f
+import y5.f
 
 public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, viewScrolling: (Boolean) -> Unit = <unrepresentable>.INSTANCE) :
    OnAttachStateChangeListener {

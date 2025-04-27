@@ -113,13 +113,13 @@ public fun TextView.setOptionalText(text: CharSequence?) {
    q.h(var0, "<this>");
    var0.setText(var1);
    var var2: Boolean;
-   if (var1 != null && !h.x(var1)) {
+   if (var1 != null && !h.d0(var1)) {
       var2 = 0;
    } else {
       var2 = 1;
    }
 
-   if (var2 xor true) {
+   if (!var2) {
       var2 = 0;
    } else {
       var2 = 8;

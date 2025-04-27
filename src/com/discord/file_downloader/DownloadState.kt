@@ -88,5 +88,21 @@ public sealed class DownloadState protected constructor() {
       }
    }
 
-   public object InProgress : DownloadState()
+   public data object InProgress : DownloadState() {
+      public override operator fun equals(other: Any?): Boolean {
+         if (this === var1) {
+            return true;
+         } else {
+            return var1 is DownloadState.InProgress;
+         }
+      }
+
+      public override fun hashCode(): Int {
+         return -1387500676;
+      }
+
+      public override fun toString(): String {
+         return "InProgress";
+      }
+   }
 }

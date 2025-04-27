@@ -5,14 +5,13 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
-import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.chat.bridge.botuikit.ActionComponentState
 import com.discord.chat.bridge.botuikit.ButtonComponent
 import com.discord.chat.bridge.botuikit.ButtonStyle
 import com.discord.chat.bridge.botuikit.ComponentEmoji
 import com.discord.chat.databinding.MessageComponentButtonViewBinding
-import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
@@ -30,14 +29,14 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
-import kh.l
+import f8.l
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-   : RelativeLayout,
+   : ConstraintLayout,
    ComponentView<ButtonComponent> {
    public final val binding: MessageComponentButtonViewBinding
    private final var currentComponent: ButtonComponent?
@@ -77,25 +76,30 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          }
 
          public final ProgressDots invoke() {
-            val var1: View = this.this$0.getBinding().loadingDotsStub.inflate();
+            val var1: View = this.this$0.getBinding().loadingDots.inflate();
             q.f(var1, "null cannot be cast to non-null type com.discord.progress_dots.ProgressDots");
             return var1 as ProgressDots;
          }
       });
       this.currentStyle = ButtonStyle.UNKNOWN;
+      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var6.b(0.0F);
+      this.setLayoutParams(var6);
+      this.setMinWidth(SizeUtilsKt.getDpToPx(52));
+      this.setMinimumWidth(this.getMinWidth());
       val var5: SimpleDraweeView = var4.linkIcon;
       q.g(var4.linkIcon, "linkIcon");
       this.configureLinkIcon(var5);
    }
 
    @JvmStatic
-   fun `configure$lambda$1`(var0: ButtonComponent, var1: ComponentActionListener, var2: View) {
+   fun `configure$lambda$1`(var0: ButtonComponent, var1: ComponentContext, var2: View) {
       q.h(var0, "$component");
-      q.h(var1, "$componentActionListener");
+      q.h(var1, "$componentContext");
       if (var0.getUrl() != null) {
-         var1.openLink(var0.getUrl());
+         var1.getComponentActionEventHandlers().getOnTapButtonLinkComponent().invoke(var0.getUrl());
       } else if (var0.getCustomId() != null || var0.getStyle() === ButtonStyle.PREMIUM) {
-         var1.onTapButtonActionComponent(var0.getId());
+         var1.getComponentActionEventHandlers().getOnTapButtonActionComponent().invoke(var0.getId());
       }
    }
 
@@ -187,29 +191,23 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
       }
    }
 
-   public open fun configure(
-      component: ButtonComponent,
-      componentProvider: ComponentProvider,
-      componentActionListener: ComponentActionListener,
-      componentContext: ComponentContext
-   ) {
+   public open fun configure(component: ButtonComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
       q.h(var1, "component");
       q.h(var2, "componentProvider");
-      q.h(var3, "componentActionListener");
-      q.h(var4, "componentContext");
+      q.h(var3, "componentContext");
       if (!q.c(var1, this.currentComponent)) {
-         var var7: Boolean;
+         var var6: Boolean;
          if (var1.getState() != ActionComponentState.DISABLED && !var1.getDisabled()) {
-            var7 = 0;
+            var6 = 0;
          } else {
-            var7 = 1;
+            var6 = 1;
          }
 
-         val var9: Boolean;
+         val var8: Boolean;
          if (var1.getState() === ActionComponentState.LOADING) {
-            var9 = true;
+            var8 = true;
          } else {
-            var9 = false;
+            var8 = false;
          }
 
          val var13: MaterialButton = this.binding.button;
@@ -217,86 +215,88 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          this.configureStyle(var13, var1.getStyle());
          val var14: SimpleDraweeSpanTextView = this.binding.emoji;
          q.g(this.binding.emoji, "emoji");
-         this.configureEmoji(var14, var1.getEmoji(), var9);
+         this.configureEmoji(var14, var1.getEmoji(), var8);
          val var15: MaterialTextView = this.binding.label;
          q.g(this.binding.label, "label");
          this.configureLabelPadding(var15, var1);
-         var var5: Float;
-         if (var7) {
-            var5 = 0.5F;
+         var var4: Float;
+         if (var6) {
+            var4 = 0.5F;
          } else {
-            var5 = 1.0F;
+            var4 = 1.0F;
          }
 
-         this.binding.label.setAlpha(var5);
-         if (var7) {
-            var5 = 0.3F;
+         this.binding.label.setAlpha(var4);
+         if (var6) {
+            var4 = 0.3F;
          } else {
-            var5 = 1.0F;
+            var4 = 1.0F;
          }
 
-         this.binding.emoji.setAlpha(var5);
-         var5 = 1.0F;
-         if (var7) {
-            var5 = 0.3F;
+         this.binding.emoji.setAlpha(var4);
+         var4 = 1.0F;
+         if (var6) {
+            var4 = 0.3F;
          }
 
-         this.binding.linkIcon.setAlpha(var5);
-         this.binding.button.setEnabled((boolean)(var7 xor true));
+         this.binding.linkIcon.setAlpha(var4);
+         this.binding.button.setEnabled((boolean)(var6 xor true));
          val var19: SimpleDraweeView = this.binding.linkIcon;
          q.g(this.binding.linkIcon, "linkIcon");
          if (var1.getStyle() === ButtonStyle.LINK) {
-            var7 = (boolean)1;
+            var6 = (boolean)1;
          } else {
-            var7 = (boolean)0;
+            var6 = (boolean)0;
          }
 
-         if (var7) {
-            var7 = 0;
+         if (var6) {
+            var6 = 0;
          } else {
-            var7 = 8;
+            var6 = 8;
          }
 
-         var19.setVisibility(var7);
+         var19.setVisibility(var6);
          val var20: MaterialTextView = this.binding.label;
          this.binding.label.setText(var1.getLabel());
          q.e(var20);
-         if (var9) {
-            var7 = 4;
+         if (var8) {
+            var6 = 4;
          } else {
-            var7 = 0;
+            var6 = 0;
          }
 
-         var20.setVisibility(var7);
+         var20.setVisibility(var6);
          DiscordFontUtilsKt.setDiscordFont(var20, DiscordFont.PrimaryMedium);
          var20.setTextColor(ColorUtilsKt.getColorCompat(var20, R.color.white));
-         if (!var9) {
+         if (!var8) {
             val var21: MaterialButton = this.binding.button;
             q.g(this.binding.button, "button");
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new a(var1, var3), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(
+               var21, false, new com.discord.chat.presentation.message.view.botuikit.components.a(var1, var3), 1, null
+            );
          } else {
             val var10: MaterialButton = this.binding.button;
             q.g(this.binding.button, "button");
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, new b(), 1, null);
          }
 
-         if (var9 != this.currentIsLoading) {
+         if (var8 != this.currentIsLoading) {
             val var11: ProgressDots = this.getProgressDots();
-            if (var9) {
-               var7 = 0;
+            if (var8) {
+               var6 = 0;
             } else {
-               var7 = 8;
+               var6 = 8;
             }
 
-            var11.setVisibility(var7);
+            var11.setVisibility(var6);
          }
 
-         this.currentIsLoading = var9;
+         this.currentIsLoading = var8;
       }
    }
 
    public override fun getComponentType(): KClass<ButtonComponent> {
-      return g0.b(ButtonComponent.class);
+      return E.b(ButtonComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

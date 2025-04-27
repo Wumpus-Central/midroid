@@ -1,17 +1,15 @@
 package com.discord.billing;
 
+import Y0.i;
 import com.android.billingclient.api.BillingResult;
-import kotlin.jvm.functions.Function0;
-import kotlin.jvm.functions.Function1;
+import java.util.List;
 
 // $VF: synthetic class
-public final class b implements c3.e {
-   public final BillingManager a;
-   public final Function1 b;
-   public final Function0 c;
+public final class b implements i {
+   public final BillingManager j;
 
    @Override
-   public final void a(BillingResult var1, String var2) {
-      BillingManager.d(this.a, this.b, this.c, var1, var2);
+   public final void onPurchasesUpdated(BillingResult var1, List var2) {
+      BillingManager.b(this.j, var1, var2);
    }
 }

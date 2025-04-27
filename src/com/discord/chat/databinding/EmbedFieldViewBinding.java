@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import o1.a;
+import u0.a;
 
 public final class EmbedFieldViewBinding implements ViewBinding {
    public final SimpleDraweeSpanTextView name;

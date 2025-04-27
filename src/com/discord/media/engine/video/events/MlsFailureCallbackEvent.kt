@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,20 +77,20 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var3: java.lang.String = this.source;
-      val var2: java.lang.String = this.reason;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MlsFailureCallbackEvent(connectionId=");
-      var4.append(var1);
-      var4.append(", source=");
-      var4.append(var3);
-      var4.append(", reason=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.source;
+      val var4: java.lang.String = this.reason;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MlsFailureCallbackEvent(connectionId=");
+      var3.append(var1);
+      var3.append(", source=");
+      var3.append(var2);
+      var3.append(", reason=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -111,31 +111,32 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, b2.a};
+         return new KSerializer[]{N.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): MlsFailureCallbackEvent {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: java.lang.String;
          val var7: java.lang.String;
          if (var9.y()) {
-            var2 = var9.k(var8, 0);
+            val var2: Int = var9.k(var8, 0);
             var7 = var9.t(var8, 1);
             val var10: java.lang.String = var9.t(var8, 2);
             var3 = 7;
+            var4 = var2;
             var6 = var10;
          } else {
             var6 = null;
             var var11: java.lang.String = null;
-            var var4: Boolean = true;
+            var var14: Boolean = true;
             var3 = 0;
-            var2 = 0;
+            var var12: Int = 0;
 
-            while (var4) {
+            while (var14) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -145,27 +146,27 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
                         }
 
                         var6 = var9.t(var8, 2);
-                        var2 |= 4;
+                        var12 |= 4;
                      } else {
                         var11 = var9.t(var8, 1);
-                        var2 |= 2;
+                        var12 |= 2;
                      }
                   } else {
                      var3 = var9.k(var8, 0);
-                     var2 |= 1;
+                     var12 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var14 = false;
                }
             }
 
             var7 = var11;
-            var2 = var3;
-            var3 = var2;
+            var4 = var3;
+            var3 = var12;
          }
 
          var9.b(var8);
-         return new MlsFailureCallbackEvent(var3, var2, var7, var6, null);
+         return new MlsFailureCallbackEvent(var3, var4, var7, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MlsFailureCallbackEvent) {

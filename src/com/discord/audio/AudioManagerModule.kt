@@ -3,7 +3,7 @@ package com.discord.audio
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioManagerAudioDeviceChanged
 import com.discord.audio.react.events.AudioManagerAudioDevicesUpdated
-import com.discord.codegen.NativeAudioManagerSpec
+import com.discord.codegen.NativeAudioManagerModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.NativeModule
@@ -13,14 +13,12 @@ import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
-public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeAudioManagerSpec {
+public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeAudioManagerModuleSpec {
    private final lateinit var audioManager: DiscordAudioManagerInterface
-   private final val reactContext: ReactApplicationContext
 
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactContext = var1;
    }
 
    public override fun addListener(eventType: String) {
@@ -54,7 +52,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
          var4.add((var6.next() as AndroidAudioDevice).toNativeMap());
       }
 
-      var1.resolve(NativeArrayExtensionsKt.toNativeArray(var4));
+      var1.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));
    }
 
    public override fun removeListeners(count: Double) {
@@ -93,7 +91,6 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
    }
 
    public companion object {
-      public const val NAME: String
       private final val reactEvents: ReactEvents
 
       public fun create(reactContext: ReactApplicationContext): NativeModule {

@@ -142,9 +142,9 @@ public object MarkdownRules {
          label42: {
             val var6: java.lang.String = var1.group(2);
             if (var6 != null) {
-               val var7: java.lang.String = h.X0(var6).toString();
+               val var7: java.lang.String = h.a1(var6).toString();
                if (var7 != null) {
-                  var8 = h.y0(var7, new char[]{' '}, false, 0, 6, null);
+                  var8 = h.B0(var7, new char[]{' '}, false, 0, 6, null);
                   break label42;
                }
             }
@@ -173,7 +173,7 @@ public object MarkdownRules {
          }
 
          var var14: StyleNode = var5;
-         if (var9.isEmpty() xor true) {
+         if (!var9.isEmpty()) {
             var14 = new StyleNode((java.util.List<? extends T>)var9);
             var14.addChild(var5);
          }
@@ -234,10 +234,10 @@ public object MarkdownRules {
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
          q.h(var1, "matcher");
          q.h(var2, "parser");
-         val var4: ParseSpec.Companion = ParseSpec.Companion;
-         val var5: java.lang.String = var1.group(1);
-         q.g(var5, "matcher.group(1)");
-         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(2), var1.end(2));
+         val var5: ParseSpec.Companion = ParseSpec.Companion;
+         val var4: java.lang.String = var1.group(1);
+         q.g(var4, "matcher.group(1)");
+         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(2), var1.end(2));
       }
    }
 

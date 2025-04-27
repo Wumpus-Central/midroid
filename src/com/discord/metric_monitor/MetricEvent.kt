@@ -1,16 +1,16 @@
 package com.discord.metric_monitor
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import dl.a
-import fl.b2
-import fl.g0
-import kh.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -74,14 +74,12 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
 
    public override fun serialize(): WritableMap {
       val var2: Pair = w.a("name", this.name);
-      val var3: ReadableNativeArray;
+      var var1: ReadableNativeArray = null;
       if (this.tags != null) {
-         var3 = NativeArrayExtensionsKt.toNativeArray(this.tags);
-      } else {
-         var3 = null;
+         var1 = NativeArrayExtensionsKt.toNativeArray$default(this.tags, null, 1, null);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(w.a("data", NativeMapExtensionsKt.nativeMapOf(var2, w.a("tags", var3))));
+      return NativeMapExtensionsKt.nativeMapOf(w.a("data", NativeMapExtensionsKt.nativeMapOf(var2, w.a("tags", var1))));
    }
 
    public override fun toString(): String {
@@ -96,7 +94,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -114,7 +112,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, a.u(MetricEvent.access$get$childSerializers$cp()[1])};
+         return new KSerializer[]{C0.a, a.u(MetricEvent.access$get$childSerializers$cp()[1])};
       }
 
       public open fun deserialize(decoder: Decoder): MetricEvent {
@@ -169,7 +167,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

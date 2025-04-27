@@ -12,7 +12,7 @@ import java.util.Locale
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.l0
+import kotlin.jvm.internal.J
 import kotlin.jvm.internal.q
 import org.webrtc.ThreadUtils
 import org.webrtc.VideoFrame
@@ -158,10 +158,10 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
       }
    }
 
-   public override fun onFrame(frame: VideoFrame) {
+   public override fun onFrame(frame: VideoFrame, mirror: Boolean) {
       q.h(var1, "frame");
       this.updateFrameDimensionsAndReportEvents(var1);
-      super.onFrame(var1);
+      super.onFrame(var1, var2);
    }
 
    public override fun onGlOutOfMemory() {
@@ -171,21 +171,21 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    public open fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
       q.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var5: Log = Log.INSTANCE;
-         val var9: java.lang.String = access$getName(this);
+         val var9: Log = Log.INSTANCE;
+         val var6: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("createEglSurface (");
-         var6.append(var2);
-         var6.append(" total)");
-         Log.i$default(var5, var9, var6.toString(), null, 4, null);
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("createEglSurface (");
+         var5.append(var2);
+         var5.append(" total)");
+         Log.i$default(var9, var6, var5.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var7);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var4);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 
@@ -208,16 +208,16 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
          val var5: Long = System.currentTimeMillis();
-         val var11: Log = Log.INSTANCE;
-         val var12: java.lang.String = access$getName(this);
+         val var8: Log = Log.INSTANCE;
+         val var11: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("releaseEglSurface (");
-         var8.append(var5 - var3);
-         var8.append(" ms) (");
-         var8.append(var2);
-         var8.append(" total)");
-         Log.i$default(var11, var12, var8.toString(), null, 4, null);
+         val var12: StringBuilder = new StringBuilder();
+         var12.append("releaseEglSurface (");
+         var12.append(var5 - var3);
+         var12.append(" ms) (");
+         var12.append(var2);
+         var12.append(" total)");
+         Log.i$default(var8, var11, var12.toString(), null, 4, null);
          return true;
       } else {
          val var7: Thread = Thread.currentThread();
@@ -240,7 +240,7 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
       private final val count: AtomicInteger
 
       private fun Float.toNiceString(): String {
-         val var2: l0 = l0.a;
+         val var2: J = J.a;
          val var3: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.3f", Arrays.copyOf(new Object[]{var1}, 1));
          q.g(var3, "format(...)");
          return var3;

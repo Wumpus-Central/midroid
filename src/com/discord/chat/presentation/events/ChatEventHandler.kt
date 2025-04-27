@@ -3,7 +3,9 @@ package com.discord.chat.presentation.events
 import com.discord.chat.bridge.MediaType
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.chat.presentation.list.ScrollState
 import com.discord.chat.reactevents.ViewResizeMode
@@ -44,13 +46,21 @@ public interface ChatEventHandler {
    public abstract fun onCompleteFirstLayout() {
    }
 
-   public abstract fun onFirstLayout(firstVisibleMessageIndex: Int, lastVisibleMessageIndex: Int) {
+   public abstract fun onFirstLayout(
+      firstVisibleMessageIndex: Int,
+      firstVisibleMessagePercentVisible: Double?,
+      lastVisibleMessageIndex: Int,
+      lastVisibleMessagePercentVisible: Double?
+   ) {
    }
 
    public abstract fun onInitiateEdit(messageId: MessageId, channelId: ChannelId) {
    }
 
-   public abstract fun onInitiateReply(messageId: MessageId, channelId: ChannelId) {
+   public abstract fun onInitiateReply(messageId: MessageId, channelId: ChannelId, triggerHaptic: Boolean? = ..., location: String? = ...) {
+   }
+
+   public abstract fun onInitiateThread(messageId: MessageId, channelId: ChannelId) {
    }
 
    public abstract fun onLinkClicked(messageId: MessageId, node: LinkContentNode) {
@@ -104,10 +114,13 @@ public interface ChatEventHandler {
    public abstract fun onStickerLongClicked(sticker: Sticker, messageId: MessageId) {
    }
 
-   public abstract fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId) {
+   public abstract fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId, referrerId: String, customId: String?) {
    }
 
    public abstract fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
+   }
+
+   public abstract fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {
    }
 
    public abstract fun onTapAttachmentLink(attachmentUrl: String) {
@@ -192,10 +205,23 @@ public interface ChatEventHandler {
    ) {
    }
 
-   public abstract fun onTapInlineForward(channelId: ChannelId, messageId: MessageId, targetKind: String, embedIndex: Int?) {
+   public abstract fun onTapInlineCode(node: InlineCodeContentNode) {
+   }
+
+   public abstract fun onTapInlineForward(
+      channelId: ChannelId,
+      messageId: MessageId,
+      targetKind: String,
+      embedIndex: Int?,
+      triggerHaptic: Boolean? = ...,
+      location: String? = ...
+   ) {
    }
 
    public abstract fun onTapInviteEmbed(messageId: MessageId, index: Int, primary: Boolean?, secondary: Boolean?) {
+   }
+
+   public abstract fun onTapInviteEmbedAccept(messageId: MessageId, index: Int) {
    }
 
    public abstract fun onTapInviteToSpeak(messageId: MessageId) {
@@ -219,6 +245,9 @@ public interface ChatEventHandler {
    public abstract fun onTapObscuredMediaLearnMore(messageId: MessageId, channelId: ChannelId, attachmentId: String?, embedId: String?) {
    }
 
+   public abstract fun onTapObscuredMediaToggle(messageId: MessageId, channelId: ChannelId, isReveal: Boolean, attachmentId: String?, embedId: String?) {
+   }
+
    public abstract fun onTapOpTag() {
    }
 
@@ -234,10 +263,13 @@ public interface ChatEventHandler {
    public abstract fun onTapPostPreviewEmbed(guildId: GuildId, parentChannelId: ChannelId, threadId: ChannelId, messageId: MessageId) {
    }
 
-   public abstract fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ...) {
+   public abstract fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ..., location: String? = ...) {
    }
 
    public abstract fun onTapReactionOverflow(messageId: MessageId, channelId: ChannelId) {
+   }
+
+   public abstract fun onTapReferralRedeem(referralId: String?) {
    }
 
    public abstract fun onTapRemix(messageId: MessageId) {
@@ -262,6 +294,9 @@ public interface ChatEventHandler {
    }
 
    public abstract fun onTapShowAltText(description: String) {
+   }
+
+   public abstract fun onTapSoundmoji(node: SoundmojiContentNode) {
    }
 
    public abstract fun onTapSummary(channelId: ChannelId, messageId: MessageId, summaryId: String) {
@@ -332,14 +367,23 @@ public interface ChatEventHandler {
       public override fun onCompleteFirstLayout() {
       }
 
-      public override fun onFirstLayout(firstVisibleMessageIndex: Int, lastVisibleMessageIndex: Int) {
+      public override fun onFirstLayout(
+         firstVisibleMessageIndex: Int,
+         firstVisibleMessagePercentVisible: Double?,
+         lastVisibleMessageIndex: Int,
+         lastVisibleMessagePercentVisible: Double?
+      ) {
       }
 
       public override fun onInitiateEdit(messageId: MessageId, channelId: ChannelId) {
          q.h(var1, "messageId");
       }
 
-      public override fun onInitiateReply(messageId: MessageId, channelId: ChannelId) {
+      public override fun onInitiateReply(messageId: MessageId, channelId: ChannelId, triggerHaptic: Boolean?, location: String?) {
+         q.h(var1, "messageId");
+      }
+
+      public override fun onInitiateThread(messageId: MessageId, channelId: ChannelId) {
          q.h(var1, "messageId");
       }
 
@@ -415,12 +459,20 @@ public interface ChatEventHandler {
          q.h(var2, "messageId");
       }
 
-      public override fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId) {
+      public override fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId, referrerId: String, customId: String?) {
+         q.h(var5, "referrerId");
       }
 
       public override fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
          q.h(var5, "instanceId");
          q.h(var6, "messageId");
+      }
+
+      public override fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {
+         q.h(var1, "messageId");
+         q.h(var2, "actionId");
+         q.h(var3, "appId");
+         q.h(var4, "embedUrl");
       }
 
       public override fun onTapAttachmentLink(attachmentUrl: String) {
@@ -539,12 +591,27 @@ public interface ChatEventHandler {
          q.h(var8, "viewResizeMode");
       }
 
-      public override fun onTapInlineForward(channelId: ChannelId, messageId: MessageId, targetKind: String, embedIndex: Int?) {
+      public override fun onTapInlineCode(node: InlineCodeContentNode) {
+         q.h(var1, "node");
+      }
+
+      public override fun onTapInlineForward(
+         channelId: ChannelId,
+         messageId: MessageId,
+         targetKind: String,
+         embedIndex: Int?,
+         triggerHaptic: Boolean?,
+         location: String?
+      ) {
          q.h(var3, "messageId");
          q.h(var4, "targetKind");
       }
 
       public override fun onTapInviteEmbed(messageId: MessageId, index: Int, primary: Boolean?, secondary: Boolean?) {
+         q.h(var1, "messageId");
+      }
+
+      public override fun onTapInviteEmbedAccept(messageId: MessageId, index: Int) {
          q.h(var1, "messageId");
       }
 
@@ -574,6 +641,10 @@ public interface ChatEventHandler {
          q.h(var1, "messageId");
       }
 
+      public override fun onTapObscuredMediaToggle(messageId: MessageId, channelId: ChannelId, isReveal: Boolean, attachmentId: String?, embedId: String?) {
+         q.h(var1, "messageId");
+      }
+
       public override fun onTapOpTag() {
       }
 
@@ -595,12 +666,15 @@ public interface ChatEventHandler {
          q.h(var7, "messageId");
       }
 
-      public override fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean?) {
+      public override fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean?, location: String?) {
          q.h(var1, "messageId");
       }
 
       public override fun onTapReactionOverflow(messageId: MessageId, channelId: ChannelId) {
          q.h(var1, "messageId");
+      }
+
+      public override fun onTapReferralRedeem(referralId: String?) {
       }
 
       public override fun onTapRemix(messageId: MessageId) {
@@ -635,6 +709,10 @@ public interface ChatEventHandler {
 
       public override fun onTapShowAltText(description: String) {
          q.h(var1, "description");
+      }
+
+      public override fun onTapSoundmoji(node: SoundmojiContentNode) {
+         q.h(var1, "node");
       }
 
       public override fun onTapSummary(channelId: ChannelId, messageId: MessageId, summaryId: String) {

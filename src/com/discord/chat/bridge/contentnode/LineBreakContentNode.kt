@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
-import cl.f
-import cl.n
-import fl.g0
-import fl.g0.a
+import Y9.f
+import Y9.n
+import ba.G
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,7 +15,7 @@ import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public class LineBreakContentNode : ContentNode() {
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;

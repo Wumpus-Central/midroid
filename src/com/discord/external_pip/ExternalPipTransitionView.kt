@@ -51,23 +51,23 @@ public class ExternalPipTransitionView(context: Context) : View {
       private final val transitionViewTag: String
 
       public fun tryHide(activity: Activity?, animate: Boolean) {
-         var var3: ViewGroup = null;
-         val var4: View;
+         val var3: View;
          if (var1 != null) {
-            var4 = ActivityExtensionsKt.getRootView(var1);
+            var3 = ActivityExtensionsKt.getRootView(var1);
          } else {
-            var4 = null;
+            var3 = null;
          }
 
-         if (var4 is ViewGroup) {
-            var3 = var4 as ViewGroup;
+         var var5: ViewGroup = null;
+         if (var3 is ViewGroup) {
+            var5 = var3 as ViewGroup;
          }
 
-         if (var3 != null) {
-            val var5: ExternalPipTransitionView = var3.findViewWithTag(ExternalPipTransitionView.access$getTransitionViewTag$cp()) as ExternalPipTransitionView;
-            if (var5 != null) {
+         if (var5 != null) {
+            val var6: ExternalPipTransitionView = var5.findViewWithTag(ExternalPipTransitionView.access$getTransitionViewTag$cp()) as ExternalPipTransitionView;
+            if (var6 != null) {
                if (var2) {
-                  ExternalPipTransitionView.fadeOut$default(var5, 0L, 0L, new Function0(var3, var5) {
+                  ExternalPipTransitionView.fadeOut$default(var6, 0L, 0L, new Function0(var5, var6) {
                      final ExternalPipTransitionView $transitionView;
                      final ViewGroup $viewRoot;
 
@@ -82,7 +82,7 @@ public class ExternalPipTransitionView(context: Context) : View {
                      }
                   }, 3, null);
                } else {
-                  var3.removeView(var5);
+                  var5.removeView(var6);
                }
             }
          }

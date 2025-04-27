@@ -1,15 +1,15 @@
 package com.discord.notifications.api
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
+import ba.p0
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import dl.a
-import fl.b2
-import fl.g0
-import fl.n0
-import fl.o1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -54,7 +54,7 @@ public data class DirectReplyMessage(id: MessageId,
       var10: SerializationConstructorMarker
    ) {
       if (7 != (var1 and 7)) {
-         o1.b(var1, 7, DirectReplyMessage.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 7, DirectReplyMessage.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -183,8 +183,8 @@ public data class DirectReplyMessage(id: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = MessageId.hashCode-impl(this.id);
-      val var8: Int = ChannelId.hashCode-impl(this.channelId);
+      val var8: Int = MessageId.hashCode-impl(this.id);
+      val var6: Int = ChannelId.hashCode-impl(this.channelId);
       val var7: Int = this.author.hashCode();
       var var5: Int = 0;
       val var1: Int;
@@ -219,40 +219,40 @@ public data class DirectReplyMessage(id: MessageId,
          var5 = this.guildName.hashCode();
       }
 
-      return ((((((var6 * 31 + var8) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5;
+      return ((((((var8 * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5;
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = MessageId.toString-impl(this.id);
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: DirectReplyUser = this.author;
-      val var7: java.lang.String = this.content;
-      val var2: Int = this.type;
-      val var8: Int = this.channelType;
+      val var8: java.lang.String = MessageId.toString-impl(this.id);
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var7: DirectReplyUser = this.author;
+      val var6: java.lang.String = this.content;
+      val var3: Int = this.type;
+      val var9: Int = this.channelType;
       val var1: java.lang.String = this.channelName;
       val var4: java.lang.String = this.guildName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("DirectReplyMessage(id=");
-      var3.append(var9);
-      var3.append(", channelId=");
-      var3.append(var6);
-      var3.append(", author=");
-      var3.append(var5);
-      var3.append(", content=");
-      var3.append(var7);
-      var3.append(", type=");
-      var3.append(var2);
-      var3.append(", channelType=");
-      var3.append(var8);
-      var3.append(", channelName=");
-      var3.append(var1);
-      var3.append(", guildName=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("DirectReplyMessage(id=");
+      var2.append(var8);
+      var2.append(", channelId=");
+      var2.append(var5);
+      var2.append(", author=");
+      var2.append(var7);
+      var2.append(", content=");
+      var2.append(var6);
+      var2.append(", type=");
+      var2.append(var3);
+      var2.append(", channelType=");
+      var2.append(var9);
+      var2.append(", channelName=");
+      var2.append(var1);
+      var2.append(", guildName=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -276,13 +276,19 @@ public data class DirectReplyMessage(id: MessageId,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: MessageId.$serializer = MessageId.$serializer.INSTANCE;
-         val var4: ChannelId.$serializer = ChannelId.$serializer.INSTANCE;
-         val var6: DirectReplyUser.$serializer = DirectReplyUser.$serializer.INSTANCE;
-         val var3: b2 = b2.a;
-         val var5: KSerializer = a.u(b2.a);
-         val var1: n0 = n0.a;
-         return new KSerializer[]{var2, var4, var6, var5, a.u(n0.a), a.u(var1), a.u(var3), a.u(var3)};
+         val var4: C0 = C0.a;
+         val var1: KSerializer = a.u(C0.a);
+         val var3: N = N.a;
+         return new KSerializer[]{
+            MessageId.$serializer.INSTANCE,
+            ChannelId.$serializer.INSTANCE,
+            DirectReplyUser.$serializer.INSTANCE,
+            var1,
+            a.u(N.a),
+            a.u(var3),
+            a.u(var4),
+            a.u(var4)
+         };
       }
 
       public open fun deserialize(decoder: Decoder): DirectReplyMessage {
@@ -295,12 +301,13 @@ public data class DirectReplyMessage(id: MessageId,
          var var13: Int = null;
          var var2: Int;
          var var11: Any;
-         var var12: Int;
+         var var12: Any;
          var var14: DirectReplyUser;
-         val var15: java.lang.String;
-         val var16: Any;
-         var var27: Any;
-         var var30: Any;
+         val var15: Any;
+         val var16: Int;
+         var var26: Any;
+         var var29: Any;
+         val var34: java.lang.String;
          if (var7) {
             val var19: MessageId = var18.m(var17, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var20: java.lang.String;
@@ -310,30 +317,30 @@ public data class DirectReplyMessage(id: MessageId,
                var20 = null;
             }
 
-            var16 = var18.m(var17, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var11 = var18.m(var17, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var14 = var18.m(var17, 2, DirectReplyUser.$serializer.INSTANCE, null) as DirectReplyUser;
-            var30 = b2.a;
-            var11 = var18.v(var17, 3, b2.a, null) as java.lang.String;
-            val var8: n0 = n0.a;
-            var12 = var18.v(var17, 4, n0.a, null) as Int;
-            var27 = var18.v(var17, 5, var8, null) as Int;
-            val var23: java.lang.String = var18.v(var17, 6, (DeserializationStrategy)var30, null) as java.lang.String;
-            val var33: java.lang.String = var18.v(var17, 7, (DeserializationStrategy)var30, null) as java.lang.String;
+            var29 = C0.a;
+            var15 = var18.v(var17, 3, C0.a, null) as java.lang.String;
+            val var8: N = N.a;
+            var16 = var18.v(var17, 4, N.a, null) as Int;
+            var26 = var18.v(var17, 5, var8, null) as Int;
+            val var22: java.lang.String = var18.v(var17, 6, (DeserializationStrategy)var29, null) as java.lang.String;
+            var29 = var18.v(var17, 7, (DeserializationStrategy)var29, null) as java.lang.String;
+            var34 = var20;
             var2 = 255;
-            var15 = var20;
-            var30 = var27;
-            var13 = var23;
-            var27 = var33;
+            var12 = var26;
+            var26 = var22;
+            var29 = var29;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var24: java.lang.String = null;
+            var var23: java.lang.String = null;
             var14 = null;
             var12 = null;
             var11 = null;
-            var30 = null;
-            var27 = null;
-            var var22: Any = null;
+            var29 = null;
+            var26 = null;
+            var var21: Any = null;
 
             while (var3) {
                val var6: Int = var18.x(var17);
@@ -342,24 +349,24 @@ public data class DirectReplyMessage(id: MessageId,
                      var3 = false;
                      break;
                   case 0:
-                     val var25: MessageId;
-                     if (var24 != null) {
-                        var25 = MessageId.box-impl(var24);
-                     } else {
-                        var25 = null;
-                     }
-
-                     val var26: MessageId = var18.m(var17, 0, MessageId.$serializer.INSTANCE, var25) as MessageId;
-                     if (var26 != null) {
-                        var24 = var26.unbox-impl();
+                     val var24: MessageId;
+                     if (var23 != null) {
+                        var24 = MessageId.box-impl(var23);
                      } else {
                         var24 = null;
+                     }
+
+                     val var25: MessageId = var18.m(var17, 0, MessageId.$serializer.INSTANCE, var24) as MessageId;
+                     if (var25 != null) {
+                        var23 = var25.unbox-impl();
+                     } else {
+                        var23 = null;
                      }
 
                      var2 |= 1;
                      break;
                   case 1:
-                     var22 = var18.m(var17, 1, ChannelId.$serializer.INSTANCE, var22) as ChannelId;
+                     var21 = var18.m(var17, 1, ChannelId.$serializer.INSTANCE, var21) as ChannelId;
                      var2 |= 2;
                      break;
                   case 2:
@@ -368,23 +375,23 @@ public data class DirectReplyMessage(id: MessageId,
                      var4 = 7;
                      continue;
                   case 3:
-                     var27 = var18.v(var17, 3, b2.a, var27) as java.lang.String;
+                     var26 = var18.v(var17, 3, C0.a, var26) as java.lang.String;
                      var2 |= 8;
                      continue;
                   case 4:
-                     var13 = var18.v(var17, 4, n0.a, var13) as Int;
+                     var13 = var18.v(var17, 4, N.a, var13) as Int;
                      var2 |= 16;
                      continue;
                   case 5:
-                     var30 = var18.v(var17, 5, n0.a, var30) as Int;
+                     var29 = var18.v(var17, 5, N.a, var29) as Int;
                      var2 |= 32;
                      continue;
                   case 6:
-                     var11 = var18.v(var17, var5, b2.a, var11) as java.lang.String;
+                     var11 = var18.v(var17, var5, C0.a, var11) as java.lang.String;
                      var2 |= 64;
                      continue;
                   case 7:
-                     var12 = var18.v(var17, var4, b2.a, var12) as java.lang.String;
+                     var12 = var18.v(var17, var4, C0.a, var12) as java.lang.String;
                      var2 |= 128;
                      continue;
                   default:
@@ -395,17 +402,18 @@ public data class DirectReplyMessage(id: MessageId,
                var5 = 6;
             }
 
-            var13 = (Integer)var11;
-            var11 = var27;
-            var27 = var12;
-            var12 = var13;
-            var16 = var22;
-            var15 = var24;
+            var15 = var26;
+            var29 = var12;
+            var26 = var11;
+            var12 = var29;
+            var16 = var13;
+            var11 = var21;
+            var34 = var23;
          }
 
          var18.b(var17);
          return new DirectReplyMessage(
-            var2, var15, (ChannelId)var16, var14, (java.lang.String)var11, var12, (Integer)var30, var13, (java.lang.String)var27, null, null
+            var2, var34, (ChannelId)var11, var14, (java.lang.String)var15, var16, (Integer)var12, (java.lang.String)var26, (java.lang.String)var29, null, null
          );
       }
 
@@ -419,7 +427,7 @@ public data class DirectReplyMessage(id: MessageId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fl.g0.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 
@@ -435,12 +443,12 @@ public data class DirectReplyMessage(id: MessageId,
          val var6: Json = DirectReplyMessage.access$getJson$cp();
          var6.a();
          val var12: DirectReplyMessage = var6.b(DirectReplyMessage.Companion.serializer(), var1) as DirectReplyMessage;
-         val var8: java.lang.String = var12.getId-3Eiw7ao();
-         val var7: Int = var12.getType();
-         val var11: java.lang.String = var12.getContent();
+         val var10: java.lang.String = var12.getId-3Eiw7ao();
+         val var8: Int = var12.getType();
+         val var7: java.lang.String = var12.getContent();
          val var4: Long = var12.getChannelId-o4g7jtM();
-         val var9: Int = var12.getChannelType();
-         val var10: java.util.List = i.k();
+         val var11: Int = var12.getChannelType();
+         val var9: java.util.List = i.k();
          val var2: Long = var12.getAuthor().getId-re6GcUE();
          val var16: java.lang.String = var12.getAuthor().getUsername();
          var1 = var16;
@@ -458,13 +466,13 @@ public data class DirectReplyMessage(id: MessageId,
 
          return new NotificationData(
             "MESSAGE_CREATE",
+            var10,
+            null,
+            null,
             var8,
-            null,
-            null,
             var7,
-            var11,
             null,
-            var9,
+            var11,
             var12.getChannelName(),
             ChannelId.box-impl(var4),
             null,
@@ -472,7 +480,7 @@ public data class DirectReplyMessage(id: MessageId,
             null,
             null,
             null,
-            var10,
+            var9,
             UserId.box-impl(var2),
             var1,
             null,
@@ -507,8 +515,14 @@ public data class DirectReplyMessage(id: MessageId,
             null,
             false,
             null,
+            false,
+            null,
+            null,
+            null,
+            null,
+            null,
             -35357620,
-            262095,
+            16777167,
             null
          );
       }

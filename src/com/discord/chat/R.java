@@ -59,6 +59,8 @@ public final class R {
       public static int drawable_audio_play_button_gradient_dark;
       public static int drawable_audio_play_button_gradient_light;
       public static int drawable_bot_component_divider;
+      public static int drawable_bot_component_section_column_gap;
+      public static int drawable_bot_component_section_row_gap;
       public static int drawable_circle;
       public static int drawable_circle_primary_900;
       public static int drawable_circle_white;
@@ -69,12 +71,14 @@ public final class R {
       public static int ic_play_arrow;
       public static int ic_swipe_edit;
       public static int ic_swipe_reply;
+      public static int premium_tier2_gradient;
 
       private drawable() {
       }
    }
 
    public static final class id {
+      public static int accent_border;
       public static int acceptButton;
       public static int acceptButtonGradient;
       public static int accept_button;
@@ -85,11 +89,13 @@ public final class R {
       public static int action_text;
       public static int actions;
       public static int actions_button;
+      public static int actions_container;
       public static int add_reaction;
       public static int alt_remix_tag;
       public static int alt_text_container;
       public static int alt_text_label;
       public static int answers;
+      public static int app_icon;
       public static int arrow;
       public static int audio_details_view;
       public static int audio_file_name;
@@ -103,12 +109,14 @@ public final class R {
       public static int automod_message_channel;
       public static int automod_message_context_header;
       public static int avatar;
+      public static int avatar_container;
       public static int avatar_placeholder;
       public static int background_image;
       public static int badge;
       public static int badge_container;
       public static int badge_icon;
       public static int badge_text;
+      public static int banner;
       public static int barrier;
       public static int barrier_button;
       public static int barrier_footer;
@@ -117,6 +125,7 @@ public final class R {
       public static int blocked_messages;
       public static int blur_view;
       public static int body;
+      public static int body_text;
       public static int border;
       public static int bottom_guideline;
       public static int button;
@@ -137,6 +146,7 @@ public final class R {
       public static int chat_list_feedback_icon;
       public static int chat_list_view;
       public static int checkbox;
+      public static int children_views;
       public static int clan_tag_chiplet;
       public static int close_icon;
       public static int connections_role_tag;
@@ -162,7 +172,6 @@ public final class R {
       public static int description_label;
       public static int description_text;
       public static int divider;
-      public static int embed;
       public static int emoji;
       public static int emoji_button;
       public static int error;
@@ -196,7 +205,7 @@ public final class R {
       public static int footer_divider;
       public static int footer_text;
       public static int forum_post_action_bar_wrap;
-      public static int forward;
+      public static int fullWidthImage;
       public static int game_controller_icon;
       public static int game_icon;
       public static int gaming_stats_button;
@@ -204,6 +213,7 @@ public final class R {
       public static int gif_indicator;
       public static int gradients;
       public static int guild_avatar;
+      public static int guild_badge;
       public static int guild_communication_disabled_icon;
       public static int guild_icon;
       public static int guild_name;
@@ -217,14 +227,14 @@ public final class R {
       public static int header_section;
       public static int header_text;
       public static int hide_button;
-      public static int highlight_header_view;
-      public static int highlight_icon;
       public static int icon;
       public static int icon_button;
       public static int icon_container;
       public static int image;
+      public static int imageCopy;
       public static int image_alt_text;
       public static int image_blur_bg;
+      public static int image_invalid;
       public static int indicator_bottom;
       public static int indicator_end_barrier;
       public static int indicator_top;
@@ -245,6 +255,7 @@ public final class R {
       public static int invite_to_speak_text;
       public static int item_bottom_container;
       public static int item_description;
+      public static int item_guild_badge;
       public static int item_header;
       public static int item_hero;
       public static int item_invite_disabled_icon;
@@ -278,7 +289,6 @@ public final class R {
       public static int left_bar;
       public static int link_icon;
       public static int loading_dots;
-      public static int loading_dots_stub;
       public static int media_view;
       public static int media_view_alt_text;
       public static int media_view_alt_text_button;
@@ -301,11 +311,15 @@ public final class R {
       public static int mosaic;
       public static int move_to_speaker_icon;
       public static int name;
+      public static int nitroLogoBanner;
+      public static int nitroTicket;
       public static int no_participants_text;
       public static int obscure;
+      public static int opaque_background;
       public static int other_reactions_count;
       public static int overlay_centered_container;
       public static int overlay_container;
+      public static int overlay_gradient;
       public static int overlay_layout;
       public static int overlay_tag;
       public static int overlay_tag_icon;
@@ -317,6 +331,7 @@ public final class R {
       public static int percentage_bar_background;
       public static int percentage_bar_container;
       public static int player_container;
+      public static int player_icon;
       public static int primary_action;
       public static int primary_cta;
       public static int progress;
@@ -362,6 +377,9 @@ public final class R {
       public static int secondary_action_button;
       public static int secondary_button;
       public static int secondary_cta;
+      public static int section_component_view_group_error_row;
+      public static int section_layout_box;
+      public static int see_more_button;
       public static int select_component_chevron;
       public static int select_component_loading;
       public static int select_component_selection_icon;
@@ -370,6 +388,7 @@ public final class R {
       public static int selected_icon;
       public static int separator;
       public static int separator_dot;
+      public static int server_name_barrier;
       public static int shadow_view;
       public static int share_button;
       public static int share_prompt_close_button;
@@ -403,9 +422,9 @@ public final class R {
       public static int tag;
       public static int tag_chiplet;
       public static int tag_maybe_animate_elevation_to;
+      public static int tagline;
       public static int tertiary_action_button;
       public static int text;
-      public static int text_children;
       public static int thread_embed_container;
       public static int thread_embed_icon;
       public static int thread_embed_messages_count;
@@ -426,6 +445,8 @@ public final class R {
       public static int title_container;
       public static int title_text;
       public static int top_guideline;
+      public static int trialInfo;
+      public static int trial_info_top;
       public static int upload_cancel;
       public static int upload_complete;
       public static int upload_complete_background;
@@ -461,6 +482,7 @@ public final class R {
       public static int activity_bookmark_view;
       public static int activity_instance_embed_view;
       public static int alt_text_button_view;
+      public static int app_message_embed_view;
       public static int attachment_media_mosaic_container_view;
       public static int attachment_upload_overlay_view;
       public static int audio_player_view;
@@ -494,6 +516,7 @@ public final class R {
       public static int guild_event_invite_view;
       public static int guild_invite_disabled_view;
       public static int guild_invite_view;
+      public static int guild_profile_invite_view;
       public static int guild_view;
       public static int icon_button_view;
       public static int info_link_view;
@@ -501,24 +524,24 @@ public final class R {
       public static int invite_to_speak_view;
       public static int media_image_view;
       public static int media_view;
+      public static int media_visual_placeholder_view;
       public static int message_alt_remix_tag_view;
       public static int message_bundle_conversation_view;
       public static int message_bundle_view;
       public static int message_component_action_row_view;
       public static int message_component_button_view;
+      public static int message_component_container_view;
       public static int message_component_content_inventory_view;
       public static int message_component_media_gallery_display_view;
+      public static int message_component_section_view;
       public static int message_component_select_pill_view;
       public static int message_component_select_view;
       public static int message_component_separator_display_view;
-      public static int message_component_text_display_view;
       public static int message_frame_feed_header;
       public static int message_frame_jump_header;
-      public static int message_highlight_header;
       public static int message_start_guideline;
       public static int message_tag_view;
       public static int message_view;
-      public static int message_view_highlight_header_stub;
       public static int message_view_reply_preview;
       public static int message_view_reply_preview_stub;
       public static int message_view_thread_starter_stub;
@@ -528,6 +551,7 @@ public final class R {
       public static int poll_recycler_view;
       public static int poll_text_and_image_answer_view;
       public static int post_preview_embed_view;
+      public static int referral_view;
       public static int role_dot_view;
       public static int role_icon_view;
       public static int role_subscription_purchase_view;

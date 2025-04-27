@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.animation.AnticipateInterpolator
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.ImageView.ScaleType
@@ -38,9 +39,9 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       this.setOrientation(0);
       this.setGravity(16);
       val var8: ReactionView.Companion = ReactionView.Companion;
-      val var4: Int = ReactionView.Companion.getHORIZ_PADDING();
-      val var3: Int = VERTICAL_PADDING;
-      this.setPadding(var4, VERTICAL_PADDING, var8.getHORIZ_PADDING(), var3);
+      val var3: Int = ReactionView.Companion.getHORIZ_PADDING();
+      val var4: Int = VERTICAL_PADDING;
+      this.setPadding(var3, VERTICAL_PADDING, var8.getHORIZ_PADDING(), var4);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundSecondary(), var8.getCORNER_RADIUS(), null, 0, 12, null);
       val var5: TextView = var6.addReactionText;
       q.e(var6.addReactionText);
@@ -55,60 +56,64 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       var7.setScaleType(ScaleType.FIT_CENTER);
    }
 
-   public fun configure(addReactionLabel: String, reactionsTheme: ReactionsTheme?, isBurst: Boolean) {
+   public fun animateIn() {
+      this.setAlpha(0.0F);
+      this.setVisibility(0);
+      this.animate().alpha(1.0F).setInterpolator(new AnticipateInterpolator(2.0F)).setDuration(300L).start();
+   }
+
+   public fun configure(addReactionLabel: String, reactionsTheme: ReactionsTheme?, isBurst: Boolean, imageAsset: ReactAsset = ReactAsset.AddReaction) {
       q.h(var1, "addReactionLabel");
-      val var6: TextView = this.binding.addReactionText;
+      q.h(var4, "imageAsset");
+      val var7: TextView = this.binding.addReactionText;
       this.binding.addReactionText.setText(var1);
       if (var1.length() == 0) {
-         var6.setVisibility(8);
+         var7.setVisibility(8);
       } else {
-         var6.setVisibility(0);
+         var7.setVisibility(0);
       }
 
-      var var4: Int;
-      label35: {
+      var var5: Int;
+      label34: {
          if (var2 != null) {
-            val var7: Int = var2.getReactionTextColor();
-            if (var7 != null) {
-               var4 = var7;
-               break label35;
+            val var8: Int = var2.getReactionTextColor();
+            if (var8 != null) {
+               var5 = var8;
+               break label34;
             }
          }
 
-         var4 = ThemeManagerKt.getTheme().getTextMuted();
+         var5 = ThemeManagerKt.getTheme().getTextMuted();
       }
 
-      var6.setTextColor(var4);
-      val var13: SimpleDraweeView = this.binding.addReactionImage;
-      val var8: ReactAsset;
+      var7.setTextColor(var5);
+      val var9: SimpleDraweeView = this.binding.addReactionImage;
       if (var3) {
-         var8 = ReactAsset.AddBurstReaction;
-      } else {
-         var8 = ReactAsset.AddReaction;
+         var4 = ReactAsset.AddBurstReaction;
       }
 
-      label29: {
+      label28: {
          q.e(this.binding.addReactionImage);
-         ReactAssetUtilsKt.setReactAsset(var13, var8);
+         ReactAssetUtilsKt.setReactAsset(var9, var4);
          if (var2 != null) {
-            val var9: Int = var2.getReactionBackgroundColor();
-            if (var9 != null) {
-               var4 = var9;
-               break label29;
+            val var10: Int = var2.getReactionBackgroundColor();
+            if (var10 != null) {
+               var5 = var10;
+               break label28;
             }
          }
 
-         var4 = ThemeManagerKt.getTheme().getBackgroundSecondary();
+         var5 = ThemeManagerKt.getTheme().getBackgroundSecondary();
       }
 
-      val var10: Int;
+      val var11: Int;
       if (var2 != null) {
-         var10 = var2.getReactionBorderColor();
+         var11 = var2.getReactionBorderColor();
       } else {
-         var10 = null;
+         var11 = null;
       }
 
-      ViewBackgroundUtilsKt.setBackgroundRectangle(this, var4, ReactionView.Companion.getCORNER_RADIUS(), var10, ReactionView.Companion.getSTROKE_WIDTH());
+      ViewBackgroundUtilsKt.setBackgroundRectangle(this, var5, ReactionView.Companion.getCORNER_RADIUS(), var11, ReactionView.Companion.getSTROKE_WIDTH());
    }
 
    public companion object {

@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import cl.f
-import cl.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.b2
-import fl.g0
-import fl.g0.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -92,24 +92,24 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.applicationId;
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.instanceId;
+      val var1: java.lang.String = this.applicationId;
+      val var4: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.instanceId;
       val var3: java.lang.String = this.messageId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapActivityInstanceEmbedData(applicationId=");
-      var5.append(var4);
-      var5.append(", channelId=");
-      var5.append(var2);
-      var5.append(", instanceId=");
       var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", instanceId=");
+      var5.append(var2);
       var5.append(", messageId=");
       var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -129,7 +129,7 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapActivityInstanceEmbedData {
@@ -143,8 +143,8 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
          var var13: java.lang.String;
          if (var10.y()) {
             var13 = var10.t(var9, 0);
-            val var8: java.lang.String = var10.t(var9, 1);
-            var6 = var10.t(var9, 2);
+            var6 = var10.t(var9, 1);
+            val var8: java.lang.String = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
             var7 = var13;
@@ -186,13 +186,12 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
                }
             }
 
-            var6 = var13;
-            var13 = var12;
+            var6 = var12;
             var11 = var6;
          }
 
          var10.b(var9);
-         return new TapActivityInstanceEmbedData(var2, var7, var13, var6, var11, null);
+         return new TapActivityInstanceEmbedData(var2, var7, var6, var13, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapActivityInstanceEmbedData) {

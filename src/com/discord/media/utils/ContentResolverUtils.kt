@@ -49,7 +49,7 @@ internal object ContentResolverUtils {
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.H(var5, "image", false, 2, null)) {
+         if (h.J(var5, "image", false, 2, null)) {
             var3 = true;
          }
       }
@@ -83,7 +83,7 @@ internal object ContentResolverUtils {
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.H(var5, "video", false, 2, null)) {
+         if (h.J(var5, "video", false, 2, null)) {
             var3 = true;
          }
       }

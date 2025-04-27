@@ -3,13 +3,17 @@ package com.discord.crash_reporting
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
+import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.logging.Log
+import f8.p
+import io.sentry.Hint
 import io.sentry.IScope
-import io.sentry.d5
+import io.sentry.SentryEvent
 import io.sentry.e
-import io.sentry.n3
+import io.sentry.e2
+import io.sentry.p1
 import io.sentry.android.core.SentryAndroidOptions
-import io.sentry.android.core.r1
+import io.sentry.android.core.w0
 import java.io.File
 import java.net.ConnectException
 import java.net.SocketException
@@ -18,26 +22,25 @@ import java.net.UnknownHostException
 import java.security.cert.CertPathValidatorException
 import java.util.Map.Entry
 import javax.net.ssl.SSLException
-import kh.p
+import javax.net.ssl.SSLHandshakeException
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
-import kotlin.jvm.internal.Ref.ObjectRef
 import kotlin.reflect.KClass
-import lh.r
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
    private const val TAG_BUILD_NUMBER: String = "buildNumber"
-   public final val ignoreNetworkExceptionList: List<KClass<out Throwable>> =
+   private final val ignoreNetworkExceptionList: List<KClass<out Throwable>> =
       i.n(
          new KClass[]{
-            g0.b(UnknownHostException.class),
-            g0.b(SocketTimeoutException.class),
-            g0.b(SocketException.class),
-            g0.b(ConnectException.class),
-            g0.b(SSLException.class),
-            g0.b(CertPathValidatorException.class)
+            E.b(UnknownHostException.class),
+            E.b(SocketTimeoutException.class),
+            E.b(SocketException.class),
+            E.b(ConnectException.class),
+            E.b(SSLException.class),
+            E.b(CertPathValidatorException.class),
+            E.b(SSLHandshakeException.class)
          }
       )
 
@@ -45,73 +48,90 @@ public object CrashReporting {
       private set
 
    @JvmStatic
-   fun `captureMessage$lambda$1`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
+   fun `captureMessage$lambda$2`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
       q.h(var0, "$tag");
       q.h(var1, "$message");
       q.h(var2, "$errorLevel");
-      q.h(var3, "SentryScope");
-      var3.q(i.e(var0));
+      q.h(var3, "sentryScope");
+      var3.s(i.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
-      val var5: d5;
+      val var5: e2;
       if (var4 != 1) {
          if (var4 != 2) {
             throw new p();
          }
 
-         var5 = d5.WARNING;
+         var5 = e2.WARNING;
       } else {
-         var5 = d5.INFO;
+         var5 = e2.INFO;
       }
 
-      n3.j(var1, var5);
+      p1.k(var1, var5);
+   }
+
+   private fun handleBeforeSend(context: Context, event: SentryEvent): SentryEvent {
+      if (var2.r0() === e2.FATAL) {
+         SystemLogReport.INSTANCE.recordSentryCrash(var1, var2);
+      }
+
+      return var2;
    }
 
    @JvmStatic
-   fun `init$lambda$0`(var0: ObjectRef, var1: java.lang.String, var2: Context, var3: Double, var5: SentryAndroidOptions) {
+   fun `init$lambda$1`(var0: java.lang.String, var1: java.lang.String, var2: Context, var3: Double, var5: SentryAndroidOptions) {
       q.h(var0, "$dsn");
       q.h(var1, "$releaseName");
       q.h(var2, "$context");
       q.h(var5, "options");
-      var5.setDsn(var0.j as java.lang.String);
-      val var6: ClientInfo = ClientInfo.INSTANCE;
+      var5.setDsn(var0);
+      val var7: ClientInfo = ClientInfo.INSTANCE;
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
-      var5.setDist(var6.getVersionCode());
+      var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var7: File = var2.getCacheDir();
+      val var6: File = var2.getCacheDir();
       val var8: StringBuilder = new StringBuilder();
-      var8.append(var7);
+      var8.append(var6);
       var8.append("/sentry");
       var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("7bb52ee8-06d5-4961-a43d-4116220df14d");
-      var5.setTag("buildNumber", var6.getVersionCode());
-      var5.setTag("appVersion", var6.getVersionName());
+      var5.setProguardUuid("ec98b7e5-933b-4441-8574-065db91ef695");
+      var5.setTag("buildNumber", var7.getVersionCode());
+      var5.setTag("appVersion", var7.getVersionName());
+      var5.setBeforeSend(new a(var2));
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = r.h(), breadcrumbCategory: String? = null) {
+   @JvmStatic
+   fun `init$lambda$1$lambda$0`(var0: Context, var1: SentryEvent, var2: Hint): SentryEvent {
+      q.h(var0, "$context");
+      q.h(var1, "event");
+      q.h(var2, "<anonymous parameter 1>");
+      return INSTANCE.handleBeforeSend(var0, var1);
+   }
+
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = g8.q.h(), breadcrumbCategory: String? = null) {
       q.h(var1, "breadcrumbMessage");
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.n(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
-      var4.m(var3);
+      var4.n(var3);
       Log.i$default(Log.INSTANCE, "SentryBreadcrumb", var1, null, 4, null);
-      n3.d(var4);
+      p1.e(var4);
    }
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", kh.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", f8.e.b(var1), null, 4, null);
       if (!var2) {
-         n3.h(var1);
-      } else if (!ignoreNetworkExceptionList.contains(g0.b(var1.getClass()))) {
-         n3.h(var1);
+         p1.i(var1);
+      } else if (!ignoreNetworkExceptionList.contains(E.b(var1.getClass()))) {
+         p1.i(var1);
       }
    }
 
@@ -140,7 +160,7 @@ public object CrashReporting {
          Log.i$default(Log.INSTANCE, var1, var2, null, 4, null);
       }
 
-      n3.F(new b(var1, var2, var3));
+      p1.H(new b(var1, var2, var3));
    }
 
    public fun getSampleRate(context: Context): Double {
@@ -158,30 +178,28 @@ public object CrashReporting {
    public fun init(context: Context, releaseName: String) {
       q.h(var1, "context");
       q.h(var2, "releaseName");
-      val var3: ClientInfo = ClientInfo.INSTANCE;
+      val var4: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
-         val var4: java.lang.String = Build.DEVICE;
+         val var3: java.lang.String = Build.DEVICE;
          q.g(Build.DEVICE, "DEVICE");
-         if (h.M(var4, "vivo", false, 2, null)) {
+         if (h.O(var3, "vivo", false, 2, null)) {
             return;
          }
       }
 
-      val var6: ObjectRef = new ObjectRef();
       val var5: java.lang.String;
-      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
+      if (var4.isDebugBuild() || var4.isDeveloperBuild()) {
          var5 = "";
       } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
          var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-      } else if (!var3.isProdBuild()) {
+      } else if (!var4.isProdBuild()) {
          var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
       } else {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
       }
 
-      var6.j = var5;
-      r1.g(var1, new a(var6, var2, var1, this.getSampleRate(var1)));
-      isCrashedLastRun = n3.u();
+      w0.g(var1, new c(var5, var2, var1, this.getSampleRate(var1)));
+      isCrashedLastRun = p1.v();
    }
 
    public enum class ErrorLevel {
@@ -195,7 +213,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = rh.a.a(var0);
+         $ENTRIES = m8.a.a(var0);
       }
 
       @JvmStatic

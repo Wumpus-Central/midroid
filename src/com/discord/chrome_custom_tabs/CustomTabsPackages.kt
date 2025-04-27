@@ -7,9 +7,9 @@ import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import l2.d1
-import t3.a
-import t3.b
+import p1.a
+import p1.b
+import p1.c
 
 internal object CustomTabsPackages {
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"
@@ -21,7 +21,7 @@ internal object CustomTabsPackages {
       var var2: Intent = this.getDefaultViewIntentHandler();
       val var5: java.util.List;
       if (VERSION.SDK_INT >= 33) {
-         var5 = a.a(var1.getPackageManager(), var2, d1.a((long)0));
+         var5 = b.a(var1.getPackageManager(), var2, a.a((long)0));
       } else {
          var5 = var1.getPackageManager().queryIntentActivities(var2, 0);
       }
@@ -34,7 +34,7 @@ internal object CustomTabsPackages {
          q.g(var2, "setPackage(...)");
          val var8: ResolveInfo;
          if (VERSION.SDK_INT >= 33) {
-            var8 = b.a(var1.getPackageManager(), var2, d1.a((long)0));
+            var8 = c.a(var1.getPackageManager(), var2, a.a((long)0));
          } else {
             var8 = var1.getPackageManager().resolveService(var2, 0);
          }
@@ -126,7 +126,7 @@ internal object CustomTabsPackages {
                var3 = var10 as java.lang.String;
                var7 = var10 as java.lang.String;
                if (var3 == null) {
-                  var7 = i.g0(var5) as java.lang.String;
+                  var7 = i.h0(var5) as java.lang.String;
                }
             }
          }

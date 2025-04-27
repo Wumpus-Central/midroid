@@ -38,179 +38,183 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
       kotlin.jvm.internal.q.h(var2, "accessory");
       kotlin.jvm.internal.q.h(var5, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var7, "onMediaClicked");
-      val var17: java.lang.String = var2.getEmbed().getObscure();
-      var var11: Boolean;
-      if (var17 != null && !kotlin.text.h.x(var17)) {
-         var11 = 0;
+      val var22: java.lang.String = var2.getEmbed().getObscure();
+      val var11: Boolean;
+      if (var22 != null && !kotlin.text.h.d0(var22)) {
+         var11 = false;
       } else {
-         var11 = 1;
+         var11 = true;
       }
 
-      val var14: Boolean = (boolean)(var11 xor true);
-      val var21: EmbedView = this.embedView;
-      val var19: Embed = var2.getEmbed();
-      val var12: Int = var2.getIndex();
-      val var15: Long = var2.getChannelId-o4g7jtM();
-      val var18: java.lang.String = var2.getMessageId-3Eiw7ao();
-      var11 = var2.getConstrainedWidth();
+      val var32: EmbedView = this.embedView;
+      val var27: Embed = var2.getEmbed();
+      val var20: Long = var2.getChannelId-o4g7jtM();
+      val var30: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var12: Int = var2.getConstrainedWidth();
       val var13: Boolean;
-      if (var2.getShouldAutoPlayGifs() && !var14) {
+      if (var2.getShouldAutoPlayGifs() && var11) {
          var13 = true;
       } else {
          var13 = false;
       }
 
-      var21.setEmbed-UEgMTIk(
-         var19,
+      val var18: Boolean = var2.getShouldAnimateEmoji();
+      val var19: Boolean = var2.getShouldShowLinkDecorations();
+      val var17: Boolean = var2.getShouldShowRoleDot();
+      val var16: Boolean = var2.getShouldShowRoleOnName();
+      val var24: Function3 = new Function3(var1) {
+         {
+            super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            kotlin.jvm.internal.q.h(var2, "p1");
+            (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
+         }
+      };
+      val var35: Function3 = new Function3(var1) {
+         {
+            super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            kotlin.jvm.internal.q.h(var2, "p1");
+            (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
+         }
+      };
+      val var23: Function2 = new Function2(var1) {
+         {
+            super(
+               2,
+               var1,
+               ChatEventHandler::class.java,
+               "onLinkClicked",
+               "onLinkClicked-ntcYbpo(Ljava/lang/String;Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V",
+               0
+            );
+         }
+
+         public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            kotlin.jvm.internal.q.h(var2, "p1");
+            (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
+         }
+      };
+      val var29: Function1 = new Function1(var1) {
+         {
+            super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
+         }
+
+         public final void invoke(LinkContentNode var1) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
+         }
+      };
+      val var28: Function1 = new Function1(var1) {
+         {
+            super(1, var1, ChatEventHandler::class.java, "onTapCopyText", "onTapCopyText(Ljava/lang/CharSequence;)V", 0);
+         }
+
+         public final void invoke(java.lang.CharSequence var1) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            (super.receiver as ChatEventHandler).onTapCopyText(var1);
+         }
+      };
+      val var31: Function1 = new Function1(var1) {
+         {
+            super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
+         }
+
+         public final void invoke(EmojiContentNode var1) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            (super.receiver as ChatEventHandler).onTapEmoji(var1);
+         }
+      };
+      val var25: Function3 = new Function3(var1) {
+         {
+            super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
+         }
+      };
+      val var26: Function4 = new Function4(var1) {
+         {
+            super(
+               4,
+               var1,
+               ChatEventHandler::class.java,
+               "onTapMention",
+               "onTapMention(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+               0
+            );
+         }
+
+         public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3, java.lang.String var4) {
+            kotlin.jvm.internal.q.h(var2, "p1");
+            (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
+         }
+      };
+      val var34: Function1 = new Function1(var1) {
+         {
+            super(1, var1, ChatEventHandler::class.java, "onTapCommand", "onTapCommand(Lcom/discord/chat/bridge/contentnode/CommandMentionContentNode;)V", 0);
+         }
+
+         public final void invoke(CommandMentionContentNode var1) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            (super.receiver as ChatEventHandler).onTapCommand(var1);
+         }
+      };
+      var var33: java.lang.Boolean = var2.getEmbed().getObscureIsOpaque();
+      val var14: Boolean;
+      if (var33 != null) {
+         var14 = var33;
+      } else {
+         var14 = false;
+      }
+
+      var33 = var2.getEmbed().getObscureHideControls();
+      val var15: Boolean;
+      if (var33 != null) {
+         var15 = var33;
+      } else {
+         var15 = false;
+      }
+
+      var32.setEmbed-0qg1u9A(
+         var27,
+         var20,
+         var30,
          var12,
-         var15,
-         var18,
-         var11,
          var3,
          var4,
          var13,
-         var2.getShouldAnimateEmoji(),
-         var2.getShouldShowLinkDecorations(),
-         var2.getShouldShowRoleDot(),
-         var2.getShouldShowRoleOnName(),
-         new Function3(var1) {
-            {
-               super(
-                  3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0
-               );
-            }
-
-            public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               kotlin.jvm.internal.q.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
-            }
-         },
-         new Function3(var1) {
-            {
-               super(
-                  3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0
-               );
-            }
-
-            public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               kotlin.jvm.internal.q.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
-            }
-         },
+         var18,
+         var19,
+         var17,
+         var16,
+         var24,
+         var35,
          var7,
          var8,
-         new Function2(var1) {
-            {
-               super(
-                  2,
-                  var1,
-                  ChatEventHandler::class.java,
-                  "onLinkClicked",
-                  "onLinkClicked-ntcYbpo(Ljava/lang/String;Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V",
-                  0
-               );
-            }
-
-            public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               kotlin.jvm.internal.q.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
-            }
-         },
-         new Function1(var1) {
-            {
-               super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
-            }
-
-            public final void invoke(LinkContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
-            }
-         },
-         new Function1(var1) {
-            {
-               super(1, var1, ChatEventHandler::class.java, "onTapCopyText", "onTapCopyText(Ljava/lang/CharSequence;)V", 0);
-            }
-
-            public final void invoke(java.lang.CharSequence var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapCopyText(var1);
-            }
-         },
+         var23,
+         var29,
+         var28,
          var5,
-         new Function1(var1) {
-            {
-               super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
-            }
-
-            public final void invoke(EmojiContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapEmoji(var1);
-            }
-         },
-         new Function3(var1) {
-            {
-               super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
-            }
-
-            public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
-            }
-         },
-         new Function4(var1) {
-            {
-               super(
-                  4,
-                  var1,
-                  ChatEventHandler::class.java,
-                  "onTapMention",
-                  "onTapMention(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
-                  0
-               );
-            }
-
-            public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3, java.lang.String var4) {
-               kotlin.jvm.internal.q.h(var2, "p1");
-               (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
-            }
-         },
-         new Function1(var1) {
-            {
-               super(1, var1, ChatEventHandler::class.java, "onTapCommand", "onTapCommand(Lcom/discord/chat/bridge/contentnode/CommandMentionContentNode;)V", 0);
-            }
-
-            public final void invoke(CommandMentionContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapCommand(var1);
-            }
-         },
-         new Function4(var1) {
-            {
-               super(
-                  4,
-                  var1,
-                  ChatEventHandler::class.java,
-                  "onTapInlineForward",
-                  "onTapInlineForward-JjTCmh4(JLjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V",
-                  0
-               );
-            }
-
-            public final void invoke_JjTCmh4/* $VF was: invoke-JjTCmh4*/(long var1, java.lang.String var3, java.lang.String var4, Integer var5) {
-               kotlin.jvm.internal.q.h(var3, "p1");
-               kotlin.jvm.internal.q.h(var4, "p2");
-               (super.receiver as ChatEventHandler).onTapInlineForward-JjTCmh4(var1, var3, var4, var5);
-            }
-         },
+         var31,
+         var25,
+         var26,
+         var34,
          var6,
          var9,
+         var11 xor true,
+         var15,
          var14,
-         var2.isForwardedContent(),
-         var2.isShowingInlineForward(),
-         var2.getUseOldForwardIcon()
+         var2.isForwardedContent()
       );
    }
 }

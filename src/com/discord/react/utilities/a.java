@@ -1,14 +1,15 @@
 package com.discord.react.utilities;
 
-import com.facebook.react.bridge.ReactContext;
+import com.facebook.react.module.model.ReactModuleInfoProvider;
+import java.util.List;
+import java.util.Map;
 
 // $VF: synthetic class
-public final class a implements Runnable {
-   public final ReactContext j;
-   public final int k;
+public final class a implements ReactModuleInfoProvider {
+   public final List a;
+   public final boolean b;
 
-   @Override
-   public final void run() {
-      ReactViewExtensionsKt.a(this.j, this.k);
+   public final Map getReactModuleInfos() {
+      return ReactModuleInfoProviderExtensionsKt.a(this.a, this.b);
    }
 }

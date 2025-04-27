@@ -29,17 +29,17 @@ public class ActivityInstanceEmbedViewHolder(activityInstanceEmbedView: Activity
 
    public fun bind(activityMessageAccessory: ActivityInstanceEmbedMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "activityMessageAccessory");
-      val var5: ActivityInstanceEmbed = var1.getActivityInstanceEmbed();
-      val var4: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
-      this.activityInstanceEmbedView.setStatusText(var5.getStatusText());
-      val var3: java.util.List = var5.getParticipantAvatarUris();
+      val var4: ActivityInstanceEmbed = var1.getActivityInstanceEmbed();
+      val var5: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
+      this.activityInstanceEmbedView.setStatusText(var4.getStatusText());
+      val var3: java.util.List = var4.getParticipantAvatarUris();
       var var2: java.util.List = var3;
       if (var3 == null) {
          var2 = kotlin.collections.i.k();
       }
 
-      var4.setParticipantAvatarUris(var2);
-      var4.setLaunchButton(var5.getButtonLabelText(), var5.getButtonBackgroundColor(), var5.getButtonDisabled() xor true, var5.getSubmitting());
-      var4.setOnLaunchButtonClickListener(new b(var5, this, var1));
+      var5.setParticipantAvatarUris(var2);
+      var5.setLaunchButton(var4.getButtonLabelText(), var4.getButtonBackgroundColor(), var4.getButtonDisabled() xor true, var4.getSubmitting());
+      var5.setOnLaunchButtonClickListener(new b(var4, this, var1));
    }
 }
